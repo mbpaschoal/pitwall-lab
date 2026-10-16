@@ -1,0 +1,26 @@
+# Ambiente virtual: recriar em cada computador
+.venv/
+venv/
+env/
+
+# Arquivos temporários do Python e dos testes
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Segredos: nunca enviar ao GitHub
+.env
+.env.*
+!.env.example
+secrets/
+credentials/
+credentials*.json
+secrets*.json
+*.pem
+*.key
+
+# Arquivos locais do macOS e logs
+.DS_Store
+*.log

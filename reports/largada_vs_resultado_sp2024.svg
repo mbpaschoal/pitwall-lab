@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 905" role="img" aria-labelledby="titulo descricao">
+<title id="titulo">São Paulo 2024: posição de largada e resultado por piloto</title>
+<desc id="descricao">Um piloto por linha, ordenado pelo resultado da API. Círculo azul vazado: grid. Círculo verde cheio: resultado com status Finished. Losango âmbar: posição numérica com status especial, sem linha de comparação. Menor número é melhor. Fonte: CSV local da Jolpica-F1.</desc>
+<style>
+text { font-family: sans-serif; fill: var(--foreground, #172b40); }
+.muted { fill: var(--muted-foreground, #526477); }
+.grade { stroke: var(--border, #d9e1e9); stroke-width: 1; }
+.grid { stroke: #3983e6; stroke-width: 2.4; fill: var(--card, #ffffff); }
+.chegada { fill: #0d9c86; }
+.conexao { stroke: #0d9c86; stroke-opacity: .55; stroke-width: 3; }
+.especial { fill: #d18b15; stroke: var(--foreground, #172b40); stroke-width: .6; }
+</style>
+<text x="16" y="31" font-size="13" letter-spacing="2" class="muted">PITWALL LAB / ANÁLISE EXPLORATÓRIA</text>
+<text x="16" y="67" font-size="27" font-weight="700">Da largada ao resultado — São Paulo 2024</text>
+<text x="16" y="91" font-size="13" class="muted">Corrida principal · 3 de novembro de 2024 · ordem da posição final informada pela API</text>
+<circle cx="23" cy="119" r="6" class="grid"/><text x="38" y="124" font-size="13">Grid informado</text>
+<circle cx="214" cy="119" r="5" class="chegada"/><text x="228" y="124" font-size="13">Final: terminou</text>
+<polygon points="421,112 428,119 421,126 414,119" class="especial"/><text x="437" y="124" font-size="13">Posição da API: status especial (não comparar como chegada normal)</text>
+<text x="16" y="164" font-size="12" font-weight="700" class="muted">PILOTO</text>
+<text x="239" y="150" font-size="12" class="muted">← melhor posição / menor número</text>
+<text x="829" y="164" font-size="12" font-weight="700" class="muted">STATUS</text>
+<text x="1005" y="164" font-size="12" font-weight="700" text-anchor="middle" class="muted">SALDO*</text>
+<line x1="239" y1="182" x2="239" y2="759" class="grade"/><text x="239" y="170" text-anchor="middle" font-size="11" class="muted">1</text>
+<line x1="267" y1="182" x2="267" y2="759" class="grade"/><text x="267" y="170" text-anchor="middle" font-size="11" class="muted">2</text>
+<line x1="295" y1="182" x2="295" y2="759" class="grade"/><text x="295" y="170" text-anchor="middle" font-size="11" class="muted">3</text>
+<line x1="323" y1="182" x2="323" y2="759" class="grade"/><text x="323" y="170" text-anchor="middle" font-size="11" class="muted">4</text>
+<line x1="351" y1="182" x2="351" y2="759" class="grade"/><text x="351" y="170" text-anchor="middle" font-size="11" class="muted">5</text>
+<line x1="379" y1="182" x2="379" y2="759" class="grade"/><text x="379" y="170" text-anchor="middle" font-size="11" class="muted">6</text>
+<line x1="407" y1="182" x2="407" y2="759" class="grade"/><text x="407" y="170" text-anchor="middle" font-size="11" class="muted">7</text>
+<line x1="435" y1="182" x2="435" y2="759" class="grade"/><text x="435" y="170" text-anchor="middle" font-size="11" class="muted">8</text>
+<line x1="463" y1="182" x2="463" y2="759" class="grade"/><text x="463" y="170" text-anchor="middle" font-size="11" class="muted">9</text>
+<line x1="491" y1="182" x2="491" y2="759" class="grade"/><text x="491" y="170" text-anchor="middle" font-size="11" class="muted">10</text>
+<line x1="519" y1="182" x2="519" y2="759" class="grade"/><text x="519" y="170" text-anchor="middle" font-size="11" class="muted">11</text>
+<line x1="547" y1="182" x2="547" y2="759" class="grade"/><text x="547" y="170" text-anchor="middle" font-size="11" class="muted">12</text>
+<line x1="575" y1="182" x2="575" y2="759" class="grade"/><text x="575" y="170" text-anchor="middle" font-size="11" class="muted">13</text>
+<line x1="603" y1="182" x2="603" y2="759" class="grade"/><text x="603" y="170" text-anchor="middle" font-size="11" class="muted">14</text>
+<line x1="631" y1="182" x2="631" y2="759" class="grade"/><text x="631" y="170" text-anchor="middle" font-size="11" class="muted">15</text>
+<line x1="659" y1="182" x2="659" y2="759" class="grade"/><text x="659" y="170" text-anchor="middle" font-size="11" class="muted">16</text>
+<line x1="687" y1="182" x2="687" y2="759" class="grade"/><text x="687" y="170" text-anchor="middle" font-size="11" class="muted">17</text>
+<line x1="715" y1="182" x2="715" y2="759" class="grade"/><text x="715" y="170" text-anchor="middle" font-size="11" class="muted">18</text>
+<line x1="743" y1="182" x2="743" y2="759" class="grade"/><text x="743" y="170" text-anchor="middle" font-size="11" class="muted">19</text>
+<line x1="771" y1="182" x2="771" y2="759" class="grade"/><text x="771" y="170" text-anchor="middle" font-size="11" class="muted">20</text>
+<g data-piloto="Max Verstappen" data-grid="17" data-final="1" data-status="Finished">
+<title>Max Verstappen: grid 17; posição API 1; Finished</title>
+<text x="16" y="205" font-size="14">Max Verstappen</text>
+<line x1="687" y1="201" x2="239" y2="201" class="conexao"/>
+<circle cx="687" cy="201" r="6.4" class="grid"/>
+<circle cx="239" cy="201" r="4.4" class="chegada"/>
+<text x="829" y="205" font-size="12">Terminou</text>
+<text x="1005" y="205" text-anchor="middle" font-size="13" font-weight="700">+16</text>
+</g>
+<g data-piloto="Esteban Ocon" data-grid="4" data-final="2" data-status="Finished">
+<title>Esteban Ocon: grid 4; posição API 2; Finished</title>
+<text x="16" y="234" font-size="14">Esteban Ocon</text>
+<line x1="323" y1="230" x2="267" y2="230" class="conexao"/>
+<circle cx="323" cy="230" r="6.4" class="grid"/>
+<circle cx="267" cy="230" r="4.4" class="chegada"/>
+<text x="829" y="234" font-size="12">Terminou</text>
+<text x="1005" y="234" text-anchor="middle" font-size="13" font-weight="700">+2</text>
+</g>
+<g data-piloto="Pierre Gasly" data-grid="13" data-final="3" data-status="Finished">
+<title>Pierre Gasly: grid 13; posição API 3; Finished</title>
+<text x="16" y="263" font-size="14">Pierre Gasly</text>
+<line x1="575" y1="259" x2="295" y2="259" class="conexao"/>
+<circle cx="575" cy="259" r="6.4" class="grid"/>
+<circle cx="295" cy="259" r="4.4" class="chegada"/>
+<text x="829" y="263" font-size="12">Terminou</text>
+<text x="1005" y="263" text-anchor="middle" font-size="13" font-weight="700">+10</text>
+</g>
+<g data-piloto="George Russell" data-grid="2" data-final="4" data-status="Finished">
+<title>George Russell: grid 2; posição API 4; Finished</title>
+<text x="16" y="292" font-size="14">George Russell</text>
+<line x1="267" y1="288" x2="323" y2="288" class="conexao"/>
+<circle cx="267" cy="288" r="6.4" class="grid"/>
+<circle cx="323" cy="288" r="4.4" class="chegada"/>
+<text x="829" y="292" font-size="12">Terminou</text>
+<text x="1005" y="292" text-anchor="middle" font-size="13" font-weight="700">-2</text>
+</g>
+<g data-piloto="Charles Leclerc" data-grid="6" data-final="5" data-status="Finished">
+<title>Charles Leclerc: grid 6; posição API 5; Finished</title>
+<text x="16" y="321" font-size="14">Charles Leclerc</text>
+<line x1="379" y1="317" x2="351" y2="317" class="conexao"/>
+<circle cx="379" cy="317" r="6.4" class="grid"/>
+<circle cx="351" cy="317" r="4.4" class="chegada"/>
+<text x="829" y="321" font-size="12">Terminou</text>
+<text x="1005" y="321" text-anchor="middle" font-size="13" font-weight="700">+1</text>
+</g>
+<g data-piloto="Lando Norris" data-grid="1" data-final="6" data-status="Finished">
+<title>Lando Norris: grid 1; posição API 6; Finished</title>
+<text x="16" y="350" font-size="14">Lando Norris</text>
+<line x1="239" y1="346" x2="379" y2="346" class="conexao"/>
+<circle cx="239" cy="346" r="6.4" class="grid"/>
+<circle cx="379" cy="346" r="4.4" class="chegada"/>
+<text x="829" y="350" font-size="12">Terminou</text>
+<text x="1005" y="350" text-anchor="middle" font-size="13" font-weight="700">-5</text>
+</g>
+<g data-piloto="Yuki Tsunoda" data-grid="3" data-final="7" data-status="Finished">
+<title>Yuki Tsunoda: grid 3; posição API 7; Finished</title>
+<text x="16" y="379" font-size="14">Yuki Tsunoda</text>
+<line x1="295" y1="375" x2="407" y2="375" class="conexao"/>
+<circle cx="295" cy="375" r="6.4" class="grid"/>
+<circle cx="407" cy="375" r="4.4" class="chegada"/>
+<text x="829" y="379" font-size="12">Terminou</text>
+<text x="1005" y="379" text-anchor="middle" font-size="13" font-weight="700">-4</text>
+</g>
+<g data-piloto="Oscar Piastri" data-grid="8" data-final="8" data-status="Finished">
+<title>Oscar Piastri: grid 8; posição API 8; Finished</title>
+<text x="16" y="408" font-size="14">Oscar Piastri</text>
+<line x1="435" y1="404" x2="435" y2="404" class="conexao"/>
+<circle cx="435" cy="404" r="6.4" class="grid"/>
+<circle cx="435" cy="404" r="4.4" class="chegada"/>
+<text x="829" y="408" font-size="12">Terminou</text>
+<text x="1005" y="408" text-anchor="middle" font-size="13" font-weight="700">0</text>
+</g>
+<g data-piloto="Liam Lawson" data-grid="5" data-final="9" data-status="Finished">
+<title>Liam Lawson: grid 5; posição API 9; Finished</title>
+<text x="16" y="437" font-size="14">Liam Lawson</text>
+<line x1="351" y1="433" x2="463" y2="433" class="conexao"/>
+<circle cx="351" cy="433" r="6.4" class="grid"/>
+<circle cx="463" cy="433" r="4.4" class="chegada"/>
+<text x="829" y="437" font-size="12">Terminou</text>
+<text x="1005" y="437" text-anchor="middle" font-size="13" font-weight="700">-4</text>
+</g>
+<g data-piloto="Lewis Hamilton" data-grid="14" data-final="10" data-status="Finished">
+<title>Lewis Hamilton: grid 14; posição API 10; Finished</title>
+<text x="16" y="466" font-size="14">Lewis Hamilton</text>
+<line x1="603" y1="462" x2="491" y2="462" class="conexao"/>
+<circle cx="603" cy="462" r="6.4" class="grid"/>
+<circle cx="491" cy="462" r="4.4" class="chegada"/>
+<text x="829" y="466" font-size="12">Terminou</text>
+<text x="1005" y="466" text-anchor="middle" font-size="13" font-weight="700">+4</text>
+</g>
+<g data-piloto="Sergio Pérez" data-grid="12" data-final="11" data-status="Finished">
+<title>Sergio Pérez: grid 12; posição API 11; Finished</title>
+<text x="16" y="495" font-size="14">Sergio Pérez</text>
+<line x1="547" y1="491" x2="519" y2="491" class="conexao"/>
+<circle cx="547" cy="491" r="6.4" class="grid"/>
+<circle cx="519" cy="491" r="4.4" class="chegada"/>
+<text x="829" y="495" font-size="12">Terminou</text>
+<text x="1005" y="495" text-anchor="middle" font-size="13" font-weight="700">+1</text>
+</g>
+<g data-piloto="Oliver Bearman" data-grid="15" data-final="12" data-status="Finished">
+<title>Oliver Bearman: grid 15; posição API 12; Finished</title>
+<text x="16" y="524" font-size="14">Oliver Bearman</text>
+<line x1="631" y1="520" x2="547" y2="520" class="conexao"/>
+<circle cx="631" cy="520" r="6.4" class="grid"/>
+<circle cx="547" cy="520" r="4.4" class="chegada"/>
+<text x="829" y="524" font-size="12">Terminou</text>
+<text x="1005" y="524" text-anchor="middle" font-size="13" font-weight="700">+3</text>
+</g>
+<g data-piloto="Valtteri Bottas" data-grid="11" data-final="13" data-status="Finished">
+<title>Valtteri Bottas: grid 11; posição API 13; Finished</title>
+<text x="16" y="553" font-size="14">Valtteri Bottas</text>
+<line x1="519" y1="549" x2="575" y2="549" class="conexao"/>
+<circle cx="519" cy="549" r="6.4" class="grid"/>
+<circle cx="575" cy="549" r="4.4" class="chegada"/>
+<text x="829" y="553" font-size="12">Terminou</text>
+<text x="1005" y="553" text-anchor="middle" font-size="13" font-weight="700">-2</text>
+</g>
+<g data-piloto="Fernando Alonso" data-grid="9" data-final="14" data-status="Finished">
+<title>Fernando Alonso: grid 9; posição API 14; Finished</title>
+<text x="16" y="582" font-size="14">Fernando Alonso</text>
+<line x1="463" y1="578" x2="603" y2="578" class="conexao"/>
+<circle cx="463" cy="578" r="6.4" class="grid"/>
+<circle cx="603" cy="578" r="4.4" class="chegada"/>
+<text x="829" y="582" font-size="12">Terminou</text>
+<text x="1005" y="582" text-anchor="middle" font-size="13" font-weight="700">-5</text>
+</g>
+<g data-piloto="Guanyu Zhou" data-grid="19" data-final="15" data-status="Finished">
+<title>Guanyu Zhou: grid 19; posição API 15; Finished</title>
+<text x="16" y="611" font-size="14">Guanyu Zhou</text>
+<line x1="743" y1="607" x2="631" y2="607" class="conexao"/>
+<circle cx="743" cy="607" r="6.4" class="grid"/>
+<circle cx="631" cy="607" r="4.4" class="chegada"/>
+<text x="829" y="611" font-size="12">Terminou</text>
+<text x="1005" y="611" text-anchor="middle" font-size="13" font-weight="700">+4</text>
+</g>
+<g data-piloto="Carlos Sainz" data-grid="20" data-final="16" data-status="Retired">
+<title>Carlos Sainz: grid 20; posição API 16; Retired</title>
+<text x="16" y="640" font-size="14">Carlos Sainz</text>
+<circle cx="771" cy="636" r="6.4" class="grid"/>
+<polygon points="659,630 665,636 659,642 653,636" class="especial"/>
+<text x="829" y="640" font-size="12">Abandonou</text>
+<text x="1005" y="640" text-anchor="middle" font-size="13" font-weight="700">—</text>
+</g>
+<g data-piloto="Franco Colapinto" data-grid="16" data-final="17" data-status="Retired">
+<title>Franco Colapinto: grid 16; posição API 17; Retired</title>
+<text x="16" y="669" font-size="14">Franco Colapinto</text>
+<circle cx="659" cy="665" r="6.4" class="grid"/>
+<polygon points="687,659 693,665 687,671 681,665" class="especial"/>
+<text x="829" y="669" font-size="12">Abandonou</text>
+<text x="1005" y="669" text-anchor="middle" font-size="13" font-weight="700">—</text>
+</g>
+<g data-piloto="Alexander Albon" data-grid="7" data-final="18" data-status="Did not start">
+<title>Alexander Albon: grid 7; posição API 18; Did not start</title>
+<text x="16" y="698" font-size="14">Alexander Albon</text>
+<circle cx="407" cy="694" r="6.4" class="grid"/>
+<polygon points="715,688 721,694 715,700 709,694" class="especial"/>
+<text x="829" y="698" font-size="12">Não largou</text>
+<text x="1005" y="698" text-anchor="middle" font-size="13" font-weight="700">—</text>
+</g>
+<g data-piloto="Lance Stroll" data-grid="10" data-final="19" data-status="Did not start">
+<title>Lance Stroll: grid 10; posição API 19; Did not start</title>
+<text x="16" y="727" font-size="14">Lance Stroll</text>
+<circle cx="491" cy="723" r="6.4" class="grid"/>
+<polygon points="743,717 749,723 743,729 737,723" class="especial"/>
+<text x="829" y="727" font-size="12">Não largou</text>
+<text x="1005" y="727" text-anchor="middle" font-size="13" font-weight="700">—</text>
+</g>
+<g data-piloto="Nico Hülkenberg" data-grid="18" data-final="20" data-status="Disqualified">
+<title>Nico Hülkenberg: grid 18; posição API 20; Disqualified</title>
+<text x="16" y="756" font-size="14">Nico Hülkenberg</text>
+<circle cx="715" cy="752" r="6.4" class="grid"/>
+<polygon points="771,746 777,752 771,758 765,752" class="especial"/>
+<text x="829" y="756" font-size="12">Desclassificado</text>
+<text x="1005" y="756" text-anchor="middle" font-size="13" font-weight="700">—</text>
+</g>
+<text x="16" y="796" font-size="12" class="muted">* Saldo = grid − posição final, calculado apenas para Finished. Positivo: avançou; negativo: recuou.</text>
+<text x="16" y="818" font-size="12" class="muted">Saldo não é contagem de ultrapassagens. Para quem não largou, o círculo azul mostra apenas o grid informado.</text>
+<text x="16" y="840" font-size="12" class="muted">Fonte: Jolpica-F1 · data/resultados_sao_paulo_2024.csv · dados CC BY-NC-SA 4.0</text>
+</svg>
