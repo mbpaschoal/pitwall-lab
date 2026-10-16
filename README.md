@@ -57,7 +57,7 @@ Não copie um ambiente virtual entre computadores: recrie-o. Como o projeto est�
 2. Procura uma única corrida cuja cidade seja São Paulo e cujo país seja Brazil. A comparação da cidade desconsidera acentos.
 3. Lê `season` e `round` da resposta, em vez de presumir o número da etapa.
 4. Usa esses identificadores para consultar `results`, os resultados da corrida principal, não da sprint.
-5. Confere se os resultados pertencem à temporada e rodada descobertas e se a quantidade recebida corresponde ao total informado pela API.
+5. Valida a estrutura de cada resposta, tanto da rede quanto do cache, antes de utilizá-la. Confere os tipos, campos necessários, temporada, rodada e quantidade de registros. Uma nova resposta só é gravada no cache depois dessa validação.
 6. Ordena pela posição final e salva as cinco colunas no CSV, em UTF-8, separado por vírgulas.
 
 Identificação obtida pela execução real:
@@ -91,8 +91,14 @@ F1/
 │   └── raw/
 │       ├── calendario_2024.json         # resposta original do calendário
 │       └── resultados_sao_paulo_2024.json # resposta original dos resultados
+├── gerar_grafico.py                     # gráfico estático a partir do CSV
+├── reports/
+│   ├── largada_vs_resultado_sp2024.html
+│   └── largada_vs_resultado_sp2024.svg
 └── tests/
-    └── test_coletar_resultados.py       # verificações automáticas
+    ├── test_coletar_resultados.py       # testes originais da coleta
+    ├── test_gerar_grafico.py            # teste original do gráfico
+    └── test_validacao_respostas.py      # regressões sem rede
 ```
 
 JSON é o formato estruturado retornado pela API. Guardá-lo permite conferir de onde saiu cada valor do CSV. CSV é uma tabela em texto que pode ser aberta em planilhas ou lida por Python. Os arquivos públicos de dados não estão excluídos pelo `.gitignore`.
@@ -116,13 +122,41 @@ Status presentes nesta resposta: `Finished` = terminou; `Retired` = abandonou; `
 A documentação consultada informa limite sem autenticação de **4 requisições por segundo e 500 por hora**, sujeito a alterações. O aplicativo se identifica pelo cabeçalho `User-Agent`: `PitwallLab/0.1.0 Python/3.9.6 (educational portfolio; urllib)` nesta máquina (a versão do Python é preenchida automaticamente).
 
 - Na primeira execução, são feitas duas consultas sequenciais, com pelo menos 8 segundos entre seus inícios.
-- Nas seguintes, as respostas em `data/raw/` são reutilizadas. Isso é um **cache**, uma cópia local para evitar downloads repetidos. Portanto, repetir o comando normalmente não consulta possíveis correções posteriores na API.
+- Nas seguintes, as respostas em `data/raw/` são validadas e, se válidas, reutilizadas sem regravação. Isso é um **cache**, uma cópia local para evitar downloads repetidos. Portanto, repetir o comando normalmente não consulta possíveis correções posteriores na API.
 - O espaçamento controla este processo, não outros programas ou pessoas que usem o mesmo IP. Não execute múltiplas cópias simultaneamente.
 - Cada consulta tem tempo limite de 30 segundos. Problemas de rede, HTTP, JSON ou estrutura de dados encerram a execução com mensagem de falha e código de saída 1, sem inventar resultados.
 - Se ocorrer HTTP 429, o script informa `Retry-After`, quando enviado, e encerra sem nova tentativa automática. Aguarde o prazo indicado antes de tentar novamente. O valor pode indicar segundos ou uma data HTTP. Se não houver prazo, não repita em sequência.
 - Conteúdo existente diferente não é sobrescrito. Conteúdo igual é mantido. Antes de qualquer atualização deliberada, mova os arquivos antigos para um backup fora dos caminhos usados pelo script.
 - Para consultar a API novamente, com os arquivos atuais já guardados em backup, retire dos caminhos ativos os dois JSON de `data/raw/` e o CSV. Execute apenas uma vez. Não é necessário fazer isso no uso normal.
 - Uma falha não apaga um CSV anterior: se a coleta falhar, não trate um CSV antigo como resultado de uma nova consulta.
+
+### Respostas inválidas: o que é verificado
+
+JSON é um formato de dados. Um JSON pode estar escrito corretamente e ainda assim não conter o que precisamos: `[]` é uma lista, não o objeto esperado; `{"MRData": {}}` é um objeto, mas está incompleto.
+
+O programa aplica as **mesmas regras à rede e ao cache**, específicas para cada endpoint (tipo de consulta):
+
+- **Em ambos:** JSON em UTF-8, objeto principal, `MRData`, `RaceTable`, temporada esperada, total numérico em texto e lista não vazia de corridas. Os elementos das listas também precisam ser objetos.
+- **Calendário:** quantidade de corridas igual ao total; temporada e rodada de cada corrida; nome, data em texto, circuito e localização com cidade e país.
+- **Resultados:** uma única corrida, temporada e rodada correspondentes à consulta, lista de resultados não vazia e quantidade igual ao total. Cada registro precisa conter nome e sobrenome do piloto, nome da equipe, grid, posição e status, com os tipos esperados.
+- Campos textuais obrigatórios não podem estar vazios. Valores numéricos seguem o formato de texto com dígitos da API; o grid pode ser zero, enquanto rodada, posição e total precisam ser positivos.
+
+Campos adicionais da fonte não são descartados dos JSON. A validação verifica a estrutura necessária para a coleta: ela não certifica a exatidão esportiva de cada valor.
+
+Uma resposta inválida **da rede não cria cache para aquele endpoint**. Se outra resposta válida já tiver sido salva durante a execução, ela é preservada. JSON malformado, codificação inválida e estrutura inesperada são convertidos em mensagens claras. O programa escreve a falha no Terminal e termina com **código de saída 1**, o sinal que outros programas usam para reconhecer um erro.
+
+Não usamos `except Exception` para esconder falhas. As validações geram um erro específico, `RespostaInvalida`, derivado de `ValueError`; a execução principal trata erros esperados de dados e de acesso a arquivos/rede (`ValueError` e `OSError`). Erros inesperados de programação, como `TypeError`, não são disfarçados como dados inválidos.
+
+### Como recuperar um cache inválido sem perder dados válidos
+
+Se um cache falhar na validação, a mensagem começa com **`Cache inválido`**, mostra o caminho do arquivo e explica o campo ausente ou incorreto. O arquivo é mantido intacto. O programa não o apaga, não o sobrescreve e não tenta baixá-lo novamente automaticamente.
+
+1. Identifique **somente o arquivo indicado** pela mensagem.
+2. Mova esse arquivo para um backup fora da pasta do projeto, preservando seu conteúdo para inspeção. Não mova os demais JSON válidos nem o CSV.
+3. Execute novamente `./.venv/bin/python coletar_resultados.py`, dentro da pasta do projeto.
+4. O JSON que agora estiver ausente será consultado novamente; os demais caches válidos continuarão a ser reutilizados. Aguarde os limites da API se houver uma mensagem HTTP 429.
+
+Se a nova resposta ainda for inválida, o script voltará a falhar sem gravar aquele cache. Se uma nova coleta válida produzir um CSV diferente do já existente, a proteção contra sobrescrita continua valendo: faça um backup deliberado do CSV antes de aceitar a atualização. Não remova todos os dados para resolver um único cache defeituoso.
 
 O `.gitignore` exclui o ambiente virtual, arquivos temporários Python, `.env` e padrões comuns de segredos. Ele não é um detector completo de credenciais e não protege arquivos que já estejam sendo rastreados pelo Git. Nunca coloque senhas ou tokens no código.
 
@@ -136,6 +170,16 @@ cd "/caminho/para/pitwall-lab"
 ```
 
 O teste de coleta executa o script e compara todas as células do CSV com a resposta JSON salva, além de conferir o cabeçalho, a quantidade e a ausência de pilotos duplicados. Na falta do cache, esse teste consulta a API real. Os outros dois testes simulam falhas HTTP 429 e 503 para verificar a mensagem de espera, a ausência de tentativas repetidas, a identificação do aplicativo e o tempo limite, sem criar dados de corrida fictícios e sem acessar a API.
+
+Os quatro testes originais (incluindo o gráfico) foram mantidos. O arquivo `tests/test_validacao_respostas.py` acrescenta testes **sem rede**, com respostas simuladas e cópias temporárias das respostas reais. Eles cobrem `[]`, objetos incompletos, tipos incorretos, campos ausentes, totais e identificadores incoerentes, JSON malformado e UTF-8 inválido, tanto na rede quanto no cache. Também verificam que respostas inválidas não criam cache, que caches existentes são preservados, que dados válidos continuam aceitos e que erros de programação não são mascarados.
+
+Há testes que executam o script inteiro em subprocessos isolados para conferir **saída 1, mensagem sem traceback para dados inválidos e preservação dos outros arquivos**. A rede nesses testes está bloqueada por simulação; os dados originais do projeto não são usados como destino de gravações inválidas.
+
+Para executar apenas as novas regressões sem rede:
+
+```bash
+./.venv/bin/python -m unittest discover -s tests -p test_validacao_respostas.py -v
+```
 
 Para visualizar o CSV no Terminal:
 
