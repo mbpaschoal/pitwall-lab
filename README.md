@@ -6,7 +6,116 @@ Portfólio de ciência de dados sobre Fórmula 1, construído passo a passo para
 
 No futuro: criar um dashboard que estime a probabilidade de cada piloto terminar uma corrida no pódio.
 
-**Etapa atual:** obter os resultados do GP de São Paulo de 2024 pela API gratuita Jolpica-F1 e salvar um CSV verificável. Não há modelo de machine learning, previsão ou dashboard nesta etapa. Uma única corrida não basta para treinar uma previsão confiável.
+**Etapa atual:** temporada completa de 2024, análise exploratória da relação entre grid e pódio e uma regra simples de referência. A coleta e os relatórios de São Paulo da primeira etapa foram preservados. Não há modelo de machine learning, previsão registrada antes da corrida ou dashboard.
+
+## Etapa 2 — temporada completa e primeira referência
+
+### Entregas e resultado principal
+
+- [Relatório completo em português](reports/temporada_2024/relatorio.md), com tabelas, gráficos, metodologia, fontes e limitações.
+- [Base de 2024](data/temporada_2024/resultados_2024.csv): **24 corridas principais e 479 registros**, incluindo abandonos, não largadas e desclassificações.
+- [Comprovante e resumo da verificação](data/temporada_2024/verificacao.json): corridas esperadas/coletadas, registros por corrida, campos ausentes, duplicações, status, pódios e hashes dos arquivos.
+- [Avaliação da regra em cada corrida](reports/temporada_2024/avaliacao_por_corrida.csv): pilotos escolhidos, pódio real, IDs e acertos, ignorando a ordem.
+- [Frequência por grid](reports/temporada_2024/frequencia_grid.csv) e [resumo calculado](reports/temporada_2024/resumo.json).
+
+A regra **escolher os pilotos do grid 1, 2 e 3** acertou, em média, **2,00 dos 3 integrantes por corrida**. Foram **48/72 pódios (66,67%)** vindos do top 3 do grid; os três integrantes corretos ocorreram em **5/24 corridas (20,83%)**. Todas as 24 corridas foram avaliáveis, sem posições 1, 2 ou 3 ausentes ou duplicadas.
+
+São Paulo foi a única corrida com **0 de 3 acertos: 1/24 (4,17%)**. Isso a torna incomum descritivamente em 2024, sem provar que esse circuito será sempre imprevisível.
+
+### Comandos para reproduzir
+
+Use a pasta do projeto e o ambiente virtual já preparado. Substitua o caminho de exemplo pelo caminho local; na máquina original, a pasta se chama `F1`.
+
+```bash
+cd "/caminho/para/pitwall-lab"
+./.venv/bin/python coletar_temporada.py
+./.venv/bin/python analisar_temporada.py
+./.venv/bin/python -m unittest discover -s tests -v
+open reports/temporada_2024/previa.html
+```
+
+Não é necessário instalar bibliotecas novas. Os gráficos são **SVG estáticos**, e a prévia é um HTML autocontido, não um dashboard. O relatório Markdown pode ser lido diretamente no GitHub.
+
+- `coletar_temporada.py`: descobre as corridas pelo calendário, consulta apenas `/2024/results/`, pagina com `limit`/`offset`, valida e monta a tabela. Reaproveita o calendário válido da etapa 1 sem alterá-lo. Nesta extração, os resultados exigiram cinco páginas da API, além do calendário reaproveitado.
+- `analisar_temporada.py`: não acessa a rede. Reconstrói a base das páginas locais e confere o CSV e o comprovante antes de gerar as tabelas e os gráficos.
+- Repetir os comandos normalmente reutiliza o cache. Não busca automaticamente correções posteriores da API.
+
+### Arquivos adicionais
+
+```text
+coletar_temporada.py
+analisar_temporada.py
+tests/test_temporada.py
+data/temporada_2024/
+├── resultados_2024.csv
+├── verificacao.json
+└── raw/
+    ├── calendario_offset_0000.json
+    ├── resultados_offset_0000.json
+    ├── resultados_offset_0100.json
+    ├── resultados_offset_0200.json
+    ├── resultados_offset_0300.json
+    └── resultados_offset_0400.json
+reports/temporada_2024/
+├── relatorio.md
+├── resumo.json
+├── frequencia_grid.csv
+├── avaliacao_por_corrida.csv
+├── frequencia_grid.svg
+├── acertos_por_corrida.svg
+├── distribuicao_acertos.svg
+└── previa.html
+```
+
+### Colunas da base de 2024
+
+| Coluna | Significado |
+| --- | --- |
+| `temporada` | Ano da temporada. |
+| `rodada` | Número da etapa descoberto no calendário. |
+| `corrida` | Nome da corrida na fonte. |
+| `data_corrida` | Data no formato ano-mês-dia, conforme a API. |
+| `circuito_id` / `circuito` | Identificador e nome do circuito. |
+| `piloto_id` / `piloto` | Identificador e nome do piloto. |
+| `equipe_id` / `equipe` | Identificador e nome da equipe naquela corrida. |
+| `posicao_largada` | Grid registrado nos resultados; zero é tratado separadamente. |
+| `posicao_final` | Posição numérica do resultado da API. |
+| `status` | Situação final, preservada na forma original. |
+| `pontos` | Pontos da corrida principal; não inclui pontos de sprints. |
+| `podio` | `1` se a posição final está entre 1 e 3; `0` nos demais casos. |
+
+A chave de cada registro é **temporada + rodada + piloto_id**. Os relacionamentos usam IDs, não nomes. O indicador de pódio é o resultado que queremos estudar, não uma informação disponível antes da corrida. Posição final, status final e pontos também não devem ser usados para escolher retrospectivamente os favoritos.
+
+### Verificação, diferenças e acesso responsável
+
+Não há campos obrigatórios ausentes nem duplicações de temporada/rodada/piloto nesta base. Todas as corridas têm exatamente três posições de pódio. **A Austrália tem 19 registros**; as demais têm 20. O comunicado da Williams explica a retirada de Sargeant após a decisão de usar seu carro para Albon. Não adicionamos uma linha fictícia nem exigimos 20 registros em toda corrida. O relatório contém a contagem de cada etapa e a fonte dessa investigação.
+
+Há um único `grid=0`, Ocon no México. A documentação original Ergast, à qual a Jolpica remete para lacunas, define zero como largada do **pit lane**. A notícia oficial da F1 confirma esse caso. Não é uma posição melhor que a pole, e sua frequência aparece separada. Não presumimos que todos os casos reais de pit lane estejam codificados como zero. As fontes estão no relatório.
+
+O coletor se identifica como `PitwallLab/0.2.0`, incluindo a versão do Python, e espaça requisições por pelo menos oito segundos. Foram conferidos os limites documentados de 4/s e 500/h; são sujeitos a mudanças e compartilhados pelo IP. Não execute várias cópias simultaneamente. HTTP 429 encerra a coleta com orientação de espera, sem repetição automática.
+
+Cada página precisa ter estrutura válida, identificadores, campos necessários, total, limite e offset coerentes antes de ser gravada. Uma corrida pode atravessar páginas: a união usa IDs e não duplica os registros. A tabela final e seu comprovante só são produzidos depois da conferência completa. **Caches parciais não são uma base completa.** Se houver falha, a execução termina com saída 1, informa o problema e preserva saídas anteriores. A análise rejeita base parcial, alterada ou sem comprovante válido.
+
+Conteúdo existente diferente não é sobrescrito. Para cache inválido, mova **somente o arquivo indicado** para backup fora do projeto e execute novamente; mantenha as demais páginas válidas. Para atualizar deliberadamente toda a fotografia da temporada, guarde um backup da pasta `data/temporada_2024` e dos relatórios antes de retirar os arquivos dos caminhos ativos. Não apague os dados de São Paulo da etapa 1. Caso os relatórios existentes sejam diferentes dos recém-calculados, também é necessário preservá-los em backup antes de regenerar.
+
+Os novos testes são sem rede e incluem paginação com corrida dividida, falha intermediária sem tabela final, totais incoerentes, campos inválidos, duplicações, três pódios, grid zero, ausência/duplicação de favoritos, acertos sem ordem, ausência de filtro por status e proteção contra sobrescrita. Os testes anteriores foram mantidos.
+
+### Prévia dos gráficos
+
+**Leitura:** barras representam frequências observadas. Os rótulos mostram numerador, denominador e porcentagem. Isso não é uma probabilidade estimada por um modelo.
+
+![Pódio por posição de grid](reports/temporada_2024/frequencia_grid.svg)
+
+![Acertos por corrida](reports/temporada_2024/acertos_por_corrida.svg)
+
+![Distribuição de acertos](reports/temporada_2024/distribuicao_acertos.svg)
+
+### Limites da referência
+
+Esta é uma avaliação **retrospectiva do grid registrado nos resultados**, não uma previsão registrada logo após a classificação. Penalidades e mudanças de grid podem ocorrer depois desse momento. Nenhum favorito foi escolhido pelo status ou resultado final.
+
+Um futuro modelo precisará superar a referência em dados não usados para ajustá-lo e em condições comparáveis de disponibilidade das informações. A média de 2,00 acertos e a taxa de 20,83% de pódios completos são referências descritivas de 2024, não metas garantidas para qualquer temporada. Não treinamos modelos nesta etapa nem atribuímos causalidade às associações observadas.
+
 
 ## Ferramentas e ambiente
 
@@ -51,7 +160,7 @@ python3 -m venv .venv
 
 Não copie um ambiente virtual entre computadores: recrie-o. Como o projeto está no Dropbox, a pasta `.venv` pode ser sincronizada pelo Dropbox; o `.gitignore` só controla o Git, não a sincronização do Dropbox.
 
-## Como a coleta funciona
+## Como funciona a coleta de São Paulo (etapa 1)
 
 1. Consulta o calendário de 2024, com `limit=100`.
 2. Procura uma única corrida cuja cidade seja São Paulo e cujo país seja Brazil. A comparação da cidade desconsidera acentos.
@@ -78,7 +187,7 @@ https://api.jolpi.ca/ergast/f1/2024/21/results/?limit=100
 
 O número `21` acima documenta a descoberta; o código não o fixa manualmente.
 
-## Arquivos
+## Arquivos da etapa 1 — preservados
 
 ```text
 F1/
@@ -103,7 +212,7 @@ F1/
 
 JSON é o formato estruturado retornado pela API. Guardá-lo permite conferir de onde saiu cada valor do CSV. CSV é uma tabela em texto que pode ser aberta em planilhas ou lida por Python. Os arquivos públicos de dados não estão excluídos pelo `.gitignore`.
 
-## Colunas do CSV
+## Colunas do CSV de São Paulo
 
 | Coluna | Significado | Campo de origem |
 | --- | --- | --- |

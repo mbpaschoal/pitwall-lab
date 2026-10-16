@@ -1,0 +1,187 @@
+{
+  "completa": true,
+  "temporada": "2024",
+  "corridas_esperadas": 24,
+  "corridas_coletadas": 24,
+  "registros": 479,
+  "registros_por_corrida": [
+    {
+      "rodada": "1",
+      "corrida": "Bahrain Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "2",
+      "corrida": "Saudi Arabian Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "3",
+      "corrida": "Australian Grand Prix",
+      "registros": 19,
+      "podios": 3
+    },
+    {
+      "rodada": "4",
+      "corrida": "Japanese Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "5",
+      "corrida": "Chinese Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "6",
+      "corrida": "Miami Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "7",
+      "corrida": "Emilia Romagna Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "8",
+      "corrida": "Monaco Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "9",
+      "corrida": "Canadian Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "10",
+      "corrida": "Spanish Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "11",
+      "corrida": "Austrian Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "12",
+      "corrida": "British Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "13",
+      "corrida": "Hungarian Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "14",
+      "corrida": "Belgian Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "15",
+      "corrida": "Dutch Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "16",
+      "corrida": "Italian Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "17",
+      "corrida": "Azerbaijan Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "18",
+      "corrida": "Singapore Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "19",
+      "corrida": "United States Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "20",
+      "corrida": "Mexico City Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "21",
+      "corrida": "São Paulo Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "22",
+      "corrida": "Las Vegas Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "23",
+      "corrida": "Qatar Grand Prix",
+      "registros": 20,
+      "podios": 3
+    },
+    {
+      "rodada": "24",
+      "corrida": "Abu Dhabi Grand Prix",
+      "registros": 20,
+      "podios": 3
+    }
+  ],
+  "campos_ausentes": {
+    "temporada": 0,
+    "rodada": 0,
+    "corrida": 0,
+    "data_corrida": 0,
+    "circuito_id": 0,
+    "circuito": 0,
+    "piloto_id": 0,
+    "piloto": 0,
+    "equipe_id": 0,
+    "equipe": 0,
+    "posicao_largada": 0,
+    "posicao_final": 0,
+    "status": 0,
+    "pontos": 0,
+    "podio": 0
+  },
+  "duplicacoes_temporada_rodada_piloto": 0,
+  "distribuicao_status": {
+    "Did not start": 3,
+    "Disqualified": 2,
+    "Finished": 287,
+    "Lapped": 138,
+    "Retired": 49
+  },
+  "csv_sha256": "430bbf311eba4a63d31d8d0a99fd5f18633d72564c90933cca252860fe77f601",
+  "paginas_sha256": {
+    "calendario_offset_0000.json": "16ede12f875c4b6be9da5534131947a635a50e8eb371ad490bd1f7bf0c676bba",
+    "resultados_offset_0000.json": "fba9af8aef4ac7bb6b2fa4d45e5136e11950a463ec4faa114840f3c055edb81d",
+    "resultados_offset_0100.json": "0ee83afde9842e01cffe4b5f5f4740a22143470ed45ca2c361922d13f8e90b6f",
+    "resultados_offset_0200.json": "f5334be83a8858556f796ad4a49068b2286b48177a51be2600c875dd79d5bc52",
+    "resultados_offset_0300.json": "44bce2c02c18e1118dc0249682a5837880d2895996a1f5f09930429061ac83bf",
+    "resultados_offset_0400.json": "d0abfa6dfc9eeeb8a7a8960500dbebef1f70b869aacdb0212e02c24727e61c58"
+  }
+}
