@@ -191,6 +191,13 @@ class TestTemporada(unittest.TestCase):
                     coleta.coletar()
             self.assertEqual(antes, {p.relative_to(pasta): p.read_bytes() for p in pasta.rglob('*') if p.is_file()})
 
+    def test_relatorio_distingue_referencia_retrospectiva_de_previsao_pos_classificacao(self):
+        texto = (RAIZ / 'reports/temporada_2024/relatorio.md').read_text(encoding='utf-8')
+        for trecho in ['### Referência retrospectiva versus previsão após a classificação',
+                       'instante de corte', 'recalcular a regra simples',
+                       'não são uma medição de previsões pós-classificação']:
+            self.assertTrue(trecho in texto, 'Falta explicitar no relatório: ' + trecho)
+
     def test_relatorio_reproduzivel_sem_rede(self):
         self.modulo()
         analise = importlib.import_module('analisar_temporada')

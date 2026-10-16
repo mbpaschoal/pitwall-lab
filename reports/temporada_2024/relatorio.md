@@ -136,6 +136,25 @@ A documentação Jolpica descreve `grid` e remete à documentação Ergast para 
 
 Escolhemos os pilotos unicamente pelo grid registrado, inclusive se depois abandonaram, não largaram ou foram desclassificados. Comparamos identificadores de pilotos como conjuntos: a ordem de chegada não afeta o número de acertos. Não substituímos um favorito por outro depois de observar o resultado.
 
+### Referência retrospectiva versus previsão após a classificação
+
+**A referência desta etapa não é uma previsão feita após a classificação.** Aplicamos hoje a regra ao campo `grid` presente nos registros históricos de resultados. Não temos, nesta base, uma fotografia que comprove qual grid estava disponível no momento em que uma previsão teria sido emitida.
+
+| Aspecto | Referência retrospectiva desta etapa | Futura previsão após a classificação |
+| --- | --- | --- |
+| Fonte das informações de entrada | Grid registrado no endpoint de resultados históricos. | Somente informações comprovadamente disponíveis no instante de corte, após a classificação e antes da corrida. |
+| Momento da seleção | Reconstrução histórica; não houve seleção registrada antes da prova. | Seleção ou probabilidades salvas com data e hora, antes da corrida. |
+| Penalidades e mudanças posteriores ao corte | Podem já estar incorporadas no grid consultado nos resultados. | Não podem alterar retroativamente a previsão; uma atualização exige outra versão e outro corte. |
+| O que a avaliação mede | Coincidência entre top 3 do grid histórico e pódio real. | Desempenho de uma previsão realmente emitida com as informações daquele momento. |
+
+**Instante de corte** é a data e hora que delimitam as informações permitidas. A ordem da classificação não é necessariamente o grid de largada: penalidades, trocas de componentes e outras alterações podem mudar o grid entre a classificação e a corrida. Por isso, dizer apenas “após a classificação” não define uma fotografia reproduzível das informações.
+
+Para a futura previsão, precisaremos guardar a fonte e a data/hora da coleta, o instante de corte, os dados disponíveis naquele instante e a seleção ou as probabilidades emitidas. Informação conhecida somente depois do corte não pode entrar nessa versão da previsão. Posição final, pontos, status final e pódio servem para avaliar o desfecho, nunca para escolher retrospectivamente os favoritos.
+
+Usar o grid histórico como se ele fosse a fotografia pós-classificação pode introduzir **vazamento temporal de informação**, mesmo sem usar diretamente o resultado final: a entrada pode conter mudanças que ainda não eram conhecidas no corte escolhido. Não afirmamos que toda corrida tenha esse problema nem qual seria seu efeito nos acertos; esta etapa não reconstruiu essas fotografias.
+
+**Comparação justa:** será necessário recalcular a regra simples e avaliar o modelo usando a mesma fotografia de informações e o mesmo instante de corte, em dados não utilizados no ajuste. Os números abaixo descrevem a referência retrospectiva; **não são uma medição de previsões pós-classificação**. Não podemos afirmar que a regra teria obtido os mesmos acertos se fosse aplicada naquele momento.
+
 **Média: 48 acertos / 24 corridas avaliáveis = 2.00 de 3 por corrida.** Os três integrantes corretos ocorreram em **5/24 corridas = 20,83%**.
 
 ![Acertos por corrida](acertos_por_corrida.svg)
@@ -206,7 +225,7 @@ São Paulo teve **0 de 3 acertos**. Esse nível de correspondência ocorreu em *
 
 ## 8. O que um futuro modelo tentará superar
 
-O primeiro alvo de comparação será superar a **média de 2.00 acertos de 3** e acompanhar a taxa de três integrantes corretos (**20,83%**) desta regra simples. Comparações justas exigem dados não usados para ajustar o modelo, mesma definição de pódio, mesmos participantes e o mesmo instante de disponibilidade das informações. Superar esses números nos próprios dados de treino não demonstraria capacidade de previsão. Um modelo de probabilidades também precisará avaliar calibração e erros probabilísticos, algo que esta regra de seleção não mede.
+O primeiro alvo de comparação será superar a **média de 2.00 acertos de 3** e acompanhar a taxa de três integrantes corretos (**20,83%**) desta regra simples. Comparações justas exigem dados não usados para ajustar o modelo, mesma definição de pódio, mesmos participantes e o mesmo instante de disponibilidade das informações. Esses números são contexto retrospectivo, não uma meta validada no corte pós-classificação; a referência nesse corte precisará ser recalculada. Superar esses números nos próprios dados de treino não demonstraria capacidade de previsão. Um modelo de probabilidades também precisará avaliar calibração e erros probabilísticos, algo que esta regra de seleção não mede.
 
 ## 9. Fontes e atribuição
 
