@@ -1,0 +1,8 @@
+# Versões fixadas para o experimento v1. Python 3.9.6 na execução original.
+# scikit-learn 1.6.1 mantém compatibilidade com o Python 3.9 existente.
+# Instalar somente no ambiente virtual: ./.venv/bin/python -m pip install -r requirements_modelo_v1.txt
+numpy==1.26.4
+scipy==1.13.1
+scikit-learn==1.6.1
+joblib==1.5.3
+threadpoolctl==3.6.0

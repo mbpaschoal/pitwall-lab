@@ -1,0 +1,149 @@
+{
+  "provedor_efetivo": "openai-codex",
+  "modelo_efetivo": "gpt-6-astra",
+  "sessao_revisor": "20261018_031722_614ca3",
+  "rota": "override explicito por execucao; auxiliary.review permaneceu auto; configuracao persistente nao alterada",
+  "verificacao_rota": "session_model_usage, task vazio, 20 chamadas acumuladas da sessao",
+  "implementador_e_corretor": {
+    "provedor": "openai-codex",
+    "modelo": "gpt-5.6-terra"
+  },
+  "primeira_rodada": {
+    "veredito": "reprovado",
+    "problemas": [
+      {
+        "prioridade": "P2",
+        "bloqueante": true,
+        "arquivo": "treinar_modelo_v1.py",
+        "linha": 325,
+        "titulo": "O relato de desempates informa incorretamente o impacto na fronteira do top 3",
+        "evidencia": "Duas contraprovas exclusivamente simuladas reproduziram erros em _resumo_empates. Com posições [1, 2, 2, 4], o código informa 'posicao=2:b,c; impacto_fronteira=sim', embora b e c estejam ambos selecionados e o desempate não altere os integrantes. A condição inicio < 3 <= fim inclui indevidamente grupos que terminam exatamente na terceira posição. Com [1, 2, ausente, ausente], informa 'sem_empates; impacto_fronteira=nao', embora o desempate lexicográfico entre c e d determine o terceiro selecionado; o ramo das linhas 312–313 trata cada posição ausente isoladamente. Reprodução: scratch/pitwall-stage4-independent-review.py. Os empates reais publicados de 2024 estão fora da fronteira; não encontrei alteração nas métricas atuais. O bloqueio é pelo descumprimento do requisito explícito de relatar corretamente os desempates e seu impacto.",
+        "correcao_recomendada": "Usar a condição de cruzamento efetivo inicio < 3 < fim, considerando fim exclusivo. Agrupar também as posições ausentes que compartilham a mesma prioridade no ranking, identificando explicitamente esse desempate computacional. Acrescentar regressões para empate inteiramente dentro do top 3, empate atravessando a terceira/quarta posição e múltiplas posições ausentes atravessando essa fronteira. Não alterar o protocolo, os dados ou os critérios de seleção."
+      }
+    ],
+    "verificacoes": [
+      {
+        "item": "Escopo, base e independência da revisão",
+        "resultado": "HEAD corresponde a 467fc19d74a090db73634f3db89132f6557a9f75. Foram lidos o diff do README e os arquivos pertinentes ainda não rastreados. Nenhuma aprovação da etapa 3 foi utilizada como aprovação desta etapa.",
+        "evidencia": "git status --short; git branch --show-current; git rev-parse HEAD; git diff -- README.md; AGENTS.md; especificação integral; documentação e implementação da etapa 4."
+      },
+      {
+        "item": "Anterioridade do plano e existência das entregas antes da revisão",
+        "resultado": "O SHA-256 do plano atual coincide com o registro anterior ao treinamento e com os metadados: d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569. O registro de 18/10/2026 às 05:44:19 UTC informa que o artefato ainda não existia. Implementação, documentação e artefatos antecedem o início registrado desta revisão, às 06:17:21 UTC; logs anteriores contêm duas execuções reais e comparação de bytes.",
+        "evidencia": "scratch/pitwall-stage4-plan-before-training.json; scratch/pitwall-stage4-numeric-fix.jsonl, registros 39 e 41; scratch/pitwall-stage4-review-chronology.py; models/modelo_v1/metadados.json."
+      },
+      {
+        "item": "Elegibilidade, alvos e isolamento temporal",
+        "resultado": "A elegibilidade depende da presença na classificação e da referência temporal, não de status, pontos ou resultado_ausente. O ajuste utiliza 1.319 linhas elegíveis e rotuladas de 2021–2023. Alvos desconhecidos permanecem distintos de zero. Os testes confirmam que mudanças nos alvos/auditoria não alteram previsões ou favoritos e que mudanças na validação não alteram parâmetros ajustados.",
+        "evidencia": "treinar_modelo_v1.py:245–293 e 333–383; tests/test_modelo_v1.py; conferência independente das 1.320 linhas de cobertura do treino."
+      },
+      {
+        "item": "Pipeline e parâmetros aprendidos",
+        "resultado": "Um ajuste independente, construído sem usar a função ajustar do produtor, reproduziu exatamente medianas, médias, escalas, variâncias, coeficientes, intercepto e classes do pipeline salvo. Confirmados SimpleImputer mediana, StandardScaler e LogisticRegression C=1, L2, lbfgs, random_state=42, sem balanceamento ou calibração aprendida. A seleção utiliza a whitelist explícita.",
+        "evidencia": "scratch/pitwall-stage4-independent-review.py; models/modelo_v1/modelo.joblib; treinar_modelo_v1.py:128–156 e 259–288."
+      },
+      {
+        "item": "Aberturas reais de arquivos e proteção de 2025",
+        "resultado": "As duas execuções reais do wrapper de aceitação abriram exclusivamente data/preparado/treino.csv, validacao.csv e colunas.json como fontes de dados, sem tentativas de acesso à rede ou a dados reservados. Os bytes dessas três fontes permaneceram iguais. A contraprova independente também utilizou guardas de abertura e de escrita no projeto.",
+        "evidencia": "PYTHONDONTWRITEBYTECODE=1 ./.venv/bin/python scratch/pitwall-stage4-acceptance.py; scratch/pitwall-stage4-independent-review.py."
+      },
+      {
+        "item": "Referências, previsões e métricas",
+        "resultado": "A constante foi recalculada nas mesmas linhas do ajuste: 0.15011372251705837. As 479 previsões foram reproduzidas pelo pipeline salvo. Log loss/Brier conferidos: modelo 0.22955624759095355/0.07091793092108606; constante 0.4232520537603716/0.12771914838843695. Nos mesmos 24 GPs, distribuições de acertos 0/1/2/3: modelo 1/5/12/6; classificação 1/5/14/4. Conferidos os favoritos e acertos de cada GP. A referência B não recebe probabilidades e não usa o grid retrospectivo.",
+        "evidencia": "Oráculo scratch/pitwall-stage4-oracle.py inspecionado e executado, sem importar o produtor; conferência adicional em scratch/pitwall-stage4-independent-review.py; metricas.json, previsoes_validacao.csv e avaliacao_corridas.csv."
+      },
+      {
+        "item": "Cobertura parcial e denominadores",
+        "resultado": "As métricas probabilísticas utilizam linhas elegíveis com alvo conhecido; rankings exigem cobertura completa do GP e exatamente três positivos. GPs não avaliáveis recebem acertos indefinidos, não zero artificial. Cobertura e motivos constam dos artefatos.",
+        "evidencia": "treinar_modelo_v1.py:403–465; test_gp_parcial_nao_recebe_zero_falso_e_destino_divergente_preserva_tudo; reports/modelo_v1/relatorio.md."
+      },
+      {
+        "item": "Calibração e geometria do SVG",
+        "resultado": "Recalculadas as dez faixas de cada método, suas contagens, médias previstas e frequências observadas. Os 11 pontos do SVG usam efetivamente a média prevista no eixo x e a frequência no eixo y, sem deslocamento por método. Conferidas as 20 barras e suas alturas; faixas vazias não geram pontos.",
+        "evidencia": "scratch/pitwall-stage4-oracle.py; scratch/pitwall-stage4-independent-review.py; reports/modelo_v1/calibracao.csv e calibracao.svg; tests/test_calibracao_svg.py."
+      },
+      {
+        "item": "Reprodutibilidade, ambiente e avisos",
+        "resultado": "Duas execuções de aceitação produziram dez artefatos idênticos. Uma terceira reprodução em scratch coincidiu byte a byte com os dez artefatos entregues, distribuídos entre models e reports. Confirmados NumPy 1.26.4, scikit-learn 1.6.1 e SciPy 1.13.1; pip check não encontrou dependências quebradas. O ajuste independente e a reprodução com avisos tratados como erros terminaram sem avisos. O código transforma RuntimeWarning em erro no ajuste/previsão e ConvergenceWarning em erro no ajuste.",
+        "evidencia": "Wrappers de aceitação e revisão independente; ./.venv/bin/python -m pip check; requirements_modelo_v1.txt; treinar_modelo_v1.py:285–288 e 367–369."
+      },
+      {
+        "item": "Documentação e preservação",
+        "resultado": "README, contexto e relatório descrevem avaliação retrospectiva, validação já explorada, ausência de garantia para 2025, coeficientes sem causalidade e probabilidades sem soma obrigatória igual a três. Há instrução de uso do pipeline local sem fit e advertência sobre joblib. Nenhum arquivo do projeto foi editado; o status Git final permaneceu igual ao inicial.",
+        "evidencia": "README.md; projects/Pitwall Lab.md; reports/modelo_v1/relatorio.md; teste de preservação de destinos divergentes; git status --short e git diff --name-only ao final."
+      }
+    ],
+    "testes": {
+      "quantidade": 95,
+      "falhas": 0,
+      "comando": "PYTHONDONTWRITEBYTECODE=1 ./.venv/bin/python scratch/pitwall-stage4-tests-guarded.py"
+    },
+    "limitacoes": [
+      "Os 95 testes existentes passaram, mas não detectam os dois casos de relato de desempates identificados pelas contraprovas adicionais.",
+      "Nenhum dado real de 2025 ou arquivo misto proibido foi aberto, nem para hash ou integridade; esta revisão não certifica desempenho em 2025.",
+      "A anterioridade histórica é sustentada por registros locais, logs e timestamps, não por um registro imutável externo. A afirmação documental de 95 testes antes da revisão foi confirmada por nova execução nesta revisão, não por um log anterior completo dessa suíte.",
+      "Não reinstalei NumPy 2.0.2 para repetir o problema antigo. Verifiquei o registro da falha simulada anterior e o funcionamento atual com 1.26.4, sem atribuir causa interna ao BLAS.",
+      "Scripts adicionais de verificação foram criados somente em scratch. Não houve alterações de configuração, commits, remotos ou arquivos do projeto."
+    ],
+    "arquivos_alterados": []
+  },
+  "segunda_rodada": {
+    "veredito": "aprovado",
+    "problemas": [],
+    "verificacoes": [
+      {
+        "item": "Conclusão complementar à revisão anterior",
+        "resultado": "Esta revisão complementa o parecer completo anterior da etapa 4. O único P2 bloqueante foi corrigido e suas contraprovas passaram. Não foram encontrados problemas remanescentes no escopo revisado.",
+        "evidencia": "scratch/pitwall-stage4-review-verdict.json; treinar_modelo_v1.py:306–336; execuções independentes desta revisão."
+      },
+      {
+        "item": "Três cenários da reprodução original",
+        "resultado": "Com [1,2,2,4], o texto agora é 'posicao=2:b,c; impacto_fronteira=nao'. Com [1,2,3,3], permanece 'posicao=3:c,d; impacto_fronteira=sim'. Com [1,2,ausente,ausente], agora é 'posicao=ausente:c,d; impacto_fronteira=sim'. Nos três cenários simulados, os selecionados continuam a,b,c.",
+        "evidencia": "Reexecução de scratch/pitwall-stage4-independent-review.py."
+      },
+      {
+        "item": "Regressões novas e reprodução RED/GREEN",
+        "resultado": "As cinco regressões passaram no código atual, incluindo ausentes fora do top 3 e invariância ao alterar alvos/auditoria. Reconstruí em memória a função anterior, conferindo o hash do script anterior completo, e executei os mesmos testes: cinco executados, três falhas e zero erros. Restaurada a função atual em memória: cinco executados, zero falhas e zero erros.",
+        "evidencia": "tests/test_desempates_modelo_v1.py; scratch/pitwall-stage4-r2-scope-probe.py. Nenhum código anterior foi gravado no projeto."
+      },
+      {
+        "item": "Escopo das alterações",
+        "resultado": "Entre os arquivos registrados no manifesto anterior, somente treinar_modelo_v1.py e projects/Pitwall Lab.md mudaram. Reverter exclusivamente as alterações de _resumo_empates em memória reproduziu o hash anterior do script inteiro. Reverter a contagem de 100 para 95 reproduziu o hash anterior do contexto. Não houve mudança adicional na implementação, nas regras de seleção ou nos hiperparâmetros.",
+        "evidencia": "Comparação com scratch/pitwall-stage4-before-review-files.json pelo script scratch/pitwall-stage4-r2-scope-probe.py; leitura do novo tests/test_desempates_modelo_v1.py."
+      },
+      {
+        "item": "Preservação do plano e dos artefatos",
+        "resultado": "Os dez artefatos v1 mantêm os hashes anteriores. O plano mantém SHA-256 d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569. Uma reprodução com o código corrigido, em scratch, gerou os mesmos dez artefatos byte a byte.",
+        "evidencia": "scratch/pitwall-stage4-r2-scope-probe.py; scratch/pitwall-stage4-independent-review.py; docs/experimento_modelo_v1.md; models/modelo_v1/ e reports/modelo_v1/."
+      },
+      {
+        "item": "Pipeline, previsões, métricas e gráfico",
+        "resultado": "O ajuste independente voltou a reproduzir exatamente os parâmetros do pipeline salvo. Conferidas novamente as 479 previsões, a cobertura das 1.320 linhas de treino, os favoritos e acertos dos 24 GPs, as métricas probabilísticas e de ranking e as faixas de calibração. Também foram conferidos os 11 pontos e as 20 barras do SVG. Não houve mudança nos resultados de 2024 nem avisos na reprodução independente.",
+        "evidencia": "Reexecuções de scratch/pitwall-stage4-independent-review.py e scratch/pitwall-stage4-oracle.py, ambos previamente inspecionados."
+      },
+      {
+        "item": "Fontes permitidas e reprodução protegida",
+        "resultado": "Duas execuções reais sob guarda abriram somente treino.csv, validacao.csv e colunas.json como fontes de dados. Não houve tentativa de acesso a dados reservados ou à rede. Os bytes das fontes permaneceram iguais e as duas execuções produziram artefatos idênticos.",
+        "evidencia": "PYTHONDONTWRITEBYTECODE=1 ./.venv/bin/python scratch/pitwall-stage4-acceptance.py."
+      },
+      {
+        "item": "Suíte completa e preservação do projeto",
+        "resultado": "A suíte protegida executou 100 testes, com zero falhas e zero erros. A contagem documentada está correta. Nenhum arquivo do projeto foi alterado por esta revisão; o status Git permaneceu igual entre início e fim e HEAD continua em 467fc19d74a090db73634f3db89132f6557a9f75.",
+        "evidencia": "scratch/pitwall-stage4-tests-guarded.py; projects/Pitwall Lab.md:22; git status --short; git rev-parse HEAD."
+      }
+    ],
+    "testes": {
+      "quantidade": 100,
+      "falhas": 0,
+      "comando": "PYTHONDONTWRITEBYTECODE=1 ./.venv/bin/python scratch/pitwall-stage4-tests-guarded.py"
+    },
+    "limitacoes": [
+      "A aprovação é da etapa 4 em conjunto com a revisão anterior completa; não certifica desempenho ou generalização para 2025.",
+      "Nenhum dado real de 2025 ou base mista proibida foi aberto, inclusive para hashes. Os casos de 2025 presentes nos testes históricos são simulados em diretórios temporários.",
+      "Permanecem as limitações metodológicas já documentadas: validação de 2024 previamente explorada, fontes retrospectivas e ausência de comprovação imutável da disponibilidade histórica dos dados.",
+      "O script adicional desta revisão foi criado somente em scratch. Não houve alterações de configurações, Git, commits, remotos ou arquivos do projeto."
+    ],
+    "arquivos_alterados": []
+  },
+  "nota": "Referencias scratch sao evidencias internas de execucao, nao caminhos de scripts distribuidos no repositorio. Reproducao publica: treinar_modelo_v1.py e testes versionados."
+}

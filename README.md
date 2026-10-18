@@ -6,7 +6,74 @@ Portfólio de ciência de dados sobre Fórmula 1, construído passo a passo para
 
 No futuro: criar um dashboard que estime a probabilidade de cada piloto terminar uma corrida no pódio.
 
-**Etapa atual:** preparar uma base histórica de 2021–2025, com variáveis anteriores à corrida e divisão cronológica, sem treinar modelos. As coletas, dados e relatórios das etapas 1 e 2 foram preservados. Não há modelo de machine learning, previsão registrada antes da corrida ou dashboard.
+**Etapa atual:** a etapa 4 treinou e avaliou localmente o modelo v1 de probabilidade individual de pódio. O treino usa 2021–2023 e a validação usa 2024; 2025 continua reservado, não foi aberto nem avaliado. As seções das etapas 1–3 abaixo são histórico preservado, não descrição do estado atual.
+
+## Etapa 4 — modelo v1, sem abrir 2025
+
+### Como reproduzir
+
+Com as dependências já instaladas no ambiente virtual:
+
+```bash
+./.venv/bin/python treinar_modelo_v1.py
+./.venv/bin/python -m unittest discover -s tests -v
+```
+
+Em outra máquina, instale antes as versões fixadas:
+
+```bash
+./.venv/bin/python -m pip install -r requirements_modelo_v1.txt
+```
+
+O treinamento lê exclusivamente `data/preparado/treino.csv`, `validacao.csv` e `colunas.json`. A seleção é uma lista fixa de 15 entradas do [plano do experimento](docs/experimento_modelo_v1.md); chaves, identificação, `podio` e auditoria são recusados como entrada. O plano existia antes do ajuste; seu SHA-256 é `d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569`.
+
+### Resultado em 2024
+
+- Cobertura: 479 linhas, 24 GPs, todas elegíveis e com alvo conhecido; os 24 GPs atenderam às regras comuns de ranking.
+- Modelo logístico: log loss **0,2296** e Brier **0,0709**. Referência constante do treino: **0,4233** e **0,1277**, respectivamente. Menor é melhor.
+- Ranking top 3: modelo com média de **1,96** integrantes corretos e **6/24 (25,00%)** de GPs com os três integrantes; referência de classificação com **1,88** e **4/24 (16,67%)**.
+- A única linha inelegível de treino foi `mick_schumacher`, Mônaco 2021, por `classificacao_ausente`. A validação teve 0 alvos desconhecidos e 8 linhas com classificação ambígua; os detalhes estão nos CSVs de cobertura e previsões.
+
+Estes são resultados retrospectivos na validação já explorada de 2024, não previsão registrada antes das corridas nem evidência de generalização para 2025. As probabilidades por piloto não foram forçadas a somar três em cada GP.
+
+### Entregas
+
+- [Revisão independente e correções](reports/modelo_v1/revisao_independente.md), com [os dois pareceres completos](reports/modelo_v1/revisao_independente.json): aprovação final por `openai-codex/gpt-6-astra`, rota efetiva conferida e **100 testes aprovados**. Implementação e correções por `openai-codex/gpt-5.6-terra`; 2025 permaneceu fechado.
+- [Relatório e limitações](reports/modelo_v1/relatorio.md), [métricas estruturadas](reports/modelo_v1/metricas.json), [previsões da validação](reports/modelo_v1/previsoes_validacao.csv) e [avaliação por corrida](reports/modelo_v1/avaliacao_corridas.csv).
+- [Calibração por dez faixas](reports/modelo_v1/calibracao.csv) e [gráfico SVG](reports/modelo_v1/calibracao.svg).
+- [Coeficientes padronizados](reports/modelo_v1/coeficientes.csv), [cobertura do treino](reports/modelo_v1/cobertura_treino.csv), [metadados e hashes](models/modelo_v1/metadados.json) e `models/modelo_v1/modelo.joblib`.
+
+O joblib foi produzido localmente e não deve ser carregado quando vier de terceiros. Duas execuções consecutivas produziram bytes idênticos para os dez artefatos. Saídas existentes diferentes são preservadas, sem sobrescrita automática.
+
+### Usar o pipeline salvo sem treinar novamente
+
+Na pasta do projeto, com as mesmas versões instaladas, o exemplo abaixo reaplica o pipeline **somente à validação de 2024** e mostra as cinco primeiras probabilidades. Não usa `.fit`, não abre 2025 e não grava arquivos:
+
+```bash
+./.venv/bin/python - <<'PY'
+import json
+from pathlib import Path
+import joblib
+from treinar_modelo_v1 import carregar_dados, prever_validacao
+
+artefato = joblib.load('models/modelo_v1/modelo.joblib')  # somente arquivo local confiável
+meta = json.loads(Path('models/modelo_v1/metadados.json').read_text())
+fontes = carregar_dados('data/preparado')
+previsoes = prever_validacao(
+    artefato['pipeline'], meta['constante_treino'],
+    fontes['validacao'], fontes['esquema'],
+)
+for linha in previsoes[:5]:
+    print(linha['corrida'], linha['piloto_id'], linha['probabilidade_modelo'])
+PY
+```
+
+O pipeline guarda as medianas, escalas e coeficientes aprendidos no treino. A função de previsão seleciona apenas as entradas autorizadas; o alvo não é fornecido ao classificador. Reproduzir em outra plataforma pode alterar os últimos dígitos numéricos: as versões e o Python da execução estão em `metadados.json`.
+
+
+### Correção de compatibilidade numérica
+
+O experimento usa `numpy==1.26.4`. Com a fotografia anterior `numpy==2.0.2`, uma contraprova simulada de multiplicação matricial emitia `RuntimeWarning`, embora entradas e saída fossem finitas. A contraprova equivalente com 1.26.4 não emitiu avisos; as duas execuções reais também não. Isso identifica uma incompatibilidade observada da pilha anterior nesta máquina, sem atribuir causa interna específica ao BLAS. O código agora transforma `RuntimeWarning` em erro durante ajuste e previsão, sem suprimi-los.
 
 ## Etapa 3 — base histórica sem treinamento
 
