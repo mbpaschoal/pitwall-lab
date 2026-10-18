@@ -1,0 +1,75 @@
+{
+  "provedor_efetivo_verificado_pelo_orquestrador": "openai-codex",
+  "modelo_efetivo_verificado_pelo_orquestrador": "gpt-6-astra",
+  "sessao_revisao": "20261018_040318_30a6a5",
+  "confirmacao": "session_model_usage, task principal vazio,13 chamadas",
+  "implementador": {
+    "provedor": "openai-codex",
+    "modelo": "gpt-5.6-terra",
+    "sessao": "20261018_034603_2c67cc"
+  },
+  "parecer_original": {
+    "veredito": "aprovado",
+    "problemas": [],
+    "verificacoes": [
+      {
+        "item": "Plano congelado e evidências anteriores à abertura",
+        "resultado": "O plano atual corresponde ao SHA-256 7b67a47d1136dc02bc24236dfbf6acb8e9e4e646a6d9cb68cba09a4fc6da8983. O snapshot registra 2026-10-18T06:46:20.571521Z, anterior à abertura registrada em 2026-10-18T07:00:01.797704Z. Os logs anteriores contêm 100 testes de baseline e 109 após a implementação, sem falhas. Os hashes dos onze artefatos publicados coincidem com os dois diretórios temporários da execução original.",
+        "evidencia": "docs/avaliacao_final_v1.md:6-30; scratch/pitwall-stage5-plan-before-test.json:2-6; scratch/pitwall-stage5-first-acceptance.json:9-38; scratch/pitwall-stage5-post-implementation-tests.log:102-107. Conferência executada por pitwall-stage5-independent-review.py."
+      },
+      {
+        "item": "Integridade antes da leitura do teste e ausência de novo ajuste",
+        "resultado": "Duas reproduções adicionais em scratch registraram zero chamadas de ajuste, nenhuma tentativa de rede ou fonte proibida, 479 previsões por execução, 16 arquivos congelados preservados e dois objetos joblib inalterados em memória. A constante permaneceu 0.15011372251705837. A verificação de hashes, esquema e parâmetros precede a abertura do teste.",
+        "evidencia": "avaliar_modelo_v1.py:189-250 e 454-469; execução de ./.venv/bin/python -B scratch/pitwall-stage5-independent-review.py; resultado em scratch/pitwall-stage5-review-acceptance.json."
+      },
+      {
+        "item": "Validação e separação entre previsão e avaliação",
+        "resultado": "Contraprovas próprias confirmaram rejeição de anos e divisão incorretos, rodada inválida, chave vazia ou duplicada, NaN textual, infinito, booleano inválido e seleção de alvo/auditoria como entrada. Um alvo inválido não impediu a previsão, mas provocou erro na extração para avaliação. A projeção pré-corrida não acessou alvo nem auditoria; o CSV de previsões não contém essas colunas.",
+        "evidencia": "avaliar_modelo_v1.py:62-140, 283-301 e 463-475; tests/test_avaliacao_final_v1.py:105-116 e 279-306; contraprovas em scratch/pitwall-stage5-independent-review.py."
+      },
+      {
+        "item": "Probabilidades reconstruídas diretamente dos parâmetros congelados",
+        "resultado": "Uma implementação própria, sem fit e sem predict_proba, aplicou medianas, médias, escalas, coeficientes e intercepto salvos. A maior diferença absoluta em relação às probabilidades publicadas foi 3.3306690738754696e-16. Não houve leitura de treino ou validação nessa conferência.",
+        "evidencia": "models/modelo_v1/metadados.json; reports/avaliacao_final_v1/previsoes_pre_corrida.csv; execução de pitwall-stage5-independent-review.py. O oráculo fornecido também foi inspecionado e executado separadamente, sem divergências."
+      },
+      {
+        "item": "Métricas, cobertura, rankings e calibração",
+        "resultado": "Recálculo próprio confirmou 480 participantes, 479 elegíveis, 478 linhas probabilísticas e 22 GPs avaliáveis entre 24. Modelo: log loss 0.20328013885785817 e Brier 0.05851843821426685. Constante: log loss 0.4237972406309057 e Brier 0.12793920072881457. Todos os ranks individuais, favoritos, acertos por GP, distribuições e vinte linhas de calibração coincidiram. As rodadas 9 e 21 ficaram excluídas do ranking, com acertos vazios, não zero.",
+        "evidencia": "Execução de ./.venv/bin/python -B scratch/pitwall-stage5-review-metrics.py; reports/avaliacao_final_v1/metricas.json, avaliacao_corridas.csv, cobertura_gps.csv, cobertura_pilotos.csv, avaliacao_por_piloto.csv e calibracao.csv."
+      },
+      {
+        "item": "Desempates, alvos desconhecidos e denominadores vazios",
+        "resultado": "Contraprovas confirmaram desempate lexicográfico, posições ausentes com a mesma prioridade e identificação correta de grupos que atravessam a fronteira i < 3 < j. Coortes inteiramente inelegíveis ou com alvos desconhecidos produziram métricas indefinidas, sem zeros artificiais. A suíte confirmou invariância das probabilidades e favoritos à alteração dos alvos e da auditoria.",
+        "evidencia": "treinar_modelo_v1.py:306-366 e 409-470; tests/test_avaliacao_final_v1.py:176-203 e 279-331; pitwall-stage5-independent-review.py."
+      },
+      {
+        "item": "Gráfico e comparação descritiva",
+        "resultado": "Os onze pontos não vazios do SVG tiveram geometria conferida: x corresponde à média prevista e y à frequência observada, sem deslocamento por método; o título visível indica 2025. A comparação preserva exatamente as métricas publicadas de 2024 e explicita denominadores diferentes. Nos GPs avaliáveis, houve três vitórias, duas derrotas e dezessete empates do modelo contra a classificação, todos preservados na avaliação por corrida. O empate agregado em pódios completos está explícito no README.",
+        "evidencia": "avaliar_modelo_v1.py:311-334; treinar_modelo_v1.py:532-538; README.md:24-43; reports/avaliacao_final_v1/calibracao.svg e comparacao_2024.json; scripts próprios de conferência."
+      },
+      {
+        "item": "Manifesto, reprodução e proteção da publicação",
+        "resultado": "Os onze artefatos das duas novas execuções coincidiram byte a byte com os publicados. Foram conferidos os nove hashes de entrada e dez hashes de saída do manifesto, sem autorreferência. A suíte confirmou recusa de destino divergente sem sobrescrita. Uma falha de escrita injetada em scratch confirmou ausência de diretório final parcial e limpeza da área temporária.",
+        "evidencia": "avaliar_modelo_v1.py:416-451 e 487-510; tests/test_avaliacao_final_v1.py:222-277; reports/avaliacao_final_v1/manifesto.json; pitwall-stage5-independent-review.py."
+      },
+      {
+        "item": "Preservação do projeto e comunicação do estado final",
+        "resultado": "Os 16 arquivos do snapshot anterior à revisão permaneceram iguais. Quinze arquivos congelados do modelo, relatórios anteriores, treinador, dependências e plano original foram comparados byte a byte com o commit baseline e permaneceram iguais. HEAD e estado Git foram preservados. README e contexto identificam 2025 como avaliado para v1, não mais intocado, e distinguem os registros históricos, inclusive a revisão preexistente da etapa 4.",
+        "evidencia": "git rev-parse HEAD: 9a3b7b832334888af799e981cd173f26339c28d2; git status --short antes/depois; comparação por git show no script pitwall-stage5-review-metrics.py; README.md:9-56; projects/Pitwall Lab.md:14-27 e 42-51."
+      }
+    ],
+    "testes": {
+      "quantidade": 109,
+      "falhas": 0,
+      "comando": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=scratch ./.venv/bin/python -B scratch/pitwall-stage4-tests-guarded.py"
+    },
+    "limitacoes": [
+      "A identidade efetiva do modelo/provedor desta revisão não foi atestada por consulta ao banco nesta execução. Nenhuma identidade foi inferida da autodescrição ou da revisão antiga.",
+      "Os registros históricos e seus artefatos são consistentes entre si, mas não constituem prova independente de inexistência de qualquer acesso anterior fora das execuções registradas. As duas reproduções adicionais foram observadas diretamente sob guarda.",
+      "A conferência não reaudita a construção das janelas históricas nem comprova disponibilidade dos dados no corte original; mantém as limitações retrospectivas documentadas.",
+      "A aprovação refere-se à implementação e aos artefatos locais revisados. Não houve commit, push ou publicação; somente scripts, logs e saídas de conferência foram criados em scratch."
+    ],
+    "arquivos_alterados": []
+  },
+  "nota": "O proprio revisor nao consultou a identidade no banco; o orquestrador confirmou-a apos o parecer. Referencias scratch sao evidencias internas, nao scripts distribuidos."
+}

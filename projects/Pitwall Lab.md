@@ -11,7 +11,21 @@ Aprender ciência de dados com Fórmula 1 e, futuramente, estimar probabilidades
 
 ## Estado documentado
 
-O [README](../README.md) registra a etapa 4 concluída: um primeiro modelo logístico de probabilidade individual de pódio foi treinado somente com 2021–2023 e avaliado retrospectivamente em 2024. Não é previsão emitida antes de corrida, não há dashboard e 2025 permanece teste final reservado. Este registro deriva de execução local offline; não executou coletores nem revalidou a base histórica.
+O [README](../README.md) registra a etapa 5: avaliação final retrospectiva do modelo v1 **congelado**, sem novo ajuste, em 2025. **2025 passou de reservado a avaliado para esta versão e não poderá ser tratado como intocado em experimentos posteriores.** Não houve dashboard, coletores, nova consulta à Jolpica ou regeneração da base histórica.
+
+## Avaliação final congelada — etapa 5, 2026-10-18
+
+- O [plano final](../docs/avaliacao_final_v1.md) foi registrado antes de abrir o teste. SHA-256: `7b67a47d1136dc02bc24236dfbf6acb8e9e4e646a6d9cb68cba09a4fc6da8983`. Modelo, metadados, plano v1 e treinador mantiveram seus bytes.
+- O script `avaliar_modelo_v1.py` usa exclusivamente teste e esquema como fontes de dados; faz inferência com o pipeline local salvo, sem `fit`, `fit_transform`, `partial_fit`, recalibração ou escolhas orientadas pelo teste.
+- 480 registros de piloto por GP preparados; 479 receberam previsão; 478 elegíveis com alvo conhecido entraram nas métricas probabilísticas. Os rankings compartilham **22 dos 24 GPs**, sem atribuir zero aos dois excluídos.
+- Espanha/rodada 9: alvo de `stroll` desconhecido, mas previsão gerada. São Paulo/rodada 21: `bortoleto` inelegível por classificação ausente na base. São fatos da fotografia preparada; não foram investigadas causas com novas consultas.
+- Modelo: log loss 0,2033 e Brier 0,0585, ante 0,4238 e 0,1279 da constante congelada. Ranking: média 2,3182 contra 2,2727 da classificação; ambos acertaram os três integrantes em 8/22 GPs (36,36%). A vantagem média é pequena; houve empate nos pódios completos.
+- As três execuções reais produziram os mesmos onze artefatos. Guardas registraram zero chamadas de ajuste e zero rede; o estado em memória de três pipelines e 16 arquivos congelados permaneceu igual. Um oráculo separado, sem retreinar nem importar o avaliador, reconstruiu probabilidades a partir dos parâmetros salvos e conferiu métricas, calibração e rankings.
+- Os 109 testes passaram antes da abertura real de 2025, incluindo dados sintéticos de teste para invariância a alvos, cobertura incompleta, períodos incorretos, ausência de ajuste e proteção contra sobrescrita.
+- [Resultados e limites](../reports/avaliacao_final_v1/relatorio.md), [métricas](../reports/avaliacao_final_v1/metricas.json), [comparação descritiva com 2024](../reports/avaliacao_final_v1/comparacao_2024.json), [cobertura por GP](../reports/avaliacao_final_v1/cobertura_gps.csv) e [manifesto](../reports/avaliacao_final_v1/manifesto.json).
+- [Revisão independente da etapa 5](../reports/revisao_final_v1.md): aprovada por `openai-codex/gpt-6-astra`, com identidade efetiva verificada no registro de uso; 109 testes sem falhas, contraprovas e duas reproduções adicionais. Implementação por `openai-codex/gpt-5.6-terra`. Nenhum bloqueio encontrado; nenhuma mudança metodológica após observar 2025.
+
+A comparação com 2024 usa temporadas e denominadores distintos; não sustenta significância estatística, causalidade ou superioridade futura. Permanecem a dependência entre participantes do mesmo GP, o pequeno número de temporadas e as revisões retrospectivas das fontes. Os registros abaixo descrevem períodos anteriores, quando 2025 ainda estava reservado.
 
 ## Execução verificada da etapa 4 — 2026-10-18
 
@@ -25,6 +39,17 @@ O [README](../README.md) registra a etapa 4 concluída: um primeiro modelo logí
 - O bloqueio numérico foi resolvido ao fixar `numpy==1.26.4`: a contraprova simulada com a fotografia anterior 2.0.2 emitia `RuntimeWarning` em multiplicação matricial; com 1.26.4 não emitiu. Isso documenta uma incompatibilidade observada nesta máquina, não uma afirmação sobre a causa interna do BLAS. O código agora converte `RuntimeWarning` em erro no ajuste e na previsão, sem ocultá-lo.
 
 Os resultados de 2024 são retrospectivos e de desenvolvimento: não provam generalização para 2025. Coeficientes e probabilidades não recebem interpretação causal; as limitações de revisões retrospectivas, pequena janela temporal e dependência entre pilotos do mesmo GP permanecem.
+
+## Revisão do Codex da etapa 4 — 2026-10-18
+
+Revisado o commit [9a3b7b8](https://github.com/mbpaschoal/pitwall-lab/commit/9a3b7b832334888af799e981cd173f26339c28d2), identificado pelo conector GitHub e correspondente ao HEAD local. Nenhum problema bloqueante encontrado no escopo do experimento v1.
+
+- Os 100 testes passaram e `pip check` não encontrou dependências quebradas.
+- Duas reproduções do experimento em pasta temporária geraram os mesmos dez artefatos publicados, byte a byte. Uma guarda de abertura de arquivos permitiu somente `treino.csv`, `validacao.csv` e `colunas.json` dentro de `data/`; a rede foi bloqueada. Não foram abertos dados reais de 2025.
+- Uma implementação de conferência separada recalculou medianas, médias e escalas das 1.319 linhas elegíveis e rotuladas de treino e as 479 probabilidades de validação a partir dos coeficientes. Log loss, Brier, rankings e contagens coincidiram com os relatórios.
+- O ranking identificou 47 integrantes de pódio contra 45 da referência de classificação nos mesmos 24 GPs. A vantagem é pequena e não foi apresentada como evidência de significância ou generalização.
+
+**Registro histórico da etapa 4, proposta agora executada na etapa 5:** congelar o experimento v1 e suas regras, definir o tratamento de cobertura/alvos desconhecidos da avaliação final antes de consultar seus resultados e então avaliar o teste reservado sem reajuste orientado por ele. Manter explícita a natureza retrospectiva. A revisão da etapa 4 não alterou código, dados ou artefatos do modelo.
 
 ## Revisão verificada da etapa 3 em 2026-10-18
 
@@ -49,9 +74,9 @@ Conclusão da revisão: nenhum problema bloqueante encontrado para encerrar a pr
 
 ## Próximas ações
 
-1. Interpretar o [relatório v1](../reports/modelo_v1/relatorio.md) junto do protocolo, sem transformar validação de 2024 em teste final.
+1. Interpretar a [avaliação final v1](../reports/avaliacao_final_v1/relatorio.md) junto da cobertura por GP, sem extrapolar os 22 GPs avaliáveis para os 24.
 2. Registrar dúvidas e hipóteses em `inbox/` e `ideas/`, com fontes.
-3. Antes de qualquer avaliação de 2025, congelar formalmente a decisão de promover ou revisar este experimento; não ajustar escolhas usando esse teste reservado.
+3. Qualquer versão futura precisa de novo plano e avaliação honesta: 2025 já foi observado e não é mais teste intocado. Não ajustar o v1 nesta tarefa.
 
 ## Fontes
 

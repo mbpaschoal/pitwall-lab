@@ -6,9 +6,55 @@ Portfólio de ciência de dados sobre Fórmula 1, construído passo a passo para
 
 No futuro: criar um dashboard que estime a probabilidade de cada piloto terminar uma corrida no pódio.
 
-**Etapa atual:** a etapa 4 treinou e avaliou localmente o modelo v1 de probabilidade individual de pódio. O treino usa 2021–2023 e a validação usa 2024; 2025 continua reservado, não foi aberto nem avaliado. As seções das etapas 1–3 abaixo são histórico preservado, não descrição do estado atual.
+**Etapa atual:** a etapa 5 avaliou retrospectivamente o **modelo v1 congelado** em 2025, sem novo ajuste. **2025 passou de reservado a avaliado para esta versão e não é mais um teste intocado para experimentos posteriores.** As seções das etapas 1–4 abaixo preservam o estado histórico de cada período.
 
-## Etapa 4 — modelo v1, sem abrir 2025
+## Etapa 5 — avaliação final retrospectiva do v1 congelado
+
+O [plano final](docs/avaliacao_final_v1.md) foi registrado antes da primeira abertura do teste. O pipeline local salvo, suas entradas e regras da etapa 4 foram mantidos. Não houve `fit`, recalibração, nova consulta à Jolpica ou regeneração de bases.
+
+### Reproduzir sem treinar
+
+```bash
+./.venv/bin/python avaliar_modelo_v1.py
+./.venv/bin/python -m unittest discover -s tests -v
+```
+
+Use as versões já fixadas em `requirements_modelo_v1.txt`. **Não execute o treinador, os coletores ou o preparador histórico para reproduzir esta etapa.** A suíte inclui exemplos simulados de ajuste do treinador antigo; a execução da avaliação final apenas transforma e prevê com o pipeline salvo. Saída existente idêntica é preservada; divergente é recusada sem sobrescrita. Para conferir em outra pasta nova: `./.venv/bin/python avaliar_modelo_v1.py --relatorios /caminho/novo/avaliacao`.
+
+### Resultados e cobertura de 2025
+
+- 480 registros de piloto por GP preparados, 479 elegíveis para previsão e **478 registros com previsão e alvo conhecido** nas métricas probabilísticas.
+- 24 GPs presentes, **22 avaliáveis em comum** nos rankings. Não extrapolar as métricas de ranking aos 24 GPs.
+- **Espanha, rodada 9:** `stroll` recebeu previsão, mas seu alvo está ausente na base. O GP ficou fora dos rankings; as linhas elegíveis com alvo conhecido continuam nas métricas probabilísticas.
+- **São Paulo, rodada 21:** `bortoleto` não tem registro de classificação na base, portanto é inelegível pela regra pré-corrida congelada. O GP ficou fora dos rankings; os outros elegíveis com alvo conhecido continuam nas métricas probabilísticas.
+- Essas são ausências observadas na fotografia preparada, não explicações causais sobre os acontecimentos das corridas. Nenhum GP excluído recebeu zero artificial. Duas linhas com classificação ambígua foram preservadas.
+
+| Probabilidades — menor é melhor | Modelo | Constante do treino |
+|---|---:|---:|
+| Log loss, 478 participantes | **0,2033** | 0,4238 |
+| Brier, 478 participantes | **0,0585** | 0,1279 |
+
+| Ranking — mesmos 22 GPs | Modelo | Referência de classificação |
+|---|---:|---:|
+| Média de integrantes corretos | **2,3182** | 2,2727 |
+| Distribuição de GPs com 0 / 1 / 2 / 3 acertos | 0 / 1 / 13 / 8 | 0 / 2 / 12 / 8 |
+| Três integrantes corretos, sem exigir ordem | 8/22 — 36,36% | 8/22 — 36,36% |
+
+O modelo teve erros probabilísticos menores que a constante e pequena vantagem na média do ranking; **empatou na quantidade de pódios completos**. A comparação com 2024 é apenas descritiva: o modelo teve log loss 0,2296, Brier 0,0709, média 1,9583 e 6/24 pódios completos naquele ano, com 479 participantes nas métricas probabilísticas e 24 GPs no ranking. São temporadas e coberturas diferentes, não uma prova de significância, causalidade ou superioridade futura. Um Brier menor não comprova isoladamente melhor calibração. As probabilidades individuais não foram forçadas a somar três por GP.
+
+### Entregas
+
+- [Parecer independente e explicação detalhada](reports/revisao_final_v1.md), [parecer estruturado](reports/revisao_final_v1.json) e [registro da primeira execução protegida](reports/verificacao_final_v1.json). Aprovação por `openai-codex/gpt-6-astra`, identidade efetiva verificada; implementação por `openai-codex/gpt-5.6-terra`; **109 testes aprovados**.
+- [Previsões pré-corrida, sem alvos](reports/avaliacao_final_v1/previsoes_pre_corrida.csv) e [avaliação por piloto, após juntar os alvos](reports/avaliacao_final_v1/avaliacao_por_piloto.csv).
+- [Cobertura por piloto](reports/avaliacao_final_v1/cobertura_pilotos.csv), [cobertura por GP](reports/avaliacao_final_v1/cobertura_gps.csv) e [avaliação por GP](reports/avaliacao_final_v1/avaliacao_corridas.csv), incluindo favoritos, exclusões e motivos.
+- [Métricas](reports/avaliacao_final_v1/metricas.json), [calibração em dez faixas](reports/avaliacao_final_v1/calibracao.csv), [gráfico](reports/avaliacao_final_v1/calibracao.svg), [comparação com 2024](reports/avaliacao_final_v1/comparacao_2024.json) e [relatório](reports/avaliacao_final_v1/relatorio.md).
+- [Manifesto de hashes](reports/avaliacao_final_v1/manifesto.json): planos, modelo, metadados, treinador, esquema, fonte, script e saídas. O próprio manifesto fica fora da lista para evitar autorreferência.
+
+Os onze artefatos da avaliação foram reproduzidos byte a byte em duas pastas temporárias e no destino final. Durante essas execuções reais, guardas registraram somente teste e esquema como fontes de dados, zero chamadas de ajuste, zero acesso à rede e preservação dos arquivos congelados e do estado dos pipelines. A natureza retrospectiva e as revisões posteriores das fontes continuam sendo limitações; isto não é uma previsão registrada antes de cada GP.
+
+## Etapa 4 — modelo v1, sem abrir 2025 — registro histórico
+
+**Estado ao concluir a etapa 4:** 2025 ainda estava reservado. Essa condição terminou na etapa 5 acima. Os comandos de treinamento abaixo documentam a etapa anterior, não a reprodução da avaliação final.
 
 ### Como reproduzir
 

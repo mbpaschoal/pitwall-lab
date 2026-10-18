@@ -1,0 +1,39 @@
+{
+  "plan_registration": {
+    "registered_before_first_test_read_utc": "2026-10-18T06:46:20.571521+00:00",
+    "plan_sha256": "7b67a47d1136dc02bc24236dfbf6acb8e9e4e646a6d9cb68cba09a4fc6da8983",
+    "model_sha256": "16718ea5c4a7f662e72f09d38b073e545df1bba5c64c87b2cc1a0973ad9116e3",
+    "metadata_sha256": "77d24dc765d773e49b717b79844dd4678a91087dbbc091e3e9cb184215ea9cc6",
+    "base_commit": "9a3b7b832334888af799e981cd173f26339c28d2"
+  },
+  "first_real_test_open_utc": "2026-10-18T07:00:01.797704+00:00",
+  "opened_sources": [
+    "data/preparado/colunas.json",
+    "data/preparado/teste_final_reservado.csv"
+  ],
+  "blocked_attempts": [],
+  "fit_calls": 0,
+  "predict_proba_calls_rows": [
+    479,
+    479,
+    479
+  ],
+  "frozen_files_unchanged": 16,
+  "in_memory_models_unchanged": 3,
+  "same_output_hashes": true,
+  "output_count": 11,
+  "output_hashes": {
+    "manifesto.json": "0cb7f9b548f0bb3cb640a263dffb91c7abba190e029eb43eef2efdb1ed63e7be",
+    "calibracao.csv": "889c125d3fbc56ede129ece087d50cc62d671196cac89a193d86769a57e4435d",
+    "metricas.json": "89661f42559ea7c0b390a84eebef2eb394d908264f1c9de9768fc0d69dce42aa",
+    "relatorio.md": "2a21b3107da72f27869dce7dc9a9ccc5ab7ff1624c343444d224937f51037fc9",
+    "comparacao_2024.json": "d9c2ca6f88a8feb2dbd4f97c40fc6d1f93cace5d66ee48e3caedba52d154a9fe",
+    "avaliacao_por_piloto.csv": "85a675b69ed3a5d87007764cf52db4905ceff5211f3448c1d02a3886c2ddfdaf",
+    "avaliacao_corridas.csv": "9108e39138724279c3eac6335e4e29543f3eebe64ab5fd6aff70fae74bc3e40b",
+    "calibracao.svg": "a46563ef44049ab5b481153c43b9edd51ab88cf738df0e8db0aae9b17c41ee0b",
+    "cobertura_gps.csv": "85c3c54f2d032badb1e75d2a754aa13cd0b18e93e24239b878973db2cdf60270",
+    "cobertura_pilotos.csv": "c2cfe10bb59fa270646d557519cb3edd5d422f95256b9ffae1cd94761224f7b0",
+    "previsoes_pre_corrida.csv": "d0c690038680896f50348e7916bb2b4dab76b8716231e6fde1576254ce49b590"
+  },
+  "escopo": "Primeira execucao registrada e duas repeticoes identicas do mesmo modelo congelado. Evidencia local de execucao, nao prova externa de ausencia universal de acessos anteriores."
+}
