@@ -11,7 +11,24 @@ Aprender ciência de dados com Fórmula 1 e, futuramente, estimar probabilidades
 
 ## Estado documentado
 
-O [README](../README.md) registra a etapa 5: avaliação final retrospectiva do modelo v1 **congelado**, sem novo ajuste, em 2025. **2025 passou de reservado a avaliado para esta versão e não poderá ser tratado como intocado em experimentos posteriores.** Não houve dashboard, coletores, nova consulta à Jolpica ou regeneração da base histórica.
+O [README](../README.md) registra a etapa 6: **dashboard local em Streamlit e Plotly**, somente leitura, para explorar os resultados já calculados de 2024 e 2025. **2025 já foi avaliado para o v1 e não é teste intocado para experimentos posteriores.** O aplicativo não carrega o modelo, não faz inferência, não treina, não consulta APIs de dados e não foi publicado.
+
+## Dashboard local — etapa 6, 2026-10-18
+
+- [Contrato de dados](../docs/contrato_dashboard_v1.md) registrado antes da interface; [68 hashes de artefatos preservados](../docs/dashboard_artefatos_preservados.json). A modificação preexistente deste contexto, incluindo a revisão do Codex da etapa 5, foi preservada.
+- `app.py` separa apresentação e gráficos de `dashboard_dados.py`, responsável por carregamento e validação. São nove CSV/JSON de resultados nas duas temporadas; não se lê `data/` ou joblib no fluxo do aplicativo.
+- Telas **Explorar um GP**, **Desempenho** e **Como funciona**. Filtro de temporada nas telas; GP aplicado somente à exploração. Probabilidades do modelo e referência de classificação são visualmente separadas dos resultados posteriores.
+- 2025 mantém 478 casos probabilísticos e 22 dos 24 GPs nos rankings. Espanha e São Paulo são N/A, com motivos; integrantes conhecidos podem ser mostrados sem pontuar o GP incompleto e sem inventar ordem.
+- A suíte completa teve 129 aprovados antes da primeira revisão forte. O Astra encontrou três P2 de validação em cópias temporárias, sem divergência nos artefatos reais. Foram corrigidos por `openai-codex/gpt-5.6-terra`, com seis regressões RED/GREEN; 26 testes de dashboard passaram depois. A suíte antiga não foi repetida porque contém testes que executam coletor com cache e modelo real sobre dados sintéticos. Aceite restrito em AppTest percorreu novamente 48 GPs e as três telas para ambas as temporadas, conferindo favoritos contra os ranks publicados e invariância aos alvos.
+- Revisão independente concluída: R1 e R2 por **`openai-codex/gpt-6-astra`**, com 10 e 12 chamadas principais efetivamente confirmadas no banco. R1 reprovou três P2; Terra corrigiu, e R2 aprovou sem remanescentes, com 26 testes de dashboard, contraprovas e três capturas reais inspecionadas. Os 19 arquivos de entrega não foram alterados pelo revisor. [Pareceres preservados](../reports/dashboard_v1/revisao_independente.json).
+- Cache por bytes, somente em memória. Testes reais de AppTest alteraram uma cópia temporária mantendo o `mtime` e removeram um arquivo: apareceram erros úteis, não dados antigos do cache. Nenhum artefato real foi modificado.
+- Inspeção real em Chromium isolado, desktop de 1440 px e viewport de 390 px: nenhum erro de página, nenhuma solicitação externa; sem transbordamento horizontal no documento mobile. [Capturas reais e evidências](../reports/dashboard_v1/verificacao.md).
+- Dependências adicionais em `requirements_dashboard.txt`, com restrições da pilha científica existente. As cinco versões científicas e os 68 hashes permaneceram iguais. Instalações apenas nos ambientes isolados, sem alteração global de pacotes.
+- A configuração dos modelos do Hermes não foi editada pela tarefa. O hash global do arquivo de configuração variou durante a sessão; não se atribui preservação byte a byte desse arquivo a todo o período nem se restaura uma possível alteração externa. A identidade efetiva dos agentes é verificada pelos registros de uso.
+
+Iniciar na raiz: `./.venv/bin/python -m streamlit run app.py`. Abrir `http://127.0.0.1:8501`; servidor limitado à própria máquina e telemetria desativada. O código poderá ser versionado no repositório privado, mas isso não constitui hospedagem ou publicação do aplicativo. Não há cenários “e se”, login, chatbot, edição de dados ou previsão ao vivo.
+
+Os registros seguintes descrevem as etapas anteriores e mantêm seu contexto histórico.
 
 ## Avaliação final congelada — etapa 5, 2026-10-18
 
@@ -26,6 +43,18 @@ O [README](../README.md) registra a etapa 5: avaliação final retrospectiva do 
 - [Revisão independente da etapa 5](../reports/revisao_final_v1.md): aprovada por `openai-codex/gpt-6-astra`, com identidade efetiva verificada no registro de uso; 109 testes sem falhas, contraprovas e duas reproduções adicionais. Implementação por `openai-codex/gpt-5.6-terra`. Nenhum bloqueio encontrado; nenhuma mudança metodológica após observar 2025.
 
 A comparação com 2024 usa temporadas e denominadores distintos; não sustenta significância estatística, causalidade ou superioridade futura. Permanecem a dependência entre participantes do mesmo GP, o pequeno número de temporadas e as revisões retrospectivas das fontes. Os registros abaixo descrevem períodos anteriores, quando 2025 ainda estava reservado.
+
+## Revisão do Codex da etapa 5 — 2026-10-18
+
+Revisado o commit [9559c33](https://github.com/mbpaschoal/pitwall-lab/commit/9559c33d331176fe2a749bb73020194d8de20cf6), identificado pelo conector GitHub e correspondente ao HEAD local. Nenhum problema bloqueante encontrado no escopo da avaliação final retrospectiva v1.
+
+- Os 109 testes passaram. O diff entre as etapas 4 e 5 preserva modelo, metadados, treinador, requisitos, plano v1 e relatórios da etapa 4.
+- Duas reproduções em pasta temporária geraram os onze artefatos publicados, byte a byte. A rede e os métodos de ajuste dos estágios do pipeline foram bloqueados; dentro de `data/`, somente teste e esquema foram lidos. Quinze arquivos anteriores conferidos permaneceram iguais durante a auditoria.
+- Uma conferência independente, sem usar `predict_proba` para reconstruir probabilidades, aplicou os parâmetros salvos às entradas de teste. Probabilidades, log loss, Brier, calibração por faixa, favoritos e rankings coincidiram com os resultados publicados.
+- Confirmados 480 registros preparados, 479 previsões e 478 casos probabilísticos; os rankings usam os mesmos 22 GPs, excluindo rodadas 9 e 21 pelos motivos de cobertura já documentados.
+- O modelo identificou 51 integrantes de pódio contra 50 da classificação e ambos acertaram os três integrantes em 8/22 GPs. A vantagem de ranking é pequena. Não há afirmação de significância estatística ou superioridade futura.
+
+**Registro histórico da etapa 5 — proposta executada na etapa 6:** construir um dashboard que apresente o estudo retrospectivo, previsões calculadas, referências, cobertura e limitações. Isso não autoriza reajustar o modelo nem voltar a tratar 2025 como teste intocado. A revisão da etapa 5 verificou consistência dos registros e hashes; não certifica externamente a cronologia histórica de todo acesso anterior aos dados. Não alterou código, dados ou artefatos da avaliação.
 
 ## Execução verificada da etapa 4 — 2026-10-18
 

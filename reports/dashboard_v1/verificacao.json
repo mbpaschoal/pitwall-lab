@@ -1,0 +1,78 @@
+{
+  "app_test": {
+    "cache_invalidates_changed_bytes_same_mtime": true,
+    "missing_file_shows_error_not_stale_data": true,
+    "gps_verified_against_published_ranks": 48,
+    "gp_views_rendered": 48,
+    "all_screens_both_years": true,
+    "outcome_invariance_verified": true,
+    "unavailable_gp_scores_remain_null": true,
+    "forbidden_attempts": [],
+    "report_sources_opened": [
+      "reports/avaliacao_final_v1/avaliacao_corridas.csv",
+      "reports/avaliacao_final_v1/avaliacao_por_piloto.csv",
+      "reports/avaliacao_final_v1/calibracao.csv",
+      "reports/avaliacao_final_v1/metricas.json",
+      "reports/avaliacao_final_v1/previsoes_pre_corrida.csv",
+      "reports/modelo_v1/avaliacao_corridas.csv",
+      "reports/modelo_v1/calibracao.csv",
+      "reports/modelo_v1/metricas.json",
+      "reports/modelo_v1/previsoes_validacao.csv"
+    ],
+    "raw_data_or_model_opened": false,
+    "external_network_attempts": 0
+  },
+  "browser": {
+    "browser_version": "140.0.7339.16",
+    "page_errors": [],
+    "external_requests_blocked": [],
+    "request_hosts": [
+      "127.0.0.1"
+    ],
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    "screenshots": [
+      "calibracao_desktop.png",
+      "como_funciona_desktop.png",
+      "desempenho_desktop.png",
+      "espanha_na_desktop.png",
+      "explorar_desktop.png",
+      "explorar_mobile.png"
+    ]
+  },
+  "tests": {
+    "baseline_antes_alteracoes": 109,
+    "suite_completa_pre_revisao": 129,
+    "dashboard_apos_correcoes": 26,
+    "suite_completa_apos_correcoes_reexecutada": false,
+    "escopo_final": "Somente testes de dashboard e aceite estrito. Suíte antiga inclui coletor com cache e modelo real sobre dados sintéticos; não foi repetida após a revisão."
+  },
+  "preserved_artifacts_sha256": 68,
+  "scientific_versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.6.1",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0"
+  },
+  "server_bind": "127.0.0.1:8501",
+  "app_published": false,
+  "screenshot_source": "Capturas reais de Chromium isolado sobre servidor Streamlit local; nao sao mockups.",
+  "correcoes_revisao": {
+    "provider_efetivo": "openai-codex",
+    "modelo_efetivo": "gpt-5.6-terra",
+    "session_id": "local-32a97f8814f15596521a1742952b4f7fdfa288578b3a2a83dbd85178cd7fe61f",
+    "chamadas_tarefa_principal": 20,
+    "tres_p2_corrigidos": [
+      "ranking_probabilidade_desempate_id",
+      "tipos_json_reais_sem_string_booleano",
+      "rotulos_calibracao_e_juncao_por_limites"
+    ],
+    "regressoes_novas": 6,
+    "red_green_registrado": true,
+    "mudanca_metodologica": false
+  }
+}

@@ -1,0 +1,19 @@
+[server]
+address = "127.0.0.1"
+headless = true
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# Configuração documentada; Streamlit pode manter controles operacionais conforme o ambiente.
+toolbarMode = "minimal"
+
+[theme]
+base = "dark"
+primaryColor = "#E64B44"
+backgroundColor = "#0D1117"
+secondaryBackgroundColor = "#171E27"
+textColor = "#EDF0F4"
+font = "sans serif"

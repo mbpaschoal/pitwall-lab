@@ -1,0 +1,203 @@
+{
+  "etapa": 6,
+  "aprovacao_final": true,
+  "rodadas": [
+    {
+      "rodada": 1,
+      "provider_efetivo": "openai-codex",
+      "modelo_efetivo": "gpt-6-astra",
+      "session_id": "local-accc3144233d6ea1bd339c1e411fb8b3f1c70211fe62ffd3af8b0821d2af961e",
+      "chamadas_tarefa_principal": 10,
+      "uso_confirmado_no_banco": true,
+      "preservacao_dos_18_arquivos_de_entrega_confirmada": true,
+      "linhas_referem_se_a_versao_pre_correcao": true,
+      "parecer": {
+        "veredito": "reprovado",
+        "problemas": [
+          {
+            "prioridade": "P2",
+            "bloqueante": true,
+            "arquivo": "dashboard_dados.py",
+            "linha": 244,
+            "titulo": "Validação aceita ranking incompatível com as probabilidades",
+            "evidencia": "Em contraprova exclusivamente em memória, alterei a probabilidade de russell, rodada 1 de 2024, para 0.9999, preservando seu rank 4. O carregador aceitou o conjunto e manteve max_verstappen, leclerc e perez como favoritos. A interface os apresenta como 'top 3 por probabilidade' em app.py:173. O validador confere unicidade, continuidade e flags dos ranks, mas não sua coerência com probabilidades e desempate por ID, exigida pelo contrato:36. Os arquivos reais não apresentam essa divergência.",
+            "correcao_recomendada": "Conferir, por GP, se o ranking publicado corresponde à probabilidade decrescente e ao desempate lexicográfico por piloto_id. Rejeitar divergências com DashboardDadosErro, sem recalcular ou substituir os rankings publicados. Acrescentar regressões para inversão e empate."
+          },
+          {
+            "prioridade": "P2",
+            "bloqueante": true,
+            "arquivo": "dashboard_dados.py",
+            "linha": 389,
+            "titulo": "Métrica JSON com tipo inválido passa na validação e derruba Desempenho",
+            "evidencia": "Em cópia temporária, converti apenas probabilisticas.modelo.log_loss para string numérica, mantendo seu valor. O carregador aceitou porque _float_finito converte uma variável local, mas devolveu o JSON original com string. Ao abrir Desempenho, AppTest registrou \"Unknown format code 'f' for object of type 'str'\" em app.py:275, sem mensagem orientada de restauração.",
+            "correcao_recomendada": "Validar explicitamente os tipos numéricos do JSON, rejeitando strings e booleanos com DashboardDadosErro antes da apresentação. Aplicar a regra a todos os campos numéricos usados pela interface e testar o comportamento pelo AppTest."
+          },
+          {
+            "prioridade": "P2",
+            "bloqueante": true,
+            "arquivo": "dashboard_dados.py",
+            "linha": 448,
+            "titulo": "Rótulos de calibração não são validados antes de serem interpretados pela interface",
+            "evidencia": "Em cópia temporária de calibracao.csv de 2025, substituí somente o primeiro campo faixa por 'invalida'. Limites e contagens permaneceram intactos. O carregador aceitou, mas Desempenho falhou em app.py:251 com \"could not convert string to float: 'nvalida'\", sem mensagem útil. A interface também pressupõe correspondência dos rótulos entre os dois métodos.",
+            "correcao_recomendada": "Validar formato, unicidade e correspondência dos rótulos com os limites e entre os métodos. Preferir ordenar e relacionar faixas pelos limites numéricos já validados, sem interpretar texto de apresentação. Rejeitar inconsistências, sem alterar o CSV."
+          }
+        ],
+        "verificacoes": [
+          {
+            "item": "Fidelidade aos artefatos reais",
+            "resultado": "Confirmados 479 casos probabilísticos e 24 GPs de ranking em 2024; 478 casos e 22 GPs de ranking em 2025. Rankings reais coerentes com probabilidades em ambas as temporadas.",
+            "evidencia": "scratch/pitwall-independent-review.json:26-58; dashboard_dados.py:362-421."
+          },
+          {
+            "item": "Separação entre probabilidades, referências e observações",
+            "resultado": "Modelo versus constante aparece na comparação probabilística; modelo versus classificação aparece no ranking. Resultados posteriores têm seção própria. Interface informa retrospectiva, função dos anos e avaliação de 2025 já realizada.",
+            "evidencia": "app.py:149-209,265-310,335-355; inspeção de desempenho_desktop.png."
+          },
+          {
+            "item": "Unknown, inelegibilidade e GPs não avaliáveis",
+            "resultado": "Espanha e São Paulo de 2025 mantêm acertos null, motivos explícitos e integrantes conhecidos sem ordem. Nenhum zero artificial observado. Alterações dos alvos em memória não modificaram favoritos.",
+            "evidencia": "scratch/pitwall-independent-review.json:33-55; pitwall-stage6-app-acceptance.json:7-9; app.py:198-209."
+          },
+          {
+            "item": "Navegação e cache",
+            "resultado": "Reexecutei o aceite: 48 GPs, três telas e duas temporadas. Alteração de bytes com mtime preservado e remoção de arquivo impediram apresentação de dados antigos.",
+            "evidencia": "Execução de pitwall-stage6-app-acceptance.py com saída 0; scratch/pitwall-stage6-app-acceptance.json:2-8."
+          },
+          {
+            "item": "Isolamento do dashboard",
+            "resultado": "Aceite abriu somente os nove relatórios autorizados. Guardas não registraram acesso a data/, modelo, rede externa ou escrita em artefatos. Auditoria própria também bloqueou importações de treinador, avaliador, sklearn e joblib.",
+            "evidencia": "pitwall-stage6-app-acceptance.json:9-22; scratch/pitwall-independent-review.json:87."
+          },
+          {
+            "item": "Preservação",
+            "resultado": "68 hashes científicos coincidem com o manifesto. Os 18 arquivos do snapshot de revisão permaneceram iguais antes e depois. HEAD continua 9559c33d331176fe2a749bb73020194d8de20cf6. Nenhuma alteração de projeto realizada.",
+            "evidencia": "docs/dashboard_artefatos_preservados.json; pitwall-independent-review.json:2-9,88-90; git rev-parse HEAD e git diff --name-only."
+          },
+          {
+            "item": "Dependências e instruções",
+            "resultado": "pip check passou. Versões adicionais e cinco versões científicas coincidem com os requisitos. README contém comandos de instalação, execução e navegação. A suíte completa documentada não é compatível com as restrições desta revisão.",
+            "evidencia": "requirements_dashboard.txt:1-6; requirements_modelo_v1.txt:4-8; README.md:13-58; testes legados indicados nas limitações."
+          },
+          {
+            "item": "Servidor e navegador reais",
+            "resultado": "Servidor existente confirmado em 127.0.0.1:8501, sem reinício. Reexecutei Playwright isolado: zero erros de página, zero solicitações externas registradas e largura mobile 390/390. Configuração limita endereço e desativa telemetria.",
+            "evidencia": "lsof -nP -iTCP:8501 -sTCP:LISTEN; .streamlit/config.toml:1-7; scratch/pitwall-stage6-browser/qa.json."
+          }
+        ],
+        "testes": {
+          "quantidade": 20,
+          "falhas": 0,
+          "comando": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=scratch ./.venv/bin/python -B scratch/pitwall-independent-review.py"
+        },
+        "inspecao_visual": {
+          "realizada": true,
+          "arquivos": [
+            "reports/dashboard_v1/desempenho_desktop.png",
+            "reports/dashboard_v1/calibracao_desktop.png",
+            "reports/dashboard_v1/explorar_mobile.png"
+          ],
+          "limitacoes": [
+            "As três imagens foram efetivamente abertas com vision_analyze. Desempenho mostra claramente 478 casos, 22 de 24 GPs e empate em pódios completos. Calibração tem legenda legível, símbolos distintos e contagens zero sem frequência artificial.",
+            "A imagem mobile mostra somente o viewport superior: retrospectiva, temporada, cobertura e aviso N/A legíveis. Não certifica visualmente os gráficos e tabelas abaixo da dobra."
+          ]
+        },
+        "limitacoes": [
+          "Não reexecutei os 129 testes completos. A inspeção revelou que tests/test_avaliacao_final_v1.py:206-243 passa o modelo real ao avaliador e executa avaliação; tests/test_coletar_resultados.py:47-56 executa coletor em subprocesso e abre data/. Isso excede a autorização restrita a fits em fixtures e contraria as proibições explícitas desta revisão. Portanto, 129 aprovados permanece resultado documentado anteriormente, não reproduzido por mim.",
+          "O wrapper pitwall-stage4-tests-guarded.py não bloqueia todo data/, não proíbe carregamento do modelo e sua guarda Python não é automaticamente herdada pelos subprocessos. Não o executei.",
+          "O binário do modelo foi lido exclusivamente como bytes para conferir seu SHA-256; não houve desserialização, inferência ou treinamento.",
+          "Não conferi externamente modelo/provedor efetivos, publicação remota ou cronologia anterior. A identidade efetiva permanece para conferência do orquestrador no banco.",
+          "Os problemas encontrados são de validação e tratamento de entrada inválida. Não foi encontrada divergência nos resultados científicos reais; nenhuma correção metodológica é recomendada."
+        ],
+        "arquivos_alterados": []
+      }
+    },
+    {
+      "rodada": 2,
+      "provider_efetivo": "openai-codex",
+      "modelo_efetivo": "gpt-6-astra",
+      "session_id": "local-bdf6b0a4b6019bdf139b803ed1dcf93ad21ca601e03ac1972a6846efa84a42ec",
+      "chamadas_tarefa_principal": 12,
+      "uso_confirmado_no_banco": true,
+      "preservacao_dos_19_arquivos_de_entrega_confirmada": true,
+      "parecer": {
+        "veredito": "aprovado",
+        "problemas": [],
+        "verificacoes": [
+          {
+            "item": "P2-1 resolvido: coerência entre probabilidades e ranking publicado",
+            "resultado": "Contraprova independente alterou russell no GP 1 de 2024 para probabilidade 0.9999, preservando rank 4. O carregador rejeitou com DashboardDadosErro, identificando ranking incompatível com probabilidade decrescente e desempate por piloto_id. Um empate contrário à ordem lexicográfica também foi rejeitado. As entradas permaneceram intactas; não houve substituição de ranks ou favoritos.",
+            "evidencia": "dashboard_dados.py:270-275; scratch/pitwall-r2-independent.json, seção ranking."
+          },
+          {
+            "item": "P2-2 resolvido: tipos numéricos JSON e erro orientado na interface",
+            "resultado": "122 contraprovas independentes rejeitaram strings, booleanos, NaN, infinito e contadores representados como float nos campos numéricos consumidos ou validados pelo dashboard. Em AppTest, log_loss convertido para string produziu st.error com identificação de metricas.json e orientação para restaurar, sem exceção ou métricas antigas visíveis. Os CSVs reais continuaram sendo interpretados corretamente.",
+            "evidencia": "dashboard_dados.py:104-117,384-441; app.py:370-374; scratch/pitwall-r2-independent.json, seções json_invalidos e ui_invalidos."
+          },
+          {
+            "item": "P2-3 resolvido: faixas de calibração",
+            "resultado": "Contraprovas independentes rejeitaram rótulo inválido, faixa duplicada e rótulo incoerente em um dos métodos. O código exige rótulos canônicos coerentes com limites, unicidade e correspondência entre métodos. A tabela associa e ordena pelos limites numéricos: inverter a ordem das linhas não alterou a tabela nas duas temporadas. CSV inválido construído com csv.DictWriter produziu erro útil no AppTest, sem exceção.",
+            "evidencia": "dashboard_dados.py:468-493; app.py:249-266,370-374; scratch/pitwall-r2-independent.json, seções calibracao_invalidos, ui_invalidos e tabela_independente_ordem_linhas."
+          },
+          {
+            "item": "Aceite restrito e fidelidade aos artefatos",
+            "resultado": "Reexecutei o aceite: 48 GPs renderizados, três telas e duas temporadas, favoritos conferidos contra ranks publicados e invariância à alteração dos alvos. Confirmei 479 casos probabilísticos e 24 GPs de ranking em 2024; 478 casos e 22 GPs em 2025. Rankings reais são coerentes com probabilidades. Stroll/Espanha permanece elegível com previsão e alvo desconhecido; Espanha e São Paulo mantêm pontuação indefinida e motivos explícitos, sem zero artificial.",
+            "evidencia": "Execução de pitwall-stage6-app-acceptance.py com saída 0; scratch/pitwall-stage6-app-acceptance.json; scratch/pitwall-r2-independent.json."
+          },
+          {
+            "item": "Cache e isolamento",
+            "resultado": "O aceite abriu somente os nove relatórios autorizados. Alteração de bytes com mtime preservado e remoção de arquivo impediram apresentação de dados antigos. As guardas do aceite não registraram abertura de data/ ou modelo, rede externa ou escrita em artefatos. As contraprovas próprias também bloquearam importações de joblib, sklearn, treinadores, avaliadores e coletores, subprocessos e escrita fora de scratch; nenhuma tentativa proibida foi registrada.",
+            "evidencia": "app.py:34-42; scratch/pitwall-stage6-app-acceptance.json; scratch/pitwall-r2-independent.py:20-35 e resultado tentativas_proibidas."
+          },
+          {
+            "item": "Comunicação científica e documentação",
+            "resultado": "A interface distingue modelo versus constante nas probabilidades e modelo versus classificação no ranking. Observações posteriores têm seção própria, sem inventar ordem do pódio. Explicita retrospectiva, validação 2024 já explorada, avaliação 2025 já realizada, ganho pequeno e ausência de garantia futura. README, contexto e registros distinguem os 26 testes atuais dos 129 anteriores à R1, sem alegar execução posterior de 135 testes. Nenhuma mudança metodológica é necessária para resolver os três P2.",
+            "evidencia": "app.py:169-209,269-314,339-359; README.md:48-62; projects/Pitwall Lab.md:14-28; reports/dashboard_v1/verificacao.md:36-47; reports/dashboard_v1/verificacao.json:46-51."
+          },
+          {
+            "item": "Dependências",
+            "resultado": "pip check retornou 'No broken requirements found'. As cinco versões científicas coincidem com os requisitos: NumPy 1.26.4, SciPy 1.13.1, scikit-learn 1.6.1, joblib 1.5.3 e threadpoolctl 3.6.0. Streamlit 1.50.0, Plotly 6.3.1, pandas 2.2.3 e PyArrow 20.0.0 também coincidem com requirements_dashboard.txt.",
+            "evidencia": "./.venv/bin/python -B -m pip check; requirements_modelo_v1.txt:4-8; requirements_dashboard.txt:2-6; scratch/pitwall-r2-independent.json, seção versoes."
+          },
+          {
+            "item": "Navegador real e servidor existente",
+            "resultado": "Reexecutei o QA Playwright isolado: zero erros de página, zero solicitações externas registradas, somente host 127.0.0.1 e largura mobile 390/390. O servidor permaneceu no PID 65392, escutando em 127.0.0.1:8501; não foi parado ou reiniciado por esta revisão.",
+            "evidencia": "Execução de pitwall-stage6-browser-qa.py com saída 0; scratch/pitwall-stage6-browser/qa.json; lsof -nP -iTCP:8501 -sTCP:LISTEN."
+          },
+          {
+            "item": "Preservação dos arquivos e Git",
+            "resultado": "68 hashes científicos conferidos antes e depois, sem divergências. Os 19 arquivos do snapshot R2 também coincidem integralmente antes e depois das contraprovas. HEAD permanece 9559c33d331176fe2a749bb73020194d8de20cf6, branch main, e o estado listado por git status permaneceu igual. Nenhum arquivo do projeto foi alterado pela revisão.",
+            "evidencia": "docs/dashboard_artefatos_preservados.json; scratch/pitwall-stage6-before-review2.json; scratch/pitwall-r2-independent.json, seções hashes_antes, hashes_depois, snapshot_antes e snapshot_depois; git rev-parse HEAD e git status --short."
+          }
+        ],
+        "testes": {
+          "quantidade": 26,
+          "falhas": 0,
+          "comando": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=scratch ./.venv/bin/python -B -m unittest discover -s tests -p 'test_dashboard*.py' -v"
+        },
+        "inspecao_visual": {
+          "realizada": true,
+          "arquivos": [
+            "reports/dashboard_v1/desempenho_desktop.png",
+            "reports/dashboard_v1/calibracao_desktop.png",
+            "reports/dashboard_v1/explorar_mobile.png"
+          ],
+          "limitacoes": [
+            "As três imagens reais foram abertas com vision_analyze. Desempenho mostra comparações separadas, 478 casos, 22 de 24 GPs, empate de 8/22 pódios completos e ressalva sobre o ganho pequeno.",
+            "Calibração apresenta legenda acima do gráfico, círculos e losangos distintos, eixos identificados e contagens zero acompanhadas de valores indefinidos. A captura não inclui todas as linhas inferiores da tabela.",
+            "Mobile mostra somente o viewport superior: retrospectiva, temporada, cobertura e aviso N/A legíveis. Não certifica visualmente gráficos, favoritos e tabelas abaixo da dobra.",
+            "A inspeção não cobre todos os navegadores, dispositivos ou requisitos de acessibilidade."
+          ]
+        },
+        "limitacoes": [
+          "Aprovação restrita ao dashboard local e aos artefatos preservados. Não reexecutei a suíte histórica completa nem o wrapper da etapa 4. Os 129 testes anteriores permanecem evidência histórica documentada, não resultado reproduzido nesta R2.",
+          "Não houve treinamento, inferência, execução de avaliador ou coletor, consulta a API de dados ou abertura de data/. O modelo foi lido exclusivamente como bytes para SHA-256, nunca desserializado.",
+          "A varredura numérica excluiu cobertura.linhas_classificacao_ambigua, campo não consumido pela interface. A validação examinada não pretende impor esquema a todo metadado adicional do JSON.",
+          "O contexto desta sessão informa openai-codex/gpt-6-astra. Não conferi independentemente identidade efetiva ou contagem de chamadas no banco; essa confirmação permanece com o agente principal.",
+          "Não examinei nem alterei a configuração global do Hermes, política de uso, remotos ou publicação. Os registros do projeto continuam preservando R1 reprovada e aprovação final pendente, para atualização posterior pelo agente principal.",
+          "Arquivos de auditoria e saídas de QA foram escritos somente em scratch. arquivos_alterados refere-se aos arquivos do projeto."
+        ],
+        "arquivos_alterados": []
+      }
+    }
+  ]
+}

@@ -6,9 +6,64 @@ Portfólio de ciência de dados sobre Fórmula 1, construído passo a passo para
 
 No futuro: criar um dashboard que estime a probabilidade de cada piloto terminar uma corrida no pódio.
 
-**Etapa atual:** a etapa 5 avaliou retrospectivamente o **modelo v1 congelado** em 2025, sem novo ajuste. **2025 passou de reservado a avaliado para esta versão e não é mais um teste intocado para experimentos posteriores.** As seções das etapas 1–4 abaixo preservam o estado histórico de cada período.
+**Etapa atual:** a etapa 6 acrescentou um **dashboard local em Streamlit e Plotly**, somente leitura, para explorar os resultados retrospectivos já calculados de 2024 e 2025. Não carrega o modelo nem faz novas previsões. **2025 já foi avaliado para o v1 e não é teste intocado para experimentos posteriores.** As seções das etapas 1–5 abaixo preservam seu contexto histórico.
 
-## Etapa 5 — avaliação final retrospectiva do v1 congelado
+## Etapa 6 — dashboard local do estudo retrospectivo
+
+### Instalar as dependências adicionais
+
+Na raiz do projeto, com o ambiente `.venv` existente:
+
+```bash
+./.venv/bin/python -m pip install -r requirements_dashboard.txt
+```
+
+O arquivo adicional fixa Streamlit, Plotly, pandas e PyArrow e usa as restrições de `requirements_modelo_v1.txt`, preservando a pilha científica verificada. Nada é instalado globalmente. Se recriar um ambiente do zero e quiser executar também os testes antigos, instale antes `./.venv/bin/python -m pip install -r requirements_modelo_v1.txt`. As versões escolhidas são compatíveis com o Python 3.9.6 desta máquina; esta etapa não é uma configuração de hospedagem pública.
+
+### Iniciar e abrir
+
+```bash
+./.venv/bin/python -m streamlit run app.py
+```
+
+Abra **http://127.0.0.1:8501** no navegador. Mantenha o terminal aberto enquanto usar o aplicativo; quando o iniciar manualmente no terminal, `Ctrl+C` encerra o servidor. A configuração do projeto limita o servidor à própria máquina e desativa a telemetria. Não houve publicação do aplicativo, túnel ou serviço pago.
+
+### Navegar
+
+- **Explorar um GP:** escolha a temporada e o Grande Prêmio na lateral. Veja os favoritos e as probabilidades individuais de pódio, separados dos resultados observados posteriormente. Cobertura e motivos de não avaliação aparecem perto do título. Não é probabilidade de vitória nem de posição específica.
+- **Desempenho:** selecione a temporada. Os números agregam o ano inteiro; o filtro de GP fica desabilitado. Modelo versus constante é comparação probabilística; modelo versus classificação é comparação de ranking. Denominadores, distribuição de acertos, calibração com contagens e tabela por GP vêm dos artefatos, sem números copiados manualmente para a interface.
+- **Como funciona:** explicação das entradas, modelo, cronologia, elegibilidade, fontes e limitações, com links para metodologia e relatórios.
+- Em telas pequenas, use o botão no canto superior esquerdo para abrir ou recolher a navegação. Tabelas podem ter rolagem própria.
+
+**2024** é validação já explorada. **2025** é avaliação final retrospectiva já realizada: suas métricas probabilísticas têm **478 casos** e os rankings compartilham **22 dos 24 GPs**. Espanha e São Paulo continuam não avaliáveis para ranking pelos motivos documentados, sem zero artificial. Um alvo desconhecido não impede exibir a previsão de um elegível. Pódios observados são conjuntos, sem inventar ordem de chegada.
+
+### Imagem real da interface
+
+Captura de Chromium isolado, aberta sobre o servidor Streamlit local e os artefatos reais, não um mockup:
+
+![Dashboard local — desempenho de 2025](reports/dashboard_v1/desempenho_desktop.png)
+
+[Exploração de GP](reports/dashboard_v1/explorar_desktop.png) · [Calibração](reports/dashboard_v1/calibracao_desktop.png) · [GP não avaliável](reports/dashboard_v1/espanha_na_desktop.png) · [Tela menor](reports/dashboard_v1/explorar_mobile.png).
+
+### Segurança dos resultados e verificação
+
+O aplicativo lê somente nove CSV/JSON de resultados ao longo das duas temporadas e o documento necessário para listar as entradas. Não abre `data/`, não carrega joblib, não executa inferência, treinamento ou consultas externas e não modifica artefatos. Links externos só são navegação solicitada pelo usuário; a comunicação normal entre navegador e servidor é HTTP/WebSocket local. O cache é apenas em memória, com os bytes dos arquivos na chave; alterações, inclusive mantendo o `mtime`, e arquivos ausentes não devolvem dados antigos como se fossem válidos.
+
+Para conferir **somente o dashboard**, sem executar testes de coletores ou do pipeline científico:
+
+```bash
+./.venv/bin/python -m unittest discover -s tests -p 'test_dashboard*.py' -v
+```
+
+A suíte completa do projeto é `./.venv/bin/python -m unittest discover -s tests -v`. Ela inclui testes legados que executam o coletor com cache e carregam o modelo para dados sintéticos, por isso não deve ser confundida com o fluxo somente leitura da interface ou com o aceite estrito de nove relatórios.
+
+**26 testes específicos de dashboard aprovados na versão corrigida**, incluindo seis regressões novas para os P2 encontrados pela revisão independente. A suíte completa teve **129 aprovados antes da primeira revisão**; não foi repetida após as mudanças restritas à interface/validação. AppTest conferiu novamente as três telas, duas temporadas e os 48 GPs; o **aceite protegido do aplicativo** não registrou acesso a dados brutos/modelo, rede ou gravação em artefatos. Após reiniciar o servidor com o código corrigido, a inspeção real em Chromium passou novamente em desktop e em viewport de 390 px, sem erros de página ou solicitações externas. Os **68 hashes** dos arquivos preservados e as cinco versões científicas foram conferidos sem divergência.
+
+[Contrato de dados anterior à interface](docs/contrato_dashboard_v1.md) · [Hashes preservados](docs/dashboard_artefatos_preservados.json) · [Registro de verificação](reports/dashboard_v1/verificacao.json) · [Testes e limites da etapa 6](reports/dashboard_v1/verificacao.md) · [Revisão independente — aprovado na R2](reports/dashboard_v1/revisao_independente.json).
+
+A revisão forte foi concluída por **`openai-codex/gpt-6-astra`**, em duas sessões separadas da implementação/correção de `openai-codex/gpt-5.6-terra`. Provedor e modelo efetivos foram confirmados nos registros de uso. A R1 encontrou três P2; após correções e regressões, a R2 aprovou sem problemas remanescentes. A aprovação não equivale a garantia futura do modelo ou certificação de todos os navegadores e dispositivos.
+
+## Etapa 5 — avaliação final retrospectiva do v1 congelado — registro histórico
 
 O [plano final](docs/avaliacao_final_v1.md) foi registrado antes da primeira abertura do teste. O pipeline local salvo, suas entradas e regras da etapa 4 foram mantidos. Não houve `fit`, recalibração, nova consulta à Jolpica ou regeneração de bases.
 
