@@ -1,0 +1,14 @@
+{
+  "arquivo": "raw/resultados_offset_0300.json",
+  "endpoint": "resultados",
+  "obtido_em_utc": "2026-10-17T17:27:19.271430Z",
+  "parametros": {
+    "limit": 100,
+    "offset": 300
+  },
+  "sha256": "83f3dfef8020a8935c895afea3d84c62a8d84c6e5924ccc59f58f6c9e62c5640",
+  "temporada": "2022",
+  "url_consultada": "https://api.jolpi.ca/ergast/f1/2022/results/?limit=100&offset=300",
+  "url_real": "https://api.jolpi.ca/ergast/f1/2022/results/?limit=100&offset=300",
+  "url_reconstruida": false
+}

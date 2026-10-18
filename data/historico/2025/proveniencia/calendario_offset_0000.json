@@ -1,0 +1,14 @@
+{
+  "arquivo": "raw/calendario_offset_0000.json",
+  "endpoint": "calendario",
+  "obtido_em_utc": "2026-10-17T17:31:28.371358Z",
+  "parametros": {
+    "limit": 100,
+    "offset": 0
+  },
+  "sha256": "fb28bdac7fcbbe908dfe2b6af1f61cc311474e3392ea47a32ff80414cc713433",
+  "temporada": "2025",
+  "url_consultada": "https://api.jolpi.ca/ergast/f1/2025/?limit=100&offset=0",
+  "url_real": "https://api.jolpi.ca/ergast/f1/2025/?limit=100&offset=0",
+  "url_reconstruida": false
+}

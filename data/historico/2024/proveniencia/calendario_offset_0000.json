@@ -1,0 +1,15 @@
+{
+  "arquivo": "raw/calendario_offset_0000.json",
+  "endpoint": "calendario",
+  "obtido_em_utc": "desconhecida",
+  "origem_arquivo_legado": "data/temporada_2024/raw/calendario_offset_0000.json",
+  "parametros": {
+    "limit": 100,
+    "offset": 0
+  },
+  "sha256": "16ede12f875c4b6be9da5534131947a635a50e8eb371ad490bd1f7bf0c676bba",
+  "temporada": "2024",
+  "url_consultada": "https://api.jolpi.ca/ergast/f1/2024/?limit=100&offset=0",
+  "url_real": "https://api.jolpi.ca/ergast/f1/2024/?limit=100&offset=0",
+  "url_reconstruida": true
+}

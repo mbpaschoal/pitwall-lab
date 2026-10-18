@@ -6,7 +6,78 @@ Portfólio de ciência de dados sobre Fórmula 1, construído passo a passo para
 
 No futuro: criar um dashboard que estime a probabilidade de cada piloto terminar uma corrida no pódio.
 
-**Etapa atual:** temporada completa de 2024, análise exploratória da relação entre grid e pódio e uma regra simples de referência. A coleta e os relatórios de São Paulo da primeira etapa foram preservados. Não há modelo de machine learning, previsão registrada antes da corrida ou dashboard.
+**Etapa atual:** preparar uma base histórica de 2021–2025, com variáveis anteriores à corrida e divisão cronológica, sem treinar modelos. As coletas, dados e relatórios das etapas 1 e 2 foram preservados. Não há modelo de machine learning, previsão registrada antes da corrida ou dashboard.
+
+## Etapa 3 — base histórica sem treinamento
+
+### O que executar
+
+Na pasta do projeto, usando o ambiente virtual existente:
+
+```bash
+./.venv/bin/python coletar_historico.py --temporadas 2021 2022 2023 2024 2025
+./.venv/bin/python preparar_historico.py
+./.venv/bin/python -m unittest discover -s tests -v
+```
+
+O primeiro comando consulta apenas calendários, resultados **principais** e classificação. Na primeira coleta pode levar vários minutos: cada consulta é espaçada por pelo menos oito segundos. Não execute coletores em paralelo. O novo coletor recebe as temporadas por parâmetro; **os comandos antigos continuam iguais**, restritos às entregas originais.
+
+Para reproduzir sem novas consultas à API:
+
+```bash
+./.venv/bin/python coletar_historico.py --temporadas 2021 2022 2023 2024 2025 --somente-cache
+./.venv/bin/python preparar_historico.py
+```
+
+A preparação é sempre offline. Primeiro valida todas as fontes, depois cria as variáveis e só então grava as saídas finais. Não produz base completa se faltar uma temporada/página obrigatória ou se houver inconsistências. Saídas existentes diferentes não são substituídas: preserve um backup explícito antes de aceitar uma atualização deliberada. Falhas de rede ou HTTP 429 encerram a coleta sem repetição automática. Uma execução interrompida pode ser retomada com os caches válidos, mas não transforma cache parcial em base completa.
+
+### Entregas
+
+- [Qualidade por temporada e cobertura](reports/historico/qualidade.md), com relatórios individuais de 2021 a 2025 e [contagens em JSON](reports/historico/qualidade.json).
+- [Revisão independente, correções e testes](reports/historico/revisao_etapa3.md): aprovação alternativa com provedor/modelo efetivos conferidos; revisão Astra inicial interrompida por limite de uso.
+- [Dicionário das variáveis e fórmulas](docs/dicionario_variaveis.md).
+- [Protocolo temporal e divisão treino/validação/teste](docs/protocolo_temporal.md).
+- [Base histórica completa para auditoria](data/preparado/base_historica.csv).
+- [Entradas permitidas](data/preparado/entradas.csv), [identificação](data/preparado/identificacao.csv), [alvos](data/preparado/alvos.csv) e [desfechos apenas para auditoria](data/preparado/auditoria_resultados.csv), separados fisicamente e relacionados pelas mesmas chaves.
+- [Papéis das colunas](data/preparado/colunas.json), [janelas auditáveis](data/preparado/auditoria_janelas.json), [divisões por corrida](data/preparado/divisoes.csv) e [comprovante da preparação](data/preparado/verificacao.json).
+- JSON originais e proveniência em `data/historico/2021/` até `data/historico/2025/`.
+- Scripts `coletar_historico.py` e `preparar_historico.py`, com testes adicionais em `tests/`.
+
+Os arquivos `treino.csv`, `validacao.csv` e `teste_final_reservado.csv`, em `data/preparado/`, são visões completas por período. Para um futuro modelo, use **somente** as entradas explicitamente listadas em `colunas.json`; não forneça automaticamente todas as colunas da base completa ou desses recortes.
+
+### Como pensar nas variáveis
+
+Cada linha representa um piloto em um GP. A chave é **temporada + rodada + piloto_id**. A classificação vem de `QualifyingResults.position`, nunca de `Results.grid`. Se a API repetir uma posição de classificação para pilotos distintos, a base preserva a posição original em todas as linhas e marca `posicao_classificacao_repetida=1`; isso sinaliza ambiguidade, sem inventar desempate, eliminar pilotos ou substituir a classificação pelo grid retrospectivo. As ocorrências aparecem nos relatórios de qualidade.
+
+- Média da posição final e taxa de pódios: até **cinco participações anteriores do piloto**, com denominadores explícitos.
+- Pontos da equipe: soma dos pontos de seus pilotos nos até **cinco GPs anteriores da equipe**, dividida pelo número real de registros de pilotos nesses eventos. Não é a soma de pontos por GP, e não inclui sprints.
+- Sem histórico, as médias ficam vazias e os contadores são zero. Isso não significa desempenho zero nem necessariamente estreia na F1.
+- Sem classificação, a linha não desaparece; há indicadores de ausência. A equipe pré-corrida não é preenchida usando o resultado atual.
+- Posição final, pontos, status e grid da corrida atual ficam apenas na auditoria. `podio` é o alvo, nunca entrada. Sem resultado, o alvo é desconhecido, não zero.
+
+A união externa preserva participantes presentes em apenas uma das fontes. Os relatórios listam os IDs sem correspondência e diferenciam ausência observada de hipóteses explicativas. Não eliminamos abandonos, não largadas ou desclassificações.
+
+### Corte temporal e limites que não podem ser escondidos
+
+O corte conceitual é o encerramento da sessão que define a ordem-base do GP. Nos eventos Sprint de 2021–2022, essa sessão é a Sprint; a variável de classificação continua sendo a tomada de tempos anterior à Sprint, com a diferença sinalizada. Não presumimos um dia fixo do fim de semana.
+
+A API informa inícios de sessões, não encerramentos comprovados. O fim fica desconhecido. Para as **janelas históricas**, usamos um limite conservador anterior ao fim: início da sessão, ou início UTC do dia se só houver data ou o campo `time` vier vazio. Horários não vazios precisam estar em UTC com `Z`; valores inválidos interrompem a preparação. Resultados de um GP anterior só entram a partir do dia UTC seguinte à sua data, nunca na própria corrida ou em uma corrida futura. Essa regra é explicada, com suas limitações, no protocolo.
+
+**Datas da coleta atual não provam disponibilidade histórica.** Os JSON consultados hoje podem incorporar revisões posteriores ao corte. Os testes controlam a ordem dos cálculos, não certificam a versão que estava publicada anos atrás. Este é um estudo retrospectivo, não prova de uma previsão realmente emitida ao fim da classificação.
+
+Novas respostas registram URL, parâmetros, instante UTC de obtenção e SHA-256 dos bytes originais. Caches antigos reaproveitados sem data de coleta ficam com `obtido_em_utc: desconhecida`; não usamos a data do arquivo ou commit como se fosse a da consulta original. Os arquivos antigos não são alterados.
+
+### Avaliação cronológica definida, mas ainda não executada
+
+| Divisão | Temporadas | Finalidade |
+|---|---|---|
+| Treino | 2021–2023 | Futuro ajuste do modelo e das transformações. |
+| Validação | 2024 | Desenvolvimento; **já explorada**, não é teste intocado. |
+| Teste final reservado | 2025 | Somente integridade e preparação mecânica nesta etapa. |
+
+Todos os pilotos de um GP ficam na mesma divisão. Depois de uma corrida, seus resultados podem entrar no histórico da seguinte, inclusive dentro de 2025. Isso **não autoriza ajustar o modelo ou os transformadores usando o teste**. Não calculamos desempenho em 2025, não selecionamos variáveis por seus resultados e não ajustamos imputação ou normalização em toda a base.
+
+O projeto continua usando somente a biblioteca padrão do Python, dados públicos e ferramentas gratuitas. A configuração dos modelos do Hermes não faz parte desta etapa e não foi alterada.
 
 ## Etapa 2 — temporada completa e primeira referência
 
@@ -282,7 +353,7 @@ O teste de coleta executa o script e compara todas as células do CSV com a resp
 
 Os quatro testes originais (incluindo o gráfico) foram mantidos. O arquivo `tests/test_validacao_respostas.py` acrescenta testes **sem rede**, com respostas simuladas e cópias temporárias das respostas reais. Eles cobrem `[]`, objetos incompletos, tipos incorretos, campos ausentes, totais e identificadores incoerentes, JSON malformado e UTF-8 inválido, tanto na rede quanto no cache. Também verificam que respostas inválidas não criam cache, que caches existentes são preservados, que dados válidos continuam aceitos e que erros de programação não são mascarados.
 
-Há testes que executam o script inteiro em subprocessos isolados para conferir **saída 1, mensagem sem traceback para dados inválidos e preservação dos outros arquivos**. A rede nesses testes está bloqueada por simulação; os dados originais do projeto não são usados como destino de gravações inválidas.
+Há testes que executam o script inteiro em subprocessos isolados para conferir **saída 1, mensagem sem traceback para dados inválidos e preservação dos outros arquivos**. Eles também verificam que importar os testes históricos não altera `TMPDIR` nem `tempfile.tempdir`; os temporários seguem o diretório escolhido pelo executor. A rede nesses testes está bloqueada por simulação; os dados originais do projeto não são usados como destino de gravações inválidas.
 
 Para executar apenas as novas regressões sem rede:
 

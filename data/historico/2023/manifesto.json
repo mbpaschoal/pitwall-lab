@@ -1,0 +1,173 @@
+{
+  "proveniencia": [
+    {
+      "arquivo": "raw/calendario_offset_0000.json",
+      "endpoint": "calendario",
+      "obtido_em_utc": "2026-10-17T17:28:14.736609Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 0
+      },
+      "sha256": "698bdfbace8a5182a914f50a481e39996fc6e3d02f595c24275176e990652cc3",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/?limit=100&offset=0",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/?limit=100&offset=0",
+      "url_reconstruida": false
+    },
+    {
+      "arquivo": "raw/resultados_offset_0000.json",
+      "endpoint": "resultados",
+      "obtido_em_utc": "2026-10-17T17:28:23.474822Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 0
+      },
+      "sha256": "3226151d335623afb1ffe0e804d47c1e6704f4fd6b7b73fca6acf97ba04a4e56",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/results/?limit=100&offset=0",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/results/?limit=100&offset=0",
+      "url_reconstruida": false
+    },
+    {
+      "arquivo": "raw/resultados_offset_0100.json",
+      "endpoint": "resultados",
+      "obtido_em_utc": "2026-10-17T17:28:31.337626Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 100
+      },
+      "sha256": "90a3c80afc3e3c120725e1bc75459d316edc5eababdb150bcaf1ec4784bd45a0",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/results/?limit=100&offset=100",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/results/?limit=100&offset=100",
+      "url_reconstruida": false
+    },
+    {
+      "arquivo": "raw/resultados_offset_0200.json",
+      "endpoint": "resultados",
+      "obtido_em_utc": "2026-10-17T17:28:39.281413Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 200
+      },
+      "sha256": "5bc493da764d4ad926af42150e97f3dd6f440d7be394303ee5f38bde64bd864a",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/results/?limit=100&offset=200",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/results/?limit=100&offset=200",
+      "url_reconstruida": false
+    },
+    {
+      "arquivo": "raw/resultados_offset_0300.json",
+      "endpoint": "resultados",
+      "obtido_em_utc": "2026-10-17T17:28:47.453590Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 300
+      },
+      "sha256": "b787d5940216b57b8998cc169a88a0e57564d1869b9bf61962ea39ecacb3fb2e",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/results/?limit=100&offset=300",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/results/?limit=100&offset=300",
+      "url_reconstruida": false
+    },
+    {
+      "arquivo": "raw/resultados_offset_0400.json",
+      "endpoint": "resultados",
+      "obtido_em_utc": "2026-10-17T17:28:55.361122Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 400
+      },
+      "sha256": "0627399a545b9710ac3c4260fc8743aba09ce40f5629019c18eac45c47ea193c",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/results/?limit=100&offset=400",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/results/?limit=100&offset=400",
+      "url_reconstruida": false
+    },
+    {
+      "arquivo": "raw/classificacao_offset_0000.json",
+      "endpoint": "classificacao",
+      "obtido_em_utc": "2026-10-17T17:29:03.486727Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 0
+      },
+      "sha256": "094d40364d686a8eaf983ffd1d93267a1d77fc4f0ed8a23cd21fd5e33bd5ad39",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/qualifying/?limit=100&offset=0",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/qualifying/?limit=100&offset=0",
+      "url_reconstruida": false
+    },
+    {
+      "arquivo": "raw/classificacao_offset_0100.json",
+      "endpoint": "classificacao",
+      "obtido_em_utc": "2026-10-17T17:33:59.209983Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 100
+      },
+      "sha256": "a2939a8d97c15540b40aa8ff9453582e56d77093e2813a3866e4429cf1bc2d48",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/qualifying/?limit=100&offset=100",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/qualifying/?limit=100&offset=100",
+      "url_reconstruida": false
+    },
+    {
+      "arquivo": "raw/classificacao_offset_0200.json",
+      "endpoint": "classificacao",
+      "obtido_em_utc": "2026-10-17T17:34:08.250449Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 200
+      },
+      "sha256": "9342d31c4dd8bd05c51e41e7336578c1e4dbb874772a480c010da129fc2467b1",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/qualifying/?limit=100&offset=200",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/qualifying/?limit=100&offset=200",
+      "url_reconstruida": false
+    },
+    {
+      "arquivo": "raw/classificacao_offset_0300.json",
+      "endpoint": "classificacao",
+      "obtido_em_utc": "2026-10-17T17:34:16.239962Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 300
+      },
+      "sha256": "0c2f56cce6d9f8edd949ba21e8bc48ee4f5427d6df8306a386d49b1ec621351d",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/qualifying/?limit=100&offset=300",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/qualifying/?limit=100&offset=300",
+      "url_reconstruida": false
+    },
+    {
+      "arquivo": "raw/classificacao_offset_0400.json",
+      "endpoint": "classificacao",
+      "obtido_em_utc": "2026-10-17T17:34:24.015309Z",
+      "parametros": {
+        "limit": 100,
+        "offset": 400
+      },
+      "sha256": "362b10a868ec19c97b1e5b336e29749fba9b8f1a70bc249da34145c612631018",
+      "temporada": "2023",
+      "url_consultada": "https://api.jolpi.ca/ergast/f1/2023/qualifying/?limit=100&offset=400",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2023/qualifying/?limit=100&offset=400",
+      "url_reconstruida": false
+    }
+  ],
+  "proveniencia_sha256": {
+    "proveniencia/calendario_offset_0000.json": "9001b3c68cce07d230f0e31623f61c1c8f62420fd058d4821e760a5e76b97dbe",
+    "proveniencia/classificacao_offset_0000.json": "498003771bc31d01ae287693ab29d70bb57e96b505b6942f25130ab888f98e2c",
+    "proveniencia/classificacao_offset_0100.json": "93ad15b84b9ef8ba922673c6333192771a7252c56f4b5c4c783643ec34a047e3",
+    "proveniencia/classificacao_offset_0200.json": "c89c40483c8e43b624fb70dc7a5905eea57a0323a910d8ecbbca3d3aee816e5a",
+    "proveniencia/classificacao_offset_0300.json": "e986c1a5684c3a7ffb38235d99f6846c67013a906db95e744690e58b8ecd276c",
+    "proveniencia/classificacao_offset_0400.json": "3fef45ab6f75574df3d88d8ba919bd597d80baaeac429fa854c116f64b8de745",
+    "proveniencia/resultados_offset_0000.json": "d8c3311e368b04dd49421fb2a803d85232916164d0f7253ee971af3b42ac89de",
+    "proveniencia/resultados_offset_0100.json": "f5356619c39a4ea889df6f54cef4587fea0cd7555dbda11ab36d5aa3aaef5fe8",
+    "proveniencia/resultados_offset_0200.json": "dab53bf2a52dfb87aa04b1deabb0e3f0391fe143dbdcbda0cccabddbf20a9882",
+    "proveniencia/resultados_offset_0300.json": "b0f5d8397414fabe8cd6037549385a8d4681358af25dc6f4be66deebe94f4082",
+    "proveniencia/resultados_offset_0400.json": "aaea410233416142050dc9401b527993c078172dd8c53006f83411b59051dd44"
+  },
+  "temporada": "2023",
+  "versao": 1
+}

@@ -1,0 +1,15 @@
+{
+  "arquivo": "raw/resultados_offset_0400.json",
+  "endpoint": "resultados",
+  "obtido_em_utc": "desconhecida",
+  "origem_arquivo_legado": "data/temporada_2024/raw/resultados_offset_0400.json",
+  "parametros": {
+    "limit": 100,
+    "offset": 400
+  },
+  "sha256": "d0abfa6dfc9eeeb8a7a8960500dbebef1f70b869aacdb0212e02c24727e61c58",
+  "temporada": "2024",
+  "url_consultada": "https://api.jolpi.ca/ergast/f1/2024/results/?limit=100&offset=400",
+  "url_real": "https://api.jolpi.ca/ergast/f1/2024/results/?limit=100&offset=400",
+  "url_reconstruida": true
+}

@@ -1,0 +1,51 @@
+{
+  "alvos": [
+    "podio"
+  ],
+  "auditoria_proibida_como_entrada": [
+    "posicao_final",
+    "pontos",
+    "status",
+    "grid_resultado",
+    "resultado_ausente"
+  ],
+  "chaves": [
+    "temporada",
+    "rodada",
+    "piloto_id"
+  ],
+  "dicionario": "docs/dicionario_variaveis.md",
+  "entradas": [
+    "posicao_classificacao",
+    "posicao_classificacao_repetida",
+    "classificacao_ausente",
+    "posicao_classificacao_ausente",
+    "media_posicao_final_5",
+    "taxa_podios_5",
+    "n_posicoes_5",
+    "n_podios_5",
+    "media_pontos_equipe_5",
+    "n_corridas_equipe_5",
+    "n_participacoes_equipe_5",
+    "historico_piloto_insuficiente",
+    "historico_equipe_insuficiente",
+    "equipe_pre_corrida_ausente",
+    "referencia_temporal_ausente"
+  ],
+  "identificacao": [
+    "corrida",
+    "data_corrida",
+    "circuito_id",
+    "piloto",
+    "equipe_id",
+    "equipe_id_entrada",
+    "divisao",
+    "sessao_referencia",
+    "limite_inferior_referencia_utc",
+    "fim_sessao_referencia_utc",
+    "precisao_referencia",
+    "classificacao_nao_define_grid_gp"
+  ],
+  "nulos_csv": "campo vazio",
+  "protocolo": "docs/protocolo_temporal.md"
+}

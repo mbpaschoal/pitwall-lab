@@ -1,0 +1,14 @@
+{
+  "arquivo": "raw/classificacao_offset_0000.json",
+  "endpoint": "classificacao",
+  "obtido_em_utc": "2026-10-17T17:30:23.100683Z",
+  "parametros": {
+    "limit": 100,
+    "offset": 0
+  },
+  "sha256": "800a9ea1e2a247c1f0d0fa22774d569e505bbea4ba6c337b053144c1e7cfec20",
+  "temporada": "2024",
+  "url_consultada": "https://api.jolpi.ca/ergast/f1/2024/qualifying/?limit=100&offset=0",
+  "url_real": "https://api.jolpi.ca/ergast/f1/2024/qualifying/?limit=100&offset=0",
+  "url_reconstruida": false
+}
