@@ -1,0 +1,285 @@
+{
+  "arquivos": [
+    {
+      "caminho": ".gitignore",
+      "fonte": "publicacao/templates/.gitignore",
+      "modo": "gerado",
+      "sha256_destino": "ab0904f6cca5be3f88505e8dceedc79cd663649a89eb409fa1b3d9a37ac9d867",
+      "sha256_origem": "ab0904f6cca5be3f88505e8dceedc79cd663649a89eb409fa1b3d9a37ac9d867"
+    },
+    {
+      "caminho": ".python-version",
+      "fonte": "publicacao/templates/.python-version",
+      "modo": "gerado",
+      "sha256_destino": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "sha256_origem": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+    },
+    {
+      "caminho": ".streamlit/config.toml",
+      "fonte": "publicacao/templates/config.toml",
+      "modo": "gerado",
+      "sha256_destino": "a675aa20b4e2644b4a83078f4a3c9fcd14095e6322fc1281291dcf7cbc578e11",
+      "sha256_origem": "a675aa20b4e2644b4a83078f4a3c9fcd14095e6322fc1281291dcf7cbc578e11"
+    },
+    {
+      "caminho": "ARQUIVOS_PUBLICACAO.txt",
+      "fonte": null,
+      "modo": "gerado",
+      "sha256_destino": "8bafa64eba14625f2e6edc346487f693870eca56a0beaf64da354e40d3d75e67",
+      "sha256_origem": null
+    },
+    {
+      "caminho": "FONTES_E_DADOS.md",
+      "fonte": "publicacao/templates/FONTES_E_DADOS.md",
+      "modo": "gerado",
+      "sha256_destino": "19b39db8460e037209a3c70c1e30fc4ed1ea497a777e01e717d5a7103b588cd5",
+      "sha256_origem": "19b39db8460e037209a3c70c1e30fc4ed1ea497a777e01e717d5a7103b588cd5"
+    },
+    {
+      "caminho": "GUIA_HOSPEDAGEM.md",
+      "fonte": "publicacao/templates/GUIA_HOSPEDAGEM.md",
+      "modo": "gerado",
+      "sha256_destino": "f86f171b520f634c03b9221754b04e6beba82582e7a268280fe4d2478adc9016",
+      "sha256_origem": "f86f171b520f634c03b9221754b04e6beba82582e7a268280fe4d2478adc9016"
+    },
+    {
+      "caminho": "LICENCA_CODIGO.md",
+      "fonte": "publicacao/templates/LICENCA_CODIGO.md",
+      "modo": "gerado",
+      "sha256_destino": "c256ec8d5e16866855d57ec231563f4f6e475bd7e2d6d3ecc482c16fd86540f5",
+      "sha256_origem": "c256ec8d5e16866855d57ec231563f4f6e475bd7e2d6d3ecc482c16fd86540f5"
+    },
+    {
+      "caminho": "README.md",
+      "fonte": "publicacao/templates/README_PUBLICO.md.tpl",
+      "modo": "gerado",
+      "sha256_destino": "55de983582830efd05ecafac2fec5984223cdaa58d3bf85ccb80e286158e7347",
+      "sha256_origem": "c4180c487de0c68de681b53bb2729e5c82ba8294b0cfe9c87bcb77cfb58a06c1"
+    },
+    {
+      "caminho": "app.py",
+      "fonte": "app.py",
+      "modo": "gerado",
+      "nota": "app gerado com transformações estreitas do bloco privado GitHub e da apresentação das hachuras no gráfico de probabilidades",
+      "sha256_destino": "91e12b208a5ebebbe8302148191bad10528f7e7ff158e8b4cac0204793cf0460",
+      "sha256_origem": "c00510e5192c684412bbef88719642361bc7f25f6bbbfd643fd509bd7f2a943f"
+    },
+    {
+      "caminho": "dashboard_dados.py",
+      "fonte": "dashboard_dados.py",
+      "modo": "copia",
+      "sha256_destino": "220bd0051d40501ccb3da961156bc936e613d8155e82f7f31a21164ef534e56e",
+      "sha256_origem": "220bd0051d40501ccb3da961156bc936e613d8155e82f7f31a21164ef534e56e"
+    },
+    {
+      "caminho": "docs/avaliacao_final_v1.md",
+      "fonte": "docs/avaliacao_final_v1.md",
+      "modo": "copia",
+      "sha256_destino": "7b67a47d1136dc02bc24236dfbf6acb8e9e4e646a6d9cb68cba09a4fc6da8983",
+      "sha256_origem": "7b67a47d1136dc02bc24236dfbf6acb8e9e4e646a6d9cb68cba09a4fc6da8983"
+    },
+    {
+      "caminho": "docs/dicionario_variaveis.md",
+      "fonte": "docs/dicionario_variaveis.md",
+      "modo": "copia",
+      "sha256_destino": "00e68aadb984952868d10268f9d2253a8cbe110c0a625e942ee65c6837be8155",
+      "sha256_origem": "00e68aadb984952868d10268f9d2253a8cbe110c0a625e942ee65c6837be8155"
+    },
+    {
+      "caminho": "docs/experimento_modelo_v1.md",
+      "fonte": "docs/experimento_modelo_v1.md",
+      "modo": "copia",
+      "sha256_destino": "d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569",
+      "sha256_origem": "d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569"
+    },
+    {
+      "caminho": "docs/protocolo_temporal.md",
+      "fonte": "docs/protocolo_temporal.md",
+      "modo": "copia",
+      "sha256_destino": "1a5059356378df0564311df0ab7c2b7d97b6b279cb51cec071bc0786ffb53723",
+      "sha256_origem": "1a5059356378df0564311df0ab7c2b7d97b6b279cb51cec071bc0786ffb53723"
+    },
+    {
+      "caminho": "docs/relatorio_2024.md",
+      "fonte": "reports/modelo_v1/relatorio.md",
+      "modo": "adaptado_documentacao",
+      "nota": "links locais ajustados; resultados textuais preservados",
+      "sha256_destino": "cac2c223afc8f0e9266cb0347ec02f5998feb9810511162c506c08bdb480e122",
+      "sha256_origem": "d8f222555f086b967735bdcba976b83e6944681a9911772450a2d6a509ca7c0e"
+    },
+    {
+      "caminho": "documentacao_local.py",
+      "fonte": "publicacao/templates/documentacao_local.py",
+      "modo": "gerado",
+      "sha256_destino": "73559a5ab957b62542e5dcb7bdfb9c8aec63857d95de2800aee90edec7491c4e",
+      "sha256_origem": "73559a5ab957b62542e5dcb7bdfb9c8aec63857d95de2800aee90edec7491c4e"
+    },
+    {
+      "caminho": "reports/avaliacao_final_v1/avaliacao_corridas.csv",
+      "fonte": "reports/avaliacao_final_v1/avaliacao_corridas.csv",
+      "modo": "copia",
+      "sha256_destino": "9108e39138724279c3eac6335e4e29543f3eebe64ab5fd6aff70fae74bc3e40b",
+      "sha256_origem": "9108e39138724279c3eac6335e4e29543f3eebe64ab5fd6aff70fae74bc3e40b"
+    },
+    {
+      "caminho": "reports/avaliacao_final_v1/avaliacao_por_piloto.csv",
+      "fonte": "reports/avaliacao_final_v1/avaliacao_por_piloto.csv",
+      "modo": "copia",
+      "sha256_destino": "85a675b69ed3a5d87007764cf52db4905ceff5211f3448c1d02a3886c2ddfdaf",
+      "sha256_origem": "85a675b69ed3a5d87007764cf52db4905ceff5211f3448c1d02a3886c2ddfdaf"
+    },
+    {
+      "caminho": "reports/avaliacao_final_v1/calibracao.csv",
+      "fonte": "reports/avaliacao_final_v1/calibracao.csv",
+      "modo": "copia",
+      "sha256_destino": "889c125d3fbc56ede129ece087d50cc62d671196cac89a193d86769a57e4435d",
+      "sha256_origem": "889c125d3fbc56ede129ece087d50cc62d671196cac89a193d86769a57e4435d"
+    },
+    {
+      "caminho": "reports/avaliacao_final_v1/metricas.json",
+      "fonte": "reports/avaliacao_final_v1/metricas.json",
+      "modo": "copia",
+      "sha256_destino": "89661f42559ea7c0b390a84eebef2eb394d908264f1c9de9768fc0d69dce42aa",
+      "sha256_origem": "89661f42559ea7c0b390a84eebef2eb394d908264f1c9de9768fc0d69dce42aa"
+    },
+    {
+      "caminho": "reports/avaliacao_final_v1/previsoes_pre_corrida.csv",
+      "fonte": "reports/avaliacao_final_v1/previsoes_pre_corrida.csv",
+      "modo": "copia",
+      "sha256_destino": "d0c690038680896f50348e7916bb2b4dab76b8716231e6fde1576254ce49b590",
+      "sha256_origem": "d0c690038680896f50348e7916bb2b4dab76b8716231e6fde1576254ce49b590"
+    },
+    {
+      "caminho": "reports/avaliacao_final_v1/relatorio.md",
+      "fonte": "reports/avaliacao_final_v1/relatorio.md",
+      "modo": "copia",
+      "sha256_destino": "2a21b3107da72f27869dce7dc9a9ccc5ab7ff1624c343444d224937f51037fc9",
+      "sha256_origem": "2a21b3107da72f27869dce7dc9a9ccc5ab7ff1624c343444d224937f51037fc9"
+    },
+    {
+      "caminho": "reports/dashboard_v1/desempenho_desktop.png",
+      "fonte": "reports/dashboard_v1/desempenho_desktop.png",
+      "modo": "copia",
+      "sha256_destino": "17d9d1c2bea7c78d319840da85cb3a549ccf610ab9f4f0b32f120ec90258da4b",
+      "sha256_origem": "17d9d1c2bea7c78d319840da85cb3a549ccf610ab9f4f0b32f120ec90258da4b"
+    },
+    {
+      "caminho": "reports/modelo_v1/avaliacao_corridas.csv",
+      "fonte": "reports/modelo_v1/avaliacao_corridas.csv",
+      "modo": "copia",
+      "sha256_destino": "dec12ef6e3b1a303bc7ae6f863b02909171406776d8aac065970f417c4230d25",
+      "sha256_origem": "dec12ef6e3b1a303bc7ae6f863b02909171406776d8aac065970f417c4230d25"
+    },
+    {
+      "caminho": "reports/modelo_v1/calibracao.csv",
+      "fonte": "reports/modelo_v1/calibracao.csv",
+      "modo": "copia",
+      "sha256_destino": "e24c4c8461df6714c4907be47682ce324a835e551957c2fcfab6d17ae7879451",
+      "sha256_origem": "e24c4c8461df6714c4907be47682ce324a835e551957c2fcfab6d17ae7879451"
+    },
+    {
+      "caminho": "reports/modelo_v1/metricas.json",
+      "fonte": "reports/modelo_v1/metricas.json",
+      "modo": "copia",
+      "sha256_destino": "e06613f5178fecdd06e7afdccb0503ab4f277e5712c61c5cf85f193ae240686f",
+      "sha256_origem": "e06613f5178fecdd06e7afdccb0503ab4f277e5712c61c5cf85f193ae240686f"
+    },
+    {
+      "caminho": "reports/modelo_v1/previsoes_validacao.csv",
+      "fonte": "reports/modelo_v1/previsoes_validacao.csv",
+      "modo": "copia",
+      "sha256_destino": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "sha256_origem": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e"
+    },
+    {
+      "caminho": "requirements.txt",
+      "fonte": "publicacao/templates/requirements.txt",
+      "modo": "gerado",
+      "sha256_destino": "eee1e3667774d8e845e25b4911ed435e74ef31c986d650da09f40ac3bea56f7e",
+      "sha256_origem": "eee1e3667774d8e845e25b4911ed435e74ef31c986d650da09f40ac3bea56f7e"
+    },
+    {
+      "caminho": "tests/test_dashboard_app.py",
+      "fonte": "tests/test_dashboard_app.py",
+      "modo": "gerado",
+      "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
+      "sha256_destino": "0a4805409ea98ecfaeaeab5f015943ff1f4b06779518ca26e4cad398603a3120",
+      "sha256_origem": "c4d2c881eb79acc9b62b764e8e9e84b699eeb4cc98f656cee9bdad9ed78099c9"
+    },
+    {
+      "caminho": "tests/test_dashboard_dados.py",
+      "fonte": "tests/test_dashboard_dados.py",
+      "modo": "copia",
+      "sha256_destino": "1561b65a2993917f4667b35307a95f1d02aceb5cab06fc6e253b07554202090e",
+      "sha256_origem": "1561b65a2993917f4667b35307a95f1d02aceb5cab06fc6e253b07554202090e"
+    },
+    {
+      "caminho": "tests/test_distribuicao.py",
+      "fonte": "publicacao/templates/test_distribuicao.py",
+      "modo": "gerado",
+      "sha256_destino": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012",
+      "sha256_origem": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012"
+    }
+  ],
+  "commit_origem": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
+  "data_referencia_reprodutivel_utc": "2026-10-18T18:34:52+00:00",
+  "fontes_cientificas": [
+    "reports/modelo_v1/previsoes_validacao.csv",
+    "reports/modelo_v1/avaliacao_corridas.csv",
+    "reports/modelo_v1/metricas.json",
+    "reports/modelo_v1/calibracao.csv",
+    "reports/avaliacao_final_v1/previsoes_pre_corrida.csv",
+    "reports/avaliacao_final_v1/avaliacao_por_piloto.csv",
+    "reports/avaliacao_final_v1/avaliacao_corridas.csv",
+    "reports/avaliacao_final_v1/metricas.json",
+    "reports/avaliacao_final_v1/calibracao.csv"
+  ],
+  "formato": "pitwall-dashboard-publicacao-v1",
+  "nota_reprodutibilidade": "Não registra relógio de execução: a mesma receita, templates e commit de origem produzem os mesmos bytes. O próprio MANIFESTO.json não lista nem contém seu hash.",
+  "origens_novas_fora_do_commit_base": [
+    {
+      "caminho": "exportar_dashboard.py",
+      "sha256": "0eea9213b18dd037b80b407361460d578fbc4e3051c6814b4b1d153c570a13f0"
+    },
+    {
+      "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
+      "sha256": "c4180c487de0c68de681b53bb2729e5c82ba8294b0cfe9c87bcb77cfb58a06c1"
+    },
+    {
+      "caminho": "publicacao/templates/FONTES_E_DADOS.md",
+      "sha256": "19b39db8460e037209a3c70c1e30fc4ed1ea497a777e01e717d5a7103b588cd5"
+    },
+    {
+      "caminho": "publicacao/templates/LICENCA_CODIGO.md",
+      "sha256": "c256ec8d5e16866855d57ec231563f4f6e475bd7e2d6d3ecc482c16fd86540f5"
+    },
+    {
+      "caminho": "publicacao/templates/GUIA_HOSPEDAGEM.md",
+      "sha256": "f86f171b520f634c03b9221754b04e6beba82582e7a268280fe4d2478adc9016"
+    },
+    {
+      "caminho": "publicacao/templates/config.toml",
+      "sha256": "a675aa20b4e2644b4a83078f4a3c9fcd14095e6322fc1281291dcf7cbc578e11"
+    },
+    {
+      "caminho": "publicacao/templates/requirements.txt",
+      "sha256": "eee1e3667774d8e845e25b4911ed435e74ef31c986d650da09f40ac3bea56f7e"
+    },
+    {
+      "caminho": "publicacao/templates/.python-version",
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+    },
+    {
+      "caminho": "publicacao/templates/.gitignore",
+      "sha256": "ab0904f6cca5be3f88505e8dceedc79cd663649a89eb409fa1b3d9a37ac9d867"
+    },
+    {
+      "caminho": "publicacao/templates/documentacao_local.py",
+      "sha256": "73559a5ab957b62542e5dcb7bdfb9c8aec63857d95de2800aee90edec7491c4e"
+    },
+    {
+      "caminho": "publicacao/templates/test_distribuicao.py",
+      "sha256": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012"
+    }
+  ]
+}

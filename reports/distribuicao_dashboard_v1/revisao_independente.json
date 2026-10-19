@@ -1,0 +1,382 @@
+{
+  "etapa": 7,
+  "aprovacao_final": true,
+  "snapshot_final": "pitwall-stage7-before-review-r3.json",
+  "rodadas": [
+    {
+      "rodada": 1,
+      "modelo_efetivo": "gpt-6-astra",
+      "provider_efetivo": "openai-codex",
+      "session_id": "local-cdc782111553ad15f3cbc25bed4f490b1f61ac6e3f260e7624946fbece9fcc10",
+      "chamadas_tarefa_principal": 20,
+      "uso_efetivo_confirmado_no_banco": true,
+      "arquivos_readonly_conferidos": 58,
+      "divergencias_snapshot": [],
+      "parecer": {
+        "veredito": "reprovado",
+        "problemas": [
+          {
+            "prioridade": "P2",
+            "bloqueante": true,
+            "arquivo": "exportar_dashboard.py",
+            "linha": 370,
+            "titulo": "Componentes '..' permitem contornar a restrição de destino dentro do cofre",
+            "evidencia": "A validação usa Path.absolute() e comparação lexical em _contem(), sem normalizar ou recusar '..'. Em fixture inteiramente no SCRATCH, o destino direto cofre/notes/pacote-nao-permitido foi recusado, mas ponte/../cofre/notes/pacote-nao-permitido foi aceito, embora ambos resolvam para o mesmo lugar. Exercitei também a escrita real do exportador com conteúdo explicitamente sintético e origem/receita substituídas por mocks: foram criados arquivos no diretório proibido do cofre fictício. O projeto real não foi tocado. Contraprova: scratch/reviewer-stage7-path-probe.json. A condição vulnerável está nas linhas 368–383; a escrita ocorre nas linhas 419–427.",
+            "correcao_recomendada": "Impedir que caminhos equivalentes recebam decisões diferentes: recusar componentes '..' antes da validação ou normalizar os caminhos preservando a verificação dos ancestrais symlink. Comparar raiz, destino e destino permitido de maneira consistente e escrever somente no destino validado. Acrescentar regressão com cofre fictício no SCRATCH comprovando recusa e ausência de criação de arquivos. Regenerar manifesto/pacote após a alteração da receita e solicitar nova revisão."
+          }
+        ],
+        "verificacoes": [
+          {
+            "item": "Escopo público versus entrega privada",
+            "resultado": "O pacote atual e o ZIP contêm exatamente os 32 arquivos da allowlist. Não encontrei inclusão do cofre, histórico Git, ambiente, modelo ou dados brutos. O problema encontrado é na proteção do destino do exportador, não evidência de vazamento no pacote existente.",
+            "evidencia": "scratch/reviewer-stage7-audit.json; distribuicao/pitwall-dashboard/ARQUIVOS_PUBLICACAO.txt."
+          },
+          {
+            "item": "Origem, manifesto e reprodução",
+            "resultado": "Conferidas 20 fontes contra os objetos Git do commit-base. Nova exportação no SCRATCH produziu 32 arquivos byte a byte iguais à distribuição e à cópia independente. Reexecução foi idempotente. Hashes de destinos e receita/templates coincidem; nove fontes científicas preservadas. ZIP coincide em nomes e bytes, sem comentários ou campos extras.",
+            "evidencia": "scratch/reviewer-stage7-audit.json; exportar_dashboard.py:121; distribuicao/pitwall-dashboard/MANIFESTO.json."
+          },
+          {
+            "item": "Autossuficiência e isolamento",
+            "resultado": "Reexecutei os 30 testes exportados e o aceite AppTest com as guardas fornecidas, após inspecioná-las. Nenhuma tentativa proibida registrada. O aceite abriu somente os nove arquivos científicos previstos, percorreu 48 GPs e as três telas nas duas temporadas, preservou rankings frente à alteração sintética dos alvos e invalidou cache após alteração de bytes com mtime preservado e remoção de arquivo.",
+            "evidencia": "scratch/pitwall-stage7-independent-tests.json; scratch/pitwall-stage7-app-acceptance.json."
+          },
+          {
+            "item": "Métricas, cobertura e limites",
+            "resultado": "Conferência independente dos CSV/JSON confirmou 2024 com 24 GPs avaliáveis e 479 casos probabilísticos; 2025 com 22 de 24 GPs avaliáveis e 478 casos. Em 2025, 51 integrantes corretos contra 50, com empate em oito pódios completos. Rodadas 9 e 21 permanecem não avaliáveis. README e interface comunicam o ganho pequeno e o caráter retrospectivo.",
+            "evidencia": "scratch/reviewer-stage7-audit.json; distribuicao/pitwall-dashboard/README.md:34; distribuicao/pitwall-dashboard/app.py:271."
+          },
+          {
+            "item": "Python, dependências e configuração",
+            "resultado": "CPython 3.12.15 confirmado, com os seis requisitos nas versões declaradas, pip check aprovado e ausência de distribuições instaladas de scikit-learn, SciPy e joblib. Configuração exportada não fixa endereço/porta; comando local explicita 127.0.0.1. Ambiente original permanece em Python 3.9.6, com as nove versões de referência preservadas.",
+            "evidencia": "Execução de reviewer-stage7-versions.py nos dois interpretadores; distribuicao/pitwall-dashboard/requirements.txt; distribuicao/pitwall-dashboard/.streamlit/config.toml; distribuicao/pitwall-dashboard/README.md:51."
+          },
+          {
+            "item": "Documentação offline e navegador",
+            "resultado": "Reexecutei QA em Chromium isolado contra o servidor existente em 127.0.0.1:8502, sem reiniciá-lo. Seis documentos foram visitados; o CSV de 2024 baixado corresponde ao SHA da fonte. Nenhum erro de página ou requisição externa registrado; largura global mobile de 390/390. Não encontrei links Markdown relativos quebrados no pacote.",
+            "evidencia": "scratch/pitwall-stage7-browser/qa.json; scratch/reviewer-stage7-audit.json."
+          },
+          {
+            "item": "Fontes oficiais e condições de publicação",
+            "resultado": "Documentação oficial recuperada novamente confirma Python 3.12 como padrão selecionável em Advanced settings, uso de requirements.txt, plataforma Debian e sobreposição de gatherUsageStats para true. Termos atuais recuperados da Jolpica identificam CC BY-NC-SA 4.0 e contato para uso comercial. A distribuição distingue dados e código e deixa explícitas as decisões pendentes, sem prometer homologação Linux/Cloud.",
+            "evidencia": "Arquivos reviewer-stage7-cloud-deploy.html, reviewer-stage7-cloud-dependencies.html, reviewer-stage7-streamlit-status.html, reviewer-stage7-jolpica-terms.md e reviewer-stage7-cc-license.html no SCRATCH, obtidos dos endereços oficiais documentados; distribuicao/pitwall-dashboard/FONTES_E_DADOS.md; GUIA_HOSPEDAGEM.md."
+          },
+          {
+            "item": "Preservação e revisão somente leitura",
+            "resultado": "Comparação final confirmou os 58 arquivos do snapshot de revisão sem alterações, os 68 hashes científicos preservados, índice Git igual ao baseline e HEAD mantido em 05eec0b70b24abf9a68dae45aac36730eefb5bc5. Código, configuração, requisitos e testes originais conferidos permanecem iguais. Modelo foi lido exclusivamente como bytes para SHA-256, sem desserialização.",
+            "evidencia": "scratch/reviewer-stage7-audit.json; execução de reviewer-stage7-versions.py; git rev-parse HEAD."
+          },
+          {
+            "item": "Inspeção estática e dados privados",
+            "resultado": "Varredura do conteúdo público não encontrou caminhos pessoais, URL do repositório privado ou padrões de credenciais pesquisados. Não há symlinks no pacote. O exec em tests/test_exportar_hachuras.py:56 executa somente a função gráfica extraída da fonte congelada para comparação; não identifiquei execução de código externo, treinamento ou inferência nesse teste.",
+            "evidencia": "scratch/reviewer-stage7-audit.json; tests/test_exportar_hachuras.py:39–66."
+          }
+        ],
+        "testes": [
+          {
+            "escopo": "Testes unitários do exportador e das hachuras",
+            "quantidade": 11,
+            "falhas": 0,
+            "comando": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 TMPDIR=scratch scratch/pitwall-stage7-runtime/bin/python -B -m unittest tests.test_exportar_dashboard tests.test_exportar_hachuras -v"
+          },
+          {
+            "escopo": "Suíte exportada sob guardas de isolamento",
+            "quantidade": 30,
+            "falhas": 0,
+            "comando": "env -i HOME=scratch/pitwall-stage7-home PATH=/usr/bin:/bin TMPDIR=scratch PYTHONDONTWRITEBYTECODE=1 scratch/pitwall-stage7-runtime/bin/python -B scratch/pitwall-stage7-independent-tests.py"
+          },
+          {
+            "escopo": "GPs percorridos no aceite AppTest, além das verificações de telas, cache e invariância",
+            "quantidade": 48,
+            "falhas": 0,
+            "comando": "env -i HOME=scratch/pitwall-stage7-home PATH=/usr/bin:/bin TMPDIR=scratch PYTHONDONTWRITEBYTECODE=1 scratch/pitwall-stage7-runtime/bin/python -B scratch/pitwall-stage7-app-acceptance.py"
+          },
+          {
+            "escopo": "Execução do roteiro Chromium: documentos, download, desktop e mobile",
+            "quantidade": 1,
+            "falhas": 0,
+            "comando": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 TMPDIR=scratch PLAYWRIGHT_BROWSERS_PATH=scratch/pitwall-playwright-browsers scratch/pitwall-browser-qa/bin/python -B scratch/pitwall-stage7-browser-qa.py"
+          },
+          {
+            "escopo": "Contraprova de confinamento do destino; uma violação reproduzida com fixture sintética",
+            "quantidade": 1,
+            "falhas": 1,
+            "comando": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 scratch/pitwall-stage7-runtime/bin/python -B scratch/reviewer-stage7-path-probe.py"
+          }
+        ],
+        "inspecao_visual": {
+          "realizada": true,
+          "arquivos": [
+            "reports/distribuicao_dashboard_v1/desempenho_desktop.png",
+            "reports/distribuicao_dashboard_v1/como_funciona_desktop.png",
+            "reports/distribuicao_dashboard_v1/probabilidades_mobile.png"
+          ],
+          "limitacoes": [
+            "Desempenho: métricas, denominadores, empate e ressalvas visíveis e legíveis; não certifica conteúdo abaixo do viewport.",
+            "Como funciona: seletor offline e aviso sobre documentos históricos visíveis; o plano antigo aparece contextualizado como histórico.",
+            "Mobile: barras favoritas hachuradas visíveis, IDs e eixo legíveis; a tabela de participantes aparece apenas parcialmente.",
+            "Não houve certificação de Safari, outros aparelhos, acessibilidade completa ou tabelas inteiras."
+          ]
+        },
+        "limitacoes": [
+          "A aprovação técnica está bloqueada pela contraprova do destino com '..', apesar de as suítes existentes passarem.",
+          "Não executei treinamento, inferência, coletores, APIs de dados ou a suíte científica legada; não abri data/.",
+          "Não executei Linux, Docker ou Community Cloud. Licença aberta do código e adequação do uso às condições dos dados continuam decisões pendentes do autor, não aprovação jurídica desta revisão.",
+          "Não consultei o remoto para confirmar sua visibilidade; não alterei Git, remotos ou publicação. O commit da etapa 7 continua pendente e não foi produzido nesta revisão.",
+          "A varredura de credenciais é baseada nos padrões examinados e na allowlist, não garantia universal de ausência de segredos.",
+          "Identidade efetiva do revisor não foi comprovada por autodescrição; permanece para confirmação do agente principal no banco de uso.",
+          "Foram criados ou atualizados apenas probes, cópias e evidências no SCRATCH. A lista de arquivos alterados abaixo refere-se ao projeto."
+        ],
+        "arquivos_alterados": []
+      }
+    },
+    {
+      "rodada": 2,
+      "modelo_efetivo": "gpt-6-astra",
+      "provider_efetivo": "openai-codex",
+      "session_id": "local-f560bcd4c2b55e14d401322ba28b0d165e2429e47efb549058f946eaf812a15a",
+      "chamadas_tarefa_principal": 13,
+      "uso_efetivo_confirmado_no_banco": true,
+      "arquivos_readonly_conferidos": 59,
+      "divergencias_snapshot": [],
+      "parecer": {
+        "veredito": "reprovado",
+        "problemas": [
+          {
+            "prioridade": "P2",
+            "bloqueante": true,
+            "arquivo": "exportar_dashboard.py",
+            "linha": 385,
+            "titulo": "Comparação lexical ainda permite exportar para dentro do cofre por diferença de maiúsculas/minúsculas",
+            "evidencia": "Contraprova real, exclusivamente em cofre fictício no SCRATCH: cofre/notes/proibido foi recusado, mas COFRE/notes/proibido foi aceito e recebeu sentinela.txt, ARQUIVOS_PUBLICACAO.txt e MANIFESTO.json pela rotina real de escrita. Path.samefile confirmou que cofre e COFRE eram o mesmo diretório; o alias não era symlink. O conteúdo escrito foi explicitamente sintético. A recusa de '..' fecha o vetor específico da R1, mas _contem(), nas linhas 60–65, e _validar_destino(), nas linhas 375–390, continuam tratando identidade física como comparação lexical. Evidência: scratch/reviewer-stage7-r2-path-probe.py e reviewer-stage7-r2-path-probe.json.",
+            "correcao_recomendada": "Validar o confinamento considerando a identidade dos ancestrais existentes no sistema de arquivos, inclusive quando o destino ainda não existe. Preservar a recusa de '..' e de ancestrais symlink; não substituir a verificação por simples lowercase. Acrescentar regressão de escrita real com cofre fictício em volume insensível a caixa, comprovando recusa do alias e ausência de criação no destino proibido. Manter os controles de destino permitido, idempotência e divergência. Regenerar o manifesto após corrigir a receita e solicitar nova revisão."
+          }
+        ],
+        "verificacoes": [
+          {
+            "item": "Correção específica da R1",
+            "resultado": "Confirmada: '..' na raiz ou no destino é recusado antes da escrita. Destino direto proibido e ancestral symlink também foram recusados sem criar arquivos proibidos. Entretanto, outro alias do mesmo diretório contorna o confinamento.",
+            "evidencia": "exportar_dashboard.py:68–72, 375–407; scratch/reviewer-stage7-r2-path-probe.json."
+          },
+          {
+            "item": "Allowlist pública e separação da entrega privada",
+            "resultado": "Pacote e ZIP contêm exatamente os 32 arquivos do inventário, incluindo nove CSV/JSON científicos. Não foram encontrados symlinks, caminhos pessoais, URL do repositório privado ou padrões de credenciais pesquisados. O bloqueio encontrado pertence ao exportador, não constitui evidência de vazamento no pacote atual.",
+            "evidencia": "distribuicao/pitwall-dashboard/ARQUIVOS_PUBLICACAO.txt; scratch/reviewer-stage7-r2-audit.json."
+          },
+          {
+            "item": "Origem, manifesto e reprodução",
+            "resultado": "Conferidas 20 fontes contra o commit-base. Nova exportação no SCRATCH produziu 32 arquivos byte idênticos à distribuição e à cópia independente. Reexecução foi idempotente. Hashes do manifesto, da receita e dos templates coincidem; nove fontes científicas são cópias byte exatas. ZIP coincide em nomes e bytes, sem comentários ou campos extras.",
+            "evidencia": "scratch/reviewer-stage7-r2-audit.json; distribuicao/pitwall-dashboard/MANIFESTO.json."
+          },
+          {
+            "item": "Autossuficiência e reprodução isolada",
+            "resultado": "Após inspecionar os harnesses, reexecutei os 30 testes exportados e o aceite AppTest. Nenhuma tentativa proibida foi registrada pelas guardas. O aceite conferiu rankings contra os CSVs, percorreu 48 GPs e três telas nas duas temporadas, confirmou invariância frente à alteração dos alvos, invalidação de cache por bytes com mtime preservado e erro sem métricas antigas após remoção de arquivo. N/A permaneceu distinto de zero.",
+            "evidencia": "scratch/pitwall-stage7-independent-tests.json; scratch/pitwall-stage7-app-acceptance.json."
+          },
+          {
+            "item": "Python e dependências",
+            "resultado": "Confirmados CPython 3.12.15 e os seis pins declarados: streamlit 1.50.0, plotly 6.3.1, pandas 2.2.3, pyarrow 20.0.0, numpy 1.26.4 e protobuf 5.29.5. pip check aprovado; scikit-learn, SciPy e joblib não constam como distribuições instaladas nesse ambiente.",
+            "evidencia": "scratch/reviewer-stage7-r2-audit.json; execução de python -B -m pip check com saída 'No broken requirements found.'."
+          },
+          {
+            "item": "Configuração local versus hospedagem",
+            "resultado": "Configuração exportada sem endereço ou porta fixos, com gatherUsageStats=false. Comandos locais explicitam loopback. Guia distingue .python-version da seleção em Advanced settings, apresenta publicação como futura e não promete telemetria desligada na nuvem nem homologação Linux.",
+            "evidencia": "Teste test_configuracao_requisitos_e_testes_portaveis_nao_dependem_do_cofre aprovado; distribuicao/pitwall-dashboard/GUIA_HOSPEDAGEM.md:59–99."
+          },
+          {
+            "item": "Fidelidade de métricas, cobertura e limites",
+            "resultado": "Conferência dos artefatos confirmou 2024 com 24 GPs avaliáveis e 479 casos probabilísticos; 2025 com 22 de 24 GPs avaliáveis e 478 casos. Em 2025, 51 integrantes corretos contra 50, com oito pódios completos para ambos. Rodadas 9 e 21 permanecem não avaliáveis. README e captura de desempenho comunicam o caráter retrospectivo, denominadores distintos e vantagem pequena, sem garantia futura.",
+            "evidencia": "scratch/reviewer-stage7-r2-audit.json; distribuicao/pitwall-dashboard/README.md:34–44; reports/distribuicao_dashboard_v1/desempenho_desktop.png."
+          },
+          {
+            "item": "Links, documentação, atribuição e condições dos dados",
+            "resultado": "Não foram encontrados links Markdown relativos quebrados no pacote. A documentação distingue condições dos dados e licença do código ainda pendente, identifica origem e transformações e não trata hospedagem gratuita como autorização jurídica. A captura mostra aviso sobre documentos históricos e 2025 já avaliado antes do plano antigo.",
+            "evidencia": "distribuicao/pitwall-dashboard/FONTES_E_DADOS.md; distribuicao/pitwall-dashboard/LICENCA_CODIGO.md; distribuicao/pitwall-dashboard/GUIA_HOSPEDAGEM.md; scratch/reviewer-stage7-r2-audit.json; reports/distribuicao_dashboard_v1/como_funciona_desktop.png."
+          },
+          {
+            "item": "Preservação dos originais e revisão somente leitura",
+            "resultado": "Os 59 arquivos do snapshot R2 permanecem iguais; os 68 hashes científicos conferidos permanecem iguais. Índice Git coincide com o baseline e HEAD permanece em 05eec0b70b24abf9a68dae45aac36730eefb5bc5. Python original continua 3.9.6, versões de referência coincidem e código/configuração originais conferidos não mudaram. Escritas desta revisão ficaram no SCRATCH.",
+            "evidencia": "scratch/reviewer-stage7-r2-audit.json; execução de reviewer-stage7-versions.py no Python original; git status --short final."
+          }
+        ],
+        "testes": [
+          {
+            "escopo": "Testes unitários atuais do exportador e das hachuras",
+            "quantidade": 12,
+            "falhas": 0,
+            "comando": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 TMPDIR=scratch scratch/pitwall-stage7-runtime/bin/python -B -m unittest tests.test_exportar_dashboard tests.test_exportar_hachuras -v"
+          },
+          {
+            "escopo": "Suíte exportada sob guardas de isolamento",
+            "quantidade": 30,
+            "falhas": 0,
+            "comando": "env -i HOME=scratch/pitwall-stage7-home PATH=/usr/bin:/bin TMPDIR=scratch PYTHONDONTWRITEBYTECODE=1 scratch/pitwall-stage7-runtime/bin/python -B scratch/pitwall-stage7-independent-tests.py"
+          },
+          {
+            "escopo": "GPs percorridos no aceite AppTest, além das verificações de telas, cache e invariância",
+            "quantidade": 48,
+            "falhas": 0,
+            "comando": "env -i HOME=scratch/pitwall-stage7-home PATH=/usr/bin:/bin TMPDIR=scratch PYTHONDONTWRITEBYTECODE=1 scratch/pitwall-stage7-runtime/bin/python -B scratch/pitwall-stage7-app-acceptance.py"
+          },
+          {
+            "escopo": "Contraprova sintética de confinamento: seis cenários, uma violação de segurança reproduzida; o script registra a violação e termina com exit 0",
+            "quantidade": 6,
+            "falhas": 1,
+            "comando": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 TMPDIR=scratch scratch/pitwall-stage7-runtime/bin/python -B scratch/reviewer-stage7-r2-path-probe.py"
+          }
+        ],
+        "inspecao_visual": {
+          "realizada": true,
+          "arquivos": [
+            "reports/distribuicao_dashboard_v1/desempenho_desktop.png",
+            "reports/distribuicao_dashboard_v1/como_funciona_desktop.png",
+            "reports/distribuicao_dashboard_v1/probabilidades_mobile.png"
+          ],
+          "limitacoes": [
+            "Inspecionadas imagens reais fornecidas no projeto; não reexecutei Chromium nesta R2.",
+            "Desempenho: denominadores, empate e ressalvas legíveis no viewport.",
+            "Como funciona: seletor offline e aviso histórico visíveis antes do documento.",
+            "Mobile: três barras favoritas ciano e hachuradas visíveis; tabela de participantes aparece apenas parcialmente.",
+            "Não certifica conteúdo fora do viewport, acessibilidade completa, Safari, Android ou outros dispositivos."
+          ]
+        },
+        "limitacoes": [
+          "A correção do vetor '..' foi confirmada, mas a aprovação técnica continua bloqueada pela contraprova de identidade de caminhos em volume insensível a caixa.",
+          "Não executei treinamento, inferência, coletores, APIs de dados ou suíte científica legada; não abri dados brutos. Arquivos de modelo abrangidos pelos hashes foram tratados exclusivamente como bytes, sem desserialização.",
+          "Compatibilidade executada em macOS com Python 3.12.15; não testei Linux, Docker ou Community Cloud.",
+          "Não reconsultei fontes oficiais externas nesta rodada; examinei a documentação distribuída e o registro R1. Isso não constitui parecer jurídico nem autorização para uso comercial ou publicação.",
+          "Licença do código, adequação do uso às condições dos dados e autorização para publicação continuam pendentes do autor.",
+          "Não publiquei aplicativo, criei repositório, alterei privacidade, remotos ou configuração, nem parei ou reiniciei os servidores existentes.",
+          "A varredura de conteúdo público é limitada aos padrões examinados; não representa garantia universal de ausência de segredos.",
+          "Identidade efetiva do modelo/provedor e nível solicitado devem ser confirmados pelo pai no banco de uso; autodescrição não é prova.",
+          "Uma tentativa de execute_code foi bloqueada antes de executar; prossegui com ferramentas normais, sem alterar política ou budget.",
+          "Probes, exportação independente e evidências foram escritos somente no SCRATCH. A lista arquivos_alterados refere-se ao projeto."
+        ],
+        "arquivos_alterados": []
+      }
+    },
+    {
+      "rodada": 3,
+      "modelo_efetivo": "gpt-6-astra",
+      "provider_efetivo": "openai-codex",
+      "session_id": "local-ddfcdd4594548f3145dc4c88d346f1383d56a5e5bb5b409be7235b2752a5d3e9",
+      "chamadas_tarefa_principal": 13,
+      "uso_efetivo_confirmado_no_banco": true,
+      "arquivos_readonly_conferidos": 59,
+      "divergencias_snapshot": [],
+      "parecer": {
+        "veredito": "aprovado_com_ressalvas",
+        "problemas": [],
+        "verificacoes": [
+          {
+            "item": "Contraprova independente das correções R1/R2",
+            "resultado": "Nove cenários passaram, sem escrita fora do único destino permitido no cofre fictício. Confirmei que cofre e COFRE eram fisicamente o mesmo diretório, sem symlink. Foram recusados destino direto proibido, alias de caixa com várias pastas finais inexistentes, '..' no destino, '..' na raiz, ancestral symlink e alias da própria raiz. A exportação permitida escreveu efetivamente três arquivos sintéticos; repetição foi idempotente e divergência foi recusada sem sobrescrita.",
+            "evidencia": "exportar_dashboard.py:375–409; scratch/reviewer-stage7-r3-independent.py e reviewer-stage7-r3-independent.json. Contraprova própria, sem usar o cofre real como destino e sem normalizar identidade por lowercase."
+          },
+          {
+            "item": "1. Allowlist e ausência do cofre",
+            "resultado": "Inventário e árvore pública coincidem exatamente em 32 arquivos, incluindo somente nove CSV/JSON científicos. ZIP contém os mesmos 32 membros e bytes, sem campos extras ou comentários. Não encontrei symlinks, caminhos pessoais, URL do repositório privado ou os padrões de credenciais pesquisados. Receita, contexto, QA e testes privados não se confundem com o payload público.",
+            "evidencia": "distribuicao/pitwall-dashboard/ARQUIVOS_PUBLICACAO.txt; docs/distribuicao_dashboard_v1.md:100–136; scratch/reviewer-stage7-r3-independent.json."
+          },
+          {
+            "item": "2. Autossuficiência",
+            "resultado": "Reexecutei os 30 testes exportados com acesso ao projeto original, rede e importações científicas proibidos e proteção contra gravação no pacote. Todos passaram, sem tentativas proibidas registradas. O aceite abriu exatamente as nove fontes científicas previstas.",
+            "evidencia": "scratch/reviewer-stage7-r3-independent-tests.json e reviewer-stage7-r3-app-acceptance.json. Harnesses inspecionados antes da execução."
+          },
+          {
+            "item": "3. Python e dependências",
+            "resultado": "Confirmados CPython 3.12.15 e os seis pins: Streamlit 1.50.0, Plotly 6.3.1, pandas 2.2.3, PyArrow 20.0.0, NumPy 1.26.4 e protobuf 5.29.5. pip check passou. scikit-learn, SciPy e joblib não constam como distribuições instaladas nesse ambiente.",
+            "evidencia": "scratch/reviewer-stage7-r3-independent.json; execução de python -B -m pip check retornou 'No broken requirements found.'."
+          },
+          {
+            "item": "4. Configuração local versus hospedagem",
+            "resultado": "Configuração exportada não fixa endereço nem porta; comandos locais especificam loopback. O guia distingue .python-version da seleção de Python na plataforma e explicita que gatherUsageStats=false local não garante telemetria desligada no Community Cloud. Publicação e homologação em nuvem continuam futuras.",
+            "evidencia": "distribuicao/pitwall-dashboard/.streamlit/config.toml:1–6; GUIA_HOSPEDAGEM.md:59–99; README.md:46–79; testes de configuração aprovados."
+          },
+          {
+            "item": "5. Fidelidade de métricas, cobertura e limites",
+            "resultado": "Conferência dos CSV/JSON confirmou 2024 com 479 casos probabilísticos e 24 GPs avaliáveis; 2025 com 478 casos e 22 de 24 GPs avaliáveis. Em 2025, são 51 integrantes corretos contra 50 e oito pódios completos para ambos. Rodadas 9 e 21 permanecem não avaliáveis. O aceite confirmou N/A distinto de zero, invariância dos favoritos à alteração sintética dos alvos e invalidação do cache após alteração de bytes com mtime preservado e remoção de arquivo. README e interface distinguem denominadores, ganho pequeno e estudo retrospectivo.",
+            "evidencia": "scratch/reviewer-stage7-r3-independent.json e reviewer-stage7-r3-app-acceptance.json; distribuicao/pitwall-dashboard/app.py:271–316; README.md:34–44; captura desempenho_desktop.png."
+          },
+          {
+            "item": "6. Links, documentação, atribuição e condições dos dados",
+            "resultado": "Não encontrei links Markdown relativos quebrados no pacote. Documentação offline usa allowlist e oferece o CSV autorizado. Origem Jolpica/Ergast, transformações, condições NC/SA e ausência de endosso estão identificadas. Licença aberta do código permanece explicitamente pendente, sem aplicar licença permissiva aos dados. O aviso de registros históricos precede os planos antigos na interface.",
+            "evidencia": "distribuicao/pitwall-dashboard/FONTES_E_DADOS.md:3–33; LICENCA_CODIGO.md:3–10; documentacao_local.py:7–19 e 93–113; scratch/reviewer-stage7-r3-independent.json; captura como_funciona_desktop.png."
+          },
+          {
+            "item": "7. Reprodução isolada e proveniência",
+            "resultado": "Conferi 20 fontes contra o commit-base, hashes de receita/templates e registros do manifesto. Nove fontes científicas são cópias byte exatas. Uma nova exportação no SCRATCH produziu os mesmos 32 arquivos da distribuição; repetição foi idempotente. A cópia independente utilizada nos testes também coincide byte a byte. Reexecutei AppTest nos 48 GPs, três telas e duas temporadas, sem tentativas proibidas registradas.",
+            "evidencia": "scratch/reviewer-stage7-r3-independent.json, reviewer-stage7-r3-final-check.json e reviewer-stage7-r3-app-acceptance.json; commit-base 05eec0b70b24abf9a68dae45aac36730eefb5bc5."
+          },
+          {
+            "item": "8. Preservação dos originais",
+            "resultado": "Conferência final, após os testes e a reprodução, confirmou os 59 arquivos do snapshot R3 e os 68 hashes preservados sem divergências. Índice Git e HEAD coincidem com o baseline. Python original continua 3.9.6, versões de referência coincidem e código/configuração originais conferidos permanecem iguais. As duas reprovações anteriores foram preservadas.",
+            "evidencia": "scratch/reviewer-stage7-r3-final-check.json; execução inspecionada de reviewer-stage7-versions.py com .venv/bin/python; reports/distribuicao_dashboard_v1/revisao_independente.json."
+          }
+        ],
+        "testes": [
+          {
+            "escopo": "Contraprovas independentes de confinamento com escrita real exclusivamente sintética em cofre fictício",
+            "quantidade": 9,
+            "falhas": 0,
+            "comando": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 TMPDIR=scratch scratch/pitwall-stage7-runtime/bin/python -B scratch/reviewer-stage7-r3-independent.py"
+          },
+          {
+            "escopo": "Testes unitários do exportador e das hachuras; nenhum skip",
+            "quantidade": 13,
+            "falhas": 0,
+            "comando": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 TMPDIR=scratch scratch/pitwall-stage7-runtime/bin/python -B -m unittest tests.test_exportar_dashboard tests.test_exportar_hachuras -v"
+          },
+          {
+            "escopo": "Suíte exportada sob guardas de isolamento",
+            "quantidade": 30,
+            "falhas": 0,
+            "comando": "env -i HOME=scratch/pitwall-stage7-home PATH=/usr/bin:/bin TMPDIR=scratch PYTHONDONTWRITEBYTECODE=1 scratch/pitwall-stage7-runtime/bin/python -B scratch/reviewer-stage7-r3-run-harness.py independent-tests"
+          },
+          {
+            "escopo": "GPs renderizados e conferidos no aceite AppTest, além de telas, cache e invariância; não corresponde a 48 testes unitários",
+            "quantidade": 48,
+            "falhas": 0,
+            "comando": "env -i HOME=scratch/pitwall-stage7-home PATH=/usr/bin:/bin TMPDIR=scratch PYTHONDONTWRITEBYTECODE=1 scratch/pitwall-stage7-runtime/bin/python -B scratch/reviewer-stage7-r3-run-harness.py app-acceptance"
+          },
+          {
+            "escopo": "Reprodução byte exata, idempotência e preservação final",
+            "quantidade": 1,
+            "falhas": 0,
+            "comando": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 TMPDIR=scratch scratch/pitwall-stage7-runtime/bin/python -B scratch/reviewer-stage7-r3-final-check.py"
+          }
+        ],
+        "inspecao_visual": {
+          "realizada": true,
+          "arquivos": [
+            "reports/distribuicao_dashboard_v1/desempenho_desktop.png",
+            "reports/distribuicao_dashboard_v1/como_funciona_desktop.png",
+            "reports/distribuicao_dashboard_v1/probabilidades_mobile.png"
+          ],
+          "limitacoes": [
+            "Inspecionei as três capturas fornecidas; não reexecutei Chromium nem o download pelo navegador nesta R3.",
+            "Desempenho: denominadores, empate e ressalvas estão legíveis no viewport examinado.",
+            "Como funciona: seletor offline e aviso de documentos históricos aparecem antes do plano antigo.",
+            "Mobile: três barras favoritas ciano e hachuradas estão visíveis; tabela de participantes aparece apenas parcialmente.",
+            "Não certifico conteúdo fora do viewport, acessibilidade completa, Safari, Android ou outros dispositivos."
+          ]
+        },
+        "limitacoes": [
+          "Aprovação restrita à preparação técnica local da distribuição S7. Não é autorização de publicação, parecer jurídico ou homologação de deploy.",
+          "Não encontrei bloqueante remanescente nos cenários examinados. A revisão não constitui prova universal contra todas as condições possíveis do sistema de arquivos.",
+          "Execução verificada em macOS com Python 3.12.15; Linux, Docker e Community Cloud não foram testados nesta revisão.",
+          "Não reconsultei fontes oficiais externas nesta rodada. Avaliei a documentação local e suas ressalvas, sem certificar a atualidade das regras da plataforma ou a adequação jurídica do uso pretendido.",
+          "Licença do código, adequação do uso às condições dos dados e autorização de publicação permanecem pendentes do autor.",
+          "Não executei treinamento, inferência, desserialização de modelo, coletores, APIs de dados ou suíte científica legada. O modelo foi tratado exclusivamente como bytes para SHA-256; não abri dados brutos.",
+          "Não criei agentes, commits ou repositórios; não alterei remotos, privacidade, configurações, budget ou policy; não parei nem reiniciei serviços.",
+          "A varredura de conteúdo público cobre os padrões examinados e não garante ausência universal de segredos.",
+          "A identidade efetiva de modelo/provedor e o nível solicitado devem ser confirmados pelo pai no banco de uso; autodescrição não é prova.",
+          "Uma tentativa de execute_code foi bloqueada antes de executar. Prossegui com ferramentas normais, sem alterar a política.",
+          "Escritas da revisão ficaram no SCRATCH, com evidências novas sob prefixo reviewer-stage7-r3. Resultados anteriores não foram sobrescritos. arquivos_alterados refere-se ao projeto."
+        ],
+        "arquivos_alterados": []
+      }
+    }
+  ],
+  "escopo_aprovado": "Preparação técnica local da distribuição; publicação e decisões de licença/uso permanecem pendentes."
+}

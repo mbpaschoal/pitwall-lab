@@ -6,9 +6,36 @@ Portfólio de ciência de dados sobre Fórmula 1, construído passo a passo para
 
 No futuro: criar um dashboard que estime a probabilidade de cada piloto terminar uma corrida no pódio.
 
-**Etapa atual:** a etapa 6 acrescentou um **dashboard local em Streamlit e Plotly**, somente leitura, para explorar os resultados retrospectivos já calculados de 2024 e 2025. Não carrega o modelo nem faz novas previsões. **2025 já foi avaliado para o v1 e não é teste intocado para experimentos posteriores.** As seções das etapas 1–5 abaixo preservam seu contexto histórico.
+**Etapa atual:** a etapa 7 concluiu a preparação de uma **distribuição mínima e autossuficiente** do dashboard, separada do cofre e do ambiente científico, com aprovação técnica independente com ressalvas e futura hospedagem ainda pendente. **Nada foi publicado em aplicativo ou repositório público.** 2025 já foi avaliado para o v1 e não é teste intocado. O estado de verificação da etapa 7 está em [distribuição e limites](docs/distribuicao_dashboard_v1.md); as seções seguintes preservam as etapas anteriores.
 
-## Etapa 6 — dashboard local do estudo retrospectivo
+## Etapa 7 — distribuição mínima, publicação pendente
+
+- Pacote destinado à publicação: [`distribuicao/pitwall-dashboard/`](distribuicao/pitwall-dashboard/README.md).
+- Lista exata de arquivos: [`ARQUIVOS_PUBLICACAO.txt`](distribuicao/pitwall-dashboard/ARQUIVOS_PUBLICACAO.txt).
+- Origem, transformações documentais e hashes: [`MANIFESTO.json`](distribuicao/pitwall-dashboard/MANIFESTO.json).
+- Receita e exportador: [`publicacao/README.md`](publicacao/README.md) e [`exportar_dashboard.py`](exportar_dashboard.py).
+
+Na raiz deste projeto, para conferir/reproduzir o pacote:
+
+```bash
+./.venv/bin/python exportar_dashboard.py
+```
+
+Para uma pasta nova e independente, sem copiar o cofre:
+
+```bash
+./.venv/bin/python exportar_dashboard.py --destino "$HOME/Projetos/pitwall-dashboard-publico"
+```
+
+Destino divergente é recusado sem sobrescrita. A distribuição tem seu próprio `requirements.txt`, configuração de hospedagem sem endereço/porta fixados, comando local com `127.0.0.1`, testes e documentação offline. A versão de hospedagem usa **Python 3.12**; não migra a `.venv` científica 3.9.6. Não exige scikit-learn, SciPy ou joblib. Instruções de instalação, uso e hospedagem futura estão no [README público](distribuicao/pitwall-dashboard/README.md) e no [guia](distribuicao/pitwall-dashboard/GUIA_HOSPEDAGEM.md).
+
+O repositório atual permanece privado. A publicação futura exige **novo repositório, fora do cofre e com novo histórico**, contendo somente o inventário exportado. Os dados continuam sob CC BY-NC-SA 4.0; a licença aberta do código aguarda escolha do autor. Não há promessa de telemetria desligada no Community Cloud: a documentação da plataforma informa que sobrepõe essa opção. Consulte [fontes e condições](distribuicao/pitwall-dashboard/FONTES_E_DADOS.md) e os limites técnicos registrados na etapa.
+
+**Parecer da etapa 7:** R3 **aprovado com ressalvas**, sem problemas remanescentes nos cenários examinados, por **openai-codex / gpt-6-astra**. R1/R2 reprovaram dois P2 de confinamento do exportador; **openai-codex / gpt-5.6-terra** os corrigiu com regressões RED/GREEN. Identidades efetivas confirmadas; revisor somente leitura, sem publicação. Passaram **13 testes do exportador/hachuras**, **30 do pacote independente**, aceite de **48 GPs/3 telas/2 temporadas** e nove contraprovas próprias do revisor. Chromium local conferiu seis documentos e download CSV; 68 SHA e nove versões relevantes originais iguais. Confira o [histórico de pareceres](reports/distribuicao_dashboard_v1/revisao_independente.json) e os [limites](docs/distribuicao_dashboard_v1.md). A revisão da etapa 6 não foi usada como aprovação da etapa 7.
+
+O [ZIP mínimo](distribuicao/pitwall-dashboard.zip) contém exatamente os mesmos 32 arquivos, sem cofre ou histórico Git. Não inclui a receita, contexto ou auditorias que ficam apenas na entrega privada.
+
+## Etapa 6 — dashboard local do estudo retrospectivo — registro histórico
 
 ### Instalar as dependências adicionais
 

@@ -1,0 +1,249 @@
+{
+  "status": "aprovacao_tecnica_com_ressalvas_publicacao_pendente",
+  "python_tested": "3.12.15",
+  "os_tested": "macOS arm64",
+  "source_commit": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
+  "exported_files": 32,
+  "three_exports_identical": true,
+  "scientific_copies_byte_identical": 9,
+  "original_scientific_sha256_unchanged": 68,
+  "original_app_loader_config_requirements_unchanged": true,
+  "baseline_dashboard_tests": 26,
+  "exporter_and_hatch_tests": {
+    "tests": 13,
+    "failures": 0,
+    "scope": "Somente tests.test_exportar_dashboard e tests.test_exportar_hachuras no Python3.12; nao suite cientifica."
+  },
+  "independent_bundle_tests": {
+    "python": "3.12.15",
+    "tests": 30,
+    "failures": 0,
+    "errors": 0,
+    "original_project_inaccessible": true,
+    "bundle_read_only": true,
+    "network_blocked": true,
+    "forbidden_imports_blocked": true,
+    "forbidden_attempts": []
+  },
+  "app_test": {
+    "cache_invalidates_changed_bytes_same_mtime": true,
+    "missing_file_shows_error_not_stale_data": true,
+    "gps_verified_against_published_ranks": 48,
+    "gp_views_rendered": 48,
+    "all_screens_both_years": true,
+    "outcome_invariance_verified": true,
+    "unavailable_gp_scores_remain_null": true,
+    "forbidden_attempts": [],
+    "report_sources_opened": [
+      "reports/avaliacao_final_v1/avaliacao_corridas.csv",
+      "reports/avaliacao_final_v1/avaliacao_por_piloto.csv",
+      "reports/avaliacao_final_v1/calibracao.csv",
+      "reports/avaliacao_final_v1/metricas.json",
+      "reports/avaliacao_final_v1/previsoes_pre_corrida.csv",
+      "reports/modelo_v1/avaliacao_corridas.csv",
+      "reports/modelo_v1/calibracao.csv",
+      "reports/modelo_v1/metricas.json",
+      "reports/modelo_v1/previsoes_validacao.csv"
+    ],
+    "raw_data_or_model_opened": false,
+    "external_network_attempts": 0
+  },
+  "browser": {
+    "local_documents_visited": [
+      "Método do modelo v1",
+      "Relatório de 2024",
+      "Avaliação de 2025",
+      "Protocolo temporal",
+      "Dicionário de variáveis",
+      "Plano da avaliação de 2025"
+    ],
+    "download_2024_csv_sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+    "browser_version": "140.0.7339.16",
+    "page_errors": [],
+    "external_requests_blocked": [],
+    "request_hosts": [
+      "127.0.0.1"
+    ],
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    "screenshots": [
+      "calibracao_desktop.png",
+      "como_funciona_desktop.png",
+      "desempenho_desktop.png",
+      "espanha_na_desktop.png",
+      "explorar_desktop.png",
+      "explorar_mobile.png",
+      "probabilidades_mobile.png"
+    ]
+  },
+  "runtime": {
+    "scikit_learn_installed": false,
+    "scipy_installed": false,
+    "joblib_installed": false,
+    "pip_check": "passed",
+    "direct_requirements": [
+      "streamlit==1.50.0",
+      "plotly==6.3.1",
+      "pandas==2.2.3",
+      "pyarrow==20.0.0",
+      "numpy==1.26.4",
+      "protobuf==5.29.5"
+    ]
+  },
+  "actors_actual_usage": [
+    {
+      "fase": "implementation",
+      "session_id": "local-a0394f795409b52cacfdf1bd6dba9e9f7ba362807dbc49eabea9d921a73c10c7",
+      "model": "gpt-5.6-terra",
+      "provider": "openai-codex",
+      "primary_api_calls": 19,
+      "completed": false,
+      "limitation": "Execucao inicial interrompida com HTTP429; sem aprovação atribuída."
+    },
+    {
+      "fase": "preqa-fix",
+      "session_id": "local-69ad252ed50c28f52dec94fea521257330d85d8ce4d1ee38dba4d06b05bc8755",
+      "model": "gpt-5.6-terra",
+      "provider": "openai-codex",
+      "primary_api_calls": 18,
+      "completed": true,
+      "limitation": null
+    },
+    {
+      "fase": "utc-fix",
+      "session_id": "local-44a5bfff6bafb78108f1e447bc0690441fb709c7b9213a8534d1def3a61484de",
+      "model": "gpt-5.6-terra",
+      "provider": "openai-codex",
+      "primary_api_calls": 7,
+      "completed": true,
+      "limitation": null
+    },
+    {
+      "fase": "destination-fix",
+      "session_id": "local-a8efa39709e4f0be4c2936a30338627f8066b6f4ac7c57b60a6c7a5a8d0e05e2",
+      "model": "gpt-5.6-terra",
+      "provider": "openai-codex",
+      "primary_api_calls": 10,
+      "completed": true,
+      "limitation": null
+    },
+    {
+      "fase": "fixture-fix",
+      "session_id": "local-72726b304cab1abf624d996363b18850a67688f202299d401023ec7c6c50072d",
+      "model": "gpt-5.6-terra",
+      "provider": "openai-codex",
+      "primary_api_calls": 10,
+      "completed": true,
+      "limitation": null
+    },
+    {
+      "fase": "pattern-fix",
+      "session_id": "local-93a673ef372fd11bd2f108ffdec2fe877c02253d85ba500fdd8c5872d4de8a48",
+      "model": "gpt-5.6-terra",
+      "provider": "openai-codex",
+      "primary_api_calls": 11,
+      "completed": true,
+      "limitation": null
+    },
+    {
+      "fase": "review-r1-path-fix",
+      "session_id": "local-24d2efae864a20b19106c38719091d50419e2c88b46ff344974300a364713ca4",
+      "model": "gpt-5.6-terra",
+      "provider": "openai-codex",
+      "primary_api_calls": 9,
+      "completed": true,
+      "limitation": null
+    },
+    {
+      "fase": "review-r2-filesystem-identity-fix",
+      "session_id": "local-4cddeed9c335abbf6131b789851b85e44f922a9864453d484a5769100884eafe",
+      "model": "gpt-5.6-terra",
+      "provider": "openai-codex",
+      "primary_api_calls": 7,
+      "completed": true,
+      "limitation": null
+    }
+  ],
+  "published": false,
+  "public_repository_created": false,
+  "cloud_execution_verified": false,
+  "linux_execution_verified": false,
+  "code_open_license_selected": false,
+  "data_license": "CC BY-NC-SA 4.0",
+  "telemetry_local_requested": false,
+  "cloud_telemetry_disable_guaranteed": false,
+  "limitations": [
+    "Homologação em macOS com Python 3.12.15. Não houve deploy no Community Cloud nem execução em Linux; Docker CLI não está instalado.",
+    "Inspeção em Chromium, desktop e viewport mobile de 390 px. Não certifica todos os dispositivos, navegadores ou requisitos de acessibilidade; imagens são capturas de viewport.",
+    "O Community Cloud documenta sobreposição de gatherUsageStats para true. Não garantimos telemetria desativada na nuvem.",
+    "A licença aberta do código aguarda escolha do autor. O uso pretendido dos dados deve ser compatível com as condições NC/SA.",
+    "A suíte científica e os testes de coletores não foram executados nesta etapa."
+  ],
+  "original_nine_relevant_versions_unchanged": true,
+  "original_versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.6.1",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0",
+    "streamlit": "1.50.0",
+    "plotly": "6.3.1",
+    "pandas": "2.2.3",
+    "pyarrow": "20.0.0"
+  },
+  "r1_fix": {
+    "issue": "P2: contorno lexical do destino com componentes de diretório-pai",
+    "fix": "Recusa componentes .. em raiz e destino antes da validação/escrita; mantém guardas symlink e divergência.",
+    "TDD_red_green": true,
+    "regression_sandbox_only": true,
+    "real_vault_affected": false,
+    "three_exports_rebuilt_and_identical": true,
+    "ZIP_rebuilt_and_verified": true,
+    "public_runtime_unchanged_except_manifest_recipe_hash": true,
+    "all_checks_repeated_on": "2026-10-19"
+  },
+  "r2_fix": {
+    "issue": "P2: alias de caixa em volume macOS case-insensitive contornava comparação lexical",
+    "fix": "Compara device/inode da raiz com cada ancestral existente do destino antes da escrita; mantém recusa de .., symlink e destino divergente.",
+    "TDD_red_green": true,
+    "regression_real_export_synthetic_fake_vault_only": true,
+    "regression_skipped": false,
+    "real_vault_affected": false,
+    "six_safety_cases": 6,
+    "safety_violations_after_fix": 0,
+    "three_exports_rebuilt_and_identical": true,
+    "ZIP_rebuilt_and_verified": true,
+    "public_runtime_unchanged_except_manifest_recipe_hash": true,
+    "all_checks_repeated_on": "2026-10-19"
+  },
+  "independent_review_final": {
+    "record": "revisao_independente.json",
+    "rounds": 3,
+    "rejected_rounds": [
+      1,
+      2
+    ],
+    "approved_round": 3,
+    "verdict": "aprovado_com_ressalvas",
+    "remaining_reported_problems": 0,
+    "actual_provider": "openai-codex",
+    "actual_model": "gpt-6-astra",
+    "actual_primary_calls_by_round": [
+      20,
+      13,
+      13
+    ],
+    "actual_fix_model": "gpt-5.6-terra",
+    "actual_fix_provider": "openai-codex",
+    "readonly_final_review_files": 59,
+    "readonly_differences": 0,
+    "independent_confinement_scenarios": 9,
+    "independent_confinement_failures": 0,
+    "reviewer_browser_reexecuted_final_round": false,
+    "reviewer_visual_screenshots_inspected_final_round": 3,
+    "parent_browser_reexecuted_after_final_fix": true
+  }
+}

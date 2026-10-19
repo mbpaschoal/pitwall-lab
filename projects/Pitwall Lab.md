@@ -11,7 +11,27 @@ Aprender ciência de dados com Fórmula 1 e, futuramente, estimar probabilidades
 
 ## Estado documentado
 
-O [README](../README.md) registra a etapa 6: **dashboard local em Streamlit e Plotly**, somente leitura, para explorar os resultados já calculados de 2024 e 2025. **2025 já foi avaliado para o v1 e não é teste intocado para experimentos posteriores.** O aplicativo não carrega o modelo, não faz inferência, não treina, não consulta APIs de dados e não foi publicado.
+O [README](../README.md) registra a etapa 7: preparar uma distribuição mínima e independente do dashboard para futura hospedagem, **sem criar repositório público, mudar a visibilidade do atual ou publicar o aplicativo**. 2025 continua avaliação retrospectiva já realizada, nunca teste intocado novamente.
+
+## Distribuição mínima — etapa 7
+
+- Pasta de publicação: [distribuicao/pitwall-dashboard](../distribuicao/pitwall-dashboard/README.md). Ela não é o cofre nem uma cópia do repositório inteiro. [Inventário exato](../distribuicao/pitwall-dashboard/ARQUIVOS_PUBLICACAO.txt) e [manifesto de origem/hashes](../distribuicao/pitwall-dashboard/MANIFESTO.json).
+- Receita por allowlist em [exportar_dashboard.py](../exportar_dashboard.py), com templates separados em `publicacao/`. Origem congelada dos artefatos: commit `05eec0b70b24abf9a68dae45aac36730eefb5bc5`; a receita nova tem hashes próprios, sem atribuí-la falsamente a esse commit.
+- Nove CSV/JSON de apresentação, código, documentação necessária, atribuição, configuração de hospedagem, requisitos, testes e captura real. Cofre, sessões, credenciais, bases brutas, joblib, ambientes, backups e temporários não são arquivos de publicação.
+- Documentação e relatórios aparecem na própria interface, sem depender de acesso ao repositório privado. A edição pública do relatório 2024 adapta somente links, com origem identificada; os nove CSV/JSON e os documentos copiados sem adaptação mantêm bytes.
+- CPython 3.12.15 e ambiente de homologação novos e isolados, sem migrar a `.venv` científica. A distribuição não exige scikit-learn, SciPy ou joblib. Dados, modelo e relatórios anteriores permanecem congelados.
+- `requirements.txt` próprio na raiz, Python 3.12 selecionado futuramente em Advanced settings do Community Cloud. Endereço/porta de hospedagem não fixados; comando local usa explicitamente `127.0.0.1`.
+- Telemetria pedida como desligada no teste local; a documentação oficial informa sobreposição para ligada no Community Cloud. Execução na nuvem e em Linux não é certificada por um teste local macOS.
+- Dados mantêm CC BY-NC-SA 4.0. Licença aberta do código ainda depende de escolha do autor; não se aplica MIT aos dados. Avaliar a finalidade pretendida e condições antes de publicar.
+- **Preparação técnica concluída em 19/10/2026**, com **R3 aprovado com ressalvas** por `openai-codex/gpt-6-astra`. R1/R2 reprovaram respectivamente os aliases de `..` e de caixa; `openai-codex/gpt-5.6-terra` corrigiu os dois P2 com regressões RED/GREEN. Uso efetivo das revisões 20/13/13 chamadas principais conferido; os 59 arquivos da revisão final não foram alterados pelo revisor. Nenhuma publicação ou repositório público foi criado.
+- Pós-correção: 13 testes exportador/hachuras, 30 do pacote isolado, aceite 48 GPs/3 telas/2 temporadas, três exportações/ZIP byte idênticos, nove contraprovas independentes de confinamento e Chromium real com seis documentos/download CSV aprovados. Os 68 SHA e nove versões originais permaneceram iguais. Sem treino/inferência/coletores/APIs de dados; a suíte científica antiga não foi repetida.
+- Pareceres/limites em [distribuição e verificação](../docs/distribuicao_dashboard_v1.md) e [histórico independente](../reports/distribuicao_dashboard_v1/revisao_independente.json). Licença/adequação de uso, autorização de publicar e teste real Linux/Cloud continuam pendentes. A aprovação da etapa 6 não substituiu a revisão da etapa 7.
+
+Comando de exportação na raiz: `./.venv/bin/python exportar_dashboard.py`. Para outro diretório novo: `./.venv/bin/python exportar_dashboard.py --destino /caminho/novo/pitwall-dashboard`. Destino divergente não é sobrescrito. A publicação futura deve começar por esse pacote, **fora do cofre e com histórico Git novo**, nunca tornando público o repositório atual.
+
+## Estado histórico da etapa 6
+
+O dashboard local em Streamlit e Plotly é somente leitura e explora resultados já calculados de 2024 e 2025. Não carrega modelo, não faz inferência, treinamento ou consultas a dados e não foi publicado.
 
 ## Dashboard local — etapa 6, 2026-10-18
 
@@ -29,6 +49,19 @@ O [README](../README.md) registra a etapa 6: **dashboard local em Streamlit e Pl
 Iniciar na raiz: `./.venv/bin/python -m streamlit run app.py`. Abrir `http://127.0.0.1:8501`; servidor limitado à própria máquina e telemetria desativada. O código poderá ser versionado no repositório privado, mas isso não constitui hospedagem ou publicação do aplicativo. Não há cenários “e se”, login, chatbot, edição de dados ou previsão ao vivo.
 
 Os registros seguintes descrevem as etapas anteriores e mantêm seu contexto histórico.
+
+## Revisão do Codex da etapa 6 — 2026-10-18
+
+Revisado o commit [05eec0b](https://github.com/mbpaschoal/pitwall-lab/commit/05eec0b70b24abf9a68dae45aac36730eefb5bc5), identificado pelo conector GitHub e correspondente ao HEAD local. A consulta de metadados confirmou que o repositório permanece privado.
+
+- Os 26 testes específicos de dashboard passaram; a suíte completa da versão corrigida também foi executada nesta revisão: 135 testes aprovados. Essa execução posterior não altera os registros históricos da rodada anterior de QA.
+- `pip check` não encontrou dependências quebradas. Os 68 hashes de artefatos preservados conferem, sem divergências.
+- O código separa carregamento/validação e apresentação; os testes AppTest percorrem os GPs e as três telas, verificando cobertura e mensagens de erro. Foi inspecionada a captura desktop de desempenho já preservada; esta revisão não produziu nova sessão visual em navegador.
+- Nenhum problema bloqueante encontrado para o escopo local. Não houve alteração de código, dados, modelo ou relatórios científicos.
+
+Proposta seguinte: preparar uma distribuição mínima e revisável para hospedagem gratuita, com dependências reconhecidas pelo Streamlit Community Cloud e ambiente separado em Python suportado. Não mudar a visibilidade deste repositório/cofre nem publicar automaticamente. A lista de arquivos exportados deve ser explícita e incluir apenas aplicativo, artefatos necessários, metodologia e atribuição.
+
+Referências oficiais consultadas nesta revisão: [dependências](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies) e [implantação e versão de Python](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy). A pilha científica local deve permanecer preservada; a distribuição pública ainda não foi testada nem publicada.
 
 ## Avaliação final congelada — etapa 5, 2026-10-18
 
