@@ -1,0 +1,39 @@
+{
+  "status": "FALHOU",
+  "base_commit": "b067ad55dd97d964b132129838773cf6108773e3",
+  "allowlist_implementacao": 141,
+  "estaticos_fechamento": [
+    "reports/operacao_2026/fechamento_local_20261021T004418Z/LIMITES_E_EXCLUSOES.md",
+    "reports/operacao_2026/fechamento_local_20261021T004418Z/ensaio_pos_commit.py",
+    "reports/operacao_2026/fechamento_local_20261021T004418Z/gate_local.py",
+    "reports/operacao_2026/fechamento_local_20261021T004418Z/inventario_implementacao.json",
+    "reports/operacao_2026/fechamento_local_20261021T004418Z/payload_local.json"
+  ],
+  "detalhes": {
+    "head": "b067ad55dd97d964b132129838773cf6108773e3",
+    "branch": "main",
+    "hooks_ativos": [],
+    "r4": {
+      "parecer": "aprovado",
+      "escopo": "somente três correções R3",
+      "achados": []
+    },
+    "uso_efetivo": {
+      "model": "gpt-6-astra",
+      "billing_provider": "openai-codex",
+      "billing_mode": "subscription_included",
+      "task": ""
+    },
+    "hashes_r4_conferidos": 23,
+    "hashes_r4_divergentes": [],
+    "dashboard_hashes_declarados": 0,
+    "paths_esperados": 146,
+    "paths_invalidos_ou_symlinks": []
+  },
+  "falhas": [
+    "dashboard não declara 68 hashes"
+  ],
+  "limite_init_sem_baseline_r4": "__init__.py novo é somente docstring; não consta em hashes_pre_revisao e não foi alegado baseline anterior.",
+  "testes_reexecutados": false,
+  "ensaio_reexecutado": false
+}

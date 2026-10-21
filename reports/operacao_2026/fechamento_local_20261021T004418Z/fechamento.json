@@ -1,0 +1,63 @@
+{
+  "status": "CONCLUIDO_AGUARDANDO_SEM_PUSH_SEM_PROXIMA_ETAPA",
+  "etapa": "fechamento local etapa 8",
+  "commit_implementacao": "9e65ad25b125e78b671a763a43934385c1264363",
+  "commit_evidencias": "identificado_por_HEAD_deste_commit",
+  "gate": {
+    "status": "APROVADO",
+    "resultado": "68 declarados, 68 efetivamente verificados, 68 OK, 0 erros",
+    "arquivo": "resultado_gate_implementacao.json",
+    "reexecutado_nesta_etapa": false
+  },
+  "validacoes_reaproveitadas": {
+    "testes": "54 aprovados; não reexecutados nesta etapa",
+    "r4": "APROVADO no escopo; código e testes intactos"
+  },
+  "ensaio_pos_commit": {
+    "status": "APROVADO",
+    "emissao": "reports/operacao_2026/emissoes/ensaio-commit-9e65ad25b125e78b671a763a43934385c1264363",
+    "modo": "ENSAIO_RETROSPECTIVO",
+    "linhas": 22,
+    "elegiveis": 22,
+    "ordem_15_entradas": true,
+    "probabilidades_e_rankings_identicos_ao_ensaio_referencia": true,
+    "max_erro_probabilidade": 5.551115123125783e-17,
+    "raw_alvo_e_futuro_bloqueados": true,
+    "fit_bloqueado": true,
+    "socket_dns_bloqueados": true,
+    "componentes_rastreados_e_limpos": true,
+    "nao_e_previsao_real_de_austin": true,
+    "execucao": "única reprodução offline aprovada no terminal pelo pai e executada pelo wrapper pré-carregado; não é nova execução do executor médio",
+    "recibos": [
+      "resultado_ensaio_pos_commit.json",
+      "ensaio_pos_commit.log",
+      "ensaio_pos_commit_execucao.log"
+    ]
+  },
+  "historico": {
+    "falhas_anteriores_arquivadas": [
+      {
+        "arquivo": "resultado_gate_evidencias.json",
+        "status": "FALHOU",
+        "causa": "leitor anterior consultou campo de schema incorreto; não é divergência dos artefatos"
+      }
+    ],
+    "referencias_pre_commit1_preservadas": [
+      "resultado_gate_implementacao.json",
+      "inventario_implementacao.json"
+    ]
+  },
+  "pendencias": [
+    "aguardar instrução; sem push e sem próxima etapa"
+  ],
+  "acoes_nao_executadas_nesta_etapa": [
+    "novo gate",
+    "nova suíte ou testes",
+    "novo ensaio",
+    "coleta",
+    "treinamento",
+    "revisão",
+    "configurações ou skills",
+    "push"
+  ]
+}

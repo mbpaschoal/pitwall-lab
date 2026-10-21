@@ -1,0 +1,63 @@
+{
+  "ensaiado_em_utc": "2026-10-21T02:54:08.993477Z",
+  "verificado_em_utc": "2026-10-21T02:54:09.150358+00:00",
+  "emissao": "ensaio-commit-9e65ad25b125e78b671a763a43934385c1264363",
+  "modo": "ENSAIO_RETROSPECTIVO",
+  "fonte": "DADOS_REAIS_JOLPICA",
+  "snapshot": "coleta-20261019T164713Z",
+  "alvo_rodada_descoberta": "17",
+  "linhas": 22,
+  "elegiveis": 22,
+  "ordem_15_entradas": true,
+  "raw_alvo_e_futuro_bloqueados_por_audit_hook": true,
+  "raw_lidos": [
+    "calendario_offset_0000.json",
+    "classificacao_17_offset_0000.json",
+    "classificacao_18_offset_0000.json",
+    "resultados_10_offset_0000.json",
+    "resultados_11_offset_0000.json",
+    "resultados_12_offset_0000.json",
+    "resultados_13_offset_0000.json",
+    "resultados_14_offset_0000.json",
+    "resultados_15_offset_0000.json",
+    "resultados_16_offset_0000.json",
+    "resultados_1_offset_0000.json",
+    "resultados_2_offset_0000.json",
+    "resultados_3_offset_0000.json",
+    "resultados_4_offset_0000.json",
+    "resultados_5_offset_0000.json",
+    "resultados_6_offset_0000.json",
+    "resultados_7_offset_0000.json",
+    "resultados_8_offset_0000.json",
+    "resultados_9_offset_0000.json"
+  ],
+  "fit_fit_transform_partial_fit_bloqueados": true,
+  "sem_resultados_alvo_nas_saidas": true,
+  "hashes_todas_saidas_e_modelo_preservados": true,
+  "probabilidade_oraculo_sigmoid_metadados_sem_fit": true,
+  "max_erro_probabilidade": 5.551115123125783e-17,
+  "git": {
+    "commit": "9e65ad25b125e78b671a763a43934385c1264363",
+    "componentes_limpos": true,
+    "componentes_rastreados": true,
+    "sha256": {
+      "avaliar_modelo_v1.py": "2befdf9afea8b281b76529bd21b330e52d5f9b442efd4bc50d1821cd39c88668",
+      "operacao2026/__init__.py": "d3302f4f67797c0db32fc7c020c86291ac7222b5ee6653bd0bbacf0ae2320e8a",
+      "operacao2026/fontes.py": "c78570d89379658a62b7464755b45f7ee92807fcb4d4843d8a72ba709d86a8f4",
+      "operacao2026/previsao.py": "847db8e859b19b94d889c401db0e741d73b8c6e8ce426448db4b20cfe1c0fe1d",
+      "operar_2026.py": "049c6882a59211b0bec883cf97813f4d52ed71bcf2321b9375bf0fce5bb47467",
+      "treinar_modelo_v1.py": "cdf1c2ea005f36f032ebd1694786e9118ae343a282172fafb748cbf5c2294de3"
+    }
+  },
+  "favoritos_modelo": [
+    "max_verstappen",
+    "leclerc",
+    "antonelli"
+  ],
+  "favoritos_classificacao": [
+    "max_verstappen",
+    "leclerc",
+    "hamilton"
+  ],
+  "nao_e_previsao_real_de_austin": true
+}
