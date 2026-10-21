@@ -1,0 +1,63 @@
+{
+  "parecer": "aprovado",
+  "escopo": "somente três correções R3",
+  "achados": [],
+  "evidencias_anteriores_conferidas": [
+    "Lacunas: operar_2026.py:140–158 verifica os GPs de 2026 admitidos historicamente e bloqueia tanto lacuna declarada no índice quanto resultado ausente ou vazio. A chamada em 210 antecede gerar_entradas em 211 e a inferência do ensaio em 233, impedindo o deslocamento silencioso da janela nesse caminho. A verificação é por GP, não por participação individual.",
+    "Explicitação da política: operar_2026.py:163–176 inclui cobertura e política conservadora na emissão; operacao2026/previsao.py:413–425 apresenta ambas no relatório. Os testes fornecidos em tests/test_operacao_2026_r3.py:115–130, 145–175 e 177–187 verificam bloqueio com e sem marcador no índice, ausência de publicação bloqueada e preservação da janela quando apenas um piloto não participou. O log anterior registra esses testes como aprovados.",
+    "Ordem temporal: operacao2026/previsao.py:88–89 rejeita referência igual ou posterior à largada. preparar_alvo chama essa validação em 103, antes de retornar qualquer estado. O teste fornecido em tests/test_operacao_2026_r3.py:189–211 cobre igualdade nos caminhos de estado e ensaio, incluindo impedimento de abrir resultados e de publicar. O log anterior também registra aprovação da regressão de referência posterior.",
+    "Fragmentação: operacao2026/fontes.py:170–200 e 268–307 aceita a continuação do envelope de um GP, compara seus metadados sem a lista de participantes, verifica unicidade de pilotos e mantém a rejeição de calendário duplicado. As verificações em 164–166, 179 e 284–285 controlam quantidades, offsets e totais. operar_2026.py:79–87 acumula os resultados por GP sem sobrescrever fragmentos e rejeita piloto repetido.",
+    "Os testes fornecidos em tests/test_operacao_2026_paginacao.py:66–149 cobrem reunião exata de 101 participantes em resultados e classificação, consumo pelos caminhos operacionais, duplicação de piloto, divergência de metadados, offsets, totais e quantidades, além de calendário paginado válido e duplicado. O log anterior registra aprovação desses testes.",
+    "Os trechos de 01-testes.json, 01-testes.log e resumo.json são consistentes quanto à execução anterior única de 54 testes, com zero falhas, erros ou skips. Registram bloqueio de rede e treinamento e nenhuma tentativa de escrita proibida. Essa execução foi reaproveitada como evidência anterior, não realizada nesta revisão.",
+    "03-ensaio.json e o checkpoint registram reprodução offline anterior de 22 linhas, com ordem das 15 entradas, valores, probabilidades, rankings e linhas semânticas idênticos ao ensaio de referência. O aceite registra 22 elegíveis e bloqueio de raws do alvo e futuros. Essa evidência sustenta preservação do ensaio registrado, não substitui as regressões sintéticas das três correções."
+  ],
+  "testes_executados_nesta_revisao": 0,
+  "limitacoes": [
+    "Revisão exclusivamente estática dos trechos e registros fornecidos; nenhum arquivo, log integral, raw ou artefato externo foi aberto ou verificado diretamente.",
+    "Os arquivos operacionais são adições sem baseline histórico imutável apresentado. Não foi reconstruído um diff histórico da R3 nem presumido seu código antigo.",
+    "A verificação explícita de lacunas apresentada cobre os GPs admitidos de 2026 no snapshot operacional. Este parecer não certifica a completude de todo o acervo histórico de outras temporadas.",
+    "Os relatos de preservação e hashes são evidências anteriores locais; não constituem prova externa de imutabilidade ou anterioridade. O ensaio não é uma emissão real de Austin.",
+    "A aprovação se restringe às três correções R3 examinadas; não avalia metodologia, desempenho, etapas 1–7 ou o projeto inteiro."
+  ],
+  "proximo_passo": "Encaminhar este parecer ao pai para salvamento. Nenhuma ação adicional está autorizada por esta revisão.",
+  "uso_efetivo": {
+    "session_id": "pitwall-r4-19339920866b4517b17bd32dee96b77d",
+    "model": "gpt-6-astra",
+    "billing_provider": "openai-codex",
+    "task": "",
+    "api_call_count": 1,
+    "billing_mode": "subscription_included",
+    "input_tokens": 15238,
+    "output_tokens": 1059,
+    "estimated_cost_usd": 0.0,
+    "actual_cost_usd": 0.0,
+    "cost_status": "included"
+  },
+  "tarefas_auxiliares_native_runtime": [
+    {
+      "session_id": "pitwall-r4-19339920866b4517b17bd32dee96b77d",
+      "model": "gpt-6-astra",
+      "billing_provider": "openai-codex",
+      "task": "title_generation",
+      "api_call_count": 1,
+      "billing_mode": "",
+      "input_tokens": 464,
+      "output_tokens": 20,
+      "estimated_cost_usd": 0.0,
+      "actual_cost_usd": 0.0,
+      "cost_status": null
+    }
+  ],
+  "preservacao": {
+    "verificado_utc": "2026-10-21T00:38:51.134206+00:00",
+    "arquivos_conferidos": 25,
+    "alterados_pelo_revisor": [],
+    "metodo": "SHA-256 antes/depois; modelo recebeu somente pacote textual escopado e zero ferramentas. Pai altera apenas parecer/status após a conferência."
+  },
+  "utc": "2026-10-21T00:38:51.134206+00:00",
+  "processamento_inicial_sem_inferencia": {
+    "codigo": 2,
+    "motivo": "CLI encaminhou ao gateway e rejeitou --run-budget antes da inferência (0 tokens); execução local direta com mesma instância/API foi usada para a única chamada principal. Nenhum retry de modelo ou fallback.",
+    "log": "revisor.stderr"
+  }
+}

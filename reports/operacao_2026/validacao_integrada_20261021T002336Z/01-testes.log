@@ -1,0 +1,84 @@
+test_emissao_exclusiva_e_prospectivo_tem_guardas (tests.test_operacao_2026.Operacao2026Test) ... ok
+test_futuros_nao_afetam_entradas (tests.test_operacao_2026.Operacao2026Test) ... ok
+test_matriz_nao_le_resultado_alvo_ou_futuro_e_janela_equipe_por_gp (tests.test_operacao_2026.Operacao2026Test) ... ok
+test_modelo_congelado_carrega_e_inferencia_nao_ajusta (tests.test_operacao_2026.Operacao2026Test) ... ok
+test_paginacao_ua_retry_after_e_limite (tests.test_operacao_2026.Operacao2026Test) ... ok
+test_qualifying_duplicado_bloqueia_e_posicao_repetida_e_preservada (tests.test_operacao_2026.Operacao2026Test) ... ok
+test_qualifying_vazio_aguarda_sem_probabilidades (tests.test_operacao_2026.Operacao2026Test) ... ok
+test_trava_fit_bloqueia_metodos_de_ajuste (tests.test_operacao_2026.Operacao2026Test) ... ok
+test_emissao_tem_lote_completo_e_rejeita_escape_e_correcao_incompleta (tests.test_operacao_2026_fluxo.FluxoOperacao2026Test) ... ok
+test_ensaio_completo_nao_pede_resultado_do_alvo_ou_futuro (tests.test_operacao_2026_fluxo.FluxoOperacao2026Test) ... ok
+test_estado_le_calendario_depois_so_classificacao_e_nao_carrega_modelo (tests.test_operacao_2026_fluxo.FluxoOperacao2026Test) ... ok
+test_janela_cinco_gp_cruza_ano_sem_unir_ids (tests.test_operacao_2026_fluxo.FluxoOperacao2026Test) ... ok
+test_leitor_nunca_recebe_chave_alvo_ou_futura (tests.test_operacao_2026_fluxo.FluxoOperacao2026Test) ... ok
+test_mutacoes_alvo_futuro_nao_alteram_entradas (tests.test_operacao_2026_fluxo.FluxoOperacao2026Test) ... ok
+test_prospectivo_exige_ordem_e_utc_explicito (tests.test_operacao_2026_fluxo.FluxoOperacao2026Test) ... ok
+test_cache_original_e_refresh_e_falha_parcial (tests.test_operacao_2026_fontes.FontesEtapa8Test) ... ok
+test_ler_snapshot_filtra_antes_de_abrir_raw_nao_selecionado (tests.test_operacao_2026_fontes.FontesEtapa8Test) ... ok
+test_paginas_recusa_incompletude_ids_e_tipos (tests.test_operacao_2026_fontes.FontesEtapa8Test) ... ok
+test_rate_limit_e_retry_http_date_sao_deterministicos (tests.test_operacao_2026_fontes.FontesEtapa8Test) ... ok
+test_cli_coletar_delega_snapshot_id_e_circuito_explicito_sem_duplicar_padrao (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_estado_q_vazio_nao_indexa_e_calendario_entra_nos_raw_admitidos (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_fontes_prospectivas_exigem_janela_de_encerramento_e_corte (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_inferir_normaliza_none_so_para_rank_e_preserva_entrada_json (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_leitura_agrupada_filtra_metadata_antes_de_raw_alvo_ou_futuro (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_retry_after_503_respeita_hint_sem_sleep_real (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_calendario_paginado_valido_preserva_todas_as_corridas (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_corrida_duplicada_no_calendario_e_recusada (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_gp_fragmentado_reune_todos_os_registros_sem_perda_ou_duplicacao (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_metadados_dos_fragmentos_devem_coincidir (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_offset_divergente_e_recusado (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_piloto_duplicado_no_gp_e_recusado (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_quantidades_do_calendario_tambem_devem_ser_coerentes (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_quantidades_por_pagina_devem_respeitar_limit_offset_total (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_total_divergente_e_recusado (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_cache_resultado_vazio_tenta_atualizacao_limitada_e_preserva_origem (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_historico_auditavel_retorna_proveniencia_com_hash (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_ids_literais_malformados_sao_rejeitados_sem_normalizar (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_prospectivo_exige_timestamps_de_todas_fontes_admitidas (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_publicacao_prospectiva_que_cruza_largada_no_replace_vira_parcial_invalida (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_publicacao_prospectiva_revalida_depois_da_serializacao_sem_pasta_final (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_publicacao_prospectiva_revalida_durante_escrita_sem_pasta_final (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_referencia_posterior_bloqueia_antes_de_admitir_gp_futuro (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_snapshot_com_hash_integro_mas_paginacao_q_incompleta_bloqueia (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_cli_admite_historico_antigo_e_exclui_2024_desconhecido_sem_mudar_matriz (tests.test_operacao_2026_r2.Operacao2026R2Test) ... ok
+test_cli_bloqueia_fonte_2024_desconhecida_quando_janela_a_exige (tests.test_operacao_2026_r2.Operacao2026R2Test) ... ok
+test_cli_revalida_serializacao_escrita_e_replace_e_preserva_id_existente (tests.test_operacao_2026_r2.Operacao2026R2Test) ... ok
+test_writer_recusa_prospectivo_sem_callback (tests.test_operacao_2026_r2.Operacao2026R2Test) ... ok
+test_cli_ensaio_bloqueia_lacuna_anterior_e_emissao_completa_declara_lista_vazia (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_gp_anterior_vazio_bloqueia_mesmo_sem_declaracao_no_indice (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_paginas_permite_101_participantes_do_mesmo_gp_em_resultados_e_classificacao (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_paginas_rejeita_id_duplicado_evento_divergente_e_calendario_duplicado (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_piloto_ausente_em_gp_completo_preserva_janela_de_participacoes (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_referencia_igual_largada_bloqueia_estado_e_ensaio_antes_de_resultados (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_resultados_vazios_do_alvo_e_futuro_nao_abrem_nem_alteram_emissao (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+
+----------------------------------------------------------------------
+Ran 54 tests in 0.195s
+
+OK
+ENSAIO RETROSPECTIVO: /Users/MBPaschoal/.hermes/cache/scratch/tmp7v3_ox2k/ensaio-2
+Snapshot criado: /Users/MBPaschoal/.hermes/cache/scratch/tmp3s4mqktm/snapshots/s1
+{
+  "utc": "2026-10-21T00:23:43.878349+00:00",
+  "execucoes_da_suite_nesta_entrega": 1,
+  "modules": [
+    "tests.test_operacao_2026",
+    "tests.test_operacao_2026_fluxo",
+    "tests.test_operacao_2026_fontes",
+    "tests.test_operacao_2026_integracao",
+    "tests.test_operacao_2026_paginacao",
+    "tests.test_operacao_2026_r1",
+    "tests.test_operacao_2026_r2",
+    "tests.test_operacao_2026_r3"
+  ],
+  "tests": 54,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "all_passed": true,
+  "network_blocked": true,
+  "fit_fit_transform_partial_fit_blocked": true,
+  "forbidden_write_attempts": [],
+  "failure_details": []
+}

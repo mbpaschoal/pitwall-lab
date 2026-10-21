@@ -1,0 +1,12 @@
+{
+  "requested_provider": "openai-codex",
+  "requested_model": "gpt-6-astra",
+  "tools": 0,
+  "primary_attempts_max": 1,
+  "sdk_retries": 0,
+  "auto_recovery_cycles": 0,
+  "fallback": false,
+  "credential_rotation_pool": false,
+  "rules_and_memory_injection": false,
+  "config_files_modified": false
+}

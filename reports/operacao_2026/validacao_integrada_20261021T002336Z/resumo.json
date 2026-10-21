@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-21T00:27:28.388602+00:00",
+  "status": "VALIDACAO_INTEGRADA_APROVADA_PRONTA_PARA_REVISAO_NAO_EXECUTADA",
+  "tests": {
+    "runs": 1,
+    "count": 54,
+    "passed": true,
+    "report": "01-testes.json"
+  },
+  "preservation": {
+    "git_reference": "b067ad55dd97d964b132129838773cf6108773e3",
+    "unchanged_tracked": 286,
+    "explicit_documentary_exceptions": [
+      "README.md",
+      "projects/Pitwall Lab.md"
+    ],
+    "frozen68_passed": true,
+    "snapshot_files": 60,
+    "rehearsal_files": 72,
+    "report": "02-preservacao.json",
+    "after_rehearsal": "04-pos-ensaio.json"
+  },
+  "rehearsal": {
+    "passed": true,
+    "rows": 22,
+    "features": 15,
+    "report": "03-ensaio.json",
+    "execution_metadata_equality_required": false
+  },
+  "limitations": [
+    "Código/testes/documentação novos da etapa8 não possuem baseline histórico imutável nesta validação; alterações intencionais não são falhas de preservação de artefatos congelados.",
+    "Hashes dos manifestos/índices calculados agora identificam a referência usada, NÃO reconstroem prova de seu estado passado. Manifestos locais não são prova externa imutável."
+  ],
+  "baseline_temporario_reconstruido": false,
+  "independent_review_performed": false,
+  "next_action": "Somente se autorizado, revisão independente dos componentes atuais e evidências; sem correção automática/coleta/commit/push."
+}

@@ -1,0 +1,560 @@
+{
+  "utc": "2026-10-21T00:27:28.388602+00:00",
+  "scope": "Integridade dos mesmos snapshots/emissões após a reprodução temporária; comparação com referências já conferidas, não baseline histórico novo",
+  "files_checked": 138,
+  "all_passed": true,
+  "files": [
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/indice.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/calendario_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_1_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_2_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_3_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_4_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_5_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_6_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_7_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_8_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_9_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_10_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_11_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_12_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_13_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_14_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_15_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_16_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_17_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/classificacao_18_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/classificacao_17_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/indice.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/calendario_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_1_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_2_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_3_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_4_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_5_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_6_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_7_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_8_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_9_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_10_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_11_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_12_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_13_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_14_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_15_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_16_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/resultados_17_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/classificacao_18_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/cache-verificado-20261019/raw/classificacao_17_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/indice.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/calendario_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_1_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_2_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_3_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_4_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_5_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_6_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_7_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_8_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_9_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_10_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_11_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_12_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_13_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_14_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_15_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_16_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/resultados_17_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/classificacao_18_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/classificacao_17_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/manifesto.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/cobertura.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/entradas.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/fontes.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/historicos.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/probabilidades.csv",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/calendario_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/classificacao_17_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_10_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_11_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_12_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_13_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_14_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_15_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_16_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_1_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_2_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_3_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_4_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_5_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_6_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_7_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_8_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_9_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/relatorio.md",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/manifesto.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/cobertura.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/entradas.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/fontes.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/historicos.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/probabilidades.csv",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/calendario_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/classificacao_17_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_10_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_11_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_12_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_13_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_14_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_15_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_16_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_1_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_2_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_3_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_4_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_5_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_6_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_7_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_8_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_9_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/relatorio.md",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/manifesto.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/cobertura.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/entradas.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/fontes.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/historicos.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/probabilidades.csv",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/calendario_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/classificacao_17_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_10_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_11_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_12_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_13_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_14_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_15_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_16_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_1_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_2_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_3_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_4_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_5_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_6_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_7_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_8_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_9_offset_0000.json",
+      "match": true
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/relatorio.md",
+      "match": true
+    }
+  ]
+}

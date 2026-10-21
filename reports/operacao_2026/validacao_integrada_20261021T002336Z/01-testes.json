@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-21T00:23:43.878349+00:00",
+  "execucoes_da_suite_nesta_entrega": 1,
+  "modules": [
+    "tests.test_operacao_2026",
+    "tests.test_operacao_2026_fluxo",
+    "tests.test_operacao_2026_fontes",
+    "tests.test_operacao_2026_integracao",
+    "tests.test_operacao_2026_paginacao",
+    "tests.test_operacao_2026_r1",
+    "tests.test_operacao_2026_r2",
+    "tests.test_operacao_2026_r3"
+  ],
+  "tests": 54,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "all_passed": true,
+  "network_blocked": true,
+  "fit_fit_transform_partial_fit_blocked": true,
+  "forbidden_write_attempts": [],
+  "failure_details": []
+}

@@ -1,0 +1,66 @@
+{
+  "protocol_sha256_before_fetch": "a54833ca2f4f9b959537d4747d42911000603a0a6bbd3b712743698e6d35fa22",
+  "preflight_only_not_forecast": true,
+  "calendar_records_observed": 23,
+  "states": [
+    {
+      "circuit_id": "americas",
+      "round_discovered": "18",
+      "race": "United States Grand Prix",
+      "race_start_utc": "2026-10-25T20:00:00Z",
+      "qualifying_start_utc": "2026-10-24T21:00:00Z",
+      "qualifying_records_observed": 0,
+      "state": "aguardando_classificacao",
+      "full_entry_list_independently_verified": false
+    },
+    {
+      "circuit_id": "marina_bay",
+      "round_discovered": "17",
+      "race": "Singapore Grand Prix",
+      "race_start_utc": "2026-10-11T12:00:00Z",
+      "qualifying_start_utc": "2026-10-10T13:00:00Z",
+      "qualifying_records_observed": 22,
+      "state": "classificacao_disponivel_na_fonte",
+      "full_entry_list_independently_verified": false
+    }
+  ],
+  "sources": [
+    {
+      "label": "calendar",
+      "url": "https://api.jolpi.ca/ergast/f1/2026/?limit=100&offset=0",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2026/?limit=100&offset=0",
+      "parameters": {
+        "limit": 100,
+        "offset": 0
+      },
+      "obtained_utc": "2026-10-19T11:23:02.604769+00:00",
+      "status": 200,
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27"
+    },
+    {
+      "label": "americas_qualifying",
+      "url": "https://api.jolpi.ca/ergast/f1/2026/18/qualifying/?limit=100&offset=0",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2026/18/qualifying/?limit=100&offset=0",
+      "parameters": {
+        "limit": 100,
+        "offset": 0
+      },
+      "obtained_utc": "2026-10-19T11:23:10.336734+00:00",
+      "status": 200,
+      "sha256": "01bed0e2a0197da66664487070c30a92eaeda369da04d1bc1969934ebf3c33a2"
+    },
+    {
+      "label": "marina_bay_qualifying",
+      "url": "https://api.jolpi.ca/ergast/f1/2026/17/qualifying/?limit=100&offset=0",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2026/17/qualifying/?limit=100&offset=0",
+      "parameters": {
+        "limit": 100,
+        "offset": 0
+      },
+      "obtained_utc": "2026-10-19T11:23:18.576340+00:00",
+      "status": 200,
+      "sha256": "6305533d29c113c39c3fed73704f34e1c195f7af9c8988c0cb99b8d0f4af6109"
+    }
+  ],
+  "no_austin_favourites_produced": true
+}

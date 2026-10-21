@@ -1,0 +1,341 @@
+{
+  "parecer_atual": "aprovado_somente_tres_correcoes_R3",
+  "rodadas": [
+    {
+      "rodada": "R1",
+      "resultado": {
+        "parecer": "reprovado",
+        "problemas": [
+          {
+            "prioridade": "P1",
+            "arquivo": "operacao2026/previsao.py",
+            "linha": 60,
+            "descricao": "A referência temporal não rejeita uma classificação posterior à corrida. Diferentemente do helper congelado, _reference aceita essa incoerência; chaves_historicas_admitidas pode então admitir eventos posteriores ao alvo, abrindo seus resultados e incorporando-os às entradas.",
+            "contraprova": "Fixture inteiramente sintética: alvo em 2026-03-01, Qualifying em 2026-05-01 e outro GP em 2026-04-01. O calendário passou em validar_pagina. O helper congelado definir_referencia rejeitou com 'Sessão de referência posterior à corrida', mas _preparar_fluxo retornou pronto, abriu o resultado do GP de abril e incluiu ('2026', '2') no histórico do alvo de março. Executado em pitwall-stage8-independent-r1-probes.py, probe REFERENCIA_APOS_CORRIDA.",
+            "correcao": "Validar a coerência entre classificação e corrida antes de selecionar ou abrir qualquer histórico, preservando as rejeições temporais do v1. Acrescentar regressões que impeçam abrir arquivos posteriores diante de calendário incoerente, nos modos retrospectivo e prospectivo."
+          },
+          {
+            "prioridade": "P1",
+            "arquivo": "operar_2026.py",
+            "linha": 198,
+            "descricao": "A última checagem da largada ocorre antes de preparar os artefatos, reler raw, calcular metadados e serializar as saídas. A execução pode atravessar a largada durante essas operações e ainda gravar uma emissão PROSPECTIVO com timestamp anterior. O teste existente cobre a travessia durante inferência, não durante a preparação e gravação.",
+            "contraprova": "Na fixture prospectiva, o relógio simulado avançou para 2026-10-25T20:00:01Z durante _bytes_json, após a checagem final. A largada era 2026-10-25T20:00:00Z. O CLI retornou 0 e criou manifesto PROSPECTIVO mantendo emitido_em_utc anterior à largada. Probe ATRAVESSA_LARGADA_NA_SERIALIZACAO; somente arquivos sintéticos temporários.",
+            "correcao": "Vincular a validação temporal à conclusão/publicação efetiva do lote. Preparar os bytes antes da checagem final e impedir que uma gravação que atravesse a largada seja apresentada como emissão prospectiva válida. Registrar o instante efetivo correspondente e testar travessias durante preparação, serialização e escrita."
+          },
+          {
+            "prioridade": "P2",
+            "arquivo": "operar_2026.py",
+            "linha": 185,
+            "descricao": "O corte prospectivo verifica apenas o maior timestamp textual das páginas de classificação. Não verifica a obtenção do calendário e dos resultados históricos admitidos, nem exige que cada página de classificação tenha sido obtida depois do encerramento confirmado. Assim, a emissão aceita fontes posteriores ao corte ou páginas anteriores ao encerramento.",
+            "contraprova": "Duas fixtures separadas marcaram, respectivamente, calendário e resultado histórico como obtidos em 2026-10-26T00:00:00Z, mantendo corte em 2026-10-24T22:30:00Z. Ambas produziram emissão com retorno 0. Outra fixture tinha uma página de Q obtida às 20:00Z, antes do encerramento confirmado às 22:00Z, e outra às 22:01Z; também foi aceita. Probes calendario_apos_corte, historico_apos_corte e Q_UMA_PAGINA_ANTES_FIM.",
+            "correcao": "Interpretar e validar individualmente os timestamps das fontes admitidas. Exigir obtenção até o corte para calendário e históricos, e encerramento confirmado ≤ obtenção ≤ corte para cada página de Q. Comparar datetimes normalizados, não strings, e rejeitar metadados temporais ausentes ou incoerentes."
+          },
+          {
+            "prioridade": "P2",
+            "arquivo": "operacao2026/fontes.py",
+            "linha": 228,
+            "descricao": "A leitura operacional de um snapshot confere hash e JSON, mas não revalida a completude da paginação. _event_with_q concatena os registros sem conferir total/offset/limit. Um snapshot com bytes íntegros, porém classificação incompleta em relação ao próprio total declarado, pode produzir previsão.",
+            "contraprova": "Snapshot sintético com MRData.total=2, uma única página e somente um registro de classificação, com SHA-256 correto. O comando emitir retornou 0 e criou a emissão. Probe Q_PAGINACAO_INCOMPLETA. O bloqueio existente em paginas_completas na coleta não protege o caminho de leitura do snapshot.",
+            "correcao": "Depois da seleção de endpoint e rodada por metadados, revalidar o conjunto selecionado quanto a envelope, identidade, paginação, totais e duplicações antes da inferência. Não abrir resultados do alvo ou futuros para essa validação. Adicionar regressão exercitando o CLI com snapshot incompleto e hashes corretos."
+          },
+          {
+            "prioridade": "P2",
+            "arquivo": "operacao2026/fontes.py",
+            "linha": 154,
+            "descricao": "IDs compostos somente por espaços são aceitos como pilotos válidos. A mesma insuficiência existe em preparar_alvo: basta ser string não vazia. O fluxo trata esse identificador malformado como um novo participante, aplica imputação e publica probabilidade.",
+            "contraprova": "Qualifying sintético com driverId='   ' passou por paginas_completas e pelo comando emitir, que retornou 0 e criou a emissão. Probe ID_SOMENTE_ESPACOS_PASSA_COLETOR.",
+            "correcao": "Validar os IDs literais segundo o contrato admitido, rejeitando espaços em branco e caracteres inválidos sem normalizar ou fabricar equivalências. Aplicar a validação na coleta e na admissão operacional, com regressões para pilotos e equipes."
+          },
+          {
+            "prioridade": "P2",
+            "arquivo": "operacao2026/fontes.py",
+            "linha": 301,
+            "descricao": "O cache considera uma resposta vazia de resultados um resultado reutilizável. Sem --atualizar, uma indisponibilidade anterior pode ficar perpetuada: o coletor não tenta buscar o resultado que passou a estar disponível.",
+            "contraprova": "Cache sintético continha resultados com total=0. Na coleta seguinte, o fetch sintético estava preparado para devolver o resultado publicado, mas recebeu apenas a consulta de calendário. O novo snapshot reutilizou a página vazia como cache e manteve lacunas_resultados=['1']. Probe CACHE_VAZIO.",
+            "correcao": "Distinguir cache de resultados disponíveis de resposta de indisponibilidade. Não reutilizar indefinidamente uma resposta vazia como histórico completo; tentar uma atualização limitada para essa lacuna, preservando os snapshots e o timestamp original."
+          }
+        ],
+        "verificacoes": [
+          "Projeto mantido sem edições. Não houve rede, instalação, commit, push, agentes adicionais, treinamento, recalibração ou cálculo de desempenho de 2026 nesta revisão.",
+          "Allowlist contém 92 arquivos. Foram conferidos 90 hashes antes e depois, sem divergências. Os dois raw de resultados de Singapura foram deliberadamente mantidos fechados.",
+          "Dos 288 arquivos rastreados na fotografia inicial, 286 permanecem idênticos. As únicas divergências são README.md e projects/Pitwall Lab.md, previstas como exceções documentais. Os 32 arquivos do payload público permanecem idênticos.",
+          "Comparação com os snapshots documentais anteriores confirmou a preservação do contexto preexistente: substituições de estado e acréscimos, sem remoção das notas históricas do proprietário.",
+          "Protocolo preservado com SHA-256 a54833ca2f4f9b959537d4747d42911000603a0a6bbd3b712743698e6d35fa22. O registro local de fixação antecede os timestamps registrados das consultas de preflight; isso não constitui prova externa imutável.",
+          "Reexecutados os 24 testes dos quatro módulos tests/test_operacao_2026*.py: passaram sem falhas, erros ou skips, com ajuste bloqueado e proteção contra rede e escrita fora de scratch.",
+          "O registro anterior dos 85 testes selecionados foi conferido, mas essa execução integral não foi repetida nem apresentada como execução independente desta revisão.",
+          "Ensaio real de Singapura recalculado somente em memória, com abertura do resultado-alvo bloqueada. As 22 linhas reproduziram exatamente entradas, probabilidades e rankings preservados. Todos os hashes das saídas listadas no manifesto foram conferidos.",
+          "Probabilidades reais conferidas pela sigmoide calculada a partir dos parâmetros congelados: erro absoluto máximo de 5.551115123125783e-17. Nenhuma métrica de acerto foi calculada.",
+          "Oráculo sintético reproduzido: as 15 entradas coincidem com o preparador congelado, incluindo janela entre anos, denominador variável da equipe, novos IDs e posição ausente. Fingerprint do pipeline preservado.",
+          "Joblib, metadados e esquema foram validados antes da inferência; fit, fit_transform e partial_fit permaneceram bloqueados nas execuções protegidas.",
+          "O comando estado foi executado localmente: Austin foi descoberto como rodada 18 e retornou aguardando_classificacao, com zero registros, sem emissão real.",
+          "Os metadados dos 17 resultados reutilizados pelo snapshot de cache preservam os hashes e timestamps originais. O índice distingue essas páginas das três consultas registradas como rede.",
+          "O ensaio existente identifica corretamente a base b067ad55dd97d964b132129838773cf6108773e3, componentes_rastreados=false e hashes próprios. componentes_limpos=true não foi interpretado como código novo já commitado.",
+          "Contraprovas próprias reproduzíveis em /Users/MBPaschoal/.hermes/cache/scratch/pitwall-stage8-independent-r1-probes.py. As fixtures foram temporárias e explicitamente sintéticas; o estado Git prospectivo dessas contraprovas foi simulado, não produzido por commit."
+        ],
+        "ressalvas": [
+          "Os bloqueios encontrados são contraprovas de segurança e validade do fluxo. Não foi constatada divergência nas entradas ou probabilidades do ensaio real preservado.",
+          "A primeira tentativa dos testes encontrou TMPDIR apontando para a pasta temporária do sistema; a proteção impediu cinco gravações de arquivos fora de scratch. A execução foi repetida com TMPDIR restrito a scratch e os 24 testes passaram.",
+          "O ensaio pós-commit permanece uma pendência prevista e honestamente documentada, não uma falsa alegação de commit limpo. Entretanto, este parecer não autoriza finalizar a etapa como aprovada: as correções exigem nova revisão do código alterado.",
+          "As listas post_review_status_only e post_review_generated_only foram conferidas. Elas não autorizam mudanças de código, testes ou contratos sob um parecer anterior.",
+          "Os comandos A/B/C estão documentados e suas interfaces foram examinadas, mas o caminho prospectivo não está aprovado diante das contraprovas.",
+          "Cobertura declarada refere-se aos registros publicados, não a uma lista independente de inscritos. A disponibilidade futura da classificação de Austin e a adequação do modelo a 2026 continuam sem garantia."
+        ],
+        "nao_verificado": [
+          "Hash independente dos dois arquivos raw/resultados_17_offset_0000.json dos snapshots: não foram abertos, em respeito à restrição sobre resultados do alvo. Portanto, não se declara validação independente de 92/92 hashes.",
+          "A contagem integral de 374 resultados permanece evidência registrada, sem recontagem do resultado de Singapura nesta revisão.",
+          "Fontes oficiais externas, horários atualizados e latência da API não foram novamente consultados, pois rede e coleta estavam proibidas.",
+          "Coleta real dos comandos A/C e emissão real de Austin não foram executadas.",
+          "Novo ensaio com código commitado, commits de entrega, push e verificação remota permanecem pendentes.",
+          "Identidade efetiva de provedor/modelo não foi auditada no banco de execução; essa confirmação cabe ao pai, conforme solicitado.",
+          "Suíte científica integral, navegador, Linux/Cloud e importador manual F1/FIA não foram exercitados."
+        ],
+        "resumo": "Reprovado por falhas reproduzidas nas barreiras temporais, na validação dos snapshots/IDs e no tratamento de cache vazio. O ensaio real reproduz as entradas e probabilidades congeladas, e a preservação dos artefatos anteriores foi confirmada no escopo indicado; isso não elimina os bloqueios do fluxo operacional. Nenhuma correção foi aplicada.",
+        "uso_efetivo": {
+          "session_id": "local-a6e32cec50613791d45c7accbb01bfbdc2af164699a8c15c1cd55b397dceb51b",
+          "model": "gpt-6-astra",
+          "provider": "openai-codex",
+          "task": "",
+          "api_call_count": 13,
+          "billing_mode": "subscription_included"
+        },
+        "readonly_confirmado": {
+          "arquivos": 92,
+          "alteracoes": []
+        }
+      }
+    },
+    {
+      "rodada": "R2",
+      "resultado": {
+        "parecer": "reprovado",
+        "problemas": [
+          {
+            "prioridade": "P1",
+            "arquivo": "operar_2026.py",
+            "linha": 242,
+            "descricao": "O CLI prospectivo chama gravar_emissao sem fornecer validar_publicacao. As proteções implementadas no writer antes/depois da publicação ficam desativadas no comando emitir. A execução ainda pode atravessar a largada durante serialização, escrita ou os.replace e terminar com uma pasta final PROSPECTIVO e timestamp anterior.",
+            "contraprova": "Executado /Users/MBPaschoal/.hermes/cache/scratch/pitwall-stage8-independent-R2-probes.py. Em três casos sintéticos pelo CLI, o relógio avançou de 2026-10-25T19:59:59Z para 20:00:01Z durante serialização, escrita e os.replace, com largada às 20:00:00Z. Todos retornaram 0, mantiveram pasta final e emitido_em_utc=19:59:59Z. O controle diretamente no writer, fornecendo o callback, rejeitou a travessia no replace e preservou somente uma parcial inválida. Portanto, o writer foi corrigido, mas sua proteção não está integrada ao CLI. Git foi explicitamente simulado nessas fixtures; nenhuma emissão real foi criada.",
+            "correcao": "Conectar a validação temporal efetiva ao writer no caminho cmd_emitir e impedir publicação prospectiva sem essa guarda. Acrescentar regressões pelo CLI para travessias durante serialização, escrita e os.replace, além dos testes diretos do writer. Preservar a emissão antiga e retirar apenas o lote recém-publicado quando invalidado."
+          },
+          {
+            "prioridade": "P2",
+            "arquivo": "operar_2026.py",
+            "linha": 127,
+            "descricao": "A validação exige que fontes históricas congeladas tenham sido obtidas depois do encerramento da classificação atual. Esse limite inferior pertence às páginas de Q, não aos históricos. Fontes anteriores legítimas, obtidas antes do corte, são recusadas, inviabilizando o reaproveitamento previsto de 2021–2025.",
+            "contraprova": "A fixture CLI_historico_anterior_ao_fim_Q usa o carregador histórico real sobre arquivos sintéticos de 2021–2025, com hashes válidos e obtenção em 2026-10-17T12:00:00Z. Q termina em 2026-10-24T22:00:00Z, corte às 22:30:00Z e emissão antes da largada. O CLI retorna 1: 'Fonte histórica admitida anterior ao encerramento confirmado.'. A inspeção das fontes reais encontrou 24 timestamps válidos de 17/10/2026, igualmente anteriores à Q de Austin.",
+            "correcao": "Para históricos, exigir obtenção UTC válida e não posterior ao corte, sem exigir obtenção posterior ao encerramento da classificação-alvo. Manter encerramento ≤ obtenção ≤ corte individualmente para cada página de Q. Testar o caminho completo com históricos antigos legítimos, sem substituí-los por uma lista vazia."
+          },
+          {
+            "prioridade": "P2",
+            "arquivo": "operar_2026.py",
+            "linha": 170,
+            "descricao": "Existe outra pendência operacional independente do limite inferior incorreto: o fluxo carrega obrigatoriamente todo o histórico congelado, incluindo seis fontes de 2024 com obtido_em_utc='desconhecida'. A guarda prospectiva corretamente rejeita essa proveniência, mas os comandos A/C atualizam somente 2026 e não resolvem o bloqueio. Assim, mesmo corrigindo o problema anterior e recebendo Q válida, o caminho documentado permanece inexequível com os artefatos existentes.",
+            "contraprova": "A reprodução em memória identificou 30 fontes_historicas_admitidas: 24 com UTC válido e seis de 2024 sem obtenção conhecida, sendo calendário e cinco páginas de resultados. A contraprova isolada com uma dessas proveniências retorna 'Fonte histórica admitida sem obtenção UTC válida.'. _preparar_fluxo chama carregar_historico_bruto(..., auditoria=True) também no modo prospectivo, e cmd_emitir valida toda essa lista. As provas prospectivas com histórico mockado como vazio não exercitam essa condição real.",
+            "correcao": "Resolver explicitamente a admissão do legado antes de declarar C operacional: definir e validar um procedimento de proveniência ou seleção das fontes necessárias que preserve as fórmulas e janelas congeladas. Não inventar timestamps nem usar mtime/commit como substitutos. Preservar os originais e exigir autorização para eventual nova coleta. Demonstrar depois o CLI prospectivo com histórico representativo do legado existente, sem omitir suas proveniências por mock."
+          }
+        ],
+        "verificacoes": [
+          "Dos 139 arquivos da allowlist R2, exatamente 136 foram abertos para conferir SHA-256 antes e depois, sem divergências. Os três raw/resultados_17_offset_0000.json dos snapshots ficaram fechados, inclusive para hash.",
+          "Projeto mantido sem edições. Não houve rede, coleta real, instalação, commit, push, agentes adicionais, treinamento, recalibração ou cálculo de acertos de 2026. Scripts e fixtures novos ficaram somente em scratch.",
+          "Reexecutados os 34 testes dos cinco módulos tests/test_operacao_2026*.py: zero falhas, erros ou skips na execução final, com rede e métodos de ajuste bloqueados e TMPDIR explícito em scratch.",
+          "Os testes existentes passam apesar dos bloqueios encontrados: os testes de publicação fornecem o callback diretamente ao writer, enquanto cmd_emitir não o fornece.",
+          "Reproduzidos em memória os dois ensaios reais, sem gravar nova emissão: as 22 linhas, as 15 entradas em ordem, as probabilidades e os rankings coincidem exatamente com ensaio-integracao-20261019 e ensaio-r1-corrigido-20261020. Conferidos os 24 hashes de saída de cada manifesto.",
+          "A inferência real foi executada com bloqueio de abertura do resultado-alvo. Não foram encontrados alvo zero ou campos de resultado atual nas linhas de previsão. O erro máximo contra a sigmoide calculada dos parâmetros congelados foi 5.551115123125783e-17; isso é conferência numérica, não avaliação de desempenho.",
+          "Oráculo sintético reproduziu as 15 entradas do preparador congelado para três participantes, incluindo janela entre anos, denominador variável da equipe, novos IDs e posição ausente. Fingerprint do pipeline preservado.",
+          "Joblib local, metadados e esquema foram conferidos pelos hashes congelados antes da inferência; fit, fit_transform e partial_fit permaneceram bloqueados. Não se classificou joblib.load isoladamente como vulnerabilidade.",
+          "Confirmadas as rejeições de referência posterior à corrida, IDs malformados sem normalização, paginação incompleta no leitor e cache vazio que exige nova consulta sintética limitada.",
+          "Contraprovas adicionais confirmaram validação individual das páginas de Q, rejeição de calendário/resultados de 2026 posteriores ao corte e comparação de timestamps como instantes, incluindo offset UTC equivalente.",
+          "O CLI bloqueou travessia durante inferência. A repetição de ID preservou integralmente a emissão sintética anterior. O writer com callback rejeitou travessia durante os.replace e deixou apenas parcial inválida.",
+          "O comando estado sobre coleta-20261020T020130Z descobriu Austin como rodada 18 e retornou aguardando_classificacao, com zero registros e nenhuma emissão.",
+          "Os índices de cache-verificado-20261019 e coleta-20261020T020130Z registram 17 páginas de resultados reutilizadas e três consultas de rede. Os hashes e UTC originais das fontes de resultados coincidem nos metadados; o resultado-alvo não foi aberto para reconferência.",
+          "Dos 288 arquivos rastreados da fotografia inicial, 286 permanecem idênticos; as diferenças são README.md e projects/Pitwall Lab.md, previstas como exceções. Os 32 arquivos do payload público permanecem idênticos.",
+          "A comparação documental confirmou substituições de estado e acréscimos, sem remoção das seções históricas do proprietário. O protocolo conserva SHA-256 a54833ca2f4f9b959537d4747d42911000603a0a6bbd3b712743698e6d35fa22; seu registro local de fixação antecede os timestamps de preflight.",
+          "O ensaio corrigido identifica honestamente a base b067ad55dd97d964b132129838773cf6108773e3, componentes_rastreados=false e hashes correspondentes ao código atual. componentes_limpos=true não foi interpretado como código operacional já commitado.",
+          "Evidências próprias preservadas em /Users/MBPaschoal/.hermes/cache/scratch/pitwall-stage8-independent-R2-probes.json e /Users/MBPaschoal/.hermes/cache/scratch/pitwall-stage8-independent-R2-real.json, com scripts R2 próprios."
+        ],
+        "ressalvas": [
+          "A primeira execução do auditor R2 produziu falsos bloqueios na limpeza de temporários porque interpretava caminhos relativos a dir_fd como relativos ao projeto. Somente o auditor em scratch foi corrigido; a repetição terminou com 34 testes aprovados. Esses bloqueios não foram atribuídos ao projeto.",
+          "Uma tentativa inicial de resumir timestamps históricos encontrou 'desconhecida'. O resumo foi ajustado para contabilizar explicitamente as seis fontes sem UTC, sem alterar dados ou converter ausência em timestamp inventado.",
+          "A rejeição de proveniência desconhecida é uma proteção correta. O problema é a ausência de um caminho operacional resolvido para o legado que o próprio comando exige, não a existência dessa proteção.",
+          "A pendência pós-commit está honestamente enquadrada. As listas post_review_status_only e post_review_generated_only não autorizam corrigir código sob este parecer; alterações exigem nova revisão.",
+          "Cobertura refere-se aos registros publicados, não a uma lista independente de inscritos. A disponibilidade futura de Q e a adequação do modelo a 2026 permanecem sem garantia.",
+          "Timestamps locais e Git não constituem prova externa imutável de anterioridade."
+        ],
+        "nao_verificado": [
+          "Os três hashes dos raw de resultados de Singapura excluídos da leitura; não se declara conferência independente de 139/139 hashes.",
+          "A contagem integral de 374 resultados não foi refeita, pois exigiria abrir o resultado-alvo.",
+          "A execução integral dos 95 testes selecionados foi conferida como evidência registrada, mas não repetida nesta revisão; foram repetidos os 34 testes específicos da etapa 8.",
+          "Fontes externas, atualização dos horários oficiais, coleta real dos comandos A/C e latência futura da API, por proibição de rede.",
+          "Emissão real de Austin, novo ensaio pós-commit e commits de entrega.",
+          "Identidade efetiva de provedor/modelo no banco de execução; essa confirmação permanece com o pai.",
+          "Suíte científica integral, navegador, Linux/Cloud e importador manual F1/FIA."
+        ],
+        "resumo": "R2 reprovada. As correções de validação de fontes, IDs, paginação e cache foram confirmadas, e os ensaios reais reproduzem as entradas e probabilidades congeladas. Porém, a proteção de publicação não está conectada ao CLI prospectivo, a janela temporal do legado rejeita fontes antigas legítimas e há proveniência histórica desconhecida ainda sem solução operacional. Os testes aprovados não cobrem essas condições integradas. Nenhuma correção foi aplicada ao projeto.",
+        "uso_efetivo": {
+          "session_id": "local-15d6fbeee02f89884ed077031a7515050a7492b28468ef5fcc71e5ee99bca398",
+          "model": "gpt-6-astra",
+          "provider": "openai-codex",
+          "task": "",
+          "api_call_count": 15,
+          "billing_mode": "subscription_included"
+        },
+        "readonly_confirmado": {
+          "arquivos": 139,
+          "alteracoes": []
+        }
+      }
+    },
+    {
+      "rodada": "R3",
+      "resultado": {
+        "parecer": "reprovado",
+        "resumo": "As correções de R2 estão integradas, mas os próprios probes da R3 anterior registraram casos negativos que não podem ser tratados como aprovação. O código atual continua idêntico ao revisado e mantém os problemas abaixo. Não apliquei correções.",
+        "problemas": [
+          {
+            "prioridade": "P2",
+            "arquivo": "operar_2026.py",
+            "linha": 140,
+            "descricao": "Uma lacuna conhecida de resultados anteriores não é transportada para a cobertura ou para as limitações da emissão. O fluxo continua, substitui a participação ausente por uma mais antiga na janela disponível e pode apresentar histórico suficiente sem avisar que faltou um GP recente. A lacuna fica registrada no índice do snapshot, mas não explicitada na entrega da previsão.",
+            "contraprova": "O resultado anterior R3-mughprjb, seção lacuna_historico, registra duas execuções sintéticas do CLI. Na variante gap, a rodada 5 foi substituída por resposta vazia válida e o índice declarou lacunas_resultados=['5']. O CLI retornou 0, publicou cobertura de 2 elegíveis em 2 registros e manteve os indicadores de histórico insuficiente em zero. A janela recuou até 2025 e a probabilidade do participante a mudou de 0.9679653624128087 para 0.960256478413353. Nesta retomada, conferi também o manifesto sintético preservado: suas limitações não mencionam a lacuna. Não é avaliação de desempenho.",
+            "correcao": "Transportar para a cobertura e o relatório da emissão as lacunas passadas relevantes, distinguindo indisponibilidade da fonte de ausência real de participação. Não alterar os indicadores ou as fórmulas congeladas para esconder o problema. Explicitar a política de admissão diante dessas lacunas e testar o caminho completo; se não for possível sustentar a janela exigida pelo contrato, bloquear em vez de declarar completude."
+          },
+          {
+            "prioridade": "P2",
+            "arquivo": "operacao2026/previsao.py",
+            "linha": 88,
+            "descricao": "A validação temporal aceita início da classificação exatamente igual à largada. O preparador congelado rejeita essa igualdade. Assim, estado e ensaio retrospectivo podem aceitar um calendário temporalmente incoerente, contrariando a preservação dessa regra do v1.",
+            "contraprova": "O probe anterior referencia_igual_largada registrou rejeição pelo v1 com 'Sessão de referência não é anterior à corrida', enquanto preparar_alvo retornou 'pronto'. Conferência atual do código: previsao.py usa reference > _race_start(race); preparar_historico.py:54 usa inicio >= corrida_inicio. A guarda prospectiva posterior impede completar uma emissão prospectiva nesse caso; não afirmo vazamento de resultados futuros por essa igualdade.",
+            "correcao": "Rejeitar também a igualdade na validação da referência e acrescentar regressão para estado e ensaio, preservando o helper congelado."
+          },
+          {
+            "prioridade": "P3",
+            "arquivo": "operacao2026/fontes.py",
+            "linha": 176,
+            "descricao": "O coletor rejeita paginação válida quando os registros de um mesmo GP ocupam mais de uma página. A repetição do envelope da corrida é confundida com duplicação da corrida, embora os participantes sejam distintos. Isso impõe, na prática, um limite de uma página por GP.",
+            "contraprova": "O probe sintético anterior paginacao_101 forneceu 101 participantes distintos em páginas de 100 e 1, com offsets e total coerentes. paginas_completas recusou com 'Corrida duplicada entre páginas.'. A inspeção atual confirma a rejeição incondicional da chave repetida. O leitor de snapshots já distingue esse caso do calendário. Não há evidência de impacto sobre os 22 registros do ensaio real.",
+            "correcao": "Na coleta de resultados e classificação, permitir que o mesmo envelope continue na página seguinte, mantendo identidade, totais, offsets e unicidade dos registros. Preservar a rejeição de corridas duplicadas na paginação do calendário e testar uma paginação positiva completa."
+          }
+        ],
+        "verificacoes_reexecutadas": [
+          "Conferência SHA-256 antes e depois: 162 arquivos autorizados iguais ao snapshot R3, sem divergências. Os três raw/resultados_17_offset_0000.json foram excluídos antes da leitura, inclusive para hash; não declaro conferência independente de 165/165.",
+          "Conferência final dos 286 originais fora das exceções documentais: todos iguais aos hashes de preservação, incluindo os 32 arquivos da distribuição.",
+          "Inspeção atual das correções R2: callback conectado ao CLI; writer prospectivo sem callback recusado; históricos antigos sem limite inferior de Q; seleção do legado pelas janelas e comparação das matrizes completa e reduzida.",
+          "Inspeção dos comandos A/B/C e descoberta de rodada pelo calendário. Nenhum desses comandos operacionais foi executado nesta retomada.",
+          "Conferência do manifesto sintético preservado da contraprova de lacuna e comparação da regra temporal com o preparador congelado.",
+          "Git consultado antes e depois: branch main, HEAD b067ad55dd97d964b132129838773cf6108773e3 e alterações preexistentes mantidas. Não existe comprovação de commit limpo da etapa 8."
+        ],
+        "evidencias_anteriores_conferidas": [
+          "Scripts pitwall-stage8-independent-R3-audit-20261019a.py e pitwall-stage8-independent-R3-oracle-20261019a.py, respectivos resultado.json e registros de execução em pitwall-stage8-review-r3.jsonl. Os logs foram tratados como evidência de execução, não como parecer.",
+          "regressions.log confirma 99 testes anteriores, sem erros, falhas ou skips. O auditor empregou bloqueios de rede, ajuste e escrita fora de scratch. Não repeti nem contabilizei esses testes como execução atual.",
+          "Auditor R3 anterior: 22 linhas reais reproduzidas nos três ensaios, mesmas 15 entradas, probabilidades e rankings; erro máximo da sigmoide de 5.551115123125783e-17; fingerprint preservado e nenhuma tentativa registrada de abrir o raw-alvo.",
+          "Oráculo anterior: três participantes com 15 entradas iguais ao v1, janelas entre anos, denominadores variáveis, novos IDs e ausência de posição; página mista e calendário necessário admitidos; fonte necessária sem UTC bloqueada, inclusive para retornante de 2024 após cinco GPs de 2026.",
+          "Testes anteriores do CLI cobrem travessia da largada durante serialização, escrita e publicação, preservação de emissão existente e recusa do writer sem guarda.",
+          "Pareceres reprovados R1/R2, estado pré-entrega, protocolo congelado e listas explícitas de seis arquivos de status e duas categorias de artefatos gerados foram conferidos e preservados."
+        ],
+        "plano_pos_aprovacao": {
+          "aceito_como_plano_condicional": true,
+          "autorizado_por_este_parecer": false,
+          "descricao": "Aceito a sequência prevista somente após aprovação válida: primeiro commit do código revisado; NOVO ensaio-commit-<SHA> ligado ao ensaio-r2-corrigido-20261020, comprovando igualdade de entradas, probabilidades e ranks; segundo commit restrito às evidências geradas e aos seis arquivos de status autorizados; verificação do push e da visibilidade PRIVADA. Esta reprovação não libera a sequência. Qualquer correção de código ou contrato exige nova revisão; uma aprovação posterior não autoriza modificá-los silenciosamente."
+        },
+        "ressalvas": [
+          "Os achados não demonstram divergência no ensaio real preservado nem desfazem as correções confirmadas de R2. Demonstram condições ainda não atendidas pelo fluxo geral.",
+          "A coleta coleta-20261020T095226Z não foi aberta, usada ou incluída na conferência do payload. Deve permanecer fora do commit e do ensaio canônico conforme solicitado.",
+          "Nenhum arquivo do projeto foi editado. Não houve rede, coleta, instalação, treino, recalibração, agentes, commit ou push.",
+          "O contexto desta sessão identifica openai-codex/gpt-6-astra; não consultei autenticação, credenciais ou banco de execução para uma auditoria adicional dessa identidade."
+        ],
+        "limitacoes": [
+          "Não reexecutei probes nem inferência nesta retomada: conferi suas execuções anteriores, os artefatos preservados e o código atual com hashes iguais.",
+          "Duas tentativas de inspeção por Python foram bloqueadas pela política do ambiente antes da execução. Prossegui com ferramentas normais de leitura, jq e shasum, sem alterar permissões.",
+          "Não foram verificados fontes externas atuais, disponibilidade futura de Q, coleta real A/C, emissão real de Austin, ensaio pós-commit, commits de entrega ou push privado.",
+          "A preservação atual dos 286 originais foi reconferida ao final; sua conferência antes/depois da execução anterior está registrada no auditor R3.",
+          "Cobertura da classificação não equivale a uma lista independente de inscritos. Relógio local e Git não constituem prova externa imutável de anterioridade."
+        ],
+        "uso_efetivo": {
+          "session_id": "local-da112b7cb7337f8c294854625c75583e32ee4bb8a3da544a0c8dbfde5ce6526f",
+          "model": "gpt-6-astra",
+          "billing_provider": "openai-codex",
+          "api_call_count": 8,
+          "billing_mode": "subscription_included"
+        },
+        "utc_registro": "2026-10-20T10:03:22.428777+00:00",
+        "preservacao_pai": {
+          "arquivos": 165,
+          "divergencias": []
+        }
+      },
+      "tentativa_anterior_interrompida": {
+        "session_id": "local-440400b6cd908ef5f829faa1e120785142592d0bb64fffff585192b5f9311d29",
+        "motivo": "HTTP 429, sem parecer; evidências preservadas e conferidas na conclusão",
+        "log": "~/.hermes/cache/scratch/pitwall-stage8-review-r3.jsonl"
+      }
+    },
+    {
+      "rodada": "R4_ESCOPO_TRES_CORRECOES",
+      "resultado": {
+        "parecer": "aprovado",
+        "escopo": "somente três correções R3",
+        "achados": [],
+        "evidencias_anteriores_conferidas": [
+          "Lacunas: operar_2026.py:140–158 verifica os GPs de 2026 admitidos historicamente e bloqueia tanto lacuna declarada no índice quanto resultado ausente ou vazio. A chamada em 210 antecede gerar_entradas em 211 e a inferência do ensaio em 233, impedindo o deslocamento silencioso da janela nesse caminho. A verificação é por GP, não por participação individual.",
+          "Explicitação da política: operar_2026.py:163–176 inclui cobertura e política conservadora na emissão; operacao2026/previsao.py:413–425 apresenta ambas no relatório. Os testes fornecidos em tests/test_operacao_2026_r3.py:115–130, 145–175 e 177–187 verificam bloqueio com e sem marcador no índice, ausência de publicação bloqueada e preservação da janela quando apenas um piloto não participou. O log anterior registra esses testes como aprovados.",
+          "Ordem temporal: operacao2026/previsao.py:88–89 rejeita referência igual ou posterior à largada. preparar_alvo chama essa validação em 103, antes de retornar qualquer estado. O teste fornecido em tests/test_operacao_2026_r3.py:189–211 cobre igualdade nos caminhos de estado e ensaio, incluindo impedimento de abrir resultados e de publicar. O log anterior também registra aprovação da regressão de referência posterior.",
+          "Fragmentação: operacao2026/fontes.py:170–200 e 268–307 aceita a continuação do envelope de um GP, compara seus metadados sem a lista de participantes, verifica unicidade de pilotos e mantém a rejeição de calendário duplicado. As verificações em 164–166, 179 e 284–285 controlam quantidades, offsets e totais. operar_2026.py:79–87 acumula os resultados por GP sem sobrescrever fragmentos e rejeita piloto repetido.",
+          "Os testes fornecidos em tests/test_operacao_2026_paginacao.py:66–149 cobrem reunião exata de 101 participantes em resultados e classificação, consumo pelos caminhos operacionais, duplicação de piloto, divergência de metadados, offsets, totais e quantidades, além de calendário paginado válido e duplicado. O log anterior registra aprovação desses testes.",
+          "Os trechos de 01-testes.json, 01-testes.log e resumo.json são consistentes quanto à execução anterior única de 54 testes, com zero falhas, erros ou skips. Registram bloqueio de rede e treinamento e nenhuma tentativa de escrita proibida. Essa execução foi reaproveitada como evidência anterior, não realizada nesta revisão.",
+          "03-ensaio.json e o checkpoint registram reprodução offline anterior de 22 linhas, com ordem das 15 entradas, valores, probabilidades, rankings e linhas semânticas idênticos ao ensaio de referência. O aceite registra 22 elegíveis e bloqueio de raws do alvo e futuros. Essa evidência sustenta preservação do ensaio registrado, não substitui as regressões sintéticas das três correções."
+        ],
+        "testes_executados_nesta_revisao": 0,
+        "limitacoes": [
+          "Revisão exclusivamente estática dos trechos e registros fornecidos; nenhum arquivo, log integral, raw ou artefato externo foi aberto ou verificado diretamente.",
+          "Os arquivos operacionais são adições sem baseline histórico imutável apresentado. Não foi reconstruído um diff histórico da R3 nem presumido seu código antigo.",
+          "A verificação explícita de lacunas apresentada cobre os GPs admitidos de 2026 no snapshot operacional. Este parecer não certifica a completude de todo o acervo histórico de outras temporadas.",
+          "Os relatos de preservação e hashes são evidências anteriores locais; não constituem prova externa de imutabilidade ou anterioridade. O ensaio não é uma emissão real de Austin.",
+          "A aprovação se restringe às três correções R3 examinadas; não avalia metodologia, desempenho, etapas 1–7 ou o projeto inteiro."
+        ],
+        "proximo_passo": "Encaminhar este parecer ao pai para salvamento. Nenhuma ação adicional está autorizada por esta revisão.",
+        "uso_efetivo": {
+          "session_id": "pitwall-r4-19339920866b4517b17bd32dee96b77d",
+          "model": "gpt-6-astra",
+          "billing_provider": "openai-codex",
+          "task": "",
+          "api_call_count": 1,
+          "billing_mode": "subscription_included",
+          "input_tokens": 15238,
+          "output_tokens": 1059,
+          "estimated_cost_usd": 0.0,
+          "actual_cost_usd": 0.0,
+          "cost_status": "included"
+        },
+        "tarefas_auxiliares_native_runtime": [
+          {
+            "session_id": "pitwall-r4-19339920866b4517b17bd32dee96b77d",
+            "model": "gpt-6-astra",
+            "billing_provider": "openai-codex",
+            "task": "title_generation",
+            "api_call_count": 1,
+            "billing_mode": "",
+            "input_tokens": 464,
+            "output_tokens": 20,
+            "estimated_cost_usd": 0.0,
+            "actual_cost_usd": 0.0,
+            "cost_status": null
+          }
+        ],
+        "preservacao": {
+          "verificado_utc": "2026-10-21T00:38:51.134206+00:00",
+          "arquivos_conferidos": 25,
+          "alterados_pelo_revisor": [],
+          "metodo": "SHA-256 antes/depois; modelo recebeu somente pacote textual escopado e zero ferramentas. Pai altera apenas parecer/status após a conferência."
+        },
+        "utc": "2026-10-21T00:38:51.134206+00:00",
+        "processamento_inicial_sem_inferencia": {
+          "codigo": 2,
+          "motivo": "CLI encaminhou ao gateway e rejeitou --run-budget antes da inferência (0 tokens); execução local direta com mesma instância/API foi usada para a única chamada principal. Nenhum retry de modelo ou fallback.",
+          "log": "revisor.stderr"
+        }
+      },
+      "arquivo": "reports/operacao_2026/revisao_r4_20261021T003337Z/parecer.json"
+    }
+  ],
+  "pendente": "Revisão única solicitada concluída. Nenhum passo posterior, correção, coleta, commit ou push autorizado por esse parecer; aprovação não é do projeto inteiro."
+}

@@ -1,0 +1,588 @@
+{
+  "tipo": "inventario_implementacao",
+  "base_commit": "b067ad55dd97d964b132129838773cf6108773e3",
+  "paths": [
+    {
+      "path": "README.md",
+      "sha256": "5c6c6e96fe000c3d76a1ebec27f347dd545a48613588d6670a52e062f0059963"
+    },
+    {
+      "path": "data/operacao_2026/preflight/americas_qualifying.json",
+      "sha256": "01bed0e2a0197da66664487070c30a92eaeda369da04d1bc1969934ebf3c33a2"
+    },
+    {
+      "path": "data/operacao_2026/preflight/calendar.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27"
+    },
+    {
+      "path": "data/operacao_2026/preflight/marina_bay_qualifying.json",
+      "sha256": "6305533d29c113c39c3fed73704f34e1c195f7af9c8988c0cb99b8d0f4af6109"
+    },
+    {
+      "path": "data/operacao_2026/preflight/sources.json",
+      "sha256": "7cb6f2981bb4d25cf599dc12a32f25178c7d3ef48297fdff01300a20d079b4b2"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/indice.json",
+      "sha256": "b14676ead3110ce637c0f961affbab8dba213166c00232727b5f45458a3dde5a"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/classificacao_17_offset_0000.json",
+      "sha256": "6305533d29c113c39c3fed73704f34e1c195f7af9c8988c0cb99b8d0f4af6109"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/classificacao_18_offset_0000.json",
+      "sha256": "01bed0e2a0197da66664487070c30a92eaeda369da04d1bc1969934ebf3c33a2"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_12_offset_0000.json",
+      "sha256": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_13_offset_0000.json",
+      "sha256": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_14_offset_0000.json",
+      "sha256": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_15_offset_0000.json",
+      "sha256": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_16_offset_0000.json",
+      "sha256": "214e44691da4d4f228448b269e12cab57b27a081751da4c6768a89637658fc31"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_17_offset_0000.json",
+      "sha256": "4efc2b9d5515c1d7ff13677e97bb7565ade55cfd2567a071e0cab64c85e642bf"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b"
+    },
+    {
+      "path": "data/operacao_2026/snapshots/coleta-20261019T164713Z/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b"
+    },
+    {
+      "path": "docs/comandos_operacao_2026.md",
+      "sha256": "52e9e0be45d347d9ca4fb0f7fb0d1d580751a166532401bb3293ab2cb135c719"
+    },
+    {
+      "path": "docs/estado_hermes.md",
+      "sha256": "41bc9dcdf91f18ac5f865506c830dc6eacfd995465906c0d80de07b99fed3acb"
+    },
+    {
+      "path": "docs/fontes_operacao_2026.md",
+      "sha256": "44641a421af49558b80431604a6c34701e1a320aeb205eefcd916bbdb06a8b09"
+    },
+    {
+      "path": "docs/protocolo_operacional_2026_v1.md",
+      "sha256": "a54833ca2f4f9b959537d4747d42911000603a0a6bbd3b712743698e6d35fa22"
+    },
+    {
+      "path": "operacao2026/__init__.py",
+      "sha256": "d3302f4f67797c0db32fc7c020c86291ac7222b5ee6653bd0bbacf0ae2320e8a"
+    },
+    {
+      "path": "operacao2026/fontes.py",
+      "sha256": "c78570d89379658a62b7464755b45f7ee92807fcb4d4843d8a72ba709d86a8f4"
+    },
+    {
+      "path": "operacao2026/previsao.py",
+      "sha256": "847db8e859b19b94d889c401db0e741d73b8c6e8ce426448db4b20cfe1c0fe1d"
+    },
+    {
+      "path": "operar_2026.py",
+      "sha256": "049c6882a59211b0bec883cf97813f4d52ed71bcf2321b9375bf0fce5bb47467"
+    },
+    {
+      "path": "reports/operacao_2026/cobertura_coleta.json",
+      "sha256": "ff7c5ad0e4ac539f4e54072c360bcf48bfecc9ff2d207f5189528e9b7657eace"
+    },
+    {
+      "path": "reports/operacao_2026/disponibilidade_inicial.json",
+      "sha256": "4932c54cf6ca3bafee2342a07a24dd32c88ce923c9ad15f91e0ccdf4775b903e"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/cobertura.json",
+      "sha256": "5640fb6eb979770961ea9bd4cb98f764b607e2b07130afd04c3da71ec78e3c6e"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/entradas.json",
+      "sha256": "e4ee8d72aea29c1f31d92bdb811fe828e5127cd0c884d7727c5ab83ae9f7f298"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/fontes.json",
+      "sha256": "f5274dcc2a851300e42ee66800938a00918d4907090e4905747dac7d421b714f"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/historicos.json",
+      "sha256": "c7b4d71d8c2b8bea9baa17944d3a3154b9f564197d7ee45b69a0ca95d491be16"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/manifesto.json",
+      "sha256": "d0aaa8401ae7e5efc4f65d0a5b955bd1ad68bf1f357a9c5ffa9304c069a92a6b"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/probabilidades.csv",
+      "sha256": "54bcac2526c326820533f0b4d96e3b9bb354cdd24a77496d634cd70d04932e2e"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/classificacao_17_offset_0000.json",
+      "sha256": "6305533d29c113c39c3fed73704f34e1c195f7af9c8988c0cb99b8d0f4af6109"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_12_offset_0000.json",
+      "sha256": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_13_offset_0000.json",
+      "sha256": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_14_offset_0000.json",
+      "sha256": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_15_offset_0000.json",
+      "sha256": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_16_offset_0000.json",
+      "sha256": "214e44691da4d4f228448b269e12cab57b27a081751da4c6768a89637658fc31"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-integracao-20261019/relatorio.md",
+      "sha256": "9a9d4a29b2cb0328fef02260e4dc2828483f5577630633c03157ae7f03f94b62"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/cobertura.json",
+      "sha256": "5640fb6eb979770961ea9bd4cb98f764b607e2b07130afd04c3da71ec78e3c6e"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/entradas.json",
+      "sha256": "e4ee8d72aea29c1f31d92bdb811fe828e5127cd0c884d7727c5ab83ae9f7f298"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/fontes.json",
+      "sha256": "f5274dcc2a851300e42ee66800938a00918d4907090e4905747dac7d421b714f"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/historicos.json",
+      "sha256": "c7b4d71d8c2b8bea9baa17944d3a3154b9f564197d7ee45b69a0ca95d491be16"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/manifesto.json",
+      "sha256": "b3d5a99febf5b7112dae092e9a32f39bb3d596389a97d7fbfe8ed80c9bcbf3eb"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/probabilidades.csv",
+      "sha256": "54bcac2526c326820533f0b4d96e3b9bb354cdd24a77496d634cd70d04932e2e"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/classificacao_17_offset_0000.json",
+      "sha256": "6305533d29c113c39c3fed73704f34e1c195f7af9c8988c0cb99b8d0f4af6109"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_12_offset_0000.json",
+      "sha256": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_13_offset_0000.json",
+      "sha256": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_14_offset_0000.json",
+      "sha256": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_15_offset_0000.json",
+      "sha256": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_16_offset_0000.json",
+      "sha256": "214e44691da4d4f228448b269e12cab57b27a081751da4c6768a89637658fc31"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r1-corrigido-20261020/relatorio.md",
+      "sha256": "9a9d4a29b2cb0328fef02260e4dc2828483f5577630633c03157ae7f03f94b62"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/cobertura.json",
+      "sha256": "5640fb6eb979770961ea9bd4cb98f764b607e2b07130afd04c3da71ec78e3c6e"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/entradas.json",
+      "sha256": "e4ee8d72aea29c1f31d92bdb811fe828e5127cd0c884d7727c5ab83ae9f7f298"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/fontes.json",
+      "sha256": "f5274dcc2a851300e42ee66800938a00918d4907090e4905747dac7d421b714f"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/historicos.json",
+      "sha256": "9ee5411420fe5eaebbb22242af604b6ab2f4390c8f439867400c9bb1f20be771"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/manifesto.json",
+      "sha256": "5e0a2efd869368c2ade87692f0eb8b4b87429f81cc7e328463ee7489503c605c"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/probabilidades.csv",
+      "sha256": "54bcac2526c326820533f0b4d96e3b9bb354cdd24a77496d634cd70d04932e2e"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/classificacao_17_offset_0000.json",
+      "sha256": "6305533d29c113c39c3fed73704f34e1c195f7af9c8988c0cb99b8d0f4af6109"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_12_offset_0000.json",
+      "sha256": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_13_offset_0000.json",
+      "sha256": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_14_offset_0000.json",
+      "sha256": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_15_offset_0000.json",
+      "sha256": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_16_offset_0000.json",
+      "sha256": "214e44691da4d4f228448b269e12cab57b27a081751da4c6768a89637658fc31"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b"
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/relatorio.md",
+      "sha256": "9a9d4a29b2cb0328fef02260e4dc2828483f5577630633c03157ae7f03f94b62"
+    },
+    {
+      "path": "reports/operacao_2026/preservacao.json",
+      "sha256": "7991736803477d79403817f99b477748a9fc8f56db1239ac4cdc5ec5321239a9"
+    },
+    {
+      "path": "reports/operacao_2026/protocolo_fixado.json",
+      "sha256": "88ac64001546e2470124b5ef0dd4a7f840407d854f186bd813f4557153f7f7da"
+    },
+    {
+      "path": "reports/operacao_2026/revisao_independente.json",
+      "sha256": "9f18a65c186bb75de177c765a3d4947ed0c405a3bf2fdc48578170ee954d8904"
+    },
+    {
+      "path": "reports/operacao_2026/revisao_r4_20261021T003337Z/contexto_escopado.txt",
+      "sha256": "2f790a45bd93a0e65692032412c04ca8698281c1347d1ea77936b2d84d527e43"
+    },
+    {
+      "path": "reports/operacao_2026/revisao_r4_20261021T003337Z/hashes_pre_revisao.json",
+      "sha256": "b1af3e7afcc7eae8ebaa60c99f91f826cbc3086256e57c2c4e8f983853dcaecf"
+    },
+    {
+      "path": "reports/operacao_2026/revisao_r4_20261021T003337Z/parecer.json",
+      "sha256": "60f72600cce1089009619b36cb1a9eb00c97c5dccc94a40aabc95b3483129351"
+    },
+    {
+      "path": "reports/operacao_2026/revisao_r4_20261021T003337Z/politica_execucao.json",
+      "sha256": "984751110db7a9da9f58217044f470288f76bacfb9a559284398a3a2457a0f25"
+    },
+    {
+      "path": "reports/operacao_2026/revisao_r4_20261021T003337Z/preservacao_revisao.json",
+      "sha256": "2182f690160c2de0493c96ad05e0f90d679a9d0d2fe230f94c7cb68deaa89fd1"
+    },
+    {
+      "path": "reports/operacao_2026/revisao_r4_20261021T003337Z/uso_efetivo.json",
+      "sha256": "506257035f474701344ba6f9b18dbc2a70a4eba2bda7dae1fce043219450ab1c"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/01-testes.json",
+      "sha256": "acb9329cb36f2a76370b1633b2e2bc7fb3872977ff932dc1bd5061fc2e0992e5"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/01-testes.log",
+      "sha256": "f2fc6b699142d2994a2b97a2975a4d76e03a7a2578002bde5e21b60c7e3f2862"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/02-preservacao.json",
+      "sha256": "0983af5597c201e4a43b53c56fa95751bf4e368c2b705f9db56a16b5791580ad"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/02-preservacao.log",
+      "sha256": "6027ea499d170cb24cff73135b44096220edad95c2f88bb3e408ca96ebbd287c"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/03-ensaio.json",
+      "sha256": "1113eb47349b03dbd4e4bbe0b9d0e606c0940b360e2486b383c8f44cc415ca5f"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/03-ensaio.log",
+      "sha256": "141ed5da3833960093f0c7844cf1be83ae397346934328de8f2cf5bedfe3187c"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/04-pos-ensaio.json",
+      "sha256": "83f21a00a4c905d504cc9e6435471008366f457e076b36365273f1595762e62c"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/aceite-base-existente.py",
+      "sha256": "707a9ba93ee00552bfe4fa2f78efc21521c3396a5f9bb72a1d4d907f00147041"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/comparar-ensaio-temporario.py",
+      "sha256": "00471c596d019998afabf0b45dcce09d1082850f502d4da6bbadfc21445814e2"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/conferir-preservacao.py",
+      "sha256": "453f4f6a1c78fa16b334ca4dd644bf7e32a14f79f541f34ee16ccbaab91eb232"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/executar-testes.py",
+      "sha256": "42673a142ae2d5b6d1ae03118e4372560e4045539211234b190e29ab9912c2f9"
+    },
+    {
+      "path": "reports/operacao_2026/validacao_integrada_20261021T002336Z/resumo.json",
+      "sha256": "c45cf94d347715cf5f3778a68d37bc677d05e94fe77cac8d704572e063f63ece"
+    },
+    {
+      "path": "reports/operacao_2026/verificacao.json",
+      "sha256": "f34b1edf061031b919f2fcc211b5d2ff30414678b8f535ec176b63a3e077da52"
+    },
+    {
+      "path": "tests/test_operacao_2026.py",
+      "sha256": "a2044864c14fb54270eaf34b490e298f2a5d342e7c9848500ddd963599fb33c4"
+    },
+    {
+      "path": "tests/test_operacao_2026_fluxo.py",
+      "sha256": "3b5a3b42243b21b100405f0ea2213f8417a32c76c59d19eb9821ec088aa3030f"
+    },
+    {
+      "path": "tests/test_operacao_2026_fontes.py",
+      "sha256": "f8f280c11d6b172f8f80e3ec0f11b4f90df1529ef9c995890763646218bfccde"
+    },
+    {
+      "path": "tests/test_operacao_2026_integracao.py",
+      "sha256": "5adf3c33aac6aa70a4b14a5722ea54b6230eac966640574fd1ac9381f6af503a"
+    },
+    {
+      "path": "tests/test_operacao_2026_paginacao.py",
+      "sha256": "0e6e09c41a89d1c2d085a427a59e027627a86d040026294215602f56a630fe15"
+    },
+    {
+      "path": "tests/test_operacao_2026_r1.py",
+      "sha256": "b8a70c07eb16afa0446da07764a791c25c222bfe0d592136fc729d60b9e05789"
+    },
+    {
+      "path": "tests/test_operacao_2026_r2.py",
+      "sha256": "1fd570c2b21f1a701182ab670f5a0ccbcf82e8c1569a0043e9ffa32078eb43ef"
+    },
+    {
+      "path": "tests/test_operacao_2026_r3.py",
+      "sha256": "d83d14ec3bb400b5c7d4ed9143e41f6b6c22a812807aa567688c9976795c4652"
+    },
+    {
+      "path": "reports/operacao_2026/fechamento_local_20261021T004418Z/gate_local.py",
+      "sha256": "273bafcad4051cb5128b8c24b1d4245f359f974415bc233693eb111f0041841e"
+    },
+    {
+      "path": "reports/operacao_2026/fechamento_local_20261021T004418Z/payload_local.json",
+      "sha256": "afd8cff174a7791d4e2110d54114faac2c2151059d72b09a7d0d2b9886a67c66"
+    },
+    {
+      "path": "reports/operacao_2026/fechamento_local_20261021T004418Z/LIMITES_E_EXCLUSOES.md",
+      "sha256": "3cf10d7b3a3f1ecf85228094cd328f7ff8b39680411efa64a5accaf3c5019cba"
+    },
+    {
+      "path": "reports/operacao_2026/fechamento_local_20261021T004418Z/ensaio_pos_commit.py",
+      "sha256": "1064460ac96739863c67ffedd04626af9882a1cc05e08cb03d18c4ed0cb8fe78"
+    }
+  ],
+  "nao_inclui_hash_proprio": "inventario_implementacao.json não inclui seu próprio hash para evitar circularidade",
+  "limites": "__init__.py é somente docstring e não possui baseline em hashes_pre_revisao.json."
+}

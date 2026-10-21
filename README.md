@@ -6,7 +6,27 @@ Portfólio de ciência de dados sobre Fórmula 1, construído passo a passo para
 
 No futuro: criar um dashboard que estime a probabilidade de cada piloto terminar uma corrida no pódio.
 
-**Etapa atual:** a etapa 7 concluiu a preparação de uma **distribuição mínima e autossuficiente** do dashboard, separada do cofre e do ambiente científico, com aprovação técnica independente com ressalvas e futura hospedagem ainda pendente. **Nada foi publicado em aplicativo ou repositório público.** 2025 já foi avaliado para o v1 e não é teste intocado. O estado de verificação da etapa 7 está em [distribuição e limites](docs/distribuicao_dashboard_v1.md); as seções seguintes preservam as etapas anteriores.
+**Etapa atual — operação 2026 (etapa 8):** coleta real e ensaio retrospectivo executados com o **v1 congelado**, sem treinamento ou recalibração. A R4 aprovou, sem achados, somente as três correções R3; os **54 testes integrados** e o ensaio retrospectivo anterior foram reaproveitados como evidência. **Austin continua aguardando classificação; não existe previsão real emitida para ele.** Nada foi publicado, e a distribuição da etapa 7 permanece intacta.
+
+## Etapa 8 — operação verificável, sem esperar pela classificação
+
+- [Protocolo fixado antes da coleta](docs/protocolo_operacional_2026_v1.md), [fontes](docs/fontes_operacao_2026.md) e [comandos manuais A/B/C](docs/comandos_operacao_2026.md).
+- Em 19/10/2026: **17 GPs principais disponíveis, 374 resultados, nenhuma lacuna passada**; seis eventos futuros não são dados faltantes. Respostas originais, URLs, UTC e hashes em `data/operacao_2026/snapshots/`.
+- IDs novos versus 2021–2025: piloto `arvid_lindblad`, equipes `audi` e `cadillac`. IDs permanecem literais, sem unir equipes por nome ou inventar histórico.
+- Singapura foi escolhida cronologicamente antes da coleta. O [ensaio corrigido R2](reports/operacao_2026/emissoes/ensaio-r2-corrigido-20261020/relatorio.md) cobre os **22 registros publicados de classificação**, sem abrir o resultado do alvo ou futuros. É retrospectivo e identifica componentes ainda não commitados, com hashes próprios; não foi previsão anterior à corrida.
+- **54 testes integrados passaram em uma execução única**, com rede real e métodos de ajuste bloqueados; a R4 estática reaproveitou essa evidência sem reexecutá-la. Oráculos sintético/de probabilidades e contraprovas de emissão após/atravessando a largada constam das evidências em [verificação](reports/operacao_2026/verificacao.json). A aprovação R4 é limitada às três correções R3, não ao projeto inteiro.
+- Horários programados de Austin: classificação **24/10 às 21h UTC / 18h São Paulo**; largada **25/10 às 20h UTC / 17h São Paulo**. Reconfirmar sessões e disponibilidade da fonte. Não confundir fim programado com encerramento confirmado.
+- Nenhum importador manual F1/FIA foi implementado. Se a Jolpica atrasar, esperar sem consultas infinitas; não substituir por outro GP. A alternativa verificável e seus controles estão no protocolo.
+
+Para consultar o estado sem rede:
+
+```sh
+./.venv/bin/python operar_2026.py estado --snapshot coleta-20261019T164713Z
+```
+
+Probabilidade individual não é ordem P1/P2/P3 nem soma forçada a três. Cobertura publicada não comprova o pelotão integral; desempenho/calibração de 2024/2025 não são garantia para 2026. O [checkpoint](docs/estado_hermes.md) registra a próxima ação sem duplicar processos, snapshots ou emissões.
+
+**Registro anterior:** a etapa 7 preparou a distribuição mínima autossuficiente, aprovada com ressalvas; hospedagem, publicação e licença aberta do código continuam pendentes. **Nada foi publicado em aplicativo ou repositório público.** 2025 já foi avaliado e não é teste intocado. [Distribuição e limites](docs/distribuicao_dashboard_v1.md); as seções seguintes preservam as etapas anteriores.
 
 ## Etapa 7 — distribuição mínima, publicação pendente
 

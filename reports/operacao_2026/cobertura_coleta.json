@@ -1,0 +1,123 @@
+{
+  "snapshot": "coleta-20261019T164713Z",
+  "data_kind": "RESPOSTAS_REAIS_JOLPICA",
+  "obtencao_utc_primeira": "2026-10-19T16:47:13.716380Z",
+  "obtencao_utc_ultima": "2026-10-19T16:49:45.895262Z",
+  "calendario_eventos": 23,
+  "gps_disponiveis": 17,
+  "total_resultados": 374,
+  "resultados_por_rodada": {
+    "1": 22,
+    "2": 22,
+    "3": 22,
+    "4": 22,
+    "5": 22,
+    "6": 22,
+    "7": 22,
+    "8": 22,
+    "9": 22,
+    "10": 22,
+    "11": 22,
+    "12": 22,
+    "13": 22,
+    "14": 22,
+    "15": 22,
+    "16": 22,
+    "17": 22
+  },
+  "qualidade": {
+    "futuros": [
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23"
+    ],
+    "lacunas_resultados": [],
+    "resultados_disponiveis": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+    ]
+  },
+  "classificacao_registros_por_rodada": {
+    "18": 0,
+    "17": 22
+  },
+  "ids_pilotos": [
+    "albon",
+    "alonso",
+    "antonelli",
+    "arvid_lindblad",
+    "bearman",
+    "bortoleto",
+    "bottas",
+    "colapinto",
+    "gasly",
+    "hadjar",
+    "hamilton",
+    "hulkenberg",
+    "lawson",
+    "leclerc",
+    "max_verstappen",
+    "norris",
+    "ocon",
+    "perez",
+    "piastri",
+    "russell",
+    "sainz",
+    "stroll",
+    "tsunoda"
+  ],
+  "ids_equipes": [
+    "alpine",
+    "aston_martin",
+    "audi",
+    "cadillac",
+    "ferrari",
+    "haas",
+    "mclaren",
+    "mercedes",
+    "rb",
+    "red_bull",
+    "williams"
+  ],
+  "ids_pilotos_novos_vs_2021_2025": [
+    "arvid_lindblad"
+  ],
+  "ids_equipes_novos_vs_2021_2025": [
+    "audi",
+    "cadillac"
+  ],
+  "ids_equipes_antigos_nao_observados_2026": [
+    "alfa",
+    "alphatauri",
+    "sauber"
+  ],
+  "regra_ids": "Literais: não houve união por nome ou equivalência manual. Ausência no snapshot não prova extinção.",
+  "paginas": 20,
+  "todos_hashes_validos": true,
+  "cobertura": "17 GPs concluídos disponíveis; 6 futuros não são lacunas. Registros da fonte, não lista independente de inscritos.",
+  "austin": "aguardando_classificacao",
+  "sprint": "Nenhum endpoint Sprint consultado",
+  "atualizacao": "Uma única coleta sequencial; snapshot novo sem sobrescrever preflight.",
+  "horarios_austin": {
+    "qualifying_inicio_utc": "2026-10-24T21:00:00Z",
+    "largada_utc": "2026-10-25T20:00:00Z"
+  }
+}

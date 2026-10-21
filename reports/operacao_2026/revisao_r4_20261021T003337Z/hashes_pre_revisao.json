@@ -1,0 +1,31 @@
+{
+  "capturado_agora_para_garantir_somente_leitura": true,
+  "nao_e_baseline_historico": true,
+  "sha256": {
+    "operar_2026.py": "049c6882a59211b0bec883cf97813f4d52ed71bcf2321b9375bf0fce5bb47467",
+    "operacao2026/previsao.py": "847db8e859b19b94d889c401db0e741d73b8c6e8ce426448db4b20cfe1c0fe1d",
+    "operacao2026/fontes.py": "c78570d89379658a62b7464755b45f7ee92807fcb4d4843d8a72ba709d86a8f4",
+    "tests/test_operacao_2026_fontes.py": "f8f280c11d6b172f8f80e3ec0f11b4f90df1529ef9c995890763646218bfccde",
+    "tests/test_operacao_2026_r3.py": "d83d14ec3bb400b5c7d4ed9143e41f6b6c22a812807aa567688c9976795c4652",
+    "tests/test_operacao_2026.py": "a2044864c14fb54270eaf34b490e298f2a5d342e7c9848500ddd963599fb33c4",
+    "tests/test_operacao_2026_r2.py": "1fd570c2b21f1a701182ab670f5a0ccbcf82e8c1569a0043e9ffa32078eb43ef",
+    "tests/test_operacao_2026_fluxo.py": "3b5a3b42243b21b100405f0ea2213f8417a32c76c59d19eb9821ec088aa3030f",
+    "tests/test_operacao_2026_integracao.py": "5adf3c33aac6aa70a4b14a5722ea54b6230eac966640574fd1ac9381f6af503a",
+    "tests/test_operacao_2026_paginacao.py": "0e6e09c41a89d1c2d085a427a59e027627a86d040026294215602f56a630fe15",
+    "tests/test_operacao_2026_r1.py": "b8a70c07eb16afa0446da07764a791c25c222bfe0d592136fc729d60b9e05789",
+    "docs/estado_hermes.md": "8908758f8ec5160090f2c6800935e8034534105207b784831158d320cb05aa21",
+    "reports/operacao_2026/revisao_independente.json": "4a5e98aee87c494f8cdd82cefd592e327ba1b047eb24841106126b7df69f9582",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/03-ensaio.log": "141ed5da3833960093f0c7844cf1be83ae397346934328de8f2cf5bedfe3187c",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/aceite-base-existente.py": "707a9ba93ee00552bfe4fa2f78efc21521c3396a5f9bb72a1d4d907f00147041",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/03-ensaio.json": "1113eb47349b03dbd4e4bbe0b9d0e606c0940b360e2486b383c8f44cc415ca5f",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/conferir-preservacao.py": "453f4f6a1c78fa16b334ca4dd644bf7e32a14f79f541f34ee16ccbaab91eb232",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/executar-testes.py": "42673a142ae2d5b6d1ae03118e4372560e4045539211234b190e29ab9912c2f9",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/04-pos-ensaio.json": "83f21a00a4c905d504cc9e6435471008366f457e076b36365273f1595762e62c",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/resumo.json": "c45cf94d347715cf5f3778a68d37bc677d05e94fe77cac8d704572e063f63ece",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/02-preservacao.json": "0983af5597c201e4a43b53c56fa95751bf4e368c2b705f9db56a16b5791580ad",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/02-preservacao.log": "6027ea499d170cb24cff73135b44096220edad95c2f88bb3e408ca96ebbd287c",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/comparar-ensaio-temporario.py": "00471c596d019998afabf0b45dcce09d1082850f502d4da6bbadfc21445814e2",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/01-testes.log": "f2fc6b699142d2994a2b97a2975a4d76e03a7a2578002bde5e21b60c7e3f2862",
+    "reports/operacao_2026/validacao_integrada_20261021T002336Z/01-testes.json": "acb9329cb36f2a76370b1633b2e2bc7fb3872977ff932dc1bd5061fc2e0992e5"
+  }
+}

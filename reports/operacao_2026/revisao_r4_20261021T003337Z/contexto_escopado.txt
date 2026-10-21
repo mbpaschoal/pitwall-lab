@@ -1,0 +1,779 @@
+ESCOPO: exclusivamente os três achados da R3. Arquivos de operação são novos e não rastreados no commit-base; o diff Git pertinente é adição contra /dev/null, NÃO existe aqui um diff histórico completo da R3. Abaixo estão apenas os trechos adicionados pertinentes, com numeração ATUAL. O parecer R3 descreve o comportamento antigo; não reconstruí seu código como suposto baseline.
+
+PARECER R3 (apenas achados):
+{
+  "parecer": "reprovado",
+  "problemas": [
+    {
+      "prioridade": "P2",
+      "arquivo": "operar_2026.py",
+      "linha": 140,
+      "descricao": "Uma lacuna conhecida de resultados anteriores não é transportada para a cobertura ou para as limitações da emissão. O fluxo continua, substitui a participação ausente por uma mais antiga na janela disponível e pode apresentar histórico suficiente sem avisar que faltou um GP recente. A lacuna fica registrada no índice do snapshot, mas não explicitada na entrega da previsão.",
+      "contraprova": "O resultado anterior R3-mughprjb, seção lacuna_historico, registra duas execuções sintéticas do CLI. Na variante gap, a rodada 5 foi substituída por resposta vazia válida e o índice declarou lacunas_resultados=['5']. O CLI retornou 0, publicou cobertura de 2 elegíveis em 2 registros e manteve os indicadores de histórico insuficiente em zero. A janela recuou até 2025 e a probabilidade do participante a mudou de 0.9679653624128087 para 0.960256478413353. Nesta retomada, conferi também o manifesto sintético preservado: suas limitações não mencionam a lacuna. Não é avaliação de desempenho.",
+      "correcao": "Transportar para a cobertura e o relatório da emissão as lacunas passadas relevantes, distinguindo indisponibilidade da fonte de ausência real de participação. Não alterar os indicadores ou as fórmulas congeladas para esconder o problema. Explicitar a política de admissão diante dessas lacunas e testar o caminho completo; se não for possível sustentar a janela exigida pelo contrato, bloquear em vez de declarar completude."
+    },
+    {
+      "prioridade": "P2",
+      "arquivo": "operacao2026/previsao.py",
+      "linha": 88,
+      "descricao": "A validação temporal aceita início da classificação exatamente igual à largada. O preparador congelado rejeita essa igualdade. Assim, estado e ensaio retrospectivo podem aceitar um calendário temporalmente incoerente, contrariando a preservação dessa regra do v1.",
+      "contraprova": "O probe anterior referencia_igual_largada registrou rejeição pelo v1 com 'Sessão de referência não é anterior à corrida', enquanto preparar_alvo retornou 'pronto'. Conferência atual do código: previsao.py usa reference > _race_start(race); preparar_historico.py:54 usa inicio >= corrida_inicio. A guarda prospectiva posterior impede completar uma emissão prospectiva nesse caso; não afirmo vazamento de resultados futuros por essa igualdade.",
+      "correcao": "Rejeitar também a igualdade na validação da referência e acrescentar regressão para estado e ensaio, preservando o helper congelado."
+    },
+    {
+      "prioridade": "P3",
+      "arquivo": "operacao2026/fontes.py",
+      "linha": 176,
+      "descricao": "O coletor rejeita paginação válida quando os registros de um mesmo GP ocupam mais de uma página. A repetição do envelope da corrida é confundida com duplicação da corrida, embora os participantes sejam distintos. Isso impõe, na prática, um limite de uma página por GP.",
+      "contraprova": "O probe sintético anterior paginacao_101 forneceu 101 participantes distintos em páginas de 100 e 1, com offsets e total coerentes. paginas_completas recusou com 'Corrida duplicada entre páginas.'. A inspeção atual confirma a rejeição incondicional da chave repetida. O leitor de snapshots já distingue esse caso do calendário. Não há evidência de impacto sobre os 22 registros do ensaio real.",
+      "correcao": "Na coleta de resultados e classificação, permitir que o mesmo envelope continue na página seguinte, mantendo identidade, totais, offsets e unicidade dos registros. Preservar a rejeição de corridas duplicadas na paginação do calendário e testar uma paginação positiva completa."
+    }
+  ]
+}
+
+CHECKPOINT — ESTADO ATUAL:
+# Checkpoint — etapa 8 Pitwall Lab
+Atualização: 2026-10-21T00:27:28.388602+00:00 (UTC). **Validação integrada concluída:54 testes passaram uma vez; preservação por referências duráveis e reprodução offline temporária confirmadas. Pronto para revisão independente, ainda NÃO realizada. Parecer R3 reprovado permanece histórico. Sem commit/push.**
+## Validação integrada com referências duráveis — 20261021T002336Z
+Autorização atual: testes, preservação por referências duráveis e reprodução offline temporária; sem correções automáticas, coleta, revisão, agentes ou Git-write. O arquivo temporário ausente não é dependência nem foi reconstruído.
+Etapa 1 concluída: suíte dos 8 módulos test_operacao_2026*, executada UMA vez: 54 testes, 0 falhas, 0 erros, 0 skips. Rede/DNS e fit/fit_transform/partial_fit bloqueados, nenhuma tentativa de escrita fora das pastas permitidas. Não inclui as antigas61 regressões de dashboard/exportação, nem soma contagens anteriores.
+Evidências duráveis: reports/operacao_2026/validacao_integrada_20261021T002336Z/01-testes.{json,log} e executar-testes.py. Etapa 2 concluída: 286 arquivos anteriores idênticos ao commit b067ad55dd97d964b132129838773cf6108773e3; README.md e projects/Pitwall Lab.md separados como alterações documentais intencionais. Os68 SHA-256 conferem, e seu manifesto atual é idêntico ao versionado nesse commit. Nenhuma alteração inesperada nos arquivos anteriores. 60 arquivos dos três snapshots canônicos e 72 saídas dos três ensaios conferem com seus índices/manifestos locais. Relatório completo: reports/operacao_2026/validacao_integrada_20261021T002336Z/02-preservacao.{json,log} e conferir-preservacao.py.
+Limitações explícitas: código/testes/documentação novos da etapa8 não têm baseline histórico imutável nesta verificação. SHA de índices/manifestos calculado agora só identifica a referência consultada, não prova estado passado nem imutabilidade externa. Não foi reconstruído baseline retroativo. Essas limitações não impediram os54 testes independentes. Etapa 3 concluída: reprodução OFFLINE em TemporaryDirectory, usando o snapshot canônico coleta-20261019T164713Z e o script de aceite existente, copiado para esta pasta durável. Comparado com ensaio-r2-corrigido-20261020: 22 linhas, ordem/15 entradas, probabilidades e rankings idênticos; linhas semânticas completas também idênticas. Metadados de execução (timestamp/Git/ID) NÃO foram exigidos iguais. Resultado-alvo/futuro bloqueado pelo audit hook do aceite; rede/DNS/fit bloqueados; modelo inalterado. As emissões anteriores foram acessadas só para leitura, a nova execução ficou no temporário e sua pasta foi removida após a comparação. Evidências: reports/operacao_2026/validacao_integrada_20261021T002336Z/03-ensaio.{json,log}, comparar-ensaio-temporario.py e aceite-base-existente.py. Não é emissão real de Austin nem prova de anterioridade externa.
+
+Etapa 4 concluída: após o ensaio, 138 arquivos/índices/manifestos canônicos foram novamente comparados às referências já verificadas, sem alterações. Relatório04-pos-ensaio.json; não houve sobrescrita das emissões.
+Resultado atual:54 testes pertinentes executados UMA vez e aprovados;286 arquivos anteriores preservados,68 SHA-256 congelados válidos,60 raws de snapshots e72 saídas de ensaios consistentes com suas referências locais;22 linhas com15 entradas/probabilidades/rankings iguais na reprodução temporária. Código/documentação intencionalmente modificados e novos arquivos sem referência imutável estão separados no relatório02, não classificados como artefatos congelados nem como prova retroativa. Resumo durável: reports/operacao_2026/validacao_integrada_20261021T002336Z/resumo.json. Nada depende de pitwall-stage8-before.json.
+Próxima pendência: revisão independente SOMENTE após autorização. Os scripts/logs/resultados desta pasta e referências Git/manifesto68/snapshots/ensaios ficam disponíveis para ela; nenhuma revisão forte, coleta, correção automática, subagente, commit ou push foi realizado nesta entrega.
+
+
+
+DIFF PERTINENTE — ADIÇÕES EM operar_2026.py
+
+69:+def _resultados_2026(snapshot, calendar, alvo):
+70:+    keys = previsao.chaves_historicas_admitidas(alvo, calendar)
+71:+    rounds = {round_ for season, round_ in keys if season == '2026'}
+72:+    _, pages = _selecionar_snapshot(snapshot, 'resultados', rounds)
+73:+    results = {}
+74:+    for endpoint, entries in pages.items():
+75:+        if endpoint != 'resultados':
+76:+            continue
+77:+        for race in _races(entries):
+78:+            previsao.validar_identidade(next(item for item in calendar if previsao._event_key(item) == previsao._event_key(race)), race)
+79:+            key = previsao._event_key(race)
+80:+            bucket = results.setdefault(key, [])
+81:+            seen = {x['Driver']['driverId'] for x in bucket}
+82:+            for record in race.get('Results', []):
+83:+                driver = record.get('Driver', {}).get('driverId')
+84:+                if not driver or driver in seen:
+85:+                    raise ValueError('Paginação de resultados contém piloto duplicado.')
+86:+                bucket.append(record)
+87:+                seen.add(driver)
+88:+    return results, pages
+
+140:+def _lacunas_resultados_anteriores(index, alvo, calendar, results):
+141:+    """Bloqueia indisponibilidade conhecida em GPs já admitidos ao alvo."""
+142:+    quality = index.get('qualidade', {})
+143:+    declared = quality.get('lacunas_resultados', []) if isinstance(quality, dict) else []
+144:+    declared = {str(round_) for round_ in declared if isinstance(round_, (str, int))}
+145:+    gaps = []
+146:+    for key in previsao.chaves_historicas_admitidas(alvo, calendar):
+147:+        if key[0] != '2026':
+148:+            continue
+149:+        causes = []
+150:+        if key[1] in declared:
+151:+            causes.append('índice registra resultado indisponível')
+152:+        if key not in results or not results[key]:
+153:+            causes.append('resultado indisponível no snapshot selecionado')
+154:+        if causes:
+155:+            gaps.append({'temporada': key[0], 'rodada': key[1], 'causa': '; '.join(causes)})
+156:+    if gaps:
+157:+        detail = '; '.join('rodada {}: {}'.format(item['rodada'], item['causa']) for item in gaps)
+158:+        raise ValueError('Lacuna de resultado anterior bloqueia a emissão: {}.'.format(detail))
+159:+    return gaps
+
+162:+def _emissao_data(mode, event, index, pages, lines, audit, results, model, extra):
+163:+    lacunas = list(audit.get('lacunas_resultados_relevantes', []))
+164:+    data = {'versao': 'operacao_2026_v1', 'modo': mode,
+165:+            'evento': {'temporada': str(event['season']), 'rodada': str(event['round']),
+166:+                       'circuito_id': event['Circuit']['circuitId']},
+167:+            'source_snapshots': [index['snapshot_id']], 'fontes': _fontes(index, pages),
+168:+            'raw_admitidos': _raw_admitidos(index['snapshot_id'], pages), 'historicos_usados': _historicos(audit, results),
+169:+            'fontes_historicas_admitidas': list(audit.get('fontes_historicas_admitidas', [])),
+170:+            'fontes_historicas_excluidas': list(audit.get('fontes_historicas_excluidas', [])),
+171:+            'fontes_historicas_abertas': list(audit.get('fontes_historicas_abertas', [])),
+172:+            'cobertura': {'registros_classificacao': len(lines),
+173:+                          'elegiveis': sum(bool(x.get('elegivel_previsao')) for x in lines),
+174:+                          'lacunas_resultados_relevantes': lacunas},
+175:+            'politica_lacunas_resultados': ('Bloqueio conservador: qualquer GP principal anterior admitido '
+176:+                                            'ao alvo sem resultado disponível bloqueia a emissão.'),
+177:+            'modelos': model['hashes'], 'git': previsao.codigo_estado(str(ROOT)), 'linhas': lines}
+178:+    data.update(extra)
+179:+    return data
+
+196:+def _preparar_fluxo(snapshot, circuit, prospectivo=False):
+197:+    index, calendar, calendar_pages = _calendar(snapshot)
+198:+    event, _, state, qpages = _event_with_q(snapshot, calendar, circuit, prospectivo=prospectivo)
+199:+    if state['estado'] != 'pronto':
+200:+        return index, calendar, event, state, {**calendar_pages, **qpages}, None, None, None
+201:+    historic = previsao.carregar_historico_bruto(str(ROOT / 'data/historico'), auditoria=True)
+202:+    if len(historic) == 2:  # Mocks legados continuam retornando somente calendário/resultados.
+203:+        historic_calendar, historic_results = historic
+204:+        fontes_historicas = []
+205:+    else:
+206:+        historic_calendar, historic_results, fontes_historicas = historic
+207:+    results_2026, result_pages = _resultados_2026(snapshot, calendar, state)
+208:+    results = dict(historic_results)
+209:+    results.update(results_2026)
+210:+    lacunas = _lacunas_resultados_anteriores(index, state, calendar, results_2026)
+211:+    rows_completas, audit = previsao.gerar_entradas(state, historic_calendar + calendar, results)
+212:+    admitidas, excluidas, chaves_necessarias = previsao.selecionar_fontes_historicas(audit, fontes_historicas)
+213:+    resultados_fornecidos = {key: results[key] for key in chaves_necessarias if key in results}
+214:+    rows, audit_fornecido = previsao.gerar_entradas(state, historic_calendar + calendar, resultados_fornecidos)
+215:+    matriz_completa = [{name: row.get(name) for name in previsao.ENTRADAS_AUTORIZADAS} for row in rows_completas]
+216:+    matriz_fornecida = [{name: row.get(name) for name in previsao.ENTRADAS_AUTORIZADAS} for row in rows]
+217:+    if matriz_fornecida != matriz_completa:
+218:+        raise ValueError('Subconjunto histórico diverge da matriz v1 completa.')
+219:+    audit['resultados_fornecidos'] = audit_fornecido['resultados_lidos']
+220:+    audit['fontes_historicas_abertas'] = fontes_historicas
+221:+    audit['fontes_historicas_admitidas'] = admitidas
+222:+    audit['fontes_historicas_excluidas'] = excluidas
+223:+    audit['lacunas_resultados_relevantes'] = lacunas
+224:+    return index, calendar, event, state, {**calendar_pages, **qpages, **result_pages}, results, rows, audit
+
+227:+def cmd_ensaio(args):
+228:+    index, _, event, state, pages, results, rows, audit = _preparar_fluxo(args.snapshot, 'marina_bay')
+229:+    if state['estado'] != 'pronto':
+230:+        print('ENSAIO RETROSPECTIVO: aguardando classificação; nenhuma probabilidade emitida.')
+231:+        return
+232:+    model = previsao.carregar_modelo()
+233:+    probs = previsao.inferir(model, rows)
+234:+    eid = args.id or 'ensaio-{}-{}'.format(event['round'], datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ'))
+235:+    data = _emissao_data('ENSAIO_RETROSPECTIVO', event, index, pages, probs, audit, results, model, {
+236:+        'corte_historico_utc': previsao._z(state['referencia_utc']),
+237:+        'emitido_em_utc': previsao._z(datetime.now(timezone.utc)),
+238:+        'limites': ['Ensaio retrospectivo: obtenção atual não prova disponibilidade histórica.',
+239:+                    'Resultados do alvo e posteriores não foram abertos como entradas.']})
+240:+    print('ENSAIO RETROSPECTIVO: {}'.format(previsao.gravar_emissao(EMISSOES, eid, data)))
+
+DIFF PERTINENTE — ADIÇÕES EM operacao2026/previsao.py
+
+67:+def _race_start(race):
+68:+    try:
+69:+        return _utc('{}T{}'.format(race['date'], race['time']))
+70:+    except (KeyError, TypeError, ValueError) as error:
+71:+        raise ValueError('Data/horário UTC da corrida inválido.') from error
+
+74:+def _reference(race, exigir_horario=False):
+75:+    q = race.get('Qualifying') or {}
+76:+    if not q.get('date'):
+77:+        return None
+78:+    time = q.get('time')
+79:+    if exigir_horario and not time:
+80:+        raise ValueError('Horário UTC de Qualifying é obrigatório no modo prospectivo.')
+81:+    if time and (not isinstance(time, str) or not time.endswith('Z')):
+82:+        raise ValueError('Horário de Qualifying deve ser UTC com Z.')
+83:+    text = q['date'] + 'T' + (time[:-1] if time else '00:00:00') + '+00:00'
+84:+    try:
+85:+        reference = datetime.fromisoformat(text).astimezone(timezone.utc)
+86:+    except ValueError as error:
+87:+        raise ValueError('Data/horário de Qualifying inválido.') from error
+88:+    if reference >= _race_start(race):
+89:+        raise ValueError('Sessão de referência posterior ou igual à corrida.')
+90:+    return reference
+
+101:+def preparar_alvo(evento, registros_q, prospectivo=False):
+102:+    """A população é exclusivamente a classificação principal admitida."""
+103:+    ref = _reference(evento, exigir_horario=prospectivo)
+104:+    if not registros_q:
+105:+        return {'estado': 'aguardando_classificacao', 'evento': evento, 'referencia_utc': ref, 'registros': []}
+106:+    if ref is None:
+107:+        raise ValueError('Classificação disponível sem referência temporal de calendário.')
+108:+    rows, ids, positions = [], set(), {}
+109:+    for item in registros_q:
+110:+        try:
+111:+            driver = item['Driver']['driverId']
+112:+            team = item['Constructor']['constructorId']
+113:+        except (KeyError, TypeError) as error:
+114:+            raise ValueError('Qualifying com ID de piloto/equipe inválido.') from error
+115:+        try:
+116:+            validar_id(driver, 'ID de piloto'); validar_id(team, 'ID de equipe')
+117:+        except ValueError as error:
+118:+            raise ValueError('Qualifying com ID de piloto/equipe inválido.') from error
+119:+        if driver in ids:
+120:+            raise ValueError('piloto duplicado na classificação.')
+121:+        ids.add(driver)
+122:+        p = item.get('position')
+123:+        if p in (None, ''):
+124:+            pos = None
+125:+        else:
+126:+            try:
+127:+                pos = int(p)
+128:+            except (TypeError, ValueError) as error:
+129:+                raise ValueError('Posição de classificação inválida.') from error
+130:+            if pos <= 0:
+131:+                raise ValueError('Posição de classificação inválida.')
+132:+            positions.setdefault(pos, []).append(driver)
+133:+        rows.append({'temporada': str(evento['season']), 'rodada': str(evento['round']), 'piloto_id': driver,
+134:+                     'corrida': evento.get('raceName', ''), 'data_corrida': evento['date'],
+135:+                     'circuito_id': evento['Circuit']['circuitId'],
+136:+                     'piloto': '{} {}'.format(item['Driver'].get('givenName', ''), item['Driver'].get('familyName', '')).strip(),
+137:+                     'equipe_id': team, 'equipe_id_entrada': team, 'posicao_classificacao': pos,
+138:+                     'classificacao_ausente': 0, 'posicao_classificacao_ausente': int(pos is None),
+139:+                     'referencia_temporal_ausente': 0,
+140:+                     'limite_inferior_referencia_utc': _z(ref)})
+141:+    repeated = {p for p, drivers in positions.items() if len(drivers) > 1}
+142:+    for row in rows:
+143:+        row['posicao_classificacao_repetida'] = int(row['posicao_classificacao'] in repeated)
+144:+    return {'estado': 'pronto', 'evento': evento, 'referencia_utc': ref, 'registros': rows}
+
+151:+def chaves_historicas_admitidas(alvo, calendario):
+152:+    if alvo['estado'] != 'pronto':
+153:+        return []
+154:+    key = _event_key(alvo['evento'])
+155:+    by_key = {_event_key(r): r for r in calendario}
+156:+    if key not in by_key:
+157:+        raise ValueError('Alvo ausente do calendário.')
+158:+    target_start = _race_start(alvo['evento'])
+159:+    ordered = sorted(calendario, key=lambda r: (_race_start(r), int(r['season']), int(r['round'])))
+160:+    return [_event_key(r) for r in ordered
+161:+            if _event_key(r) != key and _race_start(r) < target_start and _release(r) <= alvo['referencia_utc']]
+
+413:+def _relatorio(data, lines):
+414:+    event = data.get('evento', {})
+415:+    coverage = data.get('cobertura', {})
+416:+    return ('# Operação 2026\n\nModo: {modo}\n\nEvento: {season}/{round} — {circuit}.\n\n'
+417:+            'Linhas da classificação admitida: {total}; elegíveis: {eligible}.\n\n'
+418:+            'Lacunas relevantes de resultados anteriores: {gaps}.\n\n'
+419:+            'Política de lacunas: {policy}.\n\n'
+420:+            'Limites: {limits}\n').format(modo=data.get('modo', ''), season=event.get('temporada', ''),
+421:+                                             round=event.get('rodada', ''), circuit=event.get('circuito_id', ''),
+422:+                                             total=len(lines), eligible=sum(bool(x.get('elegivel_previsao')) for x in lines),
+423:+                                             gaps=json.dumps(coverage.get('lacunas_resultados_relevantes', []), ensure_ascii=False),
+424:+                                             policy=data.get('politica_lacunas_resultados', ''),
+425:+                                             limits='; '.join(data.get('limites', [])))
+
+DIFF PERTINENTE — ADIÇÕES EM operacao2026/fontes.py
+
+134:+def validar_pagina(raw, endpoint, expected_round=None, expected_event=None):
+135:+    if endpoint not in _ENDPOINTS: raise ValueError('Endpoint inválido.')
+136:+    try:
+137:+        payload = json.loads(raw.decode('utf-8')); meta = payload['MRData']
+138:+        offset, limit, total = (_int(meta['offset'], 'Metadados de paginação inválidos.'), _int(meta['limit'], 'Metadados de paginação inválidos.'), _int(meta['total'], 'Metadados de paginação inválidos.'))
+139:+    except (UnicodeDecodeError, ValueError, TypeError, KeyError) as error:
+140:+        raise ValueError('Página não é JSON Jolpica paginado válido.') from error
+141:+    if offset < 0 or limit != LIMITE or total < 0: raise ValueError('Metadados de paginação inválidos.')
+142:+    races, seen, field = _race_table(payload)['Races'], set(), _field(endpoint)
+143:+    for race in races:
+144:+        key, circuit = _race_key(race)
+145:+        if key in seen or (expected_round is not None and key[1] != str(expected_round)): raise ValueError('Identidade de corrida inválida ou duplicada.')
+146:+        if expected_event and (key != (str(expected_event['season']), str(expected_event['round'])) or race['date'] != expected_event['date'] or circuit != expected_event['Circuit']['circuitId']): raise ValueError('Envelope de GP diverge do calendário.')
+147:+        seen.add(key)
+148:+        if not field: continue
+149:+        entries = race.get(field)
+150:+        if not isinstance(entries, list): raise ValueError('Registros {} inválidos.'.format(field))
+151:+        drivers = set()
+152:+        for entry in entries:
+153:+            try: driver, team = entry['Driver']['driverId'], entry['Constructor']['constructorId']
+154:+            except (KeyError, TypeError) as error: raise ValueError('ID de piloto/equipe inválido.') from error
+155:+            if not isinstance(driver, str) or not _ID.fullmatch(driver) or not isinstance(team, str) or not _ID.fullmatch(team) or driver in drivers: raise ValueError('piloto duplicado ou ID inválido.')
+156:+            drivers.add(driver)
+157:+            if field == 'Results':
+158:+                try:
+159:+                    position, points = _int(entry['position'], 'Posição/pontos de resultado inválidos.'), float(entry['points'])
+160:+                    if position <= 0 or points < 0 or not math.isfinite(points): raise ValueError
+161:+                except (KeyError, TypeError, ValueError, OverflowError) as error: raise ValueError('Posição/pontos de resultado inválidos.') from error
+162:+            elif entry.get('position') not in (None, '') and _int(entry['position'], 'Posição de classificação inválida.') <= 0:
+163:+                raise ValueError('Posição de classificação inválida.')
+164:+    count = sum(len(race[field]) for race in races) if field else len(races)
+165:+    if offset > total or count != min(limit, total - offset):
+166:+        raise ValueError('Paginação incompleta ou quantidade de registros incoerente com limit/offset/total.')
+167:+    return payload, total, offset, len(races)
+
+170:+def _identidade_fragmento(race, field):
+171:+    """Compara todo o envelope do GP, exceto os participantes desta página."""
+172:+    return _json_bytes({key: value for key, value in race.items() if key != field})
+
+175:+def paginas_completas(fetch, endpoint, expected_round=None, expected_event=None):
+176:+    pages=[]; races_seen=set(); drivers=set(); positions=set(); entries=0; offset=0; total=None; field=_field(endpoint); event_identity=None
+177:+    while total is None or offset < total:
+178:+        item=fetch(offset); payload, page_total, page_offset, _ = validar_pagina(item['bytes'], endpoint, expected_round, expected_event)
+179:+        if page_offset != offset or (total is not None and page_total != total): raise ValueError('Paginação incompleta ou total divergente.')
+180:+        total=page_total; races=payload['MRData']['RaceTable']['Races']
+181:+        if not races and total: raise ValueError('Página vazia antes do total.')
+182:+        for race in races:
+183:+            key=(race['season'], race['round'])
+184:+            if field is None:
+185:+                if key in races_seen: raise ValueError('Corrida duplicada entre páginas.')
+186:+                races_seen.add(key)
+187:+            else:
+188:+                identity=_identidade_fragmento(race, field)
+189:+                if event_identity is None: event_identity=identity
+190:+                elif identity != event_identity: raise ValueError('Envelope de GP diverge entre páginas.')
+191:+            for entry in race.get(field, []) if field else []:
+192:+                driver=entry['Driver']['driverId']
+193:+                if driver in drivers: raise ValueError('piloto duplicado entre páginas.')
+194:+                drivers.add(driver); entries += 1
+195:+                if field == 'Results':
+196:+                    pos=_int(entry['position'], 'Posição/pontos de resultado inválidos.')
+197:+                    if pos in positions: raise ValueError('posição de resultado duplicada entre páginas.')
+198:+                    positions.add(pos)
+199:+        pages.append(item); offset += LIMITE
+200:+    if (field and entries != total) or (not field and len(races_seen) != total): raise ValueError('Paginação de registros incompleta.')
+201:+    return pages
+
+268:+def _validar_selecao_snapshot(pages):
+269:+    """Revalida o conjunto selecionado sem tocar raws fora do filtro."""
+270:+    groups = {}
+271:+    for endpoint, entries in pages.items():
+272:+        for source, payload in entries:
+273:+            raw = _json_bytes(payload)
+274:+            expected = source.get('rodada')
+275:+            checked, total, offset, _ = validar_pagina(raw, endpoint, expected)
+276:+            if _int(source['parametros'].get('offset'), 'Offset inválido.') != offset:
+277:+                raise ValueError('Offset do índice diverge do raw.')
+278:+            if 'limit' in source['parametros'] and _int(source['parametros']['limit'], 'Limite inválido.') != LIMITE:
+279:+                raise ValueError('Limite do índice diverge do raw.')
+280:+            groups.setdefault((endpoint, expected), []).append((source, checked, total, offset))
+281:+    for (endpoint, expected), items in groups.items():
+282:+        total = items[0][2]
+283:+        offsets = [item[3] for item in items]
+284:+        if any(item[2] != total for item in items) or sorted(offsets) != list(range(0, total if total else 1, LIMITE)):
+285:+            raise ValueError('Paginação incompleta ou total divergente no snapshot.')
+286:+        field = _field(endpoint); records = 0; ids = set(); positions = set(); races = set(); event_identity = None
+287:+        for _, payload, _, _ in sorted(items, key=lambda item: item[3]):
+288:+            for race in _race_table(payload)['Races']:
+289:+                key, _ = _race_key(race)
+290:+                if field is None:
+291:+                    if key in races: raise ValueError('Corrida duplicada entre páginas do snapshot.')
+292:+                    races.add(key); records += 1; continue
+293:+                identity = _identidade_fragmento(race, field)
+294:+                if event_identity is None:
+295:+                    event_identity = identity
+296:+                elif identity != event_identity:
+297:+                    raise ValueError('Envelope de GP diverge entre páginas do snapshot.')
+298:+                for entry in race[field]:
+299:+                    driver = entry['Driver']['driverId']
+300:+                    if driver in ids: raise ValueError('Piloto duplicado entre páginas do snapshot.')
+301:+                    ids.add(driver); records += 1
+302:+                    if field == 'Results':
+303:+                        position = _int(entry['position'], 'Posição/pontos de resultado inválidos.')
+304:+                        if position in positions: raise ValueError('Posição de resultado duplicada entre páginas do snapshot.')
+305:+                        positions.add(position)
+306:+        if records != total:
+307:+            raise ValueError('Paginação de registros incompleta no snapshot.')
+
+TESTES tests/test_operacao_2026_paginacao.py
+1:"""Paginação sintética: fragmentos de GP, integridade e admissão offline."""
+2:import copy
+3:import json
+4:import os
+5:from pathlib import Path
+6:import tempfile
+7:import unittest
+8:from unittest.mock import patch
+9:
+10:import operar_2026 as cli
+11:from operacao2026 import fontes
+12:from tests.test_operacao_2026_r3 import corrida, fonte, pagina, quali, resultado
+13:
+14:
+15:class PaginacaoGPTest(unittest.TestCase):
+16:    def setUp(self):
+17:        self.temp = tempfile.TemporaryDirectory(dir=os.environ['TMPDIR'])
+18:        self.root = Path(self.temp.name)
+19:        self.counter = 0
+20:
+21:    def tearDown(self):
+22:        self.temp.cleanup()
+23:
+24:    def _fragmentos(self, endpoint, quantidades=(100, 1)):
+25:        field = fontes._field(endpoint)
+26:        make = resultado if endpoint == 'resultados' else quali
+27:        registros = [make('d{:03d}'.format(n), position=n + 1) for n in range(sum(quantidades))]
+28:        event = corrida(1, '2026-03-01', 'circuit')
+29:        payloads = []
+30:        start = 0
+31:        for offset, size in zip((0, 100), quantidades):
+32:            fragment = dict(event, **{field: registros[start:start + size]})
+33:            payloads.append(json.loads(pagina([fragment], endpoint, total=101, offset=offset)))
+34:            start += size
+35:        return event, registros, payloads
+36:
+37:    def _itens(self, payloads):
+38:        items = [fonte(json.dumps(p).encode('utf-8'), 'fixture') for p in payloads]
+39:        for offset, item in zip((0, 100), items):
+40:            item['parametros']['offset'] = offset
+41:        return items
+42:
+43:    def _coletor(self, endpoint, payloads):
+44:        items = self._itens(payloads)
+45:        return fontes.paginas_completas(lambda offset: items[offset // 100], endpoint,
+46:                                       None if endpoint == 'calendario' else '1')
+47:
+48:    def _snapshot(self, endpoint, payloads):
+49:        self.counter += 1
+50:        sid = 's{}'.format(self.counter)
+51:        items = self._itens(payloads)
+52:        for offset, item in zip((0, 100), items):
+53:            item['parametros']['offset'] = offset
+54:            if endpoint != 'calendario':
+55:                item['rodada'] = '1'
+56:        fontes.gravar_snapshot(self.root, sid, {endpoint: items})
+57:        return sid
+58:
+59:    def _recusa_ambos(self, endpoint, payloads):
+60:        with self.assertRaises(ValueError):
+61:            self._coletor(endpoint, payloads)
+62:        sid = self._snapshot(endpoint, payloads)
+63:        with self.assertRaises(ValueError):
+64:            fontes.ler_snapshot(self.root, sid, endpoints={endpoint})
+65:
+66:    def test_gp_fragmentado_reune_todos_os_registros_sem_perda_ou_duplicacao(self):
+67:        for endpoint in ('resultados', 'classificacao'):
+68:            with self.subTest(endpoint=endpoint):
+69:                event, expected, payloads = self._fragmentos(endpoint)
+70:                pages = self._coletor(endpoint, payloads)
+71:                self.assertEqual(len(pages), 2)
+72:                sid = self._snapshot(endpoint, payloads)
+73:                _, selected = fontes.ler_snapshot(self.root, sid, endpoints={endpoint})
+74:                records = [r for race in cli._races(selected[endpoint]) for r in race[fontes._field(endpoint)]]
+75:                self.assertEqual(records, expected)
+76:                self.assertEqual(len(records), len({r['Driver']['driverId'] for r in records}))
+77:                with patch.object(cli, 'SNAPSHOTS', self.root):
+78:                    if endpoint == 'classificacao':
+79:                        state = cli._event_with_q(sid, [event], 'circuit')[2]
+80:                        self.assertEqual([r['piloto_id'] for r in state['registros']],
+81:                                         [r['Driver']['driverId'] for r in expected])
+82:                    else:
+83:                        alvo = corrida(2, '2026-04-02', 'target')
+84:                        state = cli.previsao.preparar_alvo(alvo, [quali('synthetic')])
+85:                        results, _ = cli._resultados_2026(sid, [event, alvo], state)
+86:                        self.assertEqual(results[('2026', '1')], expected)
+87:
+88:    def test_piloto_duplicado_no_gp_e_recusado(self):
+89:        for endpoint in ('resultados', 'classificacao'):
+90:            _, _, payloads = self._fragmentos(endpoint)
+91:            field = fontes._field(endpoint)
+92:            payloads[1]['MRData']['RaceTable']['Races'][0][field][0]['Driver']['driverId'] = 'd000'
+93:            with self.subTest(endpoint=endpoint):
+94:                self._recusa_ambos(endpoint, payloads)
+95:
+96:    def test_metadados_dos_fragmentos_devem_coincidir(self):
+97:        for endpoint in ('resultados', 'classificacao'):
+98:            _, _, base = self._fragmentos(endpoint)
+99:            for change in ('date', 'time', 'raceName', 'Circuit', 'Qualifying'):
+100:                payloads = copy.deepcopy(base)
+101:                race = payloads[1]['MRData']['RaceTable']['Races'][0]
+102:                race[change] = {'date': '2026-03-02', 'time': '21:00:00Z',
+103:                                'raceName': 'OTHER SYNTHETIC',
+104:                                'Circuit': {'circuitId': 'other'},
+105:                                'Qualifying': {'date': '2026-03-01', 'time': '11:00:00Z'}}[change]
+106:                with self.subTest(endpoint=endpoint, campo=change):
+107:                    self._recusa_ambos(endpoint, payloads)
+108:
+109:    def test_offset_divergente_e_recusado(self):
+110:        for endpoint in ('resultados', 'classificacao'):
+111:            _, _, payloads = self._fragmentos(endpoint)
+112:            payloads[1]['MRData']['offset'] = '99'
+113:            with self.subTest(endpoint=endpoint):
+114:                self._recusa_ambos(endpoint, payloads)
+115:
+116:    def test_total_divergente_e_recusado(self):
+117:        for endpoint in ('resultados', 'classificacao'):
+118:            _, _, payloads = self._fragmentos(endpoint)
+119:            payloads[1]['MRData']['total'] = '102'
+120:            with self.subTest(endpoint=endpoint):
+121:                self._recusa_ambos(endpoint, payloads)
+122:
+123:    def test_quantidades_por_pagina_devem_respeitar_limit_offset_total(self):
+124:        for endpoint in ('resultados', 'classificacao'):
+125:            for sizes in ((99, 2), (101, 0), (0, 101), (100, 0)):
+126:                _, _, payloads = self._fragmentos(endpoint, sizes)
+127:                with self.subTest(endpoint=endpoint, quantidades=sizes):
+128:                    self._recusa_ambos(endpoint, payloads)
+129:
+130:    def test_calendario_paginado_valido_preserva_todas_as_corridas(self):
+131:        events = [corrida(n, '2026-03-01', 'circuit{}'.format(n)) for n in range(1, 102)]
+132:        payloads = [json.loads(pagina(events[:100], 'calendario', total=101, offset=0)),
+133:                    json.loads(pagina(events[100:], 'calendario', total=101, offset=100))]
+134:        self.assertEqual(len(self._coletor('calendario', payloads)), 2)
+135:        sid = self._snapshot('calendario', payloads)
+136:        _, selected = fontes.ler_snapshot(self.root, sid, endpoints={'calendario'})
+137:        self.assertEqual(cli._races(selected['calendario']), events)
+138:
+139:    def test_corrida_duplicada_no_calendario_e_recusada(self):
+140:        events = [corrida(n, '2026-03-01', 'circuit{}'.format(n)) for n in range(1, 101)]
+141:        payloads = [json.loads(pagina(events, 'calendario', total=101, offset=0)),
+142:                    json.loads(pagina([events[0]], 'calendario', total=101, offset=100))]
+143:        self._recusa_ambos('calendario', payloads)
+144:
+145:    def test_quantidades_do_calendario_tambem_devem_ser_coerentes(self):
+146:        events = [corrida(n, '2026-03-01', 'circuit{}'.format(n)) for n in range(1, 102)]
+147:        payloads = [json.loads(pagina(events[:99], 'calendario', total=101, offset=0)),
+148:                    json.loads(pagina(events[99:], 'calendario', total=101, offset=100))]
+149:        self._recusa_ambos('calendario', payloads)
+
+TESTE tests/test_operacao_2026_r3.py
+115:    def test_cli_ensaio_bloqueia_lacuna_anterior_e_emissao_completa_declara_lista_vazia(self):
+116:        self._snapshot_ensaio('completo')
+117:        code, output = self._run_ensaio('completo', 'ensaio-completo')
+118:        self.assertEqual(code, 0, output)
+119:        coverage = json.loads((self.emissoes / 'ensaio-completo/cobertura.json').read_text())
+120:        report = (self.emissoes / 'ensaio-completo/relatorio.md').read_text()
+121:        self.assertEqual(coverage['lacunas_resultados_relevantes'], [])
+122:        self.assertIn('Política de lacunas', report)
+123:        self.assertIn('[]', report)
+124:
+125:        self._snapshot_ensaio('com-lacuna', lacuna=True)
+126:        code, output = self._run_ensaio('com-lacuna', 'ensaio-bloqueado')
+127:        self.assertEqual(code, 1)
+128:        self.assertIn('rodada 5', output)
+129:        self.assertIn('resultado indisponível', output)
+130:        self.assertFalse((self.emissoes / 'ensaio-bloqueado').exists())
+
+TESTE tests/test_operacao_2026_r3.py
+132:    def test_resultados_vazios_do_alvo_e_futuro_nao_abrem_nem_alteram_emissao(self):
+133:        self._snapshot_ensaio('base')
+134:        code, output = self._run_ensaio('base', 'base-emissao')
+135:        self.assertEqual(code, 0, output)
+136:        self._snapshot_ensaio('alvo-futuro-vazios', resultado_alvo_futuro=True)
+137:        code, output = self._run_ensaio('alvo-futuro-vazios', 'vazios-emissao',
+138:                                        bloquear_raw=('resultados_6_', 'resultados_7_'))
+139:        self.assertEqual(code, 0, output)
+140:        base = self.emissoes / 'base-emissao'
+141:        vazios = self.emissoes / 'vazios-emissao'
+142:        self.assertEqual((base / 'entradas.json').read_bytes(), (vazios / 'entradas.json').read_bytes())
+143:        self.assertEqual((base / 'probabilidades.csv').read_bytes(), (vazios / 'probabilidades.csv').read_bytes())
+
+TESTE tests/test_operacao_2026_r3.py
+145:    def test_piloto_ausente_em_gp_completo_preserva_janela_de_participacoes(self):
+146:        # O GP 5 está completo: apenas 'b' participou. Isso não é lacuna da API.
+147:        anteriores = [
+148:            corrida(number, '2026-0{}-0{}'.format(number, number), 'prior{}'.format(number),
+149:                    results=([resultado('b', position=2, points=18)] if number == 5 else
+150:                             [resultado('a'), resultado('b', position=2, points=18)]))
+151:            for number in range(1, 7)
+152:        ]
+153:        alvo = corrida(7, '2026-07-07', 'marina_bay',
+154:                       qualifying=[quali('a'), quali('b', position=2)])
+155:        fontes.gravar_snapshot(self.snapshots, 'participacao-ausente', {
+156:            'calendario': [fonte(pagina(anteriores + [alvo], 'calendario'), 'calendario')],
+157:            'classificacao': [fonte(pagina([alvo], 'classificacao'), 'classificacao', 7)],
+158:            'resultados': [fonte(pagina([event], 'resultados'), 'resultados', event['round'])
+159:                           for event in anteriores],
+160:        })
+161:        code, output = self._run_ensaio('participacao-ausente', 'ausencia-legitima')
+162:        self.assertEqual(code, 0, output)
+163:        dest = self.emissoes / 'ausencia-legitima'
+164:        cobertura = json.loads((dest / 'cobertura.json').read_text())
+165:        self.assertEqual(cobertura['lacunas_resultados_relevantes'], [])
+166:        linhas = json.loads((dest / 'entradas.json').read_text())['linhas']
+167:        piloto = next(row for row in linhas if row['piloto_id'] == 'a')
+168:        self.assertEqual(piloto['n_posicoes_5'], 5)
+169:        self.assertEqual(piloto['historico_piloto_insuficiente'], 0)
+170:        self.assertEqual(piloto['n_corridas_equipe_5'], 5)
+171:        self.assertEqual(piloto['n_participacoes_equipe_5'],
+172:                         sum(len(event['Results']) for event in anteriores[-5:]))
+173:        janelas = json.loads((dest / 'historicos.json').read_text())['janelas']
+174:        janela_a = next(item for item in janelas if item['piloto_id'] == 'a')
+175:        self.assertEqual(janela_a['piloto'], [['2026', str(n)] for n in (1, 2, 3, 4, 6)])
+
+TESTE tests/test_operacao_2026_r3.py
+177:    def test_gp_anterior_vazio_bloqueia_mesmo_sem_declaracao_no_indice(self):
+178:        self._snapshot_ensaio('lacuna-sem-marcador', lacuna=True)
+179:        path = self.snapshots / 'lacuna-sem-marcador' / 'indice.json'
+180:        index = json.loads(path.read_text())
+181:        index['qualidade'].pop('lacunas_resultados')
+182:        path.write_text(json.dumps(index), encoding='utf-8')
+183:        code, output = self._run_ensaio('lacuna-sem-marcador', 'nao-publicar')
+184:        self.assertEqual(code, 1)
+185:        self.assertIn('rodada 5', output)
+186:        self.assertIn('resultado indisponível', output)
+187:        self.assertFalse((self.emissoes / 'nao-publicar').exists())
+
+TESTE tests/test_operacao_2026_r3.py
+189:    def test_referencia_igual_largada_bloqueia_estado_e_ensaio_antes_de_resultados(self):
+190:        austin = corrida(18, '2026-10-25', 'americas', qtime='20:00:00Z', qualifying=[quali('a')])
+191:        singapura = corrida(17, '2026-10-18', 'marina_bay', qtime='20:00:00Z', qualifying=[quali('a')])
+192:        anterior = corrida(16, '2026-10-11', 'prior', results=[resultado('a')])
+193:        fontes.gravar_snapshot(self.snapshots, 'igual', {
+194:            'calendario': [fonte(pagina([anterior, singapura, austin], 'calendario'), 'calendario')],
+195:            'classificacao': [fonte(pagina([singapura], 'classificacao'), 'classificacao', 17),
+196:                               fonte(pagina([austin], 'classificacao'), 'classificacao', 18)],
+197:            'resultados': [fonte(pagina([anterior], 'resultados'), 'resultados', 16)],
+198:        })
+199:        output = io.StringIO()
+200:        with patch.object(cli, 'SNAPSHOTS', self.snapshots), redirect_stdout(output), redirect_stderr(output):
+201:            self.assertEqual(cli.main(['estado', '--snapshot', 'igual']), 1)
+202:        self.assertIn('referência', output.getvalue())
+203:
+204:        output = io.StringIO()
+205:        with patch.object(cli, 'ROOT', self.root), patch.object(cli, 'SNAPSHOTS', self.snapshots), \
+206:             patch.object(cli, 'EMISSOES', self.emissoes), \
+207:             patch.object(cli, '_resultados_2026', side_effect=AssertionError('resultado não deveria abrir')), \
+208:             redirect_stdout(output), redirect_stderr(output):
+209:            self.assertEqual(cli.main(['ensaio', '--snapshot', 'igual', '--id', 'igual-ensaio']), 1)
+210:        self.assertIn('referência', output.getvalue())
+211:        self.assertFalse((self.emissoes / 'igual-ensaio').exists())
+
+EVIDÊNCIA reports/operacao_2026/validacao_integrada_20261021T002336Z/resumo.json
+{
+  "utc": "2026-10-21T00:27:28.388602+00:00",
+  "status": "VALIDACAO_INTEGRADA_APROVADA_PRONTA_PARA_REVISAO_NAO_EXECUTADA",
+  "tests": {
+    "runs": 1,
+    "count": 54,
+    "passed": true,
+    "report": "01-testes.json"
+  },
+  "preservation": {
+    "git_reference": "b067ad55dd97d964b132129838773cf6108773e3",
+    "unchanged_tracked": 286,
+    "explicit_documentary_exceptions": [
+      "README.md",
+      "projects/Pitwall Lab.md"
+    ],
+    "frozen68_passed": true,
+    "snapshot_files": 60,
+    "rehearsal_files": 72,
+    "report": "02-preservacao.json",
+    "after_rehearsal": "04-pos-ensaio.json"
+  },
+  "rehearsal": {
+    "passed": true,
+    "rows": 22,
+    "features": 15,
+    "report": "03-ensaio.json",
+    "execution_metadata_equality_required": false
+  },
+  "limitations": [
+    "Código/testes/documentação novos da etapa8 não possuem baseline histórico imutável nesta validação; alterações intencionais não são falhas de preservação de artefatos congelados.",
+    "Hashes dos manifestos/índices calculados agora identificam a referência usada, NÃO reconstroem prova de seu estado passado. Manifestos locais não são prova externa imutável."
+  ],
+  "baseline_temporario_reconstruido": false,
+  "independent_review_performed": false,
+  "next_action": "Somente se autorizado, revisão independente dos componentes atuais e evidências; sem correção automática/coleta/commit/push."
+}
+
+
+EVIDÊNCIA reports/operacao_2026/validacao_integrada_20261021T002336Z/01-testes.json
+{
+  "utc": "2026-10-21T00:23:43.878349+00:00",
+  "execucoes_da_suite_nesta_entrega": 1,
+  "modules": [
+    "tests.test_operacao_2026",
+    "tests.test_operacao_2026_fluxo",
+    "tests.test_operacao_2026_fontes",
+    "tests.test_operacao_2026_integracao",
+    "tests.test_operacao_2026_paginacao",
+    "tests.test_operacao_2026_r1",
+    "tests.test_operacao_2026_r2",
+    "tests.test_operacao_2026_r3"
+  ],
+  "tests": 54,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "all_passed": true,
+  "network_blocked": true,
+  "fit_fit_transform_partial_fit_blocked": true,
+  "forbidden_write_attempts": [],
+  "failure_details": []
+}
+
+
+EVIDÊNCIA 03-ensaio.json (sem dump de linhas/raw):
+{
+  "utc": "2026-10-21T00:26:18.783564+00:00",
+  "temporary_execution": true,
+  "canonical_snapshot": "coleta-20261019T164713Z",
+  "previous_rehearsal": "ensaio-r2-corrigido-20261020",
+  "rows": 22,
+  "features_order_identical": true,
+  "features15_identical": true,
+  "probabilities_identical": true,
+  "rankings_identical": true,
+  "all_semantic_rows_identical": true,
+  "execution_metadata_compared_for_equality": false,
+  "new_timestamp": "2026-10-21T00:26:18.602299Z",
+  "previous_timestamp": "2026-10-20T02:33:15.918775Z",
+  "original_model_hashes_unchanged": true,
+  "forbidden_write_attempts": [],
+  "network_and_fit_blocked": true,
+  "existing_emissions_not_overwritten": true,
+  "temporary_directory_removed_after_comparison": true,
+  "passed": true
+}
+
+ACEITE: {"linhas": 22, "elegiveis": 22, "ordem_15_entradas": true, "raw_alvo_e_futuro_bloqueados_por_audit_hook": true, "fit_fit_transform_partial_fit_bloqueados": true, "max_erro_probabilidade": 5.551115123125783e-17}
+
+01-testes.log — resumo final:
+test_prospectivo_exige_ordem_e_utc_explicito (tests.test_operacao_2026_fluxo.FluxoOperacao2026Test) ... ok
+test_cache_original_e_refresh_e_falha_parcial (tests.test_operacao_2026_fontes.FontesEtapa8Test) ... ok
+test_ler_snapshot_filtra_antes_de_abrir_raw_nao_selecionado (tests.test_operacao_2026_fontes.FontesEtapa8Test) ... ok
+test_paginas_recusa_incompletude_ids_e_tipos (tests.test_operacao_2026_fontes.FontesEtapa8Test) ... ok
+test_rate_limit_e_retry_http_date_sao_deterministicos (tests.test_operacao_2026_fontes.FontesEtapa8Test) ... ok
+test_cli_coletar_delega_snapshot_id_e_circuito_explicito_sem_duplicar_padrao (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_estado_q_vazio_nao_indexa_e_calendario_entra_nos_raw_admitidos (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_fontes_prospectivas_exigem_janela_de_encerramento_e_corte (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_inferir_normaliza_none_so_para_rank_e_preserva_entrada_json (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_leitura_agrupada_filtra_metadata_antes_de_raw_alvo_ou_futuro (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_retry_after_503_respeita_hint_sem_sleep_real (tests.test_operacao_2026_integracao.Operacao2026IntegracaoTest) ... ok
+test_calendario_paginado_valido_preserva_todas_as_corridas (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_corrida_duplicada_no_calendario_e_recusada (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_gp_fragmentado_reune_todos_os_registros_sem_perda_ou_duplicacao (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_metadados_dos_fragmentos_devem_coincidir (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_offset_divergente_e_recusado (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_piloto_duplicado_no_gp_e_recusado (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_quantidades_do_calendario_tambem_devem_ser_coerentes (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_quantidades_por_pagina_devem_respeitar_limit_offset_total (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_total_divergente_e_recusado (tests.test_operacao_2026_paginacao.PaginacaoGPTest) ... ok
+test_cache_resultado_vazio_tenta_atualizacao_limitada_e_preserva_origem (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_historico_auditavel_retorna_proveniencia_com_hash (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_ids_literais_malformados_sao_rejeitados_sem_normalizar (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_prospectivo_exige_timestamps_de_todas_fontes_admitidas (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_publicacao_prospectiva_que_cruza_largada_no_replace_vira_parcial_invalida (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_publicacao_prospectiva_revalida_depois_da_serializacao_sem_pasta_final (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_publicacao_prospectiva_revalida_durante_escrita_sem_pasta_final (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_referencia_posterior_bloqueia_antes_de_admitir_gp_futuro (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_snapshot_com_hash_integro_mas_paginacao_q_incompleta_bloqueia (tests.test_operacao_2026_r1.R1Operacao2026Test) ... ok
+test_cli_admite_historico_antigo_e_exclui_2024_desconhecido_sem_mudar_matriz (tests.test_operacao_2026_r2.Operacao2026R2Test) ... ok
+test_cli_bloqueia_fonte_2024_desconhecida_quando_janela_a_exige (tests.test_operacao_2026_r2.Operacao2026R2Test) ... ok
+test_cli_revalida_serializacao_escrita_e_replace_e_preserva_id_existente (tests.test_operacao_2026_r2.Operacao2026R2Test) ... ok
+test_writer_recusa_prospectivo_sem_callback (tests.test_operacao_2026_r2.Operacao2026R2Test) ... ok
+test_cli_ensaio_bloqueia_lacuna_anterior_e_emissao_completa_declara_lista_vazia (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_gp_anterior_vazio_bloqueia_mesmo_sem_declaracao_no_indice (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_paginas_permite_101_participantes_do_mesmo_gp_em_resultados_e_classificacao (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_paginas_rejeita_id_duplicado_evento_divergente_e_calendario_duplicado (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_piloto_ausente_em_gp_completo_preserva_janela_de_participacoes (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_referencia_igual_largada_bloqueia_estado_e_ensaio_antes_de_resultados (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+test_resultados_vazios_do_alvo_e_futuro_nao_abrem_nem_alteram_emissao (tests.test_operacao_2026_r3.Operacao2026R3Test) ... ok
+
+----------------------------------------------------------------------
+Ran 54 tests in 0.195s
+
+OK
+ENSAIO RETROSPECTIVO: /Users/MBPaschoal/.hermes/cache/scratch/tmp7v3_ox2k/ensaio-2
+Snapshot criado: /Users/MBPaschoal/.hermes/cache/scratch/tmp3s4mqktm/snapshots/s1
+{
+  "utc": "2026-10-21T00:23:43.878349+00:00",
+  "execucoes_da_suite_nesta_entrega": 1,
+  "modules": [
+    "tests.test_operacao_2026",
+    "tests.test_operacao_2026_fluxo",
+    "tests.test_operacao_2026_fontes",
+    "tests.test_operacao_2026_integracao",
+    "tests.test_operacao_2026_paginacao",
+    "tests.test_operacao_2026_r1",
+    "tests.test_operacao_2026_r2",
+    "tests.test_operacao_2026_r3"
+  ],
+  "tests": 54,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "all_passed": true,
+  "network_blocked": true,
+  "fit_fit_transform_partial_fit_blocked": true,
+  "forbidden_write_attempts": [],
+  "failure_details": []
+}

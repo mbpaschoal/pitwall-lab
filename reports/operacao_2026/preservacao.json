@@ -1,0 +1,1166 @@
+{
+  "base_commit": "b067ad55dd97d964b132129838773cf6108773e3",
+  "captura_inicial_utc": "2026-10-19T11:15:37.242180+00:00",
+  "arquivos_originais": 288,
+  "inalterados_fora_excecoes": 286,
+  "excecoes_documentais_autorizadas": [
+    "README.md",
+    "projects/Pitwall Lab.md"
+  ],
+  "contexto_do_proprietario_preservado": "Foto anterior à edição guardada; só o parágrafo de estado substituído e um parágrafo acrescentado. Demais linhas mantidas.",
+  "arquivos": {
+    ".gitignore": {
+      "antes": "1b6aa66884a2d746b1d1fed64d803ca23dd37425d184be44e172c550865e1c05",
+      "depois": "1b6aa66884a2d746b1d1fed64d803ca23dd37425d184be44e172c550865e1c05"
+    },
+    ".streamlit/config.toml": {
+      "antes": "ef20d9df5e71a750818bda60fa31b4341e63124053be5e480f0ba7dadb03b9d0",
+      "depois": "ef20d9df5e71a750818bda60fa31b4341e63124053be5e480f0ba7dadb03b9d0"
+    },
+    "README.md": {
+      "antes": "468e5760a2af95fa16a4914920338571ac9f1faf2d0054e45cebd4239f5a14ed",
+      "depois": "6e987572c0f9d6776cecde3805a0e05d516e80fc3e0687c04672da88a9eb2941"
+    },
+    "analisar_temporada.py": {
+      "antes": "bd619474f219d7681750a6959e202740060601755b5e0437e9fd8e6045759979",
+      "depois": "bd619474f219d7681750a6959e202740060601755b5e0437e9fd8e6045759979"
+    },
+    "app.py": {
+      "antes": "c00510e5192c684412bbef88719642361bc7f25f6bbbfd643fd509bd7f2a943f",
+      "depois": "c00510e5192c684412bbef88719642361bc7f25f6bbbfd643fd509bd7f2a943f"
+    },
+    "avaliar_modelo_v1.py": {
+      "antes": "2befdf9afea8b281b76529bd21b330e52d5f9b442efd4bc50d1821cd39c88668",
+      "depois": "2befdf9afea8b281b76529bd21b330e52d5f9b442efd4bc50d1821cd39c88668"
+    },
+    "coletar_historico.py": {
+      "antes": "73768b4ef38e10723d255a16d0fb6397616ca6ff8c09a774e256bc48dc6c99f9",
+      "depois": "73768b4ef38e10723d255a16d0fb6397616ca6ff8c09a774e256bc48dc6c99f9"
+    },
+    "coletar_resultados.py": {
+      "antes": "7fb3adccb00467a02954c2a7ce9196b6f1f4a1ca7437dadb0f32c2030d18b2ff",
+      "depois": "7fb3adccb00467a02954c2a7ce9196b6f1f4a1ca7437dadb0f32c2030d18b2ff"
+    },
+    "coletar_temporada.py": {
+      "antes": "04370df9eedf759b34bf930fc7ae0a0a73362a3ec37f8948bfd592c264d573b9",
+      "depois": "04370df9eedf759b34bf930fc7ae0a0a73362a3ec37f8948bfd592c264d573b9"
+    },
+    "dashboard_dados.py": {
+      "antes": "220bd0051d40501ccb3da961156bc936e613d8155e82f7f31a21164ef534e56e",
+      "depois": "220bd0051d40501ccb3da961156bc936e613d8155e82f7f31a21164ef534e56e"
+    },
+    "data/historico/2021/manifesto.json": {
+      "antes": "90e5495f3f6764b131e95852ec0baf0fd24e81b5b34269bd366c41a67281c15c",
+      "depois": "90e5495f3f6764b131e95852ec0baf0fd24e81b5b34269bd366c41a67281c15c"
+    },
+    "data/historico/2021/proveniencia/calendario_offset_0000.json": {
+      "antes": "24a85f749222bbb4d5ec00f5adea0e6de155b00a9c99fd4d250aeea219903f8d",
+      "depois": "24a85f749222bbb4d5ec00f5adea0e6de155b00a9c99fd4d250aeea219903f8d"
+    },
+    "data/historico/2021/proveniencia/classificacao_offset_0000.json": {
+      "antes": "abbb7ab4fbb0420cecd8e78edde162e62840098b14019182073850bf78817f66",
+      "depois": "abbb7ab4fbb0420cecd8e78edde162e62840098b14019182073850bf78817f66"
+    },
+    "data/historico/2021/proveniencia/classificacao_offset_0100.json": {
+      "antes": "919744f06508df685d426fa2d154c27bbb68d084504c081c1df68df617f2637c",
+      "depois": "919744f06508df685d426fa2d154c27bbb68d084504c081c1df68df617f2637c"
+    },
+    "data/historico/2021/proveniencia/classificacao_offset_0200.json": {
+      "antes": "d0e4748001778c3a3f2fe78265ad1947f16a58e89f78917d4e1c173de5f8a1f6",
+      "depois": "d0e4748001778c3a3f2fe78265ad1947f16a58e89f78917d4e1c173de5f8a1f6"
+    },
+    "data/historico/2021/proveniencia/classificacao_offset_0300.json": {
+      "antes": "f28c35c4542c95b0b9f74acf5192d4d62d6e82a507af5034ad75da8220c569a5",
+      "depois": "f28c35c4542c95b0b9f74acf5192d4d62d6e82a507af5034ad75da8220c569a5"
+    },
+    "data/historico/2021/proveniencia/classificacao_offset_0400.json": {
+      "antes": "e61043ffc98a5e7f033caf38ee1f7c3d994282f682088b7efce18ce34455fc73",
+      "depois": "e61043ffc98a5e7f033caf38ee1f7c3d994282f682088b7efce18ce34455fc73"
+    },
+    "data/historico/2021/proveniencia/resultados_offset_0000.json": {
+      "antes": "99a5eb8c31bd5590af5611625f0fb0aeac976fc0ee48e7e84b3caaa624f9fd4d",
+      "depois": "99a5eb8c31bd5590af5611625f0fb0aeac976fc0ee48e7e84b3caaa624f9fd4d"
+    },
+    "data/historico/2021/proveniencia/resultados_offset_0100.json": {
+      "antes": "857637264dfa6b2fdc3b80d29896b332b3e7addacec03313cd06483a02e937a3",
+      "depois": "857637264dfa6b2fdc3b80d29896b332b3e7addacec03313cd06483a02e937a3"
+    },
+    "data/historico/2021/proveniencia/resultados_offset_0200.json": {
+      "antes": "5fe82ef310fa1d7231d7d91f498a7a5310a4c530a55ad476c10b419ce7eb931d",
+      "depois": "5fe82ef310fa1d7231d7d91f498a7a5310a4c530a55ad476c10b419ce7eb931d"
+    },
+    "data/historico/2021/proveniencia/resultados_offset_0300.json": {
+      "antes": "d309bcc7f9a2601619f024e4b3d879ccff2e34344f4c5a7f4801c2cdc4347c38",
+      "depois": "d309bcc7f9a2601619f024e4b3d879ccff2e34344f4c5a7f4801c2cdc4347c38"
+    },
+    "data/historico/2021/proveniencia/resultados_offset_0400.json": {
+      "antes": "275490b877dc0d654e68716f3096ed83afc2d423cf1826f6e98a28178d407918",
+      "depois": "275490b877dc0d654e68716f3096ed83afc2d423cf1826f6e98a28178d407918"
+    },
+    "data/historico/2021/raw/calendario_offset_0000.json": {
+      "antes": "343b32202a313c72a8b09e8128c328bf4a8d529eb46b176c8ec53e3acf2daf7c",
+      "depois": "343b32202a313c72a8b09e8128c328bf4a8d529eb46b176c8ec53e3acf2daf7c"
+    },
+    "data/historico/2021/raw/classificacao_offset_0000.json": {
+      "antes": "2f4d54485871d47fe2b098d9ab7eb4abb81d90b3a6f00f807f076d04c1b740c7",
+      "depois": "2f4d54485871d47fe2b098d9ab7eb4abb81d90b3a6f00f807f076d04c1b740c7"
+    },
+    "data/historico/2021/raw/classificacao_offset_0100.json": {
+      "antes": "e41d1c9677cbdd7868240d2a066522516d9a08dbc8fcd78f72e630b5bbe799bd",
+      "depois": "e41d1c9677cbdd7868240d2a066522516d9a08dbc8fcd78f72e630b5bbe799bd"
+    },
+    "data/historico/2021/raw/classificacao_offset_0200.json": {
+      "antes": "0b4ea41b0ff89ddfd88c833c90ac5f804a481a14cf409933d81b25aa4f1885a5",
+      "depois": "0b4ea41b0ff89ddfd88c833c90ac5f804a481a14cf409933d81b25aa4f1885a5"
+    },
+    "data/historico/2021/raw/classificacao_offset_0300.json": {
+      "antes": "8ec473bc3696cf61782a4991a3eb1625c923a35e60a404b8981d20d68ec017b5",
+      "depois": "8ec473bc3696cf61782a4991a3eb1625c923a35e60a404b8981d20d68ec017b5"
+    },
+    "data/historico/2021/raw/classificacao_offset_0400.json": {
+      "antes": "7bd66eb680b6045c2aecac33724b30d4f50458694e805b18b2d17af0b72ab1d6",
+      "depois": "7bd66eb680b6045c2aecac33724b30d4f50458694e805b18b2d17af0b72ab1d6"
+    },
+    "data/historico/2021/raw/resultados_offset_0000.json": {
+      "antes": "b3eef4b494be3882c71df362d6253ca3b668a8f661f02115a91f179645bd7658",
+      "depois": "b3eef4b494be3882c71df362d6253ca3b668a8f661f02115a91f179645bd7658"
+    },
+    "data/historico/2021/raw/resultados_offset_0100.json": {
+      "antes": "e562aaffd2249481485a374242d3f953b6bfc2201c2aa9fa9528dab6f399b702",
+      "depois": "e562aaffd2249481485a374242d3f953b6bfc2201c2aa9fa9528dab6f399b702"
+    },
+    "data/historico/2021/raw/resultados_offset_0200.json": {
+      "antes": "14b8a5a9cc0ce853e86b0bfad50de743b42d1706de9d4bcc68a27f37e8ac7f3a",
+      "depois": "14b8a5a9cc0ce853e86b0bfad50de743b42d1706de9d4bcc68a27f37e8ac7f3a"
+    },
+    "data/historico/2021/raw/resultados_offset_0300.json": {
+      "antes": "e5c4f9743ce9dc1dba4074e3bd1bc31888d5d77abaab947fb8b674cd370c005f",
+      "depois": "e5c4f9743ce9dc1dba4074e3bd1bc31888d5d77abaab947fb8b674cd370c005f"
+    },
+    "data/historico/2021/raw/resultados_offset_0400.json": {
+      "antes": "f622899170629f1fe4075d3e296c876dab6c2563641fedc350fc02eeea849a16",
+      "depois": "f622899170629f1fe4075d3e296c876dab6c2563641fedc350fc02eeea849a16"
+    },
+    "data/historico/2021/verificacao.json": {
+      "antes": "9a84d2a7d217a9201bb76b0f3b24cd8dc5511446768448eabe4d095d53f661c8",
+      "depois": "9a84d2a7d217a9201bb76b0f3b24cd8dc5511446768448eabe4d095d53f661c8"
+    },
+    "data/historico/2022/manifesto.json": {
+      "antes": "b363947fd35f397fe96351eaf1f510c0bb5af3a5bffbef57353a9c5136957d9c",
+      "depois": "b363947fd35f397fe96351eaf1f510c0bb5af3a5bffbef57353a9c5136957d9c"
+    },
+    "data/historico/2022/proveniencia/calendario_offset_0000.json": {
+      "antes": "70a70620eaa0ade39b9adb596b25711554f1999beacba359465c19c4997a6563",
+      "depois": "70a70620eaa0ade39b9adb596b25711554f1999beacba359465c19c4997a6563"
+    },
+    "data/historico/2022/proveniencia/classificacao_offset_0000.json": {
+      "antes": "c2306feba0541a78b547c43380aa8c1a5f086b854bcd0e5a21a92b03c3387b1d",
+      "depois": "c2306feba0541a78b547c43380aa8c1a5f086b854bcd0e5a21a92b03c3387b1d"
+    },
+    "data/historico/2022/proveniencia/classificacao_offset_0100.json": {
+      "antes": "bd4e4d81ff21d67593fdacf3e1da4339624cb892b82c166a96a8aacb2ffea53b",
+      "depois": "bd4e4d81ff21d67593fdacf3e1da4339624cb892b82c166a96a8aacb2ffea53b"
+    },
+    "data/historico/2022/proveniencia/classificacao_offset_0200.json": {
+      "antes": "14d85fc3391b165bed104453039d67c4f8cb42fef87388435c3d997a1ac69d95",
+      "depois": "14d85fc3391b165bed104453039d67c4f8cb42fef87388435c3d997a1ac69d95"
+    },
+    "data/historico/2022/proveniencia/classificacao_offset_0300.json": {
+      "antes": "a5c2b183fa48dd510e4373124135894cb8ba05e1e60955e622339330065c45d3",
+      "depois": "a5c2b183fa48dd510e4373124135894cb8ba05e1e60955e622339330065c45d3"
+    },
+    "data/historico/2022/proveniencia/classificacao_offset_0400.json": {
+      "antes": "3a0dfbce82c1dff72389fbda7bb6a1bfd15169462991c96d7284c7744cb373ac",
+      "depois": "3a0dfbce82c1dff72389fbda7bb6a1bfd15169462991c96d7284c7744cb373ac"
+    },
+    "data/historico/2022/proveniencia/resultados_offset_0000.json": {
+      "antes": "4f48481002bede8998e880dff1fe728a7e66ec71cc3757d28919693540b4c831",
+      "depois": "4f48481002bede8998e880dff1fe728a7e66ec71cc3757d28919693540b4c831"
+    },
+    "data/historico/2022/proveniencia/resultados_offset_0100.json": {
+      "antes": "69927a3a8cfebf8d72462c0564ecb807bdda192201b3aba1fac89965887a68ac",
+      "depois": "69927a3a8cfebf8d72462c0564ecb807bdda192201b3aba1fac89965887a68ac"
+    },
+    "data/historico/2022/proveniencia/resultados_offset_0200.json": {
+      "antes": "75236c4cdeb7b302d7db84cb20b49f6e67aae6551b8e6ead9a47e26c67244903",
+      "depois": "75236c4cdeb7b302d7db84cb20b49f6e67aae6551b8e6ead9a47e26c67244903"
+    },
+    "data/historico/2022/proveniencia/resultados_offset_0300.json": {
+      "antes": "84945aee4fc3f24bf2f9502d1b47c6181d6e937fa61f2ef2cccd440544f6d982",
+      "depois": "84945aee4fc3f24bf2f9502d1b47c6181d6e937fa61f2ef2cccd440544f6d982"
+    },
+    "data/historico/2022/proveniencia/resultados_offset_0400.json": {
+      "antes": "8b7f487609a5a4e562f40c63cae1feb1d68637f73e733eadc769b4fbf7ba2d1f",
+      "depois": "8b7f487609a5a4e562f40c63cae1feb1d68637f73e733eadc769b4fbf7ba2d1f"
+    },
+    "data/historico/2022/raw/calendario_offset_0000.json": {
+      "antes": "aec8d998783913033f3b3fea6e4d51be38f682c6fd68ff8509bb42d5921fd4cd",
+      "depois": "aec8d998783913033f3b3fea6e4d51be38f682c6fd68ff8509bb42d5921fd4cd"
+    },
+    "data/historico/2022/raw/classificacao_offset_0000.json": {
+      "antes": "a59264a8f9c10b6ac1d8aea3a9d4bf6ccf8a2700568161db3e3ac8a2e539545d",
+      "depois": "a59264a8f9c10b6ac1d8aea3a9d4bf6ccf8a2700568161db3e3ac8a2e539545d"
+    },
+    "data/historico/2022/raw/classificacao_offset_0100.json": {
+      "antes": "f0e4c581c6e53eb36f3b443afa83a874614c3b504b524e7aa63d6194efb7caef",
+      "depois": "f0e4c581c6e53eb36f3b443afa83a874614c3b504b524e7aa63d6194efb7caef"
+    },
+    "data/historico/2022/raw/classificacao_offset_0200.json": {
+      "antes": "0167fa8c56b94f5fccc874d396a6a8950c11bb0816f2a1870c4e790bb0a72487",
+      "depois": "0167fa8c56b94f5fccc874d396a6a8950c11bb0816f2a1870c4e790bb0a72487"
+    },
+    "data/historico/2022/raw/classificacao_offset_0300.json": {
+      "antes": "3cab523f08f2de49ba0c86596879f03ee226fba0c2102cf82ece5f24929e4083",
+      "depois": "3cab523f08f2de49ba0c86596879f03ee226fba0c2102cf82ece5f24929e4083"
+    },
+    "data/historico/2022/raw/classificacao_offset_0400.json": {
+      "antes": "583c2a57f96ea00bca9361da589eab2bd007da36dff7ff76f96583d1f89fcb1c",
+      "depois": "583c2a57f96ea00bca9361da589eab2bd007da36dff7ff76f96583d1f89fcb1c"
+    },
+    "data/historico/2022/raw/resultados_offset_0000.json": {
+      "antes": "545424231206080742645c24f95c1f61f55fa13d1063389e084b120590e2bd73",
+      "depois": "545424231206080742645c24f95c1f61f55fa13d1063389e084b120590e2bd73"
+    },
+    "data/historico/2022/raw/resultados_offset_0100.json": {
+      "antes": "042f3bf558bf42bb7f2dac96e708a250c12ec5c578e829acd240e1202cf713c5",
+      "depois": "042f3bf558bf42bb7f2dac96e708a250c12ec5c578e829acd240e1202cf713c5"
+    },
+    "data/historico/2022/raw/resultados_offset_0200.json": {
+      "antes": "e464f2cda33953489c63bcd3684d63361bc1f278ce560d096fb0f6cd59722335",
+      "depois": "e464f2cda33953489c63bcd3684d63361bc1f278ce560d096fb0f6cd59722335"
+    },
+    "data/historico/2022/raw/resultados_offset_0300.json": {
+      "antes": "83f3dfef8020a8935c895afea3d84c62a8d84c6e5924ccc59f58f6c9e62c5640",
+      "depois": "83f3dfef8020a8935c895afea3d84c62a8d84c6e5924ccc59f58f6c9e62c5640"
+    },
+    "data/historico/2022/raw/resultados_offset_0400.json": {
+      "antes": "1858df4c0c8c368057dcebe9d5657c9ac35bdef823c8ed6c8af8868bc8be6d8f",
+      "depois": "1858df4c0c8c368057dcebe9d5657c9ac35bdef823c8ed6c8af8868bc8be6d8f"
+    },
+    "data/historico/2022/verificacao.json": {
+      "antes": "97dbd06d4acb8dc8ccedd4b016edf62ea1073856a243a13c272c5a87dca4ea14",
+      "depois": "97dbd06d4acb8dc8ccedd4b016edf62ea1073856a243a13c272c5a87dca4ea14"
+    },
+    "data/historico/2023/manifesto.json": {
+      "antes": "f256a13c866eb76168bec9caab624bb22cbf9be560f2e345ea6ad465328c4d30",
+      "depois": "f256a13c866eb76168bec9caab624bb22cbf9be560f2e345ea6ad465328c4d30"
+    },
+    "data/historico/2023/proveniencia/calendario_offset_0000.json": {
+      "antes": "9001b3c68cce07d230f0e31623f61c1c8f62420fd058d4821e760a5e76b97dbe",
+      "depois": "9001b3c68cce07d230f0e31623f61c1c8f62420fd058d4821e760a5e76b97dbe"
+    },
+    "data/historico/2023/proveniencia/classificacao_offset_0000.json": {
+      "antes": "498003771bc31d01ae287693ab29d70bb57e96b505b6942f25130ab888f98e2c",
+      "depois": "498003771bc31d01ae287693ab29d70bb57e96b505b6942f25130ab888f98e2c"
+    },
+    "data/historico/2023/proveniencia/classificacao_offset_0100.json": {
+      "antes": "93ad15b84b9ef8ba922673c6333192771a7252c56f4b5c4c783643ec34a047e3",
+      "depois": "93ad15b84b9ef8ba922673c6333192771a7252c56f4b5c4c783643ec34a047e3"
+    },
+    "data/historico/2023/proveniencia/classificacao_offset_0200.json": {
+      "antes": "c89c40483c8e43b624fb70dc7a5905eea57a0323a910d8ecbbca3d3aee816e5a",
+      "depois": "c89c40483c8e43b624fb70dc7a5905eea57a0323a910d8ecbbca3d3aee816e5a"
+    },
+    "data/historico/2023/proveniencia/classificacao_offset_0300.json": {
+      "antes": "e986c1a5684c3a7ffb38235d99f6846c67013a906db95e744690e58b8ecd276c",
+      "depois": "e986c1a5684c3a7ffb38235d99f6846c67013a906db95e744690e58b8ecd276c"
+    },
+    "data/historico/2023/proveniencia/classificacao_offset_0400.json": {
+      "antes": "3fef45ab6f75574df3d88d8ba919bd597d80baaeac429fa854c116f64b8de745",
+      "depois": "3fef45ab6f75574df3d88d8ba919bd597d80baaeac429fa854c116f64b8de745"
+    },
+    "data/historico/2023/proveniencia/resultados_offset_0000.json": {
+      "antes": "d8c3311e368b04dd49421fb2a803d85232916164d0f7253ee971af3b42ac89de",
+      "depois": "d8c3311e368b04dd49421fb2a803d85232916164d0f7253ee971af3b42ac89de"
+    },
+    "data/historico/2023/proveniencia/resultados_offset_0100.json": {
+      "antes": "f5356619c39a4ea889df6f54cef4587fea0cd7555dbda11ab36d5aa3aaef5fe8",
+      "depois": "f5356619c39a4ea889df6f54cef4587fea0cd7555dbda11ab36d5aa3aaef5fe8"
+    },
+    "data/historico/2023/proveniencia/resultados_offset_0200.json": {
+      "antes": "dab53bf2a52dfb87aa04b1deabb0e3f0391fe143dbdcbda0cccabddbf20a9882",
+      "depois": "dab53bf2a52dfb87aa04b1deabb0e3f0391fe143dbdcbda0cccabddbf20a9882"
+    },
+    "data/historico/2023/proveniencia/resultados_offset_0300.json": {
+      "antes": "b0f5d8397414fabe8cd6037549385a8d4681358af25dc6f4be66deebe94f4082",
+      "depois": "b0f5d8397414fabe8cd6037549385a8d4681358af25dc6f4be66deebe94f4082"
+    },
+    "data/historico/2023/proveniencia/resultados_offset_0400.json": {
+      "antes": "aaea410233416142050dc9401b527993c078172dd8c53006f83411b59051dd44",
+      "depois": "aaea410233416142050dc9401b527993c078172dd8c53006f83411b59051dd44"
+    },
+    "data/historico/2023/raw/calendario_offset_0000.json": {
+      "antes": "698bdfbace8a5182a914f50a481e39996fc6e3d02f595c24275176e990652cc3",
+      "depois": "698bdfbace8a5182a914f50a481e39996fc6e3d02f595c24275176e990652cc3"
+    },
+    "data/historico/2023/raw/classificacao_offset_0000.json": {
+      "antes": "094d40364d686a8eaf983ffd1d93267a1d77fc4f0ed8a23cd21fd5e33bd5ad39",
+      "depois": "094d40364d686a8eaf983ffd1d93267a1d77fc4f0ed8a23cd21fd5e33bd5ad39"
+    },
+    "data/historico/2023/raw/classificacao_offset_0100.json": {
+      "antes": "a2939a8d97c15540b40aa8ff9453582e56d77093e2813a3866e4429cf1bc2d48",
+      "depois": "a2939a8d97c15540b40aa8ff9453582e56d77093e2813a3866e4429cf1bc2d48"
+    },
+    "data/historico/2023/raw/classificacao_offset_0200.json": {
+      "antes": "9342d31c4dd8bd05c51e41e7336578c1e4dbb874772a480c010da129fc2467b1",
+      "depois": "9342d31c4dd8bd05c51e41e7336578c1e4dbb874772a480c010da129fc2467b1"
+    },
+    "data/historico/2023/raw/classificacao_offset_0300.json": {
+      "antes": "0c2f56cce6d9f8edd949ba21e8bc48ee4f5427d6df8306a386d49b1ec621351d",
+      "depois": "0c2f56cce6d9f8edd949ba21e8bc48ee4f5427d6df8306a386d49b1ec621351d"
+    },
+    "data/historico/2023/raw/classificacao_offset_0400.json": {
+      "antes": "362b10a868ec19c97b1e5b336e29749fba9b8f1a70bc249da34145c612631018",
+      "depois": "362b10a868ec19c97b1e5b336e29749fba9b8f1a70bc249da34145c612631018"
+    },
+    "data/historico/2023/raw/resultados_offset_0000.json": {
+      "antes": "3226151d335623afb1ffe0e804d47c1e6704f4fd6b7b73fca6acf97ba04a4e56",
+      "depois": "3226151d335623afb1ffe0e804d47c1e6704f4fd6b7b73fca6acf97ba04a4e56"
+    },
+    "data/historico/2023/raw/resultados_offset_0100.json": {
+      "antes": "90a3c80afc3e3c120725e1bc75459d316edc5eababdb150bcaf1ec4784bd45a0",
+      "depois": "90a3c80afc3e3c120725e1bc75459d316edc5eababdb150bcaf1ec4784bd45a0"
+    },
+    "data/historico/2023/raw/resultados_offset_0200.json": {
+      "antes": "5bc493da764d4ad926af42150e97f3dd6f440d7be394303ee5f38bde64bd864a",
+      "depois": "5bc493da764d4ad926af42150e97f3dd6f440d7be394303ee5f38bde64bd864a"
+    },
+    "data/historico/2023/raw/resultados_offset_0300.json": {
+      "antes": "b787d5940216b57b8998cc169a88a0e57564d1869b9bf61962ea39ecacb3fb2e",
+      "depois": "b787d5940216b57b8998cc169a88a0e57564d1869b9bf61962ea39ecacb3fb2e"
+    },
+    "data/historico/2023/raw/resultados_offset_0400.json": {
+      "antes": "0627399a545b9710ac3c4260fc8743aba09ce40f5629019c18eac45c47ea193c",
+      "depois": "0627399a545b9710ac3c4260fc8743aba09ce40f5629019c18eac45c47ea193c"
+    },
+    "data/historico/2023/verificacao.json": {
+      "antes": "dfde363c38036c48f9bc4e9fa9920761032d4c20c7a87e9011a8d2e7a2471af7",
+      "depois": "dfde363c38036c48f9bc4e9fa9920761032d4c20c7a87e9011a8d2e7a2471af7"
+    },
+    "data/historico/2024/manifesto.json": {
+      "antes": "aa50d84a1a149c81a69a1065747547cb26caf1041109e4493f6967db376f1110",
+      "depois": "aa50d84a1a149c81a69a1065747547cb26caf1041109e4493f6967db376f1110"
+    },
+    "data/historico/2024/proveniencia/calendario_offset_0000.json": {
+      "antes": "82ea413edd9aa2d638dd0330b31f4c7edebb6a8b24f12e2d1908b3f078015147",
+      "depois": "82ea413edd9aa2d638dd0330b31f4c7edebb6a8b24f12e2d1908b3f078015147"
+    },
+    "data/historico/2024/proveniencia/classificacao_offset_0000.json": {
+      "antes": "ed857650de977d68e5bc362b091caf8aad167677bb0776f3c347b3e31dcf6c59",
+      "depois": "ed857650de977d68e5bc362b091caf8aad167677bb0776f3c347b3e31dcf6c59"
+    },
+    "data/historico/2024/proveniencia/classificacao_offset_0100.json": {
+      "antes": "e4cb5bff890f8a767760e4057fb7f278c90a9c3f0c4ac4c406055b2b6285baa0",
+      "depois": "e4cb5bff890f8a767760e4057fb7f278c90a9c3f0c4ac4c406055b2b6285baa0"
+    },
+    "data/historico/2024/proveniencia/classificacao_offset_0200.json": {
+      "antes": "a682a9f9b115164d36b1c9c907661f9caef431d15e9e87aad95c7b3c3bf1d8bc",
+      "depois": "a682a9f9b115164d36b1c9c907661f9caef431d15e9e87aad95c7b3c3bf1d8bc"
+    },
+    "data/historico/2024/proveniencia/classificacao_offset_0300.json": {
+      "antes": "a29207a76c87ed254379f3dd47b97fc90a38209b90bca037e3af2c5f42250f3f",
+      "depois": "a29207a76c87ed254379f3dd47b97fc90a38209b90bca037e3af2c5f42250f3f"
+    },
+    "data/historico/2024/proveniencia/classificacao_offset_0400.json": {
+      "antes": "12779784e7208727a2cc36f9e296b6e341d4534971baecc773ba15da76086126",
+      "depois": "12779784e7208727a2cc36f9e296b6e341d4534971baecc773ba15da76086126"
+    },
+    "data/historico/2024/proveniencia/resultados_offset_0000.json": {
+      "antes": "10601a61b556ab7e85af5c45f4f087cb1fd4a106ec7c276193ddc7de1750d93e",
+      "depois": "10601a61b556ab7e85af5c45f4f087cb1fd4a106ec7c276193ddc7de1750d93e"
+    },
+    "data/historico/2024/proveniencia/resultados_offset_0100.json": {
+      "antes": "f17251fe77feed38c162c6e1736caca6062ae70545d6f9bbf14634b873a1e4d0",
+      "depois": "f17251fe77feed38c162c6e1736caca6062ae70545d6f9bbf14634b873a1e4d0"
+    },
+    "data/historico/2024/proveniencia/resultados_offset_0200.json": {
+      "antes": "6eb82cb0331567ebe67d0d3b27e61d78da0c0d335470d24f27f0f6c0e1e43bb4",
+      "depois": "6eb82cb0331567ebe67d0d3b27e61d78da0c0d335470d24f27f0f6c0e1e43bb4"
+    },
+    "data/historico/2024/proveniencia/resultados_offset_0300.json": {
+      "antes": "9b6de34fea7c3c82fed7066c09b712273a1a0b5b3231cd2eaa50d0dcc95cd63e",
+      "depois": "9b6de34fea7c3c82fed7066c09b712273a1a0b5b3231cd2eaa50d0dcc95cd63e"
+    },
+    "data/historico/2024/proveniencia/resultados_offset_0400.json": {
+      "antes": "d845cc7bd07c2ed95bde6b0596741eca17f48f6a153583c81cafc5f2f19c7569",
+      "depois": "d845cc7bd07c2ed95bde6b0596741eca17f48f6a153583c81cafc5f2f19c7569"
+    },
+    "data/historico/2024/raw/calendario_offset_0000.json": {
+      "antes": "16ede12f875c4b6be9da5534131947a635a50e8eb371ad490bd1f7bf0c676bba",
+      "depois": "16ede12f875c4b6be9da5534131947a635a50e8eb371ad490bd1f7bf0c676bba"
+    },
+    "data/historico/2024/raw/classificacao_offset_0000.json": {
+      "antes": "800a9ea1e2a247c1f0d0fa22774d569e505bbea4ba6c337b053144c1e7cfec20",
+      "depois": "800a9ea1e2a247c1f0d0fa22774d569e505bbea4ba6c337b053144c1e7cfec20"
+    },
+    "data/historico/2024/raw/classificacao_offset_0100.json": {
+      "antes": "6863e42ec409adc137e24a68874da4cfc78e2db085b017ab03fe92af72ef6bea",
+      "depois": "6863e42ec409adc137e24a68874da4cfc78e2db085b017ab03fe92af72ef6bea"
+    },
+    "data/historico/2024/raw/classificacao_offset_0200.json": {
+      "antes": "5b0296f8fff001aea53d3e5d26a895760c85d25c6a2d4a0329a7e2a53f43098d",
+      "depois": "5b0296f8fff001aea53d3e5d26a895760c85d25c6a2d4a0329a7e2a53f43098d"
+    },
+    "data/historico/2024/raw/classificacao_offset_0300.json": {
+      "antes": "5abd92acacfd66fbf990cff9e856978f955f8053fdcf8d5602f41ed8f202c832",
+      "depois": "5abd92acacfd66fbf990cff9e856978f955f8053fdcf8d5602f41ed8f202c832"
+    },
+    "data/historico/2024/raw/classificacao_offset_0400.json": {
+      "antes": "23cf8d2a50926a422b6df820f965f42881d1f4285d664181412bf724e61b9780",
+      "depois": "23cf8d2a50926a422b6df820f965f42881d1f4285d664181412bf724e61b9780"
+    },
+    "data/historico/2024/raw/resultados_offset_0000.json": {
+      "antes": "fba9af8aef4ac7bb6b2fa4d45e5136e11950a463ec4faa114840f3c055edb81d",
+      "depois": "fba9af8aef4ac7bb6b2fa4d45e5136e11950a463ec4faa114840f3c055edb81d"
+    },
+    "data/historico/2024/raw/resultados_offset_0100.json": {
+      "antes": "0ee83afde9842e01cffe4b5f5f4740a22143470ed45ca2c361922d13f8e90b6f",
+      "depois": "0ee83afde9842e01cffe4b5f5f4740a22143470ed45ca2c361922d13f8e90b6f"
+    },
+    "data/historico/2024/raw/resultados_offset_0200.json": {
+      "antes": "f5334be83a8858556f796ad4a49068b2286b48177a51be2600c875dd79d5bc52",
+      "depois": "f5334be83a8858556f796ad4a49068b2286b48177a51be2600c875dd79d5bc52"
+    },
+    "data/historico/2024/raw/resultados_offset_0300.json": {
+      "antes": "44bce2c02c18e1118dc0249682a5837880d2895996a1f5f09930429061ac83bf",
+      "depois": "44bce2c02c18e1118dc0249682a5837880d2895996a1f5f09930429061ac83bf"
+    },
+    "data/historico/2024/raw/resultados_offset_0400.json": {
+      "antes": "d0abfa6dfc9eeeb8a7a8960500dbebef1f70b869aacdb0212e02c24727e61c58",
+      "depois": "d0abfa6dfc9eeeb8a7a8960500dbebef1f70b869aacdb0212e02c24727e61c58"
+    },
+    "data/historico/2024/verificacao.json": {
+      "antes": "daf7b5cb8a940b2b65179b74abc5accdef0421e56f1317a58f559ae7c54e42e3",
+      "depois": "daf7b5cb8a940b2b65179b74abc5accdef0421e56f1317a58f559ae7c54e42e3"
+    },
+    "data/historico/2025/manifesto.json": {
+      "antes": "82902bfa26b521a40baa51f1249085d5be72672f14825ff132f2c109744c46b0",
+      "depois": "82902bfa26b521a40baa51f1249085d5be72672f14825ff132f2c109744c46b0"
+    },
+    "data/historico/2025/proveniencia/calendario_offset_0000.json": {
+      "antes": "5dee3260d7c43769279e737c98232292f1ebc3da65082ec1379645a297275989",
+      "depois": "5dee3260d7c43769279e737c98232292f1ebc3da65082ec1379645a297275989"
+    },
+    "data/historico/2025/proveniencia/classificacao_offset_0000.json": {
+      "antes": "1c7c1a00f66997c8744dc33275f9082b64f22fa08ea2c33990d9c2f6884ae312",
+      "depois": "1c7c1a00f66997c8744dc33275f9082b64f22fa08ea2c33990d9c2f6884ae312"
+    },
+    "data/historico/2025/proveniencia/classificacao_offset_0100.json": {
+      "antes": "8343ef5e3d7854868d6854add76c1c978762c73e1e8a434bdfc8755784ef19f9",
+      "depois": "8343ef5e3d7854868d6854add76c1c978762c73e1e8a434bdfc8755784ef19f9"
+    },
+    "data/historico/2025/proveniencia/classificacao_offset_0200.json": {
+      "antes": "a166f68fc205e83aad67449b2c8e67e275bbc35fe53a154df5de3ebe9955797a",
+      "depois": "a166f68fc205e83aad67449b2c8e67e275bbc35fe53a154df5de3ebe9955797a"
+    },
+    "data/historico/2025/proveniencia/classificacao_offset_0300.json": {
+      "antes": "b702aa76b5b2d8d5557e04efa65db759d82ff04e9c81d3d15a5a10622b8bb1b5",
+      "depois": "b702aa76b5b2d8d5557e04efa65db759d82ff04e9c81d3d15a5a10622b8bb1b5"
+    },
+    "data/historico/2025/proveniencia/classificacao_offset_0400.json": {
+      "antes": "6e5e51ef482250d616e59c6d307cc347a6095012489cd123efdd18af384876ae",
+      "depois": "6e5e51ef482250d616e59c6d307cc347a6095012489cd123efdd18af384876ae"
+    },
+    "data/historico/2025/proveniencia/resultados_offset_0000.json": {
+      "antes": "38ab666c0ea1e200ab72a5cafa0886d08712968c58a6ed6eff200a695f67343e",
+      "depois": "38ab666c0ea1e200ab72a5cafa0886d08712968c58a6ed6eff200a695f67343e"
+    },
+    "data/historico/2025/proveniencia/resultados_offset_0100.json": {
+      "antes": "73601e17bfb1d3ba952e4baed3e38ec0c68fcefb9a05a591ccb39dfd0ea4611f",
+      "depois": "73601e17bfb1d3ba952e4baed3e38ec0c68fcefb9a05a591ccb39dfd0ea4611f"
+    },
+    "data/historico/2025/proveniencia/resultados_offset_0200.json": {
+      "antes": "a2688d8258c100e1ac7a61630fb0808b41fa1fc5228a07a1e6ed9bf3d3635621",
+      "depois": "a2688d8258c100e1ac7a61630fb0808b41fa1fc5228a07a1e6ed9bf3d3635621"
+    },
+    "data/historico/2025/proveniencia/resultados_offset_0300.json": {
+      "antes": "a84bb6f0cdeb437b5dbebd231c9fcd4b2d884a9589387c0f3bfc3fb0aa57ff91",
+      "depois": "a84bb6f0cdeb437b5dbebd231c9fcd4b2d884a9589387c0f3bfc3fb0aa57ff91"
+    },
+    "data/historico/2025/proveniencia/resultados_offset_0400.json": {
+      "antes": "5b856399b4cf68df53e2ca5e736ea19f688df6729ad57ea37f55617e333d0645",
+      "depois": "5b856399b4cf68df53e2ca5e736ea19f688df6729ad57ea37f55617e333d0645"
+    },
+    "data/historico/2025/raw/calendario_offset_0000.json": {
+      "antes": "fb28bdac7fcbbe908dfe2b6af1f61cc311474e3392ea47a32ff80414cc713433",
+      "depois": "fb28bdac7fcbbe908dfe2b6af1f61cc311474e3392ea47a32ff80414cc713433"
+    },
+    "data/historico/2025/raw/classificacao_offset_0000.json": {
+      "antes": "3f19b4958ca6457f6fb4ac23e780f7cd0695115541aa92d030d82e0ef130ff3c",
+      "depois": "3f19b4958ca6457f6fb4ac23e780f7cd0695115541aa92d030d82e0ef130ff3c"
+    },
+    "data/historico/2025/raw/classificacao_offset_0100.json": {
+      "antes": "1fdc74db4d0c842a9b64321d24ce1c73f3bb995cfd885265709630a4f2bb0b7e",
+      "depois": "1fdc74db4d0c842a9b64321d24ce1c73f3bb995cfd885265709630a4f2bb0b7e"
+    },
+    "data/historico/2025/raw/classificacao_offset_0200.json": {
+      "antes": "a67594fbec1bb61b5ad49183d1395d8cd72d9ab805886ee383b65ff72a8da7c5",
+      "depois": "a67594fbec1bb61b5ad49183d1395d8cd72d9ab805886ee383b65ff72a8da7c5"
+    },
+    "data/historico/2025/raw/classificacao_offset_0300.json": {
+      "antes": "587ab63ecf026c5a2cbfa56e168afefff8895e8ffa0536e3944f40d8c7ba423a",
+      "depois": "587ab63ecf026c5a2cbfa56e168afefff8895e8ffa0536e3944f40d8c7ba423a"
+    },
+    "data/historico/2025/raw/classificacao_offset_0400.json": {
+      "antes": "441fa3656474d57e6c31a065af3bbd9c217de38ac7d23221719dbe7559113728",
+      "depois": "441fa3656474d57e6c31a065af3bbd9c217de38ac7d23221719dbe7559113728"
+    },
+    "data/historico/2025/raw/resultados_offset_0000.json": {
+      "antes": "cf4464a6b89f85f9632ab853061fbec89993ae995365bc377afded7c9da946a6",
+      "depois": "cf4464a6b89f85f9632ab853061fbec89993ae995365bc377afded7c9da946a6"
+    },
+    "data/historico/2025/raw/resultados_offset_0100.json": {
+      "antes": "9ed04b2441b3ff17cfb717fe7887778216f06c95b0b9003ffa9b51befbfa924c",
+      "depois": "9ed04b2441b3ff17cfb717fe7887778216f06c95b0b9003ffa9b51befbfa924c"
+    },
+    "data/historico/2025/raw/resultados_offset_0200.json": {
+      "antes": "877327fcc99f91b1027bd47f3c52ff55212b7155302b79baeb46236867e035b8",
+      "depois": "877327fcc99f91b1027bd47f3c52ff55212b7155302b79baeb46236867e035b8"
+    },
+    "data/historico/2025/raw/resultados_offset_0300.json": {
+      "antes": "ca8df94a1d2a11a4190a948c50f9364b522cefc4124dc02a0733fee7fad969c7",
+      "depois": "ca8df94a1d2a11a4190a948c50f9364b522cefc4124dc02a0733fee7fad969c7"
+    },
+    "data/historico/2025/raw/resultados_offset_0400.json": {
+      "antes": "3a10a9b570c4b87b135f59ddd6a8783ad69db2f2582827b774462feeb9519f75",
+      "depois": "3a10a9b570c4b87b135f59ddd6a8783ad69db2f2582827b774462feeb9519f75"
+    },
+    "data/historico/2025/verificacao.json": {
+      "antes": "cdff556c5cc7ab91977dbb89698bec9382037495748fd438aab6a5cc3ad7b06a",
+      "depois": "cdff556c5cc7ab91977dbb89698bec9382037495748fd438aab6a5cc3ad7b06a"
+    },
+    "data/preparado/alvos.csv": {
+      "antes": "af90beb6a33c3d7bb67743aaaeb5105a3410641b4e34e5a782502f3a9a30a03a",
+      "depois": "af90beb6a33c3d7bb67743aaaeb5105a3410641b4e34e5a782502f3a9a30a03a"
+    },
+    "data/preparado/auditoria_janelas.json": {
+      "antes": "c71e420b4cbafb690602bcc18cf314832c00650ef2edaacdd968ba1ec97d0683",
+      "depois": "c71e420b4cbafb690602bcc18cf314832c00650ef2edaacdd968ba1ec97d0683"
+    },
+    "data/preparado/auditoria_resultados.csv": {
+      "antes": "6affc1a99556b296344a4cfdb9bcecbf8c0b535c57c83eb8a80b9dd56cd88285",
+      "depois": "6affc1a99556b296344a4cfdb9bcecbf8c0b535c57c83eb8a80b9dd56cd88285"
+    },
+    "data/preparado/base_historica.csv": {
+      "antes": "3c9d722dbceb8eac0ddd04bf941ccdfe0f5a5bc4ab1559ebeed6ab35d307f777",
+      "depois": "3c9d722dbceb8eac0ddd04bf941ccdfe0f5a5bc4ab1559ebeed6ab35d307f777"
+    },
+    "data/preparado/colunas.json": {
+      "antes": "1b14e532cd3001ad6b38442cab4a14e52e63208fbe37bec77d8b464dfb98efdd",
+      "depois": "1b14e532cd3001ad6b38442cab4a14e52e63208fbe37bec77d8b464dfb98efdd"
+    },
+    "data/preparado/divisoes.csv": {
+      "antes": "72ebd4924f0c95f80763b651b5ad83d84948d288c6108eacf5a78cc79f9536c2",
+      "depois": "72ebd4924f0c95f80763b651b5ad83d84948d288c6108eacf5a78cc79f9536c2"
+    },
+    "data/preparado/entradas.csv": {
+      "antes": "cccdef2d90e05d79c32af162f6e5e9c9a69b16d049042bf734418d5c8cda5690",
+      "depois": "cccdef2d90e05d79c32af162f6e5e9c9a69b16d049042bf734418d5c8cda5690"
+    },
+    "data/preparado/identificacao.csv": {
+      "antes": "bfc7fb9c2b488229ba1461fec6bdc45d88854db6c4a0d7f7290ee0aa6d2754df",
+      "depois": "bfc7fb9c2b488229ba1461fec6bdc45d88854db6c4a0d7f7290ee0aa6d2754df"
+    },
+    "data/preparado/teste_final_reservado.csv": {
+      "antes": "63c15af693a45d24c105cd2055ba4d7f59b115aadcb61cdf85bd92f0671b18da",
+      "depois": "63c15af693a45d24c105cd2055ba4d7f59b115aadcb61cdf85bd92f0671b18da"
+    },
+    "data/preparado/treino.csv": {
+      "antes": "6a2fe25985c36c2d562d2065557cc08abeebb8bbce4cefb5f8c5d03b392f2491",
+      "depois": "6a2fe25985c36c2d562d2065557cc08abeebb8bbce4cefb5f8c5d03b392f2491"
+    },
+    "data/preparado/validacao.csv": {
+      "antes": "70a861631bc75a78cc7c34340ec29585473db0ff203d213646feb485eea625a9",
+      "depois": "70a861631bc75a78cc7c34340ec29585473db0ff203d213646feb485eea625a9"
+    },
+    "data/preparado/verificacao.json": {
+      "antes": "4f1026117f9b01f327de2c33a4b78673e746150c3325d4a9acb5593a38f8b5b8",
+      "depois": "4f1026117f9b01f327de2c33a4b78673e746150c3325d4a9acb5593a38f8b5b8"
+    },
+    "data/raw/calendario_2024.json": {
+      "antes": "16ede12f875c4b6be9da5534131947a635a50e8eb371ad490bd1f7bf0c676bba",
+      "depois": "16ede12f875c4b6be9da5534131947a635a50e8eb371ad490bd1f7bf0c676bba"
+    },
+    "data/raw/resultados_sao_paulo_2024.json": {
+      "antes": "d09b683002224469649e4936cee327e5883799821306823590e10f94fe8eebac",
+      "depois": "d09b683002224469649e4936cee327e5883799821306823590e10f94fe8eebac"
+    },
+    "data/resultados_sao_paulo_2024.csv": {
+      "antes": "336bd1dec0ec15f997345a503d2c74a538299740903af81e24e1209310f20ae1",
+      "depois": "336bd1dec0ec15f997345a503d2c74a538299740903af81e24e1209310f20ae1"
+    },
+    "data/temporada_2024/raw/calendario_offset_0000.json": {
+      "antes": "16ede12f875c4b6be9da5534131947a635a50e8eb371ad490bd1f7bf0c676bba",
+      "depois": "16ede12f875c4b6be9da5534131947a635a50e8eb371ad490bd1f7bf0c676bba"
+    },
+    "data/temporada_2024/raw/resultados_offset_0000.json": {
+      "antes": "fba9af8aef4ac7bb6b2fa4d45e5136e11950a463ec4faa114840f3c055edb81d",
+      "depois": "fba9af8aef4ac7bb6b2fa4d45e5136e11950a463ec4faa114840f3c055edb81d"
+    },
+    "data/temporada_2024/raw/resultados_offset_0100.json": {
+      "antes": "0ee83afde9842e01cffe4b5f5f4740a22143470ed45ca2c361922d13f8e90b6f",
+      "depois": "0ee83afde9842e01cffe4b5f5f4740a22143470ed45ca2c361922d13f8e90b6f"
+    },
+    "data/temporada_2024/raw/resultados_offset_0200.json": {
+      "antes": "f5334be83a8858556f796ad4a49068b2286b48177a51be2600c875dd79d5bc52",
+      "depois": "f5334be83a8858556f796ad4a49068b2286b48177a51be2600c875dd79d5bc52"
+    },
+    "data/temporada_2024/raw/resultados_offset_0300.json": {
+      "antes": "44bce2c02c18e1118dc0249682a5837880d2895996a1f5f09930429061ac83bf",
+      "depois": "44bce2c02c18e1118dc0249682a5837880d2895996a1f5f09930429061ac83bf"
+    },
+    "data/temporada_2024/raw/resultados_offset_0400.json": {
+      "antes": "d0abfa6dfc9eeeb8a7a8960500dbebef1f70b869aacdb0212e02c24727e61c58",
+      "depois": "d0abfa6dfc9eeeb8a7a8960500dbebef1f70b869aacdb0212e02c24727e61c58"
+    },
+    "data/temporada_2024/resultados_2024.csv": {
+      "antes": "430bbf311eba4a63d31d8d0a99fd5f18633d72564c90933cca252860fe77f601",
+      "depois": "430bbf311eba4a63d31d8d0a99fd5f18633d72564c90933cca252860fe77f601"
+    },
+    "data/temporada_2024/verificacao.json": {
+      "antes": "e64f351b97bb187c285fdef1dbc03ebd80644e0d3545bd700de58a71e0434366",
+      "depois": "e64f351b97bb187c285fdef1dbc03ebd80644e0d3545bd700de58a71e0434366"
+    },
+    "distribuicao/pitwall-dashboard.zip": {
+      "antes": "fc4d000d9100a7c3008d07d9b73eecbf6729e298c3590f4d72b9ea25c69d2f39",
+      "depois": "fc4d000d9100a7c3008d07d9b73eecbf6729e298c3590f4d72b9ea25c69d2f39"
+    },
+    "distribuicao/pitwall-dashboard/.gitignore": {
+      "antes": "ab0904f6cca5be3f88505e8dceedc79cd663649a89eb409fa1b3d9a37ac9d867",
+      "depois": "ab0904f6cca5be3f88505e8dceedc79cd663649a89eb409fa1b3d9a37ac9d867"
+    },
+    "distribuicao/pitwall-dashboard/.python-version": {
+      "antes": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "depois": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+    },
+    "distribuicao/pitwall-dashboard/.streamlit/config.toml": {
+      "antes": "a675aa20b4e2644b4a83078f4a3c9fcd14095e6322fc1281291dcf7cbc578e11",
+      "depois": "a675aa20b4e2644b4a83078f4a3c9fcd14095e6322fc1281291dcf7cbc578e11"
+    },
+    "distribuicao/pitwall-dashboard/ARQUIVOS_PUBLICACAO.txt": {
+      "antes": "8bafa64eba14625f2e6edc346487f693870eca56a0beaf64da354e40d3d75e67",
+      "depois": "8bafa64eba14625f2e6edc346487f693870eca56a0beaf64da354e40d3d75e67"
+    },
+    "distribuicao/pitwall-dashboard/FONTES_E_DADOS.md": {
+      "antes": "19b39db8460e037209a3c70c1e30fc4ed1ea497a777e01e717d5a7103b588cd5",
+      "depois": "19b39db8460e037209a3c70c1e30fc4ed1ea497a777e01e717d5a7103b588cd5"
+    },
+    "distribuicao/pitwall-dashboard/GUIA_HOSPEDAGEM.md": {
+      "antes": "f86f171b520f634c03b9221754b04e6beba82582e7a268280fe4d2478adc9016",
+      "depois": "f86f171b520f634c03b9221754b04e6beba82582e7a268280fe4d2478adc9016"
+    },
+    "distribuicao/pitwall-dashboard/LICENCA_CODIGO.md": {
+      "antes": "c256ec8d5e16866855d57ec231563f4f6e475bd7e2d6d3ecc482c16fd86540f5",
+      "depois": "c256ec8d5e16866855d57ec231563f4f6e475bd7e2d6d3ecc482c16fd86540f5"
+    },
+    "distribuicao/pitwall-dashboard/MANIFESTO.json": {
+      "antes": "6cf24179fc926818117901b5b8400e70c6fbea3a68f1bf87164253eae30f0683",
+      "depois": "6cf24179fc926818117901b5b8400e70c6fbea3a68f1bf87164253eae30f0683"
+    },
+    "distribuicao/pitwall-dashboard/README.md": {
+      "antes": "55de983582830efd05ecafac2fec5984223cdaa58d3bf85ccb80e286158e7347",
+      "depois": "55de983582830efd05ecafac2fec5984223cdaa58d3bf85ccb80e286158e7347"
+    },
+    "distribuicao/pitwall-dashboard/app.py": {
+      "antes": "91e12b208a5ebebbe8302148191bad10528f7e7ff158e8b4cac0204793cf0460",
+      "depois": "91e12b208a5ebebbe8302148191bad10528f7e7ff158e8b4cac0204793cf0460"
+    },
+    "distribuicao/pitwall-dashboard/dashboard_dados.py": {
+      "antes": "220bd0051d40501ccb3da961156bc936e613d8155e82f7f31a21164ef534e56e",
+      "depois": "220bd0051d40501ccb3da961156bc936e613d8155e82f7f31a21164ef534e56e"
+    },
+    "distribuicao/pitwall-dashboard/docs/avaliacao_final_v1.md": {
+      "antes": "7b67a47d1136dc02bc24236dfbf6acb8e9e4e646a6d9cb68cba09a4fc6da8983",
+      "depois": "7b67a47d1136dc02bc24236dfbf6acb8e9e4e646a6d9cb68cba09a4fc6da8983"
+    },
+    "distribuicao/pitwall-dashboard/docs/dicionario_variaveis.md": {
+      "antes": "00e68aadb984952868d10268f9d2253a8cbe110c0a625e942ee65c6837be8155",
+      "depois": "00e68aadb984952868d10268f9d2253a8cbe110c0a625e942ee65c6837be8155"
+    },
+    "distribuicao/pitwall-dashboard/docs/experimento_modelo_v1.md": {
+      "antes": "d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569",
+      "depois": "d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569"
+    },
+    "distribuicao/pitwall-dashboard/docs/protocolo_temporal.md": {
+      "antes": "1a5059356378df0564311df0ab7c2b7d97b6b279cb51cec071bc0786ffb53723",
+      "depois": "1a5059356378df0564311df0ab7c2b7d97b6b279cb51cec071bc0786ffb53723"
+    },
+    "distribuicao/pitwall-dashboard/docs/relatorio_2024.md": {
+      "antes": "cac2c223afc8f0e9266cb0347ec02f5998feb9810511162c506c08bdb480e122",
+      "depois": "cac2c223afc8f0e9266cb0347ec02f5998feb9810511162c506c08bdb480e122"
+    },
+    "distribuicao/pitwall-dashboard/documentacao_local.py": {
+      "antes": "73559a5ab957b62542e5dcb7bdfb9c8aec63857d95de2800aee90edec7491c4e",
+      "depois": "73559a5ab957b62542e5dcb7bdfb9c8aec63857d95de2800aee90edec7491c4e"
+    },
+    "distribuicao/pitwall-dashboard/reports/avaliacao_final_v1/avaliacao_corridas.csv": {
+      "antes": "9108e39138724279c3eac6335e4e29543f3eebe64ab5fd6aff70fae74bc3e40b",
+      "depois": "9108e39138724279c3eac6335e4e29543f3eebe64ab5fd6aff70fae74bc3e40b"
+    },
+    "distribuicao/pitwall-dashboard/reports/avaliacao_final_v1/avaliacao_por_piloto.csv": {
+      "antes": "85a675b69ed3a5d87007764cf52db4905ceff5211f3448c1d02a3886c2ddfdaf",
+      "depois": "85a675b69ed3a5d87007764cf52db4905ceff5211f3448c1d02a3886c2ddfdaf"
+    },
+    "distribuicao/pitwall-dashboard/reports/avaliacao_final_v1/calibracao.csv": {
+      "antes": "889c125d3fbc56ede129ece087d50cc62d671196cac89a193d86769a57e4435d",
+      "depois": "889c125d3fbc56ede129ece087d50cc62d671196cac89a193d86769a57e4435d"
+    },
+    "distribuicao/pitwall-dashboard/reports/avaliacao_final_v1/metricas.json": {
+      "antes": "89661f42559ea7c0b390a84eebef2eb394d908264f1c9de9768fc0d69dce42aa",
+      "depois": "89661f42559ea7c0b390a84eebef2eb394d908264f1c9de9768fc0d69dce42aa"
+    },
+    "distribuicao/pitwall-dashboard/reports/avaliacao_final_v1/previsoes_pre_corrida.csv": {
+      "antes": "d0c690038680896f50348e7916bb2b4dab76b8716231e6fde1576254ce49b590",
+      "depois": "d0c690038680896f50348e7916bb2b4dab76b8716231e6fde1576254ce49b590"
+    },
+    "distribuicao/pitwall-dashboard/reports/avaliacao_final_v1/relatorio.md": {
+      "antes": "2a21b3107da72f27869dce7dc9a9ccc5ab7ff1624c343444d224937f51037fc9",
+      "depois": "2a21b3107da72f27869dce7dc9a9ccc5ab7ff1624c343444d224937f51037fc9"
+    },
+    "distribuicao/pitwall-dashboard/reports/dashboard_v1/desempenho_desktop.png": {
+      "antes": "17d9d1c2bea7c78d319840da85cb3a549ccf610ab9f4f0b32f120ec90258da4b",
+      "depois": "17d9d1c2bea7c78d319840da85cb3a549ccf610ab9f4f0b32f120ec90258da4b"
+    },
+    "distribuicao/pitwall-dashboard/reports/modelo_v1/avaliacao_corridas.csv": {
+      "antes": "dec12ef6e3b1a303bc7ae6f863b02909171406776d8aac065970f417c4230d25",
+      "depois": "dec12ef6e3b1a303bc7ae6f863b02909171406776d8aac065970f417c4230d25"
+    },
+    "distribuicao/pitwall-dashboard/reports/modelo_v1/calibracao.csv": {
+      "antes": "e24c4c8461df6714c4907be47682ce324a835e551957c2fcfab6d17ae7879451",
+      "depois": "e24c4c8461df6714c4907be47682ce324a835e551957c2fcfab6d17ae7879451"
+    },
+    "distribuicao/pitwall-dashboard/reports/modelo_v1/metricas.json": {
+      "antes": "e06613f5178fecdd06e7afdccb0503ab4f277e5712c61c5cf85f193ae240686f",
+      "depois": "e06613f5178fecdd06e7afdccb0503ab4f277e5712c61c5cf85f193ae240686f"
+    },
+    "distribuicao/pitwall-dashboard/reports/modelo_v1/previsoes_validacao.csv": {
+      "antes": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "depois": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e"
+    },
+    "distribuicao/pitwall-dashboard/requirements.txt": {
+      "antes": "eee1e3667774d8e845e25b4911ed435e74ef31c986d650da09f40ac3bea56f7e",
+      "depois": "eee1e3667774d8e845e25b4911ed435e74ef31c986d650da09f40ac3bea56f7e"
+    },
+    "distribuicao/pitwall-dashboard/tests/test_dashboard_app.py": {
+      "antes": "0a4805409ea98ecfaeaeab5f015943ff1f4b06779518ca26e4cad398603a3120",
+      "depois": "0a4805409ea98ecfaeaeab5f015943ff1f4b06779518ca26e4cad398603a3120"
+    },
+    "distribuicao/pitwall-dashboard/tests/test_dashboard_dados.py": {
+      "antes": "1561b65a2993917f4667b35307a95f1d02aceb5cab06fc6e253b07554202090e",
+      "depois": "1561b65a2993917f4667b35307a95f1d02aceb5cab06fc6e253b07554202090e"
+    },
+    "distribuicao/pitwall-dashboard/tests/test_distribuicao.py": {
+      "antes": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012",
+      "depois": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012"
+    },
+    "docs/avaliacao_final_v1.md": {
+      "antes": "7b67a47d1136dc02bc24236dfbf6acb8e9e4e646a6d9cb68cba09a4fc6da8983",
+      "depois": "7b67a47d1136dc02bc24236dfbf6acb8e9e4e646a6d9cb68cba09a4fc6da8983"
+    },
+    "docs/contrato_dashboard_v1.md": {
+      "antes": "7936e2bad8f43db6515fadae0a0e9ab41b5e5e927fa3a812e03452f1c63fe2be",
+      "depois": "7936e2bad8f43db6515fadae0a0e9ab41b5e5e927fa3a812e03452f1c63fe2be"
+    },
+    "docs/dashboard_artefatos_preservados.json": {
+      "antes": "256c4489c782f2e356b39b8f08ce45139104aa56b760b77bcf8bae5ac1245cd9",
+      "depois": "256c4489c782f2e356b39b8f08ce45139104aa56b760b77bcf8bae5ac1245cd9"
+    },
+    "docs/dicionario_variaveis.md": {
+      "antes": "00e68aadb984952868d10268f9d2253a8cbe110c0a625e942ee65c6837be8155",
+      "depois": "00e68aadb984952868d10268f9d2253a8cbe110c0a625e942ee65c6837be8155"
+    },
+    "docs/distribuicao_dashboard_v1.md": {
+      "antes": "35b0e4ccee93e3253565090d34e1cc89a157fa864a9f7064575fa09ad051b975",
+      "depois": "35b0e4ccee93e3253565090d34e1cc89a157fa864a9f7064575fa09ad051b975"
+    },
+    "docs/experimento_modelo_v1.md": {
+      "antes": "d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569",
+      "depois": "d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569"
+    },
+    "docs/protocolo_temporal.md": {
+      "antes": "1a5059356378df0564311df0ab7c2b7d97b6b279cb51cec071bc0786ffb53723",
+      "depois": "1a5059356378df0564311df0ab7c2b7d97b6b279cb51cec071bc0786ffb53723"
+    },
+    "exportar_dashboard.py": {
+      "antes": "0eea9213b18dd037b80b407361460d578fbc4e3051c6814b4b1d153c570a13f0",
+      "depois": "0eea9213b18dd037b80b407361460d578fbc4e3051c6814b4b1d153c570a13f0"
+    },
+    "gerar_grafico.py": {
+      "antes": "9f687046c1c42a8fff2c39c370a1c319a9863f8ece4c8225e89364361071ce38",
+      "depois": "9f687046c1c42a8fff2c39c370a1c319a9863f8ece4c8225e89364361071ce38"
+    },
+    "models/modelo_v1/metadados.json": {
+      "antes": "77d24dc765d773e49b717b79844dd4678a91087dbbc091e3e9cb184215ea9cc6",
+      "depois": "77d24dc765d773e49b717b79844dd4678a91087dbbc091e3e9cb184215ea9cc6"
+    },
+    "models/modelo_v1/modelo.joblib": {
+      "antes": "16718ea5c4a7f662e72f09d38b073e545df1bba5c64c87b2cc1a0973ad9116e3",
+      "depois": "16718ea5c4a7f662e72f09d38b073e545df1bba5c64c87b2cc1a0973ad9116e3"
+    },
+    "preparar_historico.py": {
+      "antes": "99cd209ea41ea45c5440976e2de107375184b2ca0a13c14a24d06a106519a5f1",
+      "depois": "99cd209ea41ea45c5440976e2de107375184b2ca0a13c14a24d06a106519a5f1"
+    },
+    "projects/Pitwall Lab.md": {
+      "antes": "8389dd2c9bdf9fa02fa0296b42dd24f24d2436a83589612844ff100fa44cf77f",
+      "depois": "71689d4c23cce2fbbaf4831e4fcc8f053f1653852189c4bc0d5e2766362a8fdd"
+    },
+    "publicacao/README.md": {
+      "antes": "957736e6b0ba287950dc22ed3bf6464a33269e085509a5c164bcf85a3f8fc87f",
+      "depois": "957736e6b0ba287950dc22ed3bf6464a33269e085509a5c164bcf85a3f8fc87f"
+    },
+    "publicacao/templates/.gitignore": {
+      "antes": "ab0904f6cca5be3f88505e8dceedc79cd663649a89eb409fa1b3d9a37ac9d867",
+      "depois": "ab0904f6cca5be3f88505e8dceedc79cd663649a89eb409fa1b3d9a37ac9d867"
+    },
+    "publicacao/templates/.python-version": {
+      "antes": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "depois": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+    },
+    "publicacao/templates/FONTES_E_DADOS.md": {
+      "antes": "19b39db8460e037209a3c70c1e30fc4ed1ea497a777e01e717d5a7103b588cd5",
+      "depois": "19b39db8460e037209a3c70c1e30fc4ed1ea497a777e01e717d5a7103b588cd5"
+    },
+    "publicacao/templates/GUIA_HOSPEDAGEM.md": {
+      "antes": "f86f171b520f634c03b9221754b04e6beba82582e7a268280fe4d2478adc9016",
+      "depois": "f86f171b520f634c03b9221754b04e6beba82582e7a268280fe4d2478adc9016"
+    },
+    "publicacao/templates/LICENCA_CODIGO.md": {
+      "antes": "c256ec8d5e16866855d57ec231563f4f6e475bd7e2d6d3ecc482c16fd86540f5",
+      "depois": "c256ec8d5e16866855d57ec231563f4f6e475bd7e2d6d3ecc482c16fd86540f5"
+    },
+    "publicacao/templates/README_PUBLICO.md.tpl": {
+      "antes": "c4180c487de0c68de681b53bb2729e5c82ba8294b0cfe9c87bcb77cfb58a06c1",
+      "depois": "c4180c487de0c68de681b53bb2729e5c82ba8294b0cfe9c87bcb77cfb58a06c1"
+    },
+    "publicacao/templates/config.toml": {
+      "antes": "a675aa20b4e2644b4a83078f4a3c9fcd14095e6322fc1281291dcf7cbc578e11",
+      "depois": "a675aa20b4e2644b4a83078f4a3c9fcd14095e6322fc1281291dcf7cbc578e11"
+    },
+    "publicacao/templates/documentacao_local.py": {
+      "antes": "73559a5ab957b62542e5dcb7bdfb9c8aec63857d95de2800aee90edec7491c4e",
+      "depois": "73559a5ab957b62542e5dcb7bdfb9c8aec63857d95de2800aee90edec7491c4e"
+    },
+    "publicacao/templates/requirements.txt": {
+      "antes": "eee1e3667774d8e845e25b4911ed435e74ef31c986d650da09f40ac3bea56f7e",
+      "depois": "eee1e3667774d8e845e25b4911ed435e74ef31c986d650da09f40ac3bea56f7e"
+    },
+    "publicacao/templates/test_distribuicao.py": {
+      "antes": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012",
+      "depois": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012"
+    },
+    "reports/avaliacao_final_v1/avaliacao_corridas.csv": {
+      "antes": "9108e39138724279c3eac6335e4e29543f3eebe64ab5fd6aff70fae74bc3e40b",
+      "depois": "9108e39138724279c3eac6335e4e29543f3eebe64ab5fd6aff70fae74bc3e40b"
+    },
+    "reports/avaliacao_final_v1/avaliacao_por_piloto.csv": {
+      "antes": "85a675b69ed3a5d87007764cf52db4905ceff5211f3448c1d02a3886c2ddfdaf",
+      "depois": "85a675b69ed3a5d87007764cf52db4905ceff5211f3448c1d02a3886c2ddfdaf"
+    },
+    "reports/avaliacao_final_v1/calibracao.csv": {
+      "antes": "889c125d3fbc56ede129ece087d50cc62d671196cac89a193d86769a57e4435d",
+      "depois": "889c125d3fbc56ede129ece087d50cc62d671196cac89a193d86769a57e4435d"
+    },
+    "reports/avaliacao_final_v1/calibracao.svg": {
+      "antes": "a46563ef44049ab5b481153c43b9edd51ab88cf738df0e8db0aae9b17c41ee0b",
+      "depois": "a46563ef44049ab5b481153c43b9edd51ab88cf738df0e8db0aae9b17c41ee0b"
+    },
+    "reports/avaliacao_final_v1/cobertura_gps.csv": {
+      "antes": "85c3c54f2d032badb1e75d2a754aa13cd0b18e93e24239b878973db2cdf60270",
+      "depois": "85c3c54f2d032badb1e75d2a754aa13cd0b18e93e24239b878973db2cdf60270"
+    },
+    "reports/avaliacao_final_v1/cobertura_pilotos.csv": {
+      "antes": "c2cfe10bb59fa270646d557519cb3edd5d422f95256b9ffae1cd94761224f7b0",
+      "depois": "c2cfe10bb59fa270646d557519cb3edd5d422f95256b9ffae1cd94761224f7b0"
+    },
+    "reports/avaliacao_final_v1/comparacao_2024.json": {
+      "antes": "d9c2ca6f88a8feb2dbd4f97c40fc6d1f93cace5d66ee48e3caedba52d154a9fe",
+      "depois": "d9c2ca6f88a8feb2dbd4f97c40fc6d1f93cace5d66ee48e3caedba52d154a9fe"
+    },
+    "reports/avaliacao_final_v1/manifesto.json": {
+      "antes": "0cb7f9b548f0bb3cb640a263dffb91c7abba190e029eb43eef2efdb1ed63e7be",
+      "depois": "0cb7f9b548f0bb3cb640a263dffb91c7abba190e029eb43eef2efdb1ed63e7be"
+    },
+    "reports/avaliacao_final_v1/metricas.json": {
+      "antes": "89661f42559ea7c0b390a84eebef2eb394d908264f1c9de9768fc0d69dce42aa",
+      "depois": "89661f42559ea7c0b390a84eebef2eb394d908264f1c9de9768fc0d69dce42aa"
+    },
+    "reports/avaliacao_final_v1/previsoes_pre_corrida.csv": {
+      "antes": "d0c690038680896f50348e7916bb2b4dab76b8716231e6fde1576254ce49b590",
+      "depois": "d0c690038680896f50348e7916bb2b4dab76b8716231e6fde1576254ce49b590"
+    },
+    "reports/avaliacao_final_v1/relatorio.md": {
+      "antes": "2a21b3107da72f27869dce7dc9a9ccc5ab7ff1624c343444d224937f51037fc9",
+      "depois": "2a21b3107da72f27869dce7dc9a9ccc5ab7ff1624c343444d224937f51037fc9"
+    },
+    "reports/dashboard_v1/calibracao_desktop.png": {
+      "antes": "48a5831a079316be7a777f3802fdb403f132c16d84f8425fae90270e6a9eb841",
+      "depois": "48a5831a079316be7a777f3802fdb403f132c16d84f8425fae90270e6a9eb841"
+    },
+    "reports/dashboard_v1/como_funciona_desktop.png": {
+      "antes": "e1e252b3f7068cb95ddd86aa7a2d9219bb55b25dc6597a43ebff7fc1f0946df8",
+      "depois": "e1e252b3f7068cb95ddd86aa7a2d9219bb55b25dc6597a43ebff7fc1f0946df8"
+    },
+    "reports/dashboard_v1/desempenho_desktop.png": {
+      "antes": "17d9d1c2bea7c78d319840da85cb3a549ccf610ab9f4f0b32f120ec90258da4b",
+      "depois": "17d9d1c2bea7c78d319840da85cb3a549ccf610ab9f4f0b32f120ec90258da4b"
+    },
+    "reports/dashboard_v1/espanha_na_desktop.png": {
+      "antes": "eeeece847a1d8b7394cd43f7ef5a6444f103e3274649f3f1e63c6722241cacb7",
+      "depois": "eeeece847a1d8b7394cd43f7ef5a6444f103e3274649f3f1e63c6722241cacb7"
+    },
+    "reports/dashboard_v1/explorar_desktop.png": {
+      "antes": "6bc14755f9260b98f523ffb52038b860701d875124e565c1db5fe8981f7d3fcd",
+      "depois": "6bc14755f9260b98f523ffb52038b860701d875124e565c1db5fe8981f7d3fcd"
+    },
+    "reports/dashboard_v1/explorar_mobile.png": {
+      "antes": "054bb5195e42159866ff1c7514057c32ee6471f3c45b0b231d1e5b37852301e3",
+      "depois": "054bb5195e42159866ff1c7514057c32ee6471f3c45b0b231d1e5b37852301e3"
+    },
+    "reports/dashboard_v1/revisao_independente.json": {
+      "antes": "f9ff1a38d250e904896d66e49eb9e9de68ddcda340fb1d5bf612dc76fe00d43f",
+      "depois": "f9ff1a38d250e904896d66e49eb9e9de68ddcda340fb1d5bf612dc76fe00d43f"
+    },
+    "reports/dashboard_v1/verificacao.json": {
+      "antes": "5affc14b73bf6d6ae83276826d721fbcc565a3ad7475d754e60c666742a33311",
+      "depois": "5affc14b73bf6d6ae83276826d721fbcc565a3ad7475d754e60c666742a33311"
+    },
+    "reports/dashboard_v1/verificacao.md": {
+      "antes": "adf82adbcb8c1d2397267a4e4af23a4ce6b50076028a43556ba529c1b2a61967",
+      "depois": "adf82adbcb8c1d2397267a4e4af23a4ce6b50076028a43556ba529c1b2a61967"
+    },
+    "reports/distribuicao_dashboard_v1/calibracao_desktop.png": {
+      "antes": "48a5831a079316be7a777f3802fdb403f132c16d84f8425fae90270e6a9eb841",
+      "depois": "48a5831a079316be7a777f3802fdb403f132c16d84f8425fae90270e6a9eb841"
+    },
+    "reports/distribuicao_dashboard_v1/como_funciona_desktop.png": {
+      "antes": "b778f1d8f2feb5baa1b793ed49ee8fb4407ab7ecd0382b1f09a7e333177fc91a",
+      "depois": "b778f1d8f2feb5baa1b793ed49ee8fb4407ab7ecd0382b1f09a7e333177fc91a"
+    },
+    "reports/distribuicao_dashboard_v1/desempenho_desktop.png": {
+      "antes": "17d9d1c2bea7c78d319840da85cb3a549ccf610ab9f4f0b32f120ec90258da4b",
+      "depois": "17d9d1c2bea7c78d319840da85cb3a549ccf610ab9f4f0b32f120ec90258da4b"
+    },
+    "reports/distribuicao_dashboard_v1/espanha_na_desktop.png": {
+      "antes": "b694e9726e388e420c39494b7a90e29a68d56d2ad94f3fe678db5ce526677bfd",
+      "depois": "b694e9726e388e420c39494b7a90e29a68d56d2ad94f3fe678db5ce526677bfd"
+    },
+    "reports/distribuicao_dashboard_v1/explorar_desktop.png": {
+      "antes": "d53e596f81dee14b01a7d970322c231327fd37b7681d6fa28a007bb077e1048c",
+      "depois": "d53e596f81dee14b01a7d970322c231327fd37b7681d6fa28a007bb077e1048c"
+    },
+    "reports/distribuicao_dashboard_v1/explorar_mobile.png": {
+      "antes": "054bb5195e42159866ff1c7514057c32ee6471f3c45b0b231d1e5b37852301e3",
+      "depois": "054bb5195e42159866ff1c7514057c32ee6471f3c45b0b231d1e5b37852301e3"
+    },
+    "reports/distribuicao_dashboard_v1/probabilidades_mobile.png": {
+      "antes": "790bc1b212b0396b854fbdf4064513b79803da7f584579c9249f0657705484e8",
+      "depois": "790bc1b212b0396b854fbdf4064513b79803da7f584579c9249f0657705484e8"
+    },
+    "reports/distribuicao_dashboard_v1/revisao_independente.json": {
+      "antes": "c0a5d30d42276ee3b1c8981acccd0209ac533724f519fdd92f0ac02c16f9ea5d",
+      "depois": "c0a5d30d42276ee3b1c8981acccd0209ac533724f519fdd92f0ac02c16f9ea5d"
+    },
+    "reports/distribuicao_dashboard_v1/verificacao.json": {
+      "antes": "e15b1ccf846d0182a42fb3d5bf63ec0e99a6ee4177689d0b60c83b94d2a1607f",
+      "depois": "e15b1ccf846d0182a42fb3d5bf63ec0e99a6ee4177689d0b60c83b94d2a1607f"
+    },
+    "reports/historico/qualidade.json": {
+      "antes": "13da682c365c47a679c4cccc0b1c658e80176a852a19055fafe20cf247ea78df",
+      "depois": "13da682c365c47a679c4cccc0b1c658e80176a852a19055fafe20cf247ea78df"
+    },
+    "reports/historico/qualidade.md": {
+      "antes": "1eaa493af04c009c9a413d15bed81256b830197a3e9a2eb35d91087abd838544",
+      "depois": "1eaa493af04c009c9a413d15bed81256b830197a3e9a2eb35d91087abd838544"
+    },
+    "reports/historico/qualidade_2021.md": {
+      "antes": "d1a92c1e336686179ddd62f9df238f007491b17ce83a6431dd1dc2a07b23d28b",
+      "depois": "d1a92c1e336686179ddd62f9df238f007491b17ce83a6431dd1dc2a07b23d28b"
+    },
+    "reports/historico/qualidade_2022.md": {
+      "antes": "9320a55194a1a9f4316d1b1ca78001cbf35c1cd33d9e95f747cafbd20bfe3cfd",
+      "depois": "9320a55194a1a9f4316d1b1ca78001cbf35c1cd33d9e95f747cafbd20bfe3cfd"
+    },
+    "reports/historico/qualidade_2023.md": {
+      "antes": "e6386b7642747066204dd635d17b3c1bea2da4327a0091d572a76468926736a0",
+      "depois": "e6386b7642747066204dd635d17b3c1bea2da4327a0091d572a76468926736a0"
+    },
+    "reports/historico/qualidade_2024.md": {
+      "antes": "d4e24ba71588c3945a1dd4976b851117bdeabe84eba962509478a7af41444d02",
+      "depois": "d4e24ba71588c3945a1dd4976b851117bdeabe84eba962509478a7af41444d02"
+    },
+    "reports/historico/qualidade_2025.md": {
+      "antes": "e0dbb0605764bfbd86b3c13a51b58cae763bd9928dd655e60a64c618f59c8df9",
+      "depois": "e0dbb0605764bfbd86b3c13a51b58cae763bd9928dd655e60a64c618f59c8df9"
+    },
+    "reports/historico/revisao_etapa3.md": {
+      "antes": "7623c8fa8965d55c16638f6a7149783e7d1ac81678b2a96edf626133df1fb08c",
+      "depois": "7623c8fa8965d55c16638f6a7149783e7d1ac81678b2a96edf626133df1fb08c"
+    },
+    "reports/largada_vs_resultado_sp2024.html": {
+      "antes": "4b3458da4815577226fa9ea8b9ad060aa6586ec24b0caa02e7380db30e73387e",
+      "depois": "4b3458da4815577226fa9ea8b9ad060aa6586ec24b0caa02e7380db30e73387e"
+    },
+    "reports/largada_vs_resultado_sp2024.svg": {
+      "antes": "1462446ee6d7347c38ceabc51fbcad97175ca55e72f1eedeb204bb2e6b531df1",
+      "depois": "1462446ee6d7347c38ceabc51fbcad97175ca55e72f1eedeb204bb2e6b531df1"
+    },
+    "reports/modelo_v1/avaliacao_corridas.csv": {
+      "antes": "dec12ef6e3b1a303bc7ae6f863b02909171406776d8aac065970f417c4230d25",
+      "depois": "dec12ef6e3b1a303bc7ae6f863b02909171406776d8aac065970f417c4230d25"
+    },
+    "reports/modelo_v1/calibracao.csv": {
+      "antes": "e24c4c8461df6714c4907be47682ce324a835e551957c2fcfab6d17ae7879451",
+      "depois": "e24c4c8461df6714c4907be47682ce324a835e551957c2fcfab6d17ae7879451"
+    },
+    "reports/modelo_v1/calibracao.svg": {
+      "antes": "5afc6d28e2dd72f1c0b9fdb77a7d58771307d80436130bba906cf5896442375f",
+      "depois": "5afc6d28e2dd72f1c0b9fdb77a7d58771307d80436130bba906cf5896442375f"
+    },
+    "reports/modelo_v1/cobertura_treino.csv": {
+      "antes": "1cc955894269c4b6d4cfdd3b33101423e100d7159ccb5de4ff665fe05f876fe7",
+      "depois": "1cc955894269c4b6d4cfdd3b33101423e100d7159ccb5de4ff665fe05f876fe7"
+    },
+    "reports/modelo_v1/coeficientes.csv": {
+      "antes": "f07384e34c625e1139eed28d24547250028d252073e7fdca92ad507a0f40606a",
+      "depois": "f07384e34c625e1139eed28d24547250028d252073e7fdca92ad507a0f40606a"
+    },
+    "reports/modelo_v1/metricas.json": {
+      "antes": "e06613f5178fecdd06e7afdccb0503ab4f277e5712c61c5cf85f193ae240686f",
+      "depois": "e06613f5178fecdd06e7afdccb0503ab4f277e5712c61c5cf85f193ae240686f"
+    },
+    "reports/modelo_v1/previsoes_validacao.csv": {
+      "antes": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "depois": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e"
+    },
+    "reports/modelo_v1/relatorio.md": {
+      "antes": "d8f222555f086b967735bdcba976b83e6944681a9911772450a2d6a509ca7c0e",
+      "depois": "d8f222555f086b967735bdcba976b83e6944681a9911772450a2d6a509ca7c0e"
+    },
+    "reports/modelo_v1/revisao_independente.json": {
+      "antes": "5630496a66e35f528a870d669be8f9928c8921e5217e66be1e69c5dbaf0eb98e",
+      "depois": "5630496a66e35f528a870d669be8f9928c8921e5217e66be1e69c5dbaf0eb98e"
+    },
+    "reports/modelo_v1/revisao_independente.md": {
+      "antes": "db8567c1a1eb0cbeca813a3344ebb02704efb9cb75bac5eac367d584188b013f",
+      "depois": "db8567c1a1eb0cbeca813a3344ebb02704efb9cb75bac5eac367d584188b013f"
+    },
+    "reports/revisao_final_v1.json": {
+      "antes": "90192da3267f3aa496c8a4846dc14040896699b5771d6c4ea139c63448f68828",
+      "depois": "90192da3267f3aa496c8a4846dc14040896699b5771d6c4ea139c63448f68828"
+    },
+    "reports/revisao_final_v1.md": {
+      "antes": "13387e6a7ffdfefe95be0893b118ab4e7dc64d0b46de253b75a310509cfafa48",
+      "depois": "13387e6a7ffdfefe95be0893b118ab4e7dc64d0b46de253b75a310509cfafa48"
+    },
+    "reports/temporada_2024/acertos_por_corrida.svg": {
+      "antes": "c62183498a562599a5da6f4f9def185f0846e7b787ddc02dc4c8ce1940caa899",
+      "depois": "c62183498a562599a5da6f4f9def185f0846e7b787ddc02dc4c8ce1940caa899"
+    },
+    "reports/temporada_2024/avaliacao_por_corrida.csv": {
+      "antes": "40f8d5508730d8f13bdc09133940a5c47a45f56102eadce64742c96c3220695f",
+      "depois": "40f8d5508730d8f13bdc09133940a5c47a45f56102eadce64742c96c3220695f"
+    },
+    "reports/temporada_2024/distribuicao_acertos.svg": {
+      "antes": "6b2f149d3f99e8321ee5efc7ff149f4f69f27f8dcf2f80844dcfd11e832b0f3a",
+      "depois": "6b2f149d3f99e8321ee5efc7ff149f4f69f27f8dcf2f80844dcfd11e832b0f3a"
+    },
+    "reports/temporada_2024/frequencia_grid.csv": {
+      "antes": "c95035a8aa1096ecd777088e1da7d27bb429ae13ab551b87680362304c7a7341",
+      "depois": "c95035a8aa1096ecd777088e1da7d27bb429ae13ab551b87680362304c7a7341"
+    },
+    "reports/temporada_2024/frequencia_grid.svg": {
+      "antes": "6c8285bcb4011fb0554c1dd454d9788295d2fe9dcd945317e5caffb7f89f73c9",
+      "depois": "6c8285bcb4011fb0554c1dd454d9788295d2fe9dcd945317e5caffb7f89f73c9"
+    },
+    "reports/temporada_2024/previa.html": {
+      "antes": "f2e60217d5b1b2cea9dced89d6ef9a022669e25ad797b770554647cfb656521b",
+      "depois": "f2e60217d5b1b2cea9dced89d6ef9a022669e25ad797b770554647cfb656521b"
+    },
+    "reports/temporada_2024/relatorio.md": {
+      "antes": "5ee9b8cee0f93405f6c7140e6b80ea8bd4967412bf347266ad2761d073d0c979",
+      "depois": "5ee9b8cee0f93405f6c7140e6b80ea8bd4967412bf347266ad2761d073d0c979"
+    },
+    "reports/temporada_2024/resumo.json": {
+      "antes": "f1584363eaf21665cecf775ed2e8342c81ba53801e7b14a919aba5c077d0ab92",
+      "depois": "f1584363eaf21665cecf775ed2e8342c81ba53801e7b14a919aba5c077d0ab92"
+    },
+    "reports/verificacao_final_v1.json": {
+      "antes": "dc467147ccf19868f9847ecad47df69f045bb81a0a134dc6555cd18f516451bd",
+      "depois": "dc467147ccf19868f9847ecad47df69f045bb81a0a134dc6555cd18f516451bd"
+    },
+    "requirements_dashboard.txt": {
+      "antes": "9490a2ec61c3ea36b0fe546569fefa6f9030b6be6b2f52a00f1d0e366be6b0dc",
+      "depois": "9490a2ec61c3ea36b0fe546569fefa6f9030b6be6b2f52a00f1d0e366be6b0dc"
+    },
+    "requirements_modelo_v1.txt": {
+      "antes": "1e63b187c8935c501fd8bb9a9be7691f2c58b4b9c8a2f602a3b02c32692d72c8",
+      "depois": "1e63b187c8935c501fd8bb9a9be7691f2c58b4b9c8a2f602a3b02c32692d72c8"
+    },
+    "tests/test_avaliacao_final_v1.py": {
+      "antes": "9da99ceff7d4560badd3870912b25dec620cf62c167944c406d3bb54c2c36e3a",
+      "depois": "9da99ceff7d4560badd3870912b25dec620cf62c167944c406d3bb54c2c36e3a"
+    },
+    "tests/test_calibracao_svg.py": {
+      "antes": "46abf3b9569bbd7766e050dfd0a55cdbe15689c7a07e30495c4f6784dc44dad3",
+      "depois": "46abf3b9569bbd7766e050dfd0a55cdbe15689c7a07e30495c4f6784dc44dad3"
+    },
+    "tests/test_coletar_historico.py": {
+      "antes": "d769782d1cec01129f36254ab9a5387e9e730db2022126afe641703d48ef6084",
+      "depois": "d769782d1cec01129f36254ab9a5387e9e730db2022126afe641703d48ef6084"
+    },
+    "tests/test_coletar_resultados.py": {
+      "antes": "fa33778686b56ac585a200a7e99a37f32d0a86c26873b13c7d1cf98557909573",
+      "depois": "fa33778686b56ac585a200a7e99a37f32d0a86c26873b13c7d1cf98557909573"
+    },
+    "tests/test_dashboard_app.py": {
+      "antes": "c4d2c881eb79acc9b62b764e8e9e84b699eeb4cc98f656cee9bdad9ed78099c9",
+      "depois": "c4d2c881eb79acc9b62b764e8e9e84b699eeb4cc98f656cee9bdad9ed78099c9"
+    },
+    "tests/test_dashboard_dados.py": {
+      "antes": "1561b65a2993917f4667b35307a95f1d02aceb5cab06fc6e253b07554202090e",
+      "depois": "1561b65a2993917f4667b35307a95f1d02aceb5cab06fc6e253b07554202090e"
+    },
+    "tests/test_desempates_modelo_v1.py": {
+      "antes": "9c925fce6ab4aa186a9b427d44fa30723fee90c1af3bca317aaba8df222cc5bf",
+      "depois": "9c925fce6ab4aa186a9b427d44fa30723fee90c1af3bca317aaba8df222cc5bf"
+    },
+    "tests/test_exportar_dashboard.py": {
+      "antes": "d0fae1a2d1af35441e1d139ba4bcd48eccb40a4d70636e5e05f8928f2b0c27cc",
+      "depois": "d0fae1a2d1af35441e1d139ba4bcd48eccb40a4d70636e5e05f8928f2b0c27cc"
+    },
+    "tests/test_exportar_hachuras.py": {
+      "antes": "9510f9b12bb7b0c88d864a3de56b6d14fc3f4a817033be754bd133122e1b876d",
+      "depois": "9510f9b12bb7b0c88d864a3de56b6d14fc3f4a817033be754bd133122e1b876d"
+    },
+    "tests/test_gerar_grafico.py": {
+      "antes": "d9c2018410ec979fa69d406ca37069be8ca19c6e427691c1ce66d56746570bc0",
+      "depois": "d9c2018410ec979fa69d406ca37069be8ca19c6e427691c1ce66d56746570bc0"
+    },
+    "tests/test_modelo_v1.py": {
+      "antes": "70e5df49a0f45cd6e5bc26a0431b9ce8d98a1ab24414ede88ab9457d91702fbb",
+      "depois": "70e5df49a0f45cd6e5bc26a0431b9ce8d98a1ab24414ede88ab9457d91702fbb"
+    },
+    "tests/test_preparar_historico.py": {
+      "antes": "fdcad787a72287f562dc0b9a5f94f50a886c3c9191f66264143496d168ce6bbf",
+      "depois": "fdcad787a72287f562dc0b9a5f94f50a886c3c9191f66264143496d168ce6bbf"
+    },
+    "tests/test_regressoes_astra.py": {
+      "antes": "7e7f06087f937bf3cf58f3cd203f3fd477337964a02e88332480bb07720abee0",
+      "depois": "7e7f06087f937bf3cf58f3cd203f3fd477337964a02e88332480bb07720abee0"
+    },
+    "tests/test_temporada.py": {
+      "antes": "b84170a6e39dc012aa59a3a36de601ea10279f714a39de343e78f8c119f2b261",
+      "depois": "b84170a6e39dc012aa59a3a36de601ea10279f714a39de343e78f8c119f2b261"
+    },
+    "tests/test_validacao_respostas.py": {
+      "antes": "00243229bf64292041cd5583c030f00cd28aaac035a1510107b50075508b110a",
+      "depois": "00243229bf64292041cd5583c030f00cd28aaac035a1510107b50075508b110a"
+    },
+    "treinar_modelo_v1.py": {
+      "antes": "cdf1c2ea005f36f032ebd1694786e9118ae343a282172fafb748cbf5c2294de3",
+      "depois": "cdf1c2ea005f36f032ebd1694786e9118ae343a282172fafb748cbf5c2294de3"
+    }
+  },
+  "verificado_utc": "2026-10-20T02:35:50.932196+00:00"
+}

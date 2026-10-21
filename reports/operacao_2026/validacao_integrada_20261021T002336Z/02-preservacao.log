@@ -1,0 +1,43 @@
+{
+  "utc": "2026-10-21T00:25:13.146086+00:00",
+  "reference_commit": "b067ad55dd97d964b132129838773cf6108773e3",
+  "tracked_unchanged_count": 286,
+  "intentional_document_changes": [
+    {
+      "path": "README.md",
+      "git_oid_original": "477be25392b0cf4bc786daaf9003fa39d55e819b",
+      "igual_ao_commit": false
+    },
+    {
+      "path": "projects/Pitwall Lab.md",
+      "git_oid_original": "0fdb8ed3ee7702680b6c9ea886424e1569c5b1ee",
+      "igual_ao_commit": false
+    }
+  ],
+  "unexpected_changes": [],
+  "manifest68_anchored_in_base_commit": true,
+  "snapshot_files_checked": 60,
+  "rehearsal_files_checked": 72,
+  "new_code_docs_without_historical_immutable_reference": [
+    "operar_2026.py",
+    "operacao2026/__init__.py",
+    "operacao2026/fontes.py",
+    "operacao2026/previsao.py",
+    "tests/test_operacao_2026.py",
+    "tests/test_operacao_2026_fluxo.py",
+    "tests/test_operacao_2026_fontes.py",
+    "tests/test_operacao_2026_integracao.py",
+    "tests/test_operacao_2026_paginacao.py",
+    "tests/test_operacao_2026_r1.py",
+    "tests/test_operacao_2026_r2.py",
+    "tests/test_operacao_2026_r3.py",
+    "docs/estado_hermes.md",
+    "docs/comandos_operacao_2026.md",
+    "docs/fontes_operacao_2026.md"
+  ],
+  "limitations": [
+    "Código/testes/documentação novos da etapa8 não possuem baseline histórico imutável nesta validação; alterações intencionais não são falhas de preservação de artefatos congelados.",
+    "Hashes dos manifestos/índices calculados agora identificam a referência usada, NÃO reconstroem prova de seu estado passado. Manifestos locais não são prova externa imutável."
+  ],
+  "all_preservation_checks_passed": true
+}

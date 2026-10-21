@@ -1,0 +1,28 @@
+[
+  {
+    "session_id": "pitwall-r4-19339920866b4517b17bd32dee96b77d",
+    "model": "gpt-6-astra",
+    "billing_provider": "openai-codex",
+    "task": "title_generation",
+    "api_call_count": 1,
+    "billing_mode": "",
+    "input_tokens": 464,
+    "output_tokens": 20,
+    "estimated_cost_usd": 0.0,
+    "actual_cost_usd": 0.0,
+    "cost_status": null
+  },
+  {
+    "session_id": "pitwall-r4-19339920866b4517b17bd32dee96b77d",
+    "model": "gpt-6-astra",
+    "billing_provider": "openai-codex",
+    "task": "",
+    "api_call_count": 1,
+    "billing_mode": "subscription_included",
+    "input_tokens": 15238,
+    "output_tokens": 1059,
+    "estimated_cost_usd": 0.0,
+    "actual_cost_usd": 0.0,
+    "cost_status": "included"
+  }
+]
