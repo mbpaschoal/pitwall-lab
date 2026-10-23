@@ -46,6 +46,11 @@ def carregar_asset(raiz):
         for campo in ('estado_qualificacao', 'estado_previsao', 'estado_resultado'):
             if corrida.get(campo) not in ('indisponivel', 'local_disponivel', 'ensaio_retrospectivo', 'observado_local'):
                 raise RaceWeekendDadosErro('Asset Race Weekend com estado inválido: {}.'.format(campo))
+        for campo in ('corrida', 'cidade', 'pais', 'data'):
+            if not isinstance(corrida.get(campo), str) or not corrida[campo]:
+                raise RaceWeekendDadosErro('Asset Race Weekend sem contexto do GP: {}.'.format(campo))
+        if corrida.get('estado_operacao') not in ('aguardando_dados', 'classificacao_disponivel', 'previsao_registrada'):
+            raise RaceWeekendDadosErro('Asset Race Weekend com estado operacional inválido.')
     for item in previsoes:
         if not isinstance(item, dict) or item.get('temporada') != 2026 or not isinstance(item.get('rodada'), int) or not item.get('piloto_id'):
             raise RaceWeekendDadosErro('Asset Race Weekend com participante 2026 inválido.')

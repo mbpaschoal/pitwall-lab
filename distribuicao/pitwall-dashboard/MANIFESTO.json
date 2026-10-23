@@ -18,14 +18,14 @@
       "caminho": ".streamlit/config.toml",
       "fonte": "publicacao/templates/config.toml",
       "modo": "gerado",
-      "sha256_destino": "a675aa20b4e2644b4a83078f4a3c9fcd14095e6322fc1281291dcf7cbc578e11",
-      "sha256_origem": "a675aa20b4e2644b4a83078f4a3c9fcd14095e6322fc1281291dcf7cbc578e11"
+      "sha256_destino": "0a8192c9b084ef5bf69f64798779f750aba9af7c531bda764e23a90a614394f8",
+      "sha256_origem": "0a8192c9b084ef5bf69f64798779f750aba9af7c531bda764e23a90a614394f8"
     },
     {
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "72da943753afb6710bc2e9787d7e792283f6039c2da93f75ef45d2ebb8c0e2af",
+      "sha256_destino": "c112e9e358f086bc093ef2d4ded66a5aeb2314a79b211d5fded24973ff110725",
       "sha256_origem": null
     },
     {
@@ -53,44 +53,51 @@
       "caminho": "README.md",
       "fonte": "publicacao/templates/README_PUBLICO.md.tpl",
       "modo": "gerado",
-      "sha256_destino": "c5c9bf9dc832285a8aafb103af68a1976b86bf0f09ba4e798735771c000ed93b",
-      "sha256_origem": "c5c9bf9dc832285a8aafb103af68a1976b86bf0f09ba4e798735771c000ed93b"
+      "sha256_destino": "8d11e4a077ac4986d737937cf900433fa7e18aba8e9c65a9fc015835003b30bc",
+      "sha256_origem": "8d11e4a077ac4986d737937cf900433fa7e18aba8e9c65a9fc015835003b30bc"
     },
     {
       "caminho": "app.py",
       "fonte": "app.py",
       "modo": "gerado",
       "nota": "viewer offline inserido na UI Race Weekend do working tree",
-      "sha256_destino": "4800932e04c6975890d5692b13ac98752d0cabd063e94e2637369d88d814805d",
-      "sha256_origem": "4e7e1e4d3f67f280c037880d4c3805e98cab0dd2b2f47c04cf899bf5d6e3672c"
+      "sha256_destino": "e259a72d5cf686e755091539cabbf79723ddaeb15f06df23d512da8bfc9499e5",
+      "sha256_origem": "3d0bbd454844cf3f35d68dcb635ceac67ce03dc3d78681019d115fe9d6803caf"
     },
     {
-      "caminho": "dashboard_assets/fonts/saira-OFL.txt",
-      "fonte": "dashboard_assets/fonts/saira-OFL.txt",
+      "caminho": "dashboard_assets/fonts/abrilfatface-OFL.txt",
+      "fonte": "dashboard_assets/fonts/abrilfatface-OFL.txt",
       "modo": "copia",
-      "sha256_destino": "f2665d4718b452b3818a877191355ac884a6b9b419d35408fe7ee487e9e8f30f",
-      "sha256_origem": "f2665d4718b452b3818a877191355ac884a6b9b419d35408fe7ee487e9e8f30f"
+      "sha256_destino": "aba8997e16b1e3888c6e855ba883c70d96bd4375bff8cb9c7ce0f097200f74b8",
+      "sha256_origem": "aba8997e16b1e3888c6e855ba883c70d96bd4375bff8cb9c7ce0f097200f74b8"
     },
     {
-      "caminho": "dashboard_assets/fonts/saira.ttf",
-      "fonte": "dashboard_assets/fonts/saira.ttf",
+      "caminho": "dashboard_assets/fonts/abrilfatface.ttf",
+      "fonte": "dashboard_assets/fonts/abrilfatface.ttf",
       "modo": "copia",
-      "sha256_destino": "9d050fc5a01c85f74c4257c207d50b55d1e40c37308c642f974a2c5003231dde",
-      "sha256_origem": "9d050fc5a01c85f74c4257c207d50b55d1e40c37308c642f974a2c5003231dde"
+      "sha256_destino": "5971d4a3758a922a9fedc7f6fb825a96341a2e718c45a4b2c9a6b417c8c4dbe9",
+      "sha256_origem": "5971d4a3758a922a9fedc7f6fb825a96341a2e718c45a4b2c9a6b417c8c4dbe9"
     },
     {
-      "caminho": "dashboard_assets/fonts/sourcesans3-OFL.txt",
-      "fonte": "dashboard_assets/fonts/sourcesans3-OFL.txt",
+      "caminho": "dashboard_assets/fonts/lato-OFL.txt",
+      "fonte": "dashboard_assets/fonts/lato-OFL.txt",
       "modo": "copia",
-      "sha256_destino": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
-      "sha256_origem": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+      "sha256_destino": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e",
+      "sha256_origem": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
     },
     {
-      "caminho": "dashboard_assets/fonts/sourcesans3.ttf",
-      "fonte": "dashboard_assets/fonts/sourcesans3.ttf",
+      "caminho": "dashboard_assets/fonts/lato-bold.ttf",
+      "fonte": "dashboard_assets/fonts/lato-bold.ttf",
       "modo": "copia",
-      "sha256_destino": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
-      "sha256_origem": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9"
+      "sha256_destino": "8a0aace75d33794eece4b28187bfc1df0bbd2888b5d8a56e01788c8d65d16be1",
+      "sha256_origem": "8a0aace75d33794eece4b28187bfc1df0bbd2888b5d8a56e01788c8d65d16be1"
+    },
+    {
+      "caminho": "dashboard_assets/fonts/lato.ttf",
+      "fonte": "dashboard_assets/fonts/lato.ttf",
+      "modo": "copia",
+      "sha256_destino": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251",
+      "sha256_origem": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
     },
     {
       "caminho": "dashboard_dados.py",
@@ -146,15 +153,15 @@
       "caminho": "frontend_assets/race_weekend.json",
       "fonte": "frontend_assets/race_weekend.json",
       "modo": "copia",
-      "sha256_destino": "c233ecfef2e4de6fb310ea9ac887d07e7fc120ce9b8704c85aae9edb8955bdc0",
-      "sha256_origem": "c233ecfef2e4de6fb310ea9ac887d07e7fc120ce9b8704c85aae9edb8955bdc0"
+      "sha256_destino": "0d1d60643d70b5e30f0a87b35b84f6b768cb15b93a6dfd530825a5fda952f406",
+      "sha256_origem": "0d1d60643d70b5e30f0a87b35b84f6b768cb15b93a6dfd530825a5fda952f406"
     },
     {
       "caminho": "race_weekend_dados.py",
       "fonte": "race_weekend_dados.py",
       "modo": "copia",
-      "sha256_destino": "054245810dc79230f4a8af8256ae59f4b043296230066f6472a75b80c3439619",
-      "sha256_origem": "054245810dc79230f4a8af8256ae59f4b043296230066f6472a75b80c3439619"
+      "sha256_destino": "ea0d588d82060ec64b2f26e03e6ec0c349f6aab7e0f69d88ba495560a398a6a7",
+      "sha256_origem": "ea0d588d82060ec64b2f26e03e6ec0c349f6aab7e0f69d88ba495560a398a6a7"
     },
     {
       "caminho": "reports/avaliacao_final_v1/avaliacao_corridas.csv",
@@ -238,8 +245,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "dfe446540085e2e6ab48766c8e13e7297e2f889960332033e4f233b73fcb2ac7",
-      "sha256_origem": "d219633876749abceaccf38c9fcd06d73a69f251ff644f1513ed4da774b37232"
+      "sha256_destino": "9b54857463bbf5e757acbbae8fbdc5ffa24a48285da7e507cd7108b14e87bb27",
+      "sha256_origem": "a07d65ee36cdc0c3dc2a0e9fde99f1d794d9d182ec9c31fb2001e30dbbab2a7c"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -274,11 +281,11 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "3801074d631463ea04a641f7c72e072b511ecbd8734d703913b3113575710a46"
+      "sha256": "3cb962d233b7263b2db0f5feb674ebcdfb9281a5b055acea41ebb95bb05a3385"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
-      "sha256": "c5c9bf9dc832285a8aafb103af68a1976b86bf0f09ba4e798735771c000ed93b"
+      "sha256": "8d11e4a077ac4986d737937cf900433fa7e18aba8e9c65a9fc015835003b30bc"
     },
     {
       "caminho": "publicacao/templates/FONTES_E_DADOS.md",
@@ -294,7 +301,7 @@
     },
     {
       "caminho": "publicacao/templates/config.toml",
-      "sha256": "a675aa20b4e2644b4a83078f4a3c9fcd14095e6322fc1281291dcf7cbc578e11"
+      "sha256": "0a8192c9b084ef5bf69f64798779f750aba9af7c531bda764e23a90a614394f8"
     },
     {
       "caminho": "publicacao/templates/requirements.txt",

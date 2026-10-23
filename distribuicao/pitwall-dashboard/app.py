@@ -1,6 +1,7 @@
 """Dashboard local, somente leitura, do estudo retrospectivo Pitwall Lab."""
 import os
 import base64
+from html import escape
 from pathlib import Path
 
 import pandas as pd
@@ -26,8 +27,8 @@ from documentacao_local import renderizar_documentacao_local
 
 RAIZ_PADRAO = Path(__file__).resolve().parent
 CORES = {
-    'fundo': '#F4F7FB', 'superficie': '#FFFFFF', 'texto': '#183153',
-    'acento': '#E53935', 'modelo': '#2475EF', 'classificacao': '#183153', 'neutro': '#B7BEC8',
+    'fundo': '#F2F6FA', 'superficie': '#FFFFFF', 'texto': '#132B4F',
+    'acento': '#D62732', 'modelo': '#2475EF', 'classificacao': '#132B4F', 'neutro': '#B7BEC8',
 }
 CORES_EQUIPE = {
     'ferrari': '#E53935', 'red_bull': '#183153', 'mercedes': '#00A19B',
@@ -103,37 +104,91 @@ def conteudo_markdown(atual):
     return '<div class="nota-retrospectiva">Estudo retrospectivo com dados históricos.</div>'
 
 
-def aplicar_estilo():
+def estilo_dashboard():
     fontes = raiz_artefatos() / 'dashboard_assets' / 'fonts'
     def fonte(nome, formato):
         try:
             return 'data:{};base64,{}'.format(formato, base64.b64encode((fontes / nome).read_bytes()).decode('ascii'))
         except OSError:
             return ''
-    st.markdown(
-        '''
+    return '''
         <style>
-        @font-face { font-family: SairaLocal; src: url("%s") format("truetype"); }
-        @font-face { font-family: SourceSansLocal; src: url("%s") format("truetype"); }
-        .stApp { background: #F4F7FB; color: #183153; font-family: SourceSansLocal, Arial, sans-serif; }
-        [data-testid="stSidebar"] { background: #FFFFFF; border-right: 2px solid #183153; }
-        [data-testid="stSidebar"] > div { padding-top: 1rem; }
-        .pitwall-wordmark, h1, h2, h3 { font-family: SairaLocal, Arial, sans-serif; color: #183153; letter-spacing: -.02em; }
-        .pitwall-wordmark { font-size: 1.45rem; font-weight: 800; margin: 0 0 .15rem; }.pitwall-wordmark span { color: #E53935; }
-        .sidebar-caption { color: #183153; font-size: .85rem; margin-bottom: 1.25rem; }
-        .nota-retrospectiva { border-left: 4px solid #E53935; background: #FFFFFF; padding: .7rem .9rem; margin: .1rem 0 1.2rem; font-weight: 650; }
-        .secao-rotulo { color: #183153; font-size: .9rem; font-weight: 700; }
-        .stMetric { background: #FFFFFF; border: 1px solid #B7BEC8; padding: .55rem .75rem; border-radius: .2rem; }
-        .stDataFrame { border: 1px solid #B7BEC8; }
-        *:focus-visible { outline: 3px solid #2475EF !important; outline-offset: 2px; }
+        @font-face { font-family: AbrilFatfaceLocal; src: url("%s") format("truetype"); }
+        @font-face { font-family: LatoLocal; src: url("%s") format("truetype"); font-weight: 400; }
+        @font-face { font-family: LatoLocal; src: url("%s") format("truetype"); font-weight: 700; }
+        .stApp { background: #F2F6FA; color: #132B4F; font-family: LatoLocal, Arial, sans-serif; }
+        .stApp *, [data-testid="stSidebar"] * { font-family: LatoLocal, Arial, sans-serif; }
+        [data-testid="stIconMaterial"] { font-family: "Material Symbols Rounded" !important; }
+        [data-testid="stSidebar"] { background: #FFFFFF; border-right: 1px solid #D8E0E9; min-width: 15.25rem; max-width: 15.25rem; }
+        [data-testid="stSidebar"] > div { padding-top: 1.2rem; }
+        .main .block-container { max-width: 78rem; padding-top: 1.7rem; padding-bottom: 3rem; }
+        h1 { border-left: 4px solid #D62732; font-family: AbrilFatfaceLocal, Georgia, serif !important; color: #132B4F; font-size: 3.45rem !important; font-weight: 400; letter-spacing: .01em; line-height: 1.02; padding-left: 1rem; }
+        h2, h3 { color: #132B4F; font-weight: 700; letter-spacing: -.01em; }
+        .sidebar-title { font-family: AbrilFatfaceLocal, Georgia, serif !important; color: #132B4F; font-size: 1.7rem; line-height: 1; margin: 0 0 .35rem; }
+        .sidebar-caption { color: #526983; font-size: .84rem; line-height: 1.45; margin-bottom: 1.5rem; }
+        .nota-retrospectiva { border-left: 3px solid #D62732; background: transparent; padding: .2rem 0 .2rem .75rem; margin: .15rem 0 1.4rem; color: #36516F; font-weight: 700; }
+        .secao-rotulo { color: #D62732; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+        .gp-meta { color: #526983; font-size: .96rem; margin: -.35rem 0 1.1rem; }
+        .estado-operacao { color: #132B4F; font-weight: 700; }
+        .gp-cabecalho { align-items: flex-start; border-bottom: 1px solid #D8E0E9; display: flex; gap: 1.2rem; justify-content: space-between; margin: .45rem 0 1.1rem; padding-bottom: 1.1rem; }
+        .gp-cabecalho h1 { margin: 0; }
+        .gp-status { background: #E9EEF4; color: #132B4F; font-size: .78rem; font-weight: 700; margin-top: .5rem; padding: .38rem .68rem; white-space: nowrap; }
+        .gp-status::before { background: #D62732; border-radius: 50%%; content: ""; display: inline-block; height: .38rem; margin-right: .4rem; width: .38rem; }
+        .contexto-circuito { border-top: 1px solid #D8E0E9; border-bottom: 1px solid #D8E0E9; margin: .35rem 0 1.35rem; padding: 1.35rem 0; }
+        .circuito-rotulo { color: #D62732; font-size: .72rem; font-weight: 700; letter-spacing: .1em; margin: 0 0 .25rem; text-transform: uppercase; }
+        .circuito-nome { color: #132B4F; font-size: 1.45rem; font-weight: 700; margin: 0; }
+        .tracado-indisponivel { color: #526983; font-size: .86rem; margin: .45rem 0 0; }
+        .ficha-gp { border-left: 3px solid #D62732; padding-left: .85rem; }
+        .ficha-gp p { margin: .16rem 0; }
+        .ficha-gp strong { color: #132B4F; }
+        .circuito-linha { display: block; height: 118px; max-width: 100%%; width: 100%%; }
+        .condicoes-disponiveis { border-top: 1px solid #D8E0E9; margin-top: .4rem; padding-top: .85rem; }
+        .condicoes-disponiveis p { color: #526983; margin: .25rem 0; }
+        .tabela-editorial { overflow-x: auto; }
+        .tabela-editorial table { border-collapse: collapse; font-size: .84rem; width: 100%%; }
+        .tabela-editorial th { border-bottom: 1px solid #AFC0D2; color: #526983; font-size: .68rem; letter-spacing: .06em; padding: .35rem .25rem; text-align: left; text-transform: uppercase; }
+        .tabela-editorial td { border-bottom: 1px solid #D8E0E9; padding: .44rem .25rem; vertical-align: middle; }
+        .tabela-editorial .numero { text-align: right; white-space: nowrap; }
+        .barra-equipe { display: inline-block; height: 1.05rem; margin-right: .38rem; vertical-align: middle; width: .22rem; }
+        .tabela-legenda { color: #526983; font-size: .78rem; margin: .25rem 0 .6rem; }
+        [data-baseweb="tab-list"] { border-bottom: 1px solid #D8E0E9; gap: 1.25rem; }
+        button[data-baseweb="tab"] { background: transparent !important; color: #526983 !important; font-size: .85rem !important; font-weight: 700 !important; padding: .45rem 0 !important; }
+        button[data-baseweb="tab"][aria-selected="true"] { border-bottom: 3px solid #D62732 !important; color: #132B4F !important; }
+        .stMetric { background: #FFFFFF; border: 1px solid #D8E0E9; border-radius: 0; padding: .55rem .75rem; }
+        .stDataFrame { border: 1px solid #D8E0E9; }
+        [data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"] { color: #D62732; font-weight: 700; }
+        [data-testid="stSidebar"] [data-testid="stSelectbox"] > div { border-radius: 0; }
+        *:focus-visible { outline: 3px solid #D62732 !important; outline-offset: 2px; }
         @media (max-width: 700px) {
-          [data-testid="stMetric"] { min-width: 0; }
-          .main .block-container { padding-left: .8rem; padding-right: .8rem; }
+          [data-testid="stMetric"] { min-width: 0; padding: .45rem .55rem; }
+          .main .block-container { padding-left: .9rem; padding-right: .9rem; }
+          h1 { font-size: 2.2rem !important; line-height: 1.04; }
+          .gp-cabecalho { gap: .7rem; }
+          .gp-status { font-size: .72rem; padding: .3rem .5rem; }
+          [data-testid="stSidebar"] { min-width: auto; max-width: none; }
+          [data-baseweb="tab-list"] { gap: .7rem; overflow-x: auto; }
         }
         </style>
-        ''' % (fonte('saira.ttf', 'font/ttf'), fonte('sourcesans3.ttf', 'font/ttf')),
-        unsafe_allow_html=True,
-    )
+        ''' % (fonte('abrilfatface.ttf', 'font/ttf'), fonte('lato.ttf', 'font/ttf'), fonte('lato-bold.ttf', 'font/ttf'))
+
+
+def aplicar_estilo():
+    st.markdown(estilo_dashboard(), unsafe_allow_html=True)
+
+
+def rotulo_resultado(posicao, status):
+    status_normalizado = str(status or '').strip().lower()
+    if status_normalizado in ('disqualified', 'disqualificado', 'desclassificado'):
+        return 'Desclassificação'
+    if status_normalizado in ('retired', 'abandoned', 'abandonou'):
+        return 'Abandono'
+    if status_normalizado in ('did not start', 'dns', 'não largou'):
+        return 'Não largou'
+    if posicao in (1, 2, 3):
+        return 'Pódio'
+    if isinstance(posicao, int) and 4 <= posicao <= 10:
+        return 'Pontuou fora do pódio'
+    return 'Resultado registrado'
 
 
 def tabela_participantes(pacote, participantes):
@@ -168,9 +223,38 @@ def tabela_campeonato_pilotos(campeonato):
     ])
 
 
+def cor_equipe(equipe):
+    nome = str(equipe or '').lower()
+    for identificador, cor in CORES_EQUIPE.items():
+        if identificador.replace('_', ' ') in nome:
+            return cor
+    return CORES['neutro']
+
+
+def tabela_campeonato_editorial(campeonato, limite=5):
+    """Tabela visual curta; a tabela completa continua disponível no expander."""
+    linhas = []
+    for item in campeonato['classificacao'][:limite]:
+        equipe = item['equipe'] or 'Equipe indisponível'
+        linhas.append(
+            '<tr><td class="numero">{}</td><td>{}</td><td><span class="barra-equipe" style="background:{}"></span>{}</td><td class="numero">{}</td></tr>'.format(
+                escape(str(item['posicao'])), escape(str(item['piloto'])), cor_equipe(equipe),
+                escape(equipe), escape(str(item['pontos'])),
+            )
+        )
+    return '''
+    <div class="tabela-editorial">
+      <table aria-label="Campeonato de pilotos 2026">
+        <thead><tr><th>Pos.</th><th>Piloto</th><th>Equipe</th><th class="numero">Pontos</th></tr></thead>
+        <tbody>{}</tbody>
+      </table>
+    </div>
+    '''.format(''.join(linhas))
+
+
 def renderizar_campeonato_pilotos(pacote):
     campeonato = pacote.get('campeonato_pilotos')
-    st.subheader('Campeonato de pilotos 2026')
+    st.subheader('Classificação de pilotos 2026')
     if not isinstance(campeonato, dict) or not isinstance(campeonato.get('disponivel'), bool):
         st.info('Classificação de pilotos indisponível.')
         st.caption('Snapshot DriverStandings ausente ou com schema inválido. Probabilidades por GP permanecem separadas.')
@@ -190,7 +274,10 @@ def renderizar_campeonato_pilotos(pacote):
         campeonato['paginas_validadas'],
     ))
     st.caption(campeonato['escopo'])
-    st.dataframe(tabela_campeonato_pilotos(campeonato), width='stretch', hide_index=True)
+    st.markdown('<p class="tabela-legenda">Top 5 do snapshot oficial local. Barras finas identificam a equipe.</p>', unsafe_allow_html=True)
+    st.markdown(tabela_campeonato_editorial(campeonato), unsafe_allow_html=True)
+    with st.expander('Classificação completa'):
+        st.dataframe(tabela_campeonato_pilotos(campeonato), width='stretch', hide_index=True)
 
 
 def tabela_calendario_2026(pacote, rodada_selecionada):
@@ -209,6 +296,88 @@ def renderizar_calendario_2026(pacote, rodada_selecionada):
     st.subheader('Calendário 2026')
     st.caption('Calendário local do mesmo asset 2026; “Selecionado” acompanha o seletor de Grande Prêmio.')
     st.dataframe(tabela_calendario_2026(pacote, rodada_selecionada), width='stretch', hide_index=True)
+
+
+def nome_estado_operacao(estado):
+    return {
+        'aguardando_dados': 'Aguardando dados',
+        'classificacao_disponivel': 'Classificação disponível',
+        'previsao_registrada': 'Previsão registrada',
+    }.get(estado, str(estado).replace('_', ' ').capitalize())
+
+
+def renderizar_programacao(corrida):
+    st.subheader('Programação do fim de semana')
+    programacao = corrida.get('programacao')
+    if not isinstance(programacao, list) or not programacao:
+        st.caption('Programação não disponível no artefato local desta temporada.')
+        return
+    cabecalho = st.columns((2, 1, 1))
+    cabecalho[0].markdown('**Sessão**')
+    cabecalho[1].markdown('**Data**')
+    cabecalho[2].markdown('**Hora**')
+    for item in programacao:
+        linha = st.columns((2, 1, 1))
+        linha[0].write(item['sessao'])
+        linha[1].write(item['data'])
+        linha[2].write(item['hora'])
+
+
+def renderizar_estado_dados(corrida):
+    st.subheader('Estado dos dados')
+    for nome, estado in (
+        ('Classificação', corrida.get('estado_qualificacao', 'histórico disponível')),
+        ('Previsão', corrida.get('estado_previsao', 'avaliação retrospectiva')),
+        ('Resultado', corrida.get('estado_resultado', 'observado')),
+    ):
+        linha = st.columns((1, 2))
+        linha[0].markdown('**{}**'.format(nome))
+        linha[1].write(estado.replace('_', ' '))
+
+
+def renderizar_contexto_circuito(corrida):
+    esquerda, direita = st.columns((2, 1), gap='large')
+    with esquerda:
+        st.markdown('''
+        <section class="contexto-circuito">
+          <p class="circuito-rotulo">Contexto do circuito</p>
+          <p class="circuito-nome">{}</p>
+          <svg class="circuito-linha" viewBox="0 0 520 150" role="img" aria-label="Traçado do circuito indisponível no snapshot local">
+            <path d="M42,104 C77,31 155,30 183,74 C205,110 253,122 288,94 C325,65 320,27 371,41 C430,56 451,123 485,82" fill="none" stroke="#132B4F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 8"/>
+          </svg>
+          <p class="tracado-indisponivel">Traçado do circuito indisponível no snapshot local.</p>
+        </section>
+        '''.format(corrida.get('circuito_nome') or 'Circuito indisponível'), unsafe_allow_html=True)
+    with direita:
+        st.markdown('''
+        <section class="ficha-gp">
+          <p class="circuito-rotulo">Informações do circuito</p>
+          <p><strong>{}</strong></p>
+          <p>{}, {}</p>
+          <p>Data: {}</p>
+          <p>Estado: <strong>{}</strong></p>
+        </section>
+        '''.format(
+            corrida.get('circuito_id', 'Circuito indisponível'), corrida.get('cidade', 'Cidade indisponível'),
+            corrida.get('pais', 'País indisponível'), corrida.get('data', 'Data indisponível'),
+            nome_estado_operacao(corrida.get('estado_operacao', 'aguardando_dados')),
+        ), unsafe_allow_html=True)
+
+
+def renderizar_condicoes_disponiveis(corrida):
+    st.markdown('''
+    <section class="condicoes-disponiveis">
+      <p class="circuito-rotulo">Condições disponíveis</p>
+      <p><strong>Dados meteorológicos indisponíveis no snapshot local.</strong></p>
+      <p>O dashboard não estima clima, tempos de sessão ou estratégias antes de uma fonte pública canônica.</p>
+    </section>
+    ''', unsafe_allow_html=True)
+
+
+def renderizar_desempenho_equipes_indisponivel():
+    st.subheader('Desempenho das equipes')
+    st.info('Dados de desempenho por equipe indisponíveis no snapshot local.')
+    st.caption('A tabela não é reconstruída a partir de resultados de corrida porque não há um snapshot canônico de campeonato de construtores neste pacote.')
 
 
 def aviso_favoritos_insuficientes(quantidade):
@@ -324,6 +493,7 @@ def renderizar_resultados_observados(pacote, corrida, bloco, participantes):
                     'Previsão disponível': percentual(item['probabilidade_modelo']),
                     'Rank previsto': numero(item['ranking_modelo']),
                     'Resultado observado': numero(item['resultado_observado']),
+                    'Situação do resultado': rotulo_resultado(item['resultado_observado'], item.get('status_resultado')),
                 })
         if linhas:
             st.dataframe(pd.DataFrame(linhas), width='stretch', hide_index=True)
@@ -335,10 +505,24 @@ def tela_explorar(pacote, rodada, foco):
     bloco = dados_do_gp_2026(pacote, rodada) if pacote['temporada'] == 2026 else dados_do_gp(pacote, rodada)
     corrida = bloco['corrida']
     participantes = bloco['participantes']
-    st.title('{} — {}'.format(corrida['corrida'], 'Corrida' if foco == 'Corridas' else 'Previsões'))
-    st.caption('Temporada {} · rodada {} · {} · {} participantes preparados'.format(
-        nome_temporada(pacote['temporada']), corrida['rodada'], corrida['corrida'], corrida['participantes_preparados']
-    ))
+    if pacote['temporada'] == 2026:
+        st.markdown('''
+        <section class="gp-cabecalho">
+          <div>
+            <h1>{}</h1>
+            <div class="gp-meta">{}, {} · {}</div>
+          </div>
+          <div class="gp-status">{}</div>
+        </section>
+        '''.format(
+            escape(corrida['corrida']), escape(corrida['cidade']), escape(corrida['pais']),
+            escape(corrida['data']), escape(nome_estado_operacao(corrida['estado_operacao'])),
+        ), unsafe_allow_html=True)
+    else:
+        st.title(corrida['corrida'])
+        st.caption('Temporada {} · rodada {} · {} participantes preparados'.format(
+            pacote['temporada'], corrida['rodada'], corrida['participantes_preparados']
+        ))
     estados = [
         ('Classificação', corrida.get('estado_qualificacao', 'histórico disponível')),
         ('Previsão', corrida.get('estado_previsao', 'avaliação retrospectiva')),
@@ -349,8 +533,35 @@ def tela_explorar(pacote, rodada, foco):
         coluna.markdown('**{}**  \n{}'.format(nome, estado.replace('_', ' ')))
     st.caption('A previsão retrospectiva é separada de previsão registrada antes da corrida; resultados não entram na previsão da própria corrida.')
     if pacote['temporada'] == 2026:
-        renderizar_campeonato_pilotos(pacote)
-        renderizar_calendario_2026(pacote, rodada)
+        st.markdown('<div class="secao-rotulo">Contexto do GP</div>', unsafe_allow_html=True)
+        if foco == 'Corridas':
+            visao_geral, tempos, estrategias, clima, historico, comparativo_equipes = st.tabs((
+                'Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes',
+            ))
+            with visao_geral:
+                renderizar_contexto_circuito(corrida)
+                renderizar_condicoes_disponiveis(corrida)
+                classificacao, equipes = st.columns(2, gap='large')
+                with classificacao:
+                    renderizar_campeonato_pilotos(pacote)
+                with equipes:
+                    renderizar_desempenho_equipes_indisponivel()
+            with tempos:
+                renderizar_programacao(corrida)
+                st.caption('Os horários programados não são tempos de volta. Não há tempos de sessão públicos no snapshot local.')
+            with estrategias:
+                st.info('Estratégias indisponíveis no snapshot local. O dashboard não estima paradas, pneus ou stints.')
+            with clima:
+                renderizar_condicoes_disponiveis(corrida)
+            with historico:
+                renderizar_estado_dados(corrida)
+                with st.expander('Calendário 2026'):
+                    renderizar_calendario_2026(pacote, rodada)
+            with comparativo_equipes:
+                renderizar_desempenho_equipes_indisponivel()
+        else:
+            renderizar_campeonato_pilotos(pacote)
+            renderizar_estado_dados(corrida)
     st.caption('Cobertura: {} participantes preparados · {} elegíveis · {} alvos conhecidos depois.'.format(
         corrida['participantes_preparados'], corrida['elegiveis'], corrida['alvos_conhecidos']))
     with st.expander('Cobertura e exclusões'):
@@ -526,12 +737,12 @@ def tela_como_funciona():
 
 
 def executar_app():
-    st.set_page_config(page_title='Pitwall Lab', page_icon='🏁', layout='wide', initial_sidebar_state='expanded')
+    st.set_page_config(page_title='Pitwall Lab', layout='wide', initial_sidebar_state='auto')
     aplicar_estilo()
-    st.sidebar.markdown('<div class="pitwall-wordmark">Pitwall<span>Lab</span></div>', unsafe_allow_html=True)
+    st.sidebar.markdown('<div class="sidebar-title">Pitwall Lab</div>', unsafe_allow_html=True)
     st.sidebar.markdown('<div class="sidebar-caption">Estudo retrospectivo de pódios na Fórmula 1</div>', unsafe_allow_html=True)
     tela = st.sidebar.radio('Navegação', ('Corridas', 'Previsões', 'Desempenho', 'Metodologia'), key='tela')
-    temporada = st.sidebar.selectbox('Temporada', (2024, 2025, 2026), index=1, format_func=nome_temporada, key='temporada')
+    temporada = st.sidebar.selectbox('Temporada', (2024, 2025, 2026), index=1, key='temporada')
     try:
         pacote = carregar(temporada)
     except (DashboardDadosErro, RaceWeekendDadosErro) as erro:

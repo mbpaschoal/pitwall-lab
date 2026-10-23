@@ -33,6 +33,11 @@ class TestAssetsRaceWeekend(unittest.TestCase):
         self.assertEqual(corrida_2026[17]['estado_previsao'], 'ensaio_retrospectivo')
         self.assertEqual(corrida_2026[18]['estado_qualificacao'], 'indisponivel')
         self.assertEqual(corrida_2026[18]['estado_resultado'], 'indisponivel')
+        self.assertEqual(corrida_2026[18]['cidade'], 'Austin')
+        self.assertEqual(corrida_2026[18]['pais'], 'USA')
+        self.assertEqual(corrida_2026[18]['data'], '2026-10-25')
+        self.assertEqual(corrida_2026[18]['circuito_nome'], 'Circuit of the Americas')
+        self.assertEqual(corrida_2026[18]['estado_operacao'], 'aguardando_dados')
         self.assertEqual(corrida_2026[18]['motivo_resultado'], 'snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída')
         singapura = [item for item in asset['dados_2026']['previsoes'] if item['rodada'] == 17]
         self.assertEqual(len(singapura), 22)

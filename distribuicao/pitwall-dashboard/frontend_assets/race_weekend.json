@@ -197,9 +197,13 @@
     },
     "corridas": [
       {
+        "cidade": "Melbourne",
         "circuito_id": "albert_park",
+        "circuito_nome": "Albert Park Grand Prix Circuit",
         "corrida": "Australian Grand Prix",
+        "data": "2026-03-08",
         "data_corrida": "2026-03-08",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -207,13 +211,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Australia",
+        "programacao": [
+          {
+            "data": "2026-03-06",
+            "hora": "01:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-03-06",
+            "hora": "05:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-03-07",
+            "hora": "01:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-03-07",
+            "hora": "05:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-03-08",
+            "hora": "04:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 1,
         "temporada": 2026
       },
       {
+        "cidade": "Shanghai",
         "circuito_id": "shanghai",
+        "circuito_nome": "Shanghai International Circuit",
         "corrida": "Chinese Grand Prix",
+        "data": "2026-03-15",
         "data_corrida": "2026-03-15",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -221,13 +257,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "China",
+        "programacao": [
+          {
+            "data": "2026-03-13",
+            "hora": "03:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-03-13",
+            "hora": "07:30:00Z",
+            "sessao": "Classificação Sprint"
+          },
+          {
+            "data": "2026-03-14",
+            "hora": "03:00:00Z",
+            "sessao": "Sprint"
+          },
+          {
+            "data": "2026-03-14",
+            "hora": "07:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-03-15",
+            "hora": "07:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 2,
         "temporada": 2026
       },
       {
+        "cidade": "Suzuka",
         "circuito_id": "suzuka",
+        "circuito_nome": "Suzuka Circuit",
         "corrida": "Japanese Grand Prix",
+        "data": "2026-03-29",
         "data_corrida": "2026-03-29",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -235,13 +303,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Japan",
+        "programacao": [
+          {
+            "data": "2026-03-27",
+            "hora": "02:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-03-27",
+            "hora": "06:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-03-28",
+            "hora": "02:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-03-28",
+            "hora": "06:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-03-29",
+            "hora": "05:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 3,
         "temporada": 2026
       },
       {
+        "cidade": "Miami",
         "circuito_id": "miami",
+        "circuito_nome": "Miami International Autodrome",
         "corrida": "Miami Grand Prix",
+        "data": "2026-05-03",
         "data_corrida": "2026-05-03",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -249,13 +349,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "USA",
+        "programacao": [
+          {
+            "data": "2026-05-01",
+            "hora": "16:00:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-05-01",
+            "hora": "20:30:00Z",
+            "sessao": "Classificação Sprint"
+          },
+          {
+            "data": "2026-05-02",
+            "hora": "16:00:00Z",
+            "sessao": "Sprint"
+          },
+          {
+            "data": "2026-05-02",
+            "hora": "20:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-05-03",
+            "hora": "20:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 4,
         "temporada": 2026
       },
       {
+        "cidade": "Montreal",
         "circuito_id": "villeneuve",
+        "circuito_nome": "Circuit Gilles Villeneuve",
         "corrida": "Canadian Grand Prix",
+        "data": "2026-05-24",
         "data_corrida": "2026-05-24",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -263,13 +395,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Canada",
+        "programacao": [
+          {
+            "data": "2026-05-22",
+            "hora": "16:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-05-22",
+            "hora": "20:30:00Z",
+            "sessao": "Classificação Sprint"
+          },
+          {
+            "data": "2026-05-23",
+            "hora": "16:00:00Z",
+            "sessao": "Sprint"
+          },
+          {
+            "data": "2026-05-23",
+            "hora": "20:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-05-24",
+            "hora": "20:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 5,
         "temporada": 2026
       },
       {
+        "cidade": "Monte Carlo",
         "circuito_id": "monaco",
+        "circuito_nome": "Circuit de Monaco",
         "corrida": "Monaco Grand Prix",
+        "data": "2026-06-07",
         "data_corrida": "2026-06-07",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -277,13 +441,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Monaco",
+        "programacao": [
+          {
+            "data": "2026-06-05",
+            "hora": "11:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-06-05",
+            "hora": "15:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-06-06",
+            "hora": "10:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-06-06",
+            "hora": "14:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-06-07",
+            "hora": "13:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 6,
         "temporada": 2026
       },
       {
+        "cidade": "Barcelona",
         "circuito_id": "catalunya",
+        "circuito_nome": "Circuit de Barcelona-Catalunya",
         "corrida": "Barcelona Grand Prix",
+        "data": "2026-06-14",
         "data_corrida": "2026-06-14",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -291,13 +487,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Spain",
+        "programacao": [
+          {
+            "data": "2026-06-12",
+            "hora": "11:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-06-12",
+            "hora": "15:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-06-13",
+            "hora": "10:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-06-13",
+            "hora": "14:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-06-14",
+            "hora": "13:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 7,
         "temporada": 2026
       },
       {
+        "cidade": "Spielberg",
         "circuito_id": "red_bull_ring",
+        "circuito_nome": "Red Bull Ring",
         "corrida": "Austrian Grand Prix",
+        "data": "2026-06-28",
         "data_corrida": "2026-06-28",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -305,13 +533,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Austria",
+        "programacao": [
+          {
+            "data": "2026-06-26",
+            "hora": "11:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-06-26",
+            "hora": "15:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-06-27",
+            "hora": "10:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-06-27",
+            "hora": "14:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-06-28",
+            "hora": "13:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 8,
         "temporada": 2026
       },
       {
+        "cidade": "Silverstone",
         "circuito_id": "silverstone",
+        "circuito_nome": "Silverstone Circuit",
         "corrida": "British Grand Prix",
+        "data": "2026-07-05",
         "data_corrida": "2026-07-05",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -319,13 +579,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "UK",
+        "programacao": [
+          {
+            "data": "2026-07-03",
+            "hora": "11:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-07-03",
+            "hora": "15:30:00Z",
+            "sessao": "Classificação Sprint"
+          },
+          {
+            "data": "2026-07-04",
+            "hora": "11:00:00Z",
+            "sessao": "Sprint"
+          },
+          {
+            "data": "2026-07-04",
+            "hora": "15:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-07-05",
+            "hora": "14:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 9,
         "temporada": 2026
       },
       {
+        "cidade": "Spa",
         "circuito_id": "spa",
+        "circuito_nome": "Circuit de Spa-Francorchamps",
         "corrida": "Belgian Grand Prix",
+        "data": "2026-07-19",
         "data_corrida": "2026-07-19",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -333,13 +625,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Belgium",
+        "programacao": [
+          {
+            "data": "2026-07-17",
+            "hora": "11:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-07-17",
+            "hora": "15:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-07-18",
+            "hora": "10:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-07-18",
+            "hora": "14:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-07-19",
+            "hora": "13:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 10,
         "temporada": 2026
       },
       {
+        "cidade": "Budapest",
         "circuito_id": "hungaroring",
+        "circuito_nome": "Hungaroring",
         "corrida": "Hungarian Grand Prix",
+        "data": "2026-07-26",
         "data_corrida": "2026-07-26",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -347,13 +671,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Hungary",
+        "programacao": [
+          {
+            "data": "2026-07-24",
+            "hora": "11:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-07-24",
+            "hora": "15:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-07-25",
+            "hora": "10:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-07-25",
+            "hora": "14:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-07-26",
+            "hora": "13:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 11,
         "temporada": 2026
       },
       {
+        "cidade": "Zandvoort",
         "circuito_id": "zandvoort",
+        "circuito_nome": "Circuit Park Zandvoort",
         "corrida": "Dutch Grand Prix",
+        "data": "2026-08-23",
         "data_corrida": "2026-08-23",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -361,13 +717,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Netherlands",
+        "programacao": [
+          {
+            "data": "2026-08-21",
+            "hora": "10:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-08-21",
+            "hora": "14:30:00Z",
+            "sessao": "Classificação Sprint"
+          },
+          {
+            "data": "2026-08-22",
+            "hora": "10:00:00Z",
+            "sessao": "Sprint"
+          },
+          {
+            "data": "2026-08-22",
+            "hora": "14:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-08-23",
+            "hora": "13:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 12,
         "temporada": 2026
       },
       {
+        "cidade": "Monza",
         "circuito_id": "monza",
+        "circuito_nome": "Autodromo Nazionale di Monza",
         "corrida": "Italian Grand Prix",
+        "data": "2026-09-06",
         "data_corrida": "2026-09-06",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -375,13 +763,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Italy",
+        "programacao": [
+          {
+            "data": "2026-09-04",
+            "hora": "10:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-09-04",
+            "hora": "14:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-09-05",
+            "hora": "10:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-09-05",
+            "hora": "14:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-09-06",
+            "hora": "13:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 13,
         "temporada": 2026
       },
       {
+        "cidade": "Madrid",
         "circuito_id": "madring",
+        "circuito_nome": "Madring",
         "corrida": "Spanish Grand Prix",
+        "data": "2026-09-13",
         "data_corrida": "2026-09-13",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -389,13 +809,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Spain",
+        "programacao": [
+          {
+            "data": "2026-09-11",
+            "hora": "11:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-09-11",
+            "hora": "15:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-09-12",
+            "hora": "10:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-09-12",
+            "hora": "14:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-09-13",
+            "hora": "13:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 14,
         "temporada": 2026
       },
       {
+        "cidade": "Baku",
         "circuito_id": "baku",
+        "circuito_nome": "Baku City Circuit",
         "corrida": "Azerbaijan Grand Prix",
+        "data": "2026-09-26",
         "data_corrida": "2026-09-26",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -403,13 +855,45 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Azerbaijan",
+        "programacao": [
+          {
+            "data": "2026-09-24",
+            "hora": "08:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-09-24",
+            "hora": "12:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-09-25",
+            "hora": "08:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-09-25",
+            "hora": "12:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-09-26",
+            "hora": "11:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 15,
         "temporada": 2026
       },
       {
+        "cidade": "Kuala Lumpur",
         "circuito_id": "sepang",
+        "circuito_nome": "Sepang International Circuit",
         "corrida": "Bahrain Grand Prix in Malaysia",
+        "data": "2026-10-04",
         "data_corrida": "2026-10-04",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "observado_local",
@@ -417,14 +901,46 @@
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": null,
+        "pais": "Malaysia",
+        "programacao": [
+          {
+            "data": "2026-10-02",
+            "hora": "04:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-10-02",
+            "hora": "08:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-10-03",
+            "hora": "04:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-10-03",
+            "hora": "08:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-10-04",
+            "hora": "07:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 16,
         "temporada": 2026
       },
       {
+        "cidade": "Marina Bay",
         "circuito_id": "marina_bay",
+        "circuito_nome": "Marina Bay Street Circuit",
         "corrida": "Singapore Grand Prix",
+        "data": "2026-10-11",
         "data_corrida": "2026-10-11",
         "emissao_sha256": "c28a7a0ded07640f593ca655739548641d75a07d7cdc755be67b82f798aace46",
+        "estado_operacao": "previsao_registrada",
         "estado_previsao": "ensaio_retrospectivo",
         "estado_qualificacao": "local_disponivel",
         "estado_resultado": "observado_local",
@@ -433,84 +949,304 @@
         "motivo_previsao": "ensaio retrospectivo; não é previsão registrada antes da corrida",
         "motivo_qualificacao": null,
         "motivo_resultado": null,
+        "pais": "Singapore",
+        "programacao": [
+          {
+            "data": "2026-10-09",
+            "hora": "08:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-10-09",
+            "hora": "12:30:00Z",
+            "sessao": "Classificação Sprint"
+          },
+          {
+            "data": "2026-10-10",
+            "hora": "09:00:00Z",
+            "sessao": "Sprint"
+          },
+          {
+            "data": "2026-10-10",
+            "hora": "13:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-10-11",
+            "hora": "12:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 17,
         "temporada": 2026
       },
       {
+        "cidade": "Austin",
         "circuito_id": "americas",
+        "circuito_nome": "Circuit of the Americas",
         "corrida": "United States Grand Prix",
+        "data": "2026-10-25",
         "data_corrida": "2026-10-25",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "indisponivel",
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": "snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída",
+        "pais": "USA",
+        "programacao": [
+          {
+            "data": "2026-10-23",
+            "hora": "17:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-10-23",
+            "hora": "21:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-10-24",
+            "hora": "17:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-10-24",
+            "hora": "21:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-10-25",
+            "hora": "20:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 18,
         "temporada": 2026
       },
       {
+        "cidade": "Mexico City",
         "circuito_id": "rodriguez",
+        "circuito_nome": "Autódromo Hermanos Rodríguez",
         "corrida": "Mexico City Grand Prix",
+        "data": "2026-11-01",
         "data_corrida": "2026-11-01",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "indisponivel",
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": "snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída",
+        "pais": "Mexico",
+        "programacao": [
+          {
+            "data": "2026-10-30",
+            "hora": "18:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-10-30",
+            "hora": "22:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-10-31",
+            "hora": "17:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-10-31",
+            "hora": "21:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-11-01",
+            "hora": "20:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 19,
         "temporada": 2026
       },
       {
+        "cidade": "São Paulo",
         "circuito_id": "interlagos",
+        "circuito_nome": "Autódromo José Carlos Pace",
         "corrida": "Brazilian Grand Prix",
+        "data": "2026-11-08",
         "data_corrida": "2026-11-08",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "indisponivel",
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": "snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída",
+        "pais": "Brazil",
+        "programacao": [
+          {
+            "data": "2026-11-06",
+            "hora": "15:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-11-06",
+            "hora": "19:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-11-07",
+            "hora": "14:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-11-07",
+            "hora": "18:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-11-08",
+            "hora": "17:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 20,
         "temporada": 2026
       },
       {
+        "cidade": "Las Vegas",
         "circuito_id": "vegas",
+        "circuito_nome": "Las Vegas Strip Street Circuit",
         "corrida": "Las Vegas Grand Prix",
+        "data": "2026-11-22",
         "data_corrida": "2026-11-22",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "indisponivel",
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": "snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída",
+        "pais": "USA",
+        "programacao": [
+          {
+            "data": "2026-11-20",
+            "hora": "00:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-11-20",
+            "hora": "04:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-11-21",
+            "hora": "00:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-11-21",
+            "hora": "04:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-11-22",
+            "hora": "04:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 21,
         "temporada": 2026
       },
       {
+        "cidade": "Lusail",
         "circuito_id": "losail",
+        "circuito_nome": "Lusail International Circuit",
         "corrida": "Qatar Grand Prix",
+        "data": "2026-11-29",
         "data_corrida": "2026-11-29",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "indisponivel",
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": "snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída",
+        "pais": "Qatar",
+        "programacao": [
+          {
+            "data": "2026-11-27",
+            "hora": "13:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-11-27",
+            "hora": "17:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-11-28",
+            "hora": "14:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-11-28",
+            "hora": "18:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-11-29",
+            "hora": "16:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 22,
         "temporada": 2026
       },
       {
+        "cidade": "Abu Dhabi",
         "circuito_id": "yas_marina",
+        "circuito_nome": "Yas Marina Circuit",
         "corrida": "Abu Dhabi Grand Prix",
+        "data": "2026-12-06",
         "data_corrida": "2026-12-06",
+        "estado_operacao": "aguardando_dados",
         "estado_previsao": "indisponivel",
         "estado_qualificacao": "indisponivel",
         "estado_resultado": "indisponivel",
         "motivo_previsao": "não há previsão registrada local válida para este GP",
         "motivo_qualificacao": "snapshot local de classificação ausente",
         "motivo_resultado": "snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída",
+        "pais": "UAE",
+        "programacao": [
+          {
+            "data": "2026-12-04",
+            "hora": "09:30:00Z",
+            "sessao": "Treino livre 1"
+          },
+          {
+            "data": "2026-12-04",
+            "hora": "13:00:00Z",
+            "sessao": "Treino livre 2"
+          },
+          {
+            "data": "2026-12-05",
+            "hora": "10:30:00Z",
+            "sessao": "Treino livre 3"
+          },
+          {
+            "data": "2026-12-05",
+            "hora": "14:00:00Z",
+            "sessao": "Classificação"
+          },
+          {
+            "data": "2026-12-06",
+            "hora": "13:00:00Z",
+            "sessao": "Corrida"
+          }
+        ],
         "rodada": 23,
         "temporada": 2026
       }
@@ -528,6 +1264,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 1,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -542,6 +1279,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 1,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -556,6 +1294,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 1,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -570,6 +1309,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 1,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -584,6 +1324,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 1,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -598,6 +1339,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 1,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -612,6 +1354,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -626,6 +1369,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -640,6 +1384,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -654,6 +1399,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -668,6 +1414,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -682,6 +1429,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -696,6 +1444,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -710,6 +1459,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -724,6 +1474,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -738,6 +1489,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -752,6 +1504,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 1,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -766,6 +1519,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 1,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -780,6 +1534,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 1,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -794,6 +1549,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 1,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -808,6 +1564,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 1,
+        "status_resultado": "Did not start",
         "temporada": 2026
       },
       {
@@ -822,6 +1579,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 1,
+        "status_resultado": "Did not start",
         "temporada": 2026
       },
       {
@@ -836,6 +1594,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 2,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -850,6 +1609,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 2,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -864,6 +1624,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 2,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -878,6 +1639,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 2,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -892,6 +1654,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 2,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -906,6 +1669,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 2,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -920,6 +1684,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 2,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -934,6 +1699,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 2,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -948,6 +1714,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 2,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -962,6 +1729,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 2,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -976,6 +1744,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 2,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -990,6 +1759,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 2,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1004,6 +1774,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 2,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1018,6 +1789,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 2,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1032,6 +1804,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 2,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1046,6 +1819,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 2,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -1060,6 +1834,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 2,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -1074,6 +1849,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 2,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -1088,6 +1864,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 2,
+        "status_resultado": "Did not start",
         "temporada": 2026
       },
       {
@@ -1102,6 +1879,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 2,
+        "status_resultado": "Did not start",
         "temporada": 2026
       },
       {
@@ -1116,6 +1894,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 2,
+        "status_resultado": "Did not start",
         "temporada": 2026
       },
       {
@@ -1130,6 +1909,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 2,
+        "status_resultado": "Did not start",
         "temporada": 2026
       },
       {
@@ -1144,6 +1924,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1158,6 +1939,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1172,6 +1954,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1186,6 +1969,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1200,6 +1984,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1214,6 +1999,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1228,6 +2014,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1242,6 +2029,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1256,6 +2044,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1270,6 +2059,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1284,6 +2074,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1298,6 +2089,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1312,6 +2104,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1326,6 +2119,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1340,6 +2134,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1354,6 +2149,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1368,6 +2164,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 3,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1382,6 +2179,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 3,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1396,6 +2194,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 3,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1410,6 +2209,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 3,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1424,6 +2224,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 3,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -1438,6 +2239,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 3,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -1452,6 +2254,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 4,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1466,6 +2269,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 4,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1480,6 +2284,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 4,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1494,6 +2299,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 4,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1508,6 +2314,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 4,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1522,6 +2329,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 4,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1536,6 +2344,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 4,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1550,6 +2359,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 4,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1564,6 +2374,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 4,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1578,6 +2389,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 4,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1592,6 +2404,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 4,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1606,6 +2419,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 4,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1620,6 +2434,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 4,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1634,6 +2449,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 4,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1648,6 +2464,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 4,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1662,6 +2479,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 4,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1676,6 +2494,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 4,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1690,6 +2509,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 4,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1704,6 +2524,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 4,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -1718,6 +2539,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 4,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -1732,6 +2554,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 4,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -1746,6 +2569,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 4,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -1760,6 +2584,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 5,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1774,6 +2599,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 5,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1788,6 +2614,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 5,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1802,6 +2629,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 5,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -1816,6 +2644,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1830,6 +2659,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1844,6 +2674,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1858,6 +2689,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1872,6 +2704,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1886,6 +2719,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1900,6 +2734,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1914,6 +2749,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1928,6 +2764,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1942,6 +2779,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1956,6 +2794,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1970,6 +2809,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 5,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -1984,6 +2824,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 5,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -1998,6 +2839,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 5,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2012,6 +2854,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 5,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2026,6 +2869,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 5,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2040,6 +2884,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 5,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2054,6 +2899,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 5,
+        "status_resultado": "Did not start",
         "temporada": 2026
       },
       {
@@ -2068,6 +2914,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2082,6 +2929,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2096,6 +2944,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2110,6 +2959,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2124,6 +2974,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2138,6 +2989,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2152,6 +3004,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2166,6 +3019,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2180,6 +3034,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2194,6 +3049,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2208,6 +3064,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2222,6 +3079,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2236,6 +3094,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2250,6 +3109,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2264,6 +3124,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 6,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2278,6 +3139,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 6,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2292,6 +3154,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 6,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2306,6 +3169,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 6,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2320,6 +3184,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 6,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2334,6 +3199,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 6,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2348,6 +3214,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 6,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2362,6 +3229,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 6,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2376,6 +3244,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 7,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2390,6 +3259,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 7,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2404,6 +3274,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 7,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2418,6 +3289,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 7,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2432,6 +3304,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 7,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2446,6 +3319,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 7,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2460,6 +3334,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 7,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2474,6 +3349,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 7,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2488,6 +3364,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 7,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2502,6 +3379,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 7,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2516,6 +3394,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 7,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2530,6 +3409,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 7,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2544,6 +3424,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 7,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2558,6 +3439,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 7,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2572,6 +3454,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 7,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2586,6 +3469,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 7,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2600,6 +3484,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 7,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2614,6 +3499,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 7,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2628,6 +3514,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 7,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2642,6 +3529,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 7,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2656,6 +3544,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 7,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2670,6 +3559,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 7,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2684,6 +3574,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 8,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2698,6 +3589,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 8,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2712,6 +3604,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 8,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2726,6 +3619,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 8,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2740,6 +3634,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 8,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2754,6 +3649,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 8,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2768,6 +3664,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 8,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2782,6 +3679,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 8,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -2796,6 +3694,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 8,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2810,6 +3709,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 8,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2824,6 +3724,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 8,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2838,6 +3739,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 8,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2852,6 +3754,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 8,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2866,6 +3769,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 8,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2880,6 +3784,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 8,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2894,6 +3799,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 8,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2908,6 +3814,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 8,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2922,6 +3829,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 8,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -2936,6 +3844,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 8,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2950,6 +3859,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 8,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2964,6 +3874,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 8,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2978,6 +3889,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 8,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -2992,6 +3904,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3006,6 +3919,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3020,6 +3934,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3034,6 +3949,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3048,6 +3964,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3062,6 +3979,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3076,6 +3994,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3090,6 +4009,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3104,6 +4024,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3118,6 +4039,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3132,6 +4054,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3146,6 +4069,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3160,6 +4084,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3174,6 +4099,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3188,6 +4114,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3202,6 +4129,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 9,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3216,6 +4144,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 9,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3230,6 +4159,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 9,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3244,6 +4174,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 9,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3258,6 +4189,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 9,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -3272,6 +4204,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 9,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -3286,6 +4219,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 9,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -3300,6 +4234,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3314,6 +4249,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3328,6 +4264,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3342,6 +4279,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3356,6 +4294,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3370,6 +4309,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3384,6 +4324,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3398,6 +4339,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3412,6 +4354,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3426,6 +4369,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3440,6 +4384,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3454,6 +4399,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3468,6 +4414,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3482,6 +4429,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3496,6 +4444,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3510,6 +4459,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3524,6 +4474,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 10,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3538,6 +4489,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 10,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3552,6 +4504,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 10,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3566,6 +4519,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 10,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -3580,6 +4534,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 10,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -3594,6 +4549,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 10,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -3608,6 +4564,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 11,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3622,6 +4579,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 11,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3636,6 +4594,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 11,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3650,6 +4609,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 11,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3664,6 +4624,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 11,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3678,6 +4639,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 11,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3692,6 +4654,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 11,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3706,6 +4669,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3720,6 +4684,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3734,6 +4699,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3748,6 +4714,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3762,6 +4729,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3776,6 +4744,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3790,6 +4759,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3804,6 +4774,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3818,6 +4789,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3832,6 +4804,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3846,6 +4819,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3860,6 +4834,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 11,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -3874,6 +4849,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 11,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -3888,6 +4864,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 11,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -3902,6 +4879,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 11,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -3916,6 +4894,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 12,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3930,6 +4909,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 12,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3944,6 +4924,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 12,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3958,6 +4939,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 12,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3972,6 +4954,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 12,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -3986,6 +4969,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 12,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4000,6 +4984,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 12,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4014,6 +4999,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 12,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4028,6 +5014,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 12,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4042,6 +5029,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 12,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4056,6 +5044,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 12,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4070,6 +5059,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 12,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4084,6 +5074,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 12,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4098,6 +5089,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 12,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4112,6 +5104,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 12,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4126,6 +5119,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 12,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4140,6 +5134,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 12,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4154,6 +5149,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 12,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4168,6 +5164,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 12,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4182,6 +5179,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 12,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4196,6 +5194,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 12,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4210,6 +5209,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 12,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4224,6 +5224,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4238,6 +5239,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4252,6 +5254,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4266,6 +5269,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4280,6 +5284,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4294,6 +5299,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4308,6 +5314,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4322,6 +5329,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4336,6 +5344,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4350,6 +5359,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4364,6 +5374,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4378,6 +5389,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4392,6 +5404,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4406,6 +5419,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4420,6 +5434,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 13,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4434,6 +5449,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 13,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4448,6 +5464,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 13,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4462,6 +5479,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 13,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4476,6 +5494,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 13,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4490,6 +5509,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 13,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4504,6 +5524,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 13,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4518,6 +5539,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 13,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4532,6 +5554,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 14,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4546,6 +5569,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 14,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4560,6 +5584,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 14,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4574,6 +5599,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 14,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4588,6 +5614,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 14,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4602,6 +5629,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 14,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4616,6 +5644,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 14,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4630,6 +5659,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 14,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4644,6 +5674,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 14,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4658,6 +5689,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 14,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4672,6 +5704,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 14,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4686,6 +5719,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 14,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4700,6 +5734,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 14,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4714,6 +5749,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 14,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4728,6 +5764,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 14,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4742,6 +5779,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 14,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4756,6 +5794,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 14,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4770,6 +5809,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 14,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -4784,6 +5824,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 14,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4798,6 +5839,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 14,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4812,6 +5854,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 14,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4826,6 +5869,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 14,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -4840,6 +5884,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4854,6 +5899,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4868,6 +5914,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4882,6 +5929,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4896,6 +5944,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4910,6 +5959,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4924,6 +5974,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4938,6 +5989,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4952,6 +6004,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4966,6 +6019,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4980,6 +6034,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -4994,6 +6049,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5008,6 +6064,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5022,6 +6079,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5036,6 +6094,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 15,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5050,6 +6109,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 15,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5064,6 +6124,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 15,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5078,6 +6139,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 15,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5092,6 +6154,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 15,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5106,6 +6169,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 15,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5120,6 +6184,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 15,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5134,6 +6199,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 15,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5148,6 +6214,7 @@
         "ranking_modelo": null,
         "resultado_observado": 1,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5162,6 +6229,7 @@
         "ranking_modelo": null,
         "resultado_observado": 2,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5176,6 +6244,7 @@
         "ranking_modelo": null,
         "resultado_observado": 3,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5190,6 +6259,7 @@
         "ranking_modelo": null,
         "resultado_observado": 4,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5204,6 +6274,7 @@
         "ranking_modelo": null,
         "resultado_observado": 5,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5218,6 +6289,7 @@
         "ranking_modelo": null,
         "resultado_observado": 6,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5232,6 +6304,7 @@
         "ranking_modelo": null,
         "resultado_observado": 7,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5246,6 +6319,7 @@
         "ranking_modelo": null,
         "resultado_observado": 8,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5260,6 +6334,7 @@
         "ranking_modelo": null,
         "resultado_observado": 9,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5274,6 +6349,7 @@
         "ranking_modelo": null,
         "resultado_observado": 10,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5288,6 +6364,7 @@
         "ranking_modelo": null,
         "resultado_observado": 11,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5302,6 +6379,7 @@
         "ranking_modelo": null,
         "resultado_observado": 12,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5316,6 +6394,7 @@
         "ranking_modelo": null,
         "resultado_observado": 13,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5330,6 +6409,7 @@
         "ranking_modelo": null,
         "resultado_observado": 14,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5344,6 +6424,7 @@
         "ranking_modelo": null,
         "resultado_observado": 15,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5358,6 +6439,7 @@
         "ranking_modelo": null,
         "resultado_observado": 16,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5372,6 +6454,7 @@
         "ranking_modelo": null,
         "resultado_observado": 17,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5386,6 +6469,7 @@
         "ranking_modelo": null,
         "resultado_observado": 18,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5400,6 +6484,7 @@
         "ranking_modelo": null,
         "resultado_observado": 19,
         "rodada": 16,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5414,6 +6499,7 @@
         "ranking_modelo": null,
         "resultado_observado": 20,
         "rodada": 16,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5428,6 +6514,7 @@
         "ranking_modelo": null,
         "resultado_observado": 21,
         "rodada": 16,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5442,6 +6529,7 @@
         "ranking_modelo": null,
         "resultado_observado": 22,
         "rodada": 16,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5456,6 +6544,7 @@
         "ranking_modelo": 1,
         "resultado_observado": 1,
         "rodada": 17,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5470,6 +6559,7 @@
         "ranking_modelo": 3,
         "resultado_observado": 2,
         "rodada": 17,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5484,6 +6574,7 @@
         "ranking_modelo": 2,
         "resultado_observado": 3,
         "rodada": 17,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5498,6 +6589,7 @@
         "ranking_modelo": 6,
         "resultado_observado": 4,
         "rodada": 17,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5512,6 +6604,7 @@
         "ranking_modelo": 7,
         "resultado_observado": 5,
         "rodada": 17,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5526,6 +6619,7 @@
         "ranking_modelo": 5,
         "resultado_observado": 6,
         "rodada": 17,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5540,6 +6634,7 @@
         "ranking_modelo": 9,
         "resultado_observado": 7,
         "rodada": 17,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5554,6 +6649,7 @@
         "ranking_modelo": 11,
         "resultado_observado": 8,
         "rodada": 17,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5568,6 +6664,7 @@
         "ranking_modelo": 4,
         "resultado_observado": 9,
         "rodada": 17,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5582,6 +6679,7 @@
         "ranking_modelo": 18,
         "resultado_observado": 10,
         "rodada": 17,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -5596,6 +6694,7 @@
         "ranking_modelo": 8,
         "resultado_observado": 11,
         "rodada": 17,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -5610,6 +6709,7 @@
         "ranking_modelo": 12,
         "resultado_observado": 12,
         "rodada": 17,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -5624,6 +6724,7 @@
         "ranking_modelo": 13,
         "resultado_observado": 13,
         "rodada": 17,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -5638,6 +6739,7 @@
         "ranking_modelo": 14,
         "resultado_observado": 14,
         "rodada": 17,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -5652,6 +6754,7 @@
         "ranking_modelo": 10,
         "resultado_observado": 15,
         "rodada": 17,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -5666,6 +6769,7 @@
         "ranking_modelo": 17,
         "resultado_observado": 16,
         "rodada": 17,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -5680,6 +6784,7 @@
         "ranking_modelo": 21,
         "resultado_observado": 17,
         "rodada": 17,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -5694,6 +6799,7 @@
         "ranking_modelo": 19,
         "resultado_observado": 18,
         "rodada": 17,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5708,6 +6814,7 @@
         "ranking_modelo": 22,
         "resultado_observado": 19,
         "rodada": 17,
+        "status_resultado": "Lapped",
         "temporada": 2026
       },
       {
@@ -5722,6 +6829,7 @@
         "ranking_modelo": 20,
         "resultado_observado": 20,
         "rodada": 17,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5736,6 +6844,7 @@
         "ranking_modelo": 16,
         "resultado_observado": 21,
         "rodada": 17,
+        "status_resultado": "Retired",
         "temporada": 2026
       },
       {
@@ -5750,6 +6859,7 @@
         "ranking_modelo": 15,
         "resultado_observado": 22,
         "rodada": 17,
+        "status_resultado": "Retired",
         "temporada": 2026
       }
     ]

@@ -140,7 +140,7 @@ class TestDashboardApp(unittest.TestCase):
         self.escolher('temporada', 2025)
         self.escolher('gp', '2025:9')
         texto = texto_renderizado(self.at)
-        self.assertIn('2025 — avaliação final retrospectiva já realizada', texto)
+        self.assertIn('Temporada 2025', texto)
         self.assertIn('Cobertura:', texto)
         self.assertIn('participantes preparados', texto)
         self.assertIn('elegíveis', texto)
@@ -221,7 +221,7 @@ class TestDashboardApp(unittest.TestCase):
         por_chave(self.at.get('radio'), 'tela').set_value('Previsões')
         self.executar()
         texto = texto_renderizado(self.at)
-        self.assertIn('Campeonato de pilotos 2026', texto)
+        self.assertIn('Classificação de pilotos 2026', texto)
         self.assertIn('Rodada de referência: 17', texto)
         self.assertIn('DriverStandings Jolpica-F1, separado das probabilidades por GP.', texto)
         campeonato = app.carregar(2026)['campeonato_pilotos']
@@ -250,10 +250,71 @@ class TestDashboardApp(unittest.TestCase):
         self.executar()
         self.escolher('gp', '2026:18')
         texto = texto_renderizado(self.at)
+        self.assertIn('United States Grand Prix', texto)
+        self.assertIn('Austin, USA · 2026-10-25', texto)
+        self.assertIn('Aguardando dados', texto)
         self.assertIn('Faltam classificação concluída e emissão prospectiva registrada para este GP.', texto)
         self.assertNotIn('Favoritos por ranking publicado', texto)
         self.assertNotIn('76.0%', texto)
         self.assertNotIn('Max Verstappen · Red Bull · 76.0%', texto)
+
+    def test_visual_editorial_usa_fontes_locais_abril_e_lato_sem_gradiente(self):
+        css = app.estilo_dashboard()
+        self.assertIn('AbrilFatfaceLocal', css)
+        self.assertIn('LatoLocal', css)
+        self.assertIn('stIconMaterial', css)
+        self.assertNotIn('gradient', css.lower())
+        self.assertTrue((RAIZ / 'dashboard_assets/fonts/abrilfatface.ttf').is_file())
+        self.assertTrue((RAIZ / 'dashboard_assets/fonts/lato.ttf').is_file())
+
+    def test_corridas_austin_exibe_contexto_programacao_e_estado_aguardando_dados(self):
+        self.executar()
+        self.escolher('temporada', 2026)
+        self.escolher('gp', '2026:18')
+        texto = texto_renderizado(self.at)
+        self.assertEqual(list(por_chave(self.at.get('selectbox'), 'temporada').options), ['2024', '2025', '2026'])
+        self.assertIn('United States Grand Prix', texto)
+        self.assertIn('Austin, USA · 2026-10-25', texto)
+        self.assertIn('Contexto do GP', texto)
+        self.assertIn('Traçado do circuito indisponível no snapshot local.', texto)
+        self.assertIn('Programação do fim de semana', texto)
+        self.assertIn('Classificação de pilotos 2026', texto)
+        self.assertIn('Desempenho das equipes', texto)
+        self.assertIn('Dados de desempenho por equipe indisponíveis no snapshot local.', texto)
+        self.assertIn('Estado dos dados', texto)
+        self.assertIn('Aguardando dados', texto)
+        self.assertNotIn('76.0%', texto)
+
+    def test_corridas_austin_tem_hierarquia_editorial_e_navegacao_secundaria_completa(self):
+        self.executar()
+        self.escolher('temporada', 2026)
+        self.escolher('gp', '2026:18')
+        texto = texto_renderizado(self.at)
+        for rotulo in ('Contexto do circuito', 'Informações do circuito', 'Condições disponíveis'):
+            self.assertIn(rotulo, texto)
+        codigo = (RAIZ / 'app.py').read_text(encoding='utf-8')
+        for aba in ('Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes'):
+            self.assertIn(aba, codigo)
+        self.assertIn('Dados meteorológicos indisponíveis no snapshot local.', texto)
+        self.assertIn('Aguardando dados', texto)
+        self.assertNotIn('Previsão disponível: 76.0%', texto)
+
+        css = app.estilo_dashboard()
+        self.assertIn('gp-cabecalho', css)
+        self.assertIn('tabela-editorial', css)
+        self.assertIn('barra-equipe', css)
+
+        campeonato = app.carregar(2026)['campeonato_pilotos']
+        tabela = app.tabela_campeonato_editorial(campeonato)
+        self.assertIn('Max Verstappen', tabela)
+        self.assertIn('barra-equipe', tabela)
+        self.assertIn('Pontos', tabela)
+
+    def test_rotulo_resultado_distingue_podio_pontos_abandono_e_desclassificacao(self):
+        self.assertEqual(app.rotulo_resultado(2, 'Finished'), 'Pódio')
+        self.assertEqual(app.rotulo_resultado(8, 'Finished'), 'Pontuou fora do pódio')
+        self.assertEqual(app.rotulo_resultado(14, 'Retired'), 'Abandono')
+        self.assertEqual(app.rotulo_resultado(18, 'Disqualified'), 'Desclassificação')
 
     def test_calendario_2026_usa_corridas_locais_e_marca_gp_selecionado_sem_afetar_2025(self):
         self.executar()

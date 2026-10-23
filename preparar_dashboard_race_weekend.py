@@ -80,12 +80,39 @@ def _fontes_snapshot(root):
 
 
 def _corrida_base(event):
+    local = event.get('Circuit', {}).get('Location', {})
+    programacao = []
+    for campo, nome in (
+        ('FirstPractice', 'Treino livre 1'),
+        ('SecondPractice', 'Treino livre 2'),
+        ('ThirdPractice', 'Treino livre 3'),
+        ('SprintQualifying', 'Classificação Sprint'),
+        ('Sprint', 'Sprint'),
+        ('Qualifying', 'Classificação'),
+    ):
+        sessao = event.get(campo)
+        if isinstance(sessao, dict) and sessao.get('date'):
+            programacao.append({
+                'sessao': nome,
+                'data': sessao['date'],
+                'hora': sessao.get('time') or 'Horário indisponível',
+            })
+    programacao.append({
+        'sessao': 'Corrida',
+        'data': event['date'],
+        'hora': event.get('time') or 'Horário indisponível',
+    })
     return {
         'temporada': 2026,
         'rodada': int(event['round']),
         'corrida': event['raceName'],
+        'cidade': local.get('locality') or 'Cidade indisponível',
+        'pais': local.get('country') or 'País indisponível',
+        'data': event['date'],
         'data_corrida': event['date'],
         'circuito_id': event['Circuit']['circuitId'],
+        'circuito_nome': event['Circuit'].get('circuitName') or 'Circuito indisponível',
+        'programacao': programacao,
         'estado_qualificacao': 'indisponivel',
         'estado_previsao': 'indisponivel',
         'estado_resultado': 'indisponivel',
@@ -93,6 +120,15 @@ def _corrida_base(event):
         'motivo_previsao': 'não há previsão registrada local válida para este GP',
         'motivo_resultado': MOTIVO_SEM_RESULTADO,
     }
+
+
+def _estado_operacao(corrida):
+    """Estado de apresentação; não altera emissão, fonte ou probabilidades."""
+    if corrida['estado_previsao'] != 'indisponivel':
+        return 'previsao_registrada'
+    if corrida['estado_qualificacao'] == 'local_disponivel':
+        return 'classificacao_disponivel'
+    return 'aguardando_dados'
 
 
 def _campeonato_pilotos_2026(root):
@@ -220,7 +256,9 @@ def _dados_2026(root):
                         'temporada': 2026, 'rodada': rodada, 'piloto_id': piloto_id,
                         **identidade, 'elegivel_previsao': False, 'probabilidade_modelo': None,
                         'ranking_modelo': None, 'ranking_classificacao': None,
-                        'resultado_observado': int(entry['position']), 'modo_previsao': None,
+                        'resultado_observado': int(entry['position']),
+                        'status_resultado': entry.get('status') or None,
+                        'modo_previsao': None,
                     }
 
     emissao = root / 'reports/operacao_2026/emissoes' / EMISSAO_SINGAPURA
@@ -286,6 +324,8 @@ def _dados_2026(root):
                 'ranking_classificacao': int(row['ranking_classificacao']) if row['ranking_classificacao'] else None,
                 'modo_previsao': 'ensaio_retrospectivo',
             })
+    for corrida in corridas:
+        corrida['estado_operacao'] = _estado_operacao(corrida)
     campeonato, fontes_campeonato = _campeonato_pilotos_2026(root)
     return {
         'corridas': corridas,

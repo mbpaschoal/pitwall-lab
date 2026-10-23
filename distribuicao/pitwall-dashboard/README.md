@@ -4,6 +4,8 @@ Demonstração local e publicável de um estudo retrospectivo sobre a probabilid
 individual de um piloto integrar o pódio de um Grande Prêmio principal. Não é uma
 previsão ao vivo, não estima a ordem do pódio e não consulta fontes na execução.
 
+**[Abrir dashboard — deploy pendente](#hospedagem-futura-ainda-não-executada)**
+
 ![Tela de desempenho de 2025](reports/dashboard_v1/desempenho_desktop.png)
 
 ## Três telas

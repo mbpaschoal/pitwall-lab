@@ -331,6 +331,8 @@ class TestExportacaoDashboard(unittest.TestCase):
         config = (self.destino / '.streamlit/config.toml').read_text(encoding='utf-8')
         self.assertIn('gatherUsageStats = false', config)
         self.assertIn('headless = true', config)
+        self.assertIn('primaryColor = "#D62732"', config)
+        self.assertIn('backgroundColor = "#F2F6FA"', config)
         self.assertNotIn('address =', config)
         self.assertNotIn('port =', config)
         app_testes = (self.destino / 'tests/test_dashboard_app.py').read_text(encoding='utf-8')

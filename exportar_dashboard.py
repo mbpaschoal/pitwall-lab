@@ -36,9 +36,9 @@ DOCUMENTOS_COPIADOS = (
 FONTES_COPIADAS = FONTES_CIENTIFICAS
 RUNTIME_WORKTREE = (
     'app.py', 'dashboard_dados.py', 'race_weekend_dados.py',
-    'frontend_assets/race_weekend.json', 'dashboard_assets/fonts/saira.ttf',
-    'dashboard_assets/fonts/sourcesans3.ttf', 'dashboard_assets/fonts/saira-OFL.txt',
-    'dashboard_assets/fonts/sourcesans3-OFL.txt', 'tests/test_dashboard_app.py',
+    'frontend_assets/race_weekend.json', 'dashboard_assets/fonts/abrilfatface.ttf',
+    'dashboard_assets/fonts/lato.ttf', 'dashboard_assets/fonts/lato-bold.ttf',
+    'dashboard_assets/fonts/abrilfatface-OFL.txt', 'dashboard_assets/fonts/lato-OFL.txt', 'tests/test_dashboard_app.py',
     'tests/test_dashboard_dados.py',
 )
 TEMPLATES = (
@@ -183,6 +183,13 @@ def _app_publico(conteudo):
     if texto.count(bloco_privado) != 1:
         raise ValueError('bloco privado GitHub esperado não encontrado no app')
     texto = texto.replace(bloco_privado, '    renderizar_documentacao_local(st)', 1)
+    marcador_hachura = "'pattern': {'shape': padroes, 'fgcolor': CORES['fundo']}"
+    if texto.count(marcador_hachura) == 1:
+        texto = texto.replace(
+            marcador_hachura,
+            "'pattern': {'shape': padroes, 'fgcolor': CORES['fundo'], 'bgcolor': CORES['modelo'], 'fillmode': 'overlay'}",
+            1,
+        )
     return texto.encode('utf-8')
 
 
