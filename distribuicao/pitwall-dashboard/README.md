@@ -31,13 +31,11 @@ explorada e 2025 uma avaliação retrospectiva já realizada. A classificação 
 referência de ranking, não uma probabilidade. As limitações temporais e de fonte
 estão nos documentos exibidos pela interface e em `docs/`.
 
-Em 2025, as métricas probabilísticas usam 478 casos. Nos mesmos
-22 GPs avaliáveis de ranking, o modelo identificou 51
-integrantes de pódio, contra 50 da classificação. A
-média foi 2.3182 contra 2.2727; ambos
-acertaram os três integrantes em 8/22 GPs. É uma
-vantagem descritiva pequena e um empate em pódios completos, não evidência de
-garantia futura, causalidade ou significância estatística.
+Em 2025, as métricas probabilísticas usam 478 casos. Nos mesmos 22 GPs
+avaliáveis de ranking, o modelo identificou 51 integrantes de pódio, contra 50 da
+classificação. A média foi 2,3182 contra 2,2727; ambos acertaram os três
+integrantes em 8/22 GPs. É uma vantagem descritiva pequena e um empate em pódios
+completos, não evidência de garantia futura, causalidade ou significância estatística.
 
 2025 já foi avaliado para o v1: não é teste intocado para versões posteriores.
 As fontes históricas podem ter revisões posteriores ao corte; o estudo não prova

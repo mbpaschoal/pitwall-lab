@@ -1,19 +1,91 @@
-# Checkpoint — etapa 8 Pitwall Lab
+# Checkpoint — correções focais R2 do Race Weekend
 
-## Objetivo
-Fechamento local autorizado da operação 2026, sem publicação.
+## Estado atual
+Os três achados de `reports/dashboard_race_weekend/revisao_final.json` foram corrigidos; QA e distribuição concluídos. A única revisão forte desta execução APROVOU COM RESSALVAS, sem P1/P2 no escopo focal.
+Parecer R1 reprovado permanece preservado. Histórico intermediário: `reports/dashboard_race_weekend/correcoes_r2_20261023T000545Z/estado_intermediario_antes_fecho.md`.
 
-## Concluído
-- COMMIT1 de implementação: `9e65ad25b125e78b671a763a43934385c1264363` (146 paths), pai `b067ad55dd97d964b132129838773cf6108773e3`.
-- Gate aprovado: 68 declarados, 68 efetivamente verificados, 68 OK, 0 erros. R4 e código/testes permaneceram intactos.
-- Testes reaproveitados: 54 aprovados; R4 aprovado no escopo.
-- Ensaio pós-COMMIT1 aprovado: `ENSAIO_RETROSPECTIVO`, 22 linhas/22 elegíveis, ordem de 15 entradas, probabilidades e rankings idênticos ao ensaio de referência; erro máximo `5.551115123125783e-17`. Raw alvo/futuro, fit e socket/DNS bloqueados. Não é previsão real de Austin.
+## Entregas verificadas
+1. `exportar_dashboard.py`: ZIP temporário no mesmo diretório, recusa symlink/arquivo divergente/não regular, aceita idêntico sem reescrita e publica por link exclusivo sem substituir rival concorrente.
+2. `app.py`: junto a Pódios completos acertados: “Acerto dos três integrantes do pódio, independentemente da ordem”. Cálculos e denominadores preservados.
+3. `app.py`: Corridas prioriza contexto/resultado observado e recolhe probabilidades; Previsões prioriza probabilidades/estado e recolhe resultado posterior. O GP selecionado e a identificação de ensaio retrospectivo permanecem.
 
-## Arquivos
-Evidências em `reports/operacao_2026/fechamento_local_20261021T004418Z/` e emissão em `reports/operacao_2026/emissoes/ensaio-commit-9e65ad25b125e78b671a763a43934385c1264363/`.
+## Evidências desta execução
+Diretório: `reports/dashboard_race_weekend/correcoes_r2_20261023T000545Z/`.
+- `1_zip_red.log` e `1_zip_green.log`: reprodução e primeira validação; prova final inclui os casos adicionais de FIFO/rival.
+- `5_gate_focal_final.log`: 18 testes aprovados (exportador e duas regressões de UI), sem suíte científica.
+- `4_distribuicao_verificacao_final.log` e `4_distribuicao_idempotencia.log`: pacote de 37 arquivos/ZIP conferidos, idempotência e nove fontes científicas idênticas. Pacote anterior preservado no subdiretório distribuicao_anterior.
+- `qa_telas.json`, `qa_resumo.json` e capturas: Corridas, Previsões e Desempenho; desktop e viewport móvel 390×844, sem exceção Streamlit ou overflow horizontal na amostra.
+- `modelos_e_execucao.json`: modelo médio efetivo gpt-5.6-terra/openai-codex, assinatura. O transporte do executor terminou por timeout, não por quota; a entrega foi verificada diretamente antes de avançar.
+- Integridade anterior reaproveitada: 446 arquivos/68 declarações, 374 resultados/22 probabilidades. Comparação com o selo R1 só encontrou mudanças autorizadas em app/exportador/testes e cópia gerada; asset/fontes/ciência preservados. Sem nova inferência/treino/coleta.
 
-## Gate e ensaio
-O gate e os 54 testes foram reaproveitados, não reexecutados. A única execução offline do ensaio pós-commit foi aprovada no terminal pelo pai e executada pelo wrapper pré-carregado; não foi uma nova execução do executor médio.
+## Operação e próxima ação
+Servidor principal da raiz em http://127.0.0.1:8501/, somente loopback, PID 3182; encerrar com `kill 3182`.
+Próximo comando seguro: `curl --fail http://127.0.0.1:8501/_stcore/health`.
+Revisão R2 executada: gpt-6-astra/openai-codex, uma chamada principal incluída na assinatura. Parecer aprovado_com_ressalvas em `reports/dashboard_race_weekend/correcoes_r2_20261023T000545Z/revisao_final.json`. Sem P1/P2 nos três achados. P3 restante: texto de orientação “favoritos visíveis acima” pode indicar posição errada em Corridas; sugerida orientação sem referência espacial. Não foi corrigido após o parecer para preservar o payload e a revisão única. Os 42 arquivos selados continuam idênticos. Próxima ação: avaliação local do usuário; sem correção/revisão automática agendada.
+Sem commit, push, publicação, alterações de skills/configurações ou dependências. HEAD continua f279b4763611fc348ed9f0ef9451ec934b6f220f.
 
-## Próximo passo
-Aguardar; sem push e sem próxima etapa.
+## Nova entrega solicitada — aguardando modelo médio
+- Pedido: entrega curta, cota restante informada pelo usuário de 19%, execução direta sem subagentes nem revisão forte.
+- Bloqueio antes da implementação: a sessão atual usa efetivamente `gpt-6.1-sol/openai-codex`, confirmado em `session_model_usage` da própria conversa. Não foi apresentada como execução média. A captura da interface Hermes não disponibilizou controles para trocar o modelo; não foram alteradas configurações nem aberto outro executor.
+- Item 1 PENDENTE: separar “Campeonato de pilotos 2026” das probabilidades por GP; classificação Jolpica com rodada de referência, UTC de obtenção, cache e paginação completa.
+- Item 2 PENDENTE, iniciar somente após concluir/verificar o item 1: garantir associação exclusiva emissão↔GP; Singapura é ensaio retrospectivo, nunca previsão de Austin. Sem emissão, mostrar os requisitos ausentes.
+- Item 3 PENDENTE, iniciar somente após concluir/verificar o item 2: calendário somente 2026, fontes/componentes existentes, sincronizado com seletor do GP.
+- Alterações desta tentativa: apenas este checkpoint. Nenhum código, dado, probabilidade ou pacote alterado; nenhum teste repetido. OpenF1, treino, commit, push e mudança de visibilidade não executados.
+- Verificações: checkpoint e guia `docs/comandos_operacao_2026.md` lidos; dashboard respondeu `ok` em `http://127.0.0.1:8501/_stcore/health`.
+- Próximo passo exato: o usuário selecionar o modelo médio `gpt-5.6-terra` nesta conversa e enviar nova mensagem. Confirmar o modelo efetivo antes de implementar. Então ler apenas `app.py`, `race_weekend_dados.py` e o coletor/cache Jolpica existente necessário ao item 1; escrever teste focal, implementar/verificar somente item 1 e atualizar este checkpoint antes de iniciar item 2. Sem retomada automática.
+- Comando operacional existente: guia `docs/comandos_operacao_2026.md`, seção C, linhas 43–75. Após encerramento confirmado da classificação, criar snapshot novo com `operar_2026.py coletar --id "$SNAPSHOT" --atualizar --classificacao-circuito americas`, consultar `estado --snapshot "$SNAPSHOT"`; somente com estado `pronto`, emitir com `emitir --snapshot "$SNAPSHOT" --id "$EMISSAO" --sessao-encerrada-em "$FIM_Q" --fonte-encerramento "$FONTE_Q" --corte "$CORTE"`. UTC e URL de encerramento precisam ser reais; comandos não executados nesta tentativa.
+- Tornar o repositório público continua autorizado pelo usuário, mas fica expressamente PENDENTE para outra execução. Não tratar esta autorização como tarefa a executar agora.
+
+## Entrega curta 2026 — item 1 concluído e verificado
+- Alterações: `preparar_dashboard_race_weekend.py` passou a derivar `dados_2026.campeonato_pilotos` exclusivamente das páginas de resultados já presentes no snapshot `coleta-20261020T020130Z`, lidas por `operacao2026.fontes.ler_snapshot`. Essa leitura revalida hash, `limit`/`offset`/`total`, cobertura de paginação e duplicidades antes da soma de pontos; sem rede.
+- Apresentação: `app.py` mostra “Campeonato de pilotos 2026” em bloco próprio, separado das probabilidades do GP, com rodada de referência 17, obtenção UTC `2026-10-19T16:49:29.864340Z`, snapshot, número de páginas validadas e escopo explícito. O campo é levado por `race_weekend_dados.py` e validado no carregamento.
+- Fonte/campos locais: `data/operacao_2026/snapshots/coleta-20261020T020130Z/indice.json` e `raw/resultados_<rodada>_offset_0000.json`; campos `MRData.limit`, `offset`, `total`, `RaceTable.Races[].round`, `Results[].points`, `Driver` e `Constructor`. São 17 páginas e 374 registros de resultados no recorte local.
+- Verificações: RED observado no teste novo por ausência de `campeonato_pilotos`; GREEN em `tests.test_race_weekend_assets.TestAssetsRaceWeekend.test_campeonato_2026_vem_do_snapshot_local_com_paginas_completas_e_referencia` e `tests.test_dashboard_app.TestDashboardApp.test_2026_separa_campeonato_local_das_probabilidades_do_gp` (ambos aprovados). `frontend_assets/race_weekend.json` foi regenerado localmente; nenhuma distribuição/publicação/rede foi acionada.
+- Limitação: a tabela é uma classificação acumulada dos resultados principais disponíveis no cache, não uma classificação oficial ao vivo; o próprio app registra esse escopo. Sem dados locais de Sprint, não há inferência desses pontos.
+- Item 2 permanece pendente e é o próximo passo exato: testar e garantir que linhas/probabilidades só sejam expostas quando a emissão pertencer à rodada selecionada; Singapura permanece rotulada como ensaio retrospectivo e Austin sem emissão deve listar requisitos faltantes, sem favoritos.
+
+## Entrega curta 2026 — item 2 concluído e verificado
+- Alteração: em 2026, `renderizar_previsoes` agora encerra o bloco de probabilidades quando o GP selecionado tem `estado_previsao=indisponivel`. A tela informa “Sem probabilidades publicadas” e exige explicitamente classificação concluída mais emissão prospectiva registrada para aquele GP; não cria favoritos, gráfico, tabela ou percentuais.
+- Associação preservada: os dados locais de Singapura continuam na rodada 17 com `modo_previsao=ensaio_retrospectivo` e `estado_previsao=ensaio_retrospectivo`; Austin é rodada 18 e não recebe participantes/probabilidades da rodada 17. Nenhuma probabilidade foi recalculada ou modificada.
+- Verificação: RED observado porque Austin ainda exibiu cabeçalhos vazios de favoritos e não listava ambos os requisitos. GREEN em `tests.test_dashboard_app.TestDashboardApp.test_austin_sem_emissao_nao_reusa_ensaio_de_singapura_nem_mostra_favoritos` (aprovado): confirma a mensagem, ausência de “Favoritos por ranking publicado” e ausência dos 76,0%/linha de Singapura.
+- Pendência/próximo passo exato: item 3, escrever teste focal e adicionar calendário simples somente para 2026, reutilizando os dados locais existentes e sincronizado ao seletor de GP; não alterar 2024/2025.
+
+## Entrega curta 2026 — item 3 concluído e verificado
+- Alteração: `app.py` inclui `Calendário 2026` somente no fluxo de exploração da temporada 2026. A tabela usa `pacote['corridas']` já carregado do asset local e marca “Selecionado” na mesma rodada escolhida no seletor de GP. Os fluxos 2024/2025 não chamam nem mostram esse calendário.
+- Fonte/campos: `frontend_assets/race_weekend.json`, `dados_2026.corridas`, derivados do calendário local do snapshot; campos exibidos `rodada`, `data_corrida` e `corrida`. Sem coleta, rede ou alteração do calendário-fonte.
+- Verificação: RED observado pela ausência de `Calendário 2026`/`tabela_calendario_2026`. GREEN em `tests.test_dashboard_app.TestDashboardApp.test_calendario_2026_usa_corridas_locais_e_marca_gp_selecionado_sem_afetar_2025` (aprovado), incluindo Austin na rodada 18, marca sincronizada e ausência em 2025.
+- Próximo passo exato: executar apenas o gate focal consolidado e a checagem HTTP local já disponível; se aprovados, registrar recibo factual e encerrar. Distribuição permanece pendente: não atualizar sem confirmar o exportador previsto, e não publicar.
+
+## Encerramento factual — entrega curta 2026
+- Executor médio efetivo: `gpt-5.6-terra/openai-codex`, sessão `local-e516ae9292beea2ddb79fcb108c00c471511f1a505af0bbd90848b04ac16e7f0`, 33 chamadas principais incluídas na assinatura. O executor atingiu HTTP 429 durante a inspeção posterior do exportador; o runtime registrou três tentativas automáticas e encerrou. Não houve nova chamada, fallback, retentativa manual ou continuação automática após o sinal de quota.
+- Verificação consolidada posterior ao encerramento: cinco testes focados aprovados em 0,398 s — os três testes novos dos itens 1–3, mais a regressão de focos Corridas/Previsões. Recibo: `reports/dashboard_race_weekend/entrega_curta_2026_20261023T143326Z.json`.
+- Item 1 precisa de precisão de fonte: o bloco separado funciona, mostra rodada 17, UTC e paginação validada das 17 páginas/374 resultados Jolpica locais. Porém o cache não contém endpoint Jolpica de *driver standings* nem dados de Sprint. A tabela soma apenas pontos dos resultados principais disponíveis; não é classificação oficial completa ao vivo. Não declarar o contrário. Próximo passo autorizado futuro: cachear a classificação de pilotos Jolpica com paginação completa ou manter explicitamente essa limitação.
+- Item 2 concluído: Singapura (rodada 17) preserva 22 probabilidades de ensaio retrospectivo; Austin (rodada 18) está indisponível com zero probabilidades e exige classificação concluída e emissão prospectiva registrada. O teste confirma que 76,0% e favoritos de Singapura não aparecem em Austin.
+- Item 3 concluído: calendário simples exclusivo de 2026 usa o asset local e marca a rodada selecionada; teste confirma sincronismo em Austin e ausência em 2025.
+- Servidor reiniciado somente em loopback após a execução: `http://127.0.0.1:8501/`, health `ok`, listener PID 1538; encerrar com `kill 1538`.
+- Não realizado: atualização da distribuição, OpenF1, treino, alteração manual de probabilidades, commit, push, publicação, visibilidade ou revisão forte. A publicação do repositório permanece pendente para outra execução. Não há retomada automática.
+
+## Correção focal — fonte do Campeonato de pilotos 2026
+- Escopo: somente a origem do bloco de campeonato foi substituída. Probabilidades, calendário, resultados, modelo e demais telas não foram alterados.
+- Coleta única autorizada: `https://api.jolpi.ca/ergast/f1/2026/driverstandings.json?limit=30&offset=0`, sem retentativa. Snapshot versionado: `data/operacao_2026/snapshots/classificacao-pilotos-20261023T143930Z/`.
+- Recibo da fonte: UTC `2026-10-23T14:39:30.899442Z`; rodada de referência 17; paginação `limit=30`, `offset=0`, `total=23`, uma página esperada/coletada, completa; SHA-256 do raw `f1cfb67c99d81ec779a6e5523b552f40982288ee0c50e452517f79a6008d7f03`. Índice preserva URL, metadados e hash.
+- Implementação: `preparar_dashboard_race_weekend.py` lê exclusivamente `DriverStandings` do snapshot, valida URL, hash, temporada, rodada, `limit`/`offset`/`total`, cobertura completa e IDs sem duplicidade. A tabela usa somente posição, pontos, vitórias, piloto e equipe(s) do payload. Ela não soma resultados locais e não usa aquele cache como substituto.
+- Falha/incompletude: índice/página inválida, hash divergente, paginação incompleta ou dados duplicados produzem `campeonato_pilotos.disponivel=false`; a UI mostra “Classificação de pilotos indisponível” com motivo e mantém as probabilidades por GP separadas.
+- Asset/adaptador/UI/testes alterados somente nos arquivos necessários: `preparar_dashboard_race_weekend.py`, `race_weekend_dados.py`, `app.py`, `frontend_assets/race_weekend.json`, testes focados e o novo snapshot.
+- Verificações focadas aprovadas: 3 testes em 0,158 s — paginação/DriverStandings e Max Verstappen P4 (221 pontos, 2 vitórias); indisponibilidade sem somar resultados; separação do campeonato e probabilidades por GP. Asset regenerado e health do dashboard `ok` em `http://127.0.0.1:8501/`.
+- Próximo passo exato: nenhum nesta execução. Se uma coleta futura trouxer mais de uma página, o mesmo adaptador exige offsets completos antes de exibir a tabela. Sem revisão forte, distribuição, commit, push ou publicação.
+
+## Correção focal — renderização do DriverStandings
+- Erro corrigido: `renderizar_campeonato_pilotos` não acessa mais campos do formato anterior, como `paginas_resultados_validadas`. O schema oficial atual usa `paginas_validadas` e é validado antes da renderização.
+- Schema ausente/inválido: o bloco agora exibe “Classificação de pilotos indisponível” e uma explicação legível, sem `KeyError` ou traceback. Snapshot válido permanece exclusivamente em DriverStandings: posição, pontos, vitórias, nome completo e equipe(s).
+- Testes focados: RED reproduziu `KeyError: 'disponivel'` para schema ausente. GREEN: 3 testes aprovados em 0,040 s — schema DriverStandings válido/Max P4; schema ausente sem exceção; renderização sem probabilidades no quadro do campeonato.
+- QA após reinício: dashboard reiniciado em loopback; health `ok`, listener PID 2550. Na temporada 2026, a tabela renderizada mostra a linha acessível `4 | Max Verstappen | Red Bull | 221 | 2`; não exibiu mensagem de indisponibilidade. A inspeção visual confirmou o bloco e a tabela; o canvas da grade apareceu preto na captura headless, mas a árvore de acessibilidade da própria tabela expôs os mesmos cabeçalhos e valores.
+- Escopo preservado: não houve coleta, alteração de probabilidades, calendário, OpenF1, treino, revisão forte, commit, push ou publicação nesta correção.
+
+## Publicação Race Weekend — pré-commit verificado
+- Revisão curta do diff por executor médio efetivo `gpt-5.6-terra/openai-codex`: allowlist separada dos arquivos pessoais; identificou que a distribuição anterior não correspondia a `app.py`, `race_weekend_dados.py` e ao asset atual.
+- Exportação atualizada pelo fluxo seguro: a cópia anterior foi preservada fora do projeto em SCRATCH antes da troca. `exportar_dashboard.py` gerou `distribuicao/pitwall-dashboard/` com 37 arquivos e ZIP determinístico SHA-256 `7df473aa74b9cc46863e862c903384ddf680425b4230c0c9b8a30dad1edfd49a`; 37 membros e bytes do ZIP foram conferidos contra a pasta.
+- Testes antes do commit: 22 testes focados raiz (exportador, DriverStandings, separação por GP e renderização) aprovados. Depois da exportação, 24 testes do pacote independente aprovados (manifesto/inventário e dashboard). Max Verstappen permanece P4, 221 pontos e 2 vitórias no DriverStandings.
+- Escopo de staging planejado: dashboard Race Weekend, gerador/adaptador/asset/fontes, snapshot Jolpica necessário, testes, receita/documentação operacional e os 37 arquivos da distribuição/ZIP. Exclusões explícitas: `Home.md`, `AGENTS.md`, `inbox/`, `notes/`, `ideas/`, `F1 previsões conhecimento/`, `codex-knowledge-llm/`, automações, `.graphify*`, `projects/`, caches, credenciais, logs/revisões e relatórios de revisão.
+- Próximo passo exato autorizado: conferir allowlist no índice, criar um único commit, push normal para `main`, confirmar SHA remoto, então tornar `mbpaschoal/pitwall-lab` público e consultar novamente a visibilidade. Sem coleta, treino, alteração de probabilidades ou revisão forte.
+

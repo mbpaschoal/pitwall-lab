@@ -25,7 +25,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "8bafa64eba14625f2e6edc346487f693870eca56a0beaf64da354e40d3d75e67",
+      "sha256_destino": "72da943753afb6710bc2e9787d7e792283f6039c2da93f75ef45d2ebb8c0e2af",
       "sha256_origem": null
     },
     {
@@ -53,16 +53,44 @@
       "caminho": "README.md",
       "fonte": "publicacao/templates/README_PUBLICO.md.tpl",
       "modo": "gerado",
-      "sha256_destino": "55de983582830efd05ecafac2fec5984223cdaa58d3bf85ccb80e286158e7347",
-      "sha256_origem": "c4180c487de0c68de681b53bb2729e5c82ba8294b0cfe9c87bcb77cfb58a06c1"
+      "sha256_destino": "c5c9bf9dc832285a8aafb103af68a1976b86bf0f09ba4e798735771c000ed93b",
+      "sha256_origem": "c5c9bf9dc832285a8aafb103af68a1976b86bf0f09ba4e798735771c000ed93b"
     },
     {
       "caminho": "app.py",
       "fonte": "app.py",
       "modo": "gerado",
-      "nota": "app gerado com transformações estreitas do bloco privado GitHub e da apresentação das hachuras no gráfico de probabilidades",
-      "sha256_destino": "91e12b208a5ebebbe8302148191bad10528f7e7ff158e8b4cac0204793cf0460",
-      "sha256_origem": "c00510e5192c684412bbef88719642361bc7f25f6bbbfd643fd509bd7f2a943f"
+      "nota": "viewer offline inserido na UI Race Weekend do working tree",
+      "sha256_destino": "4800932e04c6975890d5692b13ac98752d0cabd063e94e2637369d88d814805d",
+      "sha256_origem": "4e7e1e4d3f67f280c037880d4c3805e98cab0dd2b2f47c04cf899bf5d6e3672c"
+    },
+    {
+      "caminho": "dashboard_assets/fonts/saira-OFL.txt",
+      "fonte": "dashboard_assets/fonts/saira-OFL.txt",
+      "modo": "copia",
+      "sha256_destino": "f2665d4718b452b3818a877191355ac884a6b9b419d35408fe7ee487e9e8f30f",
+      "sha256_origem": "f2665d4718b452b3818a877191355ac884a6b9b419d35408fe7ee487e9e8f30f"
+    },
+    {
+      "caminho": "dashboard_assets/fonts/saira.ttf",
+      "fonte": "dashboard_assets/fonts/saira.ttf",
+      "modo": "copia",
+      "sha256_destino": "9d050fc5a01c85f74c4257c207d50b55d1e40c37308c642f974a2c5003231dde",
+      "sha256_origem": "9d050fc5a01c85f74c4257c207d50b55d1e40c37308c642f974a2c5003231dde"
+    },
+    {
+      "caminho": "dashboard_assets/fonts/sourcesans3-OFL.txt",
+      "fonte": "dashboard_assets/fonts/sourcesans3-OFL.txt",
+      "modo": "copia",
+      "sha256_destino": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "sha256_origem": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "caminho": "dashboard_assets/fonts/sourcesans3.ttf",
+      "fonte": "dashboard_assets/fonts/sourcesans3.ttf",
+      "modo": "copia",
+      "sha256_destino": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+      "sha256_origem": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9"
     },
     {
       "caminho": "dashboard_dados.py",
@@ -115,6 +143,20 @@
       "sha256_origem": "73559a5ab957b62542e5dcb7bdfb9c8aec63857d95de2800aee90edec7491c4e"
     },
     {
+      "caminho": "frontend_assets/race_weekend.json",
+      "fonte": "frontend_assets/race_weekend.json",
+      "modo": "copia",
+      "sha256_destino": "c233ecfef2e4de6fb310ea9ac887d07e7fc120ce9b8704c85aae9edb8955bdc0",
+      "sha256_origem": "c233ecfef2e4de6fb310ea9ac887d07e7fc120ce9b8704c85aae9edb8955bdc0"
+    },
+    {
+      "caminho": "race_weekend_dados.py",
+      "fonte": "race_weekend_dados.py",
+      "modo": "copia",
+      "sha256_destino": "054245810dc79230f4a8af8256ae59f4b043296230066f6472a75b80c3439619",
+      "sha256_origem": "054245810dc79230f4a8af8256ae59f4b043296230066f6472a75b80c3439619"
+    },
+    {
       "caminho": "reports/avaliacao_final_v1/avaliacao_corridas.csv",
       "fonte": "reports/avaliacao_final_v1/avaliacao_corridas.csv",
       "modo": "copia",
@@ -157,13 +199,6 @@
       "sha256_origem": "2a21b3107da72f27869dce7dc9a9ccc5ab7ff1624c343444d224937f51037fc9"
     },
     {
-      "caminho": "reports/dashboard_v1/desempenho_desktop.png",
-      "fonte": "reports/dashboard_v1/desempenho_desktop.png",
-      "modo": "copia",
-      "sha256_destino": "17d9d1c2bea7c78d319840da85cb3a549ccf610ab9f4f0b32f120ec90258da4b",
-      "sha256_origem": "17d9d1c2bea7c78d319840da85cb3a549ccf610ab9f4f0b32f120ec90258da4b"
-    },
-    {
       "caminho": "reports/modelo_v1/avaliacao_corridas.csv",
       "fonte": "reports/modelo_v1/avaliacao_corridas.csv",
       "modo": "copia",
@@ -203,8 +238,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "0a4805409ea98ecfaeaeab5f015943ff1f4b06779518ca26e4cad398603a3120",
-      "sha256_origem": "c4d2c881eb79acc9b62b764e8e9e84b699eeb4cc98f656cee9bdad9ed78099c9"
+      "sha256_destino": "dfe446540085e2e6ab48766c8e13e7297e2f889960332033e4f233b73fcb2ac7",
+      "sha256_origem": "d219633876749abceaccf38c9fcd06d73a69f251ff644f1513ed4da774b37232"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -234,16 +269,16 @@
     "reports/avaliacao_final_v1/metricas.json",
     "reports/avaliacao_final_v1/calibracao.csv"
   ],
-  "formato": "pitwall-dashboard-publicacao-v1",
-  "nota_reprodutibilidade": "Não registra relógio de execução: a mesma receita, templates e commit de origem produzem os mesmos bytes. O próprio MANIFESTO.json não lista nem contém seu hash.",
+  "formato": "pitwall-dashboard-publicacao-v2",
+  "nota_reprodutibilidade": "Os nove dados científicos são bytes do commit-base; UI, asset e fontes locais são do working tree e registram hashes de origem e destino. MANIFESTO.json não se lista.",
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "0eea9213b18dd037b80b407361460d578fbc4e3051c6814b4b1d153c570a13f0"
+      "sha256": "3801074d631463ea04a641f7c72e072b511ecbd8734d703913b3113575710a46"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
-      "sha256": "c4180c487de0c68de681b53bb2729e5c82ba8294b0cfe9c87bcb77cfb58a06c1"
+      "sha256": "c5c9bf9dc832285a8aafb103af68a1976b86bf0f09ba4e798735771c000ed93b"
     },
     {
       "caminho": "publicacao/templates/FONTES_E_DADOS.md",

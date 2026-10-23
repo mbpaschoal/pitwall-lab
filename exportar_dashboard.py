@@ -5,8 +5,10 @@ import hashlib
 import json
 import os
 import shutil
+import stat
 import subprocess
 import tempfile
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -31,14 +33,14 @@ DOCUMENTOS_COPIADOS = (
     'docs/dicionario_variaveis.md',
     'reports/avaliacao_final_v1/relatorio.md',
 )
-FONTES_COPIADAS = (
-    'app.py',
-    'dashboard_dados.py',
-    'tests/test_dashboard_app.py',
+FONTES_COPIADAS = FONTES_CIENTIFICAS
+RUNTIME_WORKTREE = (
+    'app.py', 'dashboard_dados.py', 'race_weekend_dados.py',
+    'frontend_assets/race_weekend.json', 'dashboard_assets/fonts/saira.ttf',
+    'dashboard_assets/fonts/sourcesans3.ttf', 'dashboard_assets/fonts/saira-OFL.txt',
+    'dashboard_assets/fonts/sourcesans3-OFL.txt', 'tests/test_dashboard_app.py',
     'tests/test_dashboard_dados.py',
-    'reports/dashboard_v1/desempenho_desktop.png',
-    'reports/modelo_v1/relatorio.md',
-) + FONTES_CIENTIFICAS + DOCUMENTOS_COPIADOS
+)
 TEMPLATES = (
     'publicacao/templates/README_PUBLICO.md.tpl',
     'publicacao/templates/FONTES_E_DADOS.md',
@@ -181,14 +183,6 @@ def _app_publico(conteudo):
     if texto.count(bloco_privado) != 1:
         raise ValueError('bloco privado GitHub esperado não encontrado no app')
     texto = texto.replace(bloco_privado, '    renderizar_documentacao_local(st)', 1)
-    marcador_hachura = "        marker={'color': CORES['modelo'], 'pattern': {'shape': padroes, 'fgcolor': CORES['fundo']}},"
-    hachura_publica = (
-        "        marker={'color': CORES['modelo'], 'pattern': {'shape': padroes, "
-        "'fgcolor': CORES['fundo'], 'bgcolor': CORES['modelo'], 'fillmode': 'overlay'}},"
-    )
-    if texto.count(marcador_hachura) != 1:
-        raise ValueError('marcador de hachura esperado no gráfico de probabilidades não encontrado')
-    texto = texto.replace(marcador_hachura, hachura_publica, 1)
     return texto.encode('utf-8')
 
 
@@ -252,57 +246,32 @@ def _lista_templates_com_hashes(raiz):
 
 def _montar_arquivos(raiz, conteudos, commit):
     arquivos = {}
-    for relativo in FONTES_CIENTIFICAS + DOCUMENTOS_COPIADOS:
+    for relativo in FONTES_CIENTIFICAS:
         _adicionar(arquivos, relativo, conteudos[relativo], 'copia', relativo, _sha256(conteudos[relativo]))
-    _adicionar(
-        arquivos,
-        'dashboard_dados.py',
-        conteudos['dashboard_dados.py'],
-        'copia',
-        'dashboard_dados.py',
-        _sha256(conteudos['dashboard_dados.py']),
-    )
-    _adicionar(
-        arquivos,
-        'app.py',
-        _app_publico(conteudos['app.py']),
-        'gerado',
-        'app.py',
-        _sha256(conteudos['app.py']),
-        'app gerado com transformações estreitas do bloco privado GitHub e da apresentação das hachuras no gráfico de probabilidades',
-    )
-    _adicionar(
-        arquivos,
-        'tests/test_dashboard_app.py',
-        _teste_app_portavel(conteudos['tests/test_dashboard_app.py']),
-        'gerado',
-        'tests/test_dashboard_app.py',
-        _sha256(conteudos['tests/test_dashboard_app.py']),
-        'cópia com remoção exclusiva do workaround Python 3.9/Hermes',
-    )
-    _adicionar(
-        arquivos,
-        'tests/test_dashboard_dados.py',
-        conteudos['tests/test_dashboard_dados.py'],
-        'copia',
-        'tests/test_dashboard_dados.py',
-        _sha256(conteudos['tests/test_dashboard_dados.py']),
-    )
-    _adicionar(
-        arquivos,
-        'reports/dashboard_v1/desempenho_desktop.png',
-        conteudos['reports/dashboard_v1/desempenho_desktop.png'],
-        'copia',
-        'reports/dashboard_v1/desempenho_desktop.png',
-        _sha256(conteudos['reports/dashboard_v1/desempenho_desktop.png']),
-    )
+    for relativo in DOCUMENTOS_COPIADOS:
+        conteudo = _ler_arquivo_regular(raiz, relativo)
+        _adicionar(arquivos, relativo, conteudo, 'copia', relativo, _sha256(conteudo))
+    for relativo in RUNTIME_WORKTREE:
+        conteudo = _ler_arquivo_regular(raiz, relativo)
+        if relativo == 'app.py':
+            conteudo = _app_publico(conteudo)
+            modo = 'gerado'
+            nota = 'viewer offline inserido na UI Race Weekend do working tree'
+        elif relativo == 'tests/test_dashboard_app.py':
+            conteudo = _teste_app_portavel(conteudo)
+            modo = 'gerado'
+            nota = 'cópia com remoção exclusiva do workaround Python 3.9/Hermes'
+        else:
+            modo = 'copia'
+            nota = None
+        _adicionar(arquivos, relativo, conteudo, modo, relativo, _sha256(_ler_arquivo_regular(raiz, relativo)), nota)
     _adicionar(
         arquivos,
         'docs/relatorio_2024.md',
-        _relatorio_2024_publico(conteudos['reports/modelo_v1/relatorio.md']),
+        _relatorio_2024_publico(_ler_arquivo_regular(raiz, 'reports/modelo_v1/relatorio.md')),
         'adaptado_documentacao',
         'reports/modelo_v1/relatorio.md',
-        _sha256(conteudos['reports/modelo_v1/relatorio.md']),
+        _sha256(_ler_arquivo_regular(raiz, 'reports/modelo_v1/relatorio.md')),
         'links locais ajustados; resultados textuais preservados',
     )
 
@@ -347,15 +316,15 @@ def _manifesto(arquivos, raiz, commit):
             registro['nota'] = item['nota']
         registros.append(registro)
     return {
-        'formato': 'pitwall-dashboard-publicacao-v1',
+        'formato': 'pitwall-dashboard-publicacao-v2',
         'commit_origem': commit,
         'data_referencia_reprodutivel_utc': _data_do_commit(raiz, commit),
         'fontes_cientificas': list(FONTES_CIENTIFICAS),
         'arquivos': registros,
         'origens_novas_fora_do_commit_base': _lista_templates_com_hashes(raiz),
         'nota_reprodutibilidade': (
-            'Não registra relógio de execução: a mesma receita, templates e commit de origem '
-            'produzem os mesmos bytes. O próprio MANIFESTO.json não lista nem contém seu hash.'
+            'Os nove dados científicos são bytes do commit-base; UI, asset e fontes locais são '
+            'do working tree e registram hashes de origem e destino. MANIFESTO.json não se lista.'
         ),
     }
 
@@ -416,6 +385,82 @@ def _escrever_arquivos(raiz, arquivos):
         caminho.write_bytes(item['conteudo'])
 
 
+def _ler_zip_regular(caminho):
+    """Lê um ZIP existente sem seguir links nem aceitar outros tipos de arquivo."""
+    try:
+        modo = os.lstat(caminho).st_mode
+    except FileNotFoundError:
+        return None
+    if stat.S_ISLNK(modo):
+        raise ValueError('ZIP de destino não pode usar symlink: {}'.format(caminho))
+    if not stat.S_ISREG(modo):
+        raise ValueError('ZIP de destino não é arquivo regular: {}'.format(caminho))
+    try:
+        descritor = os.open(str(caminho), os.O_RDONLY | getattr(os, 'O_NOFOLLOW', 0))
+    except FileNotFoundError:
+        return None
+    except OSError as erro:
+        raise ValueError('ZIP de destino inválido ou symlink: {}'.format(caminho)) from erro
+    try:
+        if not stat.S_ISREG(os.fstat(descritor).st_mode):
+            raise ValueError('ZIP de destino não é arquivo regular: {}'.format(caminho))
+        with os.fdopen(descritor, 'rb') as arquivo:
+            descritor = None
+            return arquivo.read()
+    finally:
+        if descritor is not None:
+            os.close(descritor)
+
+
+def _preparar_zip_deterministico(destino, esperado):
+    """Cria o ZIP privado e recusa previamente qualquer destino não idêntico."""
+    caminho = destino.parent / 'pitwall-dashboard.zip'
+    _recusar_symlink_no_caminho(caminho, 'ZIP de destino')
+    descritor, nome_temporario = tempfile.mkstemp(prefix='.pitwall-dashboard-', suffix='.zip', dir=str(destino.parent))
+    os.close(descritor)
+    temporario = Path(nome_temporario)
+    try:
+        with zipfile.ZipFile(temporario, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as arquivo:
+            for nome in sorted(esperado):
+                info = zipfile.ZipInfo(nome, date_time=(1980, 1, 1, 0, 0, 0))
+                info.compress_type = zipfile.ZIP_DEFLATED
+                info.external_attr = 0o100644 << 16
+                arquivo.writestr(info, esperado[nome])
+        existente = _ler_zip_regular(caminho)
+        if existente is not None:
+            if existente != temporario.read_bytes():
+                raise ValueError('ZIP de destino diverge do pacote esperado; nada foi sobrescrito')
+            temporario.unlink()
+            return None, caminho
+        return temporario, caminho
+    except Exception:
+        if temporario.exists():
+            temporario.unlink()
+        raise
+
+
+def _publicar_zip_temporario(temporario, caminho):
+    """Publica somente por link exclusivo; nunca substitui um destino existente."""
+    if temporario is None:
+        return caminho
+    try:
+        os.link(str(temporario), str(caminho))
+    except FileExistsError:
+        existente = _ler_zip_regular(caminho)
+        if existente != temporario.read_bytes():
+            raise ValueError('ZIP de destino apareceu ou diverge do pacote esperado; nada foi sobrescrito')
+    finally:
+        if temporario.exists():
+            temporario.unlink()
+    return caminho
+
+
+def _zip_deterministico(destino, esperado):
+    """Compatibilidade interna: prepara e publica o ZIP sem sobrescrever destinos."""
+    temporario, caminho = _preparar_zip_deterministico(destino, esperado)
+    return _publicar_zip_temporario(temporario, caminho)
+
+
 def exportar(raiz_projeto=None, destino=None, commit_origem=COMMIT_BASE_PADRAO):
     """Gera o pacote ou aceita somente uma cópia pré-existente byte idêntica."""
     raiz = _caminho_absoluto_sem_diretorio_pai(
@@ -438,27 +483,35 @@ def exportar(raiz_projeto=None, destino=None, commit_origem=COMMIT_BASE_PADRAO):
         nota='autorreferência excluída da lista de hashes do manifesto',
     )
     esperado = {caminho: item['conteudo'] for caminho, item in arquivos.items()}
-
-    if destino.exists():
-        existente = _arvore(destino)
-        if existente != esperado:
-            raise ValueError('destino não vazio diverge do pacote esperado; nada foi sobrescrito')
-        return {'destino': str(destino), 'arquivos': len(esperado), 'idempotente': True}
-
     destino.parent.mkdir(parents=True, exist_ok=True)
     if destino.parent.is_symlink():
         raise ValueError('diretório pai do destino não pode usar symlink: {}'.format(destino.parent))
-    temporario = Path(tempfile.mkdtemp(prefix='.pitwall-export-', dir=str(destino.parent)))
+    zip_temporario = None
     try:
-        _escrever_arquivos(temporario, arquivos)
-        if _arvore(temporario) != esperado:
-            raise RuntimeError('falha ao verificar a exportação temporária')
-        os.replace(str(temporario), str(destino))
+        zip_temporario, zip_path = _preparar_zip_deterministico(destino, esperado)
+        if destino.exists():
+            existente = _arvore(destino)
+            if existente != esperado:
+                raise ValueError('destino não vazio diverge do pacote esperado; nada foi sobrescrito')
+            zip_path = _publicar_zip_temporario(zip_temporario, zip_path)
+            return {'destino': str(destino), 'zip': str(zip_path), 'arquivos': len(esperado), 'idempotente': True}
+
+        temporario = Path(tempfile.mkdtemp(prefix='.pitwall-export-', dir=str(destino.parent)))
+        try:
+            _escrever_arquivos(temporario, arquivos)
+            if _arvore(temporario) != esperado:
+                raise RuntimeError('falha ao verificar a exportação temporária')
+            os.replace(str(temporario), str(destino))
+        except Exception:
+            if temporario.exists():
+                shutil.rmtree(temporario)
+            raise
+        zip_path = _publicar_zip_temporario(zip_temporario, zip_path)
+        return {'destino': str(destino), 'zip': str(zip_path), 'arquivos': len(esperado), 'idempotente': False}
     except Exception:
-        if temporario.exists():
-            shutil.rmtree(temporario)
+        if zip_temporario is not None and zip_temporario.exists():
+            zip_temporario.unlink()
         raise
-    return {'destino': str(destino), 'arquivos': len(esperado), 'idempotente': False}
 
 
 def main():

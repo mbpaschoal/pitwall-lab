@@ -2,6 +2,7 @@
 import hashlib
 import importlib.util
 import json
+import errno
 import os
 import shutil
 import subprocess
@@ -147,6 +148,78 @@ class TestExportacaoDashboard(unittest.TestCase):
         for relativo in arquivos_reais(self.destino):
             self.assertEqual(sha256(self.destino / relativo), sha256(segundo / relativo), relativo)
 
+    def test_zip_symlink_regular_ou_pendente_e_recusado_sem_tocar_no_alvo(self):
+        zip_path = self.destino.parent / 'pitwall-dashboard.zip'
+        sentinela = Path(self.tmp.name) / 'sentinela-externa.txt'
+        sentinela.write_bytes(b'nao alterar sentinela')
+        antes = sentinela.stat()
+        zip_path.symlink_to(sentinela)
+        link_antes = zip_path.lstat()
+        with self.assertRaisesRegex(ValueError, 'symlink'):
+            self.exportar()
+        self.assertEqual(sentinela.read_bytes(), b'nao alterar sentinela')
+        self.assertEqual(sentinela.stat().st_mtime_ns, antes.st_mtime_ns)
+        self.assertEqual(zip_path.lstat().st_ino, link_antes.st_ino)
+        self.assertTrue(zip_path.is_symlink())
+
+        zip_path.unlink()
+        pendente = Path(self.tmp.name) / 'alvo-ausente.zip'
+        zip_path.symlink_to(pendente)
+        with self.assertRaisesRegex(ValueError, 'symlink'):
+            self.exportar()
+        self.assertTrue(zip_path.is_symlink())
+        self.assertFalse(pendente.exists())
+        self.assertFalse(self.destino.exists())
+
+    def test_zip_regular_divergente_e_identico_preservam_bytes_inode_e_mtime(self):
+        zip_path = self.destino.parent / 'pitwall-dashboard.zip'
+        zip_path.write_bytes(b'zip rival divergente')
+        antes = zip_path.stat()
+        with self.assertRaisesRegex(ValueError, 'ZIP de destino diverge'):
+            self.exportar()
+        self.assertEqual(zip_path.read_bytes(), b'zip rival divergente')
+        depois = zip_path.stat()
+        self.assertEqual((depois.st_ino, depois.st_mtime_ns), (antes.st_ino, antes.st_mtime_ns))
+        self.assertFalse(self.destino.exists())
+
+        zip_path.unlink()
+        self.exportar()
+        antes = zip_path.stat()
+        bytes_antes = zip_path.read_bytes()
+        resultado = self.exportar()
+        depois = zip_path.stat()
+        self.assertTrue(resultado['idempotente'])
+        self.assertEqual(zip_path.read_bytes(), bytes_antes)
+        self.assertEqual((depois.st_ino, depois.st_mtime_ns), (antes.st_ino, antes.st_mtime_ns))
+
+    def test_zip_diretorio_e_fifo_sao_recusados_sem_abertura(self):
+        zip_path = self.destino.parent / 'pitwall-dashboard.zip'
+        zip_path.mkdir()
+        with self.assertRaisesRegex(ValueError, 'arquivo regular'):
+            self.exportar()
+        zip_path.rmdir()
+        if not hasattr(os, 'mkfifo'):
+            self.skipTest('mkfifo indisponível neste sistema')
+        os.mkfifo(zip_path)
+        with self.assertRaisesRegex(ValueError, 'arquivo regular'):
+            self.exportar()
+        self.assertTrue(zip_path.exists())
+
+    def test_zip_rival_que_aparece_antes_do_link_e_preservado(self):
+        zip_path = self.destino.parent / 'pitwall-dashboard.zip'
+        link_real = self.exportador.os.link
+
+        def rival_antes_do_link(origem, destino):
+            Path(destino).write_bytes(b'zip rival concorrente')
+            raise FileExistsError(errno.EEXIST, 'File exists', destino)
+
+        with patch.object(self.exportador.os, 'link', side_effect=rival_antes_do_link):
+            with self.assertRaisesRegex(ValueError, 'apareceu ou diverge'):
+                self.exportar()
+        self.assertEqual(zip_path.read_bytes(), b'zip rival concorrente')
+        self.assertFalse(list(self.destino.parent.glob('.pitwall-dashboard-*.zip')))
+        self.assertTrue(callable(link_real))
+
     def test_destino_divergente_ou_symlink_e_recusado_sem_sobrescrever(self):
         self.destino.mkdir()
         sentinela = self.destino / 'arquivo-do-usuario.txt'
@@ -252,6 +325,9 @@ class TestExportacaoDashboard(unittest.TestCase):
             'numpy==1.26.4',
             'protobuf==5.29.5',
         ])
+        for linha in requisitos:
+            if linha.startswith(('-c ', '-r ')):
+                self.assertTrue((self.destino / linha.split(maxsplit=1)[1]).is_file(), linha)
         config = (self.destino / '.streamlit/config.toml').read_text(encoding='utf-8')
         self.assertIn('gatherUsageStats = false', config)
         self.assertIn('headless = true', config)

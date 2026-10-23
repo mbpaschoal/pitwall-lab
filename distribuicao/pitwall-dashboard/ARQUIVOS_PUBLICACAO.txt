@@ -8,6 +8,10 @@ LICENCA_CODIGO.md
 MANIFESTO.json
 README.md
 app.py
+dashboard_assets/fonts/saira-OFL.txt
+dashboard_assets/fonts/saira.ttf
+dashboard_assets/fonts/sourcesans3-OFL.txt
+dashboard_assets/fonts/sourcesans3.ttf
 dashboard_dados.py
 docs/avaliacao_final_v1.md
 docs/dicionario_variaveis.md
@@ -15,13 +19,14 @@ docs/experimento_modelo_v1.md
 docs/protocolo_temporal.md
 docs/relatorio_2024.md
 documentacao_local.py
+frontend_assets/race_weekend.json
+race_weekend_dados.py
 reports/avaliacao_final_v1/avaliacao_corridas.csv
 reports/avaliacao_final_v1/avaliacao_por_piloto.csv
 reports/avaliacao_final_v1/calibracao.csv
 reports/avaliacao_final_v1/metricas.json
 reports/avaliacao_final_v1/previsoes_pre_corrida.csv
 reports/avaliacao_final_v1/relatorio.md
-reports/dashboard_v1/desempenho_desktop.png
 reports/modelo_v1/avaliacao_corridas.csv
 reports/modelo_v1/calibracao.csv
 reports/modelo_v1/metricas.json

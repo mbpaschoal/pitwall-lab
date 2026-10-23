@@ -1,5 +1,6 @@
 """Dashboard local, somente leitura, do estudo retrospectivo Pitwall Lab."""
 import os
+import base64
 from pathlib import Path
 
 import pandas as pd
@@ -13,16 +14,24 @@ from dashboard_dados import (
     dados_do_gp,
     opcoes_gps,
 )
+from race_weekend_dados import (
+    RaceWeekendDadosErro,
+    carregar_asset,
+    dados_do_gp_2026,
+    identidade,
+    pacote_2026,
+)
 
 RAIZ_PADRAO = Path(__file__).resolve().parent
 CORES = {
-    'fundo': '#0D1117',
-    'superficie': '#171E27',
-    'texto': '#EDF0F4',
-    'acento': '#E64B44',
-    'modelo': '#59CDD1',
-    'classificacao': '#F1AE55',
-    'neutro': '#AAB5C4',
+    'fundo': '#F4F7FB', 'superficie': '#FFFFFF', 'texto': '#183153',
+    'acento': '#E53935', 'modelo': '#2475EF', 'classificacao': '#183153', 'neutro': '#B7BEC8',
+}
+CORES_EQUIPE = {
+    'ferrari': '#E53935', 'red_bull': '#183153', 'mercedes': '#00A19B',
+    'mclaren': '#F58020', 'aston_martin': '#006F62', 'alpine': '#2475EF',
+    'williams': '#2475EF', 'haas': '#FFFFFF', 'sauber': '#168A4A', 'audi': '#B7BEC8',
+    'rb': '#2475EF', 'racing_bulls': '#2475EF',
 }
 
 
@@ -38,8 +47,18 @@ def carregar_cacheado(temporada, conteudos):
 
 
 def carregar(temporada):
+    if temporada == 2026:
+        asset = carregar_asset(raiz_artefatos())
+        pacote = pacote_2026(asset)
+        pacote['asset_race_weekend'] = asset
+        return pacote
     conteudos = conteudos_temporada(raiz_artefatos(), temporada)
-    return carregar_cacheado(temporada, conteudos)
+    pacote = carregar_cacheado(temporada, conteudos)
+    try:
+        pacote['asset_race_weekend'] = carregar_asset(raiz_artefatos())
+    except RaceWeekendDadosErro:
+        pacote['asset_race_weekend'] = None
+    return pacote
 
 
 def percentual(valor):
@@ -53,7 +72,29 @@ def numero(valor):
 def nome_temporada(temporada):
     if temporada == 2024:
         return '2024 — validação já explorada'
-    return '2025 — avaliação final retrospectiva já realizada'
+    if temporada == 2025:
+        return '2025 — avaliação final retrospectiva já realizada'
+    return '2026 — snapshots locais, cobertura parcial'
+
+
+def nome_piloto(pacote, item):
+    asset = pacote.get('asset_race_weekend')
+    if asset:
+        return identidade(asset, pacote['temporada'], item['rodada'], item['piloto_id'])['piloto']
+    return 'Nome indisponível ({})'.format(item['piloto_id'])
+
+
+def identidade_piloto(pacote, item):
+    """Nome e equipe contextualizados pela temporada e rodada do GP."""
+    asset = pacote.get('asset_race_weekend')
+    if asset:
+        return identidade(asset, pacote['temporada'], item['rodada'], item['piloto_id'])
+    return {'piloto': nome_piloto(pacote, item), 'equipe_id': item.get('equipe_id'), 'equipe': item.get('equipe')}
+
+
+def nome_equipe(pacote, item):
+    dados = identidade_piloto(pacote, item)
+    return dados['equipe'] or 'Equipe indisponível'
 
 
 def conteudo_markdown(atual):
@@ -61,39 +102,48 @@ def conteudo_markdown(atual):
 
 
 def aplicar_estilo():
+    fontes = raiz_artefatos() / 'dashboard_assets' / 'fonts'
+    def fonte(nome, formato):
+        try:
+            return 'data:{};base64,{}'.format(formato, base64.b64encode((fontes / nome).read_bytes()).decode('ascii'))
+        except OSError:
+            return ''
     st.markdown(
         '''
         <style>
-        :root { color-scheme: dark; }
-        .stApp { background: #0D1117; color: #EDF0F4; }
-        [data-testid="stSidebar"] { background: #171E27; border-right: 1px solid #273241; }
+        @font-face { font-family: SairaLocal; src: url("%s") format("truetype"); }
+        @font-face { font-family: SourceSansLocal; src: url("%s") format("truetype"); }
+        .stApp { background: #F4F7FB; color: #183153; font-family: SourceSansLocal, Arial, sans-serif; }
+        [data-testid="stSidebar"] { background: #FFFFFF; border-right: 2px solid #183153; }
         [data-testid="stSidebar"] > div { padding-top: 1rem; }
-        .pitwall-wordmark { font-size: 1.45rem; font-weight: 800; letter-spacing: .02em; margin: 0 0 .15rem; }
-        .pitwall-wordmark span { color: #E64B44; }
-        .sidebar-caption { color: #AAB5C4; font-size: .78rem; margin-bottom: 1.25rem; }
-        .nota-retrospectiva { border-left: 4px solid #E64B44; background: #171E27; padding: .7rem .9rem; margin: .1rem 0 1.2rem; font-weight: 650; }
-        .secao-rotulo { color: #59CDD1; font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
-        .stMetric { background: #171E27; border: 1px solid #273241; padding: .55rem .75rem; border-radius: .25rem; }
-        .stDataFrame { border: 1px solid #273241; }
-        h1, h2, h3 { letter-spacing: -.02em; }
+        .pitwall-wordmark, h1, h2, h3 { font-family: SairaLocal, Arial, sans-serif; color: #183153; letter-spacing: -.02em; }
+        .pitwall-wordmark { font-size: 1.45rem; font-weight: 800; margin: 0 0 .15rem; }.pitwall-wordmark span { color: #E53935; }
+        .sidebar-caption { color: #183153; font-size: .85rem; margin-bottom: 1.25rem; }
+        .nota-retrospectiva { border-left: 4px solid #E53935; background: #FFFFFF; padding: .7rem .9rem; margin: .1rem 0 1.2rem; font-weight: 650; }
+        .secao-rotulo { color: #183153; font-size: .9rem; font-weight: 700; }
+        .stMetric { background: #FFFFFF; border: 1px solid #B7BEC8; padding: .55rem .75rem; border-radius: .2rem; }
+        .stDataFrame { border: 1px solid #B7BEC8; }
+        *:focus-visible { outline: 3px solid #2475EF !important; outline-offset: 2px; }
         @media (max-width: 700px) {
           [data-testid="stMetric"] { min-width: 0; }
           .main .block-container { padding-left: .8rem; padding-right: .8rem; }
         }
         </style>
-        ''',
+        ''' % (fonte('saira.ttf', 'font/ttf'), fonte('sourcesans3.ttf', 'font/ttf')),
         unsafe_allow_html=True,
     )
 
 
-def tabela_participantes(participantes):
+def tabela_participantes(pacote, participantes):
     linhas = []
     for item in participantes:
         situacao = 'Elegível' if item['elegivel_previsao'] else 'Inelegível: {}'.format(item['motivos_inelegibilidade'])
         if item['elegivel_previsao'] and item['podio'] is None:
             situacao += ' · alvo desconhecido'
         linhas.append({
-            'Piloto (ID)': item['piloto_id'],
+            'Piloto': nome_piloto(pacote, item),
+            'Equipe': nome_equipe(pacote, item),
+            'ID': item['piloto_id'],
             'Situação': situacao,
             'Probabilidade de pódio': percentual(item['probabilidade_modelo']),
             'Rank do modelo': numero(item['ranking_modelo']),
@@ -103,15 +153,74 @@ def tabela_participantes(participantes):
     return pd.DataFrame(linhas)
 
 
+def tabela_campeonato_pilotos(campeonato):
+    return pd.DataFrame([
+        {
+            'Posição': item['posicao'],
+            'Piloto': item['piloto'],
+            'Equipe': item['equipe'] or 'Equipe indisponível',
+            'Pontos': item['pontos'],
+            'Vitórias': item['vitorias'],
+        }
+        for item in campeonato['classificacao']
+    ])
+
+
+def renderizar_campeonato_pilotos(pacote):
+    campeonato = pacote.get('campeonato_pilotos')
+    st.subheader('Campeonato de pilotos 2026')
+    if not isinstance(campeonato, dict) or not isinstance(campeonato.get('disponivel'), bool):
+        st.info('Classificação de pilotos indisponível.')
+        st.caption('Snapshot DriverStandings ausente ou com schema inválido. Probabilidades por GP permanecem separadas.')
+        return
+    if not campeonato['disponivel']:
+        st.info('Classificação de pilotos indisponível.')
+        st.caption(campeonato.get('motivo') or 'Snapshot DriverStandings incompleto.')
+        return
+    campos = ('snapshot_id', 'rodada_referencia', 'obtido_em_utc', 'paginas_validadas', 'escopo', 'classificacao')
+    if not all(campo in campeonato for campo in campos) or not isinstance(campeonato['classificacao'], list):
+        st.info('Classificação de pilotos indisponível.')
+        st.caption('Snapshot DriverStandings incompleto. Probabilidades por GP permanecem separadas.')
+        return
+    st.caption('DriverStandings Jolpica-F1, separado das probabilidades por GP.')
+    st.caption('Rodada de referência: {} · Obtido em UTC: {} · Snapshot: {} · {} página(s) paginada(s) validada(s).'.format(
+        campeonato['rodada_referencia'], campeonato['obtido_em_utc'], campeonato['snapshot_id'],
+        campeonato['paginas_validadas'],
+    ))
+    st.caption(campeonato['escopo'])
+    st.dataframe(tabela_campeonato_pilotos(campeonato), width='stretch', hide_index=True)
+
+
+def tabela_calendario_2026(pacote, rodada_selecionada):
+    return pd.DataFrame([
+        {
+            'Rodada': corrida['rodada'],
+            'Data': corrida['data_corrida'],
+            'GP': corrida['corrida'],
+            'Selecionado': 'sim' if corrida['rodada'] == rodada_selecionada else '',
+        }
+        for corrida in sorted(pacote['corridas'], key=lambda item: item['rodada'])
+    ])
+
+
+def renderizar_calendario_2026(pacote, rodada_selecionada):
+    st.subheader('Calendário 2026')
+    st.caption('Calendário local do mesmo asset 2026; “Selecionado” acompanha o seletor de Grande Prêmio.')
+    st.dataframe(tabela_calendario_2026(pacote, rodada_selecionada), width='stretch', hide_index=True)
+
+
 def aviso_favoritos_insuficientes(quantidade):
     if quantidade < 3:
         return 'Aviso: há menos de três favoritos disponíveis neste ranking ({} de 3).'.format(quantidade)
     return ''
 
 
-def grafico_probabilidades(participantes):
+def grafico_probabilidades(pacote, participantes=None):
+    if participantes is None:
+        participantes = pacote
+        pacote = {'temporada': 0, 'asset_race_weekend': None}
     elegiveis = [item for item in participantes if item['elegivel_previsao']]
-    elegiveis.sort(key=lambda item: (item['probabilidade_modelo'], item['piloto_id']))
+    elegiveis.sort(key=lambda item: (item.get('ranking_modelo') is None, item.get('ranking_modelo') or 9999, item['piloto_id']))
     if not elegiveis:
         figura = go.Figure()
         figura.add_annotation(
@@ -125,14 +234,16 @@ def grafico_probabilidades(participantes):
             xaxis={'visible': False}, yaxis={'visible': False}, showlegend=False,
         )
         return figura
-    padroes = ['/' if item['favorito_modelo'] else '' for item in elegiveis]
+
     maior_percentual = max(item['probabilidade_modelo'] * 100 for item in elegiveis)
     figura = go.Figure(go.Bar(
         x=[item['probabilidade_modelo'] * 100 for item in elegiveis],
-        y=[item['piloto_id'] for item in elegiveis],
+        y=[nome_piloto(pacote, item) for item in elegiveis],
         orientation='h',
-        marker={'color': CORES['modelo'], 'pattern': {'shape': padroes, 'fgcolor': CORES['fundo']}},
-        hovertemplate='%{y}: %{x:.1f}%<extra>probabilidade individual de pódio</extra>',
+        marker={'color': [CORES_EQUIPE.get(identidade_piloto(pacote, item).get('equipe_id') or '', CORES['neutro']) for item in elegiveis],
+                'line': {'color': ['#183153' if identidade_piloto(pacote, item).get('equipe_id') == 'haas' else 'rgba(0,0,0,0)' for item in elegiveis], 'width': 1}},
+        customdata=[nome_equipe(pacote, item) for item in elegiveis],
+        hovertemplate='%{y}<br>Equipe: %{customdata}<br>Probabilidade: %{x:.1f}%<extra>pódio individual</extra>',
         name='Probabilidade do modelo',
     ))
     figura.update_layout(
@@ -140,73 +251,121 @@ def grafico_probabilidades(participantes):
         margin={'l': 10, 'r': 20, 't': 25, 'b': 40},
         paper_bgcolor=CORES['fundo'], plot_bgcolor=CORES['fundo'], font={'color': CORES['texto']},
         xaxis={'title': 'Probabilidade individual de pódio (%)', 'range': [0, min(100, max(10, maior_percentual * 1.15))]},
-        yaxis={'title': 'Piloto (ID)'},
+        yaxis={'title': 'Piloto', 'autorange': 'reversed'},
         showlegend=False,
     )
     return figura
 
 
-def tela_explorar(pacote, rodada):
-    bloco = dados_do_gp(pacote, rodada)
-    corrida = bloco['corrida']
-    participantes = bloco['participantes']
-    st.title('Explorar um GP')
-    st.caption('{} · rodada {} · {} · {} participantes preparados'.format(
-        nome_temporada(pacote['temporada']), corrida['rodada'], corrida['corrida'], corrida['participantes_preparados']
-    ))
-    st.markdown('<div class="secao-rotulo">Cobertura desta corrida — informação posterior usada só na avaliação</div>', unsafe_allow_html=True)
-    cobertura = st.columns(3)
-    cobertura[0].metric('Participantes preparados', corrida['participantes_preparados'])
-    cobertura[1].metric('Elegíveis para previsão', corrida['elegiveis'])
-    cobertura[2].metric('Alvos conhecidos depois', corrida['alvos_conhecidos'])
-    st.caption('Participantes preparados: {} · Elegíveis: {} · Alvos conhecidos: {}.'.format(
-        corrida['participantes_preparados'], corrida['elegiveis'], corrida['alvos_conhecidos']
-    ))
-    if corrida['avaliavel_ranking']:
-        st.caption('Ranking avaliável: há cobertura completa para pontuar os favoritos depois da corrida.')
-    else:
-        st.warning('N/A — não avaliável para ranking. Motivo: `{}`. Não há placar zero artificial.'.format(corrida['motivos_nao_avaliavel']))
+def renderizar_previsoes(pacote, bloco, participantes):
+    if pacote['temporada'] == 2026 and bloco['corrida']['estado_previsao'] == 'indisponivel':
+        st.subheader('Probabilidades de pódio')
+        st.info('Sem probabilidades publicadas para este GP.')
+        st.caption('Faltam classificação concluída e emissão prospectiva registrada para este GP.')
+        return
     st.markdown('<div class="secao-rotulo">Modelo e referências — calculados sem o alvo atual</div>', unsafe_allow_html=True)
     st.subheader('Favoritos por ranking publicado')
     esquerda, direita = st.columns(2)
     with esquerda:
         st.markdown('**Modelo — top 3 por probabilidade**')
         for item in bloco['favoritos_modelo']:
-            st.write('#{} · Piloto ({}) · {}'.format(item['ranking_modelo'], item['piloto_id'], percentual(item['probabilidade_modelo'])))
+            st.write('#{} · {} · {} · {}'.format(item['ranking_modelo'], nome_piloto(pacote, item), nome_equipe(pacote, item), percentual(item['probabilidade_modelo'])))
     with direita:
         st.markdown('**Referência de classificação — top 3 por ranking**')
         for item in bloco['favoritos_classificacao']:
-            st.write('#{} · Piloto ({})'.format(item['ranking_classificacao'], item['piloto_id']))
+            st.write('#{} · {} · {}'.format(item['ranking_classificacao'], nome_piloto(pacote, item), nome_equipe(pacote, item)))
         st.caption('A referência é uma ordem por classificação; ela não recebe probabilidade.')
     for ranking, favoritos in (('modelo', bloco['favoritos_modelo']), ('referência de classificação', bloco['favoritos_classificacao'])):
         aviso = aviso_favoritos_insuficientes(len(favoritos))
         if aviso:
             st.warning('{} Ranking: {}.'.format(aviso, ranking))
     st.subheader('Probabilidades de pódio de todos os elegíveis')
-    st.caption('Barras hachuradas indicam os três favoritos do modelo; a hachura complementa a cor. % arredondadas apenas para exibição; rank original mantido.')
-    st.plotly_chart(grafico_probabilidades(participantes))
+    st.caption('Barras seguem o rank publicado e usam a cor da equipe junto do nome; % arredondadas apenas para exibição. Sem hachura e sem recálculo.')
+    st.plotly_chart(grafico_probabilidades(pacote, participantes))
     st.subheader('Participantes do GP')
-    st.dataframe(tabela_participantes(participantes), width='stretch', hide_index=True)
+    st.dataframe(tabela_participantes(pacote, participantes), width='stretch', hide_index=True)
 
+
+def renderizar_resultados_observados(pacote, corrida, bloco, participantes):
     st.markdown('<div class="secao-rotulo">Resultados observados — usados depois para avaliação</div>', unsafe_allow_html=True)
     if corrida['avaliavel_ranking']:
-        st.markdown('**Integrantes do pódio observado (sem ordem):** {}'.format(', '.join(corrida['podio_observado'])))
+        podio = [nome_piloto(pacote, next(item for item in participantes if item['piloto_id'] == piloto_id)) for piloto_id in corrida['podio_observado']]
+        st.markdown('**Integrantes do pódio observado (sem ordem):** {}'.format(', '.join(podio)))
         col1, col2 = st.columns(2)
         col1.metric('Acertos — modelo', '{} de 3'.format(corrida['acertos_modelo']))
         col2.metric('Acertos — classificação', '{} de 3'.format(corrida['acertos_classificacao']))
         st.caption('A pontuação ignora a ordem dos três integrantes e só é mostrada com cobertura oficial avaliável.')
     else:
         st.markdown('**N/A — não avaliável.** Motivo: `{}`.'.format(corrida['motivos_nao_avaliavel']))
-        alvos_desconhecidos = [item['piloto_id'] for item in participantes if item['podio'] is None]
-        inelegiveis = [item['piloto_id'] for item in participantes if not item['elegivel_previsao']]
+        alvos_desconhecidos = [nome_piloto(pacote, item) for item in participantes if item['podio'] is None]
+        inelegiveis = [nome_piloto(pacote, item) for item in participantes if not item['elegivel_previsao']]
         if alvos_desconhecidos:
             st.markdown('**Alvo(s) desconhecido(s) no GP:** {}'.format(', '.join(alvos_desconhecidos)))
         if inelegiveis:
             st.markdown('**Participante(s) inelegível(is):** {}'.format(', '.join(inelegiveis)))
-        identificados = bloco['integrantes_identificados']
+        identificados = [nome_piloto(pacote, next(item for item in participantes if item['piloto_id'] == piloto_id)) for piloto_id in bloco['integrantes_identificados']]
         if identificados:
             st.markdown('**Integrantes identificados na base, sem ordem:** {}'.format(', '.join(identificados)))
-        st.caption('O campo de pódio por GP fica vazio nesta cobertura; não há placar zero nem acerto artificial. Os favoritos continuam visíveis acima.')
+        if pacote['temporada'] == 2026 and corrida['podio_observado']:
+            st.caption('O resultado observado permanece visível. Não há avaliação prospectiva oficial ou anual: a comparação disponível é retrospectiva, sem placar zero nem reclassificação da emissão.')
+        elif pacote['temporada'] == 2026 and corrida['estado_previsao'] == 'indisponivel':
+            st.caption('Sem emissão deste GP, não há favoritos exibidos nem placar artificial.')
+        else:
+            st.caption('O campo de pódio por GP fica vazio nesta cobertura; não há placar zero nem acerto artificial. Os favoritos continuam visíveis acima.')
+    if pacote['temporada'] == 2026:
+        st.subheader('Previsão e resultado observado')
+        linhas = []
+        for item in participantes:
+            if item['probabilidade_modelo'] is not None or item['resultado_observado'] is not None:
+                linhas.append({
+                    'Piloto': nome_piloto(pacote, item), 'Equipe': nome_equipe(pacote, item),
+                    'Previsão disponível': percentual(item['probabilidade_modelo']),
+                    'Rank previsto': numero(item['ranking_modelo']),
+                    'Resultado observado': numero(item['resultado_observado']),
+                })
+        if linhas:
+            st.dataframe(pd.DataFrame(linhas), width='stretch', hide_index=True)
+        else:
+            st.info('Não há previsão ou resultado local para este GP. As rodadas 1–16 não têm probabilidade local; a rodada 18 aguarda classificação local.')
+
+
+def tela_explorar(pacote, rodada, foco):
+    bloco = dados_do_gp_2026(pacote, rodada) if pacote['temporada'] == 2026 else dados_do_gp(pacote, rodada)
+    corrida = bloco['corrida']
+    participantes = bloco['participantes']
+    st.title('{} — {}'.format(corrida['corrida'], 'Corrida' if foco == 'Corridas' else 'Previsões'))
+    st.caption('Temporada {} · rodada {} · {} · {} participantes preparados'.format(
+        nome_temporada(pacote['temporada']), corrida['rodada'], corrida['corrida'], corrida['participantes_preparados']
+    ))
+    estados = [
+        ('Classificação', corrida.get('estado_qualificacao', 'histórico disponível')),
+        ('Previsão', corrida.get('estado_previsao', 'avaliação retrospectiva')),
+        ('Resultado factual', corrida.get('estado_resultado', 'observado')),
+    ]
+    linha_tempo = st.columns(3)
+    for coluna, (nome, estado) in zip(linha_tempo, estados):
+        coluna.markdown('**{}**  \n{}'.format(nome, estado.replace('_', ' ')))
+    st.caption('A previsão retrospectiva é separada de previsão registrada antes da corrida; resultados não entram na previsão da própria corrida.')
+    if pacote['temporada'] == 2026:
+        renderizar_campeonato_pilotos(pacote)
+        renderizar_calendario_2026(pacote, rodada)
+    st.caption('Cobertura: {} participantes preparados · {} elegíveis · {} alvos conhecidos depois.'.format(
+        corrida['participantes_preparados'], corrida['elegiveis'], corrida['alvos_conhecidos']))
+    with st.expander('Cobertura e exclusões'):
+        if corrida['avaliavel_ranking']:
+            st.write('Ranking avaliável: há cobertura completa para pontuar os favoritos depois da corrida.')
+        else:
+            st.warning('N/A — não avaliável para ranking. Motivo: `{}`. Não há placar zero artificial.'.format(corrida['motivos_nao_avaliavel']))
+    if foco == 'Corridas':
+        st.markdown('<div class="secao-rotulo">Contexto do GP e resultado observado</div>', unsafe_allow_html=True)
+        renderizar_resultados_observados(pacote, corrida, bloco, participantes)
+        with st.expander('Previsões e probabilidades publicadas'):
+            renderizar_previsoes(pacote, bloco, participantes)
+    else:
+        st.markdown('<div class="secao-rotulo">Probabilidades e estado da previsão</div>', unsafe_allow_html=True)
+        renderizar_previsoes(pacote, bloco, participantes)
+        with st.expander('Resultado observado — avaliação posterior'):
+            renderizar_resultados_observados(pacote, corrida, bloco, participantes)
 
 
 def tabela_distribuicao(metricas):
@@ -267,39 +426,48 @@ def tabela_calibracao(calibracao):
 
 
 def tela_desempenho(pacote):
+    if pacote['temporada'] == 2026:
+        st.title('Desempenho')
+        st.warning('N/A — não há métricas agregadas locais de 2026. Resultados observados e o ensaio retrospectivo permanecem separados; nenhuma probabilidade foi recalculada.')
+        return
     metricas = pacote['metricas']
     cobertura = metricas['cobertura']
     total_prob = metricas['probabilisticas']['linhas_avaliaveis']
     total_gp = metricas['ranking_modelo']['corridas_avaliaveis']
     st.title('Desempenho')
     st.caption('{} · métricas lidas dos artefatos publicados'.format(nome_temporada(pacote['temporada'])))
-    st.subheader('Modelo versus constante — probabilidades')
-    st.caption('Menor é melhor. As duas métricas usam {} casos elegíveis com alvo conhecido.'.format(total_prob))
-    colunas = st.columns(4)
-    colunas[0].metric('Log loss · modelo', '{:.4f}'.format(metricas['probabilisticas']['modelo']['log_loss']))
-    colunas[1].metric('Log loss · constante', '{:.4f}'.format(metricas['probabilisticas']['constante']['log_loss']))
-    colunas[2].metric('Brier · modelo', '{:.4f}'.format(metricas['probabilisticas']['modelo']['brier']))
-    colunas[3].metric('Brier · constante', '{:.4f}'.format(metricas['probabilisticas']['constante']['brier']))
-    st.caption('Erro menor é melhor, mas não demonstra causalidade nem garante desempenho futuro; Brier menor sozinho não prova calibração melhor.')
+    excluidos = cobertura['gps_total'] - total_gp
+    st.subheader('Acertos entre os três escolhidos')
+    st.caption('Média de integrantes corretos entre três escolhas, em {} de {} GPs; {} excluído(s) por cobertura incompleta, sem transformar ausência em zero.'.format(total_gp, cobertura['gps_total'], excluidos))
+    colunas = st.columns(2)
+    colunas[0].metric('Modelo', '{:.2f} de 3'.format(metricas['ranking_modelo']['media_integrantes_corretos']))
+    colunas[1].metric('Classificação', '{:.2f} de 3'.format(metricas['ranking_classificacao']['media_integrantes_corretos']))
 
-    st.subheader('Modelo versus classificação — ranking')
-    st.caption('Os métodos usam os mesmos {} GPs avaliáveis de {} GPs presentes.'.format(total_gp, cobertura['gps_total']))
-    colunas = st.columns(4)
-    colunas[0].metric('Média · modelo', '{:.4f} de 3'.format(metricas['ranking_modelo']['media_integrantes_corretos']))
-    colunas[1].metric('Média · classificação', '{:.4f} de 3'.format(metricas['ranking_classificacao']['media_integrantes_corretos']))
     completos_modelo = metricas['ranking_modelo']['distribuicao_0_1_2_3']['3']
     completos_classificacao = metricas['ranking_classificacao']['distribuicao_0_1_2_3']['3']
-    colunas[2].metric('Pódios completos · modelo', '{} de {}'.format(completos_modelo, total_gp))
-    colunas[3].metric('Pódios completos · classificação', '{} de {}'.format(completos_classificacao, total_gp))
-    ganho = metricas['ranking_modelo']['media_integrantes_corretos'] - metricas['ranking_classificacao']['media_integrantes_corretos']
-    texto_empate = 'Houve empate em pódios completos.' if completos_modelo == completos_classificacao else 'Os totais de pódios completos diferem.'
-    st.caption('Ganho médio descritivo do modelo: {:+.4f} integrante por GP; é pequeno. {} A comparação não é uma garantia futura.'.format(ganho, texto_empate))
+    st.subheader('Pódios completos acertados')
+    st.caption('Acerto dos três integrantes do pódio, independentemente da ordem')
+    colunas = st.columns(2)
+    colunas[0].metric('Modelo', '{} de {} GPs'.format(completos_modelo, total_gp))
+    colunas[1].metric('Classificação', '{} de {} GPs'.format(completos_classificacao, total_gp))
+    st.caption('Houve empate em pódios completos.' if completos_modelo == completos_classificacao else 'Os totais de pódios completos diferem.')
+
+    st.subheader('Comparação com a classificação')
+    st.caption('As duas listas são comparadas nos mesmos {} GPs avaliáveis. A tabela mostra quantos integrantes do pódio foram acertados; não promete ganho futuro.'.format(total_gp))
     st.dataframe(tabela_distribuicao(metricas), width='stretch', hide_index=True)
 
-    st.subheader('Calibração descritiva')
-    st.caption('Eixo x: média prevista. Eixo y: frequência observada. Faixas vazias não viram pontos; a tabela preserva n=0.')
-    st.plotly_chart(grafico_calibracao(pacote['calibracao']))
-    st.dataframe(tabela_calibracao(pacote['calibracao']), width='stretch', hide_index=True)
+    with st.expander('Detalhes técnicos'):
+        st.write('Log loss penaliza especialmente probabilidades muito confiantes que erram; Brier mede a distância quadrática entre probabilidade e resultado. Em ambas, menor é melhor; nenhuma é porcentagem de acerto.')
+        st.caption('As métricas probabilísticas usam {} casos elegíveis com alvo conhecido.'.format(total_prob))
+        tecnicas = pd.DataFrame([
+            {'Métrica': 'Log loss', 'Modelo': '{:.4f}'.format(metricas['probabilisticas']['modelo']['log_loss']), 'Constante': '{:.4f}'.format(metricas['probabilisticas']['constante']['log_loss'])},
+            {'Métrica': 'Brier', 'Modelo': '{:.4f}'.format(metricas['probabilisticas']['modelo']['brier']), 'Constante': '{:.4f}'.format(metricas['probabilisticas']['constante']['brier'])},
+        ])
+        st.dataframe(tecnicas, width='stretch', hide_index=True)
+        st.subheader('Calibração descritiva')
+        st.caption('Eixo x: média prevista. Eixo y: frequência observada. Faixas vazias não viram pontos; a tabela preserva n=0.')
+        st.plotly_chart(grafico_calibracao(pacote['calibracao']))
+        st.dataframe(tabela_calibracao(pacote['calibracao']), width='stretch', hide_index=True)
 
     st.subheader('Cobertura e avaliação por GP')
     linhas = []
@@ -365,32 +533,36 @@ def executar_app():
     aplicar_estilo()
     st.sidebar.markdown('<div class="pitwall-wordmark">Pitwall<span>Lab</span></div>', unsafe_allow_html=True)
     st.sidebar.markdown('<div class="sidebar-caption">Estudo retrospectivo de pódios na Fórmula 1</div>', unsafe_allow_html=True)
-    tela = st.sidebar.radio('Navegação', ('Explorar um GP', 'Desempenho', 'Como funciona'), key='tela')
-    temporada = st.sidebar.selectbox('Temporada', (2024, 2025), index=1, format_func=nome_temporada, key='temporada')
+    tela = st.sidebar.radio('Navegação', ('Corridas', 'Previsões', 'Desempenho', 'Metodologia'), key='tela')
+    temporada = st.sidebar.selectbox('Temporada', (2024, 2025, 2026), index=1, format_func=nome_temporada, key='temporada')
     try:
         pacote = carregar(temporada)
-    except DashboardDadosErro as erro:
+    except (DashboardDadosErro, RaceWeekendDadosErro) as erro:
         st.error(str(erro))
         st.stop()
     anterior = st.session_state.get('_temporada_anterior_dashboard')
-    if anterior != temporada:
-        st.session_state.pop('gp', None)
-        st.session_state['_temporada_anterior_dashboard'] = temporada
     opcoes = opcoes_gps(pacote)
     valores = [item['valor'] for item in opcoes]
+    if anterior != temporada:
+        if temporada == 2026:
+            observadas = [item['valor'] for item in opcoes if dados_do_gp_2026(pacote, item['rodada'])['corrida']['alvos_conhecidos']]
+            st.session_state['gp'] = observadas[-1] if observadas else valores[0]
+        else:
+            st.session_state.pop('gp', None)
+        st.session_state['_temporada_anterior_dashboard'] = temporada
     descricoes = {item['valor']: '{:02d} — {}'.format(item['rodada'], item['corrida']) for item in opcoes}
-    st.sidebar.caption('Desempenho agrega toda a temporada; o filtro de GP aplica-se apenas em Explorar um GP.')
+    st.sidebar.caption('Desempenho agrega toda a temporada; o filtro de GP aplica-se em Corridas e Previsões.')
     gp = st.sidebar.selectbox(
         'Grande Prêmio', valores, format_func=lambda valor: descricoes.get(valor, str(valor)), key='gp',
-        disabled=tela != 'Explorar um GP',
+        disabled=tela in ('Desempenho', 'Metodologia'),
     )
     if gp not in descricoes:
         por_descricao = {descricao: valor for valor, descricao in descricoes.items()}
         gp = por_descricao.get(gp, valores[0])
     rodada = int(gp.split(':', 1)[1])
     st.markdown(conteudo_markdown(pacote), unsafe_allow_html=True)
-    if tela == 'Explorar um GP':
-        tela_explorar(pacote, rodada)
+    if tela in ('Corridas', 'Previsões'):
+        tela_explorar(pacote, rodada, tela)
     elif tela == 'Desempenho':
         tela_desempenho(pacote)
     else:

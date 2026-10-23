@@ -33,6 +33,10 @@ def copiar_artefatos(raiz):
                 'previsoes_pre_corrida.csv', 'avaliacao_por_piloto.csv',
             }:
                 shutil.copy2(arquivo, destino / arquivo.name)
+    asset = RAIZ / 'frontend_assets/race_weekend.json'
+    destino_asset = raiz / 'frontend_assets/race_weekend.json'
+    destino_asset.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(asset, destino_asset)
     return raiz
 
 
@@ -70,7 +74,7 @@ class TestDashboardApp(unittest.TestCase):
     def test_navega_tres_telas_com_campos_e_nota_retrospectiva(self):
         self.executar()
         radio = por_chave(self.at.get('radio'), 'tela')
-        self.assertEqual(radio.value, 'Explorar um GP')
+        self.assertEqual(radio.value, 'Corridas')
         self.assertIn('Estudo retrospectivo com dados históricos.', texto_renderizado(self.at))
         self.assertEqual(por_chave(self.at.get('selectbox'), 'temporada').value, 2025)
         self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2025:1')
@@ -78,11 +82,11 @@ class TestDashboardApp(unittest.TestCase):
         radio.set_value('Desempenho')
         self.executar()
         texto = texto_renderizado(self.at)
-        self.assertIn('Modelo versus constante', texto)
+        self.assertIn('Acertos entre os três escolhidos', texto)
         self.assertIn('478', texto)
 
         radio = por_chave(self.at.get('radio'), 'tela')
-        radio.set_value('Como funciona')
+        radio.set_value('Metodologia')
         self.executar()
         texto = texto_renderizado(self.at)
         self.assertIn('15 entradas', texto)
@@ -93,7 +97,7 @@ class TestDashboardApp(unittest.TestCase):
         gp_inicial = por_chave(self.at.get('selectbox'), 'gp').value
         radio = por_chave(self.at.get('radio'), 'tela')
 
-        for tela in ('Desempenho', 'Como funciona'):
+        for tela in ('Desempenho', 'Metodologia'):
             radio.set_value(tela)
             self.executar()
             seletor_gp = por_chave(self.at.get('selectbox'), 'gp')
@@ -101,7 +105,7 @@ class TestDashboardApp(unittest.TestCase):
             self.assertTrue(seletor_gp.disabled)
             self.assertEqual(seletor_gp.value, gp_inicial)
             self.assertFalse(seletor_temporada.disabled)
-            self.assertIn('aplica-se apenas em Explorar um GP', texto_renderizado(self.at))
+            self.assertIn('aplica-se em Corridas e Previsões', texto_renderizado(self.at))
 
     def test_grafico_vazio_e_probabilidade_maxima_nao_criam_dado_falso_nem_eixo_acima_de_100(self):
         vazio = app.grafico_probabilidades([])
@@ -137,18 +141,18 @@ class TestDashboardApp(unittest.TestCase):
         self.escolher('gp', '2025:9')
         texto = texto_renderizado(self.at)
         self.assertIn('2025 — avaliação final retrospectiva já realizada', texto)
-        self.assertIn('Cobertura desta corrida', texto)
-        self.assertIn('Participantes preparados', texto)
-        self.assertIn('Elegíveis', texto)
-        self.assertIn('Alvos conhecidos', texto)
+        self.assertIn('Cobertura:', texto)
+        self.assertIn('participantes preparados', texto)
+        self.assertIn('elegíveis', texto)
+        self.assertIn('alvos conhecidos', texto)
         self.assertIn('N/A — não avaliável', texto)
-        self.assertLess(texto.index('Cobertura desta corrida'), texto.index('Probabilidades de pódio'))
+        self.assertLess(texto.index('Cobertura:'), texto.index('Probabilidades de pódio'))
         self.assertIn('menos de três favoritos', app.aviso_favoritos_insuficientes(2).lower())
 
     def test_como_funciona_expoe_regras_congeladas_e_links_dos_dois_relatorios(self):
         self.executar()
         radio = por_chave(self.at.get('radio'), 'tela')
-        radio.set_value('Como funciona')
+        radio.set_value('Metodologia')
         self.executar()
         texto = texto_renderizado(self.at)
         texto_minusculo = texto.lower()
@@ -192,6 +196,116 @@ class TestDashboardApp(unittest.TestCase):
         fontes = (RAIZ / 'app.py').read_text(encoding='utf-8').lower()
         self.assertNotIn('joblib', fontes)
         self.assertNotIn('sklearn', fontes)
+
+    def test_2026_abre_no_ultimo_gp_observado_com_nomes_equipes_e_resultado(self):
+        self.executar()
+        self.escolher('temporada', 2026)
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:17')
+        texto = texto_renderizado(self.at)
+        self.assertIn('Max Verstappen', texto)
+        self.assertIn('Red Bull', texto)
+        self.assertIn('Previsão e resultado observado', texto)
+        self.assertNotIn('Max Verstappen (max_verstappen)', texto)
+
+    def test_2026_com_resultado_observado_nao_afirma_que_o_podio_esta_vazio(self):
+        self.executar()
+        self.escolher('temporada', 2026)
+        texto = texto_renderizado(self.at)
+        self.assertIn('Integrantes identificados na base, sem ordem:', texto)
+        self.assertIn('não há avaliação prospectiva oficial ou anual', texto.lower())
+        self.assertNotIn('O campo de pódio por GP fica vazio nesta cobertura', texto)
+
+    def test_2026_separa_campeonato_local_das_probabilidades_do_gp(self):
+        self.executar()
+        self.escolher('temporada', 2026)
+        por_chave(self.at.get('radio'), 'tela').set_value('Previsões')
+        self.executar()
+        texto = texto_renderizado(self.at)
+        self.assertIn('Campeonato de pilotos 2026', texto)
+        self.assertIn('Rodada de referência: 17', texto)
+        self.assertIn('DriverStandings Jolpica-F1, separado das probabilidades por GP.', texto)
+        campeonato = app.carregar(2026)['campeonato_pilotos']
+        self.assertIn('Vitórias', app.tabela_campeonato_pilotos(campeonato).columns)
+        self.assertIn('Max Verstappen', texto)
+
+    def test_renderizar_campeonato_driverstandings_mostra_max_em_p4_sem_probabilidades(self):
+        campeonato = app.carregar(2026)['campeonato_pilotos']
+        with patch.object(app, 'st') as st_local:
+            app.renderizar_campeonato_pilotos({'campeonato_pilotos': campeonato})
+        tabela = st_local.dataframe.call_args.args[0]
+        max_verstappen = tabela[tabela['Piloto'] == 'Max Verstappen'].iloc[0]
+        self.assertEqual((max_verstappen['Posição'], max_verstappen['Pontos'], max_verstappen['Vitórias']), (4, 221.0, 2))
+        self.assertNotIn('Probabilidade de pódio', tabela.columns)
+
+    def test_renderizar_campeonato_schema_ausente_mostra_indisponibilidade_sem_traceback(self):
+        with patch.object(app, 'st') as st_local:
+            app.renderizar_campeonato_pilotos({'campeonato_pilotos': {}})
+        st_local.info.assert_called_once_with('Classificação de pilotos indisponível.')
+        st_local.dataframe.assert_not_called()
+
+    def test_austin_sem_emissao_nao_reusa_ensaio_de_singapura_nem_mostra_favoritos(self):
+        self.executar()
+        self.escolher('temporada', 2026)
+        por_chave(self.at.get('radio'), 'tela').set_value('Previsões')
+        self.executar()
+        self.escolher('gp', '2026:18')
+        texto = texto_renderizado(self.at)
+        self.assertIn('Faltam classificação concluída e emissão prospectiva registrada para este GP.', texto)
+        self.assertNotIn('Favoritos por ranking publicado', texto)
+        self.assertNotIn('76.0%', texto)
+        self.assertNotIn('Max Verstappen · Red Bull · 76.0%', texto)
+
+    def test_calendario_2026_usa_corridas_locais_e_marca_gp_selecionado_sem_afetar_2025(self):
+        self.executar()
+        self.escolher('temporada', 2026)
+        self.escolher('gp', '2026:18')
+        texto = texto_renderizado(self.at)
+        self.assertIn('Calendário 2026', texto)
+        calendario = app.tabela_calendario_2026(app.carregar(2026), 18)
+        austin = calendario[calendario['Rodada'] == 18].iloc[0]
+        self.assertEqual(austin['GP'], 'United States Grand Prix')
+        self.assertEqual(austin['Selecionado'], 'sim')
+
+        self.escolher('temporada', 2025)
+        self.assertNotIn('Calendário 2026', texto_renderizado(self.at))
+
+    def test_desempenho_prioriza_acertos_e_mantem_metricas_tecnicas_no_expander(self):
+        self.executar()
+        por_chave(self.at.get('radio'), 'tela').set_value('Desempenho')
+        self.executar()
+        texto = texto_renderizado(self.at)
+        self.assertIn('Acertos entre os três escolhidos', texto)
+        self.assertIn('Pódios completos acertados', texto)
+        self.assertIn('Acerto dos três integrantes do pódio, independentemente da ordem', texto)
+        self.assertIn('Comparação com a classificação', texto)
+        self.assertIn('22 de 24 GPs', texto)
+        self.assertEqual(
+            [(item.label, item.value) for item in self.at.get('metric')],
+            [('Modelo', '2.32 de 3'), ('Classificação', '2.27 de 3'),
+             ('Modelo', '8 de 22 GPs'), ('Classificação', '8 de 22 GPs')],
+        )
+        self.assertTrue(any('Detalhes técnicos' in str(item.label) for item in self.at.get('expander')))
+
+    def test_corridas_e_previsoes_priorizam_blocos_distintos_sem_trocar_o_gp(self):
+        self.executar()
+        self.escolher('temporada', 2026)
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:17')
+        corridas = texto_renderizado(self.at)
+        self.assertIn('Contexto do GP e resultado observado', corridas)
+        self.assertLess(corridas.index('Resultados observados'), corridas.index('Modelo e referências'))
+        self.assertIn('ensaio retrospectivo', corridas.lower())
+
+        por_chave(self.at.get('radio'), 'tela').set_value('Previsões')
+        self.executar()
+        previsoes = texto_renderizado(self.at)
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:17')
+        self.assertIn('Probabilidades e estado da previsão', previsoes)
+        self.assertLess(previsoes.index('Modelo e referências'), previsoes.index('Resultados observados'))
+        self.assertIn('ensaio retrospectivo', previsoes.lower())
+
+        self.escolher('gp', '2026:18')
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:18')
+        self.assertIn('N/A — não avaliável', texto_renderizado(self.at))
 
     def test_metricas_json_com_numero_em_texto_exibe_erro_util_sem_traceback(self):
         caminho = self.raiz / 'reports/avaliacao_final_v1/metricas.json'

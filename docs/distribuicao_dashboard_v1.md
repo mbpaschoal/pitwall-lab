@@ -196,3 +196,27 @@ Entrega ao repositório existente **privado**, por allowlist separada do invent�
 [4] https://github.com/jolpica/jolpica-f1/blob/main/TERMS.md
 [5] https://creativecommons.org/licenses/by-nc-sa/4.0
 [6] https://docs.streamlit.io/develop/concepts/configuration/options
+
+## Receita v2 — Race Weekend 2026
+
+Esta atualização substitui a receita v1 para a entrega Race Weekend sem alterar os
+artefatos científicos congelados. Os nove CSV/JSON continuam lidos do
+commit-base `05eec0b70b24abf9a68dae45aac36730eefb5bc5` e são recusados se os bytes
+locais divergirem. `app.py`, `dashboard_dados.py`, `race_weekend_dados.py`, o
+asset `frontend_assets/race_weekend.json` e as fontes locais Saira/Source Sans 3
+com seus textos OFL são proveniência da entrega atual: `UNCOMMITTED`, receita v2
+e SHA-256 registrado no manifesto. Não se atribui essa UI ao HEAD antigo.
+
+O pacote v2 contém 35 arquivos, inclusive os nove CSV/JSON científicos, runtime
+offline 2026 e documentação selecionada; não contém brutos, pesos, modelos,
+coletores, cofre, `.env`, cache ou evidências privadas. A tela 2026 usa os modos
+`observado_local`, `ensaio_retrospectivo` e `indisponivel`: rodadas 1–16 não têm
+probabilidade local e a rodada 18 aguarda classificação local.
+
+Execute `./.venv/bin/python exportar_dashboard.py`. O destino canônico é
+`distribuicao/pitwall-dashboard`; repetição byte idêntica é idempotente e destino
+divergente é recusado. O ZIP determinístico fica em
+`distribuicao/pitwall-dashboard.zip`. Quando CPython 3.12 não estiver disponível,
+use a `.venv` 3.9 somente para a UI, asset e receita local; não instalar ou migrar
+dependências. Esta execução não publica, não cria repositório e não reinicia o
+servidor local.
