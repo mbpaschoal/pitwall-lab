@@ -89,3 +89,10 @@ Sem commit, push, publicação, alterações de skills/configurações ou depend
 - Escopo de staging planejado: dashboard Race Weekend, gerador/adaptador/asset/fontes, snapshot Jolpica necessário, testes, receita/documentação operacional e os 37 arquivos da distribuição/ZIP. Exclusões explícitas: `Home.md`, `AGENTS.md`, `inbox/`, `notes/`, `ideas/`, `F1 previsões conhecimento/`, `codex-knowledge-llm/`, automações, `.graphify*`, `projects/`, caches, credenciais, logs/revisões e relatórios de revisão.
 - Próximo passo exato autorizado: conferir allowlist no índice, criar um único commit, push normal para `main`, confirmar SHA remoto, então tornar `mbpaschoal/pitwall-lab` público e consultar novamente a visibilidade. Sem coleta, treino, alteração de probabilidades ou revisão forte.
 
+## Publicação Race Weekend — concluída
+- Commit de entrega: `5ef51710a380b1a47329ecfa9106d46f9eb56844` (`feat(dashboard): publica entrega Race Weekend com classificação 2026`), com 52 arquivos estritamente allowlistados. Nenhum arquivo pessoal, cofre, cache temporário, credencial ou log de revisão entrou no índice.
+- Push normal confirmado: `origin/main` apontou para `5ef51710a380b1a47329ecfa9106d46f9eb56844`, igual ao HEAD local, sem force e sem tags automáticas.
+- Visibilidade confirmada no GitHub após o push: `mbpaschoal/pitwall-lab` está público, branch padrão `main`. URL pública: `https://github.com/mbpaschoal/pitwall-lab`.
+- A consulta e alteração de visibilidade usaram a credencial GitHub já existente sem registrar nem exibir segredo. Não houve coleta, alteração de probabilidades, treino, OpenF1 ou revisão forte.
+- Próximo passo exato: nenhum automático. A documentação final desta publicação precisa ser incluída em um commit documental separado se for desejado versionar esta confirmação remota; não alterar a entrega publicada sem nova autorização.
+
