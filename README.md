@@ -630,7 +630,3 @@ O teste do gráfico confere os 20 pilotos e suas posições contra o CSV, distin
 - Termos de uso: https://github.com/jolpica/jolpica-f1/blob/main/TERMS.md
 
 Projeto educacional independente, sem vínculo oficial com a Fórmula 1. **Fonte dos dados: Jolpica-F1. Conforme seus termos, os dados são disponibilizados sob CC BY-NC-SA 4.0 (Atribuição–NãoComercial–CompartilhaIgual).** O CSV é uma conversão de formato e seleção de campos da resposta original, sem correção manual dos valores. Preserve a atribuição e a licença ao compartilhar os dados; usos comerciais exigem contato com a Jolpica-F1. Consulte os termos antes de outros usos.
-
-## Como explicar esta etapa em uma entrevista
-
-“Preparei um ambiente Python isolado e fiz uma coleta reproduzível de dados históricos. Descobri a rodada no calendário da API, guardei as respostas originais e converti os resultados para CSV. Identifiquei o aplicativo, reduzi consultas com cache e tratei falhas básicas. Conferi todos os valores do CSV contra a fonte. Ainda não construí um modelo preditivo.”

@@ -24,3 +24,6 @@ secrets*.json
 # Arquivos locais do macOS e logs
 .DS_Store
 *.log
+
+# Material pessoal: nunca publicar
+material-pessoal/
