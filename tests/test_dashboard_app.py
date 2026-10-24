@@ -276,7 +276,8 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('United States Grand Prix', texto)
         self.assertIn('Austin, USA · 2026-10-25', texto)
         self.assertIn('Contexto do GP', texto)
-        self.assertIn('Traçado do circuito indisponível no snapshot local.', texto)
+        self.assertIn('Mapa do circuito', texto)
+        self.assertIn('Layout F1 · CC BY-SA 4.0', texto)
         self.assertIn('Programação do fim de semana', texto)
         self.assertIn('Classificação de pilotos 2026', texto)
         self.assertIn('Desempenho das equipes', texto)
@@ -309,6 +310,23 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('Max Verstappen', tabela)
         self.assertIn('barra-equipe', tabela)
         self.assertIn('Pontos', tabela)
+
+    def test_visao_geral_austin_usa_foto_e_mapa_locais_com_atribuicao(self):
+        self.executar()
+        self.escolher('temporada', 2026)
+        self.escolher('gp', '2026:18')
+        texto = texto_renderizado(self.at)
+        self.assertIn('Foto do circuito', texto)
+        self.assertIn('Mapa do circuito', texto)
+        self.assertIn('Dados do circuito indisponíveis no snapshot local.', texto)
+        css = app.estilo_dashboard()
+        self.assertIn('hero-circuito', css)
+        self.assertIn('mapa-circuito', css)
+        self.assertTrue((RAIZ / 'dashboard_assets/circuit/cota-hero.jpg').is_file())
+        self.assertTrue((RAIZ / 'dashboard_assets/circuit/cota-f1-layout.svg').is_file())
+        atribuicoes = (RAIZ / 'dashboard_assets/circuit/ATRIBUICOES.md').read_text(encoding='utf-8')
+        self.assertIn('CC BY 2.0', atribuicoes)
+        self.assertIn('CC BY-SA 4.0', atribuicoes)
 
     def test_rotulo_resultado_distingue_podio_pontos_abandono_e_desclassificacao(self):
         self.assertEqual(app.rotulo_resultado(2, 'Finished'), 'Pódio')

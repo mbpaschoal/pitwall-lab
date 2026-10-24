@@ -38,7 +38,9 @@ RUNTIME_WORKTREE = (
     'app.py', 'dashboard_dados.py', 'race_weekend_dados.py',
     'frontend_assets/race_weekend.json', 'dashboard_assets/fonts/abrilfatface.ttf',
     'dashboard_assets/fonts/lato.ttf', 'dashboard_assets/fonts/lato-bold.ttf',
-    'dashboard_assets/fonts/abrilfatface-OFL.txt', 'dashboard_assets/fonts/lato-OFL.txt', 'tests/test_dashboard_app.py',
+    'dashboard_assets/fonts/abrilfatface-OFL.txt', 'dashboard_assets/fonts/lato-OFL.txt',
+    'dashboard_assets/circuit/cota-hero.jpg', 'dashboard_assets/circuit/cota-f1-layout.svg',
+    'dashboard_assets/circuit/ATRIBUICOES.md', 'tests/test_dashboard_app.py',
     'tests/test_dashboard_dados.py',
 )
 TEMPLATES = (
