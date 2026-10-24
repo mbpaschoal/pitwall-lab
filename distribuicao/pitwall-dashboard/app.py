@@ -104,6 +104,15 @@ def conteudo_markdown(atual):
     return '<div class="nota-retrospectiva">Estudo retrospectivo com dados históricos.</div>'
 
 
+def ativo_data_uri(caminho_relativo, mime):
+    """Carrega um ativo local para o HTML sem depender de rede em produção."""
+    try:
+        bruto = (raiz_artefatos() / caminho_relativo).read_bytes()
+    except OSError:
+        return ''
+    return 'data:{};base64,{}'.format(mime, base64.b64encode(bruto).decode('ascii'))
+
+
 def estilo_dashboard():
     fontes = raiz_artefatos() / 'dashboard_assets' / 'fonts'
     def fonte(nome, formato):
@@ -117,6 +126,7 @@ def estilo_dashboard():
         @font-face { font-family: LatoLocal; src: url("%s") format("truetype"); font-weight: 400; }
         @font-face { font-family: LatoLocal; src: url("%s") format("truetype"); font-weight: 700; }
         .stApp { background: #F2F6FA; color: #132B4F; font-family: LatoLocal, Arial, sans-serif; }
+        header[data-testid="stHeader"] { display: none; }
         .stApp *, [data-testid="stSidebar"] * { font-family: LatoLocal, Arial, sans-serif; }
         [data-testid="stIconMaterial"] { font-family: "Material Symbols Rounded" !important; }
         [data-testid="stSidebar"] { background: #FFFFFF; border-right: 1px solid #D8E0E9; min-width: 15.25rem; max-width: 15.25rem; }
@@ -151,8 +161,48 @@ def estilo_dashboard():
         .tabela-editorial .numero { text-align: right; white-space: nowrap; }
         .barra-equipe { display: inline-block; height: 1.05rem; margin-right: .38rem; vertical-align: middle; width: .22rem; }
         .tabela-legenda { color: #526983; font-size: .78rem; margin: .25rem 0 .6rem; }
-        [data-baseweb="tab-list"] { border-bottom: 1px solid #D8E0E9; gap: 1.25rem; }
-        button[data-baseweb="tab"] { background: transparent !important; color: #526983 !important; font-size: .85rem !important; font-weight: 700 !important; padding: .45rem 0 !important; }
+        .breadcrumb-editorial { color: #667A9A; font-size: .66rem; font-weight: 700; letter-spacing: .12em; margin: .1rem 0 1.6rem; text-transform: uppercase; }
+        .breadcrumb-editorial span { color: #132B4F; margin: 0 .7rem; }
+        .area-visao-geral { display: grid; gap: .85rem; grid-template-columns: minmax(0, 1.95fr) minmax(175px, .64fr) minmax(235px, .9fr); margin-top: 1rem; }
+        .hero-circuito { background: #17304F; color: #FFFFFF; margin: 0; min-height: 23.4rem; overflow: hidden; position: relative; }
+        .hero-circuito img { height: 23.4rem; object-fit: cover; object-position: center; width: 100%%; }
+        .hero-sobreposicao { background: rgba(11,27,48,.88); bottom: 0; left: 0; padding: 1rem 1.45rem 1.1rem; position: absolute; right: 0; }
+        .hero-sobreposicao .circuito-rotulo { color: #FFFFFF; margin-bottom: .4rem; }
+        .hero-sobreposicao h2 { color: #FFFFFF; font-family: AbrilFatfaceLocal, Georgia, serif !important; font-size: 2rem; font-weight: 400; margin: 0 0 .3rem; }
+        .hero-sobreposicao p { color: #E3EBF5; font-size: .82rem; margin: 0; }
+        .hero-atribuicao { bottom: .45rem; color: rgba(255,255,255,.78); font-size: .62rem; position: absolute; right: .65rem; }
+        .mapa-circuito, .painel-editorial { background: rgba(255,255,255,.72); border: 1px solid #DFE8F0; }
+        .mapa-circuito { align-items: center; display: flex; flex-direction: column; justify-content: center; min-height: 23.4rem; padding: 1.2rem; }
+        .mapa-circuito img { max-height: 13.8rem; max-width: 100%%; object-fit: contain; width: 100%%; }
+        .mapa-circuito p { color: #526983; font-size: .74rem; margin: .35rem 0 0; }
+        .coluna-circuito { display: grid; gap: .85rem; grid-template-rows: .82fr 1.18fr; }
+        .painel-editorial { padding: 1.1rem 1.2rem; }
+        .painel-editorial h3 { font-size: .7rem; letter-spacing: .1em; margin: 0 0 .7rem; text-transform: uppercase; }
+        .painel-editorial p { color: #526983; font-size: .85rem; line-height: 1.45; margin: .35rem 0; }
+        .painel-editorial strong { color: #132B4F; }
+        .painel-vazio { align-items: center; display: flex; min-height: 100%%; }
+        .secao-campeonato { margin-top: .85rem; }
+        .secao-campeonato [data-testid="stColumn"] { background: rgba(255,255,255,.72); border: 1px solid #DFE8F0; padding: 1rem 1.2rem; }
+        [data-testid="stSidebar"] { min-width: 16.8125rem; max-width: 16.8125rem; }
+        [data-testid="stSidebar"] > div { padding: 1.85rem .9rem; }
+        [data-testid="stSidebar"] [data-testid="stRadio"] label { border-left: 3px solid transparent; min-height: 3.2rem; padding: .55rem .65rem; }
+        [data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"] { background: #EAF4FC; border-left-color: #D62732; color: #132B4F; }
+        [data-testid="stSidebar"] [data-testid="stRadio"] label::before { color: #526983; font-family: "Material Symbols Rounded"; font-size: 1.25rem; margin-right: .6rem; }
+        [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(1)::before { content: "flag"; }
+        [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(2)::before { content: "query_stats"; }
+        [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(3)::before { content: "monitoring"; }
+        [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(4)::before { content: "fact_check"; }
+        .main .block-container { max-width: 83.6rem; padding: .5rem 2.35rem 3rem; }
+        .gp-cabecalho { margin-bottom: 1.45rem; }
+        .gp-cabecalho h1 { font-size: 5rem !important; letter-spacing: -.035em; line-height: .96; max-width: 58rem; }
+        .gp-meta { font-size: 1.15rem; letter-spacing: .18em; margin: .55rem 0 0 1.28rem; }
+        .gp-status { border-radius: 999px; font-size: .88rem; margin-top: 1rem; padding: .72rem 1.1rem; }
+        [data-baseweb="tab-list"] { gap: 2rem; margin-bottom: .1rem; }
+        button[data-baseweb="tab"] { font-size: .94rem !important; padding: .7rem .1rem !important; }
+        .contexto-circuito, .ficha-gp, .condicoes-disponiveis { border: 0; margin: 0; padding: 0; }
+        @media (max-width: 1000px) { .area-visao-geral { grid-template-columns: minmax(0, 1fr) minmax(200px, .55fr); } .coluna-circuito { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; grid-template-rows: none; } .gp-cabecalho h1 { font-size: 4rem !important; } }
+        [data-baseweb="tab-list"] { border-bottom: 1px solid #D8E0E9; gap: 2rem; margin-bottom: .1rem; }
+        button[data-baseweb="tab"] { background: transparent !important; color: #526983 !important; font-size: .94rem !important; font-weight: 700 !important; padding: .7rem .1rem !important; }
         button[data-baseweb="tab"][aria-selected="true"] { border-bottom: 3px solid #D62732 !important; color: #132B4F !important; }
         .stMetric { background: #FFFFFF; border: 1px solid #D8E0E9; border-radius: 0; padding: .55rem .75rem; }
         .stDataFrame { border: 1px solid #D8E0E9; }
@@ -165,6 +215,13 @@ def estilo_dashboard():
           h1 { font-size: 2.2rem !important; line-height: 1.04; }
           .gp-cabecalho { gap: .7rem; }
           .gp-status { font-size: .72rem; padding: .3rem .5rem; }
+          .breadcrumb-editorial { margin-bottom: 1rem; }
+          .area-visao-geral { display: block; }
+          .hero-circuito, .hero-circuito img { min-height: 15rem; height: 15rem; }
+          .mapa-circuito, .painel-editorial { margin-top: .8rem; min-height: auto; }
+          .coluna-circuito { display: block; }
+          .gp-cabecalho h1 { font-size: 2.75rem !important; }
+          .gp-meta { font-size: .83rem; letter-spacing: .08em; margin-left: 1rem; }
           [data-testid="stSidebar"] { min-width: auto; max-width: none; }
           [data-baseweb="tab-list"] { gap: .7rem; overflow-x: auto; }
         }
@@ -336,32 +393,50 @@ def renderizar_estado_dados(corrida):
 
 
 def renderizar_contexto_circuito(corrida):
-    esquerda, direita = st.columns((2, 1), gap='large')
-    with esquerda:
-        st.markdown('''
-        <section class="contexto-circuito">
-          <p class="circuito-rotulo">Contexto do circuito</p>
-          <p class="circuito-nome">{}</p>
-          <svg class="circuito-linha" viewBox="0 0 520 150" role="img" aria-label="Traçado do circuito indisponível no snapshot local">
-            <path d="M42,104 C77,31 155,30 183,74 C205,110 253,122 288,94 C325,65 320,27 371,41 C430,56 451,123 485,82" fill="none" stroke="#132B4F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 8"/>
-          </svg>
-          <p class="tracado-indisponivel">Traçado do circuito indisponível no snapshot local.</p>
+    circuito = corrida.get('circuito_nome') or 'Circuito indisponível'
+    eh_austin = corrida.get('circuito_id') == 'americas'
+    foto = ativo_data_uri('dashboard_assets/circuit/cota-hero.jpg', 'image/jpeg') if eh_austin else ''
+    mapa = ativo_data_uri('dashboard_assets/circuit/cota-f1-layout.svg', 'image/svg+xml') if eh_austin else ''
+    hero = '<img src="{}" alt="Foto do circuito Circuit of the Americas">'.format(foto) if foto else '<p>Foto do circuito indisponível no pacote local.</p>'
+    mapa_html = '<img src="{}" alt="Mapa do circuito Circuit of the Americas">'.format(mapa) if mapa else '<p>Mapa do circuito indisponível no pacote local.</p>'
+    st.markdown('''
+    <section class="area-visao-geral" aria-label="Visão geral do circuito">
+      <figure class="hero-circuito">
+        {}
+        <figcaption class="hero-sobreposicao">
+          <p class="circuito-rotulo">Foto do circuito · Contexto do circuito</p>
+          <h2>{}</h2>
+          <p>Dados do circuito indisponíveis no snapshot local.</p>
+        </figcaption>
+        <span class="hero-atribuicao">Foto: Pedro Mendes · CC BY 2.0</span>
+      </figure>
+      <section class="mapa-circuito" aria-label="Mapa do circuito">
+        <p class="circuito-rotulo">Mapa do circuito</p>
+        {}
+        <p>Layout F1 · CC BY-SA 4.0</p>
+      </section>
+      <div class="coluna-circuito">
+        <section class="painel-editorial painel-vazio">
+          <div>
+            <h3>Condições disponíveis</h3>
+            <p><strong>Dados meteorológicos indisponíveis no snapshot local.</strong></p>
+            <p>Não há clima, tempos ou estratégias publicados nesta visualização.</p>
+          </div>
         </section>
-        '''.format(corrida.get('circuito_nome') or 'Circuito indisponível'), unsafe_allow_html=True)
-    with direita:
-        st.markdown('''
-        <section class="ficha-gp">
-          <p class="circuito-rotulo">Informações do circuito</p>
-          <p><strong>{}</strong></p>
-          <p>{}, {}</p>
-          <p>Data: {}</p>
-          <p>Estado: <strong>{}</strong></p>
+        <section class="painel-editorial">
+          <h3>Informações do circuito</h3>
+          <p><strong>Circuito</strong><br>{}</p>
+          <p><strong>Local</strong><br>{}, {}</p>
+          <p><strong>Data</strong><br>{}</p>
+          <p><strong>Estado operacional</strong><br>{}</p>
         </section>
-        '''.format(
-            corrida.get('circuito_id', 'Circuito indisponível'), corrida.get('cidade', 'Cidade indisponível'),
-            corrida.get('pais', 'País indisponível'), corrida.get('data', 'Data indisponível'),
-            nome_estado_operacao(corrida.get('estado_operacao', 'aguardando_dados')),
-        ), unsafe_allow_html=True)
+      </div>
+    </section>
+    '''.format(
+        hero, escape(circuito), mapa_html, escape(circuito), escape(corrida.get('cidade', 'Cidade indisponível')),
+        escape(corrida.get('pais', 'País indisponível')), escape(corrida.get('data', 'Data indisponível')),
+        escape(nome_estado_operacao(corrida.get('estado_operacao', 'aguardando_dados'))),
+    ), unsafe_allow_html=True)
 
 
 def renderizar_condicoes_disponiveis(corrida):
@@ -506,6 +581,7 @@ def tela_explorar(pacote, rodada, foco):
     corrida = bloco['corrida']
     participantes = bloco['participantes']
     if pacote['temporada'] == 2026:
+        st.markdown('<div class="breadcrumb-editorial">Corridas <span>›</span> {}</div>'.format(escape(corrida['corrida'])), unsafe_allow_html=True)
         st.markdown('''
         <section class="gp-cabecalho">
           <div>
@@ -523,24 +599,13 @@ def tela_explorar(pacote, rodada, foco):
         st.caption('Temporada {} · rodada {} · {} participantes preparados'.format(
             pacote['temporada'], corrida['rodada'], corrida['participantes_preparados']
         ))
-    estados = [
-        ('Classificação', corrida.get('estado_qualificacao', 'histórico disponível')),
-        ('Previsão', corrida.get('estado_previsao', 'avaliação retrospectiva')),
-        ('Resultado factual', corrida.get('estado_resultado', 'observado')),
-    ]
-    linha_tempo = st.columns(3)
-    for coluna, (nome, estado) in zip(linha_tempo, estados):
-        coluna.markdown('**{}**  \n{}'.format(nome, estado.replace('_', ' ')))
-    st.caption('A previsão retrospectiva é separada de previsão registrada antes da corrida; resultados não entram na previsão da própria corrida.')
     if pacote['temporada'] == 2026:
-        st.markdown('<div class="secao-rotulo">Contexto do GP</div>', unsafe_allow_html=True)
         if foco == 'Corridas':
             visao_geral, tempos, estrategias, clima, historico, comparativo_equipes = st.tabs((
                 'Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes',
             ))
             with visao_geral:
                 renderizar_contexto_circuito(corrida)
-                renderizar_condicoes_disponiveis(corrida)
                 classificacao, equipes = st.columns(2, gap='large')
                 with classificacao:
                     renderizar_campeonato_pilotos(pacote)
@@ -562,6 +627,16 @@ def tela_explorar(pacote, rodada, foco):
         else:
             renderizar_campeonato_pilotos(pacote)
             renderizar_estado_dados(corrida)
+    else:
+        estados = [
+            ('Classificação', corrida.get('estado_qualificacao', 'histórico disponível')),
+            ('Previsão', corrida.get('estado_previsao', 'avaliação retrospectiva')),
+            ('Resultado factual', corrida.get('estado_resultado', 'observado')),
+        ]
+        linha_tempo = st.columns(3)
+        for coluna, (nome, estado) in zip(linha_tempo, estados):
+            coluna.markdown('**{}**  \n{}'.format(nome, estado.replace('_', ' ')))
+        st.caption('A previsão retrospectiva é separada de previsão registrada antes da corrida; resultados não entram na previsão da própria corrida.')
     st.caption('Cobertura: {} participantes preparados · {} elegíveis · {} alvos conhecidos depois.'.format(
         corrida['participantes_preparados'], corrida['elegiveis'], corrida['alvos_conhecidos']))
     with st.expander('Cobertura e exclusões'):
@@ -768,7 +843,8 @@ def executar_app():
         por_descricao = {descricao: valor for valor, descricao in descricoes.items()}
         gp = por_descricao.get(gp, valores[0])
     rodada = int(gp.split(':', 1)[1])
-    st.markdown(conteudo_markdown(pacote), unsafe_allow_html=True)
+    if not (tela == 'Corridas' and temporada == 2026):
+        st.markdown(conteudo_markdown(pacote), unsafe_allow_html=True)
     if tela in ('Corridas', 'Previsões'):
         tela_explorar(pacote, rodada, tela)
     elif tela == 'Desempenho':

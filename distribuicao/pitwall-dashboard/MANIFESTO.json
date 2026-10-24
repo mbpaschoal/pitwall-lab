@@ -25,7 +25,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "c112e9e358f086bc093ef2d4ded66a5aeb2314a79b211d5fded24973ff110725",
+      "sha256_destino": "5595cc3d82c756b11cd34107c4e2ea7a06c0a0753cb23c01b79013985f5d29d9",
       "sha256_origem": null
     },
     {
@@ -61,8 +61,29 @@
       "fonte": "app.py",
       "modo": "gerado",
       "nota": "viewer offline inserido na UI Race Weekend do working tree",
-      "sha256_destino": "e259a72d5cf686e755091539cabbf79723ddaeb15f06df23d512da8bfc9499e5",
-      "sha256_origem": "3d0bbd454844cf3f35d68dcb635ceac67ce03dc3d78681019d115fe9d6803caf"
+      "sha256_destino": "27b99ad0ecca19866f2a14eeed261c854a0d06a849df439f70b38c5413901ae5",
+      "sha256_origem": "47d95224135e1efe9228ce6d84199e9e889a287d61e4d7b948009aba624e20af"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/ATRIBUICOES.md",
+      "fonte": "dashboard_assets/circuit/ATRIBUICOES.md",
+      "modo": "copia",
+      "sha256_destino": "9ebb94c48f79b821253d1578a1904e2b9509e5b8600c5d5dcb496d5e79f30915",
+      "sha256_origem": "9ebb94c48f79b821253d1578a1904e2b9509e5b8600c5d5dcb496d5e79f30915"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/cota-f1-layout.svg",
+      "fonte": "dashboard_assets/circuit/cota-f1-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "dcad6aa8a57db9db438e93f4c3a292f2b936920d6ce85994e9e3d917e9174d46",
+      "sha256_origem": "dcad6aa8a57db9db438e93f4c3a292f2b936920d6ce85994e9e3d917e9174d46"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/cota-hero.jpg",
+      "fonte": "dashboard_assets/circuit/cota-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "e8ebf6e95694662d2f07a44ba1a629cf65fdeb47b90e9a69a7fa8ae2e6ada1f9",
+      "sha256_origem": "e8ebf6e95694662d2f07a44ba1a629cf65fdeb47b90e9a69a7fa8ae2e6ada1f9"
     },
     {
       "caminho": "dashboard_assets/fonts/abrilfatface-OFL.txt",
@@ -245,8 +266,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "9b54857463bbf5e757acbbae8fbdc5ffa24a48285da7e507cd7108b14e87bb27",
-      "sha256_origem": "a07d65ee36cdc0c3dc2a0e9fde99f1d794d9d182ec9c31fb2001e30dbbab2a7c"
+      "sha256_destino": "b4d79f1fffc0be0de1c64f3a452059b3e28722bef4432499626fdb9d2db64468",
+      "sha256_origem": "50ed84d4322dabad32231faad465dffd2ccf0457914e02fa675c4e6063f85887"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -263,8 +284,8 @@
       "sha256_origem": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012"
     }
   ],
-  "commit_origem": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
-  "data_referencia_reprodutivel_utc": "2026-10-18T18:34:52+00:00",
+  "commit_origem": "34b396d6827dbe4b50cbd898d94473ab2ddbfbf8",
+  "data_referencia_reprodutivel_utc": "2026-10-24T05:22:22+00:00",
   "fontes_cientificas": [
     "reports/modelo_v1/previsoes_validacao.csv",
     "reports/modelo_v1/avaliacao_corridas.csv",
@@ -281,7 +302,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "3cb962d233b7263b2db0f5feb674ebcdfb9281a5b055acea41ebb95bb05a3385"
+      "sha256": "04e3d0e03ff09c1bcf72329546a030061b8c829996b85acf97d628ea79463f50"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
