@@ -417,6 +417,35 @@ def renderizar_programacao(corrida):
         linha[2].write(item['hora'])
 
 
+def renderizar_tempos_sessoes(bloco):
+    tempos = bloco.get('tempos_sessoes')
+    st.subheader('Tempos de sessão')
+    if not tempos or not tempos.get('disponivel'):
+        st.info((tempos or {}).get('motivo', 'Tempos de sessão não disponíveis no pacote local.'))
+        return
+    st.caption('Fonte: Formula1Dashboard · snapshot {} · {}'.format(tempos['snapshot_id'], tempos['aviso_modelo']))
+    rotulos = {'TL1': 'TL1', 'TL2': 'TL2', 'TL3': 'TL3', 'Q': 'Qualifying'}
+    chave = st.selectbox('Sessão com tempos publicados', list(rotulos), format_func=lambda item: rotulos[item], key='sessao_tempos')
+    sessao = tempos['sessoes'][chave]
+    linhas = []
+    for item in sessao['linhas']:
+        linhas.append({
+            'Pos.': item['posicao'], 'Piloto': item['piloto'], 'Equipe': item['equipe'], 'Tempo': item['tempo'] or 'Sem tempo',
+            'Gap ao líder (%)': None if item['gap_percentual_lider'] is None else round(item['gap_percentual_lider'], 3),
+            'Q1': item['q1'] or '—', 'Q2': item['q2'] or '—', 'Q3': item['q3'] or '—',
+            'Rank da previsão': numero(item['ranking_modelo']),
+            'Prob. pódio publicada': percentual(item['probabilidade_modelo']),
+            'Comparação': item['motivo_exclusao_comparacao'] or ('favorito/previsão registrada' if item['ranking_modelo'] else 'sem probabilidade publicada'),
+        })
+    st.dataframe(pd.DataFrame(linhas), width='stretch', hide_index=True)
+    favoritos = [item for item in sessao['linhas'] if item['ranking_modelo'] in (1, 2, 3)]
+    if favoritos:
+        st.caption('Favoritos da emissão congelada comparados nesta sessão: ' + '; '.join(
+            '#{} {} ({}, {})'.format(item['ranking_modelo'], item['piloto'], item['tempo'] or 'sem tempo', percentual(item['probabilidade_modelo']))
+            for item in sorted(favoritos, key=lambda valor: valor['ranking_modelo'])
+        ))
+
+
 def renderizar_estado_dados(corrida):
     st.subheader('Estado dos dados')
     for nome, estado in (
@@ -658,7 +687,7 @@ def tela_explorar(pacote, rodada, foco):
                 renderizar_desempenho_equipes_indisponivel()
         with tempos:
             renderizar_programacao(corrida)
-            st.caption('Tempos de sessão não disponíveis no pacote local.')
+            renderizar_tempos_sessoes(bloco)
         with estrategias:
             st.info('Estratégias indisponíveis no pacote local.')
         with clima:

@@ -61,8 +61,8 @@
       "fonte": "app.py",
       "modo": "gerado",
       "nota": "viewer offline inserido na UI Race Weekend do working tree",
-      "sha256_destino": "85979a915b2738e1f8eea36c511c948fad3eca186109b5f08fef48d6ebee9310",
-      "sha256_origem": "f8d8d045dc21cb35bffa5c954d58a617e857f7d9fbcbc373047320eae9095c66"
+      "sha256_destino": "5a9b36da4d677c8be0e731ffc33d7c67a6cb193d9ea9f9b15bb5f814c62c2892",
+      "sha256_origem": "206a9c8972d851518ce0dd7fe3a6f97cb924d38422eee9b12d86b2b78ae341b2"
     },
     {
       "caminho": "catalogo_visual.py",
@@ -552,15 +552,15 @@
       "caminho": "frontend_assets/race_weekend.json",
       "fonte": "frontend_assets/race_weekend.json",
       "modo": "copia",
-      "sha256_destino": "42503cc89b3a062c2d384c1bfb744ba2f799cc8b6ae66a5288553f4aa5836cd7",
-      "sha256_origem": "42503cc89b3a062c2d384c1bfb744ba2f799cc8b6ae66a5288553f4aa5836cd7"
+      "sha256_destino": "8411fd00cde73e3af7dfe6124fea504ab0b724cf4ef14b908a63cd4eaa9f1865",
+      "sha256_origem": "8411fd00cde73e3af7dfe6124fea504ab0b724cf4ef14b908a63cd4eaa9f1865"
     },
     {
       "caminho": "race_weekend_dados.py",
       "fonte": "race_weekend_dados.py",
       "modo": "copia",
-      "sha256_destino": "c2115c2ab86abfde1855feb4469c3302d4620b37bb00331e1f3c1729393e058f",
-      "sha256_origem": "c2115c2ab86abfde1855feb4469c3302d4620b37bb00331e1f3c1729393e058f"
+      "sha256_destino": "1166d9d207d619e63f2e7f728be568f8e1b78196f1df7539e82b5c064ed97e16",
+      "sha256_origem": "1166d9d207d619e63f2e7f728be568f8e1b78196f1df7539e82b5c064ed97e16"
     },
     {
       "caminho": "registro_emissoes.py",
@@ -669,8 +669,8 @@
       "sha256_origem": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012"
     }
   ],
-  "commit_origem": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
-  "data_referencia_reprodutivel_utc": "2026-10-18T18:34:52+00:00",
+  "commit_origem": "128e272636d336ec2c95d324edca2e98df37685b",
+  "data_referencia_reprodutivel_utc": "2026-10-25T14:46:21+00:00",
   "fontes_cientificas": [
     "reports/modelo_v1/previsoes_validacao.csv",
     "reports/modelo_v1/avaliacao_corridas.csv",
