@@ -116,6 +116,12 @@ DECLARACOES = (
         'diretorio': 'reports/operacao_2026/emissoes/ensaio-commit-9e65ad25b125e78b671a763a43934385c1264363',
         'modo': 'ENSAIO_RETROSPECTIVO',
     },
+    {
+        'temporada': 2026, 'rodada': 18, 'circuito_id': 'americas',
+        'snapshot': 'coleta-20261020T020130Z',
+        'diretorio': 'reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z',
+        'modo': 'PROSPECTIVO',
+    },
 )
 
 

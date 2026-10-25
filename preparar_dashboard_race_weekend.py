@@ -476,7 +476,7 @@ def _dados_2026(root):
 
 
 def gerar(root, destino):
-    root, destino = Path(root), Path(destino)
+    root, destino = Path(root).resolve(), Path(destino)
     identidades, identificacao_path = _identidades_historicas(root)
     nomes_equipes = _nomes_equipes_historicas(root)
     for chave, identidade in identidades.items():

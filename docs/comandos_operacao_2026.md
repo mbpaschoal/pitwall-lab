@@ -1,7 +1,7 @@
 # Operação 2026 — comandos manuais
 
 Created by: MBPaschoal
-Status: coleta real, cache e ensaio retrospectivo executados; Austin aguardando classificação
+Status: coleta real, cache, ensaios retrospectivos e emissão prospectiva Austin/OpenF1 registrada
 Type: operational guide
 
 Use a raiz do projeto e o ambiente Python já instalado, **sem instalar nada**:
@@ -73,6 +73,27 @@ Para o legado 2021–2025, o leitor ainda confere hash e abre as páginas necess
 Exige identidade exata, paginação completa, IDs literais válidos, horários conhecidos e componentes operacionais commitados e intactos. O lote é preparado separadamente e validado antes e depois da publicação, inclusive durante serialização, escrita e após a troca atômica: se atravessar a largada, não resta uma pasta final válida; os bytes são preservados apenas como parcial inválida para diagnóstico. Não existe opção CLI para retrodatá-lo. Alterações no cofre fora desses componentes não bloqueiam a emissão. Se a verificação falhar, não contorne o bloqueio; uma nova consulta exige nova fotografia.
 
 Uma correção usa ID novo e ambos os argumentos `--versao-anterior ID_ANTERIOR --motivo-correcao MOTIVO_DOCUMENTADO`, nunca substituição. Não reexecute o comando com um ID já emitido.
+
+### C.1 Exceção auditável: classificação OpenF1 já preservada
+
+Quando a classificação canônica Jolpica estiver vazia, o produtor pode admitir **somente** um diretório OpenF1 previamente preservado e validado pelo adaptador `operacao2026/openf1_qualificacao.py`. Essa rota não converte o array OpenF1 em resposta Jolpica e não inventa `offset`, `total` ou paginação. O `inventario.json` precisa declarar os raws, URLs, HTTP status, UTCs de obtenção, SHA-256, `session_key`, `meeting_key`, identidade do GP e a versão da normalização.
+
+O adaptador exige correspondência literal da temporada/rodada/circuito, 22 resultados e 22 pilotos, posições e números únicos, mapeamento literal 2026 de `driver_number` para `driverId`/`constructorId`, e o evento `SESSION FINISHED` com `qualifying_phase=3`. Q1/Q2, duração programada, nomes aproximados ou equipes unidas manualmente não são aceitos. A conferência FIA/F1 é registrada como evidência; não substitui o raw OpenF1.
+
+```sh
+OPENF1="data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z"
+./.venv/bin/python -c "from operacao2026.openf1_qualificacao import carregar; print(carregar('$OPENF1')['sessao'])"
+CORTE="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+EMISSAO="austin-prospectivo-openf1-$(date -u +%Y%m%dT%H%M%SZ)"
+./.venv/bin/python operar_2026.py emitir \
+  --snapshot coleta-20261020T020130Z --id "$EMISSAO" \
+  --openf1-diretorio "$OPENF1" \
+  --sessao-encerrada-em 2026-10-24T22:00:00.097000Z \
+  --fonte-encerramento 'https://api.openf1.org/v1/race_control?session_key=11392' \
+  --corte "$CORTE"
+```
+
+Para Austin 2026, a emissão oficial registrada é `austin-prospectivo-openf1-20261025T054420Z`, emitida em `2026-10-25T05:44:21.904104Z`; ela usa `session_key=11392`, `meeting_key=1297` e fim Q3 em `2026-10-24T22:00:00.097000Z`. Nunca repita esta emissão com o mesmo ID nem a recrie depois da largada.
 
 ## D. FastF1 opcional após uma sessão já encerrada
 

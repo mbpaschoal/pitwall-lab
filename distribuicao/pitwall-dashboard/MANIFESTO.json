@@ -552,8 +552,8 @@
       "caminho": "frontend_assets/race_weekend.json",
       "fonte": "frontend_assets/race_weekend.json",
       "modo": "copia",
-      "sha256_destino": "319824bf82bfc435d7353229ad40547deb9b8d27d8b7bf5936c4992d54512554",
-      "sha256_origem": "319824bf82bfc435d7353229ad40547deb9b8d27d8b7bf5936c4992d54512554"
+      "sha256_destino": "42503cc89b3a062c2d384c1bfb744ba2f799cc8b6ae66a5288553f4aa5836cd7",
+      "sha256_origem": "42503cc89b3a062c2d384c1bfb744ba2f799cc8b6ae66a5288553f4aa5836cd7"
     },
     {
       "caminho": "race_weekend_dados.py",
@@ -566,8 +566,8 @@
       "caminho": "registro_emissoes.py",
       "fonte": "registro_emissoes.py",
       "modo": "copia",
-      "sha256_destino": "775dd624e28161c7baa33445e2e35d7fce7142e45068191e58f061d113582be3",
-      "sha256_origem": "775dd624e28161c7baa33445e2e35d7fce7142e45068191e58f061d113582be3"
+      "sha256_destino": "723c31ac3aa7fdeb6727fa05299efb6953071b4e6ae2927874ed9d2cac53f505",
+      "sha256_origem": "723c31ac3aa7fdeb6727fa05299efb6953071b4e6ae2927874ed9d2cac53f505"
     },
     {
       "caminho": "reports/avaliacao_final_v1/avaliacao_corridas.csv",
@@ -651,8 +651,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "bb45dd612fa1de4b95e8debcb81a865b7d3915b49fbb5783c594bd01b09d0c15",
-      "sha256_origem": "b6ce7a2ab11f52784a4f468ccf133e10e2cdcee28ee99d39e7ed3256fe5ea6ab"
+      "sha256_destino": "f2ea5f4ad4a6ff053d3e1e9d35f570eae77464d668ba0f3aa31b667d2922e388",
+      "sha256_origem": "30f36acbda23509b24454f81a92d4a20901c602b748f86129031b3f3ac320f5e"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",

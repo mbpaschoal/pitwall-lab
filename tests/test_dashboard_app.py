@@ -267,7 +267,7 @@ class TestDashboardApp(unittest.TestCase):
         st_local.info.assert_called_once_with('Classificação de pilotos indisponível.')
         st_local.dataframe.assert_not_called()
 
-    def test_austin_sem_emissao_nao_reusa_ensaio_de_singapura_nem_mostra_favoritos(self):
+    def test_austin_com_emissao_openf1_mostra_favoritos_da_emissao(self):
         self.executar()
         self.escolher('temporada', 2026)
         por_chave(self.at.get('radio'), 'tela').set_value('Previsões')
@@ -276,10 +276,9 @@ class TestDashboardApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         self.assertIn('United States Grand Prix', texto)
         self.assertIn('Austin, USA · 2026-10-25', texto)
-        self.assertIn('Aguardando dados', texto)
-        self.assertIn('Faltam classificação concluída e emissão prospectiva registrada para este GP.', texto)
-        self.assertNotIn('Favoritos por ranking publicado', texto)
-        self.assertNotIn('76.0%', texto)
+        self.assertIn('Previsão registrada', texto)
+        self.assertIn('Favoritos por ranking publicado', texto)
+        self.assertIn('Kimi Antonelli · Mercedes · 83.5%', texto)
         self.assertNotIn('Max Verstappen · Red Bull · 76.0%', texto)
 
     def test_visual_editorial_usa_fontes_locais_abril_e_lato_sem_gradiente(self):
@@ -297,7 +296,7 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn("initial_sidebar_state='expanded'", codigo)
         self.assertNotIn('header[data-testid="stHeader"] { display: none; }', css)
 
-    def test_corridas_austin_exibe_contexto_programacao_e_estado_aguardando_dados(self):
+    def test_corridas_austin_exibe_contexto_programacao_e_previsao_registrada(self):
         self.executar()
         self.escolher('temporada', 2026)
         self.escolher('gp', '2026:18')
@@ -314,8 +313,8 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('Desempenho das equipes', texto)
         self.assertIn('Dados de desempenho por equipe indisponíveis no snapshot local.', texto)
         self.assertIn('Estado dos dados', texto)
-        self.assertIn('Aguardando dados', texto)
-        self.assertNotIn('76.0%', texto)
+        self.assertIn('Previsão registrada', texto)
+        self.assertIn('83.5%', texto)
 
     def test_corridas_austin_tem_hierarquia_editorial_e_navegacao_secundaria_completa(self):
         self.executar()
@@ -328,8 +327,8 @@ class TestDashboardApp(unittest.TestCase):
         for aba in ('Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes'):
             self.assertIn(aba, codigo)
         self.assertIn('Dados meteorológicos indisponíveis no snapshot local.', texto)
-        self.assertIn('Aguardando dados', texto)
-        self.assertNotIn('Previsão disponível: 76.0%', texto)
+        self.assertIn('Previsão registrada', texto)
+        self.assertIn('Kimi Antonelli · Mercedes · 83.5%', texto)
 
         css = app.estilo_dashboard()
         self.assertIn('gp-cabecalho', css)
