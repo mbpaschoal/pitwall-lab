@@ -74,6 +74,78 @@ Exige identidade exata, paginação completa, IDs literais válidos, horários c
 
 Uma correção usa ID novo e ambos os argumentos `--versao-anterior ID_ANTERIOR --motivo-correcao MOTIVO_DOCUMENTADO`, nunca substituição. Não reexecute o comando com um ID já emitido.
 
+## D. FastF1 opcional após uma sessão já encerrada
+
+FastF1 é gratuito e **não é instalado nem consultado automaticamente**. Antes da primeira coleta, instale manualmente no ambiente do projeto a versão opcional compatível e confira a instalação; não faça isso durante a coleta de uma sessão:
+
+```sh
+./.venv/bin/python -m pip install "fastf1==3.6.0"
+./.venv/bin/python -c "import fastf1; print(fastf1.__version__)"
+```
+
+Use um snapshot Jolpica local apenas para resolver `americas` para a rodada canônica. Para FP1, FP2 ou FP3, substitua somente `SESSAO` por `FP1`, `FP2` ou `FP3`, depois que a sessão terminar:
+
+```sh
+JOLPICA_SNAPSHOT="coleta-20261020T020130Z"
+SESSAO="FP1"
+FASTF1_SNAPSHOT="austin-${SESSAO:l}-$(date -u +%Y%m%dT%H%M%SZ)"
+./.venv/bin/python operar_2026.py coletar-fastf1 \
+  --id "$FASTF1_SNAPSHOT" --snapshot-jolpica "$JOLPICA_SNAPSHOT" \
+  --circuito americas --sessao "$SESSAO"
+if [ -f "data/operacao_2026/fastf1/$FASTF1_SNAPSHOT/indice.json" ]; then
+  ./.venv/bin/python operar_2026.py validar-fastf1 --id "$FASTF1_SNAPSHOT"
+else
+  print 'FastF1 ainda aguardando dados; não há snapshot para validar.'
+fi
+```
+
+O exemplo usa expansão nativa do **zsh** (`${SESSAO:l}`). Se a sessão ainda não estiver pública, o primeiro comando imprime `aguardando_dados` e encerra com sucesso: não faça polling nem use o snapshot de outra sessão. Cada captura registra cache local explícito, UTC, fonte FastF1, `session_key`, hash, nome do GP, cidade, país e data. FP1/FP2/FP3 são somente contexto e nunca substituem classificação.
+
+Depois de Q terminar, a ordem obrigatória é: coletar primeiro a classificação canônica Jolpica, confirmar `pronto`, opcionalmente registrar FastF1 Q e então emitir. A rodada vem do calendário no snapshot Jolpica e a emissão verifica igualdade de temporada/rodada/circuito se o contexto FastF1 for informado.
+
+```sh
+SNAPSHOT="austin-pos-q-$(date -u +%Y%m%dT%H%M%SZ)"
+./.venv/bin/python operar_2026.py coletar --id "$SNAPSHOT" --atualizar --classificacao-circuito americas
+./.venv/bin/python operar_2026.py estado --snapshot "$SNAPSHOT"
+# Pare se o estado não for pronto.
+
+FASTF1_Q="austin-q-$(date -u +%Y%m%dT%H%M%SZ)"
+./.venv/bin/python operar_2026.py coletar-fastf1 \
+  --id "$FASTF1_Q" --snapshot-jolpica "$SNAPSHOT" --circuito americas --sessao Q
+if [ -f "data/operacao_2026/fastf1/$FASTF1_Q/indice.json" ]; then
+  ./.venv/bin/python operar_2026.py validar-fastf1 --id "$FASTF1_Q"
+else
+  print 'FastF1 Q ainda aguardando dados; emita sem --fastf1-snapshot ou aguarde uma nova execução manual.'
+fi
+
+printf 'Fim confirmado da sessão em UTC (AAAA-MM-DDTHH:MM:SSZ): '
+read -r FIM_Q
+printf 'URL http(s) da evidência de encerramento: '
+read -r FONTE_Q
+CORTE="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+EMISSAO="austin-prospectivo-$(date -u +%Y%m%dT%H%M%SZ)"
+./.venv/bin/python operar_2026.py emitir --snapshot "$SNAPSHOT" --id "$EMISSAO" \
+  --sessao-encerrada-em "$FIM_Q" --fonte-encerramento "$FONTE_Q" --corte "$CORTE" \
+  --fastf1-snapshot "$FASTF1_Q"
+```
+
+`--fastf1-snapshot` é opcional: se FastF1 não estiver disponível, omita apenas esse argumento; a emissão continua bloqueada sem classificação Jolpica `pronto`. FastF1 não altera o modelo v1, suas 15 entradas, probabilidades ou o contrato temporal.
+
+## E. Cadeia obrigatória após a emissão
+
+Uma emissão gravada ainda não aparece no dashboard automaticamente. Sem editar manifesto de emissão à mão, acrescente uma declaração explícita em `registro_emissoes.py` com a mesma identidade, `snapshot`, diretório e modo que o CLI acabou de gravar. Em seguida, valide o registro, gere o asset, gere a distribuição, publique somente o pacote gerado e confirme visualmente o redeploy público.
+
+```sh
+# Depois de registrar a nova declaração no código e antes da largada:
+./.venv/bin/python -c "from registro_emissoes import carregar; carregar('.')"
+./.venv/bin/python preparar_dashboard_race_weekend.py --root . --saida frontend_assets/race_weekend.json
+./.venv/bin/python exportar_dashboard.py --destino /private/tmp/pitwall-dashboard
+# Publique apenas /private/tmp/pitwall-dashboard após conferir MANIFESTO.json e ARQUIVOS_PUBLICACAO.txt.
+# Depois do deploy, abra a URL pública e confirme manualmente GP, UTC, fonte Q e estado prospectivo.
+```
+
+O caminho mínimo sem FastF1 é: coletar Jolpica pós-Q → `estado` igual a `pronto` → informar fim/URL/corte → `emitir` sem `--fastf1-snapshot` → registrar → gerar asset → exportar → publicar → conferir. A declaração e o asset devem apontar para o snapshot e hashes da Q que o manifesto da emissão já registra; não reutilize Q de outro snapshot.
+
 ## Saídas, limitações e alternativa gratuita
 
 Cada emissão contém `probabilidades.csv`, `entradas.json` (15 entradas em ordem), `cobertura.json`, `historicos.json`, `fontes.json`, raw admitidos, `relatorio.md` e `manifesto.json` com hashes/modelo/Git. O ensaio de desenvolvimento identifica código ainda não commitado; a fotografia final pós-commit identifica o commit real dos componentes. Arquivos locais, relógio e commit **não são prova externa imutável** de uma previsão anterior ao GP.

@@ -4,7 +4,7 @@ Demonstração local e publicável de um estudo retrospectivo sobre a probabilid
 individual de um piloto integrar o pódio de um Grande Prêmio principal. Não é uma
 previsão ao vivo, não estima a ordem do pódio e não consulta fontes na execução.
 
-**[Abrir dashboard — deploy pendente](#hospedagem-futura-ainda-não-executada)**
+**[Abrir dashboard público](https://pitwall-lab.streamlit.app/)**
 
 ![Tela de desempenho de 2025](reports/dashboard_v1/desempenho_desktop.png)
 
@@ -65,18 +65,19 @@ Para executar a suíte da distribuição:
 python -m unittest discover -s tests -v
 ```
 
-## Hospedagem futura, ainda não executada
+## Hospedagem no Streamlit Community Cloud
 
 Crie um repositório **público separado**, fora deste cofre, e copie somente os
 arquivos listados em `ARQUIVOS_PUBLICACAO.txt`. Nesse novo diretório, inicie um
 histórico novo com `git init`, crie a branch `main` e revise a lista antes de
 adicionar arquivos. Nunca publique o histórico deste repositório/cofre atual.
 
-No Streamlit Community Cloud, selecione o repositório novo, a branch `main` e
-`app.py`; em **Advanced settings**, selecione Python 3.12. Não há secrets
-necessários para este pacote. As instruções detalhadas e limitações estão em
-[GUIA_HOSPEDAGEM.md](GUIA_HOSPEDAGEM.md). Não há URL de aplicativo ou badge de
-deploy porque a publicação ainda não foi feita.
+O aplicativo público é https://pitwall-lab.streamlit.app/. Para atualizar o
+deploy, no Streamlit Community Cloud selecione a branch `main` e `app.py`; em
+**Advanced settings**, selecione Python 3.12. Não há secrets necessários para
+este pacote. As instruções detalhadas e limitações estão em
+[GUIA_HOSPEDAGEM.md](GUIA_HOSPEDAGEM.md). Confirme o redeploy pelo conteúdo
+visível do aplicativo; um push no Git não comprova a atualização do serviço.
 
 ## Licenças e limites
 

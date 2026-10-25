@@ -25,7 +25,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "5595cc3d82c756b11cd34107c4e2ea7a06c0a0753cb23c01b79013985f5d29d9",
+      "sha256_destino": "0b2e2e523a1b13e9576012dfaa8dd58b0980a9d3a405708c0aed04c4dc19ba80",
       "sha256_origem": null
     },
     {
@@ -53,37 +53,408 @@
       "caminho": "README.md",
       "fonte": "publicacao/templates/README_PUBLICO.md.tpl",
       "modo": "gerado",
-      "sha256_destino": "8d11e4a077ac4986d737937cf900433fa7e18aba8e9c65a9fc015835003b30bc",
-      "sha256_origem": "8d11e4a077ac4986d737937cf900433fa7e18aba8e9c65a9fc015835003b30bc"
+      "sha256_destino": "5180d02604d6d2e4b9760b642356a29f767414bd3fca4d1490203d7fcaf8cbe4",
+      "sha256_origem": "5180d02604d6d2e4b9760b642356a29f767414bd3fca4d1490203d7fcaf8cbe4"
     },
     {
       "caminho": "app.py",
       "fonte": "app.py",
       "modo": "gerado",
       "nota": "viewer offline inserido na UI Race Weekend do working tree",
-      "sha256_destino": "27b99ad0ecca19866f2a14eeed261c854a0d06a849df439f70b38c5413901ae5",
-      "sha256_origem": "47d95224135e1efe9228ce6d84199e9e889a287d61e4d7b948009aba624e20af"
+      "sha256_destino": "62ebb3f43f7d7ad3081ac5fbef526fe442b65b29e2dee2a39843813751104911",
+      "sha256_origem": "483f6c8108e8b419f68635b1975a359f12496b550615f93fd57abf4c11ce3d05"
+    },
+    {
+      "caminho": "catalogo_visual.py",
+      "fonte": "catalogo_visual.py",
+      "modo": "copia",
+      "sha256_destino": "10a3fe1990715c82f007996e60aca91987d777f1a1deac051a6d696958c63a70",
+      "sha256_origem": "10a3fe1990715c82f007996e60aca91987d777f1a1deac051a6d696958c63a70"
+    },
+    {
+      "caminho": "contexto_editorial.py",
+      "fonte": "contexto_editorial.py",
+      "modo": "copia",
+      "sha256_destino": "6f6eeb457e6ff2a8f55725bebdb4bb016bd6a76d09366be152711fc6c6fc83b4",
+      "sha256_origem": "6f6eeb457e6ff2a8f55725bebdb4bb016bd6a76d09366be152711fc6c6fc83b4"
     },
     {
       "caminho": "dashboard_assets/circuit/ATRIBUICOES.md",
       "fonte": "dashboard_assets/circuit/ATRIBUICOES.md",
       "modo": "copia",
-      "sha256_destino": "9ebb94c48f79b821253d1578a1904e2b9509e5b8600c5d5dcb496d5e79f30915",
-      "sha256_origem": "9ebb94c48f79b821253d1578a1904e2b9509e5b8600c5d5dcb496d5e79f30915"
+      "sha256_destino": "863997782e92500584b242ef40e02313f6f40f485a5cdf01362aeb40a57ed164",
+      "sha256_origem": "863997782e92500584b242ef40e02313f6f40f485a5cdf01362aeb40a57ed164"
     },
     {
-      "caminho": "dashboard_assets/circuit/cota-f1-layout.svg",
-      "fonte": "dashboard_assets/circuit/cota-f1-layout.svg",
+      "caminho": "dashboard_assets/circuit/albert_park-hero.jpg",
+      "fonte": "dashboard_assets/circuit/albert_park-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "f0af19dfd008b1ca29958f30b6ace3d071d0bd54993c2b109f7b398906431cfe",
+      "sha256_origem": "f0af19dfd008b1ca29958f30b6ace3d071d0bd54993c2b109f7b398906431cfe"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/albert_park-layout.svg",
+      "fonte": "dashboard_assets/circuit/albert_park-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "dc1ab2deddea816f49b7421b733db6db504713bfbe493fa36d5a477c575c3c96",
+      "sha256_origem": "dc1ab2deddea816f49b7421b733db6db504713bfbe493fa36d5a477c575c3c96"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/americas-hero.jpg",
+      "fonte": "dashboard_assets/circuit/americas-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "e8ebf6e95694662d2f07a44ba1a629cf65fdeb47b90e9a69a7fa8ae2e6ada1f9",
+      "sha256_origem": "e8ebf6e95694662d2f07a44ba1a629cf65fdeb47b90e9a69a7fa8ae2e6ada1f9"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/americas-layout.svg",
+      "fonte": "dashboard_assets/circuit/americas-layout.svg",
       "modo": "copia",
       "sha256_destino": "dcad6aa8a57db9db438e93f4c3a292f2b936920d6ce85994e9e3d917e9174d46",
       "sha256_origem": "dcad6aa8a57db9db438e93f4c3a292f2b936920d6ce85994e9e3d917e9174d46"
     },
     {
-      "caminho": "dashboard_assets/circuit/cota-hero.jpg",
-      "fonte": "dashboard_assets/circuit/cota-hero.jpg",
+      "caminho": "dashboard_assets/circuit/bahrain-hero.jpg",
+      "fonte": "dashboard_assets/circuit/bahrain-hero.jpg",
       "modo": "copia",
-      "sha256_destino": "e8ebf6e95694662d2f07a44ba1a629cf65fdeb47b90e9a69a7fa8ae2e6ada1f9",
-      "sha256_origem": "e8ebf6e95694662d2f07a44ba1a629cf65fdeb47b90e9a69a7fa8ae2e6ada1f9"
+      "sha256_destino": "953e1b94d2abe2d254b19465c29884268a9a02c246949694fc09c3c61510bd45",
+      "sha256_origem": "953e1b94d2abe2d254b19465c29884268a9a02c246949694fc09c3c61510bd45"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/bahrain-layout.svg",
+      "fonte": "dashboard_assets/circuit/bahrain-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "a2dc8664fa3ab5dd1505be7d9329e399b38b1e9a3f8d5386b6166fbd316ecf4a",
+      "sha256_origem": "a2dc8664fa3ab5dd1505be7d9329e399b38b1e9a3f8d5386b6166fbd316ecf4a"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/baku-hero.jpg",
+      "fonte": "dashboard_assets/circuit/baku-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "5416d33edaea5fe95533b0a50e46aeda9e6fcab9d2c6d7dd83d04536d89b395c",
+      "sha256_origem": "5416d33edaea5fe95533b0a50e46aeda9e6fcab9d2c6d7dd83d04536d89b395c"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/baku-layout.svg",
+      "fonte": "dashboard_assets/circuit/baku-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "6590aa74a959adc39a373c9a97e80df9dd9cb5a68858c86cfd80585dc7d8d047",
+      "sha256_origem": "6590aa74a959adc39a373c9a97e80df9dd9cb5a68858c86cfd80585dc7d8d047"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/catalogo_visual.json",
+      "fonte": "dashboard_assets/circuit/catalogo_visual.json",
+      "modo": "copia",
+      "sha256_destino": "3ac12d43b3d51132d6db5f1ef1a088537cee49a15ccf30908fee8518642f9fbb",
+      "sha256_origem": "3ac12d43b3d51132d6db5f1ef1a088537cee49a15ccf30908fee8518642f9fbb"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/catalunya-hero.jpg",
+      "fonte": "dashboard_assets/circuit/catalunya-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "b0a4a6ff1769984784e139ae9ff4987d322903d5ed80d50713b82e1f9c30f991",
+      "sha256_origem": "b0a4a6ff1769984784e139ae9ff4987d322903d5ed80d50713b82e1f9c30f991"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/catalunya-layout.svg",
+      "fonte": "dashboard_assets/circuit/catalunya-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "8a0884bdfbccc70a37667ad6e1a08b0a4a1f5929391f791506fb063125d1cbbd",
+      "sha256_origem": "8a0884bdfbccc70a37667ad6e1a08b0a4a1f5929391f791506fb063125d1cbbd"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/hungaroring-hero.jpg",
+      "fonte": "dashboard_assets/circuit/hungaroring-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "353334bea1a48a71b5ccf5830c5c3695533b7538c9ee250756d8386b5577f134",
+      "sha256_origem": "353334bea1a48a71b5ccf5830c5c3695533b7538c9ee250756d8386b5577f134"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/hungaroring-layout.svg",
+      "fonte": "dashboard_assets/circuit/hungaroring-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "31bb22e8182d8d6a6e82e18ae486adaef9314387bf52e67bfa1c05689181eaa2",
+      "sha256_origem": "31bb22e8182d8d6a6e82e18ae486adaef9314387bf52e67bfa1c05689181eaa2"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/imola-hero.jpg",
+      "fonte": "dashboard_assets/circuit/imola-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "02c677299ac691c3563eaee3c6ceb5d3f7079b9878be25741775189df6e4fb16",
+      "sha256_origem": "02c677299ac691c3563eaee3c6ceb5d3f7079b9878be25741775189df6e4fb16"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/imola-layout.png",
+      "fonte": "dashboard_assets/circuit/imola-layout.png",
+      "modo": "copia",
+      "sha256_destino": "dbedc9a3d5b38d7cd278c0a9703d36aa15b5cf3fdb5b65a5b2838a78ecfaba65",
+      "sha256_origem": "dbedc9a3d5b38d7cd278c0a9703d36aa15b5cf3fdb5b65a5b2838a78ecfaba65"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/interlagos-hero.jpg",
+      "fonte": "dashboard_assets/circuit/interlagos-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "1a0b6ec0834612dd6cd02d61301372b5b50afe7dceb68381940f66a933028fed",
+      "sha256_origem": "1a0b6ec0834612dd6cd02d61301372b5b50afe7dceb68381940f66a933028fed"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/interlagos-layout.svg",
+      "fonte": "dashboard_assets/circuit/interlagos-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "76f2d6ac6627586248d65a9bfe252dcc3e7d218593aa718464c72cd894dd4dc1",
+      "sha256_origem": "76f2d6ac6627586248d65a9bfe252dcc3e7d218593aa718464c72cd894dd4dc1"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/jeddah-hero.png",
+      "fonte": "dashboard_assets/circuit/jeddah-hero.png",
+      "modo": "copia",
+      "sha256_destino": "62e66ce9f353d9b6eac815191ffc2da28e476cff438031fb6a3b9ef49470f177",
+      "sha256_origem": "62e66ce9f353d9b6eac815191ffc2da28e476cff438031fb6a3b9ef49470f177"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/jeddah-layout.svg",
+      "fonte": "dashboard_assets/circuit/jeddah-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "998102ac05a9b474e08c13eafbcbba7a9cddf22f1204aa3a8c7a49d5732cc8ef",
+      "sha256_origem": "998102ac05a9b474e08c13eafbcbba7a9cddf22f1204aa3a8c7a49d5732cc8ef"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/losail-hero.jpg",
+      "fonte": "dashboard_assets/circuit/losail-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "e56514237dd81fea921043595da72c802939cb5aad0b2055674e800f3b81ee1e",
+      "sha256_origem": "e56514237dd81fea921043595da72c802939cb5aad0b2055674e800f3b81ee1e"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/losail-layout.svg",
+      "fonte": "dashboard_assets/circuit/losail-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "9c928681d957f6dd007f95d036caad74d940a7bbff95e03654ce91ea2d45483f",
+      "sha256_origem": "9c928681d957f6dd007f95d036caad74d940a7bbff95e03654ce91ea2d45483f"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/madring-hero.jpg",
+      "fonte": "dashboard_assets/circuit/madring-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "3371aff97ae8041acc675c71dc5b68b305e6c5415f1ab5f4cc8f2d5249d324f0",
+      "sha256_origem": "3371aff97ae8041acc675c71dc5b68b305e6c5415f1ab5f4cc8f2d5249d324f0"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/madring-layout.svg",
+      "fonte": "dashboard_assets/circuit/madring-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "11bcdb0c3b815bc748a39643bb066be04d6d9e73bfb6aee6387addfffbce5fd1",
+      "sha256_origem": "11bcdb0c3b815bc748a39643bb066be04d6d9e73bfb6aee6387addfffbce5fd1"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/marina_bay-hero.jpg",
+      "fonte": "dashboard_assets/circuit/marina_bay-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "f0ed75c782eda3168598c3e3e5a89a1be6dc33dda7202195259e06820627e335",
+      "sha256_origem": "f0ed75c782eda3168598c3e3e5a89a1be6dc33dda7202195259e06820627e335"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/marina_bay-layout.svg",
+      "fonte": "dashboard_assets/circuit/marina_bay-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "d1fd1cf54431a9c94cc0d1a2a1ba6afe78a534900e7901f68c04f15282b62d97",
+      "sha256_origem": "d1fd1cf54431a9c94cc0d1a2a1ba6afe78a534900e7901f68c04f15282b62d97"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/miami-hero.jpg",
+      "fonte": "dashboard_assets/circuit/miami-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "e1c2da79b064496cf8c05a0434cd5fdab4833749a9519bf7f7932f3f0ba35c66",
+      "sha256_origem": "e1c2da79b064496cf8c05a0434cd5fdab4833749a9519bf7f7932f3f0ba35c66"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/miami-layout.svg",
+      "fonte": "dashboard_assets/circuit/miami-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "ff01575a29f793f00838da7229e5ac21d74eae3ef78ffffe7fe55d9de9a705c2",
+      "sha256_origem": "ff01575a29f793f00838da7229e5ac21d74eae3ef78ffffe7fe55d9de9a705c2"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/monaco-hero.jpg",
+      "fonte": "dashboard_assets/circuit/monaco-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "d1ed060f1817c672e8a0530b6dddff6f66cd9c90fb625ad9c5bc91a200457532",
+      "sha256_origem": "d1ed060f1817c672e8a0530b6dddff6f66cd9c90fb625ad9c5bc91a200457532"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/monaco-layout.svg",
+      "fonte": "dashboard_assets/circuit/monaco-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "0325339b5964647d22889037fb0939fabb9ddd2a86b51c7c97e0b930ee2fab07",
+      "sha256_origem": "0325339b5964647d22889037fb0939fabb9ddd2a86b51c7c97e0b930ee2fab07"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/monza-hero.jpg",
+      "fonte": "dashboard_assets/circuit/monza-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "f089e21a6d457df400b59e29e10dd495afc38d665ff7fbc798409cc79377bc98",
+      "sha256_origem": "f089e21a6d457df400b59e29e10dd495afc38d665ff7fbc798409cc79377bc98"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/monza-layout.png",
+      "fonte": "dashboard_assets/circuit/monza-layout.png",
+      "modo": "copia",
+      "sha256_destino": "44e70f813da10649c3a68c9487443f4d199fdcbfe5a3d32d33fed2c30127d3d0",
+      "sha256_origem": "44e70f813da10649c3a68c9487443f4d199fdcbfe5a3d32d33fed2c30127d3d0"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/red_bull_ring-hero.jpg",
+      "fonte": "dashboard_assets/circuit/red_bull_ring-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "91adb2f77171a8c56ca9721d581ddf927e7d37a74be3fce9ea6f98867263e1b5",
+      "sha256_origem": "91adb2f77171a8c56ca9721d581ddf927e7d37a74be3fce9ea6f98867263e1b5"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/red_bull_ring-layout.svg",
+      "fonte": "dashboard_assets/circuit/red_bull_ring-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "682d19a8cbad221cbfd09f96ac0baacee578fd50ace489caefb634effec91259",
+      "sha256_origem": "682d19a8cbad221cbfd09f96ac0baacee578fd50ace489caefb634effec91259"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/rodriguez-hero.jpg",
+      "fonte": "dashboard_assets/circuit/rodriguez-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "7ffed28061d4ceadd56bae210b4285d911c29736026717b36039f6c21d655033",
+      "sha256_origem": "7ffed28061d4ceadd56bae210b4285d911c29736026717b36039f6c21d655033"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/rodriguez-layout.png",
+      "fonte": "dashboard_assets/circuit/rodriguez-layout.png",
+      "modo": "copia",
+      "sha256_destino": "b2dea8f229dfd52976380728f848e5760eda771ee99e1c0a54100854fb92b8bc",
+      "sha256_origem": "b2dea8f229dfd52976380728f848e5760eda771ee99e1c0a54100854fb92b8bc"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/sepang-hero.jpg",
+      "fonte": "dashboard_assets/circuit/sepang-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "6cc1388a9408c6a92f4e7f83fc79c5d1e07f698ffa5e6f1def6e68c2d140635a",
+      "sha256_origem": "6cc1388a9408c6a92f4e7f83fc79c5d1e07f698ffa5e6f1def6e68c2d140635a"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/sepang-layout.svg",
+      "fonte": "dashboard_assets/circuit/sepang-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "65beb77b58f504ee57ea1ef9360659985b8c6cdadd36b8648320aef46e5f5749",
+      "sha256_origem": "65beb77b58f504ee57ea1ef9360659985b8c6cdadd36b8648320aef46e5f5749"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/shanghai-hero.jpg",
+      "fonte": "dashboard_assets/circuit/shanghai-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "f4ce249bc4b7d6c9099303fe7b9afe7006756dff072626dae7fe09e31da869ce",
+      "sha256_origem": "f4ce249bc4b7d6c9099303fe7b9afe7006756dff072626dae7fe09e31da869ce"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/shanghai-layout.svg",
+      "fonte": "dashboard_assets/circuit/shanghai-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "6e12b3eb7a99f51497d75b8d0d35a87353677806bbebad4f5c7ef4522a5c18c0",
+      "sha256_origem": "6e12b3eb7a99f51497d75b8d0d35a87353677806bbebad4f5c7ef4522a5c18c0"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/silverstone-hero.jpg",
+      "fonte": "dashboard_assets/circuit/silverstone-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "79be9943ccb3ae221d5f3e91183304c1e2325f82b680a75971b6568773a4814d",
+      "sha256_origem": "79be9943ccb3ae221d5f3e91183304c1e2325f82b680a75971b6568773a4814d"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/silverstone-layout.svg",
+      "fonte": "dashboard_assets/circuit/silverstone-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "1b472c27da59cb1eec7d2a68d03c8037da2b4b9cdb3ad5ecd57f48d6bf4067ad",
+      "sha256_origem": "1b472c27da59cb1eec7d2a68d03c8037da2b4b9cdb3ad5ecd57f48d6bf4067ad"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/spa-hero.jpg",
+      "fonte": "dashboard_assets/circuit/spa-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "1ee27cd0d3c2e9457359d795aad5004e0b7e68885c109a69e0a2a41f3827c347",
+      "sha256_origem": "1ee27cd0d3c2e9457359d795aad5004e0b7e68885c109a69e0a2a41f3827c347"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/spa-layout.png",
+      "fonte": "dashboard_assets/circuit/spa-layout.png",
+      "modo": "copia",
+      "sha256_destino": "41f64f4d4269c656445f759a16b3ba0028b8d0f6c7391639d7fb502aa177f69a",
+      "sha256_origem": "41f64f4d4269c656445f759a16b3ba0028b8d0f6c7391639d7fb502aa177f69a"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/suzuka-hero.jpg",
+      "fonte": "dashboard_assets/circuit/suzuka-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "5c47ea4576839f0d705039ef2977b5f6c66dd51c90d4af172a2fea23e55140b5",
+      "sha256_origem": "5c47ea4576839f0d705039ef2977b5f6c66dd51c90d4af172a2fea23e55140b5"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/suzuka-layout.svg",
+      "fonte": "dashboard_assets/circuit/suzuka-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "063ee5111f5a52f1d45f7c31d89fe5a850a75ae54e41a67eb23a7f099c43c8d6",
+      "sha256_origem": "063ee5111f5a52f1d45f7c31d89fe5a850a75ae54e41a67eb23a7f099c43c8d6"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/vegas-hero.jpg",
+      "fonte": "dashboard_assets/circuit/vegas-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "51dc96083a9374d3b9eebb48bffb7385d6644d821438cd0a8581626b479ed1c4",
+      "sha256_origem": "51dc96083a9374d3b9eebb48bffb7385d6644d821438cd0a8581626b479ed1c4"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/vegas-layout.png",
+      "fonte": "dashboard_assets/circuit/vegas-layout.png",
+      "modo": "copia",
+      "sha256_destino": "176f6b136aa100f871f2e3655ab29dbd9cb5c10eae6bb9ba51f3c9f941c29a79",
+      "sha256_origem": "176f6b136aa100f871f2e3655ab29dbd9cb5c10eae6bb9ba51f3c9f941c29a79"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/villeneuve-hero.jpg",
+      "fonte": "dashboard_assets/circuit/villeneuve-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "5e66887e09f12a79b2b1cd6fc688ca99d86523b551e2aa0554ef1e90d3bfe7a5",
+      "sha256_origem": "5e66887e09f12a79b2b1cd6fc688ca99d86523b551e2aa0554ef1e90d3bfe7a5"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/villeneuve-layout.svg",
+      "fonte": "dashboard_assets/circuit/villeneuve-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "0c2782dd150add22cc12ad696491ccc749920a260fbf80833dbda7887049ecaa",
+      "sha256_origem": "0c2782dd150add22cc12ad696491ccc749920a260fbf80833dbda7887049ecaa"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/yas_marina-hero.jpg",
+      "fonte": "dashboard_assets/circuit/yas_marina-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "7a6e999d33a7756ebbe467b09fdeec207d8a213d531bb34202398697100817a2",
+      "sha256_origem": "7a6e999d33a7756ebbe467b09fdeec207d8a213d531bb34202398697100817a2"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/yas_marina-layout.svg",
+      "fonte": "dashboard_assets/circuit/yas_marina-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "a44c69641de8d19a1deaaae20e52d4b9e75d8b231f62a1b22ce8b111ad075293",
+      "sha256_origem": "a44c69641de8d19a1deaaae20e52d4b9e75d8b231f62a1b22ce8b111ad075293"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/zandvoort-hero.jpg",
+      "fonte": "dashboard_assets/circuit/zandvoort-hero.jpg",
+      "modo": "copia",
+      "sha256_destino": "384c073467a3b80fd14e94a89f2c910ff8382b11d87c39cb507adb8a9f3114cf",
+      "sha256_origem": "384c073467a3b80fd14e94a89f2c910ff8382b11d87c39cb507adb8a9f3114cf"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/zandvoort-layout.svg",
+      "fonte": "dashboard_assets/circuit/zandvoort-layout.svg",
+      "modo": "copia",
+      "sha256_destino": "e2b2f637bb1ce9e1e386724417101946846c32ce8079980b9292e332616234c4",
+      "sha256_origem": "e2b2f637bb1ce9e1e386724417101946846c32ce8079980b9292e332616234c4"
     },
     {
       "caminho": "dashboard_assets/fonts/abrilfatface-OFL.txt",
@@ -171,18 +542,32 @@
       "sha256_origem": "73559a5ab957b62542e5dcb7bdfb9c8aec63857d95de2800aee90edec7491c4e"
     },
     {
+      "caminho": "frontend_assets/contexto_editorial.json",
+      "fonte": "frontend_assets/contexto_editorial.json",
+      "modo": "copia",
+      "sha256_destino": "c98896b54bdf86dfc9a993854167e8d3bbe109eda201a9f9a826b704f4d2f3ae",
+      "sha256_origem": "c98896b54bdf86dfc9a993854167e8d3bbe109eda201a9f9a826b704f4d2f3ae"
+    },
+    {
       "caminho": "frontend_assets/race_weekend.json",
       "fonte": "frontend_assets/race_weekend.json",
       "modo": "copia",
-      "sha256_destino": "0d1d60643d70b5e30f0a87b35b84f6b768cb15b93a6dfd530825a5fda952f406",
-      "sha256_origem": "0d1d60643d70b5e30f0a87b35b84f6b768cb15b93a6dfd530825a5fda952f406"
+      "sha256_destino": "319824bf82bfc435d7353229ad40547deb9b8d27d8b7bf5936c4992d54512554",
+      "sha256_origem": "319824bf82bfc435d7353229ad40547deb9b8d27d8b7bf5936c4992d54512554"
     },
     {
       "caminho": "race_weekend_dados.py",
       "fonte": "race_weekend_dados.py",
       "modo": "copia",
-      "sha256_destino": "ea0d588d82060ec64b2f26e03e6ec0c349f6aab7e0f69d88ba495560a398a6a7",
-      "sha256_origem": "ea0d588d82060ec64b2f26e03e6ec0c349f6aab7e0f69d88ba495560a398a6a7"
+      "sha256_destino": "c2115c2ab86abfde1855feb4469c3302d4620b37bb00331e1f3c1729393e058f",
+      "sha256_origem": "c2115c2ab86abfde1855feb4469c3302d4620b37bb00331e1f3c1729393e058f"
+    },
+    {
+      "caminho": "registro_emissoes.py",
+      "fonte": "registro_emissoes.py",
+      "modo": "copia",
+      "sha256_destino": "775dd624e28161c7baa33445e2e35d7fce7142e45068191e58f061d113582be3",
+      "sha256_origem": "775dd624e28161c7baa33445e2e35d7fce7142e45068191e58f061d113582be3"
     },
     {
       "caminho": "reports/avaliacao_final_v1/avaliacao_corridas.csv",
@@ -266,8 +651,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "b4d79f1fffc0be0de1c64f3a452059b3e28722bef4432499626fdb9d2db64468",
-      "sha256_origem": "50ed84d4322dabad32231faad465dffd2ccf0457914e02fa675c4e6063f85887"
+      "sha256_destino": "b12a6cdbe9252f11ab78370ce93638971c36aaff5851cfb3f2f3c38ebcd430cd",
+      "sha256_origem": "d44f8bfdbf7f708f9b5cf08d11462481eab702ed9751027967d80c4565474af1"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -284,8 +669,8 @@
       "sha256_origem": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012"
     }
   ],
-  "commit_origem": "34b396d6827dbe4b50cbd898d94473ab2ddbfbf8",
-  "data_referencia_reprodutivel_utc": "2026-10-24T05:22:22+00:00",
+  "commit_origem": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
+  "data_referencia_reprodutivel_utc": "2026-10-18T18:34:52+00:00",
   "fontes_cientificas": [
     "reports/modelo_v1/previsoes_validacao.csv",
     "reports/modelo_v1/avaliacao_corridas.csv",
@@ -302,11 +687,11 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "04e3d0e03ff09c1bcf72329546a030061b8c829996b85acf97d628ea79463f50"
+      "sha256": "22c78e5463e49e0381547f10d20f52a57148eecffe2b2a04d85d0208b537fd93"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
-      "sha256": "8d11e4a077ac4986d737937cf900433fa7e18aba8e9c65a9fc015835003b30bc"
+      "sha256": "5180d02604d6d2e4b9760b642356a29f767414bd3fca4d1490203d7fcaf8cbe4"
     },
     {
       "caminho": "publicacao/templates/FONTES_E_DADOS.md",

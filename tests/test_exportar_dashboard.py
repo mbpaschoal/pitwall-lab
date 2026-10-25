@@ -50,7 +50,7 @@ def modulo_local(caminho, nome):
 
 class TestExportacaoDashboard(unittest.TestCase):
     def setUp(self):
-        self.tmp = tempfile.TemporaryDirectory()
+        self.tmp = tempfile.TemporaryDirectory(dir=str(Path(tempfile.gettempdir()).resolve()))
         self.addCleanup(self.tmp.cleanup)
         self.destino = Path(self.tmp.name) / 'pacote'
         self.exportador = modulo_exportador()
@@ -340,11 +340,16 @@ class TestExportacaoDashboard(unittest.TestCase):
         self.assertNotIn('/.venv/lib/python3.9/site-packages', app_testes)
         self.assertTrue((self.destino / 'tests/test_dashboard_dados.py').is_file())
         self.assertTrue((self.destino / 'tests/test_distribuicao.py').is_file())
-        self.assertTrue((self.destino / 'dashboard_assets/circuit/cota-hero.jpg').is_file())
-        self.assertTrue((self.destino / 'dashboard_assets/circuit/cota-f1-layout.svg').is_file())
+        catalogo = json.loads((self.destino / 'dashboard_assets/circuit/catalogo_visual.json').read_text(encoding='utf-8'))
+        america = catalogo['circuitos']['americas']
+        for ativo in (america['foto'], america['mapa']):
+            caminho = self.destino / ativo['caminho']
+            self.assertTrue(caminho.is_file(), ativo['caminho'])
+            self.assertEqual(sha256(caminho), ativo['sha256'], ativo['caminho'])
         atribuicoes = (self.destino / 'dashboard_assets/circuit/ATRIBUICOES.md').read_text(encoding='utf-8')
-        self.assertIn('CC BY 2.0', atribuicoes)
-        self.assertIn('CC BY-SA 4.0', atribuicoes)
+        for ativo in (america['foto'], america['mapa']):
+            self.assertIn(ativo['autor'], atribuicoes)
+            self.assertIn(ativo['licenca'], atribuicoes)
         readme = (self.destino / 'README.md').read_text(encoding='utf-8')
         self.assertIn('python3.12 -m venv .venv', readme)
         self.assertIn('não modifica o ambiente científico original', readme)

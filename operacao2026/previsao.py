@@ -29,7 +29,10 @@ HASH_META = '77d24dc765d773e49b717b79844dd4678a91087dbbc091e3e9cb184215ea9cc6'
 HASH_ESQUEMA = '1b14e532cd3001ad6b38442cab4a14e52e63208fbe37bec77d8b464dfb98efdd'
 CONSTANTE = 0.15011372251705837
 TOKEN = re.compile(r'^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$')
-COMPONENTES_OPERACIONAIS = ('operacao2026/__init__.py', 'operacao2026/previsao.py', 'operar_2026.py', 'operacao2026/fontes.py')
+COMPONENTES_OPERACIONAIS = (
+    'operacao2026/__init__.py', 'operacao2026/previsao.py', 'operar_2026.py',
+    'operacao2026/fontes.py', 'operacao2026/fastf1_contexto.py',
+)
 HELPERS_CONGELADOS = ('treinar_modelo_v1.py', 'avaliar_modelo_v1.py')
 
 
@@ -491,7 +494,10 @@ def gravar_emissao(root, emission_id, data, validar_publicacao=None):
 def codigo_estado(root='.', componentes=COMPONENTES_OPERACIONAIS, helpers=HELPERS_CONGELADOS):
     base = Path(root)
     paths = tuple(componentes) + tuple(helpers)
-    hashes = {path: _sha(base / path) for path in paths}
+    try:
+        hashes = {path: _sha(base / path) for path in paths}
+    except OSError:
+        return {'commit': None, 'componentes_rastreados': False, 'componentes_limpos': False, 'sha256': {}}
     try:
         commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=str(base), text=True).strip()
         tracked = subprocess.run(['git', 'ls-files', '--error-unmatch', '--'] + list(paths), cwd=str(base),

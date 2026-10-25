@@ -7,11 +7,12 @@ from pathlib import Path
 
 from dashboard_dados import carregar_temporada
 from operacao2026 import fontes
+from registro_emissoes import carregar as carregar_registro_emissoes
 
 
 SNAPSHOT_2026 = 'coleta-20261020T020130Z'
 SNAPSHOT_CLASSIFICACAO_PILOTOS_2026 = 'classificacao-pilotos-20261023T143930Z'
-EMISSAO_SINGAPURA = 'ensaio-commit-9e65ad25b125e78b671a763a43934385c1264363'
+
 MOTIVO_SEM_RESULTADO = (
     'snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída'
 )
@@ -65,18 +66,47 @@ def _nomes_equipes_historicas(root):
     return nomes
 
 
-def _fontes_snapshot(root):
-    base = root / 'data/operacao_2026/snapshots' / SNAPSHOT_2026
+def _fontes_snapshot(root, snapshot=SNAPSHOT_2026):
+    """Lê snapshot somente após revalidar hashes e paginação do coletor."""
+    raiz_snapshots = root / 'data/operacao_2026/snapshots'
+    indice, _ = fontes.ler_snapshot(raiz_snapshots, snapshot)
+    base = raiz_snapshots / snapshot
     indice_path = base / 'indice.json'
-    indice = _json(indice_path)
-    fontes = []
-    for source in indice['fontes']:
-        path = base / source['arquivo']
-        digest = _sha256(path)
-        if digest != source['sha256']:
-            raise ValueError('Hash divergente no snapshot: {}'.format(source['arquivo']))
-        fontes.append((source, path))
-    return base, indice_path, fontes
+    return base, indice_path, [(source, base / source['arquivo']) for source in indice['fontes']]
+
+
+def _paginas_qualificacao_comprovadas(paginas, evento):
+    """Valida e ordena uma Q paginada de um único snapshot/endpoint/evento."""
+    por_offset = {}
+    for source, path in paginas:
+        if source.get('endpoint') != 'classificacao':
+            raise ValueError('Fonte declarada não é classificação.')
+        offset = int(source['parametros']['offset'])
+        if offset in por_offset:
+            raise ValueError('Offset duplicado na classificação declarada.')
+        por_offset[offset] = (source, path)
+    if not por_offset:
+        raise ValueError('Fonte de classificação declarada ausente do snapshot da emissão.')
+    temporada = evento.get('season', evento.get('temporada'))
+    rodada = evento.get('round', evento.get('rodada'))
+    circuito = evento.get('Circuit', {}).get('circuitId', evento.get('circuito_id'))
+    esperado = {
+        'season': str(temporada), 'round': str(rodada),
+        'date': evento['data'], 'Circuit': {'circuitId': circuito},
+    }
+    def buscar(offset):
+        source, path = por_offset[offset]
+        return dict(source, bytes=path.read_bytes())
+    try:
+        validadas = fontes.paginas_completas(buscar, 'classificacao', evento['rodada'], esperado)
+    except (KeyError, ValueError) as erro:
+        raise ValueError('Classificação paginada inválida para o evento declarado.') from erro
+    ordenadas = [por_offset[int(item['parametros']['offset'])] for item in validadas]
+    resultados = []
+    for _, path in ordenadas:
+        corrida = _json(path)['MRData']['RaceTable']['Races'][0]
+        resultados.extend(corrida.get('QualifyingResults', []))
+    return ordenadas, resultados
 
 
 def _corrida_base(event):
@@ -124,11 +154,33 @@ def _corrida_base(event):
 
 def _estado_operacao(corrida):
     """Estado de apresentação; não altera emissão, fonte ou probabilidades."""
-    if corrida['estado_previsao'] != 'indisponivel':
+    if corrida['estado_previsao'] == 'ensaio_retrospectivo':
+        return 'ensaio_retrospectivo'
+    if corrida['estado_previsao'] == 'previsao_registrada':
         return 'previsao_registrada'
+    if corrida['estado_resultado'] == 'observado_local':
+        return 'resultado_observado'
     if corrida['estado_qualificacao'] == 'local_disponivel':
         return 'classificacao_disponivel'
     return 'aguardando_dados'
+
+
+def _participante_da_emissao(rodada, piloto_id, identidade, linha, existente=None, prospectivo=False):
+    """Combina emissão e classificação sem exigir o resultado do GP-alvo."""
+    participante = dict(existente or {
+        'temporada': 2026, 'rodada': rodada, 'piloto_id': piloto_id,
+        'resultado_observado': None, 'status_resultado': None,
+    })
+    participante.update({
+        **identidade,
+        'elegivel_previsao': linha['elegivel_previsao'] == 'True',
+        'probabilidade_modelo': float(linha['probabilidade_modelo']) if linha['probabilidade_modelo'] else None,
+        'ranking_modelo': int(linha['ranking_modelo']) if linha['ranking_modelo'] else None,
+        'ranking_classificacao': int(linha['ranking_classificacao']) if linha['ranking_classificacao'] else None,
+    })
+    if prospectivo:
+        participante.update({'resultado_observado': None, 'status_resultado': None, 'podio': None})
+    return participante
 
 
 def _campeonato_pilotos_2026(root):
@@ -261,69 +313,141 @@ def _dados_2026(root):
                         'modo_previsao': None,
                     }
 
-    emissao = root / 'reports/operacao_2026/emissoes' / EMISSAO_SINGAPURA
-    manifesto_path = emissao / 'manifesto.json'
-    manifesto = _json(manifesto_path)
-    hash_probabilidades = _sha256(emissao / 'probabilidades.csv')
-    if (
-        manifesto.get('evento', {}).get('rodada') != '17'
-        or manifesto.get('modo') != 'ENSAIO_RETROSPECTIVO'
-        or manifesto.get('hashes_saidas', {}).get('probabilidades.csv') != hash_probabilidades
-    ):
-        raise ValueError('Emissão de Singapura sem modo explícito ou hash de probabilidades confirmado.')
-
+    registros = carregar_registro_emissoes(root)
+    eventos_com_emissao = {(rodada, circuito_id) for (temporada, rodada, circuito_id) in registros if temporada == 2026}
     qualificacoes = {}
+    fontes_qualificacao_por_rodada = {}
     for (endpoint, rodada_fonte), paginas in by_key.items():
         if endpoint != 'classificacao':
             continue
+        por_evento = {}
         for source, path in paginas:
-            for classificacao in _json(path)['MRData']['RaceTable'].get('Races', []):
+            races = _json(path)['MRData']['RaceTable'].get('Races', [])
+            if not races:
+                continue
+            for classificacao in races:
                 rodada = int(classificacao['round'])
                 if rodada_fonte is not None and rodada != int(rodada_fonte):
                     raise ValueError('Índice de classificação divergente da rodada no conteúdo.')
-                resultados = classificacao.get('QualifyingResults', [])
-                if resultados:
-                    if rodada in qualificacoes:
-                        raise ValueError('Classificação 2026 duplicada: {}.'.format(rodada))
-                    qualificacoes[rodada] = (source, resultados)
-                    por_rodada[rodada].update({
-                        'estado_qualificacao': 'local_disponivel',
-                        'motivo_qualificacao': None,
-                        'fonte_qualificacao_sha256': source['sha256'],
-                    })
+                chave_evento = (rodada, classificacao['Circuit']['circuitId'])
+                por_evento.setdefault(chave_evento, []).append((source, path, classificacao))
+        for (rodada, circuito_id), paginas_evento in por_evento.items():
+            # Uma emissão declara sua própria Q: a Q-base não participa nem da identidade
+            # nem da proveniência desse evento, mesmo quando possui os mesmos bytes.
+            if (rodada, circuito_id) in eventos_com_emissao:
+                continue
+            corrida = por_rodada.get(rodada)
+            if corrida is None or corrida['circuito_id'] != circuito_id:
+                raise ValueError('Classificação local para evento ausente ou divergente do calendário.')
+            if len(paginas_evento) == 1 and len(_json(paginas_evento[0][1])['MRData']['RaceTable'].get('Races', [])) > 1:
+                source, path, classificacao = paginas_evento[0]
+                ordenadas, resultados = [(source, path)], classificacao.get('QualifyingResults', [])
+            else:
+                ordenadas, resultados = _paginas_qualificacao_comprovadas(
+                    [(source, path) for source, path, _ in paginas_evento], corrida)
+            if resultados:
+                qualificacoes[rodada] = (ordenadas[0][0], resultados)
+                fontes_qualificacao_por_rodada[rodada] = [source['sha256'] for source, _ in ordenadas]
+                corrida.update({
+                    'estado_qualificacao': 'local_disponivel',
+                    'motivo_qualificacao': None,
+                    'fonte_qualificacao_sha256': ordenadas[0][0]['sha256'],
+                    'fontes_qualificacao_sha256': [source['sha256'] for source, _ in ordenadas],
+                })
 
-    if 17 not in qualificacoes:
-        raise ValueError('Classificação local válida de Singapura ausente.')
-    qual_source, qualificacao = qualificacoes[17]
-    pilotos_qualificacao = {item['Driver']['driverId']: item for item in qualificacao}
-    corrida = por_rodada[17]
-    corrida.update({
-        'estado_previsao': 'ensaio_retrospectivo',
-        'motivo_previsao': 'ensaio retrospectivo; não é previsão registrada antes da corrida',
-        'emissao_sha256': _sha256(manifesto_path),
-    })
-    with (emissao / 'probabilidades.csv').open(encoding='utf-8', newline='') as arquivo:
-        for row in csv.DictReader(arquivo):
-            piloto_id = row['piloto_id']
-            encontrado = pilotos_qualificacao.get(piloto_id)
-            if encontrado is None:
-                raise ValueError('Piloto da emissão sem classificação local: {}'.format(piloto_id))
-            identidade = {
-                'piloto': _nome(encontrado['Driver']),
-                'equipe_id': encontrado['Constructor']['constructorId'],
-                'equipe': encontrado['Constructor'].get('name') or None,
-            }
-            identidades['2026:17:{}'.format(piloto_id)] = identidade
-            chave = (17, piloto_id)
-            if chave not in previsoes_por_chave:
-                raise ValueError('Previsão retrospectiva sem resultado local correspondente: {}'.format(piloto_id))
-            previsoes_por_chave[chave].update({
-                **identidade, 'elegivel_previsao': row['elegivel_previsao'] == 'True',
-                'probabilidade_modelo': float(row['probabilidade_modelo']) if row['probabilidade_modelo'] else None,
-                'ranking_modelo': int(row['ranking_modelo']) if row['ranking_modelo'] else None,
-                'ranking_classificacao': int(row['ranking_classificacao']) if row['ranking_classificacao'] else None,
-                'modo_previsao': 'ensaio_retrospectivo',
-            })
+    fontes_emissoes = []
+    snapshots_emissoes = {}
+    for (temporada, rodada, _), registro in sorted(registros.items()):
+        if temporada != 2026:
+            continue
+        snapshot = registro['snapshot']
+        if snapshot not in snapshots_emissoes:
+            _, indice_emissao, fontes_emissao = _fontes_snapshot(root, snapshot)
+            snapshots_emissoes[snapshot] = fontes_emissao
+            fontes_emissoes.append(indice_emissao)
+        declaradas = {(fonte['arquivo'], fonte['sha256']) for fonte in registro['fontes_qualificacao']}
+        selecionadas = [(source, path) for source, path in snapshots_emissoes[snapshot]
+                       if (source.get('arquivo'), source.get('sha256')) in declaradas]
+        if len(selecionadas) != len(declaradas):
+            raise ValueError('Fonte de classificação declarada ausente do snapshot da emissão.')
+        corrida_declarada = por_rodada.get(rodada)
+        if corrida_declarada is None:
+            raise ValueError('Emissão para rodada ausente do calendário.')
+        ordenadas, resultados_qualificacao = _paginas_qualificacao_comprovadas(selecionadas, corrida_declarada)
+        fontes_emissoes.extend(path for _, path in ordenadas)
+        qualificacoes[rodada] = (ordenadas[0][0], resultados_qualificacao)
+        fontes_qualificacao_por_rodada[rodada] = [source['sha256'] for source, _ in ordenadas]
+        por_rodada[rodada].update({
+            'estado_qualificacao': 'local_disponivel',
+            'motivo_qualificacao': None,
+            'fonte_qualificacao_sha256': ordenadas[0][0]['sha256'],
+            'fontes_qualificacao_sha256': [source['sha256'] for source, _ in ordenadas],
+        })
+    emissoes_proveniencia = {}
+    emissao_legada = None
+    for (temporada, rodada, circuito_id), registro in sorted(registros.items()):
+        if temporada != 2026:
+            continue
+        if rodada not in por_rodada or rodada not in qualificacoes:
+            raise ValueError('Emissão sem classificação local válida para a rodada {}.'.format(rodada))
+        emissao = root / registro['diretorio']
+        manifesto_path = emissao / 'manifesto.json'
+        qual_source, qualificacao = qualificacoes[rodada]
+        pilotos_qualificacao = {item['Driver']['driverId']: item for item in qualificacao}
+        corrida = por_rodada[rodada]
+        if registro['modo'] == 'PROSPECTIVO':
+            corrida.update({'estado_resultado': 'indisponivel', 'motivo_resultado': MOTIVO_SEM_RESULTADO,
+                            'fonte_resultado_sha256': None})
+            for (rodada_item, _), participante_existente in previsoes_por_chave.items():
+                if rodada_item == rodada:
+                    participante_existente.update({'resultado_observado': None, 'status_resultado': None, 'podio': None})
+        if corrida['circuito_id'] != circuito_id:
+            raise ValueError('Emissão associada ao circuito incorreto para a rodada {}.'.format(rodada))
+        estado = 'previsao_registrada' if registro['modo'] == 'PROSPECTIVO' else 'ensaio_retrospectivo'
+        motivo = ('previsão registrada antes da corrida' if estado == 'previsao_registrada'
+                  else 'ensaio retrospectivo; não é previsão registrada antes da corrida')
+        corrida.update({
+            'estado_previsao': estado,
+            'motivo_previsao': motivo,
+            'emissao_sha256': _sha256(manifesto_path),
+        })
+        with (emissao / 'probabilidades.csv').open(encoding='utf-8', newline='') as arquivo:
+            for row in csv.DictReader(arquivo):
+                piloto_id = row['piloto_id']
+                encontrado = pilotos_qualificacao.get(piloto_id)
+                if encontrado is None:
+                    raise ValueError('Piloto da emissão sem classificação local: {}'.format(piloto_id))
+                identidade = {
+                    'piloto': _nome(encontrado['Driver']),
+                    'equipe_id': encontrado['Constructor']['constructorId'],
+                    'equipe': encontrado['Constructor'].get('name') or None,
+                }
+                identidades['2026:{}:{}'.format(rodada, piloto_id)] = identidade
+                chave = (rodada, piloto_id)
+                participante = _participante_da_emissao(
+                    rodada, piloto_id, identidade, row, previsoes_por_chave.get(chave),
+                    prospectivo=(registro['modo'] == 'PROSPECTIVO'),
+                )
+                participante['modo_previsao'] = estado
+                previsoes_por_chave[chave] = participante
+        for (rodada_item, piloto_id), participante in previsoes_por_chave.items():
+            if rodada_item == rodada and piloto_id not in pilotos_qualificacao:
+                participante['motivos_inelegibilidade'] = (
+                    'ausente da classificação capturada; probabilidade não calculada'
+                )
+        chave_evento = '{}:{}:{}'.format(temporada, rodada, circuito_id)
+        proveniencia = {
+            'evento': registro['evento'], 'modo': registro['modo'],
+            'emitido_em_utc': registro['emitido_em_utc'],
+            'hashes_saidas': {'probabilidades.csv': registro['hash_probabilidades']},
+            'fonte_qualificacao_sha256': qual_source['sha256'],
+            'fontes_qualificacao_sha256': fontes_qualificacao_por_rodada[rodada],
+        }
+        emissoes_proveniencia[chave_evento] = proveniencia
+        if rodada == 17 or emissao_legada is None:
+            emissao_legada = proveniencia
+    if emissao_legada is None:
+        emissao_legada = {}
     for corrida in corridas:
         corrida['estado_operacao'] = _estado_operacao(corrida)
     campeonato, fontes_campeonato = _campeonato_pilotos_2026(root)
@@ -331,10 +455,8 @@ def _dados_2026(root):
         'corridas': corridas,
         'previsoes': list(previsoes_por_chave.values()),
         'campeonato_pilotos': campeonato,
-    }, identidades, [indice_path, manifesto_path, *fontes_campeonato], {
-        'modo': manifesto['modo'], 'emitido_em_utc': manifesto.get('emitido_em_utc'),
-        'hashes_saidas': {'probabilidades.csv': hash_probabilidades},
-        'fonte_qualificacao_sha256': qual_source['sha256'],
+    }, identidades, [indice_path, *fontes_emissoes, *fontes_campeonato], {
+        **emissao_legada, 'emissoes': emissoes_proveniencia,
     }
 
 
@@ -363,8 +485,9 @@ def gerar(root, destino):
         'proveniencia': {
             'gerador': 'preparar_dashboard_race_weekend.py',
             'snapshot_2026': SNAPSHOT_2026,
-            'emissao_2026': EMISSAO_SINGAPURA,
+            'emissao_2026': '2026:17:marina_bay',
             'emissao': emissao,
+            'emissoes': emissao['emissoes'],
             'fontes_sha256': {str(path.relative_to(root)): _sha256(path) for path in fontes},
             'sem_recalculo': True,
         },

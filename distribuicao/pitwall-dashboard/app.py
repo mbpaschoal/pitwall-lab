@@ -22,6 +22,8 @@ from race_weekend_dados import (
     identidade,
     pacote_2026,
 )
+from contexto_editorial import ContextoEditorialErro, carregar as carregar_contextos_editoriais, para_gp
+from catalogo_visual import CatalogoVisualErro, carregar as carregar_catalogo_visual, para_circuito
 
 from documentacao_local import renderizar_documentacao_local
 
@@ -50,10 +52,19 @@ def carregar_cacheado(temporada, conteudos):
 
 
 def carregar(temporada):
+    try:
+        contextos_editoriais = carregar_contextos_editoriais(raiz_artefatos())
+    except ContextoEditorialErro as erro:
+        raise RaceWeekendDadosErro(str(erro)) from erro
     if temporada == 2026:
         asset = carregar_asset(raiz_artefatos())
         pacote = pacote_2026(asset)
         pacote['asset_race_weekend'] = asset
+        pacote['contextos_editoriais'] = contextos_editoriais
+        try:
+            pacote['catalogo_visual'] = carregar_catalogo_visual(raiz_artefatos())
+        except CatalogoVisualErro:
+            pacote['catalogo_visual'] = {}
         return pacote
     conteudos = conteudos_temporada(raiz_artefatos(), temporada)
     pacote = carregar_cacheado(temporada, conteudos)
@@ -61,6 +72,11 @@ def carregar(temporada):
         pacote['asset_race_weekend'] = carregar_asset(raiz_artefatos())
     except RaceWeekendDadosErro:
         pacote['asset_race_weekend'] = None
+    pacote['contextos_editoriais'] = contextos_editoriais
+    try:
+        pacote['catalogo_visual'] = carregar_catalogo_visual(raiz_artefatos())
+    except CatalogoVisualErro:
+        pacote['catalogo_visual'] = {}
     return pacote
 
 
@@ -78,6 +94,14 @@ def nome_temporada(temporada):
     if temporada == 2025:
         return '2025 — avaliação final retrospectiva já realizada'
     return '2026 — snapshots locais, cobertura parcial'
+
+
+def corrida_editorial(pacote, corrida):
+    """Acrescenta somente contexto factual de apresentação ao artefato do GP."""
+    contexto = para_gp(pacote['contextos_editoriais'], pacote['temporada'], corrida['rodada'])
+    resultado = dict(corrida)
+    resultado.update(contexto)
+    return resultado
 
 
 def nome_piloto(pacote, item):
@@ -360,7 +384,20 @@ def nome_estado_operacao(estado):
         'aguardando_dados': 'Aguardando dados',
         'classificacao_disponivel': 'Classificação disponível',
         'previsao_registrada': 'Previsão registrada',
+        'resultado_observado': 'Resultado observado',
     }.get(estado, str(estado).replace('_', ' ').capitalize())
+
+
+def situacao_corrida(corrida):
+    if corrida.get('estado_resultado') == 'observado_local':
+        return 'Resultado observado'
+    if corrida.get('estado_previsao') == 'ensaio_retrospectivo':
+        return 'Ensaio retrospectivo'
+    if corrida.get('estado_previsao') == 'previsao_registrada':
+        return 'Previsão registrada'
+    if corrida.get('estado_qualificacao') == 'local_disponivel':
+        return 'Classificação disponível'
+    return nome_estado_operacao(corrida.get('estado_operacao', 'aguardando_dados'))
 
 
 def renderizar_programacao(corrida):
@@ -392,13 +429,26 @@ def renderizar_estado_dados(corrida):
         linha[1].write(estado.replace('_', ' '))
 
 
-def renderizar_contexto_circuito(corrida):
+def renderizar_contexto_circuito(pacote, corrida):
     circuito = corrida.get('circuito_nome') or 'Circuito indisponível'
-    eh_austin = corrida.get('circuito_id') == 'americas'
-    foto = ativo_data_uri('dashboard_assets/circuit/cota-hero.jpg', 'image/jpeg') if eh_austin else ''
-    mapa = ativo_data_uri('dashboard_assets/circuit/cota-f1-layout.svg', 'image/svg+xml') if eh_austin else ''
-    hero = '<img src="{}" alt="Foto do circuito Circuit of the Americas">'.format(foto) if foto else '<p>Foto do circuito indisponível no pacote local.</p>'
-    mapa_html = '<img src="{}" alt="Mapa do circuito Circuit of the Americas">'.format(mapa) if mapa else '<p>Mapa do circuito indisponível no pacote local.</p>'
+    ativos = para_circuito(pacote.get('catalogo_visual', {}), corrida.get('circuito_id'))
+    foto_meta = ativos.get('foto') if ativos else None
+    mapa_meta = ativos.get('mapa') if ativos else None
+    foto = ativo_data_uri(foto_meta['caminho'], foto_meta['mime']) if foto_meta else ''
+    mapa = ativo_data_uri(mapa_meta['caminho'], mapa_meta['mime']) if mapa_meta else ''
+    alt = escape((ativos or {}).get('alt_foto') or 'Fotografia ilustrativa do circuito {}.'.format(circuito))
+    hero = '<img src="{}" alt="{}">'.format(foto, alt) if foto else '<p>Fotografia ilustrativa ainda não registrada para este circuito.</p>'
+    mapa_html = '<img src="{}" alt="Mapa do circuito {}">'.format(mapa, escape(circuito)) if mapa else '<p>Mapa do traçado ainda não registrado para este circuito.</p>'
+    if foto_meta and foto:
+        credito_foto = '<span class="hero-atribuicao">Foto: {} · {}</span>'.format(
+            escape(foto_meta['autor']), escape(foto_meta['licenca'])
+        )
+    else:
+        credito_foto = ''
+    if mapa_meta and mapa:
+        credito_mapa = '<p>Mapa: {} · {}</p>'.format(escape(mapa_meta['autor']), escape(mapa_meta['licenca']))
+    else:
+        credito_mapa = '<p>Ativo visual pendente de registro.</p>'
     st.markdown('''
     <section class="area-visao-geral" aria-label="Visão geral do circuito">
       <figure class="hero-circuito">
@@ -408,12 +458,12 @@ def renderizar_contexto_circuito(corrida):
           <h2>{}</h2>
           <p>Dados do circuito indisponíveis no snapshot local.</p>
         </figcaption>
-        <span class="hero-atribuicao">Foto: Pedro Mendes · CC BY 2.0</span>
+        {}
       </figure>
       <section class="mapa-circuito" aria-label="Mapa do circuito">
         <p class="circuito-rotulo">Mapa do circuito</p>
         {}
-        <p>Layout F1 · CC BY-SA 4.0</p>
+        {}
       </section>
       <div class="coluna-circuito">
         <section class="painel-editorial painel-vazio">
@@ -433,7 +483,7 @@ def renderizar_contexto_circuito(corrida):
       </div>
     </section>
     '''.format(
-        hero, escape(circuito), mapa_html, escape(circuito), escape(corrida.get('cidade', 'Cidade indisponível')),
+        hero, escape(circuito), credito_foto, mapa_html, credito_mapa, escape(circuito), escape(corrida.get('cidade', 'Cidade indisponível')),
         escape(corrida.get('pais', 'País indisponível')), escape(corrida.get('data', 'Data indisponível')),
         escape(nome_estado_operacao(corrida.get('estado_operacao', 'aguardando_dados'))),
     ), unsafe_allow_html=True)
@@ -578,65 +628,51 @@ def renderizar_resultados_observados(pacote, corrida, bloco, participantes):
 
 def tela_explorar(pacote, rodada, foco):
     bloco = dados_do_gp_2026(pacote, rodada) if pacote['temporada'] == 2026 else dados_do_gp(pacote, rodada)
-    corrida = bloco['corrida']
+    corrida = corrida_editorial(pacote, bloco['corrida'])
+    bloco = dict(bloco)
+    bloco['corrida'] = corrida
     participantes = bloco['participantes']
-    if pacote['temporada'] == 2026:
-        st.markdown('<div class="breadcrumb-editorial">Corridas <span>›</span> {}</div>'.format(escape(corrida['corrida'])), unsafe_allow_html=True)
-        st.markdown('''
-        <section class="gp-cabecalho">
-          <div>
-            <h1>{}</h1>
-            <div class="gp-meta">{}, {} · {}</div>
-          </div>
-          <div class="gp-status">{}</div>
-        </section>
-        '''.format(
-            escape(corrida['corrida']), escape(corrida['cidade']), escape(corrida['pais']),
-            escape(corrida['data']), escape(nome_estado_operacao(corrida['estado_operacao'])),
-        ), unsafe_allow_html=True)
-    else:
-        st.title(corrida['corrida'])
-        st.caption('Temporada {} · rodada {} · {} participantes preparados'.format(
-            pacote['temporada'], corrida['rodada'], corrida['participantes_preparados']
+    st.markdown('<div class="breadcrumb-editorial">Corridas <span>›</span> {}</div>'.format(escape(corrida['corrida'])), unsafe_allow_html=True)
+    st.markdown('''
+    <section class="gp-cabecalho">
+      <div>
+        <h1>{}</h1>
+        <div class="gp-meta">Temporada {} · {}, {} · {}</div>
+      </div>
+      <div class="gp-status">{}</div>
+    </section>
+    '''.format(
+        escape(corrida['corrida']), pacote['temporada'], escape(corrida['cidade']), escape(corrida['pais']),
+        escape(corrida['data']), escape(situacao_corrida(corrida)),
+    ), unsafe_allow_html=True)
+    if foco == 'Corridas':
+        visao_geral, tempos, estrategias, clima, historico, comparativo_equipes = st.tabs((
+            'Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes',
         ))
-    if pacote['temporada'] == 2026:
-        if foco == 'Corridas':
-            visao_geral, tempos, estrategias, clima, historico, comparativo_equipes = st.tabs((
-                'Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes',
-            ))
-            with visao_geral:
-                renderizar_contexto_circuito(corrida)
-                classificacao, equipes = st.columns(2, gap='large')
-                with classificacao:
-                    renderizar_campeonato_pilotos(pacote)
-                with equipes:
-                    renderizar_desempenho_equipes_indisponivel()
-            with tempos:
-                renderizar_programacao(corrida)
-                st.caption('Os horários programados não são tempos de volta. Não há tempos de sessão públicos no snapshot local.')
-            with estrategias:
-                st.info('Estratégias indisponíveis no snapshot local. O dashboard não estima paradas, pneus ou stints.')
-            with clima:
-                renderizar_condicoes_disponiveis(corrida)
-            with historico:
-                renderizar_estado_dados(corrida)
+        with visao_geral:
+            renderizar_contexto_circuito(pacote, corrida)
+            classificacao, equipes = st.columns(2, gap='large')
+            with classificacao:
+                renderizar_campeonato_pilotos(pacote)
+            with equipes:
+                renderizar_desempenho_equipes_indisponivel()
+        with tempos:
+            renderizar_programacao(corrida)
+            st.caption('Tempos de sessão não disponíveis no pacote local.')
+        with estrategias:
+            st.info('Estratégias indisponíveis no pacote local.')
+        with clima:
+            renderizar_condicoes_disponiveis(corrida)
+        with historico:
+            renderizar_estado_dados(corrida)
+            if pacote['temporada'] == 2026:
                 with st.expander('Calendário 2026'):
                     renderizar_calendario_2026(pacote, rodada)
-            with comparativo_equipes:
-                renderizar_desempenho_equipes_indisponivel()
-        else:
-            renderizar_campeonato_pilotos(pacote)
-            renderizar_estado_dados(corrida)
+        with comparativo_equipes:
+            renderizar_desempenho_equipes_indisponivel()
     else:
-        estados = [
-            ('Classificação', corrida.get('estado_qualificacao', 'histórico disponível')),
-            ('Previsão', corrida.get('estado_previsao', 'avaliação retrospectiva')),
-            ('Resultado factual', corrida.get('estado_resultado', 'observado')),
-        ]
-        linha_tempo = st.columns(3)
-        for coluna, (nome, estado) in zip(linha_tempo, estados):
-            coluna.markdown('**{}**  \n{}'.format(nome, estado.replace('_', ' ')))
-        st.caption('A previsão retrospectiva é separada de previsão registrada antes da corrida; resultados não entram na previsão da própria corrida.')
+        renderizar_campeonato_pilotos(pacote)
+        renderizar_estado_dados(corrida)
     st.caption('Cobertura: {} participantes preparados · {} elegíveis · {} alvos conhecidos depois.'.format(
         corrida['participantes_preparados'], corrida['elegiveis'], corrida['alvos_conhecidos']))
     with st.expander('Cobertura e exclusões'):

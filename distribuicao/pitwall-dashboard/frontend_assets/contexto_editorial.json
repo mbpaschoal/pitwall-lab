@@ -1,0 +1,720 @@
+{
+  "eventos": [
+    {
+      "cidade": "Sakhir",
+      "circuito_id": "bahrain",
+      "circuito_nome": "Bahrain International Circuit",
+      "corrida": "Bahrain Grand Prix",
+      "data": "2024-03-02",
+      "pais": "Bahrain",
+      "rodada": 1,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Jeddah",
+      "circuito_id": "jeddah",
+      "circuito_nome": "Jeddah Corniche Circuit",
+      "corrida": "Saudi Arabian Grand Prix",
+      "data": "2024-03-09",
+      "pais": "Saudi Arabia",
+      "rodada": 2,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Melbourne",
+      "circuito_id": "albert_park",
+      "circuito_nome": "Albert Park Grand Prix Circuit",
+      "corrida": "Australian Grand Prix",
+      "data": "2024-03-24",
+      "pais": "Australia",
+      "rodada": 3,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Suzuka",
+      "circuito_id": "suzuka",
+      "circuito_nome": "Suzuka Circuit",
+      "corrida": "Japanese Grand Prix",
+      "data": "2024-04-07",
+      "pais": "Japan",
+      "rodada": 4,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Shanghai",
+      "circuito_id": "shanghai",
+      "circuito_nome": "Shanghai International Circuit",
+      "corrida": "Chinese Grand Prix",
+      "data": "2024-04-21",
+      "pais": "China",
+      "rodada": 5,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Miami",
+      "circuito_id": "miami",
+      "circuito_nome": "Miami International Autodrome",
+      "corrida": "Miami Grand Prix",
+      "data": "2024-05-05",
+      "pais": "USA",
+      "rodada": 6,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Imola",
+      "circuito_id": "imola",
+      "circuito_nome": "Autodromo Enzo e Dino Ferrari",
+      "corrida": "Emilia Romagna Grand Prix",
+      "data": "2024-05-19",
+      "pais": "Italy",
+      "rodada": 7,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Monte Carlo",
+      "circuito_id": "monaco",
+      "circuito_nome": "Circuit de Monaco",
+      "corrida": "Monaco Grand Prix",
+      "data": "2024-05-26",
+      "pais": "Monaco",
+      "rodada": 8,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Montreal",
+      "circuito_id": "villeneuve",
+      "circuito_nome": "Circuit Gilles Villeneuve",
+      "corrida": "Canadian Grand Prix",
+      "data": "2024-06-09",
+      "pais": "Canada",
+      "rodada": 9,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Barcelona",
+      "circuito_id": "catalunya",
+      "circuito_nome": "Circuit de Barcelona-Catalunya",
+      "corrida": "Spanish Grand Prix",
+      "data": "2024-06-23",
+      "pais": "Spain",
+      "rodada": 10,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Spielberg",
+      "circuito_id": "red_bull_ring",
+      "circuito_nome": "Red Bull Ring",
+      "corrida": "Austrian Grand Prix",
+      "data": "2024-06-30",
+      "pais": "Austria",
+      "rodada": 11,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Silverstone",
+      "circuito_id": "silverstone",
+      "circuito_nome": "Silverstone Circuit",
+      "corrida": "British Grand Prix",
+      "data": "2024-07-07",
+      "pais": "UK",
+      "rodada": 12,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Budapest",
+      "circuito_id": "hungaroring",
+      "circuito_nome": "Hungaroring",
+      "corrida": "Hungarian Grand Prix",
+      "data": "2024-07-21",
+      "pais": "Hungary",
+      "rodada": 13,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Spa",
+      "circuito_id": "spa",
+      "circuito_nome": "Circuit de Spa-Francorchamps",
+      "corrida": "Belgian Grand Prix",
+      "data": "2024-07-28",
+      "pais": "Belgium",
+      "rodada": 14,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Zandvoort",
+      "circuito_id": "zandvoort",
+      "circuito_nome": "Circuit Park Zandvoort",
+      "corrida": "Dutch Grand Prix",
+      "data": "2024-08-25",
+      "pais": "Netherlands",
+      "rodada": 15,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Monza",
+      "circuito_id": "monza",
+      "circuito_nome": "Autodromo Nazionale di Monza",
+      "corrida": "Italian Grand Prix",
+      "data": "2024-09-01",
+      "pais": "Italy",
+      "rodada": 16,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Baku",
+      "circuito_id": "baku",
+      "circuito_nome": "Baku City Circuit",
+      "corrida": "Azerbaijan Grand Prix",
+      "data": "2024-09-15",
+      "pais": "Azerbaijan",
+      "rodada": 17,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Marina Bay",
+      "circuito_id": "marina_bay",
+      "circuito_nome": "Marina Bay Street Circuit",
+      "corrida": "Singapore Grand Prix",
+      "data": "2024-09-22",
+      "pais": "Singapore",
+      "rodada": 18,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Austin",
+      "circuito_id": "americas",
+      "circuito_nome": "Circuit of the Americas",
+      "corrida": "United States Grand Prix",
+      "data": "2024-10-20",
+      "pais": "USA",
+      "rodada": 19,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Mexico City",
+      "circuito_id": "rodriguez",
+      "circuito_nome": "Autódromo Hermanos Rodríguez",
+      "corrida": "Mexico City Grand Prix",
+      "data": "2024-10-27",
+      "pais": "Mexico",
+      "rodada": 20,
+      "temporada": 2024
+    },
+    {
+      "cidade": "São Paulo",
+      "circuito_id": "interlagos",
+      "circuito_nome": "Autódromo José Carlos Pace",
+      "corrida": "São Paulo Grand Prix",
+      "data": "2024-11-03",
+      "pais": "Brazil",
+      "rodada": 21,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Las Vegas",
+      "circuito_id": "vegas",
+      "circuito_nome": "Las Vegas Strip Street Circuit",
+      "corrida": "Las Vegas Grand Prix",
+      "data": "2024-11-23",
+      "pais": "USA",
+      "rodada": 22,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Lusail",
+      "circuito_id": "losail",
+      "circuito_nome": "Lusail International Circuit",
+      "corrida": "Qatar Grand Prix",
+      "data": "2024-12-01",
+      "pais": "Qatar",
+      "rodada": 23,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Abu Dhabi",
+      "circuito_id": "yas_marina",
+      "circuito_nome": "Yas Marina Circuit",
+      "corrida": "Abu Dhabi Grand Prix",
+      "data": "2024-12-08",
+      "pais": "UAE",
+      "rodada": 24,
+      "temporada": 2024
+    },
+    {
+      "cidade": "Melbourne",
+      "circuito_id": "albert_park",
+      "circuito_nome": "Albert Park Grand Prix Circuit",
+      "corrida": "Australian Grand Prix",
+      "data": "2025-03-16",
+      "pais": "Australia",
+      "rodada": 1,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Shanghai",
+      "circuito_id": "shanghai",
+      "circuito_nome": "Shanghai International Circuit",
+      "corrida": "Chinese Grand Prix",
+      "data": "2025-03-23",
+      "pais": "China",
+      "rodada": 2,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Suzuka",
+      "circuito_id": "suzuka",
+      "circuito_nome": "Suzuka Circuit",
+      "corrida": "Japanese Grand Prix",
+      "data": "2025-04-06",
+      "pais": "Japan",
+      "rodada": 3,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Sakhir",
+      "circuito_id": "bahrain",
+      "circuito_nome": "Bahrain International Circuit",
+      "corrida": "Bahrain Grand Prix",
+      "data": "2025-04-13",
+      "pais": "Bahrain",
+      "rodada": 4,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Jeddah",
+      "circuito_id": "jeddah",
+      "circuito_nome": "Jeddah Corniche Circuit",
+      "corrida": "Saudi Arabian Grand Prix",
+      "data": "2025-04-20",
+      "pais": "Saudi Arabia",
+      "rodada": 5,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Miami",
+      "circuito_id": "miami",
+      "circuito_nome": "Miami International Autodrome",
+      "corrida": "Miami Grand Prix",
+      "data": "2025-05-04",
+      "pais": "USA",
+      "rodada": 6,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Imola",
+      "circuito_id": "imola",
+      "circuito_nome": "Autodromo Enzo e Dino Ferrari",
+      "corrida": "Emilia Romagna Grand Prix",
+      "data": "2025-05-18",
+      "pais": "Italy",
+      "rodada": 7,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Monte Carlo",
+      "circuito_id": "monaco",
+      "circuito_nome": "Circuit de Monaco",
+      "corrida": "Monaco Grand Prix",
+      "data": "2025-05-25",
+      "pais": "Monaco",
+      "rodada": 8,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Barcelona",
+      "circuito_id": "catalunya",
+      "circuito_nome": "Circuit de Barcelona-Catalunya",
+      "corrida": "Spanish Grand Prix",
+      "data": "2025-06-01",
+      "pais": "Spain",
+      "rodada": 9,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Montreal",
+      "circuito_id": "villeneuve",
+      "circuito_nome": "Circuit Gilles Villeneuve",
+      "corrida": "Canadian Grand Prix",
+      "data": "2025-06-15",
+      "pais": "Canada",
+      "rodada": 10,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Spielberg",
+      "circuito_id": "red_bull_ring",
+      "circuito_nome": "Red Bull Ring",
+      "corrida": "Austrian Grand Prix",
+      "data": "2025-06-29",
+      "pais": "Austria",
+      "rodada": 11,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Silverstone",
+      "circuito_id": "silverstone",
+      "circuito_nome": "Silverstone Circuit",
+      "corrida": "British Grand Prix",
+      "data": "2025-07-06",
+      "pais": "UK",
+      "rodada": 12,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Spa",
+      "circuito_id": "spa",
+      "circuito_nome": "Circuit de Spa-Francorchamps",
+      "corrida": "Belgian Grand Prix",
+      "data": "2025-07-27",
+      "pais": "Belgium",
+      "rodada": 13,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Budapest",
+      "circuito_id": "hungaroring",
+      "circuito_nome": "Hungaroring",
+      "corrida": "Hungarian Grand Prix",
+      "data": "2025-08-03",
+      "pais": "Hungary",
+      "rodada": 14,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Zandvoort",
+      "circuito_id": "zandvoort",
+      "circuito_nome": "Circuit Park Zandvoort",
+      "corrida": "Dutch Grand Prix",
+      "data": "2025-08-31",
+      "pais": "Netherlands",
+      "rodada": 15,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Monza",
+      "circuito_id": "monza",
+      "circuito_nome": "Autodromo Nazionale di Monza",
+      "corrida": "Italian Grand Prix",
+      "data": "2025-09-07",
+      "pais": "Italy",
+      "rodada": 16,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Baku",
+      "circuito_id": "baku",
+      "circuito_nome": "Baku City Circuit",
+      "corrida": "Azerbaijan Grand Prix",
+      "data": "2025-09-21",
+      "pais": "Azerbaijan",
+      "rodada": 17,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Marina Bay",
+      "circuito_id": "marina_bay",
+      "circuito_nome": "Marina Bay Street Circuit",
+      "corrida": "Singapore Grand Prix",
+      "data": "2025-10-05",
+      "pais": "Singapore",
+      "rodada": 18,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Austin",
+      "circuito_id": "americas",
+      "circuito_nome": "Circuit of the Americas",
+      "corrida": "United States Grand Prix",
+      "data": "2025-10-19",
+      "pais": "USA",
+      "rodada": 19,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Mexico City",
+      "circuito_id": "rodriguez",
+      "circuito_nome": "Autódromo Hermanos Rodríguez",
+      "corrida": "Mexico City Grand Prix",
+      "data": "2025-10-26",
+      "pais": "Mexico",
+      "rodada": 20,
+      "temporada": 2025
+    },
+    {
+      "cidade": "São Paulo",
+      "circuito_id": "interlagos",
+      "circuito_nome": "Autódromo José Carlos Pace",
+      "corrida": "São Paulo Grand Prix",
+      "data": "2025-11-09",
+      "pais": "Brazil",
+      "rodada": 21,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Las Vegas",
+      "circuito_id": "vegas",
+      "circuito_nome": "Las Vegas Strip Street Circuit",
+      "corrida": "Las Vegas Grand Prix",
+      "data": "2025-11-23",
+      "pais": "USA",
+      "rodada": 22,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Lusail",
+      "circuito_id": "losail",
+      "circuito_nome": "Lusail International Circuit",
+      "corrida": "Qatar Grand Prix",
+      "data": "2025-11-30",
+      "pais": "Qatar",
+      "rodada": 23,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Abu Dhabi",
+      "circuito_id": "yas_marina",
+      "circuito_nome": "Yas Marina Circuit",
+      "corrida": "Abu Dhabi Grand Prix",
+      "data": "2025-12-07",
+      "pais": "UAE",
+      "rodada": 24,
+      "temporada": 2025
+    },
+    {
+      "cidade": "Melbourne",
+      "circuito_id": "albert_park",
+      "circuito_nome": "Albert Park Grand Prix Circuit",
+      "corrida": "Australian Grand Prix",
+      "data": "2026-03-08",
+      "pais": "Australia",
+      "rodada": 1,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Shanghai",
+      "circuito_id": "shanghai",
+      "circuito_nome": "Shanghai International Circuit",
+      "corrida": "Chinese Grand Prix",
+      "data": "2026-03-15",
+      "pais": "China",
+      "rodada": 2,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Suzuka",
+      "circuito_id": "suzuka",
+      "circuito_nome": "Suzuka Circuit",
+      "corrida": "Japanese Grand Prix",
+      "data": "2026-03-29",
+      "pais": "Japan",
+      "rodada": 3,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Miami",
+      "circuito_id": "miami",
+      "circuito_nome": "Miami International Autodrome",
+      "corrida": "Miami Grand Prix",
+      "data": "2026-05-03",
+      "pais": "USA",
+      "rodada": 4,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Montreal",
+      "circuito_id": "villeneuve",
+      "circuito_nome": "Circuit Gilles Villeneuve",
+      "corrida": "Canadian Grand Prix",
+      "data": "2026-05-24",
+      "pais": "Canada",
+      "rodada": 5,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Monte Carlo",
+      "circuito_id": "monaco",
+      "circuito_nome": "Circuit de Monaco",
+      "corrida": "Monaco Grand Prix",
+      "data": "2026-06-07",
+      "pais": "Monaco",
+      "rodada": 6,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Barcelona",
+      "circuito_id": "catalunya",
+      "circuito_nome": "Circuit de Barcelona-Catalunya",
+      "corrida": "Barcelona Grand Prix",
+      "data": "2026-06-14",
+      "pais": "Spain",
+      "rodada": 7,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Spielberg",
+      "circuito_id": "red_bull_ring",
+      "circuito_nome": "Red Bull Ring",
+      "corrida": "Austrian Grand Prix",
+      "data": "2026-06-28",
+      "pais": "Austria",
+      "rodada": 8,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Silverstone",
+      "circuito_id": "silverstone",
+      "circuito_nome": "Silverstone Circuit",
+      "corrida": "British Grand Prix",
+      "data": "2026-07-05",
+      "pais": "UK",
+      "rodada": 9,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Spa",
+      "circuito_id": "spa",
+      "circuito_nome": "Circuit de Spa-Francorchamps",
+      "corrida": "Belgian Grand Prix",
+      "data": "2026-07-19",
+      "pais": "Belgium",
+      "rodada": 10,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Budapest",
+      "circuito_id": "hungaroring",
+      "circuito_nome": "Hungaroring",
+      "corrida": "Hungarian Grand Prix",
+      "data": "2026-07-26",
+      "pais": "Hungary",
+      "rodada": 11,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Zandvoort",
+      "circuito_id": "zandvoort",
+      "circuito_nome": "Circuit Park Zandvoort",
+      "corrida": "Dutch Grand Prix",
+      "data": "2026-08-23",
+      "pais": "Netherlands",
+      "rodada": 12,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Monza",
+      "circuito_id": "monza",
+      "circuito_nome": "Autodromo Nazionale di Monza",
+      "corrida": "Italian Grand Prix",
+      "data": "2026-09-06",
+      "pais": "Italy",
+      "rodada": 13,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Madrid",
+      "circuito_id": "madring",
+      "circuito_nome": "Madring",
+      "corrida": "Spanish Grand Prix",
+      "data": "2026-09-13",
+      "pais": "Spain",
+      "rodada": 14,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Baku",
+      "circuito_id": "baku",
+      "circuito_nome": "Baku City Circuit",
+      "corrida": "Azerbaijan Grand Prix",
+      "data": "2026-09-26",
+      "pais": "Azerbaijan",
+      "rodada": 15,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Kuala Lumpur",
+      "circuito_id": "sepang",
+      "circuito_nome": "Sepang International Circuit",
+      "corrida": "Bahrain Grand Prix in Malaysia",
+      "data": "2026-10-04",
+      "pais": "Malaysia",
+      "rodada": 16,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Marina Bay",
+      "circuito_id": "marina_bay",
+      "circuito_nome": "Marina Bay Street Circuit",
+      "corrida": "Singapore Grand Prix",
+      "data": "2026-10-11",
+      "pais": "Singapore",
+      "rodada": 17,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Austin",
+      "circuito_id": "americas",
+      "circuito_nome": "Circuit of the Americas",
+      "corrida": "United States Grand Prix",
+      "data": "2026-10-25",
+      "pais": "USA",
+      "rodada": 18,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Mexico City",
+      "circuito_id": "rodriguez",
+      "circuito_nome": "Autódromo Hermanos Rodríguez",
+      "corrida": "Mexico City Grand Prix",
+      "data": "2026-11-01",
+      "pais": "Mexico",
+      "rodada": 19,
+      "temporada": 2026
+    },
+    {
+      "cidade": "São Paulo",
+      "circuito_id": "interlagos",
+      "circuito_nome": "Autódromo José Carlos Pace",
+      "corrida": "Brazilian Grand Prix",
+      "data": "2026-11-08",
+      "pais": "Brazil",
+      "rodada": 20,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Las Vegas",
+      "circuito_id": "vegas",
+      "circuito_nome": "Las Vegas Strip Street Circuit",
+      "corrida": "Las Vegas Grand Prix",
+      "data": "2026-11-22",
+      "pais": "USA",
+      "rodada": 21,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Lusail",
+      "circuito_id": "losail",
+      "circuito_nome": "Lusail International Circuit",
+      "corrida": "Qatar Grand Prix",
+      "data": "2026-11-29",
+      "pais": "Qatar",
+      "rodada": 22,
+      "temporada": 2026
+    },
+    {
+      "cidade": "Abu Dhabi",
+      "circuito_id": "yas_marina",
+      "circuito_nome": "Yas Marina Circuit",
+      "corrida": "Abu Dhabi Grand Prix",
+      "data": "2026-12-06",
+      "pais": "UAE",
+      "rodada": 23,
+      "temporada": 2026
+    }
+  ],
+  "temporadas": [
+    2024,
+    2025,
+    2026
+  ],
+  "versao": 1
+}

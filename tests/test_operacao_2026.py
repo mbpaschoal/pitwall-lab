@@ -1,5 +1,6 @@
 import json
 import os
+import subprocess
 import tempfile
 import unittest
 from datetime import datetime, timezone
@@ -10,7 +11,7 @@ from unittest.mock import patch
 from operacao2026 import fontes, previsao
 
 
-SCRATCH = Path(os.environ.get('TMPDIR', '/Users/MBPaschoal/.hermes/cache/scratch'))
+SCRATCH = Path(os.environ.get('TMPDIR') or tempfile.gettempdir()).resolve()
 
 
 def corrida(round_, date_, circuit='x', qualifying=None):
@@ -142,6 +143,31 @@ class Operacao2026Test(unittest.TestCase):
         with previsao._sem_fit():
             with self.assertRaisesRegex(RuntimeError, 'fit'):
                 context['pipeline'].fit([[1.0] * 15], [0])
+
+    def test_codigo_estado_exige_fastf1_rastreado_limpo_e_ignora_notas_fora(self):
+        with tempfile.TemporaryDirectory(dir=str(SCRATCH)) as temporario:
+            raiz = Path(temporario)
+            componentes = tuple(previsao.COMPONENTES_OPERACIONAIS) + tuple(previsao.HELPERS_CONGELADOS)
+            for relativo in componentes:
+                caminho = raiz / relativo
+                caminho.parent.mkdir(parents=True, exist_ok=True)
+                caminho.write_text('conteudo inicial\n', encoding='utf-8')
+            subprocess.run(['git', 'init'], cwd=raiz, check=True, stdout=subprocess.PIPE)
+            subprocess.run(['git', 'config', 'user.email', 'fixture@example.invalid'], cwd=raiz, check=True)
+            subprocess.run(['git', 'config', 'user.name', 'Fixture'], cwd=raiz, check=True)
+            subprocess.run(['git', 'add', '.'], cwd=raiz, check=True)
+            subprocess.run(['git', 'commit', '-m', 'fixture'], cwd=raiz, check=True, stdout=subprocess.PIPE)
+            self.assertTrue(previsao.codigo_estado(raiz)['componentes_rastreados'])
+            (raiz / 'notas-fora.md').write_text('não operacional\n', encoding='utf-8')
+            self.assertTrue(previsao.codigo_estado(raiz)['componentes_limpos'])
+            fastf1 = raiz / 'operacao2026' / 'fastf1_contexto.py'
+            fastf1.write_text('alterado\n', encoding='utf-8')
+            self.assertFalse(previsao.codigo_estado(raiz)['componentes_limpos'])
+            subprocess.run(['git', 'checkout', '--', 'operacao2026/fastf1_contexto.py'], cwd=raiz, check=True)
+            fastf1.unlink()
+            estado = previsao.codigo_estado(raiz)
+            self.assertFalse(estado['componentes_rastreados'])
+            self.assertFalse(estado['componentes_limpos'])
 
 
 if __name__ == '__main__':

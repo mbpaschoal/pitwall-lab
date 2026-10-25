@@ -7,11 +7,12 @@ from pathlib import Path
 import sys
 from urllib.parse import urlparse
 
-from operacao2026 import fontes, previsao
+from operacao2026 import fastf1_contexto, fontes, previsao
 
 ROOT = Path(__file__).resolve().parent
 SNAPSHOTS = ROOT / 'data/operacao_2026/snapshots'
 EMISSOES = ROOT / 'reports/operacao_2026/emissoes'
+FASTF1_SNAPSHOTS = ROOT / 'data/operacao_2026/fastf1'
 
 
 def _fonte_api(name):
@@ -186,6 +187,32 @@ def cmd_coletar(args):
     print('Snapshot criado: {}'.format(dest))
 
 
+def cmd_coletar_fastf1(args):
+    """Fotografia opcional FastF1; Jolpica continua canônica para emissão."""
+    _, calendar, _ = _calendar(args.snapshot_jolpica)
+    event = fontes.discover_event(calendar, args.circuito)
+    try:
+        indice = fastf1_contexto.coletar_sessao(FASTF1_SNAPSHOTS, args.id, event, args.sessao)
+    except fastf1_contexto.SessaoIndisponivel as error:
+        print(json.dumps({
+            'estado': 'aguardando_dados', 'circuito_id': args.circuito,
+            'sessao': str(args.sessao).upper(), 'motivo': str(error),
+        }, ensure_ascii=False, indent=2))
+        return
+    print(json.dumps({
+        'estado': 'dados_registrados', 'snapshot_fastf1': indice['snapshot_id'],
+        'sessao': indice['sessao'], 'session_key': indice['session_key'], 'gp': indice['gp'],
+    }, ensure_ascii=False, indent=2))
+
+
+def cmd_validar_fastf1(args):
+    indice = fastf1_contexto.validar_snapshot(FASTF1_SNAPSHOTS, args.id)
+    print(json.dumps({
+        'estado': 'valido', 'snapshot_fastf1': indice['snapshot_id'],
+        'sessao': indice['sessao'], 'session_key': indice['session_key'], 'gp': indice['gp'],
+    }, ensure_ascii=False, indent=2))
+
+
 def cmd_estado(args):
     index, calendar, _ = _calendar(args.snapshot)
     event, _, state, _ = _event_with_q(args.snapshot, calendar, 'americas')
@@ -252,6 +279,9 @@ def cmd_emitir(args):
     index, _, event, state, pages, results, rows, audit = _preparar_fluxo(args.snapshot, 'americas', prospectivo=True)
     if state['estado'] != 'pronto':
         raise ValueError('Aguardando classificação de Austin; nenhuma probabilidade é emitida.')
+    if args.fastf1_snapshot:
+        # Enriquecimento opcional: valida somente identidade/contexto. Não entra na matriz v1.
+        fastf1_contexto.validar_contexto_emissao(FASTF1_SNAPSHOTS, args.fastf1_snapshot, event)
     q_endpoint = 'classificacao'
     q_sources = _fontes(index, {q_endpoint: pages.get(q_endpoint, [])})
     if not q_sources:
@@ -279,7 +309,16 @@ def cmd_emitir(args):
         'sessao_qualifying_inicio_utc': previsao._z(state['referencia_utc']),
         'sessao_qualifying_encerrada_utc': previsao._z(args.sessao_encerrada_em),
         'fonte_encerramento': args.fonte_encerramento, 'corte_utc': previsao._z(args.corte),
-        'obtido_classificacao_utc': previsao._z(obtained), 'emitido_em_utc': previsao._z(emitido), 'git': git,
+        'obtido_classificacao_utc': previsao._z(obtained),
+        'corte_temporal': {
+            'qualificacao_inicio_utc': previsao._z(state['referencia_utc']),
+            'qualificacao_encerrada_em_utc': previsao._z(args.sessao_encerrada_em),
+            'qualificacao_disponivel_em_utc': previsao._z(obtained),
+            'corte_utc': previsao._z(args.corte),
+            'corrida_programada_em_utc': previsao._z(previsao._utc(race_start)),
+            'resultado_alvo_incluido': False,
+        },
+        'emitido_em_utc': previsao._z(emitido), 'git': git,
         'versao_anterior': args.versao_anterior, 'motivo_correcao': args.motivo_correcao,
         'limites': ['Resultados do alvo e posteriores não foram abertos como entradas.']})
     def validar_publicacao():
@@ -299,6 +338,15 @@ def main(argv=None):
     p.add_argument('--atualizar', action='store_true')
     p.add_argument('--classificacao-circuito', action='append')
     p.set_defaults(func=cmd_coletar)
+    p = sub.add_parser('coletar-fastf1')
+    p.add_argument('--id', required=True)
+    p.add_argument('--snapshot-jolpica', required=True)
+    p.add_argument('--circuito', required=True)
+    p.add_argument('--sessao', required=True, choices=('FP1', 'FP2', 'FP3', 'Q'))
+    p.set_defaults(func=cmd_coletar_fastf1)
+    p = sub.add_parser('validar-fastf1')
+    p.add_argument('--id', required=True)
+    p.set_defaults(func=cmd_validar_fastf1)
     p = sub.add_parser('estado')
     p.add_argument('--snapshot', required=True)
     p.set_defaults(func=cmd_estado)
@@ -314,6 +362,7 @@ def main(argv=None):
     p.add_argument('--corte', required=True, help='UTC de admissão, após a coleta/classificação')
     p.add_argument('--versao-anterior')
     p.add_argument('--motivo-correcao')
+    p.add_argument('--fastf1-snapshot', help='Enriquecimento opcional FastF1 Q; não substitui a classificação Jolpica.')
     p.set_defaults(func=cmd_emitir)
     args = parser.parse_args(argv)
     if args.cmd == 'coletar' and args.classificacao_circuito is None:

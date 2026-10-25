@@ -39,7 +39,6 @@ RUNTIME_WORKTREE = (
     'frontend_assets/race_weekend.json', 'dashboard_assets/fonts/abrilfatface.ttf',
     'dashboard_assets/fonts/lato.ttf', 'dashboard_assets/fonts/lato-bold.ttf',
     'dashboard_assets/fonts/abrilfatface-OFL.txt', 'dashboard_assets/fonts/lato-OFL.txt',
-    'dashboard_assets/circuit/cota-hero.jpg', 'dashboard_assets/circuit/cota-f1-layout.svg',
     'dashboard_assets/circuit/ATRIBUICOES.md', 'tests/test_dashboard_app.py',
     'tests/test_dashboard_dados.py',
 )
@@ -95,13 +94,53 @@ def _recusar_symlink_no_caminho(caminho, rotulo, limite=None):
 
 
 def _ler_arquivo_regular(raiz, relativo):
+    raiz = Path(raiz).resolve()
+    relativo = Path(relativo)
+    if relativo.is_absolute() or '..' in relativo.parts:
+        raise ValueError('caminho de fonte fora da raiz: {}'.format(relativo))
     caminho = raiz / relativo
-    if not _contem(raiz, caminho):
+    if not _contem(raiz, caminho.resolve(strict=False)):
         raise ValueError('caminho de fonte fora da raiz: {}'.format(relativo))
     _recusar_symlink_no_caminho(caminho, 'fonte', raiz)
     if caminho.is_symlink() or not caminho.is_file():
         raise ValueError('fonte ausente, inválida ou symlink: {}'.format(relativo))
     return caminho.read_bytes()
+
+
+def _ler_catalogo_visual(raiz):
+    relativo = 'dashboard_assets/circuit/catalogo_visual.json'
+    try:
+        catalogo = json.loads(_ler_arquivo_regular(raiz, relativo).decode('utf-8'))
+    except (UnicodeDecodeError, json.JSONDecodeError) as erro:
+        raise ValueError('catálogo visual inválido') from erro
+    circuitos = catalogo.get('circuitos')
+    if catalogo.get('versao') != 1 or not isinstance(circuitos, dict) or len(circuitos) != 26:
+        raise ValueError('catálogo visual sem a cobertura esperada de 26 circuitos')
+    for circuito, ativos in circuitos.items():
+        if not isinstance(circuito, str) or not isinstance(ativos, dict):
+            raise ValueError('catálogo visual com circuito inválido')
+        for tipo in ('foto', 'mapa'):
+            ativo = ativos.get(tipo)
+            if not isinstance(ativo, dict) or not isinstance(ativo.get('caminho'), str):
+                raise ValueError('catálogo visual com ativo inválido')
+            conteudo = _ler_arquivo_regular(raiz, ativo['caminho'])
+            if _sha256(conteudo) != ativo.get('sha256'):
+                raise ValueError('hash divergente no catálogo visual: {}'.format(ativo['caminho']))
+    return catalogo
+
+
+def runtime_worktree(raiz):
+    """Allowlist de runtime: núcleo explícito + ativos declarados no catálogo validado."""
+    arquivos = list(RUNTIME_WORKTREE) + [
+        'contexto_editorial.py', 'catalogo_visual.py', 'registro_emissoes.py',
+        'frontend_assets/contexto_editorial.json', 'dashboard_assets/circuit/catalogo_visual.json',
+    ]
+    catalogo = _ler_catalogo_visual(raiz)
+    for ativos in catalogo['circuitos'].values():
+        arquivos.extend((ativos['foto']['caminho'], ativos['mapa']['caminho']))
+    if len(arquivos) != len(set(arquivos)):
+        raise ValueError('allowlist de runtime contém caminho duplicado')
+    return tuple(arquivos)
 
 
 def _git_show(raiz, commit, relativo):
@@ -260,7 +299,7 @@ def _montar_arquivos(raiz, conteudos, commit):
     for relativo in DOCUMENTOS_COPIADOS:
         conteudo = _ler_arquivo_regular(raiz, relativo)
         _adicionar(arquivos, relativo, conteudo, 'copia', relativo, _sha256(conteudo))
-    for relativo in RUNTIME_WORKTREE:
+    for relativo in runtime_worktree(raiz):
         conteudo = _ler_arquivo_regular(raiz, relativo)
         if relativo == 'app.py':
             conteudo = _app_publico(conteudo)

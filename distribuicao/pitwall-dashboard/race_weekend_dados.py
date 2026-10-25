@@ -43,13 +43,21 @@ def carregar_asset(raiz):
         if corrida['rodada'] in chaves_corrida:
             raise RaceWeekendDadosErro('Asset Race Weekend com rodada 2026 duplicada.')
         chaves_corrida.add(corrida['rodada'])
-        for campo in ('estado_qualificacao', 'estado_previsao', 'estado_resultado'):
-            if corrida.get(campo) not in ('indisponivel', 'local_disponivel', 'ensaio_retrospectivo', 'observado_local'):
+        estados_por_campo = {
+            'estado_qualificacao': ('indisponivel', 'local_disponivel'),
+            'estado_previsao': ('indisponivel', 'previsao_registrada', 'ensaio_retrospectivo'),
+            'estado_resultado': ('indisponivel', 'observado_local'),
+        }
+        for campo, aceitos in estados_por_campo.items():
+            if corrida.get(campo) not in aceitos:
                 raise RaceWeekendDadosErro('Asset Race Weekend com estado inválido: {}.'.format(campo))
         for campo in ('corrida', 'cidade', 'pais', 'data'):
             if not isinstance(corrida.get(campo), str) or not corrida[campo]:
                 raise RaceWeekendDadosErro('Asset Race Weekend sem contexto do GP: {}.'.format(campo))
-        if corrida.get('estado_operacao') not in ('aguardando_dados', 'classificacao_disponivel', 'previsao_registrada'):
+        if corrida.get('estado_operacao') not in (
+            'aguardando_dados', 'classificacao_disponivel', 'previsao_registrada',
+            'ensaio_retrospectivo', 'resultado_observado',
+        ):
             raise RaceWeekendDadosErro('Asset Race Weekend com estado operacional inválido.')
     for item in previsoes:
         if not isinstance(item, dict) or item.get('temporada') != 2026 or not isinstance(item.get('rodada'), int) or not item.get('piloto_id'):
@@ -82,7 +90,7 @@ def pacote_2026(asset):
     for item in dados.get('previsoes', []):
         participante = dict(item)
         participante.update({
-            'motivos_inelegibilidade': 'probabilidade local indisponível',
+            'motivos_inelegibilidade': participante.get('motivos_inelegibilidade') or 'probabilidade local indisponível',
             'favorito_modelo': participante.get('ranking_modelo') in (1, 2, 3),
             'favorito_classificacao': participante.get('ranking_classificacao') in (1, 2, 3),
             'alvo_conhecido': participante.get('resultado_observado') is not None,

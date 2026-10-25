@@ -33,10 +33,11 @@ def copiar_artefatos(raiz):
                 'previsoes_pre_corrida.csv', 'avaliacao_por_piloto.csv',
             }:
                 shutil.copy2(arquivo, destino / arquivo.name)
-    asset = RAIZ / 'frontend_assets/race_weekend.json'
-    destino_asset = raiz / 'frontend_assets/race_weekend.json'
-    destino_asset.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(asset, destino_asset)
+    destino_asset = raiz / 'frontend_assets'
+    destino_asset.mkdir(parents=True, exist_ok=True)
+    for nome in ('race_weekend.json', 'contexto_editorial.json'):
+        shutil.copy2(RAIZ / 'frontend_assets' / nome, destino_asset / nome)
+    shutil.copytree(RAIZ / 'dashboard_assets' / 'circuit', raiz / 'dashboard_assets' / 'circuit')
     return raiz
 
 
@@ -53,6 +54,13 @@ def texto_renderizado(at):
 
 
 class TestDashboardApp(unittest.TestCase):
+    def test_estado_prospectivo_prioriza_previsao_sem_resultado(self):
+        corrida = {
+            'estado_resultado': 'indisponivel', 'estado_previsao': 'previsao_registrada',
+            'estado_qualificacao': 'local_disponivel', 'estado_operacao': 'previsao_registrada',
+        }
+        self.assertEqual(app.situacao_corrida(corrida), 'Previsão registrada')
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.raiz = copiar_artefatos(Path(self.tmp.name))
@@ -91,6 +99,22 @@ class TestDashboardApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         self.assertIn('15 entradas', texto)
         self.assertIn('CC BY-NC-SA 4.0', texto)
+
+    def test_corridas_compartilham_cabecalho_editorial_e_contexto_nas_tres_temporadas(self):
+        self.executar()
+        casos = (
+            (2024, '2024:1', 'Bahrain Grand Prix', 'Sakhir, Bahrain · 2024-03-02'),
+            (2025, '2025:1', 'Australian Grand Prix', 'Melbourne, Australia · 2025-03-16'),
+            (2026, '2026:18', 'United States Grand Prix', 'Austin, USA · 2026-10-25'),
+        )
+        for temporada, gp, corrida, meta in casos:
+            self.escolher('temporada', temporada)
+            self.escolher('gp', gp)
+            texto = texto_renderizado(self.at)
+            self.assertIn(corrida, texto)
+            self.assertIn(meta, texto)
+            for rotulo in ('Contexto do circuito', 'Mapa do circuito', 'Informações do circuito', 'Visão geral'):
+                self.assertIn(rotulo, texto)
 
     def test_gp_fica_desabilitado_fora_da_exploracao_sem_desabilitar_temporada(self):
         self.executar()
@@ -277,7 +301,8 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('Austin, USA · 2026-10-25', texto)
         self.assertIn('Contexto do GP', texto)
         self.assertIn('Mapa do circuito', texto)
-        self.assertIn('Layout F1 · CC BY-SA 4.0', texto)
+        self.assertIn('Mapa:', texto)
+        self.assertIn('CC BY-SA 4.0', texto)
         self.assertIn('Programação do fim de semana', texto)
         self.assertIn('Classificação de pilotos 2026', texto)
         self.assertIn('Desempenho das equipes', texto)
@@ -322,8 +347,11 @@ class TestDashboardApp(unittest.TestCase):
         css = app.estilo_dashboard()
         self.assertIn('hero-circuito', css)
         self.assertIn('mapa-circuito', css)
-        self.assertTrue((RAIZ / 'dashboard_assets/circuit/cota-hero.jpg').is_file())
-        self.assertTrue((RAIZ / 'dashboard_assets/circuit/cota-f1-layout.svg').is_file())
+        self.assertTrue((RAIZ / 'dashboard_assets/circuit/americas-hero.jpg').is_file())
+        self.assertTrue((RAIZ / 'dashboard_assets/circuit/americas-layout.svg').is_file())
+        catalogo = (RAIZ / 'dashboard_assets/circuit/catalogo_visual.json').read_text(encoding='utf-8')
+        self.assertIn('americas-hero.jpg', catalogo)
+        self.assertIn('americas-layout.svg', catalogo)
         atribuicoes = (RAIZ / 'dashboard_assets/circuit/ATRIBUICOES.md').read_text(encoding='utf-8')
         self.assertIn('CC BY 2.0', atribuicoes)
         self.assertIn('CC BY-SA 4.0', atribuicoes)

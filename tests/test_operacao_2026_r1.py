@@ -13,7 +13,7 @@ import operar_2026
 from operacao2026 import fontes, previsao
 
 
-SCRATCH = Path(os.environ.get('TMPDIR', '/Users/MBPaschoal/.hermes/cache/scratch'))
+SCRATCH = Path(os.environ.get('TMPDIR') or tempfile.gettempdir()).resolve()
 
 
 def corrida(round_, date_, circuit='americas', qdate=None):

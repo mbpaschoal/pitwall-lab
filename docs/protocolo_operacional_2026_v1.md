@@ -90,6 +90,12 @@ Correção/retomada exige pasta nova relacionada à anterior e motivo, sem subst
 
 Se a Jolpica atrasar, manter o estado de espera; não consultar infinitamente nem reutilizar outro GP. Alternativa: classificação oficial no site F1 do evento ou documento de classificação da FIA disponibilizado para esse GP. Antes de admitir importação manual, guardar cópia original com URL, obtenção UTC/hash, evento/ano/circuito, mapeamento explícito verificado para driverId/constructorId literais, posições e responsável pela transcrição. Validar com a mesma regra, marcar `origem=manual` em toda a emissão e não alegar consulta via API. Sem evidência e IDs coerentes, não emitir. A existência de uma página oficial hoje não garante publicação imediata dos resultados futuros de Austin.
 
+## Contexto opcional FastF1, separado da emissão
+
+FastF1 é um enriquecimento gratuito, manual e pós-sessão para registrar FP1, FP2, FP3 ou Q já públicos. Não há polling, credencial, dado pago, consulta automática nem dependência do dashboard durante uma emissão. O cache explícito fica em `data/operacao_2026/fastf1/cache/`; cada fotografia fica em `data/operacao_2026/fastf1/<id>/` com `sessao.json` e `indice.json`, UTC, fonte, `session_key`, GP/cidade/país/data e SHA-256.
+
+A sessão é resolvida pela rodada e circuito já presentes no snapshot Jolpica informado ao comando; o operador não fornece uma rodada solta. Se FastF1 ainda não publicar a sessão, o comando devolve `aguardando_dados` e encerra sem falha. FP1/FP2/FP3 e Q são snapshots distintos. Para emissão prospectiva, Jolpica continua sendo a única fonte canônica da classificação: um snapshot FastF1 opcional só pode ser `Q`, precisa ter temporada/rodada/circuito iguais ao evento Jolpica e é validado como contexto. Seus dados nunca entram nas 15 variáveis, não alteram a matriz, probabilidades ou favoritos e não permitem emitir sem `QualifyingResults` Jolpica válido.
+
 ## Verificações obrigatórias e entrega
 
 Testes sintéticos identificados: alvo/futuro ausentes ou alterados não afetam matriz/probabilidades/favoritos; auditoria de arquivos impede abrir resultado-alvo; fórmulas/janelas comparadas ao v1; novos IDs e janelas vazias; classificação ausente/incompleta/incoerente; fit bloqueado e parâmetros iguais; exclusividade de emissão e correções; prospectivo recusado após largada ou com dados obtidos após corte. Regredir escopo relevante sem executar treino ou coletores antigos reais. Confirmar hashes de etapas1–7/distribuição antes/depois.

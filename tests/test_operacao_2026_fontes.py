@@ -11,7 +11,7 @@ from urllib.error import HTTPError
 
 from operacao2026 import fontes
 
-SCRATCH = Path(os.environ.get('TMPDIR', '/Users/MBPaschoal/.hermes/cache/scratch'))
+SCRATCH = Path(os.environ.get('TMPDIR') or tempfile.gettempdir()).resolve()
 
 
 def pagina(races, total=None, offset=0, limit=100):

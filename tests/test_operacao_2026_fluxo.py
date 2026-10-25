@@ -13,7 +13,7 @@ from operacao2026 import fontes, previsao
 from treinar_modelo_v1 import ENTRADAS_AUTORIZADAS
 
 
-SCRATCH = Path('/Users/MBPaschoal/.hermes/cache/scratch')
+SCRATCH = Path(os.environ.get('TMPDIR') or tempfile.gettempdir()).resolve()
 
 
 def corrida(round_, data, circuito='x', qtime='12:00:00Z'):
