@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-from operacao2026 import fontes as fontes_operacao
+from operacao2026 import fontes as fontes_operacao, openf1_qualificacao
 
 
 class RegistroEmissoesErro(ValueError):
@@ -192,6 +192,30 @@ def _fontes_qualificacao_comprovadas(raiz, snapshot, evento, manifesto, exigir_u
     return [dict(fonte) for fonte in fontes_snapshot]
 
 
+def _qualificacao_alternativa_openf1(raiz, manifesto, evento):
+    declarada = manifesto.get('qualificacao_alternativa')
+    if not isinstance(declarada, dict) or declarada.get('origem') != 'openf1':
+        return None
+    diretorio = declarada.get('diretorio')
+    if not isinstance(diretorio, str) or not diretorio:
+        raise RegistroEmissoesErro('Diretório OpenF1 inválido.')
+    base = Path(raiz).resolve()
+    caminho = (base / diretorio).resolve()
+    if base not in caminho.parents:
+        raise RegistroEmissoesErro('Diretório OpenF1 fora da raiz.')
+    try:
+        dados = openf1_qualificacao.carregar(caminho)
+    except (OSError, ValueError) as erro:
+        raise RegistroEmissoesErro('Classificação OpenF1 comprovada inválida.') from erro
+    if (dados['sessao']['session_key'], dados['sessao']['meeting_key']) != (declarada.get('session_key'), declarada.get('meeting_key')):
+        raise RegistroEmissoesErro('Sessão OpenF1 diverge do manifesto.')
+    if dados['encerramento_utc'] != declarada.get('encerramento_utc'):
+        raise RegistroEmissoesErro('Encerramento OpenF1 diverge do manifesto.')
+    if evento != {'temporada': 2026, 'rodada': 18, 'circuito_id': 'americas'}:
+        raise RegistroEmissoesErro('Identidade do evento não corresponde à Q OpenF1.')
+    return dados
+
+
 def validar_declaracoes(raiz, declaracoes):
     raiz = Path(raiz)
     saida = {}
@@ -219,9 +243,13 @@ def validar_declaracoes(raiz, declaracoes):
         emitido_em = _utc(manifesto.get('emitido_em_utc'))
         if modo == 'PROSPECTIVO':
             _validar_corte_prospectivo(manifesto, emitido_em)
-        fontes_qualificacao = _fontes_qualificacao_comprovadas(
-            raiz, snapshot, evento_declarado, manifesto, exigir_utc=(modo == 'PROSPECTIVO'),
-        )
+        alternativa = _qualificacao_alternativa_openf1(raiz, manifesto, evento_declarado)
+        if alternativa is None:
+            fontes_qualificacao = _fontes_qualificacao_comprovadas(
+                raiz, snapshot, evento_declarado, manifesto, exigir_utc=(modo == 'PROSPECTIVO'),
+            )
+        else:
+            fontes_qualificacao = alternativa['fontes']
         if modo == 'PROSPECTIVO':
             _validar_corte_prospectivo(manifesto, emitido_em, fontes_qualificacao)
         modelos = manifesto.get('modelos')
@@ -246,6 +274,9 @@ def validar_declaracoes(raiz, declaracoes):
             'cobertura': dict(manifesto.get('cobertura') or {}),
             'hash_probabilidades': hashes['probabilidades.csv'],
             'fontes_qualificacao': fontes_qualificacao,
+            'origem_qualificacao': 'openf1' if alternativa is not None else 'jolpica',
+            'registros_qualificacao': alternativa['registros'] if alternativa is not None else None,
+            'arquivos_qualificacao': alternativa['arquivos'] if alternativa is not None else None,
         }
     return saida
 

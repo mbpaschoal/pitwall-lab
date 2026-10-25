@@ -32,6 +32,7 @@ TOKEN = re.compile(r'^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$')
 COMPONENTES_OPERACIONAIS = (
     'operacao2026/__init__.py', 'operacao2026/previsao.py', 'operar_2026.py',
     'operacao2026/fontes.py', 'operacao2026/fastf1_contexto.py',
+    'operacao2026/openf1_qualificacao.py',
 )
 HELPERS_CONGELADOS = ('treinar_modelo_v1.py', 'avaliar_modelo_v1.py')
 

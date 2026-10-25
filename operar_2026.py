@@ -7,7 +7,7 @@ from pathlib import Path
 import sys
 from urllib.parse import urlparse
 
-from operacao2026 import fastf1_contexto, fontes, previsao
+from operacao2026 import fastf1_contexto, fontes, openf1_qualificacao, previsao
 
 ROOT = Path(__file__).resolve().parent
 SNAPSHOTS = ROOT / 'data/operacao_2026/snapshots'
@@ -251,6 +251,40 @@ def _preparar_fluxo(snapshot, circuit, prospectivo=False):
     return index, calendar, event, state, {**calendar_pages, **qpages, **result_pages}, results, rows, audit
 
 
+def _preparar_fluxo_openf1(snapshot, diretorio):
+    """Monta a mesma matriz v1 com Q OpenF1 já capturada, sem remodelar seu raw como Jolpica."""
+    index, calendar, calendar_pages = _calendar(snapshot)
+    event = fontes.discover_event(calendar, 'americas')
+    q_openf1 = openf1_qualificacao.carregar(diretorio)
+    if (str(event['season']), str(event['round']), event['Circuit']['circuitId']) != ('2026', '18', 'americas'):
+        raise ValueError('Calendário não resolve Austin 2026 para a identidade OpenF1 admitida.')
+    state = previsao.preparar_alvo(event, q_openf1['registros'], prospectivo=True)
+    historic = previsao.carregar_historico_bruto(str(ROOT / 'data/historico'), auditoria=True)
+    if len(historic) == 2:
+        historic_calendar, historic_results = historic
+        fontes_historicas = []
+    else:
+        historic_calendar, historic_results, fontes_historicas = historic
+    results_2026, result_pages = _resultados_2026(snapshot, calendar, state)
+    results = dict(historic_results)
+    results.update(results_2026)
+    lacunas = _lacunas_resultados_anteriores(index, state, calendar, results_2026)
+    rows_completas, audit = previsao.gerar_entradas(state, historic_calendar + calendar, results)
+    admitidas, excluidas, chaves_necessarias = previsao.selecionar_fontes_historicas(audit, fontes_historicas)
+    resultados_fornecidos = {key: results[key] for key in chaves_necessarias if key in results}
+    rows, audit_fornecido = previsao.gerar_entradas(state, historic_calendar + calendar, resultados_fornecidos)
+    matriz_completa = [{name: row.get(name) for name in previsao.ENTRADAS_AUTORIZADAS} for row in rows_completas]
+    matriz_fornecida = [{name: row.get(name) for name in previsao.ENTRADAS_AUTORIZADAS} for row in rows]
+    if matriz_fornecida != matriz_completa:
+        raise ValueError('Subconjunto histórico diverge da matriz v1 completa.')
+    audit['resultados_fornecidos'] = audit_fornecido['resultados_lidos']
+    audit['fontes_historicas_abertas'] = fontes_historicas
+    audit['fontes_historicas_admitidas'] = admitidas
+    audit['fontes_historicas_excluidas'] = excluidas
+    audit['lacunas_resultados_relevantes'] = lacunas
+    return index, calendar, event, state, {**calendar_pages, **result_pages}, results, rows, audit, q_openf1
+
+
 def cmd_ensaio(args):
     index, _, event, state, pages, results, rows, audit = _preparar_fluxo(args.snapshot, 'marina_bay')
     if state['estado'] != 'pronto':
@@ -276,25 +310,42 @@ def _url(value):
 
 def cmd_emitir(args):
     _url(args.fonte_encerramento)
-    index, _, event, state, pages, results, rows, audit = _preparar_fluxo(args.snapshot, 'americas', prospectivo=True)
+    q_openf1 = None
+    if args.openf1_diretorio:
+        index, _, event, state, pages, results, rows, audit, q_openf1 = _preparar_fluxo_openf1(
+            args.snapshot, args.openf1_diretorio)
+        q_sources = q_openf1['fontes']
+        obtained = max(previsao._utc(source['obtido_em_utc']) for source in q_sources)
+        encerramento_efetivo = q_openf1['encerramento_utc']
+        if previsao._utc(args.sessao_encerrada_em) != previsao._utc(encerramento_efetivo):
+            raise ValueError('Encerramento informado diverge da evidência OpenF1 de Q3.')
+    else:
+        index, _, event, state, pages, results, rows, audit = _preparar_fluxo(args.snapshot, 'americas', prospectivo=True)
+        q_endpoint = 'classificacao'
+        q_sources = _fontes(index, {q_endpoint: pages.get(q_endpoint, [])})
+        if not q_sources:
+            raise ValueError('Snapshot não contém proveniência da classificação de Austin.')
+        try:
+            obtained = max(previsao._utc(source['obtido_em_utc']) for source in q_sources)
+        except (KeyError, TypeError, ValueError) as error:
+            raise ValueError('Classificação sem obtenção UTC válida.') from error
     if state['estado'] != 'pronto':
         raise ValueError('Aguardando classificação de Austin; nenhuma probabilidade é emitida.')
     if args.fastf1_snapshot:
-        # Enriquecimento opcional: valida somente identidade/contexto. Não entra na matriz v1.
         fastf1_contexto.validar_contexto_emissao(FASTF1_SNAPSHOTS, args.fastf1_snapshot, event)
-    q_endpoint = 'classificacao'
-    q_sources = _fontes(index, {q_endpoint: pages.get(q_endpoint, [])})
-    if not q_sources:
-        raise ValueError('Snapshot não contém proveniência da classificação de Austin.')
-    try:
-        obtained = max(previsao._utc(source['obtido_em_utc']) for source in q_sources)
-    except (KeyError, TypeError, ValueError) as error:
-        raise ValueError('Classificação sem obtenção UTC válida.') from error
+    if q_openf1 is None:
+        try:
+            obtained = max(previsao._utc(source['obtido_em_utc']) for source in q_sources)
+        except (KeyError, TypeError, ValueError) as error:
+            raise ValueError('Classificação sem obtenção UTC válida.') from error
     race_start = '{}T{}'.format(event['date'], event.get('time', ''))
     if not event.get('time'):
         raise ValueError('Austin sem horário de largada UTC; emissão prospectiva bloqueada.')
     now = datetime.now(timezone.utc)
     previsao.validar_prospectivo(race_start, state['referencia_utc'], args.sessao_encerrada_em, obtained, args.corte, now)
+    if any(previsao._utc(source['obtido_em_utc']) < previsao._utc(args.sessao_encerrada_em)
+           or previsao._utc(source['obtido_em_utc']) > previsao._utc(args.corte) for source in q_sources):
+        raise ValueError('Fonte de classificação fora da janela temporal prospectiva.')
     _validar_fontes_prospectivas(pages, (audit or {}).get('fontes_historicas_admitidas', []),
                                  args.sessao_encerrada_em, args.corte)
     git = previsao.codigo_estado(str(ROOT))
@@ -321,6 +372,14 @@ def cmd_emitir(args):
         'emitido_em_utc': previsao._z(emitido), 'git': git,
         'versao_anterior': args.versao_anterior, 'motivo_correcao': args.motivo_correcao,
         'limites': ['Resultados do alvo e posteriores não foram abertos como entradas.']})
+    if q_openf1 is not None:
+        data['fontes'].extend(q_sources)
+        data['qualificacao_alternativa'] = {
+            'origem': q_openf1['origem'], 'normalizacao': q_openf1['normalizacao'],
+            'diretorio': str(Path(args.openf1_diretorio).resolve().relative_to(ROOT)),
+            'session_key': q_openf1['sessao']['session_key'], 'meeting_key': q_openf1['sessao']['meeting_key'],
+            'encerramento_utc': q_openf1['encerramento_utc'],
+        }
     def validar_publicacao():
         atual = datetime.now(timezone.utc)
         previsao.validar_prospectivo(race_start, state['referencia_utc'], args.sessao_encerrada_em,
@@ -363,6 +422,7 @@ def main(argv=None):
     p.add_argument('--versao-anterior')
     p.add_argument('--motivo-correcao')
     p.add_argument('--fastf1-snapshot', help='Enriquecimento opcional FastF1 Q; não substitui a classificação Jolpica.')
+    p.add_argument('--openf1-diretorio', help='Diretório local de Q OpenF1 já preservada; origem explícita, sem simular Jolpica.')
     p.set_defaults(func=cmd_emitir)
     args = parser.parse_args(argv)
     if args.cmd == 'coletar' and args.classificacao_circuito is None:

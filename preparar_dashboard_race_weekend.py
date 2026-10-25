@@ -361,6 +361,21 @@ def _dados_2026(root):
         if temporada != 2026:
             continue
         snapshot = registro['snapshot']
+        if registro.get('origem_qualificacao') == 'openf1':
+            resultados_qualificacao = list(registro.get('registros_qualificacao') or [])
+            fontes_q = list(registro.get('fontes_qualificacao') or [])
+            arquivos_q = list(registro.get('arquivos_qualificacao') or [])
+            if not resultados_qualificacao or not fontes_q or not arquivos_q:
+                raise ValueError('Emissão OpenF1 sem classificação comprovada.')
+            qualificacoes[rodada] = (fontes_q[0], resultados_qualificacao)
+            fontes_qualificacao_por_rodada[rodada] = [source['sha256'] for source in fontes_q]
+            fontes_emissoes.extend(arquivos_q)
+            por_rodada[rodada].update({
+                'estado_qualificacao': 'local_disponivel', 'motivo_qualificacao': None,
+                'fonte_qualificacao_sha256': fontes_q[0]['sha256'],
+                'fontes_qualificacao_sha256': [source['sha256'] for source in fontes_q],
+            })
+            continue
         if snapshot not in snapshots_emissoes:
             _, indice_emissao, fontes_emissao = _fontes_snapshot(root, snapshot)
             snapshots_emissoes[snapshot] = fontes_emissao
