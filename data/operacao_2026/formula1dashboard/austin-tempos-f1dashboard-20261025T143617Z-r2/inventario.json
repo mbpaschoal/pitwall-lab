@@ -1,0 +1,67 @@
+{
+  "base_url": "https://api.formula1dashboard.com",
+  "cobertura": {
+    "completa": true,
+    "por_sessao": {
+      "Practice 1": 22,
+      "Practice 2": 22,
+      "Practice 3": 22,
+      "Qualifying": 22
+    },
+    "results_total": 88
+  },
+  "fontes": [
+    {
+      "arquivo": "grand-prix.json",
+      "bytes": 12516,
+      "endpoint": "grand-prix",
+      "headers_arquivo": "grand-prix.headers.json",
+      "obtido_em_utc": "2026-10-25T14:36:17.431644Z",
+      "sha256": "2a77a1b0125ac618d55167fc75a1bcb37a8cd8c0c20a5405249a0aa374f653c5",
+      "status": 200,
+      "url_real": "https://api.formula1dashboard.com/api/v1/grand-prix?year=2026",
+      "url_solicitada": "https://api.formula1dashboard.com/api/v1/grand-prix?year=2026"
+    },
+    {
+      "arquivo": "sessions.json",
+      "bytes": 8118,
+      "endpoint": "sessions",
+      "headers_arquivo": "sessions.headers.json",
+      "obtido_em_utc": "2026-10-25T14:36:17.507371Z",
+      "sha256": "c03efcdfd0c4ad300df7a18677c88109ceda06d9ea1263f5647f2bb04c6114b4",
+      "status": 200,
+      "url_real": "https://api.formula1dashboard.com/api/v1/sessions?year=2026&meeting_key=1297",
+      "url_solicitada": "https://api.formula1dashboard.com/api/v1/sessions?year=2026&meeting_key=1297"
+    },
+    {
+      "arquivo": "results.json",
+      "bytes": 125262,
+      "endpoint": "results",
+      "headers_arquivo": "results.headers.json",
+      "obtido_em_utc": "2026-10-25T14:36:17.585573Z",
+      "sha256": "f7a9cdce0e8e44c74717f3c27b9edd44e42bc7d13e18200cbc42b1e6c88f8f3f",
+      "status": 200,
+      "url_real": "https://api.formula1dashboard.com/api/v1/results?year=2026&meeting_key=1297&session_type=Practice%201%2CPractice%202%2CPractice%203%2CQualifying",
+      "url_solicitada": "https://api.formula1dashboard.com/api/v1/results?year=2026&meeting_key=1297&session_type=Practice%201%2CPractice%202%2CPractice%203%2CQualifying"
+    }
+  ],
+  "identidade": {
+    "cidade": "Austin",
+    "circuito_id": "americas",
+    "corrida": "United States Grand Prix",
+    "meeting_key": 1297,
+    "rodada": 18,
+    "temporada": 2026
+  },
+  "obtido_em_utc": "2026-10-25T14:36:17.585573Z",
+  "origem": "formula1dashboard",
+  "schema": "pitwall-formula1dashboard-sessions-v1",
+  "sessoes": {
+    "Practice 1": 11389,
+    "Practice 2": 11390,
+    "Practice 3": 11391,
+    "Qualifying": 11392
+  },
+  "snapshot_id": "austin-tempos-f1dashboard-20261025T143617Z-r2",
+  "versao_normalizacao": "formula1dashboard-tempos-v1"
+}

@@ -6,12 +6,13 @@ import json
 from pathlib import Path
 
 from dashboard_dados import carregar_temporada
-from operacao2026 import fontes
+from operacao2026 import fontes, formula1dashboard_tempos
 from registro_emissoes import carregar as carregar_registro_emissoes
 
 
 SNAPSHOT_2026 = 'coleta-20261020T020130Z'
 SNAPSHOT_CLASSIFICACAO_PILOTOS_2026 = 'classificacao-pilotos-20261023T143930Z'
+SNAPSHOT_FORMULA1DASHBOARD_AUSTIN = 'austin-tempos-f1dashboard-20261025T143617Z-r2'
 
 MOTIVO_SEM_RESULTADO = (
     'snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída'
@@ -163,6 +164,46 @@ def _estado_operacao(corrida):
     if corrida['estado_qualificacao'] == 'local_disponivel':
         return 'classificacao_disponivel'
     return 'aguardando_dados'
+
+
+def _tempos_formula1dashboard(root, rodada, previsoes_por_piloto):
+    """Contexto pós-emissão, somente para apresentação; nunca altera o modelo v1."""
+    base = root / 'data' / 'operacao_2026' / 'formula1dashboard' / SNAPSHOT_FORMULA1DASHBOARD_AUSTIN
+    dados = formula1dashboard_tempos.carregar(base)
+    if dados['evento']['rodada'] != rodada or dados['evento']['circuito_id'] != 'americas':
+        raise ValueError('Snapshot Formula1Dashboard associado ao evento incorreto.')
+    sessoes = {}
+    for chave, sessao in dados['sessoes'].items():
+        linhas = []
+        menores_q = {
+            fase: min((item[fase + '_segundos'] for item in sessao['linhas'] if item[fase + '_segundos'] is not None), default=None)
+            for fase in ('q1', 'q2', 'q3')
+        }
+        for original in sessao['linhas']:
+            item = dict(original)
+            piloto = previsoes_por_piloto.get(item['piloto_id']) if item['piloto_id'] else None
+            item['ranking_modelo'] = piloto.get('ranking_modelo') if piloto else None
+            item['probabilidade_modelo'] = piloto.get('probabilidade_modelo') if piloto else None
+            item['motivo_exclusao_comparacao'] = (
+                'substituto de treino sem identidade canônica na previsão do GP'
+                if item['piloto_id'] is None else None
+            )
+            melhor = sessao['menor_tempo_segundos']
+            item['gap_percentual_lider'] = (
+                None if item['tempo_segundos'] is None or melhor is None else 100 * (item['tempo_segundos'] / melhor - 1)
+            )
+            item['gaps_percentuais_fases'] = {
+                fase: None if item[fase + '_segundos'] is None or menores_q[fase] is None else
+                100 * (item[fase + '_segundos'] / menores_q[fase] - 1)
+                for fase in ('q1', 'q2', 'q3')
+            }
+            linhas.append(item)
+        sessoes[chave] = {**sessao, 'linhas': linhas}
+    return {
+        'disponivel': True, 'origem': dados['origem'], 'normalizacao': dados['normalizacao'],
+        'snapshot_id': dados['snapshot_id'], 'evento': dados['evento'], 'sessoes': sessoes,
+        'aviso_modelo': ('Tempos obtidos após a emissão prospectiva; são contexto descritivo e não integraram as 15 entradas do modelo v1.'),
+    }, dados['arquivos']
 
 
 def _participante_da_emissao(rodada, piloto_id, identidade, linha, existente=None, prospectivo=False):
@@ -466,11 +507,24 @@ def _dados_2026(root):
     for corrida in corridas:
         corrida['estado_operacao'] = _estado_operacao(corrida)
     campeonato, fontes_campeonato = _campeonato_pilotos_2026(root)
+    previsoes_austin = {
+        piloto_id: participante for (rodada, piloto_id), participante in previsoes_por_chave.items()
+        if rodada == 18
+    }
+    try:
+        tempos_austin, fontes_tempos = _tempos_formula1dashboard(root, 18, previsoes_austin)
+    except (OSError, ValueError, json.JSONDecodeError) as erro:
+        tempos_austin, fontes_tempos = {
+            'disponivel': False,
+            'motivo': 'Tempos Formula1Dashboard indisponíveis: {}.'.format(erro),
+            'sessoes': {},
+        }, []
     return {
         'corridas': corridas,
         'previsoes': list(previsoes_por_chave.values()),
         'campeonato_pilotos': campeonato,
-    }, identidades, [indice_path, *fontes_emissoes, *fontes_campeonato], {
+        'tempos_sessoes': {'18': tempos_austin},
+    }, identidades, [indice_path, *fontes_emissoes, *fontes_campeonato, *fontes_tempos], {
         **emissao_legada, 'emissoes': emissoes_proveniencia,
     }
 

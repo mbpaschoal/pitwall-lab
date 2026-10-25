@@ -36,6 +36,9 @@ def carregar_asset(raiz):
                 raise RaceWeekendDadosErro('Asset Race Weekend com DriverStandings incompleto.')
     elif not isinstance(campeonato.get('motivo'), str):
         raise RaceWeekendDadosErro('Asset Race Weekend sem motivo de indisponibilidade do campeonato.')
+    tempos_sessoes = dados.get('tempos_sessoes', {})
+    if not isinstance(tempos_sessoes, dict):
+        raise RaceWeekendDadosErro('Asset Race Weekend com tempos de sessão inválidos.')
     chaves_corrida, chaves_previsao = set(), set()
     for corrida in corridas:
         if not isinstance(corrida, dict) or not isinstance(corrida.get('rodada'), int) or corrida['rodada'] < 1:
@@ -117,6 +120,7 @@ def pacote_2026(asset):
         'previsoes': dados.get('previsoes', []),
         'participantes_por_rodada': participantes_por_rodada,
         'campeonato_pilotos': dados['campeonato_pilotos'],
+        'tempos_sessoes': dados.get('tempos_sessoes', {}),
     }
 
 
@@ -132,4 +136,5 @@ def dados_do_gp_2026(pacote, rodada):
         'favoritos_modelo': [item for item in participantes if item['favorito_modelo']],
         'favoritos_classificacao': [item for item in participantes if item['favorito_classificacao']],
         'integrantes_identificados': [item['piloto_id'] for item in participantes if item['podio'] == 1],
+        'tempos_sessoes': pacote.get('tempos_sessoes', {}).get(str(rodada)),
     }

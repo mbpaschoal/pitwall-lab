@@ -20,6 +20,18 @@ RAIZ = Path(__file__).resolve().parents[1]
 
 
 class TestAssetsRaceWeekend(unittest.TestCase):
+    def test_tempos_formula1dashboard_austin_entram_no_asset_com_herta_excluido_da_previsao(self):
+        dados, arquivos = preparar._tempos_formula1dashboard(RAIZ, 18, {
+            'antonelli': {'ranking_modelo': 1, 'probabilidade_modelo': 0.8353690998809116},
+        })
+        self.assertEqual(set(dados['sessoes']), {'TL1', 'TL2', 'TL3', 'Q'})
+        self.assertEqual([dados['sessoes'][chave]['cobertura'] for chave in ('TL1', 'TL2', 'TL3', 'Q')], [22, 22, 22, 22])
+        herta = next(item for item in dados['sessoes']['TL1']['linhas'] if item['numero_carro'] == 25)
+        self.assertEqual(herta['motivo_exclusao_comparacao'], 'substituto de treino sem identidade canônica na previsão do GP')
+        antonelli = next(item for item in dados['sessoes']['Q']['linhas'] if item['piloto_id'] == 'antonelli')
+        self.assertEqual(antonelli['ranking_modelo'], 1)
+        self.assertTrue(arquivos)
+
     def test_emissao_vencem_q_base_divergente_com_paginas_completas(self):
         hashes_q_base = set()
 
