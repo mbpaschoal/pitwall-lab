@@ -150,7 +150,7 @@ def estilo_dashboard():
         @font-face { font-family: LatoLocal; src: url("%s") format("truetype"); font-weight: 400; }
         @font-face { font-family: LatoLocal; src: url("%s") format("truetype"); font-weight: 700; }
         .stApp { background: #F2F6FA; color: #132B4F; font-family: LatoLocal, Arial, sans-serif; }
-        header[data-testid="stHeader"] { display: none; }
+        /* Mantém o cabeçalho nativo: nele está o botão acessível que reabre a barra lateral. */
         .stApp *, [data-testid="stSidebar"] * { font-family: LatoLocal, Arial, sans-serif; }
         [data-testid="stIconMaterial"] { font-family: "Material Symbols Rounded" !important; }
         [data-testid="stSidebar"] { background: #FFFFFF; border-right: 1px solid #D8E0E9; min-width: 15.25rem; max-width: 15.25rem; }
@@ -848,7 +848,7 @@ def tela_como_funciona():
 
 
 def executar_app():
-    st.set_page_config(page_title='Pitwall Lab', layout='wide', initial_sidebar_state='auto')
+    st.set_page_config(page_title='Pitwall Lab', layout='wide', initial_sidebar_state='expanded')
     aplicar_estilo()
     st.sidebar.markdown('<div class="sidebar-title">Pitwall Lab</div>', unsafe_allow_html=True)
     st.sidebar.markdown('<div class="sidebar-caption">Estudo retrospectivo de pódios na Fórmula 1</div>', unsafe_allow_html=True)

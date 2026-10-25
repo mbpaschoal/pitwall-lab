@@ -284,6 +284,12 @@ class TestDashboardApp(unittest.TestCase):
         self.assertTrue((RAIZ / 'dashboard_assets/fonts/abrilfatface.ttf').is_file())
         self.assertTrue((RAIZ / 'dashboard_assets/fonts/lato.ttf').is_file())
 
+    def test_menu_lateral_mantem_cabecalho_nativo_e_abre_expandido(self):
+        codigo = (RAIZ / 'app.py').read_text(encoding='utf-8')
+        css = app.estilo_dashboard()
+        self.assertIn("initial_sidebar_state='expanded'", codigo)
+        self.assertNotIn('header[data-testid="stHeader"] { display: none; }', css)
+
     def test_corridas_austin_exibe_contexto_programacao_e_estado_aguardando_dados(self):
         self.executar()
         self.escolher('temporada', 2026)
