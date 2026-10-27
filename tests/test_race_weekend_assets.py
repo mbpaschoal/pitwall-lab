@@ -2,6 +2,7 @@
 import hashlib
 import json
 import os
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -334,7 +335,7 @@ class TestAssetsRaceWeekend(unittest.TestCase):
         corrida = next(item for item in dados['corridas'] if item['rodada'] == 18)
         participantes = {item['piloto_id']: item for item in dados['previsoes'] if item['rodada'] == 18}
         self.assertEqual(corrida['estado_resultado'], 'indisponivel')
-        self.assertIn('resultado posterior rejeitado: proveniência temporal/identidade', corrida['motivo_resultado'])
+        self.assertIn('resultado rejeitado: proveniência temporal do resultado posterior inválida', corrida['motivo_resultado'])
         self.assertEqual(set(participantes), {'a', 'b', 'c'})
         self.assertTrue(all(item['resultado_observado'] is None for item in participantes.values()))
         self.assertTrue(all(item['status_resultado'] is None for item in participantes.values()))
@@ -414,8 +415,8 @@ class TestAssetsRaceWeekend(unittest.TestCase):
         self.assertEqual(asset['identidades']['2024:1:max_verstappen']['piloto'], 'Max Verstappen')
         corrida_2026 = {item['rodada']: item for item in asset['dados_2026']['corridas']}
         self.assertEqual(len(corrida_2026), 23)
-        self.assertEqual(corrida_2026[1]['estado_resultado'], 'indisponivel')
-        self.assertEqual(corrida_2026[17]['estado_resultado'], 'indisponivel')
+        self.assertEqual(corrida_2026[1]['estado_resultado'], 'observado_local')
+        self.assertEqual(corrida_2026[17]['estado_resultado'], 'observado_local')
         self.assertEqual(corrida_2026[17]['estado_previsao'], 'ensaio_retrospectivo')
         self.assertEqual(corrida_2026[17]['estado_operacao'], 'ensaio_retrospectivo')
         self.assertEqual(corrida_2026[1]['estado_operacao'], 'ensaio_retrospectivo')
@@ -433,8 +434,8 @@ class TestAssetsRaceWeekend(unittest.TestCase):
         self.assertEqual(singapura[0]['piloto'], 'Max Verstappen')
         self.assertEqual(singapura[0]['equipe_id'], 'red_bull')
         observados = [item for item in asset['dados_2026']['previsoes'] if item['resultado_observado'] is not None]
-        self.assertEqual(len(observados), 22)
-        self.assertEqual(len({(item['temporada'], item['rodada'], item['piloto_id']) for item in observados}), 22)
+        self.assertEqual(len(observados), 396)
+        self.assertEqual(len({(item['temporada'], item['rodada'], item['piloto_id']) for item in observados}), 396)
         ausentes_classificacao = {(item['rodada'], item['piloto_id']) for item in asset['dados_2026']['previsoes']
                                   if item['probabilidade_modelo'] is None}
         self.assertEqual(ausentes_classificacao, {(1, 'max_verstappen'), (1, 'sainz'), (1, 'stroll'),
@@ -443,7 +444,7 @@ class TestAssetsRaceWeekend(unittest.TestCase):
             if (item['rodada'], item['piloto_id']) in ausentes_classificacao:
                 self.assertIn('classificação capturada', item['motivos_inelegibilidade'])
         self.assertEqual(sum(item['probabilidade_modelo'] is not None for item in singapura), 22)
-        self.assertTrue(all(item['resultado_observado'] is None for item in singapura))
+        self.assertTrue(all(item['resultado_observado'] is not None for item in singapura))
         self.assertEqual(asset['proveniencia']['emissao']['modo'], 'ENSAIO_RETROSPECTIVO')
         self.assertEqual(
             asset['proveniencia']['emissao']['hashes_saidas']['probabilidades.csv'],
@@ -458,15 +459,36 @@ class TestAssetsRaceWeekend(unittest.TestCase):
             asset = preparar.gerar(RAIZ, Path(tmp) / 'race_weekend.json')
         campeonato = asset['dados_2026']['campeonato_pilotos']
         self.assertTrue(campeonato['disponivel'])
-        self.assertEqual(campeonato['snapshot_id'], 'austin-pos-corrida-20261026T111018Z-r2')
+        self.assertEqual(campeonato['snapshot_id'], 'austin-pos-corrida-20261026T111018Z-r2:classificacao_pilotos')
         self.assertEqual(campeonato['rodada_referencia'], 18)
         self.assertEqual(campeonato['paginas_validadas'], 1)
+        self.assertEqual(len(campeonato['classificacao']), 23)
         self.assertIn('/2026/18/driverstandings/', campeonato['url_base'])
         max_verstappen = next(item for item in campeonato['classificacao'] if item['piloto_id'] == 'max_verstappen')
         self.assertEqual(max_verstappen['posicao'], 4)
         self.assertEqual(max_verstappen['pontos'], 236.0)
         self.assertEqual(max_verstappen['vitorias'], 2)
         self.assertIsInstance(campeonato['classificacao'][0]['pontos'], float)
+
+    def test_campeonato_pos_austin_recusa_total_que_nao_bate_com_registros(self):
+        origem = RAIZ / 'data/operacao_2026/pos_corrida/austin-20261026T111018Z'
+        with tempfile.TemporaryDirectory() as tmp:
+            destino = Path(tmp) / 'data/operacao_2026/pos_corrida/austin-20261026T111018Z'
+            destino.parent.mkdir(parents=True)
+            shutil.copytree(origem, destino)
+            inventario_path = destino / 'inventario.json'
+            inventario = json.loads(inventario_path.read_text(encoding='utf-8'))
+            fonte = next(item for item in inventario['fontes'] if item['endpoint'] == 'classificacao_pilotos')
+            raw_path = destino / fonte['arquivo']
+            bruto = json.loads(raw_path.read_text(encoding='utf-8'))
+            bruto['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings'].pop()
+            serializado = json.dumps(bruto, separators=(',', ':')).encode('utf-8')
+            raw_path.write_bytes(serializado)
+            fonte['sha256'] = hashlib.sha256(serializado).hexdigest()
+            inventario_path.write_text(json.dumps(inventario), encoding='utf-8')
+            campeonato, _ = preparar._campeonato_pilotos_2026(Path(tmp))
+        self.assertFalse(campeonato['disponivel'])
+        self.assertIn('incompleta', campeonato['motivo'])
 
     def test_campeonato_incompleto_fica_indisponivel_sem_somar_resultados(self):
         with tempfile.TemporaryDirectory() as tmp:

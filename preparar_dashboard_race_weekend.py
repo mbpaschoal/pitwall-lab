@@ -233,24 +233,74 @@ def _participante_da_emissao(rodada, piloto_id, identidade, linha, existente=Non
 
 
 def _campeonato_pilotos_2026(root):
-    """Lê exclusivamente o snapshot paginado de DriverStandings da Jolpica."""
+    """Lê DriverStandings pós-Austin somente após validar o inventário paginado."""
     inventario_path = root / 'data/operacao_2026/pos_corrida/austin-20261026T111018Z/inventario.json'
     if inventario_path.is_file():
         try:
-            inventario=_json(inventario_path)
-            if inventario.get('schema') != 'pitwall-pos-corrida-austin-captura-v1': raise ValueError('schema pós-corrida inválido')
-            fonte=next(x for x in inventario['fontes'] if x.get('endpoint')=='classificacao_pilotos')
-            raw=inventario_path.parent/fonte['arquivo']
-            if _sha256(raw)!=fonte['sha256']: raise ValueError('hash pós-corrida divergente')
-            lista=_json(raw)['MRData']['StandingsTable']['StandingsLists']
-            if len(lista)!=1 or int(_json(raw)['MRData']['StandingsTable']['round'])!=18: raise ValueError('rodada pós-corrida divergente')
-            itens=[]
-            for item in lista[0]['DriverStandings']:
-                piloto=item['Driver']; equipes=item.get('Constructors',[])
-                itens.append({'posicao':int(item['position']),'pontos':float(item['points']),'vitorias':int(item['wins']),'piloto_id':piloto['driverId'],'piloto':_nome(piloto),'equipe':' / '.join(x['name'] for x in equipes) or None})
-            return {'disponivel':True,'snapshot_id':'austin-pos-corrida-20261026T111018Z-r2','rodada_referencia':18,'obtido_em_utc':fonte['obtido_em_utc'],'paginas_validadas':1,'url_base':fonte['url_real'],'escopo':'DriverStandings pós-Austin da Jolpica-F1, separado das probabilidades por GP.','classificacao':sorted(itens,key=lambda x:(x['posicao'],x['piloto_id']))}, [inventario_path,raw]
-        except (KeyError,StopIteration,OSError,ValueError,json.JSONDecodeError) as erro:
-            return {'disponivel':False,'motivo':'Classificação pós-Austin indisponível: {}.'.format(erro),'classificacao':[]},[inventario_path]
+            inventario = _json(inventario_path)
+            identidade = inventario['identidade']
+            if (inventario.get('schema') != 'pitwall-pos-corrida-austin-captura-v1'
+                    or inventario.get('estado') != 'coleta_concluida'
+                    or identidade != {'temporada': 2026, 'rodada': 18, 'circuito_id': 'americas', 'data': '2026-10-25'}):
+                raise ValueError('inventário pós-corrida inválido')
+            metadados_endpoint = inventario['endpoints']['classificacao_pilotos']
+            if metadados_endpoint.get('estado') != 'completo':
+                raise ValueError('classificação pós-Austin incompleta no inventário')
+            fontes_driver = [item for item in inventario['fontes'] if item.get('endpoint') == 'classificacao_pilotos']
+            if not fontes_driver:
+                raise ValueError('fonte DriverStandings pós-Austin ausente')
+            por_offset, standings, arquivos = {}, [], [inventario_path]
+            total_esperado = int(metadados_endpoint['total'])
+            limite = None
+            for fonte in fontes_driver:
+                if (fonte.get('status') != 200 or fonte.get('origem') != 'rede'
+                        or not str(fonte.get('url_real', '')).startswith('https://api.jolpi.ca/ergast/f1/2026/18/driverstandings/')
+                        or _utc(fonte['obtido_em_utc']) > _utc(inventario['encerrado_em_utc'])):
+                    raise ValueError('proveniência DriverStandings pós-Austin inválida')
+                offset, limite_pagina = int(fonte['parametros']['offset']), int(fonte['parametros']['limit'])
+                if offset in por_offset or limite_pagina <= 0:
+                    raise ValueError('offset DriverStandings pós-Austin duplicado ou inválido')
+                if limite is None:
+                    limite = limite_pagina
+                elif limite != limite_pagina:
+                    raise ValueError('limite DriverStandings pós-Austin divergente')
+                raw = inventario_path.parent / fonte['arquivo']
+                if _sha256(raw) != fonte['sha256']:
+                    raise ValueError('hash pós-corrida divergente')
+                dados = _json(raw)['MRData']
+                tabela = dados['StandingsTable']
+                if (int(dados['limit']) != limite_pagina or int(dados['offset']) != offset
+                        or int(dados['total']) != total_esperado or str(tabela['season']) != '2026'
+                        or int(tabela['round']) != 18):
+                    raise ValueError('metadados DriverStandings pós-Austin divergentes')
+                listas = tabela['StandingsLists']
+                if len(listas) != 1 or str(listas[0]['season']) != '2026' or int(listas[0]['round']) != 18:
+                    raise ValueError('identidade DriverStandings pós-Austin divergente')
+                por_offset[offset] = fonte
+                standings.extend(listas[0].get('DriverStandings', []))
+                arquivos.append(raw)
+            if (limite is None or set(por_offset) != set(range(0, total_esperado, limite))
+                    or len(standings) != total_esperado
+                    or len({item['Driver']['driverId'] for item in standings}) != total_esperado):
+                raise ValueError('classificação pós-Austin incompleta ou duplicada')
+            itens = []
+            for item in standings:
+                piloto, equipes = item['Driver'], item.get('Constructors', [])
+                itens.append({
+                    'posicao': int(item['position']), 'pontos': float(item['points']),
+                    'vitorias': int(item['wins']), 'piloto_id': piloto['driverId'],
+                    'piloto': _nome(piloto), 'equipe': ' / '.join(x['name'] for x in equipes) or None,
+                })
+            return {
+                'disponivel': True,
+                'snapshot_id': '{}:classificacao_pilotos'.format(inventario['snapshot_canonico']),
+                'rodada_referencia': 18, 'obtido_em_utc': max(item['obtido_em_utc'] for item in fontes_driver),
+                'paginas_validadas': len(por_offset), 'url_base': por_offset[min(por_offset)]['url_real'],
+                'escopo': 'DriverStandings pós-Austin da Jolpica-F1, derivado do inventário paginado separado das probabilidades por GP.',
+                'classificacao': sorted(itens, key=lambda x: (x['posicao'], x['piloto_id'])),
+            }, arquivos
+        except (KeyError, OSError, TypeError, ValueError, json.JSONDecodeError) as erro:
+            return {'disponivel': False, 'motivo': 'Classificação pós-Austin indisponível: {}.'.format(erro), 'classificacao': []}, [inventario_path]
     base = root / 'data' / 'operacao_2026' / 'snapshots' / SNAPSHOT_CLASSIFICACAO_PILOTOS_2026
     indice_path = base / 'indice.json'
     try:
@@ -483,16 +533,35 @@ def _dados_2026(root):
 
         if corrida['estado_resultado'] == 'observado_local':
             try:
-                if (corrida.get('resultado_circuito_id') != circuito_id or corrida.get('resultado_data_fonte') != corrida['data']
-                    or _utc(corrida['resultado_obtido_em_utc']) <= _utc(registro['emitido_em_utc'])
-                    or _utc(corrida['resultado_obtido_em_utc']) <= datetime.combine(datetime.fromisoformat(corrida['data']).date(), datetime.min.time(), timezone.utc)):
-                    raise ValueError('proveniência temporal/identidade do resultado posterior inválida')
+                identidade_resultado_valida = (
+                    corrida.get('resultado_circuito_id') == circuito_id
+                    and corrida.get('resultado_data_fonte') == corrida['data']
+                    and isinstance(corrida.get('fonte_resultado_sha256'), str)
+                    and corrida['fonte_resultado_sha256']
+                )
+                obtido_resultado = _utc(corrida['resultado_obtido_em_utc'])
+                if not identidade_resultado_valida:
+                    raise ValueError('identidade/proveniência do resultado inválida')
+                if registro['modo'] == 'PROSPECTIVO' and (
+                    obtido_resultado <= _utc(registro['emitido_em_utc'])
+                    or obtido_resultado <= datetime.combine(
+                        datetime.fromisoformat(corrida['data']).date(), datetime.min.time(), timezone.utc,
+                    )
+                ):
+                    raise ValueError('proveniência temporal do resultado posterior inválida')
             except (KeyError, TypeError, ValueError) as erro:
-                corrida.update({'estado_resultado':'indisponivel','motivo_resultado':'resultado posterior rejeitado: {}'.format(erro),'fonte_resultado_sha256':None, 'resultado_posterior_validado':False})
-                for (rodada_item,_), participante in previsoes_por_chave.items():
-                    if rodada_item==rodada: participante.update({'resultado_observado':None,'status_resultado':None,'podio':None})
+                corrida.update({
+                    'estado_resultado': 'indisponivel',
+                    'motivo_resultado': 'resultado rejeitado: {}'.format(erro),
+                    'fonte_resultado_sha256': None,
+                    'resultado_posterior_validado': False,
+                })
+                for (rodada_item, _), participante in previsoes_por_chave.items():
+                    if rodada_item == rodada:
+                        participante.update({'resultado_observado': None, 'status_resultado': None, 'podio': None})
             else:
-                corrida['resultado_posterior_validado'] = True
+                # O selo só serve à auditoria posterior de uma emissão prospectiva.
+                corrida['resultado_posterior_validado'] = registro['modo'] == 'PROSPECTIVO'
 
         if corrida['circuito_id'] != circuito_id:
             raise ValueError('Emissão associada ao circuito incorreto para a rodada {}.'.format(rodada))
