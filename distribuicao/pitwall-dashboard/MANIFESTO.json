@@ -61,8 +61,8 @@
       "fonte": "app.py",
       "modo": "gerado",
       "nota": "viewer offline inserido na UI Race Weekend do working tree",
-      "sha256_destino": "5a9b36da4d677c8be0e731ffc33d7c67a6cb193d9ea9f9b15bb5f814c62c2892",
-      "sha256_origem": "206a9c8972d851518ce0dd7fe3a6f97cb924d38422eee9b12d86b2b78ae341b2"
+      "sha256_destino": "7da60a00f8ea8ffd08e6c59654c8919e7a1ad300acc53a5314ddf142b3c2caef",
+      "sha256_origem": "6cc495460c6e6ed2dbbe0d8b6301c634321476a7b05740bf3ac16dd975cd3a9b"
     },
     {
       "caminho": "catalogo_visual.py",
@@ -552,15 +552,15 @@
       "caminho": "frontend_assets/race_weekend.json",
       "fonte": "frontend_assets/race_weekend.json",
       "modo": "copia",
-      "sha256_destino": "8411fd00cde73e3af7dfe6124fea504ab0b724cf4ef14b908a63cd4eaa9f1865",
-      "sha256_origem": "8411fd00cde73e3af7dfe6124fea504ab0b724cf4ef14b908a63cd4eaa9f1865"
+      "sha256_destino": "335284cbd2d5165c64e3628392905707e52d6a8295b9add5e9b79eda8f0180fb",
+      "sha256_origem": "335284cbd2d5165c64e3628392905707e52d6a8295b9add5e9b79eda8f0180fb"
     },
     {
       "caminho": "race_weekend_dados.py",
       "fonte": "race_weekend_dados.py",
       "modo": "copia",
-      "sha256_destino": "1166d9d207d619e63f2e7f728be568f8e1b78196f1df7539e82b5c064ed97e16",
-      "sha256_origem": "1166d9d207d619e63f2e7f728be568f8e1b78196f1df7539e82b5c064ed97e16"
+      "sha256_destino": "65bff8bc63cef0a62d6461e97add459c7c4cbdace43ba9102e3980d6ea0dbb19",
+      "sha256_origem": "65bff8bc63cef0a62d6461e97add459c7c4cbdace43ba9102e3980d6ea0dbb19"
     },
     {
       "caminho": "registro_emissoes.py",
@@ -651,8 +651,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "f2ea5f4ad4a6ff053d3e1e9d35f570eae77464d668ba0f3aa31b667d2922e388",
-      "sha256_origem": "30f36acbda23509b24454f81a92d4a20901c602b748f86129031b3f3ac320f5e"
+      "sha256_destino": "7150337156f5059acac5385be06c4a5ff4cc8d74a12fc947203c4e5b36b9e325",
+      "sha256_origem": "8a9295cffe62f6e6c35b079d288bd6545745a497156b89eec8d8556205ef58d5"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -669,8 +669,8 @@
       "sha256_origem": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012"
     }
   ],
-  "commit_origem": "128e272636d336ec2c95d324edca2e98df37685b",
-  "data_referencia_reprodutivel_utc": "2026-10-25T14:46:21+00:00",
+  "commit_origem": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
+  "data_referencia_reprodutivel_utc": "2026-10-18T18:34:52+00:00",
   "fontes_cientificas": [
     "reports/modelo_v1/previsoes_validacao.csv",
     "reports/modelo_v1/avaliacao_corridas.csv",

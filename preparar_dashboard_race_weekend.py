@@ -3,6 +3,7 @@ import argparse
 import csv
 import hashlib
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 from dashboard_dados import carregar_temporada
@@ -10,7 +11,7 @@ from operacao2026 import fontes, formula1dashboard_tempos
 from registro_emissoes import carregar as carregar_registro_emissoes
 
 
-SNAPSHOT_2026 = 'coleta-20261020T020130Z'
+SNAPSHOT_2026 = 'austin-pos-corrida-20261026T111018Z-r2'
 SNAPSHOT_CLASSIFICACAO_PILOTOS_2026 = 'classificacao-pilotos-20261023T143930Z'
 SNAPSHOT_FORMULA1DASHBOARD_AUSTIN = 'austin-tempos-f1dashboard-20261025T143617Z-r2'
 
@@ -25,6 +26,11 @@ def _sha256(path):
 
 def _json(path):
     return json.loads(path.read_text(encoding='utf-8'))
+
+def _utc(valor):
+    if not isinstance(valor, str) or not valor.endswith('Z'):
+        raise ValueError('UTC sem sufixo Z')
+    return datetime.fromisoformat(valor.replace('Z','+00:00')).astimezone(timezone.utc)
 
 
 def _nome(driver):
@@ -150,6 +156,8 @@ def _corrida_base(event):
         'motivo_qualificacao': 'snapshot local de classificação ausente',
         'motivo_previsao': 'não há previsão registrada local válida para este GP',
         'motivo_resultado': MOTIVO_SEM_RESULTADO,
+        'resultado_posterior_validado': False,
+        'participantes_esperados_previsao': None,
     }
 
 
@@ -226,6 +234,23 @@ def _participante_da_emissao(rodada, piloto_id, identidade, linha, existente=Non
 
 def _campeonato_pilotos_2026(root):
     """Lê exclusivamente o snapshot paginado de DriverStandings da Jolpica."""
+    inventario_path = root / 'data/operacao_2026/pos_corrida/austin-20261026T111018Z/inventario.json'
+    if inventario_path.is_file():
+        try:
+            inventario=_json(inventario_path)
+            if inventario.get('schema') != 'pitwall-pos-corrida-austin-captura-v1': raise ValueError('schema pós-corrida inválido')
+            fonte=next(x for x in inventario['fontes'] if x.get('endpoint')=='classificacao_pilotos')
+            raw=inventario_path.parent/fonte['arquivo']
+            if _sha256(raw)!=fonte['sha256']: raise ValueError('hash pós-corrida divergente')
+            lista=_json(raw)['MRData']['StandingsTable']['StandingsLists']
+            if len(lista)!=1 or int(_json(raw)['MRData']['StandingsTable']['round'])!=18: raise ValueError('rodada pós-corrida divergente')
+            itens=[]
+            for item in lista[0]['DriverStandings']:
+                piloto=item['Driver']; equipes=item.get('Constructors',[])
+                itens.append({'posicao':int(item['position']),'pontos':float(item['points']),'vitorias':int(item['wins']),'piloto_id':piloto['driverId'],'piloto':_nome(piloto),'equipe':' / '.join(x['name'] for x in equipes) or None})
+            return {'disponivel':True,'snapshot_id':'austin-pos-corrida-20261026T111018Z-r2','rodada_referencia':18,'obtido_em_utc':fonte['obtido_em_utc'],'paginas_validadas':1,'url_base':fonte['url_real'],'escopo':'DriverStandings pós-Austin da Jolpica-F1, separado das probabilidades por GP.','classificacao':sorted(itens,key=lambda x:(x['posicao'],x['piloto_id']))}, [inventario_path,raw]
+        except (KeyError,StopIteration,OSError,ValueError,json.JSONDecodeError) as erro:
+            return {'disponivel':False,'motivo':'Classificação pós-Austin indisponível: {}.'.format(erro),'classificacao':[]},[inventario_path]
     base = root / 'data' / 'operacao_2026' / 'snapshots' / SNAPSHOT_CLASSIFICACAO_PILOTOS_2026
     indice_path = base / 'indice.json'
     try:
@@ -331,6 +356,9 @@ def _dados_2026(root):
                     'estado_resultado': 'observado_local',
                     'motivo_resultado': None,
                     'fonte_resultado_sha256': source['sha256'],
+                    'resultado_obtido_em_utc': source.get('obtido_em_utc'),
+                    'resultado_data_fonte': result.get('date'),
+                    'resultado_circuito_id': result.get('Circuit', {}).get('circuitId'),
                 })
                 for entry in result['Results']:
                     driver = entry['Driver']
@@ -451,12 +479,21 @@ def _dados_2026(root):
         qual_source, qualificacao = qualificacoes[rodada]
         pilotos_qualificacao = {item['Driver']['driverId']: item for item in qualificacao}
         corrida = por_rodada[rodada]
-        if registro['modo'] == 'PROSPECTIVO':
-            corrida.update({'estado_resultado': 'indisponivel', 'motivo_resultado': MOTIVO_SEM_RESULTADO,
-                            'fonte_resultado_sha256': None})
-            for (rodada_item, _), participante_existente in previsoes_por_chave.items():
-                if rodada_item == rodada:
-                    participante_existente.update({'resultado_observado': None, 'status_resultado': None, 'podio': None})
+        corrida['participantes_esperados_previsao'] = sorted(pilotos_qualificacao)
+
+        if corrida['estado_resultado'] == 'observado_local':
+            try:
+                if (corrida.get('resultado_circuito_id') != circuito_id or corrida.get('resultado_data_fonte') != corrida['data']
+                    or _utc(corrida['resultado_obtido_em_utc']) <= _utc(registro['emitido_em_utc'])
+                    or _utc(corrida['resultado_obtido_em_utc']) <= datetime.combine(datetime.fromisoformat(corrida['data']).date(), datetime.min.time(), timezone.utc)):
+                    raise ValueError('proveniência temporal/identidade do resultado posterior inválida')
+            except (KeyError, TypeError, ValueError) as erro:
+                corrida.update({'estado_resultado':'indisponivel','motivo_resultado':'resultado posterior rejeitado: {}'.format(erro),'fonte_resultado_sha256':None, 'resultado_posterior_validado':False})
+                for (rodada_item,_), participante in previsoes_por_chave.items():
+                    if rodada_item==rodada: participante.update({'resultado_observado':None,'status_resultado':None,'podio':None})
+            else:
+                corrida['resultado_posterior_validado'] = True
+
         if corrida['circuito_id'] != circuito_id:
             raise ValueError('Emissão associada ao circuito incorreto para a rodada {}.'.format(rodada))
         estado = 'previsao_registrada' if registro['modo'] == 'PROSPECTIVO' else 'ensaio_retrospectivo'
@@ -482,7 +519,7 @@ def _dados_2026(root):
                 chave = (rodada, piloto_id)
                 participante = _participante_da_emissao(
                     rodada, piloto_id, identidade, row, previsoes_por_chave.get(chave),
-                    prospectivo=(registro['modo'] == 'PROSPECTIVO'),
+                    prospectivo=False,
                 )
                 participante['modo_previsao'] = estado
                 previsoes_por_chave[chave] = participante

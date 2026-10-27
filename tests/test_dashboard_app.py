@@ -224,7 +224,7 @@ class TestDashboardApp(unittest.TestCase):
     def test_2026_abre_no_ultimo_gp_observado_com_nomes_equipes_e_resultado(self):
         self.executar()
         self.escolher('temporada', 2026)
-        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:17')
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:18')
         texto = texto_renderizado(self.at)
         self.assertIn('Max Verstappen', texto)
         self.assertIn('Red Bull', texto)
@@ -235,8 +235,8 @@ class TestDashboardApp(unittest.TestCase):
         self.executar()
         self.escolher('temporada', 2026)
         texto = texto_renderizado(self.at)
-        self.assertIn('Integrantes identificados na base, sem ordem:', texto)
-        self.assertIn('não há avaliação prospectiva oficial ou anual', texto.lower())
+        self.assertIn('Integrantes do pódio observado (sem ordem):', texto)
+        self.assertIn('avaliação posterior desta previsão registrada', texto.lower())
         self.assertNotIn('O campo de pódio por GP fica vazio nesta cobertura', texto)
 
     def test_2026_separa_campeonato_local_das_probabilidades_do_gp(self):
@@ -246,7 +246,7 @@ class TestDashboardApp(unittest.TestCase):
         self.executar()
         texto = texto_renderizado(self.at)
         self.assertIn('Classificação de pilotos 2026', texto)
-        self.assertIn('Rodada de referência: 17', texto)
+        self.assertIn('Rodada de referência: 18', texto)
         self.assertIn('DriverStandings Jolpica-F1, separado das probabilidades por GP.', texto)
         campeonato = app.carregar(2026)['campeonato_pilotos']
         self.assertIn('Vitórias', app.tabela_campeonato_pilotos(campeonato).columns)
@@ -258,7 +258,7 @@ class TestDashboardApp(unittest.TestCase):
             app.renderizar_campeonato_pilotos({'campeonato_pilotos': campeonato})
         tabela = st_local.dataframe.call_args.args[0]
         max_verstappen = tabela[tabela['Piloto'] == 'Max Verstappen'].iloc[0]
-        self.assertEqual((max_verstappen['Posição'], max_verstappen['Pontos'], max_verstappen['Vitórias']), (4, 221.0, 2))
+        self.assertEqual((max_verstappen['Posição'], max_verstappen['Pontos'], max_verstappen['Vitórias']), (4, 236.0, 2))
         self.assertNotIn('Probabilidade de pódio', tabela.columns)
 
     def test_renderizar_campeonato_schema_ausente_mostra_indisponibilidade_sem_traceback(self):
@@ -278,8 +278,21 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('Austin, USA · 2026-10-25', texto)
         self.assertIn('Previsão registrada', texto)
         self.assertIn('Favoritos por ranking publicado', texto)
-        self.assertIn('Kimi Antonelli · Mercedes · 83.5%', texto)
+        self.assertIn('Andrea Kimi Antonelli · Mercedes · 83.5%', texto)
+        self.assertIn('Previsão registrada antes da corrida.', texto)
+        self.assertNotIn('Estudo retrospectivo com dados históricos.', texto)
         self.assertNotIn('Max Verstappen · Red Bull · 76.0%', texto)
+
+        pacote = app.carregar(2026)
+        identidade_fonte = pacote['asset_race_weekend']['identidades']['2026:18:antonelli']
+        self.assertEqual(identidade_fonte['piloto'], 'Kimi Antonelli')
+        figura = app.grafico_probabilidades(pacote, app.dados_do_gp_2026(pacote, 18)['participantes'])
+        self.assertIn('Andrea Kimi Antonelli', figura.data[0].y)
+
+        self.escolher('gp', '2026:17')
+        texto = texto_renderizado(self.at)
+        self.assertIn('Estudo retrospectivo com dados históricos.', texto)
+        self.assertNotIn('Previsão registrada antes da corrida.', texto)
 
     def test_visual_editorial_usa_fontes_locais_abril_e_lato_sem_gradiente(self):
         css = app.estilo_dashboard()
@@ -328,7 +341,9 @@ class TestDashboardApp(unittest.TestCase):
             self.assertIn(aba, codigo)
         self.assertIn('Dados meteorológicos indisponíveis no snapshot local.', texto)
         self.assertIn('Previsão registrada', texto)
-        self.assertIn('Kimi Antonelli · Mercedes · 83.5%', texto)
+        self.assertIn('Andrea Kimi Antonelli · Mercedes · 83.5%', texto)
+        self.assertIn('Previsão registrada antes da corrida.', texto)
+        self.assertNotIn('Estudo retrospectivo com dados históricos.', texto)
 
         css = app.estilo_dashboard()
         self.assertIn('gp-cabecalho', css)
@@ -401,23 +416,23 @@ class TestDashboardApp(unittest.TestCase):
     def test_corridas_e_previsoes_priorizam_blocos_distintos_sem_trocar_o_gp(self):
         self.executar()
         self.escolher('temporada', 2026)
-        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:17')
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:18')
         corridas = texto_renderizado(self.at)
         self.assertIn('Contexto do GP e resultado observado', corridas)
         self.assertLess(corridas.index('Resultados observados'), corridas.index('Modelo e referências'))
-        self.assertIn('ensaio retrospectivo', corridas.lower())
+        self.assertIn('previsão registrada', corridas.lower())
 
         por_chave(self.at.get('radio'), 'tela').set_value('Previsões')
         self.executar()
         previsoes = texto_renderizado(self.at)
-        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:17')
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:18')
         self.assertIn('Probabilidades e estado da previsão', previsoes)
         self.assertLess(previsoes.index('Modelo e referências'), previsoes.index('Resultados observados'))
-        self.assertIn('ensaio retrospectivo', previsoes.lower())
+        self.assertIn('previsão registrada', previsoes.lower())
 
         self.escolher('gp', '2026:18')
         self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:18')
-        self.assertIn('N/A — não avaliável', texto_renderizado(self.at))
+        self.assertIn('Avaliação posterior desta previsão registrada', texto_renderizado(self.at))
 
     def test_metricas_json_com_numero_em_texto_exibe_erro_util_sem_traceback(self):
         caminho = self.raiz / 'reports/avaliacao_final_v1/metricas.json'

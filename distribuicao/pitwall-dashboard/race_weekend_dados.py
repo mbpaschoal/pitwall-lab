@@ -1,10 +1,69 @@
 """Adaptador somente leitura do asset Race Weekend gerado offline."""
 import json
+import math
 from pathlib import Path
 
 
 class RaceWeekendDadosErro(ValueError):
     pass
+
+def _nao_avaliavel(motivo, podio=None):
+    return {
+        'avaliavel_ranking': False, 'motivo': motivo, 'podio_observado': podio or [],
+        'acertos_modelo': None, 'acertos_classificacao': None,
+    }
+
+
+def _inteiro_positivo(valor):
+    return isinstance(valor, int) and not isinstance(valor, bool) and valor > 0
+
+
+def avaliar_previsao_registrada(
+    modo, participantes, *, populacao_esperada=None,
+    estado_resultado='observado_local', resultado_validado=True,
+):
+    """Audita uma emissão registrada sem modificar probabilidades ou o ensaio histórico."""
+    if modo != 'previsao_registrada':
+        return _nao_avaliavel('ensaio_retrospectivo_ou_sem_previsao_registrada')
+    if estado_resultado != 'observado_local' or resultado_validado is not True:
+        return _nao_avaliavel('resultado_posterior_nao_validado')
+    ids = [item.get('piloto_id') for item in participantes]
+    if not ids or any(not isinstance(piloto_id, str) or not piloto_id for piloto_id in ids) or len(set(ids)) != len(ids):
+        return _nao_avaliavel('participantes_invalidos_ou_duplicados')
+    elegiveis = [item for item in participantes if item.get('elegivel_previsao') is True]
+    esperada = set(populacao_esperada) if populacao_esperada is not None else set(ids)
+    if (len(elegiveis) < 3 or len(elegiveis) != len(participantes)
+            or set(ids) != esperada or any(not isinstance(x, str) or not x for x in esperada)):
+        return _nao_avaliavel('cobertura_elegivel_incompleta')
+    if any(item.get('resultado_observado') is None for item in participantes):
+        return _nao_avaliavel('resultado_posterior_ausente')
+    posicoes = [item.get('resultado_observado') for item in participantes]
+    if any(not _inteiro_positivo(posicao) for posicao in posicoes) or len(set(posicoes)) != len(posicoes):
+        return _nao_avaliavel('resultado_posterior_invalido')
+    podio = [item['piloto_id'] for item in participantes if item['resultado_observado'] in (1, 2, 3)]
+    if {item['resultado_observado'] for item in participantes if item['resultado_observado'] in (1, 2, 3)} != {1, 2, 3}:
+        return _nao_avaliavel('podio_posterior_incompleto')
+    for item in elegiveis:
+        probabilidade = item.get('probabilidade_modelo')
+        if (not isinstance(probabilidade, (int, float)) or isinstance(probabilidade, bool)
+                or not math.isfinite(probabilidade) or not 0 <= probabilidade <= 1):
+            return _nao_avaliavel('probabilidade_publicada_invalida', podio)
+    rankings = ('ranking_modelo', 'ranking_classificacao')
+    if any(
+        any(not _inteiro_positivo(item.get(campo)) for item in elegiveis)
+        or {item[campo] for item in elegiveis if item[campo] in (1, 2, 3)} != {1, 2, 3}
+        for campo in rankings
+    ):
+        return _nao_avaliavel('ranking_publicado_invalido', podio)
+    favoritos_modelo = {item['piloto_id'] for item in elegiveis if item['ranking_modelo'] in (1, 2, 3)}
+    favoritos_q = {item['piloto_id'] for item in elegiveis if item['ranking_classificacao'] in (1, 2, 3)}
+    if len(favoritos_modelo) != 3 or len(favoritos_q) != 3:
+        return _nao_avaliavel('ranking_publicado_incompleto', podio)
+    return {
+        'avaliavel_ranking': True, 'motivo': 'avaliacao_posterior_previsao_registrada',
+        'podio_observado': podio, 'acertos_modelo': len(favoritos_modelo & set(podio)),
+        'acertos_classificacao': len(favoritos_q & set(podio)),
+    }
 
 
 def carregar_asset(raiz):
@@ -75,11 +134,18 @@ def carregar_asset(raiz):
     return asset
 
 
+def nome_exibicao_piloto(piloto_id, nome):
+    """Expande um nome conhecido apenas na UI; identidade e fonte ficam intactas."""
+    if piloto_id == 'antonelli' and nome == 'Kimi Antonelli':
+        return 'Andrea Kimi Antonelli'
+    return nome
+
+
 def identidade(asset, temporada, rodada, piloto_id):
     valor = asset.get('identidades', {}).get('{}:{}:{}'.format(temporada, rodada, piloto_id), {})
     nome = valor.get('piloto')
     return {
-        'piloto': nome if nome else 'Nome indisponível ({})'.format(piloto_id),
+        'piloto': nome_exibicao_piloto(piloto_id, nome) if nome else 'Nome indisponível ({})'.format(piloto_id),
         'equipe_id': valor.get('equipe_id'),
         'equipe': valor.get('equipe'),
     }
@@ -105,13 +171,20 @@ def pacote_2026(asset):
         corrida = dict(fonte)
         participantes = participantes_por_rodada.get(corrida['rodada'], [])
         podio_observado = [item['piloto_id'] for item in participantes if item['resultado_observado'] in (1, 2, 3)]
+        avaliacao = avaliar_previsao_registrada(
+            corrida.get('estado_previsao'), participantes,
+            populacao_esperada=corrida.get('participantes_esperados_previsao'),
+            estado_resultado=corrida.get('estado_resultado', 'indisponivel'),
+            resultado_validado=corrida.get('resultado_posterior_validado', False),
+        )
         corrida.update({
             'participantes_preparados': len(participantes),
             'elegiveis': sum(item['elegivel_previsao'] for item in participantes),
             'alvos_conhecidos': sum(item['alvo_conhecido'] for item in participantes),
-            'avaliavel_ranking': False,
-            'motivos_nao_avaliavel': 'previsão não disponível para comparação oficial',
-            'podio_observado': podio_observado, 'acertos_modelo': None, 'acertos_classificacao': None,
+            'avaliavel_ranking': avaliacao['avaliavel_ranking'],
+            'motivos_nao_avaliavel': avaliacao['motivo'],
+            'podio_observado': avaliacao['podio_observado'] if avaliacao['avaliavel_ranking'] else podio_observado,
+            'acertos_modelo': avaliacao['acertos_modelo'], 'acertos_classificacao': avaliacao['acertos_classificacao'],
         })
         corridas.append(corrida)
     return {

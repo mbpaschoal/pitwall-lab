@@ -16,8 +16,9 @@ estima a ordem P1/P2/P3.
 - Operação 2026 separada do histórico: classificação oficial de pilotos vem de
   um snapshot paginado de `DriverStandings` da Jolpica-F1; probabilidades são
   exibidas somente para o GP da emissão correspondente.
-- Austin permanece em **Aguardando dados**: não há treino, clima, resultado,
-  probabilidade ou previsão inventados.
+- Austin 2026 tem uma **previsão registrada** congelada antes da corrida e o
+  resultado posterior validado localmente. A interface preserva as probabilidades
+  originais e mostra a auditoria pós-corrida separada do estudo retrospectivo.
 
 ## Limites importantes
 

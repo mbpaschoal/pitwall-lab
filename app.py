@@ -20,6 +20,7 @@ from race_weekend_dados import (
     carregar_asset,
     dados_do_gp_2026,
     identidade,
+    nome_exibicao_piloto,
     pacote_2026,
 )
 from contexto_editorial import ContextoEditorialErro, carregar as carregar_contextos_editoriais, para_gp
@@ -122,8 +123,17 @@ def nome_equipe(pacote, item):
     return dados['equipe'] or 'Equipe indisponível'
 
 
-def conteudo_markdown(atual):
-    return '<div class="nota-retrospectiva">Estudo retrospectivo com dados históricos.</div>'
+def conteudo_markdown(atual, rodada=None):
+    aviso = 'Estudo retrospectivo com dados históricos.'
+    if atual['temporada'] == 2026:
+        corrida = next((item for item in atual['corridas'] if item['rodada'] == rodada), None)
+        if corrida and corrida.get('estado_previsao') == 'previsao_registrada':
+            aviso = 'Previsão registrada antes da corrida.'
+        elif corrida is None:
+            aviso = 'Análise de pódios com dados históricos e previsões registradas.'
+        elif corrida.get('estado_previsao') != 'ensaio_retrospectivo':
+            aviso = 'Previsão deste GP indisponível.'
+    return '<div class="nota-retrospectiva">{}</div>'.format(aviso)
 
 
 def ativo_data_uri(caminho_relativo, mime):
@@ -428,7 +438,7 @@ def renderizar_tempos_sessoes(bloco):
     linhas = []
     for item in sessao['linhas']:
         linhas.append({
-            'Pos.': item['posicao'], 'Piloto': item['piloto'], 'Equipe': item['equipe'], 'Tempo': item['tempo'] or 'Sem tempo',
+            'Pos.': item['posicao'], 'Piloto': nome_exibicao_piloto(item.get('piloto_id'), item['piloto']), 'Equipe': item['equipe'], 'Tempo': item['tempo'] or 'Sem tempo',
             'Gap ao líder (%)': None if item['gap_percentual_lider'] is None else round(item['gap_percentual_lider'], 3),
             'Q1': item['q1'] or '—', 'Q2': item['q2'] or '—', 'Q3': item['q3'] or '—',
             'Rank da previsão': numero(item['ranking_modelo']),
@@ -439,7 +449,7 @@ def renderizar_tempos_sessoes(bloco):
     favoritos = [item for item in sessao['linhas'] if item['ranking_modelo'] in (1, 2, 3)]
     if favoritos:
         st.caption('Favoritos da emissão congelada comparados nesta sessão: ' + '; '.join(
-            '#{} {} ({}, {})'.format(item['ranking_modelo'], item['piloto'], item['tempo'] or 'sem tempo', percentual(item['probabilidade_modelo']))
+            '#{} {} ({}, {})'.format(item['ranking_modelo'], nome_exibicao_piloto(item.get('piloto_id'), item['piloto']), item['tempo'] or 'sem tempo', percentual(item['probabilidade_modelo']))
             for item in sorted(favoritos, key=lambda valor: valor['ranking_modelo'])
         ))
 
@@ -617,7 +627,10 @@ def renderizar_resultados_observados(pacote, corrida, bloco, participantes):
         col1, col2 = st.columns(2)
         col1.metric('Acertos — modelo', '{} de 3'.format(corrida['acertos_modelo']))
         col2.metric('Acertos — classificação', '{} de 3'.format(corrida['acertos_classificacao']))
-        st.caption('A pontuação ignora a ordem dos três integrantes e só é mostrada com cobertura oficial avaliável.')
+        if corrida.get('estado_previsao') == 'previsao_registrada':
+            st.caption('Avaliação posterior desta previsão registrada: a pontuação ignora a ordem dos três integrantes; não é métrica anual nem altera a emissão original.')
+        else:
+            st.caption('Resultado apresentado em estudo retrospectivo; não é avaliação posterior de uma previsão registrada.')
     else:
         st.markdown('**N/A — não avaliável.** Motivo: `{}`.'.format(corrida['motivos_nao_avaliavel']))
         alvos_desconhecidos = [nome_piloto(pacote, item) for item in participantes if item['podio'] is None]
@@ -883,7 +896,7 @@ def executar_app():
     st.set_page_config(page_title='Pitwall Lab', layout='wide', initial_sidebar_state='expanded')
     aplicar_estilo()
     st.sidebar.markdown('<div class="sidebar-title">Pitwall Lab</div>', unsafe_allow_html=True)
-    st.sidebar.markdown('<div class="sidebar-caption">Estudo retrospectivo de pódios na Fórmula 1</div>', unsafe_allow_html=True)
+    st.sidebar.markdown('<div class="sidebar-caption">Análise de dados e probabilidades de pódio na Fórmula 1</div>', unsafe_allow_html=True)
     tela = st.sidebar.radio('Navegação', ('Corridas', 'Previsões', 'Desempenho', 'Metodologia'), key='tela')
     temporada = st.sidebar.selectbox('Temporada', (2024, 2025, 2026), index=1, key='temporada')
     try:
@@ -911,8 +924,8 @@ def executar_app():
         por_descricao = {descricao: valor for valor, descricao in descricoes.items()}
         gp = por_descricao.get(gp, valores[0])
     rodada = int(gp.split(':', 1)[1])
-    if not (tela == 'Corridas' and temporada == 2026):
-        st.markdown(conteudo_markdown(pacote), unsafe_allow_html=True)
+    rodada_aviso = rodada if tela in ('Corridas', 'Previsões') else None
+    st.markdown(conteudo_markdown(pacote, rodada_aviso), unsafe_allow_html=True)
     if tela in ('Corridas', 'Previsões'):
         tela_explorar(pacote, rodada, tela)
     elif tela == 'Desempenho':
