@@ -226,11 +226,28 @@ def estilo_dashboard():
         [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(2)::before { content: "query_stats"; }
         [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(3)::before { content: "monitoring"; }
         [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(4)::before { content: "fact_check"; }
-        .main .block-container { max-width: 83.6rem; padding: .5rem 2.35rem 3rem; }
-        .gp-cabecalho { margin-bottom: 1.45rem; }
+        /* Shell comum: a grade começa no mesmo alinhamento do mockup (x≈307). */
+        [data-testid="stHeader"] { background: transparent; height: 0; overflow: visible; }
+        [data-testid="stMainBlockContainer"] { max-width: none !important; padding: 0 2.35rem 2rem !important; }
+        /* A nota científica reaparece condensada no status/cobertura; não desloca a composição. */
+        /* O Streamlit reserva um gap por bloco Markdown: estilos/nota não podem consumir a grade. */
+        [data-testid="stMainBlockContainer"] .stElementContainer:has(style),
+        [data-testid="stMainBlockContainer"] .stElementContainer:has(.nota-retrospectiva) { display: none; }
+        .gp-cabecalho h1 { font-size: 4.45rem !important; }
+        .topo-editorial { align-items: center; border-bottom: 1px solid #DCE6EE; color: #647493; display: flex; font-size: .72rem; justify-content: flex-end; margin: 0 0 .3rem; min-height: 1.8rem; }
+        .topo-editorial .busca { margin-right: 1rem; }
+        .topo-editorial .perfil { align-items: center; border-left: 1px solid #DCE6EE; color: #061226; display: flex; font-size: 1rem; padding-left: 1rem; }
+        .gp-cabecalho { margin: .2rem 0 .55rem; padding-bottom: .55rem; }
         .gp-cabecalho h1 { font-size: 5rem !important; letter-spacing: -.035em; line-height: .96; max-width: 58rem; }
-        .gp-meta { font-size: 1.15rem; letter-spacing: .18em; margin: .55rem 0 0 1.28rem; }
-        .gp-status { border-radius: 999px; font-size: .88rem; margin-top: 1rem; padding: .72rem 1.1rem; }
+        .gp-meta { font-size: .92rem; letter-spacing: .16em; margin: .4rem 0 0 1.28rem; }
+        .gp-status { border-radius: 999px; font-size: .76rem; margin-top: .6rem; padding: .55rem .8rem; }
+        .breadcrumb-editorial { margin: 0 0 .45rem; }
+        .area-visao-geral { gap: .85rem; height: 23.4rem; margin: .45rem 0 .7rem; }
+        .coluna-circuito { min-height: 0; }
+        .painel-editorial { min-height: 0; overflow: auto; }
+        .hero-circuito, .hero-circuito img { height: 23.4rem; min-height: 23.4rem; }
+        .secao-campeonato { margin-top: .75rem; }
+        .secao-campeonato [data-testid="stColumn"] { min-height: 14.7rem; padding: .85rem 1rem; }
         [data-baseweb="tab-list"] { gap: 2rem; margin-bottom: .1rem; }
         button[data-baseweb="tab"] { font-size: .94rem !important; padding: .7rem .1rem !important; }
         .contexto-circuito, .ficha-gp, .condicoes-disponiveis { border: 0; margin: 0; padding: 0; }
@@ -250,7 +267,7 @@ def estilo_dashboard():
           .gp-cabecalho { gap: .7rem; }
           .gp-status { font-size: .72rem; padding: .3rem .5rem; }
           .breadcrumb-editorial { margin-bottom: 1rem; }
-          .area-visao-geral { display: block; }
+          .area-visao-geral { display: block; height: auto; }
           .hero-circuito, .hero-circuito img { min-height: 15rem; height: 15rem; }
           .mapa-circuito, .painel-editorial { margin-top: .8rem; min-height: auto; }
           .coluna-circuito { display: block; }
@@ -674,6 +691,12 @@ def tela_explorar(pacote, rodada, foco):
     bloco = dict(bloco)
     bloco['corrida'] = corrida
     participantes = bloco['participantes']
+    st.markdown('''
+    <div class="topo-editorial" aria-label="Ferramentas da página">
+      <span class="busca">⌕&nbsp; Buscar corrida, piloto ou circuito…</span>
+      <span class="perfil" role="img" aria-label="Preferências locais">◎</span>
+    </div>
+    ''', unsafe_allow_html=True)
     st.markdown('<div class="breadcrumb-editorial">Corridas <span>›</span> {}</div>'.format(escape(corrida['corrida'])), unsafe_allow_html=True)
     st.markdown('''
     <section class="gp-cabecalho">

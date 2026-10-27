@@ -349,6 +349,9 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('gp-cabecalho', css)
         self.assertIn('tabela-editorial', css)
         self.assertIn('barra-equipe', css)
+        self.assertIn('.topo-editorial', css)
+        self.assertIn('max-width: none', css)
+        self.assertIn('height: 23.4rem', css)
 
         campeonato = app.carregar(2026)['campeonato_pilotos']
         tabela = app.tabela_campeonato_editorial(campeonato)
