@@ -36,6 +36,8 @@ DOCUMENTOS_COPIADOS = (
 FONTES_COPIADAS = FONTES_CIENTIFICAS
 RUNTIME_WORKTREE = (
     'app.py', 'dashboard_dados.py', 'race_weekend_dados.py',
+    'pitwall_ui.py', 'pitwall_ui_dados.py', 'frontend_assets/pitwall.css',
+    'frontend_assets/paineis_editoriais.json',
     'frontend_assets/race_weekend.json', 'dashboard_assets/fonts/abrilfatface.ttf',
     'dashboard_assets/fonts/lato.ttf', 'dashboard_assets/fonts/lato-bold.ttf',
     'dashboard_assets/fonts/abrilfatface-OFL.txt', 'dashboard_assets/fonts/lato-OFL.txt',

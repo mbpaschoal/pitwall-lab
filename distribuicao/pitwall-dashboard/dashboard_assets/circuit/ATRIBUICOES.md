@@ -32,11 +32,13 @@ Each asset below is identified by the active circuit catalog. Photographs are il
 
 ### Circuit map
 
-- File: `americas-layout.svg`
+- File: `americas-outline.svg`
+- Derived from preserved original: `americas-layout.svg`
+- Changes: track geometry retained; sector colors, text and symbols removed; navy stroke and compact framing. This is illustrative orientation only.
 - Source page: https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_COTA.svg
 - Author: <a href="//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1" class="new" title="User:ごひょううべこ (page does not exist)">ごひょううべこ</a>
 - License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `dcad6aa8a57db9db438e93f4c3a292f2b936920d6ce85994e9e3d917e9174d46`
+- SHA-256: `d97dae9ca9a91185fb50577c21c1397e73212d2a2e9db19c4e672ec1a0ea34bc`
 
 ## Bahrain
 
@@ -471,3 +473,13 @@ Each asset below is identified by the active circuit catalog. Photographs are il
 - License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
 - SHA-256: `e2b2f637bb1ce9e1e386724417101946846c32ce8079980b9292e332616234c4`
 
+
+## Austin — current illustrative hero (2026-10-27)
+
+- File: `americas-illustration-20261027.png`
+- Generated with OpenAI imagegen from the owner-provided AI reference, not documentary photography.
+- No external photograph license is asserted for this generated image. The earlier Wikimedia photograph remains preserved as `americas-hero.jpg` with its attribution above.
+- SHA-256: `3fa12e945f3e25f36371ed54cdededc7c1f8bce00445eea018eb1eda2d09c390`
+
+- Current image author credit: OpenAI · referência fornecida por MBPaschoal
+- Current image label: Ilustração gerada por IA; sem licença fotográfica atribuída

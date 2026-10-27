@@ -1,0 +1,440 @@
+{
+  "circuitos": {
+    "americas": {
+      "fontes": [
+        {
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "titulo": "Formula 1 — United States Grand Prix 2026",
+          "url": "https://www.formula1.com/en/racing/2026/united-states"
+        },
+        {
+          "campos": [
+            "curvas",
+            "sentido"
+          ],
+          "titulo": "Circuit of The Americas — Austin, Circuit Of The Americas Get High Praise From Formula One Drivers",
+          "url": "https://circuitoftheamericas.com/blog/2014/10/25/austin-circuit-of-the-americas-get-high-praise-from-formula-one-drivers-teams/"
+        }
+      ],
+      "metricas_estaveis": {
+        "comprimento_km": 5.513,
+        "curvas": 20,
+        "primeiro_gp": 2012,
+        "sentido": "Anti-horário"
+      },
+      "por_temporada": {
+        "2026": {
+          "distancia_corrida_km": 308.432,
+          "recorde_volta": "1:36.169 · Charles Leclerc (2019)",
+          "voltas": 56
+        }
+      },
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-27"
+    }
+  },
+  "snapshots": [
+    {
+      "circuito_id": "americas",
+      "classificacao": [
+        {
+          "equipe": "Mercedes",
+          "equipe_ids": [
+            "mercedes"
+          ],
+          "nacionalidade": "Italian",
+          "piloto": "Andrea Kimi Antonelli",
+          "piloto_id": "antonelli",
+          "pontos": 365.0,
+          "posicao": 1,
+          "vitorias": 9
+        },
+        {
+          "equipe": "Mercedes",
+          "equipe_ids": [
+            "mercedes"
+          ],
+          "nacionalidade": "British",
+          "piloto": "George Russell",
+          "piloto_id": "russell",
+          "pontos": 242.0,
+          "posicao": 2,
+          "vitorias": 3
+        },
+        {
+          "equipe": "Ferrari",
+          "equipe_ids": [
+            "ferrari"
+          ],
+          "nacionalidade": "British",
+          "piloto": "Lewis Hamilton",
+          "piloto_id": "hamilton",
+          "pontos": 241.0,
+          "posicao": 3,
+          "vitorias": 1
+        },
+        {
+          "equipe": "Red Bull",
+          "equipe_ids": [
+            "red_bull"
+          ],
+          "nacionalidade": "Dutch",
+          "piloto": "Max Verstappen",
+          "piloto_id": "max_verstappen",
+          "pontos": 236.0,
+          "posicao": 4,
+          "vitorias": 2
+        },
+        {
+          "equipe": "Ferrari",
+          "equipe_ids": [
+            "ferrari"
+          ],
+          "nacionalidade": "Monegasque",
+          "piloto": "Charles Leclerc",
+          "piloto_id": "leclerc",
+          "pontos": 233.0,
+          "posicao": 5,
+          "vitorias": 1
+        },
+        {
+          "equipe": "McLaren",
+          "equipe_ids": [
+            "mclaren"
+          ],
+          "nacionalidade": "British",
+          "piloto": "Lando Norris",
+          "piloto_id": "norris",
+          "pontos": 211.0,
+          "posicao": 6,
+          "vitorias": 2
+        },
+        {
+          "equipe": "McLaren",
+          "equipe_ids": [
+            "mclaren"
+          ],
+          "nacionalidade": "Australian",
+          "piloto": "Oscar Piastri",
+          "piloto_id": "piastri",
+          "pontos": 144.0,
+          "posicao": 7,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Red Bull",
+          "equipe_ids": [
+            "red_bull"
+          ],
+          "nacionalidade": "French",
+          "piloto": "Isack Hadjar",
+          "piloto_id": "hadjar",
+          "pontos": 105.0,
+          "posicao": 8,
+          "vitorias": 0
+        },
+        {
+          "equipe": "RB F1 Team / Red Bull",
+          "equipe_ids": [
+            "rb",
+            "red_bull"
+          ],
+          "nacionalidade": "New Zealander",
+          "piloto": "Liam Lawson",
+          "piloto_id": "lawson",
+          "pontos": 77.0,
+          "posicao": 9,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Alpine F1 Team",
+          "equipe_ids": [
+            "alpine"
+          ],
+          "nacionalidade": "French",
+          "piloto": "Pierre Gasly",
+          "piloto_id": "gasly",
+          "pontos": 42.0,
+          "posicao": 10,
+          "vitorias": 0
+        },
+        {
+          "equipe": "RB F1 Team",
+          "equipe_ids": [
+            "rb"
+          ],
+          "nacionalidade": "British",
+          "piloto": "Arvid Lindblad",
+          "piloto_id": "arvid_lindblad",
+          "pontos": 38.0,
+          "posicao": 11,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Alpine F1 Team",
+          "equipe_ids": [
+            "alpine"
+          ],
+          "nacionalidade": "Argentine",
+          "piloto": "Franco Colapinto",
+          "piloto_id": "colapinto",
+          "pontos": 27.0,
+          "posicao": 12,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Haas F1 Team",
+          "equipe_ids": [
+            "haas"
+          ],
+          "nacionalidade": "British",
+          "piloto": "Oliver Bearman",
+          "piloto_id": "bearman",
+          "pontos": 23.0,
+          "posicao": 13,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Audi",
+          "equipe_ids": [
+            "audi"
+          ],
+          "nacionalidade": "German",
+          "piloto": "Nico Hülkenberg",
+          "piloto_id": "hulkenberg",
+          "pontos": 13.0,
+          "posicao": 14,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Audi",
+          "equipe_ids": [
+            "audi"
+          ],
+          "nacionalidade": "Brazilian",
+          "piloto": "Gabriel Bortoleto",
+          "piloto_id": "bortoleto",
+          "pontos": 10.0,
+          "posicao": 15,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Haas F1 Team",
+          "equipe_ids": [
+            "haas"
+          ],
+          "nacionalidade": "French",
+          "piloto": "Esteban Ocon",
+          "piloto_id": "ocon",
+          "pontos": 7.0,
+          "posicao": 16,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Aston Martin",
+          "equipe_ids": [
+            "aston_martin"
+          ],
+          "nacionalidade": "Spanish",
+          "piloto": "Fernando Alonso",
+          "piloto_id": "alonso",
+          "pontos": 7.0,
+          "posicao": 17,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Williams",
+          "equipe_ids": [
+            "williams"
+          ],
+          "nacionalidade": "Spanish",
+          "piloto": "Carlos Sainz",
+          "piloto_id": "sainz",
+          "pontos": 7.0,
+          "posicao": 18,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Williams",
+          "equipe_ids": [
+            "williams"
+          ],
+          "nacionalidade": "Thai",
+          "piloto": "Alexander Albon",
+          "piloto_id": "albon",
+          "pontos": 5.0,
+          "posicao": 19,
+          "vitorias": 0
+        },
+        {
+          "equipe": "RB F1 Team",
+          "equipe_ids": [
+            "rb"
+          ],
+          "nacionalidade": "Japanese",
+          "piloto": "Yuki Tsunoda",
+          "piloto_id": "tsunoda",
+          "pontos": 1.0,
+          "posicao": 20,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Aston Martin",
+          "equipe_ids": [
+            "aston_martin"
+          ],
+          "nacionalidade": "Canadian",
+          "piloto": "Lance Stroll",
+          "piloto_id": "stroll",
+          "pontos": 0.0,
+          "posicao": 21,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Cadillac F1 Team",
+          "equipe_ids": [
+            "cadillac"
+          ],
+          "nacionalidade": "Finnish",
+          "piloto": "Valtteri Bottas",
+          "piloto_id": "bottas",
+          "pontos": 0.0,
+          "posicao": 22,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Cadillac F1 Team",
+          "equipe_ids": [
+            "cadillac"
+          ],
+          "nacionalidade": "Mexican",
+          "piloto": "Sergio Pérez",
+          "piloto_id": "perez",
+          "pontos": 0.0,
+          "posicao": 23,
+          "vitorias": 0
+        }
+      ],
+      "disponivel": true,
+      "escopo": "Classificação oficial pós-GP da Jolpica-F1; contexto descritivo separado das probabilidades.",
+      "fontes_sha256": [
+        "752d1ec88e7899e5d530c2cedcaf0b1ff3c05a58de33f08a9d6abf2bc386167b"
+      ],
+      "fontes_url": [
+        "https://api.jolpi.ca/ergast/f1/2026/18/driverstandings/?limit=100&offset=0"
+      ],
+      "obtido_em_utc": "2026-10-26T11:14:06.803814Z",
+      "paginas_validadas": 1,
+      "rodada_referencia": 18,
+      "snapshot_id": "austin-pos-corrida-20261026T111018Z-r2:classificacao_pilotos",
+      "temporada": 2026,
+      "tipo": "driver_standings",
+      "total": 23
+    },
+    {
+      "circuito_id": "americas",
+      "classificacao": [
+        {
+          "equipe": "Mercedes",
+          "equipe_id": "mercedes",
+          "pontos": 607.0,
+          "posicao": 1,
+          "vitorias": 12
+        },
+        {
+          "equipe": "Ferrari",
+          "equipe_id": "ferrari",
+          "pontos": 474.0,
+          "posicao": 2,
+          "vitorias": 2
+        },
+        {
+          "equipe": "Red Bull",
+          "equipe_id": "red_bull",
+          "pontos": 355.0,
+          "posicao": 3,
+          "vitorias": 2
+        },
+        {
+          "equipe": "McLaren",
+          "equipe_id": "mclaren",
+          "pontos": 355.0,
+          "posicao": 4,
+          "vitorias": 2
+        },
+        {
+          "equipe": "RB F1 Team",
+          "equipe_id": "rb",
+          "pontos": 102.0,
+          "posicao": 5,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Alpine F1 Team",
+          "equipe_id": "alpine",
+          "pontos": 69.0,
+          "posicao": 6,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Haas F1 Team",
+          "equipe_id": "haas",
+          "pontos": 30.0,
+          "posicao": 7,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Audi",
+          "equipe_id": "audi",
+          "pontos": 23.0,
+          "posicao": 8,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Williams",
+          "equipe_id": "williams",
+          "pontos": 12.0,
+          "posicao": 9,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Aston Martin",
+          "equipe_id": "aston_martin",
+          "pontos": 7.0,
+          "posicao": 10,
+          "vitorias": 0
+        },
+        {
+          "equipe": "Cadillac F1 Team",
+          "equipe_id": "cadillac",
+          "pontos": 0.0,
+          "posicao": 11,
+          "vitorias": 0
+        }
+      ],
+      "disponivel": true,
+      "escopo": "Classificação oficial pós-GP da Jolpica-F1; contexto descritivo separado das probabilidades.",
+      "fontes_sha256": [
+        "1727930ffc30af976f9b16ac052bbee256da51dd4835c85508bc8ffd571fcf4b"
+      ],
+      "fontes_url": [
+        "https://api.jolpi.ca/ergast/f1/2026/18/constructorstandings/?limit=100&offset=0"
+      ],
+      "obtido_em_utc": "2026-10-26T11:14:14.715437Z",
+      "paginas_validadas": 1,
+      "rodada_referencia": 18,
+      "snapshot_id": "austin-pos-corrida-20261026T111018Z-r2:classificacao_equipes",
+      "temporada": 2026,
+      "tipo": "constructor_standings",
+      "total": 11
+    }
+  ],
+  "uso": "contexto_descritivo_pos_corrida",
+  "versao": 1
+}

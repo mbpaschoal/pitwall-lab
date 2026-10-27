@@ -1,6 +1,7 @@
 """Dashboard local, somente leitura, do estudo retrospectivo Pitwall Lab."""
 import os
 import base64
+import re
 from html import escape
 from pathlib import Path
 
@@ -25,11 +26,13 @@ from race_weekend_dados import (
 )
 from contexto_editorial import ContextoEditorialErro, carregar as carregar_contextos_editoriais, para_gp
 from catalogo_visual import CatalogoVisualErro, carregar as carregar_catalogo_visual, para_circuito
+from pitwall_ui_dados import carregar_paineis
+import pitwall_ui
 
 RAIZ_PADRAO = Path(__file__).resolve().parent
 CORES = {
-    'fundo': '#F2F6FA', 'superficie': '#FFFFFF', 'texto': '#132B4F',
-    'acento': '#D62732', 'modelo': '#2475EF', 'classificacao': '#132B4F', 'neutro': '#B7BEC8',
+    'fundo': '#E8F3FC', 'superficie': '#FFFFFF', 'texto': '#061226',
+    'acento': '#D3071D', 'modelo': '#2475EF', 'classificacao': '#061226', 'neutro': '#B7BEC8',
 }
 CORES_EQUIPE = {
     'ferrari': '#E53935', 'red_bull': '#183153', 'mercedes': '#00A19B',
@@ -146,136 +149,7 @@ def ativo_data_uri(caminho_relativo, mime):
 
 
 def estilo_dashboard():
-    fontes = raiz_artefatos() / 'dashboard_assets' / 'fonts'
-    def fonte(nome, formato):
-        try:
-            return 'data:{};base64,{}'.format(formato, base64.b64encode((fontes / nome).read_bytes()).decode('ascii'))
-        except OSError:
-            return ''
-    return '''
-        <style>
-        @font-face { font-family: AbrilFatfaceLocal; src: url("%s") format("truetype"); }
-        @font-face { font-family: LatoLocal; src: url("%s") format("truetype"); font-weight: 400; }
-        @font-face { font-family: LatoLocal; src: url("%s") format("truetype"); font-weight: 700; }
-        .stApp { background: #F2F6FA; color: #132B4F; font-family: LatoLocal, Arial, sans-serif; }
-        /* Mantém o cabeçalho nativo: nele está o botão acessível que reabre a barra lateral. */
-        .stApp *, [data-testid="stSidebar"] * { font-family: LatoLocal, Arial, sans-serif; }
-        [data-testid="stIconMaterial"] { font-family: "Material Symbols Rounded" !important; }
-        [data-testid="stSidebar"] { background: #FFFFFF; border-right: 1px solid #D8E0E9; min-width: 15.25rem; max-width: 15.25rem; }
-        [data-testid="stSidebar"] > div { padding-top: 1.2rem; }
-        .main .block-container { max-width: 78rem; padding-top: 1.7rem; padding-bottom: 3rem; }
-        h1 { border-left: 4px solid #D62732; font-family: AbrilFatfaceLocal, Georgia, serif !important; color: #132B4F; font-size: 3.45rem !important; font-weight: 400; letter-spacing: .01em; line-height: 1.02; padding-left: 1rem; }
-        h2, h3 { color: #132B4F; font-weight: 700; letter-spacing: -.01em; }
-        .sidebar-title { font-family: AbrilFatfaceLocal, Georgia, serif !important; color: #132B4F; font-size: 1.7rem; line-height: 1; margin: 0 0 .35rem; }
-        .sidebar-caption { color: #526983; font-size: .84rem; line-height: 1.45; margin-bottom: 1.5rem; }
-        .nota-retrospectiva { border-left: 3px solid #D62732; background: transparent; padding: .2rem 0 .2rem .75rem; margin: .15rem 0 1.4rem; color: #36516F; font-weight: 700; }
-        .secao-rotulo { color: #D62732; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-        .gp-meta { color: #526983; font-size: .96rem; margin: -.35rem 0 1.1rem; }
-        .estado-operacao { color: #132B4F; font-weight: 700; }
-        .gp-cabecalho { align-items: flex-start; border-bottom: 1px solid #D8E0E9; display: flex; gap: 1.2rem; justify-content: space-between; margin: .45rem 0 1.1rem; padding-bottom: 1.1rem; }
-        .gp-cabecalho h1 { margin: 0; }
-        .gp-status { background: #E9EEF4; color: #132B4F; font-size: .78rem; font-weight: 700; margin-top: .5rem; padding: .38rem .68rem; white-space: nowrap; }
-        .gp-status::before { background: #D62732; border-radius: 50%%; content: ""; display: inline-block; height: .38rem; margin-right: .4rem; width: .38rem; }
-        .contexto-circuito { border-top: 1px solid #D8E0E9; border-bottom: 1px solid #D8E0E9; margin: .35rem 0 1.35rem; padding: 1.35rem 0; }
-        .circuito-rotulo { color: #D62732; font-size: .72rem; font-weight: 700; letter-spacing: .1em; margin: 0 0 .25rem; text-transform: uppercase; }
-        .circuito-nome { color: #132B4F; font-size: 1.45rem; font-weight: 700; margin: 0; }
-        .tracado-indisponivel { color: #526983; font-size: .86rem; margin: .45rem 0 0; }
-        .ficha-gp { border-left: 3px solid #D62732; padding-left: .85rem; }
-        .ficha-gp p { margin: .16rem 0; }
-        .ficha-gp strong { color: #132B4F; }
-        .circuito-linha { display: block; height: 118px; max-width: 100%%; width: 100%%; }
-        .condicoes-disponiveis { border-top: 1px solid #D8E0E9; margin-top: .4rem; padding-top: .85rem; }
-        .condicoes-disponiveis p { color: #526983; margin: .25rem 0; }
-        .tabela-editorial { overflow-x: auto; }
-        .tabela-editorial table { border-collapse: collapse; font-size: .84rem; width: 100%%; }
-        .tabela-editorial th { border-bottom: 1px solid #AFC0D2; color: #526983; font-size: .68rem; letter-spacing: .06em; padding: .35rem .25rem; text-align: left; text-transform: uppercase; }
-        .tabela-editorial td { border-bottom: 1px solid #D8E0E9; padding: .44rem .25rem; vertical-align: middle; }
-        .tabela-editorial .numero { text-align: right; white-space: nowrap; }
-        .barra-equipe { display: inline-block; height: 1.05rem; margin-right: .38rem; vertical-align: middle; width: .22rem; }
-        .tabela-legenda { color: #526983; font-size: .78rem; margin: .25rem 0 .6rem; }
-        .breadcrumb-editorial { color: #667A9A; font-size: .66rem; font-weight: 700; letter-spacing: .12em; margin: .1rem 0 1.6rem; text-transform: uppercase; }
-        .breadcrumb-editorial span { color: #132B4F; margin: 0 .7rem; }
-        .area-visao-geral { display: grid; gap: .85rem; grid-template-columns: minmax(0, 1.95fr) minmax(175px, .64fr) minmax(235px, .9fr); margin-top: 1rem; }
-        .hero-circuito { background: #17304F; color: #FFFFFF; margin: 0; min-height: 23.4rem; overflow: hidden; position: relative; }
-        .hero-circuito img { height: 23.4rem; object-fit: cover; object-position: center; width: 100%%; }
-        .hero-sobreposicao { background: rgba(11,27,48,.88); bottom: 0; left: 0; padding: 1rem 1.45rem 1.1rem; position: absolute; right: 0; }
-        .hero-sobreposicao .circuito-rotulo { color: #FFFFFF; margin-bottom: .4rem; }
-        .hero-sobreposicao h2 { color: #FFFFFF; font-family: AbrilFatfaceLocal, Georgia, serif !important; font-size: 2rem; font-weight: 400; margin: 0 0 .3rem; }
-        .hero-sobreposicao p { color: #E3EBF5; font-size: .82rem; margin: 0; }
-        .hero-atribuicao { bottom: .45rem; color: rgba(255,255,255,.78); font-size: .62rem; position: absolute; right: .65rem; }
-        .mapa-circuito, .painel-editorial { background: rgba(255,255,255,.72); border: 1px solid #DFE8F0; }
-        .mapa-circuito { align-items: center; display: flex; flex-direction: column; justify-content: center; min-height: 23.4rem; padding: 1.2rem; }
-        .mapa-circuito img { max-height: 13.8rem; max-width: 100%%; object-fit: contain; width: 100%%; }
-        .mapa-circuito p { color: #526983; font-size: .74rem; margin: .35rem 0 0; }
-        .coluna-circuito { display: grid; gap: .85rem; grid-template-rows: .82fr 1.18fr; }
-        .painel-editorial { padding: 1.1rem 1.2rem; }
-        .painel-editorial h3 { font-size: .7rem; letter-spacing: .1em; margin: 0 0 .7rem; text-transform: uppercase; }
-        .painel-editorial p { color: #526983; font-size: .85rem; line-height: 1.45; margin: .35rem 0; }
-        .painel-editorial strong { color: #132B4F; }
-        .painel-vazio { align-items: center; display: flex; min-height: 100%%; }
-        .secao-campeonato { margin-top: .85rem; }
-        .secao-campeonato [data-testid="stColumn"] { background: rgba(255,255,255,.72); border: 1px solid #DFE8F0; padding: 1rem 1.2rem; }
-        [data-testid="stSidebar"] { min-width: 16.8125rem; max-width: 16.8125rem; }
-        [data-testid="stSidebar"] > div { padding: 1.85rem .9rem; }
-        [data-testid="stSidebar"] [data-testid="stRadio"] label { border-left: 3px solid transparent; min-height: 3.2rem; padding: .55rem .65rem; }
-        [data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"] { background: #EAF4FC; border-left-color: #D62732; color: #132B4F; }
-        [data-testid="stSidebar"] [data-testid="stRadio"] label::before { color: #526983; font-family: "Material Symbols Rounded"; font-size: 1.25rem; margin-right: .6rem; }
-        [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(1)::before { content: "flag"; }
-        [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(2)::before { content: "query_stats"; }
-        [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(3)::before { content: "monitoring"; }
-        [data-testid="stSidebar"] [data-testid="stRadio"] label:nth-of-type(4)::before { content: "fact_check"; }
-        /* Shell comum: a grade começa no mesmo alinhamento do mockup (x≈307). */
-        [data-testid="stHeader"] { background: transparent; height: 0; overflow: visible; }
-        [data-testid="stMainBlockContainer"] { max-width: none !important; padding: 0 2.35rem 2rem !important; }
-        /* A nota científica reaparece condensada no status/cobertura; não desloca a composição. */
-        /* O Streamlit reserva um gap por bloco Markdown: estilos/nota não podem consumir a grade. */
-        [data-testid="stMainBlockContainer"] .stElementContainer:has(style),
-        [data-testid="stMainBlockContainer"] .stElementContainer:has(.nota-retrospectiva) { display: none; }
-        .gp-cabecalho h1 { font-size: 4.45rem !important; }
-        .topo-editorial { align-items: center; border-bottom: 1px solid #DCE6EE; color: #647493; display: flex; font-size: .72rem; justify-content: flex-end; margin: 0 0 .3rem; min-height: 1.8rem; }
-        .topo-editorial .busca { margin-right: 1rem; }
-        .topo-editorial .perfil { align-items: center; border-left: 1px solid #DCE6EE; color: #061226; display: flex; font-size: 1rem; padding-left: 1rem; }
-        .gp-cabecalho { margin: .2rem 0 .55rem; padding-bottom: .55rem; }
-        .gp-cabecalho h1 { font-size: 5rem !important; letter-spacing: -.035em; line-height: .96; max-width: 58rem; }
-        .gp-meta { font-size: .92rem; letter-spacing: .16em; margin: .4rem 0 0 1.28rem; }
-        .gp-status { border-radius: 999px; font-size: .76rem; margin-top: .6rem; padding: .55rem .8rem; }
-        .breadcrumb-editorial { margin: 0 0 .45rem; }
-        .area-visao-geral { gap: .85rem; height: 23.4rem; margin: .45rem 0 .7rem; }
-        .coluna-circuito { min-height: 0; }
-        .painel-editorial { min-height: 0; overflow: auto; }
-        .hero-circuito, .hero-circuito img { height: 23.4rem; min-height: 23.4rem; }
-        .secao-campeonato { margin-top: .75rem; }
-        .secao-campeonato [data-testid="stColumn"] { min-height: 14.7rem; padding: .85rem 1rem; }
-        [data-baseweb="tab-list"] { gap: 2rem; margin-bottom: .1rem; }
-        button[data-baseweb="tab"] { font-size: .94rem !important; padding: .7rem .1rem !important; }
-        .contexto-circuito, .ficha-gp, .condicoes-disponiveis { border: 0; margin: 0; padding: 0; }
-        @media (max-width: 1000px) { .area-visao-geral { grid-template-columns: minmax(0, 1fr) minmax(200px, .55fr); } .coluna-circuito { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; grid-template-rows: none; } .gp-cabecalho h1 { font-size: 4rem !important; } }
-        [data-baseweb="tab-list"] { border-bottom: 1px solid #D8E0E9; gap: 2rem; margin-bottom: .1rem; }
-        button[data-baseweb="tab"] { background: transparent !important; color: #526983 !important; font-size: .94rem !important; font-weight: 700 !important; padding: .7rem .1rem !important; }
-        button[data-baseweb="tab"][aria-selected="true"] { border-bottom: 3px solid #D62732 !important; color: #132B4F !important; }
-        .stMetric { background: #FFFFFF; border: 1px solid #D8E0E9; border-radius: 0; padding: .55rem .75rem; }
-        .stDataFrame { border: 1px solid #D8E0E9; }
-        [data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"] { color: #D62732; font-weight: 700; }
-        [data-testid="stSidebar"] [data-testid="stSelectbox"] > div { border-radius: 0; }
-        *:focus-visible { outline: 3px solid #D62732 !important; outline-offset: 2px; }
-        @media (max-width: 700px) {
-          [data-testid="stMetric"] { min-width: 0; padding: .45rem .55rem; }
-          .main .block-container { padding-left: .9rem; padding-right: .9rem; }
-          h1 { font-size: 2.2rem !important; line-height: 1.04; }
-          .gp-cabecalho { gap: .7rem; }
-          .gp-status { font-size: .72rem; padding: .3rem .5rem; }
-          .breadcrumb-editorial { margin-bottom: 1rem; }
-          .area-visao-geral { display: block; height: auto; }
-          .hero-circuito, .hero-circuito img { min-height: 15rem; height: 15rem; }
-          .mapa-circuito, .painel-editorial { margin-top: .8rem; min-height: auto; }
-          .coluna-circuito { display: block; }
-          .gp-cabecalho h1 { font-size: 2.75rem !important; }
-          .gp-meta { font-size: .83rem; letter-spacing: .08em; margin-left: 1rem; }
-          [data-testid="stSidebar"] { min-width: auto; max-width: none; }
-          [data-baseweb="tab-list"] { gap: .7rem; overflow-x: auto; }
-        }
-        </style>
-        ''' % (fonte('abrilfatface.ttf', 'font/ttf'), fonte('lato.ttf', 'font/ttf'), fonte('lato-bold.ttf', 'font/ttf'))
+    return pitwall_ui.stylesheet(raiz_artefatos())
 
 
 def aplicar_estilo():
@@ -360,7 +234,7 @@ def tabela_campeonato_editorial(campeonato, limite=5):
 
 def renderizar_campeonato_pilotos(pacote):
     campeonato = pacote.get('campeonato_pilotos')
-    st.subheader('Classificação de pilotos 2026')
+    st.subheader('Classificação de pilotos {}'.format(pacote.get('temporada', '')).strip())
     if not isinstance(campeonato, dict) or not isinstance(campeonato.get('disponivel'), bool):
         st.info('Classificação de pilotos indisponível.')
         st.caption('Snapshot DriverStandings ausente ou com schema inválido. Probabilidades por GP permanecem separadas.')
@@ -414,7 +288,7 @@ def nome_estado_operacao(estado):
 
 
 def situacao_corrida(corrida):
-    if corrida.get('estado_resultado') == 'observado_local':
+    if corrida.get('estado_resultado') == 'observado_local' or (corrida.get('estado_resultado') is None and corrida.get('alvos_conhecidos', 0) > 0):
         return 'Resultado observado'
     if corrida.get('estado_previsao') == 'ensaio_retrospectivo':
         return 'Ensaio retrospectivo'
@@ -484,63 +358,26 @@ def renderizar_estado_dados(corrida):
 
 
 def renderizar_contexto_circuito(pacote, corrida):
-    circuito = corrida.get('circuito_nome') or 'Circuito indisponível'
-    ativos = para_circuito(pacote.get('catalogo_visual', {}), corrida.get('circuito_id'))
-    foto_meta = ativos.get('foto') if ativos else None
-    mapa_meta = ativos.get('mapa') if ativos else None
+    ativos = para_circuito(pacote.get('catalogo_visual', {}), corrida.get('circuito_id')) or {}
+    foto_meta, mapa_meta = ativos.get('foto'), ativos.get('mapa')
     foto = ativo_data_uri(foto_meta['caminho'], foto_meta['mime']) if foto_meta else ''
     mapa = ativo_data_uri(mapa_meta['caminho'], mapa_meta['mime']) if mapa_meta else ''
-    alt = escape((ativos or {}).get('alt_foto') or 'Fotografia ilustrativa do circuito {}.'.format(circuito))
-    hero = '<img src="{}" alt="{}">'.format(foto, alt) if foto else '<p>Fotografia ilustrativa ainda não registrada para este circuito.</p>'
-    mapa_html = '<img src="{}" alt="Mapa do circuito {}">'.format(mapa, escape(circuito)) if mapa else '<p>Mapa do traçado ainda não registrado para este circuito.</p>'
-    if foto_meta and foto:
-        credito_foto = '<span class="hero-atribuicao">Foto: {} · {}</span>'.format(
-            escape(foto_meta['autor']), escape(foto_meta['licenca'])
-        )
-    else:
-        credito_foto = ''
-    if mapa_meta and mapa:
-        credito_mapa = '<p>Mapa: {} · {}</p>'.format(escape(mapa_meta['autor']), escape(mapa_meta['licenca']))
-    else:
-        credito_mapa = '<p>Ativo visual pendente de registro.</p>'
-    st.markdown('''
-    <section class="area-visao-geral" aria-label="Visão geral do circuito">
-      <figure class="hero-circuito">
-        {}
-        <figcaption class="hero-sobreposicao">
-          <p class="circuito-rotulo">Foto do circuito · Contexto do circuito</p>
-          <h2>{}</h2>
-          <p>Dados do circuito indisponíveis no snapshot local.</p>
-        </figcaption>
-        {}
-      </figure>
-      <section class="mapa-circuito" aria-label="Mapa do circuito">
-        <p class="circuito-rotulo">Mapa do circuito</p>
-        {}
-        {}
-      </section>
-      <div class="coluna-circuito">
-        <section class="painel-editorial painel-vazio">
-          <div>
-            <h3>Condições disponíveis</h3>
-            <p><strong>Dados meteorológicos indisponíveis no snapshot local.</strong></p>
-            <p>Não há clima, tempos ou estratégias publicados nesta visualização.</p>
-          </div>
-        </section>
-        <section class="painel-editorial">
-          <h3>Informações do circuito</h3>
-          <p><strong>Circuito</strong><br>{}</p>
-          <p><strong>Local</strong><br>{}, {}</p>
-          <p><strong>Data</strong><br>{}</p>
-          <p><strong>Estado operacional</strong><br>{}</p>
-        </section>
-      </div>
-    </section>
-    '''.format(
-        hero, escape(circuito), credito_foto, mapa_html, credito_mapa, escape(circuito), escape(corrida.get('cidade', 'Cidade indisponível')),
-        escape(corrida.get('pais', 'País indisponível')), escape(corrida.get('data', 'Data indisponível')),
-        escape(nome_estado_operacao(corrida.get('estado_operacao', 'aguardando_dados'))),
-    ), unsafe_allow_html=True)
+    paineis = carregar_paineis(raiz_artefatos(), pacote['temporada'], corrida['rodada'], corrida['circuito_id'])
+    st.markdown(pitwall_ui.visao_geral(corrida, paineis, foto, mapa, ativos.get('alt_foto', 'Imagem ilustrativa do circuito')) + pitwall_ui.campeonatos(paineis, pacote['temporada']), unsafe_allow_html=True)
+    with st.expander('Fontes, contexto do circuito e classificações completas', expanded=st.session_state.get('mostrar_fontes', False) or st.query_params.get('painel') in ('pilotos', 'equipes')):
+        st.caption('Foto do circuito · Contexto do circuito. Ativos ilustrativos; não fornecem entradas ao modelo.')
+        for label, meta in [('Imagem', foto_meta), ('Mapa', mapa_meta)]:
+            if meta:
+                st.markdown('{}: [{}]({}) · {}'.format(label, meta['autor'], meta['pagina'], meta['licenca']))
+        st.caption(paineis['circuit_info']['motivo_metricas'])
+        for campo, titulo, ancora in [('driver_standings', 'Campeonato de pilotos', 'campeonato-completo'), ('constructor_standings', 'Campeonato de construtores', 'equipes-completo')]:
+            snapshot = paineis[campo]
+            st.markdown('<h3 id="{}">{} {}</h3>'.format(ancora, titulo, pacote['temporada']), unsafe_allow_html=True)
+            if snapshot['disponivel']:
+                st.caption('Rodada de referência: {} · Snapshot: {} · Captura UTC: {} · {} página(s) validada(s).'.format(snapshot['rodada_referencia'], snapshot['snapshot_id'], snapshot['obtido_em_utc'], snapshot['paginas_validadas']))
+                st.dataframe(pd.DataFrame(snapshot['classificacao']), width='stretch', hide_index=True)
+            else:
+                st.caption(snapshot['motivo'])
 
 
 def renderizar_condicoes_disponiveis(corrida):
@@ -683,42 +520,58 @@ def renderizar_resultados_observados(pacote, corrida, bloco, participantes):
             st.info('Não há previsão ou resultado local para este GP. As rodadas 1–16 não têm probabilidade local; a rodada 18 aguarda classificação local.')
 
 
+def selecionar_gp_busca(valor):
+    """Callback nativo: aplicado antes de o seletor lateral ser reconstruído."""
+    st.session_state['gp'] = valor
+    st.session_state['tela'] = 'Corridas'
+
+
+def renderizar_topo(pacote, corrida=None, participantes=None):
+    with st.container(key='topbar'):
+        breadcrumb, busca, perfil = st.columns([.70, .24, .06], gap='small', vertical_alignment='center')
+        with breadcrumb:
+            st.markdown('<div class="breadcrumb-editorial">{} <span>› &nbsp; {}</span></div>'.format(
+                escape(st.session_state.get('tela', 'Corridas')), escape(corrida['corrida'] if corrida else str(pacote['temporada']))), unsafe_allow_html=True)
+        with busca:
+            with st.popover('Buscar corrida, piloto ou circuito…', icon=':material/search:', width='stretch'):
+                consulta = st.text_input('Buscar nesta temporada', key='busca_local', placeholder='Ex.: Austin, Leclerc, Monza').strip().casefold()
+                st.caption('Busca local na temporada {}. Nenhuma consulta externa.'.format(pacote['temporada']))
+                if consulta:
+                    encontrados = []
+                    for opcao in opcoes_gps(pacote):
+                        contexto = para_gp(pacote['contextos_editoriais'], pacote['temporada'], opcao['rodada'])
+                        if consulta in ' '.join(str(v) for v in contexto.values()).casefold():
+                            encontrados.append(opcao)
+                    for opcao in encontrados[:12]:
+                        st.button('{:02d} · {}'.format(opcao['rodada'], opcao['corrida']), key='busca_gp_'+opcao['valor'], on_click=selecionar_gp_busca, args=(opcao['valor'],), width='stretch')
+                    pilotos = [item for item in (participantes or []) if consulta in (nome_piloto(pacote, item)+' '+nome_equipe(pacote, item)).casefold()]
+                    if pilotos:
+                        st.dataframe(tabela_participantes(pacote, pilotos)[['Piloto','Equipe','Probabilidade de pódio','Rank do modelo']], hide_index=True, width='stretch')
+                        st.caption('Pilotos do GP selecionado; probabilidades originais preservadas.')
+                    if not encontrados and not pilotos:
+                        st.info('Nenhum resultado nesta temporada ou no GP selecionado.')
+        with perfil:
+            with st.popover('Preferências locais', icon=':material/person:', help='Preferências desta sessão'):
+                st.markdown('**Pitwall Lab · Preferências locais**')
+                st.caption('Temporada {} · {}. Não há conta ou login nesta interface.'.format(pacote['temporada'], st.session_state.get('tela', 'Corridas')))
+                st.checkbox('Abrir notas de fontes', key='mostrar_fontes')
+                st.caption('A preferência vale somente para esta sessão e não altera dados nem previsões.')
+
+
 def tela_explorar(pacote, rodada, foco):
     bloco = dados_do_gp_2026(pacote, rodada) if pacote['temporada'] == 2026 else dados_do_gp(pacote, rodada)
     corrida = corrida_editorial(pacote, bloco['corrida'])
     bloco = dict(bloco)
     bloco['corrida'] = corrida
     participantes = bloco['participantes']
-    st.markdown('''
-    <div class="topo-editorial" aria-label="Ferramentas da página">
-      <span class="busca">⌕&nbsp; Buscar corrida, piloto ou circuito…</span>
-      <span class="perfil" role="img" aria-label="Preferências locais">◎</span>
-    </div>
-    ''', unsafe_allow_html=True)
-    st.markdown('<div class="breadcrumb-editorial">Corridas <span>›</span> {}</div>'.format(escape(corrida['corrida'])), unsafe_allow_html=True)
-    st.markdown('''
-    <section class="gp-cabecalho">
-      <div>
-        <h1>{}</h1>
-        <div class="gp-meta">Temporada {} · {}, {} · {}</div>
-      </div>
-      <div class="gp-status">{}</div>
-    </section>
-    '''.format(
-        escape(corrida['corrida']), pacote['temporada'], escape(corrida['cidade']), escape(corrida['pais']),
-        escape(corrida['data']), escape(situacao_corrida(corrida)),
-    ), unsafe_allow_html=True)
+    renderizar_topo(pacote, corrida, participantes)
+    st.markdown(pitwall_ui.cabecalho(corrida, pacote['temporada'], situacao_corrida(corrida)), unsafe_allow_html=True)
     if foco == 'Corridas':
         visao_geral, tempos, estrategias, clima, historico, comparativo_equipes = st.tabs((
             'Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes',
         ))
         with visao_geral:
             renderizar_contexto_circuito(pacote, corrida)
-            classificacao, equipes = st.columns(2, gap='large')
-            with classificacao:
-                renderizar_campeonato_pilotos(pacote)
-            with equipes:
-                renderizar_desempenho_equipes_indisponivel()
         with tempos:
             renderizar_programacao(corrida)
             renderizar_tempos_sessoes(bloco)
@@ -732,7 +585,14 @@ def tela_explorar(pacote, rodada, foco):
                 with st.expander('Calendário 2026'):
                     renderizar_calendario_2026(pacote, rodada)
         with comparativo_equipes:
-            renderizar_desempenho_equipes_indisponivel()
+            paineis = carregar_paineis(raiz_artefatos(), pacote['temporada'], rodada, corrida['circuito_id'])
+            equipes = paineis['constructor_standings']
+            if equipes['disponivel']:
+                st.subheader('Campeonato de construtores {}'.format(pacote['temporada']))
+                st.caption('Classificação oficial pós-GP, rodada {}. Contexto descritivo separado das probabilidades individuais de pódio.'.format(rodada))
+                st.dataframe(pd.DataFrame(equipes['classificacao']), width='stretch', hide_index=True)
+            else:
+                renderizar_desempenho_equipes_indisponivel()
     else:
         renderizar_campeonato_pilotos(pacote)
         renderizar_estado_dados(corrida)
@@ -916,12 +776,25 @@ def tela_como_funciona():
 
 
 def executar_app():
-    st.set_page_config(page_title='Pitwall Lab', layout='wide', initial_sidebar_state='expanded')
+    st.set_page_config(page_title='Pitwall Lab', layout='wide', initial_sidebar_state='auto')
     aplicar_estilo()
+    # Links dos painéis preservam temporada e GP; nenhum parâmetro altera dados.
+    query_token = (st.query_params.get('temporada'), st.query_params.get('gp'), st.query_params.get('painel'))
+    if query_token != st.session_state.get('_query_aplicada'):
+        ano, gp_query, _ = query_token
+        if ano in ('2024', '2025', '2026') and re.fullmatch(r'[0-9]{1,2}', str(gp_query)) and 1 <= int(gp_query) <= 24:
+            st.session_state['temporada'] = int(ano)
+            st.session_state['_query_gp_pendente'] = '{}:{}'.format(ano, int(gp_query))
+        st.session_state['_query_aplicada'] = query_token
     st.sidebar.markdown('<div class="sidebar-title">Pitwall Lab</div>', unsafe_allow_html=True)
-    st.sidebar.markdown('<div class="sidebar-caption">Análise de dados e probabilidades de pódio na Fórmula 1</div>', unsafe_allow_html=True)
+    st.sidebar.markdown('<div class="sidebar-caption">DADOS · CONTEXTO · PERFORMANCE</div>', unsafe_allow_html=True)
     tela = st.sidebar.radio('Navegação', ('Corridas', 'Previsões', 'Desempenho', 'Metodologia'), key='tela')
-    temporada = st.sidebar.selectbox('Temporada', (2024, 2025, 2026), index=1, key='temporada')
+    st.sidebar.markdown('<div class="sidebar-divider"></div>', unsafe_allow_html=True)
+    st.session_state.setdefault('temporada', 2025)
+    def manter_temporada():
+        if st.session_state.get('temporada') not in (2024, 2025, 2026):
+            st.session_state['temporada'] = st.session_state.get('_temporada_anterior_dashboard', 2025)
+    temporada = st.sidebar.selectbox('Temporada', (2024, 2025, 2026), index=None, key='temporada', on_change=manter_temporada)
     try:
         pacote = carregar(temporada)
     except (DashboardDadosErro, RaceWeekendDadosErro) as erro:
@@ -938,11 +811,19 @@ def executar_app():
             st.session_state.pop('gp', None)
         st.session_state['_temporada_anterior_dashboard'] = temporada
     descricoes = {item['valor']: '{:02d} — {}'.format(item['rodada'], item['corrida']) for item in opcoes}
-    st.sidebar.caption('Desempenho agrega toda a temporada; o filtro de GP aplica-se em Corridas e Previsões.')
+    gp_pendente = st.session_state.pop('_query_gp_pendente', None)
+    if gp_pendente in valores:
+        st.session_state['gp'] = gp_pendente
+    def manter_gp():
+        if st.session_state.get('gp') not in valores:
+            st.session_state['gp'] = valores[0]
     gp = st.sidebar.selectbox(
         'Grande Prêmio', valores, format_func=lambda valor: descricoes.get(valor, str(valor)), key='gp',
+        index=None if 'gp' in st.session_state else 0,
+        on_change=manter_gp,
         disabled=tela in ('Desempenho', 'Metodologia'),
     )
+    st.sidebar.markdown('<div class="sidebar-help">Desempenho agrega toda a temporada; o filtro de GP aplica-se em Corridas e Previsões.</div><div class="sidebar-motto">ANÁLISE<br>PARA UMA<br>FÓRMULA 1<br>MAIS INTELIGENTE.</div>', unsafe_allow_html=True)
     if gp not in descricoes:
         por_descricao = {descricao: valor for valor, descricao in descricoes.items()}
         gp = por_descricao.get(gp, valores[0])
@@ -952,8 +833,10 @@ def executar_app():
     if tela in ('Corridas', 'Previsões'):
         tela_explorar(pacote, rodada, tela)
     elif tela == 'Desempenho':
+        renderizar_topo(pacote)
         tela_desempenho(pacote)
     else:
+        renderizar_topo(pacote)
         tela_como_funciona()
 
 

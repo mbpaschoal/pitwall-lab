@@ -18,14 +18,14 @@
       "caminho": ".streamlit/config.toml",
       "fonte": "publicacao/templates/config.toml",
       "modo": "gerado",
-      "sha256_destino": "0a8192c9b084ef5bf69f64798779f750aba9af7c531bda764e23a90a614394f8",
-      "sha256_origem": "0a8192c9b084ef5bf69f64798779f750aba9af7c531bda764e23a90a614394f8"
+      "sha256_destino": "8286c9894075e1f4525ba68f3d786b14d7d4a32d22da80f42ca2e8862a0f71b6",
+      "sha256_origem": "8286c9894075e1f4525ba68f3d786b14d7d4a32d22da80f42ca2e8862a0f71b6"
     },
     {
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "0b2e2e523a1b13e9576012dfaa8dd58b0980a9d3a405708c0aed04c4dc19ba80",
+      "sha256_destino": "12341ae609e9cb8c78083bebadc515eff3802abd37a42cb8cf3697404b6c019c",
       "sha256_origem": null
     },
     {
@@ -61,8 +61,8 @@
       "fonte": "app.py",
       "modo": "gerado",
       "nota": "viewer offline inserido na UI Race Weekend do working tree",
-      "sha256_destino": "d9b28463620274fb1acba9320401a0e471c77693e3f596370ca1150ada9bb798",
-      "sha256_origem": "01f51b50cd5be5692896bfa1a94d04c1660a54096be9bc373e186b602b9f895b"
+      "sha256_destino": "01da3e3e31828c37bdaefe334c19123aaf7df86b03c66a6dee025345a84bde33",
+      "sha256_origem": "f9737f297e722b771bcdbb66289163bc2a81c42805baac1c5df393539b3dadb9"
     },
     {
       "caminho": "catalogo_visual.py",
@@ -82,8 +82,8 @@
       "caminho": "dashboard_assets/circuit/ATRIBUICOES.md",
       "fonte": "dashboard_assets/circuit/ATRIBUICOES.md",
       "modo": "copia",
-      "sha256_destino": "863997782e92500584b242ef40e02313f6f40f485a5cdf01362aeb40a57ed164",
-      "sha256_origem": "863997782e92500584b242ef40e02313f6f40f485a5cdf01362aeb40a57ed164"
+      "sha256_destino": "deed5ee028f01827331805425192e1d398769af69aacef99c4dcc5e8ae9b2594",
+      "sha256_origem": "deed5ee028f01827331805425192e1d398769af69aacef99c4dcc5e8ae9b2594"
     },
     {
       "caminho": "dashboard_assets/circuit/albert_park-hero.jpg",
@@ -100,18 +100,18 @@
       "sha256_origem": "dc1ab2deddea816f49b7421b733db6db504713bfbe493fa36d5a477c575c3c96"
     },
     {
-      "caminho": "dashboard_assets/circuit/americas-hero.jpg",
-      "fonte": "dashboard_assets/circuit/americas-hero.jpg",
+      "caminho": "dashboard_assets/circuit/americas-illustration-20261027.png",
+      "fonte": "dashboard_assets/circuit/americas-illustration-20261027.png",
       "modo": "copia",
-      "sha256_destino": "e8ebf6e95694662d2f07a44ba1a629cf65fdeb47b90e9a69a7fa8ae2e6ada1f9",
-      "sha256_origem": "e8ebf6e95694662d2f07a44ba1a629cf65fdeb47b90e9a69a7fa8ae2e6ada1f9"
+      "sha256_destino": "3fa12e945f3e25f36371ed54cdededc7c1f8bce00445eea018eb1eda2d09c390",
+      "sha256_origem": "3fa12e945f3e25f36371ed54cdededc7c1f8bce00445eea018eb1eda2d09c390"
     },
     {
-      "caminho": "dashboard_assets/circuit/americas-layout.svg",
-      "fonte": "dashboard_assets/circuit/americas-layout.svg",
+      "caminho": "dashboard_assets/circuit/americas-outline.svg",
+      "fonte": "dashboard_assets/circuit/americas-outline.svg",
       "modo": "copia",
-      "sha256_destino": "dcad6aa8a57db9db438e93f4c3a292f2b936920d6ce85994e9e3d917e9174d46",
-      "sha256_origem": "dcad6aa8a57db9db438e93f4c3a292f2b936920d6ce85994e9e3d917e9174d46"
+      "sha256_destino": "d97dae9ca9a91185fb50577c21c1397e73212d2a2e9db19c4e672ec1a0ea34bc",
+      "sha256_origem": "d97dae9ca9a91185fb50577c21c1397e73212d2a2e9db19c4e672ec1a0ea34bc"
     },
     {
       "caminho": "dashboard_assets/circuit/bahrain-hero.jpg",
@@ -145,8 +145,8 @@
       "caminho": "dashboard_assets/circuit/catalogo_visual.json",
       "fonte": "dashboard_assets/circuit/catalogo_visual.json",
       "modo": "copia",
-      "sha256_destino": "3ac12d43b3d51132d6db5f1ef1a088537cee49a15ccf30908fee8518642f9fbb",
-      "sha256_origem": "3ac12d43b3d51132d6db5f1ef1a088537cee49a15ccf30908fee8518642f9fbb"
+      "sha256_destino": "215ff141ccd666bfccff7dd00e08bc910b11a60baa48ba21a744e8e45af30122",
+      "sha256_origem": "215ff141ccd666bfccff7dd00e08bc910b11a60baa48ba21a744e8e45af30122"
     },
     {
       "caminho": "dashboard_assets/circuit/catalunya-hero.jpg",
@@ -549,11 +549,39 @@
       "sha256_origem": "c98896b54bdf86dfc9a993854167e8d3bbe109eda201a9f9a826b704f4d2f3ae"
     },
     {
+      "caminho": "frontend_assets/paineis_editoriais.json",
+      "fonte": "frontend_assets/paineis_editoriais.json",
+      "modo": "copia",
+      "sha256_destino": "7f84eb86dbb82e6922ee254401403142028cba1352c2b30368e559984e652c94",
+      "sha256_origem": "7f84eb86dbb82e6922ee254401403142028cba1352c2b30368e559984e652c94"
+    },
+    {
+      "caminho": "frontend_assets/pitwall.css",
+      "fonte": "frontend_assets/pitwall.css",
+      "modo": "copia",
+      "sha256_destino": "78d99ade97c9e7c9485651c061c778153fc32ac402a0df9347ef8fd1b86fc3f9",
+      "sha256_origem": "78d99ade97c9e7c9485651c061c778153fc32ac402a0df9347ef8fd1b86fc3f9"
+    },
+    {
       "caminho": "frontend_assets/race_weekend.json",
       "fonte": "frontend_assets/race_weekend.json",
       "modo": "copia",
       "sha256_destino": "629023f18c99e71ca2b506a3e41ef36e1eb0417704414ac835bf1ef9cc54fa48",
       "sha256_origem": "629023f18c99e71ca2b506a3e41ef36e1eb0417704414ac835bf1ef9cc54fa48"
+    },
+    {
+      "caminho": "pitwall_ui.py",
+      "fonte": "pitwall_ui.py",
+      "modo": "copia",
+      "sha256_destino": "1fd692ded1d58462b2f95597006df1e6dd2d0808b7b930aa4ea646ded9be2576",
+      "sha256_origem": "1fd692ded1d58462b2f95597006df1e6dd2d0808b7b930aa4ea646ded9be2576"
+    },
+    {
+      "caminho": "pitwall_ui_dados.py",
+      "fonte": "pitwall_ui_dados.py",
+      "modo": "copia",
+      "sha256_destino": "697cea51e52517ec83610215ed4b6293f492519a0e9b2c45b60bd79f5b705e3c",
+      "sha256_origem": "697cea51e52517ec83610215ed4b6293f492519a0e9b2c45b60bd79f5b705e3c"
     },
     {
       "caminho": "race_weekend_dados.py",
@@ -651,8 +679,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "876a7af8239ff34c639cebfc7b54108b58df1717485468f64b8f83ca768962a3",
-      "sha256_origem": "235603f00e1f7683739a9b072b053705ac72bbd4300ec8ab7310eafdda7b29ae"
+      "sha256_destino": "b0a56203cb1fc991aecdc056c00021b8368f758c1a1e8649ab317b07e3d2e624",
+      "sha256_origem": "00b7d560d283982b83207c493cb5763fff1fcd5430dacf1f15937dc8409503f5"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -687,7 +715,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "22c78e5463e49e0381547f10d20f52a57148eecffe2b2a04d85d0208b537fd93"
+      "sha256": "6ec71b2ec311fc8466e42a38bb10e6761dab1d917fb9833e44c8b701fc53ec51"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
@@ -707,7 +735,7 @@
     },
     {
       "caminho": "publicacao/templates/config.toml",
-      "sha256": "0a8192c9b084ef5bf69f64798779f750aba9af7c531bda764e23a90a614394f8"
+      "sha256": "8286c9894075e1f4525ba68f3d786b14d7d4a32d22da80f42ca2e8862a0f71b6"
     },
     {
       "caminho": "publicacao/templates/requirements.txt",

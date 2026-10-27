@@ -35,7 +35,7 @@ def copiar_artefatos(raiz):
                 shutil.copy2(arquivo, destino / arquivo.name)
     destino_asset = raiz / 'frontend_assets'
     destino_asset.mkdir(parents=True, exist_ok=True)
-    for nome in ('race_weekend.json', 'contexto_editorial.json'):
+    for nome in ('race_weekend.json', 'contexto_editorial.json', 'paineis_editoriais.json'):
         shutil.copy2(RAIZ / 'frontend_assets' / nome, destino_asset / nome)
     shutil.copytree(RAIZ / 'dashboard_assets' / 'circuit', raiz / 'dashboard_assets' / 'circuit')
     return raiz
@@ -54,6 +54,39 @@ def texto_renderizado(at):
 
 
 class TestDashboardApp(unittest.TestCase):
+    def test_busca_local_navega_gp_e_preferencias_abrem_fontes(self):
+        self.executar()
+        busca = por_chave(self.at.get('text_input'), 'busca_local')
+        busca.set_value('Austin')
+        self.executar()
+        botao = por_chave(self.at.get('button'), 'busca_gp_2025:19')
+        botao.click()
+        self.executar()
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2025:19')
+        self.assertIn('United States Grand Prix', texto_renderizado(self.at))
+        por_chave(self.at.get('checkbox'), 'mostrar_fontes').check()
+        self.executar()
+        self.assertTrue(self.at.session_state['mostrar_fontes'])
+
+    def test_link_de_campeonato_preserva_temporada_gp_e_abre_tabela(self):
+        self.at.query_params.update({'temporada':'2026', 'gp':'18', 'painel':'equipes'})
+        self.executar()
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'temporada').value, 2026)
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:18')
+        texto = texto_renderizado(self.at)
+        self.assertIn('607', texto)
+        self.assertIn('equipes-completo', texto)
+        self.assertFalse(any('Session State API' in str(w.value) for w in self.at.warning))
+
+    def test_query_invalida_e_limpeza_dos_filtros_nao_derrubam_app(self):
+        self.at.query_params.update({'temporada':'2026', 'gp':'²'})
+        self.executar()
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'temporada').value, 2025)
+        self.escolher('temporada', None)
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'temporada').value, 2025)
+        self.escolher('gp', None)
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2025:1')
+
     def test_estado_prospectivo_prioriza_previsao_sem_resultado(self):
         corrida = {
             'estado_resultado': 'indisponivel', 'estado_previsao': 'previsao_registrada',
@@ -245,7 +278,7 @@ class TestDashboardApp(unittest.TestCase):
         por_chave(self.at.get('radio'), 'tela').set_value('Previsões')
         self.executar()
         texto = texto_renderizado(self.at)
-        self.assertIn('Classificação de pilotos 2026', texto)
+        self.assertIn('Campeonato de pilotos', texto)
         self.assertIn('Rodada de referência: 18', texto)
         self.assertIn('DriverStandings Jolpica-F1, separado das probabilidades por GP.', texto)
         campeonato = app.carregar(2026)['campeonato_pilotos']
@@ -294,19 +327,19 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('Estudo retrospectivo com dados históricos.', texto)
         self.assertNotIn('Previsão registrada antes da corrida.', texto)
 
-    def test_visual_editorial_usa_fontes_locais_abril_e_lato_sem_gradiente(self):
+    def test_visual_editorial_usa_fontes_locais_e_sobreposicao_legivel(self):
         css = app.estilo_dashboard()
         self.assertIn('AbrilFatfaceLocal', css)
         self.assertIn('LatoLocal', css)
         self.assertIn('stIconMaterial', css)
-        self.assertNotIn('gradient', css.lower())
+        self.assertIn('linear-gradient(transparent', css.lower())
         self.assertTrue((RAIZ / 'dashboard_assets/fonts/abrilfatface.ttf').is_file())
         self.assertTrue((RAIZ / 'dashboard_assets/fonts/lato.ttf').is_file())
 
-    def test_menu_lateral_mantem_cabecalho_nativo_e_abre_expandido(self):
+    def test_menu_lateral_mantem_controle_nativo_e_adapta_ao_viewport(self):
         codigo = (RAIZ / 'app.py').read_text(encoding='utf-8')
         css = app.estilo_dashboard()
-        self.assertIn("initial_sidebar_state='expanded'", codigo)
+        self.assertIn("initial_sidebar_state='auto'", codigo)
         self.assertNotIn('header[data-testid="stHeader"] { display: none; }', css)
 
     def test_corridas_austin_exibe_contexto_programacao_e_previsao_registrada(self):
@@ -322,9 +355,10 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('Mapa:', texto)
         self.assertIn('CC BY-SA 4.0', texto)
         self.assertIn('Programação do fim de semana', texto)
-        self.assertIn('Classificação de pilotos 2026', texto)
+        self.assertIn('Campeonato de pilotos', texto)
         self.assertIn('Desempenho das equipes', texto)
-        self.assertIn('Dados de desempenho por equipe indisponíveis no snapshot local.', texto)
+        self.assertIn('Campeonato de construtores', texto)
+        self.assertIn('607', texto)
         self.assertIn('Estado dos dados', texto)
         self.assertIn('Previsão registrada', texto)
         self.assertIn('83.5%', texto)
@@ -339,7 +373,7 @@ class TestDashboardApp(unittest.TestCase):
         codigo = (RAIZ / 'app.py').read_text(encoding='utf-8')
         for aba in ('Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes'):
             self.assertIn(aba, codigo)
-        self.assertIn('Dados meteorológicos indisponíveis no snapshot local.', texto)
+        self.assertIn('Clima não disponível', texto)
         self.assertIn('Previsão registrada', texto)
         self.assertIn('Andrea Kimi Antonelli · Mercedes · 83.5%', texto)
         self.assertIn('Previsão registrada antes da corrida.', texto)
@@ -349,9 +383,9 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('gp-cabecalho', css)
         self.assertIn('tabela-editorial', css)
         self.assertIn('barra-equipe', css)
-        self.assertIn('.topo-editorial', css)
-        self.assertIn('max-width: none', css)
-        self.assertIn('height: 23.4rem', css)
+        self.assertIn('.st-key-topbar', css)
+        self.assertIn('max-width:none', css)
+        self.assertIn('height:375px', css)
 
         campeonato = app.carregar(2026)['campeonato_pilotos']
         tabela = app.tabela_campeonato_editorial(campeonato)
@@ -366,15 +400,17 @@ class TestDashboardApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         self.assertIn('Foto do circuito', texto)
         self.assertIn('Mapa do circuito', texto)
-        self.assertIn('Dados do circuito indisponíveis no snapshot local.', texto)
+        self.assertIn('5,513 km', texto)
+        self.assertIn('Anti-horário', texto)
         css = app.estilo_dashboard()
         self.assertIn('hero-circuito', css)
         self.assertIn('mapa-circuito', css)
-        self.assertTrue((RAIZ / 'dashboard_assets/circuit/americas-hero.jpg').is_file())
-        self.assertTrue((RAIZ / 'dashboard_assets/circuit/americas-layout.svg').is_file())
+        self.assertTrue((RAIZ / 'dashboard_assets/circuit/americas-illustration-20261027.png').is_file())
+        self.assertTrue((RAIZ / 'dashboard_assets/circuit/americas-outline.svg').is_file())
         catalogo = (RAIZ / 'dashboard_assets/circuit/catalogo_visual.json').read_text(encoding='utf-8')
-        self.assertIn('americas-hero.jpg', catalogo)
-        self.assertIn('americas-layout.svg', catalogo)
+        self.assertIn('americas-illustration-20261027.png', catalogo)
+        self.assertIn('Ilustração gerada por IA', texto)
+        self.assertIn('americas-outline.svg', catalogo)
         atribuicoes = (RAIZ / 'dashboard_assets/circuit/ATRIBUICOES.md').read_text(encoding='utf-8')
         self.assertIn('CC BY 2.0', atribuicoes)
         self.assertIn('CC BY-SA 4.0', atribuicoes)

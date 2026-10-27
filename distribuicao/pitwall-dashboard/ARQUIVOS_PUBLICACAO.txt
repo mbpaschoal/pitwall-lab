@@ -13,8 +13,8 @@ contexto_editorial.py
 dashboard_assets/circuit/ATRIBUICOES.md
 dashboard_assets/circuit/albert_park-hero.jpg
 dashboard_assets/circuit/albert_park-layout.svg
-dashboard_assets/circuit/americas-hero.jpg
-dashboard_assets/circuit/americas-layout.svg
+dashboard_assets/circuit/americas-illustration-20261027.png
+dashboard_assets/circuit/americas-outline.svg
 dashboard_assets/circuit/bahrain-hero.jpg
 dashboard_assets/circuit/bahrain-layout.svg
 dashboard_assets/circuit/baku-hero.jpg
@@ -77,7 +77,11 @@ docs/protocolo_temporal.md
 docs/relatorio_2024.md
 documentacao_local.py
 frontend_assets/contexto_editorial.json
+frontend_assets/paineis_editoriais.json
+frontend_assets/pitwall.css
 frontend_assets/race_weekend.json
+pitwall_ui.py
+pitwall_ui_dados.py
 race_weekend_dados.py
 registro_emissoes.py
 reports/avaliacao_final_v1/avaliacao_corridas.csv

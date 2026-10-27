@@ -19,6 +19,13 @@ estima a ordem P1/P2/P3.
 - Austin 2026 tem uma **previsão registrada** congelada antes da corrida e o
   resultado posterior validado localmente. A interface preserva as probabilidades
   originais e mostra a auditoria pós-corrida separada do estudo retrospectivo.
+- Interface editorial compartilhada por 2024–2026, com fontes locais, busca na
+  temporada, preferências da sessão e composição responsiva. O CSS está em
+  `frontend_assets/pitwall.css`; `pitwall_ui.py` controla a grade e
+  `pitwall_ui_dados.py` fornece apenas contexto descritivo validado. Austin usa
+  uma ilustração identificada como IA e os campeonatos oficiais de pilotos e
+  construtores pós-GP. Dados indisponíveis aparecem como lacunas, sem copiar os
+  números ilustrativos da referência visual.
 
 ## Limites importantes
 
