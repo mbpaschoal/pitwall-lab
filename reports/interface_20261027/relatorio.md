@@ -51,3 +51,5 @@ Dados técnicos descritivos de Austin conferidos na [página oficial F1 de 2026]
 ## Publicação
 
 Commit de implementação `8aa088578918cb9b2cc1a0c114b37ef87cb2dccc` enviado a `origin/main`. A nova composição foi confirmada em uma nova aba pública do Streamlit, com Austin/R18 selecionado pelo link, ilustração IA, campeonatos oficiais e sem erro de importação. A inspeção identificou uma sobreposição específica do Cloud: a barra “Fork/GitHub” cobria o perfil. Ela foi ocultada pelo seletor próprio `stToolbarActions`, preservando o botão independente de abrir a navegação.
+
+Revisão final publicada: `488e4e82c1168c5ffbbe653c6af60950961730e8`. Nova sessão pública confirmou as três temporadas com grade em `(307,289,1333,375)` e campeonatos em `(307,678,1333,235)`. Perfil aberto com sucesso, barra operacional oculta e sem erro de importação. [Registro público](publicacao_verificada.json) e [captura pública real](publico-final-1672x941.png). Não foi necessário reiniciar administrativamente o Cloud nesta correção.
