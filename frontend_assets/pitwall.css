@@ -8,6 +8,7 @@ html { font-size:16px; }
 [data-testid="stHeader"] div { pointer-events:none !important; }
 [data-testid="stHeader"] button, [data-testid="stHeader"] button span { pointer-events:auto !important; }
 [data-testid="stToolbar"] { top:0; right:0; }
+[data-testid="stToolbarActions"] { display:none; }
 [data-testid="stMainBlockContainer"] { max-width:none; padding:0 32px 40px 38px; }
 [data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] { gap:0; }
 .stElementContainer:has(style), .stElementContainer:has(.nota-retrospectiva) { display:none; }

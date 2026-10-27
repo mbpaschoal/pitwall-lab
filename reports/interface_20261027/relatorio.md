@@ -1,7 +1,7 @@
 # Pitwall Lab — correção da interface compartilhada
 
 Created by: MBPaschoal
-Status: implemented locally; public verification pending
+Status: implemented; public deployment verified
 Type: implementation and verification report
 Date: 2026-10-27
 
@@ -50,4 +50,4 @@ Dados técnicos descritivos de Austin conferidos na [página oficial F1 de 2026]
 
 ## Publicação
 
-A confirmar depois do envio do pacote ao GitHub, em nova sessão pública do Streamlit. Correção local e push não constituem, por si só, comprovação de implantação.
+Commit de implementação `8aa088578918cb9b2cc1a0c114b37ef87cb2dccc` enviado a `origin/main`. A nova composição foi confirmada em uma nova aba pública do Streamlit, com Austin/R18 selecionado pelo link, ilustração IA, campeonatos oficiais e sem erro de importação. A inspeção identificou uma sobreposição específica do Cloud: a barra “Fork/GitHub” cobria o perfil. Ela foi ocultada pelo seletor próprio `stToolbarActions`, preservando o botão independente de abrir a navegação.
