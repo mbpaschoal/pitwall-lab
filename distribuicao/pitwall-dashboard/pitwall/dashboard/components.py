@@ -231,7 +231,9 @@ def campeonatos(paineis, temporada):
     )
 
 
-def visao_geral(corrida, paineis, foto, mapa, alt, clima=None):
+def visao_geral(
+    corrida, paineis, foto, mapa, alt, clima=None, enquadramento_foto=None
+):
     info = paineis["circuit_info"]
     metrics = [
         ("Comprimento", info.get("comprimento_km"), " km"),
@@ -291,8 +293,10 @@ def visao_geral(corrida, paineis, foto, mapa, alt, clima=None):
         )
         or "<p>Informações técnicas indisponíveis.</p>"
     )
+    # A named frame keeps a portrait subject outside the circuit illustration.
+    photo_class = ' class="pw-photo-left"' if enquadramento_foto == "pista-esquerda" else ""
     photo_html = (
-        '<img src="{}" alt="{}">'.format(foto, e(alt))
+        '<img{} src="{}" alt="{}">'.format(photo_class, foto, e(alt))
         if foto
         else "<p>Imagem do circuito indisponível.</p>"
     )

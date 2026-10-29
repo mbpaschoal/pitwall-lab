@@ -180,3 +180,6 @@ nav[aria-label="Documentação"] { line-height:1.9; padding:4px 0 12px; }
 
 /* Reserve a top row below the native toolbar and above the GP header. */
 .st-key-topbar { margin-bottom:52px; }
+
+/* Show the main straight and pit lane, keeping the portrait outside the frame. */
+.hero-circuito > img.pw-photo-left { width:150%; max-width:none; object-position:left center; }

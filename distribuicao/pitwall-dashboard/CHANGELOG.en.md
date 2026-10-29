@@ -4,6 +4,16 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.1.4 — 2026-10-29
+
+### São Paulo and Madrid images
+
+The Interlagos image was only 349 × 197 pixels. It is replaced with a 5000 × 3333 photograph of the Senna S during the 2022 São Paulo Grand Prix, showing Formula 1 cars and the track. Credit: Beto Issa/Formula 1 and Governo do Estado de São Paulo, CC BY 2.0.
+
+In Madrid, a portrait photograph was cropped to show mostly sky. The new official photograph shows the main straight, pit lane and grandstands in September 2026. The interface frames its left side to focus on the circuit and keep the portrait subject outside the visible area. Credit: Comunidad de Madrid, CC BY-NC-SA 4.0; this file-specific noncommercial condition remains recorded in the catalog.
+
+Review checks original resolution and the subject visible at actual card size on desktop and mobile. Original image bytes remain unedited; presentation cropping, sources, attribution and PT/EN alt text are documented. Maps, data and predictions are unchanged.
+
 ## 0.1.3 — 2026-10-29
 
 ### Miami photograph

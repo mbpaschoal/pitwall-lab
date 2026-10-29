@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "fbe62dc0b9aeccc72dd8bac6f1b6c75e7f532d4add224b60c822e0ee364eccdb",
+  "apresentacao_build_sha256": "d88a6454c742e0f7cb9b169f1b2d18e9dd2c536ed99ada74c08c33e8b2c4aa48",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "fc724a791a665bfdd8dc9def40be269a48750c36b01b2f78a4e2a7756492439d",
-      "sha256_origem": "6bc6a834aabc02860cb025fb5b49b7ec00d7178a4d27e84cb983508b702d061f"
+      "sha256_destino": "24d457239925a154b4e223da26f4f4a19d30c8a250ad0b79beff5372bd8097b7",
+      "sha256_origem": "ed5e3a4d8ba1d1610384adb0a719cbd49c8a920a905b6cbc7ddfdfd53d3166b4"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "cce38bb6ca2d2b44f6c6e932db10834f8edf43c0557edf7b26871f12609763d3",
-      "sha256_origem": "8a7ae716161f47214b6fbe284915ced6d95b96c78db08d503e2c92962a185138"
+      "sha256_destino": "21b2705db69386eb67d8a107a66080694a36638d7d1118270bf5ff7cd458b420",
+      "sha256_origem": "cb2f9af9f778d3e4ac79ec2fa5b299322832f11aee5a6db89df615e44adf5674"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -91,8 +91,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "2d2454ef0edeb462a6ce8b25d387aaa74df08093d5cea0428a10ce55510c6326",
-      "sha256_origem": "2d2454ef0edeb462a6ce8b25d387aaa74df08093d5cea0428a10ce55510c6326"
+      "sha256_destino": "8a3dad16d348c163566a456fcf650d85d7aeeda5e53d01ee1fa8dc15212915a7",
+      "sha256_origem": "8a3dad16d348c163566a456fcf650d85d7aeeda5e53d01ee1fa8dc15212915a7"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -196,8 +196,8 @@
       "caminho": "dashboard_assets/circuit/catalogo_visual.json",
       "fonte": "dashboard_assets/circuit/catalogo_visual.json",
       "modo": "copia",
-      "sha256_destino": "ea8539257f3e47d3cb776755e9c54da71cfa003b8926b29ea9b611ac393fb032",
-      "sha256_origem": "ea8539257f3e47d3cb776755e9c54da71cfa003b8926b29ea9b611ac393fb032"
+      "sha256_destino": "5df5e4518c5db6311f7657e5e6627ded846cbeddbc11d61739d9a0296453e193",
+      "sha256_origem": "5df5e4518c5db6311f7657e5e6627ded846cbeddbc11d61739d9a0296453e193"
     },
     {
       "caminho": "dashboard_assets/circuit/catalunya-hero.jpg",
@@ -245,8 +245,8 @@
       "caminho": "dashboard_assets/circuit/interlagos-hero.jpg",
       "fonte": "dashboard_assets/circuit/interlagos-hero.jpg",
       "modo": "copia",
-      "sha256_destino": "1a0b6ec0834612dd6cd02d61301372b5b50afe7dceb68381940f66a933028fed",
-      "sha256_origem": "1a0b6ec0834612dd6cd02d61301372b5b50afe7dceb68381940f66a933028fed"
+      "sha256_destino": "b39995a8518ae7cfbe8cd87781af43cba095138deca62677e0e2b1907cb62856",
+      "sha256_origem": "b39995a8518ae7cfbe8cd87781af43cba095138deca62677e0e2b1907cb62856"
     },
     {
       "caminho": "dashboard_assets/circuit/interlagos-layout.svg",
@@ -287,8 +287,8 @@
       "caminho": "dashboard_assets/circuit/madring-hero.jpg",
       "fonte": "dashboard_assets/circuit/madring-hero.jpg",
       "modo": "copia",
-      "sha256_destino": "3371aff97ae8041acc675c71dc5b68b305e6c5415f1ab5f4cc8f2d5249d324f0",
-      "sha256_origem": "3371aff97ae8041acc675c71dc5b68b305e6c5415f1ab5f4cc8f2d5249d324f0"
+      "sha256_destino": "23d37ff979b3f55236ca6a25ac44fb2cd1b123b930554283aa90f0b6978a8384",
+      "sha256_origem": "23d37ff979b3f55236ca6a25ac44fb2cd1b123b930554283aa90f0b6978a8384"
     },
     {
       "caminho": "dashboard_assets/circuit/madring-layout.svg",
@@ -659,8 +659,8 @@
       "caminho": "frontend_assets/pitwall.css",
       "fonte": "frontend_assets/pitwall.css",
       "modo": "copia",
-      "sha256_destino": "122ba44c87839944c943364a895195c18b6fba8a5d135fff422f94fa1dcf84bd",
-      "sha256_origem": "122ba44c87839944c943364a895195c18b6fba8a5d135fff422f94fa1dcf84bd"
+      "sha256_destino": "2547033604a8048bdff63dfde2c1557f7a83b9a698589215a8b85bc155b23205",
+      "sha256_origem": "2547033604a8048bdff63dfde2c1557f7a83b9a698589215a8b85bc155b23205"
     },
     {
       "caminho": "frontend_assets/race_weekend.json",
@@ -694,8 +694,8 @@
       "caminho": "pitwall/dashboard/app.py",
       "fonte": "pitwall/dashboard/app.py",
       "modo": "copia",
-      "sha256_destino": "70c157b7c46df64aa636e9bca8e239182abed5ba8b316e1acfd5954a7ce6c899",
-      "sha256_origem": "70c157b7c46df64aa636e9bca8e239182abed5ba8b316e1acfd5954a7ce6c899"
+      "sha256_destino": "cc8f546e432504d3e1d9352e89b90cdde010f6642b427b3089ae73802e79c525",
+      "sha256_origem": "cc8f546e432504d3e1d9352e89b90cdde010f6642b427b3089ae73802e79c525"
     },
     {
       "caminho": "pitwall/dashboard/archive_views.py",
@@ -708,8 +708,8 @@
       "caminho": "pitwall/dashboard/components.py",
       "fonte": "pitwall/dashboard/components.py",
       "modo": "copia",
-      "sha256_destino": "db1f1df350fc0fc9529677292e11619c9578f31e927cc9bb60f70107c07719b2",
-      "sha256_origem": "db1f1df350fc0fc9529677292e11619c9578f31e927cc9bb60f70107c07719b2"
+      "sha256_destino": "00ef9592a444415ff37109e67dd0db08496013e5e713ee16316b8aae7d121b21",
+      "sha256_origem": "00ef9592a444415ff37109e67dd0db08496013e5e713ee16316b8aae7d121b21"
     },
     {
       "caminho": "pitwall/data/__init__.py",
@@ -785,8 +785,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "a0965a364a9357f9f3158e161a57585333e73d6eb1be72234a8290f14a525a4f",
-      "sha256_origem": "a0965a364a9357f9f3158e161a57585333e73d6eb1be72234a8290f14a525a4f"
+      "sha256_destino": "a62aabe0617595f352297460a1ce3543e70c5cc50e30c9455368b1c93d99a140",
+      "sha256_origem": "a62aabe0617595f352297460a1ce3543e70c5cc50e30c9455368b1c93d99a140"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -925,8 +925,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "bed3883f2f0d0dd3d90325181d93b52831bd4f90a4e23bc4189c840128f8f7a4",
-      "sha256_origem": "bed3883f2f0d0dd3d90325181d93b52831bd4f90a4e23bc4189c840128f8f7a4"
+      "sha256_destino": "72f1608bf769f483b8d5d01499efbd7f438f7c6821be5f26efd58177a4c47e68",
+      "sha256_origem": "72f1608bf769f483b8d5d01499efbd7f438f7c6821be5f26efd58177a4c47e68"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -1012,7 +1012,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "bed3883f2f0d0dd3d90325181d93b52831bd4f90a4e23bc4189c840128f8f7a4"
+      "sha256": "72f1608bf769f483b8d5d01499efbd7f438f7c6821be5f26efd58177a4c47e68"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -1031,5 +1031,5 @@
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.1.3"
+  "versao_produto": "0.1.4"
 }

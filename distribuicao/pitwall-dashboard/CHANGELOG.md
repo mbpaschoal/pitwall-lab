@@ -4,6 +4,16 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.1.4 — 2026-10-29
+
+### Imagens de São Paulo e Madrid
+
+A imagem de Interlagos tinha apenas 349 × 197 pixels. Ela foi substituída por uma fotografia de 5000 × 3333 pixels do S do Senna durante o GP de São Paulo de 2022, com carros de Fórmula 1 e pista em destaque. Crédito Beto Issa/Fórmula 1 e Governo do Estado de São Paulo, CC BY 2.0.
+
+Em Madrid, o recorte de uma foto vertical destacava o céu e escondia a pista. A nova foto oficial mostra a reta principal, boxes e arquibancadas em setembro de 2026. O enquadramento lateral da interface prioriza o circuito e mantém a pessoa retratada fora da área visível. Crédito Comunidad de Madrid, CC BY-NC-SA 4.0; a restrição não comercial é específica desse arquivo e permanece no catálogo.
+
+A revisão confere resolução original e assunto visível no tamanho real do card em desktop e celular. As imagens originais permanecem sem edição; os recortes de apresentação, fontes, créditos e textos alternativos PT/EN estão registrados. Mapas, dados e previsões não mudaram.
+
 ## 0.1.3 — 2026-10-29
 
 ### Fotografia de Miami

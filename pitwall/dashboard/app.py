@@ -466,6 +466,7 @@ def renderizar_contexto_circuito(pacote, corrida, acervo_gp=None):
             mapa,
             ativos.get("alt_foto", "Imagem ilustrativa do circuito"),
             clima=acervo_gp.get("clima"),
+            enquadramento_foto=foto_meta.get("enquadramento") if foto_meta else None,
         )
     else:
         visao = pitwall_ui.visao_geral(
@@ -474,6 +475,7 @@ def renderizar_contexto_circuito(pacote, corrida, acervo_gp=None):
             foto,
             mapa,
             ativos.get("alt_foto", "Imagem ilustrativa do circuito"),
+            enquadramento_foto=foto_meta.get("enquadramento") if foto_meta else None,
         )
     st.markdown(
         visao + pitwall_ui.campeonatos(paineis, pacote["temporada"]),
