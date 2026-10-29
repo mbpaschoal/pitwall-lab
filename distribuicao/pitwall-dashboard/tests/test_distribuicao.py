@@ -33,6 +33,8 @@ def carregar_documentacao():
 
 class StubStreamlit:
     def __init__(self):
+        self.query_params = {'documento': 'relatorio-2024'}
+        self.session_state = {}
         self.markdowns = []
         self.downloads = []
 
@@ -73,8 +75,7 @@ class TestDistribuicao(unittest.TestCase):
         st = StubStreamlit()
         modulo.renderizar_documentacao_local(st)
         self.assertTrue(any('Relatório de 2024' in texto for texto in st.markdowns))
-        self.assertTrue(any('Plano da avaliação de 2025' in texto for texto in st.markdowns))
-        self.assertTrue(any('São registros históricos; 2025 já foi avaliado' in texto for texto in st.markdowns))
+        self.assertTrue(any('Registros históricos do projeto' in texto for texto in st.markdowns))
         self.assertEqual(len(st.downloads), 1)
         rotulo, kwargs = st.downloads[0]
         self.assertEqual(rotulo, 'Baixar previsões de 2024 (CSV)')

@@ -39,7 +39,7 @@ class TestDashboardAcervoApp(unittest.TestCase):
         with patch('socket.create_connection', side_effect=AssertionError('Consulta de rede proibida')):
             self.executar()
         texto = texto_renderizado(self.at)
-        for trecho in ('Clima do fim de semana', 'Open-Meteo.com', 'Modelo atmosférico histórico em grade',
+        for trecho in ('Clima do fim de semana', 'Open-Meteo.com', 'Modelo atmosférico histórico próximo ao circuito',
                        'Pneus e paradas observados', 'Comparativo de equipes no GP',
                        'Histórico observado deste GP', '2026-10-28-acervo-1'):
             self.assertIn(trecho, texto)
@@ -93,11 +93,14 @@ class TestDashboardAcervoApp(unittest.TestCase):
     def test_gp_futuro_sem_acervo_mantem_ausencia_sem_probabilidades(self):
         self.executar(2026, 19)
         texto = texto_renderizado(self.at)
-        self.assertIn('Sem probabilidades publicadas', texto)
+        self.assertNotIn('Favoritos por ranking publicado', texto)
         self.assertIn('Estratégias indisponíveis no pacote local.', texto)
         self.assertNotIn('Clima do fim de semana', texto)
         self.assertNotIn('Pneus e paradas observados', texto)
         self.assertNotIn('Favoritos por ranking publicado', texto)
+        por_chave(self.at.radio, 'tela').set_value('Previsões')
+        self.at.run(timeout=30)
+        self.assertIn('Sem probabilidades publicadas', texto_renderizado(self.at))
 
 
 if __name__ == '__main__':

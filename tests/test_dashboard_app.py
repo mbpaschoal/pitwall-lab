@@ -1,5 +1,6 @@
 """AppTest da etapa 6: usa uma cópia temporária de reports/, sem data/ ou modelos."""
 import os
+import re
 import shutil
 import socket
 import sys
@@ -49,7 +50,9 @@ def texto_renderizado(at):
     partes = []
     for tipo in ('markdown', 'text', 'caption', 'title', 'header', 'subheader', 'info', 'warning', 'error'):
         for elemento in at.get(tipo):
-            partes.append(str(getattr(elemento, 'value', elemento)))
+            valor = str(getattr(elemento, 'value', elemento))
+            if not valor.startswith('<style>'):
+                partes.append(re.sub(r'data:[^;]+;base64,[A-Za-z0-9+/=]+', 'ativo-local', valor))
     return '\n'.join(partes)
 
 
@@ -146,7 +149,7 @@ class TestDashboardApp(unittest.TestCase):
             texto = texto_renderizado(self.at)
             self.assertIn(corrida, texto)
             self.assertIn(meta, texto)
-            for rotulo in ('Contexto do circuito', 'Mapa do circuito', 'Informações do circuito', 'Visão geral'):
+            for rotulo in ('Foto do circuito', 'Mapa do circuito', 'Informações do circuito', 'Visão geral'):
                 self.assertIn(rotulo, texto)
 
     def test_gp_fica_desabilitado_fora_da_exploracao_sem_desabilitar_temporada(self):
@@ -195,6 +198,8 @@ class TestDashboardApp(unittest.TestCase):
     def test_explorar_exibe_temporada_cobertura_na_e_aviso_de_favoritos_antes_da_avaliacao(self):
         self.executar()
         self.escolher('temporada', 2025)
+        por_chave(self.at.radio, 'tela').set_value('Previsões')
+        self.executar()
         self.escolher('gp', '2025:9')
         texto = texto_renderizado(self.at)
         self.assertIn('Temporada 2025', texto)
@@ -230,21 +235,24 @@ class TestDashboardApp(unittest.TestCase):
             for valor in valores:
                 seletor_gp.set_value(valor)
                 self.executar()
-                self.assertIn('Modelo e referências — calculados sem o alvo atual', texto_renderizado(self.at))
+                self.assertIn('Ver previsões deste GP', texto_renderizado(self.at))
+                self.assertNotIn('Favoritos por ranking publicado', texto_renderizado(self.at))
                 seletor_gp = por_chave(self.at.get('selectbox'), 'gp')
 
     def test_espanha_e_sao_paulo_2025_exibem_na_motivo_unknown_e_inelegivel(self):
         self.executar()
         self.escolher('temporada', 2025)
+        por_chave(self.at.radio, 'tela').set_value('Previsões')
+        self.executar()
         self.escolher('gp', '2025:9')
         texto = texto_renderizado(self.at).lower()
         self.assertIn('n/a', texto)
-        self.assertIn('alvo_desconhecido', texto)
+        self.assertIn('alvo desconhecido', texto)
         self.assertIn('stroll', texto)
         self.escolher('gp', '2025:21')
         texto = texto_renderizado(self.at).lower()
         self.assertIn('n/a', texto)
-        self.assertIn('participante_inelegivel', texto)
+        self.assertIn('participante inelegivel', texto)
         self.assertIn('bortoleto', texto)
 
     def test_execucao_app_nao_chama_socket_e_nao_importa_joblib(self):
@@ -261,7 +269,8 @@ class TestDashboardApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         self.assertIn('Max Verstappen', texto)
         self.assertIn('Red Bull', texto)
-        self.assertIn('Previsão e resultado observado', texto)
+        self.assertNotIn('Previsão e resultado observado', texto)
+        self.assertIn('Integrantes do pódio observado', texto)
         self.assertNotIn('Max Verstappen (max_verstappen)', texto)
 
     def test_2026_com_resultado_observado_nao_afirma_que_o_podio_esta_vazio(self):
@@ -269,7 +278,7 @@ class TestDashboardApp(unittest.TestCase):
         self.escolher('temporada', 2026)
         texto = texto_renderizado(self.at)
         self.assertIn('Integrantes do pódio observado (sem ordem):', texto)
-        self.assertIn('avaliação posterior desta previsão registrada', texto.lower())
+        self.assertIn('Previsão registrada antes da corrida.', texto)
         self.assertNotIn('O campo de pódio por GP fica vazio nesta cobertura', texto)
 
     def test_2026_separa_campeonato_local_das_probabilidades_do_gp(self):
@@ -278,9 +287,9 @@ class TestDashboardApp(unittest.TestCase):
         por_chave(self.at.get('radio'), 'tela').set_value('Previsões')
         self.executar()
         texto = texto_renderizado(self.at)
-        self.assertIn('Campeonato de pilotos', texto)
-        self.assertIn('Rodada de referência: 18', texto)
-        self.assertIn('DriverStandings Jolpica-F1, separado das probabilidades por GP.', texto)
+        self.assertNotIn('Campeonato de pilotos', texto)
+        self.assertIn('Ver campeonato completo', texto)
+        self.assertIn('Favoritos por ranking publicado', texto)
         campeonato = app.carregar(2026)['campeonato_pilotos']
         self.assertIn('Vitórias', app.tabela_campeonato_pilotos(campeonato).columns)
         self.assertIn('Max Verstappen', texto)
@@ -350,32 +359,32 @@ class TestDashboardApp(unittest.TestCase):
         self.assertEqual(list(por_chave(self.at.get('selectbox'), 'temporada').options), ['2024', '2025', '2026'])
         self.assertIn('United States Grand Prix', texto)
         self.assertIn('Austin, USA · 2026-10-25', texto)
-        self.assertIn('Contexto do GP', texto)
+        self.assertIn('Ver previsões deste GP', texto)
         self.assertIn('Mapa do circuito', texto)
         self.assertIn('Mapa:', texto)
         self.assertIn('CC BY-SA 4.0', texto)
         self.assertIn('Programação do fim de semana', texto)
         self.assertIn('Campeonato de pilotos', texto)
-        self.assertIn('Desempenho das equipes', texto)
+        self.assertIn('Campeonato de construtores', texto)
         self.assertIn('Campeonato de construtores', texto)
         self.assertIn('607', texto)
-        self.assertIn('Estado dos dados', texto)
+        self.assertNotIn('Estado dos dados', texto)
         self.assertIn('Previsão registrada', texto)
-        self.assertIn('83.5%', texto)
+        self.assertNotIn('83.5%', texto)
 
     def test_corridas_austin_tem_hierarquia_editorial_e_navegacao_secundaria_completa(self):
         self.executar()
         self.escolher('temporada', 2026)
         self.escolher('gp', '2026:18')
         texto = texto_renderizado(self.at)
-        for rotulo in ('Contexto do circuito', 'Informações do circuito', 'Condições disponíveis'):
+        for rotulo in ('Foto do circuito', 'Informações do circuito', 'Clima'):
             self.assertIn(rotulo, texto)
         codigo = (RAIZ / 'app.py').read_text(encoding='utf-8')
         for aba in ('Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes'):
             self.assertIn(aba, codigo)
         self.assertIn('Clima não disponível', texto)
         self.assertIn('Previsão registrada', texto)
-        self.assertIn('Andrea Kimi Antonelli · Mercedes · 83.5%', texto)
+        self.assertNotIn('Andrea Kimi Antonelli · Mercedes · 83.5%', texto)
         self.assertIn('Previsão registrada antes da corrida.', texto)
         self.assertNotIn('Estudo retrospectivo com dados históricos.', texto)
 
@@ -455,23 +464,21 @@ class TestDashboardApp(unittest.TestCase):
     def test_corridas_e_previsoes_priorizam_blocos_distintos_sem_trocar_o_gp(self):
         self.executar()
         self.escolher('temporada', 2026)
-        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:18')
+        self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2026:18')
         corridas = texto_renderizado(self.at)
-        self.assertIn('Contexto do GP e resultado observado', corridas)
-        self.assertLess(corridas.index('Resultados observados'), corridas.index('Modelo e referências'))
-        self.assertIn('previsão registrada', corridas.lower())
-
-        por_chave(self.at.get('radio'), 'tela').set_value('Previsões')
+        self.assertIn('Campeonato de pilotos', corridas)
+        self.assertIn('Integrantes do pódio observado', corridas)
+        self.assertNotIn('Favoritos por ranking publicado', corridas)
+        self.assertNotIn('Previsão e resultado observado', corridas)
+        por_chave(self.at.radio, 'tela').set_value('Previsões')
         self.executar()
         previsoes = texto_renderizado(self.at)
-        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:18')
-        self.assertIn('Probabilidades e estado da previsão', previsoes)
-        self.assertLess(previsoes.index('Modelo e referências'), previsoes.index('Resultados observados'))
-        self.assertIn('previsão registrada', previsoes.lower())
+        self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2026:18')
+        self.assertIn('Favoritos por ranking publicado', previsoes)
+        self.assertIn('Avaliação posterior desta previsão registrada', previsoes)
+        self.assertNotIn('Campeonato de pilotos', previsoes)
+        self.assertNotIn('Informações do circuito', previsoes)
 
-        self.escolher('gp', '2026:18')
-        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:18')
-        self.assertIn('Avaliação posterior desta previsão registrada', texto_renderizado(self.at))
 
     def test_metricas_json_com_numero_em_texto_exibe_erro_util_sem_traceback(self):
         caminho = self.raiz / 'reports/avaliacao_final_v1/metricas.json'

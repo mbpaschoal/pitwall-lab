@@ -44,7 +44,7 @@ RUNTIME_WORKTREE = (
     'dashboard_assets/fonts/lato.ttf', 'dashboard_assets/fonts/lato-bold.ttf',
     'dashboard_assets/fonts/abrilfatface-OFL.txt', 'dashboard_assets/fonts/lato-OFL.txt',
     'dashboard_assets/circuit/ATRIBUICOES.md', 'tests/test_dashboard_app.py',
-    'tests/test_dashboard_dados.py',
+    'tests/test_dashboard_dados.py', 'tests/test_interface_editorial.py',
 )
 TEMPLATES = (
     'publicacao/templates/README_PUBLICO.md.tpl',

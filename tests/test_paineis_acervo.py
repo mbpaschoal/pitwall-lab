@@ -45,5 +45,5 @@ class TestPaineisAcervo(unittest.TestCase):
         corrida = {'corrida':'Australian Grand Prix','circuito_nome':'Albert Park','cidade':'Melbourne','pais':'Australia','data':'2025-03-16'}
         panes = carregar_paineis(ROOT, 2025, 1, 'albert_park')
         html = pitwall_ui.visao_geral(corrida, panes, '', '', '', clima=gp['clima'])
-        self.assertIn('Open-Meteo · média do período histórico', html)
+        self.assertIn('Open-Meteo · média histórica', html)
         self.assertNotIn('Clima não disponível', html)

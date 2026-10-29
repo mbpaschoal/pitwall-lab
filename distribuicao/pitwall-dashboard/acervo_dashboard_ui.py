@@ -77,7 +77,6 @@ def renderizar_tempos(gp):
         key=_chave(gp, 'sessao_tempos'),
     )
     sessao = por_id[selecionada]
-    st.caption('Fonte: OpenF1. Tempos observados, separados das probabilidades do modelo.')
     nome = sessao['nome']
     if nome in ('Race', 'Sprint'):
         st.caption('Tempo total publicado para a prova. Não é o tempo de uma volta.')
@@ -100,7 +99,7 @@ def renderizar_tempos(gp):
 
 def renderizar_estrategias(gp):
     st.subheader('Pneus e paradas observados')
-    st.caption('Sequência de compostos e stints publicada após as sessões. Não revela a intenção da equipe nem estima degradação causal.')
+    st.caption('Compostos e limites de voltas publicados por piloto.')
     estrategias = gp.get('estrategias', [])
     modalidades = list(dict.fromkeys(e.get('modalidade', 'Race') for e in estrategias))
     if modalidades:
@@ -197,7 +196,7 @@ def renderizar_clima(gp):
     if not horas:
         st.info('Série meteorológica não disponível para este GP.')
         return
-    st.caption('Modelo atmosférico histórico em grade, próximo ao circuito. Não representa temperatura do asfalto nem uma previsão emitida antes da corrida.')
+    st.caption('Modelo atmosférico histórico próximo ao circuito; não é uma medição do asfalto.')
     if clima.get('origem') == 'archived_forecast':
         st.info('Esta série é uma previsão meteorológica arquivada, identificada pela fonte; não é uma medição realizada na pista.')
     st.markdown('Dados meteorológicos por [Open-Meteo.com](https://open-meteo.com/) · [CC BY 4.0](https://open-meteo.com/en/licence).')
@@ -241,7 +240,7 @@ def renderizar_historico(gp):
     st.subheader('Histórico observado deste GP')
     historico = gp.get('historico') or {}
     resumo = historico.get('resumo') or {}
-    st.caption('{} resultados, {} voltas com tempo e {} pilotos com voltas disponíveis. Dados posteriores à corrida, separados das entradas do modelo.'.format(
+    st.caption('{} resultados, {} voltas com tempo e {} pilotos com voltas disponíveis. '.format(
         resumo.get('n_resultados', 0), resumo.get('n_voltas', 0), resumo.get('n_pilotos_com_voltas', 0)))
     resultados = historico.get('resultados') or []
     if resultados:
@@ -285,31 +284,23 @@ def renderizar_equipes(gp):
     modalidade = st.selectbox('Modalidade do comparativo', modalidades,
                              format_func=lambda x: ROTULOS_SESSAO.get(x, x), key=_chave(gp, 'prova_equipes'))
     selecionadas = [e for e in equipes if e.get('modalidade', 'Race') == modalidade]
-    st.caption('Soma observada dos resultados desta prova, com denominadores explícitos. Não reconstrói o campeonato e não mede causalmente a força de uma equipe.')
+    st.caption('Resultados das equipes nesta prova. O campeonato está na visão geral.')
     _tabela([{'Equipe': e.get('equipe'), 'Resultados': e.get('n_resultados'), 'Pontos observados': e.get('pontos'),
               'Pontos completos': e.get('pontos_completos'), 'Posição média observada': e.get('posicao_media'),
               'Melhor posição': e.get('melhor_posicao'), 'Pilotos': ', '.join(e.get('pilotos') or [])} for e in selecionadas],
              _chave(gp, 'csv_equipes'), 'equipes_{}'.format(_chave(gp, 'gp')))
-    snapshot = gp.get('campeonato_equipes') or {}
-    if snapshot.get('disponivel'):
-        with st.expander('Campeonato de construtores publicado após a rodada'):
-            st.caption('{} · Rodada {}. {}'.format(snapshot.get('fonte'), snapshot.get('rodada_referencia'), snapshot.get('motivo') or 'Classificação publicada, sem soma parcial de resultados.'))
-            _tabela(snapshot.get('classificacao') or [], _chave(gp, 'csv_campeonato_equipes'), 'campeonato_equipes')
-
 
 def renderizar_fontes(gp, asset):
-    with st.expander('Fontes e cobertura do acervo histórico'):
-        st.caption('Versão do acervo: {}'.format(asset.get('versao', 'não informada')))
-        st.write('Dados descritivos de sessões e da corrida. Não alteram as probabilidades registradas nem as 15 entradas do modelo v1.')
-        st.markdown('Fontes: [OpenF1](https://openf1.org/docs/), [Jolpica-F1](https://github.com/jolpica/jolpica-f1) e [Open-Meteo](https://open-meteo.com/).')
-        cobertura = gp.get('cobertura') or []
-        parciais = [r for r in cobertura if r.get('estado') in ('parcial', 'indisponivel')]
-        if parciais:
-            rotulos = {'laps_sessoes': 'Voltas das sessões', 'stints': 'Limites dos stints',
-                       'estrategias_pneus': 'Sequências de pneus', 'clima_open_meteo': 'Clima Open-Meteo',
-                       'clima_pista': 'Medições meteorológicas da pista', 'tempos_sessoes': 'Tempos de sessão'}
-            st.dataframe(pd.DataFrame([{'Conjunto': rotulos.get(r.get('tipo'), str(r.get('tipo', '')).replace('_', ' ')),
-                                       'Estado': r.get('estado'), 'Observação': r.get('motivo')} for r in parciais]),
-                         width='stretch', hide_index=True)
-        else:
-            st.caption('Os conjuntos selecionados estão presentes. A presença do conjunto não certifica todos os campos de todos os pilotos.')
+    st.caption('Versão do acervo: {}'.format(asset.get('versao', 'não informada')))
+    st.markdown('Fontes: [OpenF1](https://openf1.org/docs/), [Jolpica-F1](https://github.com/jolpica/jolpica-f1) e [Open-Meteo](https://open-meteo.com/).')
+    cobertura = gp.get('cobertura') or []
+    parciais = [r for r in cobertura if r.get('estado') in ('parcial', 'indisponivel')]
+    if parciais:
+        rotulos = {'laps_sessoes': 'Voltas das sessões', 'stints': 'Limites dos stints',
+                   'estrategias_pneus': 'Sequências de pneus', 'clima_open_meteo': 'Clima Open-Meteo',
+                   'clima_pista': 'Medições meteorológicas da pista', 'tempos_sessoes': 'Tempos de sessão'}
+        st.dataframe(pd.DataFrame([{'Conjunto': rotulos.get(r.get('tipo'), str(r.get('tipo', '')).replace('_', ' ')),
+                                   'Estado': r.get('estado'), 'Observação': r.get('motivo')} for r in parciais]),
+                     width='stretch', hide_index=True)
+    else:
+        st.caption('Conjuntos disponíveis; campos ausentes permanecem sinalizados nas tabelas.')
