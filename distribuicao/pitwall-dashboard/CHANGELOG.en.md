@@ -4,6 +4,16 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.1.1 — 2026-10-29
+
+### Publication and verification
+
+GitHub and CI were up to date for 0.1.0, but a clean public session still received the previous interface. A normal rerun did not synchronise the code. The presentation dependency file received a delivery marker to request a fresh Community Cloud build, retaining exactly the same package versions. Public confirmation remains separate from push and CI.
+
+Version-policy tests now use synthetic changelogs, independent of versions already present in actual history. No data, model, probability or scientific artefact changed.
+
+Lesson: a release and passing tests do not prove the hosting service runs that code. [Documented Streamlit mechanism](https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app/upgrade-streamlit).
+
 ## 0.1.0 — 2026-10-29
 
 First version under the explicit product-versioning policy.

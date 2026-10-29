@@ -14,7 +14,8 @@ class TestReleases(unittest.TestCase):
     def test_real_version_has_both_languages_and_separate_model_identity(self):
         result = check(ROOT)
         self.assertEqual(result["languages"], ["pt", "en"])
-        self.assertIn("31", notes("en", ROOT))
+        self.assertGreater(len(notes("en", ROOT)), 100)
+        self.assertNotEqual(notes("en", ROOT), notes("pt", ROOT))
         self.assertNotEqual(version(ROOT), "v1")
 
     def test_invalid_version_and_missing_translation_fail(self):
@@ -38,6 +39,10 @@ class TestReleases(unittest.TestCase):
                     dest.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copyfile(ROOT / name, dest)
             (root / "VERSION").write_text("0.1.0\n")
+            # Fixture versions are independent of the real project's growing history.
+            for name in ("CHANGELOG.md", "CHANGELOG.en.md"):
+                (root/name).write_text("# Fixture\n\n## 0.1.0 — 2026-10-29\n\n" + "Explicit fixture release notes with behaviour, validation and limitations. "*3)
+
             (root / "pitwall").mkdir()
             (root / "pitwall/example.py").write_text("a=1\n")
 

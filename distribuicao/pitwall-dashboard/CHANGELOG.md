@@ -4,6 +4,16 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.1.1 — 2026-10-29
+
+### Publicação e verificação
+
+O GitHub e o CI da versão 0.1.0 estavam atualizados, mas uma sessão pública limpa ainda recebeu a interface anterior. Reexecutar a página não sincronizou o código. O arquivo de dependências da apresentação recebeu um marcador da entrega para solicitar um build novo ao Community Cloud, mantendo exatamente as mesmas versões de pacotes. A confirmação pública continua separada do push e do CI.
+
+O teste de versões passou a usar changelogs sintéticos, para não depender de quais versões já existem no histórico real. Nenhum dado, modelo, probabilidade ou artefato científico foi alterado.
+
+Aprendizado: uma release e testes aprovados não comprovam que o serviço de hospedagem já executa esse código. [Mecanismo documentado pelo Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app/upgrade-streamlit).
+
 ## 0.1.0 — 2026-10-29
 
 Primeira versão sob a política explícita de versionamento do produto.
