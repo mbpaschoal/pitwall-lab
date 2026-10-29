@@ -389,7 +389,7 @@ def renderizar_fontes_circuito(pacote, corrida, acervo_gp):
 
 def atalho_gp(pacote, corrida, tela, rotulo, aba=None):
     url = pitwall_ui.link_interno(pacote['temporada'], corrida['rodada'], tela=tela, aba=aba)
-    st.markdown('<a href="{}" target="_top">{}</a>'.format(escape(url, quote=True), escape(rotulo)), unsafe_allow_html=True)
+    st.markdown('<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(escape(url, quote=True), escape(rotulo)), unsafe_allow_html=True)
 
 
 def renderizar_podio(pacote, corrida, participantes):

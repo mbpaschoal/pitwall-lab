@@ -75,8 +75,8 @@
       "fonte": "app.py",
       "modo": "gerado",
       "nota": "viewer offline inserido na UI Race Weekend do working tree",
-      "sha256_destino": "d1458068b9bdb7dccb5dc0e97a008c98b80b2ae946ffa2572e2223122f372162",
-      "sha256_origem": "fad45741a18938415ce724afa357a0fd8fd5977e0af347c030c41562cde5cec3"
+      "sha256_destino": "954efde5fb00cd4f987038ac127c490e2c16990da3d43ac4212cbae4d6469753",
+      "sha256_origem": "f1505b9830275aa80bd014079011d1476f5f4576102eaf07b1807fb7ef5addea"
     },
     {
       "caminho": "catalogo_visual.py",
@@ -552,8 +552,8 @@
       "caminho": "documentacao_local.py",
       "fonte": "publicacao/templates/documentacao_local.py",
       "modo": "gerado",
-      "sha256_destino": "755baee99273a537038ff2b66ddd52aacb3b1386eb710a19f3fa179938ef061a",
-      "sha256_origem": "755baee99273a537038ff2b66ddd52aacb3b1386eb710a19f3fa179938ef061a"
+      "sha256_destino": "555d834559565467acf47c024fb80dc529dca91993c773041992ffcb16ceef6b",
+      "sha256_origem": "555d834559565467acf47c024fb80dc529dca91993c773041992ffcb16ceef6b"
     },
     {
       "caminho": "frontend_assets/acervo_dashboard.json",
@@ -594,8 +594,8 @@
       "caminho": "pitwall_ui.py",
       "fonte": "pitwall_ui.py",
       "modo": "copia",
-      "sha256_destino": "66b03d01f0f6810591a4ca26c5e01e0f9107fefb574c7b4ebc83c7a87e4831ac",
-      "sha256_origem": "66b03d01f0f6810591a4ca26c5e01e0f9107fefb574c7b4ebc83c7a87e4831ac"
+      "sha256_destino": "117ecc2542549b668a76c82b89adcb7f1d746acb4c1229c18e6c2973db7695fb",
+      "sha256_origem": "117ecc2542549b668a76c82b89adcb7f1d746acb4c1229c18e6c2973db7695fb"
     },
     {
       "caminho": "pitwall_ui_dados.py",
@@ -786,7 +786,7 @@
     },
     {
       "caminho": "publicacao/templates/documentacao_local.py",
-      "sha256": "755baee99273a537038ff2b66ddd52aacb3b1386eb710a19f3fa179938ef061a"
+      "sha256": "555d834559565467acf47c024fb80dc529dca91993c773041992ffcb16ceef6b"
     },
     {
       "caminho": "publicacao/templates/test_distribuicao.py",

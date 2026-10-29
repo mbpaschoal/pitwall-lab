@@ -91,9 +91,9 @@ def reescrever_links(texto):
         normalizado = destino.lstrip('./')
         titulo = _MAPA_CAMINHOS.get(normalizado) or _MAPA_RELATIVOS.get(normalizado)
         if titulo:
-            return '<a href="{}" target="_top">{}</a>'.format(escape(url_documento(_IDS_POR_TITULO[titulo]), quote=True), escape(rotulo))
+            return '<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(escape(url_documento(_IDS_POR_TITULO[titulo]), quote=True), escape(rotulo))
         if normalizado.endswith('previsoes_validacao.csv'):
-            return '<a href="{}" target="_top">{}</a>'.format(escape(url_documento('relatorio-2024', download=True), quote=True), escape(rotulo))
+            return '<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(escape(url_documento('relatorio-2024', download=True), quote=True), escape(rotulo))
         if destino.startswith(('https://', 'http://', '#')):
             return encontro.group(0)
         return '{} (artefato de auditoria fora desta demonstração)'.format(rotulo)
@@ -105,7 +105,7 @@ def renderizar_documentacao_local(st):
     st.markdown('<div id="documentacao"></div>', unsafe_allow_html=True)
     st.subheader('Documentação e relatórios')
     por_id = {item['id']: item['titulo'] for item in documentos_disponiveis()}
-    links = ['<a href="{}" target="_top">{}</a>'.format(escape(url_documento(identificador), quote=True), escape(titulo)) for identificador, titulo in por_id.items()]
+    links = ['<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(escape(url_documento(identificador), quote=True), escape(titulo)) for identificador, titulo in por_id.items()]
     st.markdown('<nav aria-label="Documentação">{}</nav>'.format(' · '.join(links)), unsafe_allow_html=True)
     identificador = st.query_params.get('documento')
     if identificador not in por_id:
