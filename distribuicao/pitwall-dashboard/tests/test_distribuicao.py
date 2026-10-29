@@ -62,7 +62,7 @@ class TestDistribuicao(unittest.TestCase):
         self.assertIn('.gitignore', publicados)
         self.assertEqual((RAIZ / '.gitignore').read_text(encoding='utf-8').splitlines(), [
             '.venv/', '__pycache__/', '.pytest_cache/', '.DS_Store', '.env', '.env.*',
-            '.streamlit/secrets.toml', '*.joblib', 'data/', 'models/',
+            '.streamlit/secrets.toml', '*.joblib', '/data/', 'models/',
         ])
         registros = {item['caminho']: item for item in manifesto['arquivos']}
         self.assertNotIn('MANIFESTO.json', registros)
@@ -116,10 +116,10 @@ class TestDistribuicao(unittest.TestCase):
         self.assertIn('python3.12 -m venv .venv', readme)
         self.assertIn('não modifica o ambiente científico original', readme)
         guia = (RAIZ / 'GUIA_HOSPEDAGEM.md').read_text(encoding='utf-8')
-        self.assertIn('git init -b main', guia)
+        self.assertIn('mbpaschoal/pitwall-lab', guia)
         self.assertIn('ARQUIVOS_PUBLICACAO.txt', guia)
-        self.assertIn('Yup, I have an app', guia)
-        fontes = '\n'.join((RAIZ / nome).read_text(encoding='utf-8') for nome in ('app.py', 'dashboard_dados.py'))
+        self.assertIn('distribuicao/pitwall-dashboard/app.py', guia)
+        fontes = '\n'.join((RAIZ / nome).read_text(encoding='utf-8') for nome in ('pitwall/dashboard/app.py', 'pitwall/data/dashboard.py'))
         for proibido in ('joblib', 'sklearn', 'treinar_modelo', 'avaliar_modelo', 'data/', 'urllib', 'requests', 'socket'):
             self.assertNotIn(proibido, fontes.lower())
 

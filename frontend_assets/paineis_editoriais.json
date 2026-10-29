@@ -1,6 +1,1381 @@
 {
   "circuitos": {
+    "bahrain": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.412,
+        "primeiro_gp": 2004,
+        "altitude_m": 8.0,
+        "curvas": 15,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 57,
+          "distancia_corrida_km": 308.238,
+          "recorde_volta": "1:31.447 · Pedro de la Rosa (2005)",
+          "zonas_drs": 3
+        },
+        "2025": {
+          "voltas": 57,
+          "distancia_corrida_km": 308.238,
+          "recorde_volta": "1:31.447 · Pedro de la Rosa (2005)",
+          "zonas_drs": 3
+        },
+        "2026": {
+          "voltas": 57,
+          "distancia_corrida_km": 308.238,
+          "recorde_volta": "1:31.447 · Pedro de la Rosa (2005)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/bahrain/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "49dc897ba5079abe1fdcd745428a1d326b2fe299345cbbb40604e392f43800fa"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "bahrain",
+            "latitude": 26.0325,
+            "longitude": 50.5106
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 65)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=65",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "jeddah": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 6.174,
+        "primeiro_gp": 2021,
+        "altitude_m": 2.0,
+        "curvas": 27,
+        "sentido": "Anti-horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 50,
+          "distancia_corrida_km": 308.45,
+          "recorde_volta": "1:30.734 · Lewis Hamilton (2021)",
+          "zonas_drs": 3
+        },
+        "2025": {
+          "voltas": 50,
+          "distancia_corrida_km": 308.45,
+          "recorde_volta": "1:30.734 · Lewis Hamilton (2021)",
+          "zonas_drs": 3
+        },
+        "2026": {
+          "voltas": 50,
+          "distancia_corrida_km": 308.45,
+          "recorde_volta": "1:30.734 · Lewis Hamilton (2021)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/saudi-arabia/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "fc59c30ad653a8c0ddcd9f485fa86f1243f33edb5303aba047986666c86cfb2a"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "jeddah",
+            "latitude": 21.6319,
+            "longitude": 39.1044
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 67)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=67",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "albert_park": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.278,
+        "primeiro_gp": 1996,
+        "altitude_m": 2.0,
+        "curvas": 14,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 58,
+          "distancia_corrida_km": 306.124,
+          "recorde_volta": "1:19.813 · Charles Leclerc (2024)",
+          "zonas_drs": 4
+        },
+        "2025": {
+          "voltas": 58,
+          "distancia_corrida_km": 306.124,
+          "recorde_volta": "1:19.813 · Charles Leclerc (2024)",
+          "zonas_drs": 4
+        },
+        "2026": {
+          "voltas": 58,
+          "distancia_corrida_km": 306.124,
+          "recorde_volta": "1:19.813 · Charles Leclerc (2024)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/australia/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "3647695ae05ba431bbb3be43b0cea5542aa0aa2f43ee56d7d1a3cc9e8f1445fe"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "albert_park",
+            "latitude": -37.8497,
+            "longitude": 144.968
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 59)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=59",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "suzuka": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.807,
+        "primeiro_gp": 1987,
+        "altitude_m": 36.0,
+        "curvas": 18,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 53,
+          "distancia_corrida_km": 307.471,
+          "zonas_drs": 1
+        },
+        "2025": {
+          "voltas": 53,
+          "distancia_corrida_km": 307.471,
+          "recorde_volta": "1:30.965 · Kimi Antonelli (2025)",
+          "zonas_drs": 1
+        },
+        "2026": {
+          "voltas": 53,
+          "distancia_corrida_km": 307.471,
+          "recorde_volta": "1:30.965 · Kimi Antonelli (2025)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/japan/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "551a2bb0fb35bf283867717bb07966f75a8d132e188f5f16c5b662807561a781"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "suzuka",
+            "latitude": 34.8431,
+            "longitude": 136.541
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 63)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=63",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "shanghai": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.451,
+        "primeiro_gp": 2004,
+        "altitude_m": 4.0,
+        "curvas": 16,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 56,
+          "distancia_corrida_km": 305.066,
+          "recorde_volta": "1:32.238 · Michael Schumacher (2004)",
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 56,
+          "distancia_corrida_km": 305.066,
+          "recorde_volta": "1:32.238 · Michael Schumacher (2004)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 56,
+          "distancia_corrida_km": 305.066,
+          "recorde_volta": "1:32.238 · Michael Schumacher (2004)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/china/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "b1bab7b63c1e21d99da29728bb4b4d821809443f0dea7ef12eb029899752ffc7"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "shanghai",
+            "latitude": 31.3389,
+            "longitude": 121.22
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 61)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=61",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "miami": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.412,
+        "primeiro_gp": 2022,
+        "curvas": 19,
+        "altitude_m": 5.0,
+        "sentido": "Anti-horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 57,
+          "distancia_corrida_km": 308.326,
+          "recorde_volta": "1:29.708 · Max Verstappen (2023)",
+          "zonas_drs": 3
+        },
+        "2025": {
+          "voltas": 57,
+          "distancia_corrida_km": 308.326,
+          "recorde_volta": "1:29.708 · Max Verstappen (2023)",
+          "zonas_drs": 3
+        },
+        "2026": {
+          "voltas": 57,
+          "distancia_corrida_km": 308.326,
+          "recorde_volta": "1:29.708 · Max Verstappen (2023)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/miami/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "curvas",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "ce5c6f0bd2195f584e738d7cf688ca798660ebe9c02871a5a4f440855375d082"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "miami",
+            "latitude": 25.9581,
+            "longitude": -80.2389
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 68)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=68",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "imola": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 4.909,
+        "primeiro_gp": 1980,
+        "sentido": "Anti-horário",
+        "altitude_m": 39.0,
+        "curvas": 19
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 63,
+          "distancia_corrida_km": 309.049,
+          "recorde_volta": "1:15.484 · Lewis Hamilton (2020)",
+          "zonas_drs": 1
+        },
+        "2025": {
+          "voltas": 63,
+          "distancia_corrida_km": 309.049,
+          "recorde_volta": "1:15.484 · Lewis Hamilton (2020)",
+          "zonas_drs": 1
+        },
+        "2026": {
+          "voltas": 63,
+          "distancia_corrida_km": 309.049,
+          "recorde_volta": "1:15.484 · Lewis Hamilton (2020)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/emiliaromagna/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "sentido",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "a119a1498aa64a6139d3aa35cd9412f0d8bb18126802698decd6fad9bdbadd15"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "imola",
+            "latitude": 44.3439,
+            "longitude": 11.7167
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 69)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=69",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "monaco": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 3.337,
+        "primeiro_gp": 1950,
+        "altitude_m": 16.0,
+        "curvas": 19,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 78,
+          "distancia_corrida_km": 260.286,
+          "recorde_volta": "1:12.909 · Lewis Hamilton (2021)",
+          "zonas_drs": 1
+        },
+        "2025": {
+          "voltas": 78,
+          "distancia_corrida_km": 260.286,
+          "recorde_volta": "1:12.909 · Lewis Hamilton (2021)",
+          "zonas_drs": 1
+        },
+        "2026": {
+          "voltas": 78,
+          "distancia_corrida_km": 260.286,
+          "recorde_volta": "1:12.909 · Lewis Hamilton (2021)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/monaco/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "14edc40eb528b66240418063fd867912a188413444026b3751eb68c7cda4198e"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "monaco",
+            "latitude": 43.7347,
+            "longitude": 7.42056
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 70)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=70",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "villeneuve": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 4.361,
+        "primeiro_gp": 1978,
+        "altitude_m": 11.0,
+        "curvas": 14,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 70,
+          "distancia_corrida_km": 305.27,
+          "recorde_volta": "1:13.078 · Valtteri Bottas (2019)",
+          "zonas_drs": 3
+        },
+        "2025": {
+          "voltas": 70,
+          "distancia_corrida_km": 305.27,
+          "recorde_volta": "1:13.078 · Valtteri Bottas (2019)",
+          "zonas_drs": 3
+        },
+        "2026": {
+          "voltas": 70,
+          "distancia_corrida_km": 305.27,
+          "recorde_volta": "1:13.078 · Valtteri Bottas (2019)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/canada/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "337be410fc872b2eb419236afbc9c55c4a18cc2aada0d2bdee6ac2bf5ac20823"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "villeneuve",
+            "latitude": 45.5,
+            "longitude": -73.5228
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 72)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=72",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "catalunya": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 4.657,
+        "primeiro_gp": 1991,
+        "altitude_m": 121.0,
+        "curvas": 14,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 66,
+          "distancia_corrida_km": 307.236,
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 66,
+          "distancia_corrida_km": 307.236,
+          "recorde_volta": "1:15.743 · Oscar Piastri (2025)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 66,
+          "distancia_corrida_km": 307.236,
+          "recorde_volta": "1:15.743 · Oscar Piastri (2025)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/spain/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "4eb77b72533af9483c30f10c3d482973b429eeef30b8b6d3f83c77a5444d0459"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "catalunya",
+            "latitude": 41.57,
+            "longitude": 2.26111
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 71)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=71",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "red_bull_ring": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 4.326,
+        "primeiro_gp": 1970,
+        "altitude_m": 681.0,
+        "curvas": 10,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 71,
+          "distancia_corrida_km": 307.018,
+          "zonas_drs": 3
+        },
+        "2025": {
+          "voltas": 71,
+          "distancia_corrida_km": 307.018,
+          "recorde_volta": "1:07.924 · Oscar Piastri (2025)",
+          "zonas_drs": 3
+        },
+        "2026": {
+          "voltas": 71,
+          "distancia_corrida_km": 307.018,
+          "recorde_volta": "1:07.924 · Oscar Piastri (2025)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/austria/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "b03d1134a906e6bea14235f3e3fa446be893ffbc6e50d112fa276a3fc1a45cac"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "red_bull_ring",
+            "latitude": 47.2197,
+            "longitude": 14.7647
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 73)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=73",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "silverstone": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.891,
+        "primeiro_gp": 1950,
+        "altitude_m": 152.0,
+        "curvas": 18,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 52,
+          "distancia_corrida_km": 306.198,
+          "recorde_volta": "1:27.097 · Max Verstappen (2020)",
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 52,
+          "distancia_corrida_km": 306.198,
+          "recorde_volta": "1:27.097 · Max Verstappen (2020)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 52,
+          "distancia_corrida_km": 306.198,
+          "recorde_volta": "1:27.097 · Max Verstappen (2020)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/great-britain/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "cff70d9cdfb189335505d5c72791a6cb00167e4eff0d21900a93168e2208cd47"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "silverstone",
+            "latitude": 52.0786,
+            "longitude": -1.01694
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 74)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=74",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "hungaroring": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 4.381,
+        "primeiro_gp": 1986,
+        "altitude_m": 240.0,
+        "curvas": 14,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 70,
+          "distancia_corrida_km": 306.63,
+          "recorde_volta": "1:16.627 · Lewis Hamilton (2020)",
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 70,
+          "distancia_corrida_km": 306.63,
+          "recorde_volta": "1:16.627 · Lewis Hamilton (2020)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 70,
+          "distancia_corrida_km": 306.63,
+          "recorde_volta": "1:16.627 · Lewis Hamilton (2020)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/hungary/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "537febbab6e6e0cd9f92c16359d5f568967aa100ca402058820f2f2903937b0c"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "hungaroring",
+            "latitude": 47.5789,
+            "longitude": 19.2486
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 76)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=76",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "spa": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 7.004,
+        "primeiro_gp": 1950,
+        "altitude_m": 391.0,
+        "curvas": 19,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 44,
+          "distancia_corrida_km": 308.052,
+          "recorde_volta": "1:44.701 · Sergio Perez (2024)",
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 44,
+          "distancia_corrida_km": 308.052,
+          "recorde_volta": "1:44.701 · Sergio Perez (2024)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 44,
+          "distancia_corrida_km": 308.052,
+          "recorde_volta": "1:44.701 · Sergio Perez (2024)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/belgium/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "82fed667c43576e4865e92e3b59760532b4b70f285c41c6f1b3a6c5192571631"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "spa",
+            "latitude": 50.4372,
+            "longitude": 5.97139
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 75)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=75",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "zandvoort": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 4.259,
+        "primeiro_gp": 1952,
+        "altitude_m": 5.0,
+        "curvas": 14,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 72,
+          "distancia_corrida_km": 306.587,
+          "recorde_volta": "1:11.097 · Lewis Hamilton (2021)",
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 72,
+          "distancia_corrida_km": 306.587,
+          "recorde_volta": "1:11.097 · Lewis Hamilton (2021)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 72,
+          "distancia_corrida_km": 306.587,
+          "recorde_volta": "1:11.097 · Lewis Hamilton (2021)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/netherlands/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "c52ced6a3d225db56a22114d04d0572d3c08a826e5ac9ffd2dddd383ca35bdf8"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "zandvoort",
+            "latitude": 52.3888,
+            "longitude": 4.54092
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 77)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=77",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "monza": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.793,
+        "primeiro_gp": 1950,
+        "altitude_m": 182.0,
+        "curvas": 11,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 53,
+          "distancia_corrida_km": 306.72,
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 53,
+          "distancia_corrida_km": 306.72,
+          "recorde_volta": "1:20.901 · Lando Norris (2025)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 53,
+          "distancia_corrida_km": 306.72,
+          "recorde_volta": "1:20.901 · Lando Norris (2025)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/italy/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "e45d8f9263f339d6a9ede30299d6d02d448eb48df45e6e15e8a7677c5adc56f3"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "monza",
+            "latitude": 45.6156,
+            "longitude": 9.28111
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 78)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=78",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "baku": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 6.003,
+        "primeiro_gp": 2016,
+        "altitude_m": -18.0,
+        "curvas": 20,
+        "sentido": "Anti-horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 51,
+          "distancia_corrida_km": 306.049,
+          "recorde_volta": "1:43.009 · Charles Leclerc (2019)",
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 51,
+          "distancia_corrida_km": 306.049,
+          "recorde_volta": "1:43.009 · Charles Leclerc (2019)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 51,
+          "distancia_corrida_km": 306.049,
+          "recorde_volta": "1:43.009 · Charles Leclerc (2019)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/azerbaijan/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "d3fe93ba6dec81df66283eee171e1b9b623413580e0a26ef824abc4ec0fea704"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "baku",
+            "latitude": 40.3725,
+            "longitude": 49.8533
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 79)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=79",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "marina_bay": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 4.927,
+        "primeiro_gp": 2008,
+        "altitude_m": 7.0,
+        "curvas": 19,
+        "sentido": "Anti-horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 62,
+          "distancia_corrida_km": 305.337,
+          "zonas_drs": 4
+        },
+        "2025": {
+          "voltas": 62,
+          "distancia_corrida_km": 305.337,
+          "recorde_volta": "1:33.808 · Lewis Hamilton (2025)",
+          "zonas_drs": 4
+        },
+        "2026": {
+          "voltas": 62,
+          "distancia_corrida_km": 305.337,
+          "recorde_volta": "1:33.808 · Lewis Hamilton (2025)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/singapore/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "93917a792de0ad9038207a83b465e57e245a0326057dcf60db7a73b1482e683c"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "marina_bay",
+            "latitude": 1.2914,
+            "longitude": 103.864
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 80)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=80",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
     "americas": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.513,
+        "curvas": 20,
+        "primeiro_gp": 2012,
+        "sentido": "Anti-horário",
+        "altitude_m": 154.0
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 56,
+          "distancia_corrida_km": 308.405,
+          "recorde_volta": "1:36.169 · Charles Leclerc (2019)",
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 56,
+          "distancia_corrida_km": 308.405,
+          "recorde_volta": "1:36.169 · Charles Leclerc (2019)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 56,
+          "distancia_corrida_km": 308.405,
+          "recorde_volta": "1:36.169 · Charles Leclerc (2019)"
+        }
+      },
       "fontes": [
         {
           "campos": [
@@ -20,23 +1395,548 @@
           ],
           "titulo": "Circuit of The Americas — Austin, Circuit Of The Americas Get High Praise From Formula One Drivers",
           "url": "https://circuitoftheamericas.com/blog/2014/10/25/austin-circuit-of-the-americas-get-high-praise-from-formula-one-drivers-teams/"
+        },
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/united-states/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "1a98163b500d57db92048f4ebb7bf6c9544df4f5586d9674a9673f53f10f1dfc"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "americas",
+            "latitude": 30.1328,
+            "longitude": -97.6411
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 81)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=81",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa de Austin 2025, zonas DRS 1 e 2",
+          "url": "https://www.fia.com/system/files/decision-document/2025_united_states_grand_prix_-_event_notes_-_circuit_map_pit_lane_drawing_emergency_exits_map_quarantine_zone_map_red_zones_map.pdf",
+          "campos": [
+            "zonas_drs"
+          ],
+          "sha256": "7b7d350cb5ef5846e11127653eff51e5551d59a72a762745f07d960a42fc2bac"
         }
-      ],
+      ]
+    },
+    "rodriguez": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
       "metricas_estaveis": {
-        "comprimento_km": 5.513,
-        "curvas": 20,
-        "primeiro_gp": 2012,
+        "comprimento_km": 4.304,
+        "primeiro_gp": 1963,
+        "altitude_m": 2234.0,
+        "curvas": 17,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 71,
+          "distancia_corrida_km": 305.354,
+          "recorde_volta": "1:17.774 · Valtteri Bottas (2021)",
+          "zonas_drs": 3
+        },
+        "2025": {
+          "voltas": 71,
+          "distancia_corrida_km": 305.354,
+          "recorde_volta": "1:17.774 · Valtteri Bottas (2021)",
+          "zonas_drs": 3
+        },
+        "2026": {
+          "voltas": 71,
+          "distancia_corrida_km": 305.354,
+          "recorde_volta": "1:17.774 · Valtteri Bottas (2021)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/mexico/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "0fb76f6e3ce843f38f88e582be5784666a16d17771c14e0fb6a76aae305dc2ee"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "rodriguez",
+            "latitude": 19.4042,
+            "longitude": -99.0907
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 82)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=82",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "interlagos": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 4.309,
+        "primeiro_gp": 1973,
+        "altitude_m": 779.0,
+        "curvas": 15,
         "sentido": "Anti-horário"
       },
       "por_temporada": {
+        "2024": {
+          "voltas": 71,
+          "distancia_corrida_km": 305.879,
+          "recorde_volta": "1:10.540 · Valtteri Bottas (2018)",
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 71,
+          "distancia_corrida_km": 305.879,
+          "recorde_volta": "1:10.540 · Valtteri Bottas (2018)",
+          "zonas_drs": 2
+        },
         "2026": {
-          "distancia_corrida_km": 308.432,
-          "recorde_volta": "1:36.169 · Charles Leclerc (2019)",
-          "voltas": 56
+          "voltas": 71,
+          "distancia_corrida_km": 305.879,
+          "recorde_volta": "1:10.540 · Valtteri Bottas (2018)"
         }
       },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/brazil/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "728cadaaeb8f104f423bbb7a63fd8ad72a88bf9f5dcd70700a243016e92511ec"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "interlagos",
+            "latitude": -23.7036,
+            "longitude": -46.6997
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 83)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=83",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "vegas": {
       "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
-      "verificado_em": "2026-10-27"
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 6.201,
+        "primeiro_gp": 2023,
+        "curvas": 17,
+        "altitude_m": 644.0,
+        "sentido": "Anti-horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 50,
+          "distancia_corrida_km": 309.958,
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 50,
+          "distancia_corrida_km": 309.958,
+          "recorde_volta": "1:33.365 · Max Verstappen (2025)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 50,
+          "distancia_corrida_km": 309.958,
+          "recorde_volta": "1:33.365 · Max Verstappen (2025)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/las-vegas/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "curvas",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "5af6e68e655de3ebb09480942f0bccced10d7a0eef436087eb58ba8b9b9ed49e"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "vegas",
+            "latitude": 36.1147,
+            "longitude": -115.173
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 84)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=84",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "losail": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.419,
+        "primeiro_gp": 2021,
+        "altitude_m": 12.0,
+        "curvas": 16,
+        "sentido": "Horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 57,
+          "distancia_corrida_km": 308.611,
+          "recorde_volta": "1:22.384 · Lando Norris (2024)",
+          "zonas_drs": 1
+        },
+        "2025": {
+          "voltas": 57,
+          "distancia_corrida_km": 308.611,
+          "recorde_volta": "1:22.384 · Lando Norris (2024)",
+          "zonas_drs": 1
+        },
+        "2026": {
+          "voltas": 57,
+          "distancia_corrida_km": 308.611,
+          "recorde_volta": "1:22.384 · Lando Norris (2024)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/qatar/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "a73172fc4817c670e490623120865d6fdc3345ebcc77062c03470dea56cfd93c"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "losail",
+            "latitude": 25.49,
+            "longitude": 51.4542
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 85)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=85",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "yas_marina": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.281,
+        "primeiro_gp": 2009,
+        "altitude_m": 7.0,
+        "curvas": 16,
+        "sentido": "Anti-horário"
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 58,
+          "distancia_corrida_km": 306.183,
+          "recorde_volta": "1:25.637 · Kevin Magnussen (2024)",
+          "zonas_drs": 2
+        },
+        "2025": {
+          "voltas": 58,
+          "distancia_corrida_km": 306.183,
+          "recorde_volta": "1:25.637 · Kevin Magnussen (2024)",
+          "zonas_drs": 2
+        },
+        "2026": {
+          "voltas": 58,
+          "distancia_corrida_km": 306.183,
+          "recorde_volta": "1:25.637 · Kevin Magnussen (2024)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2025/united-arab-emirates/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "7a77777aacdfc4190fc4d8bbe609be29750fd3077e8268e3ae9827bb8e3ec95a"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "yas_marina",
+            "latitude": 24.4672,
+            "longitude": 54.6031
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        },
+        {
+          "titulo": "FIA — mapa de referência 2025 (página 86)",
+          "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf#page=86",
+          "campos": [
+            "curvas",
+            "sentido",
+            "zonas_drs"
+          ],
+          "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+          "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        }
+      ]
+    },
+    "madring": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.414,
+        "primeiro_gp": 2026,
+        "curvas": 22,
+        "altitude_m": 683.0
+      },
+      "por_temporada": {
+        "2026": {
+          "voltas": 57,
+          "distancia_corrida_km": 308.399,
+          "recorde_volta": "1:35.587 · George Russell (2026)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2026/spain/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "curvas",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "955fed92072690a532dbb6d050720a1465ae32d633b0da3a4c241628c231ef75"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "madring",
+            "latitude": 40.46528,
+            "longitude": -3.61528
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        }
+      ]
+    },
+    "sepang": {
+      "uso": "contexto_descritivo_atual_sem_uso_no_modelo",
+      "verificado_em": "2026-10-29",
+      "metricas_estaveis": {
+        "comprimento_km": 5.543,
+        "primeiro_gp": 1999,
+        "curvas": 15,
+        "altitude_m": 43.0
+      },
+      "por_temporada": {
+        "2024": {
+          "voltas": 56,
+          "distancia_corrida_km": 310.417,
+          "recorde_volta": "1:34.080 · Sebastian Vettel (2017)"
+        },
+        "2025": {
+          "voltas": 56,
+          "distancia_corrida_km": 310.417,
+          "recorde_volta": "1:34.080 · Sebastian Vettel (2017)"
+        },
+        "2026": {
+          "voltas": 56,
+          "distancia_corrida_km": 310.417,
+          "recorde_volta": "1:34.080 · Sebastian Vettel (2017)"
+        }
+      },
+      "fontes": [
+        {
+          "titulo": "Formula 1 — ficha do circuito (referência descritiva consultada em 2026)",
+          "url": "https://www.formula1.com/en/racing/2026/bahrain/circuit",
+          "campos": [
+            "comprimento_km",
+            "primeiro_gp",
+            "curvas",
+            "voltas",
+            "distancia_corrida_km",
+            "recorde_volta"
+          ],
+          "sha256": "d15dcec7e33750d3a764a38c7f355ac7e1ae6146057618a43e75ea895980afe1"
+        },
+        {
+          "titulo": "Open-Meteo / Copernicus DEM GLO-90 — altitude aproximada no ponto do calendário",
+          "url": "https://open-meteo.com/en/docs/elevation-api",
+          "campos": [
+            "altitude_m"
+          ],
+          "coordenadas": {
+            "circuito_id": "sepang",
+            "latitude": 2.76083,
+            "longitude": 101.738
+          },
+          "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a"
+        },
+        {
+          "titulo": "F1 — DRS substituído por aerodinâmica ativa em 2026",
+          "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+          "campos": [
+            "zonas_drs"
+          ]
+        }
+      ]
     }
   },
   "snapshots": [

@@ -87,7 +87,7 @@ class TestExportacaoDashboard(unittest.TestCase):
         self.assertIn('.gitignore', publicados)
         self.assertEqual((self.destino / '.gitignore').read_text(encoding='utf-8').splitlines(), [
             '.venv/', '__pycache__/', '.pytest_cache/', '.DS_Store', '.env', '.env.*',
-            '.streamlit/secrets.toml', '*.joblib', 'data/', 'models/',
+            '.streamlit/secrets.toml', '*.joblib', '/data/', 'models/',
         ])
         self.assertNotIn('MANIFESTO.json', {item['caminho'] for item in manifesto['arquivos']})
         self.assertEqual(cientificos, set(manifesto['fontes_cientificas']))
@@ -95,6 +95,14 @@ class TestExportacaoDashboard(unittest.TestCase):
             self.assertEqual((RAIZ / relativo).read_bytes(), (self.destino / relativo).read_bytes(), relativo)
         proibidos = ('data/', 'models/', '.venv/', '.env', 'joblib', 'coletar_', 'treinar_', 'avaliar_modelo')
         self.assertFalse(any(item.startswith(proibidos) for item in publicados))
+
+    def test_ignore_bloqueia_dados_brutos_sem_excluir_codigo_dos_leitores(self):
+        self.exportar()
+        subprocess.run(['git','init','-q'],cwd=self.destino,check=True)
+        readers=subprocess.run(['git','check-ignore','--no-index','pitwall/data/dashboard.py'],cwd=self.destino,capture_output=True)
+        raw=subprocess.run(['git','check-ignore','--no-index','data/raw.csv'],cwd=self.destino,capture_output=True)
+        self.assertEqual(readers.returncode,1)
+        self.assertEqual(raw.returncode,0)
 
     def test_inventario_ignora_so_diretorios_locais_conhecidos(self):
         self.exportar()
@@ -110,7 +118,8 @@ class TestExportacaoDashboard(unittest.TestCase):
 
     def test_documentos_tela_offline_e_download_csv_sao_whitelistados(self):
         self.exportar()
-        modulo = modulo_local(self.destino / 'documentacao_local.py', 'documentacao_local_exportada')
+        modulo = modulo_local(self.destino / 'pitwall/publishing/documentation.py', 'documentacao_local_exportada')
+        modulo.RAIZ = self.destino
         documentos = modulo.documentos_disponiveis()
         titulos = [item['titulo'] for item in documentos]
         self.assertIn('Protocolo temporal', titulos)
@@ -131,7 +140,8 @@ class TestExportacaoDashboard(unittest.TestCase):
 
     def test_documentacao_recusa_ancestral_symlink_para_fora_do_pacote(self):
         self.exportar()
-        modulo = modulo_local(self.destino / 'documentacao_local.py', 'documentacao_local_symlink')
+        modulo = modulo_local(self.destino / 'pitwall/publishing/documentation.py', 'documentacao_local_symlink')
+        modulo.RAIZ = self.destino
         documentos = self.destino / 'docs'
         externo = Path(self.tmp.name) / 'docs-externos'
         documentos.rename(externo)
@@ -354,9 +364,9 @@ class TestExportacaoDashboard(unittest.TestCase):
         self.assertIn('python3.12 -m venv .venv', readme)
         self.assertIn('não modifica o ambiente científico original', readme)
         guia = (self.destino / 'GUIA_HOSPEDAGEM.md').read_text(encoding='utf-8')
-        self.assertIn('git init -b main', guia)
+        self.assertIn('mbpaschoal/pitwall-lab', guia)
         self.assertIn('ARQUIVOS_PUBLICACAO.txt', guia)
-        self.assertIn('Yup, I have an app', guia)
+        self.assertIn('distribuicao/pitwall-dashboard/app.py', guia)
 
     def test_origem_e_allowlist_sao_verificadas_no_commit_base(self):
         fontes = self.exportador.FONTES_COPIADAS

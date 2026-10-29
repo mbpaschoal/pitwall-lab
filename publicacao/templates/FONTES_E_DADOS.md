@@ -1,64 +1,29 @@
-# Fontes e dados
+# Fontes e dados / Sources and data
 
-## Origem e atribuição
+## Português
 
-Os dados apresentados derivam de Jolpica-F1, incluindo o legado voluntário do
-Ergast. A fonte primária dos termos é:
+O produto apresenta dados derivados, com fonte e lacunas preservadas. A licença de uma fonte não substitui a de outra.
 
-- https://github.com/jolpica/jolpica-f1/blob/main/TERMS.md
-- https://creativecommons.org/licenses/by-nc-sa/4.0/
+- **Jolpica-F1/legado Ergast:** resultados, classificação e campeonatos. [Termos](https://github.com/jolpica/jolpica-f1/blob/main/TERMS.md): CC BY-NC-SA 4.0. Preserve atribuição, alterações e condições aplicáveis; não sugira endosso.
+- **OpenF1:** tempos, voltas, stints e medições de pista. [Documentação](https://openf1.org/docs/) e [condições](https://openf1.org/), incluindo CC BY-NC-SA 4.0.
+- **Open-Meteo:** modelo atmosférico histórico próximo à pista, separado de medições do asfalto. Weather data by [Open-Meteo.com](https://open-meteo.com/), [CC BY 4.0](https://open-meteo.com/en/licence). A altitude usa Copernicus DEM GLO-90 nas coordenadas do calendário; é aproximada.
+- **Formula 1/FIA:** documentos oficiais de classificação, tempos FIA e informações/mapas de circuito. Os links de fonte são apresentados no GP. O complemento Baku/Q contém 223 durações e 20 horários de referência; não infere setores ou validade de voltas.
+- **Archive histórico:** identificado como [jtrotman/formula-1-race-data](https://www.kaggle.com/datasets/jtrotman/formula-1-race-data) pelo ID do download original e pela igualdade dos 14 CSVs com o ZIP. O catálogo declara atualmente CC0; a licença da versão original não foi verificada separadamente. O horário original de aquisição continua desconhecido.
 
-Conforme esses termos, os dados são disponibilizados sob **CC BY-NC-SA 4.0**
-(Atribuição–NãoComercial–CompartilhaIgual). Dê crédito à Jolpica-F1, identifique
-alterações, não sugira endosso e preserve as condições NC e SA nos direitos
-cabíveis de contribuições derivadas.
+A fotografia de dados atual não prova sua disponibilidade num corte histórico. Dados posteriores não modificam as 15 entradas, o modelo v1 ou probabilidades registradas. Pneus representam sequências observadas, não intenção estratégica ou degradação causal. Race e Sprint permanecem separados; ausências e limites inconsistentes continuam explícitos.
 
-## Transformações identificadas
+O pacote inclui nove artefatos científicos congelados e projeções preparadas offline para 66 GPs/330 sessões. Não contém dados brutos nem modelos executáveis. Fontes históricas podem ter revisões posteriores. Condições não comerciais não autorizam automaticamente todos os usos pretendidos; consulte os termos originais. Código tem situação de licença independente. Projeto sem endosso oficial; dados sem garantias.
 
-As transformações históricas — junção por identificadores, janelas temporais,
-indicadores de ausência, divisão 2021–2025 e modelagem — foram realizadas antes
-desta distribuição. Nesta etapa, não houve nova coleta, treinamento, inferência
-ou processamento científico: somente apresentação e cópias dos nove artefatos
-necessários ao dashboard.
+## English
 
-## Limites de uso
+The product presents derived data with provenance and missingness preserved. One source's licence does not replace another's.
 
-Os dados não recebem licença MIT ou Apache por estarem neste pacote. A condição
-NãoComercial não autoriza automaticamente todos os usos de portfólio,
-recrutamento ou outros contextos com finalidade comercial. O autor deve avaliar
-o uso pretendido e, se necessário, contatar admin@jolpi.ca. Isto não é
-aconselhamento jurídico.
+- **Jolpica-F1/Ergast legacy:** results, qualifying and championships. [Terms](https://github.com/jolpica/jolpica-f1/blob/main/TERMS.md): CC BY-NC-SA 4.0. Preserve attribution, identified changes and applicable conditions; do not imply endorsement.
+- **OpenF1:** times, laps, stints and track measurements. [Documentation](https://openf1.org/docs/) and [conditions](https://openf1.org/), including CC BY-NC-SA 4.0.
+- **Open-Meteo:** historical atmospheric model near the circuit, separate from track-surface measurements. Weather data by [Open-Meteo.com](https://open-meteo.com/), [CC BY 4.0](https://open-meteo.com/en/licence). Altitude uses Copernicus DEM GLO-90 at calendar coordinates and is approximate.
+- **Formula 1/FIA:** official qualifying documents, FIA timings and circuit profiles/maps. Source links appear in each GP. Baku/Q's supplement contains 223 durations and 20 reference clock times; no inferred sectors or lap-validity flags.
+- **Historical archive:** identified as [jtrotman/formula-1-race-data](https://www.kaggle.com/datasets/jtrotman/formula-1-race-data) through the original download ID and byte equality of 14 CSVs with the ZIP. The current catalogue declares CC0; the original version's licence was not separately verified. Original acquisition time remains unknown.
 
-Os dados são fornecidos sem garantias. Pitwall Lab é um projeto independente,
-sem endosso da Jolpica-F1, Ergast, Fórmula 1 ou equipes/pilotos.
+A current snapshot does not prove availability at a historical cutoff. Later data do not change the 15 inputs, v1 model or recorded probabilities. Tyres describe observed sequences, not strategic intent or causal degradation. Race and Sprint remain separate; missing/inconsistent boundaries stay explicit.
 
-## Acervo descritivo de 2024–2026
-
-O arquivo portátil `frontend_assets/acervo_dashboard.json` acrescenta tempos de
-sessões, clima, sequências observadas de pneus, paradas, resultados históricos e
-comparativos de equipes para 66 GPs, incluindo Austin 2026. É preparado offline;
-o aplicativo não consulta as APIs nem carrega dados brutos durante a navegação.
-
-- **OpenF1**: resultados/tempos, voltas, stints e medições meteorológicas da
-  pista. [Documentação](https://openf1.org/docs/) e
-  [condições](https://openf1.org/), incluindo CC BY-NC-SA 4.0.
-- **Open-Meteo e provedores meteorológicos**: reconstrução/modelo atmosférico
-  horário na grade próxima ao circuito, sob
-  [CC BY 4.0](https://open-meteo.com/en/licence).
-  Weather data by [Open-Meteo.com](https://open-meteo.com/).
-  Não se trata de temperatura do asfalto ou previsão emitida antes do GP.
-- **Jolpica-F1 e fotografia CSV local de origem histórica**: resultados,
-  paradas e classificações acumuladas por rodada. A fotografia local conserva
-  aquisição desconhecida e divergência entre duas atribuições antigas de URL;
-  o pacote não afirma que um publicador específico forneceu esses bytes.
-
-Os dados apresentados são derivados para exibição e preservam fonte e lacunas.
-As condições de uma fonte não substituem as de outra. Compostos e stints são
-sequências observadas; não demonstram intenção estratégica, combustível,
-undercut ou degradação causal. Race e Sprint são mostrados separadamente.
-
-As voltas detalhadas da classificação de Baku 2025 não foram recuperadas nas
-fontes consultadas. Seus resultados e tempos agregados estão disponíveis.
-Outros campos ausentes ou limites de stint inconsistentes permanecem sinalizados.
-Os dados posteriores não alteram as 15 entradas, o modelo ou as probabilidades
-registradas. Os nove artefatos científicos anteriores continuam congelados.
+The package includes nine frozen scientific artefacts and offline projections for 66 GPs/330 sessions, without raw data or executable models. Historical sources can contain later revisions. Non-commercial conditions do not automatically permit every intended use: consult original terms. Code licensing is separate. No official endorsement; data carry no guarantees.

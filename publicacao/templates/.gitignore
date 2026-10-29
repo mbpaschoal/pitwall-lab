@@ -6,5 +6,5 @@ __pycache__/
 .env.*
 .streamlit/secrets.toml
 *.joblib
-data/
+/data/
 models/

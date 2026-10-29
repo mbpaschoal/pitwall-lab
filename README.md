@@ -1,93 +1,51 @@
 # Pitwall Lab
 
-Portfólio público de ciência de dados sobre Fórmula 1. O projeto apresenta um
-estudo retrospectivo de probabilidades individuais de pódio, com fontes,
-limitações e separação temporal documentadas. Não é uma previsão ao vivo e não
-estima a ordem P1/P2/P3.
+**Português · [English](README.en.md)**
 
-**[Abrir dashboard público](https://pitwall-lab.streamlit.app/)**
+Portfólio de ciência de dados sobre Fórmula 1, criado por **MBPaschoal**. Estou aprendendo a construir um produto completo: coletar dados, reconhecer suas limitações, avaliar um modelo e transformar os resultados numa interface compreensível. As correções e os resultados inconclusivos fazem parte desse percurso.
 
-## O que está disponível
+**[Abrir o dashboard](https://pitwall-lab.streamlit.app/) · [Evolução e aprendizados](docs/APRENDIZADOS.md) · [Versões](CHANGELOG.md) · [Arquitetura](docs/ARQUITETURA.md)**
 
-- Dashboard Streamlit com as telas **Corridas**, **Previsões**, **Desempenho** e
-  **Metodologia**.
-- Artefatos locais para 2024 e 2025; 2024 foi validação já explorada e 2025 foi
-  avaliação retrospectiva já realizada.
-- Operação 2026 separada do histórico: classificação oficial de pilotos vem de
-  um snapshot paginado de `DriverStandings` da Jolpica-F1; probabilidades são
-  exibidas somente para o GP da emissão correspondente.
-- Austin 2026 tem uma **previsão registrada** congelada antes da corrida e o
-  resultado posterior validado localmente. A interface preserva as probabilidades
-  originais e mostra a auditoria pós-corrida separada do estudo retrospectivo.
-- Interface editorial compartilhada por 2024–2026, com fontes locais, busca na
-  temporada, preferências da sessão e composição responsiva. O CSS está em
-  `frontend_assets/pitwall.css`; `pitwall_ui.py` controla a grade e
-  `pitwall_ui_dados.py` fornece apenas contexto descritivo validado. Austin usa
-  uma ilustração identificada como IA e os campeonatos oficiais de pilotos e
-  construtores pós-GP. Dados indisponíveis aparecem como lacunas, sem copiar os
-  números ilustrativos da referência visual.
+## O produto hoje
 
-## Limites importantes
+- **Corridas:** ficha do circuito, campeonato completo, tempos, clima, pneus/paradas, equipes e desempenho dos pilotos em até cinco edições anteriores na mesma pista.
+- **Previsões:** probabilidades individuais de pódio e comparação posterior. A emissão prospectiva de Austin 2026 permanece separada do estudo retrospectivo.
+- **Desempenho:** log loss, Brier, calibração, ranking e cobertura, com denominadores explícitos.
+- **Metodologia:** documentos e relatórios offline. As bandeiras 🇧🇷 e 🇬🇧 no canto inferior selecionam português ou inglês e acompanham a navegação.
 
-As probabilidades são individuais e não somam obrigatoriamente três por GP. A
-avaliação é retrospectiva: fontes podem ter sido revisadas após as datas dos
-eventos, e os resultados de 2024/2025 não demonstram desempenho futuro.
+O acervo descritivo cobre **66 GPs e 330 sessões de 2024–2026 até Austin**. A revisão de 29/10 resolveu 75 dos 112 itens da fila; seis ausências foram confirmadas e 31 limitações de pneus permanecem nas fontes. O Histórico exclui a corrida selecionada e outras pistas do mesmo país. Altitude é uma estimativa no ponto do calendário; mapas DRS de referência não certificam todas as configurações históricas.
 
-A classificação de pilotos de 2026 e as probabilidades por GP são blocos
-independentes. O estudo não reutiliza a emissão retrospectiva de Singapura para
-Austin nem transforma ausência de dados em zero, favoritos ou previsão.
+## O que aprendi com os erros
 
-## Executar localmente
+Um número exibido não basta: preciso explicar de onde veio, quando poderia estar disponível e o que significa. O Histórico inicialmente mostrava a corrida atual; agora responde à pergunta sobre edições anteriores da mesma pista. Rankings incompletos passaram a declarar a ausência, sem criar posições ou pontuações zero. A publicação ganhou uma verificação própria porque um teste local não comprova o que está no Streamlit.
 
-O dashboard local usa o ambiente virtual já existente no projeto:
+O [diário de evolução](docs/APRENDIZADOS.md) liga cada aprendizado a uma mudança e a uma verificação. Não atribuo versões retroativas nem reescrevo os commits para aparentar um desenvolvimento sem erros.
+
+## Resultado científico e limites
+
+O **modelo v1 está congelado**: regressão logística, treino em 2021–2023, validação de 2024 já explorada e avaliação retrospectiva de 2025 já realizada. Em 2025, nos mesmos 22 GPs avaliáveis, o modelo identificou 51 integrantes do pódio e a classificação 50; ambos acertaram os três em 8/22 GPs. São resultados descritivos, sem demonstração de significância ou garantia futura.
+
+O modelo não prevê a ordem P1/P2/P3. As probabilidades individuais não são forçadas a somar três. Fontes históricas podem conter revisões posteriores ao corte. **2025 não é mais teste intocado**, e a pesquisa v2 ainda não foi promovida. Dados novos de interface não alteram as 15 entradas, o modelo ou as probabilidades registradas.
+
+## Executar e encontrar o código
+
+O ponto de entrada continua sendo `app.py`. A implementação está no pacote [`pitwall/`](pitwall/), separado pelas responsabilidades do blueprint. Os pequenos módulos da raiz preservam imports/comandos existentes; os produtores científicos congelados mantêm seus caminhos originais.
+
+Para usar o ambiente de análise existente:
 
 ```bash
 ./.venv/bin/python -m streamlit run app.py --server.address 127.0.0.1 --server.port 8501
 ```
 
-Abra `http://127.0.0.1:8501`. O aplicativo não coleta dados, não treina o
-modelo e não faz inferência durante a visualização.
+Para uma instalação de apresentação independente, use Python 3.12 e as instruções do [pacote portátil](distribuicao/pitwall-dashboard/README.md). A navegação não coleta dados, treina ou executa inferência. O Cloud usa `distribuicao/pitwall-dashboard/app.py` na branch `main`.
 
-## Publicação gratuita no Streamlit Community Cloud
+## Versões e contribuição
 
-A entrega portátil pronta para hospedagem está em
-[`distribuicao/pitwall-dashboard/`](distribuicao/pitwall-dashboard/README.md).
-Ela contém seu próprio `app.py`, `requirements.txt`, configuração Streamlit e
-inventário de arquivos publicáveis.
+[`VERSION`](VERSION) identifica o produto; **não** é a versão do modelo. Cada atualização de dados ou melhoria entregue exige nova versão, notas em português/inglês e evidências de validação. A política começa em **0.1.0**, sem inventar versões anteriores. Consulte a [política de versões](docs/VERSOES.md) e o [guia de contribuição](CONTRIBUTING.md).
 
-A interface inclui o acervo descritivo de 66 GPs de 2024–2026 (até Austin),
-com tempos de sessões, voltas, pit stops, pneus, comparativo de equipes e
-clima histórico Open-Meteo. A projeção portátil fica em
-`frontend_assets/acervo_dashboard.json`; sua preparação offline usa
-`preparar_acervo_dashboard.py`. As ausências das fontes são sinalizadas e
-esses dados não alteram as probabilidades registradas do modelo v1.
+- [Documentação técnica em português e inglês](docs/README.md)
+- [Fontes, atribuição e limites](publicacao/templates/FONTES_E_DADOS.md)
+- [Método v1](docs/experimento_modelo_v1.md) · [English](docs/en/experimento_modelo_v1.md)
+- [Protocolo temporal](docs/protocolo_temporal.md) · [English](docs/en/protocolo_temporal.md)
 
-O aplicativo público está em **https://pitwall-lab.streamlit.app/**. Para
-atualizar a publicação no Streamlit Community Cloud, selecione a branch `main`
-e o entrypoint:
-
-```text
-distribuicao/pitwall-dashboard/app.py
-```
-
-Em **Advanced settings**, escolha Python 3.12. O `requirements.txt` fica no
-mesmo diretório do entrypoint e não há secrets necessários. O passo a passo e
-as limitações estão em
-[`distribuicao/pitwall-dashboard/GUIA_HOSPEDAGEM.md`](distribuicao/pitwall-dashboard/GUIA_HOSPEDAGEM.md).
-
-## Documentação técnica
-
-- [Protocolo temporal](docs/protocolo_temporal.md)
-- [Experimento do modelo v1](docs/experimento_modelo_v1.md)
-- [Avaliação final retrospectiva](docs/avaliacao_final_v1.md)
-- [Dicionário de variáveis](docs/dicionario_variaveis.md)
-- [Fontes e condições dos dados](docs/fontes_operacao_2026.md)
-
-## Fontes e atribuição
-
-Os dados históricos e operacionais usados pelo projeto derivam de Jolpica-F1.
-Consulte os documentos de fonte e de limitações antes de reutilizar os dados.
-Os dados seguem as condições informadas pela fonte, incluindo CC BY-NC-SA 4.0;
-a licença do código permanece uma decisão separada do autor.
-
-Projeto educacional independente, sem vínculo oficial com a Fórmula 1.
+Dados de fontes diferentes conservam suas próprias condições; nenhuma licença é estendida automaticamente a outra fonte. A licença aberta do código ainda não foi escolhida pelo autor. Projeto educacional independente, sem vínculo oficial com Fórmula 1, fontes ou equipes.

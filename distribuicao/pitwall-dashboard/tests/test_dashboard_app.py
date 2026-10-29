@@ -251,7 +251,7 @@ class TestDashboardApp(unittest.TestCase):
     def test_execucao_app_nao_chama_socket_e_nao_importa_joblib(self):
         with patch.object(socket.socket, 'connect', side_effect=AssertionError('rede externa proibida')):
             self.executar()
-        fontes = (RAIZ / 'app.py').read_text(encoding='utf-8').lower()
+        fontes = Path(app.__file__).read_text(encoding='utf-8').lower()
         self.assertNotIn('joblib', fontes)
         self.assertNotIn('sklearn', fontes)
 
@@ -265,6 +265,16 @@ class TestDashboardApp(unittest.TestCase):
         self.assertNotIn('Previsão e resultado observado', texto)
         self.assertIn('Integrantes do pódio observado', texto)
         self.assertNotIn('Max Verstappen (max_verstappen)', texto)
+
+    def test_historico_sem_acervo_nao_reutiliza_podio_da_corrida_atual(self):
+        self.executar()
+        self.escolher('temporada', 2026)
+        historico=next(tab for tab in self.at.tabs if tab.label=='Histórico')
+        texto=texto_renderizado(historico)
+        self.assertIn('Não há corrida anterior nesta pista', texto)
+        self.assertNotIn('Integrantes do pódio observado', texto)
+        tempos=next(tab for tab in self.at.tabs if tab.label=='Tempos')
+        self.assertIn('Integrantes do pódio observado', texto_renderizado(tempos))
 
     def test_2026_com_resultado_observado_nao_afirma_que_o_podio_esta_vazio(self):
         self.executar()
@@ -339,9 +349,9 @@ class TestDashboardApp(unittest.TestCase):
         self.assertTrue((RAIZ / 'dashboard_assets/fonts/lato.ttf').is_file())
 
     def test_menu_lateral_mantem_controle_nativo_e_adapta_ao_viewport(self):
-        codigo = (RAIZ / 'app.py').read_text(encoding='utf-8')
+        codigo = Path(app.__file__).read_text(encoding='utf-8')
         css = app.estilo_dashboard()
-        self.assertIn("initial_sidebar_state='auto'", codigo)
+        self.assertRegex(codigo, "initial_sidebar_state=[\"']auto[\"']")
         self.assertNotIn('header[data-testid="stHeader"] { display: none; }', css)
 
     def test_corridas_austin_exibe_contexto_programacao_e_previsao_registrada(self):
@@ -372,7 +382,7 @@ class TestDashboardApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         for rotulo in ('Foto do circuito', 'Informações do circuito', 'Clima'):
             self.assertIn(rotulo, texto)
-        codigo = (RAIZ / 'app.py').read_text(encoding='utf-8')
+        codigo = Path(app.__file__).read_text(encoding='utf-8')
         for aba in ('Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes'):
             self.assertIn(aba, codigo)
         self.assertIn('Clima não disponível', texto)

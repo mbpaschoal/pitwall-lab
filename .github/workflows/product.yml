@@ -1,0 +1,45 @@
+name: Produto e idiomas / Product and languages
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Dependências de apresentação / Presentation dependencies
+        run: python -m pip install -r publicacao/templates/requirements.txt
+      - name: Versão e documentação / Version and documentation
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          python -m pitwall.publishing.releases check
+          if [ -n "$BASE_REF" ] && git cat-file -e "$BASE_REF^{commit}" 2>/dev/null; then
+            python -m pitwall.publishing.releases check --base "$BASE_REF"
+          fi
+      - name: Testes PT e EN / PT and EN tests
+        run: python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_dashboard_acervo_app tests.test_interface_editorial
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Notas PT e EN / PT and EN release notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m pitwall.publishing.releases publish

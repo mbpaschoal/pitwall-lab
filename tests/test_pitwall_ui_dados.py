@@ -43,27 +43,20 @@ class TestPaineisEditorias(unittest.TestCase):
         with self.assertRaisesRegex(PaineisDadosErro, 'Circuito'):
             carregar_paineis(RAIZ, 2026, 18, 'monza')
 
-    def test_contexto_cota_tem_fontes_e_dados_2026_nao_sao_retroprojetados(self):
+    def test_contexto_cota_tem_fontes_altitude_dem_e_drs_por_temporada(self):
         for ano, rodada in ((2024, 19), (2025, 19), (2026, 18)):
             info = carregar_paineis(RAIZ, ano, rodada, 'americas')['circuit_info']
             self.assertEqual(info['comprimento_km'], 5.513)
             self.assertEqual(info['curvas'], 20)
             self.assertEqual(info['sentido'], 'Anti-horário')
             self.assertEqual(info['primeiro_gp'], 2012)
-            self.assertIsNone(info['altitude_m'])
-            self.assertIsNone(info['zonas_drs'])
-            self.assertEqual(len(info['fontes']), 2)
+            self.assertEqual(info['altitude_m'], 154)
+            self.assertEqual(info['zonas_drs'], 2 if ano < 2026 else None)
+            self.assertEqual(info['drs_aplicavel'], ano < 2026)
+            self.assertGreaterEqual(len(info['fontes']), 4)
             self.assertIn('Não integra o modelo', info['escopo'])
-            if ano == 2026:
-                self.assertEqual(info['voltas'], 56)
-                self.assertEqual(info['distancia_corrida_km'], 308.432)
-                self.assertEqual(info['recorde_volta'], '1:36.169 · Charles Leclerc (2019)')
-            else:
-                self.assertIsNone(info['voltas'])
-                self.assertIsNone(info['distancia_corrida_km'])
-                self.assertIsNone(info['recorde_volta'])
-        outro = carregar_paineis(RAIZ, 2026, 1, 'albert_park')['circuit_info']
-        self.assertIsNone(outro['comprimento_km'])
+            self.assertEqual(info['voltas'], 56)
+            self.assertEqual(info['recorde_volta'], '1:36.169 · Charles Leclerc (2019)')
 
     def test_hash_raw_paginacao_e_identidade_sao_verificados_antes_de_normalizar(self):
         fonte_raiz = RAIZ / Path(INVENTARIO_AUSTIN).parent

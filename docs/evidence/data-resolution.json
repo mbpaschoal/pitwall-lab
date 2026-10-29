@@ -1,0 +1,545 @@
+{
+  "date": "2026-10-29",
+  "original_items": 112,
+  "resolved": 75,
+  "confirmed_absences": 6,
+  "remaining_source_limitations": 31,
+  "states": {
+    "ausencia_confirmada_na_tabela_oficial": 6,
+    "resolvido_documentalmente": 71,
+    "resolvido_com_fonte_alternativa": 1,
+    "resolvido_origem_identificada": 1,
+    "lacuna_confirmada_na_origem": 31,
+    "resolvido_classificacao_de_qualidade": 2
+  },
+  "archive_origin": {
+    "schema": "proveniencia-archive-v1",
+    "estado": "origem_identificada_por_metadados_locais_e_bytes",
+    "dataset_id": 1320004,
+    "versao_armazenamento": 20597603,
+    "dataset_ref": "jtrotman/formula-1-race-data",
+    "url": "https://www.kaggle.com/datasets/jtrotman/formula-1-race-data",
+    "url_armazenamento_sem_assinatura": "https://storage.googleapis.com/kaggle-data-sets/1320004/20597603/bundle/archive.zip",
+    "licenca_declarada_atualmente": "CC0: Public Domain",
+    "licenca_da_versao_original_verificada_separadamente": false,
+    "obtido_em_utc": "desconhecida",
+    "zip_sha256": "4f0ac528cd63b818183337966cc93c8065d910f967c3d4e80ec9e591367238f4",
+    "fontes_metadata_sha256": "b357cdd6e2e9e25155e01f2d75878bc32479b4496d983d47bdaac359f6fdf324",
+    "evidencia_local": "WhereFroms do ZIP original e igualdade de 14 CSVs; não certifica publicação histórica nem horário de aquisição",
+    "arquivos_sha256": {
+      "circuits.csv": "a43c986bf3f4b3856682e0f8d14bb2c07fab578ce670421c6b96507c151c9590",
+      "status.csv": "6651b8a26b6efd60fde9f7d6a2dd8523c80910918c5e9fe97a9c3136ef5fba2d",
+      "lap_times.csv": "e8bcdcb9a436eb65328dbf25512db447f90f719529bb405bc6b7142ebe897c9a",
+      "sprint_results.csv": "5e5e848f6b3638f8096e10e69c73b873599a72fdd8890125c7ce2d973ce6c2f5",
+      "drivers.csv": "d0a061348fc6874762691c0839db0a55102d3b5120d0f0cb39e74cd4635308f8",
+      "races.csv": "cfe8bb2f79b62abe3af108473c963a4600fd71e3861ee1f9489d489a45d5064d",
+      "constructors.csv": "a80601ac9f6961221527682452aa99c3075e8bddf5bb12e1eca95052aee52600",
+      "constructor_standings.csv": "6b6638fab20bd8e70925c8f0f915878a8ee73ddbedd896a72a64d38ff8c28f51",
+      "qualifying.csv": "cd4a6fba7576f2b65ad0a945c7a5b2011e258aee594579136fe50660d6415426",
+      "driver_standings.csv": "e5d71d74c6a69ec74cdac50722177e72b8552cda38aa24028e920802b41a3c94",
+      "constructor_results.csv": "064ec5df36f9d4b9dbf27ea1305a481720d4ad14e18bc4c3528674f2e906c69b",
+      "pit_stops.csv": "19d6c8d6ecf43e550d35577e539912225fb5e00aee1a3623608547a37194dc74",
+      "seasons.csv": "4dbb8bdffe6d8361334993586e55e4380e1f49eda18d0ff4ca71c8e867b0f1a6",
+      "results.csv": "95d5cebbd9a0368112f15bc0eeb49e7ce2547233a761a9ac6b8e775057b1bd61"
+    }
+  },
+  "sources": [
+    {
+      "id": "f1_index_2024",
+      "url": "https://www.formula1.com/en/results/2024/races",
+      "http": 200,
+      "sha256": "4516cb950b3e4b57d3bfbd20573641324fc233a7849541e206acbc3b54172f0a",
+      "retrieved_utc": "2026-10-29T09:47:27.528171+00:00"
+    },
+    {
+      "id": "f1_index_2025",
+      "url": "https://www.formula1.com/en/results/2025/races",
+      "http": 200,
+      "sha256": "7af56cd484a08b11250bbedfc1dbdffeb8897a3477fdb36b16878b1d81c41ff6",
+      "retrieved_utc": "2026-10-29T09:47:36.250782+00:00"
+    },
+    {
+      "id": "f1_index_2026",
+      "url": "https://www.formula1.com/en/results/2026/races",
+      "http": 200,
+      "sha256": "5e68f75903b8278bb58ce62609a2a14f6b3502ad671a49941f222ffce4b65250",
+      "retrieved_utc": "2026-10-29T09:47:44.391994+00:00"
+    },
+    {
+      "id": "fia_baku2025_timing",
+      "url": "https://www.fia.com/events/fia-formula-one-world-championship/season-2025/azerbaijan-grand-prix/eventtiming-information",
+      "http": 200,
+      "sha256": "6208f3e809c4a3dc2888e1417c812a5551f9f36d817697bc82b760b87da8bf5a",
+      "retrieved_utc": "2026-10-29T09:47:53.762364+00:00"
+    },
+    {
+      "id": "f1_austin_circuito",
+      "url": "https://www.formula1.com/en/racing/2025/united-states/circuit",
+      "http": 200,
+      "sha256": "1a98163b500d57db92048f4ebb7bf6c9544df4f5586d9674a9673f53f10f1dfc",
+      "retrieved_utc": "2026-10-29T09:48:03.800732+00:00"
+    },
+    {
+      "id": "f1_q_2024_monaco",
+      "url": "https://www.formula1.com/en/results/2024/races/1236/monaco/qualifying",
+      "http": 200,
+      "sha256": "255a999e8fd6a0621334c38dfacaa1f86fef84f7bbfaa41ac2d054251be02b22",
+      "retrieved_utc": "2026-10-29T09:49:38.682805+00:00"
+    },
+    {
+      "id": "f1_q_2024_netherlands",
+      "url": "https://www.formula1.com/en/results/2024/races/1243/netherlands/qualifying",
+      "http": 200,
+      "sha256": "12c21d83a8f20b713e6a4b40011744829af923d8b5ad5cc742270885fbadc6ce",
+      "retrieved_utc": "2026-10-29T09:49:47.373425+00:00"
+    },
+    {
+      "id": "f1_q_2024_azerbaijan",
+      "url": "https://www.formula1.com/en/results/2024/races/1245/azerbaijan/qualifying",
+      "http": 200,
+      "sha256": "c1bea178e7854fb331878a01ad72b04e79f4690c2602a6b8112f3da9e1f986db",
+      "retrieved_utc": "2026-10-29T09:49:56.927326+00:00"
+    },
+    {
+      "id": "f1_q_2024_singapore",
+      "url": "https://www.formula1.com/en/results/2024/races/1246/singapore/qualifying",
+      "http": 200,
+      "sha256": "4dba5ad1026f2cfe03b67b4509f4c668535fffe8706b185eb2f2fbe03ecd550e",
+      "retrieved_utc": "2026-10-29T09:50:05.671038+00:00"
+    },
+    {
+      "id": "f1_q_2024_brazil",
+      "url": "https://www.formula1.com/en/results/2024/races/1249/brazil/qualifying",
+      "http": 200,
+      "sha256": "fee7882b1108f2d94569bf1936adfa0793859312c55b0e6af6b2c7a3db59bf20",
+      "retrieved_utc": "2026-10-29T09:50:15.066129+00:00"
+    },
+    {
+      "id": "f1_q_2025_miami",
+      "url": "https://www.formula1.com/en/results/2025/races/1259/miami/qualifying",
+      "http": 200,
+      "sha256": "d215522cc97740c8713a992ad62f7ddcb082046ca573f675ffcd41cd71db7c88",
+      "retrieved_utc": "2026-10-29T09:50:23.906709+00:00"
+    },
+    {
+      "id": "f1_q_2025_emilia-romagna",
+      "url": "https://www.formula1.com/en/results/2025/races/1260/emilia-romagna/qualifying",
+      "http": 200,
+      "sha256": "9dd96cc762b44ffc6f1cfe7ffd70ab3b8d8d87e1b8fcc7d3d5edfb4a4000d483",
+      "retrieved_utc": "2026-10-29T09:50:34.099147+00:00"
+    },
+    {
+      "id": "f1_q_2025_singapore",
+      "url": "https://www.formula1.com/en/results/2025/races/1270/singapore/qualifying",
+      "http": 200,
+      "sha256": "97c3eabdcc06413414764ae8fb00e8c325089f1354fb49c20c22c8a39d5e9b8f",
+      "retrieved_utc": "2026-10-29T09:50:42.925678+00:00"
+    },
+    {
+      "id": "f1_q_2025_brazil",
+      "url": "https://www.formula1.com/en/results/2025/races/1273/brazil/qualifying",
+      "http": 200,
+      "sha256": "70bb3e81b44680e671e4b8b47b707d475d634145dbdc8506253e2942798d591b",
+      "retrieved_utc": "2026-10-29T09:50:51.638695+00:00"
+    },
+    {
+      "id": "f1_q_2026_miami",
+      "url": "https://www.formula1.com/en/results/2026/races/1284/miami/qualifying",
+      "http": 200,
+      "sha256": "927f422ee107972686454cecb95abaf5c53bc79cb7c1784096a38dce30735f3a",
+      "retrieved_utc": "2026-10-29T09:50:59.790924+00:00"
+    },
+    {
+      "id": "f1_q_2026_australia",
+      "url": "https://www.formula1.com/en/results/2026/races/1279/australia/qualifying",
+      "http": 200,
+      "sha256": "466762f2bd230607fd26527041717b8285b321ae75149905d17a1198a163d464",
+      "retrieved_utc": "2026-10-29T09:51:07.920941+00:00"
+    },
+    {
+      "id": "f1_q_2026_italy",
+      "url": "https://www.formula1.com/en/results/2026/races/1293/italy/qualifying",
+      "http": 200,
+      "sha256": "90e159478532499e1a667724b56f5f10364e07925a86cf2b23266cbb6f7b4eff",
+      "retrieved_utc": "2026-10-29T09:51:16.063991+00:00"
+    },
+    {
+      "id": "fia_laps_baku2025",
+      "url": "https://www.fia.com/sites/default/files/2025_17_aze_f1_q0_timing_qualifyingsessionlaptimes_v01.pdf",
+      "http": 200,
+      "sha256": "316c01d4f184a69cea9da664d08a163bfc7a72a8c7ac1c36e6a3e246c64d3c40",
+      "retrieved_utc": "2026-10-29T09:51:25.414581+00:00"
+    },
+    {
+      "id": "f1_regras2026",
+      "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+      "http": 200,
+      "sha256": "89b6a4845c5d23d0f625940777fe3e465ccd0c823f209edcbaaa39f7701c786f",
+      "retrieved_utc": "2026-10-29T09:51:35.514390+00:00"
+    },
+    {
+      "id": "fia_austin2025_preview",
+      "url": "https://www.fia.com/news/f1-2025-united-states-grand-prix-preview",
+      "http": 200,
+      "sha256": "38cf09b38265cd9a704f1631a1d3145760ddfb68f2086a7993ca8a865f12daed",
+      "retrieved_utc": "2026-10-29T09:51:44.520765+00:00"
+    },
+    {
+      "id": "f1_circuito_australia",
+      "url": "https://www.formula1.com/en/racing/2025/australia/circuit",
+      "http": 200,
+      "sha256": "3647695ae05ba431bbb3be43b0cea5542aa0aa2f43ee56d7d1a3cc9e8f1445fe",
+      "retrieved_utc": "2026-10-29T09:51:54.213626+00:00"
+    },
+    {
+      "id": "f1_circuito_china",
+      "url": "https://www.formula1.com/en/racing/2025/china/circuit",
+      "http": 200,
+      "sha256": "b1bab7b63c1e21d99da29728bb4b4d821809443f0dea7ef12eb029899752ffc7",
+      "retrieved_utc": "2026-10-29T09:52:04.837499+00:00"
+    },
+    {
+      "id": "f1_circuito_japan",
+      "url": "https://www.formula1.com/en/racing/2025/japan/circuit",
+      "http": 200,
+      "sha256": "551a2bb0fb35bf283867717bb07966f75a8d132e188f5f16c5b662807561a781",
+      "retrieved_utc": "2026-10-29T09:52:14.154817+00:00"
+    },
+    {
+      "id": "f1_circuito_bahrain",
+      "url": "https://www.formula1.com/en/racing/2025/bahrain/circuit",
+      "http": 200,
+      "sha256": "49dc897ba5079abe1fdcd745428a1d326b2fe299345cbbb40604e392f43800fa",
+      "retrieved_utc": "2026-10-29T09:52:23.896001+00:00"
+    },
+    {
+      "id": "f1_circuito_saudi-arabia",
+      "url": "https://www.formula1.com/en/racing/2025/saudi-arabia/circuit",
+      "http": 200,
+      "sha256": "fc59c30ad653a8c0ddcd9f485fa86f1243f33edb5303aba047986666c86cfb2a",
+      "retrieved_utc": "2026-10-29T09:52:32.719809+00:00"
+    },
+    {
+      "id": "f1_circuito_miami",
+      "url": "https://www.formula1.com/en/racing/2025/miami/circuit",
+      "http": 200,
+      "sha256": "ce5c6f0bd2195f584e738d7cf688ca798660ebe9c02871a5a4f440855375d082",
+      "retrieved_utc": "2026-10-29T09:52:41.565215+00:00"
+    },
+    {
+      "id": "f1_circuito_emilia-romagna",
+      "url": "https://www.formula1.com/en/racing/2025/emilia-romagna/circuit",
+      "http": 404,
+      "sha256": "8203407985fa6627deeff89ec3095f1476823d034fd540fa0a9712c0d87791ba",
+      "retrieved_utc": "2026-10-29T09:52:50.389107+00:00"
+    },
+    {
+      "id": "f1_circuito_monaco",
+      "url": "https://www.formula1.com/en/racing/2025/monaco/circuit",
+      "http": 200,
+      "sha256": "14edc40eb528b66240418063fd867912a188413444026b3751eb68c7cda4198e",
+      "retrieved_utc": "2026-10-29T09:52:59.834203+00:00"
+    },
+    {
+      "id": "f1_circuito_spain",
+      "url": "https://www.formula1.com/en/racing/2025/spain/circuit",
+      "http": 200,
+      "sha256": "4eb77b72533af9483c30f10c3d482973b429eeef30b8b6d3f83c77a5444d0459",
+      "retrieved_utc": "2026-10-29T09:53:11.093907+00:00"
+    },
+    {
+      "id": "f1_circuito_canada",
+      "url": "https://www.formula1.com/en/racing/2025/canada/circuit",
+      "http": 200,
+      "sha256": "337be410fc872b2eb419236afbc9c55c4a18cc2aada0d2bdee6ac2bf5ac20823",
+      "retrieved_utc": "2026-10-29T09:53:20.059973+00:00"
+    },
+    {
+      "id": "f1_circuito_austria",
+      "url": "https://www.formula1.com/en/racing/2025/austria/circuit",
+      "http": 200,
+      "sha256": "b03d1134a906e6bea14235f3e3fa446be893ffbc6e50d112fa276a3fc1a45cac",
+      "retrieved_utc": "2026-10-29T09:53:29.627311+00:00"
+    },
+    {
+      "id": "f1_circuito_great-britain",
+      "url": "https://www.formula1.com/en/racing/2025/great-britain/circuit",
+      "http": 200,
+      "sha256": "cff70d9cdfb189335505d5c72791a6cb00167e4eff0d21900a93168e2208cd47",
+      "retrieved_utc": "2026-10-29T09:53:40.275584+00:00"
+    },
+    {
+      "id": "f1_circuito_belgium",
+      "url": "https://www.formula1.com/en/racing/2025/belgium/circuit",
+      "http": 200,
+      "sha256": "82fed667c43576e4865e92e3b59760532b4b70f285c41c6f1b3a6c5192571631",
+      "retrieved_utc": "2026-10-29T09:53:50.035573+00:00"
+    },
+    {
+      "id": "f1_circuito_hungary",
+      "url": "https://www.formula1.com/en/racing/2025/hungary/circuit",
+      "http": 200,
+      "sha256": "537febbab6e6e0cd9f92c16359d5f568967aa100ca402058820f2f2903937b0c",
+      "retrieved_utc": "2026-10-29T09:53:58.765048+00:00"
+    },
+    {
+      "id": "f1_circuito_netherlands",
+      "url": "https://www.formula1.com/en/racing/2025/netherlands/circuit",
+      "http": 200,
+      "sha256": "c52ced6a3d225db56a22114d04d0572d3c08a826e5ac9ffd2dddd383ca35bdf8",
+      "retrieved_utc": "2026-10-29T09:54:08.050981+00:00"
+    },
+    {
+      "id": "f1_circuito_italy",
+      "url": "https://www.formula1.com/en/racing/2025/italy/circuit",
+      "http": 200,
+      "sha256": "e45d8f9263f339d6a9ede30299d6d02d448eb48df45e6e15e8a7677c5adc56f3",
+      "retrieved_utc": "2026-10-29T09:54:17.277342+00:00"
+    },
+    {
+      "id": "f1_circuito_azerbaijan",
+      "url": "https://www.formula1.com/en/racing/2025/azerbaijan/circuit",
+      "http": 200,
+      "sha256": "d3fe93ba6dec81df66283eee171e1b9b623413580e0a26ef824abc4ec0fea704",
+      "retrieved_utc": "2026-10-29T09:54:26.018481+00:00"
+    },
+    {
+      "id": "f1_circuito_singapore",
+      "url": "https://www.formula1.com/en/racing/2025/singapore/circuit",
+      "http": 200,
+      "sha256": "93917a792de0ad9038207a83b465e57e245a0326057dcf60db7a73b1482e683c",
+      "retrieved_utc": "2026-10-29T09:54:35.630434+00:00"
+    },
+    {
+      "id": "f1_circuito_mexico",
+      "url": "https://www.formula1.com/en/racing/2025/mexico/circuit",
+      "http": 200,
+      "sha256": "0fb76f6e3ce843f38f88e582be5784666a16d17771c14e0fb6a76aae305dc2ee",
+      "retrieved_utc": "2026-10-29T09:54:45.675270+00:00"
+    },
+    {
+      "id": "f1_circuito_brazil",
+      "url": "https://www.formula1.com/en/racing/2025/brazil/circuit",
+      "http": 200,
+      "sha256": "728cadaaeb8f104f423bbb7a63fd8ad72a88bf9f5dcd70700a243016e92511ec",
+      "retrieved_utc": "2026-10-29T09:54:54.324444+00:00"
+    },
+    {
+      "id": "f1_circuito_las-vegas",
+      "url": "https://www.formula1.com/en/racing/2025/las-vegas/circuit",
+      "http": 200,
+      "sha256": "5af6e68e655de3ebb09480942f0bccced10d7a0eef436087eb58ba8b9b9ed49e",
+      "retrieved_utc": "2026-10-29T09:55:03.465055+00:00"
+    },
+    {
+      "id": "f1_circuito_qatar",
+      "url": "https://www.formula1.com/en/racing/2025/qatar/circuit",
+      "http": 200,
+      "sha256": "a73172fc4817c670e490623120865d6fdc3345ebcc77062c03470dea56cfd93c",
+      "retrieved_utc": "2026-10-29T09:55:13.233435+00:00"
+    },
+    {
+      "id": "f1_circuito_abu-dhabi",
+      "url": "https://www.formula1.com/en/racing/2025/abu-dhabi/circuit",
+      "http": 404,
+      "sha256": "8203407985fa6627deeff89ec3095f1476823d034fd540fa0a9712c0d87791ba",
+      "retrieved_utc": "2026-10-29T09:55:22.064993+00:00"
+    },
+    {
+      "id": "f1_q_2026_spain",
+      "url": "https://www.formula1.com/en/results/2026/races/1294/spain/qualifying",
+      "http": 200,
+      "sha256": "c16fb7c1093a49221f5445c7a9c07e125cdb02f2a33256b02f68312c8c68b4ee",
+      "retrieved_utc": "2026-10-29T09:56:02.499519+00:00"
+    },
+    {
+      "id": "f1_circuito_madring",
+      "url": "https://www.formula1.com/en/racing/2026/spain/circuit",
+      "http": 200,
+      "sha256": "955fed92072690a532dbb6d050720a1465ae32d633b0da3a4c241628c231ef75",
+      "retrieved_utc": "2026-10-29T09:56:12.367098+00:00"
+    },
+    {
+      "id": "f1_circuito_imola_corrigido",
+      "url": "https://www.formula1.com/en/racing/2025/emiliaromagna/circuit",
+      "http": 200,
+      "sha256": "a119a1498aa64a6139d3aa35cd9412f0d8bb18126802698decd6fad9bdbadd15",
+      "retrieved_utc": "2026-10-29T09:56:22.459064+00:00"
+    },
+    {
+      "id": "f1_circuito_abudhabi_corrigido",
+      "url": "https://www.formula1.com/en/racing/2025/united-arab-emirates/circuit",
+      "http": 200,
+      "sha256": "7a77777aacdfc4190fc4d8bbe609be29750fd3077e8268e3ae9827bb8e3ec95a",
+      "retrieved_utc": "2026-10-29T09:56:32.468895+00:00"
+    },
+    {
+      "id": "elevacao_circuitos",
+      "url": "https://api.open-meteo.com/v1/elevation?latitude=-37.8497%2C30.1328%2C26.0325%2C40.3725%2C41.57%2C47.5789%2C44.3439%2C-23.7036%2C21.6319%2C25.49%2C40.46528%2C1.2914%2C25.9581%2C43.7347%2C45.6156%2C47.2197%2C19.4042%2C2.76083%2C31.3389%2C52.0786%2C50.4372%2C34.8431%2C36.1147%2C45.5%2C24.4672%2C52.3888&longitude=144.968%2C-97.6411%2C50.5106%2C49.8533%2C2.26111%2C19.2486%2C11.7167%2C-46.6997%2C39.1044%2C51.4542%2C-3.61528%2C103.864%2C-80.2389%2C7.42056%2C9.28111%2C14.7647%2C-99.0907%2C101.738%2C121.22%2C-1.01694%2C5.97139%2C136.541%2C-115.173%2C-73.5228%2C54.6031%2C4.54092",
+      "http": 200,
+      "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a",
+      "retrieved_utc": "2026-10-29T09:56:41.468799+00:00"
+    },
+    {
+      "id": "fia_austin_drs2025",
+      "url": "https://www.fia.com/system/files/decision-document/2025_united_states_grand_prix_-_event_notes_-_circuit_map_pit_lane_drawing_emergency_exits_map_quarantine_zone_map_red_zones_map.pdf",
+      "http": 200,
+      "sha256": "7b7d350cb5ef5846e11127653eff51e5551d59a72a762745f07d960a42fc2bac",
+      "retrieved_utc": "2026-10-29T09:56:50.069457+00:00"
+    },
+    {
+      "id": "kaggle_jtrotman_metadata",
+      "url": "https://www.kaggle.com/api/v1/datasets/list?search=jtrotman%20formula-1-race-data",
+      "http": 200,
+      "sha256": "b357cdd6e2e9e25155e01f2d75878bc32479b4496d983d47bdaac359f6fdf324",
+      "retrieved_utc": "2026-10-29T09:56:58.526108+00:00"
+    },
+    {
+      "id": "kaggle_rohanrao_metadata",
+      "url": "https://www.kaggle.com/api/v1/datasets/list?search=rohanrao%20formula-1-world-championship-1950-2020",
+      "http": 200,
+      "sha256": "af9e7a89045fd23c81ca9ae27c9972d455bcefb0e762518c2784210a36dffe66",
+      "retrieved_utc": "2026-10-29T09:57:06.841011+00:00"
+    },
+    {
+      "id": "openf1_stints_9496",
+      "url": "https://api.openf1.org/v1/stints?session_key=9496",
+      "http": 200,
+      "sha256": "48328e6349c6a5b050a41ffa354477276b4bb07bb99aaab672cdf8203524debc",
+      "retrieved_utc": "2026-10-29T09:59:45.250788+00:00"
+    },
+    {
+      "id": "openf1_stints_9506",
+      "url": "https://api.openf1.org/v1/stints?session_key=9506",
+      "http": 200,
+      "sha256": "6bd604f979f8a8ed8f5c40c7982e42bfec27afc729038bb9d016a0e0d9709b7d",
+      "retrieved_utc": "2026-10-29T09:59:54.035908+00:00"
+    },
+    {
+      "id": "openf1_stints_9508",
+      "url": "https://api.openf1.org/v1/stints?session_key=9508",
+      "http": 200,
+      "sha256": "7ee3e9189ecfc8d6b0dbd5cf9a86dab924b693915c3c5d230006521e4efafbf9",
+      "retrieved_utc": "2026-10-29T10:00:02.829184+00:00"
+    },
+    {
+      "id": "openf1_stints_9523",
+      "url": "https://api.openf1.org/v1/stints?session_key=9523",
+      "http": 200,
+      "sha256": "17fb71bab5571e3982aff600f8f24d4fcdb7f017f773769a9b07b228eca06392",
+      "retrieved_utc": "2026-10-29T10:00:11.610457+00:00"
+    },
+    {
+      "id": "openf1_stints_9558",
+      "url": "https://api.openf1.org/v1/stints?session_key=9558",
+      "http": 200,
+      "sha256": "766ba4af6f1cd7b50e2a7c19626a007b6b003351a824ef73734fc3dc731538b9",
+      "retrieved_utc": "2026-10-29T10:00:20.439829+00:00"
+    },
+    {
+      "id": "openf1_stints_9625",
+      "url": "https://api.openf1.org/v1/stints?session_key=9625",
+      "http": 200,
+      "sha256": "8a70906c1805945166ba27e360311fc70a1f3089e9f18c85ce71242a24f9277b",
+      "retrieved_utc": "2026-10-29T10:00:29.371093+00:00"
+    },
+    {
+      "id": "openf1_stints_9636",
+      "url": "https://api.openf1.org/v1/stints?session_key=9636",
+      "http": 200,
+      "sha256": "e5be4004ddb5319fd917c3cfed19b6d06377297cafceb971304d361e3062060a",
+      "retrieved_utc": "2026-10-29T10:00:38.238371+00:00"
+    },
+    {
+      "id": "openf1_stints_9637",
+      "url": "https://api.openf1.org/v1/stints?session_key=9637",
+      "http": 200,
+      "sha256": "4862a84ae0a37b02c19b544ab39b266136e01385159994a37f57dcecc3692a32",
+      "retrieved_utc": "2026-10-29T10:00:47.057950+00:00"
+    },
+    {
+      "id": "openf1_stints_9655",
+      "url": "https://api.openf1.org/v1/stints?session_key=9655",
+      "http": 200,
+      "sha256": "563b14f1fe3b1a9096b2fcfb85b705b624da7a4ce05a594dfba34120751ffc3f",
+      "retrieved_utc": "2026-10-29T10:00:55.996671+00:00"
+    },
+    {
+      "id": "openf1_stints_9662",
+      "url": "https://api.openf1.org/v1/stints?session_key=9662",
+      "http": 200,
+      "sha256": "33da3e8ef4c01bd46c513862668a3e7eb435e6a58bfb2bd8690ffbcb73be48d2",
+      "retrieved_utc": "2026-10-29T10:01:04.816088+00:00"
+    },
+    {
+      "id": "openf1_stints_10022",
+      "url": "https://api.openf1.org/v1/stints?session_key=10022",
+      "http": 200,
+      "sha256": "0c25d69f784dfa08bfd5cc0a2c3ac6dd273c1bb53f39ee71133d893d738af973",
+      "retrieved_utc": "2026-10-29T10:01:13.626147+00:00"
+    },
+    {
+      "id": "openf1_stints_9693",
+      "url": "https://api.openf1.org/v1/stints?session_key=9693",
+      "http": 200,
+      "sha256": "d439ab35672a3d26e1b4b35426f9ac4dd34a9745156aaa27fc180d4bd1cc6d8e",
+      "retrieved_utc": "2026-10-29T10:01:22.594486+00:00"
+    },
+    {
+      "id": "openf1_stints_9949",
+      "url": "https://api.openf1.org/v1/stints?session_key=9949",
+      "http": 200,
+      "sha256": "c7c91f745cdc47791fe1cd57cf4b85f45384c761d56fe013f2617d21a1f3d114",
+      "retrieved_utc": "2026-10-29T10:01:31.566038+00:00"
+    },
+    {
+      "id": "openf1_stints_9979",
+      "url": "https://api.openf1.org/v1/stints?session_key=9979",
+      "http": 200,
+      "sha256": "27140efe3fe0120d3032b06c3cc939f6a3b55714b42f764103c90887f698cd08",
+      "retrieved_utc": "2026-10-29T10:01:40.344010+00:00"
+    },
+    {
+      "id": "openf1_stints_11291",
+      "url": "https://api.openf1.org/v1/stints?session_key=11291",
+      "http": 200,
+      "sha256": "62e3bab40fcb0ba2840a4283e9929e745947bb4e0e366d9ae47c064513b71850",
+      "retrieved_utc": "2026-10-29T10:01:49.208637+00:00"
+    },
+    {
+      "id": "openf1_stints_11299",
+      "url": "https://api.openf1.org/v1/stints?session_key=11299",
+      "http": 200,
+      "sha256": "18f169266a44dd9e0f461dfa0fa7b37ed48970f2c83e70ae780fc0f38fce8dc5",
+      "retrieved_utc": "2026-10-29T10:01:58.237620+00:00"
+    },
+    {
+      "id": "openf1_stints_11731",
+      "url": "https://api.openf1.org/v1/stints?session_key=11731",
+      "http": 200,
+      "sha256": "b69646c79c683ac60f6dfc33c0a8dcaa099d4f1c2535e6ded3a91aee7613b49f",
+      "retrieved_utc": "2026-10-29T10:02:06.987951+00:00"
+    },
+    {
+      "id": "fia_media_kit_2025",
+      "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf",
+      "http": 200,
+      "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
+      "retrieved_utc": "2026-10-29T10:04:26.689239+00:00"
+    },
+    {
+      "id": "f1_circuito_sepang",
+      "url": "https://www.formula1.com/en/racing/2026/bahrain/circuit",
+      "http": 200,
+      "sha256": "d15dcec7e33750d3a764a38c7f355ac7e1ae6146057618a43e75ea895980afe1",
+      "retrieved_utc": "2026-10-29T10:15:31.115798+00:00"
+    }
+  ],
+  "files": {
+    "fia-laps.csv": "d60c57bdcfeb1747aba894b1d08d46103230648d3a7ff06d98312b6b50bec2ed",
+    "qualifying-complements.csv": "06eb5ddb9f4cf50cc61eb829b946156198081cbec542269dcbe5092b2bc75ef6",
+    "pendencias.csv": "76aa788e48a38339a8b2dd61bfadbe68f6c5ff827456d59756f5b3dc43cf506b"
+  },
+  "scientific_evidence_changed": false,
+  "raw_document_policy": "Raw documents and caches remain local; official URLs and hashes identify the inspected sources."
+}

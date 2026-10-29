@@ -159,3 +159,21 @@ a:focus-visible { outline:2px solid var(--pw-red); outline-offset:3px; }
 /* Links não podem ficar sob a legenda seguinte do Streamlit. */
 [data-testid="stMarkdownContainer"]:has(a) { margin-bottom:0; }
 nav[aria-label="Documentação"] { line-height:1.9; padding:4px 0 12px; }
+
+/* A ficha cresce com os valores documentados, sem cortar recorde ou regra DRS. */
+.pw-overview { height:auto; min-height:375px; align-items:start; }
+.coluna-circuito { grid-template-rows:138px minmax(222px,auto); }
+.pw-circuit-info dt { min-width:0; flex:1; }
+.pw-circuit-info dd { min-width:0; flex:1; overflow-wrap:anywhere; }
+@media (max-width:700px) { .coluna-circuito { grid-template-rows:138px auto; } }
+
+/* Native language buttons also work inside the Community Cloud iframe. */
+[class*="st-key-pw_language_switch_"] { position:fixed; right:18px; bottom:14px; z-index:999990; width:138px!important; padding:6px 8px; border:1px solid var(--pw-line); border-radius:8px; background:#fff; box-shadow:0 2px 10px #06122618; }
+[class*="st-key-pw_language_switch_"] [data-testid="stHorizontalBlock"] { gap:4px; align-items:center; }
+[class*="st-key-pw_language_switch_"] [data-testid="stCaptionContainer"] { color:var(--pw-muted); font-size:11px; margin:0; }
+[class*="st-key-pw_language_switch_"] button { min-height:28px; padding:1px 3px; background:white; border:1px solid var(--pw-line); }
+[class*="st-key-pw_language_switch_"] button p { font-size:20px; line-height:24px; }
+[class*="st-key-pw_language_switch_"] button[kind="primary"] { border:2px solid var(--pw-red); }
+[class*="st-key-pw_language_switch_"] [data-testid="stHorizontalBlock"] { flex-wrap:nowrap!important; }
+[class*="st-key-pw_language_switch_"] [data-testid="stColumn"] { flex:1 1 0!important; min-width:0!important; width:auto!important; }
+[class*="st-key-pw_language_switch_"] [data-testid="stCaptionContainer"] p { font-size:11px; line-height:1.2; }

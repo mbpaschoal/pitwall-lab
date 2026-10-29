@@ -1,96 +1,39 @@
-# Pitwall Lab — dashboard retrospectivo de pódios na Fórmula 1
+# Pitwall Lab
 
-Demonstração local e publicável de um estudo retrospectivo sobre a probabilidade
-individual de um piloto integrar o pódio de um Grande Prêmio principal. Não é uma
-previsão ao vivo, não estima a ordem do pódio e não consulta fontes na execução.
+Português · [English](README.en.md)
 
-**[Abrir dashboard público](https://pitwall-lab.streamlit.app/)**
+[**Abrir dashboard público**](https://pitwall-lab.streamlit.app/)
 
-![Tela de desempenho de 2025](reports/dashboard_v1/desempenho_desktop.png)
+Portfólio de MBPaschoal sobre ciência de dados na Fórmula 1. Este pacote apresenta probabilidades individuais de pódio, evidências e limitações. Não estima a ordem P1/P2/P3 nem consulta APIs durante a navegação.
 
-## Telas e acervo
+## Produto
 
-- **Corridas:** contexto, tempos de sessão, pneus/paradas, clima, histórico e
-  comparação de equipes para 66 GPs de 2024–2026, incluindo Austin.
-- **Previsões:** probabilidades e favoritos já publicados, com a emissão
-  prospectiva de Austin e seus resultados posteriores mantidos separados.
-- **Desempenho:** métricas probabilísticas, ranking, calibração e cobertura por
-  Grande Prêmio.
-- **Metodologia:** método, documentos e relatórios renderizados dentro da
-  própria interface, além de downloads dos CSVs que acompanham a demonstração.
+- **Corridas:** circuito, campeonatos completos, tempos, pneus/paradas, clima, equipes e até cinco edições anteriores na mesma pista.
+- **Previsões:** probabilidades registradas e comparação posterior, com Austin prospectivo separado da retrospectiva.
+- **Desempenho:** métricas, calibração e cobertura explícita.
+- **Metodologia:** documentos e relatórios offline, também em inglês.
 
-## Arquitetura simples
+As bandeiras BR/GB no canto inferior selecionam o idioma. A navegação preserva temporada, GP e idioma. Identificadores e downloads científicos conservam seus bytes originais; tabelas descritivas acompanham o idioma.
 
-`app.py` apresenta o dashboard em Streamlit e Plotly. `dashboard_dados.py` lê e
-valida apenas nove CSV/JSON de resultados. `documentacao_local.py` oferece uma
-allowlist de documentação offline; ele não abre caminhos arbitrários nem baixa
-conteúdo. Não há joblib, scikit-learn, treinamento, inferência, coletor, API de
-dados ou dados brutos neste pacote.
+## Evidência e aprendizado
 
-`acervo_dashboard_dados.py` lê o asset descritivo portátil; as novas tabelas
-foram preparadas offline, sem alterar os nove artefatos científicos anteriores.
-Clima Open-Meteo em grade e medições de pista OpenF1 são separados. Pneus mostram
-sequências observadas, com ausências e limites inconsistentes identificados.
-As voltas detalhadas da classificação de Baku 2025 permanecem indisponíveis;
-seus tempos agregados estão presentes.
+Modelo v1 congelado: treino 2021–2023, validação 2024 já explorada e 2025 já avaliado. Nos mesmos {gps_2025} GPs de ranking de 2025, o modelo identificou 51 integrantes de pódio contra 50 da classificação; ambos acertaram três em 8/22 GPs. Métricas probabilísticas usam {casos_2025} casos. Isso não demonstra significância nem garantia futura.
 
-## Fonte, método e resultados
+O acervo cobre 66 GPs/330 sessões até Austin 2026. A revisão resolveu 75 itens, confirmou seis ausências e preservou 31 limitações de pneus. Baku/Q tem complemento FIA com 223 durações e 20 horários de referência, sem setores/validade inventados. A origem do archive foi identificada; seu UTC original permanece desconhecido. DRS respeita ano/referência e altitude é aproximada.
 
-Os dados derivam de Jolpica-F1; veja [FONTES_E_DADOS.md](FONTES_E_DADOS.md).
-O estudo usa regressão logística treinada em 2021–2023; 2024 foi uma validação já
-explorada e 2025 uma avaliação retrospectiva já realizada. A classificação é uma
-referência de ranking, não uma probabilidade. As limitações temporais e de fonte
-estão nos documentos exibidos pela interface e em `docs/`.
+A correção do Histórico mostrou que uma tabela pode existir e responder à pergunta errada. A verificação de publicação passou a conferir o build servido porque testes locais não provam deploy. [Evolução e versões](CHANGELOG.md).
 
-Em 2025, as métricas probabilísticas usam 478 casos. Nos mesmos 22 GPs
-avaliáveis de ranking, o modelo identificou 51 integrantes de pódio, contra 50 da
-classificação. A média foi 2,3182 contra 2,2727; ambos acertaram os três
-integrantes em 8/22 GPs. É uma vantagem descritiva pequena e um empate em pódios
-completos, não evidência de garantia futura, causalidade ou significância estatística.
+## Executar
 
-2025 já foi avaliado para o v1: não é teste intocado para versões posteriores.
-As fontes históricas podem ter revisões posteriores ao corte; o estudo não prova
-que cada previsão foi registrada antes de cada corrida.
-
-## Executar localmente
-
-Use Python 3.12 em um ambiente novo, criado dentro desta distribuição pública;
-isso não modifica o ambiente científico original:
+Use Python 3.12 num ambiente novo dentro deste pacote; isso não modifica o ambiente científico original:
 
 ```bash
 python3.12 -m venv .venv
 . .venv/bin/activate
-python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 python -m streamlit run app.py --server.address 127.0.0.1 --server.port 8501
 ```
 
-Abra `http://127.0.0.1:8501`. O endereço e a porta desse comando são uma escolha
-local; não são configuração de hospedagem pública.
+A implementação está em `pitwall/dashboard`, `pitwall/data` e `pitwall/i18n`; módulos da raiz são compatibilidade. Não há modelos joblib, treino, inferência ou dados brutos neste pacote. [Hospedagem](GUIA_HOSPEDAGEM.md), [fontes](FONTES_E_DADOS.md), [licença do código](LICENCA_CODIGO.md).
 
-Para executar a suíte da distribuição:
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-## Hospedagem no Streamlit Community Cloud
-
-Crie um repositório **público separado**, fora deste cofre, e copie somente os
-arquivos listados em `ARQUIVOS_PUBLICACAO.txt`. Nesse novo diretório, inicie um
-histórico novo com `git init`, crie a branch `main` e revise a lista antes de
-adicionar arquivos. Nunca publique o histórico deste repositório/cofre atual.
-
-O aplicativo público é https://pitwall-lab.streamlit.app/. Para atualizar o
-deploy, no Streamlit Community Cloud selecione a branch `main` e `app.py`; em
-**Advanced settings**, selecione Python 3.12. Não há secrets necessários para
-este pacote. As instruções detalhadas e limitações estão em
-[GUIA_HOSPEDAGEM.md](GUIA_HOSPEDAGEM.md). Confirme o redeploy pelo conteúdo
-visível do aplicativo; um push no Git não comprova a atualização do serviço.
-
-## Licenças e limites
-
-A licença aberta do código ainda não foi definida; consulte
-[LICENCA_CODIGO.md](LICENCA_CODIGO.md). Essa pendência não altera as condições dos
-dados, que estão em [FONTES_E_DADOS.md](FONTES_E_DADOS.md). Hospedagem gratuita
-não transforma o código automaticamente em código aberto.
+A versão em `VERSION` é do produto, independente do modelo v1 e do build registrado em `MANIFESTO.json`. Cada entrega de dados ou melhoria exige nova versão e notas PT/EN. Projeto educacional independente, sem vínculo oficial com Fórmula 1.

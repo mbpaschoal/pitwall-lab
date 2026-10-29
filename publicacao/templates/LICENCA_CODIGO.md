@@ -1,10 +1,9 @@
-# Licença do código
+# Licença do código / Code licensing
 
-A licença aberta do código deste pacote **ainda não foi definida**.
+## Português
 
-Este arquivo não concede licença MIT, Apache, GPL ou outra licença aberta. Antes
-de publicar, o autor deve escolher e aprovar explicitamente uma licença para o
-código. Hospedagem gratuita não equivale a liberar o código como open source.
+O autor ainda não escolheu uma licença aberta para o código. Este arquivo não concede MIT, Apache, GPL ou outra licença aberta. A disponibilidade pública do repositório não implica a concessão de uma licença de código. As condições dos dados são independentes, descritas em [FONTES_E_DADOS.md](FONTES_E_DADOS.md).
 
-Esta pendência não altera as condições aplicáveis aos dados, que estão descritas
-em `FONTES_E_DADOS.md`.
+## English
+
+The author has not selected an open-source licence for the code. This file grants no MIT, Apache, GPL or other open-source licence. Public repository availability does not itself grant a code licence. Data conditions are separate; see [FONTES_E_DADOS.md](FONTES_E_DADOS.md).

@@ -41,11 +41,18 @@ class TestDashboardAcervoApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         for trecho in ('Clima do fim de semana', 'Open-Meteo.com', 'Modelo atmosférico histórico próximo ao circuito',
                        'Pneus e paradas observados', 'Comparativo de equipes no GP',
-                       'Histórico observado deste GP', '2026-10-28-acervo-1'):
+                       'Desempenho dos pilotos nesta pista', '2026-10-29-acervo-2'):
             self.assertIn(trecho, texto)
         self.assertNotIn('Clima não disponível', texto)
         self.assertFalse((self.raiz / 'data').exists())
         self.assertFalse((self.raiz / 'models').exists())
+
+    def test_gp_futuro_tem_historico_da_mesma_pista_sem_podio_atual(self):
+        self.executar(2026,19)
+        texto=texto_renderizado(self.at)
+        self.assertIn('Desempenho dos pilotos nesta pista',texto)
+        self.assertIn('5 edições anteriores',texto)
+        self.assertTrue(any('Vitórias' in df.value.columns and len(df.value)>0 for df in self.at.dataframe))
 
     def test_classificacao_2024_preserva_fases_sem_colunas_de_probabilidade(self):
         self.executar(2024, 1)

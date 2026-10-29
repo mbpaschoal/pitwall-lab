@@ -275,7 +275,7 @@ class TestCacheEIsolamento(unittest.TestCase):
         self.assertNotEqual(dados.assinatura_conteudos(antes), dados.assinatura_conteudos(depois))
 
     def test_modulos_do_dashboard_nao_abrem_data_nem_importam_modelo_ou_rede(self):
-        fontes = '\n'.join((RAIZ / nome).read_text(encoding='utf-8') for nome in ('dashboard_dados.py', 'app.py'))
+        fontes = '\n'.join((RAIZ / nome).read_text(encoding='utf-8') for nome in ('pitwall/data/dashboard.py', 'pitwall/dashboard/app.py'))
         for proibido in ('joblib', 'sklearn', 'treinar_modelo', 'avaliar_modelo', 'data/', 'urllib', 'requests', 'socket'):
             self.assertNotIn(proibido, fontes.lower())
 

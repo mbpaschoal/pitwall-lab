@@ -1,0 +1,2 @@
+# Preserve CSV bytes and hashes / Preserve bytes e hashes dos CSVs.
+*.csv -text whitespace=cr-at-eol

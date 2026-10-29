@@ -35,8 +35,38 @@ DOCUMENTOS_COPIADOS = (
 )
 FONTES_COPIADAS = FONTES_CIENTIFICAS
 RUNTIME_WORKTREE = (
-    'app.py', 'dashboard_dados.py', 'race_weekend_dados.py',
-    'acervo_dashboard_dados.py', 'acervo_dashboard_ui.py',
+    ".gitattributes",
+    'VERSION', 'pitwall/version.py', 'CHANGELOG.md', 'CHANGELOG.en.md',
+    'pitwall/__init__.py',
+    'pitwall/paths.py',
+    'pitwall/dashboard/__init__.py',
+    'pitwall/data/__init__.py',
+    'pitwall/publishing/__init__.py',
+    'pitwall/i18n/__init__.py',
+    'pitwall/i18n/streamlit.py',
+    'pitwall/i18n/controls.py',
+    'pitwall/i18n/en.json',
+    'docs/en/avaliacao_final_v1.md',
+    'docs/en/dicionario_variaveis.md',
+    'docs/en/experimento_modelo_v1.md',
+    'docs/en/protocolo_temporal.md',
+    'docs/en/relatorio_2024.md',
+    'docs/en/relatorio_2025.md',
+
+    'pitwall/dashboard/app.py',
+    'pitwall/publishing/documentation.py',
+    'pitwall/data/dashboard.py',
+    'pitwall/data/race_weekend.py',
+    'pitwall/data/archive.py',
+    'pitwall/dashboard/archive_views.py',
+    'pitwall/data/circuit_history.py',
+    'pitwall/dashboard/components.py',
+    'pitwall/data/editorial_panels.py',
+    'pitwall/data/editorial.py',
+    'pitwall/data/visual_catalog.py',
+
+    'app.py', 'documentacao_local.py', 'dashboard_dados.py', 'race_weekend_dados.py',
+    'acervo_dashboard_dados.py', 'acervo_dashboard_ui.py', 'historico_circuito.py',
     'frontend_assets/acervo_dashboard.json',
     'pitwall_ui.py', 'pitwall_ui_dados.py', 'frontend_assets/pitwall.css',
     'frontend_assets/paineis_editoriais.json',
@@ -48,6 +78,7 @@ RUNTIME_WORKTREE = (
 )
 TEMPLATES = (
     'publicacao/templates/README_PUBLICO.md.tpl',
+    'publicacao/templates/README_PUBLICO.en.md.tpl',
     'publicacao/templates/FONTES_E_DADOS.md',
     'publicacao/templates/LICENCA_CODIGO.md',
     'publicacao/templates/GUIA_HOSPEDAGEM.md',
@@ -55,7 +86,6 @@ TEMPLATES = (
     'publicacao/templates/requirements.txt',
     'publicacao/templates/.python-version',
     'publicacao/templates/.gitignore',
-    'publicacao/templates/documentacao_local.py',
     'publicacao/templates/test_distribuicao.py',
     'publicacao/templates/test_acervo_publico.py',
 )
@@ -210,35 +240,6 @@ def _adicionar(arquivos, caminho, conteudo, modo, fonte=None, sha_origem=None, n
     }
 
 
-def _app_publico(conteudo):
-    texto = conteudo.decode('utf-8')
-    marcador_importacao = '\n\nRAIZ_PADRAO = Path(__file__).resolve().parent'
-    if texto.count(marcador_importacao) != 1:
-        raise ValueError('estrutura esperada de imports do app não encontrada')
-    texto = texto.replace(
-        marcador_importacao,
-        '\n\nfrom documentacao_local import renderizar_documentacao_local' + marcador_importacao,
-        1,
-    )
-    bloco_privado = """    st.markdown(
-        '[Método](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/experimento_modelo_v1.md) · '
-        '[Relatório de 2024](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/modelo_v1/relatorio.md) · '
-        '[Avaliação de 2025](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/avaliacao_final_v1/relatorio.md) · '
-        '[Repositório](https://github.com/mbpaschoal/pitwall-lab)'
-    )"""
-    if texto.count(bloco_privado) != 1:
-        raise ValueError('bloco privado GitHub esperado não encontrado no app')
-    texto = texto.replace(bloco_privado, '    renderizar_documentacao_local(st)', 1)
-    marcador_hachura = "'pattern': {'shape': padroes, 'fgcolor': CORES['fundo']}"
-    if texto.count(marcador_hachura) == 1:
-        texto = texto.replace(
-            marcador_hachura,
-            "'pattern': {'shape': padroes, 'fgcolor': CORES['fundo'], 'bgcolor': CORES['modelo'], 'fillmode': 'overlay'}",
-            1,
-        )
-    return texto.encode('utf-8')
-
-
 def _teste_app_portavel(conteudo):
     texto = conteudo.decode('utf-8')
     workaround = """# O terminal do agente injeta um site-packages Python 3.14 antes do .venv 3.9.
@@ -306,10 +307,10 @@ def _montar_arquivos(raiz, conteudos, commit):
         _adicionar(arquivos, relativo, conteudo, 'copia', relativo, _sha256(conteudo))
     for relativo in runtime_worktree(raiz):
         conteudo = _ler_arquivo_regular(raiz, relativo)
-        if relativo == 'app.py':
-            conteudo = _app_publico(conteudo)
-            modo = 'gerado'
-            nota = 'viewer offline inserido na UI Race Weekend do working tree'
+        if relativo in ('CHANGELOG.md', 'CHANGELOG.en.md'):
+            conteudo = conteudo.replace(b'(docs/APRENDIZADOS.md)', b'(https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/APRENDIZADOS.md)').replace(b'(docs/en/LEARNING.md)', b'(https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/en/LEARNING.md)')
+            modo = 'adaptado_documentacao'
+            nota = 'link para o diário publicado; notas da versão preservadas'
         elif relativo == 'tests/test_dashboard_app.py':
             conteudo = _teste_app_portavel(conteudo)
             modo = 'gerado'
@@ -338,11 +339,13 @@ def _montar_arquivos(raiz, conteudos, commit):
         'publicacao/templates/README_PUBLICO.md.tpl',
         _sha256(template_readme),
     )
+    readme_en = _ler_template(raiz, 'publicacao/templates/README_PUBLICO.en.md.tpl')
+    _adicionar(arquivos, 'README.en.md', readme_en.decode('utf-8').format(**metricas).encode('utf-8'),
+               'gerado', 'publicacao/templates/README_PUBLICO.en.md.tpl', _sha256(readme_en))
     for origem, destino in (
         ('publicacao/templates/FONTES_E_DADOS.md', 'FONTES_E_DADOS.md'),
         ('publicacao/templates/LICENCA_CODIGO.md', 'LICENCA_CODIGO.md'),
         ('publicacao/templates/GUIA_HOSPEDAGEM.md', 'GUIA_HOSPEDAGEM.md'),
-        ('publicacao/templates/documentacao_local.py', 'documentacao_local.py'),
         ('publicacao/templates/test_distribuicao.py', 'tests/test_distribuicao.py'),
         ('publicacao/templates/test_acervo_publico.py', 'tests/test_acervo_publico.py'),
         ('publicacao/templates/requirements.txt', 'requirements.txt'),
@@ -372,6 +375,11 @@ def _manifesto(arquivos, raiz, commit):
     return {
         'formato': 'pitwall-dashboard-publicacao-v2',
         'commit_origem': commit,
+        'versao_produto': (raiz / 'VERSION').read_text().strip(),
+        'baseline_cientifico_commit': commit,
+        'apresentacao_build_sha256': _sha256(json.dumps(
+            [(r['caminho'], r['sha256_destino']) for r in registros],
+            separators=(',', ':'), ensure_ascii=False).encode('utf8')),
         'data_referencia_reprodutivel_utc': _data_do_commit(raiz, commit),
         'fontes_cientificas': list(FONTES_CIENTIFICAS),
         'arquivos': registros,
