@@ -29,6 +29,7 @@ _TEXT_METHODS = frozenset(
         "download_button",
         "metric",
         "selectbox",
+        "multiselect",
         "radio",
     }
 )
@@ -76,7 +77,7 @@ class Presentation:
             # Explicitly retain the canonical value before registering its new ID.
             state_key = kwargs.get("key")
             if (
-                name in {"radio", "selectbox", "checkbox", "text_input"}
+                name in {"radio", "selectbox", "multiselect", "checkbox", "text_input"}
                 and native.session_state.get("_preserve_language_widgets")
                 and state_key is not None
                 and state_key in native.session_state
@@ -88,7 +89,7 @@ class Presentation:
             for key in ("label", "help", "placeholder", "title"):
                 if key in kwargs:
                     kwargs[key] = visible_text(kwargs[key])
-            if name in ("selectbox", "radio"):
+            if name in ("selectbox", "radio", "multiselect"):
                 formatter = kwargs.get("format_func", str)
                 selected_language = language()
                 kwargs["format_func"] = lambda item: in_language(
@@ -100,6 +101,9 @@ class Presentation:
                     kwargs["default"] = translate(kwargs["default"])
             if name == "dataframe" and values:
                 values[0] = dataframe(values[0])
+                if "column_config" in kwargs:
+                    kwargs["column_config"] = {translate(key): display_value(config)
+                        for key, config in kwargs["column_config"].items()}
             if name == "plotly_chart" and values and language() == "en":
                 import plotly.graph_objects as go
 

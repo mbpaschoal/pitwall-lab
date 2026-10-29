@@ -4,6 +4,10 @@ Português · [English](en/CURRENT_DATA.md)
 
 O acervo é descritivo e separado das entradas v1: 66 GPs/330 sessões de 2024–2026 até Austin. A aquisição complementar de 29/10 foi serial e cacheada. Os nove artefatos científicos e as emissões anteriores foram preservados.
 
+## Controle de qualidade de Pilotos — 0.2.0
+
+A [auditoria atual](../reports/pilotos_condicoes_20261029/README.md) substitui o estado de pneus da revisão inicial abaixo: 295 verificações tratadas, 50 limites adjudicados, nove compostos recuperados e 17 compostos de treinos/classificação indisponíveis nas duas fontes consultadas. Essas lacunas permanecem ausentes e impedem análises que dependam delas; não afetam resultados por condições de corrida. São 66 corridas principais, 1.354 resultados, 1.340 largadas e oito provas com chuva registrada durante os intervalos efetivamente disputados. Os 66 mapas FIA foram conferidos por edição, inclusive comprimentos que mudaram entre anos e o traçado em oito de Suzuka. Nenhum resultado da própria corrida entrou nas previsões congeladas.
+
 ## Fila de 112 itens
 
 | Estado | Quantidade |

@@ -15,13 +15,19 @@
           "voltas": 57,
           "distancia_corrida_km": 308.238,
           "recorde_volta": "1:31.447 · Pedro de la Rosa (2005)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 5.412,
+          "curvas": 15,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 57,
           "distancia_corrida_km": 308.238,
           "recorde_volta": "1:31.447 · Pedro de la Rosa (2005)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 5.412,
+          "curvas": 15,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 57,
@@ -72,6 +78,26 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/bahrain-grand-prix/event-notes-circuit-map-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "eabea9dceaaecba63abb26bdb166eff07793550c55703243fa462e8bb095fc8e"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/bahrain-grand-prix/event-notes-circuit-map-v4.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "48a7838862ddd0258f52d7d3b4e67e316dc84d5f13e9839245bc24a3988e604d"
         }
       ]
     },
@@ -90,13 +116,19 @@
           "voltas": 50,
           "distancia_corrida_km": 308.45,
           "recorde_volta": "1:30.734 · Lewis Hamilton (2021)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 6.174,
+          "curvas": 27,
+          "sentido": "Anti-horário"
         },
         "2025": {
           "voltas": 50,
           "distancia_corrida_km": 308.45,
           "recorde_volta": "1:30.734 · Lewis Hamilton (2021)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 6.174,
+          "curvas": 27,
+          "sentido": "Anti-horário"
         },
         "2026": {
           "voltas": 50,
@@ -147,6 +179,26 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/saudi-arabian-grand-prix/event-notes-circuit-map-pit-lane-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "2e3f0f4d2df9672dcaea55c53fb8f904870651d2a1e17b76eb21ef4563dd8c09"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/saudi-arabian-grand-prix/event-notes-circuit-map-pit-lane-and-quarantine-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "fdbd4a72211efad4089aadb2efe261f75acfac67cbf8aa9dcd187e0fcbcfb7d0"
         }
       ]
     },
@@ -165,18 +217,27 @@
           "voltas": 58,
           "distancia_corrida_km": 306.124,
           "recorde_volta": "1:19.813 · Charles Leclerc (2024)",
-          "zonas_drs": 4
+          "zonas_drs": 4,
+          "comprimento_km": 5.278,
+          "curvas": 14,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 58,
           "distancia_corrida_km": 306.124,
           "recorde_volta": "1:19.813 · Charles Leclerc (2024)",
-          "zonas_drs": 4
+          "zonas_drs": 4,
+          "comprimento_km": 5.278,
+          "curvas": 14,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 58,
           "distancia_corrida_km": 306.124,
-          "recorde_volta": "1:19.813 · Charles Leclerc (2024)"
+          "recorde_volta": "1:19.813 · Charles Leclerc (2024)",
+          "comprimento_km": 5.278,
+          "curvas": 14,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -222,6 +283,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/australian-grand-prix/event-notes-circuit-map-pit-lane-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "37973352eee7b80f275ae34491427b9d43366293c9deaef1fa2d18c9c6fd0321"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/australian-grand-prix/event-notes-circuit-map-pit-lane-and-quarantine-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "1440ed0d9e825ec74855c14f9dcf941813e910bbfc773b18455bc2fbf33c92e3"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/australian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-quarantine-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "d1f571edace53e2e2c178dfafff9bd9a7f680d51cc2c73728e39e9820da1aa7c"
         }
       ]
     },
@@ -239,18 +330,27 @@
         "2024": {
           "voltas": 53,
           "distancia_corrida_km": 307.471,
-          "zonas_drs": 1
+          "zonas_drs": 1,
+          "comprimento_km": 5.807,
+          "curvas": 18,
+          "sentido": "Misto (traçado em oito)"
         },
         "2025": {
           "voltas": 53,
           "distancia_corrida_km": 307.471,
           "recorde_volta": "1:30.965 · Kimi Antonelli (2025)",
-          "zonas_drs": 1
+          "zonas_drs": 1,
+          "comprimento_km": 5.807,
+          "curvas": 18,
+          "sentido": "Misto (traçado em oito)"
         },
         "2026": {
           "voltas": 53,
           "distancia_corrida_km": 307.471,
-          "recorde_volta": "1:30.965 · Kimi Antonelli (2025)"
+          "recorde_volta": "1:30.965 · Kimi Antonelli (2025)",
+          "comprimento_km": 5.807,
+          "curvas": 18,
+          "sentido": "Misto (traçado em oito)"
         }
       },
       "fontes": [
@@ -296,6 +396,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/japanese-grand-prix/event-notes-circuit-map.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "146c23c1279f5239ad07c5129683507ca735b029934f366eba60acf6bafaa899"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/japanese-grand-prix/event-notes-circuit-map-pit-lane-quarantine-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "aff1230361e3581b426717f0d8fb5265301218d0b6fb0faada5b2460c9c3fc79"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/japanese-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-battery-containment-area-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "d78ed4ffc860e28f78d41b6ea8a5fd6ad368aa16deef97bc9ec93a0232b0d494"
         }
       ]
     },
@@ -314,18 +444,27 @@
           "voltas": 56,
           "distancia_corrida_km": 305.066,
           "recorde_volta": "1:32.238 · Michael Schumacher (2004)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 5.451,
+          "curvas": 16,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 56,
           "distancia_corrida_km": 305.066,
           "recorde_volta": "1:32.238 · Michael Schumacher (2004)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 5.451,
+          "curvas": 16,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 56,
           "distancia_corrida_km": 305.066,
-          "recorde_volta": "1:32.238 · Michael Schumacher (2004)"
+          "recorde_volta": "1:32.238 · Michael Schumacher (2004)",
+          "comprimento_km": 5.451,
+          "curvas": 16,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -371,6 +510,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/chinese-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "f9ae35833345273ff6a7b45b6cbccce478bc7b109f9948fb93b2caf780f8072d"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/chinese-grand-prix/event-notes-circuit-map-pit-lane-and-quarantine-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "f52bb6941843f45927c22ea2ecf32df6697c9d34ef4c7f2b645082bf128272cd"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/chinese-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-battery-containment-area-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "7fba64c20346a9055e92251359c44720410578b42545d62458c1609f20d2a331"
         }
       ]
     },
@@ -389,18 +558,27 @@
           "voltas": 57,
           "distancia_corrida_km": 308.326,
           "recorde_volta": "1:29.708 · Max Verstappen (2023)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 5.412,
+          "curvas": 19,
+          "sentido": "Anti-horário"
         },
         "2025": {
           "voltas": 57,
           "distancia_corrida_km": 308.326,
           "recorde_volta": "1:29.708 · Max Verstappen (2023)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 5.412,
+          "curvas": 19,
+          "sentido": "Anti-horário"
         },
         "2026": {
           "voltas": 57,
           "distancia_corrida_km": 308.326,
-          "recorde_volta": "1:29.708 · Max Verstappen (2023)"
+          "recorde_volta": "1:29.708 · Max Verstappen (2023)",
+          "comprimento_km": 5.412,
+          "curvas": 19,
+          "sentido": "Anti-horário"
         }
       },
       "fontes": [
@@ -447,6 +625,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/miami-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "6f154ee8fb6d24d4a5163bba9389a9b079cb5eb4b1f24f423ec90e77f484007d"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/miami-grand-prix/event-notes-circuit-map-pit-lane-quarantine-zone-emergency-exits-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "d6cad02032de20ce1eb797482480432ae0fc9d476fb436bb7206d5867968dcb4"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/miami-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "57e96ed983ca1cd7d951fc8485f88a93e971f93736bbaf758d49733ac791c261"
         }
       ]
     },
@@ -465,13 +673,19 @@
           "voltas": 63,
           "distancia_corrida_km": 309.049,
           "recorde_volta": "1:15.484 · Lewis Hamilton (2020)",
-          "zonas_drs": 1
+          "zonas_drs": 1,
+          "comprimento_km": 4.909,
+          "curvas": 19,
+          "sentido": "Anti-horário"
         },
         "2025": {
           "voltas": 63,
           "distancia_corrida_km": 309.049,
           "recorde_volta": "1:15.484 · Lewis Hamilton (2020)",
-          "zonas_drs": 1
+          "zonas_drs": 1,
+          "comprimento_km": 4.909,
+          "curvas": 19,
+          "sentido": "Anti-horário"
         },
         "2026": {
           "voltas": 63,
@@ -523,6 +737,26 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/emilia-romagna-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "d06539f52166f9d8fe6d5a480cb45143b776d9a0ad7a4c556f3828574aaf04ba"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/emilia-romagna-grand-prix/race-director-event-notes-circuit-map-pit-lane-emergency-exits-quarantine-zone-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "16e91058e4c86d5719dcabe9548fdc40ca6da1530d98765bda2d1daff3642e46"
         }
       ]
     },
@@ -541,18 +775,27 @@
           "voltas": 78,
           "distancia_corrida_km": 260.286,
           "recorde_volta": "1:12.909 · Lewis Hamilton (2021)",
-          "zonas_drs": 1
+          "zonas_drs": 1,
+          "comprimento_km": 3.337,
+          "curvas": 19,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 78,
           "distancia_corrida_km": 260.286,
           "recorde_volta": "1:12.909 · Lewis Hamilton (2021)",
-          "zonas_drs": 1
+          "zonas_drs": 1,
+          "comprimento_km": 3.337,
+          "curvas": 19,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 78,
           "distancia_corrida_km": 260.286,
-          "recorde_volta": "1:12.909 · Lewis Hamilton (2021)"
+          "recorde_volta": "1:12.909 · Lewis Hamilton (2021)",
+          "comprimento_km": 3.337,
+          "curvas": 19,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -598,6 +841,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/monaco-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "94bd0908323ad662debcdd07c9b43ee231dfa263db2b17daa528a5fa80c898a2"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/monaco-grand-prix/race-directors-event-notes-circuit-map-pit-lane-map-ers-battery-containment-area-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "ecd84d520bcee78e723395b5ebb40bbc305375dce419c111f996b889d89e1f6d"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/monaco-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "d7334536ab4bd791d5410d3aa86c2d0a70305257259dd8ff08ebbf0980262b62"
         }
       ]
     },
@@ -616,18 +889,27 @@
           "voltas": 70,
           "distancia_corrida_km": 305.27,
           "recorde_volta": "1:13.078 · Valtteri Bottas (2019)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 4.361,
+          "curvas": 14,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 70,
           "distancia_corrida_km": 305.27,
           "recorde_volta": "1:13.078 · Valtteri Bottas (2019)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 4.361,
+          "curvas": 14,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 70,
           "distancia_corrida_km": 305.27,
-          "recorde_volta": "1:13.078 · Valtteri Bottas (2019)"
+          "recorde_volta": "1:13.078 · Valtteri Bottas (2019)",
+          "comprimento_km": 4.361,
+          "curvas": 14,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -673,6 +955,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/canadian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "99f08cc1c8769af9aa3d3ea2399f18f87f35aaeaacc687d50eac51ae8198a3bd"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/canadian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-map-ers-battery-containment-area-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "573b99039d5f6557158b752a09603f7890b7ba87198000585588676433e18f68"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/canadian-grand-prix/competition-notes-circuit-map-v2.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "ff1913689a59cdf0ea5bd0c112f71fbfcbb269f6b9e89e285a88d74f06d5facc"
         }
       ]
     },
@@ -690,18 +1002,27 @@
         "2024": {
           "voltas": 66,
           "distancia_corrida_km": 307.236,
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 4.657,
+          "curvas": 14,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 66,
           "distancia_corrida_km": 307.236,
           "recorde_volta": "1:15.743 · Oscar Piastri (2025)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 4.657,
+          "curvas": 14,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 66,
           "distancia_corrida_km": 307.236,
-          "recorde_volta": "1:15.743 · Oscar Piastri (2025)"
+          "recorde_volta": "1:15.743 · Oscar Piastri (2025)",
+          "comprimento_km": 4.657,
+          "curvas": 14,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -747,6 +1068,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/spanish-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones-v2.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "88fd2169c22fdc927375ab203cfaec9d891543f3073138db29faa1e2f6b74036"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/spanish-grand-prix/race-director-event-notes-circuit-map-pit-lane-quarantine-zone-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "61257ccbaa6aaf4db9eb8223f0f06e7e9e84f10b5f20dc0ea4768bb140c67811"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://www.fia.com/system/files/decision-document/2026_barcelona-catalunya_grand_prix_-_competition_notes_-_circuit_map_pit_lane_drawing_and_emergency_exits_map.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "71e80dcbf81aef7b622d4737782409dba8dd1c87f5d8d1b02cd1c12f9be3145d"
         }
       ]
     },
@@ -764,18 +1115,27 @@
         "2024": {
           "voltas": 71,
           "distancia_corrida_km": 307.018,
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 4.318,
+          "curvas": 10,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 71,
           "distancia_corrida_km": 307.018,
           "recorde_volta": "1:07.924 · Oscar Piastri (2025)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 4.326,
+          "curvas": 10,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 71,
           "distancia_corrida_km": 307.018,
-          "recorde_volta": "1:07.924 · Oscar Piastri (2025)"
+          "recorde_volta": "1:07.924 · Oscar Piastri (2025)",
+          "comprimento_km": 4.326,
+          "curvas": 10,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -821,6 +1181,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/austrian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "14d2a3384308173c0985d460e2ff4a36fe33c3d08ba6ccba8f062583c266beeb"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/austrian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exit-map-quarantine-zone-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "63b6081b553684272b7eda418a64db43d8ad3e5b6e5d3b3e5367c3e4950d44a0"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/austrian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "00e1595eb783c7edd279ad9e3dd1030c909c9c9edf0e7e423b7eb220db064a90"
         }
       ]
     },
@@ -839,18 +1229,27 @@
           "voltas": 52,
           "distancia_corrida_km": 306.198,
           "recorde_volta": "1:27.097 · Max Verstappen (2020)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 5.891,
+          "curvas": 18,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 52,
           "distancia_corrida_km": 306.198,
           "recorde_volta": "1:27.097 · Max Verstappen (2020)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 5.891,
+          "curvas": 18,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 52,
           "distancia_corrida_km": 306.198,
-          "recorde_volta": "1:27.097 · Max Verstappen (2020)"
+          "recorde_volta": "1:27.097 · Max Verstappen (2020)",
+          "comprimento_km": 5.891,
+          "curvas": 18,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -896,6 +1295,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/british-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "5f88036da9d4adb2b65e65cf6b6a63455de0d6bb151c83feb02e4f75ffc2288b"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/british-grand-prix/event-notes-circuit-map-v2.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "9a620d00e968818672154b8a8aa748c8020839edc9a956228424d1657cd0bfe6"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/british-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "9dd40b959d4ef1c19604ae23dc63c80aa5b9426169373131f69d952e84aa77fa"
         }
       ]
     },
@@ -914,18 +1343,27 @@
           "voltas": 70,
           "distancia_corrida_km": 306.63,
           "recorde_volta": "1:16.627 · Lewis Hamilton (2020)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 4.381,
+          "curvas": 14,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 70,
           "distancia_corrida_km": 306.63,
           "recorde_volta": "1:16.627 · Lewis Hamilton (2020)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 4.381,
+          "curvas": 14,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 70,
           "distancia_corrida_km": 306.63,
-          "recorde_volta": "1:16.627 · Lewis Hamilton (2020)"
+          "recorde_volta": "1:16.627 · Lewis Hamilton (2020)",
+          "comprimento_km": 4.381,
+          "curvas": 14,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -971,6 +1409,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/hungarian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "3233837bdbefb2ce70aca5511d7c5a96793bc4254a2b774608520933be4d07c7"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/hungarian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-map-quarantine-zone-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "2c76642ef36cad71c0eadd8903173cb6bfc7e2c47d0bf9fc0264379139962120"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/hungarian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "9e0d7e4c730b3572d36f2b7f5552fa9607ba808cfc4b9dca2f4a2523405b8a63"
         }
       ]
     },
@@ -989,18 +1457,27 @@
           "voltas": 44,
           "distancia_corrida_km": 308.052,
           "recorde_volta": "1:44.701 · Sergio Perez (2024)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 7.004,
+          "curvas": 19,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 44,
           "distancia_corrida_km": 308.052,
           "recorde_volta": "1:44.701 · Sergio Perez (2024)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 7.004,
+          "curvas": 19,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 44,
           "distancia_corrida_km": 308.052,
-          "recorde_volta": "1:44.701 · Sergio Perez (2024)"
+          "recorde_volta": "1:44.701 · Sergio Perez (2024)",
+          "comprimento_km": 7.004,
+          "curvas": 19,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -1046,6 +1523,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/belgian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones-v2.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "4ff5e1f2df7bb3f38f7df1f5f84339720c592f17ba0fcb0415c2aae0a2de6762"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/belgian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-quarantine-zone-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "eeaf14a91e8e020fcfe6849d3ff21e189cce292fabf68ec3528d0928d2542c82"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/belgian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "584d96cf7d651b1eef1554a0032382eb79ba515028035c79b1e0273ea44a38f1"
         }
       ]
     },
@@ -1064,18 +1571,27 @@
           "voltas": 72,
           "distancia_corrida_km": 306.587,
           "recorde_volta": "1:11.097 · Lewis Hamilton (2021)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 4.259,
+          "curvas": 14,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 72,
           "distancia_corrida_km": 306.587,
           "recorde_volta": "1:11.097 · Lewis Hamilton (2021)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 4.259,
+          "curvas": 14,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 72,
           "distancia_corrida_km": 306.587,
-          "recorde_volta": "1:11.097 · Lewis Hamilton (2021)"
+          "recorde_volta": "1:11.097 · Lewis Hamilton (2021)",
+          "comprimento_km": 4.259,
+          "curvas": 14,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -1121,6 +1637,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/dutch-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "71de7a63ba4f68bb837b2cdfdf9a03db9d7c13d14e46b3921ddda0730c2f527d"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/dutch-grand-prix/event-notes-circuit-map-pit-lane-map-emergency-exit-map-quarantine-zone-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "c0d7f1fc5d761cdce94580d181aee108c0e2c01506c345ece5bbc21150f4cb1f"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/dutch-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "c5dc6a793675016747ae9d50ad6c10dddb557e0adfbd22d1a6d0948fb34dcfeb"
         }
       ]
     },
@@ -1138,18 +1684,27 @@
         "2024": {
           "voltas": 53,
           "distancia_corrida_km": 306.72,
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 5.793,
+          "curvas": 11,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 53,
           "distancia_corrida_km": 306.72,
           "recorde_volta": "1:20.901 · Lando Norris (2025)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 5.793,
+          "curvas": 11,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 53,
           "distancia_corrida_km": 306.72,
-          "recorde_volta": "1:20.901 · Lando Norris (2025)"
+          "recorde_volta": "1:20.901 · Lando Norris (2025)",
+          "comprimento_km": 5.793,
+          "curvas": 11,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -1195,6 +1750,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/italian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "0140e225b4c242e1f68ea68cfa14ce6d75673af49259b41a494317789ba64dd5"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/italian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exit-map-quarantine-zone-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "2c1cd6cbf26e1b0b597fea1ee290fd2aa55d85c807169012973a431c8fc282fc"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/italian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "799756ca8cd77b376f7c0dc24aabb00b2535fc5ce4c6ad4e70f66ec244e0f4f7"
         }
       ]
     },
@@ -1213,18 +1798,27 @@
           "voltas": 51,
           "distancia_corrida_km": 306.049,
           "recorde_volta": "1:43.009 · Charles Leclerc (2019)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 6.003,
+          "curvas": 20,
+          "sentido": "Anti-horário"
         },
         "2025": {
           "voltas": 51,
           "distancia_corrida_km": 306.049,
           "recorde_volta": "1:43.009 · Charles Leclerc (2019)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 6.003,
+          "curvas": 20,
+          "sentido": "Anti-horário"
         },
         "2026": {
           "voltas": 51,
           "distancia_corrida_km": 306.049,
-          "recorde_volta": "1:43.009 · Charles Leclerc (2019)"
+          "recorde_volta": "1:43.009 · Charles Leclerc (2019)",
+          "comprimento_km": 6.003,
+          "curvas": 20,
+          "sentido": "Anti-horário"
         }
       },
       "fontes": [
@@ -1270,6 +1864,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/azerbaijan-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones-v2.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "8d16e1f2e4e1d6d778f572c4f28ac4efe92a54315546fc0adaf2221f544a44f0"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/azerbaijan-grand-prix/event-notes-circuit-map-pit-lane-quarantine-zone-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "48b475a35de6b0f9b42b0900764fe8a06e2f2278fba8ae48e6d127696ce47855"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/azerbaijan-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "34506576427627d59c2d09612fe4d83bf8b05ae18eeb9705053d39c4a7bb2e33"
         }
       ]
     },
@@ -1287,18 +1911,27 @@
         "2024": {
           "voltas": 62,
           "distancia_corrida_km": 305.337,
-          "zonas_drs": 4
+          "zonas_drs": 4,
+          "comprimento_km": 4.94,
+          "curvas": 19,
+          "sentido": "Anti-horário"
         },
         "2025": {
           "voltas": 62,
           "distancia_corrida_km": 305.337,
           "recorde_volta": "1:33.808 · Lewis Hamilton (2025)",
-          "zonas_drs": 4
+          "zonas_drs": 4,
+          "comprimento_km": 4.927,
+          "curvas": 19,
+          "sentido": "Anti-horário"
         },
         "2026": {
           "voltas": 62,
           "distancia_corrida_km": 305.337,
-          "recorde_volta": "1:33.808 · Lewis Hamilton (2025)"
+          "recorde_volta": "1:33.808 · Lewis Hamilton (2025)",
+          "comprimento_km": 4.927,
+          "curvas": 19,
+          "sentido": "Anti-horário"
         }
       },
       "fontes": [
@@ -1344,6 +1977,36 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/singapore-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "20ead22663c0fb6b413926ad13a39c0e31def2e48bdcb98cf1b10a96c7649995"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/singapore-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-map-and-quarantine-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "d36769fe74365d21594000c0bf4e9be4fccb4c30822678e166e89bdbad0a7625"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/singapore-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "8bd2227af6272a03e692b0f27bb1bded920cd7f16107f493781770461fa14aae"
         }
       ]
     },
@@ -1362,18 +2025,27 @@
           "voltas": 56,
           "distancia_corrida_km": 308.405,
           "recorde_volta": "1:36.169 · Charles Leclerc (2019)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 5.513,
+          "curvas": 20,
+          "sentido": "Anti-horário"
         },
         "2025": {
           "voltas": 56,
           "distancia_corrida_km": 308.405,
           "recorde_volta": "1:36.169 · Charles Leclerc (2019)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 5.513,
+          "curvas": 20,
+          "sentido": "Anti-horário"
         },
         "2026": {
           "voltas": 56,
           "distancia_corrida_km": 308.405,
-          "recorde_volta": "1:36.169 · Charles Leclerc (2019)"
+          "recorde_volta": "1:36.169 · Charles Leclerc (2019)",
+          "comprimento_km": 5.513,
+          "curvas": 20,
+          "sentido": "Anti-horário"
         }
       },
       "fontes": [
@@ -1446,6 +2118,36 @@
             "zonas_drs"
           ],
           "sha256": "7b7d350cb5ef5846e11127653eff51e5551d59a72a762745f07d960a42fc2bac"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/united-states-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "a482a96bc9a8b5d8fd493a6546c3bd18207745fc1434c5bdc73f80887bfe9f9f"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/united-states-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-map-red-zones-map.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "7b7d350cb5ef5846e11127653eff51e5551d59a72a762745f07d960a42fc2bac"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/united-states-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "120b2bce2d733b8c85a9a7ef9040ff0684eeb4615983cda79daae66c2c6c35c2"
         }
       ]
     },
@@ -1464,13 +2166,19 @@
           "voltas": 71,
           "distancia_corrida_km": 305.354,
           "recorde_volta": "1:17.774 · Valtteri Bottas (2021)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 4.304,
+          "curvas": 17,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 71,
           "distancia_corrida_km": 305.354,
           "recorde_volta": "1:17.774 · Valtteri Bottas (2021)",
-          "zonas_drs": 3
+          "zonas_drs": 3,
+          "comprimento_km": 4.304,
+          "curvas": 17,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 71,
@@ -1521,6 +2229,26 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/mexico-city-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "f03e9f8c54cfc384040e8a21079676ad1d4c16ec8fc2d70a73bcfb8d28e96a21"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/mexico-city-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-quarantine-zone-area.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "e81d4deff487a8b8b142dff6ca97209013d0089634401670788e7960234db6f1"
         }
       ]
     },
@@ -1539,13 +2267,19 @@
           "voltas": 71,
           "distancia_corrida_km": 305.879,
           "recorde_volta": "1:10.540 · Valtteri Bottas (2018)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 4.309,
+          "curvas": 15,
+          "sentido": "Anti-horário"
         },
         "2025": {
           "voltas": 71,
           "distancia_corrida_km": 305.879,
           "recorde_volta": "1:10.540 · Valtteri Bottas (2018)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 4.309,
+          "curvas": 15,
+          "sentido": "Anti-horário"
         },
         "2026": {
           "voltas": 71,
@@ -1596,6 +2330,26 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/s%C3%A3o-paulo-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "5aeb7e77e68f671a9010b7b8360f8b43bb9aadf8692f804777ef6ac84ca1bd9f"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/s%C3%A3o-paulo-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-and-red-zones-map.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "596191c397c17d82c4d52668c9603d7c5eaded90b57e32bb2d94fd8b25b284ff"
         }
       ]
     },
@@ -1613,13 +2367,19 @@
         "2024": {
           "voltas": 50,
           "distancia_corrida_km": 309.958,
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 6.201,
+          "curvas": 17,
+          "sentido": "Anti-horário"
         },
         "2025": {
           "voltas": 50,
           "distancia_corrida_km": 309.958,
           "recorde_volta": "1:33.365 · Max Verstappen (2025)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 6.201,
+          "curvas": 17,
+          "sentido": "Anti-horário"
         },
         "2026": {
           "voltas": 50,
@@ -1671,6 +2431,26 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/las-vegas-grand-prix/event-notes-circuit-map-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "893fd78f8f9944b980411506032c659370a3231f3740bb4feb97e71dde9d9406"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/las-vegas-grand-prix/event-notes-circuit-map-v2-pit-lane-drawing-emergency-map-exits-quarantine-zone-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "5725f5e2c9085a0d593ffea2c67c15f71f8943353b974fc379c58070df8ab9b4"
         }
       ]
     },
@@ -1689,13 +2469,19 @@
           "voltas": 57,
           "distancia_corrida_km": 308.611,
           "recorde_volta": "1:22.384 · Lando Norris (2024)",
-          "zonas_drs": 1
+          "zonas_drs": 1,
+          "comprimento_km": 5.419,
+          "curvas": 16,
+          "sentido": "Horário"
         },
         "2025": {
           "voltas": 57,
           "distancia_corrida_km": 308.611,
           "recorde_volta": "1:22.384 · Lando Norris (2024)",
-          "zonas_drs": 1
+          "zonas_drs": 1,
+          "comprimento_km": 5.419,
+          "curvas": 16,
+          "sentido": "Horário"
         },
         "2026": {
           "voltas": 57,
@@ -1746,6 +2532,26 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/qatar-grand-prix/event-notes-circuit-map-pit-lane-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "d6988bb22d24480a4988b3b6a0aa30727fc093cdf520d6291b56001f36e651b7"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/qatar-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-ers-battery-containment-area-red-zones-map.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "97cf896ba89c89c707357c948ccfb4b77e02a2347d5d7483febd75bb3ae418d7"
         }
       ]
     },
@@ -1764,13 +2570,19 @@
           "voltas": 58,
           "distancia_corrida_km": 306.183,
           "recorde_volta": "1:25.637 · Kevin Magnussen (2024)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 5.281,
+          "curvas": 16,
+          "sentido": "Anti-horário"
         },
         "2025": {
           "voltas": 58,
           "distancia_corrida_km": 306.183,
           "recorde_volta": "1:25.637 · Kevin Magnussen (2024)",
-          "zonas_drs": 2
+          "zonas_drs": 2,
+          "comprimento_km": 5.281,
+          "curvas": 16,
+          "sentido": "Anti-horário"
         },
         "2026": {
           "voltas": 58,
@@ -1821,6 +2633,26 @@
           ],
           "sha256": "936ff789ae9d332baeb42922947d85f0d29ce4bb0cfd95cb693187847f7a768a",
           "criterio": "leitura visual do mapa oficial; sentido conforme setas e sequência de curvas"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2024",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/abu-dhabi-grand-prix/event-notes-circuit-map-pit-lane-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "7a8239673e286d353d29552279ade649951c2b7cf4c470e69a6dcf860463845b"
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2025",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/abu-dhabi-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-and-red-zones.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "5d7fe92297123c0db9d430652755cdbf95d1af5d6d6aeaa628903e6bcb7f8aeb"
         }
       ]
     },
@@ -1837,7 +2669,10 @@
         "2026": {
           "voltas": 57,
           "distancia_corrida_km": 308.399,
-          "recorde_volta": "1:35.587 · George Russell (2026)"
+          "recorde_volta": "1:35.587 · George Russell (2026)",
+          "comprimento_km": 5.414,
+          "curvas": 22,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -1873,6 +2708,16 @@
           "campos": [
             "zonas_drs"
           ]
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/spanish-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "85336f07aa823a1935f28367608057e1129c317fe059eef4d367cc41db66246a"
         }
       ]
     },
@@ -1899,7 +2744,10 @@
         "2026": {
           "voltas": 56,
           "distancia_corrida_km": 310.417,
-          "recorde_volta": "1:34.080 · Sebastian Vettel (2017)"
+          "recorde_volta": "1:34.080 · Sebastian Vettel (2017)",
+          "comprimento_km": 5.543,
+          "curvas": 15,
+          "sentido": "Horário"
         }
       },
       "fontes": [
@@ -1935,6 +2783,16 @@
           "campos": [
             "zonas_drs"
           ]
+        },
+        {
+          "titulo": "FIA — mapa do circuito · 2026",
+          "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/bahrain-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+          "campos": [
+            "comprimento_km",
+            "curvas",
+            "sentido"
+          ],
+          "sha256": "0490017fd5eda55480198e7ebaaf85329a5e28b384e17c3386b42be7c4af05d4"
         }
       ]
     }

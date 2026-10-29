@@ -525,7 +525,7 @@ def carregar_paineis(root, temporada, rodada, circuito_id):
                         raise PaineisDadosErro("Altitude inválida.")
                 elif campo in {"comprimento_km", "distancia_corrida_km"}:
                     _pontos(valor)
-                elif campo == "sentido" and valor not in {"Horário", "Anti-horário"}:
+                elif campo == "sentido" and valor not in {"Horário", "Anti-horário", "Misto (traçado em oito)"}:
                     raise PaineisDadosErro("Sentido do circuito inválido.")
                 else:
                     _texto(valor)
@@ -537,7 +537,7 @@ def carregar_paineis(root, temporada, rodada, circuito_id):
                     "escopo": "Contexto descritivo atual, consultado em {}. Não integra o modelo ou as probabilidades registradas.".format(
                         tecnico["verificado_em"]
                     ),
-                    "motivo_metricas": "Ficha descritiva consultada em {}. Altitude aproximada no ponto do calendário: Open-Meteo / Copernicus DEM GLO-90 (90 m). Não é a elevação mínima/máxima do traçado. Curvas, sentido e zonas DRS referem-se aos mapas FIA de 2025, não certificam a configuração histórica de cada edição. Contam-se zonas de ativação, não pontos de detecção. DRS não se aplica em 2026, que usa aerodinâmica ativa. Campos sem fonte ficam indicados.".format(
+                    "motivo_metricas": "Ficha descritiva consultada em {}. Altitude aproximada no ponto do calendário: Open-Meteo / Copernicus DEM GLO-90 (90 m). Não é a elevação mínima/máxima do traçado. Curvas, sentido e comprimento usam o mapa FIA da edição quando disponível, com referência indicada nas fontes. Zonas DRS usam mapas de referência de 2025 e não certificam a configuração histórica de cada edição. Contam-se zonas de ativação, não pontos de detecção. DRS não se aplica em 2026, que usa aerodinâmica ativa. Campos sem fonte ficam indicados.".format(
                         tecnico["verificado_em"]
                     ),
                 }

@@ -4,6 +4,18 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.2.0 — 2026-10-29
+
+### Drivers: comparing results with actual race conditions
+
+New helmet menu, condition overview and individual profiles in Portuguese and English. Six highlights cover recorded rain, track temperatures, direction, corners and altitude. Filters select seasons, metric and minimum starts. Rankings cover the complete eligible cohort; the heatmap includes all drivers. Teammate comparisons and downloadable evidence link to individual GPs. Ties stay explicit; insufficient samples do not become zero performance.
+
+The descriptive dataset contains 66 main races, 1,354 results and 1,340 starts. Race control defines actual racing intervals and excludes suspensions: eight races recorded rain. Open-Meteo supplies 70 hourly atmospheric samples within these intervals, labelled as grid reconstruction. All 66 edition-specific FIA maps were reviewed: Suzuka is a figure-eight layout; Spielberg and Marina Bay retain their year-specific lengths.
+
+The [audit](reports/pilotos_condicoes_20261029/README.en.md) records 295 checks. Of 50 invalid stint bounds, 30 were reconstructed using observed laps; the rest have zero completed laps or DNS. Nine compounds were recovered. The 17 still unavailable belong to practice/qualifying and remain missing, outside these comparisons. Races received 11 observed strategy sequences and eight individual compound fills; the ninth recovered compound is already within one of those sequences.
+
+Learning: session type alone does not separate Sprint from the main race; scheduled time does not define actual racing time; agreement between feeds does not imply independence. Australia/2026 lap selection uses driver, UTC and duration while preserving a numbering discrepancy between sources. Rates use starts as opportunities, including retirements and DSQ; non-starts are excluded. Comparisons show historical associations rather than isolated skill. All 614 protected files, model v1 and registered probabilities remain unchanged.
+
 ## 0.1.4 — 2026-10-29
 
 ### São Paulo and Madrid images

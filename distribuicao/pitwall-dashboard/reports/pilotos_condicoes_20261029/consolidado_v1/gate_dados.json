@@ -1,0 +1,40 @@
+{
+  "schema": "pitwall-driver-data-quality-v1",
+  "gate_pilotos": true,
+  "pendencias_obrigatorias_sem_tratamento": 0,
+  "completude_fisica_de_todos_os_campos": false,
+  "compostos_indisponiveis_declarados": 17,
+  "corridas": 66,
+  "chuva_registrada": 8,
+  "resultados": 1354,
+  "largadas": 1340,
+  "dns": 14,
+  "compostos": {
+    "indisponivel_nas_duas_fontes_consultadas": 17,
+    "zero_voltas_completadas_composto_nao_aplicavel": 2,
+    "composto_recuperado_fonte_alternativa": 9,
+    "registro_orfao_excluido_dos_cruzamentos": 30
+  },
+  "limites_pneus": {
+    "zero_voltas_completadas_limites_nao_aplicaveis": 17,
+    "limites_recuperados_fonte_alternativa": 30,
+    "nao_largou_limites_nao_aplicaveis": 3
+  },
+  "mapas_fia": 66,
+  "originais_protegidos_verificados": 614,
+  "arquivos_protegidos_alterados": [],
+  "ledger_registros": 295,
+  "proibicoes": [
+    "Inferir pneus ausentes",
+    "Tratar linhas FastF1Generated como observadas",
+    "Misturar Sprint e Race",
+    "Usar chuva da agenda/fim de semana como chuva durante a prova",
+    "Alterar entradas/probabilidades congeladas do v1"
+  ],
+  "fontes_sha256": {
+    "data/acervo_historico/pilotos-condicoes-20261029/clima_validado_v1/clima_corridas.json": "84c7d1e0bcbb0f44a4c775cfc1f0db7b4cbd2b1824e2f24e6ae1cdd6d5e8a90e",
+    "data/acervo_historico/pilotos-condicoes-20261029/fontes_validadas_v2/fontes_auditadas.json": "7e6ed3e8cc597aea4f07de31bcd03d530c1fa2dafbffe3a915e801604fca7f9d",
+    "data/acervo_historico/pilotos-condicoes-20261029/pneus_validados_v2/pneus_adjudicados.json": "c2052a2777dd85aca5bd57602ac6d8a2352a953bc3c7b93f4f0dd820ab130047",
+    "data/acervo_historico/pilotos-condicoes-20261029/circuitos_validados_v1/circuitos_corridas.json": "f6c4fffaeb7977d0ca1765380f65acbe10ecb2480b363512bb2cd79430d8f709"
+  }
+}

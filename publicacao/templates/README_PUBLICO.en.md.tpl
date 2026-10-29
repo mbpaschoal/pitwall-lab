@@ -8,6 +8,7 @@ MBPaschoal's Formula 1 data-science portfolio. This package presents individual 
 
 ## Product
 
+- **Drivers:** condition leaders, individual profiles, minimum samples, ties and GP evidence.
 - **Races:** circuit, complete standings, times, tyres/stops, weather, teams and up to five previous editions at the same circuit.
 - **Predictions:** recorded probabilities and subsequent comparison, separating prospective Austin from retrospective analysis.
 - **Performance:** metrics, calibration and explicit coverage.
@@ -19,7 +20,7 @@ BR/GB flags in the upper-right corner select the language. Navigation retains se
 
 Frozen model v1: training 2021–2023, already explored 2024 validation and already evaluated 2025. Across the same {gps_2025} ranking GPs in 2025, the model identified 51 podium drivers versus qualifying's 50; both identified all three in 8/22 GPs. Probability metrics use {casos_2025} cases. This demonstrates neither statistical significance nor future guarantees.
 
-The archive covers 66 GPs/330 sessions through Austin 2026. Review resolved 75 items, confirmed six absences and preserved 31 tyre limitations. Baku/Q has an FIA supplement with 223 durations and 20 reference clock times, without invented sectors/validity. Archive origin was identified; original acquisition UTC remains unknown. DRS is season/reference-aware and altitude approximate.
+Drivers combines 66 main races and 1,340 starts with sensors within actual racing intervals and edition-specific FIA maps. Eight races recorded rain. The audit records 295 checks; 17 practice/qualifying compounds remain missing and do not enter these rankings. Weather separates race sensors from hourly atmospheric reconstruction. Baku/Q retains its FIA supplement without invented sectors or validity flags.
 
 The History correction showed that an existing table can answer the wrong question. Publication now checks the served build because local tests do not prove deployment. [Evolution and versions](CHANGELOG.en.md).
 

@@ -1338,7 +1338,7 @@ def executar_app():
     )
     if query_token != st.session_state.get("_query_aplicada"):
         ano, gp_query, painel, tela_query, _, documento, _ = query_token
-        if tela_query in ("Corridas", "Previsões", "Desempenho", "Metodologia"):
+        if tela_query in ("Corridas", "Pilotos", "Previsões", "Desempenho", "Metodologia"):
             st.session_state["tela"] = tela_query
         elif painel in ("pilotos", "equipes"):
             st.session_state["tela"] = "Corridas"
@@ -1360,9 +1360,14 @@ def executar_app():
         unsafe_allow_html=True,
     )
     tela = st.sidebar.radio(
-        "Navegação", ("Corridas", "Previsões", "Desempenho", "Metodologia"), key="tela"
+        "Navegação", ("Corridas", "Pilotos", "Previsões", "Desempenho", "Metodologia"), key="tela"
     )
     st.sidebar.markdown('<div class="sidebar-divider"></div>', unsafe_allow_html=True)
+    if tela == "Pilotos":
+        from pitwall.dashboard.pilot_views import render
+        render_language(st)
+        render(raiz_artefatos())
+        return
     st.session_state.setdefault("temporada", 2025)
 
     def manter_temporada():

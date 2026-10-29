@@ -8,12 +8,13 @@ A Formula 1 data-science portfolio by **MBPaschoal**. I am learning to build a c
 
 ## The product today
 
+- **Drivers:** condition leaders, individual profiles, minimum samples, explicit ties and supporting races. [Data audit](reports/pilotos_condicoes_20261029/README.en.md).
 - **Races:** circuit profile, full championship standings, session times, weather, tyres/stops, teams and driver performance in up to five previous editions at the same circuit.
 - **Predictions:** individual podium probabilities and subsequent comparison. Austin 2026's prospective recorded prediction remains separate from the retrospective study.
 - **Performance:** log loss, Brier, calibration, ranking and coverage with explicit denominators.
 - **Methodology:** offline documents and reports. The 🇧🇷 and 🇬🇧 flags in the upper-right corner select Portuguese or English and retain the current navigation.
 
-The descriptive archive covers **66 GPs and 330 sessions in 2024–2026 through Austin**. The 29 October review resolved 75 of 112 queue items; six absences were confirmed and 31 tyre limitations remain in the sources. History excludes the selected race and other circuits in the same country. Altitude is an estimate at the calendar coordinates; reference DRS maps do not certify every historical configuration.
+The descriptive archive covers **66 GPs and 330 sessions in 2024–2026 through Austin**. Drivers uses 1,340 starts, sensors within actual racing intervals and edition-specific FIA maps. The audit records 295 checks; 17 practice/qualifying compounds remain missing and do not enter these rankings. History compares earlier editions at the same circuit. [Corrections and limits](docs/en/CURRENT_DATA.md).
 
 ## What I learned from mistakes
 

@@ -251,6 +251,9 @@ class CaptureClient:
             )
 
     def capture(self, provider, endpoint, relative_path, url, **metadata):
+        response_format = metadata.get("response_format", "json")
+        if response_format not in ("json", "bytes"):
+            raise ValueError("Formato de resposta não suportado")
         existing = [
             x
             for x in self.manifest["fontes"]
@@ -263,12 +266,14 @@ class CaptureClient:
             saved_path = self.destination / item["arquivo"]
             if (
                 item["url"] != url
+                or item.get("response_format", "json") != response_format
                 or not saved_path.is_file()
                 or sha256(saved_path.read_bytes()).hexdigest() != item["sha256"]
             ):
                 raise ValueError("Cache divergente: " + relative_path)
             if item["status"] == 200:
-                return json.loads(saved_path.read_bytes())
+                saved = saved_path.read_bytes()
+                return saved if response_format == "bytes" else json.loads(saved)
             transient = item["status"] in (408, 425, 429, 500, 502, 503, 504)
             if (
                 not self.retry_errors
@@ -356,7 +361,7 @@ class CaptureClient:
         if retry_after is not None:
             item["retry_after"] = retry_after
         try:
-            payload = json.loads(raw)
+            payload = raw if response_format == "bytes" else json.loads(raw)
             if isinstance(payload, list):
                 item["registros"] = len(payload)
         except (ValueError, UnicodeDecodeError):

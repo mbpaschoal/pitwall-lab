@@ -326,7 +326,8 @@ class TestExportacaoDashboard(unittest.TestCase):
 
     def test_configuracao_requisitos_e_testes_portaveis_nao_dependem_do_cofre(self):
         self.exportar()
-        requisitos = (self.destino / 'requirements.txt').read_text(encoding='utf-8').splitlines()
+        requisitos = [line for line in (self.destino / 'requirements.txt').read_text(encoding='utf-8').splitlines()
+                      if line.strip() and not line.lstrip().startswith('#')]
         self.assertEqual(requisitos, [
             'streamlit==1.50.0',
             'plotly==6.3.1',

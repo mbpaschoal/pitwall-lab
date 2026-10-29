@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-SCRATCH = Path.home() / '.hermes' / 'cache' / 'scratch'
+SCRATCH = Path(tempfile.gettempdir())
 RAIZ = Path(__file__).resolve().parents[1]
 FONTE_REAL = RAIZ / 'data' / 'operacao_2026' / 'fontes_alternativas' / 'austin-q-20261025T052624Z'
 

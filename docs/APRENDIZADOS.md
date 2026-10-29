@@ -22,3 +22,7 @@ Este registro explica decisões técnicas do projeto; não é uma lista de resul
 ## Como registrar a próxima melhoria
 
 Descrever o comportamento anterior com um exemplo concreto, a causa conhecida (ou a incerteza), a mudança entregue, a verificação executada e o que continua limitado. Uma hipótese não vira resultado confirmado. Datas e versões devem corresponder à entrega real; não criar commits antigos fictícios nem editar resultados para contar uma história melhor.
+
+## 0.2.0: comparar exige verificar o denominador
+
+O brainstorm contava chuva em sessões completas e podia selecionar Sprint pelo tipo Race. A auditoria passou a exigir o nome literal da corrida, status de início e fim e exclusão de suspensões. O resultado mudou para oito provas com chuva durante a disputa. Também aprendi a preservar diferenças entre feeds: a numeração de voltas na Austrália/2026 não deve ser corrigida por um deslocamento aplicado a linhas sem vínculo. Taxas agora mostram largadas e empates; fontes incompletas permanecem incompletas. [Evidência e limites](../reports/pilotos_condicoes_20261029/README.md).

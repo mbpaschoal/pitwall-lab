@@ -360,6 +360,18 @@ def _qualidade_texto(valor):
 
 
 def renderizar_clima(gp):
+    actual = gp.get("clima_corrida_efetiva")
+    if actual:
+        st.subheader("Durante a corrida")
+        columns = st.columns(3)
+        columns[0].metric("Temperatura média do ar", _valor(actual["air_temperature"], " °C"))
+        columns[1].metric("Temperatura média da pista", _valor(actual["track_temperature"], " °C"))
+        columns[2].metric("Chuva registrada", "Sim" if actual["rain_condition"] == "recorded" else "Não")
+        st.caption("Sensores OpenF1 nos intervalos ativos da corrida; pausas por bandeira vermelha são excluídas. Ausência de chuva registrada não comprova pista seca.")
+        with st.expander("Janela efetiva e contexto atmosférico"):
+            st.dataframe(pd.DataFrame(actual["active_intervals_utc"], columns=["Início (UTC)", "Fim (UTC)"]), hide_index=True, width="stretch")
+            st.caption("Open-Meteo: reconstrução em grade, com amostras horárias dentro desses intervalos; não representa observação contínua na pista.")
+            st.dataframe(pd.DataFrame(actual["atmospheric_context"]["amostras"]).rename(columns={"time_utc": "Hora (UTC)", "cloud_cover": "Cobertura de nuvens (%)", "weather_code": "Código meteorológico WMO"}), hide_index=True, width="stretch")
     st.subheader("Clima do fim de semana")
     clima = gp.get("clima") or {}
     horas = clima.get("horas") or []

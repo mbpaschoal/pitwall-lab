@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "d88a6454c742e0f7cb9b169f1b2d18e9dd2c536ed99ada74c08c33e8b2c4aa48",
+  "apresentacao_build_sha256": "db81ac15c31c85f6909044b15682dd7c363f042bb6475c841e72d3e68994259e",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "0491f78d2fceb9463a23b2e1c3662bd6637e2fa10a83a4a67d0b771eaa5eb949",
+      "sha256_destino": "75396200ae25f3a57a2ffc3641445dbb59572d7978f776e623801705d9320213",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "24d457239925a154b4e223da26f4f4a19d30c8a250ad0b79beff5372bd8097b7",
-      "sha256_origem": "ed5e3a4d8ba1d1610384adb0a719cbd49c8a920a905b6cbc7ddfdfd53d3166b4"
+      "sha256_destino": "3f42bd59f338eb138862f2c75751076114081a8e874a9f9c881652feaedf23f1",
+      "sha256_origem": "ce12842b57089cb8510f37aa04e46486d6a61112acb7d566d8c3eb1189b8196c"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "21b2705db69386eb67d8a107a66080694a36638d7d1118270bf5ff7cd458b420",
-      "sha256_origem": "cb2f9af9f778d3e4ac79ec2fa5b299322832f11aee5a6db89df615e44adf5674"
+      "sha256_destino": "b8bfe67e77c27971f86ca6d74232b97ecf866e5f4414b76cc00dba4ad45dbe53",
+      "sha256_origem": "8af9d598eac7befc891ab71de1f11fe4aa9acc0edf9b0258d55c6b1f5ed69d72"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -77,22 +77,22 @@
       "caminho": "README.en.md",
       "fonte": "publicacao/templates/README_PUBLICO.en.md.tpl",
       "modo": "gerado",
-      "sha256_destino": "c67527d9844fdd6f8566d677c278e4bc2f10a364dda94cd78bd6ab5ae4811b3e",
-      "sha256_origem": "8b0cd6a6fe0632d7e07976383097712dfbfc9add0c2bc897e38459408ba8b897"
+      "sha256_destino": "eca774552e5f9857f0e57f5e91a590e5b7ec679683f544e24e0c47cabbf7803d",
+      "sha256_origem": "c6c624d4afd3aa441813d6e2478075241e788303dc7c08445cad30304983b9fd"
     },
     {
       "caminho": "README.md",
       "fonte": "publicacao/templates/README_PUBLICO.md.tpl",
       "modo": "gerado",
-      "sha256_destino": "3bf13067ec494dacd1650a9b62ad42e7755c8cd7b595c0e67e0b95f5b24549eb",
-      "sha256_origem": "6b5c07ed19a0fdfff1fc031dd1aa421025bb799ea14742a737bb4e772f7db31b"
+      "sha256_destino": "90cfb3a05759c296ac6cfd86b81d1deecd111d54d81855d76e48b98ba618c89c",
+      "sha256_origem": "dcc84e9d2803ff838131575378e9180287c7a5f2f4678c10aecdc44116297bfb"
     },
     {
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "8a3dad16d348c163566a456fcf650d85d7aeeda5e53d01ee1fa8dc15212915a7",
-      "sha256_origem": "8a3dad16d348c163566a456fcf650d85d7aeeda5e53d01ee1fa8dc15212915a7"
+      "sha256_destino": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9",
+      "sha256_origem": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -638,8 +638,8 @@
       "caminho": "frontend_assets/acervo_dashboard.json",
       "fonte": "frontend_assets/acervo_dashboard.json",
       "modo": "copia",
-      "sha256_destino": "f7d36c739256d1362a88987340e75b915981a0acfef173f2c2a0521f754fabd5",
-      "sha256_origem": "f7d36c739256d1362a88987340e75b915981a0acfef173f2c2a0521f754fabd5"
+      "sha256_destino": "6201898a1465cd6eeea1e0bf160bae246cfbe2d04cd72e3aae74b14c892fbe51",
+      "sha256_origem": "6201898a1465cd6eeea1e0bf160bae246cfbe2d04cd72e3aae74b14c892fbe51"
     },
     {
       "caminho": "frontend_assets/contexto_editorial.json",
@@ -652,15 +652,22 @@
       "caminho": "frontend_assets/paineis_editoriais.json",
       "fonte": "frontend_assets/paineis_editoriais.json",
       "modo": "copia",
-      "sha256_destino": "191d305c0ffa6822e737229a6485640186b9c4b6a9b8eb9447bad804a108ec2e",
-      "sha256_origem": "191d305c0ffa6822e737229a6485640186b9c4b6a9b8eb9447bad804a108ec2e"
+      "sha256_destino": "c42548cdf463929cbff04804ea75df0d8ffc04837bbdc1cbdcb126f225b79d20",
+      "sha256_origem": "c42548cdf463929cbff04804ea75df0d8ffc04837bbdc1cbdcb126f225b79d20"
+    },
+    {
+      "caminho": "frontend_assets/pilotos_condicoes.json",
+      "fonte": "frontend_assets/pilotos_condicoes.json",
+      "modo": "copia",
+      "sha256_destino": "61e73d630ce737e49f91d9bfb30426673d07162b066068e78edff1b254b4a6c5",
+      "sha256_origem": "61e73d630ce737e49f91d9bfb30426673d07162b066068e78edff1b254b4a6c5"
     },
     {
       "caminho": "frontend_assets/pitwall.css",
       "fonte": "frontend_assets/pitwall.css",
       "modo": "copia",
-      "sha256_destino": "2547033604a8048bdff63dfde2c1557f7a83b9a698589215a8b85bc155b23205",
-      "sha256_origem": "2547033604a8048bdff63dfde2c1557f7a83b9a698589215a8b85bc155b23205"
+      "sha256_destino": "f07fc68ed3546232b2d52eb60b656e78fb463700a6081bf9f869af421bb17743",
+      "sha256_origem": "f07fc68ed3546232b2d52eb60b656e78fb463700a6081bf9f869af421bb17743"
     },
     {
       "caminho": "frontend_assets/race_weekend.json",
@@ -694,15 +701,15 @@
       "caminho": "pitwall/dashboard/app.py",
       "fonte": "pitwall/dashboard/app.py",
       "modo": "copia",
-      "sha256_destino": "cc8f546e432504d3e1d9352e89b90cdde010f6642b427b3089ae73802e79c525",
-      "sha256_origem": "cc8f546e432504d3e1d9352e89b90cdde010f6642b427b3089ae73802e79c525"
+      "sha256_destino": "45935809732836e505b754da1c3c85108736d5f628ca926dce7b986f1d4f9467",
+      "sha256_origem": "45935809732836e505b754da1c3c85108736d5f628ca926dce7b986f1d4f9467"
     },
     {
       "caminho": "pitwall/dashboard/archive_views.py",
       "fonte": "pitwall/dashboard/archive_views.py",
       "modo": "copia",
-      "sha256_destino": "cf14558295352d4af0f38acb9e3b5e2f2f27ca616d3d49318a5928edf35576af",
-      "sha256_origem": "cf14558295352d4af0f38acb9e3b5e2f2f27ca616d3d49318a5928edf35576af"
+      "sha256_destino": "4e913b0247826d495b96f8eb860a5e575c1f63c42aa17ba232e58629f6531ccc",
+      "sha256_origem": "4e913b0247826d495b96f8eb860a5e575c1f63c42aa17ba232e58629f6531ccc"
     },
     {
       "caminho": "pitwall/dashboard/components.py",
@@ -710,6 +717,13 @@
       "modo": "copia",
       "sha256_destino": "00ef9592a444415ff37109e67dd0db08496013e5e713ee16316b8aae7d121b21",
       "sha256_origem": "00ef9592a444415ff37109e67dd0db08496013e5e713ee16316b8aae7d121b21"
+    },
+    {
+      "caminho": "pitwall/dashboard/pilot_views.py",
+      "fonte": "pitwall/dashboard/pilot_views.py",
+      "modo": "copia",
+      "sha256_destino": "0f21995f52d9c55f033e09fbe758f2d7ca9b61d5c92a43232f0d4d3776a0ae92",
+      "sha256_origem": "0f21995f52d9c55f033e09fbe758f2d7ca9b61d5c92a43232f0d4d3776a0ae92"
     },
     {
       "caminho": "pitwall/data/__init__.py",
@@ -740,6 +754,20 @@
       "sha256_origem": "ba22d2a98b9ebc6c4cfced2c9a695d4ea64c996cdaf48bf18761f3b00f9ed6eb"
     },
     {
+      "caminho": "pitwall/data/driver_archive_projection.py",
+      "fonte": "pitwall/data/driver_archive_projection.py",
+      "modo": "copia",
+      "sha256_destino": "3b0d58127bf95a5ce873600a3af46720be5eda9b7ac277a143b738d31b799f73",
+      "sha256_origem": "3b0d58127bf95a5ce873600a3af46720be5eda9b7ac277a143b738d31b799f73"
+    },
+    {
+      "caminho": "pitwall/data/driver_conditions.py",
+      "fonte": "pitwall/data/driver_conditions.py",
+      "modo": "copia",
+      "sha256_destino": "3d0223f1f64781849db283d48306c60dbf8e1337e14dd3248d16a1c9a0c1e30f",
+      "sha256_origem": "3d0223f1f64781849db283d48306c60dbf8e1337e14dd3248d16a1c9a0c1e30f"
+    },
+    {
       "caminho": "pitwall/data/editorial.py",
       "fonte": "pitwall/data/editorial.py",
       "modo": "copia",
@@ -750,8 +778,8 @@
       "caminho": "pitwall/data/editorial_panels.py",
       "fonte": "pitwall/data/editorial_panels.py",
       "modo": "copia",
-      "sha256_destino": "58fd2364b2508af45ff15311fe89da15b7fb352244b5b58d2ae61b6f9b778ed7",
-      "sha256_origem": "58fd2364b2508af45ff15311fe89da15b7fb352244b5b58d2ae61b6f9b778ed7"
+      "sha256_destino": "367de39d8c5ef7bd3fbc3ff70402c29d81ba4c96f55a906b141a2f77b3d628ea",
+      "sha256_origem": "367de39d8c5ef7bd3fbc3ff70402c29d81ba4c96f55a906b141a2f77b3d628ea"
     },
     {
       "caminho": "pitwall/data/race_weekend.py",
@@ -785,15 +813,15 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "a62aabe0617595f352297460a1ce3543e70c5cc50e30c9455368b1c93d99a140",
-      "sha256_origem": "a62aabe0617595f352297460a1ce3543e70c5cc50e30c9455368b1c93d99a140"
+      "sha256_destino": "e00971b91603820bc0e5ccbfaa9d5278b666b3d2199eefc0bc76ab011e37787d",
+      "sha256_origem": "e00971b91603820bc0e5ccbfaa9d5278b666b3d2199eefc0bc76ab011e37787d"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
       "fonte": "pitwall/i18n/streamlit.py",
       "modo": "copia",
-      "sha256_destino": "a7c533f86cda09148e877c73b5859163729b3b77d4e63046779bf4270c6c6082",
-      "sha256_origem": "a7c533f86cda09148e877c73b5859163729b3b77d4e63046779bf4270c6c6082"
+      "sha256_destino": "9bbc0b95d1de32e4f223c4d885fc5555ca42ccf9f8eeec578874b24d7b95c2f0",
+      "sha256_origem": "9bbc0b95d1de32e4f223c4d885fc5555ca42ccf9f8eeec578874b24d7b95c2f0"
     },
     {
       "caminho": "pitwall/paths.py",
@@ -815,6 +843,20 @@
       "modo": "copia",
       "sha256_destino": "ba280d87b4f01f1c7be4fa761c02e3e446d4846c4a94299021daa9ee1e26168d",
       "sha256_origem": "ba280d87b4f01f1c7be4fa761c02e3e446d4846c4a94299021daa9ee1e26168d"
+    },
+    {
+      "caminho": "pitwall/research/__init__.py",
+      "fonte": "pitwall/research/__init__.py",
+      "modo": "copia",
+      "sha256_destino": "3f002730385d4e84bd9afad6cd1513f281d4c7948edbcb3f525a44ac9a94e039",
+      "sha256_origem": "3f002730385d4e84bd9afad6cd1513f281d4c7948edbcb3f525a44ac9a94e039"
+    },
+    {
+      "caminho": "pitwall/research/driver_conditions.py",
+      "fonte": "pitwall/research/driver_conditions.py",
+      "modo": "copia",
+      "sha256_destino": "4c0f48ed88ea60beb443c9eefbe5a2931687e773a73f87862d0e1c7174c48640",
+      "sha256_origem": "4c0f48ed88ea60beb443c9eefbe5a2931687e773a73f87862d0e1c7174c48640"
     },
     {
       "caminho": "pitwall/version.py",
@@ -922,11 +964,46 @@
       "sha256_origem": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e"
     },
     {
+      "caminho": "reports/pilotos_condicoes_20261029/README.en.md",
+      "fonte": "reports/pilotos_condicoes_20261029/README.en.md",
+      "modo": "copia",
+      "sha256_destino": "bb1eb95cc22dc3ee476ef4a5e7580b9838531173687958f6aabbe380845d36f8",
+      "sha256_origem": "bb1eb95cc22dc3ee476ef4a5e7580b9838531173687958f6aabbe380845d36f8"
+    },
+    {
+      "caminho": "reports/pilotos_condicoes_20261029/README.md",
+      "fonte": "reports/pilotos_condicoes_20261029/README.md",
+      "modo": "copia",
+      "sha256_destino": "1ce16cbdb7893a1e40a636ff6f461ad275e150d5d63fe63de45f9ddf3731c606",
+      "sha256_origem": "1ce16cbdb7893a1e40a636ff6f461ad275e150d5d63fe63de45f9ddf3731c606"
+    },
+    {
+      "caminho": "reports/pilotos_condicoes_20261029/circuitos_revisados.csv",
+      "fonte": "reports/pilotos_condicoes_20261029/circuitos_revisados.csv",
+      "modo": "copia",
+      "sha256_destino": "3e28ab7f48273692ca5134c54a786fef622c4310c06b93566118f4b5bf00484c",
+      "sha256_origem": "3e28ab7f48273692ca5134c54a786fef622c4310c06b93566118f4b5bf00484c"
+    },
+    {
+      "caminho": "reports/pilotos_condicoes_20261029/consolidado_v1/gate_dados.json",
+      "fonte": "reports/pilotos_condicoes_20261029/consolidado_v1/gate_dados.json",
+      "modo": "copia",
+      "sha256_destino": "2174bdc6c17fc17d502c1a43f40a5a70735d4f7f1098e233736c2a904da6ffd0",
+      "sha256_origem": "2174bdc6c17fc17d502c1a43f40a5a70735d4f7f1098e233736c2a904da6ffd0"
+    },
+    {
+      "caminho": "reports/pilotos_condicoes_20261029/consolidado_v1/pendencias.csv",
+      "fonte": "reports/pilotos_condicoes_20261029/consolidado_v1/pendencias.csv",
+      "modo": "copia",
+      "sha256_destino": "ab8ac0977ba1d8f6ec35623981939ded5b5ee767b065a811bb50f9e6b14bb0e8",
+      "sha256_origem": "ab8ac0977ba1d8f6ec35623981939ded5b5ee767b065a811bb50f9e6b14bb0e8"
+    },
+    {
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "72f1608bf769f483b8d5d01499efbd7f438f7c6821be5f26efd58177a4c47e68",
-      "sha256_origem": "72f1608bf769f483b8d5d01499efbd7f438f7c6821be5f26efd58177a4c47e68"
+      "sha256_destino": "b9f51094ce3dc52c2800e26c12e98e81e2bbd6d7bfe7062486722e09b1a3168e",
+      "sha256_origem": "b9f51094ce3dc52c2800e26c12e98e81e2bbd6d7bfe7062486722e09b1a3168e"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -958,11 +1035,32 @@
       "sha256_origem": "93280a02832d8c92df7e325274b571d3d1e999dbb6df932c4cdfa565b72be7b9"
     },
     {
+      "caminho": "tests/test_driver_conditions.py",
+      "fonte": "tests/test_driver_conditions.py",
+      "modo": "copia",
+      "sha256_destino": "2417dbb62a018be7f282d8085932d91584f1ca54dde41f7062edee6ef980e2c0",
+      "sha256_origem": "2417dbb62a018be7f282d8085932d91584f1ca54dde41f7062edee6ef980e2c0"
+    },
+    {
+      "caminho": "tests/test_driver_projection.py",
+      "fonte": "tests/test_driver_projection.py",
+      "modo": "copia",
+      "sha256_destino": "64d51624e71d3c39154f56d820b9740f30b858edb47f998c72520e579d73e972",
+      "sha256_origem": "64d51624e71d3c39154f56d820b9740f30b858edb47f998c72520e579d73e972"
+    },
+    {
       "caminho": "tests/test_interface_editorial.py",
       "fonte": "tests/test_interface_editorial.py",
       "modo": "copia",
       "sha256_destino": "61535c56fd8d9e539ba9dab465ec4781b18fe44f3bc1e18e49fb28733f89c6f3",
       "sha256_origem": "61535c56fd8d9e539ba9dab465ec4781b18fe44f3bc1e18e49fb28733f89c6f3"
+    },
+    {
+      "caminho": "tests/test_pilot_views.py",
+      "fonte": "tests/test_pilot_views.py",
+      "modo": "copia",
+      "sha256_destino": "a128d46fcd9bc83e78fc51f8856252397d114ceb9d78f1e521e3b5cd9364b605",
+      "sha256_origem": "a128d46fcd9bc83e78fc51f8856252397d114ceb9d78f1e521e3b5cd9364b605"
     }
   ],
   "baseline_cientifico_commit": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
@@ -984,15 +1082,15 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "c3a0b9a5df979ddbd7a11e8751996987ce1d5a5c8c5c10f2595e38ff487ecf08"
+      "sha256": "321838473c97defdbc03d8105a3435c536cdc112b4e019afc286e753b0181288"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
-      "sha256": "6b5c07ed19a0fdfff1fc031dd1aa421025bb799ea14742a737bb4e772f7db31b"
+      "sha256": "dcc84e9d2803ff838131575378e9180287c7a5f2f4678c10aecdc44116297bfb"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.en.md.tpl",
-      "sha256": "8b0cd6a6fe0632d7e07976383097712dfbfc9add0c2bc897e38459408ba8b897"
+      "sha256": "c6c624d4afd3aa441813d6e2478075241e788303dc7c08445cad30304983b9fd"
     },
     {
       "caminho": "publicacao/templates/FONTES_E_DADOS.md",
@@ -1012,7 +1110,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "72f1608bf769f483b8d5d01499efbd7f438f7c6821be5f26efd58177a4c47e68"
+      "sha256": "b9f51094ce3dc52c2800e26c12e98e81e2bbd6d7bfe7062486722e09b1a3168e"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -1031,5 +1129,5 @@
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.1.4"
+  "versao_produto": "0.2.0"
 }

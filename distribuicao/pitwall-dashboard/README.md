@@ -8,6 +8,7 @@ Portfólio de MBPaschoal sobre ciência de dados na Fórmula 1. Este pacote apre
 
 ## Produto
 
+- **Pilotos:** destaques por condição, perfil individual, amostra mínima, empates e evidências de cada GP.
 - **Corridas:** circuito, campeonatos completos, tempos, pneus/paradas, clima, equipes e até cinco edições anteriores na mesma pista.
 - **Previsões:** probabilidades registradas e comparação posterior, com Austin prospectivo separado da retrospectiva.
 - **Desempenho:** métricas, calibração e cobertura explícita.
@@ -19,7 +20,7 @@ As bandeiras BR/GB no canto superior direito selecionam o idioma. A navegação 
 
 Modelo v1 congelado: treino 2021–2023, validação 2024 já explorada e 2025 já avaliado. Nos mesmos 22 GPs de ranking de 2025, o modelo identificou 51 integrantes de pódio contra 50 da classificação; ambos acertaram três em 8/22 GPs. Métricas probabilísticas usam 478 casos. Isso não demonstra significância nem garantia futura.
 
-O acervo cobre 66 GPs/330 sessões até Austin 2026. A revisão resolveu 75 itens, confirmou seis ausências e preservou 31 limitações de pneus. Baku/Q tem complemento FIA com 223 durações e 20 horários de referência, sem setores/validade inventados. A origem do archive foi identificada; seu UTC original permanece desconhecido. DRS respeita ano/referência e altitude é aproximada.
+Pilotos cruza 66 corridas principais e 1.340 largadas com sensores nos intervalos efetivos e mapas FIA de cada edição. São oito provas com chuva registrada. A auditoria registra 295 verificações; 17 compostos de treinos/classificação continuam ausentes e não entram nesses rankings. O clima distingue sensores da corrida e reconstrução atmosférica horária. Baku/Q mantém o complemento FIA sem setores/validade inventados.
 
 A correção do Histórico mostrou que uma tabela pode existir e responder à pergunta errada. A verificação de publicação passou a conferir o build servido porque testes locais não provam deploy. [Evolução e versões](CHANGELOG.md).
 

@@ -8,7 +8,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
 FONTE = RAIZ / 'data/operacao_2026/formula1dashboard/austin-tempos-f1dashboard-20261025T143617Z-r2'
-SCRATCH = Path.home() / '.hermes' / 'cache' / 'scratch'
+SCRATCH = Path(tempfile.gettempdir())
 
 
 class Formula1DashboardTemposTest(unittest.TestCase):

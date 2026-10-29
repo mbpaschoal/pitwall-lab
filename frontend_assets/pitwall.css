@@ -1,5 +1,29 @@
 /* Composição compartilhada. Referência: 1672 × 941; sem regras por temporada. */
 :root { --pw-ink:#061226; --pw-muted:#647493; --pw-line:#dce6ee; --pw-red:#d3071d; --pw-bg:#e8f3fc; }
+.pilot-header { padding:44px 0 22px; }
+.pilot-header h1 { font-family:AbrilFatfaceLocal,Georgia,serif; font-size:64px; font-weight:400; padding:0; letter-spacing:-1px; }
+.pilot-header p { color:var(--pw-muted); font-size:18px; margin-top:4px; }
+.pilot-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin:20px 0 28px; }
+.pilot-card { background:rgba(255,255,255,.82); border:1px solid var(--pw-line); border-radius:7px; padding:22px; min-height:250px; display:flex; flex-direction:column; }
+.pilot-card-heading { display:flex; align-items:center; gap:12px; font-size:16px; margin-bottom:17px; }
+.pilot-card-heading span { font-size:29px; line-height:1; color:#466a91; }
+.pilot-card small { font-size:11px; color:var(--pw-muted); text-transform:uppercase; letter-spacing:1px; }
+.pilot-card h3 { font-family:LatoLocal,Arial,sans-serif; font-size:20px; line-height:1.35; padding:5px 0; font-weight:700; }
+.pilot-card strong { font-size:32px; color:#18365c; }
+.pilot-card p { font-size:12px; color:var(--pw-muted); line-height:1.65; margin:6px 0 16px; }
+.pilot-card a { color:#23538b; text-decoration:none; font-size:13px; margin-top:auto; align-self:flex-end; }
+.pilot-card a:hover { text-decoration:underline; }
+.pilot-card h3 a { font-size:inherit; color:inherit; font-weight:700; }
+.pilot-card a:focus-visible { outline:2px solid var(--pw-red); outline-offset:5px; }
+.pilot-profile { border-left:4px solid var(--pw-red); padding-left:18px; margin:20px 0; }
+.pilot-profile h2 { font-family:AbrilFatfaceLocal,Georgia,serif; font-size:37px; font-weight:400; }
+.pilot-profile p { color:var(--pw-muted); }
+.st-key-pilot_view [role="radiogroup"] { border-bottom:1px solid var(--pw-line); gap:24px; }
+.st-key-pilot_view [role="radiogroup"] > label { padding:10px 2px; border-bottom:3px solid transparent; margin:0; }
+.st-key-pilot_view [role="radiogroup"] > label:has(input:checked) { border-color:var(--pw-red); font-weight:700; }
+.st-key-pilot_view [role="radiogroup"] > label > div:first-of-type { display:none; }
+@media(max-width:1000px) { .pilot-cards { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .pilot-cards { grid-template-columns:1fr; } .pilot-header { padding-top:25px; } .pilot-header h1 { font-size:45px; } }
 html { font-size:16px; }
 .stApp, [data-testid="stAppViewContainer"] { background:var(--pw-bg); color:var(--pw-ink); }
 .stApp, .stApp p, .stApp input, .stApp button, .stApp select, .stApp table { font-family:LatoLocal,Arial,sans-serif; }
@@ -39,9 +63,10 @@ html { font-size:16px; }
 .st-key-tela [role="radiogroup"] > label > div:first-child { display:none; }
 .st-key-tela [role="radiogroup"] > label::before { font-family:"Material Symbols Rounded"; font-size:25px; line-height:25px; margin-right:25px; font-weight:400; }
 .st-key-tela [role="radiogroup"] > label:nth-child(1)::before { content:"sports_score"; }
-.st-key-tela [role="radiogroup"] > label:nth-child(2)::before { content:"task_alt"; }
-.st-key-tela [role="radiogroup"] > label:nth-child(3)::before { content:"bar_chart"; }
-.st-key-tela [role="radiogroup"] > label:nth-child(4)::before { content:"assignment_turned_in"; }
+.st-key-tela [role="radiogroup"] > label:nth-child(2)::before { content:""; width:25px; height:25px; background:currentColor; mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M24 15a10 10 0 0 0-20 0v6l8 3h10l2-5H13l-2-6h12M5 15h5M7 21v-3'/%3E%3C/svg%3E") center / contain no-repeat; }
+.st-key-tela [role="radiogroup"] > label:nth-child(3)::before { content:"task_alt"; }
+.st-key-tela [role="radiogroup"] > label:nth-child(4)::before { content:"bar_chart"; }
+.st-key-tela [role="radiogroup"] > label:nth-child(5)::before { content:"assignment_turned_in"; }
 .st-key-tela p { font-size:16px; }
 .sidebar-divider { height:1px; background:var(--pw-line); margin:20px 24px 29px; }
 .st-key-temporada, .st-key-gp { padding:0 24px; }

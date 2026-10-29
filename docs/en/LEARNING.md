@@ -22,3 +22,7 @@ This journal explains technical decisions; it is not a list of uniformly positiv
 ## Recording the next improvement
 
 Explain prior behaviour with a concrete example, known cause or uncertainty, delivered change, executed verification and remaining limitations. A hypothesis is not a confirmed finding. Dates and versions must match actual deliveries: no fabricated old commits or edited results to improve the narrative.
+
+## 0.2.0: comparisons require a verified denominator
+
+The brainstorm counted rain across whole sessions and could select a Sprint through the Race session type. The audit now requires the literal main-race name, start/end status and exclusion of suspensions. This changed the result to eight races with rain during active racing. I also learned to preserve feed differences: Australia/2026 lap numbers must not be corrected by shifting unmatched rows. Rates now show starts and ties; incomplete sources remain incomplete. [Evidence and limits](../../reports/pilotos_condicoes_20261029/README.en.md).

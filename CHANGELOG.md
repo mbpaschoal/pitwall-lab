@@ -4,6 +4,18 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.2.0 — 2026-10-29
+
+### Pilotos: comparar resultados com condições reais de corrida
+
+Novo menu com capacete, visão geral por condição e perfil individual, em português e inglês. Os seis destaques mostram chuva registrada, temperaturas da pista, sentido, curvas e altitude. Há filtros de temporadas, métrica e mínimo de largadas, classificação completa da coorte, mapa de todos os pilotos, confronto com o companheiro e evidências exportáveis com links para cada GP. Empates permanecem explícitos; ausência de amostra não vira desempenho zero.
+
+A base descritiva reúne 66 corridas principais, 1.354 resultados e 1.340 largadas. Controle de corrida delimita os intervalos realmente disputados e exclui pausas: oito provas tiveram chuva registrada. Open-Meteo fornece 70 amostras atmosféricas horárias dentro desses intervalos, identificadas como reconstrução em grade. Foram conferidos 66 mapas FIA da edição: Suzuka tem traçado em oito; Spielberg e Marina Bay respeitam seus comprimentos por ano.
+
+A [auditoria](reports/pilotos_condicoes_20261029/README.md) registra 295 verificações. Dos 50 limites de stint inválidos, 30 foram reconstruídos com voltas observadas; os demais correspondem a zero voltas completadas ou DNS. Nove compostos foram recuperados. Os 17 compostos ainda indisponíveis pertencem a treinos/classificação e ficam ausentes, excluídos destes cruzamentos. Corridas recebeu 11 sequências observadas de estratégias e oito preenchimentos pontuais de compostos; o nono composto recuperado já está numa dessas sequências.
+
+Aprendizado: tipo de sessão não basta para separar Sprint e corrida; horário agendado não define tempo efetivo de prova; concordância entre feeds não garante independência. Na Austrália/2026, a seleção de voltas considera piloto, UTC e duração, preservando uma divergência de numeração entre fontes. Taxas usam largadas como oportunidades, inclusive abandonos e DSQ; não largadas são excluídas. As comparações são associações históricas, sem estimar habilidade isolada. Os 614 arquivos protegidos, o modelo v1 e as probabilidades registradas permanecem inalterados.
+
 ## 0.1.4 — 2026-10-29
 
 ### Imagens de São Paulo e Madrid

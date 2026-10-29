@@ -27,7 +27,7 @@ jobs:
             python -m pitwall.publishing.releases check --base "$BASE_REF"
           fi
       - name: Testes PT e EN / PT and EN tests
-        run: python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_dashboard_acervo_app tests.test_interface_editorial
+        run: python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_dashboard_acervo_app tests.test_interface_editorial tests.test_driver_conditions tests.test_driver_projection tests.test_pilot_views tests.test_race_weather tests.test_tyre_reconciliation tests.test_driver_source_audit
   release:
     if: startsWith(github.ref, 'refs/tags/v')
     needs: validate
