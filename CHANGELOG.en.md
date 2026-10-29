@@ -4,6 +4,14 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.1.3 — 2026-10-29
+
+### Miami photograph
+
+Replaces a Porsche Sprint Challenge photograph, selected because it was taken at the same circuit, with a real photograph of Sergio Pérez driving the Red Bull RB18 Formula 1 car at the 2022 Miami Grand Prix. Public feedback exposed the selection error: the correct venue does not guarantee the correct racing category. Visual selection now checks the circuit, category and car identity.
+
+Credit: Dcmaradiaga (David Castro), Wikimedia Commons, CC BY-SA 4.0. Original image preserved; PT/EN alt text, source and catalog hash updated. The photograph illustrates the venue and dates from 2022; it does not depict the selected season. Data and predictions remain unchanged.
+
 ## 0.1.2 — 2026-10-29
 
 ### Interface

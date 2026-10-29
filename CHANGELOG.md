@@ -4,6 +4,14 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.1.3 — 2026-10-29
+
+### Fotografia de Miami
+
+Substitui a fotografia da Porsche Sprint Challenge, selecionada por ocorrer no mesmo circuito, por uma foto real de Sergio Pérez no Red Bull RB18 de Fórmula 1 no GP de Miami de 2022. A correção surgiu do uso público: o local correto não garante que a categoria mostrada seja a correta. A seleção visual agora confere circuito, categoria e identificação do carro.
+
+Crédito: Dcmaradiaga (David Castro), Wikimedia Commons, CC BY-SA 4.0. Arquivo original preservado; texto alternativo PT/EN e catálogo com hash e origem atualizados. A foto é ilustrativa e datada de 2022, sem representar a temporada selecionada. Dados e previsões permanecem preservados.
+
 ## 0.1.2 — 2026-10-29
 
 ### Interface

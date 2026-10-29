@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "420c7194e35b6875468bd1be51c5b6f350247d93abe02b797de3b649f7cf8474",
+  "apresentacao_build_sha256": "fbe62dc0b9aeccc72dd8bac6f1b6c75e7f532d4add224b60c822e0ee364eccdb",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a1241ed7fdf249c144e3a435351aeb23f29aaa9ebd4997978ee36b7e315dd116",
-      "sha256_origem": "29f6937eea4ce6ed9547d31d30dbcc5e87b327bfa4a2dd27cb2c6ec45eb440a5"
+      "sha256_destino": "fc724a791a665bfdd8dc9def40be269a48750c36b01b2f78a4e2a7756492439d",
+      "sha256_origem": "6bc6a834aabc02860cb025fb5b49b7ec00d7178a4d27e84cb983508b702d061f"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "11b56363a1e27428029671afbd8f9fce357ab1360d143126aa1846214b0bfa55",
-      "sha256_origem": "428d6cbcafdb2d1185c1e03ae752686d7475e08773e9c868301edab7479bf7e2"
+      "sha256_destino": "cce38bb6ca2d2b44f6c6e932db10834f8edf43c0557edf7b26871f12609763d3",
+      "sha256_origem": "8a7ae716161f47214b6fbe284915ced6d95b96c78db08d503e2c92962a185138"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -91,8 +91,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "297b50f08386d3521f8fdaf2f78eb8d9d0acdf452d2e61596905fba37208c792",
-      "sha256_origem": "297b50f08386d3521f8fdaf2f78eb8d9d0acdf452d2e61596905fba37208c792"
+      "sha256_destino": "2d2454ef0edeb462a6ce8b25d387aaa74df08093d5cea0428a10ce55510c6326",
+      "sha256_origem": "2d2454ef0edeb462a6ce8b25d387aaa74df08093d5cea0428a10ce55510c6326"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -196,8 +196,8 @@
       "caminho": "dashboard_assets/circuit/catalogo_visual.json",
       "fonte": "dashboard_assets/circuit/catalogo_visual.json",
       "modo": "copia",
-      "sha256_destino": "215ff141ccd666bfccff7dd00e08bc910b11a60baa48ba21a744e8e45af30122",
-      "sha256_origem": "215ff141ccd666bfccff7dd00e08bc910b11a60baa48ba21a744e8e45af30122"
+      "sha256_destino": "ea8539257f3e47d3cb776755e9c54da71cfa003b8926b29ea9b611ac393fb032",
+      "sha256_origem": "ea8539257f3e47d3cb776755e9c54da71cfa003b8926b29ea9b611ac393fb032"
     },
     {
       "caminho": "dashboard_assets/circuit/catalunya-hero.jpg",
@@ -315,8 +315,8 @@
       "caminho": "dashboard_assets/circuit/miami-hero.jpg",
       "fonte": "dashboard_assets/circuit/miami-hero.jpg",
       "modo": "copia",
-      "sha256_destino": "e1c2da79b064496cf8c05a0434cd5fdab4833749a9519bf7f7932f3f0ba35c66",
-      "sha256_origem": "e1c2da79b064496cf8c05a0434cd5fdab4833749a9519bf7f7932f3f0ba35c66"
+      "sha256_destino": "c52ce464d7557adf49348533eef9e4e1a5d8288399a9418ad85302f99f0a58d2",
+      "sha256_origem": "c52ce464d7557adf49348533eef9e4e1a5d8288399a9418ad85302f99f0a58d2"
     },
     {
       "caminho": "dashboard_assets/circuit/miami-layout.svg",
@@ -785,8 +785,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "06de732e5f807485f5a3448ee36e9b45e968e7179fa0e1baa7bb95b33e694dde",
-      "sha256_origem": "06de732e5f807485f5a3448ee36e9b45e968e7179fa0e1baa7bb95b33e694dde"
+      "sha256_destino": "a0965a364a9357f9f3158e161a57585333e73d6eb1be72234a8290f14a525a4f",
+      "sha256_origem": "a0965a364a9357f9f3158e161a57585333e73d6eb1be72234a8290f14a525a4f"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -925,8 +925,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "3fd5976ef6d3462ed8c3d0f97f4e41df9a9e542485f76aa9cd6bb80b0f90f818",
-      "sha256_origem": "3fd5976ef6d3462ed8c3d0f97f4e41df9a9e542485f76aa9cd6bb80b0f90f818"
+      "sha256_destino": "bed3883f2f0d0dd3d90325181d93b52831bd4f90a4e23bc4189c840128f8f7a4",
+      "sha256_origem": "bed3883f2f0d0dd3d90325181d93b52831bd4f90a4e23bc4189c840128f8f7a4"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -1012,7 +1012,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "3fd5976ef6d3462ed8c3d0f97f4e41df9a9e542485f76aa9cd6bb80b0f90f818"
+      "sha256": "bed3883f2f0d0dd3d90325181d93b52831bd4f90a4e23bc4189c840128f8f7a4"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -1031,5 +1031,5 @@
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.1.2"
+  "versao_produto": "0.1.3"
 }
