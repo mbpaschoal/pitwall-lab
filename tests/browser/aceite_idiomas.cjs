@@ -38,7 +38,11 @@ const server = http.createServer((req,res) => {
       const state=new URL(iframe.url()).searchParams;
       check(state.get('gp')==='18' && state.get('temporada')==='2026' && state.get('aba')==='Histórico','Season, GP or tab lost on flag click');
       const flag=frame.getByRole('button',{name:'🇬🇧',exact:true});
-      const box=await flag.boundingBox();const brBox=await frame.getByRole('button',{name:'🇧🇷',exact:true}).boundingBox();check(Math.abs(box.y-brBox.y)<5,'Flags stacked vertically');check(box && box.y>viewport.height-90 && box.x+box.width<=viewport.width,'Flags are not reachable in lower corner');
+      const box=await flag.boundingBox();const brBox=await frame.getByRole('button',{name:'🇧🇷',exact:true}).boundingBox();check(Math.abs(box.y-brBox.y)<5,'Flags stacked vertically');check(box && box.y>=0 && box.y+box.height<=125 && box.x>viewport.width-180 && box.x+box.width<=viewport.width,'Flags are not in the upper-right corner');
+      const switches=frame.locator('[class*="st-key-pw_language_switch_"]:visible').first();
+      const switchBox=await switches.boundingBox();
+      const controls=await frame.locator('.st-key-topbar button:visible, .gp-cabecalho:visible').all();
+      for(const control of controls){const rect=await control.boundingBox();if(rect)check(!(switchBox.x<rect.x+rect.width && switchBox.x+switchBox.width>rect.x && switchBox.y<rect.y+rect.height && switchBox.y+switchBox.height>rect.y),'Language switch overlaps header controls');}
       const csvPromise=page.waitForEvent('download');
       await frame.getByRole('button',{name:'Download table CSV',exact:true}).first().click();
       const csv=await csvPromise;const destination=path.join(output,`history-en-${viewport.width}.csv`);await csv.saveAs(destination);

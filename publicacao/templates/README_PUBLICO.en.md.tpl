@@ -13,7 +13,7 @@ MBPaschoal's Formula 1 data-science portfolio. This package presents individual 
 - **Performance:** metrics, calibration and explicit coverage.
 - **Methodology:** offline documents and reports, also in English.
 
-BR/GB flags in the lower corner select the language. Navigation retains season, GP and language. Canonical identifiers and scientific downloads preserve original bytes; descriptive tables follow the selected language.
+BR/GB flags in the upper-right corner select the language. Navigation retains season, GP and language. Canonical identifiers and scientific downloads preserve original bytes; descriptive tables follow the selected language.
 
 ## Evidence and learning
 

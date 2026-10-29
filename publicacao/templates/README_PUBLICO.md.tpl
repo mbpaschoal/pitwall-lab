@@ -13,7 +13,7 @@ Portfólio de MBPaschoal sobre ciência de dados na Fórmula 1. Este pacote apre
 - **Desempenho:** métricas, calibração e cobertura explícita.
 - **Metodologia:** documentos e relatórios offline, também em inglês.
 
-As bandeiras BR/GB no canto inferior selecionam o idioma. A navegação preserva temporada, GP e idioma. Identificadores e downloads científicos conservam seus bytes originais; tabelas descritivas acompanham o idioma.
+As bandeiras BR/GB no canto superior direito selecionam o idioma. A navegação preserva temporada, GP e idioma. Identificadores e downloads científicos conservam seus bytes originais; tabelas descritivas acompanham o idioma.
 
 ## Evidência e aprendizado
 

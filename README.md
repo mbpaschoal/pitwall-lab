@@ -11,7 +11,7 @@ Portfólio de ciência de dados sobre Fórmula 1, criado por **MBPaschoal**. Est
 - **Corridas:** ficha do circuito, campeonato completo, tempos, clima, pneus/paradas, equipes e desempenho dos pilotos em até cinco edições anteriores na mesma pista.
 - **Previsões:** probabilidades individuais de pódio e comparação posterior. A emissão prospectiva de Austin 2026 permanece separada do estudo retrospectivo.
 - **Desempenho:** log loss, Brier, calibração, ranking e cobertura, com denominadores explícitos.
-- **Metodologia:** documentos e relatórios offline. As bandeiras 🇧🇷 e 🇬🇧 no canto inferior selecionam português ou inglês e acompanham a navegação.
+- **Metodologia:** documentos e relatórios offline. As bandeiras 🇧🇷 e 🇬🇧 no canto superior direito selecionam português ou inglês e acompanham a navegação.
 
 O acervo descritivo cobre **66 GPs e 330 sessões de 2024–2026 até Austin**. A revisão de 29/10 resolveu 75 dos 112 itens da fila; seis ausências foram confirmadas e 31 limitações de pneus permanecem nas fontes. O Histórico exclui a corrida selecionada e outras pistas do mesmo país. Altitude é uma estimativa no ponto do calendário; mapas DRS de referência não certificam todas as configurações históricas.
 

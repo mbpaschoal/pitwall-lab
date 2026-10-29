@@ -4,6 +4,14 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.1.2 — 2026-10-29
+
+### Interface
+
+Move BR/GB flags to the upper-right corner after public use revealed overlap with Streamlit/GitHub branding and controls in the footer. A reserved row below the native toolbar prevents covering search, preferences or the GP title on desktop and mobile. Language, GP, tab and filters remain retained.
+
+Acceptance checks the upper position, side-by-side flags and no intersection with application controls. Data, model and probabilities are unchanged.
+
 ## 0.1.1 — 2026-10-29
 
 ### Publication and verification

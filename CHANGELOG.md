@@ -4,6 +4,14 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.1.2 — 2026-10-29
+
+### Interface
+
+Move as bandeiras BR/GB para o canto superior direito após o uso público mostrar sobreposição com a marca e os controles do Streamlit/GitHub no rodapé. Uma faixa reservada abaixo da barra nativa evita cobrir busca, perfil e título do GP em desktop e celular. Idioma, GP, aba e filtros permanecem preservados.
+
+O aceite verifica a posição superior, as bandeiras lado a lado e a ausência de interseção com os controles da aplicação. Dados, modelo e probabilidades não mudaram.
+
 ## 0.1.1 — 2026-10-29
 
 ### Publicação e verificação

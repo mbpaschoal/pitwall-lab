@@ -11,7 +11,7 @@ A Formula 1 data-science portfolio by **MBPaschoal**. I am learning to build a c
 - **Races:** circuit profile, full championship standings, session times, weather, tyres/stops, teams and driver performance in up to five previous editions at the same circuit.
 - **Predictions:** individual podium probabilities and subsequent comparison. Austin 2026's prospective recorded prediction remains separate from the retrospective study.
 - **Performance:** log loss, Brier, calibration, ranking and coverage with explicit denominators.
-- **Methodology:** offline documents and reports. The 🇧🇷 and 🇬🇧 flags in the lower corner select Portuguese or English and retain the current navigation.
+- **Methodology:** offline documents and reports. The 🇧🇷 and 🇬🇧 flags in the upper-right corner select Portuguese or English and retain the current navigation.
 
 The descriptive archive covers **66 GPs and 330 sessions in 2024–2026 through Austin**. The 29 October review resolved 75 of 112 queue items; six absences were confirmed and 31 tyre limitations remain in the sources. History excludes the selected race and other circuits in the same country. Altitude is an estimate at the calendar coordinates; reference DRS maps do not certify every historical configuration.
 

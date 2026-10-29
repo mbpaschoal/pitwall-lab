@@ -168,7 +168,7 @@ nav[aria-label="Documentação"] { line-height:1.9; padding:4px 0 12px; }
 @media (max-width:700px) { .coluna-circuito { grid-template-rows:138px auto; } }
 
 /* Native language buttons also work inside the Community Cloud iframe. */
-[class*="st-key-pw_language_switch_"] { position:fixed; right:18px; bottom:14px; z-index:999990; width:138px!important; padding:6px 8px; border:1px solid var(--pw-line); border-radius:8px; background:#fff; box-shadow:0 2px 10px #06122618; }
+[class*="st-key-pw_language_switch_"] { position:fixed; right:18px; top:62px; bottom:auto; z-index:999990; width:138px!important; padding:6px 8px; border:1px solid var(--pw-line); border-radius:8px; background:#fff; box-shadow:0 2px 10px #06122618; }
 [class*="st-key-pw_language_switch_"] [data-testid="stHorizontalBlock"] { gap:4px; align-items:center; }
 [class*="st-key-pw_language_switch_"] [data-testid="stCaptionContainer"] { color:var(--pw-muted); font-size:11px; margin:0; }
 [class*="st-key-pw_language_switch_"] button { min-height:28px; padding:1px 3px; background:white; border:1px solid var(--pw-line); }
@@ -177,3 +177,6 @@ nav[aria-label="Documentação"] { line-height:1.9; padding:4px 0 12px; }
 [class*="st-key-pw_language_switch_"] [data-testid="stHorizontalBlock"] { flex-wrap:nowrap!important; }
 [class*="st-key-pw_language_switch_"] [data-testid="stColumn"] { flex:1 1 0!important; min-width:0!important; width:auto!important; }
 [class*="st-key-pw_language_switch_"] [data-testid="stCaptionContainer"] p { font-size:11px; line-height:1.2; }
+
+/* Reserve a top row below the native toolbar and above the GP header. */
+.st-key-topbar { margin-bottom:52px; }

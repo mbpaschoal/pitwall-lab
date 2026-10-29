@@ -1,4 +1,4 @@
-"""Native BR/GB controls retain language, GP and tab without iframe navigation."""
+"""Upper-right BR/GB controls retain language, GP and tab without iframe navigation."""
 
 from . import language, set_language
 from pitwall.version import version
