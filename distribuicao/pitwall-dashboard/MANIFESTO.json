@@ -25,15 +25,15 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "12341ae609e9cb8c78083bebadc515eff3802abd37a42cb8cf3697404b6c019c",
+      "sha256_destino": "ff5bf513460b393e28201870113293f23a1c2d94fbfec2c792dc1893e92205ac",
       "sha256_origem": null
     },
     {
       "caminho": "FONTES_E_DADOS.md",
       "fonte": "publicacao/templates/FONTES_E_DADOS.md",
       "modo": "gerado",
-      "sha256_destino": "19b39db8460e037209a3c70c1e30fc4ed1ea497a777e01e717d5a7103b588cd5",
-      "sha256_origem": "19b39db8460e037209a3c70c1e30fc4ed1ea497a777e01e717d5a7103b588cd5"
+      "sha256_destino": "98d6a54eef99f487d73020fdda552471dd2321936d700a78e3ae44f7be0d6aa4",
+      "sha256_origem": "98d6a54eef99f487d73020fdda552471dd2321936d700a78e3ae44f7be0d6aa4"
     },
     {
       "caminho": "GUIA_HOSPEDAGEM.md",
@@ -53,16 +53,30 @@
       "caminho": "README.md",
       "fonte": "publicacao/templates/README_PUBLICO.md.tpl",
       "modo": "gerado",
-      "sha256_destino": "5180d02604d6d2e4b9760b642356a29f767414bd3fca4d1490203d7fcaf8cbe4",
-      "sha256_origem": "5180d02604d6d2e4b9760b642356a29f767414bd3fca4d1490203d7fcaf8cbe4"
+      "sha256_destino": "0eeab6e08678c927fdbf34b75addae280e5ca9b7dbbf148d43720c11bd06bc51",
+      "sha256_origem": "0eeab6e08678c927fdbf34b75addae280e5ca9b7dbbf148d43720c11bd06bc51"
+    },
+    {
+      "caminho": "acervo_dashboard_dados.py",
+      "fonte": "acervo_dashboard_dados.py",
+      "modo": "copia",
+      "sha256_destino": "377513839e8e77e39d8f715cc89576c170e94c004f10d357735dc40122672ef2",
+      "sha256_origem": "377513839e8e77e39d8f715cc89576c170e94c004f10d357735dc40122672ef2"
+    },
+    {
+      "caminho": "acervo_dashboard_ui.py",
+      "fonte": "acervo_dashboard_ui.py",
+      "modo": "copia",
+      "sha256_destino": "59eeda9ccbfd4a889ba0912c45a8f57422b4411d6e285b48662a185a453d9103",
+      "sha256_origem": "59eeda9ccbfd4a889ba0912c45a8f57422b4411d6e285b48662a185a453d9103"
     },
     {
       "caminho": "app.py",
       "fonte": "app.py",
       "modo": "gerado",
       "nota": "viewer offline inserido na UI Race Weekend do working tree",
-      "sha256_destino": "01da3e3e31828c37bdaefe334c19123aaf7df86b03c66a6dee025345a84bde33",
-      "sha256_origem": "f9737f297e722b771bcdbb66289163bc2a81c42805baac1c5df393539b3dadb9"
+      "sha256_destino": "6c92c0ffd948ab790dc282b4b472397b634a263b4eb472fa95d53ede359d8c87",
+      "sha256_origem": "a49b25ff95034c586d14b78ee7d871657f5273423ab74bdaf41356dcd3bb1cd2"
     },
     {
       "caminho": "catalogo_visual.py",
@@ -542,6 +556,13 @@
       "sha256_origem": "73559a5ab957b62542e5dcb7bdfb9c8aec63857d95de2800aee90edec7491c4e"
     },
     {
+      "caminho": "frontend_assets/acervo_dashboard.json",
+      "fonte": "frontend_assets/acervo_dashboard.json",
+      "modo": "copia",
+      "sha256_destino": "3ff63efd8ec4d8c86b49a936a25959bf10ee510f43726bcfc0c45e667c522fb1",
+      "sha256_origem": "3ff63efd8ec4d8c86b49a936a25959bf10ee510f43726bcfc0c45e667c522fb1"
+    },
+    {
       "caminho": "frontend_assets/contexto_editorial.json",
       "fonte": "frontend_assets/contexto_editorial.json",
       "modo": "copia",
@@ -573,15 +594,15 @@
       "caminho": "pitwall_ui.py",
       "fonte": "pitwall_ui.py",
       "modo": "copia",
-      "sha256_destino": "1fd692ded1d58462b2f95597006df1e6dd2d0808b7b930aa4ea646ded9be2576",
-      "sha256_origem": "1fd692ded1d58462b2f95597006df1e6dd2d0808b7b930aa4ea646ded9be2576"
+      "sha256_destino": "3a9163b528eb88185c3563a67f61824c1d9093b0e14a56e2622e13ae5d5de697",
+      "sha256_origem": "3a9163b528eb88185c3563a67f61824c1d9093b0e14a56e2622e13ae5d5de697"
     },
     {
       "caminho": "pitwall_ui_dados.py",
       "fonte": "pitwall_ui_dados.py",
       "modo": "copia",
-      "sha256_destino": "697cea51e52517ec83610215ed4b6293f492519a0e9b2c45b60bd79f5b705e3c",
-      "sha256_origem": "697cea51e52517ec83610215ed4b6293f492519a0e9b2c45b60bd79f5b705e3c"
+      "sha256_destino": "8e30eda755ed79b450453ed4a430e28e93428606b5ad43c29dbf54cfda5202a5",
+      "sha256_origem": "8e30eda755ed79b450453ed4a430e28e93428606b5ad43c29dbf54cfda5202a5"
     },
     {
       "caminho": "race_weekend_dados.py",
@@ -675,6 +696,13 @@
       "sha256_origem": "eee1e3667774d8e845e25b4911ed435e74ef31c986d650da09f40ac3bea56f7e"
     },
     {
+      "caminho": "tests/test_acervo_publico.py",
+      "fonte": "publicacao/templates/test_acervo_publico.py",
+      "modo": "gerado",
+      "sha256_destino": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52",
+      "sha256_origem": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
+    },
+    {
       "caminho": "tests/test_dashboard_app.py",
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
@@ -715,15 +743,15 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "6ec71b2ec311fc8466e42a38bb10e6761dab1d917fb9833e44c8b701fc53ec51"
+      "sha256": "8d08535d3dbcff93c49ec403ce0f5ae1d395ea38d0c5653a3cebf515287aa3c4"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
-      "sha256": "5180d02604d6d2e4b9760b642356a29f767414bd3fca4d1490203d7fcaf8cbe4"
+      "sha256": "0eeab6e08678c927fdbf34b75addae280e5ca9b7dbbf148d43720c11bd06bc51"
     },
     {
       "caminho": "publicacao/templates/FONTES_E_DADOS.md",
-      "sha256": "19b39db8460e037209a3c70c1e30fc4ed1ea497a777e01e717d5a7103b588cd5"
+      "sha256": "98d6a54eef99f487d73020fdda552471dd2321936d700a78e3ae44f7be0d6aa4"
     },
     {
       "caminho": "publicacao/templates/LICENCA_CODIGO.md",
@@ -756,6 +784,10 @@
     {
       "caminho": "publicacao/templates/test_distribuicao.py",
       "sha256": "35504a5400f91cd05fd7136e8e8f7dde83bb5bbb7ce272a3a763ab0304477012"
+    },
+    {
+      "caminho": "publicacao/templates/test_acervo_publico.py",
+      "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ]
 }

@@ -26,7 +26,9 @@ from race_weekend_dados import (
 )
 from contexto_editorial import ContextoEditorialErro, carregar as carregar_contextos_editoriais, para_gp
 from catalogo_visual import CatalogoVisualErro, carregar as carregar_catalogo_visual, para_circuito
-from pitwall_ui_dados import carregar_paineis
+from pitwall_ui_dados import carregar_paineis, complementar_paineis
+from acervo_dashboard_dados import AcervoDashboardErro, carregar as carregar_acervo_dashboard, para_gp as acervo_para_gp
+import acervo_dashboard_ui
 import pitwall_ui
 
 from documentacao_local import renderizar_documentacao_local
@@ -359,13 +361,18 @@ def renderizar_estado_dados(corrida):
         linha[1].write(estado.replace('_', ' '))
 
 
-def renderizar_contexto_circuito(pacote, corrida):
+def renderizar_contexto_circuito(pacote, corrida, acervo_gp=None):
     ativos = para_circuito(pacote.get('catalogo_visual', {}), corrida.get('circuito_id')) or {}
     foto_meta, mapa_meta = ativos.get('foto'), ativos.get('mapa')
     foto = ativo_data_uri(foto_meta['caminho'], foto_meta['mime']) if foto_meta else ''
     mapa = ativo_data_uri(mapa_meta['caminho'], mapa_meta['mime']) if mapa_meta else ''
     paineis = carregar_paineis(raiz_artefatos(), pacote['temporada'], corrida['rodada'], corrida['circuito_id'])
-    st.markdown(pitwall_ui.visao_geral(corrida, paineis, foto, mapa, ativos.get('alt_foto', 'Imagem ilustrativa do circuito')) + pitwall_ui.campeonatos(paineis, pacote['temporada']), unsafe_allow_html=True)
+    if acervo_gp:
+        paineis = complementar_paineis(paineis, acervo_gp)
+        visao = pitwall_ui.visao_geral(corrida, paineis, foto, mapa, ativos.get('alt_foto', 'Imagem ilustrativa do circuito'), clima=acervo_gp.get('clima'))
+    else:
+        visao = pitwall_ui.visao_geral(corrida, paineis, foto, mapa, ativos.get('alt_foto', 'Imagem ilustrativa do circuito'))
+    st.markdown(visao + pitwall_ui.campeonatos(paineis, pacote['temporada']), unsafe_allow_html=True)
     with st.expander('Fontes, contexto do circuito e classificações completas', expanded=st.session_state.get('mostrar_fontes', False) or st.query_params.get('painel') in ('pilotos', 'equipes')):
         st.caption('Foto do circuito · Contexto do circuito. Ativos ilustrativos; não fornecem entradas ao modelo.')
         for label, meta in [('Imagem', foto_meta), ('Mapa', mapa_meta)]:
@@ -376,7 +383,10 @@ def renderizar_contexto_circuito(pacote, corrida):
             snapshot = paineis[campo]
             st.markdown('<h3 id="{}">{} {}</h3>'.format(ancora, titulo, pacote['temporada']), unsafe_allow_html=True)
             if snapshot['disponivel']:
-                st.caption('Rodada de referência: {} · Snapshot: {} · Captura UTC: {} · {} página(s) validada(s).'.format(snapshot['rodada_referencia'], snapshot['snapshot_id'], snapshot['obtido_em_utc'], snapshot['paginas_validadas']))
+                if snapshot.get('origem') == 'acervo':
+                    st.caption('Rodada de referência: {} · {} · Captura UTC: {}.'.format(snapshot['rodada_referencia'], snapshot.get('escopo', 'Fotografia histórica do acervo'), snapshot.get('obtido_em_utc') or 'desconhecida'))
+                else:
+                    st.caption('Rodada de referência: {} · Snapshot: {} · Captura UTC: {} · {} página(s) validada(s).'.format(snapshot['rodada_referencia'], snapshot['snapshot_id'], snapshot['obtido_em_utc'], snapshot['paginas_validadas']))
                 st.dataframe(pd.DataFrame(snapshot['classificacao']), width='stretch', hide_index=True)
             else:
                 st.caption(snapshot['motivo'])
@@ -566,6 +576,13 @@ def tela_explorar(pacote, rodada, foco):
     bloco = dict(bloco)
     bloco['corrida'] = corrida
     participantes = bloco['participantes']
+    acervo_asset, acervo_gp = None, None
+    if (raiz_artefatos() / 'frontend_assets/acervo_dashboard.json').exists():
+        try:
+            acervo_asset = carregar_acervo_dashboard(raiz_artefatos())
+            acervo_gp = acervo_para_gp(acervo_asset, pacote['temporada'], rodada, corrida['circuito_id'])
+        except AcervoDashboardErro as erro:
+            st.warning('O acervo complementar não pôde ser exibido: {}.'.format(erro))
     renderizar_topo(pacote, corrida, participantes)
     st.markdown(pitwall_ui.cabecalho(corrida, pacote['temporada'], situacao_corrida(corrida)), unsafe_allow_html=True)
     if foco == 'Corridas':
@@ -573,28 +590,44 @@ def tela_explorar(pacote, rodada, foco):
             'Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes',
         ))
         with visao_geral:
-            renderizar_contexto_circuito(pacote, corrida)
+            renderizar_contexto_circuito(pacote, corrida, acervo_gp)
         with tempos:
             renderizar_programacao(corrida)
-            renderizar_tempos_sessoes(bloco)
+            if acervo_gp:
+                acervo_dashboard_ui.renderizar_tempos(acervo_gp)
+            else:
+                renderizar_tempos_sessoes(bloco)
         with estrategias:
-            st.info('Estratégias indisponíveis no pacote local.')
+            if acervo_gp:
+                acervo_dashboard_ui.renderizar_estrategias(acervo_gp)
+            else:
+                st.info('Estratégias indisponíveis no pacote local.')
         with clima:
-            renderizar_condicoes_disponiveis(corrida)
+            if acervo_gp:
+                acervo_dashboard_ui.renderizar_clima(acervo_gp)
+            else:
+                renderizar_condicoes_disponiveis(corrida)
         with historico:
             renderizar_estado_dados(corrida)
+            if acervo_gp:
+                acervo_dashboard_ui.renderizar_historico(acervo_gp)
             if pacote['temporada'] == 2026:
                 with st.expander('Calendário 2026'):
                     renderizar_calendario_2026(pacote, rodada)
         with comparativo_equipes:
-            paineis = carregar_paineis(raiz_artefatos(), pacote['temporada'], rodada, corrida['circuito_id'])
-            equipes = paineis['constructor_standings']
-            if equipes['disponivel']:
-                st.subheader('Campeonato de construtores {}'.format(pacote['temporada']))
-                st.caption('Classificação oficial pós-GP, rodada {}. Contexto descritivo separado das probabilidades individuais de pódio.'.format(rodada))
-                st.dataframe(pd.DataFrame(equipes['classificacao']), width='stretch', hide_index=True)
+            if acervo_gp:
+                acervo_dashboard_ui.renderizar_equipes(acervo_gp)
             else:
-                renderizar_desempenho_equipes_indisponivel()
+                paineis = carregar_paineis(raiz_artefatos(), pacote['temporada'], rodada, corrida['circuito_id'])
+                equipes = paineis['constructor_standings']
+                if equipes['disponivel']:
+                    st.subheader('Campeonato de construtores {}'.format(pacote['temporada']))
+                    st.caption('Classificação oficial pós-GP, rodada {}. Contexto descritivo separado das probabilidades individuais de pódio.'.format(rodada))
+                    st.dataframe(pd.DataFrame(equipes['classificacao']), width='stretch', hide_index=True)
+                else:
+                    renderizar_desempenho_equipes_indisponivel()
+        if acervo_gp:
+            acervo_dashboard_ui.renderizar_fontes(acervo_gp, acervo_asset)
     else:
         renderizar_campeonato_pilotos(pacote)
         renderizar_estado_dados(corrida)

@@ -5,6 +5,7 @@ da rodada e a proveniência das respostas originais. Não se calculam campeonato
 a partir de resultados de GPs: isso omitiria Sprint e ajustes administrativos.
 """
 import hashlib
+import copy
 import json
 import math
 import re
@@ -238,6 +239,47 @@ def gerar_asset(raiz, destino):
 
 def _indisponivel(temporada, rodada, motivo):
     return {'disponivel': False, 'classificacao': [], 'temporada': temporada, 'rodada_referencia': rodada, 'motivo': motivo}
+
+
+def complementar_paineis(paineis, acervo_gp):
+    """Acrescenta snapshots do GP exato; preserva o painel oficial já validado.
+
+    Fotografias CSV não recebem paginação ou horário de aquisição inventados.
+    Este adaptador só trabalha com o asset descritivo validado pelo leitor.
+    """
+    resultado = copy.deepcopy(paineis)
+    if not acervo_gp:
+        return resultado
+    identidade = acervo_gp.get('identidade', {})
+    if any(identidade.get(campo) != paineis[campo] for campo in ('temporada', 'rodada', 'circuito_id')):
+        raise PaineisDadosErro('Acervo não corresponde ao GP dos painéis.')
+    for tipo, campo in [('driver_standings', 'campeonato_pilotos'), ('constructor_standings', 'campeonato_equipes')]:
+        if resultado[tipo].get('disponivel'):
+            continue
+        snapshot = acervo_gp.get(campo)
+        if not isinstance(snapshot, dict) or not snapshot.get('disponivel'):
+            continue
+        linhas = snapshot.get('classificacao')
+        if not isinstance(linhas, list) or not linhas:
+            continue
+        campo_id = 'piloto_id' if tipo == 'driver_standings' else 'equipe_id'
+        ids = [_texto(linha.get(campo_id)) for linha in linhas]
+        posicoes = [_inteiro(linha['posicao'], 1) for linha in linhas if linha.get('posicao') is not None]
+        if len(set(ids)) != len(linhas) or len(set(posicoes)) != len(posicoes):
+            raise PaineisDadosErro('Identidades ou posições incompletas no campeonato do acervo.')
+        for linha in linhas:
+            _pontos(linha.get('pontos'))
+            _texto(linha.get('piloto' if tipo == 'driver_standings' else 'equipe'))
+        resultado[tipo] = dict(snapshot, disponivel=True, origem='acervo',
+            temporada=paineis['temporada'], rodada_referencia=paineis['rodada'],
+            circuito_id=paineis['circuito_id'], paginas_validadas=None,
+            snapshot_id='acervo-descritivo-{}-{}'.format(paineis['temporada'], paineis['rodada']),
+            obtido_em_utc=snapshot.get('obtido_em_utc') or 'desconhecida',
+            escopo=snapshot.get('escopo') or 'Classificação publicada na fotografia local; aquisição histórica desconhecida.')
+        if len(posicoes) != len(linhas):
+            resultado[tipo]['parcial'] = True
+            resultado[tipo]['escopo'] += ' Algumas posições não foram informadas pela fonte e permanecem ausentes.'
+    return resultado
 
 
 def carregar_paineis(root, temporada, rodada, circuito_id):

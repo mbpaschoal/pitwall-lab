@@ -8,13 +8,15 @@ previsão ao vivo, não estima a ordem do pódio e não consulta fontes na execu
 
 ![Tela de desempenho de 2025](reports/dashboard_v1/desempenho_desktop.png)
 
-## Três telas
+## Telas e acervo
 
-- **Explorar um GP:** probabilidades já calculadas, favoritos publicados,
-  cobertura e resultados posteriores mantidos separados.
+- **Corridas:** contexto, tempos de sessão, pneus/paradas, clima, histórico e
+  comparação de equipes para 66 GPs de 2024–2026, incluindo Austin.
+- **Previsões:** probabilidades e favoritos já publicados, com a emissão
+  prospectiva de Austin e seus resultados posteriores mantidos separados.
 - **Desempenho:** métricas probabilísticas, ranking, calibração e cobertura por
   Grande Prêmio.
-- **Como funciona:** método, documentos e relatórios renderizados dentro da
+- **Metodologia:** método, documentos e relatórios renderizados dentro da
   própria interface, além de downloads dos CSVs que acompanham a demonstração.
 
 ## Arquitetura simples
@@ -24,6 +26,13 @@ valida apenas nove CSV/JSON de resultados. `documentacao_local.py` oferece uma
 allowlist de documentação offline; ele não abre caminhos arbitrários nem baixa
 conteúdo. Não há joblib, scikit-learn, treinamento, inferência, coletor, API de
 dados ou dados brutos neste pacote.
+
+`acervo_dashboard_dados.py` lê o asset descritivo portátil; as novas tabelas
+foram preparadas offline, sem alterar os nove artefatos científicos anteriores.
+Clima Open-Meteo em grade e medições de pista OpenF1 são separados. Pneus mostram
+sequências observadas, com ausências e limites inconsistentes identificados.
+As voltas detalhadas da classificação de Baku 2025 permanecem indisponíveis;
+seus tempos agregados estão presentes.
 
 ## Fonte, método e resultados
 

@@ -7,6 +7,8 @@ GUIA_HOSPEDAGEM.md
 LICENCA_CODIGO.md
 MANIFESTO.json
 README.md
+acervo_dashboard_dados.py
+acervo_dashboard_ui.py
 app.py
 catalogo_visual.py
 contexto_editorial.py
@@ -76,6 +78,7 @@ docs/experimento_modelo_v1.md
 docs/protocolo_temporal.md
 docs/relatorio_2024.md
 documentacao_local.py
+frontend_assets/acervo_dashboard.json
 frontend_assets/contexto_editorial.json
 frontend_assets/paineis_editoriais.json
 frontend_assets/pitwall.css
@@ -95,6 +98,7 @@ reports/modelo_v1/calibracao.csv
 reports/modelo_v1/metricas.json
 reports/modelo_v1/previsoes_validacao.csv
 requirements.txt
+tests/test_acervo_publico.py
 tests/test_dashboard_app.py
 tests/test_dashboard_dados.py
 tests/test_distribuicao.py

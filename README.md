@@ -55,6 +55,13 @@ A entrega portátil pronta para hospedagem está em
 Ela contém seu próprio `app.py`, `requirements.txt`, configuração Streamlit e
 inventário de arquivos publicáveis.
 
+A interface inclui o acervo descritivo de 66 GPs de 2024–2026 (até Austin),
+com tempos de sessões, voltas, pit stops, pneus, comparativo de equipes e
+clima histórico Open-Meteo. A projeção portátil fica em
+`frontend_assets/acervo_dashboard.json`; sua preparação offline usa
+`preparar_acervo_dashboard.py`. As ausências das fontes são sinalizadas e
+esses dados não alteram as probabilidades registradas do modelo v1.
+
 O aplicativo público está em **https://pitwall-lab.streamlit.app/**. Para
 atualizar a publicação no Streamlit Community Cloud, selecione a branch `main`
 e o entrypoint:

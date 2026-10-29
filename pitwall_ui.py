@@ -1,5 +1,6 @@
 """Composição editorial compartilhada entre temporadas; sem inferência ou rede."""
 import base64
+import math
 from datetime import date
 from html import escape
 from pathlib import Path
@@ -82,7 +83,7 @@ def campeonatos(paineis, temporada):
     return '<div class="pw-standings">{}</div>'.format(''.join(cards))
 
 
-def visao_geral(corrida, paineis, foto, mapa, alt):
+def visao_geral(corrida, paineis, foto, mapa, alt, clima=None):
     info = paineis['circuit_info']
     metrics = [('Comprimento',info.get('comprimento_km'),' km'),('Curvas',info.get('curvas'),''),('Voltas',info.get('voltas'),''),('Distância da corrida',info.get('distancia_corrida_km'),' km')]
     metric_html = ''.join('<div><small>{}</small><strong>{}</strong></div>'.format(label,e((('{:.1f}'.format(value) if label == 'Distância da corrida' else str(value)).replace('.',','))+unit if value is not None else '—')) for label,value,unit in metrics)
@@ -93,4 +94,9 @@ def visao_geral(corrida, paineis, foto, mapa, alt):
         photo_html += '<span class="pw-image-label">Ilustração IA</span>'
     map_html = '<img src="{}" alt="Mapa do circuito {}">'.format(mapa,e(corrida['circuito_nome'])) if mapa else '<p>Mapa do circuito indisponível.</p>'
     length = str(info.get('comprimento_km')).replace('.',',')+' km' if info.get('comprimento_km') is not None else 'Comprimento não documentado'
-    return '<section class="pw-overview" aria-label="Visão geral do circuito"><div class="pw-track"><figure class="hero-circuito">{}<figcaption class="hero-sobreposicao"><p class="circuito-rotulo">Circuito</p><h2>{}</h2><div class="pw-track-metrics">{}</div></figcaption></figure><section class="mapa-circuito" aria-label="Mapa do circuito"><div class="mapa-meta"><strong>{}</strong>{}<span>{}</span></div>{}</section></div><div class="coluna-circuito"><section class="painel-editorial"><h3>Condições disponíveis</h3><p>{}</p><div class="pw-weather"><span class="pw-weather-icon" aria-hidden="true">partly_cloudy_day</span><div><strong>—</strong><p>Clima não disponível</p></div></div></section><section class="painel-editorial"><h3>Informações do circuito</h3><dl class="pw-circuit-info">{}</dl></section></div></section>'.format(photo_html,e(corrida['circuito_nome']),metric_html,e(corrida['cidade']),e(COUNTRIES.get(corrida['pais'],corrida['pais'])),e(length),map_html,e(data_editorial(corrida['data'])),details)
+    temperatura, nota_clima = '—', 'Clima não disponível'
+    media = (clima or {}).get('resumo', {}).get('temperatura_media_c')
+    if isinstance(media, (int, float)) and not isinstance(media, bool) and math.isfinite(media):
+        temperatura = '{:.1f} °C'.format(media).replace('.', ',')
+        nota_clima = 'Open-Meteo · média do período histórico'
+    return '<section class="pw-overview" aria-label="Visão geral do circuito"><div class="pw-track"><figure class="hero-circuito">{}<figcaption class="hero-sobreposicao"><p class="circuito-rotulo">Circuito</p><h2>{}</h2><div class="pw-track-metrics">{}</div></figcaption></figure><section class="mapa-circuito" aria-label="Mapa do circuito"><div class="mapa-meta"><strong>{}</strong>{}<span>{}</span></div>{}</section></div><div class="coluna-circuito"><section class="painel-editorial"><h3>Condições disponíveis</h3><p>{}</p><div class="pw-weather"><span class="pw-weather-icon" aria-hidden="true">partly_cloudy_day</span><div><strong>{}</strong><p>{}</p></div></div></section><section class="painel-editorial"><h3>Informações do circuito</h3><dl class="pw-circuit-info">{}</dl></section></div></section>'.format(photo_html,e(corrida['circuito_nome']),metric_html,e(corrida['cidade']),e(COUNTRIES.get(corrida['pais'],corrida['pais'])),e(length),map_html,e(data_editorial(corrida['data'])),e(temperatura),e(nota_clima),details)
