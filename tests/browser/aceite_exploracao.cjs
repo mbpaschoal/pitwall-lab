@@ -23,15 +23,14 @@ fs.mkdirSync(output, {recursive:true});
  const context = await browser.newContext({viewport:{width:1440,height:1200}});
  let p = await open(context, 'tela=Pilotos', 'Pilotos');
  await p.screenshot({path:path.join(output,'pilotos-pt.png')});
- let frame = p.frames().find(f => f.url().includes('pitwall_favorite'));
- check(frame, 'Missing favourite component');
- await frame.locator('select').selectOption('max_verstappen');
+ // Resolve the iframe again after every rerender instead of retaining a detached Frame.
+ let favourite = p.frameLocator('iframe[src*="pitwall_favorite"]').locator('select');
+ await favourite.selectOption('max_verstappen');
  await p.getByRole('button',{name:'Ver meu favorito',exact:true}).waitFor();
  await p.reload();
  await p.getByRole('heading',{level:1,name:'Pilotos',exact:true}).waitFor();
- frame = p.frames().find(f => f.url().includes('pitwall_favorite'));
- await frame.locator('select').waitFor();
- check(await frame.locator('select').inputValue() === 'max_verstappen', 'Favourite lost after reload');
+ favourite = p.frameLocator('iframe[src*="pitwall_favorite"]').locator('select');
+ await favourite.locator('option[value="max_verstappen"]:checked').waitFor({state:'attached',timeout:15000});
  // A persisted favourite must not overwrite a shared driver or period.
  p = await open(context, 'tela=Pilotos&visao=perfil&piloto=norris&anos=2026&lang=en', 'Drivers');
  await p.locator('.pilot-profile h2').filter({hasText:'Lando Norris'}).waitFor();

@@ -4,6 +4,10 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.3.1 — 2026-10-30
+
+Fix favourite-test synchronisation: acceptance now resolves the current iframe after reload and waits for the persisted value, rather than holding a Frame that Streamlit may detach. The issue appeared in the main-branch CI; the 0.3.0 release and public app had passed. Data, comparison rules and scientific model are unchanged. CI also regenerates the distribution and compares it with the published copy. Validation covers the full browser journey against the served package and package integrity.
+
 ## 0.3.0 — 2026-10-29
 
 - Fan navigation: complete championship in its own screen, race results first and technical explanations in a second layer.

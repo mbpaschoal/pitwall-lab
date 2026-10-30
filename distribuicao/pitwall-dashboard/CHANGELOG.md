@@ -4,6 +4,10 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.3.1 — 2026-10-30
+
+Corrige a sincronização do teste de favorito: o aceite passa a localizar o iframe atual após recarregar e aguardar o valor persistido, em vez de guardar uma referência que pode ser removida pelo Streamlit. A instabilidade foi observada no CI da branch principal; a release 0.3.0 e a aplicação pública haviam passado. Dados, regras de comparação e modelo científico permanecem iguais. O CI também regenera a distribuição e compara com a cópia publicada. Validação: jornada completa do navegador contra o pacote servido e conferência de integridade.
+
 ## 0.3.0 — 2026-10-29
 
 - Navegação para fãs: campeonato completo em uma tela própria, resultados primeiro e explicações técnicas em segundo nível.
