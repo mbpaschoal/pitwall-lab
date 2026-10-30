@@ -38,4 +38,16 @@ Emission requires committed operational code, the frozen model, complete admitte
 
 The 2026 Lab score includes only registered predictions with validated later outcomes. Retrospective trials are excluded; small samples do not establish superiority. Frozen v1, its 15 inputs and existing probabilities remain unchanged.
 
-Local follow-up requires this computer and Codex to be available. This is not a continuously hosted collector. Delayed sources remain explicit pending data.
+## Hosted automation
+
+The [collection workflow](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml) replaces local follow-up: it runs on GitHub servers every half-hour, at minutes 7 and 37. It requires neither the personal computer nor chat reminders. Scheduler delays are possible; this is not a real-time guarantee.
+
+`operacao2026/cloud.py` uses the explicit Mexico configuration and discovers subsequent 2026 events using the canonical calendar, exact dates and OpenF1 meetings. Sprint sessions are preserved. Collection runs from the day before first practice through 48 hours after the race; no telemetry is acquired outside that window. Revisions are checked after 16 hours past the scheduled race end. Ambiguous identity stops collection.
+
+Runs are serialized, preserve cache and cooldowns, and retry delayed sources. GitHub may evict execution caches; a replacement capture receives its own UTC. Original captures also accompany automatic releases as `capturas-originais.tar.gz`, independently of the cache. Persisted state is capped at 128 MiB and compressed captures at 32 MiB. No credentials are stored in captures.
+
+Only substantive changes create a version, PT/EN notes, export, tests, navigation checks, commit/tag and release. Query timestamps and forecast-only changes do not create releases; hourly forecasts refresh alongside new session data. The app shows the last published verification and links to the workflow. Previous weekends remain in a public archive without borrowing the next GP's data. The same workflow validates delivery because `GITHUB_TOKEN` pushes do not trigger further push workflows. Failures remain visible in Actions; displayed timestamps are never artificially advanced.
+
+This uses standard Linux runners for a public repository, without enabling paid services or increasing storage limits. Cache and logs have their own limits. Product browser evidence is retained for three days. [GitHub Actions billing](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
+
+The automation collects and publishes descriptive context. It neither trains models nor emits probabilities: prospective emission rules above remain mandatory.

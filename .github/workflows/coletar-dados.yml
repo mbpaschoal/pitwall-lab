@@ -1,0 +1,122 @@
+name: Coleta automática / Automatic collection
+on:
+  schedule:
+    - cron: '7,37 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/coletar-dados.yml'
+      - 'operacao2026/cloud.py'
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: pitwall-automatic-collection
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: github.repository == 'mbpaschoal/pitwall-lab' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Restaurar capturas e espera / Restore captures and cooldown
+        uses: actions/cache/restore@v4
+        with:
+          path: data/operacao_2026/fins_de_semana
+          key: pitwall-collection-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: pitwall-collection-v1-
+      - name: Coletar serialmente / Collect serially
+        id: data
+        run: |
+          python -B -m operacao2026.cloud collect --result "$RUNNER_TEMP/collection.json"
+          python - "$RUNNER_TEMP/collection.json" "$GITHUB_OUTPUT" <<'PY'
+          import json,sys
+          result=json.load(open(sys.argv[1]))
+          with open(sys.argv[2],'a') as output:
+              output.write('changed='+str(result['changed']).lower()+'\n')
+          PY
+      - name: Limitar estado persistido / Bound persisted state
+        id: storage
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          size=sum(p.stat().st_size for p in Path('data/operacao_2026/fins_de_semana').rglob('*') if p.is_file())
+          if size>128*1024*1024:raise SystemExit('Collection state exceeds 128 MiB; preserve and review before increasing storage.')
+          PY
+      - name: Preservar capturas mesmo em falha / Preserve captures even on failure
+        if: always() && steps.storage.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: data/operacao_2026/fins_de_semana
+          key: pitwall-collection-v1-${{ github.run_id }}-${{ github.run_attempt }}
+      - if: steps.data.outputs.changed == 'true'
+        run: python -m pip install -r publicacao/templates/requirements.txt
+      - name: Versionar alteração real / Version substantive change
+        if: steps.data.outputs.changed == 'true'
+        run: |
+          python -B -m operacao2026.cloud prepare-release --result "$RUNNER_TEMP/collection.json"
+          python -B exportar_dashboard.py --destino "$RUNNER_TEMP/generated/pitwall-dashboard"
+          cp -a "$RUNNER_TEMP/generated/pitwall-dashboard/." distribuicao/pitwall-dashboard/
+          python -B -m pitwall.publishing.releases check --base HEAD
+      - name: Validar antes de publicar / Validate before publishing
+        if: steps.data.outputs.changed == 'true'
+        run: |
+          python -B -m unittest tests.test_weekend_cloud tests.test_weekend_operation tests.test_weekend_official tests.test_weekend_ui tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_review_regressions tests.test_fan_exploration
+          python -B verificar_pacote.py --pacote distribuicao/pitwall-dashboard
+          diff -qr --exclude=__pycache__ "$RUNNER_TEMP/generated/pitwall-dashboard" distribuicao/pitwall-dashboard
+      - uses: actions/setup-node@v6
+        if: steps.data.outputs.changed == 'true'
+        with:
+          node-version: '22'
+      - name: Conferir navegação / Check navigation
+        if: steps.data.outputs.changed == 'true'
+        run: |
+          npm install --no-save playwright@1.62.1
+          npx playwright install --with-deps chromium
+          python -m streamlit run distribuicao/pitwall-dashboard/app.py --server.headless true --server.address 127.0.0.1 --server.port 8501 > "$RUNNER_TEMP/streamlit.log" 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8501/_stcore/health; then break; fi
+            sleep 1
+          done
+          node tests/browser/aceite_exploracao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/browser-evidence"
+      - name: Publicar dados e release / Publish data and release
+        if: steps.data.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - "$RUNNER_TEMP/capturas-originais.tar.gz" <<'PY'
+          from pathlib import Path
+          import sys
+          from operacao2026.cloud import archive_captures
+          from pitwall.paths import PROJECT_ROOT
+          archive_captures(PROJECT_ROOT,Path(sys.argv[1]))
+          PY
+          git config user.name 'Pitwall Lab automation'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add VERSION CHANGELOG.md CHANGELOG.en.md publicacao/templates/requirements.txt frontend_assets/operacao_fim_semana.json distribuicao/pitwall-dashboard
+          VERSION=$(cat VERSION)
+          git commit -m "data: atualização automática / automatic update v$VERSION"
+          git tag -a "v$VERSION" -m "Pitwall Lab $VERSION — automatic data update / atualização automática"
+          git push --atomic origin HEAD:main "refs/tags/v$VERSION"
+          python - "$RUNNER_TEMP/release-notes.md" <<'PY'
+          from pathlib import Path
+          import sys
+          from pitwall.publishing.releases import notes
+          Path(sys.argv[1]).write_text('## Português\n\n'+notes('pt')+'\n\n## English\n\n'+notes('en'))
+          PY
+          gh release create "v$VERSION" "$RUNNER_TEMP/generated/pitwall-dashboard.zip" "$RUNNER_TEMP/capturas-originais.tar.gz" --verify-tag --title "Pitwall Lab $VERSION" --notes-file "$RUNNER_TEMP/release-notes.md"
+      - name: Conferir versão pública / Verify public deployment
+        if: steps.data.outputs.changed == 'true'
+        run: node tests/browser/verificar_publicacao.cjs "$(cat VERSION)" "$RUNNER_TEMP/collection.json"
+      - name: Registrar resultado / Record outcome
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/collection.json" ]; then cat "$RUNNER_TEMP/collection.json" >> "$GITHUB_STEP_SUMMARY"; fi

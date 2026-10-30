@@ -14,6 +14,11 @@ from operacao2026.fontes import _lock
 
 ENDPOINTS = ('race_control', 'drivers', 'session_result', 'weather', 'laps', 'stints', 'pit')
 NAMES = ('Practice 1', 'Practice 2', 'Practice 3', 'Qualifying', 'Race')
+SESSION_TYPES = {
+    'Practice 1': ('Practice',), 'Practice 2': ('Practice',), 'Practice 3': ('Practice',),
+    'Qualifying': ('Qualifying',), 'Race': ('Race',),
+    'Sprint Qualifying': ('Sprint Qualifying', 'Qualifying'), 'Sprint': ('Race', 'Sprint'),
+}
 
 
 def load_event(path):
@@ -23,12 +28,13 @@ def load_event(path):
     if type(event.get('temporada')) is not int or event['temporada'] != 2026 or type(event.get('rodada')) is not int or not 1 <= event['rodada'] <= 24 or not re.fullmatch(r'[a-zA-Z0-9_-]+', event.get('circuito_id','')):
         raise ValueError('Invalid canonical event identity')
     sessions = event['sessions']
-    if sorted(s['session_name'] for s in sessions) != sorted(NAMES):
+    names = [s['session_name'] for s in sessions]
+    if not {'Practice 1', 'Qualifying', 'Race'}.issubset(names) or len(names) != len(set(names)) or any(n not in SESSION_TYPES for n in names):
         raise ValueError('Missing or duplicated session')
-    if len({s['session_key'] for s in sessions}) != 5 or len({s['meeting_key'] for s in sessions}) != 1:
+    if len({s['session_key'] for s in sessions}) != len(sessions) or len({s['meeting_key'] for s in sessions}) != 1:
         raise ValueError('Ambiguous session identity')
     for session in sessions:
-        if session['session_type'] != ('Practice' if session['session_name'].startswith('Practice') else session['session_name']):
+        if session['session_type'] not in SESSION_TYPES[session['session_name']]:
             raise ValueError('Invalid session type')
         if session['year'] != event['temporada'] or session['location'] != event['location'] or session['country_name'] != event['country_name']:
             raise ValueError('Session belongs to another event')
@@ -51,7 +57,7 @@ def verify_rows(rows, session):
 def finished(rows, session):
     verify_rows(rows, session)
     flags = [r for r in rows if r.get('message') == 'SESSION FINISHED'
-             and (session['session_name'] != 'Qualifying' or r.get('qualifying_phase') == 3)]
+             and (session['session_name'] not in ('Qualifying', 'Sprint Qualifying') or r.get('qualifying_phase') == 3)]
     if any(instant(r['date']) < instant(session['date_start']) for r in flags):
         raise ValueError('Finish before session start')
     return max((instant(r['date']) for r in flags), default=None)
@@ -181,7 +187,7 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
                 state['retry_after_utc'] = deadline.isoformat()
             save_checkpoint(run/'estado.json', state)
             # On failure keep the last usable state; store cooldown independently.
-            if len(state['sessoes']) == 5:
+            if len(state['sessoes']) == len(event['sessions']):
                 save_checkpoint(base/'estado.json',state)
             elif deadline:
                 previous['retry_after_utc'] = deadline.isoformat()

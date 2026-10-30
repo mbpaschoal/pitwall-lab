@@ -16,7 +16,12 @@ def load_status(root, year, round_, circuit):
     if not isinstance(state, dict) or any((k not in state for k in ('temporada', 'rodada', 'circuito_id', 'sessoes', 'atualizado_em_utc'))) or state.get('schema') != 'pitwall-weekend-public-v1':
         raise ValueError('Unknown weekend schema')
     if (state['temporada'], state['rodada'], state['circuito_id']) != (year, round_, circuit):
-        return None
+        matches = [s for s in state.get('arquivo_eventos', []) if (s.get('temporada'),s.get('rodada'),s.get('circuito_id')) == (year,round_,circuit)]
+        if not matches:
+            return None
+        if len(matches) != 1:
+            raise ValueError('Ambiguous archived event')
+        state = matches[0]
     if not isinstance(state.get('sessoes'), list) or any((not isinstance(s, dict) or type(s.get('session_key')) is not int for s in state['sessoes'])):
         raise ValueError('Invalid session list')
     if len({s['session_key'] for s in state['sessoes']}) != len(state['sessoes']):
@@ -31,6 +36,8 @@ def render_status(state):
         return
     stamp = datetime.fromisoformat(state['atualizado_em_utc'].replace('Z', '+00:00')).strftime('%Y-%m-%d %H:%M UTC')
     st.caption('Verificação das fontes: {}. Dados coletados após as sessões; sujeitos ao prazo de publicação.'.format(stamp))
+    if state.get('automacao', {}).get('modo') == 'github_actions':
+        st.markdown('[Atualização automática · acompanhar coleta no GitHub](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml)')
     with st.expander('Acompanhar chegada dos dados'):
         st.dataframe(pd.DataFrame([{'Sessão': {'Practice 1':'Treino livre 1','Practice 2':'Treino livre 2','Practice 3':'Treino livre 3','Qualifying':'Classificação','Race':'Corrida'}.get(s['nome'],s['nome']), 'Situação': STATES[s['estado']]} for s in state['sessoes']]), hide_index=True, width='stretch')
         st.caption('A previsão meteorológica é uma estimativa arquivada. O clima observado da corrida só será consolidado depois da prova.')

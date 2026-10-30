@@ -11,7 +11,10 @@ Who wins more often in the rain? How do two drivers compare at the same races? W
 ![Drivers: historical comparisons by condition](docs/images/pitwall-pilotos-en.png)
 
 
-Mexico 2026 preparation: five-session tracking, explicit sources and times, collection after observed finishes and forecasts separated from race observations. [Operation and limits](docs/en/WEEKEND_OPERATION.md). This publication does not yet contain Mexico results or a prospective Mexico forecast.
+Mexico 2026 preparation: five-session tracking, explicit sources and times, collection after observed finishes and forecasts separated from race observations. [Operation and limits](docs/en/WEEKEND_OPERATION.md). New data appears as sources publish it; observed data does not imply a prospective forecast exists for that GP.
+
+
+Collection is now scheduled through GitHub Actions, independent of the personal computer: new sessions are validated, versioned and published automatically. [Track runs](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml).
 
 ## The product today
 

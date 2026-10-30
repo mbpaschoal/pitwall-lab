@@ -942,16 +942,20 @@ def tela_explorar(pacote, rodada, foco):
         except AcervoDashboardErro as erro:
             st.warning("O acervo complementar não pôde ser exibido: {}.".format(erro))
     renderizar_topo(pacote, corrida, participantes)
-    st.markdown(
-        pitwall_ui.cabecalho(corrida, pacote["temporada"], situacao_corrida(corrida), show_prediction_note=foco == "Previsões"),
-        unsafe_allow_html=True,
-    )
     from pitwall.dashboard.weekend_views import load_status, render_status, render_times, render_weather, render_strategies, render_podium
     try:
         weekend = load_status(raiz_artefatos(), pacote["temporada"], rodada, corrida["circuito_id"])
     except (ValueError, OSError):
         weekend = None
         st.warning("Não foi possível validar o estado da coleta deste GP.")
+    display_status=situacao_corrida(corrida)
+    observed_race=next((session for session in (weekend or {}).get('sessoes',[]) if session['nome']=='Race'),{})
+    if observed_race.get('encerramento_observado_utc') and observed_race.get('tempos'):
+        display_status='Resultado publicado pela OpenF1'
+    st.markdown(
+        pitwall_ui.cabecalho(corrida,pacote['temporada'],display_status,show_prediction_note=foco=='Previsões'),
+        unsafe_allow_html=True,
+    )
     render_status(weekend)
     if foco == "Corridas":
         abas = (

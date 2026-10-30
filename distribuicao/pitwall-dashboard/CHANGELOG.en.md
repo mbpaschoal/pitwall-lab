@@ -4,6 +4,10 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.4.1 — 2026-10-30
+
+Automatic GitHub Actions collection and publication, scheduled every half-hour. The calendar identifies upcoming 2026 races, including Sprint sessions, without approximate identity matching. Persisted cache and cooldowns, original captures archived as release assets, and versions only for substantive changes. Publication requires tests, navigation checks and public deployment verification. Collection automation never trains or emits predictions; frozen v1 safeguards remain intact.
+
 ## 0.4.0 — 2026-10-30
 
 In Summary, the circuit image and track outline now precede the podium, giving the venue visual priority.

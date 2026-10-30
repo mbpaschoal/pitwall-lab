@@ -27,7 +27,7 @@ jobs:
             python -m pitwall.publishing.releases check --base "$BASE_REF"
           fi
       - name: Testes PT e EN / PT and EN tests
-        run: python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_dashboard_acervo_app tests.test_interface_editorial tests.test_driver_conditions tests.test_driver_projection tests.test_pilot_views tests.test_race_weather tests.test_tyre_reconciliation tests.test_driver_source_audit tests.test_review_regressions tests.test_fan_exploration tests.test_weekend_operation tests.test_weekend_official tests.test_weekend_ui
+        run: python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_dashboard_acervo_app tests.test_interface_editorial tests.test_driver_conditions tests.test_driver_projection tests.test_pilot_views tests.test_race_weather tests.test_tyre_reconciliation tests.test_driver_source_audit tests.test_review_regressions tests.test_fan_exploration tests.test_weekend_operation tests.test_weekend_official tests.test_weekend_ui tests.test_weekend_cloud
       - name: Integridade do pacote publicado / Published package integrity
         run: |
           python -B exportar_dashboard.py --destino "$RUNNER_TEMP/expected-package/pitwall-dashboard"
@@ -58,6 +58,7 @@ jobs:
         if: always()
         with:
           name: fan-journey-evidence
+          retention-days: 3
           path: |
             ${{ runner.temp }}/browser-evidence
             ${{ runner.temp }}/streamlit.log

@@ -4,6 +4,10 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.4.1 — 2026-10-30
+
+Coleta e publicação automáticas no GitHub Actions, agendadas a cada meia hora. O calendário identifica os próximos GPs de 2026, incluindo sessões Sprint, sem troca aproximada de identidade. Cache com espera persistida, originais preservados como asset de release e novas versões apenas para mudanças reais. Publicação exige testes, navegação e conferência pública. A automação de coleta não treina nem emite previsões; as barreiras do modelo v1 continuam intactas.
+
 ## 0.4.0 — 2026-10-30
 
 No Resumo, foto e traçado da pista passam a aparecer antes do pódio, dando destaque ao circuito.

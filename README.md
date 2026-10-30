@@ -11,7 +11,10 @@ Quem ganha mais na chuva? Como dois pilotos se saem nos mesmos GPs? Quem já foi
 ![Pilotos: comparações históricas por condição](docs/images/pitwall-pilotos.png)
 
 
-Preparação do México 2026: acompanhamento das cinco sessões, fontes e horários explícitos, coleta após encerramento observado e clima previsto separado das medições da corrida. [Operação e limites](docs/OPERACAO_FIM_SEMANA.md). A publicação atual ainda não contém resultados nem previsão prospectiva do México.
+Preparação do México 2026: acompanhamento das cinco sessões, fontes e horários explícitos, coleta após encerramento observado e clima previsto separado das medições da corrida. [Operação e limites](docs/OPERACAO_FIM_SEMANA.md). Dados novos aparecem conforme as fontes publicam; dados observados não significam que exista previsão prospectiva para aquele GP.
+
+
+A coleta agora é agendada no GitHub Actions, sem depender do computador pessoal: novas sessões são validadas, versionadas e publicadas automaticamente. [Acompanhar execuções](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml).
 
 ## O produto hoje
 
