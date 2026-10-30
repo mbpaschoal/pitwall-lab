@@ -4,6 +4,10 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.4.2 — 2026-10-30
+
+Automatic Mexico City Grand Prix data update through GitHub Actions. Sessions with received data: 0/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.4.1 — 2026-10-30
 
 Automatic GitHub Actions collection and publication, scheduled every half-hour. The calendar identifies upcoming 2026 races, including Sprint sessions, without approximate identity matching. Persisted cache and cooldowns, original captures archived as release assets, and versions only for substantive changes. Publication requires tests, navigation checks and public deployment verification. Collection automation never trains or emits predictions; frozen v1 safeguards remain intact.

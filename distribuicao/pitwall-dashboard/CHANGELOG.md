@@ -4,6 +4,10 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.4.2 — 2026-10-30
+
+Atualização automática de dados de Mexico City Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 0/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.4.1 — 2026-10-30
 
 Coleta e publicação automáticas no GitHub Actions, agendadas a cada meia hora. O calendário identifica os próximos GPs de 2026, incluindo sessões Sprint, sem troca aproximada de identidade. Cache com espera persistida, originais preservados como asset de release e novas versões apenas para mudanças reais. Publicação exige testes, navegação e conferência pública. A automação de coleta não treina nem emite previsões; as barreiras do modelo v1 continuam intactas.
