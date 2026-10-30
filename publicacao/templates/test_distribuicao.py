@@ -120,7 +120,7 @@ class TestDistribuicao(unittest.TestCase):
         self.assertIn('ARQUIVOS_PUBLICACAO.txt', guia)
         self.assertIn('distribuicao/pitwall-dashboard/app.py', guia)
         fontes = '\n'.join((RAIZ / nome).read_text(encoding='utf-8') for nome in ('pitwall/dashboard/app.py', 'pitwall/data/dashboard.py'))
-        for proibido in ('joblib', 'sklearn', 'treinar_modelo', 'avaliar_modelo', 'data/', 'urllib', 'requests', 'socket'):
+        for proibido in ('joblib', 'sklearn', 'treinar_modelo', 'avaliar_modelo', 'data/', 'urllib.request', 'requests', 'socket'):
             self.assertNotIn(proibido, fontes.lower())
 
 

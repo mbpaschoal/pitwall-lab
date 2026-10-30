@@ -152,20 +152,17 @@ class TestDashboardApp(unittest.TestCase):
             for rotulo in ('Foto do circuito', 'Mapa do circuito', 'Informações do circuito', 'Visão geral'):
                 self.assertIn(rotulo, texto)
 
-    def test_gp_fica_desabilitado_fora_da_exploracao_sem_desabilitar_temporada(self):
+    def test_gp_filter_hidden_where_it_does_not_apply(self):
         self.executar()
-        gp_inicial = por_chave(self.at.get('selectbox'), 'gp').value
-        radio = por_chave(self.at.get('radio'), 'tela')
-
+        gp = por_chave(self.at.selectbox, 'gp').value
         for tela in ('Desempenho', 'Metodologia'):
-            radio.set_value(tela)
+            por_chave(self.at.radio, 'tela').set_value(tela)
             self.executar()
-            seletor_gp = por_chave(self.at.get('selectbox'), 'gp')
-            seletor_temporada = por_chave(self.at.get('selectbox'), 'temporada')
-            self.assertTrue(seletor_gp.disabled)
-            self.assertEqual(seletor_gp.value, gp_inicial)
-            self.assertFalse(seletor_temporada.disabled)
-            self.assertIn('aplica-se em Corridas e Previsões', texto_renderizado(self.at))
+            self.assertFalse(any(x.key == 'gp' for x in self.at.selectbox))
+            self.assertFalse(por_chave(self.at.selectbox, 'temporada').disabled)
+        por_chave(self.at.radio, 'tela').set_value('Corridas')
+        self.executar()
+        self.assertEqual(por_chave(self.at.selectbox, 'gp').value, gp)
 
     def test_grafico_vazio_e_probabilidade_maxima_nao_criam_dado_falso_nem_eixo_acima_de_100(self):
         vazio = app.grafico_probabilidades([])
@@ -208,7 +205,7 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('elegíveis', texto)
         self.assertIn('alvos conhecidos', texto)
         self.assertIn('N/A — não avaliável', texto)
-        self.assertLess(texto.index('Cobertura:'), texto.index('Probabilidades de pódio'))
+        self.assertLess(texto.index('Cobertura:'), texto.index('Chances de pódio'))
         self.assertIn('menos de três favoritos', app.aviso_favoritos_insuficientes(2).lower())
 
     def test_como_funciona_expoe_regras_congeladas_e_links_dos_dois_relatorios(self):
@@ -236,7 +233,7 @@ class TestDashboardApp(unittest.TestCase):
                 seletor_gp.set_value(valor)
                 self.executar()
                 self.assertIn('Ver previsões deste GP', texto_renderizado(self.at))
-                self.assertNotIn('Favoritos por ranking publicado', texto_renderizado(self.at))
+                self.assertNotIn('Quem tinha mais chance de pódio', texto_renderizado(self.at))
                 seletor_gp = por_chave(self.at.get('selectbox'), 'gp')
 
     def test_espanha_e_sao_paulo_2025_exibem_na_motivo_unknown_e_inelegivel(self):
@@ -276,11 +273,11 @@ class TestDashboardApp(unittest.TestCase):
     def test_historico_sem_acervo_nao_reutiliza_podio_da_corrida_atual(self):
         self.executar()
         self.escolher('temporada', 2026)
-        historico=next(tab for tab in self.at.tabs if tab.label=='Histórico')
+        historico=next(tab for tab in self.at.tabs if tab.label=='Nesta pista')
         texto=texto_renderizado(historico)
         self.assertIn('Não há corrida anterior nesta pista', texto)
         self.assertNotIn('Integrantes do pódio observado', texto)
-        tempos=next(tab for tab in self.at.tabs if tab.label=='Tempos')
+        tempos=next(tab for tab in self.at.tabs if tab.label=='Sessões e voltas')
         self.assertIn('Integrantes do pódio observado', texto_renderizado(tempos))
 
     def test_2026_com_resultado_observado_nao_afirma_que_o_podio_esta_vazio(self):
@@ -288,7 +285,7 @@ class TestDashboardApp(unittest.TestCase):
         self.escolher('temporada', 2026)
         texto = texto_renderizado(self.at)
         self.assertIn('Integrantes do pódio observado (sem ordem):', texto)
-        self.assertIn('Previsão registrada antes da corrida.', texto)
+        self.assertNotIn('Previsão registrada antes da corrida.', texto)
         self.assertNotIn('O campo de pódio por GP fica vazio nesta cobertura', texto)
 
     def test_2026_separa_campeonato_local_das_probabilidades_do_gp(self):
@@ -299,7 +296,7 @@ class TestDashboardApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         self.assertNotIn('Campeonato de pilotos', texto)
         self.assertIn('Ver campeonato completo', texto)
-        self.assertIn('Favoritos por ranking publicado', texto)
+        self.assertIn('Quem tinha mais chance de pódio', texto)
         campeonato = app.carregar(2026)['campeonato_pilotos']
         self.assertIn('Vitórias', app.tabela_campeonato_pilotos(campeonato).columns)
         self.assertIn('Max Verstappen', texto)
@@ -329,7 +326,7 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('United States Grand Prix', texto)
         self.assertIn('Austin, USA · 2026-10-25', texto)
         self.assertIn('Previsão registrada', texto)
-        self.assertIn('Favoritos por ranking publicado', texto)
+        self.assertIn('Quem tinha mais chance de pódio', texto)
         self.assertIn('Andrea Kimi Antonelli · Mercedes · 83.5%', texto)
         self.assertIn('Previsão registrada antes da corrida.', texto)
         self.assertNotIn('Estudo retrospectivo com dados históricos.', texto)
@@ -374,12 +371,11 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('Mapa:', texto)
         self.assertIn('CC BY-SA 4.0', texto)
         self.assertIn('Programação do fim de semana', texto)
-        self.assertIn('Campeonato de pilotos', texto)
-        self.assertIn('Campeonato de construtores', texto)
-        self.assertIn('Campeonato de construtores', texto)
-        self.assertIn('607', texto)
+        self.assertNotIn('Campeonato de pilotos', texto)
+        self.assertNotIn('Campeonato de construtores', texto)
+        self.assertNotIn('Campeonato de construtores', texto)
         self.assertNotIn('Estado dos dados', texto)
-        self.assertIn('Previsão registrada', texto)
+        self.assertIn('Resultado observado', texto)
         self.assertNotIn('83.5%', texto)
 
     def test_corridas_austin_tem_hierarquia_editorial_e_navegacao_secundaria_completa(self):
@@ -390,12 +386,12 @@ class TestDashboardApp(unittest.TestCase):
         for rotulo in ('Foto do circuito', 'Informações do circuito', 'Clima'):
             self.assertIn(rotulo, texto)
         codigo = Path(app.__file__).read_text(encoding='utf-8')
-        for aba in ('Visão geral', 'Tempos', 'Estratégias', 'Clima', 'Histórico', 'Comparativo de equipes'):
+        for aba in ('Resumo', 'Sessões e voltas', 'Pneus e paradas', 'Clima', 'Nesta pista', 'Equipes'):
             self.assertIn(aba, codigo)
         self.assertIn('Clima não disponível', texto)
-        self.assertIn('Previsão registrada', texto)
+        self.assertIn('Resultado observado', texto)
         self.assertNotIn('Andrea Kimi Antonelli · Mercedes · 83.5%', texto)
-        self.assertIn('Previsão registrada antes da corrida.', texto)
+        self.assertNotIn('Previsão registrada antes da corrida.', texto)
         self.assertNotIn('Estudo retrospectivo com dados históricos.', texto)
 
         css = app.estilo_dashboard()
@@ -476,15 +472,15 @@ class TestDashboardApp(unittest.TestCase):
         self.escolher('temporada', 2026)
         self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2026:18')
         corridas = texto_renderizado(self.at)
-        self.assertIn('Campeonato de pilotos', corridas)
+        self.assertNotIn('Campeonato de pilotos', corridas)
         self.assertIn('Integrantes do pódio observado', corridas)
-        self.assertNotIn('Favoritos por ranking publicado', corridas)
+        self.assertNotIn('Quem tinha mais chance de pódio', corridas)
         self.assertNotIn('Previsão e resultado observado', corridas)
         por_chave(self.at.radio, 'tela').set_value('Previsões')
         self.executar()
         previsoes = texto_renderizado(self.at)
         self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2026:18')
-        self.assertIn('Favoritos por ranking publicado', previsoes)
+        self.assertIn('Quem tinha mais chance de pódio', previsoes)
         self.assertIn('Avaliação posterior desta previsão registrada', previsoes)
         self.assertNotIn('Campeonato de pilotos', previsoes)
         self.assertNotIn('Informações do circuito', previsoes)

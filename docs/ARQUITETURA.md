@@ -30,3 +30,9 @@ Documentos ingleses ficam em `docs/en/`; a seleção usa uma allowlist explícit
 ## Como alterar
 
 Comece pelo contrato de papel no blueprint. Mantenha funções pequenas, nomes descritivos, dependências explícitas e testes no comportamento. Evite copiar implementações entre pacote, raiz e distribuição: o pacote portátil é gerado. Registre nova versão para cada entrega e teste o pacote isolado e o idioma afetado. Não faça descoberta irrestrita de testes para uma alteração de apresentação: ela pode executar ciência.
+
+## Entrega 0.3.0
+
+`pitwall/dashboard/model_views.py` concentra a avaliação do Lab; `pilot_views.py` compõe exploração, perfil e duelo. `driver_duel.py` calcula somente em largadas compartilhadas, sem dependências de interface. `search.py` busca entidades locais; `share_cards.py` exporta SVG sem recursos externos. O favorito usa o componente local em `frontend_assets/favorite/` e o armazenamento do navegador.
+
+`distribuicao/pitwall-dashboard/` é gerado pela allowlist e não deve ser editado diretamente. O ZIP é anexado à release, evitando duplicar um binário grande em cada commit. O CI valida a árvore realmente servida. `validar_blueprint.py` pertence ao cofre local e não é requisito da instalação pública.

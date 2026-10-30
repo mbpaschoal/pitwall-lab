@@ -1,5 +1,5 @@
 /* Composição compartilhada. Referência: 1672 × 941; sem regras por temporada. */
-:root { --pw-ink:#061226; --pw-muted:#647493; --pw-line:#dce6ee; --pw-red:#d3071d; --pw-bg:#e8f3fc; }
+:root { --pw-ink:#061226; --pw-muted:#51617e; --pw-line:#dce6ee; --pw-red:#d3071d; --pw-bg:#e8f3fc; }
 .pilot-header { padding:44px 0 22px; }
 .pilot-header h1 { font-family:AbrilFatfaceLocal,Georgia,serif; font-size:64px; font-weight:400; padding:0; letter-spacing:-1px; }
 .pilot-header p { color:var(--pw-muted); font-size:18px; margin-top:4px; }
@@ -64,9 +64,9 @@ html { font-size:16px; }
 .st-key-tela [role="radiogroup"] > label::before { font-family:"Material Symbols Rounded"; font-size:25px; line-height:25px; margin-right:25px; font-weight:400; }
 .st-key-tela [role="radiogroup"] > label:nth-child(1)::before { content:"sports_score"; }
 .st-key-tela [role="radiogroup"] > label:nth-child(2)::before { content:""; width:25px; height:25px; background:currentColor; mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M24 15a10 10 0 0 0-20 0v6l8 3h10l2-5H13l-2-6h12M5 15h5M7 21v-3'/%3E%3C/svg%3E") center / contain no-repeat; }
-.st-key-tela [role="radiogroup"] > label:nth-child(3)::before { content:"task_alt"; }
-.st-key-tela [role="radiogroup"] > label:nth-child(4)::before { content:"bar_chart"; }
-.st-key-tela [role="radiogroup"] > label:nth-child(5)::before { content:"assignment_turned_in"; }
+.st-key-tela [role="radiogroup"] > label:nth-child(3)::before { content:"emoji_events"; }
+.st-key-tela [role="radiogroup"] > label:nth-child(4)::before { content:"task_alt"; }
+.st-key-tela [role="radiogroup"] > label:nth-child(5)::before { content:"bar_chart"; }
 .st-key-tela p { font-size:16px; }
 .sidebar-divider { height:1px; background:var(--pw-line); margin:20px 24px 29px; }
 .st-key-temporada, .st-key-gp { padding:0 24px; }
@@ -208,3 +208,36 @@ nav[aria-label="Documentação"] { line-height:1.9; padding:4px 0 12px; }
 
 /* Show the main straight and pit lane, keeping the portrait outside the frame. */
 .hero-circuito > img.pw-photo-left { width:150%; max-width:none; object-position:left center; }
+
+/* Fan reading rhythm: explanatory prose only; tables retain their width. */
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] > p { max-width:75ch; line-height:1.6; margin-bottom:12px; }
+.pilot-card p { max-width:none; }
+.pilot-header h1 { font-size:clamp(36px,4vw,64px); }
+[data-testid="stMain"] h2 { margin-top:24px; }
+@media(max-width:600px) {
+ .gp-cabecalho h1 { font-size:34px; }
+ .hero-circuito { height:220px; }
+ .mapa-circuito { height:190px; }
+ [data-baseweb="tab-list"] { border-bottom:2px solid var(--pw-line); }
+ [data-baseweb="tab-list"]::after { content:"↔"; position:sticky; right:0; background:var(--pw-bg); padding:8px; }
+}
+
+.st-key-tela [role="radiogroup"] > label:nth-child(6)::before { content:"help_outline"; }
+.pilot-header h1, [data-testid="stMain"] h1 { font-family:AbrilFatfaceLocal, Georgia, serif; }
+@media (max-width:700px) {
+ [data-baseweb="tab-list"] { flex-wrap:wrap; height:auto; gap:4px 14px; padding-bottom:6px; overflow:visible; }
+ [data-baseweb="tab-list"]::after { display:none; }
+ [data-baseweb="tab"] { font-size:13px; padding:8px 0; min-height:42px; }
+ [class*="st-key-pw_language_switch_"] button { min-height:42px; }
+ .tabela-editorial { overflow-x:auto; }
+ .pw-drivers-table { min-width:400px; }
+}
+
+.pw-inline-team { display:none; }
+.gp-status-area p:empty { display:none; }
+@media (max-width:700px) {
+ .pw-inline-team { display:block; font-size:12px; color:var(--pw-muted); margin-left:23px; }
+ .pw-drivers-table { min-width:0; width:100%; font-size:14px; }
+ .pw-drivers-table th:nth-child(3), .pw-drivers-table td:nth-child(3) { display:none; }
+ .pw-drivers-table th:nth-child(2), .pw-drivers-table td:nth-child(2) { width:58%; padding-left:0; }
+}

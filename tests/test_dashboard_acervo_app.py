@@ -92,7 +92,7 @@ class TestDashboardAcervoApp(unittest.TestCase):
         hashes = {p: hashlib.sha256(p.read_bytes()).hexdigest() for p in fontes}
         self.executar(2026, 18)
         texto = texto_renderizado(self.at)
-        self.assertIn('Previsão registrada antes da corrida.', texto)
+        self.assertNotIn('Previsão registrada antes da corrida.', texto)
         self.assertIn('Clima do fim de semana', texto)
         self.assertIn('Pneus e paradas observados', texto)
         self.assertEqual(hashes, {p: hashlib.sha256(p.read_bytes()).hexdigest() for p in fontes})

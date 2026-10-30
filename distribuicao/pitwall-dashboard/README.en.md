@@ -6,13 +6,16 @@
 
 MBPaschoal's Formula 1 data-science portfolio. This package presents individual podium probabilities, evidence and limitations. It does not estimate P1/P2/P3 order or query APIs during navigation.
 
+![Drivers: historical comparisons by condition](docs/images/pitwall-pilotos-en.png)
+
 ## Product
 
-- **Drivers:** condition leaders, individual profiles, minimum samples, ties and GP evidence.
-- **Races:** circuit, complete standings, times, tyres/stops, weather, teams and up to five previous editions at the same circuit.
-- **Predictions:** recorded probabilities and subsequent comparison, separating prospective Austin from retrospective analysis.
-- **Performance:** metrics, calibration and explicit coverage.
-- **Methodology:** offline documents and reports, also in English.
+- **Drivers:** condition leaders, profiles, shared-race duels, browser-local favourites and shareable cards, with explicit samples and ties.
+- **Races:** result and circuit, times, tyres/stops, weather, teams and up to five previous editions at the same circuit.
+- **Championship:** full driver and constructor standings at the selected round.
+- **Podium chances:** recorded probabilities and subsequent comparison, separating prospective Austin from retrospective analysis.
+- **How the Lab did:** metrics, calibration and explicit coverage.
+- **How it works:** offline documents and reports, also in English.
 
 BR/GB flags in the upper-right corner select the language. Navigation retains season, GP and language. Canonical identifiers and scientific downloads preserve original bytes; descriptive tables follow the selected language.
 

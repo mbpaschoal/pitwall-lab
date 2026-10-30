@@ -26,3 +26,7 @@ Descrever o comportamento anterior com um exemplo concreto, a causa conhecida (o
 ## 0.2.0: comparar exige verificar o denominador
 
 O brainstorm contava chuva em sessões completas e podia selecionar Sprint pelo tipo Race. A auditoria passou a exigir o nome literal da corrida, status de início e fim e exclusão de suspensões. O resultado mudou para oito provas com chuva durante a disputa. Também aprendi a preservar diferenças entre feeds: a numeração de voltas na Austrália/2026 não deve ser corrigida por um deslocamento aplicado a linhas sem vínculo. Taxas agora mostram largadas e empates; fontes incompletas permanecem incompletas. [Evidência e limites](../reports/pilotos_condicoes_20261029/README.md).
+
+## 0.3.0 — Comparações justas e leitura agradável
+
+Aprendi que um campo com formato correto ainda pode estar semanticamente errado: vento exige média circular. Também não basta comparar um piloto com todo o grid sem alinhar as corridas e os denominadores. Corrigi essas duas decisões e acrescentei regressões. Na interface, cada informação ganhou um destino: resultado em Corridas, classificação em Campeonato, estimativas em Chances de pódio. Duelo usa largadas em comum, e o cartão informa período, amostra e fonte. Um teste verde na raiz não comprova que o pacote publicado corresponde ao código; a entrega passa a verificar os dois.

@@ -1,9 +1,5 @@
-# Licença do código / Code licensing
+# Licença do código / Code license
 
-## Português
+O código original de MBPaschoal é disponibilizado sob a licença MIT, reproduzida no arquivo LICENSE. Dados, fotografias, mapas, fontes tipográficas e materiais de terceiros mantêm suas próprias licenças, atribuições e restrições. Consulte FONTES_E_DADOS.md e os créditos de cada ativo.
 
-O autor ainda não escolheu uma licença aberta para o código. Este arquivo não concede MIT, Apache, GPL ou outra licença aberta. A disponibilidade pública do repositório não implica a concessão de uma licença de código. As condições dos dados são independentes, descritas em [FONTES_E_DADOS.md](FONTES_E_DADOS.md).
-
-## English
-
-The author has not selected an open-source licence for the code. This file grants no MIT, Apache, GPL or other open-source licence. Public repository availability does not itself grant a code licence. Data conditions are separate; see [FONTES_E_DADOS.md](FONTES_E_DADOS.md).
+Original code by MBPaschoal is available under the MIT License, reproduced in LICENSE. Data, photographs, maps, fonts and third-party materials retain their own licences, attribution requirements and restrictions. See FONTES_E_DADOS.md and individual asset credits.

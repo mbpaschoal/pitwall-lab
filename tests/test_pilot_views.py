@@ -36,6 +36,39 @@ class PilotViewTests(unittest.TestCase):
         self.assertEqual(app.session_state["pilot_view"], "Perfil individual")
         self.assertEqual(app.metric[0].value, "66")
 
+    def test_page_changes_preserve_race_and_driver_filters(self):
+        at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30)
+        at.query_params.update(temporada="2024", gp="12")
+        at.run()
+        at.sidebar.radio[0].set_value("Pilotos").run()
+        at.multiselect(key="pilot_years").set_value([2025]).run()
+        at.sidebar.radio[0].set_value("Corridas").run()
+        self.assertFalse(at.exception)
+        self.assertEqual(at.sidebar.radio[0].value, "Corridas")
+        self.assertEqual(at.selectbox(key="temporada").value, 2024)
+        self.assertEqual(at.selectbox(key="gp").value, "2024:12")
+        at.sidebar.radio[0].set_value("Pilotos").run()
+        self.assertEqual(at.multiselect(key="pilot_years").value, [2025])
+
+    def test_shared_duel_opens_in_english_with_both_drivers(self):
+        at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30)
+        at.query_params.update(tela="Pilotos", visao="duelo", piloto="max_verstappen", rival="norris", anos="2026", lang="en")
+        at.run()
+        self.assertFalse(at.exception)
+        self.assertEqual(at.session_state["pilot_years"], [2026])
+        self.assertEqual(at.session_state["pilot_driver"], "max_verstappen")
+        self.assertEqual(at.session_state["duel_right"], "norris")
+        self.assertIn("Finished ahead of rival", [x.label for x in at.metric])
+
+    def test_driver_without_starts_in_period_is_not_replaced(self):
+        at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30)
+        at.query_params.update(tela="Pilotos", visao="perfil", piloto="bortoleto", anos="2024", lang="en")
+        at.run()
+        self.assertFalse(at.exception)
+        self.assertEqual(at.selectbox(key="pilot_driver").value, "bortoleto")
+        self.assertEqual(at.metric[0].value, "0")
+        self.assertTrue(any("Gabriel Bortoleto" in x.value for x in at.markdown))
+
 
 if __name__ == "__main__":
     unittest.main()

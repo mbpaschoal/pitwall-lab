@@ -4,6 +4,15 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.3.0 — 2026-10-29
+
+- Navegação para fãs: campeonato completo em uma tela própria, resultados primeiro e explicações técnicas em segundo nível.
+- Pilotos: duelos nos mesmos GPs, favorito no navegador, histórico recente, filtros preservados e cartões SVG para compartilhar.
+- Correções: vento usa média circular; comparação individual usa os mesmos GPs; clima do resumo corresponde à corrida quando disponível.
+- Leitura e celular: contraste, parágrafos, abas visíveis e imagens de apresentação menores, preservando os originais.
+- Entrega: licença MIT para código original, verificação do pacote real em CI e documentação PT/EN.
+- Limites: análise histórica não mede habilidade isolada. 17 compostos de treinos/classificação continuam ausentes. Modelo v1 e emissões preservados.
+
 ## 0.2.0 — 2026-10-29
 
 ### Pilotos: comparar resultados com condições reais de corrida

@@ -6,13 +6,18 @@ Portfólio de ciência de dados sobre Fórmula 1, criado por **MBPaschoal**. Est
 
 **[Abrir o dashboard](https://pitwall-lab.streamlit.app/) · [Evolução e aprendizados](docs/APRENDIZADOS.md) · [Versões](CHANGELOG.md) · [Arquitetura](docs/ARQUITETURA.md)**
 
+Quem ganha mais na chuva? Como dois pilotos se saem nos mesmos GPs? Quem já foi bem nesta pista? Explore essas perguntas nos filtros; carro e época também influenciam os resultados.
+
+![Pilotos: comparações históricas por condição](docs/images/pitwall-pilotos.png)
+
 ## O produto hoje
 
-- **Pilotos:** destaques por condição, visão individual, amostra mínima, empates explícitos e corridas de evidência. [Auditoria dos dados](reports/pilotos_condicoes_20261029/README.md).
-- **Corridas:** ficha do circuito, campeonato completo, tempos, clima, pneus/paradas, equipes e desempenho dos pilotos em até cinco edições anteriores na mesma pista.
-- **Previsões:** probabilidades individuais de pódio e comparação posterior. A emissão prospectiva de Austin 2026 permanece separada do estudo retrospectivo.
-- **Desempenho:** log loss, Brier, calibração, ranking e cobertura, com denominadores explícitos.
-- **Metodologia:** documentos e relatórios offline. As bandeiras 🇧🇷 e 🇬🇧 no canto superior direito selecionam português ou inglês e acompanham a navegação.
+- **Pilotos:** destaques por condição, perfil, duelos, favorito no navegador e cartões para compartilhar. Filtros, amostras e empates ficam explícitos. [Auditoria dos dados](reports/pilotos_condicoes_20261029/README.md).
+- **Corridas:** resultado, ficha do circuito, tempos, clima, pneus/paradas, equipes e desempenho dos pilotos em até cinco edições anteriores na mesma pista.
+- **Campeonato:** classificação completa de pilotos e equipes na rodada selecionada.
+- **Chances de pódio:** probabilidades individuais de pódio e comparação posterior. A emissão prospectiva de Austin 2026 permanece separada do estudo retrospectivo.
+- **Acertos do Lab:** log loss, Brier, calibração, ranking e cobertura, com denominadores explícitos.
+- **Como funciona:** documentos e relatórios offline. As bandeiras 🇧🇷 e 🇬🇧 no canto superior direito selecionam português ou inglês e acompanham a navegação.
 
 O acervo descritivo cobre **66 GPs e 330 sessões de 2024–2026 até Austin**. Pilotos usa 1.340 largadas, sensores nos intervalos efetivos e mapas FIA de cada edição. A auditoria registra 295 verificações; 17 compostos de treinos/classificação continuam ausentes e não entram nesses rankings. O Histórico compara edições anteriores da mesma pista. [Correções e limites](docs/DADOS_ATUAIS.md).
 
@@ -49,4 +54,6 @@ Para uma instalação de apresentação independente, use Python 3.12 e as instr
 - [Método v1](docs/experimento_modelo_v1.md) · [English](docs/en/experimento_modelo_v1.md)
 - [Protocolo temporal](docs/protocolo_temporal.md) · [English](docs/en/protocolo_temporal.md)
 
-Dados de fontes diferentes conservam suas próprias condições; nenhuma licença é estendida automaticamente a outra fonte. A licença aberta do código ainda não foi escolhida pelo autor. Projeto educacional independente, sem vínculo oficial com Fórmula 1, fontes ou equipes.
+Dados de fontes diferentes conservam suas próprias condições; nenhuma licença é estendida automaticamente a outra fonte. O código original está sob a [licença MIT](LICENSE); os materiais de terceiros mantêm seus próprios termos. Projeto educacional independente, sem vínculo oficial com Fórmula 1, fontes ou equipes.
+
+- [Entrega dos 45 itens da revisão crítica](docs/REVISAO_030.md)

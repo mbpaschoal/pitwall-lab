@@ -36,7 +36,7 @@ DOCUMENTOS_COPIADOS = (
 FONTES_COPIADAS = FONTES_CIENTIFICAS
 RUNTIME_WORKTREE = (
     ".gitattributes",
-    'VERSION', 'pitwall/version.py', 'CHANGELOG.md', 'CHANGELOG.en.md',
+    'LICENSE', 'VERSION', 'pitwall/version.py', 'CHANGELOG.md', 'CHANGELOG.en.md',
     'pitwall/__init__.py',
     'pitwall/paths.py',
     'pitwall/dashboard/__init__.py',
@@ -60,6 +60,13 @@ RUNTIME_WORKTREE = (
     'pitwall/data/archive.py',
     'pitwall/dashboard/archive_views.py',
     'pitwall/dashboard/pilot_views.py',
+    'docs/REVISAO_030.md', 'docs/en/REVIEW_030.md',
+    'docs/images/pitwall-pilotos.png', 'docs/images/pitwall-pilotos-en.png',
+    'pitwall/dashboard/tokens.py',
+    'pitwall/dashboard/model_views.py', 'pitwall/dashboard/favorites.py',
+    'pitwall/dashboard/search.py', 'pitwall/dashboard/share_cards.py',
+    'pitwall/research/driver_duel.py', 'frontend_assets/favorite/index.html',
+    'tests/test_fan_exploration.py', 'tests/test_review_regressions.py',
     'pitwall/data/driver_conditions.py',
     'pitwall/data/driver_archive_projection.py',
     'pitwall/research/__init__.py',
@@ -185,6 +192,9 @@ def runtime_worktree(raiz):
     catalogo = _ler_catalogo_visual(raiz)
     for ativos in catalogo['circuitos'].values():
         arquivos.extend((ativos['foto']['caminho'], ativos['mapa']['caminho']))
+        derivative = 'dashboard_assets/presentation/' + Path(ativos['foto']['caminho']).stem + '.webp'
+        if (Path(raiz) / derivative).is_file():
+            arquivos.append(derivative)
     if len(arquivos) != len(set(arquivos)):
         raise ValueError('allowlist de runtime contém caminho duplicado')
     return tuple(arquivos)
@@ -323,6 +333,10 @@ def _montar_arquivos(raiz, conteudos, commit):
             conteudo = conteudo.replace(b'(docs/APRENDIZADOS.md)', b'(https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/APRENDIZADOS.md)').replace(b'(docs/en/LEARNING.md)', b'(https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/en/LEARNING.md)')
             modo = 'adaptado_documentacao'
             nota = 'link para o diário publicado; notas da versão preservadas'
+        elif relativo == 'docs/en/relatorio_2024.md':
+            conteudo = conteudo.replace(b'(../../reports/modelo_v1/relatorio.md)', b'(../relatorio_2024.md)')
+            modo = 'adaptado_documentacao'
+            nota = 'link PT resolvido dentro do pacote portatil'
         elif relativo == 'tests/test_dashboard_app.py':
             conteudo = _teste_app_portavel(conteudo)
             modo = 'gerado'

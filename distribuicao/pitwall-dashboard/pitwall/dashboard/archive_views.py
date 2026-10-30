@@ -5,6 +5,7 @@ import math
 import pandas as pd
 import plotly.graph_objects as go
 from pitwall.i18n.streamlit import st
+from pitwall.i18n import language, translate
 
 
 ROTULOS_SESSAO = {
@@ -39,7 +40,8 @@ def _valor(valor, unidade=""):
     if isinstance(valor, (float, int)) and not isinstance(valor, bool):
         if not math.isfinite(valor):
             return "—"
-        return ("{:g}".format(valor) + unidade).replace(".", ",")
+        text = "{:g}".format(valor) + unidade
+        return text.replace(".", ",") if language() == "pt" else text
     return str(valor) + unidade
 
 
@@ -71,13 +73,14 @@ def _tabela(linhas, chave, nome):
     st.dataframe(frame, width="stretch", hide_index=True)
     from pitwall.i18n.streamlit import dataframe as display_dataframe
 
-    st.download_button(
-        "Baixar tabela CSV",
-        display_dataframe(frame).to_csv(index=False).encode("utf-8-sig"),
-        file_name=nome + ".csv",
-        mime="text/csv",
-        key=chave,
-    )
+    with st.expander("Exportar tabela"):
+        st.download_button(
+            "Baixar tabela CSV",
+            display_dataframe(frame).to_csv(index=False).encode("utf-8-sig"),
+            file_name=nome + ".csv",
+            mime="text/csv",
+            key=chave,
+        )
 
 
 def _figura_base(figura, altura=340):
@@ -102,6 +105,7 @@ def renderizar_tempos(gp):
     selecionada = st.selectbox(
         "Sessão com tempos publicados",
         list(por_id),
+        index=next((i for i, key in enumerate(por_id) if por_id[key]["nome"] == "Race"), 0),
         format_func=lambda key: ROTULOS_SESSAO.get(
             por_id[key]["nome"], por_id[key]["nome"]
         ),
@@ -364,128 +368,129 @@ def renderizar_clima(gp):
     if actual:
         st.subheader("Durante a corrida")
         columns = st.columns(3)
-        columns[0].metric("Temperatura média do ar", _valor(actual["air_temperature"], " °C"))
-        columns[1].metric("Temperatura média da pista", _valor(actual["track_temperature"], " °C"))
+        columns[0].metric("Temperatura média do ar", "{:.1f} °C".format(actual["air_temperature"]).replace(".", ","))
+        columns[1].metric("Temperatura média da pista", "{:.1f} °C".format(actual["track_temperature"]).replace(".", ","))
         columns[2].metric("Chuva registrada", "Sim" if actual["rain_condition"] == "recorded" else "Não")
         st.caption("Sensores OpenF1 nos intervalos ativos da corrida; pausas por bandeira vermelha são excluídas. Ausência de chuva registrada não comprova pista seca.")
         with st.expander("Janela efetiva e contexto atmosférico"):
             st.dataframe(pd.DataFrame(actual["active_intervals_utc"], columns=["Início (UTC)", "Fim (UTC)"]), hide_index=True, width="stretch")
             st.caption("Open-Meteo: reconstrução em grade, com amostras horárias dentro desses intervalos; não representa observação contínua na pista.")
             st.dataframe(pd.DataFrame(actual["atmospheric_context"]["amostras"]).rename(columns={"time_utc": "Hora (UTC)", "cloud_cover": "Cobertura de nuvens (%)", "weather_code": "Código meteorológico WMO"}), hide_index=True, width="stretch")
-    st.subheader("Clima do fim de semana")
-    clima = gp.get("clima") or {}
-    horas = clima.get("horas") or []
-    if not horas:
-        st.info("Série meteorológica não disponível para este GP.")
-        return
-    st.caption(
-        "Modelo atmosférico histórico próximo ao circuito; não é uma medição do asfalto."
-    )
-    if clima.get("origem") == "archived_forecast":
-        st.info(
-            "Esta série é uma previsão meteorológica arquivada, identificada pela fonte; não é uma medição realizada na pista."
-        )
-    st.markdown(
-        "Dados meteorológicos por [Open-Meteo.com](https://open-meteo.com/) · [CC BY 4.0](https://open-meteo.com/en/licence)."
-    )
-    st.caption(
-        "Horários em UTC. Modelo: {}. A precipitação corresponde ao acumulado de cada hora.".format(
-            clima.get("modelo") or "informado pela fonte"
-        )
-    )
-    st.caption(
-        "Janela de {} a {} ({} horas). As estatísticas abaixo abrangem essa janela inteira.".format(
-            horas[0]["data_utc"][:10], horas[-1]["data_utc"][:10], len(horas)
-        )
-    )
-    resumo = clima.get("resumo") or {}
-    colunas = st.columns(3)
-    faixa = "{} a {} °C".format(
-        _valor(resumo.get("temperatura_min_c")), _valor(resumo.get("temperatura_max_c"))
-    )
-    colunas[0].metric("Temperatura na janela", faixa)
-    colunas[1].metric(
-        "Precipitação na janela", _valor(resumo.get("precipitacao_total_mm"), " mm")
-    )
-    colunas[2].metric("Vento máximo", _valor(resumo.get("vento_max_ms"), " m/s"))
-    frame = pd.DataFrame(horas)
-    instante = pd.to_datetime(frame["data_utc"], errors="coerce", utc=True)
-    temperatura = go.Figure(
-        go.Scatter(
-            x=instante,
-            y=frame["temperatura_c"],
-            mode="lines",
-            name="Temperatura a 2 m",
-            line={"color": "#D3071D", "width": 2},
-            connectgaps=False,
-        )
-    )
-    _figura_base(temperatura, 285)
-    temperatura.update_layout(
-        yaxis_title="Temperatura do ar (°C)", xaxis_title="Fim de semana (UTC)"
-    )
-    st.plotly_chart(
-        temperatura,
-        use_container_width=True,
-        config={"displayModeBar": False},
-        key=_chave(gp, "temperatura"),
-    )
-    chuva = go.Figure(
-        go.Bar(
-            x=instante,
-            y=frame["precipitacao_mm"],
-            name="Precipitação",
-            marker_color="#2475EF",
-        )
-    )
-    _figura_base(chuva, 245)
-    chuva.update_layout(
-        yaxis_title="Precipitação na hora (mm)", xaxis_title="Fim de semana (UTC)"
-    )
-    st.plotly_chart(
-        chuva,
-        use_container_width=True,
-        config={"displayModeBar": False},
-        key=_chave(gp, "precipitacao"),
-    )
-    with st.expander("Série horária e unidades"):
-        _tabela(
-            [
-                {
-                    "Data e hora (UTC)": h.get("data_utc"),
-                    "Temperatura a 2 m (°C)": h.get("temperatura_c"),
-                    "Umidade relativa (%)": h.get("umidade"),
-                    "Precipitação (mm)": h.get("precipitacao_mm"),
-                    "Vento a 10 m (m/s)": h.get("vento_ms"),
-                    "Pressão (hPa)": h.get("pressao_hpa"),
-                }
-                for h in horas
-            ],
-            _chave(gp, "csv_clima"),
-            "clima_{}".format(_chave(gp, "gp")),
-        )
-    sensores = clima.get("pista_sessoes") or []
-    if sensores:
-        st.subheader("Medições meteorológicas da pista")
+    with st.expander("Contexto do fim de semana"):
+        st.subheader("Clima do fim de semana")
+        clima = gp.get("clima") or {}
+        horas = clima.get("horas") or []
+        if not horas:
+            st.info("Série meteorológica não disponível para este GP.")
+            return
         st.caption(
-            "Fonte OpenF1. Resumo das medições por sessão, separado do modelo atmosférico Open-Meteo."
+            "Modelo atmosférico histórico próximo ao circuito; não é uma medição do asfalto."
         )
-        _tabela(
-            [
-                {
-                    "Sessão": ROTULOS_SESSAO.get(s.get("nome"), s.get("nome")),
-                    "Medições": s.get("n_medicoes"),
-                    "Ar mínimo (°C)": s.get("temperatura_ar_min_c"),
-                    "Ar máximo (°C)": s.get("temperatura_ar_max_c"),
-                    "Pista mínima (°C)": s.get("temperatura_pista_min_c"),
-                    "Pista máxima (°C)": s.get("temperatura_pista_max_c"),
-                    "Chuva observada": s.get("chuva_observada"),
-                }
-                for s in sensores
-            ],
-            _chave(gp, "csv_pista"),
-            "clima_pista_{}".format(_chave(gp, "gp")),
+        if clima.get("origem") == "archived_forecast":
+            st.info(
+                "Esta série é uma previsão meteorológica arquivada, identificada pela fonte; não é uma medição realizada na pista."
+            )
+        st.markdown(
+            "Dados meteorológicos por [Open-Meteo.com](https://open-meteo.com/) · [CC BY 4.0](https://open-meteo.com/en/licence)."
         )
+        st.caption(
+            "Horários em UTC. Modelo: {}. A precipitação corresponde ao acumulado de cada hora.".format(
+                clima.get("modelo") or "informado pela fonte"
+            )
+        )
+        st.caption(
+            "Janela de {} a {} ({} horas). As estatísticas abaixo abrangem essa janela inteira.".format(
+                horas[0]["data_utc"][:10], horas[-1]["data_utc"][:10], len(horas)
+            )
+        )
+        resumo = clima.get("resumo") or {}
+        colunas = st.columns(3)
+        faixa = "{} a {} °C".format(
+            _valor(resumo.get("temperatura_min_c")), _valor(resumo.get("temperatura_max_c"))
+        )
+        colunas[0].metric("Temperatura na janela", faixa)
+        colunas[1].metric(
+            "Precipitação na janela", _valor(resumo.get("precipitacao_total_mm"), " mm")
+        )
+        colunas[2].metric("Vento máximo", _valor(resumo.get("vento_max_ms"), " m/s"))
+        frame = pd.DataFrame(horas)
+        instante = pd.to_datetime(frame["data_utc"], errors="coerce", utc=True)
+        temperatura = go.Figure(
+            go.Scatter(
+                x=instante,
+                y=frame["temperatura_c"],
+                mode="lines",
+                name="Temperatura a 2 m",
+                line={"color": "#D3071D", "width": 2},
+                connectgaps=False,
+            )
+        )
+        _figura_base(temperatura, 285)
+        temperatura.update_layout(
+            yaxis_title="Temperatura do ar (°C)", xaxis_title="Fim de semana (UTC)"
+        )
+        st.plotly_chart(
+            temperatura,
+            use_container_width=True,
+            config={"displayModeBar": False},
+            key=_chave(gp, "temperatura"),
+        )
+        chuva = go.Figure(
+            go.Bar(
+                x=instante,
+                y=frame["precipitacao_mm"],
+                name="Precipitação",
+                marker_color="#2475EF",
+            )
+        )
+        _figura_base(chuva, 245)
+        chuva.update_layout(
+            yaxis_title="Precipitação na hora (mm)", xaxis_title="Fim de semana (UTC)", yaxis_rangemode="tozero"
+        )
+        st.plotly_chart(
+            chuva,
+            use_container_width=True,
+            config={"displayModeBar": False},
+            key=_chave(gp, "precipitacao"),
+        )
+        with st.expander("Série horária e unidades"):
+            _tabela(
+                [
+                    {
+                        "Data e hora (UTC)": h.get("data_utc"),
+                        "Temperatura a 2 m (°C)": h.get("temperatura_c"),
+                        "Umidade relativa (%)": h.get("umidade"),
+                        "Precipitação (mm)": h.get("precipitacao_mm"),
+                        "Vento a 10 m (m/s)": h.get("vento_ms"),
+                        "Pressão (hPa)": h.get("pressao_hpa"),
+                    }
+                    for h in horas
+                ],
+                _chave(gp, "csv_clima"),
+                "clima_{}".format(_chave(gp, "gp")),
+            )
+        sensores = clima.get("pista_sessoes") or []
+        if sensores:
+            st.subheader("Medições meteorológicas da pista")
+            st.caption(
+                "Fonte OpenF1. Resumo das medições por sessão, separado do modelo atmosférico Open-Meteo."
+            )
+            _tabela(
+                [
+                    {
+                        "Sessão": ROTULOS_SESSAO.get(s.get("nome"), s.get("nome")),
+                        "Medições": s.get("n_medicoes"),
+                        "Ar mínimo (°C)": s.get("temperatura_ar_min_c"),
+                        "Ar máximo (°C)": s.get("temperatura_ar_max_c"),
+                        "Pista mínima (°C)": s.get("temperatura_pista_min_c"),
+                        "Pista máxima (°C)": s.get("temperatura_pista_max_c"),
+                        "Chuva observada": s.get("chuva_observada"),
+                    }
+                    for s in sensores
+                ],
+                _chave(gp, "csv_pista"),
+                "clima_pista_{}".format(_chave(gp, "gp")),
+            )
 
 
 def renderizar_observado(gp):
@@ -578,6 +583,9 @@ def renderizar_historico(gp):
             max(e["temporada"] for e in edicoes),
         )
     )
+    winners = [(e.get("temporada"), r.get("piloto")) for e in edicoes for r in e.get("resultados", []) if r.get("posicao") == 1]
+    if winners:
+        st.markdown("**{}:** {}".format(translate("Quem venceu aqui"), " · ".join("{}: {}".format(year, name) for year, name in winners)))
     pilotos = historico.get("pilotos") or []
     atuais = {r["piloto_id"] for r in (gp.get("historico") or {}).get("resultados", [])}
     so_atuais = st.checkbox(
@@ -622,6 +630,14 @@ def renderizar_historico(gp):
         format_func=lambda p: por_id[p]["piloto"],
         key=_chave(gp, "historico_piloto"),
     )
+    trajectory = sorted(por_id[pid]["resultados"], key=lambda r: r["temporada"])
+    chart = go.Figure(go.Scatter(x=[str(r["temporada"]) for r in trajectory],
+        y=[r["posicao"] if r.get("status") not in ("Disqualified", "Did not start", "Withdrawn") else None for r in trajectory],
+        mode="lines+markers", connectgaps=False, line_color="#102b50",
+        hovertemplate="%{x}: %{y}<extra></extra>"))
+    _figura_base(chart, 240)
+    chart.update_yaxes(autorange="reversed", title_text="Posição final", dtick=1)
+    st.plotly_chart(chart, use_container_width=True, config={"displayModeBar": False})
     _tabela(
         [
             {
@@ -655,7 +671,14 @@ def renderizar_equipes(gp):
         key=_chave(gp, "prova_equipes"),
     )
     selecionadas = [e for e in equipes if e.get("modalidade", "Race") == modalidade]
-    st.caption("Resultados das equipes nesta prova. O campeonato está na visão geral.")
+    st.caption("Pontos nesta prova. A classificação da temporada está no menu Campeonato.")
+    visual = [e for e in selecionadas if e.get("pontos") is not None and e.get("pontos_completos")]
+    if visual:
+        visual = sorted(visual, key=lambda e: e["pontos"])
+        chart = go.Figure(go.Bar(x=[e["pontos"] for e in visual], y=[e["equipe"] for e in visual], orientation="h", marker_color="#102b50", hovertemplate="%{y}: %{x}<extra></extra>"))
+        _figura_base(chart, 350)
+        chart.update_xaxes(title_text="Pontos observados", rangemode="tozero")
+        st.plotly_chart(chart, use_container_width=True, config={"displayModeBar": False})
     _tabela(
         [
             {

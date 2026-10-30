@@ -15,6 +15,7 @@ from pitwall.paths import PROJECT_ROOT
 from pitwall.version import version
 
 DOCUMENT_PAIRS = (
+    ("docs/REVISAO_030.md", "docs/en/REVIEW_030.md"),
     ("README.md", "README.en.md"),
     ("CHANGELOG.md", "CHANGELOG.en.md"),
     ("CONTRIBUTING.md", "CONTRIBUTING.en.md"),
@@ -92,7 +93,7 @@ def check(root=PROJECT_ROOT, base=None):
     }
 
 
-def publish(root=PROJECT_ROOT):
+def publish(root=PROJECT_ROOT, asset=None):
     """Explicit tag-workflow operation; credentials are never printed or persisted."""
     check(root)
     current = version(root)
@@ -123,6 +124,17 @@ def publish(root=PROJECT_ROOT):
     )
     with urlopen(request, timeout=30) as response:
         result = json.load(response)
+    if asset:
+        from urllib.parse import urlencode
+        asset = Path(asset)
+        upload = Request(result["upload_url"].split("{")[0] + "?" + urlencode({"name": asset.name}),
+            data=asset.read_bytes(), method="POST", headers={
+                "Authorization": "Bearer " + os.environ["GITHUB_TOKEN"],
+                "Content-Type": "application/zip", "Accept": "application/vnd.github+json"})
+        with urlopen(upload, timeout=120) as response:
+            uploaded = json.load(response)
+        if uploaded.get("state") != "uploaded":
+            raise ValueError("Release asset upload incomplete")
     return {"tag": payload["tag_name"], "url": result["html_url"]}
 
 
@@ -130,12 +142,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=("check", "notes", "publish"))
     parser.add_argument("--base")
+    parser.add_argument("--asset", type=Path)
     parser.add_argument("--language", choices=("pt", "en"), default="pt")
     args = parser.parse_args()
     if args.command == "notes":
         print(notes(args.language))
     elif args.command == "publish":
-        print(json.dumps(publish()))
+        print(json.dumps(publish(asset=args.asset)))
     else:
         print(json.dumps(check(base=args.base)))
 

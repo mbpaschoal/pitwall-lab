@@ -4,6 +4,15 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.3.0 — 2026-10-29
+
+- Fan navigation: complete championship in its own screen, race results first and technical explanations in a second layer.
+- Drivers: duels at shared races, a browser-local favourite, recent results, persistent filters and shareable SVG cards.
+- Corrections: circular mean wind direction; individual reference uses the same races; overview weather describes the race when available.
+- Reading and mobile: contrast, paragraph rhythm, visible tabs and smaller presentation images with originals preserved.
+- Delivery: MIT for original code, actual package validation in CI and PT/EN documentation.
+- Limits: historical associations do not isolate driver skill. 17 practice/qualifying tyre compounds remain unavailable. Model v1 and recorded predictions are preserved.
+
 ## 0.2.0 — 2026-10-29
 
 ### Drivers: comparing results with actual race conditions

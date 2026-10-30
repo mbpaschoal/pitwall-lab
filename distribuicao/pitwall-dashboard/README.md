@@ -6,13 +6,16 @@ Português · [English](README.en.md)
 
 Portfólio de MBPaschoal sobre ciência de dados na Fórmula 1. Este pacote apresenta probabilidades individuais de pódio, evidências e limitações. Não estima a ordem P1/P2/P3 nem consulta APIs durante a navegação.
 
+![Pilotos: comparações históricas por condição](docs/images/pitwall-pilotos.png)
+
 ## Produto
 
 - **Pilotos:** destaques por condição, perfil individual, amostra mínima, empates e evidências de cada GP.
 - **Corridas:** circuito, campeonatos completos, tempos, pneus/paradas, clima, equipes e até cinco edições anteriores na mesma pista.
-- **Previsões:** probabilidades registradas e comparação posterior, com Austin prospectivo separado da retrospectiva.
-- **Desempenho:** métricas, calibração e cobertura explícita.
-- **Metodologia:** documentos e relatórios offline, também em inglês.
+- **Campeonato:** classificação completa de pilotos e equipes na rodada selecionada.
+- **Chances de pódio:** probabilidades registradas e comparação posterior, com Austin prospectivo separado da retrospectiva.
+- **Acertos do Lab:** métricas, calibração e cobertura explícita.
+- **Como funciona:** documentos e relatórios offline, também em inglês.
 
 As bandeiras BR/GB no canto superior direito selecionam o idioma. A navegação preserva temporada, GP e idioma. Identificadores e downloads científicos conservam seus bytes originais; tabelas descritivas acompanham o idioma.
 

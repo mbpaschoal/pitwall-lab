@@ -18,3 +18,5 @@ For presentation changes, run focused modules, for example:
 Export to a new destination and verify using `verificar_pacote.py --pacote ABSOLUTE_PATH`. Check PT/EN desktop/mobile when UI changes. The complete scientific suite can fit models; do not use it as an automatic copy/CSS gate.
 
 Each delivered data update/improvement requires a version and bilingual notes under the [policy](docs/en/VERSIONS.md). Use concrete commit subjects and PT/EN bodies covering problem, correction, verification and limits. Do not rewrite historical commits to standardise language or hide mistakes. Code licensing remains the author's separate decision; source conditions remain distinct.
+
+Original code is available under the [MIT License](LICENSE). Third-party data and assets retain their own terms.

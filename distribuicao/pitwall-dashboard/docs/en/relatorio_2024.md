@@ -1,6 +1,6 @@
 # Stage 4 — v1 podium-probability model
 
-[Português](../../reports/modelo_v1/relatorio.md)
+[Português](../relatorio_2024.md)
 
 This is a retrospective study. The experiment protocol was fixed before fitting. Training uses 2021–2023 only; validation uses previously explored 2024. **At the time of this report**, the 2025 test had not been opened or evaluated; see the separate subsequent 2025 report for the current evaluated status.
 

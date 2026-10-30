@@ -6,13 +6,18 @@ A Formula 1 data-science portfolio by **MBPaschoal**. I am learning to build a c
 
 **[Open the dashboard](https://pitwall-lab.streamlit.app/) · [Learning journal](docs/en/LEARNING.md) · [Versions](CHANGELOG.en.md) · [Architecture](docs/en/ARCHITECTURE.md)**
 
+Who wins more often in the rain? How do two drivers compare at the same races? Who has done well at this circuit? Explore these questions using the filters; car and era also affect results.
+
+![Drivers: historical comparisons by condition](docs/images/pitwall-pilotos-en.png)
+
 ## The product today
 
-- **Drivers:** condition leaders, individual profiles, minimum samples, explicit ties and supporting races. [Data audit](reports/pilotos_condicoes_20261029/README.en.md).
-- **Races:** circuit profile, full championship standings, session times, weather, tyres/stops, teams and driver performance in up to five previous editions at the same circuit.
-- **Predictions:** individual podium probabilities and subsequent comparison. Austin 2026's prospective recorded prediction remains separate from the retrospective study.
-- **Performance:** log loss, Brier, calibration, ranking and coverage with explicit denominators.
-- **Methodology:** offline documents and reports. The 🇧🇷 and 🇬🇧 flags in the upper-right corner select Portuguese or English and retain the current navigation.
+- **Drivers:** condition leaders, profiles, shared-race duels, a browser-local favourite and shareable cards, with explicit sample sizes and ties. [Data audit](reports/pilotos_condicoes_20261029/README.en.md).
+- **Races:** results, circuit profile, session times, weather, tyres/stops, teams and driver performance in up to five previous editions at the same circuit.
+- **Championship:** full driver and constructor standings at the selected round.
+- **Podium chances:** individual podium probabilities and subsequent comparison. Austin 2026's prospective recorded prediction remains separate from the retrospective study.
+- **How the Lab did:** log loss, Brier, calibration, ranking and coverage with explicit denominators.
+- **How it works:** offline documents and reports. The 🇧🇷 and 🇬🇧 flags in the upper-right corner select Portuguese or English and retain the current navigation.
 
 The descriptive archive covers **66 GPs and 330 sessions in 2024–2026 through Austin**. Drivers uses 1,340 starts, sensors within actual racing intervals and edition-specific FIA maps. The audit records 295 checks; 17 practice/qualifying compounds remain missing and do not enter these rankings. History compares earlier editions at the same circuit. [Corrections and limits](docs/en/CURRENT_DATA.md).
 
@@ -49,4 +54,8 @@ For an independent presentation installation, use Python 3.12 and the [portable-
 - [Model v1 method](docs/en/experimento_modelo_v1.md) · [Português](docs/experimento_modelo_v1.md)
 - [Temporal protocol](docs/en/protocolo_temporal.md) · [Português](docs/protocolo_temporal.md)
 
-Different sources retain their own conditions; one licence does not automatically extend to another source. The author has not yet selected an open-source code licence. Independent educational project without official affiliation to Formula 1, data sources or teams.
+Different sources retain their own conditions; one licence does not automatically extend to another source. Original code is licensed under MIT; third-party source conditions remain separate. Independent educational project without official affiliation to Formula 1, data sources or teams.
+
+Original code is available under the [MIT License](LICENSE). Third-party data and assets retain their own terms.
+
+- [Delivery of the 45 critical review items](docs/en/REVIEW_030.md)

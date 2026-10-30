@@ -17,4 +17,4 @@ Para apresentação, execute módulos focais, por exemplo:
 
 O pacote deve ser exportado para destino novo e verificado com `verificar_pacote.py --pacote CAMINHO_ABSOLUTO`. Confira navegador PT/EN em desktop/mobile quando a interface mudar. A suíte científica completa pode treinar modelos; não a use como verificação automática de texto/CSS.
 
-Cada entrega de dados ou melhoria exige versão e notas bilíngues conforme a [política](docs/VERSOES.md). Assunto de commit concreto; corpo PT/EN com problema, correção, verificação e limitações. Não reescreva commits históricos para padronizar idioma ou esconder erros. Licença do código continua pendente de escolha do autor; condições das fontes permanecem separadas.
+Cada entrega de dados ou melhoria exige versão e notas bilíngues conforme a [política](docs/VERSOES.md). Assunto de commit concreto; corpo PT/EN com problema, correção, verificação e limitações. Não reescreva commits históricos para padronizar idioma ou esconder erros. O código original está sob a licença MIT; condições das fontes permanecem separadas.

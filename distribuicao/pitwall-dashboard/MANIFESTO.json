@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "db81ac15c31c85f6909044b15682dd7c363f042bb6475c841e72d3e68994259e",
+  "apresentacao_build_sha256": "99f9135b8eb88e9db756314fff7dd85efb24ae74f3395b38af761a64db111297",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "75396200ae25f3a57a2ffc3641445dbb59572d7978f776e623801705d9320213",
+      "sha256_destino": "cc020f455942c03c3a6a6906bf9276cde4d020d43efd154bac045a89b38cc9bc",
       "sha256_origem": null
     },
     {
@@ -41,23 +41,23 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "3f42bd59f338eb138862f2c75751076114081a8e874a9f9c881652feaedf23f1",
-      "sha256_origem": "ce12842b57089cb8510f37aa04e46486d6a61112acb7d566d8c3eb1189b8196c"
+      "sha256_destino": "173e155c49757929d961ab030488140d5cda1a5d4f364c485bd0990db892db15",
+      "sha256_origem": "33afc1677c169be20d1d7fd5ca1fd26827b200cd0fdfea51f894b7f91b44ce5b"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "b8bfe67e77c27971f86ca6d74232b97ecf866e5f4414b76cc00dba4ad45dbe53",
-      "sha256_origem": "8af9d598eac7befc891ab71de1f11fe4aa9acc0edf9b0258d55c6b1f5ed69d72"
+      "sha256_destino": "0a4523a1de528a395f4b4135d31ca91dfd90d23ac2307cdfa5f14edbf3591f2e",
+      "sha256_origem": "6cd4ca6f507d21212cd96abaf91498cf4cd0eee443684753fef28b60b67fb7bc"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
       "fonte": "publicacao/templates/FONTES_E_DADOS.md",
       "modo": "gerado",
-      "sha256_destino": "1ff9abd80513fc842c2382e3a7899aa686b31c8e207e35133f25319e3e101ad6",
-      "sha256_origem": "1ff9abd80513fc842c2382e3a7899aa686b31c8e207e35133f25319e3e101ad6"
+      "sha256_destino": "36e30b520512560b6fd4806b5c5c9d39d846f1d14eaebae23fa1d56f030c2e03",
+      "sha256_origem": "36e30b520512560b6fd4806b5c5c9d39d846f1d14eaebae23fa1d56f030c2e03"
     },
     {
       "caminho": "GUIA_HOSPEDAGEM.md",
@@ -70,29 +70,36 @@
       "caminho": "LICENCA_CODIGO.md",
       "fonte": "publicacao/templates/LICENCA_CODIGO.md",
       "modo": "gerado",
-      "sha256_destino": "10835ebde101aa4d8e776a38091e14668a20cb16cb88c0b32e195883f750b2b8",
-      "sha256_origem": "10835ebde101aa4d8e776a38091e14668a20cb16cb88c0b32e195883f750b2b8"
+      "sha256_destino": "b8bfceca4c642e162e778c479baf87a13b30a32e4e0c67b302bf2c911345d5b6",
+      "sha256_origem": "b8bfceca4c642e162e778c479baf87a13b30a32e4e0c67b302bf2c911345d5b6"
+    },
+    {
+      "caminho": "LICENSE",
+      "fonte": "LICENSE",
+      "modo": "copia",
+      "sha256_destino": "6b67e71c727bfe6c6af9de4e054cf4b6f95a51b504689d4c62da73b4e5be59ff",
+      "sha256_origem": "6b67e71c727bfe6c6af9de4e054cf4b6f95a51b504689d4c62da73b4e5be59ff"
     },
     {
       "caminho": "README.en.md",
       "fonte": "publicacao/templates/README_PUBLICO.en.md.tpl",
       "modo": "gerado",
-      "sha256_destino": "eca774552e5f9857f0e57f5e91a590e5b7ec679683f544e24e0c47cabbf7803d",
-      "sha256_origem": "c6c624d4afd3aa441813d6e2478075241e788303dc7c08445cad30304983b9fd"
+      "sha256_destino": "2b62e39eaabfacad132e4b4bdca744005c0088d35129f18d1c8f23a8867f9bf8",
+      "sha256_origem": "d4e567bd603b9d0543020acc76838807463b0ef7a93c82779b7264bce1c228b5"
     },
     {
       "caminho": "README.md",
       "fonte": "publicacao/templates/README_PUBLICO.md.tpl",
       "modo": "gerado",
-      "sha256_destino": "90cfb3a05759c296ac6cfd86b81d1deecd111d54d81855d76e48b98ba618c89c",
-      "sha256_origem": "dcc84e9d2803ff838131575378e9180287c7a5f2f4678c10aecdc44116297bfb"
+      "sha256_destino": "5519da8f7a42429d44ba38c5ae8f9468b6d5752c63a480479ae369c239a7cbda",
+      "sha256_origem": "80640226f6c9305bde16131a3d1ebf64ad7eb371b572ecee1dd6c336120dad65"
     },
     {
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9",
-      "sha256_origem": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9"
+      "sha256_destino": "d915cc95d6ca8f47ae297713ed46d4e5c5d99ddd29fc3c61e263bdf305f2b5b0",
+      "sha256_origem": "d915cc95d6ca8f47ae297713ed46d4e5c5d99ddd29fc3c61e263bdf305f2b5b0"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -543,11 +550,200 @@
       "sha256_origem": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
     },
     {
+      "caminho": "dashboard_assets/presentation/albert_park-hero.webp",
+      "fonte": "dashboard_assets/presentation/albert_park-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "5f77b0d05a5420ec946123e65471c8d98b78fb43434d63bc31439258d172894a",
+      "sha256_origem": "5f77b0d05a5420ec946123e65471c8d98b78fb43434d63bc31439258d172894a"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/americas-illustration-20261027.webp",
+      "fonte": "dashboard_assets/presentation/americas-illustration-20261027.webp",
+      "modo": "copia",
+      "sha256_destino": "4390d0cba7234064bb504eecfd474af7bf1decb74cad74631a3948b1e0322243",
+      "sha256_origem": "4390d0cba7234064bb504eecfd474af7bf1decb74cad74631a3948b1e0322243"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/bahrain-hero.webp",
+      "fonte": "dashboard_assets/presentation/bahrain-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "eb52815aebdbf009d6ccb8b7105748645e97e784e2e983e641da95bc27044928",
+      "sha256_origem": "eb52815aebdbf009d6ccb8b7105748645e97e784e2e983e641da95bc27044928"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/baku-hero.webp",
+      "fonte": "dashboard_assets/presentation/baku-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "89988b5b3a7e38504c349975dfbb23f292f3af793e2b84820d8fddf61f7c6c29",
+      "sha256_origem": "89988b5b3a7e38504c349975dfbb23f292f3af793e2b84820d8fddf61f7c6c29"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/catalunya-hero.webp",
+      "fonte": "dashboard_assets/presentation/catalunya-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "04834bada1dfd465ca90d12a112d68c5c47dbe908964c6afba3e0e1b4c0b8473",
+      "sha256_origem": "04834bada1dfd465ca90d12a112d68c5c47dbe908964c6afba3e0e1b4c0b8473"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/hungaroring-hero.webp",
+      "fonte": "dashboard_assets/presentation/hungaroring-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "ff9d84e64874e00aad18376f66b31c28c68b3ce0fabd8d84b3cdfa406a68745b",
+      "sha256_origem": "ff9d84e64874e00aad18376f66b31c28c68b3ce0fabd8d84b3cdfa406a68745b"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/imola-hero.webp",
+      "fonte": "dashboard_assets/presentation/imola-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "4f95f9527dadd444c40a32b2af7c0b48e5cd5ffc433135f0ed55cd2749b48ad2",
+      "sha256_origem": "4f95f9527dadd444c40a32b2af7c0b48e5cd5ffc433135f0ed55cd2749b48ad2"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/interlagos-hero.webp",
+      "fonte": "dashboard_assets/presentation/interlagos-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "8cfb25ec28c32286d075746941eda46e78fece3e397e4a46fb007a75d06bbb1b",
+      "sha256_origem": "8cfb25ec28c32286d075746941eda46e78fece3e397e4a46fb007a75d06bbb1b"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/jeddah-hero.webp",
+      "fonte": "dashboard_assets/presentation/jeddah-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "68e2d88edc389b65207cff5e6f6ac8ff1acd0a859964dcd0117718578d8ad08c",
+      "sha256_origem": "68e2d88edc389b65207cff5e6f6ac8ff1acd0a859964dcd0117718578d8ad08c"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/losail-hero.webp",
+      "fonte": "dashboard_assets/presentation/losail-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "5efdbbd060cb83e50e9eeaad92a15bba338f7824a6b78e8d4a8e33abf2f7a6e4",
+      "sha256_origem": "5efdbbd060cb83e50e9eeaad92a15bba338f7824a6b78e8d4a8e33abf2f7a6e4"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/madring-hero.webp",
+      "fonte": "dashboard_assets/presentation/madring-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "82492771ea57dbe4e07eb2f2840a7bc0e68c235126d8f74ebe16f839702f32f4",
+      "sha256_origem": "82492771ea57dbe4e07eb2f2840a7bc0e68c235126d8f74ebe16f839702f32f4"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/marina_bay-hero.webp",
+      "fonte": "dashboard_assets/presentation/marina_bay-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "2876f353c46aeb896bb6d98a02ee5bafa27b2234380e4bcea30a23b693ea23c4",
+      "sha256_origem": "2876f353c46aeb896bb6d98a02ee5bafa27b2234380e4bcea30a23b693ea23c4"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/miami-hero.webp",
+      "fonte": "dashboard_assets/presentation/miami-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "f2152ea9da06c960fb2a55a6ca4fca6f09322774a251929b45c72b2664c45e05",
+      "sha256_origem": "f2152ea9da06c960fb2a55a6ca4fca6f09322774a251929b45c72b2664c45e05"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/monaco-hero.webp",
+      "fonte": "dashboard_assets/presentation/monaco-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "59e4dd9069074783b94f5c89c58965306b4e5bc07a27deab83874ce0d217af3f",
+      "sha256_origem": "59e4dd9069074783b94f5c89c58965306b4e5bc07a27deab83874ce0d217af3f"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/monza-hero.webp",
+      "fonte": "dashboard_assets/presentation/monza-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "8bf746fd16f723adf63c3e88482c239c20fec77fde40c38f8a66649844924161",
+      "sha256_origem": "8bf746fd16f723adf63c3e88482c239c20fec77fde40c38f8a66649844924161"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/red_bull_ring-hero.webp",
+      "fonte": "dashboard_assets/presentation/red_bull_ring-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "a94a316a9b8f1cc8482621319201bd10a84d9db476b2b65e02a915b38a18bff1",
+      "sha256_origem": "a94a316a9b8f1cc8482621319201bd10a84d9db476b2b65e02a915b38a18bff1"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/rodriguez-hero.webp",
+      "fonte": "dashboard_assets/presentation/rodriguez-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "94c4d42cd01892e49fcbf0d49f1c4df8e0f541eeeceaf1a73904caf4547e6fc4",
+      "sha256_origem": "94c4d42cd01892e49fcbf0d49f1c4df8e0f541eeeceaf1a73904caf4547e6fc4"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/sepang-hero.webp",
+      "fonte": "dashboard_assets/presentation/sepang-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "d70f0faeeb47178f0a54e1593dc60c19f9965664bcf275b5a5d99314dba3b757",
+      "sha256_origem": "d70f0faeeb47178f0a54e1593dc60c19f9965664bcf275b5a5d99314dba3b757"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/shanghai-hero.webp",
+      "fonte": "dashboard_assets/presentation/shanghai-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "d6ac545d3ca7a852c88b4e447dc5d264c86124a08a80a8fe603a2aaf8218912e",
+      "sha256_origem": "d6ac545d3ca7a852c88b4e447dc5d264c86124a08a80a8fe603a2aaf8218912e"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/silverstone-hero.webp",
+      "fonte": "dashboard_assets/presentation/silverstone-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "5edae871d948308dd8ee3c4ed244cfb3ca4d5eee4d7301c052b2f378ac60a0f6",
+      "sha256_origem": "5edae871d948308dd8ee3c4ed244cfb3ca4d5eee4d7301c052b2f378ac60a0f6"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/spa-hero.webp",
+      "fonte": "dashboard_assets/presentation/spa-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "3bbe9d6b7cf1defdd4e00c5cbb86351c8294bab25bcf9fe97c98a69f12e47001",
+      "sha256_origem": "3bbe9d6b7cf1defdd4e00c5cbb86351c8294bab25bcf9fe97c98a69f12e47001"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/suzuka-hero.webp",
+      "fonte": "dashboard_assets/presentation/suzuka-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "5d05c458d636135b0f73f46b69f9589c868aebdabe627a322934e16f033e1b57",
+      "sha256_origem": "5d05c458d636135b0f73f46b69f9589c868aebdabe627a322934e16f033e1b57"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/vegas-hero.webp",
+      "fonte": "dashboard_assets/presentation/vegas-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "05cc92f58f120ca48022e884f01911709fe6daabe199e6831da4e9f973b568d3",
+      "sha256_origem": "05cc92f58f120ca48022e884f01911709fe6daabe199e6831da4e9f973b568d3"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/villeneuve-hero.webp",
+      "fonte": "dashboard_assets/presentation/villeneuve-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "6ba0b1badd3a8102c7c386b597658f37fe877958c73939dcb72f78b929f91b38",
+      "sha256_origem": "6ba0b1badd3a8102c7c386b597658f37fe877958c73939dcb72f78b929f91b38"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/yas_marina-hero.webp",
+      "fonte": "dashboard_assets/presentation/yas_marina-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "1dd5a5a6837bf257daaf0950c6fd11096ddb18fdc82aae5f10b8cedbf28ec737",
+      "sha256_origem": "1dd5a5a6837bf257daaf0950c6fd11096ddb18fdc82aae5f10b8cedbf28ec737"
+    },
+    {
+      "caminho": "dashboard_assets/presentation/zandvoort-hero.webp",
+      "fonte": "dashboard_assets/presentation/zandvoort-hero.webp",
+      "modo": "copia",
+      "sha256_destino": "a440603503f2ebd3f20557670cdf732acb8c59319341bbfcc34e72cdb631a4f2",
+      "sha256_origem": "a440603503f2ebd3f20557670cdf732acb8c59319341bbfcc34e72cdb631a4f2"
+    },
+    {
       "caminho": "dashboard_dados.py",
       "fonte": "dashboard_dados.py",
       "modo": "copia",
       "sha256_destino": "182fefbc19de287a18f9103dc0d0e73d8ec370a99bf0e868f71664fa7edcc8cf",
       "sha256_origem": "182fefbc19de287a18f9103dc0d0e73d8ec370a99bf0e868f71664fa7edcc8cf"
+    },
+    {
+      "caminho": "docs/REVISAO_030.md",
+      "fonte": "docs/REVISAO_030.md",
+      "modo": "copia",
+      "sha256_destino": "2f77ea710e40b275267f485891a975127b00464359131cc91865309e9839fbfa",
+      "sha256_origem": "2f77ea710e40b275267f485891a975127b00464359131cc91865309e9839fbfa"
     },
     {
       "caminho": "docs/avaliacao_final_v1.md",
@@ -562,6 +758,13 @@
       "modo": "copia",
       "sha256_destino": "00e68aadb984952868d10268f9d2253a8cbe110c0a625e942ee65c6837be8155",
       "sha256_origem": "00e68aadb984952868d10268f9d2253a8cbe110c0a625e942ee65c6837be8155"
+    },
+    {
+      "caminho": "docs/en/REVIEW_030.md",
+      "fonte": "docs/en/REVIEW_030.md",
+      "modo": "copia",
+      "sha256_destino": "b94cc8f917b1f1167a8ee388363b0d88832ef57ab4acf7a5aa043d92c56e5dc9",
+      "sha256_origem": "b94cc8f917b1f1167a8ee388363b0d88832ef57ab4acf7a5aa043d92c56e5dc9"
     },
     {
       "caminho": "docs/en/avaliacao_final_v1.md",
@@ -594,8 +797,9 @@
     {
       "caminho": "docs/en/relatorio_2024.md",
       "fonte": "docs/en/relatorio_2024.md",
-      "modo": "copia",
-      "sha256_destino": "e8a8d392839f8cf1d391a85c33127664298f2d04eab5fa01edb93035d2ceb2c7",
+      "modo": "adaptado_documentacao",
+      "nota": "link PT resolvido dentro do pacote portatil",
+      "sha256_destino": "8453c4b0965bd49a420dbf6ec1fb40d1c9a1bf436fabea4e25ec907eeb5b2334",
       "sha256_origem": "e8a8d392839f8cf1d391a85c33127664298f2d04eab5fa01edb93035d2ceb2c7"
     },
     {
@@ -611,6 +815,20 @@
       "modo": "copia",
       "sha256_destino": "d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569",
       "sha256_origem": "d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569"
+    },
+    {
+      "caminho": "docs/images/pitwall-pilotos-en.png",
+      "fonte": "docs/images/pitwall-pilotos-en.png",
+      "modo": "copia",
+      "sha256_destino": "d5cc5cdc606fac78b709c4aedcd38678e531a8cc4e06e501ad674d61b27987ba",
+      "sha256_origem": "d5cc5cdc606fac78b709c4aedcd38678e531a8cc4e06e501ad674d61b27987ba"
+    },
+    {
+      "caminho": "docs/images/pitwall-pilotos.png",
+      "fonte": "docs/images/pitwall-pilotos.png",
+      "modo": "copia",
+      "sha256_destino": "75469406c7bc679dbe98a5cad89156e605b996f7b041ef082c190f7c95555756",
+      "sha256_origem": "75469406c7bc679dbe98a5cad89156e605b996f7b041ef082c190f7c95555756"
     },
     {
       "caminho": "docs/protocolo_temporal.md",
@@ -638,8 +856,8 @@
       "caminho": "frontend_assets/acervo_dashboard.json",
       "fonte": "frontend_assets/acervo_dashboard.json",
       "modo": "copia",
-      "sha256_destino": "6201898a1465cd6eeea1e0bf160bae246cfbe2d04cd72e3aae74b14c892fbe51",
-      "sha256_origem": "6201898a1465cd6eeea1e0bf160bae246cfbe2d04cd72e3aae74b14c892fbe51"
+      "sha256_destino": "6c7c3b4cf82a346ec626135444001ec5e156481545ba0889d2ec30b715948dfb",
+      "sha256_origem": "6c7c3b4cf82a346ec626135444001ec5e156481545ba0889d2ec30b715948dfb"
     },
     {
       "caminho": "frontend_assets/contexto_editorial.json",
@@ -647,6 +865,13 @@
       "modo": "copia",
       "sha256_destino": "c98896b54bdf86dfc9a993854167e8d3bbe109eda201a9f9a826b704f4d2f3ae",
       "sha256_origem": "c98896b54bdf86dfc9a993854167e8d3bbe109eda201a9f9a826b704f4d2f3ae"
+    },
+    {
+      "caminho": "frontend_assets/favorite/index.html",
+      "fonte": "frontend_assets/favorite/index.html",
+      "modo": "copia",
+      "sha256_destino": "921b0c6298ff6f35f4cfe9e9c948ac7f5a8a53d2e3027d899abf4ca198b430f1",
+      "sha256_origem": "921b0c6298ff6f35f4cfe9e9c948ac7f5a8a53d2e3027d899abf4ca198b430f1"
     },
     {
       "caminho": "frontend_assets/paineis_editoriais.json",
@@ -659,15 +884,15 @@
       "caminho": "frontend_assets/pilotos_condicoes.json",
       "fonte": "frontend_assets/pilotos_condicoes.json",
       "modo": "copia",
-      "sha256_destino": "61e73d630ce737e49f91d9bfb30426673d07162b066068e78edff1b254b4a6c5",
-      "sha256_origem": "61e73d630ce737e49f91d9bfb30426673d07162b066068e78edff1b254b4a6c5"
+      "sha256_destino": "dfc760dfb9a78e2cf087c89b7175ab671070bc2b6eed3dab70297a2df7ae2535",
+      "sha256_origem": "dfc760dfb9a78e2cf087c89b7175ab671070bc2b6eed3dab70297a2df7ae2535"
     },
     {
       "caminho": "frontend_assets/pitwall.css",
       "fonte": "frontend_assets/pitwall.css",
       "modo": "copia",
-      "sha256_destino": "f07fc68ed3546232b2d52eb60b656e78fb463700a6081bf9f869af421bb17743",
-      "sha256_origem": "f07fc68ed3546232b2d52eb60b656e78fb463700a6081bf9f869af421bb17743"
+      "sha256_destino": "a651e0cfdde810ae67677c07ce4b921010476390e8258887bc8962b42c414b44",
+      "sha256_origem": "a651e0cfdde810ae67677c07ce4b921010476390e8258887bc8962b42c414b44"
     },
     {
       "caminho": "frontend_assets/race_weekend.json",
@@ -701,29 +926,64 @@
       "caminho": "pitwall/dashboard/app.py",
       "fonte": "pitwall/dashboard/app.py",
       "modo": "copia",
-      "sha256_destino": "45935809732836e505b754da1c3c85108736d5f628ca926dce7b986f1d4f9467",
-      "sha256_origem": "45935809732836e505b754da1c3c85108736d5f628ca926dce7b986f1d4f9467"
+      "sha256_destino": "3cdd855faa4083f64df3fc84356350ad527076ca59114157e7b40523e2d3b88f",
+      "sha256_origem": "3cdd855faa4083f64df3fc84356350ad527076ca59114157e7b40523e2d3b88f"
     },
     {
       "caminho": "pitwall/dashboard/archive_views.py",
       "fonte": "pitwall/dashboard/archive_views.py",
       "modo": "copia",
-      "sha256_destino": "4e913b0247826d495b96f8eb860a5e575c1f63c42aa17ba232e58629f6531ccc",
-      "sha256_origem": "4e913b0247826d495b96f8eb860a5e575c1f63c42aa17ba232e58629f6531ccc"
+      "sha256_destino": "814282267a5fb2dd232b1be421214ac66a2e95435286c086cebcd0af655e164b",
+      "sha256_origem": "814282267a5fb2dd232b1be421214ac66a2e95435286c086cebcd0af655e164b"
     },
     {
       "caminho": "pitwall/dashboard/components.py",
       "fonte": "pitwall/dashboard/components.py",
       "modo": "copia",
-      "sha256_destino": "00ef9592a444415ff37109e67dd0db08496013e5e713ee16316b8aae7d121b21",
-      "sha256_origem": "00ef9592a444415ff37109e67dd0db08496013e5e713ee16316b8aae7d121b21"
+      "sha256_destino": "76f70a2a516845511aafcaa66210baebaaf313de7c9ae582183b222a1d7964f2",
+      "sha256_origem": "76f70a2a516845511aafcaa66210baebaaf313de7c9ae582183b222a1d7964f2"
+    },
+    {
+      "caminho": "pitwall/dashboard/favorites.py",
+      "fonte": "pitwall/dashboard/favorites.py",
+      "modo": "copia",
+      "sha256_destino": "2cf4f128c49a903841ebbe959345d69eae400adb5869247917d403341c9be74b",
+      "sha256_origem": "2cf4f128c49a903841ebbe959345d69eae400adb5869247917d403341c9be74b"
+    },
+    {
+      "caminho": "pitwall/dashboard/model_views.py",
+      "fonte": "pitwall/dashboard/model_views.py",
+      "modo": "copia",
+      "sha256_destino": "f142584a8476d871b30db1021c172d7c346c036b298a3978a058d6ba3c7c5837",
+      "sha256_origem": "f142584a8476d871b30db1021c172d7c346c036b298a3978a058d6ba3c7c5837"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
       "fonte": "pitwall/dashboard/pilot_views.py",
       "modo": "copia",
-      "sha256_destino": "0f21995f52d9c55f033e09fbe758f2d7ca9b61d5c92a43232f0d4d3776a0ae92",
-      "sha256_origem": "0f21995f52d9c55f033e09fbe758f2d7ca9b61d5c92a43232f0d4d3776a0ae92"
+      "sha256_destino": "51e356e336bcae686e44a83838f16b7cd890deb74a3d03370abd3ae7fc543ccc",
+      "sha256_origem": "51e356e336bcae686e44a83838f16b7cd890deb74a3d03370abd3ae7fc543ccc"
+    },
+    {
+      "caminho": "pitwall/dashboard/search.py",
+      "fonte": "pitwall/dashboard/search.py",
+      "modo": "copia",
+      "sha256_destino": "ec15c80a7cbc06c241b8aee99b47ba47bf06e264ec27702d57207cccaad39326",
+      "sha256_origem": "ec15c80a7cbc06c241b8aee99b47ba47bf06e264ec27702d57207cccaad39326"
+    },
+    {
+      "caminho": "pitwall/dashboard/share_cards.py",
+      "fonte": "pitwall/dashboard/share_cards.py",
+      "modo": "copia",
+      "sha256_destino": "fac07e66fde13b043ecc08640be62277cb1cfddd5b9e6b832ccc62acd689cbfe",
+      "sha256_origem": "fac07e66fde13b043ecc08640be62277cb1cfddd5b9e6b832ccc62acd689cbfe"
+    },
+    {
+      "caminho": "pitwall/dashboard/tokens.py",
+      "fonte": "pitwall/dashboard/tokens.py",
+      "modo": "copia",
+      "sha256_destino": "60dd10b6bca268df471589e2f36f4da7ce527f52bee221de539f56c6e24f59c9",
+      "sha256_origem": "60dd10b6bca268df471589e2f36f4da7ce527f52bee221de539f56c6e24f59c9"
     },
     {
       "caminho": "pitwall/data/__init__.py",
@@ -764,8 +1024,8 @@
       "caminho": "pitwall/data/driver_conditions.py",
       "fonte": "pitwall/data/driver_conditions.py",
       "modo": "copia",
-      "sha256_destino": "3d0223f1f64781849db283d48306c60dbf8e1337e14dd3248d16a1c9a0c1e30f",
-      "sha256_origem": "3d0223f1f64781849db283d48306c60dbf8e1337e14dd3248d16a1c9a0c1e30f"
+      "sha256_destino": "8fa53e8b98cd20155d2a865ab1f21381558506bc59b7206938dc3b424c697f7c",
+      "sha256_origem": "8fa53e8b98cd20155d2a865ab1f21381558506bc59b7206938dc3b424c697f7c"
     },
     {
       "caminho": "pitwall/data/editorial.py",
@@ -813,8 +1073,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "e00971b91603820bc0e5ccbfaa9d5278b666b3d2199eefc0bc76ab011e37787d",
-      "sha256_origem": "e00971b91603820bc0e5ccbfaa9d5278b666b3d2199eefc0bc76ab011e37787d"
+      "sha256_destino": "523e3018635f8defc7bd4572aa9e21eebdbdc5e558e9d190b239c92c41198170",
+      "sha256_origem": "523e3018635f8defc7bd4572aa9e21eebdbdc5e558e9d190b239c92c41198170"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -855,8 +1115,15 @@
       "caminho": "pitwall/research/driver_conditions.py",
       "fonte": "pitwall/research/driver_conditions.py",
       "modo": "copia",
-      "sha256_destino": "4c0f48ed88ea60beb443c9eefbe5a2931687e773a73f87862d0e1c7174c48640",
-      "sha256_origem": "4c0f48ed88ea60beb443c9eefbe5a2931687e773a73f87862d0e1c7174c48640"
+      "sha256_destino": "071325c57d486fc8a70d5bb1e2b33bdd597d8a751885b1768f4e0012b8bf6947",
+      "sha256_origem": "071325c57d486fc8a70d5bb1e2b33bdd597d8a751885b1768f4e0012b8bf6947"
+    },
+    {
+      "caminho": "pitwall/research/driver_duel.py",
+      "fonte": "pitwall/research/driver_duel.py",
+      "modo": "copia",
+      "sha256_destino": "be19eaa4f368a35ce41013cdf89a62433c43971fdce62a0372ca08ed65aad1ce",
+      "sha256_origem": "be19eaa4f368a35ce41013cdf89a62433c43971fdce62a0372ca08ed65aad1ce"
     },
     {
       "caminho": "pitwall/version.py",
@@ -1002,8 +1269,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "b9f51094ce3dc52c2800e26c12e98e81e2bbd6d7bfe7062486722e09b1a3168e",
-      "sha256_origem": "b9f51094ce3dc52c2800e26c12e98e81e2bbd6d7bfe7062486722e09b1a3168e"
+      "sha256_destino": "6ea90730765276c28ce18580b4d15f76b499377996908e1a865d0ad5acda0ceb",
+      "sha256_origem": "6ea90730765276c28ce18580b4d15f76b499377996908e1a865d0ad5acda0ceb"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -1017,22 +1284,22 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "0ff6a8048f055c8264d457cccec3f441d53d53ea02b2e501b67447749a606644",
-      "sha256_origem": "d52f626a5f83fc3fb7d449c3ea8beacaab4bda6004df16d2912aad93f0142ed8"
+      "sha256_destino": "9a477ac892088b4b0c2ed14ec119483e037c855deac07e852d26e4228b40596e",
+      "sha256_origem": "cacad9fcb3e4258ccf766227c24225cf284874e419b2ae7b662cdd81aa9ee2f2"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
       "fonte": "tests/test_dashboard_dados.py",
       "modo": "copia",
-      "sha256_destino": "cc39c2bfec53d266f3cccdd3a0033579dc486de6a16f398d5be8b34f23bd3b86",
-      "sha256_origem": "cc39c2bfec53d266f3cccdd3a0033579dc486de6a16f398d5be8b34f23bd3b86"
+      "sha256_destino": "60959686bec7b3ddfc1615fdf1e4370ce1304befbe912709f0e2210e66e9eacc",
+      "sha256_origem": "60959686bec7b3ddfc1615fdf1e4370ce1304befbe912709f0e2210e66e9eacc"
     },
     {
       "caminho": "tests/test_distribuicao.py",
       "fonte": "publicacao/templates/test_distribuicao.py",
       "modo": "gerado",
-      "sha256_destino": "93280a02832d8c92df7e325274b571d3d1e999dbb6df932c4cdfa565b72be7b9",
-      "sha256_origem": "93280a02832d8c92df7e325274b571d3d1e999dbb6df932c4cdfa565b72be7b9"
+      "sha256_destino": "bfc511d58fe219007a255d78c76b4e461f914d186287483e97ed300564101104",
+      "sha256_origem": "bfc511d58fe219007a255d78c76b4e461f914d186287483e97ed300564101104"
     },
     {
       "caminho": "tests/test_driver_conditions.py",
@@ -1049,18 +1316,32 @@
       "sha256_origem": "64d51624e71d3c39154f56d820b9740f30b858edb47f998c72520e579d73e972"
     },
     {
+      "caminho": "tests/test_fan_exploration.py",
+      "fonte": "tests/test_fan_exploration.py",
+      "modo": "copia",
+      "sha256_destino": "1211445bb24f44f478cca2066e89d1a7772ff7875cb35c4deb45e8e990442598",
+      "sha256_origem": "1211445bb24f44f478cca2066e89d1a7772ff7875cb35c4deb45e8e990442598"
+    },
+    {
       "caminho": "tests/test_interface_editorial.py",
       "fonte": "tests/test_interface_editorial.py",
       "modo": "copia",
-      "sha256_destino": "61535c56fd8d9e539ba9dab465ec4781b18fe44f3bc1e18e49fb28733f89c6f3",
-      "sha256_origem": "61535c56fd8d9e539ba9dab465ec4781b18fe44f3bc1e18e49fb28733f89c6f3"
+      "sha256_destino": "d1e7e4559b9a25bcbe1599edcfdc546b64dc4ef5416b25e02dd7e9e32150641c",
+      "sha256_origem": "d1e7e4559b9a25bcbe1599edcfdc546b64dc4ef5416b25e02dd7e9e32150641c"
     },
     {
       "caminho": "tests/test_pilot_views.py",
       "fonte": "tests/test_pilot_views.py",
       "modo": "copia",
-      "sha256_destino": "a128d46fcd9bc83e78fc51f8856252397d114ceb9d78f1e521e3b5cd9364b605",
-      "sha256_origem": "a128d46fcd9bc83e78fc51f8856252397d114ceb9d78f1e521e3b5cd9364b605"
+      "sha256_destino": "b154790f1ffc131e943628528749cf4d4aa337d1335e07c99f9aba8d12db066f",
+      "sha256_origem": "b154790f1ffc131e943628528749cf4d4aa337d1335e07c99f9aba8d12db066f"
+    },
+    {
+      "caminho": "tests/test_review_regressions.py",
+      "fonte": "tests/test_review_regressions.py",
+      "modo": "copia",
+      "sha256_destino": "1670e57114075dddc04bfa7e1e94cc176494f374d1039c5bdb7b1c76f78c5b57",
+      "sha256_origem": "1670e57114075dddc04bfa7e1e94cc176494f374d1039c5bdb7b1c76f78c5b57"
     }
   ],
   "baseline_cientifico_commit": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
@@ -1082,23 +1363,23 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "321838473c97defdbc03d8105a3435c536cdc112b4e019afc286e753b0181288"
+      "sha256": "3980158c3d017fbcda1581836f3a9ae2f4c4a5e0e12e6f227fa191bfa0f6033a"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
-      "sha256": "dcc84e9d2803ff838131575378e9180287c7a5f2f4678c10aecdc44116297bfb"
+      "sha256": "80640226f6c9305bde16131a3d1ebf64ad7eb371b572ecee1dd6c336120dad65"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.en.md.tpl",
-      "sha256": "c6c624d4afd3aa441813d6e2478075241e788303dc7c08445cad30304983b9fd"
+      "sha256": "d4e567bd603b9d0543020acc76838807463b0ef7a93c82779b7264bce1c228b5"
     },
     {
       "caminho": "publicacao/templates/FONTES_E_DADOS.md",
-      "sha256": "1ff9abd80513fc842c2382e3a7899aa686b31c8e207e35133f25319e3e101ad6"
+      "sha256": "36e30b520512560b6fd4806b5c5c9d39d846f1d14eaebae23fa1d56f030c2e03"
     },
     {
       "caminho": "publicacao/templates/LICENCA_CODIGO.md",
-      "sha256": "10835ebde101aa4d8e776a38091e14668a20cb16cb88c0b32e195883f750b2b8"
+      "sha256": "b8bfceca4c642e162e778c479baf87a13b30a32e4e0c67b302bf2c911345d5b6"
     },
     {
       "caminho": "publicacao/templates/GUIA_HOSPEDAGEM.md",
@@ -1110,7 +1391,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "b9f51094ce3dc52c2800e26c12e98e81e2bbd6d7bfe7062486722e09b1a3168e"
+      "sha256": "6ea90730765276c28ce18580b4d15f76b499377996908e1a865d0ad5acda0ceb"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -1122,12 +1403,12 @@
     },
     {
       "caminho": "publicacao/templates/test_distribuicao.py",
-      "sha256": "93280a02832d8c92df7e325274b571d3d1e999dbb6df932c4cdfa565b72be7b9"
+      "sha256": "bfc511d58fe219007a255d78c76b4e461f914d186287483e97ed300564101104"
     },
     {
       "caminho": "publicacao/templates/test_acervo_publico.py",
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.2.0"
+  "versao_produto": "0.3.0"
 }

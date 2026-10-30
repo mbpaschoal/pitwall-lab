@@ -138,11 +138,11 @@ class TestEnglishApplication(unittest.TestCase):
             [t.label for t in at.tabs],
             [
                 "Overview",
-                "Times",
-                "Strategies",
+                "Sessions and laps",
+                "Tyres and stops",
                 "Weather",
-                "History",
-                "Team comparison",
+                "At this circuit",
+                "Teams",
             ],
         )
         self.assertEqual(
@@ -165,7 +165,7 @@ class TestEnglishApplication(unittest.TestCase):
         self.assertEqual(
             next(s for s in at.selectbox if s.key == "gp").value, "2026:18"
         )
-        self.assertIn("Histórico", [t.label for t in at.tabs])
+        self.assertIn("Nesta pista", [t.label for t in at.tabs])
 
     def test_native_language_button_retains_methodology_and_session_filter(self):
         import json
@@ -214,7 +214,7 @@ class TestEnglishApplication(unittest.TestCase):
         at.run(timeout=30)
         self.assertFalse(at.exception)
         self.assertTrue(
-            any("Favourites by published ranking" == s.value for s in at.subheader)
+            any("Who had the best podium chances" == s.value for s in at.subheader)
         )
         for chart in at.get("plotly_chart"):
             self.assertNotIn("Probabilidade individual de pódio", str(chart.proto.spec))

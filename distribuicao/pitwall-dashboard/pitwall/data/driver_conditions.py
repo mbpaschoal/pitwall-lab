@@ -40,6 +40,12 @@ def validate(asset):
         for field in ("track_temperature", "air_temperature", "humidity", "pressure", "wind_speed", "altitude_m", "corners"):
             if type(gp[field]) not in (float, int) or not math.isfinite(gp[field]):
                 raise DriverConditionsError("Missing observed/reference condition: " + field)
+        for field in gp.get("available_fields", []):
+            if gp.get(field) is None:
+                raise DriverConditionsError("Advertised field missing: " + field)
+        direction = gp.get("wind_direction")
+        if direction is not None and (type(direction) not in (int, float) or not math.isfinite(direction) or not 0 <= direction < 360):
+            raise DriverConditionsError("Invalid circular wind direction")
     seen = set()
     for row in asset.get("resultados", []):
         key = row["race_id"], row["driver_id"]
@@ -109,7 +115,9 @@ def assemble(acquisition_path, gate_path, output):
             if not w["campos"][field]["elegivel"]:
                 raise DriverConditionsError("Ineligible sensor field")
             record[field] = w["campos"][field]["media_amostras"]
-        record["wind_direction"] = w["campos"]["wind_direction"]["media_amostras"]
+        record["wind_direction"] = w["campos"]["wind_direction"]["media_circular_graus"]
+        record["available_fields"] = [field for field in ("track_temperature", "air_temperature", "humidity", "pressure", "wind_speed", "wind_direction", "corners", "length_km", "altitude_m") if record.get(field) is not None]
+        record["wind_direction_status"] = "available" if record["wind_direction"] is not None else "indeterminate"
         gps["{}:{}".format(*key)] = record
     rows = []
     for row in data["sources"]["largadas"]:

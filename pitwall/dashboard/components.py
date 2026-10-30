@@ -135,16 +135,25 @@ def link_interno(
     return "/?" + urlencode(parametros)
 
 
-def cabecalho(corrida, temporada, status):
+def cabecalho(corrida, temporada, status, show_prediction_note=True):
     if corrida.get("estado_previsao") == "previsao_registrada":
-        detalhe = "Previsão registrada antes da corrida."
+        detalhe = "Previsão registrada antes da corrida." if show_prediction_note else ""
     elif (
         status == "Resultado observado"
         or corrida.get("estado_previsao") == "ensaio_retrospectivo"
     ):
         detalhe = "Estudo retrospectivo com dados históricos."
     elif status == "Aguardando dados":
-        detalhe = "Aguardando dados oficiais."
+        from datetime import date
+        try:
+            future = date.fromisoformat(corrida["data"][:10]) > date.today()
+        except (ValueError, KeyError, TypeError):
+            future = False
+        if future:
+            status = "Etapa futura"
+            detalhe = "Explore as edições anteriores em Nesta pista."
+        else:
+            detalhe = "Aguardando dados oficiais."
     else:
         detalhe = ""
     return '<section class="gp-cabecalho"><div class="gp-titulo"><h1>{}</h1><div class="gp-meta" title="{}"><span>{}</span><b aria-hidden="true">·</b><span>{}</span><b aria-hidden="true">·</b><span>{}</span></div></div><div class="gp-status-area"><div class="gp-status">{}</div><p>{}</p></div></section>'.format(
@@ -166,7 +175,7 @@ def _pontos(valor):
     return "{:g}".format(float(valor))
 
 
-def standings_table(snapshot, teams=False):
+def standings_table(snapshot, teams=False, season=None):
     classificacao = (
         snapshot.get("classificacao", []) if snapshot.get("disponivel") else []
     )
@@ -193,6 +202,16 @@ def standings_table(snapshot, teams=False):
                 FLAGS.get(item.get("nacionalidade"), ""), e(item["piloto"])
             )
         )
+        if not teams:
+            if item.get("piloto_id"):
+                from urllib.parse import urlencode
+                from pitwall.i18n import language
+                params = dict(tela="Pilotos", visao="perfil", piloto=item["piloto_id"], lang=language())
+                if season is not None:
+                    params["anos"] = season
+                href = "?" + urlencode(params)
+                label = '<a href="{}">{}</a>'.format(e(href), label)
+            label += '<small class="pw-inline-team">{}</small>'.format(e(item.get("equipe")))
         cells = [e(item.get("posicao")), label]
         if not teams:
             cells.append(
@@ -223,10 +242,10 @@ def campeonatos(paineis, temporada):
         snapshot = paineis["constructor_standings" if teams else "driver_standings"]
         cards.append(
             '<section class="painel-editorial" id="{}"><div class="pw-card-head"><h3>{} <span>{}</span></h3></div>{}</section>'.format(
-                ancora, e(titulo), temporada, standings_table(snapshot, teams)
+                ancora, e(titulo), temporada, standings_table(snapshot, teams, temporada)
             )
         )
-    return '<p class="pw-standings-note">Classificação após a rodada {}.</p><div class="pw-standings">{}</div>'.format(
+    return '<p class="pw-standings-note">Campeonato · referência da rodada {}.</p><div class="pw-standings">{}</div>'.format(
         paineis["rodada"], "".join(cards)
     )
 
@@ -310,15 +329,16 @@ def visao_geral(
         else "<p>Mapa do circuito indisponível.</p>"
     )
     temperatura, nota_clima = "—", "Clima não disponível"
-    media = (clima or {}).get("resumo", {}).get("temperatura_media_c")
+    actual = (clima or {}).get("corrida_efetiva")
+    media = actual.get("air_temperature") if actual else (clima or {}).get("resumo", {}).get("temperatura_media_c")
     if (
         isinstance(media, (int, float))
         and not isinstance(media, bool)
         and math.isfinite(media)
     ):
         temperatura = "{:.1f} °C".format(media).replace(".", ",")
-        nota_clima = "Open-Meteo · média histórica"
-    return '<section class="pw-overview" aria-label="Visão geral do circuito"><div class="pw-track"><figure class="hero-circuito">{}<figcaption class="hero-sobreposicao"><p class="circuito-rotulo">Circuito</p><h2>{}</h2><div class="pw-track-metrics">{}</div></figcaption></figure><section class="mapa-circuito" aria-label="Mapa do circuito"><div class="mapa-meta"><strong>Traçado do circuito</strong></div>{}</section></div><div class="coluna-circuito"><section class="painel-editorial"><h3><a href="{}" target="_blank" rel="noopener noreferrer">Clima e medições</a></h3><div class="pw-weather"><span class="pw-weather-icon" aria-hidden="true">partly_cloudy_day</span><div><strong>{}</strong><p>{}</p></div></div></section><section class="painel-editorial"><h3>Informações do circuito</h3><dl class="pw-circuit-info">{}</dl></section></div></section>'.format(
+        nota_clima = "Ar durante a corrida · OpenF1" if actual else "Fim de semana · Open-Meteo"
+    return '<section class="pw-overview" aria-label="Visão geral do circuito"><div class="pw-track"><figure class="hero-circuito">{}<figcaption class="hero-sobreposicao"><p class="circuito-rotulo">Circuito</p><h2>{}</h2><div class="pw-track-metrics">{}</div></figcaption></figure><section class="mapa-circuito" aria-label="Mapa do circuito"><div class="mapa-meta"><strong>Traçado do circuito</strong></div>{}</section></div><div class="coluna-circuito"><section class="painel-editorial"><h3><a href="{}" target="_blank" rel="noopener noreferrer">Clima e medições</a></h3><div class="pw-weather"><span class="pw-weather-icon" aria-hidden="true">thermostat</span><div><strong>{}</strong><p>{}</p></div></div></section><section class="painel-editorial"><h3>Informações do circuito</h3><dl class="pw-circuit-info">{}</dl></section></div></section>'.format(
         photo_html,
         e(corrida["circuito_nome"]),
         metric_html,

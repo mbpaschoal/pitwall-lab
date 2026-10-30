@@ -27,3 +27,7 @@ The product presents derived data with provenance and missingness preserved. One
 A current snapshot does not prove availability at a historical cutoff. Later data do not change the 15 inputs, v1 model or recorded probabilities. Tyres describe observed sequences, not strategic intent or causal degradation. Race and Sprint remain separate; missing/inconsistent boundaries stay explicit.
 
 The package includes nine frozen scientific artefacts and offline projections for 66 GPs/330 sessions, without raw data or executable models. Historical sources can contain later revisions. Non-commercial conditions do not automatically permit every intended use: consult original terms. Code licensing is separate. No official endorsement; data carry no guarantees.
+
+Derivados WebP mudam dimensão/formato para apresentação; os originais, créditos e condições de cada ativo estão preservados no catálogo visual.
+
+WebP presentation derivatives change dimensions/format; original files, credits and individual terms remain preserved in the visual catalogue.

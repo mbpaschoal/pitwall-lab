@@ -145,8 +145,9 @@ def teammate_comparison(asset, driver, years=None, condition=None):
 
 def profile(asset, driver, years=None, conditions=HIGHLIGHTS):
     selected = select_rows(asset, years, driver=driver)
+    opportunities = {x["race_id"] for x in selected if x["started"]}
     return {"driver_id": driver, "driver_name": selected[-1]["driver_name"] if selected else driver,
         "summary": summarize(selected), "conditions": [
             {"condition": key, "driver": summarize(select_rows(asset, years, key, driver)),
-             "reference": summarize([x for x in select_rows(asset, years, key) if x["driver_id"] != driver])}
+             "reference": summarize([x for x in select_rows(asset, years, key) if x["driver_id"] != driver and x["race_id"] in opportunities])}
             for key in conditions], "teammates": teammate_comparison(asset, driver, years), "races": selected}

@@ -26,3 +26,7 @@ Explain prior behaviour with a concrete example, known cause or uncertainty, del
 ## 0.2.0: comparisons require a verified denominator
 
 The brainstorm counted rain across whole sessions and could select a Sprint through the Race session type. The audit now requires the literal main-race name, start/end status and exclusion of suspensions. This changed the result to eight races with rain during active racing. I also learned to preserve feed differences: Australia/2026 lap numbers must not be corrected by shifting unmatched rows. Rates now show starts and ties; incomplete sources remain incomplete. [Evidence and limits](../../reports/pilotos_condicoes_20261029/README.en.md).
+
+## 0.3.0 — Fair comparisons and enjoyable reading
+
+I learned that a correctly typed field can still be semantically wrong: wind direction needs a circular mean. Comparing one driver with the entire grid also requires aligned races and denominators. Both decisions now have regression checks. Each kind of information has a clear home: results in Races, standings in Championship, estimates in Podium chances. Duels use shared starts and cards include period, sample and source. A green source-tree test does not prove the published package matches the code; delivery now checks both.

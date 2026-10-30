@@ -27,19 +27,53 @@ jobs:
             python -m pitwall.publishing.releases check --base "$BASE_REF"
           fi
       - name: Testes PT e EN / PT and EN tests
-        run: python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_dashboard_acervo_app tests.test_interface_editorial tests.test_driver_conditions tests.test_driver_projection tests.test_pilot_views tests.test_race_weather tests.test_tyre_reconciliation tests.test_driver_source_audit
-  release:
-    if: startsWith(github.ref, 'refs/tags/v')
-    needs: validate
+        run: python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_dashboard_acervo_app tests.test_interface_editorial tests.test_driver_conditions tests.test_driver_projection tests.test_pilot_views tests.test_race_weather tests.test_tyre_reconciliation tests.test_driver_source_audit tests.test_review_regressions tests.test_fan_exploration
+      - name: Integridade do pacote publicado / Published package integrity
+        run: python -B verificar_pacote.py --pacote "$GITHUB_WORKSPACE/distribuicao/pitwall-dashboard"
+  browser:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - run: python -m pip install -r publicacao/templates/requirements.txt
+      - run: npm install --no-save playwright@1.62.1
+      - run: npx playwright install --with-deps chromium
+      - name: Jornadas de fãs / Fan journeys
+        run: |
+          python -m streamlit run distribuicao/pitwall-dashboard/app.py --server.headless true --server.address 127.0.0.1 --server.port 8501 > "$RUNNER_TEMP/streamlit.log" 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8501/_stcore/health; then break; fi
+            sleep 1
+          done
+          node tests/browser/aceite_exploracao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/browser-evidence"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fan-journey-evidence
+          path: |
+            ${{ runner.temp }}/browser-evidence
+            ${{ runner.temp }}/streamlit.log
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [validate, browser]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Pacote da release / Release package
+        run: python exportar_dashboard.py --destino "$RUNNER_TEMP/pitwall-release/pitwall-dashboard"
       - name: Notas PT e EN / PT and EN release notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python -m pitwall.publishing.releases publish
+        run: python -m pitwall.publishing.releases publish --asset "$RUNNER_TEMP/pitwall-release/pitwall-dashboard.zip"

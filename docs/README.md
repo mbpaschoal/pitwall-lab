@@ -26,3 +26,9 @@ Current documentation is available in Portuguese and English. Original scientifi
 Comandos em protocolos históricos não são instruções para refazer uma previsão após a corrida. As verificações atuais usam os contratos do blueprint e os testes focais, sem execução científica durante a navegação.
 
 Commands in historical protocols do not instruct recreating a prediction after its race. Current checks use blueprint contracts and focused tests; browsing performs no scientific execution.
+
+## Leitura por etapa / Reading by stage
+
+O produto corrente está no README, em DADOS_ATUAIS e na [revisão 0.3.0](REVISAO_030.md). Protocolos e relatórios científicos congelados descrevem o estado e as datas de sua própria etapa; não substituem o estado atual do produto.
+
+The current product is described in the README, CURRENT_DATA and the [0.3.0 review](en/REVIEW_030.md). Frozen scientific protocols and reports retain their own stage and dates; they do not replace the current product status.

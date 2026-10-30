@@ -30,3 +30,9 @@ English documents live in `docs/en/` and use an explicit allowlist. Scientific d
 ## Making changes
 
 Start from the relevant blueprint role contract. Prefer small functions, descriptive names, explicit dependencies and behavioural tests. Avoid copying implementations among package, root and distribution: the portable package is generated. Record a new version for each delivery and test the isolated package and affected language. Do not run unrestricted test discovery for a presentation change: it can execute scientific work.
+
+## Release 0.3.0
+
+`pitwall/dashboard/model_views.py` owns Lab evaluation; `pilot_views.py` composes exploration, profiles and duels. `driver_duel.py` calculates shared-start comparisons without UI dependencies. `search.py` searches local entities; `share_cards.py` exports SVG without external resources. Favourites use the local component in `frontend_assets/favorite/` and browser storage.
+
+`distribuicao/pitwall-dashboard/` is generated from an allowlist and must not be edited directly. ZIP files are release assets rather than large duplicated Git binaries. CI validates the actual served tree. `validar_blueprint.py` belongs to the local vault and is not required by the public installation.

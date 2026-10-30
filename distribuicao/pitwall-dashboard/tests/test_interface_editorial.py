@@ -77,13 +77,15 @@ class TestInterfaceEditorial(unittest.TestCase):
 
     def test_corridas_nao_repete_previsoes_e_cada_campeonato_aparece_uma_vez(self):
         texto = self.run_app({'temporada': '2026', 'gp': '18'})
-        self.assertNotIn('Favoritos por ranking publicado', texto)
+        self.assertNotIn('Quem tinha mais chance de pódio', texto)
         self.assertNotIn('Acertos — modelo', texto)
         self.assertNotIn('Previsão e resultado observado', texto)
+        self.assertEqual(texto.count('aria-label="Campeonato de pilotos"'), 0)
+        self.assertEqual(sum(e.label == 'Fontes e cobertura' for e in self.at.expander), 1)
+        texto = self.run_app({'tela': 'Campeonato', 'temporada': '2026', 'gp': '18'})
         self.assertEqual(texto.count('aria-label="Campeonato de pilotos"'), 1)
         self.assertEqual(texto.count('aria-label="Campeonato de construtores"'), 1)
         self.assertIn('Sergio Pérez', texto)
-        self.assertEqual(sum(e.label == 'Fontes e cobertura' for e in self.at.expander), 1)
         self.assertFalse(any('campeonato' in e.label.lower() for e in self.at.expander))
 
     def test_atalho_real_preserva_gp_e_separa_paineis(self):
@@ -95,7 +97,7 @@ class TestInterfaceEditorial(unittest.TestCase):
         texto = self.run_app(query)
         self.assertEqual(por_chave(self.at.radio, 'tela').value, 'Previsões')
         self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2025:1')
-        self.assertIn('Favoritos por ranking publicado', texto)
+        self.assertIn('Quem tinha mais chance de pódio', texto)
         self.assertNotIn('aria-label="Campeonato de pilotos"', texto)
         self.assertNotIn('Histórico observado deste GP', texto)
         self.assertEqual(texto.count('Estudo retrospectivo com dados históricos.'), 1)
