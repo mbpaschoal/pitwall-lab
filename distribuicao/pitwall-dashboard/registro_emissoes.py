@@ -210,14 +210,26 @@ def _qualificacao_alternativa_openf1(raiz, manifesto, evento):
     if base not in caminho.parents:
         raise RegistroEmissoesErro('Diretório OpenF1 fora da raiz.')
     try:
-        dados = openf1_qualificacao.carregar(caminho)
+        config_path = declarada.get('configuracao_evento')
+        if config_path:
+            from operacao2026.weekend import load_event
+            path = (base/config_path).resolve()
+            if base not in path.parents:
+                raise RegistroEmissoesErro('Configuração fora da raiz.')
+            config = load_event(path)
+            if evento != {key:config[key] for key in ('temporada','rodada','circuito_id')}:
+                raise RegistroEmissoesErro('Configuração diverge do evento.')
+            expected = next(s for s in config['sessions'] if s['session_name']=='Qualifying')
+            dados = openf1_qualificacao.carregar(caminho,sessao_esperada=expected,prefixo='openf1-q',mapeamento=openf1_qualificacao.MAPEAMENTO_2026)
+        else:
+            dados = openf1_qualificacao.carregar(caminho)
     except (OSError, ValueError) as erro:
         raise RegistroEmissoesErro('Classificação OpenF1 comprovada inválida.') from erro
     if (dados['sessao']['session_key'], dados['sessao']['meeting_key']) != (declarada.get('session_key'), declarada.get('meeting_key')):
         raise RegistroEmissoesErro('Sessão OpenF1 diverge do manifesto.')
     if dados['encerramento_utc'] != declarada.get('encerramento_utc'):
         raise RegistroEmissoesErro('Encerramento OpenF1 diverge do manifesto.')
-    if evento != {'temporada': 2026, 'rodada': 18, 'circuito_id': 'americas'}:
+    if not declarada.get('configuracao_evento') and evento != {'temporada': 2026, 'rodada': 18, 'circuito_id': 'americas'}:
         raise RegistroEmissoesErro('Identidade do evento não corresponde à Q OpenF1.')
     return dados
 
@@ -288,4 +300,8 @@ def validar_declaracoes(raiz, declaracoes):
 
 
 def carregar(raiz):
-    return validar_declaracoes(raiz, DECLARACOES)
+    path = Path(raiz)/'operacao2026/eventos/emissoes_registradas.json'
+    additional = json.loads(path.read_text()) if path.is_file() else []
+    if not isinstance(additional,list):
+        raise RegistroEmissoesErro('Registro adicional inválido.')
+    return validar_declaracoes(raiz, (*DECLARACOES,*additional))

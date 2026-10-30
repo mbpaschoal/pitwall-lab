@@ -110,7 +110,7 @@ class Operacao2026IntegracaoTest(unittest.TestCase):
         with patch.object(operar_2026, 'SNAPSHOTS', self.snapshots):
             text = io.StringIO()
             with redirect_stdout(text):
-                operar_2026.cmd_estado(argparse.Namespace(snapshot='q0'))
+                operar_2026.cmd_estado(argparse.Namespace(snapshot='q0', temporada='2026', rodada=18, circuito='americas'))
             index, calendar, calendar_pages = operar_2026._calendar('q0')
             raw = operar_2026._raw_admitidos('q0', calendar_pages)
         self.assertIn('aguardando_classificacao', text.getvalue())

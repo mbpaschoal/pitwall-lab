@@ -33,6 +33,7 @@ COMPONENTES_OPERACIONAIS = (
     'operacao2026/__init__.py', 'operacao2026/previsao.py', 'operar_2026.py',
     'operacao2026/fontes.py', 'operacao2026/fastf1_contexto.py',
     'operacao2026/openf1_qualificacao.py',
+    'operacao2026/weekend.py', 'operacao2026/weekend_projection.py', 'operacao2026/weekend_official.py', 'operacao2026/eventos/mexico2026.json',
     'operacao2026/formula1dashboard_tempos.py',
 )
 HELPERS_CONGELADOS = ('treinar_modelo_v1.py', 'avaliar_modelo_v1.py')

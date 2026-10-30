@@ -4,6 +4,12 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.4.0 — 2026-10-30
+
+No Resumo, foto e traçado da pista passam a aparecer antes do pódio, dando destaque ao circuito.
+
+Preparação do México com cinco sessões identificadas, coleta serial após encerramento observado, cache auditável e espera persistida em limites da API. Tempos, voltas, pneus, paradas, previsão meteorológica separada dos sensores da corrida e campeonatos da rodada própria. Admissão explícita de Q OpenF1 para o México; código commitado e publicação antes da largada continuam obrigatórios. Acertos de 2026 inclui somente previsões registradas e resultados posteriores validados. A corrida e a classificação ainda não aconteceram; não há previsão prospectiva do México nesta entrega.
+
 ## 0.3.1 — 2026-10-30
 
 Corrige a sincronização do teste de favorito: o aceite passa a localizar o iframe atual após recarregar e aguardar o valor persistido, em vez de guardar uma referência que pode ser removida pelo Streamlit. A instabilidade foi observada no CI da branch principal; a release 0.3.0 e a aplicação pública haviam passado. Dados, regras de comparação e modelo científico permanecem iguais. O CI também regenera a distribuição e compara com a cópia publicada. Validação: jornada completa do navegador contra o pacote servido e conferência de integridade.

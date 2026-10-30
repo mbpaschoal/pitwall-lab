@@ -55,8 +55,15 @@ def _selecionar_snapshot(snapshot, endpoint, rodadas):
         return index, {endpoint: [item for alias in aliases for item in legacy.get(alias, [])]}
 
 
-def _event_with_q(snapshot, calendar, circuit, prospectivo=False):
+def _selecionar_evento(calendar, circuit, temporada='2026', rodada=None):
     event = fontes.discover_event(calendar, circuit)
+    if str(event['season']) != str(temporada) or (rodada is not None and str(event['round']) != str(rodada)):
+        raise ValueError('Temporada/rodada/circuito solicitados divergem do calendário.')
+    return event
+
+
+def _event_with_q(snapshot, calendar, circuit, prospectivo=False, temporada='2026', rodada=None):
+    event = _selecionar_evento(calendar, circuit, temporada, rodada)
     endpoint = 'classificacao'
     _, pages = _selecionar_snapshot(snapshot, endpoint, {event['round']})
     qpages = pages.get(endpoint, [])
@@ -215,14 +222,18 @@ def cmd_validar_fastf1(args):
 
 def cmd_estado(args):
     index, calendar, _ = _calendar(args.snapshot)
-    event, _, state, _ = _event_with_q(args.snapshot, calendar, 'americas')
-    print(json.dumps({'snapshot': index['snapshot_id'], 'austin': {'round': event['round'], 'date': event['date']},
+    event, _, state, _ = _event_with_q(args.snapshot, calendar, args.circuito,
+                                      temporada=args.temporada, rodada=args.rodada)
+    print(json.dumps({'snapshot': index['snapshot_id'], 'evento': {
+                      'temporada': str(event['season']), 'rodada': str(event['round']),
+                      'circuito_id': event['Circuit']['circuitId'], 'data': event['date']},
                       'estado': state['estado'], 'registros_classificacao': len(state['registros'])}, ensure_ascii=False, indent=2))
 
 
-def _preparar_fluxo(snapshot, circuit, prospectivo=False):
+def _preparar_fluxo(snapshot, circuit, prospectivo=False, temporada='2026', rodada=None):
     index, calendar, calendar_pages = _calendar(snapshot)
-    event, _, state, qpages = _event_with_q(snapshot, calendar, circuit, prospectivo=prospectivo)
+    event, _, state, qpages = _event_with_q(snapshot, calendar, circuit, prospectivo=prospectivo,
+                                         temporada=temporada, rodada=rodada)
     if state['estado'] != 'pronto':
         return index, calendar, event, state, {**calendar_pages, **qpages}, None, None, None
     historic = previsao.carregar_historico_bruto(str(ROOT / 'data/historico'), auditoria=True)
@@ -251,13 +262,21 @@ def _preparar_fluxo(snapshot, circuit, prospectivo=False):
     return index, calendar, event, state, {**calendar_pages, **qpages, **result_pages}, results, rows, audit
 
 
-def _preparar_fluxo_openf1(snapshot, diretorio):
+def _preparar_fluxo_openf1(snapshot, diretorio, evento_config=None):
     """Monta a mesma matriz v1 com Q OpenF1 já capturada, sem remodelar seu raw como Jolpica."""
     index, calendar, calendar_pages = _calendar(snapshot)
-    event = fontes.discover_event(calendar, 'americas')
-    q_openf1 = openf1_qualificacao.carregar(diretorio)
-    if (str(event['season']), str(event['round']), event['Circuit']['circuitId']) != ('2026', '18', 'americas'):
-        raise ValueError('Calendário não resolve Austin 2026 para a identidade OpenF1 admitida.')
+    if evento_config is None:
+        event = _selecionar_evento(calendar, 'americas', '2026', 18)
+        q_openf1 = openf1_qualificacao.carregar(diretorio)
+    else:
+        from operacao2026.weekend import load_event
+        config = load_event(evento_config)
+        event = _selecionar_evento(calendar, config['circuito_id'], config['temporada'], config['rodada'])
+        expected = next(s for s in config['sessions'] if s['session_name'] == 'Qualifying')
+        qstart = event['Qualifying']['date'] + 'T' + event['Qualifying']['time']
+        if previsao._utc(qstart) != previsao._utc(expected['date_start']) or event['date'] != config['data']:
+            raise ValueError('Qualifying OpenF1/calendar mismatch')
+        q_openf1 = openf1_qualificacao.carregar(diretorio, sessao_esperada=expected, prefixo='openf1-q', mapeamento=openf1_qualificacao.MAPEAMENTO_2026)
     state = previsao.preparar_alvo(event, q_openf1['registros'], prospectivo=True)
     historic = previsao.carregar_historico_bruto(str(ROOT / 'data/historico'), auditoria=True)
     if len(historic) == 2:
@@ -312,25 +331,33 @@ def cmd_emitir(args):
     _url(args.fonte_encerramento)
     q_openf1 = None
     if args.openf1_diretorio:
-        index, _, event, state, pages, results, rows, audit, q_openf1 = _preparar_fluxo_openf1(
-            args.snapshot, args.openf1_diretorio)
+        evento_config = getattr(args, 'openf1_evento', None)
+        if evento_config:
+            from operacao2026.weekend import load_event
+            config = load_event(evento_config)
+            if (str(args.temporada), str(args.rodada), args.circuito) != (str(config['temporada']), str(config['rodada']), config['circuito_id']):
+                raise ValueError('Identidade solicitada diverge da configuração OpenF1.')
+        if not evento_config and (str(args.temporada), str(args.rodada), args.circuito) != ('2026', '18', 'americas'):
+            raise ValueError('Adaptador OpenF1 admitido exclusivamente para Austin 2026/18/americas.')
+        index, _, event, state, pages, results, rows, audit, q_openf1 = (_preparar_fluxo_openf1(args.snapshot, args.openf1_diretorio, evento_config) if evento_config else _preparar_fluxo_openf1(args.snapshot, args.openf1_diretorio))
         q_sources = q_openf1['fontes']
         obtained = max(previsao._utc(source['obtido_em_utc']) for source in q_sources)
         encerramento_efetivo = q_openf1['encerramento_utc']
         if previsao._utc(args.sessao_encerrada_em) != previsao._utc(encerramento_efetivo):
             raise ValueError('Encerramento informado diverge da evidência OpenF1 de Q3.')
     else:
-        index, _, event, state, pages, results, rows, audit = _preparar_fluxo(args.snapshot, 'americas', prospectivo=True)
+        index, _, event, state, pages, results, rows, audit = _preparar_fluxo(
+            args.snapshot, args.circuito, prospectivo=True, temporada=args.temporada, rodada=args.rodada)
         q_endpoint = 'classificacao'
         q_sources = _fontes(index, {q_endpoint: pages.get(q_endpoint, [])})
         if not q_sources:
-            raise ValueError('Snapshot não contém proveniência da classificação de Austin.')
+            raise ValueError('Snapshot não contém proveniência da classificação do GP solicitado.')
         try:
             obtained = max(previsao._utc(source['obtido_em_utc']) for source in q_sources)
         except (KeyError, TypeError, ValueError) as error:
             raise ValueError('Classificação sem obtenção UTC válida.') from error
     if state['estado'] != 'pronto':
-        raise ValueError('Aguardando classificação de Austin; nenhuma probabilidade é emitida.')
+        raise ValueError('Aguardando classificação do GP solicitado; nenhuma probabilidade é emitida.')
     if args.fastf1_snapshot:
         fastf1_contexto.validar_contexto_emissao(FASTF1_SNAPSHOTS, args.fastf1_snapshot, event)
     if q_openf1 is None:
@@ -340,7 +367,7 @@ def cmd_emitir(args):
             raise ValueError('Classificação sem obtenção UTC válida.') from error
     race_start = '{}T{}'.format(event['date'], event.get('time', ''))
     if not event.get('time'):
-        raise ValueError('Austin sem horário de largada UTC; emissão prospectiva bloqueada.')
+        raise ValueError('GP sem horário de largada UTC; emissão prospectiva bloqueada.')
     now = datetime.now(timezone.utc)
     previsao.validar_prospectivo(race_start, state['referencia_utc'], args.sessao_encerrada_em, obtained, args.corte, now)
     if any(previsao._utc(source['obtido_em_utc']) < previsao._utc(args.sessao_encerrada_em)
@@ -380,6 +407,9 @@ def cmd_emitir(args):
             'session_key': q_openf1['sessao']['session_key'], 'meeting_key': q_openf1['sessao']['meeting_key'],
             'encerramento_utc': q_openf1['encerramento_utc'],
         }
+        if getattr(args, 'openf1_evento', None):
+            config_path = Path(args.openf1_evento).resolve()
+            data['qualificacao_alternativa']['configuracao_evento'] = str(config_path.relative_to(ROOT))
     def validar_publicacao():
         atual = datetime.now(timezone.utc)
         previsao.validar_prospectivo(race_start, state['referencia_utc'], args.sessao_encerrada_em,
@@ -408,6 +438,9 @@ def main(argv=None):
     p.set_defaults(func=cmd_validar_fastf1)
     p = sub.add_parser('estado')
     p.add_argument('--snapshot', required=True)
+    p.add_argument('--temporada', required=True, choices=('2026',))
+    p.add_argument('--rodada', required=True, type=int)
+    p.add_argument('--circuito', required=True)
     p.set_defaults(func=cmd_estado)
     p = sub.add_parser('ensaio')
     p.add_argument('--snapshot', required=True)
@@ -415,6 +448,9 @@ def main(argv=None):
     p.set_defaults(func=cmd_ensaio)
     p = sub.add_parser('emitir')
     p.add_argument('--snapshot', required=True)
+    p.add_argument('--temporada', required=True, choices=('2026',))
+    p.add_argument('--rodada', required=True, type=int)
+    p.add_argument('--circuito', required=True)
     p.add_argument('--id', required=True)
     p.add_argument('--sessao-encerrada-em', required=True, help='UTC observado, por exemplo 2026-10-24T22:00:00Z')
     p.add_argument('--fonte-encerramento', required=True, help='URL da confirmação de encerramento observada')
@@ -422,6 +458,7 @@ def main(argv=None):
     p.add_argument('--versao-anterior')
     p.add_argument('--motivo-correcao')
     p.add_argument('--fastf1-snapshot', help='Enriquecimento opcional FastF1 Q; não substitui a classificação Jolpica.')
+    p.add_argument('--openf1-evento', help='Configuração explícita e validada para outro GP; não desativa barreiras UTC.')
     p.add_argument('--openf1-diretorio', help='Diretório local de Q OpenF1 já preservada; origem explícita, sem simular Jolpica.')
     p.set_defaults(func=cmd_emitir)
     args = parser.parse_args(argv)

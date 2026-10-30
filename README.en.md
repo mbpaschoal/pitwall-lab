@@ -10,6 +10,9 @@ Who wins more often in the rain? How do two drivers compare at the same races? W
 
 ![Drivers: historical comparisons by condition](docs/images/pitwall-pilotos-en.png)
 
+
+Mexico 2026 preparation: five-session tracking, explicit sources and times, collection after observed finishes and forecasts separated from race observations. [Operation and limits](docs/en/WEEKEND_OPERATION.md). This publication does not yet contain Mexico results or a prospective Mexico forecast.
+
 ## The product today
 
 - **Drivers:** condition leaders, profiles, shared-race duels, a browser-local favourite and shareable cards, with explicit sample sizes and ties. [Data audit](reports/pilotos_condicoes_20261029/README.en.md).

@@ -10,6 +10,9 @@ Quem ganha mais na chuva? Como dois pilotos se saem nos mesmos GPs? Quem já foi
 
 ![Pilotos: comparações históricas por condição](docs/images/pitwall-pilotos.png)
 
+
+Preparação do México 2026: acompanhamento das cinco sessões, fontes e horários explícitos, coleta após encerramento observado e clima previsto separado das medições da corrida. [Operação e limites](docs/OPERACAO_FIM_SEMANA.md). A publicação atual ainda não contém resultados nem previsão prospectiva do México.
+
 ## O produto hoje
 
 - **Pilotos:** destaques por condição, perfil, duelos, favorito no navegador e cartões para compartilhar. Filtros, amostras e empates ficam explícitos. [Auditoria dos dados](reports/pilotos_condicoes_20261029/README.md).

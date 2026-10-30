@@ -15,6 +15,7 @@ from pitwall.paths import PROJECT_ROOT
 from pitwall.version import version
 
 DOCUMENT_PAIRS = (
+    ("docs/OPERACAO_FIM_SEMANA.md", "docs/en/WEEKEND_OPERATION.md"),
     ("docs/REVISAO_030.md", "docs/en/REVIEW_030.md"),
     ("README.md", "README.en.md"),
     ("CHANGELOG.md", "CHANGELOG.en.md"),

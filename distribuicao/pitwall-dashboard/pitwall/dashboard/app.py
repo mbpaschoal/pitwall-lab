@@ -946,6 +946,13 @@ def tela_explorar(pacote, rodada, foco):
         pitwall_ui.cabecalho(corrida, pacote["temporada"], situacao_corrida(corrida), show_prediction_note=foco == "Previsões"),
         unsafe_allow_html=True,
     )
+    from pitwall.dashboard.weekend_views import load_status, render_status, render_times, render_weather, render_strategies, render_podium
+    try:
+        weekend = load_status(raiz_artefatos(), pacote["temporada"], rodada, corrida["circuito_id"])
+    except (ValueError, OSError):
+        weekend = None
+        st.warning("Não foi possível validar o estado da coleta deste GP.")
+    render_status(weekend)
     if foco == "Corridas":
         abas = (
             "Visão geral",
@@ -961,29 +968,30 @@ def tela_explorar(pacote, rodada, foco):
         )
         with visao_geral:
             render_language(st, "Visão geral")
-            renderizar_podio(pacote, corrida, participantes, acervo_gp)
+            renderizar_contexto_circuito(pacote, corrida, acervo_gp)
+            if not render_podium(weekend):
+                renderizar_podio(pacote, corrida, participantes, acervo_gp)
             if acervo_gp:
                 atalho_gp(pacote, corrida, "Corridas", "Ver classificação completa da corrida", aba="Tempos")
-            renderizar_contexto_circuito(pacote, corrida, acervo_gp)
         with tempos:
             render_language(st, "Tempos")
             renderizar_programacao(corrida)
             if acervo_gp:
                 acervo_dashboard_ui.renderizar_tempos(acervo_gp)
-            else:
+            elif not render_times(weekend):
                 renderizar_tempos_sessoes(bloco)
                 renderizar_podio(pacote, corrida, participantes)
         with estrategias:
             render_language(st, "Estratégias")
             if acervo_gp:
                 acervo_dashboard_ui.renderizar_estrategias(acervo_gp)
-            else:
+            elif not render_strategies(weekend):
                 st.info("Estratégias indisponíveis no pacote local.")
         with clima:
             render_language(st, "Clima")
             if acervo_gp:
                 acervo_dashboard_ui.renderizar_clima(acervo_gp)
-            else:
+            elif not render_weather(weekend):
                 renderizar_condicoes_disponiveis(corrida)
         with historico:
             render_language(st, "Histórico")
@@ -1198,7 +1206,9 @@ def executar_app():
                     "alvos_conhecidos"
                 ]
             ]
-            st.session_state["gp"] = observadas[-1] if observadas else valores[0]
+            from pitwall.dashboard.weekend_views import current_gp
+            active = current_gp(raiz_artefatos())
+            st.session_state["gp"] = active if active in valores else (observadas[-1] if observadas else valores[0])
         else:
             st.session_state.pop("gp", None)
         st.session_state["_temporada_anterior_dashboard"] = temporada
@@ -1249,6 +1259,12 @@ def executar_app():
                 paineis = complementar_paineis(paineis, gp_acervo)
         except AcervoDashboardErro:
             pass
+        from pitwall.dashboard.weekend_views import load_status
+        weekend=load_status(raiz_artefatos(),temporada,rodada,corrida["circuito_id"])
+        if weekend:
+            for field,snapshot in (weekend.get('campeonatos') or {}).items():
+                if snapshot.get('disponivel'):
+                    paineis[field]=snapshot
         st.title("Campeonato")
         st.markdown(pitwall_ui.campeonatos(paineis, temporada), unsafe_allow_html=True)
     elif tela == "Desempenho":

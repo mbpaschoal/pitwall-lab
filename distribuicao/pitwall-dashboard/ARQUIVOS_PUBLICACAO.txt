@@ -104,10 +104,12 @@ dashboard_assets/presentation/villeneuve-hero.webp
 dashboard_assets/presentation/yas_marina-hero.webp
 dashboard_assets/presentation/zandvoort-hero.webp
 dashboard_dados.py
+docs/OPERACAO_FIM_SEMANA.md
 docs/REVISAO_030.md
 docs/avaliacao_final_v1.md
 docs/dicionario_variaveis.md
 docs/en/REVIEW_030.md
+docs/en/WEEKEND_OPERATION.md
 docs/en/avaliacao_final_v1.md
 docs/en/dicionario_variaveis.md
 docs/en/experimento_modelo_v1.md
@@ -123,6 +125,7 @@ documentacao_local.py
 frontend_assets/acervo_dashboard.json
 frontend_assets/contexto_editorial.json
 frontend_assets/favorite/index.html
+frontend_assets/operacao_fim_semana.json
 frontend_assets/paineis_editoriais.json
 frontend_assets/pilotos_condicoes.json
 frontend_assets/pitwall.css
@@ -139,6 +142,7 @@ pitwall/dashboard/pilot_views.py
 pitwall/dashboard/search.py
 pitwall/dashboard/share_cards.py
 pitwall/dashboard/tokens.py
+pitwall/dashboard/weekend_views.py
 pitwall/data/__init__.py
 pitwall/data/archive.py
 pitwall/data/circuit_history.py
@@ -159,6 +163,7 @@ pitwall/publishing/documentation.py
 pitwall/research/__init__.py
 pitwall/research/driver_conditions.py
 pitwall/research/driver_duel.py
+pitwall/research/prospective_evaluation.py
 pitwall/version.py
 pitwall_ui.py
 pitwall_ui_dados.py
@@ -190,3 +195,4 @@ tests/test_fan_exploration.py
 tests/test_interface_editorial.py
 tests/test_pilot_views.py
 tests/test_review_regressions.py
+tests/test_weekend_ui.py

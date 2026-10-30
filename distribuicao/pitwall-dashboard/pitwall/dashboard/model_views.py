@@ -132,7 +132,21 @@ def tabela_calibracao(calibracao):
 def tela_desempenho(pacote):
     if pacote["temporada"] == 2026:
         st.title("Acertos do Lab")
-        st.info("Métricas agregadas de 2026 ainda indisponíveis.")
+        from pitwall.research.prospective_evaluation import prospective_races
+        rows = prospective_races(pacote)
+        if not rows:
+            st.info("Ainda não há previsão registrada com resultado validado para avaliar em 2026.")
+            return
+        first, second, third = st.columns(3)
+        first.metric("Corridas avaliadas",len(rows))
+        second.metric("Integrantes do pódio acertados",'{} / {}'.format(sum(r['modelo'] for r in rows),3*len(rows)))
+        third.metric("Pódios completos",'{} / {}'.format(sum(r['modelo']==3 for r in rows),len(rows)))
+        st.caption("Somente previsões registradas antes da corrida e resultados posteriores validados. Poucas corridas não demonstram superioridade do modelo.")
+        from urllib.parse import urlencode
+        from pitwall.i18n import language
+        frame = pd.DataFrame([{'GP':r['corrida'],'Acertos do Lab':r['modelo'],'Acertos da classificação':r['classificacao'],
+            'Previsão registrada':'?'+urlencode(dict(tela='Previsões',temporada=2026,gp=r['rodada'],lang=language()))} for r in rows])
+        st.dataframe(frame,hide_index=True,width='stretch',column_config={'Previsão registrada':st.column_config.LinkColumn(display_text='↗')})
         return
     metricas = pacote["metricas"]
     cobertura = metricas["cobertura"]

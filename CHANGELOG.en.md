@@ -4,6 +4,12 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.4.0 — 2026-10-30
+
+In Summary, the circuit image and track outline now precede the podium, giving the venue visual priority.
+
+Mexico preparation with five identified sessions, serial collection after observed finishes, auditable cache and persisted API cooldowns. Times, laps, tyres, pits, forecast separated from race sensors and round-specific official standings. Explicit Mexico OpenF1 qualifying admission; committed code and publication before lights out remain mandatory. The 2026 score includes only registered predictions and validated later outcomes. Qualifying and the race have not happened yet; this delivery contains no prospective Mexico forecast.
+
 ## 0.3.1 — 2026-10-30
 
 Fix favourite-test synchronisation: acceptance now resolves the current iframe after reload and waits for the persisted value, rather than holding a Frame that Streamlit may detach. The issue appeared in the main-branch CI; the 0.3.0 release and public app had passed. Data, comparison rules and scientific model are unchanged. CI also regenerates the distribution and compares it with the published copy. Validation covers the full browser journey against the served package and package integrity.

@@ -71,17 +71,22 @@ def _fonte(inventario, nome):
     raise ValueError('Recibo OpenF1 ausente: {}.'.format(nome))
 
 
-def carregar(base):
+def carregar(base, *, sessao_esperada=None, prefixo="openf1-austin-q", mapeamento=None):
+    esperado_sessao = SESSAO_ESPERADA if sessao_esperada is None else sessao_esperada
+    mapping = MAPEAMENTO_2026 if mapeamento is None else mapeamento
+    if esperado_sessao.get("session_name") != "Qualifying" or esperado_sessao.get("session_type") != "Qualifying":
+        raise ValueError("A sessão precisa ser Qualifying principal.")
+    if not prefixo.replace("-", "").isalnum():
+        raise ValueError("Prefixo inválido.")
     base = Path(base)
     inventario = _carregar_json(base, {'sha256_arquivos': {'inventario.json': _sha(base / 'inventario.json')}}, 'inventario.json')
     if inventario.get('schema') != 'pitwall-source-availability-evidence-v1':
         raise ValueError('Inventário OpenF1 com schema inválido.')
-    nomes = ('openf1-austin-q-sessions.json', 'openf1-austin-q-session_result.json',
-             'openf1-austin-q-drivers.json', 'openf1-austin-q-race_control.json')
+    nomes = tuple(prefixo + '-' + endpoint + '.json' for endpoint in ('sessions','session_result','drivers','race_control'))
     dados = {nome: _carregar_json(base, inventario, nome) for nome in nomes}
-    sessoes = [item for item in dados[nomes[0]] if all(item.get(k) == v for k, v in SESSAO_ESPERADA.items())]
+    sessoes = [item for item in dados[nomes[0]] if all(item.get(k) == v for k, v in esperado_sessao.items())]
     if len(sessoes) != 1:
-        raise ValueError('Sessão OpenF1 Austin Q ausente ou ambígua.')
+        raise ValueError('Sessão OpenF1 Q ausente ou ambígua.')
     sessao = sessoes[0]
     chave = (sessao['session_key'], sessao['meeting_key'])
     resultados, pilotos = dados[nomes[1]], dados[nomes[2]]
@@ -96,18 +101,18 @@ def carregar(base):
             raise ValueError('Piloto OpenF1 duplicado.')
         por_numero[numero] = piloto
     registros, posicoes, numeros = [], set(), set()
-    for resultado in sorted(resultados, key=lambda item: item.get('position', 999)):
+    for resultado in sorted(resultados, key=lambda item: item.get('position') if type(item.get('position')) is int else 999):
         if (resultado.get('session_key'), resultado.get('meeting_key')) != chave:
             raise ValueError('Resultado OpenF1 de outra sessão/evento.')
         numero, posicao = resultado.get('driver_number'), resultado.get('position')
         if numero in numeros or numero not in por_numero:
             raise ValueError('Piloto OpenF1 duplicado ou ausente.')
-        if not isinstance(posicao, int) or posicao <= 0 or posicao in posicoes:
+        if type(posicao) is not int or posicao <= 0 or posicao in posicoes:
             raise ValueError('Posição OpenF1 inválida ou duplicada.')
-        if numero not in MAPEAMENTO_2026:
+        if numero not in mapping:
             raise ValueError('Mapeamento literal OpenF1 ausente: {}.'.format(numero))
         piloto = por_numero[numero]
-        driver_id, constructor_id, first, last, equipe = MAPEAMENTO_2026[numero]
+        driver_id, constructor_id, first, last, equipe = mapping[numero]
         if (piloto.get('first_name'), piloto.get('last_name'), piloto.get('team_name')) != (first, last, equipe):
             raise ValueError('Identidade OpenF1 diverge do mapeamento literal: {}.'.format(numero))
         numeros.add(numero); posicoes.add(posicao)
@@ -115,7 +120,7 @@ def carregar(base):
                           'Driver': {'driverId': driver_id, 'givenName': first, 'familyName': last},
                           'Constructor': {'constructorId': constructor_id, 'name': equipe},
                           'openf1_driver_number': numero})
-    if set(MAPEAMENTO_2026) != numeros or posicoes != set(range(1, 23)):
+    if set(mapping) != numeros or posicoes != set(range(1, 23)):
         raise ValueError('Cobertura OpenF1 incompleta.')
     fechamento = [item for item in dados[nomes[3]]
                   if (item.get('session_key'), item.get('meeting_key')) == chave
@@ -126,11 +131,13 @@ def carregar(base):
     fontes = []
     for nome in nomes:
         fonte = _fonte(inventario, nome)
+        if fonte.get('status') != 200 or fonte.get('sha256') != inventario['sha256_arquivos'][nome]:
+            raise ValueError('Recibo OpenF1 diverge do raw.')
         fontes.append({'origem': ORIGEM, 'normalizacao': VERSAO_NORMALIZACAO,
                        'arquivo': nome, 'sha256': fonte['sha256'], 'url_solicitada': fonte['url_solicitada'],
                        'url_real': fonte['url_real'], 'status': fonte['status'], 'obtido_em_utc': _z(fonte['obtido_em_utc']),
                        'session_key': sessao['session_key'], 'meeting_key': sessao['meeting_key'],
-                       'endpoint': nome.replace('openf1-austin-q-', '').replace('.json', '')})
+                       'endpoint': nome.replace(prefixo + '-', '').replace('.json', '')})
     return {'origem': ORIGEM, 'normalizacao': VERSAO_NORMALIZACAO, 'sessao': sessao,
             'encerramento_utc': encerramento, 'registros': registros, 'fontes': fontes,
             'diretorio': str(base), 'arquivos': [base / nome for nome in nomes]}

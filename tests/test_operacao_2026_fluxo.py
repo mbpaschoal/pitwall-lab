@@ -125,7 +125,7 @@ class FluxoOperacao2026Test(unittest.TestCase):
              patch.object(previsao, 'carregar_modelo', side_effect=AssertionError('modelo não deveria carregar')):
             text = io.StringIO()
             with redirect_stdout(text):
-                operar_2026.cmd_estado(argparse.Namespace(snapshot='fixture'))
+                operar_2026.cmd_estado(argparse.Namespace(snapshot='fixture', temporada='2026', rodada=18, circuito='americas'))
         self.assertEqual(calls, [('calendario',), ('classificacao_18',)])
         self.assertIn('aguardando_classificacao', text.getvalue())
 

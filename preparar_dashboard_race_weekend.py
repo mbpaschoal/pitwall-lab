@@ -369,8 +369,8 @@ def _campeonato_pilotos_2026(root):
         }, [indice_path]
 
 
-def _dados_2026(root):
-    _, indice_path, fontes = _fontes_snapshot(root)
+def _dados_2026(root, snapshot=None):
+    _, indice_path, fontes = _fontes_snapshot(root) if snapshot is None else _fontes_snapshot(root,snapshot)
     by_key = {}
     for source, path in fontes:
         by_key.setdefault((source['endpoint'], source.get('rodada')), []).append((source, path))
@@ -635,13 +635,13 @@ def _dados_2026(root):
     }
 
 
-def gerar(root, destino):
+def gerar(root, destino, snapshot=None):
     root, destino = Path(root).resolve(), Path(destino)
     identidades, identificacao_path = _identidades_historicas(root)
     nomes_equipes = _nomes_equipes_historicas(root)
     for chave, identidade in identidades.items():
         identidade['equipe'] = nomes_equipes.get(chave)
-    dados_2026, identidades_2026, fontes_2026, emissao = _dados_2026(root)
+    dados_2026, identidades_2026, fontes_2026, emissao = _dados_2026(root) if snapshot is None else _dados_2026(root,snapshot)
     identidades.update(identidades_2026)
     fontes = [identificacao_path, *fontes_2026]
     for temporada in (2024, 2025):
@@ -659,7 +659,7 @@ def gerar(root, destino):
         'dados_2026': dados_2026,
         'proveniencia': {
             'gerador': 'preparar_dashboard_race_weekend.py',
-            'snapshot_2026': SNAPSHOT_2026,
+            'snapshot_2026': snapshot or SNAPSHOT_2026,
             'emissao_2026': '2026:17:marina_bay',
             'emissao': emissao,
             'emissoes': emissao['emissoes'],
@@ -675,10 +675,11 @@ def gerar(root, destino):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument('--snapshot', default=None, help='Snapshot 2026 validado; padrão histórico preservado.')
     parser.add_argument('--saida', type=Path, default=Path('frontend_assets/race_weekend.json'))
     args = parser.parse_args()
     destino = args.saida if args.saida.is_absolute() else args.root / args.saida
-    gerar(args.root, destino)
+    gerar(args.root, destino, args.snapshot)
 
 
 if __name__ == '__main__':
