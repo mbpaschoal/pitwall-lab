@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "1a4536590bd983b0037ca3f83ce3a9346fe3ca5d14e8f4b782bea3218b593db9",
+  "apresentacao_build_sha256": "65802d7540ae624106ef92a71f37df16c6fbe9ae8d5baa5ee371ca3e50d40f09",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "94948d85ab121b5f213a4320608c855b42af408ffb3f9fb99a064e4fe62f1306",
-      "sha256_origem": "ae5d1462fa82756e372ec732db3b8bed14275818a0f0d5a0bc53dfb2b1ce37df"
+      "sha256_destino": "5994eef4a55149e32c64ef59d7f755e19c8a01d2f63c2fbeec4607836da4f907",
+      "sha256_origem": "ee0eb08ce0d0a78d62ab1559c6cacec06408983d0a32c732f2cc4671868ee14c"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "ebde8fb380eb15eba027e6dc281464380951e7769ab22b339e9c1085f7cda55d",
-      "sha256_origem": "ddca62d217aff08c9e12dd9a506f031cf3475cb396e027bced698d1e18fee54e"
+      "sha256_destino": "0b422fdafa6f5895f713e308faffdbc20e827634713d4ba95cffbb4ebe077c5e",
+      "sha256_origem": "f0131e14940e93e297d537aeeaf83d5dfd05468ee83b5a91b62590f34a39fbb4"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "175307e07ac7f0bdc0f3dba371ba3a202aaf3c0117368a93d2331e1bea4af4f3",
-      "sha256_origem": "175307e07ac7f0bdc0f3dba371ba3a202aaf3c0117368a93d2331e1bea4af4f3"
+      "sha256_destino": "345a551b61a5dc33388b9bf40df339c9a0d9446ced7eeaeb576e3dbf4321918e",
+      "sha256_origem": "345a551b61a5dc33388b9bf40df339c9a0d9446ced7eeaeb576e3dbf4321918e"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -891,8 +891,8 @@
       "caminho": "frontend_assets/operacao_fim_semana.json",
       "fonte": "frontend_assets/operacao_fim_semana.json",
       "modo": "copia",
-      "sha256_destino": "eccda216d86c19f05f76c8f70e688e9e28e55ff8864e344548a594c16858fcd4",
-      "sha256_origem": "eccda216d86c19f05f76c8f70e688e9e28e55ff8864e344548a594c16858fcd4"
+      "sha256_destino": "1d11bc7ea85bdd3dbfab9a5f182202a51f55fd3aef0d09a29dcbba13870101ef",
+      "sha256_origem": "1d11bc7ea85bdd3dbfab9a5f182202a51f55fd3aef0d09a29dcbba13870101ef"
     },
     {
       "caminho": "frontend_assets/paineis_editoriais.json",
@@ -1304,8 +1304,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "075a60dce9fea7b267e2322ff4a5aa67febc3b543f222128595bee1e99962936",
-      "sha256_origem": "075a60dce9fea7b267e2322ff4a5aa67febc3b543f222128595bee1e99962936"
+      "sha256_destino": "e24bd460197c8e87230f2bcceb56478028c4d23d03eeeef27ee0a910a964e566",
+      "sha256_origem": "e24bd460197c8e87230f2bcceb56478028c4d23d03eeeef27ee0a910a964e566"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -1433,7 +1433,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "075a60dce9fea7b267e2322ff4a5aa67febc3b543f222128595bee1e99962936"
+      "sha256": "e24bd460197c8e87230f2bcceb56478028c4d23d03eeeef27ee0a910a964e566"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -1452,5 +1452,5 @@
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.4.4"
+  "versao_produto": "0.4.5"
 }
