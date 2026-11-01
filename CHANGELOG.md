@@ -4,6 +4,11 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.6.2 — 2026-11-01
+
+- Cartões de acertos de 2024/2025 identificam o estudo retrospectivo; o aviso sobre previsões registradas fica restrito à avaliação prospectiva de 2026.
+- Regressão adicional preserva essa distinção entre os períodos. Nenhum resultado ou probabilidade foi alterado.
+
 ## 0.6.1 — 2026-11-01
 
 - Menu inferior elevado para preservar todos os botões diante do selo externo do Streamlit Community Cloud, identificado na verificação pública.

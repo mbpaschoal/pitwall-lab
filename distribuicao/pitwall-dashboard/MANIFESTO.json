@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "b6a7c8098490ad827f894dc89b95f5bb5f648d9c1735205749d7c9d5a3233b8b",
+  "apresentacao_build_sha256": "8ba9b4f3ff54f247cd4aa0a90d83056cc38fd628bab89491c75de1c79d09cd65",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a176062d19a38f2d13a2f4aade62a3dd7712bac1866dbb26fca029c41e5ada88",
-      "sha256_origem": "a5f8a524da196c5e41607d1f967b803499c51bc0d7ceb25cc9ad9299700bf4b1"
+      "sha256_destino": "103f66a486e941faf70b60e67f5ec9b62d02314f978af81e8fd41f6061f4c9a8",
+      "sha256_origem": "e59293c7ca63d1a2bb165d6c47f38ce165d86b4acdb70cabbc81847e206832e0"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "7dbc454d944efa175db10419e097fc149167f3e2164f445f1958ef88162e1978",
-      "sha256_origem": "9ac44e311c14bfc5a5afacf404d831e201fba036ce5671142ce154612885de89"
+      "sha256_destino": "bfc4000909d5e44bd7e179fe847067e7e7acaf6d6564679881dc4a778aeb4a3a",
+      "sha256_origem": "9e8f3367b11a020c79b0e9999e97e093a1b95bb056d8574835ef3c8292747da5"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "87b241b275c591694846560e9879f50c9da3150f854efdabd782c539772f3033",
-      "sha256_origem": "87b241b275c591694846560e9879f50c9da3150f854efdabd782c539772f3033"
+      "sha256_destino": "a466ef209f5c3aee5ff0c702e2e9d5cced4783d2a655e8ab66330f21a5557b3f",
+      "sha256_origem": "a466ef209f5c3aee5ff0c702e2e9d5cced4783d2a655e8ab66330f21a5557b3f"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -1332,8 +1332,8 @@
       "caminho": "pitwall/dashboard/fan_views.py",
       "fonte": "pitwall/dashboard/fan_views.py",
       "modo": "copia",
-      "sha256_destino": "135c2cb383ed63c5f84e962220938219cc4faba26da4eef665bc3998b7c14f8c",
-      "sha256_origem": "135c2cb383ed63c5f84e962220938219cc4faba26da4eef665bc3998b7c14f8c"
+      "sha256_destino": "886d6a14e304512627332cd8886b6fa0909d03caa656e3381b9062f4594d961a",
+      "sha256_origem": "886d6a14e304512627332cd8886b6fa0909d03caa656e3381b9062f4594d961a"
     },
     {
       "caminho": "pitwall/dashboard/favorites.py",
@@ -1689,8 +1689,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "56cb2ccf237cf1e21638c072971be36818932fcf2ee53bb21b68d32119bf36d5",
-      "sha256_origem": "56cb2ccf237cf1e21638c072971be36818932fcf2ee53bb21b68d32119bf36d5"
+      "sha256_destino": "14f91883181c85ba9a5b5c38f225b27aeac362cfac8c15dd8d58caa926415daf",
+      "sha256_origem": "14f91883181c85ba9a5b5c38f225b27aeac362cfac8c15dd8d58caa926415daf"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -1739,8 +1739,8 @@
       "caminho": "tests/test_fan_composition.py",
       "fonte": "tests/test_fan_composition.py",
       "modo": "copia",
-      "sha256_destino": "b36d5880436bc5306c1200dee07a40420c00214866bd509449320990519cd601",
-      "sha256_origem": "b36d5880436bc5306c1200dee07a40420c00214866bd509449320990519cd601"
+      "sha256_destino": "71e35e06ebe676fdad73d1609b1bf20c76c2f5bef0dd5f550f5a85f3e48c859a",
+      "sha256_origem": "71e35e06ebe676fdad73d1609b1bf20c76c2f5bef0dd5f550f5a85f3e48c859a"
     },
     {
       "caminho": "tests/test_fan_exploration.py",
@@ -1832,7 +1832,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "56cb2ccf237cf1e21638c072971be36818932fcf2ee53bb21b68d32119bf36d5"
+      "sha256": "14f91883181c85ba9a5b5c38f225b27aeac362cfac8c15dd8d58caa926415daf"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -1851,5 +1851,5 @@
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.6.1"
+  "versao_produto": "0.6.2"
 }

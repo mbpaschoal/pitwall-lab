@@ -4,6 +4,11 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.6.2 — 2026-11-01
+
+- Evaluation cards for 2024/2025 identify retrospective analysis; the recorded-forecast notice is restricted to prospective 2026 evaluation.
+- An additional regression preserves this distinction across periods. No result or probability changed.
+
 ## 0.6.1 — 2026-11-01
 
 - Raised bottom navigation to keep every button clear of the external Streamlit Community Cloud badge discovered during public verification.

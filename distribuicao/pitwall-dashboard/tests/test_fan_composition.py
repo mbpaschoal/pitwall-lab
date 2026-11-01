@@ -34,6 +34,12 @@ class FanCompositionTests(unittest.TestCase):
         self.assertIn('Corrida aguardada',rendered)
         self.assertNotIn('0 de 3',rendered)
 
+    def test_retrospective_cards_do_not_claim_prospective_predictions(self):
+        row=dict(rodada=1,corrida='Bahrain Grand Prix',modelo=2,classificacao=3)
+        rendered=performance_cards([row],[dict(rodada=1,corrida='Bahrain Grand Prix')],2024)
+        self.assertIn('Estudo retrospectivo com dados históricos.',rendered)
+        self.assertNotIn('Somente previsões registradas',rendered)
+
     def test_count_metric_has_visible_relative_bars_without_a_fake_percentage(self):
         row=dict(score=3,rank=1,driver_id='norris',driver_name='Lando Norris',starts=8)
         rendered=condition_rows([row],'wins',{'norris':'?piloto=norris'})
