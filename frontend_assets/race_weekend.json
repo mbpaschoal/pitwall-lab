@@ -1623,15 +1623,43 @@
         "corrida": "Mexico City Grand Prix",
         "data": "2026-11-01",
         "data_corrida": "2026-11-01",
-        "estado_operacao": "aguardando_dados",
-        "estado_previsao": "indisponivel",
-        "estado_qualificacao": "indisponivel",
+        "emissao_sha256": "dd1269793d8d7e9cb2893e592941730cd99de3b0a0483e64d2f8cfc20061b647",
+        "estado_operacao": "previsao_registrada",
+        "estado_previsao": "previsao_registrada",
+        "estado_qualificacao": "local_disponivel",
         "estado_resultado": "indisponivel",
-        "motivo_previsao": "não há previsão registrada local válida para este GP",
-        "motivo_qualificacao": "snapshot local de classificação ausente",
+        "fonte_qualificacao_sha256": "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219",
+        "fontes_qualificacao_sha256": [
+          "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219"
+        ],
+        "motivo_previsao": "previsão registrada antes da corrida",
+        "motivo_qualificacao": null,
         "motivo_resultado": "snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída",
         "pais": "Mexico",
-        "participantes_esperados_previsao": null,
+        "participantes_esperados_previsao": [
+          "albon",
+          "alonso",
+          "antonelli",
+          "arvid_lindblad",
+          "bearman",
+          "bortoleto",
+          "bottas",
+          "colapinto",
+          "gasly",
+          "hadjar",
+          "hamilton",
+          "hulkenberg",
+          "lawson",
+          "leclerc",
+          "max_verstappen",
+          "norris",
+          "perez",
+          "piastri",
+          "russell",
+          "ryo_hirakawa",
+          "sainz",
+          "stroll"
+        ],
         "programacao": [
           {
             "data": "2026-10-30",
@@ -7796,6 +7824,336 @@
         "resultado_observado": 22,
         "rodada": 18,
         "status_resultado": "Retired",
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Ferrari",
+        "equipe_id": "ferrari",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Lewis Hamilton",
+        "piloto_id": "hamilton",
+        "probabilidade_modelo": 0.6188153257245499,
+        "ranking_classificacao": 1,
+        "ranking_modelo": 2,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Mercedes",
+        "equipe_id": "mercedes",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "George Russell",
+        "piloto_id": "russell",
+        "probabilidade_modelo": 0.5754100003469584,
+        "ranking_classificacao": 2,
+        "ranking_modelo": 3,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Ferrari",
+        "equipe_id": "ferrari",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Charles Leclerc",
+        "piloto_id": "leclerc",
+        "probabilidade_modelo": 0.5516680040985348,
+        "ranking_classificacao": 3,
+        "ranking_modelo": 4,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Red Bull",
+        "equipe_id": "red_bull",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Max Verstappen",
+        "piloto_id": "max_verstappen",
+        "probabilidade_modelo": 0.6824631450207722,
+        "ranking_classificacao": 4,
+        "ranking_modelo": 1,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Mercedes",
+        "equipe_id": "mercedes",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Andrea Kimi Antonelli",
+        "piloto_id": "antonelli",
+        "probabilidade_modelo": 0.5297330373034154,
+        "ranking_classificacao": 5,
+        "ranking_modelo": 5,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "McLaren",
+        "equipe_id": "mclaren",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Lando Norris",
+        "piloto_id": "norris",
+        "probabilidade_modelo": 0.15748879937067303,
+        "ranking_classificacao": 6,
+        "ranking_modelo": 7,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Red Bull",
+        "equipe_id": "red_bull",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Isack Hadjar",
+        "piloto_id": "hadjar",
+        "probabilidade_modelo": 0.2291227116540247,
+        "ranking_classificacao": 7,
+        "ranking_modelo": 6,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "RB F1 Team",
+        "equipe_id": "rb",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Arvid Lindblad",
+        "piloto_id": "arvid_lindblad",
+        "probabilidade_modelo": 0.004302300298333095,
+        "ranking_classificacao": 8,
+        "ranking_modelo": 14,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "RB F1 Team",
+        "equipe_id": "rb",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Liam Lawson",
+        "piloto_id": "lawson",
+        "probabilidade_modelo": 0.0047736425726922545,
+        "ranking_classificacao": 9,
+        "ranking_modelo": 13,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Alpine F1 Team",
+        "equipe_id": "alpine",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Pierre Gasly",
+        "piloto_id": "gasly",
+        "probabilidade_modelo": 0.02409766852598063,
+        "ranking_classificacao": 10,
+        "ranking_modelo": 8,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Audi",
+        "equipe_id": "audi",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Nico Hülkenberg",
+        "piloto_id": "hulkenberg",
+        "probabilidade_modelo": 0.019377612135897514,
+        "ranking_classificacao": 11,
+        "ranking_modelo": 10,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Alpine F1 Team",
+        "equipe_id": "alpine",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Franco Colapinto",
+        "piloto_id": "colapinto",
+        "probabilidade_modelo": 0.011075026822397999,
+        "ranking_classificacao": 12,
+        "ranking_modelo": 11,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "McLaren",
+        "equipe_id": "mclaren",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Oscar Piastri",
+        "piloto_id": "piastri",
+        "probabilidade_modelo": 0.019481238293652812,
+        "ranking_classificacao": 13,
+        "ranking_modelo": 9,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Audi",
+        "equipe_id": "audi",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Gabriel Bortoleto",
+        "piloto_id": "bortoleto",
+        "probabilidade_modelo": 0.005407641828532923,
+        "ranking_classificacao": 14,
+        "ranking_modelo": 12,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Haas F1 Team",
+        "equipe_id": "haas",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Oliver Bearman",
+        "piloto_id": "bearman",
+        "probabilidade_modelo": 0.004158025102047383,
+        "ranking_classificacao": 15,
+        "ranking_modelo": 15,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Williams",
+        "equipe_id": "williams",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Carlos Sainz",
+        "piloto_id": "sainz",
+        "probabilidade_modelo": 0.0026979978399320104,
+        "ranking_classificacao": 16,
+        "ranking_modelo": 16,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Williams",
+        "equipe_id": "williams",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Alexander Albon",
+        "piloto_id": "albon",
+        "probabilidade_modelo": 0.0017112776722318565,
+        "ranking_classificacao": 17,
+        "ranking_modelo": 17,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Aston Martin",
+        "equipe_id": "aston_martin",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Fernando Alonso",
+        "piloto_id": "alonso",
+        "probabilidade_modelo": 0.001399313378406835,
+        "ranking_classificacao": 18,
+        "ranking_modelo": 18,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Haas F1 Team",
+        "equipe_id": "haas",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Ryo Hirakawa",
+        "piloto_id": "ryo_hirakawa",
+        "probabilidade_modelo": 0.000194265091618331,
+        "ranking_classificacao": 19,
+        "ranking_modelo": 22,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Aston Martin",
+        "equipe_id": "aston_martin",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Lance Stroll",
+        "piloto_id": "stroll",
+        "probabilidade_modelo": 0.0006351261268520311,
+        "ranking_classificacao": 20,
+        "ranking_modelo": 19,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Cadillac F1 Team",
+        "equipe_id": "cadillac",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Sergio Pérez",
+        "piloto_id": "perez",
+        "probabilidade_modelo": 0.00043777898511275986,
+        "ranking_classificacao": 21,
+        "ranking_modelo": 20,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
+        "temporada": 2026
+      },
+      {
+        "elegivel_previsao": true,
+        "equipe": "Cadillac F1 Team",
+        "equipe_id": "cadillac",
+        "modo_previsao": "previsao_registrada",
+        "piloto": "Valtteri Bottas",
+        "piloto_id": "bottas",
+        "probabilidade_modelo": 0.0002948651085978731,
+        "ranking_classificacao": 22,
+        "ranking_modelo": 21,
+        "resultado_observado": null,
+        "rodada": 19,
+        "status_resultado": null,
         "temporada": 2026
       }
     ],
@@ -16729,6 +17087,116 @@
       "equipe_id": "aston_martin",
       "piloto": "Lance Stroll"
     },
+    "2026:19:albon": {
+      "equipe": "Williams",
+      "equipe_id": "williams",
+      "piloto": "Alexander Albon"
+    },
+    "2026:19:alonso": {
+      "equipe": "Aston Martin",
+      "equipe_id": "aston_martin",
+      "piloto": "Fernando Alonso"
+    },
+    "2026:19:antonelli": {
+      "equipe": "Mercedes",
+      "equipe_id": "mercedes",
+      "piloto": "Andrea Kimi Antonelli"
+    },
+    "2026:19:arvid_lindblad": {
+      "equipe": "RB F1 Team",
+      "equipe_id": "rb",
+      "piloto": "Arvid Lindblad"
+    },
+    "2026:19:bearman": {
+      "equipe": "Haas F1 Team",
+      "equipe_id": "haas",
+      "piloto": "Oliver Bearman"
+    },
+    "2026:19:bortoleto": {
+      "equipe": "Audi",
+      "equipe_id": "audi",
+      "piloto": "Gabriel Bortoleto"
+    },
+    "2026:19:bottas": {
+      "equipe": "Cadillac F1 Team",
+      "equipe_id": "cadillac",
+      "piloto": "Valtteri Bottas"
+    },
+    "2026:19:colapinto": {
+      "equipe": "Alpine F1 Team",
+      "equipe_id": "alpine",
+      "piloto": "Franco Colapinto"
+    },
+    "2026:19:gasly": {
+      "equipe": "Alpine F1 Team",
+      "equipe_id": "alpine",
+      "piloto": "Pierre Gasly"
+    },
+    "2026:19:hadjar": {
+      "equipe": "Red Bull",
+      "equipe_id": "red_bull",
+      "piloto": "Isack Hadjar"
+    },
+    "2026:19:hamilton": {
+      "equipe": "Ferrari",
+      "equipe_id": "ferrari",
+      "piloto": "Lewis Hamilton"
+    },
+    "2026:19:hulkenberg": {
+      "equipe": "Audi",
+      "equipe_id": "audi",
+      "piloto": "Nico Hülkenberg"
+    },
+    "2026:19:lawson": {
+      "equipe": "RB F1 Team",
+      "equipe_id": "rb",
+      "piloto": "Liam Lawson"
+    },
+    "2026:19:leclerc": {
+      "equipe": "Ferrari",
+      "equipe_id": "ferrari",
+      "piloto": "Charles Leclerc"
+    },
+    "2026:19:max_verstappen": {
+      "equipe": "Red Bull",
+      "equipe_id": "red_bull",
+      "piloto": "Max Verstappen"
+    },
+    "2026:19:norris": {
+      "equipe": "McLaren",
+      "equipe_id": "mclaren",
+      "piloto": "Lando Norris"
+    },
+    "2026:19:perez": {
+      "equipe": "Cadillac F1 Team",
+      "equipe_id": "cadillac",
+      "piloto": "Sergio Pérez"
+    },
+    "2026:19:piastri": {
+      "equipe": "McLaren",
+      "equipe_id": "mclaren",
+      "piloto": "Oscar Piastri"
+    },
+    "2026:19:russell": {
+      "equipe": "Mercedes",
+      "equipe_id": "mercedes",
+      "piloto": "George Russell"
+    },
+    "2026:19:ryo_hirakawa": {
+      "equipe": "Haas F1 Team",
+      "equipe_id": "haas",
+      "piloto": "Ryo Hirakawa"
+    },
+    "2026:19:sainz": {
+      "equipe": "Williams",
+      "equipe_id": "williams",
+      "piloto": "Carlos Sainz"
+    },
+    "2026:19:stroll": {
+      "equipe": "Aston Martin",
+      "equipe_id": "aston_martin",
+      "piloto": "Lance Stroll"
+    },
     "2026:1:albon": {
       "equipe": "Williams",
       "equipe_id": "williams",
@@ -17870,6 +18338,22 @@
           },
           "modo": "PROSPECTIVO"
         },
+        "2026:19:rodriguez": {
+          "emitido_em_utc": "2026-11-01T04:32:23.054391Z",
+          "evento": {
+            "circuito_id": "rodriguez",
+            "rodada": 19,
+            "temporada": 2026
+          },
+          "fonte_qualificacao_sha256": "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219",
+          "fontes_qualificacao_sha256": [
+            "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219"
+          ],
+          "hashes_saidas": {
+            "probabilidades.csv": "e11587ce3373cd3e9c2fa975ae11b8cd104f9e3d2842b3319f17b90c5e0d926a"
+          },
+          "modo": "PROSPECTIVO"
+        },
         "2026:1:albert_park": {
           "emitido_em_utc": "2026-10-24T14:15:14.756034Z",
           "evento": {
@@ -18179,6 +18663,22 @@
         },
         "modo": "PROSPECTIVO"
       },
+      "2026:19:rodriguez": {
+        "emitido_em_utc": "2026-11-01T04:32:23.054391Z",
+        "evento": {
+          "circuito_id": "rodriguez",
+          "rodada": 19,
+          "temporada": 2026
+        },
+        "fonte_qualificacao_sha256": "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219",
+        "fontes_qualificacao_sha256": [
+          "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219"
+        ],
+        "hashes_saidas": {
+          "probabilidades.csv": "e11587ce3373cd3e9c2fa975ae11b8cd104f9e3d2842b3319f17b90c5e0d926a"
+        },
+        "modo": "PROSPECTIVO"
+      },
       "2026:1:albert_park": {
         "emitido_em_utc": "2026-10-24T14:15:14.756034Z",
         "evento": {
@@ -18335,7 +18835,6 @@
       "data/operacao_2026/formula1dashboard/austin-tempos-f1dashboard-20261025T143617Z-r2/sessions.json": "c03efcdfd0c4ad300df7a18677c88109ceda06d9ea1263f5647f2bb04c6114b4",
       "data/operacao_2026/pos_corrida/austin-20261026T111018Z/inventario.json": "35884a03e6c22a77b43640e263f00ea180c8a943bbcb827024e42e52011fc420",
       "data/operacao_2026/pos_corrida/austin-20261026T111018Z/raw/classificacao_pilotos_offset_0000.json": "752d1ec88e7899e5d530c2cedcaf0b1ff3c05a58de33f08a9d6abf2bc386167b",
-      "data/operacao_2026/snapshots/austin-pos-corrida-20261026T111018Z-r2/indice.json": "af91e7946b8fc148cfd28139deb38c74e75f5707aa47fa669d12aff8baf5c79f",
       "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/indice.json": "006371428d002dbd8e272480b8cb80703ec06a9b32884dd4383d0c0bc24bf5b9",
       "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_10_offset_0000.json": "4fcbb5708c6c8fa8ea0833f277eaf9681071a6581f9eb5cac13f463cc5c11a42",
       "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_11_offset_0000.json": "d28d84a989563a9d1e3242238c69dd41249dbfaa2d20bf9cf09f0bf6255749be",
@@ -18355,11 +18854,13 @@
       "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_9_offset_0000.json": "2a8df6fabb6de06a94110c736cce8addde1ebe27437a6077c8a7f13e20ca46ef",
       "data/operacao_2026/snapshots/coleta-20261020T020130Z/indice.json": "b7e4ccf30454f670538676b297ba1d1afec857d18e231cde67950ccb4299ed3f",
       "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/classificacao_17_offset_0000.json": "6305533d29c113c39c3fed73704f34e1c195f7af9c8988c0cb99b8d0f4af6109",
+      "data/operacao_2026/snapshots/mexico-previsao-20261101T0432Z/indice.json": "2e7de73a4be99a7f7433584f43712233ea91f846c3112be096165dae147d1b5c",
+      "data/operacao_2026/snapshots/mexico-previsao-20261101T0432Z/raw/classificacao_19_offset_0000.json": "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219",
       "data/preparado/identificacao.csv": "bfc7fb9c2b488229ba1461fec6bdc45d88854db6c4a0d7f7290ee0aa6d2754df"
     },
     "gerador": "preparar_dashboard_race_weekend.py",
     "sem_recalculo": true,
-    "snapshot_2026": "austin-pos-corrida-20261026T111018Z-r2"
+    "snapshot_2026": "mexico-previsao-20261101T0432Z"
   },
   "temporadas": [
     2024,

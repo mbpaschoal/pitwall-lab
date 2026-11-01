@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "65802d7540ae624106ef92a71f37df16c6fbe9ae8d5baa5ee371ca3e50d40f09",
+  "apresentacao_build_sha256": "bd8e7043f85e479e4964297d0c45c6245333bd7ac1fa083f57d9c41a5fe8d82b",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "5994eef4a55149e32c64ef59d7f755e19c8a01d2f63c2fbeec4607836da4f907",
-      "sha256_origem": "ee0eb08ce0d0a78d62ab1559c6cacec06408983d0a32c732f2cc4671868ee14c"
+      "sha256_destino": "651e2e650eb6547c98b5052b95a1f808059d9fc1a5227169928e599d7014e709",
+      "sha256_origem": "464bf0a3328481ce71bb0a904f04bf24bfb55891ffbef4ae1a82faea041b8a9a"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "0b422fdafa6f5895f713e308faffdbc20e827634713d4ba95cffbb4ebe077c5e",
-      "sha256_origem": "f0131e14940e93e297d537aeeaf83d5dfd05468ee83b5a91b62590f34a39fbb4"
+      "sha256_destino": "427c450688ab62e8d0c8bf1db219a72f2d4342d4bf02c4607e9aaed17b16550d",
+      "sha256_origem": "fd2b9477b61d99322e7fc916cd69ee8af68b94e8524b0c20cd17b69e9e9c8495"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "345a551b61a5dc33388b9bf40df339c9a0d9446ced7eeaeb576e3dbf4321918e",
-      "sha256_origem": "345a551b61a5dc33388b9bf40df339c9a0d9446ced7eeaeb576e3dbf4321918e"
+      "sha256_destino": "aee8cd7067db4ba68b056e2e49072621d7dbcdf9b3952e98e6d9e5b024200e83",
+      "sha256_origem": "aee8cd7067db4ba68b056e2e49072621d7dbcdf9b3952e98e6d9e5b024200e83"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -919,8 +919,8 @@
       "caminho": "frontend_assets/race_weekend.json",
       "fonte": "frontend_assets/race_weekend.json",
       "modo": "copia",
-      "sha256_destino": "629023f18c99e71ca2b506a3e41ef36e1eb0417704414ac835bf1ef9cc54fa48",
-      "sha256_origem": "629023f18c99e71ca2b506a3e41ef36e1eb0417704414ac835bf1ef9cc54fa48"
+      "sha256_destino": "f9cdaaa3739542dd05f1bdfd110a18d796d949a58aa967b5838c5c3582242ade",
+      "sha256_origem": "f9cdaaa3739542dd05f1bdfd110a18d796d949a58aa967b5838c5c3582242ade"
     },
     {
       "caminho": "historico_circuito.py",
@@ -1304,8 +1304,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "e24bd460197c8e87230f2bcceb56478028c4d23d03eeeef27ee0a910a964e566",
-      "sha256_origem": "e24bd460197c8e87230f2bcceb56478028c4d23d03eeeef27ee0a910a964e566"
+      "sha256_destino": "c5cb70b6e107042ae72fe20ca43193fd9ff40dd15b28c01114f17a65a5b34384",
+      "sha256_origem": "c5cb70b6e107042ae72fe20ca43193fd9ff40dd15b28c01114f17a65a5b34384"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -1433,7 +1433,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "e24bd460197c8e87230f2bcceb56478028c4d23d03eeeef27ee0a910a964e566"
+      "sha256": "c5cb70b6e107042ae72fe20ca43193fd9ff40dd15b28c01114f17a65a5b34384"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -1452,5 +1452,5 @@
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.4.5"
+  "versao_produto": "0.4.6"
 }

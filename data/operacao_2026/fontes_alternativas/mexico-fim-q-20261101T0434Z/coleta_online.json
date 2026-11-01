@@ -1,0 +1,27 @@
+{
+  "schema": "pitwall-acervo-online-v1",
+  "criado_em_utc": "2026-11-01T04:32:01.853790Z",
+  "estado": "em_coleta",
+  "fontes": [
+    {
+      "provider": "openf1",
+      "endpoint": "race_control",
+      "arquivo": "race_control.json",
+      "arquivo_requisicao": "race_control.json",
+      "url": "https://api.openf1.org/v1/race_control?session_key=11400",
+      "url_real": "https://api.openf1.org/v1/race_control?session_key=11400",
+      "status": 200,
+      "obtido_em_utc": "2026-11-01T04:32:03.041826Z",
+      "sha256": "98327eb439baacdfe0afb5bf4c2cabcc5fced45073f34310fa6ef6cb2076fb3f",
+      "bytes": 20727,
+      "registros": 79
+    }
+  ],
+  "falhas": [],
+  "limites": {
+    "intervalo_minimo_s": 8,
+    "max_bytes": 1073741824,
+    "max_requisicoes": 1200
+  },
+  "uso": "Acervo retrospectivo descritivo; proibido alterar entradas v1 ou emissões."
+}

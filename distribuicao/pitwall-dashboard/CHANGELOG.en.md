@@ -4,6 +4,10 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.4.6 — 2026-11-01
+
+Mexico 2026 prospective forecast recorded on Nov 1 at 04:32 UTC, before the scheduled 20:00 UTC start. Canonical qualifying with 22 drivers, verified Q3 finish and frozen v1 model. Individual podium probabilities do not predict finishing order. Later race outcomes were excluded from inputs. Sources, manifest and probabilities preserved for audit.
+
 ## 0.4.5 — 2026-10-31
 
 Automatic Mexico City Grand Prix data update through GitHub Actions. Sessions with received data: 2/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
