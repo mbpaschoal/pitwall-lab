@@ -4,6 +4,11 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.6.1 — 2026-11-01
+
+- Raised bottom navigation to keep every button clear of the external Streamlit Community Cloud badge discovered during public verification.
+- Main-heading acceptance uses its semantic level to avoid ambiguity with the championship table heading.
+
 ## 0.6.0 — 2026-11-01
 
 - Rebuilt all six screens around the approved composition C: prominent imagery, a shared compact header, a calendar with flags and bottom navigation.

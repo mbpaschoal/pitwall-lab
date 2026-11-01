@@ -270,3 +270,6 @@
  .st-key-journey-navigation .st-key-tela [role="radiogroup"]>label p{word-break:normal;overflow-wrap:normal}
  .fan-season-progress a:not([data-distance="-1"]):not([data-distance="0"]):not([data-distance="1"]){display:none}
 }
+/* Community Cloud's outer-frame badge must never cover navigation targets. */
+.st-key-journey-navigation{bottom:calc(60px + env(safe-area-inset-bottom))}
+[data-testid="stMainBlockContainer"]{padding-bottom:calc(152px + env(safe-area-inset-bottom))}

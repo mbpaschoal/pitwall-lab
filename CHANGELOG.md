@@ -4,6 +4,11 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.6.1 — 2026-11-01
+
+- Menu inferior elevado para preservar todos os botões diante do selo externo do Streamlit Community Cloud, identificado na verificação pública.
+- Aceite do título principal usa seu nível semântico para evitar ambiguidade com o título da tabela do campeonato.
+
 ## 0.6.0 — 2026-11-01
 
 - Reconstrução das seis telas seguindo a composição C aprovada: imagens em destaque, cabeçalho compacto compartilhado, calendário com bandeiras e menu inferior.

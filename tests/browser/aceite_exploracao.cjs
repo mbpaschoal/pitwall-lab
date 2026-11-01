@@ -80,7 +80,7 @@ fs.mkdirSync(output, {recursive:true});
  const dock=p.locator('.st-key-journey-navigation');
  check(await dock.locator('[role="radiogroup"] > label').count()===6,'Missing journey destinations');
  await dock.getByText('Campeonato',{exact:true}).click();
- await p.getByRole('heading',{name:'Campeonato de pilotos 2026',exact:true}).waitFor();
+ await p.getByRole('heading',{name:'Campeonato de pilotos 2026',level:1,exact:true}).waitFor();
  check(new URL(p.url()).searchParams.get('gp')==='18','Dock lost GP');
  await p.screenshot({path:path.join(output,'journey-championship.png')});
  p=await open(journey,'tela=Previsões&temporada=2026&gp=19&lang=pt','Mexico City Grand Prix');
