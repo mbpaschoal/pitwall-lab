@@ -30,6 +30,77 @@ class FakeClient:
 
 class WeekendTests(unittest.TestCase):
 
+    def test_qualifying_phases_preserve_source_values_and_missing_times(self):
+        data=dict(drivers=[dict(driver_number=7)],session_result=[dict(driver_number=7,duration=[78.3,77.1,None])])
+        row=weekend.session_times(data,dict(session_name='Qualifying'))[0]
+        self.assertEqual([row['q1'],row['q2'],row['q3']],[78.3,77.1,None])
+        self.assertEqual(row['duracao'],[78.3,77.1,None])
+
+    def test_missing_practice_profile_withholds_projection_but_collects_qualifying(self):
+        class MissingProfile(FakeClient):
+            def capture(self, provider, endpoint, relative, url):
+                self.calls.append(endpoint)
+                event = weekend.load_event(CONFIG)
+                if endpoint == 'sessions':
+                    payload = event['sessions']
+                elif endpoint == 'forecast':
+                    payload = {'hourly': {'time': [], 'temperature_2m': [], 'precipitation': [], 'wind_speed_10m': []}}
+                else:
+                    session = next(s for s in event['sessions'] if str(s['session_key']) == relative.split('/')[0])
+                    ids = dict(session_key=session['session_key'], meeting_key=session['meeting_key'])
+                    result_number = 30 if session['session_name'] == 'Practice 3' else 7
+                    payload = {
+                        'race_control': [dict(ids, message='SESSION FINISHED', qualifying_phase=3, date=session['date_end'])],
+                        'drivers': [dict(ids, driver_number=7, full_name='Synthetic Driver', team_name='Synthetic')],
+                        'session_result': [dict(ids, driver_number=result_number, position=1)],
+                        'weather': [dict(ids, air_temperature=20)],
+                        'laps': [], 'stints': [], 'pit': [],
+                    }[endpoint]
+                raw = json.dumps(payload).encode()
+                path = self.destination / relative
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(raw)
+                self.manifest['fontes'].append(dict(endpoint=endpoint, provider=provider, arquivo=relative, url=url, status=200, sha256=hashlib.sha256(raw).hexdigest(), obtido_em_utc='2026-11-01T05:00:00Z'))
+                return payload
+
+        with tempfile.TemporaryDirectory() as tmp:
+            state = weekend.collect(CONFIG, tmp, datetime(2026, 11, 1, 5, tzinfo=timezone.utc), MissingProfile)
+            sessions = {s['nome']: s for s in state['sessoes']}
+            partial = sessions['Practice 3']
+            self.assertEqual(partial['estado'], 'parcial')
+            self.assertEqual(partial['qualidade_identidade']['numero'], 30)
+            self.assertNotIn('tempos', partial)
+            self.assertEqual(partial['dados_descritivos'],dict(voltas_por_piloto=[],estrategias=[],paradas=[]))
+            self.assertTrue(partial['fontes'])
+            self.assertFalse(weekend.cached_session(partial, Path(tmp)))
+            self.assertEqual(sessions['Qualifying']['estado'], 'dados_recebidos')
+            self.assertEqual(sessions['Race']['estado'], 'aguardando_sessao')
+            self.assertTrue((Path(tmp)/'data/operacao_2026/fins_de_semana/rodriguez-2026/estado.json').exists())
+
+    def test_missing_profile_cannot_hide_conflicting_results(self):
+        data = dict(drivers=[dict(driver_number=7)], session_result=[dict(driver_number=30), dict(driver_number=7), dict(driver_number=7)])
+        with self.assertRaisesRegex(ValueError, 'duplicated'):
+            weekend.session_times(data, {})
+
+    def test_unlinked_pit_does_not_block_valid_qualifying_times_or_laps(self):
+        entry=dict(estado='dados_recebidos')
+        data=dict(drivers=[dict(driver_number=7,full_name='Synthetic')],
+                  session_result=[dict(driver_number=7,position=1)],
+                  laps=[dict(driver_number=7,lap_number=1,lap_duration=80)],
+                  stints=[],pit=[dict(driver_number=236)])
+        weekend.project_session(entry,data,dict(session_name='Qualifying',session_key=11400))
+        self.assertEqual(entry['estado'],'parcial')
+        self.assertEqual(entry['tempos'][0]['numero'],7)
+        self.assertEqual(len(entry['dados_descritivos']['voltas_por_piloto']),1)
+        self.assertNotIn('paradas',entry['dados_descritivos'])
+        self.assertEqual(entry['qualidade_identidade']['grupos_bloqueados'],[dict(grupo='paradas',numeros=[236])])
+
+    def test_missing_profile_cannot_hide_conflicting_laps(self):
+        data = dict(drivers=[dict(driver_number=7)], session_result=[dict(driver_number=30)],
+                    laps=[dict(driver_number=7,lap_number=1,lap_duration=90),dict(driver_number=7,lap_number=1,lap_duration=80)])
+        with self.assertRaisesRegex(ValueError, 'Conflicting duplicate lap'):
+            weekend.session_times(data, {})
+
     def test_completed_practice_projects_times_laps_and_pneus(self):
 
         class Completed(FakeClient):

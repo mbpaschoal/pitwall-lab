@@ -4,6 +4,10 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.5.2 — 2026-11-01
+
+Corrige a interrupção da coleta do México quando falta um cadastro de piloto na OpenF1. A sessão afetada permanece parcial, com motivo visível e suas projeções bloqueadas; as demais sessões continuam sendo coletadas. Duplicações, conflitos de voltas e mistura de sessões continuam rejeitados. Fontes originais, previsões registradas e modelo v1 preservados.
+
 ## 0.5.1 — 2026-11-01
 
 Cartas de tarô aprovadas para o México, com cores das equipes, poses distintas e rostos ajustados a referências fornecidas pelo proprietário. A janela continua opcional; percentuais ficam somente na tabela de previsões. Retratos só aparecem quando a equipe do registro corresponde à arte, preservando os períodos históricos. Nenhuma probabilidade, emissão ou modelo foi alterado.

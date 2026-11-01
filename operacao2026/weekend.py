@@ -11,6 +11,7 @@ from urllib.parse import urlencode
 from pitwall.paths import PROJECT_ROOT
 from pitwall.data.archive_collection import CaptureClient, instant, save_checkpoint
 from operacao2026.fontes import _lock
+from operacao2026.weekend_projection import DriverIdentityUnavailable, verify_driver_profiles
 
 ENDPOINTS = ('race_control', 'drivers', 'session_result', 'weather', 'laps', 'stints', 'pit')
 NAMES = ('Practice 1', 'Practice 2', 'Practice 3', 'Qualifying', 'Race')
@@ -149,9 +150,7 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
                 if end and end <= now and data.get('session_result') and data.get('drivers'):
                     entry['estado'] = 'dados_recebidos' if all(key in data for key in ENDPOINTS) and bool(data.get('weather')) and len(data['session_result']) == len(data['drivers']) else 'parcial'
                     entry['encerramento_observado_utc'] = end.isoformat()
-                    entry['tempos'] = session_times(data, session)
-                    from operacao2026.weekend_projection import project
-                    entry['dados_descritivos'] = project(data,session)
+                    project_session(entry, data, session)
                     if session['session_name'] == 'Race' and data.get('weather'):
                         from pitwall.data.race_weather import race_windows, summarize_sensors, RaceWeatherError
                         try:
@@ -195,20 +194,59 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
         return state
 
 
+
+def project_session(entry, data, session):
+    """Withhold each unresolved projection; keep independent validated tables."""
+    from operacao2026.weekend_projection import project
+    verify_driver_profiles(data, endpoints=())  # Conflicts always fail, even in another group.
+    issues = []
+    for key in ('tempos', 'dados_descritivos', 'qualidade_identidade', 'motivo_parcial'):
+        entry.pop(key, None)
+    try:
+        entry['tempos'] = session_times(data, session)
+    except DriverIdentityUnavailable as error:
+        issues.append(dict(grupo='tempos', numeros=error.numbers))
+    descriptions = {}
+    for endpoint, field in (('laps', 'voltas_por_piloto'), ('stints', 'estrategias'), ('pit', 'paradas')):
+        if endpoint not in data:
+            continue
+        try:
+            subset = dict(drivers=data['drivers'], **{endpoint:data[endpoint]})
+            descriptions[field] = project(subset, session)[field]
+        except DriverIdentityUnavailable as error:
+            issues.append(dict(grupo=field, numeros=error.numbers))
+    if descriptions:
+        entry['dados_descritivos'] = descriptions
+    if issues:
+        entry['estado'] = 'parcial'
+        entry['qualidade_identidade'] = dict(codigo='cadastro_piloto_ausente',
+            numero=issues[0]['numeros'][0], grupos_bloqueados=issues)
+        entry['motivo_parcial'] = 'Cadastro de piloto ausente na fonte.'
+
+
 def session_times(data, session):
+    verify_driver_profiles(data, endpoints=('session_result',))
     drivers = {d['driver_number']:d for d in data['drivers']}
     if len(drivers) != len(data['drivers']):
         raise ValueError('Duplicated driver number')
     rows, seen = [], set()
     for result in data['session_result']:
         number = result['driver_number']
-        if number not in drivers or number in seen:
-            raise ValueError('Result identity missing/duplicated')
+        if type(number) is not int or number <= 0 or number in seen:
+            raise ValueError('Result identity invalid/duplicated')
+        if number not in drivers:
+            raise DriverIdentityUnavailable(number)
         seen.add(number)
         driver = drivers[number]
         rows.append(dict(numero=number, piloto=driver.get('full_name') or driver.get('broadcast_name'),
                          equipe=driver.get('team_name'), posicao=result.get('position'),
                          duracao=result.get('duration'), gap=result.get('gap_to_leader'), voltas=result.get('number_of_laps')))
+        duration = result.get('duration')
+        if session.get('session_name') in ('Qualifying', 'Sprint Qualifying') and isinstance(duration, list):
+            if len(duration) > 3:
+                raise ValueError('Unknown qualifying duration phases')
+            for i, field in enumerate(('q1', 'q2', 'q3')):
+                rows[-1][field] = duration[i] if i < len(duration) else None
     return rows
 
 

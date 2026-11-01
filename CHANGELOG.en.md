@@ -4,6 +4,10 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.5.2 — 2026-11-01
+
+Fixes Mexico collection stopping when an OpenF1 driver profile is missing. The affected session remains partial, with a visible reason and its projections withheld; collection continues for other sessions. Duplicates, conflicting laps and mixed session identities remain rejected. Original captures, recorded forecasts and frozen v1 remain unchanged.
+
 ## 0.5.1 — 2026-11-01
 
 Approved Mexico tarot artwork with team colours, distinct poses and likenesses refined from owner-provided references. The dialog remains optional; percentages appear only in the forecast table. Portraits are shown only when the record's team matches the artwork, preserving historical context. No probabilities, registered forecasts or model were changed.

@@ -8,6 +8,8 @@ on:
     paths:
       - '.github/workflows/coletar-dados.yml'
       - 'operacao2026/cloud.py'
+      - 'operacao2026/weekend.py'
+      - 'operacao2026/weekend_projection.py'
 permissions:
   contents: write
   actions: read

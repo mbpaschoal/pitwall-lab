@@ -39,7 +39,7 @@ def render_status(state):
     if state.get('automacao', {}).get('modo') == 'github_actions':
         st.markdown('[Atualização automática · acompanhar coleta no GitHub](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml)')
     with st.expander('Acompanhar chegada dos dados'):
-        st.dataframe(pd.DataFrame([{'Sessão': {'Practice 1':'Treino livre 1','Practice 2':'Treino livre 2','Practice 3':'Treino livre 3','Qualifying':'Classificação','Race':'Corrida'}.get(s['nome'],s['nome']), 'Situação': STATES[s['estado']]} for s in state['sessoes']]), hide_index=True, width='stretch')
+        st.dataframe(pd.DataFrame([{'Sessão': {'Practice 1':'Treino livre 1','Practice 2':'Treino livre 2','Practice 3':'Treino livre 3','Qualifying':'Classificação','Race':'Corrida'}.get(s['nome'],s['nome']), 'Situação': STATES[s['estado']], 'Detalhes': s.get('motivo_parcial', '—')} for s in state['sessoes']]), hide_index=True, width='stretch')
         st.caption('A previsão meteorológica é uma estimativa arquivada. O clima observado da corrida só será consolidado depois da prova.')
 
 def render_times(state):

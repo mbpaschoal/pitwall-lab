@@ -51,3 +51,15 @@ Only substantive changes create a version, PT/EN notes, export, tests, navigatio
 This uses standard Linux runners for a public repository, without enabling paid services or increasing storage limits. Cache and logs have their own limits. Product browser evidence is retained for three days. [GitHub Actions billing](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
 
 The automation collects and publishes descriptive context. It neither trains models nor emits probabilities: prospective emission rules above remain mandatory.
+
+## Missing session driver profile
+
+If a number appears in results, laps, tyres or stops but has no driver profile, the session stays partial and only the tables/projections depending on that profile are withheld. Original captures, receipts and the unresolved number are preserved. Other sessions continue without borrowing names from another session or GP. Partial sessions are retried on later runs. Duplicates, conflicting laps and foreign sessions still stop collection; the exception is limited to a missing driver profile.
+
+### Incident verified on Nov 1, 2026
+
+FP3 (`11399`) returned 22 results but 21 driver profiles: number 30 appears in results/laps/tyres but is absent from `drivers`; its specific query returned 404. FP3 and qualifying (`11400`) pit records also contain number 236 without a profile. Qualifying retains its 22 valid results, laps and tyres; only its pit projection is withheld. Affected FP3 groups stay withheld, with numbers and groups recorded in `qualidade_identidade`. No name was inferred or borrowed from another session. Published coverage distinguishes partial sessions from the upcoming race.
+
+Regression checks cover missing profiles, continuation to qualifying, preservation of valid results, duplicates and conflicting laps. Mexico forecast evaluation awaits a validated later race result; this recovery never reissues probabilities.
+
+Sources: [FP3 profiles](https://api.openf1.org/v1/drivers?session_key=11399), [FP3 results](https://api.openf1.org/v1/session_result?session_key=11399), [qualifying pit records](https://api.openf1.org/v1/pit?session_key=11400). Availability may change after the recorded captures.

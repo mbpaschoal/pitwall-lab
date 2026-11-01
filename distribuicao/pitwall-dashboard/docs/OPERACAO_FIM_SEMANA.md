@@ -51,3 +51,15 @@ Somente mudanças relevantes geram versão, notas PT/EN, exportação, testes, c
 Usa executores Linux padrão de repositório público, sem habilitar serviços pagos ou aumentar limites de armazenamento. Cache e registros têm seus limites próprios. Os testes de navegador do produto retêm evidências por três dias. [Custos do GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
 
 Esta automação coleta e publica contexto descritivo. Não treina modelos nem emite probabilidades: as regras de emissão prospectiva acima continuam obrigatórias.
+
+## Cadastro ausente em uma sessão
+
+Se um número aparece nos resultados, voltas, pneus ou paradas mas seu cadastro está ausente, a sessão fica parcial e apenas as tabelas/projeções que dependem desse cadastro ficam bloqueadas. Os originais, recibos e número sem cadastro são preservados. A coleta das outras sessões continua, sem copiar nomes de outra sessão ou GP. Sessões parciais são consultadas novamente nas execuções seguintes. Duplicações, conflitos de voltas e sessões divergentes continuam interrompendo a coleta; a exceção se restringe ao cadastro ausente.
+
+### Ocorrência verificada em 01/11/2026
+
+No TL3 (`11399`), a captura trouxe 22 resultados e 21 cadastros: o número 30 aparece nos resultados/voltas/pneus, mas falta em `drivers`; a consulta específica retornou 404. Paradas de TL3 e classificação (`11400`) também contêm o número 236 sem cadastro. A classificação mantém seus 22 resultados, voltas e pneus válidos; só suas paradas ficam retidas. TL3 mantém os grupos afetados bloqueados, com os números e grupos registrados em `qualidade_identidade`. Nenhum nome foi inferido ou copiado de outra sessão. A cobertura publicada distingue sessão parcial de corrida futura.
+
+A correção foi testada com cadastro ausente, continuação até Q, conservação de resultados válidos, duplicações e conflitos de voltas. A comparação da previsão do México aguarda o resultado posterior validado; esta recuperação não reemite probabilidades.
+
+Fontes: [cadastros TL3](https://api.openf1.org/v1/drivers?session_key=11399), [resultados TL3](https://api.openf1.org/v1/session_result?session_key=11399), [paradas Q](https://api.openf1.org/v1/pit?session_key=11400). A disponibilidade pode mudar após as capturas registradas.
