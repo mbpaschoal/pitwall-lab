@@ -19,6 +19,79 @@ INK = "#102b50"
 BLUE = "#7fa4ca"
 SYMBOLS = {"rain": "☂", "track_hot": "☀", "ccw": "↶", "many_corners": "⌁",
            "high_altitude": "△", "track_cold": "❄"}
+QUICK_CONDITIONS = (("rain", "☂ Chuva"), ("track_hot", "☀ Calor"),
+                    ("ccw", "↶ Sentido anti-horário"))
+COMPARISON_CONDITIONS = ("rain", "no_rain", "track_hot", "ccw")
+CRITERION_DEFAULTS = {"pilot_years": [2024, 2025, 2026],
+                      "pilot_metric": "win_rate", "pilot_minimum": 5}
+TEAM_NAMES = {
+    "mercedes": "Mercedes", "ferrari": "Ferrari", "red_bull": "Red Bull",
+    "red_bull_racing": "Red Bull", "mclaren": "McLaren",
+    "aston_martin": "Aston Martin", "alpine": "Alpine",
+    "alpine_f1_team": "Alpine", "williams": "Williams", "haas": "Haas",
+    "haas_f1_team": "Haas", "rb": "RB", "rb_f1_team": "RB",
+    "racing_bulls": "Racing Bulls", "sauber": "Sauber", "audi": "Audi",
+    "cadillac": "Cadillac",
+}
+
+
+def _condition_chips(years, metric, minimum, condition):
+    """Quick conditions keep the comparison scope; Clear restores valid defaults."""
+    chips = []
+    for key, label in QUICK_CONDITIONS:
+        query = dict(tela="Pilotos", visao="geral", condicao=key,
+                     anos=",".join(map(str, years)), metrica=metric,
+                     minimo=minimum, lang=language())
+        chips.append('<a href="?{}" target="_self"{}>{}</a>'.format(
+            escape(urlencode(query), quote=True),
+            ' aria-current="true"' if key == condition else "",
+            escape(translate(label))))
+    reset = dict(tela="Pilotos", visao="geral", condicao="rain",
+                 anos="2024,2025,2026", metrica="win_rate", minimo=5,
+                 faixas=",".join(HIGHLIGHTS), lang=language())
+    chips.append('<a class="fan-condition-reset" href="?{}" target="_self" title="{}">{}</a>'.format(
+        escape(urlencode(reset), quote=True),
+        escape(translate("Restaurar período e critérios padrão"), quote=True),
+        escape(translate("Limpar"))))
+    return '<nav class="fan-condition-chips" aria-label="{}">{}</nav>'.format(
+        escape(translate("Condições de corrida")), "".join(chips))
+
+
+def _comparison_toolbar(years, metric, minimum):
+    scope = translate("Histórico: {} · {} · mínimo {} corridas por condição.").format(
+        ", ".join(map(str, years)) or "—", translate(METRICS[metric]), minimum)
+    return '<div class="fan-pilot-toolbar"><span>{}</span></div>'.format(escape(scope))
+
+
+def _overview_details(asset, rows, years, metric, minimum):
+    """Read four comparable cohorts and each driver's last team in this period."""
+    comparisons, teams = {}, {}
+    for row in rows:
+        driver = row["driver_id"]
+        comparisons[driver] = []
+        for condition in COMPARISON_CONDITIONS:
+            stats = summarize(select_rows(asset, years, condition, driver))
+            comparisons[driver].append({
+                "label": "Sem chuva registrada" if condition == "no_rain" else BY_KEY[condition].short,
+                "condition": condition,
+                "score": stats[metric] if stats["starts"] >= minimum else None,
+                "starts": stats["starts"], "wins": stats["wins"],
+                "podiums": stats["podiums"],
+            })
+        observations = select_rows(asset, years, driver=driver)
+        if observations:
+            latest = max(observations, key=lambda item: (
+                asset["gps"][item["race_id"]]["temporada"],
+                asset["gps"][item["race_id"]]["rodada"]))
+            team = latest["team_id"]
+            teams[driver] = {"id": team, "name": TEAM_NAMES.get(team, team.replace("_", " ").title())}
+    maximum = 1 if metric.endswith("rate") else max(
+        (item["score"] for items in comparisons.values() for item in items
+         if item["score"] is not None), default=0)
+    for items in comparisons.values():
+        for item in items:
+            item["maximum"] = maximum
+    return comparisons, teams
 
 
 def _link(driver, condition="rain"):
@@ -77,15 +150,15 @@ def _overview(asset, years, metric, minimum):
     from pitwall.dashboard.fan_views import condition_rows
     condition=st.session_state.get('pilot_condition','rain')
     if condition not in BY_KEY:condition='rain'
-    chips=[]
-    for key,label in [('rain','☂ Chuva'),('track_hot','☀ Calor'),('ccw','↶ Sentido anti-horário')]:
-        query=dict(tela='Pilotos',visao='geral',condicao=key,anos=','.join(map(str,years)),metrica=metric,minimo=minimum,lang=language())
-        chips.append('<a href="?{}" target="_self"{}>{}</a>'.format(escape(urlencode(query),quote=True),' aria-current="true"' if key==condition else '',escape(translate(label))))
-    st.markdown('<nav class="fan-condition-chips" aria-label="{}">{}</nav>'.format(escape(translate('Condições de corrida')),''.join(chips)),unsafe_allow_html=True)
-    st.caption(translate('Histórico: {} · {} · mínimo {} corridas por condição.').format(', '.join(map(str,years)),translate(METRICS[metric]),minimum))
     ranked=ranking(asset,condition,metric,minimum,years)
     if ranked:
-        st.markdown(condition_rows(ranked[:8],metric,{r['driver_id']:_link(r['driver_id'],condition) for r in ranked}),unsafe_allow_html=True)
+        # Four people initially; never cut the tie containing the fourth person.
+        cutoff_rank = ranked[min(3, len(ranked) - 1)]["rank"]
+        visible = [row for row in ranked if row["rank"] <= cutoff_rank]
+        comparisons, teams = _overview_details(asset, visible, years, metric, minimum)
+        st.markdown(condition_rows(visible, metric,
+            {r['driver_id']:_link(r['driver_id'],condition) for r in ranked},
+            comparisons=comparisons, teams=teams), unsafe_allow_html=True)
         with st.expander('Classificação completa por condição'):
             st.dataframe(pd.DataFrame([{'Pos.':r['rank'],'Piloto':r['driver_name'],'Largadas':r['starts'],METRICS[metric]:r['score']} for r in ranked]),hide_index=True,width='stretch')
     else:
@@ -99,7 +172,7 @@ def _overview(asset, years, metric, minimum):
         cards.append('<a class="fan-discovery" href="{}" target="_self"><span>{}</span><div><strong>{}</strong><small>{}</small></div></a>'.format(escape(_link(best[0]['driver_id'],key),quote=True),SYMBOLS[key],escape(translate(BY_KEY[key].short)),escape(' / '.join(r['driver_name'] for r in best))))
     st.markdown('<div class="fan-discoveries">{}</div>'.format(''.join(cards)),unsafe_allow_html=True)
     with st.expander('Mais condições'):
-        st.selectbox('Condição para comparar',list(BY_KEY),format_func=lambda x:BY_KEY[x].label,key='pilot_condition')
+        st.selectbox('Condição para comparar',list(BY_KEY),index=list(BY_KEY).index(condition),format_func=lambda x:BY_KEY[x].label,key='pilot_condition')
     right=st.container()
     with right:
         with st.expander("Mapa de condições"):
@@ -107,7 +180,7 @@ def _overview(asset, years, metric, minimum):
             names = driver_names(asset, years)
             if "matrix_drivers" in st.session_state:
                 st.session_state["matrix_drivers"] = [x for x in st.session_state["matrix_drivers"] if x in names]
-            ids = st.multiselect("Pilotos no mapa", sorted(names, key=names.get), default=sorted(names, key=names.get), format_func=names.get, key="matrix_drivers")
+            ids = st.multiselect("Pilotos no mapa", sorted(names, key=names.get), default=st.session_state.get("matrix_drivers", sorted(names, key=names.get)), format_func=names.get, key="matrix_drivers")
             matrix = {}
             for key in HIGHLIGHTS:
                 matrix[key] = {x["driver_id"]: x["score"] for x in ranking(asset, key, metric, minimum, years)}
@@ -131,8 +204,8 @@ def _individual(asset, years, metric, minimum):
     ids = sorted(names, key=names.get)
     if st.session_state.get("pilot_driver") not in names:
         st.session_state["pilot_driver"] = ids[0]
-    driver = st.selectbox("Piloto", ids, format_func=names.get, key="pilot_driver")
-    conditions = st.multiselect("Condições para explorar", list(BY_KEY), default=list(HIGHLIGHTS), format_func=lambda x: BY_KEY[x].label, key="profile_conditions")
+    driver = st.selectbox("Piloto", ids, index=ids.index(st.session_state["pilot_driver"]), format_func=names.get, key="pilot_driver")
+    conditions = st.multiselect("Condições para explorar", list(BY_KEY), default=st.session_state.get("profile_conditions", list(HIGHLIGHTS)), format_func=lambda x: BY_KEY[x].label, key="profile_conditions")
     details = profile(asset, driver, years, conditions=conditions)
     back = _link(driver, st.session_state.get("pilot_condition", "rain")).replace("visao=perfil", "visao=geral")
     st.markdown('<a href="{}" target="_self">← {}</a>'.format(escape(back), escape(translate("Voltar à visão geral"))), unsafe_allow_html=True)
@@ -140,25 +213,34 @@ def _individual(asset, years, metric, minimum):
         escape(names[driver]), translate("Desempenho histórico por condição")), unsafe_allow_html=True)
     for column, label, field in zip(st.columns(3), ("Largadas", "Vitórias", "Pódios"), ("starts", "wins", "podiums")):
         column.metric(label, details["summary"][field])
+    if not details["races"]:
+        st.info("Nenhuma corrida neste recorte.")
+        return
     left, right = st.columns([1.3, 1])
     with left:
         st.subheader("Desempenho por condição")
         comparisons = details["conditions"]
-        figure = go.Figure()
         reference_label = "Demais pilotos (taxa conjunta)" if metric.endswith("rate") else "Demais pilotos (total)"
         series = [("driver", details["driver_name"], INK)]
         if metric.endswith("rate"):
             series.append(("reference", reference_label, BLUE))
-        for field, label, color in series:
-            values = [x[field][metric] if x[field]["starts"] >= minimum else None for x in comparisons]
-            figure.add_bar(name=label, y=[BY_KEY[x["condition"]].short for x in comparisons], x=values,
-                orientation="h", marker_color=color, customdata=[x[field]["starts"] for x in comparisons],
-                hovertemplate=("%{y}<br>%{x:.1%}<br>N=%{customdata}<extra>%{fullData.name}</extra>" if metric.endswith("rate") else "%{y}<br>%{x}<br>N=%{customdata}<extra>%{fullData.name}</extra>"))
-        figure.update_layout(barmode="group")
-        figure.update_xaxes(tickformat=".0%" if metric.endswith("rate") else "d", title_text=METRICS[metric])
-        figure.update_yaxes(autorange="reversed")
-        _figure(figure, 390)
-        st.caption("A referência usa os outros pilotos nos mesmos GPs em que este piloto largou. Contagens mostram apenas o piloto; taxas permitem comparação.")
+        if not comparisons:
+            st.info("Selecione pelo menos uma condição.")
+        elif not any(item[field]["starts"] >= minimum for item in comparisons
+                     for field, _, _ in series):
+            st.info("Amostra insuficiente para esta condição.")
+        else:
+            figure = go.Figure()
+            for field, label, color in series:
+                values = [x[field][metric] if x[field]["starts"] >= minimum else None for x in comparisons]
+                figure.add_bar(name=label, y=[BY_KEY[x["condition"]].short for x in comparisons], x=values,
+                    orientation="h", marker_color=color, customdata=[x[field]["starts"] for x in comparisons],
+                    hovertemplate=("%{y}<br>%{x:.1%}<br>N=%{customdata}<extra>%{fullData.name}</extra>" if metric.endswith("rate") else "%{y}<br>%{x}<br>N=%{customdata}<extra>%{fullData.name}</extra>"))
+            figure.update_layout(barmode="group")
+            figure.update_xaxes(tickformat=".0%" if metric.endswith("rate") else "d", title_text=METRICS[metric])
+            figure.update_yaxes(autorange="reversed")
+            _figure(figure, 390)
+            st.caption("A referência usa os outros pilotos nos mesmos GPs em que este piloto largou. Contagens mostram apenas o piloto; taxas permitem comparação.")
     with right:
         st.subheader("Contra o companheiro de equipe")
         st.caption("Todas as condições no período selecionado.")
@@ -192,6 +274,14 @@ def _individual(asset, years, metric, minimum):
                 for x in mate["evidence"]]), hide_index=True, width="stretch")
 
 
+def _remember_criterion(key):
+    """Only an explicit criteria change commits a widget value to the scope."""
+    filters = dict(st.session_state.get("_pilot_filters", {}))
+    value = st.session_state[key]
+    filters[key] = list(value) if isinstance(value, list) else value
+    st.session_state["_pilot_filters"] = filters
+
+
 def render(root):
     try:
         asset = load(root)
@@ -199,8 +289,8 @@ def render(root):
         st.error(str(error))
         return
     for key, value in st.session_state.get("_pilot_filters", {}).items():
-        if key not in st.session_state:
-            st.session_state[key] = value
+        if key in CRITERION_DEFAULTS or key not in st.session_state:
+            st.session_state[key] = list(value) if isinstance(value, list) else value
     query = tuple(st.query_params.get(x) for x in ("piloto", "visao", "condicao", "anos", "metrica", "minimo", "faixas", "rival", "duelo_condicao"))
     if query != st.session_state.get("_pilot_query"):
         driver, view, condition, year_query, metric_query, minimum_query, bands, rival, duel_query = query
@@ -216,7 +306,7 @@ def render(root):
                 parsed_years = list(dict.fromkeys(int(x) for x in year_query.split(",")))
             except ValueError:
                 parsed_years = []
-            if parsed_years and all(x in (2024, 2025, 2026) for x in parsed_years):
+            if (parsed_years or year_query == "") and all(x in (2024, 2025, 2026) for x in parsed_years):
                 st.session_state["pilot_years"] = parsed_years
         if metric_query in METRICS:
             st.session_state["pilot_metric"] = metric_query
@@ -229,22 +319,78 @@ def render(root):
         if condition in BY_KEY:
             st.session_state["pilot_condition"] = condition
         st.session_state["_pilot_query"] = query
-    from pitwall.dashboard.fan_views import hero
-    title={'rain':'Quem se destaca na chuva?','track_hot':'Quem se destaca no calor?','ccw':'Quem se destaca no sentido anti-horário?'}.get(st.session_state.get('pilot_condition','rain'),'Quem se destaca em cada condição?') if st.session_state.get('pilot_view','Visão geral')=='Visão geral' else 'Pilotos'
-    st.markdown(hero(title,'Explore como os pilotos se saem em diferentes condições de pista e encontre os mais consistentes.',image='rain',dark=True),unsafe_allow_html=True)
+    st.session_state.setdefault("pilot_metric", "win_rate")
+    st.session_state.setdefault("pilot_minimum", 5)
+    st.session_state.setdefault("pilot_condition", "rain")
+    filters = dict(st.session_state.get("_pilot_filters", {}))
+    for key, default in CRITERION_DEFAULTS.items():
+        value = st.session_state.get(key, default)
+        filters[key] = list(value) if isinstance(value, list) else value
+    st.session_state["_pilot_filters"] = filters
+    if st.session_state["pilot_condition"] not in BY_KEY:
+        st.session_state["pilot_condition"] = "rain"
+    with st.container(key="pilot-cover"):
+        with st.container(key="pilot-view-navigation"):
+            modes = ["Visão geral", "Perfil individual", "Duelo"]
+            selected_mode = st.session_state.get("pilot_view", modes[0])
+            with st.popover("Explorar pilotos", icon=":material/person_search:"):
+                view = st.radio("Visualização de pilotos", modes,
+                    index=modes.index(selected_mode) if selected_mode in modes else 0,
+                    key="pilot_view", label_visibility="collapsed")
+        years = st.session_state.get("pilot_years", [2024, 2025, 2026])
+        metric = st.session_state["pilot_metric"]
+        minimum = st.session_state["pilot_minimum"]
+        condition = st.session_state["pilot_condition"]
+        from pitwall.dashboard.fan_views import hero
+        title = {
+            "rain": "Quem se destaca na chuva?",
+            "track_hot": "Quem se destaca no calor?",
+            "ccw": "Quem se destaca no sentido anti-horário?",
+        }.get(condition, "Quem se destaca em cada condição?") if view == "Visão geral" else "Pilotos"
+        image = "drivers" if condition == "rain" and view == "Visão geral" else (
+            "performance" if condition == "track_hot" else "forecast")
+        names = driver_names(asset)
+        person = None
+        if view == "Perfil individual" and names:
+            driver = st.session_state.get("pilot_driver")
+            if driver not in names:
+                driver = sorted(names, key=names.get)[0]
+                st.session_state["pilot_driver"] = driver
+            person = {"id": driver, "name": names[driver]}
+            title = names[driver]
+            image = "method"
+        elif view == "Duelo":
+            title = "Duelo"
+            image = "championship"
+        st.markdown(hero(title,
+            "Compare resultados históricos por condição, com o período e a amostra de cada piloto.",
+            image=image, dark=image == "drivers",
+            extra=_condition_chips(years, metric, minimum, condition), person=person), unsafe_allow_html=True)
+        with st.container(key="pilot-comparison-toolbar"):
+            metadata, criteria = st.columns([4, 1], vertical_alignment="center")
+            with metadata:
+                st.markdown(_comparison_toolbar(years, metric, minimum), unsafe_allow_html=True)
+            with criteria:
+                with st.popover("Filtros", icon=":material/tune:", help="Período e critérios da comparação"):
+                    # Match browser defaults to the canonical scope: components
+                    # can rerun before native widgets apply set_value.
+                    st.multiselect("Período", [2024, 2025, 2026], default=years,
+                        key="pilot_years", on_change=_remember_criterion, args=("pilot_years",))
+                    st.selectbox("Comparar por", list(METRICS), index=list(METRICS).index(metric),
+                        format_func=METRICS.get, key="pilot_metric",
+                        on_change=_remember_criterion, args=("pilot_metric",))
+                    st.selectbox("Corridas mínimas por condição", [5, 3, 10, 15, 1],
+                        index=[5, 3, 10, 15, 1].index(minimum), key="pilot_minimum",
+                        on_change=_remember_criterion, args=("pilot_minimum",))
     from pitwall.dashboard.favorites import render as favorite_control
-    names = driver_names(asset)
     favorite = st.session_state.get("browser_favorite", st.session_state.get("favorite_driver"))
     favorite = favorite if isinstance(favorite, str) and favorite in names else None
     st.session_state["favorite_driver"] = favorite
-    if favorite and st.button("Ver meu favorito"):
+    def show_favorite():
         st.session_state["pilot_view"] = "Perfil individual"
         st.session_state["pilot_driver"] = favorite
-        st.rerun()
-    view = st.radio("Visualização de pilotos", ["Visão geral", "Perfil individual", "Duelo"], horizontal=True, key="pilot_view", label_visibility="collapsed")
-    years=st.session_state.get('pilot_years',[2024,2025,2026])
-    metric=st.session_state.get('pilot_metric','win_rate')
-    minimum=st.session_state.get('pilot_minimum',5)
+    if favorite:
+        st.button("Ver meu favorito", on_click=show_favorite)
     if not years:
         st.info("Selecione pelo menos uma temporada.")
     if years and view == "Visão geral":
@@ -253,11 +399,6 @@ def render(root):
         _individual(asset, years, metric, minimum)
     elif years:
         _duel(asset, years, metric, minimum)
-    with st.expander('Período e critérios da comparação'):
-        period,measure,sample=st.columns([1,1,1])
-        years = period.multiselect("Período", [2024, 2025, 2026], default=[2024, 2025, 2026], key="pilot_years")
-        metric = measure.selectbox("Comparar por", list(METRICS), format_func=METRICS.get, key="pilot_metric")
-        minimum = sample.selectbox("Corridas mínimas por condição", [5, 3, 10, 15, 1], key="pilot_minimum")
     if years:
         _share(asset, years, metric, minimum, view)
 
@@ -271,8 +412,7 @@ def render(root):
         st.dataframe(pd.DataFrame([{"Condição": x.label, "Variável": x.variable} for x in CONDITIONS]), hide_index=True, width="stretch")
         st.markdown("[OpenF1](https://openf1.org/docs/) · [Open-Meteo](https://open-meteo.com/en/docs/historical-weather-api) · [Mapas FIA por edição](https://github.com/TracingInsights/DDocs/tree/9f647f7c62a838405c85219e5eb2feb5c3575027) · [Auditoria dos dados](https://github.com/mbpaschoal/pitwall-lab/tree/main/reports/pilotos_condicoes_20261029)")
 
-    favorite_slot=st.empty()
-    with favorite_slot.container():
+    with st.container(key="pilot-favorite-control"):
         favorite_control(names, favorite)
 
 
@@ -300,12 +440,16 @@ def _duel(asset, years, metric, minimum):
         return
     if st.session_state.get("pilot_driver") not in ids:
         st.session_state["pilot_driver"] = ids[0]
-    left = st.selectbox("Primeiro piloto", ids, format_func=names.get, key="pilot_driver")
+    left = st.selectbox("Primeiro piloto", ids, index=ids.index(st.session_state["pilot_driver"]), format_func=names.get, key="pilot_driver")
     rivals = [x for x in ids if x != left]
     if st.session_state.get("duel_right") not in rivals:
         st.session_state["duel_right"] = rivals[0]
-    right = st.selectbox("Segundo piloto", rivals, format_func=names.get, key="duel_right")
-    condition = st.selectbox("Condição do duelo", ["all"] + list(BY_KEY), format_func=lambda x: "Todas as condições" if x == "all" else BY_KEY[x].label, key="duel_condition")
+    right = st.selectbox("Segundo piloto", rivals, index=rivals.index(st.session_state["duel_right"]), format_func=names.get, key="duel_right")
+    conditions = ["all"] + list(BY_KEY)
+    selected_condition = st.session_state.get("duel_condition", "all")
+    condition = st.selectbox("Condição do duelo", conditions,
+        index=conditions.index(selected_condition) if selected_condition in conditions else 0,
+        format_func=lambda x: "Todas as condições" if x == "all" else BY_KEY[x].label, key="duel_condition")
     result = duel(asset, left, right, years, None if condition == "all" else condition)
     st.caption("{} largadas em comum; {} resultados comparáveis. Só entram GPs em que ambos largaram.".format(result["common_starts"], result["comparable_results"]))
     if not result["common_starts"]:
@@ -336,7 +480,9 @@ def _share(asset, years, metric, minimum, view):
     if view == "Duelo":
         params["rival"] = st.session_state.get("duel_right", "")
         params["duelo_condicao"] = st.session_state.get("duel_condition", "all")
-    st.session_state["_pilot_filters"] = {key: st.session_state[key] for key in ("pilot_years", "pilot_metric", "pilot_minimum", "pilot_condition", "pilot_driver", "pilot_view", "profile_conditions", "matrix_drivers", "duel_right", "duel_condition") if key in st.session_state}
+    filters = dict(st.session_state.get("_pilot_filters", {}))
+    filters.update({key: st.session_state[key] for key in ("pilot_condition", "pilot_driver", "pilot_view", "profile_conditions", "matrix_drivers", "duel_right", "duel_condition") if key in st.session_state})
+    st.session_state["_pilot_filters"] = filters
     st.query_params.from_dict(params)
     st.session_state["_pilot_query"] = tuple(st.query_params.get(x) for x in ("piloto", "visao", "condicao", "anos", "metrica", "minimo", "faixas", "rival", "duelo_condicao"))
     title = translate("Pilotos")

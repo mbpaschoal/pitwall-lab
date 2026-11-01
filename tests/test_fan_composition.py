@@ -21,7 +21,7 @@ class FanCompositionTests(unittest.TestCase):
         set_language('en')
         rendered=hero('Chances de pódio',image='car')
         self.assertIn('data:image/jpeg;base64,',rendered)
-        self.assertIn('Photograph of Sergio Pérez',rendered)
+        self.assertIn('alt="Sergio Pérez in the Red Bull RB18 at Miami on 7 May 2022.',rendered)
         self.assertIn('Miami 2022',rendered)
 
     def test_podium_never_turns_forecast_order_into_observed_places(self):
@@ -59,7 +59,7 @@ class FanCompositionTests(unittest.TestCase):
     def test_count_metric_has_visible_relative_bars_without_a_fake_percentage(self):
         row=dict(score=3,rank=1,driver_id='norris',driver_name='Lando Norris',starts=8)
         rendered=condition_rows([row],'wins',{'norris':'?piloto=norris'})
-        self.assertIn('width:100.0%',rendered)
+        self.assertRegex(rendered,r'width:100(?:\.0+)?%')
         self.assertIn('<em>3</em>',rendered)
         self.assertNotIn('<em>3.00</em>',rendered)
 
@@ -69,5 +69,13 @@ class FanCompositionTests(unittest.TestCase):
         self.assertIn('68,2%',html)
         self.assertNotIn('fan-place-1',html)
 
+
+    def test_comparison_tooltip_uses_the_selected_language(self):
+        set_language('en')
+        row=dict(score=.375,rank=1,driver_id='norris',driver_name='Lando Norris',starts=8)
+        comparisons={'norris':[dict(label='Chuva',score=.375,starts=8,maximum=1)]}
+        html=condition_rows([row],'win_rate',{'norris':'?piloto=norris'},comparisons=comparisons)
+        self.assertIn('title="Rain · 8 starts"',html)
+        self.assertNotIn('title="Chuva',html)
 
 if __name__=='__main__':unittest.main()

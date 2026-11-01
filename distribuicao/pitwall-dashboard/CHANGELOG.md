@@ -4,6 +4,15 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.7.0 — 2026-11-01
+
+- As seis telas refinam a composição C na revisão C3: cabeçalho e controles compactos, foto do circuito em destaque, cinco fotografias principais distintas para os demais destinos e navegação inferior. Pilotos combina o fundo de Piastri em Silverstone com o close de Ricciardo em Miami, identificando pessoas e eventos distintos, e mostra quatro comparações por líder com os empates preservados. Chances de pódio reforça a linha antes/depois e o contexto temporal da emissão.
+- Os 28 retratos de 93 × 93 pixels foram substituídos por fontes naturais maiores, com o acréscimo de Ryo Hirakawa: 29 retratos, todos acima do mínimo de 512 pixels por eixo; 28 têm largura de 1336 pixels. As 26 fotos de circuitos e os cinco cabeçalhos têm largura natural de pelo menos 2488 pixels, com fonte, direitos, dimensões e hash registrados. A apresentação usa os originais, sem ampliar miniaturas como evidência de qualidade.
+- Catálogo de 87 cartas geradas: três poses corporais distintas para cada um dos 29 pilotos. As artes neutras permitem mostrar nome e cores da equipe do GP, inclusive nos períodos históricos. As três cartas originais aprovadas permanecem preservadas e restritas às equipes compatíveis.
+- O diálogo das cartas continua opcional, sem percentuais ou ordem P1/P2/P3. A seleção determinística conserva os favoritos e suas probabilidades e distribui três poses diferentes por trio, inclusive quando há favoritos adicionais por empate. [Galeria das 87 cartas](docs/galeria-cartas.html).
+- Corrigidos o compartilhamento indevido de um contêiner entre sessões, a perda do recorte do URL após atualização do favorito e a exibição de gráficos vazios ou contagens como percentuais. Período, métrica e amostra mínima permanecem canônicos; seleções vazias intencionais continuam editáveis. A regressão inclui perfis concorrentes e persistência do favorito.
+- Testes verificam fontes e resolução natural, identidades, poses, hashes e allowlist do pacote. Modelo v1, 15 entradas, previsões e 614 arquivos científicos protegidos permanecem preservados. Esta nota descreve a entrega local; a conferência pública possui evidência própria.
+
 ## 0.6.3 — 2026-11-01
 
 - Banners de pilotos fictícios substituídos por fotografias identificadas de Lando Norris e Max Verstappen em alta resolução; crédito clicável junto à imagem.

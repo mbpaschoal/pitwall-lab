@@ -4,6 +4,15 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.7.0 — 2026-11-01
+
+- All six screens refine composition C in revision C3: compact shared controls, a prominent circuit photograph, five distinct principal hero photographs and bottom navigation. Drivers combines Piastri at Silverstone in the backdrop with Ricciardo at Miami in close-up, identifying separate people and events, and shows four comparisons per leader with ties preserved. Podium chances strengthens the before/after timeline and emission-time context.
+- The 28 original 93 × 93 portraits were replaced with larger natural-resolution sources, adding Ryo Hirakawa: 29 portraits, all above the minimum of 512 pixels on each axis; 28 are 1336 pixels wide. All 26 circuit photographs and five hero photographs are naturally at least 2488 pixels wide, with sources, rights, dimensions and hashes recorded. Presentation uses the original sources instead of treating enlarged thumbnails as higher-quality images.
+- A catalog of 87 generated cards provides three distinct body poses for each of 29 drivers. Neutral artwork supports GP-specific team names and frame colours across historical periods. The three approved original cards remain byte-identical and restricted to matching teams.
+- Cards remain in an optional dialog without percentages or P1/P2/P3 order. Deterministic selection preserves favorites and probabilities while assigning distinct poses to each trio, including additional tied favorites. [Gallery of all 87 cards](docs/galeria-cartas.html).
+- Fixed a UI container shared across sessions, a shared URL scope being overwritten after a favorite update, and empty charts or counts formatted as percentages. Period, metric and minimum sample remain canonical; intentional empty selections stay editable. Regression coverage includes concurrent profiles and persisted favorites.
+- Tests check natural resolution, provenance, identities, poses, hashes and the explicit package allowlist. Frozen v1, its 15 inputs, stored forecasts and 614 protected scientific files remain unchanged. These notes describe the local delivery; public deployment requires its own verification evidence.
+
 ## 0.6.3 — 2026-11-01
 
 - Fictional driver banners replaced with identified high-resolution photographs of Lando Norris and Max Verstappen, with clickable image credits.

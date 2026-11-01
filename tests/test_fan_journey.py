@@ -47,12 +47,12 @@ class JourneyTests(unittest.TestCase):
 
     def test_historical_team_cannot_show_later_team_artwork(self):
         row=dict(driver_id='hamilton',name='Lewis Hamilton',team='Mercedes',probability=.5)
-        html=cards_html([row],ROOT)
-        self.assertNotIn('<img ',html)
+        html=cards_html([row],ROOT,2024,1)
+        self.assertIn('data-team-id="mercedes"',html)
         self.assertIn('Mercedes',html)
         self.assertNotIn('Ferrari',html)
         row['team']='Ferrari'
-        self.assertIn('<img ',cards_html([row],ROOT))
+        self.assertIn('<img ',cards_html([row],ROOT,2025,1))
 
     def test_gp_without_emission_does_not_open_cards(self):
         app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=40)

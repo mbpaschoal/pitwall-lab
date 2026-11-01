@@ -251,7 +251,7 @@ def campeonatos(paineis, temporada):
                 ancora, e(titulo), temporada, standings_table(snapshot, teams, temporada)
             )
         )
-    return '<p class="pw-standings-note">Campeonato · referência da rodada {}.</p><div class="pw-standings">{}</div>'.format(
+    return '<div class="pw-standings" aria-label="Campeonato · referência da rodada {}">{}</div>'.format(
         paineis["rodada"], "".join(cards)
     )
 

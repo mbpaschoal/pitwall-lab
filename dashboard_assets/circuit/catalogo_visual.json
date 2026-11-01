@@ -1,20 +1,29 @@
 {
   "circuitos": {
     "albert_park": {
-      "alt_foto": "Fotografia ilustrativa do circuito albert park.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Albert Park, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:AllAussieTraveller&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:AllAussieTraveller (page does not exist)\">AllAussieTraveller</a>",
-        "caminho": "dashboard_assets/circuit/albert_park-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY-SA 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Albert_Park_circuit_main_straight,_pictured_from_above_teams'_garages_in_2022.jpg",
-        "sha256": "f0af19dfd008b1ca29958f30b6ace3d071d0bd54993c2b109f7b398906431cfe",
-        "titulo": "Albert Park circuit main straight, pictured from above teams' garages in 2022.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/1/19/Albert_Park_circuit_main_straight%2C_pictured_from_above_teams%27_garages_in_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Albert_Park_circuit_main_straight%2C_pictured_from_above_teams%27_garages_in_2022.jpg/1920px-Albert_Park_circuit_main_straight%2C_pictured_from_above_teams%27_garages_in_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/albert_park-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/norris-beats-verstappen-to-victory-in-dramatic-australian-gp-opener-amid.5rKGxQHJoDl1P8stMSHlIN",
+        "pagina": "https://www.formula1.com/en/latest/article/norris-beats-verstappen-to-victory-in-dramatic-australian-gp-opener-amid.5rKGxQHJoDl1P8stMSHlIN",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_Of_Australia/2205320698.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_Of_Australia/2205320698.webp",
+        "titulo": "MELBOURNE, AUSTRALIA - MARCH 16: Lando Norris of Great Britain driving the (4) McLaren MCL39",
+        "sha256": "7169a68f01dde75bdfa3fba1e7d7a335465b072d877f28a18d5a84386d9ea981",
+        "sha256_anterior": "f0af19dfd008b1ca29958f30b6ace3d071d0bd54993c2b109f7b398906431cfe",
+        "obtido_em": "2026-11-01T17:03:11.439923+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 959354,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Albert Park, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ごひょううべこ (page does not exist)\">ごひょううべこ</a>",
@@ -28,21 +37,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/0/0e/2022_F1_CourseLayout_Australia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/2022_F1_CourseLayout_Australia.svg/1920px-2022_F1_CourseLayout_Australia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Albert Park, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "americas": {
-      "alt_foto": "Ilustração gerada por IA do Circuit of the Americas, baseada na referência visual do Pitwall Lab; não é fotografia documental.",
-      "alteracoes": "Imagem ilustrativa gerada por IA a partir da referência fornecida pelo proprietário; fotografia Wikimedia anterior preservada em americas-hero.jpg. Mapa simplificado a partir da geometria vetorial original.",
+      "alt_foto": "Vista real do COTA a partir da torre em 22 de outubro de 2016. Fotografia histórica ilustrativa.",
+      "alteracoes": "Fotografia real em resolução natural; bytes originais preservados, enquadramento somente em CSS. Fontes anteriores preservadas no arquivo de auditoria. Mapa preservado.",
       "foto": {
-        "autor": "OpenAI · referência fornecida por MBPaschoal",
-        "caminho": "dashboard_assets/circuit/americas-illustration-20261027.png",
-        "gerado_em": "2026-10-27",
-        "licenca": "Ilustração gerada por IA; sem licença fotográfica atribuída",
-        "mime": "image/png",
-        "pagina": "https://github.com/mbpaschoal/pitwall-lab/blob/main/dashboard_assets/circuit/americas-illustration-20261027.png",
-        "sha256": "3fa12e945f3e25f36371ed54cdededc7c1f8bce00445eea018eb1eda2d09c390",
-        "tipo": "ilustracao_ia",
-        "titulo": "Ilustração do COTA baseada na referência visual fornecida pelo proprietário"
+        "caminho": "dashboard_assets/circuit/americas-hero.jpg",
+        "mime": "image/jpeg",
+        "autor": "Pedro Mendes (pedrik)",
+        "credito": "Pedro Mendes (pedrik)",
+        "licenca": "CC BY 2.0",
+        "url_licenca": "https://creativecommons.org/licenses/by/2.0/",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Circuit_of_the_Americas,_Austin,_TX_(30066328424).jpg",
+        "url_original": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Circuit_of_the_Americas%2C_Austin%2C_TX_%2830066328424%29.jpg",
+        "url_obtida": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Circuit_of_the_Americas%2C_Austin%2C_TX_%2830066328424%29.jpg",
+        "titulo": "Vista real do COTA a partir da torre em 22 de outubro de 2016. Fotografia histórica ilustrativa.",
+        "sha256": "a49f718f36996c7cb7b39db6659af31fe7eb600bf4ea9205c4a6b04194754993",
+        "sha256_anterior": "3fa12e945f3e25f36371ed54cdededc7c1f8bce00445eea018eb1eda2d09c390",
+        "obtido_em": "2026-11-01T16:53:02.278268+00:00",
+        "width": 5822,
+        "height": 3275,
+        "bytes": 12226808,
+        "tipo": "fotografia",
+        "evento": "2016-10-22",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Real view of COTA from the tower on 22 October 2016. Illustrative historical photograph."
       },
       "mapa": {
         "alteracoes": "Percurso geométrico preservado; removidos setores, textos e símbolos; traço azul-marinho e enquadramento compacto.",
@@ -58,23 +79,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/b/b4/2022_F1_CourseLayout_COTA.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/2022_F1_CourseLayout_COTA.svg/1920px-2022_F1_CourseLayout_COTA.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Real view of COTA from the tower on 22 October 2016. Illustrative historical photograph."
     },
     "bahrain": {
-      "alt_foto": "Fotografia ilustrativa do circuito bahrain.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Carros de Fórmula 1 na largada do GP de Bahrein de 2025. Fotografia histórica ilustrativa.",
+      "alteracoes": "Fotografia real em resolução natural; bytes originais preservados, enquadramento somente em CSS. Fontes anteriores preservadas no arquivo de auditoria. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/wiki/User:FactFindersEnigma\" title=\"User:FactFindersEnigma\">FactFindersEnigma</a>",
-        "caminho": "dashboard_assets/circuit/bahrain-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Bahrain_International_Circuit_before_the_F1_race_-_2024.jpg",
-        "sha256": "953e1b94d2abe2d254b19465c29884268a9a02c246949694fc09c3c61510bd45",
-        "titulo": "Bahrain International Circuit before the F1 race - 2024.jpg",
-        "url_licenca": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Bahrain_International_Circuit_before_the_F1_race_-_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Bahrain_International_Circuit_before_the_F1_race_-_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+        "caminho": "dashboard_assets/circuit/bahrain-start-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/piastri-storms-to-controlled-victory-in-bahrain-grand-prix-ahead-of-russell.47YQh0Ex2gkZcx58fRaRqJ",
+        "pagina": "https://www.formula1.com/en/latest/article/piastri-storms-to-controlled-victory-in-bahrain-grand-prix-ahead-of-russell.47YQh0Ex2gkZcx58fRaRqJ",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Bahrain/2210066173.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Bahrain/2210066173.webp",
+        "titulo": "Carros de Fórmula 1 na largada do GP de Bahrein de 2025. Fotografia histórica ilustrativa.",
+        "sha256": "20257a7ac468c4fcdf99145b51f5bfb693c073baaf7cb1d31e33b4400115ff3f",
+        "sha256_anterior": "953e1b94d2abe2d254b19465c29884268a9a02c246949694fc09c3c61510bd45",
+        "obtido_em": "2026-11-01T17:03:09.663174+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 796714,
+        "tipo": "fotografia",
+        "evento": "2025-04-13",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Formula 1 cars at the start of the 2025 Bahrain Grand Prix. Illustrative historical photograph."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Will_Pittenger\" title=\"User:Will Pittenger\">User:Will Pittenger</a>",
@@ -88,11 +119,12 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Bahrain_International_Circuit--Grand_Prix_Layout_with_DRS.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Bahrain_International_Circuit--Grand_Prix_Layout_with_DRS.svg/1920px-Bahrain_International_Circuit--Grand_Prix_Layout_with_DRS.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Formula 1 cars at the start of the 2025 Bahrain Grand Prix. Illustrative historical photograph."
     },
     "baku": {
       "alt_foto": "Fotografia ilustrativa do circuito baku.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alteracoes": "Fotografia original em resolução natural; enquadramento somente em CSS. Mapa preservado.",
       "foto": {
         "autor": "<a href=\"https://en.wikipedia.org/wiki/Planet_Labs\" class=\"extiw\" title=\"en:Planet Labs\">Planet Labs, Inc.</a>",
         "caminho": "dashboard_assets/circuit/baku-hero.jpg",
@@ -100,11 +132,18 @@
         "licenca": "CC BY-SA 4.0",
         "mime": "image/jpeg",
         "pagina": "https://commons.wikimedia.org/wiki/File:Baku_City_Circuit,_April_9,_2018_SkySat.jpg",
-        "sha256": "5416d33edaea5fe95533b0a50e46aeda9e6fcab9d2c6d7dd83d04536d89b395c",
+        "sha256": "6a7e3fd15872a65e6360b8b7780b4cdeccb9d38715fe14ff8489ff02b4c13c98",
         "titulo": "Baku City Circuit, April 9, 2018 SkySat.jpg",
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Baku_City_Circuit%2C_April_9%2C_2018_SkySat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Baku_City_Circuit%2C_April_9%2C_2018_SkySat.jpg/1920px-Baku_City_Circuit%2C_April_9%2C_2018_SkySat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Baku_City_Circuit%2C_April_9%2C_2018_SkySat.jpg/1920px-Baku_City_Circuit%2C_April_9%2C_2018_SkySat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "url_obtida": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Baku_City_Circuit%2C_April_9%2C_2018_SkySat.jpg",
+        "obtido_em": "2026-11-01T16:56:15.596785+00:00",
+        "width": 3792,
+        "height": 2133,
+        "bytes": 2688857,
+        "sha256_anterior": "5416d33edaea5fe95533b0a50e46aeda9e6fcab9d2c6d7dd83d04536d89b395c",
+        "alteracoes": "Bytes do original preservados; enquadramento somente em CSS, sem ampliação local."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:HumanBodyPiloter5&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:HumanBodyPiloter5 (page does not exist)\">HumanBodyPiloter5</a>",
@@ -121,20 +160,29 @@
       }
     },
     "catalunya": {
-      "alt_foto": "Fotografia ilustrativa do circuito catalunya.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Carros de Fórmula 1 na largada do GP de Barcelona-Catalunya de 2025. Fotografia histórica ilustrativa.",
+      "alteracoes": "Fotografia real em resolução natural; bytes originais preservados, enquadramento somente em CSS. Fontes anteriores preservadas no arquivo de auditoria. Mapa preservado.",
       "foto": {
-        "autor": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/vroig/\">vroig</a> from Catalonia",
-        "caminho": "dashboard_assets/circuit/catalunya-hero.jpg",
-        "credito": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/vroig/478614304/\">Flickr</a>",
-        "licenca": "CC BY 2.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Circuit_de_Catalunya_Formula_One.jpg",
-        "sha256": "b0a4a6ff1769984784e139ae9ff4987d322903d5ed80d50713b82e1f9c30f991",
-        "titulo": "Circuit de Catalunya Formula One.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by/2.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/9/93/Circuit_de_Catalunya_Formula_One.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://upload.wikimedia.org/wikipedia/commons/9/93/Circuit_de_Catalunya_Formula_One.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+        "caminho": "dashboard_assets/circuit/catalunya-start-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/piastri-leads-mclaren-1-2-from-norris-in-spanish-gp-amid-late-race-drama-for.2t1WkW9NVeMzJbOIkpM8u8",
+        "pagina": "https://www.formula1.com/en/latest/article/piastri-leads-mclaren-1-2-from-norris-in-spanish-gp-amid-late-race-drama-for.2t1WkW9NVeMzJbOIkpM8u8",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Spain/2218091373.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Spain/2218091373.webp",
+        "titulo": "Carros de Fórmula 1 na largada do GP de Barcelona-Catalunya de 2025. Fotografia histórica ilustrativa.",
+        "sha256": "21fa0387893356e75575879a5418126e42cbb61c9d34b586d42ccc736a260e3e",
+        "sha256_anterior": "b0a4a6ff1769984784e139ae9ff4987d322903d5ed80d50713b82e1f9c30f991",
+        "obtido_em": "2026-11-01T17:03:15.209954+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 646120,
+        "tipo": "fotografia",
+        "evento": "2025-06-01",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Formula 1 cars at the start of the 2025 Barcelona-Catalunya Grand Prix. Illustrative historical photograph."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Will_Pittenger\" title=\"User:Will Pittenger\">Will Pittenger</a>",
@@ -148,23 +196,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Formula1_Circuit_Catalunya.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Formula1_Circuit_Catalunya.svg/1920px-Formula1_Circuit_Catalunya.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Formula 1 cars at the start of the 2025 Barcelona-Catalunya Grand Prix. Illustrative historical photograph."
     },
     "hungaroring": {
-      "alt_foto": "Fotografia ilustrativa do circuito hungaroring.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Hungaroring, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/wiki/User:VargaA\" title=\"User:VargaA\">VargaA</a>",
-        "caminho": "dashboard_assets/circuit/hungaroring-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY-SA 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Hungaroring_2020.jpg",
-        "sha256": "353334bea1a48a71b5ccf5830c5c3695533b7538c9ee250756d8386b5577f134",
-        "titulo": "Hungaroring 2020.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Hungaroring_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Hungaroring_2020.jpg/1920px-Hungaroring_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/hungaroring-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/norris-holds-of-piastri-in-thrilling-battle-to-win-hungarian-grand-prix.3nguaFMU2JVNsT9QWopwzK",
+        "pagina": "https://www.formula1.com/en/latest/article/norris-holds-of-piastri-in-thrilling-battle-to-win-hungarian-grand-prix.3nguaFMU2JVNsT9QWopwzK",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Hungary/2228332808.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Hungary/2228332808.webp",
+        "titulo": "BUDAPEST, HUNGARY - AUGUST 03: Lando Norris of Great Britain driving the (4) McLaren MCL39 Mercedes",
+        "sha256": "6e95868178ed3eb9b64b35cffdf5b13cba7008126f76b6beef439944ff74ad18",
+        "sha256_anterior": "353334bea1a48a71b5ccf5830c5c3695533b7538c9ee250756d8386b5577f134",
+        "obtido_em": "2026-11-01T17:03:21.621314+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 720514,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Hungaroring, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ごひょううべこ (page does not exist)\">ごひょううべこ</a>",
@@ -178,11 +236,12 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/f/fb/2022_F1_CourseLayout_Hungary.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/2022_F1_CourseLayout_Hungary.svg/1920px-2022_F1_CourseLayout_Hungary.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Hungaroring, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "imola": {
       "alt_foto": "Fotografia ilustrativa do circuito imola.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alteracoes": "Fotografia original em resolução natural; enquadramento somente em CSS. Mapa preservado.",
       "foto": {
         "autor": "by Grantuking",
         "caminho": "dashboard_assets/circuit/imola-hero.jpg",
@@ -190,11 +249,18 @@
         "licenca": "CC BY 2.0",
         "mime": "image/jpeg",
         "pagina": "https://commons.wikimedia.org/wiki/File:WTCC08_Dino_ed_Enzo_Ferrari_Circuit_Imola.jpg",
-        "sha256": "02c677299ac691c3563eaee3c6ceb5d3f7079b9878be25741775189df6e4fb16",
+        "sha256": "314cc069231a47a2f5d27b3f09e22adb9703b70c12642aa9a7042751a582611d",
         "titulo": "WTCC08 Dino ed Enzo Ferrari Circuit Imola.jpg",
         "url_licenca": "https://creativecommons.org/licenses/by/2.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/d/df/WTCC08_Dino_ed_Enzo_Ferrari_Circuit_Imola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/WTCC08_Dino_ed_Enzo_Ferrari_Circuit_Imola.jpg/1920px-WTCC08_Dino_ed_Enzo_Ferrari_Circuit_Imola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/WTCC08_Dino_ed_Enzo_Ferrari_Circuit_Imola.jpg/1920px-WTCC08_Dino_ed_Enzo_Ferrari_Circuit_Imola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "url_obtida": "https://upload.wikimedia.org/wikipedia/commons/d/df/WTCC08_Dino_ed_Enzo_Ferrari_Circuit_Imola.jpg",
+        "obtido_em": "2026-11-01T16:56:21.774277+00:00",
+        "width": 2816,
+        "height": 2112,
+        "bytes": 2183218,
+        "sha256_anterior": "02c677299ac691c3563eaee3c6ceb5d3f7079b9878be25741775189df6e4fb16",
+        "alteracoes": "Bytes do original preservados; enquadramento somente em CSS, sem ampliação local."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Juan2910&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Juan2910 (page does not exist)\">Juan2910</a>",
@@ -224,7 +290,9 @@
         "titulo": "Fórmula 1 Heineken Grande Prêmio de São Paulo 2022 (52498140708).jpg",
         "url_licenca": "https://creativecommons.org/licenses/by/2.0/",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/3/3a/F%C3%B3rmula_1_Heineken_Grande_Pr%C3%AAmio_de_S%C3%A3o_Paulo_2022_%2852498140708%29.jpg",
-        "url_otimizada": "https://upload.wikimedia.org/wikipedia/commons/3/3a/F%C3%B3rmula_1_Heineken_Grande_Pr%C3%AAmio_de_S%C3%A3o_Paulo_2022_%2852498140708%29.jpg"
+        "url_otimizada": "https://upload.wikimedia.org/wikipedia/commons/3/3a/F%C3%B3rmula_1_Heineken_Grande_Pr%C3%AAmio_de_S%C3%A3o_Paulo_2022_%2852498140708%29.jpg",
+        "width": 5000,
+        "height": 3333
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Sas1998&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Sas1998 (page does not exist)\">Sas1998</a>",
@@ -241,20 +309,29 @@
       }
     },
     "jeddah": {
-      "alt_foto": "Fotografia ilustrativa do circuito jeddah.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Vista aérea noturna do circuito de Jeddah ao fim do GP da Arábia Saudita em 20 de abril de 2025. Fotografia histórica ilustrativa.",
+      "alteracoes": "Fotografia real em resolução natural; bytes originais preservados, enquadramento somente em CSS. Fontes anteriores preservadas no arquivo de auditoria. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:G%C3%A9oFr11&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:GéoFr11 (page does not exist)\">GéoFr11</a>",
-        "caminho": "dashboard_assets/circuit/jeddah-hero.png",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC0",
-        "mime": "image/png",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Jeddah_Corniche_Circuit_viewed_from_above.png",
-        "sha256": "62e66ce9f353d9b6eac815191ffc2da28e476cff438031fb6a3b9ef49470f177",
-        "titulo": "Jeddah Corniche Circuit viewed from above.png",
-        "url_licenca": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Jeddah_Corniche_Circuit_viewed_from_above.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Jeddah_Corniche_Circuit_viewed_from_above.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+        "caminho": "dashboard_assets/circuit/jeddah-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/piastri-clinches-victory-in-saudi-arabia-from-verstappen-and-leclerc-as.1XBezBwUfLfjOayPSKNs41",
+        "pagina": "https://www.formula1.com/en/latest/article/piastri-clinches-victory-in-saudi-arabia-from-verstappen-and-leclerc-as.1XBezBwUfLfjOayPSKNs41",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Saudi_Arabia/2211145759.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Saudi_Arabia/2211145759.webp",
+        "titulo": "Vista aérea noturna do circuito de Jeddah ao fim do GP da Arábia Saudita em 20 de abril de 2025. Fotografia histórica ilustrativa.",
+        "sha256": "868d65041d02db48e78645bece6a2b5c9f0f08922bd9a416c541af53cc64583a",
+        "sha256_anterior": "62e66ce9f353d9b6eac815191ffc2da28e476cff438031fb6a3b9ef49470f177",
+        "obtido_em": "2026-11-01T16:55:02.954243+00:00",
+        "width": 3840,
+        "height": 2526,
+        "bytes": 1032562,
+        "tipo": "fotografia",
+        "evento": "2025-04-20",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Night aerial view of Jeddah circuit after the Saudi Arabian Grand Prix on 20 April 2025. Illustrative historical photograph."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ごひょううべこ (page does not exist)\">ごひょううべこ</a>",
@@ -268,23 +345,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/3/38/2023_F1_CourseLayout_Saudi-Arabia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/2023_F1_CourseLayout_Saudi-Arabia.svg/1920px-2023_F1_CourseLayout_Saudi-Arabia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Night aerial view of Jeddah circuit after the Saudi Arabian Grand Prix on 20 April 2025. Illustrative historical photograph."
     },
     "losail": {
-      "alt_foto": "Fotografia ilustrativa do circuito losail.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Losail, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Trinidade&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Trinidade (page does not exist)\">Trinidade</a>",
-        "caminho": "dashboard_assets/circuit/losail-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY-SA 3.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Grand_Stand.JPG",
-        "sha256": "e56514237dd81fea921043595da72c802939cb5aad0b2055674e800f3b81ee1e",
-        "titulo": "Grand Stand.JPG",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Grand_Stand.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Grand_Stand.JPG/1920px-Grand_Stand.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/losail-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/verstappen-wins-qatar-gp-as-title-battle-goes-to-abu-dhabi-with-piastri.5KlYT7q8OcrJ7AnMALjkxJ",
+        "pagina": "https://www.formula1.com/en/latest/article/verstappen-wins-qatar-gp-as-title-battle-goes-to-abu-dhabi-with-piastri.5KlYT7q8OcrJ7AnMALjkxJ",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Qatar/2249198054.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Qatar/2249198054.webp",
+        "titulo": "LUSAIL CITY, QATAR - NOVEMBER 30: Oscar Piastri of Australia driving the (81) McLaren MCL39",
+        "sha256": "41724ef3de0c0ff5af03cb74dffb0c252e4f511eab9a74a3db9f9d84006bc464",
+        "sha256_anterior": "e56514237dd81fea921043595da72c802939cb5aad0b2055674e800f3b81ee1e",
+        "obtido_em": "2026-11-01T17:03:34.814991+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 815542,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Losail, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<ul><li><a href=\"//commons.wikimedia.org/wiki/File:Losail.svg\" title=\"File:Losail.svg\">Losail.svg</a>: <a href=\"//commons.wikimedia.org/wiki/User:Will_Pittenger\" title=\"User:Will Pittenger\">Will Pittenger</a></li>\n<li>derivative work: <a href=\"//commons.wikimedia.org/wiki/User:Gpmat\" title=\"User:Gpmat\">Gpmat</a></li></ul>",
@@ -298,24 +385,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Lusail_International_Circuit_2023.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Lusail_International_Circuit_2023.svg/1920px-Lusail_International_Circuit_2023.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Losail, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "madring": {
-      "alt_foto": "Reta principal, boxes e arquibancadas do Madring em setembro de 2026; recorte da pista.",
-      "alteracoes": "Original preservado; a interface exibe o lado esquerdo da foto para priorizar a reta principal, os boxes e as arquibancadas. Mapa preservado.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Madring, GP de 2026. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "Comunidad de Madrid",
-        "caminho": "dashboard_assets/circuit/madring-hero.jpg",
-        "credito": "Comunidad de Madrid / Flickr",
-        "enquadramento": "pista-esquerda",
-        "licenca": "CC BY-NC-SA 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://www.flickr.com/photos/comunidaddemadrid/55513502423/",
-        "sha256": "23d37ff979b3f55236ca6a25ac44fb2cd1b123b930554283aa90f0b6978a8384",
-        "titulo": "Madring: reta principal e boxes — visita oficial de 7 de setembro de 2026",
-        "url_licenca": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-        "url_original": "https://live.staticflickr.com/65535/55513502423_0ffdd6fb88_o.jpg",
-        "url_otimizada": "https://live.staticflickr.com/65535/55513502423_0ffdd6fb88_o.jpg"
+        "caminho": "dashboard_assets/circuit/madring-f1-2026.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/antonelli-clinches-victory-over-verstappen-and-norris-in-spanish-gp.644ZZfPzRPEaUh2JBHcB9",
+        "pagina": "https://www.formula1.com/en/latest/article/antonelli-clinches-victory-over-verstappen-and-norris-in-spanish-gp.644ZZfPzRPEaUh2JBHcB9",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2026/F1_Grand_Prix_of_Spain/2295039950.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2026/F1_Grand_Prix_of_Spain/2295039950.webp",
+        "titulo": "MADRID, SPAIN - SEPTEMBER 13: Lando Norris of Great Britain driving the (1) McLaren MCL40 Mercedes",
+        "sha256": "d8f60a356b92948ba68aff46b9976155164a0dbed0c0660fcbf7c8a17b69d3f0",
+        "sha256_anterior": "23d37ff979b3f55236ca6a25ac44fb2cd1b123b930554283aa90f0b6978a8384",
+        "obtido_em": "2026-11-01T17:03:41.099725+00:00",
+        "width": 3840,
+        "height": 2559,
+        "bytes": 728924,
+        "tipo": "fotografia",
+        "evento": "2026",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Madring, 2026 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Dave_F63&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Dave F63 (page does not exist)\">Dave F63</a>",
@@ -329,11 +425,12 @@
         "url_licenca": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Madring_Formula_1_Circuit.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Madring_Formula_1_Circuit.svg/1920px-Madring_Formula_1_Circuit.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Madring, 2026 Grand Prix. The image does not document the selected Grand Prix."
     },
     "marina_bay": {
       "alt_foto": "Fotografia ilustrativa do circuito marina bay.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alteracoes": "Fotografia original em resolução natural; enquadramento somente em CSS. Mapa preservado.",
       "foto": {
         "autor": "<bdi><a href=\"https://www.wikidata.org/wiki/Q34788025\" class=\"extiw\" title=\"d:Q34788025\"><span title=\"German photographer and mathematician\">Dietmar Rabich</span></a></bdi>",
         "caminho": "dashboard_assets/circuit/marina_bay-hero.jpg",
@@ -341,11 +438,18 @@
         "licenca": "CC BY-SA 4.0",
         "mime": "image/jpeg",
         "pagina": "https://commons.wikimedia.org/wiki/File:Singapore_(SG),_Marina_Bay_Street_Circuit,_F1_Pit_Building_--_2019_--_4478.jpg",
-        "sha256": "f0ed75c782eda3168598c3e3e5a89a1be6dc33dda7202195259e06820627e335",
+        "sha256": "f448b56c4a6b79dc07e9b7c96c92edb109dfa574f8261c5830cfdbf2308541bb",
         "titulo": "Singapore (SG), Marina Bay Street Circuit, F1 Pit Building -- 2019 -- 4478.jpg",
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Singapore_%28SG%29%2C_Marina_Bay_Street_Circuit%2C_F1_Pit_Building_--_2019_--_4478.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Singapore_%28SG%29%2C_Marina_Bay_Street_Circuit%2C_F1_Pit_Building_--_2019_--_4478.jpg/1920px-Singapore_%28SG%29%2C_Marina_Bay_Street_Circuit%2C_F1_Pit_Building_--_2019_--_4478.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Singapore_%28SG%29%2C_Marina_Bay_Street_Circuit%2C_F1_Pit_Building_--_2019_--_4478.jpg/1920px-Singapore_%28SG%29%2C_Marina_Bay_Street_Circuit%2C_F1_Pit_Building_--_2019_--_4478.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "url_obtida": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Singapore_%28SG%29%2C_Marina_Bay_Street_Circuit%2C_F1_Pit_Building_--_2019_--_4478.jpg",
+        "obtido_em": "2026-11-01T16:56:31.381768+00:00",
+        "width": 6720,
+        "height": 4480,
+        "bytes": 12525144,
+        "sha256_anterior": "f0ed75c782eda3168598c3e3e5a89a1be6dc33dda7202195259e06820627e335",
+        "alteracoes": "Bytes do original preservados; enquadramento somente em CSS, sem ampliação local."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Cherkash&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Cherkash (page does not exist)\">Cherkash</a>",
@@ -375,7 +479,9 @@
         "titulo": "2022 Miami GP - Red Bull RB18 of Sergio Pérez.jpg",
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/d/d6/2022_Miami_GP_-_Red_Bull_RB18_of_Sergio_P%C3%A9rez.jpg",
-        "url_otimizada": "https://upload.wikimedia.org/wikipedia/commons/d/d6/2022_Miami_GP_-_Red_Bull_RB18_of_Sergio_P%C3%A9rez.jpg"
+        "url_otimizada": "https://upload.wikimedia.org/wikipedia/commons/d/d6/2022_Miami_GP_-_Red_Bull_RB18_of_Sergio_P%C3%A9rez.jpg",
+        "width": 4589,
+        "height": 2401
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ごひょううべこ (page does not exist)\">ごひょううべこ</a>",
@@ -392,20 +498,29 @@
       }
     },
     "monaco": {
-      "alt_foto": "Fotografia ilustrativa do circuito monaco.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Monaco, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Kevinbeets1995\" title=\"User:Kevinbeets1995\">Kevinbeets1995</a>",
-        "caminho": "dashboard_assets/circuit/monaco-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY-SA 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Race_track_circuit_de_monaco.jpg",
-        "sha256": "d1ed060f1817c672e8a0530b6dddff6f66cd9c90fb625ad9c5bc91a200457532",
-        "titulo": "Race track circuit de monaco.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Race_track_circuit_de_monaco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Race_track_circuit_de_monaco.jpg/1920px-Race_track_circuit_de_monaco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/monaco-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/norris-takes-victory-over-leclerc-and-piastri-in-gripping-monaco-grand-prix.4B7frXOoDY8UvKMu25Daoa",
+        "pagina": "https://www.formula1.com/en/latest/article/norris-takes-victory-over-leclerc-and-piastri-in-gripping-monaco-grand-prix.4B7frXOoDY8UvKMu25Daoa",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Monaco/2216966636.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Monaco/2216966636.webp",
+        "titulo": "MONTE-CARLO, MONACO - MAY 25: Max Verstappen of the Netherlands driving the (1) Oracle Red Bull",
+        "sha256": "868e9a96a8f0135ad4cdd93b25a257c00a336b683708cfc95c694c7bd04b4225",
+        "sha256_anterior": "d1ed060f1817c672e8a0530b6dddff6f66cd9c90fb625ad9c5bc91a200457532",
+        "obtido_em": "2026-11-01T17:03:51.186822+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 478544,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Monaco, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Will_Pittenger\" title=\"User:Will Pittenger\">Will Pittenger</a>",
@@ -419,11 +534,12 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Monte_Carlo_Formula_1_track_map_with_streets.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Monte_Carlo_Formula_1_track_map_with_streets.svg/1920px-Monte_Carlo_Formula_1_track_map_with_streets.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Monaco, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "monza": {
       "alt_foto": "Fotografia ilustrativa do circuito monza.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alteracoes": "Fotografia original em resolução natural; enquadramento somente em CSS. Mapa preservado.",
       "foto": {
         "autor": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/9288799@N02\">Sitomon</a>",
         "caminho": "dashboard_assets/circuit/monza-hero.jpg",
@@ -431,11 +547,18 @@
         "licenca": "CC BY-SA 2.0",
         "mime": "image/jpeg",
         "pagina": "https://commons.wikimedia.org/wiki/File:Circuito_de_Monza08.jpg",
-        "sha256": "f089e21a6d457df400b59e29e10dd495afc38d665ff7fbc798409cc79377bc98",
+        "sha256": "889d9da38c7328dc1050fd27b43663fa02d48c1db0a6746f95ce3381516a2c07",
         "titulo": "Circuito de Monza08.jpg",
         "url_licenca": "https://creativecommons.org/licenses/by-sa/2.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Circuito_de_Monza08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Circuito_de_Monza08.jpg/1920px-Circuito_de_Monza08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Circuito_de_Monza08.jpg/1920px-Circuito_de_Monza08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "url_obtida": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Circuito_de_Monza08.jpg",
+        "obtido_em": "2026-11-01T16:56:37.422072+00:00",
+        "width": 3264,
+        "height": 2448,
+        "bytes": 2372960,
+        "sha256_anterior": "f089e21a6d457df400b59e29e10dd495afc38d665ff7fbc798409cc79377bc98",
+        "alteracoes": "Bytes do original preservados; enquadramento somente em CSS, sem ampliação local."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Anthony_Alessio_Tralongo\" title=\"User:Anthony Alessio Tralongo\">Anthony Alessio Tralongo</a>",
@@ -452,20 +575,29 @@
       }
     },
     "red_bull_ring": {
-      "alt_foto": "Fotografia ilustrativa do circuito red bull ring.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Red Bull Ring, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Vanessa_Machelett&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Vanessa Machelett (page does not exist)\">Vanessa Machelett</a>",
-        "caminho": "dashboard_assets/circuit/red_bull_ring-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY-SA 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Luftaufnahme_(c)Red_Bull_Ring.jpg",
-        "sha256": "91adb2f77171a8c56ca9721d581ddf927e7d37a74be3fce9ea6f98867263e1b5",
-        "titulo": "Luftaufnahme (c)Red Bull Ring.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Luftaufnahme_%28c%29Red_Bull_Ring.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Luftaufnahme_%28c%29Red_Bull_Ring.jpg/1920px-Luftaufnahme_%28c%29Red_Bull_Ring.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/red_bull_ring-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/norris-fends-off-piastri-for-austrian-gp-victory-in-thrilling-race-long.2CH71wVvRP1FaU8s04Tj7f",
+        "pagina": "https://www.formula1.com/en/latest/article/norris-fends-off-piastri-for-austrian-gp-victory-in-thrilling-race-long.2CH71wVvRP1FaU8s04Tj7f",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Austria/2222736500.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Austria/2222736500.webp",
+        "titulo": "SPIELBERG, AUSTRIA - JUNE 29: Lando Norris of Great Britain driving the (4) McLaren MCL39 Mercedes",
+        "sha256": "74a710cfccb0c5df1271396046b85024d1b1de61f803c637994282ce1021551a",
+        "sha256_anterior": "91adb2f77171a8c56ca9721d581ddf927e7d37a74be3fce9ea6f98867263e1b5",
+        "obtido_em": "2026-11-01T17:03:58.607056+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 777196,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Red Bull Ring, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Pitlane02\" title=\"User:Pitlane02\">Pitlane02</a>",
@@ -479,23 +611,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Circuit_Red_Bull_Ring.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Circuit_Red_Bull_Ring.svg/1920px-Circuit_Red_Bull_Ring.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Red Bull Ring, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "rodriguez": {
-      "alt_foto": "Fotografia ilustrativa do circuito rodriguez.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Rodriguez, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"https://en.wikipedia.org/wiki/Planet_Labs\" class=\"extiw\" title=\"en:Planet Labs\">Planet Labs, Inc.</a>",
-        "caminho": "dashboard_assets/circuit/rodriguez-hero.jpg",
-        "credito": "<a rel=\"nofollow\" class=\"external free\" href=\"https://medium.com/planet-stories/a-grand-prix-world-tour-86b08d45ae46\">https://medium.com/planet-stories/a-grand-prix-world-tour-86b08d45ae46</a>",
-        "licenca": "CC BY-SA 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Autódromo_Hermanos_Rodríguez,_June_4,_2018_SkySat_(cropped).jpg",
-        "sha256": "7ffed28061d4ceadd56bae210b4285d911c29736026717b36039f6c21d655033",
-        "titulo": "Autódromo Hermanos Rodríguez, June 4, 2018 SkySat (cropped).jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez%2C_June_4%2C_2018_SkySat_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez%2C_June_4%2C_2018_SkySat_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+        "caminho": "dashboard_assets/circuit/rodriguez-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/norris-seals-commanding-win-in-action-packed-mexico-city-gp-to-take-world.5ztiajHhdtqagu0qQLx0vS",
+        "pagina": "https://www.formula1.com/en/latest/article/norris-seals-commanding-win-in-action-packed-mexico-city-gp-to-take-world.5ztiajHhdtqagu0qQLx0vS",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Mexico/2243473538.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Mexico/2243473538.webp",
+        "titulo": "MEXICO CITY, MEXICO - OCTOBER 26: Oscar Piastri of Australia driving the (81) McLaren MCL39",
+        "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+        "sha256_anterior": "7ffed28061d4ceadd56bae210b4285d911c29736026717b36039f6c21d655033",
+        "obtido_em": "2026-11-01T17:04:04.310678+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 335816,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Rodriguez, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:WL2392&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:WL2392 (page does not exist)\">WL2392</a>",
@@ -509,23 +651,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/9/93/Autodromo_Hermanos_Rodriguez_%28National_Circuit_with_Foro_Sol%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Autodromo_Hermanos_Rodriguez_%28National_Circuit_with_Foro_Sol%29.png/1920px-Autodromo_Hermanos_Rodriguez_%28National_Circuit_with_Foro_Sol%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Rodriguez, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "sepang": {
-      "alt_foto": "Fotografia ilustrativa do circuito sepang.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Sepang, GP de 2026. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Mondayblues\" title=\"User:Mondayblues\">mondayblues</a>",
-        "caminho": "dashboard_assets/circuit/sepang-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY-SA 3.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Sepang_International_Circuit.JPG",
-        "sha256": "6cc1388a9408c6a92f4e7f83fc79c5d1e07f698ffa5e6f1def6e68c2d140635a",
-        "titulo": "Sepang International Circuit.JPG",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/5/55/Sepang_International_Circuit.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Sepang_International_Circuit.JPG/1920px-Sepang_International_Circuit.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/sepang-f1-2026.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/verstappen-wins-rain-hit-bahrain-gp-in-malaysia-over-antonelli-as-russell-retires-late-on.6qfpIHPch8mIVj2YgfHdCp",
+        "pagina": "https://www.formula1.com/en/latest/article/verstappen-wins-rain-hit-bahrain-gp-in-malaysia-over-antonelli-as-russell-retires-late-on.6qfpIHPch8mIVj2YgfHdCp",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia/2298504637.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia/2298504637.webp",
+        "titulo": "KUALA LUMPUR, MALAYSIA - OCTOBER 04:  Max Verstappen of the Netherlands driving the (3) Oracle Red",
+        "sha256": "ac9fbb9f23650f422121c0a21f1e434d40920900e2ea20655087bb2ad047ebfe",
+        "sha256_anterior": "6cc1388a9408c6a92f4e7f83fc79c5d1e07f698ffa5e6f1def6e68c2d140635a",
+        "obtido_em": "2026-11-01T17:04:10.115843+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 531258,
+        "tipo": "fotografia",
+        "evento": "2026",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Sepang, 2026 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Will_Pittenger\" title=\"User:Will Pittenger\">Will Pittenger</a>",
@@ -539,23 +691,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/6/67/Sepang.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Sepang.svg/1920px-Sepang.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Sepang, 2026 Grand Prix. The image does not document the selected Grand Prix."
     },
     "shanghai": {
-      "alt_foto": "Fotografia ilustrativa do circuito shanghai.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Shanghai, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "Planet Labs, Inc.",
-        "caminho": "dashboard_assets/circuit/shanghai-hero.jpg",
-        "credito": "<a rel=\"mw:ExtLink nofollow\" href=\"https://medium.com/planet-stories/a-grand-prix-world-tour-86b08d45ae46\" class=\"external free\">https://medium.com/planet-stories/a-grand-prix-world-tour-86b08d45ae46</a>",
-        "licenca": "CC BY-SA 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Shanghai_International_Circuit,_April_7,_2018_SkySat.jpg",
-        "sha256": "f4ce249bc4b7d6c9099303fe7b9afe7006756dff072626dae7fe09e31da869ce",
-        "titulo": "Shanghai International Circuit, April 7, 2018 SkySat.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/0/07/Shanghai_International_Circuit%2C_April_7%2C_2018_SkySat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Shanghai_International_Circuit%2C_April_7%2C_2018_SkySat.jpg/1920px-Shanghai_International_Circuit%2C_April_7%2C_2018_SkySat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/shanghai-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/piastri-beats-norris-and-russell-to-victory-in-chinese-grand-prix-with.CpcwOmMwzcZGjM33Wkv8V",
+        "pagina": "https://www.formula1.com/en/latest/article/piastri-beats-norris-and-russell-to-victory-in-chinese-grand-prix-with.CpcwOmMwzcZGjM33Wkv8V",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_Of_China/2206478109.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_Of_China/2206478109.webp",
+        "titulo": "SHANGHAI, CHINA - MARCH 23: Charles Leclerc of Monaco driving the (16) Scuderia Ferrari SF-25 leads",
+        "sha256": "c31eed8c8e96c97c5de137101f3acc4df49b9be19b0fd16870dd1b8ffc3b489b",
+        "sha256_anterior": "f4ce249bc4b7d6c9099303fe7b9afe7006756dff072626dae7fe09e31da869ce",
+        "obtido_em": "2026-11-01T17:04:22.924642+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 396182,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Shanghai, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Will_Pittenger\" title=\"User:Will Pittenger\">Will Pittenger</a>",
@@ -569,23 +731,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/1/14/Shanghai_International_Racing_Circuit_track_map.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Shanghai_International_Racing_Circuit_track_map.svg/1920px-Shanghai_International_Racing_Circuit_track_map.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Shanghai, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "silverstone": {
-      "alt_foto": "Fotografia ilustrativa do circuito silverstone.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Silverstone, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Harvey_Milligan\" title=\"User:Harvey Milligan\">Harvey Milligan</a>",
-        "caminho": "dashboard_assets/circuit/silverstone-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY-SA 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Silverstone_Racing_Circuit.jpg",
-        "sha256": "79be9943ccb3ae221d5f3e91183304c1e2325f82b680a75971b6568773a4814d",
-        "titulo": "Silverstone Racing Circuit.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Silverstone_Racing_Circuit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Silverstone_Racing_Circuit.jpg/1920px-Silverstone_Racing_Circuit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/silverstone-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/norris-wins-dramatic-wet-dry-british-gp-from-piastri-as-hulkenberg-claims.1puOD82avOZ8I0sca7fvLJ",
+        "pagina": "https://www.formula1.com/en/latest/article/norris-wins-dramatic-wet-dry-british-gp-from-piastri-as-hulkenberg-claims.1puOD82avOZ8I0sca7fvLJ",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Great_Britain/2223807677.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Great_Britain/2223807677.webp",
+        "titulo": "NORTHAMPTON, ENGLAND - JULY 06: Max Verstappen of the Netherlands driving the (1) Oracle Red Bull",
+        "sha256": "0b82ef0a5dd874e56018bd74bb6d52388203d330ef8463aa7f39438a6c47c0dd",
+        "sha256_anterior": "79be9943ccb3ae221d5f3e91183304c1e2325f82b680a75971b6568773a4814d",
+        "obtido_em": "2026-11-01T17:04:31.909543+00:00",
+        "width": 2693,
+        "height": 1795,
+        "bytes": 300530,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Silverstone, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ごひょううべこ (page does not exist)\">ごひょううべこ</a>",
@@ -599,23 +771,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/4/46/2022_F1_CourseLayout_Britain.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/2022_F1_CourseLayout_Britain.svg/1920px-2022_F1_CourseLayout_Britain.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Silverstone, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "spa": {
-      "alt_foto": "Fotografia ilustrativa do circuito spa.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Spa, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/30998865@N00\">Nathanael Majoros</a>",
-        "caminho": "dashboard_assets/circuit/spa-hero.jpg",
-        "credito": "originally posted to <b><a href=\"//commons.wikimedia.org/wiki/Flickr\" class=\"mw-redirect\" title=\"Flickr\">Flickr</a></b> as <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/30998865@N00/2614522144\">2008_06_26 18h57_32</a>",
-        "licenca": "CC BY-SA 2.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Spa-Francorchamps_overview.jpg",
-        "sha256": "1ee27cd0d3c2e9457359d795aad5004e0b7e68885c109a69e0a2a41f3827c347",
-        "titulo": "Spa-Francorchamps overview.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/2.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/6/62/Spa-Francorchamps_overview.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Spa-Francorchamps_overview.jpg/1920px-Spa-Francorchamps_overview.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/spa-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/piastri-wins-wet-dry-belgian-gp-after-late-pressure-from-title-rival-and.7QmPcUP90MvR5iX0w3j91",
+        "pagina": "https://www.formula1.com/en/latest/article/piastri-wins-wet-dry-belgian-gp-after-late-pressure-from-title-rival-and.7QmPcUP90MvR5iX0w3j91",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Belgium/2227246451.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Belgium/2227246451.webp",
+        "titulo": "SPA, BELGIUM - JULY 27: Charles Leclerc of Monaco driving the (16) Scuderia Ferrari SF-25 leads Max",
+        "sha256": "3aa23ed6bd302fb46a29f0bd67111adfe0299a45b80637d336733e2df3b888d4",
+        "sha256_anterior": "1ee27cd0d3c2e9457359d795aad5004e0b7e68885c109a69e0a2a41f3827c347",
+        "obtido_em": "2026-11-01T17:04:38.718110+00:00",
+        "width": 3722,
+        "height": 2331,
+        "bytes": 1244862,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Spa, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Juan2910&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Juan2910 (page does not exist)\">Juan2910</a>",
@@ -629,23 +811,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/6/68/Spa_Francorchamps_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://upload.wikimedia.org/wikipedia/commons/6/68/Spa_Francorchamps_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Spa, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "suzuka": {
-      "alt_foto": "Fotografia ilustrativa do circuito suzuka.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Suzuka, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Wata0929&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Wata0929 (page does not exist)\">Wata0929</a>",
-        "caminho": "dashboard_assets/circuit/suzuka-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY-SA 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Suzukacircuit_main-straight.jpg",
-        "sha256": "5c47ea4576839f0d705039ef2977b5f6c66dd51c90d4af172a2fea23e55140b5",
-        "titulo": "Suzukacircuit main-straight.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/7/79/Suzukacircuit_main-straight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Suzukacircuit_main-straight.jpg/1920px-Suzukacircuit_main-straight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/suzuka-alternative.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/verstappen-surges-to-fourth-consecutive-japanese-gp-victory-ahead-of-norris.1MOpqos1ljTyhFILJKiHZD",
+        "pagina": "https://www.formula1.com/en/latest/article/verstappen-surges-to-fourth-consecutive-japanese-gp-victory-ahead-of-norris.1MOpqos1ljTyhFILJKiHZD",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_Of_Japan/2208755477.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_Of_Japan/2208755477.webp",
+        "titulo": "SUZUKA, JAPAN - APRIL 06: Max Verstappen of the Netherlands driving the (1) Oracle Red Bull Racing",
+        "sha256": "f76a7574b243b9870712e9af80dae81bfbbd7a7b801a3278ac03bd988323c1dd",
+        "sha256_anterior": "5c47ea4576839f0d705039ef2977b5f6c66dd51c90d4af172a2fea23e55140b5",
+        "obtido_em": "2026-11-01T17:09:23.585770+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 332744,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Suzuka, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Will_Pittenger\" title=\"User:Will Pittenger\">Will Pittenger</a>",
@@ -659,23 +851,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Suzuka_circuit_map--2005.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Suzuka_circuit_map--2005.svg/1920px-Suzuka_circuit_map--2005.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Suzuka, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "vegas": {
-      "alt_foto": "Fotografia ilustrativa do circuito vegas.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Vegas, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Nascar9919&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Nascar9919 (page does not exist)\">Nascar9919</a>",
-        "caminho": "dashboard_assets/circuit/vegas-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:2024_Las_Vegas_Grand_Prix_at_the_Sphere_-_Friday,_November_22,_Orbi.jpg",
-        "sha256": "51dc96083a9374d3b9eebb48bffb7385d6644d821438cd0a8581626b479ed1c4",
-        "titulo": "2024 Las Vegas Grand Prix at the Sphere - Friday, November 22, Orbi.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by/4.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/9/94/2024_Las_Vegas_Grand_Prix_at_the_Sphere_-_Friday%2C_November_22%2C_Orbi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/2024_Las_Vegas_Grand_Prix_at_the_Sphere_-_Friday%2C_November_22%2C_Orbi.jpg/1920px-2024_Las_Vegas_Grand_Prix_at_the_Sphere_-_Friday%2C_November_22%2C_Orbi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/vegas-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/verstappen-beats-norris-for-dominant-las-vegas-gp-victory-as-piastri.6u1Op0SO7YQa2bwJOq8DVI",
+        "pagina": "https://www.formula1.com/en/latest/article/verstappen-beats-norris-for-dominant-las-vegas-gp-victory-as-piastri.6u1Op0SO7YQa2bwJOq8DVI",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Las_Vegas/2248011739.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Las_Vegas/2248011739.webp",
+        "titulo": "LAS VEGAS, NEVADA - NOVEMBER 22: George Russell of Great Britain driving the (63) Mercedes AMG",
+        "sha256": "17d331f131907087c1c71582a79a8017c9eeac3ddcece6b715b971b9dfe783c3",
+        "sha256_anterior": "51dc96083a9374d3b9eebb48bffb7385d6644d821438cd0a8581626b479ed1c4",
+        "obtido_em": "2026-11-01T17:04:54.454909+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 889356,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Vegas, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Nasho3498&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Nasho3498 (page does not exist)\">Nasho3498</a>",
@@ -689,23 +891,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Las_Vegas_Strip_Circuit_2023.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Las_Vegas_Strip_Circuit_2023.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Vegas, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "villeneuve": {
-      "alt_foto": "Fotografia ilustrativa do circuito villeneuve.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Villeneuve, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Maela_Ohana&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Maela Ohana (page does not exist)\">Maela Ohana</a>",
-        "caminho": "dashboard_assets/circuit/villeneuve-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY 4.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Circuit_Gilles_Villeneuve,_Montreal.jpg",
-        "sha256": "5e66887e09f12a79b2b1cd6fc688ca99d86523b551e2aa0554ef1e90d3bfe7a5",
-        "titulo": "Circuit Gilles Villeneuve, Montreal.jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by/4.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Circuit_Gilles_Villeneuve%2C_Montreal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Circuit_Gilles_Villeneuve%2C_Montreal.jpg/1920px-Circuit_Gilles_Villeneuve%2C_Montreal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/villeneuve-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/russell-takes-solid-victory-as-piastri-and-norris-collide-late-on-in.2cri9oFCALqhfsbvpqDfBq",
+        "pagina": "https://www.formula1.com/en/latest/article/russell-takes-solid-victory-as-piastri-and-norris-collide-late-on-in.2cri9oFCALqhfsbvpqDfBq",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Canada/2220285478.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Canada/2220285478.webp",
+        "titulo": "MONTREAL, QUEBEC - JUNE 15: George Russell of Great Britain driving the (63) Mercedes AMG Petronas",
+        "sha256": "34e5d72ae4def950a3080d9a9817d1dcc0c1c4e5ef1bbccd13dcd7785f751682",
+        "sha256_anterior": "5e66887e09f12a79b2b1cd6fc688ca99d86523b551e2aa0554ef1e90d3bfe7a5",
+        "obtido_em": "2026-11-01T17:05:02.242095+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 758206,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Villeneuve, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ごひょううべこ (page does not exist)\">ごひょううべこ</a>",
@@ -719,23 +931,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/4/45/2022_F1_CourseLayout_Canada.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/2022_F1_CourseLayout_Canada.svg/1920px-2022_F1_CourseLayout_Canada.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Villeneuve, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "yas_marina": {
-      "alt_foto": "Fotografia ilustrativa do circuito yas marina.",
-      "alteracoes": "Foto redimensionada pela miniatura da Wikimedia; mapa preservado no arquivo publicado pela fonte.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Yas Marina, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Pi3.124\" title=\"User:Pi3.124\">Pi3.124</a>",
-        "caminho": "dashboard_assets/circuit/yas_marina-hero.jpg",
-        "credito": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "licenca": "CC BY-SA 3.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:YasMarina2.jpeg",
-        "sha256": "7a6e999d33a7756ebbe467b09fdeec207d8a213d531bb34202398697100817a2",
-        "titulo": "YasMarina2.jpeg",
-        "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
-        "url_original": "https://upload.wikimedia.org/wikipedia/commons/a/a7/YasMarina2.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/YasMarina2.jpeg/1920px-YasMarina2.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "caminho": "dashboard_assets/circuit/yas_marina-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/norris-secures-maiden-f1-title-in-abu-dhabi-with-podium-finish-behind.EMJtmvRA0uzmzUC4MZgmw",
+        "pagina": "https://www.formula1.com/en/latest/article/norris-secures-maiden-f1-title-in-abu-dhabi-with-podium-finish-behind.EMJtmvRA0uzmzUC4MZgmw",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Abu_Dhabi/2250524705.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Abu_Dhabi/2250524705.webp",
+        "titulo": "ABU DHABI, UNITED ARAB EMIRATES - DECEMBER 07: Max Verstappen of the Netherlands driving the (1)",
+        "sha256": "6e54dd6dbaa23cbe467aac4f21725e0eb75ea943639576af4fd1f308d8618e1e",
+        "sha256_anterior": "7a6e999d33a7756ebbe467b09fdeec207d8a213d531bb34202398697100817a2",
+        "obtido_em": "2026-11-01T17:09:32.614730+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 752078,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Yas Marina, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ごひょううべこ (page does not exist)\">ごひょううべこ</a>",
@@ -749,23 +971,33 @@
         "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
         "url_original": "https://upload.wikimedia.org/wikipedia/commons/2/24/2022_F1_CourseLayout_Abu_Dhabi.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "url_otimizada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/2022_F1_CourseLayout_Abu_Dhabi.svg/1920px-2022_F1_CourseLayout_Abu_Dhabi.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Yas Marina, 2025 Grand Prix. The image does not document the selected Grand Prix."
     },
     "zandvoort": {
-      "alt_foto": "Fotografia aérea ilustrativa do Circuit Zandvoort.",
-      "alteracoes": "Mapa de traçado zandvoort-5 (layout 2021–presente) copiado sem alteração do repositório f1db; fotografia é miniatura local da Wikimedia.",
+      "alt_foto": "Fotografia histórica ilustrativa de Fórmula 1 na pista de Zandvoort, GP de 2025. A imagem não documenta o GP selecionado.",
+      "alteracoes": "Fotografia histórica em resolução natural; bytes originais preservados, apresentação por CSS. Mapa preservado.",
       "foto": {
-        "autor": "dronepicr",
-        "caminho": "dashboard_assets/circuit/zandvoort-hero.jpg",
-        "credito": "Wikimedia Commons",
-        "licenca": "CC BY 2.0",
-        "mime": "image/jpeg",
-        "pagina": "https://commons.wikimedia.org/wiki/File:Circuit_Zandvoort_motorsport_race_track_in_the_Netherlands_(46940292845).jpg",
-        "sha256": "384c073467a3b80fd14e94a89f2c910ff8382b11d87c39cb507adb8a9f3114cf",
-        "titulo": "Circuit Zandvoort motorsport race track in the Netherlands (46940292845).jpg",
-        "url_licenca": "https://creativecommons.org/licenses/by/2.0/",
-        "url_original": "https://commons.wikimedia.org/wiki/Special:FilePath/Circuit_Zandvoort_motorsport_race_track_in_the_Netherlands_(46940292845).jpg",
-        "url_otimizada": "miniatura local da Wikimedia"
+        "caminho": "dashboard_assets/circuit/zandvoort-f1-2025.webp",
+        "mime": "image/webp",
+        "autor": "Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem",
+        "credito": "Formula 1 / Getty Images",
+        "licenca": "Direitos reservados pelos titulares; nenhuma licença aberta declarada",
+        "url_licenca": "https://www.formula1.com/en/latest/article/piastri-wins-as-norris-faces-late-race-retirement-in-dramatic-dutch-grand.5gVVQeQH0zjZk9hl6k6wvv",
+        "pagina": "https://www.formula1.com/en/latest/article/piastri-wins-as-norris-faces-late-race-retirement-in-dramatic-dutch-grand.5gVVQeQH0zjZk9hl6k6wvv",
+        "url_original": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Netherlands/2233014882.webp",
+        "url_obtida": "https://media.formula1.com/image/upload/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Netherlands/2233014882.webp",
+        "titulo": "ZANDVOORT, NETHERLANDS - AUGUST 31: Oscar Piastri of Australia driving the (81) McLaren MCL39",
+        "sha256": "c0ec82df41d2171a4b4b7c38ac506aa6f02d8ca2b7a74bf86515298c4ee58274",
+        "sha256_anterior": "384c073467a3b80fd14e94a89f2c910ff8382b11d87c39cb507adb8a9f3114cf",
+        "obtido_em": "2026-11-01T17:05:11.755944+00:00",
+        "width": 3840,
+        "height": 2560,
+        "bytes": 254016,
+        "tipo": "fotografia",
+        "evento": "2025",
+        "contexto_temporal": "Fotografia histórica ilustrativa; não comprova o GP ou o estado exibido.",
+        "alt_en": "Illustrative historical Formula 1 photograph at Zandvoort, 2025 Grand Prix. The image does not document the selected Grand Prix."
       },
       "mapa": {
         "autor": "f1db contributors",
@@ -779,7 +1011,8 @@
         "url_licenca": "https://creativecommons.org/licenses/by/4.0/",
         "url_original": "https://github.com/f1db/f1db/blob/main/src/assets/circuits/black/zandvoort-5.svg",
         "url_otimizada": "https://github.com/f1db/f1db/blob/main/src/assets/circuits/black/zandvoort-5.svg"
-      }
+      },
+      "alt_foto_en": "Illustrative historical Formula 1 photograph at Zandvoort, 2025 Grand Prix. The image does not document the selected Grand Prix."
     }
   },
   "fonte": "Wikimedia Commons API",

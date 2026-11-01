@@ -7,6 +7,7 @@ from urllib.parse import urlencode
 
 from pitwall.paths import PROJECT_ROOT
 from pitwall.i18n import language, translate
+from pitwall.dashboard.hero_assets import HERO_IMAGES, PORTRAIT_OVERRIDES
 
 
 def text(value):
@@ -20,7 +21,7 @@ def href(screen, **params):
 @lru_cache(maxsize=96)
 def _image(path, modified):
     file = Path(path)
-    mime = {'.svg':'image/svg+xml','.jpg':'image/jpeg','.png':'image/png'}[file.suffix]
+    mime = {'.svg':'image/svg+xml','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp'}[file.suffix]
     return 'data:{};base64,{}'.format(mime, base64.b64encode(file.read_bytes()).decode('ascii'))
 
 
@@ -32,9 +33,15 @@ def asset(name):
 
 
 def portrait(driver, name='', css=''):
-    image = asset('portraits/{}.png'.format(driver)) if str(driver).replace('_','').isalnum() else ''
+    valid = str(driver).replace('_','').isalnum()
+    spec = PORTRAIT_OVERRIDES.get(driver,{}) if valid else {}
+    filename = spec.get('path','portraits/{}.png'.format(driver))
+    if filename.startswith('dashboard_assets/fan/'):
+        filename = filename[len('dashboard_assets/fan/'):]
+    image = asset(filename) if valid else ''
     if image:
-        return '<img class="fan-portrait {}" src="{}" alt="{}" loading="lazy">'.format(css, image, escape(name, quote=True))
+        position = escape(spec.get('object_position','center 28%'),quote=True)
+        return '<img class="fan-portrait {}" data-driver-id="{}" style="object-position:{}" src="{}" alt="{}" loading="lazy" decoding="async">'.format(css,escape(driver,quote=True),position,image,escape(name,quote=True))
     initials = ''.join(word[0] for word in str(name).split()[:2]) or '—'
     return '<span class="fan-avatar-fallback {}" aria-label="{}">{}</span>'.format(css,escape(name,quote=True),escape(initials))
 
@@ -42,45 +49,60 @@ def portrait(driver, name='', css=''):
 def team_mark(team, label=''):
     aliases = {'red_bull_racing':'red_bull','racing_bulls':'rb','haas_f1_team':'haas','alpine_f1_team':'alpine','rb_f1_team':'rb'}
     key = aliases.get(team, team)
-    image = asset('logos/{}.svg'.format(key)) if str(key).replace('_','').isalnum() else ''
+    image = asset('logos/{}.svg'.format('mclaren-swoosh' if key=='mclaren' else key)) if str(key).replace('_','').isalnum() else ''
     if image:
         return '<img class="fan-team-mark" src="{}" alt="{}">'.format(image,escape(label or str(team),quote=True))
     return '<span class="fan-team-wordmark">{}</span>'.format(escape(label or str(team).replace('_',' ').title()))
 
 
-# Only identified real drivers may illustrate a driver banner. No generic fallback.
-HERO_IMAGES = {
-    'rain': dict(path='dashboard_assets/fan/banner-norris.png',driver_id='norris',
-                 name='Lando Norris',credit='Lando Norris · Formula 1',portrait=True,
-                 source='https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/12col/image.png'),
-    'helmet': dict(path='dashboard_assets/fan/banner-verstappen.png',driver_id='max_verstappen',
-                   name='Max Verstappen',credit='Max Verstappen · Formula 1',portrait=True,
-                   source='https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/12col/image.png'),
-    'car': dict(path='dashboard_assets/circuit/miami-hero.jpg',driver_id='perez',
-                name='Sergio Pérez',credit='Sergio Pérez · Miami 2022 · David Castro · CC BY-SA 4.0',portrait=False,
-                source='https://commons.wikimedia.org/wiki/File:2022_Miami_GP_-_Red_Bull_RB18_of_Sergio_P%C3%A9rez.jpg'),
-}
 
 
-def hero(title, subtitle='', image='helmet', extra='', dark=False, photo=None, alt='', photo_left=False):
-    spec = HERO_IMAGES[image] if photo is None else None
+def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, alt='', photo_left=False, person=None):
+    spec = dict(HERO_IMAGES[image]) if photo is None else None
     css = ['fan-hero', 'fan-hero-dark' if dark else '']
-    driver = ''
+    attrs = ' data-hero-kind="{}"'.format(escape(image,quote=True))
+    backdrop_html=''
+    if person:
+        override=PORTRAIT_OVERRIDES.get(person['id'],{})
+        relative=override.get('path','dashboard_assets/fan/portraits/{}.png'.format(person['id']))
+        if not relative.startswith('dashboard_assets/'):
+            relative='dashboard_assets/fan/'+relative
+        spec=dict(path=relative,driver_id=person['id'],name=person['name'],portrait=True,
+                  credit=person['name']+' · Formula 1',source='https://www.formula1.com/en/drivers',position='center top')
     if spec:
         path = PROJECT_ROOT / spec['path']
         source = _image(str(path),path.stat().st_mtime_ns)
-        alt = translate('Fotografia de {}').format(spec['name'])
-        driver = ' data-driver-id="{}"'.format(escape(spec['driver_id'],quote=True))
+        alt = spec.get('alt_'+language()) or translate('Fotografia de {}').format(spec['name'])
+        attrs+=' data-driver-id="{}"'.format(escape(spec['driver_id'],quote=True))
         css.append('fan-hero-portrait' if spec['portrait'] else 'fan-hero-action')
-        if spec['portrait']:css.append('fan-hero-person-'+spec['driver_id'])
+        if spec.get('layout')=='right_panel':
+            css.append('fan-hero-photo-panel')
         credit = '<a class="fan-art-label" href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(escape(spec['source'],quote=True),escape(spec['credit']))
+        position=spec.get('position','center')
+        backdrop=spec.get('backdrop')
+        if backdrop:
+            backdrop_path=PROJECT_ROOT/backdrop['path']
+            backdrop_source=_image(str(backdrop_path),backdrop_path.stat().st_mtime_ns)
+            backdrop_html='<img class="fan-hero-backdrop" src="{}" alt="" aria-hidden="true" decoding="async">'.format(backdrop_source)
+            backdrop_credit='<a class="fan-art-label" href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(escape(backdrop['source'],quote=True),escape(backdrop['credit']))
+            credit='<details class="fan-photo-credits"><summary>{}</summary><div><small>{}</small>{}{}</div></details>'.format(text('Créditos das fotos'),text(spec.get('composition_'+language(),'')),credit,backdrop_credit)
+
     else:
-        source = photo
-        credit = '<small class="fan-art-label">{}</small>'.format(text('Ilustração IA')) if 'gerada por IA' in alt else ''
-    image_css = 'fan-hero-image' + (' fan-photo-left' if photo_left else '')
-    if spec and spec['portrait']:image_css += ' fan-hero-real-portrait'
-    image_html = '<img class="{}" src="{}" alt="{}">'.format(image_css,source,escape(alt,quote=True)) if source else ''
-    return '<section class="{}"{}>{}<div class="fan-hero-copy"><h1>{}</h1><p>{}</p>{}</div>{}</section>'.format(' '.join(css),driver,image_html,text(title),text(subtitle),extra,credit)
+        source=photo
+        position='20% center' if photo_left else 'center'
+        credit='<small class="fan-art-label">{}</small>'.format(text('Ilustração IA')) if 'gerada por IA' in alt else ''
+    image_css='fan-hero-image'+(' fan-photo-left' if photo_left else '')+(' fan-hero-real-portrait' if spec and spec['portrait'] else '')
+    image_html='<img class="{}" style="object-position:{}" src="{}" alt="{}" decoding="async">'.format(image_css,escape(position,quote=True),source,escape(alt,quote=True)) if source else ''
+    return '<section class="{}"{}>{}<div class="fan-hero-copy"><h1>{}</h1><p>{}</p>{}</div>{}</section>'.format(' '.join(css),attrs,backdrop_html+image_html,text(title),text(subtitle),extra,credit)
+
+
+def gp_chapters(year, round_, active='Visão geral'):
+    chapters=[('Visão geral','Resumo'),('Tempos','Sessões e voltas'),('Estratégias','Pneus e paradas'),('Clima','Clima'),('Histórico','Nesta pista'),('Comparativo de equipes','Equipes')]
+    links=[]
+    for key,label in chapters:
+        url=href('Corridas',temporada=year,gp=round_,aba=key)
+        links.append('<a href="{}" target="_self"{}>{}</a>'.format(escape(url,quote=True),' aria-current="page"' if key==active else '',text(label)))
+    return '<nav class="fan-gp-tabs" aria-label="{}">{}</nav>'.format(text('Explorar este GP'),''.join(links))
 
 
 def podium(rows, year, title='Pódio da corrida'):
@@ -111,14 +133,21 @@ def forecast_rows(rows, year):
 
 
 def circuit_details(info, climate=None, weather_href=None):
-    values=[('Comprimento',str(info.get('comprimento_km','—')).replace('.',',' if language()=='pt' else '.')+' km'),('Curvas',info.get('curvas')),('Voltas',info.get('voltas')),('Primeiro GP',info.get('primeiro_gp')),('Sentido',info.get('sentido')),('Altitude aprox.','{:g} m'.format(info['altitude_m']) if info.get('altitude_m') is not None else None),('Zonas de DRS','Não se aplica em 2026' if not info.get('drs_aplicavel',True) else info.get('zonas_drs')),('Recorde de corrida',info.get('recorde_volta'))]
-    details=''.join('<div><dt>{}</dt><dd>{}</dd></div>'.format(text(k),text(v if v is not None else 'Não documentado')) for k,v in values)
+    def rows(values):
+        return ''.join('<div><dt>{}</dt><dd>{}</dd></div>'.format(text(k),text(v if v is not None else 'Não documentado')) for k,v in values)
+    length=str(info.get('comprimento_km','—')).replace('.',',' if language()=='pt' else '.')+' km'
+    primary=rows([('Comprimento',length),('Curvas',info.get('curvas')),('Voltas',info.get('voltas')),
+                  ('Distância da corrida',str(info.get('distancia_corrida_km','—')).replace('.',',' if language()=='pt' else '.')+' km' if info.get('distancia_corrida_km') is not None else 'Não documentado')])
+    secondary=rows([('Primeiro GP',info.get('primeiro_gp')),('Sentido',info.get('sentido')),
+                    ('Altitude aprox.','{:g} m'.format(info['altitude_m']) if info.get('altitude_m') is not None else None),
+                    ('Zonas de DRS','Não se aplica em 2026' if not info.get('drs_aplicavel',True) else info.get('zonas_drs')),
+                    ('Recorde de corrida',info.get('recorde_volta'))])
     actual=(climate or {}).get('corrida_efetiva')
     value=actual.get('air_temperature') if actual else (climate or {}).get('resumo',{}).get('temperatura_media_c')
     temperature=('{:.1f} °C'.format(value).replace('.',',') if language()=='pt' else '{:.1f} °C'.format(value)) if isinstance(value,(int,float)) and not isinstance(value,bool) else '—'
     note='Ar durante a corrida · OpenF1' if actual else 'Fim de semana · Open-Meteo' if value is not None else 'Clima não disponível'
     weather_title='<a href="{}" target="_self">{}</a>'.format(escape(weather_href,quote=True),text('Clima e medições')) if weather_href else text('Clima e medições')
-    return '<aside class="fan-circuit-details"><h2>{}</h2><dl>{}</dl><div class="fan-weather"><span aria-hidden="true">🌡</span><div><h3>{}</h3><strong>{}</strong><small>{}</small></div></div></aside>'.format(text('Sobre o circuito'),details,weather_title,temperature,text(note))
+    return '<aside class="fan-circuit-details"><h2>{}</h2><dl>{}</dl><details class="fan-circuit-more"><summary>{}</summary><dl>{}</dl></details><div class="fan-weather"><span aria-hidden="true">🌡</span><div><h3>{}</h3><strong>{}</strong><small>{}</small></div></div></aside>'.format(text('Sobre o circuito'),primary,text('Mais sobre a pista'),secondary,weather_title,temperature,text(note))
 
 
 ICONS = {'database': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6c0-4 18-4 18 0s-18 4-18 0m0 0v12c0 4 18 4 18 0V6M3 12c0 4 18 4 18 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'settings': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M9 2h6v4l4 2 3 4-3 4-4 2v4H9v-4l-4-2-3-4 3-4 4-2V2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'bar_chart': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12h4v8m3 0V4h4v16m3 0V8h4v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'description': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5V2m10 0v6h5M8 12h9M8 16h9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'sports_score': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3m0 1c5-4 9 4 16 0v10c-7 4-11-4-16 0M9 3v10m4-9v10m4-10v10M5 8h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'}
@@ -132,16 +161,36 @@ def process_steps():
     return '<div class="fan-process">{}</div><div class="fan-document-links">{}</div>'.format(cards,''.join(links))
 
 
-def condition_rows(rows, metric, links):
-    result=[]
+def condition_rows(rows, metric, links, comparisons=None, teams=None):
+    """Measured historical comparisons; ties and unknown values stay visible."""
+    comparisons=comparisons or {}
+    teams=teams or {}
     maximum=max((r['score'] for r in rows if r['score'] is not None),default=0)
-    for i,row in enumerate(rows):
-        score=row['score']
+    def formatted(score):
         label=('{:.1f}%'.format(score*100) if metric.endswith('rate') else str(int(score))) if score is not None else '—'
-        if language()=='pt':label=label.replace('.',',')
-        value=max(0,min(100,score*100)) if metric.endswith('rate') and score is not None else (100*score/maximum if score is not None and maximum else 0)
-        result.append('<a class="fan-condition-row {}" href="{}" target="_self"><b>{}º</b>{}<span><strong>{}</strong><small>{} · {} {}</small></span><span class="fan-condition-bar"><i style="width:{}%"></i></span><em>{}</em><span aria-hidden="true">›</span></a>'.format('fan-condition-leader' if row['rank']==1 else '',escape(links[row['driver_id']],quote=True),row['rank'],portrait(row['driver_id'],row['driver_name']),escape(row['driver_name']),text('Empate') if row['rank']==1 and sum(r['rank']==1 for r in rows)>1 else text('Histórico no recorte'),row['starts'],text('largadas'),value,label))
-    return '<div class="pilot-cards fan-pilot-ranking">{}</div>'.format(''.join(result))
+        return label.replace('.',',') if language()=='pt' else label
+    def bar(value,limit):
+        return max(0,min(100,100*value/limit)) if value is not None and limit else 0
+    result=[]
+    tied=sum(r['rank']==1 for r in rows)>1
+    for row in rows:
+        score=row['score'];driver=row['driver_id'];leader=row['rank']==1
+        info=teams.get(driver,{})
+        team_name=info.get('name','') if isinstance(info,dict) else info
+        team_id=info.get('id','') if isinstance(info,dict) else ''
+        detail=(text('Empate na liderança')+' · ' if leader and tied else '')+text('{} largadas').format(row['starts'])
+        identity='<span class="fan-ranking-identity"><strong>{}</strong><small>{}{}</small><small class="fan-ranking-sample">{}</small></span>'.format(escape(row['driver_name']),team_mark(team_id,team_name) if team_id else '',escape(team_name),detail)
+        if leader and comparisons.get(driver):
+            chart=[]
+            for item in comparisons[driver]:
+                value=item['score'];limit=1 if metric.endswith('rate') else item.get('maximum',maximum)
+                title='{} · {}'.format(translate(item['label']),text('{} largadas').format(item['starts']))
+                chart.append('<div class="fan-mini-comparison" title="{}"><span>{}</span><i class="fan-condition-bar"><i style="width:{}%"></i></i><b>{}</b></div>'.format(escape(title,quote=True),text(item['label']),bar(value,limit),formatted(value)))
+            ending='<span class="fan-mini-comparisons">{}</span>'.format(''.join(chart))
+        else:
+            ending='<span class="fan-condition-bar"><i style="width:{}%"></i></span><em>{}</em><span aria-hidden="true">›</span>'.format(bar(score,1 if metric.endswith('rate') else maximum),formatted(score))
+        result.append('<a class="fan-condition-row {}" href="{}" target="_self"><b>{}º</b>{}{}{}</a>'.format('fan-condition-leader' if leader else '',escape(links[driver],quote=True),row['rank'],portrait(driver,row['driver_name']),identity,ending))
+    return '<div class="pilot-cards fan-pilot-ranking" data-leaders="{}">{}</div>'.format(sum(r['rank']==1 for r in rows),''.join(result))
 
 
 def performance_cards(rows, races, year):
@@ -162,7 +211,7 @@ def performance_cards(rows, races, year):
             content='<span class="fan-result-label">{}</span>{}'.format(text('{} de 3').format(row['modelo']),dots)
         else:
             content='<p>{}</p>'.format(text('Corrida aguardada' if race.get('estado_previsao')=='previsao_registrada' else 'Sem previsão registrada'))
-        cards.append('<a class="fan-gp-result" href="{}" target="_self"><strong>{}</strong>{}</a>'.format(escape(href('Previsões',temporada=year,gp=race['rodada']),quote=True),escape(label),content))
+        cards.append('<a class="fan-gp-result" data-evaluated="{}" href="{}" target="_self"><strong>{}</strong>{}</a>'.format('true' if row else 'false',escape(href('Previsões',temporada=year,gp=race['rodada']),quote=True),escape(label),content))
     wins=sum(r['modelo']>r['classificacao'] for r in rows)
     ties=sum(r['modelo']==r['classificacao'] for r in rows)
     note=text('Em {} de {} corridas, o Lab acertou mais integrantes do pódio.').format(wins,len(rows))
@@ -171,4 +220,4 @@ def performance_cards(rows, races, year):
         note=text('Empate na corrida avaliada')
         detail=text('As duas seleções acertaram {} dos três integrantes do pódio.').format(rows[0]['modelo'])
     limit='Somente previsões registradas e resultados validados. Uma amostra pequena não demonstra superioridade.' if year==2026 else 'Estudo retrospectivo com dados históricos.'
-    return '<section class="fan-results"><h2>{}</h2><p>{}</p><div class="fan-gp-results">{}</div><div class="fan-insights"><article><span class="fan-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3m0 1c5-4 9 4 16 0v10c-7 4-11-4-16 0M9 3v10m4-9v10m4-10v10M5 8h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>{}</strong><p>{}</p></div></article><article><span class="fan-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12h4v8m3 0V4h4v16m3 0V8h4v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>{}</strong><p>{}</p></div></article></div></section>'.format(text('Comparação com a classificação'),text('As escolhas do Lab e da classificação são comparadas com o mesmo resultado.'),''.join(cards),note,detail,text('Amostra limitada'),text(limit))
+    return '<section class="fan-results"><h2>{}</h2><p>{}</p><div class="fan-gp-results">{}</div><div class="fan-insights"><article><span class="fan-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3m0 1c5-4 9 4 16 0v10c-7 4-11-4-16 0M9 3v10m4-9v10m4-10v10M5 8h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>{}</strong><p>{}</p></div></article><article><span class="fan-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12h4v8m3 0V4h4v16m3 0V8h4v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>{}</strong><p>{}</p></div></article></div></section>'.format(text('Comparação com a classificação'),text('Azul: piloto no pódio. Cinza: piloto fora do pódio. Etapas sem avaliação ficam identificadas.'),''.join(cards),note,detail,text('Amostra limitada'),text(limit))

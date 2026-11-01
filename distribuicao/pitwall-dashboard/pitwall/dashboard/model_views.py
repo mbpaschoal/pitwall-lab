@@ -143,7 +143,8 @@ def tela_desempenho(pacote, show_title=True):
         from pitwall.i18n import language
         frame = pd.DataFrame([{'GP':r['corrida'],'Acertos do Lab':r['modelo'],'Acertos da classificação':r['classificacao'],
             'Previsão registrada':'?'+urlencode(dict(tela='Previsões',temporada=2026,gp=r['rodada'],lang=language()))} for r in rows])
-        st.dataframe(frame,hide_index=True,width='stretch',column_config={'Previsão registrada':st.column_config.LinkColumn(display_text='↗')})
+        with st.expander('Resultados por GP e previsões registradas'):
+            st.dataframe(frame,hide_index=True,width='stretch',column_config={'Previsão registrada':st.column_config.LinkColumn(display_text='↗')})
         return
     if not show_title:
         from pitwall.dashboard.fan_views import performance_cards

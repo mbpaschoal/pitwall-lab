@@ -1,6 +1,9 @@
 import importlib.util
+import json
+import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -28,6 +31,59 @@ class TestExportarCatalogo(unittest.TestCase):
         for ativos in catalogo['circuitos'].values():
             self.assertIn(ativos['foto']['caminho'], arquivos)
             self.assertIn(ativos['mapa']['caminho'], arquivos)
+
+    def test_cartas_neutras_sao_87_caminhos_explicitos_sem_inferir_arquivos_privados(self):
+        exportador = modulo()
+        arquivos = set(exportador.runtime_worktree(RAIZ))
+        catalogo = json.loads((RAIZ / 'dashboard_assets/tarot/catalog.json').read_text())
+        self.assertEqual(len(exportador.TAROT_DRIVER_IDS), 29)
+        self.assertEqual(len(exportador.TAROT_VARIANTS), 87)
+        self.assertEqual(len(set(exportador.TAROT_VARIANTS)), 87)
+        self.assertEqual(set(exportador.TAROT_VARIANTS), {entry['path'] for entry in catalogo['cards']})
+        self.assertEqual({entry['driver_id'] for entry in catalogo['cards']}, set(exportador.TAROT_DRIVER_IDS))
+        self.assertTrue(set(exportador.TAROT_VARIANTS).issubset(arquivos))
+        for entry in catalogo['overrides']:
+            self.assertIn(entry['path'], arquivos)
+        for module in ('hero_assets.py', 'tarot_catalog.py'):
+            self.assertIn('pitwall/dashboard/' + module, arquivos)
+        self.assertIn('dashboard_assets/tarot/catalog.json', arquivos)
+        self.assertIn('tests/test_tarot_catalog.py', arquivos)
+
+    def test_fotos_e_29_retratos_referenciados_viajam_com_o_runtime(self):
+        exportador = modulo()
+        arquivos = set(exportador.runtime_worktree(RAIZ))
+        catalogo = json.loads((RAIZ / 'dashboard_assets/fan/hero_catalog.json').read_text())
+        self.assertIn('dashboard_assets/fan/hero_catalog.json', arquivos)
+        self.assertIn('tests/test_high_resolution_assets.py', arquivos)
+        for hero in catalogo['heroes'].values():
+            self.assertIn(hero['path'], arquivos)
+        retratos = {path for path in arquivos if path.startswith('dashboard_assets/fan/portraits/')}
+        self.assertEqual(len(retratos), 29)
+        for driver in exportador.TAROT_DRIVER_IDS:
+            suffix = '.jpg' if driver == 'ryo_hirakawa' else '.png'
+            self.assertIn('dashboard_assets/fan/portraits/' + driver + suffix, retratos)
+        for override in catalogo['portrait_overrides'].values():
+            self.assertIn('dashboard_assets/fan/' + override['file'], arquivos)
+
+    def test_arquivos_adjacentes_nao_entram_por_glob_nem_por_recursao(self):
+        exportador = modulo()
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            private_paths = (
+                'dashboard_assets/fan/photos/private-reference.jpg',
+                'dashboard_assets/tarot/variants/hamilton/pose-secret.png',
+                'dashboard_assets/tarot/variants/unlisted_driver/pose-0.png',
+                'reports/tarot_variantes_20261101/generation/hamilton-pose-0.json',
+                'notes/private.md', '.env',
+            )
+            for relative in private_paths:
+                target = root / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(b'private synthetic probe')
+            with patch.object(exportador, '_ler_catalogo_visual', return_value={'circuitos': {}}):
+                arquivos = set(exportador.runtime_worktree(root))
+            self.assertTrue(set(private_paths).isdisjoint(arquivos))
+            self.assertTrue(set(exportador.TAROT_VARIANTS).issubset(arquivos))
 
 
 if __name__ == '__main__':

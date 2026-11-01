@@ -2,20 +2,20 @@
 
 [Português](../JORNADA_DO_FA.md)
 
-Approved composition C guides the entire product: Races, Drivers, Championship, Podium chances, Lab score and How it works. The blue/white/navy/red palette and Abril Fatface/Lato fonts remain. Implementation uses existing data, not the illustrative numbers in the concept board.
+Approved composition C, refined in revision C3, guides the entire product: Races, Drivers, Championship, Podium chances, Lab score and How it works. The blue/white/navy/red palette and Abril Fatface/Lato fonts remain. Implementation uses existing data, not the illustrative numbers in the concept board.
 
 ## Composition C across all six screens
 
 The logo, season, GP and search share one compact header. Language flags remain at the top right. A nearby-race ribbon and six-item bottom navigation follow the approved composition.
 
 1. **Races:** title and date over the circuit image, map on the right, observed portrait podium in visual 2–1–3 order next to circuit facts and weather.
-2. **Drivers:** identified Lando Norris photograph, a direct question, condition shortcuts and portrait rankings with bars. Real ties stay tied; full rankings, criteria, individual profiles and duels remain accessible.
-3. **Championship:** image banner, season progress and complete standings with portraits and team identifiers. No source rows are removed.
-4. **Podium chances:** racing image and before/after timeline, individual probability bars, observed result when published and optional tarot cards.
-5. **Lab results:** racing image, per-GP visual comparisons with qualifying and two insight cards. Missing forecasts are not scored zero and future races have no observed result. One evaluated race is never presented as six evaluated races to imitate the mockup.
-6. **How it works:** identified Max Verstappen photograph, three illustrated steps and two document links. Technical detail stays in an expander which opens when following a document link.
+2. **Drivers:** an identified Daniel Ricciardo helmet-and-cockpit photograph in a right-side panel, with Oscar Piastri on a wet track in the backdrop. These are separate photographs: Ricciardo at Miami in May/2024 and Piastri at Silverstone in July/2024; they do not represent the same person, event or weather. A direct question, condition shortcuts and portrait rankings complete the screen. Each leader has four bars: rain, no recorded rain, heat and anticlockwise circuits. Every tied leader remains visible; complete rankings, criteria, profiles and duels stay accessible. Period, metric and minimum starts live in compact filter controls.
+3. **Championship:** Lewis Hamilton cockpit photograph, season progress and complete standings with portraits and team identifiers. No source rows are removed.
+4. **Podium chances:** a historical Sergio Pérez at Miami photograph and before/after timeline with explicit emission-time context. The earlier stage contains individual probability bars; the later stage gives more space to the observed podium when available. Cards remain optional, and the historical photograph does not depict the forecast's GP.
+5. **Lab results:** Max Verstappen at Silverstone photograph, per-GP visual comparisons with qualifying and two insight cards. Missing forecasts are not scored zero and future races have no observed result. One evaluated race is never presented as six evaluated races to imitate the mockup.
+6. **How it works:** identified Andrea Kimi Antonelli cockpit photograph, three illustrated steps and two document links. Technical detail stays in an expander which opens when following a document link.
 
-Driver banners use identified photographs of real people. AI circuit illustrations and tarot art retain their own labels. Portraits do not establish a driver's historical uniform or team. [Image credits](../../dashboard_assets/fan/ATTRIBUTION.md) record sources and rights. The mockup guides composition and navigation; displayed figures come from real artifacts, without copying its fictional values.
+All 26 circuit photographs and five hero photographs are naturally at least 2488 pixels wide. The 29 portraits exceed the minimum of 512 pixels on each axis; 28 are 1336 pixels wide. The app uses these original sources: enlarging the former 93 × 93 portraits would not add detail. Portraits do not establish a driver's historical uniform or team. [Image credits](../../dashboard_assets/fan/ATTRIBUTION.md) and [resolution checks](../../tests/test_high_resolution_assets.py) record sources and dimensions. The mockup guides composition and navigation; displayed figures come from real artifacts, without copying its fictional values. No recorded rain does not prove a dry track, and the four condition samples can overlap.
 
 ## Navigation
 
@@ -27,9 +27,15 @@ Races retains six chapters through tabs: Summary, Sessions and laps, Tyres and p
 
 In Podium chances, **Open the GP cards** opens an optional dialog. Direct links can use `?tela=Previsões&temporada=2026&gp=19&cartas=1&lang=en`. Close with X, Escape or the table link. Closing or changing GP clears the opening state. Normal navigation never opens the dialog automatically.
 
-Drivers come from the selected GP's stored favorites, including ties. Cards show only artwork, name and team; percentages remain in the forecast table. There is no random draw, recalculation or P1/P2/P3 prediction. Team names follow the period's record. Missing forecasts do not produce cards. Retrospective studies are labeled accordingly. Drivers without artwork matching the period's team receive a helmet symbol. Mobile stacks cards in a scrollable dialog.
+Drivers come from the selected GP's stored favorites, including ties. Cards show only artwork, name and team; percentages remain in the forecast table. There is no random draw, recalculation or P1/P2/P3 prediction. Team names and frame colours follow that GP's record, while new illustrated racing suits remain neutral. Hamilton in Mercedes/2024 never receives Ferrari artwork from a later period. Missing forecasts do not produce cards. Retrospective studies are labeled accordingly. Missing verified artwork remains explicitly unavailable, without borrowing another driver or a generic helmet. Mobile stacks cards in a scrollable dialog.
 
-Verstappen, Hamilton and Russell illustrations are AI-generated decorative art, not photographs, endorsements or outcomes. Credits: [card artwork](../../dashboard_assets/tarot/ATTRIBUTION.md). Probabilities remain individual and never predict finishing order.
+The catalog contains 87 AI-generated illustrations: three per driver across 29 drivers, showing a helmet under one arm, crossed arms with a helmet resting alongside, and a helmet held in both hands in front. Each trio receives three distinct poses. Additional tied favorites remain included without changing their ranking. Selection is deterministic for the GP context. The three approved original Verstappen, Hamilton and Russell cards remain byte-identical and restricted to matching teams. Illustrations are decorative, not photographs, endorsements or outcomes. Credits: [card artwork](../../dashboard_assets/tarot/ATTRIBUTION.md). Probabilities remain individual and never predict finishing order.
+
+The [HTML gallery of all 87 cards](../galeria-cartas.html) displays the three illustrations per driver outside the app. Paths are relative: open it alongside the image directory from the repository or exported package. The dashboard loads only the requested favorites' cards.
+
+## Filters and samples
+
+A shared link retains driver, period, metric and minimum starts even when the saved browser favorite differs. Updating a favorite does not silently change the analysis period. Clearing the period or conditions is intentional: controls stay editable, and the corresponding chart remains absent with a prompt to select data. A driver without starts in the period remains selected without an unobserved chart. Counts appear as integers; percentage formatting is reserved for rates.
 
 ## Preserved limits
 

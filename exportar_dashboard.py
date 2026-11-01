@@ -34,11 +34,33 @@ DOCUMENTOS_COPIADOS = (
     'reports/avaliacao_final_v1/relatorio.md',
 )
 FONTES_COPIADAS = FONTES_CIENTIFICAS
+# Explicit presentation identities, never discovered by walking private folders.
+TAROT_DRIVER_IDS = (
+    'albon', 'alonso', 'antonelli', 'arvid_lindblad', 'bearman', 'bortoleto',
+    'bottas', 'colapinto', 'doohan', 'gasly', 'hadjar', 'hamilton', 'hulkenberg',
+    'kevin_magnussen', 'lawson', 'leclerc', 'max_verstappen', 'norris', 'ocon',
+    'perez', 'piastri', 'ricciardo', 'russell', 'ryo_hirakawa', 'sainz',
+    'sargeant', 'stroll', 'tsunoda', 'zhou',
+)
+TAROT_VARIANTS = tuple(
+    'dashboard_assets/tarot/variants/{}/pose-{}.png'.format(driver, pose)
+    for driver in TAROT_DRIVER_IDS for pose in (0, 1, 2)
+)
 RUNTIME_WORKTREE = (
     'pitwall/dashboard/fan_views.py',
+    'pitwall/dashboard/hero_assets.py',
+    'pitwall/dashboard/tarot_catalog.py',
     'tests/test_fan_composition.py',
+    'tests/test_tarot_catalog.py',
+    'tests/test_high_resolution_assets.py',
     'dashboard_assets/fan/ATTRIBUTION.md',
+    'dashboard_assets/fan/hero_catalog.json',
     'dashboard_assets/fan/generation.json',
+    'dashboard_assets/fan/photos/ricciardo-miami-2024-original.webp',
+    'dashboard_assets/fan/photos/piastri-silverstone-2024.jpg',
+    'dashboard_assets/fan/photos/hamilton-bahrain-2025.webp',
+    'dashboard_assets/fan/photos/verstappen-silverstone-2024.jpg',
+    'dashboard_assets/fan/photos/antonelli-cockpit-mercedes.jpg',
     'dashboard_assets/fan/banner-norris.png',
     'dashboard_assets/fan/banner-verstappen.png',
     'dashboard_assets/fan/logos/alpine.svg',
@@ -48,6 +70,7 @@ RUNTIME_WORKTREE = (
     'dashboard_assets/fan/logos/ferrari.svg',
     'dashboard_assets/fan/logos/haas.svg',
     'dashboard_assets/fan/logos/mclaren.svg',
+    'dashboard_assets/fan/logos/mclaren-swoosh.svg',
     'dashboard_assets/fan/logos/mercedes.svg',
     'dashboard_assets/fan/logos/rb.svg',
     'dashboard_assets/fan/logos/red_bull.svg',
@@ -75,6 +98,7 @@ RUNTIME_WORKTREE = (
     'dashboard_assets/fan/portraits/piastri.png',
     'dashboard_assets/fan/portraits/ricciardo.png',
     'dashboard_assets/fan/portraits/russell.png',
+    'dashboard_assets/fan/portraits/ryo_hirakawa.jpg',
     'dashboard_assets/fan/portraits/sainz.png',
     'dashboard_assets/fan/portraits/sargeant.png',
     'dashboard_assets/fan/portraits/stroll.png',
@@ -107,10 +131,12 @@ RUNTIME_WORKTREE = (
     'pitwall/data/archive.py',
     'pitwall/dashboard/archive_views.py',
     'pitwall/dashboard/pilot_views.py',
+    'docs/galeria-cartas.html',
     'docs/JORNADA_DO_FA.md', 'docs/en/FAN_JOURNEY.md', 'docs/OPERACAO_FIM_SEMANA.md', 'docs/en/WEEKEND_OPERATION.md',
     'docs/REVISAO_030.md', 'docs/en/REVIEW_030.md',
     'docs/images/pitwall-pilotos.png', 'docs/images/pitwall-pilotos-en.png',
     'pitwall/dashboard/tokens.py',
+    'dashboard_assets/tarot/catalog.json',
     'tests/test_fan_journey.py', 'tests/test_weekend_ui.py', 'pitwall/dashboard/journey.py', 'pitwall/dashboard/tarot.py', 'dashboard_assets/tarot/verstappen.png', 'dashboard_assets/tarot/hamilton.png', 'dashboard_assets/tarot/russell.png', 'dashboard_assets/tarot/ATTRIBUTION.md', 'frontend_assets/journey.css', 'pitwall/dashboard/weekend_views.py', 'pitwall/research/prospective_evaluation.py',
     'frontend_assets/operacao_fim_semana.json',
     'pitwall/dashboard/model_views.py', 'pitwall/dashboard/favorites.py',
@@ -235,7 +261,7 @@ def _ler_catalogo_visual(raiz):
 
 def runtime_worktree(raiz):
     """Allowlist de runtime: núcleo explícito + ativos declarados no catálogo validado."""
-    arquivos = list(RUNTIME_WORKTREE) + [
+    arquivos = list(RUNTIME_WORKTREE) + list(TAROT_VARIANTS) + [
         'contexto_editorial.py', 'catalogo_visual.py', 'registro_emissoes.py',
         'frontend_assets/contexto_editorial.json', 'dashboard_assets/circuit/catalogo_visual.json',
     ]

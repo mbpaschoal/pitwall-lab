@@ -1,487 +1,536 @@
-# Atribuições / Attributions — circuit assets
+# Fotografias e mapas dos circuitos / Circuit photographs and maps
 
-Cada ativo abaixo é identificado pelo catálogo de circuitos. Fotografias são ilustrativas; mapas servem à orientação visual e não fornecem métricas esportivas. Arquivo, página de origem, autor, licença e SHA-256 preservam os metadados originais.
+Created by: MBPaschoal
+Status: verified
+Type: visual asset attribution
 
-Each asset below is identified by the active circuit catalog. Photographs are illustrative; maps are visual orientation only and do not supply sporting metrics.
+## Português
 
-## Albert Park
+Catálogo ativo: fotografias reais em resolução natural, sem geração, espelhamento, recorte ou ampliação local. O navegador enquadra as imagens com CSS. Todas as 26 fotografias ativas têm pelo menos 2488 px de largura. Fotografias de eventos históricos são ilustrações do local e não registros do GP selecionado. Identificadores, dados, modelo e probabilidades não foram alterados.
 
-### Photograph / Fotografia
+Os arquivos e créditos anteriores, incluindo a ilustração de Austin, permanecem preservados no histórico e no relatório `reports/revisao_visual_profunda_20261101/assets_originais/circuit/`. Os mapas mantêm sua geometria e licença próprias.
 
-- File / Arquivo: `albert_park-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Albert_Park_circuit_main_straight,_pictured_from_above_teams'_garages_in_2022.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:AllAussieTraveller&amp;action=edit&amp;redlink=1" class="new" title="User:AllAussieTraveller (page does not exist)">AllAussieTraveller</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `f0af19dfd008b1ca29958f30b6ace3d071d0bd54993c2b109f7b398906431cfe`
+## English
 
-### Circuit map / Mapa
+The active catalogue uses real photographs at natural resolution, without local generation, mirroring, cropping or upscaling. CSS controls framing. All 26 active photographs are at least 2488 px wide. Historical event photographs illustrate the location; they do not document the selected Grand Prix. Identifiers, sporting data, models and probabilities are unchanged. Original assets and credits remain preserved in history and the audit archive. Maps retain their original geometry and licences.
 
-- File / Arquivo: `albert_park-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Australia.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1" class="new" title="User:ごひょううべこ (page does not exist)">ごひょううべこ</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+## albert_park
+
+### Fotografia / Photograph
+
+- Arquivo / File: `albert_park-f1-2025.webp`
+- Fonte / Source: [MELBOURNE, AUSTRALIA - MARCH 16: Lando Norris of Great Britain driving the (4) McLaren MCL39](https://www.formula1.com/en/latest/article/norris-beats-verstappen-to-victory-in-dramatic-australian-gp-opener-amid.5rKGxQHJoDl1P8stMSHlIN)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/norris-beats-verstappen-to-victory-in-dramatic-australian-gp-opener-amid.5rKGxQHJoDl1P8stMSHlIN)
+- SHA-256: `7169a68f01dde75bdfa3fba1e7d7a335465b072d877f28a18d5a84386d9ea981`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Albert Park, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Albert Park, 2025 Grand Prix. The image does not document the selected Grand Prix.
+
+### Mapa / Map
+
+- Arquivo / File: `albert_park-layout.svg`
+- Fonte / Source: [2022 F1 CourseLayout Australia.svg](https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Australia.svg)
+- Autor / Author: ごひょううべこ
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `dc1ab2deddea816f49b7421b733db6db504713bfbe493fa36d5a477c575c3c96`
 
-## Americas
+## americas
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `americas-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Circuit_of_the_Americas,_Austin,_TX_(30066328424).jpg
-- Author / Autor: <a rel="nofollow" class="external text" href="https://www.flickr.com/people/24388834@N04">pedrik</a>
-- License / Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)
-- SHA-256: `e8ebf6e95694662d2f07a44ba1a629cf65fdeb47b90e9a69a7fa8ae2e6ada1f9`
+- Arquivo / File: `americas-hero.jpg`
+- Fonte / Source: [Vista real do COTA a partir da torre em 22 de outubro de 2016. Fotografia histórica ilustrativa.](https://commons.wikimedia.org/wiki/File:Circuit_of_the_Americas,_Austin,_TX_(30066328424).jpg)
+- Autor / Author: Pedro Mendes (pedrik)
+- Licença / Licence: [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
+- SHA-256: `a49f718f36996c7cb7b39db6659af31fe7eb600bf4ea9205c4a6b04194754993`
+- Resolução natural / Natural resolution: 5822 × 3275 px.
+- Contexto / Context: Vista real do COTA a partir da torre em 22 de outubro de 2016. Fotografia histórica ilustrativa. / Real view of COTA from the tower on 22 October 2016. Illustrative historical photograph.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `americas-outline.svg`
-- Derived from preserved original: `americas-layout.svg`
-- Changes: track geometry retained; sector colors, text and symbols removed; navy stroke and compact framing. This is illustrative orientation only.
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_COTA.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1" class="new" title="User:ごひょううべこ (page does not exist)">ごひょううべこ</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `americas-outline.svg`
+- Fonte / Source: [Circuit of the Americas — contorno derivado de 2022 F1 CourseLayout COTA.svg](https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_COTA.svg)
+- Autor / Author: ごひょううべこ
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `d97dae9ca9a91185fb50577c21c1397e73212d2a2e9db19c4e672ec1a0ea34bc`
 
-## Bahrain
+## bahrain
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `bahrain-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Bahrain_International_Circuit_before_the_F1_race_-_2024.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:FactFindersEnigma" title="User:FactFindersEnigma">FactFindersEnigma</a>
-- License / Licença: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
-- SHA-256: `953e1b94d2abe2d254b19465c29884268a9a02c246949694fc09c3c61510bd45`
+- Arquivo / File: `bahrain-start-2025.webp`
+- Fonte / Source: [Carros de Fórmula 1 na largada do GP de Bahrein de 2025. Fotografia histórica ilustrativa.](https://www.formula1.com/en/latest/article/piastri-storms-to-controlled-victory-in-bahrain-grand-prix-ahead-of-russell.47YQh0Ex2gkZcx58fRaRqJ)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/piastri-storms-to-controlled-victory-in-bahrain-grand-prix-ahead-of-russell.47YQh0Ex2gkZcx58fRaRqJ)
+- SHA-256: `20257a7ac468c4fcdf99145b51f5bfb693c073baaf7cb1d31e33b4400115ff3f`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Carros de Fórmula 1 na largada do GP de Bahrein de 2025. Fotografia histórica ilustrativa. / Formula 1 cars at the start of the 2025 Bahrain Grand Prix. Illustrative historical photograph.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `bahrain-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Bahrain_International_Circuit--Grand_Prix_Layout_with_DRS.svg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Will_Pittenger" title="User:Will Pittenger">User:Will Pittenger</a>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
+- Arquivo / File: `bahrain-layout.svg`
+- Fonte / Source: [Bahrain International Circuit--Grand Prix Layout with DRS.svg](https://commons.wikimedia.org/wiki/File:Bahrain_International_Circuit--Grand_Prix_Layout_with_DRS.svg)
+- Autor / Author: User:Will Pittenger
+- Licença / Licence: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
 - SHA-256: `a2dc8664fa3ab5dd1505be7d9329e399b38b1e9a3f8d5386b6166fbd316ecf4a`
 
-## Baku
+## baku
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `baku-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Baku_City_Circuit,_April_9,_2018_SkySat.jpg
-- Author / Autor: <a href="https://en.wikipedia.org/wiki/Planet_Labs" class="extiw" title="en:Planet Labs">Planet Labs, Inc.</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `5416d33edaea5fe95533b0a50e46aeda9e6fcab9d2c6d7dd83d04536d89b395c`
+- Arquivo / File: `baku-hero.jpg`
+- Fonte / Source: [Baku City Circuit, April 9, 2018 SkySat.jpg](https://commons.wikimedia.org/wiki/File:Baku_City_Circuit,_April_9,_2018_SkySat.jpg)
+- Autor / Author: Planet Labs, Inc.
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- SHA-256: `6a7e3fd15872a65e6360b8b7780b4cdeccb9d38715fe14ff8489ff02b4c13c98`
+- Resolução natural / Natural resolution: 3792 × 2133 px.
+- Contexto / Context: Fotografia ilustrativa do circuito baku. / Historical illustration of the circuit.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `baku-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Formula1_Circuit_Baku.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:HumanBodyPiloter5&amp;action=edit&amp;redlink=1" class="new" title="User:HumanBodyPiloter5 (page does not exist)">HumanBodyPiloter5</a>
-- License / Licença: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Arquivo / File: `baku-layout.svg`
+- Fonte / Source: [Formula1 Circuit Baku.svg](https://commons.wikimedia.org/wiki/File:Formula1_Circuit_Baku.svg)
+- Autor / Author: HumanBodyPiloter5
+- Licença / Licence: [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
 - SHA-256: `6590aa74a959adc39a373c9a97e80df9dd9cb5a68858c86cfd80585dc7d8d047`
 
-## Catalunya
+## catalunya
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `catalunya-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Circuit_de_Catalunya_Formula_One.jpg
-- Author / Autor: <a rel="nofollow" class="external text" href="https://www.flickr.com/photos/vroig/">vroig</a> from Catalonia
-- License / Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)
-- SHA-256: `b0a4a6ff1769984784e139ae9ff4987d322903d5ed80d50713b82e1f9c30f991`
+- Arquivo / File: `catalunya-start-2025.webp`
+- Fonte / Source: [Carros de Fórmula 1 na largada do GP de Barcelona-Catalunya de 2025. Fotografia histórica ilustrativa.](https://www.formula1.com/en/latest/article/piastri-leads-mclaren-1-2-from-norris-in-spanish-gp-amid-late-race-drama-for.2t1WkW9NVeMzJbOIkpM8u8)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/piastri-leads-mclaren-1-2-from-norris-in-spanish-gp-amid-late-race-drama-for.2t1WkW9NVeMzJbOIkpM8u8)
+- SHA-256: `21fa0387893356e75575879a5418126e42cbb61c9d34b586d42ccc736a260e3e`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Carros de Fórmula 1 na largada do GP de Barcelona-Catalunya de 2025. Fotografia histórica ilustrativa. / Formula 1 cars at the start of the 2025 Barcelona-Catalunya Grand Prix. Illustrative historical photograph.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `catalunya-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Formula1_Circuit_Catalunya.svg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Will_Pittenger" title="User:Will Pittenger">Will Pittenger</a>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
+- Arquivo / File: `catalunya-layout.svg`
+- Fonte / Source: [Formula1 Circuit Catalunya.svg](https://commons.wikimedia.org/wiki/File:Formula1_Circuit_Catalunya.svg)
+- Autor / Author: Will Pittenger
+- Licença / Licence: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
 - SHA-256: `8a0884bdfbccc70a37667ad6e1a08b0a4a1f5929391f791506fb063125d1cbbd`
 
-## Hungaroring
+## hungaroring
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `hungaroring-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Hungaroring_2020.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:VargaA" title="User:VargaA">VargaA</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `353334bea1a48a71b5ccf5830c5c3695533b7538c9ee250756d8386b5577f134`
+- Arquivo / File: `hungaroring-f1-2025.webp`
+- Fonte / Source: [BUDAPEST, HUNGARY - AUGUST 03: Lando Norris of Great Britain driving the (4) McLaren MCL39 Mercedes](https://www.formula1.com/en/latest/article/norris-holds-of-piastri-in-thrilling-battle-to-win-hungarian-grand-prix.3nguaFMU2JVNsT9QWopwzK)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/norris-holds-of-piastri-in-thrilling-battle-to-win-hungarian-grand-prix.3nguaFMU2JVNsT9QWopwzK)
+- SHA-256: `6e95868178ed3eb9b64b35cffdf5b13cba7008126f76b6beef439944ff74ad18`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Hungaroring, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Hungaroring, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `hungaroring-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Hungary.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1" class="new" title="User:ごひょううべこ (page does not exist)">ごひょううべこ</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `hungaroring-layout.svg`
+- Fonte / Source: [2022 F1 CourseLayout Hungary.svg](https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Hungary.svg)
+- Autor / Author: ごひょううべこ
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `31bb22e8182d8d6a6e82e18ae486adaef9314387bf52e67bfa1c05689181eaa2`
 
-## Imola
+## imola
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `imola-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:WTCC08_Dino_ed_Enzo_Ferrari_Circuit_Imola.jpg
-- Author / Autor: by Grantuking
-- License / Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)
-- SHA-256: `02c677299ac691c3563eaee3c6ceb5d3f7079b9878be25741775189df6e4fb16`
+- Arquivo / File: `imola-hero.jpg`
+- Fonte / Source: [WTCC08 Dino ed Enzo Ferrari Circuit Imola.jpg](https://commons.wikimedia.org/wiki/File:WTCC08_Dino_ed_Enzo_Ferrari_Circuit_Imola.jpg)
+- Autor / Author: by Grantuking
+- Licença / Licence: [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+- SHA-256: `314cc069231a47a2f5d27b3f09e22adb9703b70c12642aa9a7042751a582611d`
+- Resolução natural / Natural resolution: 2816 × 2112 px.
+- Contexto / Context: Fotografia ilustrativa do circuito imola. / Historical illustration of the circuit.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `imola-layout.png`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Autodromo_Enzo_e_Dino_Ferrari_2022.png
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Juan2910&amp;action=edit&amp;redlink=1" class="new" title="User:Juan2910 (page does not exist)">Juan2910</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `imola-layout.png`
+- Fonte / Source: [Autodromo Enzo e Dino Ferrari 2022.png](https://commons.wikimedia.org/wiki/File:Autodromo_Enzo_e_Dino_Ferrari_2022.png)
+- Autor / Author: Juan2910
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `dbedc9a3d5b38d7cd278c0a9703d36aa15b5cf3fdb5b65a5b2838a78ecfaba65`
 
-## Interlagos
+## interlagos
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `interlagos-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Interlagos_2006_aerial.jpg
-- Author / Autor: <b><a rel="nofollow" class="external text" href="https://www.flickr.com/photos/hams/">Marlon Hammes</a></b>, cropped/retouched by <a href="//commons.wikimedia.org/wiki/User:Morio" title="User:Morio">Morio</a>
-- License / Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)
-- SHA-256: `1a0b6ec0834612dd6cd02d61301372b5b50afe7dceb68381940f66a933028fed`
+- Arquivo / File: `interlagos-hero.jpg`
+- Fonte / Source: [Fórmula 1 Heineken Grande Prêmio de São Paulo 2022 (52498140708).jpg](https://commons.wikimedia.org/wiki/File:F%C3%B3rmula_1_Heineken_Grande_Pr%C3%AAmio_de_S%C3%A3o_Paulo_2022_(52498140708).jpg)
+- Autor / Author: Beto Issa/Fórmula 1 — Governo do Estado de São Paulo
+- Licença / Licence: [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
+- SHA-256: `b39995a8518ae7cfbe8cd87781af43cba095138deca62677e0e2b1907cb62856`
+- Resolução natural / Natural resolution: 5000 × 3333 px.
+- Contexto / Context: Carros de Fórmula 1 no S do Senna, em Interlagos, no GP de São Paulo de 2022. / Historical illustration of the circuit.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `interlagos-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:2014_Interlagos_circuit_map.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Sas1998&amp;action=edit&amp;redlink=1" class="new" title="User:Sas1998 (page does not exist)">Sas1998</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `interlagos-layout.svg`
+- Fonte / Source: [2014 Interlagos circuit map.svg](https://commons.wikimedia.org/wiki/File:2014_Interlagos_circuit_map.svg)
+- Autor / Author: Sas1998
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `76f2d6ac6627586248d65a9bfe252dcc3e7d218593aa718464c72cd894dd4dc1`
 
-## Jeddah
+## jeddah
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `jeddah-hero.png`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Jeddah_Corniche_Circuit_viewed_from_above.png
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:G%C3%A9oFr11&amp;action=edit&amp;redlink=1" class="new" title="User:GéoFr11 (page does not exist)">GéoFr11</a>
-- License / Licença: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
-- SHA-256: `62e66ce9f353d9b6eac815191ffc2da28e476cff438031fb6a3b9ef49470f177`
+- Arquivo / File: `jeddah-2025.webp`
+- Fonte / Source: [Vista aérea noturna do circuito de Jeddah ao fim do GP da Arábia Saudita em 20 de abril de 2025. Fotografia histórica ilustrativa.](https://www.formula1.com/en/latest/article/piastri-clinches-victory-in-saudi-arabia-from-verstappen-and-leclerc-as.1XBezBwUfLfjOayPSKNs41)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/piastri-clinches-victory-in-saudi-arabia-from-verstappen-and-leclerc-as.1XBezBwUfLfjOayPSKNs41)
+- SHA-256: `868d65041d02db48e78645bece6a2b5c9f0f08922bd9a416c541af53cc64583a`
+- Resolução natural / Natural resolution: 3840 × 2526 px.
+- Contexto / Context: Vista aérea noturna do circuito de Jeddah ao fim do GP da Arábia Saudita em 20 de abril de 2025. Fotografia histórica ilustrativa. / Night aerial view of Jeddah circuit after the Saudi Arabian Grand Prix on 20 April 2025. Illustrative historical photograph.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `jeddah-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:2023_F1_CourseLayout_Saudi-Arabia.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1" class="new" title="User:ごひょううべこ (page does not exist)">ごひょううべこ</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `jeddah-layout.svg`
+- Fonte / Source: [2023 F1 CourseLayout Saudi-Arabia.svg](https://commons.wikimedia.org/wiki/File:2023_F1_CourseLayout_Saudi-Arabia.svg)
+- Autor / Author: ごひょううべこ
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `998102ac05a9b474e08c13eafbcbba7a9cddf22f1204aa3a8c7a49d5732cc8ef`
 
-## Losail
+## losail
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `losail-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Grand_Stand.JPG
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Trinidade&amp;action=edit&amp;redlink=1" class="new" title="User:Trinidade (page does not exist)">Trinidade</a>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
-- SHA-256: `e56514237dd81fea921043595da72c802939cb5aad0b2055674e800f3b81ee1e`
+- Arquivo / File: `losail-f1-2025.webp`
+- Fonte / Source: [LUSAIL CITY, QATAR - NOVEMBER 30: Oscar Piastri of Australia driving the (81) McLaren MCL39](https://www.formula1.com/en/latest/article/verstappen-wins-qatar-gp-as-title-battle-goes-to-abu-dhabi-with-piastri.5KlYT7q8OcrJ7AnMALjkxJ)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/verstappen-wins-qatar-gp-as-title-battle-goes-to-abu-dhabi-with-piastri.5KlYT7q8OcrJ7AnMALjkxJ)
+- SHA-256: `41724ef3de0c0ff5af03cb74dffb0c252e4f511eab9a74a3db9f9d84006bc464`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Losail, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Losail, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `losail-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Lusail_International_Circuit_2023.svg
-- Author / Autor: <ul><li><a href="//commons.wikimedia.org/wiki/File:Losail.svg" title="File:Losail.svg">Losail.svg</a>: <a href="//commons.wikimedia.org/wiki/User:Will_Pittenger" title="User:Will Pittenger">Will Pittenger</a></li>
-<li>derivative work: <a href="//commons.wikimedia.org/wiki/User:Gpmat" title="User:Gpmat">Gpmat</a></li></ul>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
+- Arquivo / File: `losail-layout.svg`
+- Fonte / Source: [Lusail International Circuit 2023.svg](https://commons.wikimedia.org/wiki/File:Lusail_International_Circuit_2023.svg)
+- Autor / Author: Losail.svg: Will Pittenger
+derivative work: Gpmat
+- Licença / Licence: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
 - SHA-256: `9c928681d957f6dd007f95d036caad74d940a7bbff95e03654ce91ea2d45483f`
 
-## Madring
+## madring
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `madring-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Circuito_MADRING_Sur.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:F%C3%A1bio_Alecrim&amp;action=edit&amp;redlink=1" class="new" title="User:Fábio Alecrim (page does not exist)">Fábio Alecrim</a>
-- License / Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0)
-- SHA-256: `3371aff97ae8041acc675c71dc5b68b305e6c5415f1ab5f4cc8f2d5249d324f0`
+- Arquivo / File: `madring-f1-2026.webp`
+- Fonte / Source: [MADRID, SPAIN - SEPTEMBER 13: Lando Norris of Great Britain driving the (1) McLaren MCL40 Mercedes](https://www.formula1.com/en/latest/article/antonelli-clinches-victory-over-verstappen-and-norris-in-spanish-gp.644ZZfPzRPEaUh2JBHcB9)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/antonelli-clinches-victory-over-verstappen-and-norris-in-spanish-gp.644ZZfPzRPEaUh2JBHcB9)
+- SHA-256: `d8f60a356b92948ba68aff46b9976155164a0dbed0c0660fcbf7c8a17b69d3f0`
+- Resolução natural / Natural resolution: 3840 × 2559 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Madring, GP de 2026. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Madring, 2026 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `madring-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Madring_Formula_1_Circuit.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Dave_F63&amp;action=edit&amp;redlink=1" class="new" title="User:Dave F63 (page does not exist)">Dave F63</a>
-- License / Licença: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Arquivo / File: `madring-layout.svg`
+- Fonte / Source: [Madring Formula 1 Circuit.svg](https://commons.wikimedia.org/wiki/File:Madring_Formula_1_Circuit.svg)
+- Autor / Author: Dave F63
+- Licença / Licence: [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
 - SHA-256: `11bcdb0c3b815bc748a39643bb066be04d6d9e73bfb6aee6387addfffbce5fd1`
 
-## Marina Bay
+## marina_bay
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `marina_bay-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Singapore_(SG),_Marina_Bay_Street_Circuit,_F1_Pit_Building_--_2019_--_4478.jpg
-- Author / Autor: <bdi><a href="https://www.wikidata.org/wiki/Q34788025" class="extiw" title="d:Q34788025"><span title="German photographer and mathematician">Dietmar Rabich</span></a></bdi>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `f0ed75c782eda3168598c3e3e5a89a1be6dc33dda7202195259e06820627e335`
+- Arquivo / File: `marina_bay-hero.jpg`
+- Fonte / Source: [Singapore (SG), Marina Bay Street Circuit, F1 Pit Building -- 2019 -- 4478.jpg](https://commons.wikimedia.org/wiki/File:Singapore_(SG),_Marina_Bay_Street_Circuit,_F1_Pit_Building_--_2019_--_4478.jpg)
+- Autor / Author: Dietmar Rabich
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- SHA-256: `f448b56c4a6b79dc07e9b7c96c92edb109dfa574f8261c5830cfdbf2308541bb`
+- Resolução natural / Natural resolution: 6720 × 4480 px.
+- Contexto / Context: Fotografia ilustrativa do circuito marina bay. / Historical illustration of the circuit.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `marina_bay-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Marina_Bay_circuit_2023.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Cherkash&amp;action=edit&amp;redlink=1" class="new" title="User:Cherkash (page does not exist)">Cherkash</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `marina_bay-layout.svg`
+- Fonte / Source: [Marina Bay circuit 2023.svg](https://commons.wikimedia.org/wiki/File:Marina_Bay_circuit_2023.svg)
+- Autor / Author: Cherkash
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `d1fd1cf54431a9c94cc0d1a2a1ba6afe78a534900e7901f68c04f15282b62d97`
 
-## Miami
+## miami
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `miami-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Start_of_the_Porsche_Sprint_Challenge_North_America_at_the_F1_Miami_GP_-_2022.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:USACJack&amp;action=edit&amp;redlink=1" class="new" title="User:USACJack (page does not exist)">USACJack</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `e1c2da79b064496cf8c05a0434cd5fdab4833749a9519bf7f7932f3f0ba35c66`
+- Arquivo / File: `miami-hero.jpg`
+- Fonte / Source: [2022 Miami GP - Red Bull RB18 of Sergio Pérez.jpg](https://commons.wikimedia.org/wiki/File:2022_Miami_GP_-_Red_Bull_RB18_of_Sergio_P%C3%A9rez.jpg)
+- Autor / Author: Dcmaradiaga (David Castro)
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- SHA-256: `c52ce464d7557adf49348533eef9e4e1a5d8288399a9418ad85302f99f0a58d2`
+- Resolução natural / Natural resolution: 4589 × 2401 px.
+- Contexto / Context: Sergio Pérez no Red Bull RB18 de Fórmula 1 no GP de Miami de 2022. / Historical illustration of the circuit.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `miami-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Miami.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1" class="new" title="User:ごひょううべこ (page does not exist)">ごひょううべこ</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `miami-layout.svg`
+- Fonte / Source: [2022 F1 CourseLayout Miami.svg](https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Miami.svg)
+- Autor / Author: ごひょううべこ
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `ff01575a29f793f00838da7229e5ac21d74eae3ef78ffffe7fe55d9de9a705c2`
 
-## Monaco
+## monaco
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `monaco-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Race_track_circuit_de_monaco.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Kevinbeets1995" title="User:Kevinbeets1995">Kevinbeets1995</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `d1ed060f1817c672e8a0530b6dddff6f66cd9c90fb625ad9c5bc91a200457532`
+- Arquivo / File: `monaco-f1-2025.webp`
+- Fonte / Source: [MONTE-CARLO, MONACO - MAY 25: Max Verstappen of the Netherlands driving the (1) Oracle Red Bull](https://www.formula1.com/en/latest/article/norris-takes-victory-over-leclerc-and-piastri-in-gripping-monaco-grand-prix.4B7frXOoDY8UvKMu25Daoa)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/norris-takes-victory-over-leclerc-and-piastri-in-gripping-monaco-grand-prix.4B7frXOoDY8UvKMu25Daoa)
+- SHA-256: `868e9a96a8f0135ad4cdd93b25a257c00a336b683708cfc95c694c7bd04b4225`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Monaco, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Monaco, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `monaco-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Monte_Carlo_Formula_1_track_map_with_streets.svg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Will_Pittenger" title="User:Will Pittenger">Will Pittenger</a>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
+- Arquivo / File: `monaco-layout.svg`
+- Fonte / Source: [Monte Carlo Formula 1 track map with streets.svg](https://commons.wikimedia.org/wiki/File:Monte_Carlo_Formula_1_track_map_with_streets.svg)
+- Autor / Author: Will Pittenger
+- Licença / Licence: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
 - SHA-256: `0325339b5964647d22889037fb0939fabb9ddd2a86b51c7c97e0b930ee2fab07`
 
-## Monza
+## monza
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `monza-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Circuito_de_Monza08.jpg
-- Author / Autor: <a rel="nofollow" class="external text" href="https://www.flickr.com/photos/9288799@N02">Sitomon</a>
-- License / Licença: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0)
-- SHA-256: `f089e21a6d457df400b59e29e10dd495afc38d665ff7fbc798409cc79377bc98`
+- Arquivo / File: `monza-hero.jpg`
+- Fonte / Source: [Circuito de Monza08.jpg](https://commons.wikimedia.org/wiki/File:Circuito_de_Monza08.jpg)
+- Autor / Author: Sitomon
+- Licença / Licence: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0)
+- SHA-256: `889d9da38c7328dc1050fd27b43663fa02d48c1db0a6746f95ce3381516a2c07`
+- Resolução natural / Natural resolution: 3264 × 2448 px.
+- Contexto / Context: Fotografia ilustrativa do circuito monza. / Historical illustration of the circuit.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `monza-layout.png`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Monza_Map-2021.png
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Anthony_Alessio_Tralongo" title="User:Anthony Alessio Tralongo">Anthony Alessio Tralongo</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `monza-layout.png`
+- Fonte / Source: [Monza Map-2021.png](https://commons.wikimedia.org/wiki/File:Monza_Map-2021.png)
+- Autor / Author: Anthony Alessio Tralongo
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `44e70f813da10649c3a68c9487443f4d199fdcbfe5a3d32d33fed2c30127d3d0`
 
-## Red Bull Ring
+## red_bull_ring
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `red_bull_ring-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Luftaufnahme_(c)Red_Bull_Ring.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Vanessa_Machelett&amp;action=edit&amp;redlink=1" class="new" title="User:Vanessa Machelett (page does not exist)">Vanessa Machelett</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `91adb2f77171a8c56ca9721d581ddf927e7d37a74be3fce9ea6f98867263e1b5`
+- Arquivo / File: `red_bull_ring-f1-2025.webp`
+- Fonte / Source: [SPIELBERG, AUSTRIA - JUNE 29: Lando Norris of Great Britain driving the (4) McLaren MCL39 Mercedes](https://www.formula1.com/en/latest/article/norris-fends-off-piastri-for-austrian-gp-victory-in-thrilling-race-long.2CH71wVvRP1FaU8s04Tj7f)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/norris-fends-off-piastri-for-austrian-gp-victory-in-thrilling-race-long.2CH71wVvRP1FaU8s04Tj7f)
+- SHA-256: `74a710cfccb0c5df1271396046b85024d1b1de61f803c637994282ce1021551a`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Red Bull Ring, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Red Bull Ring, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `red_bull_ring-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Circuit_Red_Bull_Ring.svg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Pitlane02" title="User:Pitlane02">Pitlane02</a>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
+- Arquivo / File: `red_bull_ring-layout.svg`
+- Fonte / Source: [Circuit Red Bull Ring.svg](https://commons.wikimedia.org/wiki/File:Circuit_Red_Bull_Ring.svg)
+- Autor / Author: Pitlane02
+- Licença / Licence: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
 - SHA-256: `682d19a8cbad221cbfd09f96ac0baacee578fd50ace489caefb634effec91259`
 
-## Rodriguez
+## rodriguez
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `rodriguez-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Autódromo_Hermanos_Rodríguez,_June_4,_2018_SkySat_(cropped).jpg
-- Author / Autor: <a href="https://en.wikipedia.org/wiki/Planet_Labs" class="extiw" title="en:Planet Labs">Planet Labs, Inc.</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `7ffed28061d4ceadd56bae210b4285d911c29736026717b36039f6c21d655033`
+- Arquivo / File: `rodriguez-f1-2025.webp`
+- Fonte / Source: [MEXICO CITY, MEXICO - OCTOBER 26: Oscar Piastri of Australia driving the (81) McLaren MCL39](https://www.formula1.com/en/latest/article/norris-seals-commanding-win-in-action-packed-mexico-city-gp-to-take-world.5ztiajHhdtqagu0qQLx0vS)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/norris-seals-commanding-win-in-action-packed-mexico-city-gp-to-take-world.5ztiajHhdtqagu0qQLx0vS)
+- SHA-256: `c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Rodriguez, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Rodriguez, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `rodriguez-layout.png`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Autodromo_Hermanos_Rodriguez_(National_Circuit_with_Foro_Sol).png
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:WL2392&amp;action=edit&amp;redlink=1" class="new" title="User:WL2392 (page does not exist)">WL2392</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `rodriguez-layout.png`
+- Fonte / Source: [Autodromo Hermanos Rodriguez (National Circuit with Foro Sol).png](https://commons.wikimedia.org/wiki/File:Autodromo_Hermanos_Rodriguez_(National_Circuit_with_Foro_Sol).png)
+- Autor / Author: WL2392
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `b2dea8f229dfd52976380728f848e5760eda771ee99e1c0a54100854fb92b8bc`
 
-## Sepang
+## sepang
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `sepang-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Sepang_International_Circuit.JPG
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Mondayblues" title="User:Mondayblues">mondayblues</a>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
-- SHA-256: `6cc1388a9408c6a92f4e7f83fc79c5d1e07f698ffa5e6f1def6e68c2d140635a`
+- Arquivo / File: `sepang-f1-2026.webp`
+- Fonte / Source: [KUALA LUMPUR, MALAYSIA - OCTOBER 04:  Max Verstappen of the Netherlands driving the (3) Oracle Red](https://www.formula1.com/en/latest/article/verstappen-wins-rain-hit-bahrain-gp-in-malaysia-over-antonelli-as-russell-retires-late-on.6qfpIHPch8mIVj2YgfHdCp)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/verstappen-wins-rain-hit-bahrain-gp-in-malaysia-over-antonelli-as-russell-retires-late-on.6qfpIHPch8mIVj2YgfHdCp)
+- SHA-256: `ac9fbb9f23650f422121c0a21f1e434d40920900e2ea20655087bb2ad047ebfe`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Sepang, GP de 2026. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Sepang, 2026 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `sepang-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Sepang.svg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Will_Pittenger" title="User:Will Pittenger">Will Pittenger</a>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
+- Arquivo / File: `sepang-layout.svg`
+- Fonte / Source: [Sepang.svg](https://commons.wikimedia.org/wiki/File:Sepang.svg)
+- Autor / Author: Will Pittenger
+- Licença / Licence: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
 - SHA-256: `65beb77b58f504ee57ea1ef9360659985b8c6cdadd36b8648320aef46e5f5749`
 
-## Shanghai
+## shanghai
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `shanghai-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Shanghai_International_Circuit,_April_7,_2018_SkySat.jpg
-- Author / Autor: Planet Labs, Inc.
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `f4ce249bc4b7d6c9099303fe7b9afe7006756dff072626dae7fe09e31da869ce`
+- Arquivo / File: `shanghai-f1-2025.webp`
+- Fonte / Source: [SHANGHAI, CHINA - MARCH 23: Charles Leclerc of Monaco driving the (16) Scuderia Ferrari SF-25 leads](https://www.formula1.com/en/latest/article/piastri-beats-norris-and-russell-to-victory-in-chinese-grand-prix-with.CpcwOmMwzcZGjM33Wkv8V)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/piastri-beats-norris-and-russell-to-victory-in-chinese-grand-prix-with.CpcwOmMwzcZGjM33Wkv8V)
+- SHA-256: `c31eed8c8e96c97c5de137101f3acc4df49b9be19b0fd16870dd1b8ffc3b489b`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Shanghai, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Shanghai, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `shanghai-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Shanghai_International_Racing_Circuit_track_map.svg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Will_Pittenger" title="User:Will Pittenger">Will Pittenger</a>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
+- Arquivo / File: `shanghai-layout.svg`
+- Fonte / Source: [Shanghai International Racing Circuit track map.svg](https://commons.wikimedia.org/wiki/File:Shanghai_International_Racing_Circuit_track_map.svg)
+- Autor / Author: Will Pittenger
+- Licença / Licence: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
 - SHA-256: `6e12b3eb7a99f51497d75b8d0d35a87353677806bbebad4f5c7ef4522a5c18c0`
 
-## Silverstone
+## silverstone
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `silverstone-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Silverstone_Racing_Circuit.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Harvey_Milligan" title="User:Harvey Milligan">Harvey Milligan</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `79be9943ccb3ae221d5f3e91183304c1e2325f82b680a75971b6568773a4814d`
+- Arquivo / File: `silverstone-f1-2025.webp`
+- Fonte / Source: [NORTHAMPTON, ENGLAND - JULY 06: Max Verstappen of the Netherlands driving the (1) Oracle Red Bull](https://www.formula1.com/en/latest/article/norris-wins-dramatic-wet-dry-british-gp-from-piastri-as-hulkenberg-claims.1puOD82avOZ8I0sca7fvLJ)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/norris-wins-dramatic-wet-dry-british-gp-from-piastri-as-hulkenberg-claims.1puOD82avOZ8I0sca7fvLJ)
+- SHA-256: `0b82ef0a5dd874e56018bd74bb6d52388203d330ef8463aa7f39438a6c47c0dd`
+- Resolução natural / Natural resolution: 2693 × 1795 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Silverstone, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Silverstone, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `silverstone-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Britain.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1" class="new" title="User:ごひょううべこ (page does not exist)">ごひょううべこ</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `silverstone-layout.svg`
+- Fonte / Source: [2022 F1 CourseLayout Britain.svg](https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Britain.svg)
+- Autor / Author: ごひょううべこ
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `1b472c27da59cb1eec7d2a68d03c8037da2b4b9cdb3ad5ecd57f48d6bf4067ad`
 
-## Spa
+## spa
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `spa-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Spa-Francorchamps_overview.jpg
-- Author / Autor: <a rel="nofollow" class="external text" href="https://www.flickr.com/photos/30998865@N00">Nathanael Majoros</a>
-- License / Licença: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0)
-- SHA-256: `1ee27cd0d3c2e9457359d795aad5004e0b7e68885c109a69e0a2a41f3827c347`
+- Arquivo / File: `spa-f1-2025.webp`
+- Fonte / Source: [SPA, BELGIUM - JULY 27: Charles Leclerc of Monaco driving the (16) Scuderia Ferrari SF-25 leads Max](https://www.formula1.com/en/latest/article/piastri-wins-wet-dry-belgian-gp-after-late-pressure-from-title-rival-and.7QmPcUP90MvR5iX0w3j91)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/piastri-wins-wet-dry-belgian-gp-after-late-pressure-from-title-rival-and.7QmPcUP90MvR5iX0w3j91)
+- SHA-256: `3aa23ed6bd302fb46a29f0bd67111adfe0299a45b80637d336733e2df3b888d4`
+- Resolução natural / Natural resolution: 3722 × 2331 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Spa, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Spa, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `spa-layout.png`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Spa_Francorchamps_2022.png
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Juan2910&amp;action=edit&amp;redlink=1" class="new" title="User:Juan2910 (page does not exist)">Juan2910</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `spa-layout.png`
+- Fonte / Source: [Spa Francorchamps 2022.png](https://commons.wikimedia.org/wiki/File:Spa_Francorchamps_2022.png)
+- Autor / Author: Juan2910
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `41f64f4d4269c656445f759a16b3ba0028b8d0f6c7391639d7fb502aa177f69a`
 
-## Suzuka
+## suzuka
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `suzuka-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Suzukacircuit_main-straight.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Wata0929&amp;action=edit&amp;redlink=1" class="new" title="User:Wata0929 (page does not exist)">Wata0929</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
-- SHA-256: `5c47ea4576839f0d705039ef2977b5f6c66dd51c90d4af172a2fea23e55140b5`
+- Arquivo / File: `suzuka-alternative.webp`
+- Fonte / Source: [SUZUKA, JAPAN - APRIL 06: Max Verstappen of the Netherlands driving the (1) Oracle Red Bull Racing](https://www.formula1.com/en/latest/article/verstappen-surges-to-fourth-consecutive-japanese-gp-victory-ahead-of-norris.1MOpqos1ljTyhFILJKiHZD)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/verstappen-surges-to-fourth-consecutive-japanese-gp-victory-ahead-of-norris.1MOpqos1ljTyhFILJKiHZD)
+- SHA-256: `f76a7574b243b9870712e9af80dae81bfbbd7a7b801a3278ac03bd988323c1dd`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Suzuka, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Suzuka, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `suzuka-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Suzuka_circuit_map--2005.svg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Will_Pittenger" title="User:Will Pittenger">Will Pittenger</a>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
+- Arquivo / File: `suzuka-layout.svg`
+- Fonte / Source: [Suzuka circuit map--2005.svg](https://commons.wikimedia.org/wiki/File:Suzuka_circuit_map--2005.svg)
+- Autor / Author: Will Pittenger
+- Licença / Licence: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
 - SHA-256: `063ee5111f5a52f1d45f7c31d89fe5a850a75ae54e41a67eb23a7f099c43c8d6`
 
-## Vegas
+## vegas
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `vegas-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:2024_Las_Vegas_Grand_Prix_at_the_Sphere_-_Friday,_November_22,_Orbi.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Nascar9919&amp;action=edit&amp;redlink=1" class="new" title="User:Nascar9919 (page does not exist)">Nascar9919</a>
-- License / Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0)
-- SHA-256: `51dc96083a9374d3b9eebb48bffb7385d6644d821438cd0a8581626b479ed1c4`
+- Arquivo / File: `vegas-f1-2025.webp`
+- Fonte / Source: [LAS VEGAS, NEVADA - NOVEMBER 22: George Russell of Great Britain driving the (63) Mercedes AMG](https://www.formula1.com/en/latest/article/verstappen-beats-norris-for-dominant-las-vegas-gp-victory-as-piastri.6u1Op0SO7YQa2bwJOq8DVI)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/verstappen-beats-norris-for-dominant-las-vegas-gp-victory-as-piastri.6u1Op0SO7YQa2bwJOq8DVI)
+- SHA-256: `17d331f131907087c1c71582a79a8017c9eeac3ddcece6b715b971b9dfe783c3`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Vegas, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Vegas, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `vegas-layout.png`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Las_Vegas_Strip_Circuit_2023.png
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Nasho3498&amp;action=edit&amp;redlink=1" class="new" title="User:Nasho3498 (page does not exist)">Nasho3498</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `vegas-layout.png`
+- Fonte / Source: [Las Vegas Strip Circuit 2023.png](https://commons.wikimedia.org/wiki/File:Las_Vegas_Strip_Circuit_2023.png)
+- Autor / Author: Nasho3498
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `176f6b136aa100f871f2e3655ab29dbd9cb5c10eae6bb9ba51f3c9f941c29a79`
 
-## Villeneuve
+## villeneuve
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `villeneuve-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Circuit_Gilles_Villeneuve,_Montreal.jpg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:Maela_Ohana&amp;action=edit&amp;redlink=1" class="new" title="User:Maela Ohana (page does not exist)">Maela Ohana</a>
-- License / Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0)
-- SHA-256: `5e66887e09f12a79b2b1cd6fc688ca99d86523b551e2aa0554ef1e90d3bfe7a5`
+- Arquivo / File: `villeneuve-f1-2025.webp`
+- Fonte / Source: [MONTREAL, QUEBEC - JUNE 15: George Russell of Great Britain driving the (63) Mercedes AMG Petronas](https://www.formula1.com/en/latest/article/russell-takes-solid-victory-as-piastri-and-norris-collide-late-on-in.2cri9oFCALqhfsbvpqDfBq)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/russell-takes-solid-victory-as-piastri-and-norris-collide-late-on-in.2cri9oFCALqhfsbvpqDfBq)
+- SHA-256: `34e5d72ae4def950a3080d9a9817d1dcc0c1c4e5ef1bbccd13dcd7785f751682`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Villeneuve, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Villeneuve, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `villeneuve-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Canada.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1" class="new" title="User:ごひょううべこ (page does not exist)">ごひょううべこ</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `villeneuve-layout.svg`
+- Fonte / Source: [2022 F1 CourseLayout Canada.svg](https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Canada.svg)
+- Autor / Author: ごひょううべこ
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `0c2782dd150add22cc12ad696491ccc749920a260fbf80833dbda7887049ecaa`
 
-## Yas Marina
+## yas_marina
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `yas_marina-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:YasMarina2.jpeg
-- Author / Autor: <a href="//commons.wikimedia.org/wiki/User:Pi3.124" title="User:Pi3.124">Pi3.124</a>
-- License / Licença: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
-- SHA-256: `7a6e999d33a7756ebbe467b09fdeec207d8a213d531bb34202398697100817a2`
+- Arquivo / File: `yas_marina-f1-2025.webp`
+- Fonte / Source: [ABU DHABI, UNITED ARAB EMIRATES - DECEMBER 07: Max Verstappen of the Netherlands driving the (1)](https://www.formula1.com/en/latest/article/norris-secures-maiden-f1-title-in-abu-dhabi-with-podium-finish-behind.EMJtmvRA0uzmzUC4MZgmw)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/norris-secures-maiden-f1-title-in-abu-dhabi-with-podium-finish-behind.EMJtmvRA0uzmzUC4MZgmw)
+- SHA-256: `6e54dd6dbaa23cbe467aac4f21725e0eb75ea943639576af4fd1f308d8618e1e`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Yas Marina, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Yas Marina, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `yas_marina-layout.svg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Abu_Dhabi.svg
-- Author / Autor: <a href="//commons.wikimedia.org/w/index.php?title=User:%E3%81%94%E3%81%B2%E3%82%87%E3%81%86%E3%81%86%E3%81%B9%E3%81%93&amp;action=edit&amp;redlink=1" class="new" title="User:ごひょううべこ (page does not exist)">ごひょううべこ</a>
-- License / Licença: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Arquivo / File: `yas_marina-layout.svg`
+- Fonte / Source: [2022 F1 CourseLayout Abu Dhabi.svg](https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Abu_Dhabi.svg)
+- Autor / Author: ごひょううべこ
+- Licença / Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - SHA-256: `a44c69641de8d19a1deaaae20e52d4b9e75d8b231f62a1b22ce8b111ad075293`
 
-## Zandvoort
+## zandvoort
 
-### Photograph / Fotografia
+### Fotografia / Photograph
 
-- File / Arquivo: `zandvoort-hero.jpg`
-- Source page / Origem: https://commons.wikimedia.org/wiki/File:Circuit_Zandvoort_motorsport_race_track_in_the_Netherlands_(46940292845).jpg
-- Author / Autor: dronepicr
-- License / Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
-- SHA-256: `384c073467a3b80fd14e94a89f2c910ff8382b11d87c39cb507adb8a9f3114cf`
+- Arquivo / File: `zandvoort-f1-2025.webp`
+- Fonte / Source: [ZANDVOORT, NETHERLANDS - AUGUST 31: Oscar Piastri of Australia driving the (81) McLaren MCL39](https://www.formula1.com/en/latest/article/piastri-wins-as-norris-faces-late-race-retirement-in-dramatic-dutch-grand.5gVVQeQH0zjZk9hl6k6wvv)
+- Autor / Author: Formula 1 / Getty Images; fotógrafo individual não nomeado na página de origem
+- Licença / Licence: [Direitos reservados pelos titulares; nenhuma licença aberta declarada](https://www.formula1.com/en/latest/article/piastri-wins-as-norris-faces-late-race-retirement-in-dramatic-dutch-grand.5gVVQeQH0zjZk9hl6k6wvv)
+- SHA-256: `c0ec82df41d2171a4b4b7c38ac506aa6f02d8ca2b7a74bf86515298c4ee58274`
+- Resolução natural / Natural resolution: 3840 × 2560 px.
+- Contexto / Context: Fotografia histórica ilustrativa de Fórmula 1 na pista de Zandvoort, GP de 2025. A imagem não documenta o GP selecionado. / Illustrative historical Formula 1 photograph at Zandvoort, 2025 Grand Prix. The image does not document the selected Grand Prix.
 
-### Circuit map / Mapa
+### Mapa / Map
 
-- File / Arquivo: `zandvoort-layout.svg`
-- Source page / Origem: https://github.com/f1db/f1db/blob/main/src/assets/circuits/black/zandvoort-5.svg
-- Author / Autor: f1db contributors
-- License / Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+- Arquivo / File: `zandvoort-layout.svg`
+- Fonte / Source: [zandvoort-5.svg](https://github.com/f1db/f1db/blob/main/src/assets/circuits/black/zandvoort-5.svg)
+- Autor / Author: f1db contributors
+- Licença / Licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - SHA-256: `e2b2f637bb1ce9e1e386724417101946846c32ce8079980b9292e332616234c4`
-
-
-## Austin — current illustrative hero (2026-10-27)
-
-- File / Arquivo: `americas-illustration-20261027.png`
-- Generated with OpenAI imagegen from the owner-provided AI reference, not documentary photography.
-- No external photograph license is asserted for this generated image. The earlier Wikimedia photograph remains preserved as `americas-hero.jpg` with its attribution above.
-- SHA-256: `3fa12e945f3e25f36371ed54cdededc7c1f8bce00445eea018eb1eda2d09c390`
-
-- Current image author credit: OpenAI · referência fornecida por MBPaschoal
-- Current image label: Ilustração gerada por IA; sem licença fotográfica atribuída

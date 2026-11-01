@@ -69,6 +69,48 @@ class PilotViewTests(unittest.TestCase):
         self.assertEqual(at.metric[0].value, "0")
         self.assertTrue(any("Gabriel Bortoleto" in x.value for x in at.markdown))
 
+    def test_component_state_cannot_replace_the_canonical_shared_scope(self):
+        at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30)
+        at.query_params.update(tela="Pilotos", visao="perfil", piloto="norris",
+                               anos="2026", metrica="podium_rate", minimo="3", lang="en")
+        at.run()
+        # A browser component can rerun before native widgets apply set_value.
+        at.session_state["browser_favorite"] = "max_verstappen"
+        at.session_state["pilot_years"] = [2024, 2025, 2026]
+        at.session_state["pilot_metric"] = "win_rate"
+        at.session_state["pilot_minimum"] = 5
+        at.run()
+        self.assertFalse(at.exception)
+        self.assertEqual(at.multiselect(key="pilot_years").value, [2026])
+        self.assertEqual(at.selectbox(key="pilot_metric").value, "podium_rate")
+        self.assertEqual(at.selectbox(key="pilot_minimum").value, 3)
+        self.assertEqual(at.selectbox(key="pilot_driver").value, "norris")
+
+    def test_intentional_empty_period_survives_reruns_and_remains_editable(self):
+        at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30)
+        at.query_params.update(tela="Pilotos", visao="perfil", piloto="bortoleto", anos="2024")
+        at.run()
+        self.assertEqual(len(at.get("plotly_chart")), 0)
+        at.multiselect(key="pilot_years").set_value([]).run()
+        at.run()
+        self.assertFalse(at.exception)
+        self.assertEqual(at.multiselect(key="pilot_years").value, [])
+        self.assertEqual(at.session_state["_pilot_filters"]["pilot_years"], [])
+        at.multiselect(key="pilot_years").set_value([2025]).run()
+        self.assertFalse(at.exception)
+        self.assertGreater(len(at.get("plotly_chart")), 0)
+
+    def test_empty_conditions_do_not_create_an_unobserved_chart(self):
+        at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30)
+        at.query_params.update(tela="Pilotos", visao="perfil", piloto="norris", anos="2026")
+        at.run()
+        charts = len(at.get("plotly_chart"))
+        at.multiselect(key="profile_conditions").set_value([]).run()
+        self.assertFalse(at.exception)
+        self.assertTrue(any(x.value == "Selecione pelo menos uma condição." for x in at.info))
+        self.assertEqual(len(at.get("plotly_chart")), charts - 1)
+        self.assertEqual(at.metric[0].value, "17")
+
 
 if __name__ == "__main__":
     unittest.main()

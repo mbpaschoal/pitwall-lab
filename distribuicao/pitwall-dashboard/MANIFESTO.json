@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "1580c21a9e34bc03dc854f3eef4af820505a8c43e15b6e08b26d6a422b96d141",
+  "apresentacao_build_sha256": "ea9468f747fcd07e0fb2749b4e8edb45f9a1d2862cac6e595423635871234e60",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "856f72b152c0a89ae615e6b9b31a2d64cfaa6428f7e04c1359abfc54c74d4c88",
+      "sha256_destino": "5f9bc2533a1792e29b2fc2f9542611e506d1985f6a74d8f33103719d1c2c8546",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "7cdbe87fcc13f6f436bffb320a94e4e36222addcb8bb9c6ce4bb9a57bb52e02a",
-      "sha256_origem": "ffcfdba88e9185275188fc7673af6af5cfe8be4a6ec7cd024d3e7f652c06b2fa"
+      "sha256_destino": "336889f0d07f6511cc88e67f102cb88e01d43a264b1950376e82c1c051aa2ec0",
+      "sha256_origem": "9bdef5dba15b65d2f3e7c6d5104fea4f0c8bb081e1a1d93bb85b5b1d2b44c3f5"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "59301dffd3871ea86de9db93866d5d96898cda4819e33a86d1faa6a6adef7d0e",
-      "sha256_origem": "419aaddf15f246ef51df3346d23b2c69e8da1a418623fd86edf2b0753aa9ffd9"
+      "sha256_destino": "72151fb321f651ffebd1ef24577e59921b76b13944dfe9e788dea92360cba9fa",
+      "sha256_origem": "f5692aacbde863bebd7f29b6d619447fd2a784880d1017ba315c705b5026ae8b"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "c9f56eb9348cbc8345bdaea7ca24c9f960e1598af05472794760a2682ff07a8c",
-      "sha256_origem": "c9f56eb9348cbc8345bdaea7ca24c9f960e1598af05472794760a2682ff07a8c"
+      "sha256_destino": "967d9afb101346667166f2e76e81910bc190488d7d41d50ca0072e9d92f00e32",
+      "sha256_origem": "967d9afb101346667166f2e76e81910bc190488d7d41d50ca0072e9d92f00e32"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -140,15 +140,15 @@
       "caminho": "dashboard_assets/circuit/ATRIBUICOES.md",
       "fonte": "dashboard_assets/circuit/ATRIBUICOES.md",
       "modo": "copia",
-      "sha256_destino": "4868b7fce1cf05b00cfacece69104a40edc2d7eb298b01ffafcc9f3c45885313",
-      "sha256_origem": "4868b7fce1cf05b00cfacece69104a40edc2d7eb298b01ffafcc9f3c45885313"
+      "sha256_destino": "c5447350d6a70ccb5d598f7a6bfe2e4b8b4ad7944a576c9dea24803e74164064",
+      "sha256_origem": "c5447350d6a70ccb5d598f7a6bfe2e4b8b4ad7944a576c9dea24803e74164064"
     },
     {
-      "caminho": "dashboard_assets/circuit/albert_park-hero.jpg",
-      "fonte": "dashboard_assets/circuit/albert_park-hero.jpg",
+      "caminho": "dashboard_assets/circuit/albert_park-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/albert_park-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "f0af19dfd008b1ca29958f30b6ace3d071d0bd54993c2b109f7b398906431cfe",
-      "sha256_origem": "f0af19dfd008b1ca29958f30b6ace3d071d0bd54993c2b109f7b398906431cfe"
+      "sha256_destino": "7169a68f01dde75bdfa3fba1e7d7a335465b072d877f28a18d5a84386d9ea981",
+      "sha256_origem": "7169a68f01dde75bdfa3fba1e7d7a335465b072d877f28a18d5a84386d9ea981"
     },
     {
       "caminho": "dashboard_assets/circuit/albert_park-layout.svg",
@@ -158,11 +158,11 @@
       "sha256_origem": "dc1ab2deddea816f49b7421b733db6db504713bfbe493fa36d5a477c575c3c96"
     },
     {
-      "caminho": "dashboard_assets/circuit/americas-illustration-20261027.png",
-      "fonte": "dashboard_assets/circuit/americas-illustration-20261027.png",
+      "caminho": "dashboard_assets/circuit/americas-hero.jpg",
+      "fonte": "dashboard_assets/circuit/americas-hero.jpg",
       "modo": "copia",
-      "sha256_destino": "3fa12e945f3e25f36371ed54cdededc7c1f8bce00445eea018eb1eda2d09c390",
-      "sha256_origem": "3fa12e945f3e25f36371ed54cdededc7c1f8bce00445eea018eb1eda2d09c390"
+      "sha256_destino": "a49f718f36996c7cb7b39db6659af31fe7eb600bf4ea9205c4a6b04194754993",
+      "sha256_origem": "a49f718f36996c7cb7b39db6659af31fe7eb600bf4ea9205c4a6b04194754993"
     },
     {
       "caminho": "dashboard_assets/circuit/americas-outline.svg",
@@ -172,13 +172,6 @@
       "sha256_origem": "d97dae9ca9a91185fb50577c21c1397e73212d2a2e9db19c4e672ec1a0ea34bc"
     },
     {
-      "caminho": "dashboard_assets/circuit/bahrain-hero.jpg",
-      "fonte": "dashboard_assets/circuit/bahrain-hero.jpg",
-      "modo": "copia",
-      "sha256_destino": "953e1b94d2abe2d254b19465c29884268a9a02c246949694fc09c3c61510bd45",
-      "sha256_origem": "953e1b94d2abe2d254b19465c29884268a9a02c246949694fc09c3c61510bd45"
-    },
-    {
       "caminho": "dashboard_assets/circuit/bahrain-layout.svg",
       "fonte": "dashboard_assets/circuit/bahrain-layout.svg",
       "modo": "copia",
@@ -186,11 +179,18 @@
       "sha256_origem": "a2dc8664fa3ab5dd1505be7d9329e399b38b1e9a3f8d5386b6166fbd316ecf4a"
     },
     {
+      "caminho": "dashboard_assets/circuit/bahrain-start-2025.webp",
+      "fonte": "dashboard_assets/circuit/bahrain-start-2025.webp",
+      "modo": "copia",
+      "sha256_destino": "20257a7ac468c4fcdf99145b51f5bfb693c073baaf7cb1d31e33b4400115ff3f",
+      "sha256_origem": "20257a7ac468c4fcdf99145b51f5bfb693c073baaf7cb1d31e33b4400115ff3f"
+    },
+    {
       "caminho": "dashboard_assets/circuit/baku-hero.jpg",
       "fonte": "dashboard_assets/circuit/baku-hero.jpg",
       "modo": "copia",
-      "sha256_destino": "5416d33edaea5fe95533b0a50e46aeda9e6fcab9d2c6d7dd83d04536d89b395c",
-      "sha256_origem": "5416d33edaea5fe95533b0a50e46aeda9e6fcab9d2c6d7dd83d04536d89b395c"
+      "sha256_destino": "6a7e3fd15872a65e6360b8b7780b4cdeccb9d38715fe14ff8489ff02b4c13c98",
+      "sha256_origem": "6a7e3fd15872a65e6360b8b7780b4cdeccb9d38715fe14ff8489ff02b4c13c98"
     },
     {
       "caminho": "dashboard_assets/circuit/baku-layout.svg",
@@ -203,15 +203,8 @@
       "caminho": "dashboard_assets/circuit/catalogo_visual.json",
       "fonte": "dashboard_assets/circuit/catalogo_visual.json",
       "modo": "copia",
-      "sha256_destino": "5df5e4518c5db6311f7657e5e6627ded846cbeddbc11d61739d9a0296453e193",
-      "sha256_origem": "5df5e4518c5db6311f7657e5e6627ded846cbeddbc11d61739d9a0296453e193"
-    },
-    {
-      "caminho": "dashboard_assets/circuit/catalunya-hero.jpg",
-      "fonte": "dashboard_assets/circuit/catalunya-hero.jpg",
-      "modo": "copia",
-      "sha256_destino": "b0a4a6ff1769984784e139ae9ff4987d322903d5ed80d50713b82e1f9c30f991",
-      "sha256_origem": "b0a4a6ff1769984784e139ae9ff4987d322903d5ed80d50713b82e1f9c30f991"
+      "sha256_destino": "c186faa49040e66054490f28891fe7d6da9248f0285b8abc29bb02efa44bc64d",
+      "sha256_origem": "c186faa49040e66054490f28891fe7d6da9248f0285b8abc29bb02efa44bc64d"
     },
     {
       "caminho": "dashboard_assets/circuit/catalunya-layout.svg",
@@ -221,11 +214,18 @@
       "sha256_origem": "8a0884bdfbccc70a37667ad6e1a08b0a4a1f5929391f791506fb063125d1cbbd"
     },
     {
-      "caminho": "dashboard_assets/circuit/hungaroring-hero.jpg",
-      "fonte": "dashboard_assets/circuit/hungaroring-hero.jpg",
+      "caminho": "dashboard_assets/circuit/catalunya-start-2025.webp",
+      "fonte": "dashboard_assets/circuit/catalunya-start-2025.webp",
       "modo": "copia",
-      "sha256_destino": "353334bea1a48a71b5ccf5830c5c3695533b7538c9ee250756d8386b5577f134",
-      "sha256_origem": "353334bea1a48a71b5ccf5830c5c3695533b7538c9ee250756d8386b5577f134"
+      "sha256_destino": "21fa0387893356e75575879a5418126e42cbb61c9d34b586d42ccc736a260e3e",
+      "sha256_origem": "21fa0387893356e75575879a5418126e42cbb61c9d34b586d42ccc736a260e3e"
+    },
+    {
+      "caminho": "dashboard_assets/circuit/hungaroring-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/hungaroring-f1-2025.webp",
+      "modo": "copia",
+      "sha256_destino": "6e95868178ed3eb9b64b35cffdf5b13cba7008126f76b6beef439944ff74ad18",
+      "sha256_origem": "6e95868178ed3eb9b64b35cffdf5b13cba7008126f76b6beef439944ff74ad18"
     },
     {
       "caminho": "dashboard_assets/circuit/hungaroring-layout.svg",
@@ -238,8 +238,8 @@
       "caminho": "dashboard_assets/circuit/imola-hero.jpg",
       "fonte": "dashboard_assets/circuit/imola-hero.jpg",
       "modo": "copia",
-      "sha256_destino": "02c677299ac691c3563eaee3c6ceb5d3f7079b9878be25741775189df6e4fb16",
-      "sha256_origem": "02c677299ac691c3563eaee3c6ceb5d3f7079b9878be25741775189df6e4fb16"
+      "sha256_destino": "314cc069231a47a2f5d27b3f09e22adb9703b70c12642aa9a7042751a582611d",
+      "sha256_origem": "314cc069231a47a2f5d27b3f09e22adb9703b70c12642aa9a7042751a582611d"
     },
     {
       "caminho": "dashboard_assets/circuit/imola-layout.png",
@@ -263,11 +263,11 @@
       "sha256_origem": "76f2d6ac6627586248d65a9bfe252dcc3e7d218593aa718464c72cd894dd4dc1"
     },
     {
-      "caminho": "dashboard_assets/circuit/jeddah-hero.png",
-      "fonte": "dashboard_assets/circuit/jeddah-hero.png",
+      "caminho": "dashboard_assets/circuit/jeddah-2025.webp",
+      "fonte": "dashboard_assets/circuit/jeddah-2025.webp",
       "modo": "copia",
-      "sha256_destino": "62e66ce9f353d9b6eac815191ffc2da28e476cff438031fb6a3b9ef49470f177",
-      "sha256_origem": "62e66ce9f353d9b6eac815191ffc2da28e476cff438031fb6a3b9ef49470f177"
+      "sha256_destino": "868d65041d02db48e78645bece6a2b5c9f0f08922bd9a416c541af53cc64583a",
+      "sha256_origem": "868d65041d02db48e78645bece6a2b5c9f0f08922bd9a416c541af53cc64583a"
     },
     {
       "caminho": "dashboard_assets/circuit/jeddah-layout.svg",
@@ -277,11 +277,11 @@
       "sha256_origem": "998102ac05a9b474e08c13eafbcbba7a9cddf22f1204aa3a8c7a49d5732cc8ef"
     },
     {
-      "caminho": "dashboard_assets/circuit/losail-hero.jpg",
-      "fonte": "dashboard_assets/circuit/losail-hero.jpg",
+      "caminho": "dashboard_assets/circuit/losail-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/losail-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "e56514237dd81fea921043595da72c802939cb5aad0b2055674e800f3b81ee1e",
-      "sha256_origem": "e56514237dd81fea921043595da72c802939cb5aad0b2055674e800f3b81ee1e"
+      "sha256_destino": "41724ef3de0c0ff5af03cb74dffb0c252e4f511eab9a74a3db9f9d84006bc464",
+      "sha256_origem": "41724ef3de0c0ff5af03cb74dffb0c252e4f511eab9a74a3db9f9d84006bc464"
     },
     {
       "caminho": "dashboard_assets/circuit/losail-layout.svg",
@@ -291,11 +291,11 @@
       "sha256_origem": "9c928681d957f6dd007f95d036caad74d940a7bbff95e03654ce91ea2d45483f"
     },
     {
-      "caminho": "dashboard_assets/circuit/madring-hero.jpg",
-      "fonte": "dashboard_assets/circuit/madring-hero.jpg",
+      "caminho": "dashboard_assets/circuit/madring-f1-2026.webp",
+      "fonte": "dashboard_assets/circuit/madring-f1-2026.webp",
       "modo": "copia",
-      "sha256_destino": "23d37ff979b3f55236ca6a25ac44fb2cd1b123b930554283aa90f0b6978a8384",
-      "sha256_origem": "23d37ff979b3f55236ca6a25ac44fb2cd1b123b930554283aa90f0b6978a8384"
+      "sha256_destino": "d8f60a356b92948ba68aff46b9976155164a0dbed0c0660fcbf7c8a17b69d3f0",
+      "sha256_origem": "d8f60a356b92948ba68aff46b9976155164a0dbed0c0660fcbf7c8a17b69d3f0"
     },
     {
       "caminho": "dashboard_assets/circuit/madring-layout.svg",
@@ -308,8 +308,8 @@
       "caminho": "dashboard_assets/circuit/marina_bay-hero.jpg",
       "fonte": "dashboard_assets/circuit/marina_bay-hero.jpg",
       "modo": "copia",
-      "sha256_destino": "f0ed75c782eda3168598c3e3e5a89a1be6dc33dda7202195259e06820627e335",
-      "sha256_origem": "f0ed75c782eda3168598c3e3e5a89a1be6dc33dda7202195259e06820627e335"
+      "sha256_destino": "f448b56c4a6b79dc07e9b7c96c92edb109dfa574f8261c5830cfdbf2308541bb",
+      "sha256_origem": "f448b56c4a6b79dc07e9b7c96c92edb109dfa574f8261c5830cfdbf2308541bb"
     },
     {
       "caminho": "dashboard_assets/circuit/marina_bay-layout.svg",
@@ -333,11 +333,11 @@
       "sha256_origem": "ff01575a29f793f00838da7229e5ac21d74eae3ef78ffffe7fe55d9de9a705c2"
     },
     {
-      "caminho": "dashboard_assets/circuit/monaco-hero.jpg",
-      "fonte": "dashboard_assets/circuit/monaco-hero.jpg",
+      "caminho": "dashboard_assets/circuit/monaco-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/monaco-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "d1ed060f1817c672e8a0530b6dddff6f66cd9c90fb625ad9c5bc91a200457532",
-      "sha256_origem": "d1ed060f1817c672e8a0530b6dddff6f66cd9c90fb625ad9c5bc91a200457532"
+      "sha256_destino": "868e9a96a8f0135ad4cdd93b25a257c00a336b683708cfc95c694c7bd04b4225",
+      "sha256_origem": "868e9a96a8f0135ad4cdd93b25a257c00a336b683708cfc95c694c7bd04b4225"
     },
     {
       "caminho": "dashboard_assets/circuit/monaco-layout.svg",
@@ -350,8 +350,8 @@
       "caminho": "dashboard_assets/circuit/monza-hero.jpg",
       "fonte": "dashboard_assets/circuit/monza-hero.jpg",
       "modo": "copia",
-      "sha256_destino": "f089e21a6d457df400b59e29e10dd495afc38d665ff7fbc798409cc79377bc98",
-      "sha256_origem": "f089e21a6d457df400b59e29e10dd495afc38d665ff7fbc798409cc79377bc98"
+      "sha256_destino": "889d9da38c7328dc1050fd27b43663fa02d48c1db0a6746f95ce3381516a2c07",
+      "sha256_origem": "889d9da38c7328dc1050fd27b43663fa02d48c1db0a6746f95ce3381516a2c07"
     },
     {
       "caminho": "dashboard_assets/circuit/monza-layout.png",
@@ -361,11 +361,11 @@
       "sha256_origem": "44e70f813da10649c3a68c9487443f4d199fdcbfe5a3d32d33fed2c30127d3d0"
     },
     {
-      "caminho": "dashboard_assets/circuit/red_bull_ring-hero.jpg",
-      "fonte": "dashboard_assets/circuit/red_bull_ring-hero.jpg",
+      "caminho": "dashboard_assets/circuit/red_bull_ring-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/red_bull_ring-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "91adb2f77171a8c56ca9721d581ddf927e7d37a74be3fce9ea6f98867263e1b5",
-      "sha256_origem": "91adb2f77171a8c56ca9721d581ddf927e7d37a74be3fce9ea6f98867263e1b5"
+      "sha256_destino": "74a710cfccb0c5df1271396046b85024d1b1de61f803c637994282ce1021551a",
+      "sha256_origem": "74a710cfccb0c5df1271396046b85024d1b1de61f803c637994282ce1021551a"
     },
     {
       "caminho": "dashboard_assets/circuit/red_bull_ring-layout.svg",
@@ -375,11 +375,11 @@
       "sha256_origem": "682d19a8cbad221cbfd09f96ac0baacee578fd50ace489caefb634effec91259"
     },
     {
-      "caminho": "dashboard_assets/circuit/rodriguez-hero.jpg",
-      "fonte": "dashboard_assets/circuit/rodriguez-hero.jpg",
+      "caminho": "dashboard_assets/circuit/rodriguez-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/rodriguez-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "7ffed28061d4ceadd56bae210b4285d911c29736026717b36039f6c21d655033",
-      "sha256_origem": "7ffed28061d4ceadd56bae210b4285d911c29736026717b36039f6c21d655033"
+      "sha256_destino": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+      "sha256_origem": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e"
     },
     {
       "caminho": "dashboard_assets/circuit/rodriguez-layout.png",
@@ -389,11 +389,11 @@
       "sha256_origem": "b2dea8f229dfd52976380728f848e5760eda771ee99e1c0a54100854fb92b8bc"
     },
     {
-      "caminho": "dashboard_assets/circuit/sepang-hero.jpg",
-      "fonte": "dashboard_assets/circuit/sepang-hero.jpg",
+      "caminho": "dashboard_assets/circuit/sepang-f1-2026.webp",
+      "fonte": "dashboard_assets/circuit/sepang-f1-2026.webp",
       "modo": "copia",
-      "sha256_destino": "6cc1388a9408c6a92f4e7f83fc79c5d1e07f698ffa5e6f1def6e68c2d140635a",
-      "sha256_origem": "6cc1388a9408c6a92f4e7f83fc79c5d1e07f698ffa5e6f1def6e68c2d140635a"
+      "sha256_destino": "ac9fbb9f23650f422121c0a21f1e434d40920900e2ea20655087bb2ad047ebfe",
+      "sha256_origem": "ac9fbb9f23650f422121c0a21f1e434d40920900e2ea20655087bb2ad047ebfe"
     },
     {
       "caminho": "dashboard_assets/circuit/sepang-layout.svg",
@@ -403,11 +403,11 @@
       "sha256_origem": "65beb77b58f504ee57ea1ef9360659985b8c6cdadd36b8648320aef46e5f5749"
     },
     {
-      "caminho": "dashboard_assets/circuit/shanghai-hero.jpg",
-      "fonte": "dashboard_assets/circuit/shanghai-hero.jpg",
+      "caminho": "dashboard_assets/circuit/shanghai-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/shanghai-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "f4ce249bc4b7d6c9099303fe7b9afe7006756dff072626dae7fe09e31da869ce",
-      "sha256_origem": "f4ce249bc4b7d6c9099303fe7b9afe7006756dff072626dae7fe09e31da869ce"
+      "sha256_destino": "c31eed8c8e96c97c5de137101f3acc4df49b9be19b0fd16870dd1b8ffc3b489b",
+      "sha256_origem": "c31eed8c8e96c97c5de137101f3acc4df49b9be19b0fd16870dd1b8ffc3b489b"
     },
     {
       "caminho": "dashboard_assets/circuit/shanghai-layout.svg",
@@ -417,11 +417,11 @@
       "sha256_origem": "6e12b3eb7a99f51497d75b8d0d35a87353677806bbebad4f5c7ef4522a5c18c0"
     },
     {
-      "caminho": "dashboard_assets/circuit/silverstone-hero.jpg",
-      "fonte": "dashboard_assets/circuit/silverstone-hero.jpg",
+      "caminho": "dashboard_assets/circuit/silverstone-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/silverstone-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "79be9943ccb3ae221d5f3e91183304c1e2325f82b680a75971b6568773a4814d",
-      "sha256_origem": "79be9943ccb3ae221d5f3e91183304c1e2325f82b680a75971b6568773a4814d"
+      "sha256_destino": "0b82ef0a5dd874e56018bd74bb6d52388203d330ef8463aa7f39438a6c47c0dd",
+      "sha256_origem": "0b82ef0a5dd874e56018bd74bb6d52388203d330ef8463aa7f39438a6c47c0dd"
     },
     {
       "caminho": "dashboard_assets/circuit/silverstone-layout.svg",
@@ -431,11 +431,11 @@
       "sha256_origem": "1b472c27da59cb1eec7d2a68d03c8037da2b4b9cdb3ad5ecd57f48d6bf4067ad"
     },
     {
-      "caminho": "dashboard_assets/circuit/spa-hero.jpg",
-      "fonte": "dashboard_assets/circuit/spa-hero.jpg",
+      "caminho": "dashboard_assets/circuit/spa-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/spa-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "1ee27cd0d3c2e9457359d795aad5004e0b7e68885c109a69e0a2a41f3827c347",
-      "sha256_origem": "1ee27cd0d3c2e9457359d795aad5004e0b7e68885c109a69e0a2a41f3827c347"
+      "sha256_destino": "3aa23ed6bd302fb46a29f0bd67111adfe0299a45b80637d336733e2df3b888d4",
+      "sha256_origem": "3aa23ed6bd302fb46a29f0bd67111adfe0299a45b80637d336733e2df3b888d4"
     },
     {
       "caminho": "dashboard_assets/circuit/spa-layout.png",
@@ -445,11 +445,11 @@
       "sha256_origem": "41f64f4d4269c656445f759a16b3ba0028b8d0f6c7391639d7fb502aa177f69a"
     },
     {
-      "caminho": "dashboard_assets/circuit/suzuka-hero.jpg",
-      "fonte": "dashboard_assets/circuit/suzuka-hero.jpg",
+      "caminho": "dashboard_assets/circuit/suzuka-alternative.webp",
+      "fonte": "dashboard_assets/circuit/suzuka-alternative.webp",
       "modo": "copia",
-      "sha256_destino": "5c47ea4576839f0d705039ef2977b5f6c66dd51c90d4af172a2fea23e55140b5",
-      "sha256_origem": "5c47ea4576839f0d705039ef2977b5f6c66dd51c90d4af172a2fea23e55140b5"
+      "sha256_destino": "f76a7574b243b9870712e9af80dae81bfbbd7a7b801a3278ac03bd988323c1dd",
+      "sha256_origem": "f76a7574b243b9870712e9af80dae81bfbbd7a7b801a3278ac03bd988323c1dd"
     },
     {
       "caminho": "dashboard_assets/circuit/suzuka-layout.svg",
@@ -459,11 +459,11 @@
       "sha256_origem": "063ee5111f5a52f1d45f7c31d89fe5a850a75ae54e41a67eb23a7f099c43c8d6"
     },
     {
-      "caminho": "dashboard_assets/circuit/vegas-hero.jpg",
-      "fonte": "dashboard_assets/circuit/vegas-hero.jpg",
+      "caminho": "dashboard_assets/circuit/vegas-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/vegas-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "51dc96083a9374d3b9eebb48bffb7385d6644d821438cd0a8581626b479ed1c4",
-      "sha256_origem": "51dc96083a9374d3b9eebb48bffb7385d6644d821438cd0a8581626b479ed1c4"
+      "sha256_destino": "17d331f131907087c1c71582a79a8017c9eeac3ddcece6b715b971b9dfe783c3",
+      "sha256_origem": "17d331f131907087c1c71582a79a8017c9eeac3ddcece6b715b971b9dfe783c3"
     },
     {
       "caminho": "dashboard_assets/circuit/vegas-layout.png",
@@ -473,11 +473,11 @@
       "sha256_origem": "176f6b136aa100f871f2e3655ab29dbd9cb5c10eae6bb9ba51f3c9f941c29a79"
     },
     {
-      "caminho": "dashboard_assets/circuit/villeneuve-hero.jpg",
-      "fonte": "dashboard_assets/circuit/villeneuve-hero.jpg",
+      "caminho": "dashboard_assets/circuit/villeneuve-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/villeneuve-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "5e66887e09f12a79b2b1cd6fc688ca99d86523b551e2aa0554ef1e90d3bfe7a5",
-      "sha256_origem": "5e66887e09f12a79b2b1cd6fc688ca99d86523b551e2aa0554ef1e90d3bfe7a5"
+      "sha256_destino": "34e5d72ae4def950a3080d9a9817d1dcc0c1c4e5ef1bbccd13dcd7785f751682",
+      "sha256_origem": "34e5d72ae4def950a3080d9a9817d1dcc0c1c4e5ef1bbccd13dcd7785f751682"
     },
     {
       "caminho": "dashboard_assets/circuit/villeneuve-layout.svg",
@@ -487,11 +487,11 @@
       "sha256_origem": "0c2782dd150add22cc12ad696491ccc749920a260fbf80833dbda7887049ecaa"
     },
     {
-      "caminho": "dashboard_assets/circuit/yas_marina-hero.jpg",
-      "fonte": "dashboard_assets/circuit/yas_marina-hero.jpg",
+      "caminho": "dashboard_assets/circuit/yas_marina-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/yas_marina-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "7a6e999d33a7756ebbe467b09fdeec207d8a213d531bb34202398697100817a2",
-      "sha256_origem": "7a6e999d33a7756ebbe467b09fdeec207d8a213d531bb34202398697100817a2"
+      "sha256_destino": "6e54dd6dbaa23cbe467aac4f21725e0eb75ea943639576af4fd1f308d8618e1e",
+      "sha256_origem": "6e54dd6dbaa23cbe467aac4f21725e0eb75ea943639576af4fd1f308d8618e1e"
     },
     {
       "caminho": "dashboard_assets/circuit/yas_marina-layout.svg",
@@ -501,11 +501,11 @@
       "sha256_origem": "a44c69641de8d19a1deaaae20e52d4b9e75d8b231f62a1b22ce8b111ad075293"
     },
     {
-      "caminho": "dashboard_assets/circuit/zandvoort-hero.jpg",
-      "fonte": "dashboard_assets/circuit/zandvoort-hero.jpg",
+      "caminho": "dashboard_assets/circuit/zandvoort-f1-2025.webp",
+      "fonte": "dashboard_assets/circuit/zandvoort-f1-2025.webp",
       "modo": "copia",
-      "sha256_destino": "384c073467a3b80fd14e94a89f2c910ff8382b11d87c39cb507adb8a9f3114cf",
-      "sha256_origem": "384c073467a3b80fd14e94a89f2c910ff8382b11d87c39cb507adb8a9f3114cf"
+      "sha256_destino": "c0ec82df41d2171a4b4b7c38ac506aa6f02d8ca2b7a74bf86515298c4ee58274",
+      "sha256_origem": "c0ec82df41d2171a4b4b7c38ac506aa6f02d8ca2b7a74bf86515298c4ee58274"
     },
     {
       "caminho": "dashboard_assets/circuit/zandvoort-layout.svg",
@@ -518,8 +518,8 @@
       "caminho": "dashboard_assets/fan/ATTRIBUTION.md",
       "fonte": "dashboard_assets/fan/ATTRIBUTION.md",
       "modo": "copia",
-      "sha256_destino": "f424ee6f47bfd826a09e323867cea7c3c1ff164c58def476379d0cbdf7615457",
-      "sha256_origem": "f424ee6f47bfd826a09e323867cea7c3c1ff164c58def476379d0cbdf7615457"
+      "sha256_destino": "16829c8673b2bc570ecd96fcf7ffe6dc08748ca54c5a379c2b776f178f58b662",
+      "sha256_origem": "16829c8673b2bc570ecd96fcf7ffe6dc08748ca54c5a379c2b776f178f58b662"
     },
     {
       "caminho": "dashboard_assets/fan/banner-norris.png",
@@ -541,6 +541,13 @@
       "modo": "copia",
       "sha256_destino": "12a245fcafb3c8f19db4acdd79480ed8fa9973b85c82ca884a095b10ef8731e7",
       "sha256_origem": "12a245fcafb3c8f19db4acdd79480ed8fa9973b85c82ca884a095b10ef8731e7"
+    },
+    {
+      "caminho": "dashboard_assets/fan/hero_catalog.json",
+      "fonte": "dashboard_assets/fan/hero_catalog.json",
+      "modo": "copia",
+      "sha256_destino": "3a7d1a9afeba8c0ab735e18ed629bdc2a59342eb3873a54d3c020315f62c9a3d",
+      "sha256_origem": "3a7d1a9afeba8c0ab735e18ed629bdc2a59342eb3873a54d3c020315f62c9a3d"
     },
     {
       "caminho": "dashboard_assets/fan/logos/alpine.svg",
@@ -585,6 +592,13 @@
       "sha256_origem": "95b6fc6a8ebe8ac13b1736522a447975848ac9d4aaa05451c52b810698d3a15b"
     },
     {
+      "caminho": "dashboard_assets/fan/logos/mclaren-swoosh.svg",
+      "fonte": "dashboard_assets/fan/logos/mclaren-swoosh.svg",
+      "modo": "copia",
+      "sha256_destino": "8f396d88281b1024749038fbc6f10ffc4242bfee33ed4a5dc867c28a1c182659",
+      "sha256_origem": "8f396d88281b1024749038fbc6f10ffc4242bfee33ed4a5dc867c28a1c182659"
+    },
+    {
       "caminho": "dashboard_assets/fan/logos/mclaren.svg",
       "fonte": "dashboard_assets/fan/logos/mclaren.svg",
       "modo": "copia",
@@ -620,207 +634,249 @@
       "sha256_origem": "dda3692e636e0737d4b5bc0b2911431959e24f0f8785c813cd19c621419321d0"
     },
     {
+      "caminho": "dashboard_assets/fan/photos/antonelli-cockpit-mercedes.jpg",
+      "fonte": "dashboard_assets/fan/photos/antonelli-cockpit-mercedes.jpg",
+      "modo": "copia",
+      "sha256_destino": "9776d0597fe66dff26cec778429d449dd29d4d7c37491843ee900af8b6b4f409",
+      "sha256_origem": "9776d0597fe66dff26cec778429d449dd29d4d7c37491843ee900af8b6b4f409"
+    },
+    {
+      "caminho": "dashboard_assets/fan/photos/hamilton-bahrain-2025.webp",
+      "fonte": "dashboard_assets/fan/photos/hamilton-bahrain-2025.webp",
+      "modo": "copia",
+      "sha256_destino": "97b42c7afea07d1de0ea31bb962e2d9ca7561e8aaea8b97eee39374f4217a3a8",
+      "sha256_origem": "97b42c7afea07d1de0ea31bb962e2d9ca7561e8aaea8b97eee39374f4217a3a8"
+    },
+    {
+      "caminho": "dashboard_assets/fan/photos/piastri-silverstone-2024.jpg",
+      "fonte": "dashboard_assets/fan/photos/piastri-silverstone-2024.jpg",
+      "modo": "copia",
+      "sha256_destino": "8a4dec17b22b0466a784b547c3d7cbb621931ee8ae88b04ed1663ccd3ced8d03",
+      "sha256_origem": "8a4dec17b22b0466a784b547c3d7cbb621931ee8ae88b04ed1663ccd3ced8d03"
+    },
+    {
+      "caminho": "dashboard_assets/fan/photos/ricciardo-miami-2024-original.webp",
+      "fonte": "dashboard_assets/fan/photos/ricciardo-miami-2024-original.webp",
+      "modo": "copia",
+      "sha256_destino": "d45309c1791dd091ab17b2a62702cab850fc9df939051ea1a46b5da24e92c456",
+      "sha256_origem": "d45309c1791dd091ab17b2a62702cab850fc9df939051ea1a46b5da24e92c456"
+    },
+    {
+      "caminho": "dashboard_assets/fan/photos/verstappen-silverstone-2024.jpg",
+      "fonte": "dashboard_assets/fan/photos/verstappen-silverstone-2024.jpg",
+      "modo": "copia",
+      "sha256_destino": "92b949f0d2e8183cb236053fdc1f3d3ee9c59a9603c350a90c6408ae6c071d2e",
+      "sha256_origem": "92b949f0d2e8183cb236053fdc1f3d3ee9c59a9603c350a90c6408ae6c071d2e"
+    },
+    {
       "caminho": "dashboard_assets/fan/portraits/albon.png",
       "fonte": "dashboard_assets/fan/portraits/albon.png",
       "modo": "copia",
-      "sha256_destino": "05537cc221077f6f58d8b6058187cdce701bfedf454442f9e90c77059a2c15fb",
-      "sha256_origem": "05537cc221077f6f58d8b6058187cdce701bfedf454442f9e90c77059a2c15fb"
+      "sha256_destino": "d4c5d750c98fcf741b5b9f95d0c7a1b240b02b1eeb0ba84961a20725e7876d8e",
+      "sha256_origem": "d4c5d750c98fcf741b5b9f95d0c7a1b240b02b1eeb0ba84961a20725e7876d8e"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/alonso.png",
       "fonte": "dashboard_assets/fan/portraits/alonso.png",
       "modo": "copia",
-      "sha256_destino": "1afc6c928342cf7530a4f4493c0b0f69fb9486bbe9fbc5b6ca660757e28190a4",
-      "sha256_origem": "1afc6c928342cf7530a4f4493c0b0f69fb9486bbe9fbc5b6ca660757e28190a4"
+      "sha256_destino": "ad868baf128d8d753e08eba802ead780be331b3b9cfe3448e3e3930cf7b951ab",
+      "sha256_origem": "ad868baf128d8d753e08eba802ead780be331b3b9cfe3448e3e3930cf7b951ab"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/antonelli.png",
       "fonte": "dashboard_assets/fan/portraits/antonelli.png",
       "modo": "copia",
-      "sha256_destino": "4442e3a3bfc539643a9272fc2f139c3e9516e2a6020eaddf3ccf56b88b6b24e0",
-      "sha256_origem": "4442e3a3bfc539643a9272fc2f139c3e9516e2a6020eaddf3ccf56b88b6b24e0"
+      "sha256_destino": "f9fc5765b1a99a5cb9dcbb12a4572c7feeaf39eee0f73ae9a604dcd5503c63f1",
+      "sha256_origem": "f9fc5765b1a99a5cb9dcbb12a4572c7feeaf39eee0f73ae9a604dcd5503c63f1"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/arvid_lindblad.png",
       "fonte": "dashboard_assets/fan/portraits/arvid_lindblad.png",
       "modo": "copia",
-      "sha256_destino": "2e3ae06f12c0191dcb37d690db912789704adab171daf74bb87ef2225a281c78",
-      "sha256_origem": "2e3ae06f12c0191dcb37d690db912789704adab171daf74bb87ef2225a281c78"
+      "sha256_destino": "c3defa70432244f39dc47677a8639e1c6349d598888a809aaa3e838770dfbbb2",
+      "sha256_origem": "c3defa70432244f39dc47677a8639e1c6349d598888a809aaa3e838770dfbbb2"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/bearman.png",
       "fonte": "dashboard_assets/fan/portraits/bearman.png",
       "modo": "copia",
-      "sha256_destino": "18b8b66ef2498566c8a00ec099a2d17a9084ccfcf08025d567db220abe418d74",
-      "sha256_origem": "18b8b66ef2498566c8a00ec099a2d17a9084ccfcf08025d567db220abe418d74"
+      "sha256_destino": "f7c85eb04ac17168c80658e81cba7969c365cec62e2998f14428167bd6559011",
+      "sha256_origem": "f7c85eb04ac17168c80658e81cba7969c365cec62e2998f14428167bd6559011"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/bortoleto.png",
       "fonte": "dashboard_assets/fan/portraits/bortoleto.png",
       "modo": "copia",
-      "sha256_destino": "d680f2a4d227ca1729394608f8f2c5bb785276626555f8fe11912fb9113b03e1",
-      "sha256_origem": "d680f2a4d227ca1729394608f8f2c5bb785276626555f8fe11912fb9113b03e1"
+      "sha256_destino": "7ffd3f06696e42503d365e8e8b51da64accb1ac13b85d9216edd94330ce58b96",
+      "sha256_origem": "7ffd3f06696e42503d365e8e8b51da64accb1ac13b85d9216edd94330ce58b96"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/bottas.png",
       "fonte": "dashboard_assets/fan/portraits/bottas.png",
       "modo": "copia",
-      "sha256_destino": "7ac63d9d062ef2286c38926fc2d07483a76e5ad4a5a17021ed7950ef01986fad",
-      "sha256_origem": "7ac63d9d062ef2286c38926fc2d07483a76e5ad4a5a17021ed7950ef01986fad"
+      "sha256_destino": "f47482b87f87d811fe6018eae0757f23913ac88fb50beaee540404f54f4c8e29",
+      "sha256_origem": "f47482b87f87d811fe6018eae0757f23913ac88fb50beaee540404f54f4c8e29"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/colapinto.png",
       "fonte": "dashboard_assets/fan/portraits/colapinto.png",
       "modo": "copia",
-      "sha256_destino": "8aba2241151307bd88aab5877ff69f64da786c308eea0b00577cee8a47b814bc",
-      "sha256_origem": "8aba2241151307bd88aab5877ff69f64da786c308eea0b00577cee8a47b814bc"
+      "sha256_destino": "733e440a74900668f6cb2f62e28cb1faff10d301ed5743ad528f934e1564aa40",
+      "sha256_origem": "733e440a74900668f6cb2f62e28cb1faff10d301ed5743ad528f934e1564aa40"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/doohan.png",
       "fonte": "dashboard_assets/fan/portraits/doohan.png",
       "modo": "copia",
-      "sha256_destino": "72561507c66a181883e7743b6277cef272774061af3b3b672d7d29c09ae56673",
-      "sha256_origem": "72561507c66a181883e7743b6277cef272774061af3b3b672d7d29c09ae56673"
+      "sha256_destino": "a179429c570782c8b14129b3b9489515b3a718e63955a79afd588c7677108a11",
+      "sha256_origem": "a179429c570782c8b14129b3b9489515b3a718e63955a79afd588c7677108a11"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/gasly.png",
       "fonte": "dashboard_assets/fan/portraits/gasly.png",
       "modo": "copia",
-      "sha256_destino": "411f61594a0beb97cb74a8536d67a7502e5e25242ba67c4d3744d8a48191097e",
-      "sha256_origem": "411f61594a0beb97cb74a8536d67a7502e5e25242ba67c4d3744d8a48191097e"
+      "sha256_destino": "585a0c0d09db7f8336f1eef15f318bb005a02ee8798f00b1fce3c40fb1682e42",
+      "sha256_origem": "585a0c0d09db7f8336f1eef15f318bb005a02ee8798f00b1fce3c40fb1682e42"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/hadjar.png",
       "fonte": "dashboard_assets/fan/portraits/hadjar.png",
       "modo": "copia",
-      "sha256_destino": "a7a217bf1ae90aa918a30639930d91da22d09ff6f8e4cbd05829836d2c71ad05",
-      "sha256_origem": "a7a217bf1ae90aa918a30639930d91da22d09ff6f8e4cbd05829836d2c71ad05"
+      "sha256_destino": "75e63f3f5c6a39ddba8f2279129bcf3f753635073d4358bd79f69b737e790206",
+      "sha256_origem": "75e63f3f5c6a39ddba8f2279129bcf3f753635073d4358bd79f69b737e790206"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/hamilton.png",
       "fonte": "dashboard_assets/fan/portraits/hamilton.png",
       "modo": "copia",
-      "sha256_destino": "f87513b244e6c10bf87f3de1aef169bbebf76f868843aac8c3a6b119c8718743",
-      "sha256_origem": "f87513b244e6c10bf87f3de1aef169bbebf76f868843aac8c3a6b119c8718743"
+      "sha256_destino": "e4715502ee61eb47edcdb6a0ad3ad1cce88a54d4cf0e4f5fc536261dd83f1b04",
+      "sha256_origem": "e4715502ee61eb47edcdb6a0ad3ad1cce88a54d4cf0e4f5fc536261dd83f1b04"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/hulkenberg.png",
       "fonte": "dashboard_assets/fan/portraits/hulkenberg.png",
       "modo": "copia",
-      "sha256_destino": "9de990eb91791b11aef65557b30cb91631b47444031b91dabb4cadc48e5fbf73",
-      "sha256_origem": "9de990eb91791b11aef65557b30cb91631b47444031b91dabb4cadc48e5fbf73"
+      "sha256_destino": "5a4364c2711cd79902969cd12a9c1040db0d4cc34064eb43996bd1bd6477f663",
+      "sha256_origem": "5a4364c2711cd79902969cd12a9c1040db0d4cc34064eb43996bd1bd6477f663"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/kevin_magnussen.png",
       "fonte": "dashboard_assets/fan/portraits/kevin_magnussen.png",
       "modo": "copia",
-      "sha256_destino": "b83b24f1dcd6a88f757e5115a86ddf0cbfbc93596dda60515652e05f8d727397",
-      "sha256_origem": "b83b24f1dcd6a88f757e5115a86ddf0cbfbc93596dda60515652e05f8d727397"
+      "sha256_destino": "155dda4a2f6477aa42d6dc7cf5199deb45e0be2bc9245242416534ca0b1747e1",
+      "sha256_origem": "155dda4a2f6477aa42d6dc7cf5199deb45e0be2bc9245242416534ca0b1747e1"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/lawson.png",
       "fonte": "dashboard_assets/fan/portraits/lawson.png",
       "modo": "copia",
-      "sha256_destino": "36fd1607c9a2201bbdb17f4bc179e580973336c90e6614ee697870030f0820c4",
-      "sha256_origem": "36fd1607c9a2201bbdb17f4bc179e580973336c90e6614ee697870030f0820c4"
+      "sha256_destino": "8fdd09ac038143820456068ef771fc0e89a01910a53e49084c9453124621f5b9",
+      "sha256_origem": "8fdd09ac038143820456068ef771fc0e89a01910a53e49084c9453124621f5b9"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/leclerc.png",
       "fonte": "dashboard_assets/fan/portraits/leclerc.png",
       "modo": "copia",
-      "sha256_destino": "03bbb9e7fdb329d08a59063f386c0d2b57ef1314148c91091bea8ce70363c2a9",
-      "sha256_origem": "03bbb9e7fdb329d08a59063f386c0d2b57ef1314148c91091bea8ce70363c2a9"
+      "sha256_destino": "88fae2b7c455f07f21733f01cf47f0fa5a4e93a1cd3a43f50a186a8446496293",
+      "sha256_origem": "88fae2b7c455f07f21733f01cf47f0fa5a4e93a1cd3a43f50a186a8446496293"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/max_verstappen.png",
       "fonte": "dashboard_assets/fan/portraits/max_verstappen.png",
       "modo": "copia",
-      "sha256_destino": "bf265569517ea25441967068b30627c58cdaa75f88138cffe62b9cdcc3ba9e79",
-      "sha256_origem": "bf265569517ea25441967068b30627c58cdaa75f88138cffe62b9cdcc3ba9e79"
+      "sha256_destino": "8f265b3d7de7ca041d38d2afd539ae3a39e97165a29c2858fae2cc4af2178124",
+      "sha256_origem": "8f265b3d7de7ca041d38d2afd539ae3a39e97165a29c2858fae2cc4af2178124"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/norris.png",
       "fonte": "dashboard_assets/fan/portraits/norris.png",
       "modo": "copia",
-      "sha256_destino": "82d2027d23029c7086e9b21b70d8484c9486fb604fd9c9f27daf23cbc5b4baf8",
-      "sha256_origem": "82d2027d23029c7086e9b21b70d8484c9486fb604fd9c9f27daf23cbc5b4baf8"
+      "sha256_destino": "5de64fb3a18e392eb9fa1d7a982038d6ebe287d2d8c347a109f1081cbf051bdd",
+      "sha256_origem": "5de64fb3a18e392eb9fa1d7a982038d6ebe287d2d8c347a109f1081cbf051bdd"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/ocon.png",
       "fonte": "dashboard_assets/fan/portraits/ocon.png",
       "modo": "copia",
-      "sha256_destino": "4ee1da0d5576332246de5d19a7a01379d6c9dd0e5757ec82d1c7b565c72a2318",
-      "sha256_origem": "4ee1da0d5576332246de5d19a7a01379d6c9dd0e5757ec82d1c7b565c72a2318"
+      "sha256_destino": "48c44374228c80d85f1d0d83a5ca6866cf74d5a07ac4fc1e60e8d24b18c882ef",
+      "sha256_origem": "48c44374228c80d85f1d0d83a5ca6866cf74d5a07ac4fc1e60e8d24b18c882ef"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/perez.png",
       "fonte": "dashboard_assets/fan/portraits/perez.png",
       "modo": "copia",
-      "sha256_destino": "e75421f546bc3820275abde7d54db0b948547fb0836d80c9300deb2febac2f2a",
-      "sha256_origem": "e75421f546bc3820275abde7d54db0b948547fb0836d80c9300deb2febac2f2a"
+      "sha256_destino": "a99575fc0ba85cf424d978300c067e9dd2b7f265e968d20613fdcfcb6dbb4ecc",
+      "sha256_origem": "a99575fc0ba85cf424d978300c067e9dd2b7f265e968d20613fdcfcb6dbb4ecc"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/piastri.png",
       "fonte": "dashboard_assets/fan/portraits/piastri.png",
       "modo": "copia",
-      "sha256_destino": "f3d1ae78b69ec1cb253fc471f3b2026a492229122e9b5078b7ef6a1d50455c46",
-      "sha256_origem": "f3d1ae78b69ec1cb253fc471f3b2026a492229122e9b5078b7ef6a1d50455c46"
+      "sha256_destino": "38e1502996f33bf08cfb4ac0ce9da34eb015aa3ed547e75b01dc1fe40b5b4e6f",
+      "sha256_origem": "38e1502996f33bf08cfb4ac0ce9da34eb015aa3ed547e75b01dc1fe40b5b4e6f"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/ricciardo.png",
       "fonte": "dashboard_assets/fan/portraits/ricciardo.png",
       "modo": "copia",
-      "sha256_destino": "fd04ac02ff727c609ff1ef26330e6d2e720b2e8065e9071dcee9689d1ab0bb16",
-      "sha256_origem": "fd04ac02ff727c609ff1ef26330e6d2e720b2e8065e9071dcee9689d1ab0bb16"
+      "sha256_destino": "2878b7fac53ba052084ab5dd3ca4022b7386429cdcd063f3b4bcff099e9b7b9f",
+      "sha256_origem": "2878b7fac53ba052084ab5dd3ca4022b7386429cdcd063f3b4bcff099e9b7b9f"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/russell.png",
       "fonte": "dashboard_assets/fan/portraits/russell.png",
       "modo": "copia",
-      "sha256_destino": "0357b045dc4d23ad79aec1cd117203ce7c380f653e83add00d1e3272d7ea04de",
-      "sha256_origem": "0357b045dc4d23ad79aec1cd117203ce7c380f653e83add00d1e3272d7ea04de"
+      "sha256_destino": "98cfb34e3405ee874832d36362db9eaf6647f8452c4ad8eada396444bb459ffb",
+      "sha256_origem": "98cfb34e3405ee874832d36362db9eaf6647f8452c4ad8eada396444bb459ffb"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/ryo_hirakawa.jpg",
+      "fonte": "dashboard_assets/fan/portraits/ryo_hirakawa.jpg",
+      "modo": "copia",
+      "sha256_destino": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "sha256_origem": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/sainz.png",
       "fonte": "dashboard_assets/fan/portraits/sainz.png",
       "modo": "copia",
-      "sha256_destino": "27161a1826e6078dfc21e5b25a4b9454a4be60db62978e834e3e338744b72265",
-      "sha256_origem": "27161a1826e6078dfc21e5b25a4b9454a4be60db62978e834e3e338744b72265"
+      "sha256_destino": "47aadb98aeeb046521a9fb84879fd561ee2db8710ce4ddbde7066a4fbaa0706d",
+      "sha256_origem": "47aadb98aeeb046521a9fb84879fd561ee2db8710ce4ddbde7066a4fbaa0706d"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/sargeant.png",
       "fonte": "dashboard_assets/fan/portraits/sargeant.png",
       "modo": "copia",
-      "sha256_destino": "64b66761765d39f8a51b5ddcf26f22ca87e568755fc65a67c73129ef7dcdb23f",
-      "sha256_origem": "64b66761765d39f8a51b5ddcf26f22ca87e568755fc65a67c73129ef7dcdb23f"
+      "sha256_destino": "330394fe4fa541fc13d994f2059b940b916213d159ddb96587a3e7b89d1e691e",
+      "sha256_origem": "330394fe4fa541fc13d994f2059b940b916213d159ddb96587a3e7b89d1e691e"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/stroll.png",
       "fonte": "dashboard_assets/fan/portraits/stroll.png",
       "modo": "copia",
-      "sha256_destino": "4c876811ffb369d330ac2e52325a3449e7d45a50ee084398645f6349ef4286ee",
-      "sha256_origem": "4c876811ffb369d330ac2e52325a3449e7d45a50ee084398645f6349ef4286ee"
+      "sha256_destino": "841bf78bafead4d1076456f2d8f85000b2dd0f2ca6a3f14d00801ae29b7c2dda",
+      "sha256_origem": "841bf78bafead4d1076456f2d8f85000b2dd0f2ca6a3f14d00801ae29b7c2dda"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/tsunoda.png",
       "fonte": "dashboard_assets/fan/portraits/tsunoda.png",
       "modo": "copia",
-      "sha256_destino": "c71e8e15e9593fdc310391b6597f226c7bd3ca9457d72c3edf26a9f71cc632bc",
-      "sha256_origem": "c71e8e15e9593fdc310391b6597f226c7bd3ca9457d72c3edf26a9f71cc632bc"
+      "sha256_destino": "c8e8469df9d777cc878c507a2d2b3fc46d4096b33a37a645d12f7efc318c74b8",
+      "sha256_origem": "c8e8469df9d777cc878c507a2d2b3fc46d4096b33a37a645d12f7efc318c74b8"
     },
     {
       "caminho": "dashboard_assets/fan/portraits/zhou.png",
       "fonte": "dashboard_assets/fan/portraits/zhou.png",
       "modo": "copia",
-      "sha256_destino": "bb7469237629527ec6e89e6a4769bfeb15d8b96cbeae093d4c9672bc65da31af",
-      "sha256_origem": "bb7469237629527ec6e89e6a4769bfeb15d8b96cbeae093d4c9672bc65da31af"
+      "sha256_destino": "6dbed15522ac085a1623753b5427ed8bc0e7cbe710d7a99470b9c0ad69024adf",
+      "sha256_origem": "6dbed15522ac085a1623753b5427ed8bc0e7cbe710d7a99470b9c0ad69024adf"
     },
     {
       "caminho": "dashboard_assets/fan/sources.json",
       "fonte": "dashboard_assets/fan/sources.json",
       "modo": "copia",
-      "sha256_destino": "06b73696a33064ef0f43acfdafff28b001eb4f6a498eb0dcaefc57e467deca2d",
-      "sha256_origem": "06b73696a33064ef0f43acfdafff28b001eb4f6a498eb0dcaefc57e467deca2d"
+      "sha256_destino": "d4c88c50bc6bad34b760101c6ef7ac0a89df8804a96613c9fe1c90efe8d29e0c",
+      "sha256_origem": "d4c88c50bc6bad34b760101c6ef7ac0a89df8804a96613c9fe1c90efe8d29e0c"
     },
     {
       "caminho": "dashboard_assets/fonts/abrilfatface-OFL.txt",
@@ -858,46 +914,11 @@
       "sha256_origem": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
     },
     {
-      "caminho": "dashboard_assets/presentation/albert_park-hero.webp",
-      "fonte": "dashboard_assets/presentation/albert_park-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "5f77b0d05a5420ec946123e65471c8d98b78fb43434d63bc31439258d172894a",
-      "sha256_origem": "5f77b0d05a5420ec946123e65471c8d98b78fb43434d63bc31439258d172894a"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/americas-illustration-20261027.webp",
-      "fonte": "dashboard_assets/presentation/americas-illustration-20261027.webp",
-      "modo": "copia",
-      "sha256_destino": "4390d0cba7234064bb504eecfd474af7bf1decb74cad74631a3948b1e0322243",
-      "sha256_origem": "4390d0cba7234064bb504eecfd474af7bf1decb74cad74631a3948b1e0322243"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/bahrain-hero.webp",
-      "fonte": "dashboard_assets/presentation/bahrain-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "eb52815aebdbf009d6ccb8b7105748645e97e784e2e983e641da95bc27044928",
-      "sha256_origem": "eb52815aebdbf009d6ccb8b7105748645e97e784e2e983e641da95bc27044928"
-    },
-    {
       "caminho": "dashboard_assets/presentation/baku-hero.webp",
       "fonte": "dashboard_assets/presentation/baku-hero.webp",
       "modo": "copia",
       "sha256_destino": "89988b5b3a7e38504c349975dfbb23f292f3af793e2b84820d8fddf61f7c6c29",
       "sha256_origem": "89988b5b3a7e38504c349975dfbb23f292f3af793e2b84820d8fddf61f7c6c29"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/catalunya-hero.webp",
-      "fonte": "dashboard_assets/presentation/catalunya-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "04834bada1dfd465ca90d12a112d68c5c47dbe908964c6afba3e0e1b4c0b8473",
-      "sha256_origem": "04834bada1dfd465ca90d12a112d68c5c47dbe908964c6afba3e0e1b4c0b8473"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/hungaroring-hero.webp",
-      "fonte": "dashboard_assets/presentation/hungaroring-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "ff9d84e64874e00aad18376f66b31c28c68b3ce0fabd8d84b3cdfa406a68745b",
-      "sha256_origem": "ff9d84e64874e00aad18376f66b31c28c68b3ce0fabd8d84b3cdfa406a68745b"
     },
     {
       "caminho": "dashboard_assets/presentation/imola-hero.webp",
@@ -914,27 +935,6 @@
       "sha256_origem": "8cfb25ec28c32286d075746941eda46e78fece3e397e4a46fb007a75d06bbb1b"
     },
     {
-      "caminho": "dashboard_assets/presentation/jeddah-hero.webp",
-      "fonte": "dashboard_assets/presentation/jeddah-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "68e2d88edc389b65207cff5e6f6ac8ff1acd0a859964dcd0117718578d8ad08c",
-      "sha256_origem": "68e2d88edc389b65207cff5e6f6ac8ff1acd0a859964dcd0117718578d8ad08c"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/losail-hero.webp",
-      "fonte": "dashboard_assets/presentation/losail-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "5efdbbd060cb83e50e9eeaad92a15bba338f7824a6b78e8d4a8e33abf2f7a6e4",
-      "sha256_origem": "5efdbbd060cb83e50e9eeaad92a15bba338f7824a6b78e8d4a8e33abf2f7a6e4"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/madring-hero.webp",
-      "fonte": "dashboard_assets/presentation/madring-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "82492771ea57dbe4e07eb2f2840a7bc0e68c235126d8f74ebe16f839702f32f4",
-      "sha256_origem": "82492771ea57dbe4e07eb2f2840a7bc0e68c235126d8f74ebe16f839702f32f4"
-    },
-    {
       "caminho": "dashboard_assets/presentation/marina_bay-hero.webp",
       "fonte": "dashboard_assets/presentation/marina_bay-hero.webp",
       "modo": "copia",
@@ -949,13 +949,6 @@
       "sha256_origem": "f2152ea9da06c960fb2a55a6ca4fca6f09322774a251929b45c72b2664c45e05"
     },
     {
-      "caminho": "dashboard_assets/presentation/monaco-hero.webp",
-      "fonte": "dashboard_assets/presentation/monaco-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "59e4dd9069074783b94f5c89c58965306b4e5bc07a27deab83874ce0d217af3f",
-      "sha256_origem": "59e4dd9069074783b94f5c89c58965306b4e5bc07a27deab83874ce0d217af3f"
-    },
-    {
       "caminho": "dashboard_assets/presentation/monza-hero.webp",
       "fonte": "dashboard_assets/presentation/monza-hero.webp",
       "modo": "copia",
@@ -963,88 +956,18 @@
       "sha256_origem": "8bf746fd16f723adf63c3e88482c239c20fec77fde40c38f8a66649844924161"
     },
     {
-      "caminho": "dashboard_assets/presentation/red_bull_ring-hero.webp",
-      "fonte": "dashboard_assets/presentation/red_bull_ring-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "a94a316a9b8f1cc8482621319201bd10a84d9db476b2b65e02a915b38a18bff1",
-      "sha256_origem": "a94a316a9b8f1cc8482621319201bd10a84d9db476b2b65e02a915b38a18bff1"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/rodriguez-hero.webp",
-      "fonte": "dashboard_assets/presentation/rodriguez-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "94c4d42cd01892e49fcbf0d49f1c4df8e0f541eeeceaf1a73904caf4547e6fc4",
-      "sha256_origem": "94c4d42cd01892e49fcbf0d49f1c4df8e0f541eeeceaf1a73904caf4547e6fc4"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/sepang-hero.webp",
-      "fonte": "dashboard_assets/presentation/sepang-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "d70f0faeeb47178f0a54e1593dc60c19f9965664bcf275b5a5d99314dba3b757",
-      "sha256_origem": "d70f0faeeb47178f0a54e1593dc60c19f9965664bcf275b5a5d99314dba3b757"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/shanghai-hero.webp",
-      "fonte": "dashboard_assets/presentation/shanghai-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "d6ac545d3ca7a852c88b4e447dc5d264c86124a08a80a8fe603a2aaf8218912e",
-      "sha256_origem": "d6ac545d3ca7a852c88b4e447dc5d264c86124a08a80a8fe603a2aaf8218912e"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/silverstone-hero.webp",
-      "fonte": "dashboard_assets/presentation/silverstone-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "5edae871d948308dd8ee3c4ed244cfb3ca4d5eee4d7301c052b2f378ac60a0f6",
-      "sha256_origem": "5edae871d948308dd8ee3c4ed244cfb3ca4d5eee4d7301c052b2f378ac60a0f6"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/spa-hero.webp",
-      "fonte": "dashboard_assets/presentation/spa-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "3bbe9d6b7cf1defdd4e00c5cbb86351c8294bab25bcf9fe97c98a69f12e47001",
-      "sha256_origem": "3bbe9d6b7cf1defdd4e00c5cbb86351c8294bab25bcf9fe97c98a69f12e47001"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/suzuka-hero.webp",
-      "fonte": "dashboard_assets/presentation/suzuka-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "5d05c458d636135b0f73f46b69f9589c868aebdabe627a322934e16f033e1b57",
-      "sha256_origem": "5d05c458d636135b0f73f46b69f9589c868aebdabe627a322934e16f033e1b57"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/vegas-hero.webp",
-      "fonte": "dashboard_assets/presentation/vegas-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "05cc92f58f120ca48022e884f01911709fe6daabe199e6831da4e9f973b568d3",
-      "sha256_origem": "05cc92f58f120ca48022e884f01911709fe6daabe199e6831da4e9f973b568d3"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/villeneuve-hero.webp",
-      "fonte": "dashboard_assets/presentation/villeneuve-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "6ba0b1badd3a8102c7c386b597658f37fe877958c73939dcb72f78b929f91b38",
-      "sha256_origem": "6ba0b1badd3a8102c7c386b597658f37fe877958c73939dcb72f78b929f91b38"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/yas_marina-hero.webp",
-      "fonte": "dashboard_assets/presentation/yas_marina-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "1dd5a5a6837bf257daaf0950c6fd11096ddb18fdc82aae5f10b8cedbf28ec737",
-      "sha256_origem": "1dd5a5a6837bf257daaf0950c6fd11096ddb18fdc82aae5f10b8cedbf28ec737"
-    },
-    {
-      "caminho": "dashboard_assets/presentation/zandvoort-hero.webp",
-      "fonte": "dashboard_assets/presentation/zandvoort-hero.webp",
-      "modo": "copia",
-      "sha256_destino": "a440603503f2ebd3f20557670cdf732acb8c59319341bbfcc34e72cdb631a4f2",
-      "sha256_origem": "a440603503f2ebd3f20557670cdf732acb8c59319341bbfcc34e72cdb631a4f2"
-    },
-    {
       "caminho": "dashboard_assets/tarot/ATTRIBUTION.md",
       "fonte": "dashboard_assets/tarot/ATTRIBUTION.md",
       "modo": "copia",
-      "sha256_destino": "adc11a87fc2749b8c3a2a9e0ccee2ba3382b55da533bc43e2968c861aa4ab462",
-      "sha256_origem": "adc11a87fc2749b8c3a2a9e0ccee2ba3382b55da533bc43e2968c861aa4ab462"
+      "sha256_destino": "9314b611e42915530ec5ac07ab02a6df357d28a63d2d9dc959f6b6eafa160181",
+      "sha256_origem": "9314b611e42915530ec5ac07ab02a6df357d28a63d2d9dc959f6b6eafa160181"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/catalog.json",
+      "fonte": "dashboard_assets/tarot/catalog.json",
+      "modo": "copia",
+      "sha256_destino": "b7686241fcf5c8989c875247af36b62b98c8f0a298e185513d8e7227c73c263e",
+      "sha256_origem": "b7686241fcf5c8989c875247af36b62b98c8f0a298e185513d8e7227c73c263e"
     },
     {
       "caminho": "dashboard_assets/tarot/hamilton.png",
@@ -1059,6 +982,615 @@
       "modo": "copia",
       "sha256_destino": "eb5db2342b4be6014f9d1ec58308ffd105baf2a84253e9d42439dfeedf3c7933",
       "sha256_origem": "eb5db2342b4be6014f9d1ec58308ffd105baf2a84253e9d42439dfeedf3c7933"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/albon/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/albon/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "72b346458d764fab98a9b2c587b2573b03a90f7e2d95c73ee0f1169b2c21ee27",
+      "sha256_origem": "72b346458d764fab98a9b2c587b2573b03a90f7e2d95c73ee0f1169b2c21ee27"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/albon/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/albon/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "e773845f8d6fe0e9260b3f67f2bcf47fb68e18cda18bd188a6fb456311ff18dc",
+      "sha256_origem": "e773845f8d6fe0e9260b3f67f2bcf47fb68e18cda18bd188a6fb456311ff18dc"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/albon/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/albon/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "394ec06dea0420da99b9ed14fb412b756d549343142bbe6f77cebc374d3a6ed4",
+      "sha256_origem": "394ec06dea0420da99b9ed14fb412b756d549343142bbe6f77cebc374d3a6ed4"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/alonso/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/alonso/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "bef07763503e078dc96e3062bc8c0533aadb3129c7cd08f37bf63d85697f4ae8",
+      "sha256_origem": "bef07763503e078dc96e3062bc8c0533aadb3129c7cd08f37bf63d85697f4ae8"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/alonso/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/alonso/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "b7c78306dbeacd7dbdf9077e4432a95441553a213e5774f4a158f660952e53a1",
+      "sha256_origem": "b7c78306dbeacd7dbdf9077e4432a95441553a213e5774f4a158f660952e53a1"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/alonso/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/alonso/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "7441cf4bd908b19b7e5b658576ba52a55e0fc6fdab67f4eba984587266c575f6",
+      "sha256_origem": "7441cf4bd908b19b7e5b658576ba52a55e0fc6fdab67f4eba984587266c575f6"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/antonelli/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/antonelli/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "d4733a73ee43755e19de02f45506d3d78f51417ef053bfe2eb72f303e8916e91",
+      "sha256_origem": "d4733a73ee43755e19de02f45506d3d78f51417ef053bfe2eb72f303e8916e91"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/antonelli/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/antonelli/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "cb84aa5907b9c6dbe8fe804cd743b0d590f96426bbd1a3e1babd67e6ff49e804",
+      "sha256_origem": "cb84aa5907b9c6dbe8fe804cd743b0d590f96426bbd1a3e1babd67e6ff49e804"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/antonelli/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/antonelli/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "22c37f306c54622a5d3cea00864ccbe63d5cea7cc6d9e74625aad4183557fb16",
+      "sha256_origem": "22c37f306c54622a5d3cea00864ccbe63d5cea7cc6d9e74625aad4183557fb16"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/arvid_lindblad/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/arvid_lindblad/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "ec4f6990962c0685e6aea8a21ab966653befc24e312288366e1e85d8406ebbc0",
+      "sha256_origem": "ec4f6990962c0685e6aea8a21ab966653befc24e312288366e1e85d8406ebbc0"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/arvid_lindblad/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/arvid_lindblad/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "0ea6af1b61297527332ee6a09f8cfd5c294d61e480797d4d4c2aaa2b54b77943",
+      "sha256_origem": "0ea6af1b61297527332ee6a09f8cfd5c294d61e480797d4d4c2aaa2b54b77943"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/arvid_lindblad/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/arvid_lindblad/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "7ff11d590e3344d8a46ca12ea8cb682843b1b24399376bd851cddb48f1e5c09b",
+      "sha256_origem": "7ff11d590e3344d8a46ca12ea8cb682843b1b24399376bd851cddb48f1e5c09b"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/bearman/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/bearman/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "8e6b2ee26daad85b059273bc3a2ba4514d4e10a00ef5fec473fd9e062b530618",
+      "sha256_origem": "8e6b2ee26daad85b059273bc3a2ba4514d4e10a00ef5fec473fd9e062b530618"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/bearman/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/bearman/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "fea2f0392a33d3be8153453833edb7856aa67816c021a15ea279878c08dfefbf",
+      "sha256_origem": "fea2f0392a33d3be8153453833edb7856aa67816c021a15ea279878c08dfefbf"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/bearman/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/bearman/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "36e46b2fb0ce3f7c442b2437efab8ab2da34c3b9ef1e841f83bdb0527109ed87",
+      "sha256_origem": "36e46b2fb0ce3f7c442b2437efab8ab2da34c3b9ef1e841f83bdb0527109ed87"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/bortoleto/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/bortoleto/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "9ba6367b454c10655eb2ac340c236e0c3cd9bbb02dcac04990a643147102f1eb",
+      "sha256_origem": "9ba6367b454c10655eb2ac340c236e0c3cd9bbb02dcac04990a643147102f1eb"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/bortoleto/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/bortoleto/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "82a049009de2ee9f12487ce10d2ab7e5cba4df4bee8aebb664ce861c2e0fccbf",
+      "sha256_origem": "82a049009de2ee9f12487ce10d2ab7e5cba4df4bee8aebb664ce861c2e0fccbf"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/bortoleto/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/bortoleto/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "950e9a562ea149a89f5480117eb4b96f70ca6aaccb1a632f8e88be0197062974",
+      "sha256_origem": "950e9a562ea149a89f5480117eb4b96f70ca6aaccb1a632f8e88be0197062974"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/bottas/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/bottas/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "258c7d0fbf450710856da0f340b6c6e5b9a2ff4fc787dfcdc2dd6effe13e5fca",
+      "sha256_origem": "258c7d0fbf450710856da0f340b6c6e5b9a2ff4fc787dfcdc2dd6effe13e5fca"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/bottas/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/bottas/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "971d2c2a69c15ef43322e76ca0868007070508f2b3cea144d0de9381e8cfec43",
+      "sha256_origem": "971d2c2a69c15ef43322e76ca0868007070508f2b3cea144d0de9381e8cfec43"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/bottas/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/bottas/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "227c19eb1e685875ba0e14213f9341024cdb5d6608e550ad23177308753ff3fa",
+      "sha256_origem": "227c19eb1e685875ba0e14213f9341024cdb5d6608e550ad23177308753ff3fa"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/colapinto/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/colapinto/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "33bb3daed00dfd905297e441a6267ad5cd047baf896c4d9436c3d575d7c6bed4",
+      "sha256_origem": "33bb3daed00dfd905297e441a6267ad5cd047baf896c4d9436c3d575d7c6bed4"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/colapinto/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/colapinto/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "0727225cda11270d664a003e46d9d7df8b312069f80be617da1124124b7d39c7",
+      "sha256_origem": "0727225cda11270d664a003e46d9d7df8b312069f80be617da1124124b7d39c7"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/colapinto/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/colapinto/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "507b455ec81317bdf47e0bae325658e767054f739869307ab12d756ae7afd10b",
+      "sha256_origem": "507b455ec81317bdf47e0bae325658e767054f739869307ab12d756ae7afd10b"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/doohan/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/doohan/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "db16d1ddd8acc85d537f85174b3e119a53b4d80ce794044385208ecfafc91d78",
+      "sha256_origem": "db16d1ddd8acc85d537f85174b3e119a53b4d80ce794044385208ecfafc91d78"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/doohan/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/doohan/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "9e846aaaae3b90cb43abf3e0add3f5d4b9921205dba87ef62fead781efaae46a",
+      "sha256_origem": "9e846aaaae3b90cb43abf3e0add3f5d4b9921205dba87ef62fead781efaae46a"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/doohan/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/doohan/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "f27095eb850f0a017f791a4ea81e67640368309f51d97ffe83d2a360975a3e2d",
+      "sha256_origem": "f27095eb850f0a017f791a4ea81e67640368309f51d97ffe83d2a360975a3e2d"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/gasly/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/gasly/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "9565289b5971b0fd5b22ead8d1cd0efcee2c28ea83573456cd4904dd33bb7350",
+      "sha256_origem": "9565289b5971b0fd5b22ead8d1cd0efcee2c28ea83573456cd4904dd33bb7350"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/gasly/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/gasly/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "bb9dbc17b2963470f02b73ad7dfbf1e9d91cad2edc88b4b6cb1c5ab72d3e7908",
+      "sha256_origem": "bb9dbc17b2963470f02b73ad7dfbf1e9d91cad2edc88b4b6cb1c5ab72d3e7908"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/gasly/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/gasly/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "d80aa96c636cef7a0913c75ba9eb0d461086a02f913f7c80399edfdcc1a6fdd8",
+      "sha256_origem": "d80aa96c636cef7a0913c75ba9eb0d461086a02f913f7c80399edfdcc1a6fdd8"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/hadjar/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/hadjar/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "c0c617c5f6e08d253699bff7434314089cd84d9555f8602ffb82cfb718e586e1",
+      "sha256_origem": "c0c617c5f6e08d253699bff7434314089cd84d9555f8602ffb82cfb718e586e1"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/hadjar/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/hadjar/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "3a52d666b28c934018662cdaddada1a5757f126149b97468c0872e4471cb78b2",
+      "sha256_origem": "3a52d666b28c934018662cdaddada1a5757f126149b97468c0872e4471cb78b2"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/hadjar/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/hadjar/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "60ced1a31de4e4fea2c24fe1a0fd698157751ac8c4aeebfba8a46e7be23c46c0",
+      "sha256_origem": "60ced1a31de4e4fea2c24fe1a0fd698157751ac8c4aeebfba8a46e7be23c46c0"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/hamilton/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/hamilton/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "ed9eb8517f89684dc2e1c895b962adf9c3078c3b4af8016f34241414bd914ac3",
+      "sha256_origem": "ed9eb8517f89684dc2e1c895b962adf9c3078c3b4af8016f34241414bd914ac3"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/hamilton/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/hamilton/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "2819eb0cc22be5c9e467e480f0296dfa1cf98996c3867211bf086c08885aab10",
+      "sha256_origem": "2819eb0cc22be5c9e467e480f0296dfa1cf98996c3867211bf086c08885aab10"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/hamilton/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/hamilton/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "6802dbb760ee01661ffc60cba636e6b9b89825cf761c67043b63be8fd85d5c20",
+      "sha256_origem": "6802dbb760ee01661ffc60cba636e6b9b89825cf761c67043b63be8fd85d5c20"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/hulkenberg/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/hulkenberg/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "6b03b8677d9f48cfd933f3c287a397496618327a5653c500eccf0187b1f70ac6",
+      "sha256_origem": "6b03b8677d9f48cfd933f3c287a397496618327a5653c500eccf0187b1f70ac6"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/hulkenberg/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/hulkenberg/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "dade8cf6e95265ed3ecbe36feab3bc55e89f230ebb8f8f6969f7e00ddec5eb7d",
+      "sha256_origem": "dade8cf6e95265ed3ecbe36feab3bc55e89f230ebb8f8f6969f7e00ddec5eb7d"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/hulkenberg/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/hulkenberg/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "ee95a57e3da01a4b6e1ed9b3289bd890a9e2d98c8e75b56bb8c692599e7d15f2",
+      "sha256_origem": "ee95a57e3da01a4b6e1ed9b3289bd890a9e2d98c8e75b56bb8c692599e7d15f2"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/kevin_magnussen/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/kevin_magnussen/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "c3c0f791a71a5c9cf08ed318778a74207d28389edcaaa29a481b4d6a8a304a2a",
+      "sha256_origem": "c3c0f791a71a5c9cf08ed318778a74207d28389edcaaa29a481b4d6a8a304a2a"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/kevin_magnussen/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/kevin_magnussen/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "34a3734b30813382edc17296f61d96686e9549effbf0eaca1f6dcf82e0fb456f",
+      "sha256_origem": "34a3734b30813382edc17296f61d96686e9549effbf0eaca1f6dcf82e0fb456f"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/kevin_magnussen/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/kevin_magnussen/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "402568b8bdf231a57bb8ab8b0f7cd83c2c0acec0b23a7ee8cc58b54c22071394",
+      "sha256_origem": "402568b8bdf231a57bb8ab8b0f7cd83c2c0acec0b23a7ee8cc58b54c22071394"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/lawson/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/lawson/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "2ddd082916693467dc476a8189f2f687e6d6afe565c704b112a0617ca51781d9",
+      "sha256_origem": "2ddd082916693467dc476a8189f2f687e6d6afe565c704b112a0617ca51781d9"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/lawson/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/lawson/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "39a33b24b0fc6f9b6e220cc329a85a334b2b64673de0871079c8c968d5647e83",
+      "sha256_origem": "39a33b24b0fc6f9b6e220cc329a85a334b2b64673de0871079c8c968d5647e83"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/lawson/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/lawson/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "03b7f19ec1176e5ae55fc996c5abe1a9c9c2d04f1c3fdebcf2c1157579899c26",
+      "sha256_origem": "03b7f19ec1176e5ae55fc996c5abe1a9c9c2d04f1c3fdebcf2c1157579899c26"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/leclerc/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/leclerc/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "a6659e228d83eeb63524700eb9070f7d9962d4554dec6723708fd5fb34c5b6ba",
+      "sha256_origem": "a6659e228d83eeb63524700eb9070f7d9962d4554dec6723708fd5fb34c5b6ba"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/leclerc/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/leclerc/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "00156b2222f828dad10e2e4e32bf876fb4807706e51aeb152ace6edd710b47f9",
+      "sha256_origem": "00156b2222f828dad10e2e4e32bf876fb4807706e51aeb152ace6edd710b47f9"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/leclerc/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/leclerc/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "1883df0887f10f2d767404e7664ac577758671dfb9091745fb0dcae1b19cdc9b",
+      "sha256_origem": "1883df0887f10f2d767404e7664ac577758671dfb9091745fb0dcae1b19cdc9b"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/max_verstappen/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/max_verstappen/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "91a3bb5581ae0ce6d1bf32afec8afd24534484b8cca1d4884e79aa5e1b0963de",
+      "sha256_origem": "91a3bb5581ae0ce6d1bf32afec8afd24534484b8cca1d4884e79aa5e1b0963de"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/max_verstappen/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/max_verstappen/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "c56762fcbbe1d7019e098436aa020df818d5546a985d984a1c7bda107897dbff",
+      "sha256_origem": "c56762fcbbe1d7019e098436aa020df818d5546a985d984a1c7bda107897dbff"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/max_verstappen/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/max_verstappen/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "4299b7d7b1b4e6db48d461ab4b3d6bfa6e59f1c5e7f00987482cdb23d5c97668",
+      "sha256_origem": "4299b7d7b1b4e6db48d461ab4b3d6bfa6e59f1c5e7f00987482cdb23d5c97668"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/norris/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/norris/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "d2162af1ad4aed5dc910f7da2882e4125db3abcc20e3898fb676472894c05b4c",
+      "sha256_origem": "d2162af1ad4aed5dc910f7da2882e4125db3abcc20e3898fb676472894c05b4c"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/norris/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/norris/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "9a61059aab59148894576d5494a03cdcdf15444a86e2183af6d0f84419fc6fa3",
+      "sha256_origem": "9a61059aab59148894576d5494a03cdcdf15444a86e2183af6d0f84419fc6fa3"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/norris/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/norris/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "0b342004ae4bb38bfbb83592a0127f21b8efd052a9b19c67e74d2ca522f3024d",
+      "sha256_origem": "0b342004ae4bb38bfbb83592a0127f21b8efd052a9b19c67e74d2ca522f3024d"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/ocon/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/ocon/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "04ae582161aeb5cbe0873ad5eb8fee98648b3fe1fc6a6cfd3661dafc9f141a3b",
+      "sha256_origem": "04ae582161aeb5cbe0873ad5eb8fee98648b3fe1fc6a6cfd3661dafc9f141a3b"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/ocon/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/ocon/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "cba30efbb07ebfd5e1114d1e2c651726cd02280de3a9b3542dfacf4ff1911588",
+      "sha256_origem": "cba30efbb07ebfd5e1114d1e2c651726cd02280de3a9b3542dfacf4ff1911588"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/ocon/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/ocon/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "de7ef55f7bddf014ba72dbc3092528489a5779b5d9e34540a2fe938fd46cdaa1",
+      "sha256_origem": "de7ef55f7bddf014ba72dbc3092528489a5779b5d9e34540a2fe938fd46cdaa1"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/perez/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/perez/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "5150f9301a2fa5fe375437cf12159eb1c0e1f16c432a9f328f01eb5df2f6b9ce",
+      "sha256_origem": "5150f9301a2fa5fe375437cf12159eb1c0e1f16c432a9f328f01eb5df2f6b9ce"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/perez/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/perez/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "6d736f8ab1ff7f28bd3a7a3dc0fe35f749751dd1aca5ce24ad769e5fe1e4ceed",
+      "sha256_origem": "6d736f8ab1ff7f28bd3a7a3dc0fe35f749751dd1aca5ce24ad769e5fe1e4ceed"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/perez/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/perez/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "e57c2a390107af3f30f3452c9de2b250617d45f21bfbe5a37c9028ae675cc5db",
+      "sha256_origem": "e57c2a390107af3f30f3452c9de2b250617d45f21bfbe5a37c9028ae675cc5db"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/piastri/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/piastri/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "d6f771edc89813f83be9dde5bdd184971f22f64f806b50c2dbc53ab8a4f95eab",
+      "sha256_origem": "d6f771edc89813f83be9dde5bdd184971f22f64f806b50c2dbc53ab8a4f95eab"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/piastri/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/piastri/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "fb36e9165facca0908420a61b96eb88a3bdceffeef49c8a590732dc5eb95af80",
+      "sha256_origem": "fb36e9165facca0908420a61b96eb88a3bdceffeef49c8a590732dc5eb95af80"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/piastri/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/piastri/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "ff879f5a8b587c169e869e9104bcd72aa9923e4f9f0f584f619d55b27c6ba47f",
+      "sha256_origem": "ff879f5a8b587c169e869e9104bcd72aa9923e4f9f0f584f619d55b27c6ba47f"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/ricciardo/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/ricciardo/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "69fe7b19ab67c01baa48f878f660ebe1f6427b9ced91828947f10d252980d3f7",
+      "sha256_origem": "69fe7b19ab67c01baa48f878f660ebe1f6427b9ced91828947f10d252980d3f7"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/ricciardo/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/ricciardo/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "80633230299e50ef509b98168a3f19738d12321432d8d577065cd03e88711315",
+      "sha256_origem": "80633230299e50ef509b98168a3f19738d12321432d8d577065cd03e88711315"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/ricciardo/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/ricciardo/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "7573a2fa34eeef0b06b4c9bbe0bbae35a73a0c541217d4c4ee948a4444b2d716",
+      "sha256_origem": "7573a2fa34eeef0b06b4c9bbe0bbae35a73a0c541217d4c4ee948a4444b2d716"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/russell/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/russell/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "9149281413b0a66b343f7348df5c78ec8f6fa2ddbe7de954ef7e37aab46b98a9",
+      "sha256_origem": "9149281413b0a66b343f7348df5c78ec8f6fa2ddbe7de954ef7e37aab46b98a9"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/russell/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/russell/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "cca2743876cf2c401a344f79b70c5fe0ee04382c1f033985aa9d66028ddc1914",
+      "sha256_origem": "cca2743876cf2c401a344f79b70c5fe0ee04382c1f033985aa9d66028ddc1914"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/russell/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/russell/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "9ef42d341be9754264c80e586ca67ee1421130c1001da4b76b242b1deb33a1cb",
+      "sha256_origem": "9ef42d341be9754264c80e586ca67ee1421130c1001da4b76b242b1deb33a1cb"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/ryo_hirakawa/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/ryo_hirakawa/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "770e704e2baa6f6c585505ab927761d3b464ffc2e002e212d805e7867c3e87cc",
+      "sha256_origem": "770e704e2baa6f6c585505ab927761d3b464ffc2e002e212d805e7867c3e87cc"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/ryo_hirakawa/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/ryo_hirakawa/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "5bfd7588c040f78abfbf7389a492a640b9c2186807b52d269d6ac1f53bb18c2b",
+      "sha256_origem": "5bfd7588c040f78abfbf7389a492a640b9c2186807b52d269d6ac1f53bb18c2b"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/ryo_hirakawa/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/ryo_hirakawa/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "d854c5e44a5da48244b03aba33788f7cfe30bc6e72a0b70085011310c5584aa8",
+      "sha256_origem": "d854c5e44a5da48244b03aba33788f7cfe30bc6e72a0b70085011310c5584aa8"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/sainz/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/sainz/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "03370edb2eaf12f74089d327506ec49a73ab21a620f9b7d5987eeb1e3ab9bc7a",
+      "sha256_origem": "03370edb2eaf12f74089d327506ec49a73ab21a620f9b7d5987eeb1e3ab9bc7a"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/sainz/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/sainz/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "8bca4ad654b80eee3e3c4c68c12981a24b8f9a812fe183b72d875622241eeae5",
+      "sha256_origem": "8bca4ad654b80eee3e3c4c68c12981a24b8f9a812fe183b72d875622241eeae5"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/sainz/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/sainz/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "5e939b156118dab561cf35a8361e9b2b0a2fdd64d300a1f6b8c61bbf542228af",
+      "sha256_origem": "5e939b156118dab561cf35a8361e9b2b0a2fdd64d300a1f6b8c61bbf542228af"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/sargeant/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/sargeant/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "d3c1148b3a200fa2b034b4a814e8db7d5f417f487c9fc9687909090c8c2615bc",
+      "sha256_origem": "d3c1148b3a200fa2b034b4a814e8db7d5f417f487c9fc9687909090c8c2615bc"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/sargeant/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/sargeant/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "57e6b23224cd1eb77379a9db005c62c3c5f7e82c98bd171deef69202104d67ba",
+      "sha256_origem": "57e6b23224cd1eb77379a9db005c62c3c5f7e82c98bd171deef69202104d67ba"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/sargeant/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/sargeant/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "00a2aabeb5149f77396877cbe0dce0c6ec20c5aefb5b03890f481c28e564a117",
+      "sha256_origem": "00a2aabeb5149f77396877cbe0dce0c6ec20c5aefb5b03890f481c28e564a117"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/stroll/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/stroll/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "bb574c47c9f281851b2a8d075fa2a915aaf56bd62da794f85e88283927f38688",
+      "sha256_origem": "bb574c47c9f281851b2a8d075fa2a915aaf56bd62da794f85e88283927f38688"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/stroll/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/stroll/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "0c779bc9f660355b90fdcc5a406cd480194d370e7e2d909cdcedb37961c9bdec",
+      "sha256_origem": "0c779bc9f660355b90fdcc5a406cd480194d370e7e2d909cdcedb37961c9bdec"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/stroll/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/stroll/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "01dabfff702ca0a488adb7a122acfc204d40a6e4a73e1da6466f66ef093367db",
+      "sha256_origem": "01dabfff702ca0a488adb7a122acfc204d40a6e4a73e1da6466f66ef093367db"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/tsunoda/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/tsunoda/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "8333fdfe856040e7b62676856c9f6b9a05df76e4d726a5856769fb12ff87b85f",
+      "sha256_origem": "8333fdfe856040e7b62676856c9f6b9a05df76e4d726a5856769fb12ff87b85f"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/tsunoda/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/tsunoda/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "c0a9048cb1b06efbaacb98d0d8e5bd8eaf3aaf7833c976abac9cb5bf06260ed3",
+      "sha256_origem": "c0a9048cb1b06efbaacb98d0d8e5bd8eaf3aaf7833c976abac9cb5bf06260ed3"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/tsunoda/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/tsunoda/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "83ce54fa6f356e6cebf4067785033c58c397e28ba1fce2969120c5e598fdd85a",
+      "sha256_origem": "83ce54fa6f356e6cebf4067785033c58c397e28ba1fce2969120c5e598fdd85a"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/zhou/pose-0.png",
+      "fonte": "dashboard_assets/tarot/variants/zhou/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "7462d9c44c08dca2e91400bfb1d66774b63cb8d2d52a1cf36865c735348946a7",
+      "sha256_origem": "7462d9c44c08dca2e91400bfb1d66774b63cb8d2d52a1cf36865c735348946a7"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/zhou/pose-1.png",
+      "fonte": "dashboard_assets/tarot/variants/zhou/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "a954354ef16203e1eac9c390dd4f611759b50e9d5e37ab9ebba35127dda63c86",
+      "sha256_origem": "a954354ef16203e1eac9c390dd4f611759b50e9d5e37ab9ebba35127dda63c86"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/variants/zhou/pose-2.png",
+      "fonte": "dashboard_assets/tarot/variants/zhou/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "8ba8dd591ded9d06f308a438e35efcc38748a6e944b50f462830a943b6982e7e",
+      "sha256_origem": "8ba8dd591ded9d06f308a438e35efcc38748a6e944b50f462830a943b6982e7e"
     },
     {
       "caminho": "dashboard_assets/tarot/verstappen.png",
@@ -1078,8 +1610,8 @@
       "caminho": "docs/JORNADA_DO_FA.md",
       "fonte": "docs/JORNADA_DO_FA.md",
       "modo": "copia",
-      "sha256_destino": "3a52ade7029d16ad81fbf7fd19d924a5fb741e3d00a9b4f545078a6dee41ca85",
-      "sha256_origem": "3a52ade7029d16ad81fbf7fd19d924a5fb741e3d00a9b4f545078a6dee41ca85"
+      "sha256_destino": "78d4f6238a42b8880769f5a5977758b7db9ba20023fc446ef62fa39ac4652ffc",
+      "sha256_origem": "78d4f6238a42b8880769f5a5977758b7db9ba20023fc446ef62fa39ac4652ffc"
     },
     {
       "caminho": "docs/OPERACAO_FIM_SEMANA.md",
@@ -1113,8 +1645,8 @@
       "caminho": "docs/en/FAN_JOURNEY.md",
       "fonte": "docs/en/FAN_JOURNEY.md",
       "modo": "copia",
-      "sha256_destino": "38a2fdacfe3e4ae8a8053fdb3b1e91bb350f25fe353ae9d18f65e7950560738e",
-      "sha256_origem": "38a2fdacfe3e4ae8a8053fdb3b1e91bb350f25fe353ae9d18f65e7950560738e"
+      "sha256_destino": "36a17841f955b94caf3b7dd50bfdb7a183036781ddfd4b678083f7cabb80b2df",
+      "sha256_origem": "36a17841f955b94caf3b7dd50bfdb7a183036781ddfd4b678083f7cabb80b2df"
     },
     {
       "caminho": "docs/en/REVIEW_030.md",
@@ -1181,6 +1713,13 @@
       "sha256_origem": "d6c671526aafe1ca8a1a6b98934a1d1915eb7a102872d51e5385991257fec569"
     },
     {
+      "caminho": "docs/galeria-cartas.html",
+      "fonte": "docs/galeria-cartas.html",
+      "modo": "copia",
+      "sha256_destino": "b1eec4410e9de0cb807ae5c405fc20902f67fd285d68019016d1f7e776e4415e",
+      "sha256_origem": "b1eec4410e9de0cb807ae5c405fc20902f67fd285d68019016d1f7e776e4415e"
+    },
+    {
       "caminho": "docs/images/pitwall-pilotos-en.png",
       "fonte": "docs/images/pitwall-pilotos-en.png",
       "modo": "copia",
@@ -1241,8 +1780,8 @@
       "caminho": "frontend_assets/journey.css",
       "fonte": "frontend_assets/journey.css",
       "modo": "copia",
-      "sha256_destino": "1b9ec75606cdc5f586d014a08c3d2e0653de7291c1c3deaf9428d69831157940",
-      "sha256_origem": "1b9ec75606cdc5f586d014a08c3d2e0653de7291c1c3deaf9428d69831157940"
+      "sha256_destino": "b4198c0ffebbfcff796aa955f5943ca88fa15bc16d40219e3f6b79d5b88836a7",
+      "sha256_origem": "b4198c0ffebbfcff796aa955f5943ca88fa15bc16d40219e3f6b79d5b88836a7"
     },
     {
       "caminho": "frontend_assets/operacao_fim_semana.json",
@@ -1304,8 +1843,8 @@
       "caminho": "pitwall/dashboard/app.py",
       "fonte": "pitwall/dashboard/app.py",
       "modo": "copia",
-      "sha256_destino": "c12240353b9b296a439aeb404b0f66cbe66b4f745cff97b88cb775e6e665eccc",
-      "sha256_origem": "c12240353b9b296a439aeb404b0f66cbe66b4f745cff97b88cb775e6e665eccc"
+      "sha256_destino": "aefb42ff0b0b021f793f1f10c10563ce0d6d6defcfc6d16376b368f5216b7deb",
+      "sha256_origem": "aefb42ff0b0b021f793f1f10c10563ce0d6d6defcfc6d16376b368f5216b7deb"
     },
     {
       "caminho": "pitwall/dashboard/archive_views.py",
@@ -1318,15 +1857,15 @@
       "caminho": "pitwall/dashboard/components.py",
       "fonte": "pitwall/dashboard/components.py",
       "modo": "copia",
-      "sha256_destino": "d167c5dd927e702837eb0d92e172831c936285430c905bdc5dfb840b6199a44b",
-      "sha256_origem": "d167c5dd927e702837eb0d92e172831c936285430c905bdc5dfb840b6199a44b"
+      "sha256_destino": "21b95a682d8637d76a144d25dcae3bb791762b105d73a72a2699c7b790071383",
+      "sha256_origem": "21b95a682d8637d76a144d25dcae3bb791762b105d73a72a2699c7b790071383"
     },
     {
       "caminho": "pitwall/dashboard/fan_views.py",
       "fonte": "pitwall/dashboard/fan_views.py",
       "modo": "copia",
-      "sha256_destino": "ee5c18ab304496aa7d4e4860837b2dac88c8cdb3b4adccca3b8aa7b4d6f0a4bb",
-      "sha256_origem": "ee5c18ab304496aa7d4e4860837b2dac88c8cdb3b4adccca3b8aa7b4d6f0a4bb"
+      "sha256_destino": "c4d593253215d9dcaf7cbce4524eed3d49856ea11e974c1ef6c67916222309af",
+      "sha256_origem": "c4d593253215d9dcaf7cbce4524eed3d49856ea11e974c1ef6c67916222309af"
     },
     {
       "caminho": "pitwall/dashboard/favorites.py",
@@ -1336,25 +1875,32 @@
       "sha256_origem": "2cf4f128c49a903841ebbe959345d69eae400adb5869247917d403341c9be74b"
     },
     {
+      "caminho": "pitwall/dashboard/hero_assets.py",
+      "fonte": "pitwall/dashboard/hero_assets.py",
+      "modo": "copia",
+      "sha256_destino": "33ac068fcd0b1e9b29e655cf2e24e1b87b3e4b6f552b21dda9e6f7d117619cb8",
+      "sha256_origem": "33ac068fcd0b1e9b29e655cf2e24e1b87b3e4b6f552b21dda9e6f7d117619cb8"
+    },
+    {
       "caminho": "pitwall/dashboard/journey.py",
       "fonte": "pitwall/dashboard/journey.py",
       "modo": "copia",
-      "sha256_destino": "5da104bfdb047303edd6a54b262af892d15aab664f2e116deec7d2157efec3fb",
-      "sha256_origem": "5da104bfdb047303edd6a54b262af892d15aab664f2e116deec7d2157efec3fb"
+      "sha256_destino": "6f883505b284bea0d72462ae8c76ac20a5d4aa08941ce6aca2b0a6de20074e5c",
+      "sha256_origem": "6f883505b284bea0d72462ae8c76ac20a5d4aa08941ce6aca2b0a6de20074e5c"
     },
     {
       "caminho": "pitwall/dashboard/model_views.py",
       "fonte": "pitwall/dashboard/model_views.py",
       "modo": "copia",
-      "sha256_destino": "0f967f59c14ff52e6eda3816dd1c4beee5254e8bdeba60eb32c297d0a161f4c6",
-      "sha256_origem": "0f967f59c14ff52e6eda3816dd1c4beee5254e8bdeba60eb32c297d0a161f4c6"
+      "sha256_destino": "5f135254dae209987efe4833fff8fdebd933a278d329ca435ee710e04924b1d1",
+      "sha256_origem": "5f135254dae209987efe4833fff8fdebd933a278d329ca435ee710e04924b1d1"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
       "fonte": "pitwall/dashboard/pilot_views.py",
       "modo": "copia",
-      "sha256_destino": "c8202a25fc4c3dc9a46353181cf366d503de8429d2f60309ddd715a06d7da5a1",
-      "sha256_origem": "c8202a25fc4c3dc9a46353181cf366d503de8429d2f60309ddd715a06d7da5a1"
+      "sha256_destino": "efe680396eb04c18107d122d36d55110d30f7c198717e6618b5a81bb8b651c4d",
+      "sha256_origem": "efe680396eb04c18107d122d36d55110d30f7c198717e6618b5a81bb8b651c4d"
     },
     {
       "caminho": "pitwall/dashboard/search.py",
@@ -1374,8 +1920,15 @@
       "caminho": "pitwall/dashboard/tarot.py",
       "fonte": "pitwall/dashboard/tarot.py",
       "modo": "copia",
-      "sha256_destino": "9b1caf039a913bb130a4ff8972086a929104f4768193e09310aecd7a645a70d5",
-      "sha256_origem": "9b1caf039a913bb130a4ff8972086a929104f4768193e09310aecd7a645a70d5"
+      "sha256_destino": "b452ce4620d127b6d6f96146944a78d148051e1a2accc74a1fc92a68cc76a8be",
+      "sha256_origem": "b452ce4620d127b6d6f96146944a78d148051e1a2accc74a1fc92a68cc76a8be"
+    },
+    {
+      "caminho": "pitwall/dashboard/tarot_catalog.py",
+      "fonte": "pitwall/dashboard/tarot_catalog.py",
+      "modo": "copia",
+      "sha256_destino": "5ea57d4c81539801e0623125d4422ee935cba9c2168ec1e433e3164de780c363",
+      "sha256_origem": "5ea57d4c81539801e0623125d4422ee935cba9c2168ec1e433e3164de780c363"
     },
     {
       "caminho": "pitwall/dashboard/tokens.py",
@@ -1479,8 +2032,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "df898bee21334c0494f70522485a0e6a8cd8aa2cd550132fc9d9f986136cc42f",
-      "sha256_origem": "df898bee21334c0494f70522485a0e6a8cd8aa2cd550132fc9d9f986136cc42f"
+      "sha256_destino": "6cca45ccb3961e21c259d5c132f115a96af4fd46bf624b6be82c1d701cfa8582",
+      "sha256_origem": "6cca45ccb3961e21c259d5c132f115a96af4fd46bf624b6be82c1d701cfa8582"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -1682,8 +2235,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "f832116bc500c7c38d2a4705ff529c436d1f9c29a4e625d96750f30012241c93",
-      "sha256_origem": "f832116bc500c7c38d2a4705ff529c436d1f9c29a4e625d96750f30012241c93"
+      "sha256_destino": "8e4025cbafb75f665daeb2aa0931a5d1bc04c1b70709c7d0691874c251f1cc5f",
+      "sha256_origem": "8e4025cbafb75f665daeb2aa0931a5d1bc04c1b70709c7d0691874c251f1cc5f"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -1697,8 +2250,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "36f09cd566fdc64ff5266a9f754622be48bdfd9b480c8953e7c62697da8d2115",
-      "sha256_origem": "76317526ffaa1a9a0ddeb296233df8041caa4f2bca80e23b631c27e29e25fc58"
+      "sha256_destino": "fc39425d681d1f30a1804a3a5cae2104188f232f0d6101179339d08b948baab9",
+      "sha256_origem": "c2cac2d9cedb62d14266661acae2d85fa46f062972e0d4ae314c2871c79adcf5"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -1732,8 +2285,8 @@
       "caminho": "tests/test_fan_composition.py",
       "fonte": "tests/test_fan_composition.py",
       "modo": "copia",
-      "sha256_destino": "b33f5904ce6ad80f6f55df91a86eb0ba832914b2c9d2c62801652222fdcf7c69",
-      "sha256_origem": "b33f5904ce6ad80f6f55df91a86eb0ba832914b2c9d2c62801652222fdcf7c69"
+      "sha256_destino": "ae17ced6262dad90aee54fd90e2d86a070088751a9d1653b6f7682b5affe18a7",
+      "sha256_origem": "ae17ced6262dad90aee54fd90e2d86a070088751a9d1653b6f7682b5affe18a7"
     },
     {
       "caminho": "tests/test_fan_exploration.py",
@@ -1746,8 +2299,15 @@
       "caminho": "tests/test_fan_journey.py",
       "fonte": "tests/test_fan_journey.py",
       "modo": "copia",
-      "sha256_destino": "0390574c44c995123e794ac50b5ec630dcd3e4b86a48d77032bab53e659e2d31",
-      "sha256_origem": "0390574c44c995123e794ac50b5ec630dcd3e4b86a48d77032bab53e659e2d31"
+      "sha256_destino": "f680f198ac20854396a8b0fae24844c43c16667c72630f9a91073d9f7aa2215d",
+      "sha256_origem": "f680f198ac20854396a8b0fae24844c43c16667c72630f9a91073d9f7aa2215d"
+    },
+    {
+      "caminho": "tests/test_high_resolution_assets.py",
+      "fonte": "tests/test_high_resolution_assets.py",
+      "modo": "copia",
+      "sha256_destino": "81c9a244d09b804521f5792e2e9b56485656d4af7cfbd5adff5fa280e39b8776",
+      "sha256_origem": "81c9a244d09b804521f5792e2e9b56485656d4af7cfbd5adff5fa280e39b8776"
     },
     {
       "caminho": "tests/test_interface_editorial.py",
@@ -1760,8 +2320,8 @@
       "caminho": "tests/test_pilot_views.py",
       "fonte": "tests/test_pilot_views.py",
       "modo": "copia",
-      "sha256_destino": "ac5772e30bb73b9623d130f57815152338aa3fee89e94b9bf00a5390c1b5fecb",
-      "sha256_origem": "ac5772e30bb73b9623d130f57815152338aa3fee89e94b9bf00a5390c1b5fecb"
+      "sha256_destino": "2e49ec824ffcd283fc3252e91a6a71a9f16d1240aff876a6c7884cfb1f2ff82d",
+      "sha256_origem": "2e49ec824ffcd283fc3252e91a6a71a9f16d1240aff876a6c7884cfb1f2ff82d"
     },
     {
       "caminho": "tests/test_review_regressions.py",
@@ -1769,6 +2329,13 @@
       "modo": "copia",
       "sha256_destino": "1670e57114075dddc04bfa7e1e94cc176494f374d1039c5bdb7b1c76f78c5b57",
       "sha256_origem": "1670e57114075dddc04bfa7e1e94cc176494f374d1039c5bdb7b1c76f78c5b57"
+    },
+    {
+      "caminho": "tests/test_tarot_catalog.py",
+      "fonte": "tests/test_tarot_catalog.py",
+      "modo": "copia",
+      "sha256_destino": "d3669fc826bb48d846b46b980f7e4a7c13c23d9fddef46bb47cabd30aa3d10df",
+      "sha256_origem": "d3669fc826bb48d846b46b980f7e4a7c13c23d9fddef46bb47cabd30aa3d10df"
     },
     {
       "caminho": "tests/test_weekend_ui.py",
@@ -1797,7 +2364,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "2d380f505542413e7305abb113eaa9e7b93e84f3ac259a96c20f5c0734af612b"
+      "sha256": "886866c0c9a840f31b47d4f23a652b6a1d2fd56948f2766cd5e870d0e12a4bb0"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
@@ -1825,7 +2392,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "f832116bc500c7c38d2a4705ff529c436d1f9c29a4e625d96750f30012241c93"
+      "sha256": "8e4025cbafb75f665daeb2aa0931a5d1bc04c1b70709c7d0691874c251f1cc5f"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -1844,5 +2411,5 @@
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.6.3"
+  "versao_produto": "0.7.0"
 }

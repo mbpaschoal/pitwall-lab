@@ -2,35 +2,46 @@
 import base64
 from html import escape
 import math
-from pathlib import Path
 from urllib.parse import urlencode
 
 from pitwall.i18n import translate, language
+from pitwall.dashboard.tarot_catalog import (
+    TarotCatalogError, select_cards, team_id,
+)
 
-ART = {'max_verstappen':'verstappen.png','hamilton':'hamilton.png','russell':'russell.png'}
-ART_TEAMS = {'max_verstappen': {'Red Bull', 'Red Bull Racing', 'Oracle Red Bull Racing'},
-             'hamilton': {'Ferrari'}, 'russell': {'Mercedes'}}
-HELMET = '<svg viewBox="0 0 28 28" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M24 15a10 10 0 0 0-20 0v6l8 3h10l2-5H13l-2-6h12M5 15h5M7 21v-3"/></svg>'
-
-
-def cards_html(rows, root):
-    cards = []
+def cards_html(rows, root, year=None, round_=None):
+    """Illustrate the given favorites without calculating or changing their order."""
+    eligible = []
     for row in rows:
         value = row.get('probability')
-        if isinstance(value,bool) or not isinstance(value,(int,float)) or not math.isfinite(value) or not 0<=value<=1:
-            continue
-        # Artwork includes team colours and labels: never borrow a later team.
-        filename = ART.get(row['driver_id']) if row['team'] in ART_TEAMS.get(row['driver_id'], set()) else None
-        path = Path(root)/'dashboard_assets/tarot'/filename if filename else None
-        if path and path.is_file():
+        if (not isinstance(value, bool) and isinstance(value, (int, float))
+                and math.isfinite(value) and 0 <= value <= 1):
+            eligible.append(row)
+    try:
+        selected = select_cards(eligible, root, year, round_)
+    except TarotCatalogError:
+        selected = [dict(row=row, pose_id=None, entry=None, content=None) for row in eligible]
+    cards = []
+    for item in selected:
+        row = item['row']
+        entry = item['entry']
+        team = team_id(row) or 'unknown'
+        pose = '' if item['pose_id'] is None else str(item['pose_id'])
+        kind = 'neutral' if entry and entry['team_neutral'] else 'team' if entry else 'missing'
+        if item['content'] is not None:
             image = '<img src="data:image/png;base64,{}" alt="{}">'.format(
-                base64.b64encode(path.read_bytes()).decode('ascii'),
+                base64.b64encode(item['content']).decode('ascii'),
                 escape('{} · {}'.format(row['name'], row['team']), quote=True))
         else:
-            image = '<div class="tarot-symbol">{}</div>'.format(HELMET)
-            image += '<figcaption><h3>{}</h3><span>{}</span></figcaption>'.format(
-                escape(row['name']), escape(row['team']))
-        cards.append('<article class="tarot-card"><figure>{}</figure></article>'.format(image))
+            kind = 'missing'
+            missing = 'Illustration unavailable' if language() == 'en' else 'Ilustração indisponível'
+            image = '<div class="tarot-art-unavailable">{}</div>'.format(missing)
+        # Team labels and framing belong to this GP, not to a driver's current team.
+        image += '<figcaption class="tarot-card-label"><h3>{}</h3><span>{}</span></figcaption>'.format(
+            escape(row['name']), escape(row['team']))
+        cards.append('<article class="tarot-card tarot-team-{} tarot-pose-{}" data-driver-id="{}" data-team-id="{}" data-pose-id="{}" data-artwork-kind="{}"><figure>{}</figure></article>'.format(
+            escape(team, quote=True), pose, escape(row['driver_id'], quote=True),
+            escape(team, quote=True), pose, kind, image))
     return '<div class="tarot-cards">{}</div>'.format(''.join(cards))
 
 
@@ -49,7 +60,7 @@ def render(st, root, rows, year, round_, registered):
     @st.dialog(translate('As cartas do GP'),width='large',on_dismiss=dismiss)
     def show():
         st.caption('Previsão registrada antes da corrida.' if registered else 'Estudo retrospectivo; não é previsão emitida antes da corrida.')
-        st.markdown(cards_html(rows,root),unsafe_allow_html=True)
+        st.markdown(cards_html(rows,root,year,round_),unsafe_allow_html=True)
         st.caption('Arte gerada por IA. As cartas não indicam a ordem de chegada. Consulte os percentuais na tabela de previsões.')
         href='?'+urlencode(dict(tela='Previsões',temporada=year,gp=round_,lang=language()))
         st.markdown('<a class="tarot-back" href="{}" target="_self">{}</a>'.format(escape(href,quote=True),escape(translate('Ver todos os pilotos e como calculamos'))),unsafe_allow_html=True)
