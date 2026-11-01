@@ -77,7 +77,7 @@ class TestInterfaceEditorial(unittest.TestCase):
 
     def test_corridas_nao_repete_previsoes_e_cada_campeonato_aparece_uma_vez(self):
         texto = self.run_app({'temporada': '2026', 'gp': '18'})
-        self.assertNotIn('Quem tinha mais chance de pódio', texto)
+        self.assertNotIn('Antes da corrida', texto)
         self.assertNotIn('Acertos — modelo', texto)
         self.assertNotIn('Previsão e resultado observado', texto)
         self.assertEqual(texto.count('aria-label="Campeonato de pilotos"'), 0)
@@ -97,7 +97,7 @@ class TestInterfaceEditorial(unittest.TestCase):
         texto = self.run_app(query)
         self.assertEqual(por_chave(self.at.radio, 'tela').value, 'Previsões')
         self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2025:1')
-        self.assertIn('Quem tinha mais chance de pódio', texto)
+        self.assertIn('Antes da corrida', texto)
         self.assertNotIn('aria-label="Campeonato de pilotos"', texto)
         self.assertNotIn('Histórico observado deste GP', texto)
         self.assertEqual(texto.count('Estudo retrospectivo com dados históricos.'), 1)

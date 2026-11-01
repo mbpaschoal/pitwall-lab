@@ -6,9 +6,20 @@ A composição C aprovada orienta o produto inteiro: Corridas, Pilotos, Campeona
 
 ## Navegar
 
-Os seis destinos ficam no rodapé, com ícone, rótulo e seleção visível. O controle é nativo, acessível por teclado. A área final da página reserva espaço para o menu; ele não elimina conteúdo. Temporada e GP ficam no topo das áreas que dependem desse contexto. O seletor inclui o calendário inteiro; a faixa visual mostra etapas próximas, com a selecionada identificada. No celular, destaca o GP e seus vizinhos.
+Os seis destinos ficam no rodapé, com ícone, rótulo e seleção visível. O controle é nativo, acessível por teclado. A área final da página reserva espaço para o menu; ele não elimina conteúdo. Logo, temporada, GP e busca compartilham um único cabeçalho nas seis telas. As bandeiras de idioma permanecem no canto superior direito. O seletor inclui o calendário inteiro; a faixa visual mostra etapas próximas, com a selecionada identificada. No celular, destaca o GP e seus vizinhos.
 
 Corridas mantém os seis capítulos acessíveis nas abas: Resumo, Sessões e voltas, Pneus e paradas, Clima, Nesta pista e Equipes. Foto e traçado aparecem antes do pódio. As abas preservam as rotas antigas e evitam uma página com todas as tabelas abertas de uma vez. Pilotos mantém destaques, perfil e duelos, com seus recortes próprios. Campeonato mantém todas as linhas publicadas de pilotos e equipes, agora em sequência. As outras áreas continuam com as fontes, limites e documentos acessíveis.
+
+## Composição C nas seis telas
+
+1. **Corridas:** título e data sobre a foto, traçado à direita; pódio observado com retratos em ordem visual 2–1–3, ao lado dos dados do circuito e do clima. As posições vêm exclusivamente dos resultados oficiais disponíveis.
+2. **Pilotos:** imagem de chuva, pergunta direta, atalhos por condição e ranking com retratos e barras. Empates reais aparecem como empates; o ranking completo, critérios, perfis e duelos continuam acessíveis.
+3. **Campeonato:** imagem de destaque, progressão da temporada e classificação completa com retratos e marcas de equipes. Todas as linhas da fonte são preservadas.
+4. **Chances de pódio:** imagem de corrida e linha antes/depois. Chances individuais em barras, resultado observado após publicação e cartas opcionais. O período da previsão continua explícito.
+5. **Acertos do Lab:** imagem de corrida, cartões por GP com acertos do Lab e da classificação e dois destaques. Corrida sem emissão não recebe nota zero; corrida ainda não disputada não recebe resultado. Uma corrida avaliada não vira uma amostra de seis corridas para reproduzir a prancha.
+6. **Como funciona:** imagem de capacete, três passos ilustrados e dois links para os documentos. Detalhes técnicos ficam em uma seção expansível, aberta automaticamente ao seguir um link de documento.
+
+As imagens de destaque são decorativas e identificadas como ilustrações. Retratos não estabelecem uniforme ou equipe de temporadas anteriores. Fontes e direitos estão em [créditos das imagens](../dashboard_assets/fan/ATTRIBUTION.md). A prancha orienta hierarquia, composição e navegação; os números exibidos vêm dos artefatos reais, sem copiar valores fictícios do estudo visual.
 
 ## Abrir as cartas
 

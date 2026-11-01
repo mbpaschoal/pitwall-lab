@@ -4,6 +4,14 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.6.0 — 2026-11-01
+
+- Reconstrução das seis telas seguindo a composição C aprovada: imagens em destaque, cabeçalho compacto compartilhado, calendário com bandeiras e menu inferior.
+- Pódio observado com retratos, painel do circuito, ranking visual por condição, campeonato completo, linha antes/depois e comparação visual dos acertos.
+- Três passos para explicar o Lab; fontes e documentação aprofundada continuam acessíveis. Cartas de tarô aprovadas permanecem em janela opcional.
+- Retratos locais com proveniência, tradução PT/EN e adaptações para celular. Empates e dados ausentes permanecem explícitos; nenhuma probabilidade ou emissão é recalculada.
+- Aceite visual e funcional das seis telas, links compartilhados, idioma, campeonato completo e cartas opcionais.
+
 ## 0.5.2 — 2026-11-01
 
 Corrige a interrupção da coleta do México quando falta um cadastro de piloto na OpenF1. A sessão afetada permanece parcial, com motivo visível e suas projeções bloqueadas; as demais sessões continuam sendo coletadas. Duplicações, conflitos de voltas e mistura de sessões continuam rejeitados. Fontes originais, previsões registradas e modelo v1 preservados.

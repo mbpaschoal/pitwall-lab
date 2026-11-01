@@ -14,10 +14,20 @@ fs.mkdirSync(output, {recursive:true});
  async function open(context, query, title) {
   const p = await context.newPage();
   await p.goto(base + '/?' + query);
-  await p.getByRole('heading', {level:1, name:title, exact:true}).waitFor({timeout:30000});
+  const q=new URLSearchParams(query),route=q.get('tela'),en=q.get('lang')==='en';
+  if(route==='Previsões') title=en?'Podium chances':'Chances de pódio';
+  if(route==='Campeonato') title=(en?'Drivers championship ':'Campeonato de pilotos ')+(q.get('temporada')||'2026');
+  if(route==='Pilotos'&&!['perfil','duelo'].includes(q.get('visao'))) title=en?'Who stands out in the rain?':'Quem se destaca na chuva?';
+
+  try{await p.getByRole('heading', {level:1, name:title, exact:true}).waitFor({timeout:45000});}catch(error){await p.screenshot({path:path.join(output,'failure.png')});throw Error(JSON.stringify({expected:title,url:p.url(),headings:await p.locator('h1').allTextContents(),exceptions:await p.locator('[data-testid=stException]').allTextContents()}));}
   await p.waitForFunction(() => document.querySelector('.stApp')?.getAttribute('data-test-script-state') === 'notRunning');
   await p.waitForTimeout(700);
   check(await p.locator('[data-testid="stException"]').count() === 0, 'Application exception');
+  const hero=await p.locator('.fan-hero').boundingBox();
+  check(hero&&hero.y>=0&&hero.y<270,'Composition C: image header too far below the navigation');
+  await p.locator('.fan-hero-image').evaluate(img=>img.decode());
+  check(await p.locator('.st-key-journey-navigation [role="radiogroup"] > label').count()===6,'Composition C: six destinations required');
+
   return p;
  }
  const context = await browser.newContext({viewport:{width:1440,height:1200}});
@@ -28,13 +38,13 @@ fs.mkdirSync(output, {recursive:true});
  await favourite.selectOption('max_verstappen');
  await p.getByRole('button',{name:'Ver meu favorito',exact:true}).waitFor();
  await p.reload();
- await p.getByRole('heading',{level:1,name:'Pilotos',exact:true}).waitFor();
+ await p.locator('.fan-hero h1').waitFor();
  favourite = p.frameLocator('iframe[src*="pitwall_favorite"]').locator('select');
  await favourite.locator('option[value="max_verstappen"]:checked').waitFor({state:'attached',timeout:15000});
  // A persisted favourite must not overwrite a shared driver or period.
  p = await open(context, 'tela=Pilotos&visao=perfil&piloto=norris&anos=2026&lang=en', 'Drivers');
  await p.locator('.pilot-profile h2').filter({hasText:'Lando Norris'}).waitFor();
- check(new URL(p.url()).searchParams.get('anos') === '2026', 'Profile period lost');
+ await p.waitForURL(url=>url.searchParams.get('anos')==='2026',{timeout:15000});
  await p.screenshot({path:path.join(output,'perfil-en.png')});
  await context.close();
  const clean = await browser.newContext({viewport:{width:1440,height:1200}});
@@ -53,7 +63,7 @@ fs.mkdirSync(output, {recursive:true});
  p = await open(clean,'tela=Pilotos&lang=en','Drivers');
  await p.screenshot({path:path.join(output,'pilotos-en.png')});
  p = await open(clean,'tela=Corridas&temporada=2026&gp=18&lang=pt','United States Grand Prix');
- const desktopImage=await p.locator('.pw-overview').boundingBox();
+ const desktopImage=await p.locator('.fan-hero').boundingBox();
  const desktopPodium=await p.getByRole('heading',{name:'Pódio da corrida',exact:true}).boundingBox();
  check(desktopImage && desktopPodium && desktopImage.y+desktopImage.height<=desktopPodium.y,'Desktop circuit panel must precede podium');
  await p.screenshot({path:path.join(output,'resumo-desktop.png')});
@@ -70,7 +80,7 @@ fs.mkdirSync(output, {recursive:true});
  const dock=p.locator('.st-key-journey-navigation');
  check(await dock.locator('[role="radiogroup"] > label').count()===6,'Missing journey destinations');
  await dock.getByText('Campeonato',{exact:true}).click();
- await p.getByRole('heading',{name:'Campeonato',exact:true}).waitFor();
+ await p.getByRole('heading',{name:'Campeonato de pilotos 2026',exact:true}).waitFor();
  check(new URL(p.url()).searchParams.get('gp')==='18','Dock lost GP');
  await p.screenshot({path:path.join(output,'journey-championship.png')});
  p=await open(journey,'tela=Previsões&temporada=2026&gp=19&lang=pt','Mexico City Grand Prix');
@@ -92,7 +102,7 @@ fs.mkdirSync(output, {recursive:true});
  await p.waitForTimeout(300);
  for(const tab of await p.getByRole('tab').all()) { const r=await tab.boundingBox();check(r && r.x>=0 && r.x+r.width<=390,'Tab clipped'); }
  check(!(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth)),'Mobile overflow');
- const imageTop=await p.locator('.hero-circuito').first().boundingBox();
+ const imageTop=await p.locator('.fan-hero').first().boundingBox();
  const podiumTop=await p.getByRole('heading',{name:'Pódio da corrida',exact:true}).boundingBox();
  check(imageTop && podiumTop && imageTop.y+imageTop.height<=podiumTop.y,'Circuit image must precede podium');
  await p.screenshot({path:path.join(output,'corrida-mobile.png')});

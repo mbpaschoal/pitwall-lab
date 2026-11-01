@@ -204,6 +204,8 @@ def standings_table(snapshot, teams=False, season=None):
             )
         )
         if not teams:
+            from pitwall.dashboard.fan_views import portrait
+            label=portrait(item.get('piloto_id',''),item['piloto'])+'<span class="fan-standing-name">'+e(item['piloto'])+'</span>'
             if item.get("piloto_id"):
                 from urllib.parse import urlencode
                 from pitwall.i18n import language
@@ -212,7 +214,7 @@ def standings_table(snapshot, teams=False, season=None):
                     params["anos"] = season
                 href = "?" + urlencode(params)
                 label = '<a href="{}">{}</a>'.format(e(href), label)
-            label += '<small class="pw-inline-team">{}</small>'.format(e(item.get("equipe")))
+
         cells = [e(item.get("posicao")), label]
         if not teams:
             cells.append(
@@ -220,6 +222,9 @@ def standings_table(snapshot, teams=False, season=None):
                     color, e(item.get("equipe"))
                 )
             )
+        if not teams:
+            from pitwall.dashboard.fan_views import team_mark
+            cells[-1]=team_mark(item.get('equipe_id') or (item.get('equipe_ids') or [''])[0],item.get('equipe') or '')+cells[-1]
         cells.append(e(_pontos(item["pontos"])))
         if vitorias:
             cells.append(e(item.get("vitorias")))

@@ -214,7 +214,7 @@ class TestEnglishApplication(unittest.TestCase):
         at.run(timeout=30)
         self.assertFalse(at.exception)
         self.assertTrue(
-            any("Who had the best podium chances" == s.value for s in at.subheader)
+            any("Before the race" in s.value for s in at.markdown)
         )
         for chart in at.get("plotly_chart"):
             self.assertNotIn("Probabilidade individual de pódio", str(chart.proto.spec))

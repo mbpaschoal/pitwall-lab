@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "ad9ce8d811eea072c5f24d6ab2d780f77203ade4c2f117cc829e2f5fa1201c1a",
+  "apresentacao_build_sha256": "efc105426b6401d8f1976d8dfe945ae54d5d96036af113f337428c23b25fc24d",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "2c0e405ac73ef28ada16f7aee2712e8fec5ca663a65d4d15669d9e2b825823ef",
+      "sha256_destino": "f3fd1a0a93d0f13b36a543821dd186a353438d1515db6c47e419925446c2e8ac",
       "sha256_origem": null
     },
     {
@@ -41,23 +41,23 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "00cba39ebf8f8e551ce89099bc0437d3b9d89bd6c2eaa8f80f7a086a89c1c3ef",
-      "sha256_origem": "b662b6fd176a7d9384bb35fdbf96d8618956f33550a66903b84f2a687580499c"
+      "sha256_destino": "e671c131f74d79ffdd309a906e0fe0e3d44497c8182a5ba690bdeaa65f381ae2",
+      "sha256_origem": "4f1db485361e22fc1019dd71199c10d2cb2ef23821046def7387e84f55c40ce5"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "cd13daeb52d0ba982963352887c2b69b9c597ce705a5ee60a7f0af52578b36bb",
-      "sha256_origem": "e1de23ac81369ed37eb908fb9869ed8549e67ba41cce867a56a2011b2136379a"
+      "sha256_destino": "4f54640ea523a1794c1dc70511817a14e7cea989857537f175e80a9fb1dfbb47",
+      "sha256_origem": "ef77c3d1549f7f42fb6fc2c31ab0642796814b070f45716bb102cc9cb0192735"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
       "fonte": "publicacao/templates/FONTES_E_DADOS.md",
       "modo": "gerado",
-      "sha256_destino": "36e30b520512560b6fd4806b5c5c9d39d846f1d14eaebae23fa1d56f030c2e03",
-      "sha256_origem": "36e30b520512560b6fd4806b5c5c9d39d846f1d14eaebae23fa1d56f030c2e03"
+      "sha256_destino": "b97540517a3882f1dbdb47e33b5a41c33f0c228043b15da58e0307023e74df8f",
+      "sha256_origem": "b97540517a3882f1dbdb47e33b5a41c33f0c228043b15da58e0307023e74df8f"
     },
     {
       "caminho": "GUIA_HOSPEDAGEM.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "26e0ab83aa1ff6bd0ae3882787a92663aa19db128e1241ffc99375fb9ca0c121",
-      "sha256_origem": "26e0ab83aa1ff6bd0ae3882787a92663aa19db128e1241ffc99375fb9ca0c121"
+      "sha256_destino": "97a5d6e540a6120d09c39ddb667e0e8e2bac7fcc2ffef813b82e08fd60365bce",
+      "sha256_origem": "97a5d6e540a6120d09c39ddb667e0e8e2bac7fcc2ffef813b82e08fd60365bce"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -515,6 +515,321 @@
       "sha256_origem": "e2b2f637bb1ce9e1e386724417101946846c32ce8079980b9292e332616234c4"
     },
     {
+      "caminho": "dashboard_assets/fan/ATTRIBUTION.md",
+      "fonte": "dashboard_assets/fan/ATTRIBUTION.md",
+      "modo": "copia",
+      "sha256_destino": "1b42ca42cb5c9ea406ea2a65fd21818da740d16832bbae59dbcf927cc61bda30",
+      "sha256_origem": "1b42ca42cb5c9ea406ea2a65fd21818da740d16832bbae59dbcf927cc61bda30"
+    },
+    {
+      "caminho": "dashboard_assets/fan/car.png",
+      "fonte": "dashboard_assets/fan/car.png",
+      "modo": "copia",
+      "sha256_destino": "e1932d4f88039981941b1599f4f8b00302854b5090975a0d4a7989885f73d463",
+      "sha256_origem": "e1932d4f88039981941b1599f4f8b00302854b5090975a0d4a7989885f73d463"
+    },
+    {
+      "caminho": "dashboard_assets/fan/generation.json",
+      "fonte": "dashboard_assets/fan/generation.json",
+      "modo": "copia",
+      "sha256_destino": "12a245fcafb3c8f19db4acdd79480ed8fa9973b85c82ca884a095b10ef8731e7",
+      "sha256_origem": "12a245fcafb3c8f19db4acdd79480ed8fa9973b85c82ca884a095b10ef8731e7"
+    },
+    {
+      "caminho": "dashboard_assets/fan/helmet.png",
+      "fonte": "dashboard_assets/fan/helmet.png",
+      "modo": "copia",
+      "sha256_destino": "a674d4f17557d7d36712cc0c01677d3bdfcd6f9e2996cb21572052c22999a9d6",
+      "sha256_origem": "a674d4f17557d7d36712cc0c01677d3bdfcd6f9e2996cb21572052c22999a9d6"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/alpine.svg",
+      "fonte": "dashboard_assets/fan/logos/alpine.svg",
+      "modo": "copia",
+      "sha256_destino": "da423b43efed463db0f9846aa86bd75b2f6b532c912fca1820b2f088b4d496ea",
+      "sha256_origem": "da423b43efed463db0f9846aa86bd75b2f6b532c912fca1820b2f088b4d496ea"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/aston_martin.svg",
+      "fonte": "dashboard_assets/fan/logos/aston_martin.svg",
+      "modo": "copia",
+      "sha256_destino": "c6423d510896fb31d55f51b48c26ca0f3849d4fe107c576a1c50153314bd86de",
+      "sha256_origem": "c6423d510896fb31d55f51b48c26ca0f3849d4fe107c576a1c50153314bd86de"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/audi.svg",
+      "fonte": "dashboard_assets/fan/logos/audi.svg",
+      "modo": "copia",
+      "sha256_destino": "daebead0fb61bc8cd88e90adabca5161a9b52a8d4202ce89c18daeab6bd70d7e",
+      "sha256_origem": "daebead0fb61bc8cd88e90adabca5161a9b52a8d4202ce89c18daeab6bd70d7e"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/cadillac.svg",
+      "fonte": "dashboard_assets/fan/logos/cadillac.svg",
+      "modo": "copia",
+      "sha256_destino": "aec91d6dba7fd61378188bd74672909a9695d02b933f15580a7fe9620216fe70",
+      "sha256_origem": "aec91d6dba7fd61378188bd74672909a9695d02b933f15580a7fe9620216fe70"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/ferrari.svg",
+      "fonte": "dashboard_assets/fan/logos/ferrari.svg",
+      "modo": "copia",
+      "sha256_destino": "583319b753b043bcfd0a06c3d5889cfe36c30d81262635ed5d24e14f31fa9735",
+      "sha256_origem": "583319b753b043bcfd0a06c3d5889cfe36c30d81262635ed5d24e14f31fa9735"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/haas.svg",
+      "fonte": "dashboard_assets/fan/logos/haas.svg",
+      "modo": "copia",
+      "sha256_destino": "95b6fc6a8ebe8ac13b1736522a447975848ac9d4aaa05451c52b810698d3a15b",
+      "sha256_origem": "95b6fc6a8ebe8ac13b1736522a447975848ac9d4aaa05451c52b810698d3a15b"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/mclaren.svg",
+      "fonte": "dashboard_assets/fan/logos/mclaren.svg",
+      "modo": "copia",
+      "sha256_destino": "f53570a9dde333b4f55211831baa3cad69d6c8b01681405a232e97a883506a26",
+      "sha256_origem": "f53570a9dde333b4f55211831baa3cad69d6c8b01681405a232e97a883506a26"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/mercedes.svg",
+      "fonte": "dashboard_assets/fan/logos/mercedes.svg",
+      "modo": "copia",
+      "sha256_destino": "2937c491420b8b199afd660661558c03e8af505353b1ff60a3b0f5d5da5e2e86",
+      "sha256_origem": "2937c491420b8b199afd660661558c03e8af505353b1ff60a3b0f5d5da5e2e86"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/rb.svg",
+      "fonte": "dashboard_assets/fan/logos/rb.svg",
+      "modo": "copia",
+      "sha256_destino": "731284f4a061e181bb50987ba0d880c04ba8155fee168f4716f258275731ad49",
+      "sha256_origem": "731284f4a061e181bb50987ba0d880c04ba8155fee168f4716f258275731ad49"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/red_bull.svg",
+      "fonte": "dashboard_assets/fan/logos/red_bull.svg",
+      "modo": "copia",
+      "sha256_destino": "731284f4a061e181bb50987ba0d880c04ba8155fee168f4716f258275731ad49",
+      "sha256_origem": "731284f4a061e181bb50987ba0d880c04ba8155fee168f4716f258275731ad49"
+    },
+    {
+      "caminho": "dashboard_assets/fan/logos/williams.svg",
+      "fonte": "dashboard_assets/fan/logos/williams.svg",
+      "modo": "copia",
+      "sha256_destino": "dda3692e636e0737d4b5bc0b2911431959e24f0f8785c813cd19c621419321d0",
+      "sha256_origem": "dda3692e636e0737d4b5bc0b2911431959e24f0f8785c813cd19c621419321d0"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/albon.png",
+      "fonte": "dashboard_assets/fan/portraits/albon.png",
+      "modo": "copia",
+      "sha256_destino": "05537cc221077f6f58d8b6058187cdce701bfedf454442f9e90c77059a2c15fb",
+      "sha256_origem": "05537cc221077f6f58d8b6058187cdce701bfedf454442f9e90c77059a2c15fb"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/alonso.png",
+      "fonte": "dashboard_assets/fan/portraits/alonso.png",
+      "modo": "copia",
+      "sha256_destino": "1afc6c928342cf7530a4f4493c0b0f69fb9486bbe9fbc5b6ca660757e28190a4",
+      "sha256_origem": "1afc6c928342cf7530a4f4493c0b0f69fb9486bbe9fbc5b6ca660757e28190a4"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/antonelli.png",
+      "fonte": "dashboard_assets/fan/portraits/antonelli.png",
+      "modo": "copia",
+      "sha256_destino": "4442e3a3bfc539643a9272fc2f139c3e9516e2a6020eaddf3ccf56b88b6b24e0",
+      "sha256_origem": "4442e3a3bfc539643a9272fc2f139c3e9516e2a6020eaddf3ccf56b88b6b24e0"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/arvid_lindblad.png",
+      "fonte": "dashboard_assets/fan/portraits/arvid_lindblad.png",
+      "modo": "copia",
+      "sha256_destino": "2e3ae06f12c0191dcb37d690db912789704adab171daf74bb87ef2225a281c78",
+      "sha256_origem": "2e3ae06f12c0191dcb37d690db912789704adab171daf74bb87ef2225a281c78"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/bearman.png",
+      "fonte": "dashboard_assets/fan/portraits/bearman.png",
+      "modo": "copia",
+      "sha256_destino": "18b8b66ef2498566c8a00ec099a2d17a9084ccfcf08025d567db220abe418d74",
+      "sha256_origem": "18b8b66ef2498566c8a00ec099a2d17a9084ccfcf08025d567db220abe418d74"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/bortoleto.png",
+      "fonte": "dashboard_assets/fan/portraits/bortoleto.png",
+      "modo": "copia",
+      "sha256_destino": "d680f2a4d227ca1729394608f8f2c5bb785276626555f8fe11912fb9113b03e1",
+      "sha256_origem": "d680f2a4d227ca1729394608f8f2c5bb785276626555f8fe11912fb9113b03e1"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/bottas.png",
+      "fonte": "dashboard_assets/fan/portraits/bottas.png",
+      "modo": "copia",
+      "sha256_destino": "7ac63d9d062ef2286c38926fc2d07483a76e5ad4a5a17021ed7950ef01986fad",
+      "sha256_origem": "7ac63d9d062ef2286c38926fc2d07483a76e5ad4a5a17021ed7950ef01986fad"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/colapinto.png",
+      "fonte": "dashboard_assets/fan/portraits/colapinto.png",
+      "modo": "copia",
+      "sha256_destino": "8aba2241151307bd88aab5877ff69f64da786c308eea0b00577cee8a47b814bc",
+      "sha256_origem": "8aba2241151307bd88aab5877ff69f64da786c308eea0b00577cee8a47b814bc"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/doohan.png",
+      "fonte": "dashboard_assets/fan/portraits/doohan.png",
+      "modo": "copia",
+      "sha256_destino": "72561507c66a181883e7743b6277cef272774061af3b3b672d7d29c09ae56673",
+      "sha256_origem": "72561507c66a181883e7743b6277cef272774061af3b3b672d7d29c09ae56673"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/gasly.png",
+      "fonte": "dashboard_assets/fan/portraits/gasly.png",
+      "modo": "copia",
+      "sha256_destino": "411f61594a0beb97cb74a8536d67a7502e5e25242ba67c4d3744d8a48191097e",
+      "sha256_origem": "411f61594a0beb97cb74a8536d67a7502e5e25242ba67c4d3744d8a48191097e"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/hadjar.png",
+      "fonte": "dashboard_assets/fan/portraits/hadjar.png",
+      "modo": "copia",
+      "sha256_destino": "a7a217bf1ae90aa918a30639930d91da22d09ff6f8e4cbd05829836d2c71ad05",
+      "sha256_origem": "a7a217bf1ae90aa918a30639930d91da22d09ff6f8e4cbd05829836d2c71ad05"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/hamilton.png",
+      "fonte": "dashboard_assets/fan/portraits/hamilton.png",
+      "modo": "copia",
+      "sha256_destino": "f87513b244e6c10bf87f3de1aef169bbebf76f868843aac8c3a6b119c8718743",
+      "sha256_origem": "f87513b244e6c10bf87f3de1aef169bbebf76f868843aac8c3a6b119c8718743"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/hulkenberg.png",
+      "fonte": "dashboard_assets/fan/portraits/hulkenberg.png",
+      "modo": "copia",
+      "sha256_destino": "9de990eb91791b11aef65557b30cb91631b47444031b91dabb4cadc48e5fbf73",
+      "sha256_origem": "9de990eb91791b11aef65557b30cb91631b47444031b91dabb4cadc48e5fbf73"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/kevin_magnussen.png",
+      "fonte": "dashboard_assets/fan/portraits/kevin_magnussen.png",
+      "modo": "copia",
+      "sha256_destino": "b83b24f1dcd6a88f757e5115a86ddf0cbfbc93596dda60515652e05f8d727397",
+      "sha256_origem": "b83b24f1dcd6a88f757e5115a86ddf0cbfbc93596dda60515652e05f8d727397"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/lawson.png",
+      "fonte": "dashboard_assets/fan/portraits/lawson.png",
+      "modo": "copia",
+      "sha256_destino": "36fd1607c9a2201bbdb17f4bc179e580973336c90e6614ee697870030f0820c4",
+      "sha256_origem": "36fd1607c9a2201bbdb17f4bc179e580973336c90e6614ee697870030f0820c4"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/leclerc.png",
+      "fonte": "dashboard_assets/fan/portraits/leclerc.png",
+      "modo": "copia",
+      "sha256_destino": "03bbb9e7fdb329d08a59063f386c0d2b57ef1314148c91091bea8ce70363c2a9",
+      "sha256_origem": "03bbb9e7fdb329d08a59063f386c0d2b57ef1314148c91091bea8ce70363c2a9"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/max_verstappen.png",
+      "fonte": "dashboard_assets/fan/portraits/max_verstappen.png",
+      "modo": "copia",
+      "sha256_destino": "bf265569517ea25441967068b30627c58cdaa75f88138cffe62b9cdcc3ba9e79",
+      "sha256_origem": "bf265569517ea25441967068b30627c58cdaa75f88138cffe62b9cdcc3ba9e79"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/norris.png",
+      "fonte": "dashboard_assets/fan/portraits/norris.png",
+      "modo": "copia",
+      "sha256_destino": "82d2027d23029c7086e9b21b70d8484c9486fb604fd9c9f27daf23cbc5b4baf8",
+      "sha256_origem": "82d2027d23029c7086e9b21b70d8484c9486fb604fd9c9f27daf23cbc5b4baf8"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/ocon.png",
+      "fonte": "dashboard_assets/fan/portraits/ocon.png",
+      "modo": "copia",
+      "sha256_destino": "4ee1da0d5576332246de5d19a7a01379d6c9dd0e5757ec82d1c7b565c72a2318",
+      "sha256_origem": "4ee1da0d5576332246de5d19a7a01379d6c9dd0e5757ec82d1c7b565c72a2318"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/perez.png",
+      "fonte": "dashboard_assets/fan/portraits/perez.png",
+      "modo": "copia",
+      "sha256_destino": "e75421f546bc3820275abde7d54db0b948547fb0836d80c9300deb2febac2f2a",
+      "sha256_origem": "e75421f546bc3820275abde7d54db0b948547fb0836d80c9300deb2febac2f2a"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/piastri.png",
+      "fonte": "dashboard_assets/fan/portraits/piastri.png",
+      "modo": "copia",
+      "sha256_destino": "f3d1ae78b69ec1cb253fc471f3b2026a492229122e9b5078b7ef6a1d50455c46",
+      "sha256_origem": "f3d1ae78b69ec1cb253fc471f3b2026a492229122e9b5078b7ef6a1d50455c46"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/ricciardo.png",
+      "fonte": "dashboard_assets/fan/portraits/ricciardo.png",
+      "modo": "copia",
+      "sha256_destino": "fd04ac02ff727c609ff1ef26330e6d2e720b2e8065e9071dcee9689d1ab0bb16",
+      "sha256_origem": "fd04ac02ff727c609ff1ef26330e6d2e720b2e8065e9071dcee9689d1ab0bb16"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/russell.png",
+      "fonte": "dashboard_assets/fan/portraits/russell.png",
+      "modo": "copia",
+      "sha256_destino": "0357b045dc4d23ad79aec1cd117203ce7c380f653e83add00d1e3272d7ea04de",
+      "sha256_origem": "0357b045dc4d23ad79aec1cd117203ce7c380f653e83add00d1e3272d7ea04de"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/sainz.png",
+      "fonte": "dashboard_assets/fan/portraits/sainz.png",
+      "modo": "copia",
+      "sha256_destino": "27161a1826e6078dfc21e5b25a4b9454a4be60db62978e834e3e338744b72265",
+      "sha256_origem": "27161a1826e6078dfc21e5b25a4b9454a4be60db62978e834e3e338744b72265"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/sargeant.png",
+      "fonte": "dashboard_assets/fan/portraits/sargeant.png",
+      "modo": "copia",
+      "sha256_destino": "64b66761765d39f8a51b5ddcf26f22ca87e568755fc65a67c73129ef7dcdb23f",
+      "sha256_origem": "64b66761765d39f8a51b5ddcf26f22ca87e568755fc65a67c73129ef7dcdb23f"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/stroll.png",
+      "fonte": "dashboard_assets/fan/portraits/stroll.png",
+      "modo": "copia",
+      "sha256_destino": "4c876811ffb369d330ac2e52325a3449e7d45a50ee084398645f6349ef4286ee",
+      "sha256_origem": "4c876811ffb369d330ac2e52325a3449e7d45a50ee084398645f6349ef4286ee"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/tsunoda.png",
+      "fonte": "dashboard_assets/fan/portraits/tsunoda.png",
+      "modo": "copia",
+      "sha256_destino": "c71e8e15e9593fdc310391b6597f226c7bd3ca9457d72c3edf26a9f71cc632bc",
+      "sha256_origem": "c71e8e15e9593fdc310391b6597f226c7bd3ca9457d72c3edf26a9f71cc632bc"
+    },
+    {
+      "caminho": "dashboard_assets/fan/portraits/zhou.png",
+      "fonte": "dashboard_assets/fan/portraits/zhou.png",
+      "modo": "copia",
+      "sha256_destino": "bb7469237629527ec6e89e6a4769bfeb15d8b96cbeae093d4c9672bc65da31af",
+      "sha256_origem": "bb7469237629527ec6e89e6a4769bfeb15d8b96cbeae093d4c9672bc65da31af"
+    },
+    {
+      "caminho": "dashboard_assets/fan/rain.png",
+      "fonte": "dashboard_assets/fan/rain.png",
+      "modo": "copia",
+      "sha256_destino": "583a4ab75b7dc44d96337309a0cec8017d3e95165a7faf9a0cd2bf8b0e6c2acf",
+      "sha256_origem": "583a4ab75b7dc44d96337309a0cec8017d3e95165a7faf9a0cd2bf8b0e6c2acf"
+    },
+    {
+      "caminho": "dashboard_assets/fan/sources.json",
+      "fonte": "dashboard_assets/fan/sources.json",
+      "modo": "copia",
+      "sha256_destino": "3afc9badb5e3bcfe95be4ed9e6dd5c19b57251304e106ec682fd5074c59f8fa2",
+      "sha256_origem": "3afc9badb5e3bcfe95be4ed9e6dd5c19b57251304e106ec682fd5074c59f8fa2"
+    },
+    {
       "caminho": "dashboard_assets/fonts/abrilfatface-OFL.txt",
       "fonte": "dashboard_assets/fonts/abrilfatface-OFL.txt",
       "modo": "copia",
@@ -770,8 +1085,8 @@
       "caminho": "docs/JORNADA_DO_FA.md",
       "fonte": "docs/JORNADA_DO_FA.md",
       "modo": "copia",
-      "sha256_destino": "f45b132e47c61737b8d4650190ce48e6fa06f0fe47c9a683883b16f7369ed799",
-      "sha256_origem": "f45b132e47c61737b8d4650190ce48e6fa06f0fe47c9a683883b16f7369ed799"
+      "sha256_destino": "d29edb7bc6c0455f9cc641ab7c8d8dc81f6dd82e5cb4dd8b3f72aa7281a55fc5",
+      "sha256_origem": "d29edb7bc6c0455f9cc641ab7c8d8dc81f6dd82e5cb4dd8b3f72aa7281a55fc5"
     },
     {
       "caminho": "docs/OPERACAO_FIM_SEMANA.md",
@@ -805,8 +1120,8 @@
       "caminho": "docs/en/FAN_JOURNEY.md",
       "fonte": "docs/en/FAN_JOURNEY.md",
       "modo": "copia",
-      "sha256_destino": "c0212a2642c803f06b6692b1a2163eaffb607f654b7b221357f2e07ddbb0562d",
-      "sha256_origem": "c0212a2642c803f06b6692b1a2163eaffb607f654b7b221357f2e07ddbb0562d"
+      "sha256_destino": "d8941e6913ac368418c66b8fd79ae4ebf4d41690803018da54cd932594795f15",
+      "sha256_origem": "d8941e6913ac368418c66b8fd79ae4ebf4d41690803018da54cd932594795f15"
     },
     {
       "caminho": "docs/en/REVIEW_030.md",
@@ -933,8 +1248,8 @@
       "caminho": "frontend_assets/journey.css",
       "fonte": "frontend_assets/journey.css",
       "modo": "copia",
-      "sha256_destino": "a41e5a30f8f98e9d3b8ab1f4c2a2e14b3d1f2e5c6df803c8dd20853395417f65",
-      "sha256_origem": "a41e5a30f8f98e9d3b8ab1f4c2a2e14b3d1f2e5c6df803c8dd20853395417f65"
+      "sha256_destino": "3b039587012fa6988dd36ae1ff00d71d30dcff99e9c8538180c0f8c688e9a655",
+      "sha256_origem": "3b039587012fa6988dd36ae1ff00d71d30dcff99e9c8538180c0f8c688e9a655"
     },
     {
       "caminho": "frontend_assets/operacao_fim_semana.json",
@@ -996,8 +1311,8 @@
       "caminho": "pitwall/dashboard/app.py",
       "fonte": "pitwall/dashboard/app.py",
       "modo": "copia",
-      "sha256_destino": "e7e8dac41ede4a6c4367863db4ddabb512872989d08dab586dccd3be54c7f507",
-      "sha256_origem": "e7e8dac41ede4a6c4367863db4ddabb512872989d08dab586dccd3be54c7f507"
+      "sha256_destino": "c12240353b9b296a439aeb404b0f66cbe66b4f745cff97b88cb775e6e665eccc",
+      "sha256_origem": "c12240353b9b296a439aeb404b0f66cbe66b4f745cff97b88cb775e6e665eccc"
     },
     {
       "caminho": "pitwall/dashboard/archive_views.py",
@@ -1010,8 +1325,15 @@
       "caminho": "pitwall/dashboard/components.py",
       "fonte": "pitwall/dashboard/components.py",
       "modo": "copia",
-      "sha256_destino": "b3f63ce633bdfab4471888772917c9ad9391594ebe9f3d1f5939948c8e806e75",
-      "sha256_origem": "b3f63ce633bdfab4471888772917c9ad9391594ebe9f3d1f5939948c8e806e75"
+      "sha256_destino": "d167c5dd927e702837eb0d92e172831c936285430c905bdc5dfb840b6199a44b",
+      "sha256_origem": "d167c5dd927e702837eb0d92e172831c936285430c905bdc5dfb840b6199a44b"
+    },
+    {
+      "caminho": "pitwall/dashboard/fan_views.py",
+      "fonte": "pitwall/dashboard/fan_views.py",
+      "modo": "copia",
+      "sha256_destino": "135c2cb383ed63c5f84e962220938219cc4faba26da4eef665bc3998b7c14f8c",
+      "sha256_origem": "135c2cb383ed63c5f84e962220938219cc4faba26da4eef665bc3998b7c14f8c"
     },
     {
       "caminho": "pitwall/dashboard/favorites.py",
@@ -1024,22 +1346,22 @@
       "caminho": "pitwall/dashboard/journey.py",
       "fonte": "pitwall/dashboard/journey.py",
       "modo": "copia",
-      "sha256_destino": "19a36a4c8c76e2400f29939f0c1cc32656c3bd037d80ec4db10db3e6480a5b8a",
-      "sha256_origem": "19a36a4c8c76e2400f29939f0c1cc32656c3bd037d80ec4db10db3e6480a5b8a"
+      "sha256_destino": "5da104bfdb047303edd6a54b262af892d15aab664f2e116deec7d2157efec3fb",
+      "sha256_origem": "5da104bfdb047303edd6a54b262af892d15aab664f2e116deec7d2157efec3fb"
     },
     {
       "caminho": "pitwall/dashboard/model_views.py",
       "fonte": "pitwall/dashboard/model_views.py",
       "modo": "copia",
-      "sha256_destino": "a5b9f2324ae92139bc2bd6af9e8f1bde22e2d24f4112c8dacfec2ae326388746",
-      "sha256_origem": "a5b9f2324ae92139bc2bd6af9e8f1bde22e2d24f4112c8dacfec2ae326388746"
+      "sha256_destino": "0f967f59c14ff52e6eda3816dd1c4beee5254e8bdeba60eb32c297d0a161f4c6",
+      "sha256_origem": "0f967f59c14ff52e6eda3816dd1c4beee5254e8bdeba60eb32c297d0a161f4c6"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
       "fonte": "pitwall/dashboard/pilot_views.py",
       "modo": "copia",
-      "sha256_destino": "51e356e336bcae686e44a83838f16b7cd890deb74a3d03370abd3ae7fc543ccc",
-      "sha256_origem": "51e356e336bcae686e44a83838f16b7cd890deb74a3d03370abd3ae7fc543ccc"
+      "sha256_destino": "c8202a25fc4c3dc9a46353181cf366d503de8429d2f60309ddd715a06d7da5a1",
+      "sha256_origem": "c8202a25fc4c3dc9a46353181cf366d503de8429d2f60309ddd715a06d7da5a1"
     },
     {
       "caminho": "pitwall/dashboard/search.py",
@@ -1164,8 +1486,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "2ce574773422e5ada938ac35bb8b7c41c43dd1ae7c15a179fe50a394a5c1aa2b",
-      "sha256_origem": "2ce574773422e5ada938ac35bb8b7c41c43dd1ae7c15a179fe50a394a5c1aa2b"
+      "sha256_destino": "f008831d14b8e2bcd73adfe502fc2d40a9bb05d971b0c37bcad98af2d395ab94",
+      "sha256_origem": "f008831d14b8e2bcd73adfe502fc2d40a9bb05d971b0c37bcad98af2d395ab94"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -1367,8 +1689,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "d78872078b8c73e6a3f61913c155062b290ba32e7e08958da36af453fb3e04ac",
-      "sha256_origem": "d78872078b8c73e6a3f61913c155062b290ba32e7e08958da36af453fb3e04ac"
+      "sha256_destino": "63eb57a50cf808d35d32657f51e5ae0cd82d1f56895129366ed80555e2213abb",
+      "sha256_origem": "63eb57a50cf808d35d32657f51e5ae0cd82d1f56895129366ed80555e2213abb"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -1382,8 +1704,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "4d35f13f2cd8492d9f2227188d22ace1aadb1b4a3400e379de8576459507b56c",
-      "sha256_origem": "c13bf7d5a942f95e863c11f7d7ea3283db54509dada8696b20c86a809b1ebef6"
+      "sha256_destino": "36f09cd566fdc64ff5266a9f754622be48bdfd9b480c8953e7c62697da8d2115",
+      "sha256_origem": "76317526ffaa1a9a0ddeb296233df8041caa4f2bca80e23b631c27e29e25fc58"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -1414,6 +1736,13 @@
       "sha256_origem": "64d51624e71d3c39154f56d820b9740f30b858edb47f998c72520e579d73e972"
     },
     {
+      "caminho": "tests/test_fan_composition.py",
+      "fonte": "tests/test_fan_composition.py",
+      "modo": "copia",
+      "sha256_destino": "b36d5880436bc5306c1200dee07a40420c00214866bd509449320990519cd601",
+      "sha256_origem": "b36d5880436bc5306c1200dee07a40420c00214866bd509449320990519cd601"
+    },
+    {
       "caminho": "tests/test_fan_exploration.py",
       "fonte": "tests/test_fan_exploration.py",
       "modo": "copia",
@@ -1431,8 +1760,8 @@
       "caminho": "tests/test_interface_editorial.py",
       "fonte": "tests/test_interface_editorial.py",
       "modo": "copia",
-      "sha256_destino": "d1e7e4559b9a25bcbe1599edcfdc546b64dc4ef5416b25e02dd7e9e32150641c",
-      "sha256_origem": "d1e7e4559b9a25bcbe1599edcfdc546b64dc4ef5416b25e02dd7e9e32150641c"
+      "sha256_destino": "7ed6228ee34b3a11d4d8e1f99908ee856ecdb4146353d43ef15ccedcc627471f",
+      "sha256_origem": "7ed6228ee34b3a11d4d8e1f99908ee856ecdb4146353d43ef15ccedcc627471f"
     },
     {
       "caminho": "tests/test_pilot_views.py",
@@ -1475,7 +1804,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "bb31ca50bcfad9c2f0e0f982e98a07ae62cec5749b2853a514c4149fff0e051f"
+      "sha256": "6700cec912872b4dd2005bb5808d3fe48ce27861c23942ae447f1189cb1cdd68"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
@@ -1487,7 +1816,7 @@
     },
     {
       "caminho": "publicacao/templates/FONTES_E_DADOS.md",
-      "sha256": "36e30b520512560b6fd4806b5c5c9d39d846f1d14eaebae23fa1d56f030c2e03"
+      "sha256": "b97540517a3882f1dbdb47e33b5a41c33f0c228043b15da58e0307023e74df8f"
     },
     {
       "caminho": "publicacao/templates/LICENCA_CODIGO.md",
@@ -1503,7 +1832,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "d78872078b8c73e6a3f61913c155062b290ba32e7e08958da36af453fb3e04ac"
+      "sha256": "63eb57a50cf808d35d32657f51e5ae0cd82d1f56895129366ed80555e2213abb"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -1522,5 +1851,5 @@
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.5.2"
+  "versao_produto": "0.6.0"
 }

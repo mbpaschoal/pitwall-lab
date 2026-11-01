@@ -11,6 +11,7 @@ from pitwall.paths import PROJECT_ROOT
 import pandas as pd
 import plotly.graph_objects as go
 from pitwall.i18n.streamlit import st
+from pitwall.i18n import translate
 from pitwall.i18n.controls import render as render_language
 
 from pitwall.data.dashboard import (
@@ -365,7 +366,15 @@ def situacao_corrida(corrida):
         return "Previsão registrada"
     if corrida.get("estado_qualificacao") == "local_disponivel":
         return "Classificação disponível"
-    return nome_estado_operacao(corrida.get("estado_operacao", "aguardando_dados"))
+    status = nome_estado_operacao(corrida.get("estado_operacao", "aguardando_dados"))
+    if status == "Aguardando dados":
+        from datetime import date
+        try:
+            if date.fromisoformat(corrida["data"][:10]) > date.today():
+                return "Etapa futura"
+        except (ValueError, KeyError, TypeError):
+            pass
+    return status
 
 
 def renderizar_programacao(corrida):
@@ -441,7 +450,7 @@ def renderizar_estado_dados(corrida):
         linha[1].write(estado.replace("_", " "))
 
 
-def renderizar_contexto_circuito(pacote, corrida, acervo_gp=None):
+def renderizar_contexto_circuito(pacote, corrida, acervo_gp=None, mode="full"):
     ativos = (
         para_circuito(pacote.get("catalogo_visual", {}), corrida.get("circuito_id"))
         or {}
@@ -452,6 +461,22 @@ def renderizar_contexto_circuito(pacote, corrida, acervo_gp=None):
     paineis = carregar_paineis(
         raiz_artefatos(), pacote["temporada"], corrida["rodada"], corrida["circuito_id"]
     )
+    if mode in ('hero','details'):
+        from pitwall.dashboard.fan_views import hero,circuit_details
+        if acervo_gp:
+            paineis=complementar_paineis(paineis,acervo_gp)
+        if mode=='hero':
+            map_html=('<div class="fan-hero-map"><img src="{}" alt="{}"><strong>{}</strong></div>'.format(mapa,escape('Mapa do circuito '+corrida['circuito_nome']),escape(corrida['circuito_nome']))) if mapa else ''
+            meta='{} · {} · {}'.format(corrida.get('cidade',''),pacote['temporada'],pitwall_ui.data_editorial(corrida.get('data')))
+            tooltip='Temporada {} · {}, {} · {}'.format(pacote['temporada'],corrida.get('cidade',''),corrida.get('pais',''),corrida.get('data',''))
+            map_html+='<span class="fan-gp-status" title="{}">{}</span>'.format(escape(tooltip,quote=True),escape(translate(situacao_corrida(corrida))))
+            if corrida.get('estado_previsao')!='previsao_registrada' and (pacote['temporada']!=2026 or corrida.get('estado_previsao')=='ensaio_retrospectivo'):
+                map_html+='<small class="fan-context-note">{}</small>'.format(escape(translate('Estudo retrospectivo com dados históricos.')))
+            st.markdown(hero(corrida['corrida'],meta,photo=foto,alt=ativos.get('alt_foto',''),extra=map_html,photo_left=(foto_meta or {}).get('enquadramento')=='pista-esquerda'),unsafe_allow_html=True)
+        else:
+            climate=dict((acervo_gp or {}).get('clima') or {},corrida_efetiva=(acervo_gp or {}).get('clima_corrida_efetiva'))
+            st.markdown(circuit_details(paineis['circuit_info'],climate,pitwall_ui.link_interno(pacote['temporada'],corrida['rodada'],aba='Clima')),unsafe_allow_html=True)
+        return
     if acervo_gp:
         paineis = complementar_paineis(paineis, acervo_gp)
         visao = pitwall_ui.visao_geral(
@@ -547,28 +572,22 @@ def atalho_gp(pacote, corrida, tela, rotulo, aba=None):
     )
 
 
-def renderizar_podio(pacote, corrida, participantes, acervo_gp=None):
-    from urllib.parse import urlencode
-    from pitwall.i18n import language
-    official = ((acervo_gp or {}).get("historico") or {}).get("resultados", [])
-    podium = sorted([r for r in official if r.get("posicao") in (1, 2, 3)], key=lambda r: r["posicao"])
-    if podium:
-        st.subheader("Pódio da corrida")
-        for row in podium:
-            link = "?" + urlencode(dict(tela="Pilotos", piloto=row["piloto_id"], visao="perfil", anos=pacote["temporada"], lang=language()))
-            st.markdown("**{} · [{}]({})** · {}".format(row["posicao"], row["piloto"], link, row["equipe"]))
-        return
-    rows = [p for p in participantes if p.get("posicao_observada") in (1, 2, 3)]
-    if rows:
-        st.subheader("Pódio da corrida")
-        for p in sorted(rows, key=lambda item: item["posicao_observada"]):
-            st.markdown("**{} · {}**".format(p["posicao_observada"], nome_piloto(pacote, p)))
-    elif corrida.get("podio_observado"):
-        nomes = [nome_piloto(pacote, next(p for p in participantes if p["piloto_id"] == pid)) + " · " + nome_equipe(pacote, next(p for p in participantes if p["piloto_id"] == pid))
-                 for pid in corrida["podio_observado"]]
-        st.markdown("**Integrantes do pódio observado (sem ordem):** {}".format(", ".join(nomes)))
-    else:
-        st.info("Resultado ainda indisponível para este GP.")
+def renderizar_podio(pacote, corrida, participantes, acervo_gp=None, weekend=None):
+    from pitwall.dashboard.fan_views import podium
+    official=((acervo_gp or {}).get('historico') or {}).get('resultados',[])
+    rows=[dict(id=r['piloto_id'],name=r['piloto'],team=r.get('equipe'),position=r.get('posicao')) for r in official if r.get('posicao') in (1,2,3)]
+    if not rows:
+        rows=[dict(id=p['piloto_id'],name=nome_piloto(pacote,p),team=nome_equipe(pacote,p),position=p.get('posicao_observada')) for p in participantes if p.get('posicao_observada') in (1,2,3)]
+    if not rows and weekend:
+        race=next((r for r in weekend.get('sessoes',[]) if r['nome']=='Race'),{})
+        rows=[dict(id=None,name=r['piloto'],team=r.get('equipe'),position=r['posicao']) for r in race.get('tempos',[]) if r.get('posicao') in (1,2,3)]
+    if rows or not corrida.get('podio_observado'):
+        st.markdown(podium(rows,pacote['temporada']),unsafe_allow_html=True)
+    if not rows and corrida.get('podio_observado'):
+        st.caption("Integrantes do pódio observado (sem ordem):")
+        for pid in corrida['podio_observado']:
+            p=next((p for p in participantes if p['piloto_id']==pid),None)
+            if p:st.write("{} · {}".format(nome_piloto(pacote,p),nome_equipe(pacote,p)))
 
 
 def renderizar_condicoes_disponiveis(corrida):
@@ -680,7 +699,7 @@ def grafico_probabilidades(pacote, participantes=None):
     return figura
 
 
-def renderizar_previsoes(pacote, bloco, participantes):
+def renderizar_previsoes(pacote, bloco, participantes, acervo_gp=None, weekend=None):
     if (
         pacote["temporada"] == 2026
         and bloco["corrida"]["estado_previsao"] == "indisponivel"
@@ -691,44 +710,28 @@ def renderizar_previsoes(pacote, bloco, participantes):
             "Faltam classificação concluída e emissão prospectiva registrada para este GP."
         )
         return
-    st.subheader("Quem tinha mais chance de pódio")
     from pitwall.dashboard.tarot import render as render_tarot
-    render_tarot(st,raiz_artefatos(),[
-        dict(driver_id=p['piloto_id'],name=nome_piloto(pacote,p),team=nome_equipe(pacote,p),probability=p['probabilidade_modelo'])
-        for p in bloco['favoritos_modelo']
-    ],pacote['temporada'],bloco['corrida']['rodada'],bloco['corrida'].get('estado_previsao')=='previsao_registrada')
-    esquerda, direita = st.columns(2)
-    with esquerda:
-        st.markdown("**Modelo — top 3 por probabilidade**")
-        for item in bloco["favoritos_modelo"]:
-            st.write(
-                "#{} · {} · {} · {}".format(
-                    item["ranking_modelo"],
-                    nome_piloto(pacote, item),
-                    nome_equipe(pacote, item),
-                    percentual(item["probabilidade_modelo"]),
-                )
-            )
-    same = {x["piloto_id"] for x in bloco["favoritos_modelo"]} == {x["piloto_id"] for x in bloco["favoritos_classificacao"]}
+    from pitwall.dashboard.fan_views import forecast_rows
+    with st.container(key='fan-prediction-intro'):
+        intro,reading=st.columns([3,1],vertical_alignment='center')
+        with intro:
+            st.markdown('<section class="fan-timeline-stage"><h2>{}</h2><small>{}</small></section>'.format(escape(translate('Antes da corrida')),escape(translate('Probabilidades individuais; não indicam ordem de chegada.'))),unsafe_allow_html=True)
+        with reading:
+            render_tarot(st,raiz_artefatos(),[
+                dict(driver_id=p['piloto_id'],name=nome_piloto(pacote,p),team=nome_equipe(pacote,p),probability=p['probabilidade_modelo']) for p in bloco['favoritos_modelo']
+            ],pacote['temporada'],bloco['corrida']['rodada'],bloco['corrida'].get('estado_previsao')=='previsao_registrada')
+    st.markdown(forecast_rows([dict(id=p['piloto_id'],name=nome_piloto(pacote,p),team=nome_equipe(pacote,p),probability=p['probabilidade_modelo']) for p in bloco['favoritos_modelo']],pacote['temporada']),unsafe_allow_html=True)
+    same={x['piloto_id'] for x in bloco['favoritos_modelo']}=={x['piloto_id'] for x in bloco['favoritos_classificacao']}
     if same:
-        direita.info("O Lab e a classificação escolheram os mesmos três pilotos.")
-        direita.caption("A referência usa a ordem da classificação, sem atribuir probabilidades.")
+        st.caption('O Lab e a classificação escolheram os mesmos três pilotos.')
     else:
-        with direita:
-            st.markdown("**Referência de classificação — top 3 por ranking**")
-            only_reference = [item for item in bloco["favoritos_classificacao"] if item["piloto_id"] not in {x["piloto_id"] for x in bloco["favoritos_modelo"]}]
-            st.caption("Diferentes da seleção do Lab")
-            for item in only_reference:
-                st.write(
-                    "#{} · {} · {}".format(
-                        item["ranking_classificacao"],
-                        nome_piloto(pacote, item),
-                        nome_equipe(pacote, item),
-                    )
-                )
-            st.caption(
-                "A referência é uma ordem por classificação; ela não recebe probabilidade."
-            )
+        with st.expander('Comparar com a classificação'):
+            for item in bloco['favoritos_classificacao']:
+                st.write(nome_piloto(pacote,item))
+    corrida=bloco['corrida']
+    if corrida.get('podio_observado') or any(p.get('posicao_observada') in (1,2,3) for p in participantes):
+        st.markdown('<div class="fan-timeline-stage"><h2>{}</h2></div>'.format(escape(translate('Depois da corrida'))),unsafe_allow_html=True)
+        renderizar_podio(pacote,corrida,participantes,acervo_gp,weekend)
     for ranking, favoritos in (
         ("modelo", bloco["favoritos_modelo"]),
         ("referência de classificação", bloco["favoritos_classificacao"]),
@@ -736,15 +739,10 @@ def renderizar_previsoes(pacote, bloco, participantes):
         aviso = aviso_favoritos_insuficientes(len(favoritos))
         if aviso:
             st.warning("{} Ranking: {}.".format(aviso, ranking))
-    st.subheader("Chances de pódio por piloto")
-    st.caption("Probabilidade individual de pódio; valores arredondados para exibição.")
-    st.plotly_chart(grafico_probabilidades(pacote, participantes))
-    with st.expander("Detalhes por piloto"):
-        st.dataframe(
-            tabela_participantes(pacote, participantes),
-            width="stretch",
-            hide_index=True,
-        )
+    with st.expander("Chances de pódio por piloto"):
+        st.caption("Probabilidade individual de pódio; valores arredondados para exibição.")
+        st.plotly_chart(grafico_probabilidades(pacote, participantes))
+        st.dataframe(tabela_participantes(pacote,participantes),width="stretch",hide_index=True)
 
 
 def renderizar_resultados_observados(pacote, corrida, bloco, participantes):
@@ -877,24 +875,11 @@ def selecionar_gp_busca(valor):
 
 
 def renderizar_topo(pacote, corrida=None, participantes=None):
-    with st.container(key="topbar"):
-        breadcrumb, busca, perfil = st.columns(
-            [0.70, 0.24, 0.06], gap="small", vertical_alignment="center"
-        )
-        with breadcrumb:
-            st.markdown(
-                '<div class="breadcrumb-editorial">{} <span>› &nbsp; {}</span></div>'.format(
-                    escape(st.session_state.get("tela", "Corridas")),
-                    escape("{} · GP {}".format(pacote["temporada"], corrida.get("rodada", "")) if corrida else str(pacote["temporada"])),
-                ),
-                unsafe_allow_html=True,
-            )
-        with busca:
-            with st.popover(
-                "Buscar corrida, piloto ou circuito…",
-                icon=":material/search:",
-                width="stretch",
-            ):
+    # Native search is placed in the single common header, not a second toolbar.
+    slot=globals().get('TOPBAR_SLOT',st)
+    with slot:
+        with st.container(key='topbar'):
+            with st.popover("Buscar corrida, piloto ou circuito…",icon=":material/search:"):
                 consulta = (
                     st.text_input(
                         "Buscar no Pitwall Lab",
@@ -922,14 +907,7 @@ def renderizar_topo(pacote, corrida=None, participantes=None):
                             st.markdown('<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(escape(result["href"]), escape(result["label"])), unsafe_allow_html=True)
                     if not matches:
                         st.info("Nenhum resultado. Tente outro nome de piloto, pista ou corrida, com pelo menos duas letras.")
-        with perfil:
-            with st.popover(
-                "Preferências locais",
-                icon=":material/settings:",
-                help="Preferências desta sessão",
-            ):
-                st.checkbox("Abrir notas de fontes", key="mostrar_fontes")
-                st.caption("Válido nesta sessão.")
+                st.checkbox("Abrir notas de fontes",key="mostrar_fontes")
 
 
 def tela_explorar(pacote, rodada, foco):
@@ -962,11 +940,22 @@ def tela_explorar(pacote, rodada, foco):
     observed_race=next((session for session in (weekend or {}).get('sessoes',[]) if session['nome']=='Race'),{})
     if observed_race.get('encerramento_observado_utc') and observed_race.get('tempos'):
         display_status='Resultado publicado pela OpenF1'
-    st.markdown(
-        pitwall_ui.cabecalho(corrida,pacote['temporada'],display_status,show_prediction_note=foco=='Previsões'),
-        unsafe_allow_html=True,
-    )
-    render_status(weekend)
+    from pitwall.dashboard.fan_views import hero
+    if foco == "Corridas":
+        renderizar_contexto_circuito(pacote,corrida,acervo_gp,mode='hero')
+    else:
+        st.markdown(hero("Chances de pódio","{} · {} · {}".format(corrida['corrida'],pacote['temporada'],display_status),image='car'),unsafe_allow_html=True)
+        metadata='Temporada {} · {}, {} · {}'.format(pacote['temporada'],corrida.get('cidade',''),corrida.get('pais',''),corrida.get('data',''))
+        if corrida.get('estado_previsao')=='previsao_registrada':
+            note='Previsão registrada antes da corrida.'
+        elif pacote['temporada']!=2026 or corrida.get('estado_previsao')=='ensaio_retrospectivo':
+            note='Estudo retrospectivo com dados históricos.'
+        else:
+            note='Sem previsão registrada para este GP.'
+        st.markdown('<small class="fan-forecast-note" title="{}">{}</small>'.format(escape(metadata,quote=True),escape(translate(note))),unsafe_allow_html=True)
+    if weekend:
+        with st.container(key='weekend-status'):
+            render_status(weekend)
     if foco == "Corridas":
         abas = (
             "Visão geral",
@@ -982,9 +971,11 @@ def tela_explorar(pacote, rodada, foco):
         )
         with visao_geral:
             render_language(st, "Visão geral")
-            renderizar_contexto_circuito(pacote, corrida, acervo_gp)
-            if not render_podium(weekend):
-                renderizar_podio(pacote, corrida, participantes, acervo_gp)
+            podium_column,context_column=st.columns([2,1],gap="medium")
+            with podium_column:
+                renderizar_podio(pacote,corrida,participantes,acervo_gp,weekend)
+            with context_column:
+                renderizar_contexto_circuito(pacote,corrida,acervo_gp,mode='details')
             if acervo_gp:
                 atalho_gp(pacote, corrida, "Corridas", "Ver classificação completa da corrida", aba="Tempos")
         with tempos:
@@ -1037,6 +1028,7 @@ def tela_explorar(pacote, rodada, foco):
             if acervo_gp:
                 acervo_dashboard_ui.renderizar_fontes(acervo_gp, acervo_asset)
     else:
+        renderizar_previsoes(pacote, bloco, participantes, acervo_gp, weekend)
         with st.expander("Cobertura e exclusões"):
             st.caption(
                 "Cobertura: {} participantes preparados · {} elegíveis · {} alvos conhecidos depois.".format(
@@ -1051,7 +1043,6 @@ def tela_explorar(pacote, rodada, foco):
                         corrida["motivos_nao_avaliavel"].replace("_", " ")
                     )
                 )
-        renderizar_previsoes(pacote, bloco, participantes)
         if any(item["probabilidade_modelo"] is not None for item in participantes):
             with st.expander("Avaliação da previsão"):
                 renderizar_resultados_observados(pacote, corrida, bloco, participantes)
@@ -1090,16 +1081,12 @@ def entradas_documentadas():
 
 
 def tela_como_funciona():
-    st.title("Como funciona")
-    st.subheader("De onde vêm os dados?")
-    st.write("Resultados e tempos vêm de Jolpica-F1 e OpenF1. O clima combina medições da pista e estimativas Open-Meteo, sempre identificadas. Cada comparação informa o período e quantas corridas entram.")
-    st.subheader("O que significa uma chance de pódio?")
-    st.write("É uma estimativa de terminar entre os três primeiros, sem prever a ordem. Uma chance de 70% não garante um pódio. As estimativas registradas ficam preservadas para comparar depois da corrida.")
-    st.subheader("Como ler os destaques dos pilotos?")
-    st.write("São resultados históricos no período escolhido. Carro, equipe e época também contam. Poucas corridas podem produzir percentuais altos; confira sempre o número de largadas.")
+    from pitwall.dashboard.fan_views import hero,process_steps
+    st.markdown(hero("Como funciona","O Pitwall Lab usa dados históricos da Fórmula 1 para estimar chances de pódio. Aqui você encontra uma explicação simples de como tudo funciona."),unsafe_allow_html=True)
+    st.markdown(process_steps(),unsafe_allow_html=True)
     with st.expander("Termos da corrida"):
         st.markdown("**Stint:** trecho entre trocas de pneus. **DNS:** não largou. **DSQ:** desclassificado. **Taxa de pódios:** pódios divididos pelas largadas.")
-    with st.expander("Para quem quer ir além"):
+    with st.expander("Para quem quer ir além",expanded=bool(st.query_params.get("documento"))):
         entradas = entradas_documentadas()
         st.subheader("Detalhes do modelo")
         st.markdown(
@@ -1173,19 +1160,18 @@ def executar_app():
         st.session_state["_query_aplicada"] = query_token
     from pitwall.dashboard.journey import masthead, calendar
     from pitwall.i18n import language
-    st.markdown(masthead(language()),unsafe_allow_html=True)
+    with st.container(key="journey-header"):
+        logo_control,year_control,gp_control,tool_control = st.columns([2.1,1,3.8,.38],vertical_alignment="center")
+        global TOPBAR_SLOT
+        TOPBAR_SLOT=tool_control
+        with logo_control:
+            st.markdown(masthead(language()),unsafe_allow_html=True)
     with st.container(key="journey-navigation"):
         tela = st.radio(
             "Navegação", ("Corridas", "Pilotos", "Campeonato", "Previsões", "Desempenho", "Metodologia"),
             key="tela",on_change=sincronizar_navegacao,label_visibility="collapsed",horizontal=True,
             format_func=lambda value: {"Previsões":"Chances de pódio","Desempenho":"Acertos do Lab","Metodologia":"Como funciona"}.get(value,value),
         )
-    if tela == "Pilotos":
-        from pitwall.dashboard.pilot_views import render
-        renderizar_topo({"temporada": "2024–2026"})
-        render_language(st)
-        render(raiz_artefatos())
-        return
     st.session_state.setdefault("temporada", st.session_state.get("_temporada_anterior_dashboard", 2026 if (raiz_artefatos() / "frontend_assets/pilotos_condicoes.json").is_file() else 2025))
 
     def manter_temporada():
@@ -1194,8 +1180,6 @@ def executar_app():
                 "_temporada_anterior_dashboard", 2025
             )
 
-    with st.container(key="journey-filters"):
-        year_control,gp_control = st.columns([1,3])
     temporada = year_control.selectbox(
         "Temporada",
         (2024, 2025, 2026),
@@ -1242,7 +1226,7 @@ def executar_app():
 
     if "gp" not in st.session_state and st.session_state.get("_gp_context") in valores:
         st.session_state["gp"] = st.session_state["_gp_context"]
-    if tela in ("Corridas", "Previsões", "Campeonato"):
+    if tela in ("Corridas", "Pilotos", "Previsões", "Campeonato", "Desempenho", "Metodologia"):
         gp = gp_control.selectbox(
             "Grande Prêmio",
             valores,
@@ -1255,14 +1239,18 @@ def executar_app():
         st.session_state["_gp_context"] = gp
     else:
         gp = st.session_state.get("_gp_context", st.session_state.get("gp", valores[0]))
-    if tela in ("Corridas","Previsões","Campeonato"):
-        st.markdown(calendar(opcoes,temporada,gp,tela,language()),unsafe_allow_html=True)
+    st.markdown(calendar(opcoes,temporada,gp,tela,language()),unsafe_allow_html=True)
     if tela != "Corridas":
         render_language(st)
     if gp not in descricoes:
         por_descricao = {descricao: valor for valor, descricao in descricoes.items()}
         gp = por_descricao.get(gp, valores[0])
     rodada = int(gp.split(":", 1)[1])
+    if tela == "Pilotos":
+        from pitwall.dashboard.pilot_views import render
+        renderizar_topo({"temporada": "2024–2026"})
+        render(raiz_artefatos())
+        return
     if tela in ("Corridas", "Previsões"):
         tela_explorar(pacote, rodada, tela)
     elif tela == "Campeonato":
@@ -1283,11 +1271,15 @@ def executar_app():
             for field,snapshot in (weekend.get('campeonatos') or {}).items():
                 if snapshot.get('disponivel'):
                     paineis[field]=snapshot
-        st.title("Campeonato")
+        from pitwall.dashboard.fan_views import hero
+        st.markdown(hero("Campeonato de pilotos {}".format(temporada),"Acompanhe a classificação completa da temporada."),unsafe_allow_html=True)
+        st.markdown(calendar(opcoes,temporada,gp,"Campeonato",language()).replace("journey-calendar","fan-season-progress"),unsafe_allow_html=True)
         st.markdown(pitwall_ui.campeonatos(paineis, temporada), unsafe_allow_html=True)
     elif tela == "Desempenho":
         renderizar_topo(pacote)
-        tela_desempenho(pacote)
+        from pitwall.dashboard.fan_views import hero
+        st.markdown(hero("Acertos do Lab","Nossas previsões buscam identificar quem tem mais chance de pódio. Veja a comparação com a classificação.",image="car"),unsafe_allow_html=True)
+        tela_desempenho(pacote,show_title=False)
     else:
         renderizar_topo(pacote)
         tela_como_funciona()

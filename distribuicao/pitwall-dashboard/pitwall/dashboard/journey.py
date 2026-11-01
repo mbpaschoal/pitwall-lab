@@ -14,14 +14,16 @@ def calendar(options, year, selected, screen='Corridas', lang='pt'):
     index = indices[0] if indices else 0
     start = max(0,min(index-3,len(options)-7))
     window = options[start:start+7]
+    flags={'bahrain':'🇧🇭','saudi':'🇸🇦','japan':'🇯🇵','chinese':'🇨🇳','australian':'🇦🇺','miami':'🇺🇸','emilia':'🇮🇹','monaco':'🇲🇨','spanish':'🇪🇸','canadian':'🇨🇦','austrian':'🇦🇹','british':'🇬🇧','belgian':'🇧🇪','hungarian':'🇭🇺','dutch':'🇳🇱','italian':'🇮🇹','azerbaijan':'🇦🇿','singapore':'🇸🇬','united states':'🇺🇸','mexico':'🇲🇽','são paulo':'🇧🇷','brazil':'🇧🇷','las vegas':'🇺🇸','qatar':'🇶🇦','abu dhabi':'🇦🇪','madrid':'🇪🇸'}
     links = []
     for offset,item in enumerate(window,start):
         current = item['valor'] == selected
         href = '?' + urlencode(dict(tela=screen,temporada=year,gp=item['rodada'],lang=lang))
         short = item['corrida'].replace('Grand Prix','').strip()
-        links.append('<a href="{}" target="_self" data-distance="{}" title="{}"{}><span>{:02d}</span>{}</a>'.format(
+        flag=next((value for key,value in flags.items() if key in short.lower()),'{:02d}'.format(item['rodada']))
+        links.append('<a href="{}" target="_self" data-distance="{}" title="{}"{}><span>{}</span>{}</a>'.format(
             escape(href,quote=True),offset-index,escape(item['corrida'],quote=True),
-            ' aria-current="true"' if current else '',item['rodada'],escape(short)))
+            ' aria-current="true"' if current else '',flag,escape(short)))
     return '<nav class="journey-calendar" aria-label="Calendário de GPs">{}</nav>'.format(''.join(links))
 
 

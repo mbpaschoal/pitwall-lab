@@ -31,3 +31,9 @@ The package includes nine frozen scientific artefacts and offline projections fo
 Derivados WebP mudam dimensão/formato para apresentação; os originais, créditos e condições de cada ativo estão preservados no catálogo visual.
 
 WebP presentation derivatives change dimensions/format; original files, credits and individual terms remain preserved in the visual catalogue.
+
+## Imagens da jornada / Journey imagery
+
+Retratos e ilustrações têm proveniência e direitos próprios: [créditos PT/EN](dashboard_assets/fan/ATTRIBUTION.md). Fotografias de terceiros ficam fora da licença MIT do código.
+
+Portraits and illustrations retain their own provenance and rights: [PT/EN credits](dashboard_assets/fan/ATTRIBUTION.md). Third-party photographs are outside the code MIT license.

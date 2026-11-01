@@ -74,39 +74,33 @@ def _evidence(asset, rows, key):
 
 
 def _overview(asset, years, metric, minimum):
-    cards = []
+    from pitwall.dashboard.fan_views import condition_rows
+    condition=st.session_state.get('pilot_condition','rain')
+    if condition not in BY_KEY:condition='rain'
+    chips=[]
+    for key,label in [('rain','☂ Chuva'),('track_hot','☀ Calor'),('ccw','↶ Sentido anti-horário')]:
+        query=dict(tela='Pilotos',visao='geral',condicao=key,anos=','.join(map(str,years)),metrica=metric,minimo=minimum,lang=language())
+        chips.append('<a href="?{}" target="_self"{}>{}</a>'.format(escape(urlencode(query),quote=True),' aria-current="true"' if key==condition else '',escape(translate(label))))
+    st.markdown('<nav class="fan-condition-chips" aria-label="{}">{}</nav>'.format(escape(translate('Condições de corrida')),''.join(chips)),unsafe_allow_html=True)
+    st.caption(translate('Histórico: {} · {} · mínimo {} corridas por condição.').format(', '.join(map(str,years)),translate(METRICS[metric]),minimum))
+    ranked=ranking(asset,condition,metric,minimum,years)
+    if ranked:
+        st.markdown(condition_rows(ranked[:8],metric,{r['driver_id']:_link(r['driver_id'],condition) for r in ranked}),unsafe_allow_html=True)
+        with st.expander('Classificação completa por condição'):
+            st.dataframe(pd.DataFrame([{'Pos.':r['rank'],'Piloto':r['driver_name'],'Largadas':r['starts'],METRICS[metric]:r['score']} for r in ranked]),hide_index=True,width='stretch')
+    else:
+        st.info("Amostra insuficiente para esta condição.")
+    # Alternative circumstances are discoveries, not another copy of the ranking.
+    cards=[]
     for key in HIGHLIGHTS:
-        ranked_card = ranking(asset, key, metric, minimum, years)
-        best = leaders(ranked_card)
-        title = "Chuva registrada" if key == "rain" else BY_KEY[key].short
-        if best:
-            winners = []
-            for leader in best:
-                count = leader["podiums" if "podium" in metric else "wins"]
-                evidence = translate("{} {} em {} corrida" if leader["starts"] == 1 else "{} {} em {} corridas").format(count, translate(("pódio" if count == 1 else "pódios") if "podium" in metric else ("vitória" if count == 1 else "vitórias")), leader["starts"])
-                winners.append('<div class="pilot-leader"><h3><a href="{}" target="_self">{} →</a></h3><p>{}</p></div>'.format(escape(_link(leader["driver_id"], key)), escape(leader["driver_name"]), escape(evidence)))
-            label = translate(METRICS[metric]) + (" · " + translate("Empate") if len(best) > 1 else "")
-            cards.append('<article class="pilot-card"><div class="pilot-card-heading"><span>{}</span>{}</div><small>{}</small><strong>{}</strong>{}</article>'.format(SYMBOLS[key], escape(translate(title)), label, _value(best[0]["score"], metric), "".join(winners)))
-        else:
-            cards.append('<article class="pilot-card"><div class="pilot-card-heading">{} {}</div><h3>{}</h3><p>{}</p></article>'.format(
-                SYMBOLS[key], escape(translate(title)), translate("Sem destaque neste recorte"),
-                translate("Nenhum piloto alcança o mínimo de largadas." if not ranked_card else "Nenhuma vitória ou pódio nesta métrica e neste recorte.")))
-    st.markdown('<div class="pilot-cards">' + "".join(cards) + "</div>", unsafe_allow_html=True)
-    condition = st.selectbox("Condição para comparar", list(BY_KEY), format_func=lambda x: BY_KEY[x].label,
-                             key="pilot_condition")
-    ranked = ranking(asset, condition, metric, minimum, years)
-    left, right = st.columns([1, 1])
-    with left:
-        st.subheader("Classificação por condição")
-        if ranked:
-            ordered = list(reversed(ranked))
-            figure = go.Figure(go.Bar(x=[x["score"] for x in ordered], y=[x["driver_name"] for x in ordered],
-                orientation="h", marker_color=["#d3071d" if x["driver_id"] == st.session_state.get("favorite_driver") else INK for x in ordered], customdata=[[x["starts"], x["wins"], x["podiums"]] for x in ordered],
-                hovertemplate=("%{y}<br>%{x:.1%}<br>N=%{customdata[0]}<extra></extra>" if metric.endswith("rate") else "%{y}<br>%{x}<br>N=%{customdata[0]}<extra></extra>")))
-            figure.update_xaxes(tickformat=".0%" if metric.endswith("rate") else "d", title_text=METRICS[metric])
-            _figure(figure, max(340, 27 * len(ordered)))
-        else:
-            st.info("Amostra insuficiente para esta condição.")
+        if key==condition:continue
+        best=leaders(ranking(asset,key,metric,minimum,years))
+        if not best:continue
+        cards.append('<a class="fan-discovery" href="{}" target="_self"><span>{}</span><div><strong>{}</strong><small>{}</small></div></a>'.format(escape(_link(best[0]['driver_id'],key),quote=True),SYMBOLS[key],escape(translate(BY_KEY[key].short)),escape(' / '.join(r['driver_name'] for r in best))))
+    st.markdown('<div class="fan-discoveries">{}</div>'.format(''.join(cards)),unsafe_allow_html=True)
+    with st.expander('Mais condições'):
+        st.selectbox('Condição para comparar',list(BY_KEY),format_func=lambda x:BY_KEY[x].label,key='pilot_condition')
+    right=st.container()
     with right:
         with st.expander("Mapa de condições"):
             # Alphabetical inclusion is explicit; the complete matrix is available below.
@@ -235,9 +229,10 @@ def render(root):
         if condition in BY_KEY:
             st.session_state["pilot_condition"] = condition
         st.session_state["_pilot_query"] = query
-    st.markdown('<div class="pilot-header"><h1>Pilotos</h1><p>Quem se destaca em cada condição?</p></div>', unsafe_allow_html=True)
+    from pitwall.dashboard.fan_views import hero
+    title={'rain':'Quem se destaca na chuva?','track_hot':'Quem se destaca no calor?','ccw':'Quem se destaca no sentido anti-horário?'}.get(st.session_state.get('pilot_condition','rain'),'Quem se destaca em cada condição?') if st.session_state.get('pilot_view','Visão geral')=='Visão geral' else 'Pilotos'
+    st.markdown(hero(title,'Explore como os pilotos se saem em diferentes condições de pista e encontre os mais consistentes.',image='rain',dark=True),unsafe_allow_html=True)
     from pitwall.dashboard.favorites import render as favorite_control
-    favorite_slot = st.empty()
     names = driver_names(asset)
     favorite = st.session_state.get("browser_favorite", st.session_state.get("favorite_driver"))
     favorite = favorite if isinstance(favorite, str) and favorite in names else None
@@ -245,24 +240,27 @@ def render(root):
     if favorite and st.button("Ver meu favorito"):
         st.session_state["pilot_view"] = "Perfil individual"
         st.session_state["pilot_driver"] = favorite
+        st.rerun()
     view = st.radio("Visualização de pilotos", ["Visão geral", "Perfil individual", "Duelo"], horizontal=True, key="pilot_view", label_visibility="collapsed")
-    period = measure = sample = st.sidebar
-    years = period.multiselect("Período", [2024, 2025, 2026], default=[2024, 2025, 2026], key="pilot_years")
-    metric = measure.selectbox("Comparar por", list(METRICS), format_func=METRICS.get, key="pilot_metric")
-    minimum = sample.selectbox("Corridas mínimas por condição", [5, 3, 10, 15, 1], key="pilot_minimum")
-    st.caption("Corridas principais · 2026 até Austin · análises descritivas")
+    years=st.session_state.get('pilot_years',[2024,2025,2026])
+    metric=st.session_state.get('pilot_metric','win_rate')
+    minimum=st.session_state.get('pilot_minimum',5)
     if not years:
         st.info("Selecione pelo menos uma temporada.")
-        return
-    races = [gp for gp in asset["gps"].values() if gp["temporada"] in years]
-    st.caption("{} corridas no período; {} com registro de chuva. Carro e época também influenciam os resultados.".format(len(races), sum(gp["rain_condition"] == "recorded" for gp in races)))
-    if view == "Visão geral":
+    if years and view == "Visão geral":
         _overview(asset, years, metric, minimum)
-    elif view == "Perfil individual":
+    elif years and view == "Perfil individual":
         _individual(asset, years, metric, minimum)
-    else:
+    elif years:
         _duel(asset, years, metric, minimum)
-    _share(asset, years, metric, minimum, view)
+    with st.expander('Período e critérios da comparação'):
+        period,measure,sample=st.columns([1,1,1])
+        years = period.multiselect("Período", [2024, 2025, 2026], default=[2024, 2025, 2026], key="pilot_years")
+        metric = measure.selectbox("Comparar por", list(METRICS), format_func=METRICS.get, key="pilot_metric")
+        minimum = sample.selectbox("Corridas mínimas por condição", [5, 3, 10, 15, 1], key="pilot_minimum")
+    if years:
+        _share(asset, years, metric, minimum, view)
+
     with st.expander("Como os números são calculados"):
         st.markdown("**Taxa de vitórias = vitórias ÷ largadas.** A taxa de pódios usa o mesmo denominador. Não largadas são excluídas; abandonos e desclassificações contam como oportunidades. Empates entre líderes são preservados.")
         st.markdown("Chuva significa registro do sensor durante os intervalos ativos da corrida, sem a pausa por bandeira vermelha. Ausência de chuva registrada não comprova pista seca. Temperaturas são médias das amostras nesses intervalos; as faixas são escolhas de análise, não limites universais.")
@@ -273,6 +271,7 @@ def render(root):
         st.dataframe(pd.DataFrame([{"Condição": x.label, "Variável": x.variable} for x in CONDITIONS]), hide_index=True, width="stretch")
         st.markdown("[OpenF1](https://openf1.org/docs/) · [Open-Meteo](https://open-meteo.com/en/docs/historical-weather-api) · [Mapas FIA por edição](https://github.com/TracingInsights/DDocs/tree/9f647f7c62a838405c85219e5eb2feb5c3575027) · [Auditoria dos dados](https://github.com/mbpaschoal/pitwall-lab/tree/main/reports/pilotos_condicoes_20261029)")
 
+    favorite_slot=st.empty()
     with favorite_slot.container():
         favorite_control(names, favorite)
 

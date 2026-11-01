@@ -129,30 +129,39 @@ def tabela_calibracao(calibracao):
     return pd.DataFrame(linhas)
 
 
-def tela_desempenho(pacote):
+def tela_desempenho(pacote, show_title=True):
     if pacote["temporada"] == 2026:
-        st.title("Acertos do Lab")
+        if show_title: st.title("Acertos do Lab")
         from pitwall.research.prospective_evaluation import prospective_races
         rows = prospective_races(pacote)
         if not rows:
             st.info("Ainda não há previsão registrada com resultado validado para avaliar em 2026.")
             return
-        first, second, third = st.columns(3)
-        first.metric("Corridas avaliadas",len(rows))
-        second.metric("Integrantes do pódio acertados",'{} / {}'.format(sum(r['modelo'] for r in rows),3*len(rows)))
-        third.metric("Pódios completos",'{} / {}'.format(sum(r['modelo']==3 for r in rows),len(rows)))
-        st.caption("Somente previsões registradas antes da corrida e resultados posteriores validados. Poucas corridas não demonstram superioridade do modelo.")
+        from pitwall.dashboard.fan_views import performance_cards
+        st.markdown(performance_cards(rows,pacote['corridas'],2026),unsafe_allow_html=True)
         from urllib.parse import urlencode
         from pitwall.i18n import language
         frame = pd.DataFrame([{'GP':r['corrida'],'Acertos do Lab':r['modelo'],'Acertos da classificação':r['classificacao'],
             'Previsão registrada':'?'+urlencode(dict(tela='Previsões',temporada=2026,gp=r['rodada'],lang=language()))} for r in rows])
         st.dataframe(frame,hide_index=True,width='stretch',column_config={'Previsão registrada':st.column_config.LinkColumn(display_text='↗')})
         return
+    if not show_title:
+        from pitwall.dashboard.fan_views import performance_cards
+        rows=[dict(rodada=r['rodada'],corrida=r['corrida'],modelo=r['acertos_modelo'],classificacao=r['acertos_classificacao']) for r in pacote['corridas'] if r.get('avaliavel_ranking') and type(r.get('acertos_modelo')) is int and type(r.get('acertos_classificacao')) is int]
+        st.caption('Estudo retrospectivo com dados históricos.')
+        st.markdown(performance_cards(rows,pacote['corridas'],pacote['temporada']),unsafe_allow_html=True)
+        with st.expander('Detalhes técnicos e resultados por GP'):
+            _historical(pacote,False)
+        return
+    _historical(pacote,True)
+
+
+def _historical(pacote,show_title):
     metricas = pacote["metricas"]
     cobertura = metricas["cobertura"]
     total_prob = metricas["probabilisticas"]["linhas_avaliaveis"]
     total_gp = metricas["ranking_modelo"]["corridas_avaliaveis"]
-    st.title("Acertos do Lab")
+    if show_title: st.title("Acertos do Lab")
     st.caption(
         "{} · métricas lidas dos artefatos publicados".format(
             nome_temporada(pacote["temporada"])

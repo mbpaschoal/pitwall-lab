@@ -4,6 +4,14 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.6.0 — 2026-11-01
+
+- Rebuilt all six screens around the approved composition C: prominent imagery, a shared compact header, a calendar with flags and bottom navigation.
+- Portrait podium for observed results, circuit facts, visual condition rankings, full championship standings, before/after timeline and visual evaluation cards.
+- Three steps explain the Lab; sources and detailed documentation remain accessible. Approved tarot art stays in an optional dialog.
+- Local portraits with provenance, PT/EN translations and mobile adaptations. Ties and missing data stay explicit; no forecast or recorded emission is recalculated.
+- Visual and functional acceptance covers all six screens, shared links, languages, complete standings and optional cards.
+
 ## 0.5.2 — 2026-11-01
 
 Fixes Mexico collection stopping when an OpenF1 driver profile is missing. The affected session remains partial, with a visible reason and its projections withheld; collection continues for other sessions. Duplicates, conflicting laps and mixed session identities remain rejected. Original captures, recorded forecasts and frozen v1 remain unchanged.
