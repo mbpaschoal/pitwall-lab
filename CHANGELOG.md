@@ -4,6 +4,12 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.7.1 — 2026-11-01
+
+- Corrigido o gargalo de tradução em inglês que submetia o HTML completo, incluindo imagens e fontes em base64, às regras de tradução de mensagens. O HTML agora é separado primeiro; somente textos e rótulos de acessibilidade são traduzidos.
+- URLs, CSS, identificadores, mídia incorporada e blocos de código permanecem preservados, assim como os templates exatos de hover do catálogo. Regressões cobrem HTML com grande volume de mídia, sem reduzir a resolução das imagens ou alterar dados e probabilidades.
+- O marcador de entrega nas dependências solicita nova construção no Community Cloud, mantendo as mesmas versões dos pacotes. A confirmação pública da correção exige verificação própria.
+
 ## 0.7.0 — 2026-11-01
 
 - As seis telas refinam a composição C na revisão C3: cabeçalho e controles compactos, foto do circuito em destaque, cinco fotografias principais distintas para os demais destinos e navegação inferior. Pilotos combina o fundo de Piastri em Silverstone com o close de Ricciardo em Miami, identificando pessoas e eventos distintos, e mostra quatro comparações por líder com os empates preservados. Chances de pódio reforça a linha antes/depois e o contexto temporal da emissão.

@@ -4,6 +4,12 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.7.1 — 2026-11-01
+
+- Fixed an English translation bottleneck that passed entire HTML documents, including base64 images and fonts, through message translation rules. HTML is now parsed first; only text and accessibility labels are translated.
+- URLs, CSS, identifiers, embedded media and code blocks remain preserved, as do exact catalogue hover templates. Regression checks cover HTML with large embedded media without reducing image resolution or changing data and probabilities.
+- The delivery marker in the dependency file requests a fresh Community Cloud build while retaining the same package versions. Public confirmation of the fix requires its own verification.
+
 ## 0.7.0 — 2026-11-01
 
 - All six screens refine composition C in revision C3: compact shared controls, a prominent circuit photograph, five distinct principal hero photographs and bottom navigation. Drivers combines Piastri at Silverstone in the backdrop with Ricciardo at Miami in close-up, identifying separate people and events, and shows four comparisons per leader with ties preserved. Podium chances strengthens the before/after timeline and emission-time context.

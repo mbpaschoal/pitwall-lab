@@ -37,6 +37,10 @@ The [HTML gallery of all 87 cards](../galeria-cartas.html) displays the three il
 
 A shared link retains driver, period, metric and minimum starts even when the saved browser favorite differs. Updating a favorite does not silently change the analysis period. Clearing the period or conditions is intentional: controls stay editable, and the corresponding chart remains absent with a prompt to select data. A driver without starts in the period remains selected without an unobserved chart. Counts appear as integers; percentage formatting is reserved for rates.
 
+## Language and rendering
+
+From 0.7.1, English translation parses HTML before translating its text and accessibility labels. Base64 images and fonts, CSS, URLs and identifiers remain intact, keeping message rules away from megabytes of embedded media. Language review must also open populated standings, such as Championship/2026/18: an event without standings does not exercise the same volume. Images retain their natural resolution. [Translation regressions](../../tests/test_i18n.py); local timings and public availability remain separate checks.
+
 ## Preserved limits
 
 Navigation remains offline: it neither collects data, trains nor runs inference. Registered forecasts, retrospective analysis and later observations retain their meanings. Frozen v1, its 15 inputs and previous emissions remain preserved. A new interface does not fill provider gaps; those remain explicit.

@@ -158,6 +158,32 @@ class _VisibleHTML(HTMLParser):
 def visible_text(text):
     if not isinstance(text, str) or language() == "pt":
         return text
+    if re.match(
+        r"data:(?:[\w.+-]+/[\w.+-]+)?(?:;[^,]*)?,",
+        text.lstrip()[:256],
+        re.IGNORECASE,
+    ):
+        return text
+    # Exact entries include Plotly hover templates with literal HTML. Their
+    # placeholders must survive without running message regexes over markup.
+    if "<" in text:
+        entries = catalogue()
+        if text in entries:
+            return entries[text]
+        stripped = text.strip()
+        if stripped != text and stripped in entries:
+            return (
+                text[: len(text) - len(text.lstrip())]
+                + entries[stripped]
+                + text[len(text.rstrip()) :]
+            )
+    # HTML may contain megabytes of image/font data. Parse it first so only
+    # visible text and accessibility labels reach dynamic message matching.
+    # This also keeps backticks inside script/style/code blocks verbatim.
+    if text.lstrip().startswith("<"):
+        parser = _VisibleHTML()
+        parser.feed(text)
+        return "".join(parser.output)
     if "`" in text:
         parts = re.split(r"(```[\s\S]*?```|`[^`\n]*`)", text)
         if len(parts) > 1:
@@ -165,11 +191,10 @@ def visible_text(text):
                 part if index % 2 else visible_text(part)
                 for index, part in enumerate(parts)
             )
-    converted = translate(text)
-    if "<" not in converted:
-        return converted
+    if "<" not in text:
+        return translate(text)
     parser = _VisibleHTML()
-    parser.feed(converted)
+    parser.feed(text)
     return "".join(parser.output)
 
 

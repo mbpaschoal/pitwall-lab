@@ -35,6 +35,10 @@ A [galeria HTML das 87 cartas](galeria-cartas.html) permite conferir os três de
 
 Um link compartilhado conserva piloto, período, métrica e mínimo de corridas mesmo quando o favorito salvo no navegador é diferente. Mudar o favorito não muda silenciosamente o período analisado. Limpar o período ou as condições é uma seleção intencional: o controle permanece editável e o gráfico correspondente fica ausente, com orientação para selecionar dados. Um piloto sem largadas no recorte continua selecionado e não recebe um gráfico sem observações. Contagens aparecem como números inteiros; somente taxas recebem formatação percentual.
 
+## Idioma e renderização
+
+A partir da 0.7.1, a tradução em inglês separa o HTML antes de traduzir seus textos e rótulos de acessibilidade. Imagens e fontes em base64, CSS, URLs e identificadores permanecem intactos, evitando aplicar regras de mensagens a megabytes de mídia. A revisão de idioma precisa abrir também uma classificação preenchida, como Campeonato/2026/18: uma etapa sem classificação não exercita o mesmo volume. As imagens mantêm sua resolução natural. [Regressões de tradução](../tests/test_i18n.py); tempos locais e disponibilidade pública continuam sendo verificações distintas.
+
 ## Limites preservados
 
 A navegação continua offline: não coleta dados, treina ou executa inferência. Previsão registrada, retrospectiva e resultado posterior mantêm seus significados. Modelo v1, 15 entradas e emissões anteriores permanecem preservados. Uma interface nova não resolve ausências dos provedores; essas continuam explícitas.

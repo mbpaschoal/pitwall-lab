@@ -1,9 +1,11 @@
 """Behavioural checks for both languages without changing scientific evidence."""
 
 import hashlib
+import base64
 from pathlib import Path
 from string import Formatter
 import unittest
+from unittest.mock import patch
 from urllib.parse import parse_qs, urlsplit
 import pandas as pd
 from streamlit.testing.v1 import AppTest
@@ -79,6 +81,44 @@ class TestTranslation(unittest.TestCase):
         self.assertEqual(
             visible_text("<code>Histórico</code>"), "<code>Histórico</code>"
         )
+
+    def test_embedded_media_never_enters_dynamic_translation(self):
+        payload = base64.b64encode(b"original-2014-\x00\xff" * 65536).decode("ascii")
+        image = "data:image/png;base64," + payload
+        stylesheet = '<style>.race-2014{background:url("' + image + '")}</style>'
+        script = '<script>const original = `Histórico 2014`;</script>'
+        source = (stylesheet + script
+            + '<img src="' + image + '" id="race-2014" data-season="2014" alt="Histórico">'
+            + '<a href="/?tela=Corridas&amp;ano=2014" title="Histórico">Histórico</a>'
+            + '<code>Histórico 2014</code>')
+        set_language("en")
+
+        def only_visible_values(value, *args, **kwargs):
+            self.assertLess(len(value), 1024, "Embedded markup reached message translation")
+            return translate(value, *args, **kwargs)
+
+        with patch("pitwall.i18n.translate", side_effect=only_visible_values):
+            result = visible_text(source)
+            self.assertEqual(visible_text(image), image)
+        self.assertIn(stylesheet, result)
+        self.assertIn(script, result)
+        self.assertIn('src="' + image + '" id="race-2014" data-season="2014"', result)
+        self.assertIn('href="/?tela=Corridas&amp;ano=2014" title="History">History</a>', result)
+        self.assertIn('alt="History"', result)
+        self.assertIn('<code>Histórico 2014</code>', result)
+        with patch("pitwall.i18n.catalogue", return_value={**catalogue(), "Data: 2014": "Date: 2014"}):
+            self.assertEqual(visible_text("Data: 2014"), "Date: 2014")
+
+    def test_exact_catalogue_hover_html_and_fenced_html_remain_supported(self):
+        set_language("en")
+        entries = {source: target for source, target in catalogue().items() if "<" in source}
+        self.assertTrue(entries)
+        for source, target in entries.items():
+            with self.subTest(source=source):
+                self.assertEqual(visible_text(source), target)
+                self.assertEqual(visible_text(" " + source + "\n"), " " + target + "\n")
+        source = 'Histórico\n```html\n<span id="2014">Histórico</span>\n```'
+        self.assertEqual(visible_text(source), 'History\n```html\n<span id="2014">Histórico</span>\n```')
 
     def test_translated_table_is_a_copy_with_identical_numbers_and_missingness(self):
         original = pd.DataFrame(
