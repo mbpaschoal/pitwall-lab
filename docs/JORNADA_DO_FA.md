@@ -42,3 +42,9 @@ A partir da 0.7.1, a tradução em inglês separa o HTML antes de traduzir seus 
 ## Limites preservados
 
 A navegação continua offline: não coleta dados, treina ou executa inferência. Previsão registrada, retrospectiva e resultado posterior mantêm seus significados. Modelo v1, 15 entradas e emissões anteriores permanecem preservados. Uma interface nova não resolve ausências dos provedores; essas continuam explícitas.
+
+## Conferência visual da entrega 0.7.3
+
+O aceite [aceite_visual.cjs](https://github.com/mbpaschoal/pitwall-lab/blob/main/tests/browser/aceite_visual.cjs) percorre as seis telas nos dois idiomas, em 1040 × 992 pixels para as três telas superiores da referência C, 1040 × 875 para as inferiores e 390 × 844 no celular, com densidade 2×. Ele registra capturas e medidas, sem tratar o CSS anterior como modelo aprovado. Confere ordem de leitura, sobreposição, resolução natural, legenda, campeonato completo e controles; o pódio observado e os links explicativos precisam ficar acima da navegação na conferência desktop. O CI preserva essas evidências por três dias.
+
+A comparação preserva diferenças legítimas: fotografias reais substituem as imagens conceituais, empates continuam empates, todas as linhas do campeonato permanecem disponíveis e etapas sem avaliação não recebem números fictícios. O selo externo do Streamlit tem espaço reservado. Por isso, a referência orienta a composição, mas não se declara identidade pixel a pixel.

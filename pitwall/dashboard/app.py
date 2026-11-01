@@ -570,7 +570,7 @@ def atalho_gp(pacote, corrida, tela, rotulo, aba=None):
     )
 
 
-def renderizar_podio(pacote, corrida, participantes, acervo_gp=None, weekend=None):
+def renderizar_podio(pacote, corrida, participantes, acervo_gp=None, weekend=None, compact=False):
     from pitwall.dashboard.fan_views import podium
     official=((acervo_gp or {}).get('historico') or {}).get('resultados',[])
     rows=[dict(id=r['piloto_id'],name=r['piloto'],team=r.get('equipe'),position=r.get('posicao')) for r in official if r.get('posicao') in (1,2,3)]
@@ -580,7 +580,7 @@ def renderizar_podio(pacote, corrida, participantes, acervo_gp=None, weekend=Non
         race=next((r for r in weekend.get('sessoes',[]) if r['nome']=='Race'),{})
         rows=[dict(id=None,name=r['piloto'],team=r.get('equipe'),position=r['posicao']) for r in race.get('tempos',[]) if r.get('posicao') in (1,2,3)]
     if rows or not corrida.get('podio_observado'):
-        st.markdown(podium(rows,pacote['temporada']),unsafe_allow_html=True)
+        st.markdown(podium(rows,pacote['temporada'],compact=compact),unsafe_allow_html=True)
     if not rows and corrida.get('podio_observado'):
         st.caption("Integrantes do pódio observado (sem ordem):")
         for pid in corrida['podio_observado']:
@@ -721,7 +721,7 @@ def renderizar_previsoes(pacote, bloco, participantes, acervo_gp=None, weekend=N
     st.markdown(forecast_rows([dict(id=p['piloto_id'],name=nome_piloto(pacote,p),team=nome_equipe(pacote,p),probability=p['probabilidade_modelo']) for p in bloco['favoritos_modelo']],pacote['temporada']),unsafe_allow_html=True)
     same={x['piloto_id'] for x in bloco['favoritos_modelo']}=={x['piloto_id'] for x in bloco['favoritos_classificacao']}
     if same:
-        st.caption('O Lab e a classificação escolheram os mesmos três pilotos.')
+        st.markdown('<p class="fan-forecast-baseline">{}</p>'.format(escape(translate('O Lab e a classificação escolheram os mesmos três pilotos.'))),unsafe_allow_html=True)
     else:
         with st.expander('Comparar com a classificação'):
             for item in bloco['favoritos_classificacao']:
@@ -734,7 +734,7 @@ def renderizar_previsoes(pacote, bloco, participantes, acervo_gp=None, weekend=N
                 st.markdown('<div class="fan-timeline-stage"><h2>{}</h2></div>'.format(escape(translate('Depois da corrida'))),unsafe_allow_html=True)
             with result:
                 with st.container(key='prediction-result'):
-                    renderizar_podio(pacote,corrida,participantes,acervo_gp,weekend)
+                    renderizar_podio(pacote,corrida,participantes,acervo_gp,weekend,compact=True)
     for ranking, favoritos in (
         ("modelo", bloco["favoritos_modelo"]),
         ("referência de classificação", bloco["favoritos_classificacao"]),
@@ -961,7 +961,7 @@ def tela_explorar(pacote, rodada, foco, topbar_slot=None):
         else:
             note='Sem previsão registrada para este GP.'
         note_html='<small class="fan-forecast-note" title="{}">{}</small>'.format(escape(metadata,quote=True),escape(translate(note)))
-        st.markdown(hero("Chances de pódio","Veja as chances de pódio calculadas pelo Lab e compare com o resultado da corrida.",image='forecast',extra=note_html),unsafe_allow_html=True)
+        st.markdown(hero("Chances de pódio","Veja as chances do Lab e o resultado da corrida.",image='forecast',extra=note_html),unsafe_allow_html=True)
     if weekend:
         with st.container(key='weekend-status'):
             render_status(weekend)
@@ -1093,7 +1093,7 @@ def entradas_documentadas():
 
 def tela_como_funciona():
     from pitwall.dashboard.fan_views import hero,process_steps
-    st.markdown(hero("Como funciona","O Pitwall Lab usa dados históricos da Fórmula 1 para estimar chances de pódio. Aqui você encontra uma explicação simples de como tudo funciona.",image="method"),unsafe_allow_html=True)
+    st.markdown(hero("Como funciona","Entenda como os dados viram chances de pódio e conheça os limites do Lab.",image="method"),unsafe_allow_html=True)
     st.markdown(process_steps(),unsafe_allow_html=True)
     with st.expander("Termos da corrida"):
         st.markdown("**Stint:** trecho entre trocas de pneus. **DNS:** não largou. **DSQ:** desclassificado. **Taxa de pódios:** pódios divididos pelas largadas.")

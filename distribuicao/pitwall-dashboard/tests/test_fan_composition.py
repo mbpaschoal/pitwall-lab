@@ -1,7 +1,8 @@
 """Visual presentation must not invent observed places or missing evaluations."""
 import unittest
-from pitwall.dashboard.fan_views import podium, forecast_rows, performance_cards, condition_rows, hero, HERO_IMAGES
+from pitwall.dashboard.fan_views import podium, forecast_rows, performance_cards, condition_rows, hero, HERO_IMAGES, circuit_details
 from pitwall.i18n import set_language
+from pitwall.dashboard.journey import race_identity
 
 
 class FanCompositionTests(unittest.TestCase):
@@ -38,6 +39,31 @@ class FanCompositionTests(unittest.TestCase):
         self.assertLess(rendered.index('fan-place-2'),rendered.index('fan-place-1'))
         self.assertLess(rendered.index('fan-place-1'),rendered.index('fan-place-3'))
         self.assertIn('piloto=antonelli',rendered)
+
+    def test_compact_comparison_keeps_identity_without_a_second_heading(self):
+        rendered=podium([dict(id='antonelli',name='Andrea Kimi Antonelli',team='Mercedes',position=1)],2026,compact=True)
+        self.assertNotIn('<h2>',rendered)
+        self.assertIn('aria-label="Pódio da corrida"',rendered)
+        self.assertIn('alt="Andrea Kimi Antonelli"',rendered)
+        self.assertIn('>Antonelli</strong>',rendered)
+
+    def test_circuit_summary_keeps_weather_before_optional_details(self):
+        rendered=circuit_details(dict(comprimento_km=5.513,curvas=20,voltas=56),
+                                 dict(corrida_efetiva=dict(air_temperature=27.1)))
+        self.assertLess(rendered.index('class="fan-weather"'),rendered.index('class="fan-circuit-more"'))
+        self.assertIn('27,1 °C',rendered)
+        self.assertIn('Ar durante a corrida · OpenF1',rendered)
+
+    def test_results_use_country_cues_without_inventing_a_known_country(self):
+        self.assertEqual(race_identity('Bahrain in Malaysia Grand Prix'),('', 'Bahrain in Malaysia'))
+        self.assertEqual(race_identity('Spanish Grand Prix'),('🇪🇸', 'Espanha'))
+        rows=[dict(rodada=18,corrida='United States Grand Prix',modelo=2,classificacao=2)]
+        rendered=performance_cards(rows,[dict(rodada=18,corrida='United States Grand Prix')],2026)
+        self.assertIn('🇺🇸',rendered)
+        self.assertIn('>EUA</strong>',rendered)
+        self.assertIn('title="United States Grand Prix"',rendered)
+        self.assertIn('Empate na corrida avaliada',rendered)
+        self.assertIn('fan-results-legend',rendered)
 
     def test_unknown_evaluations_do_not_become_zero_scores(self):
         rows=[dict(rodada=18,corrida='United States Grand Prix',modelo=2,classificacao=2)]

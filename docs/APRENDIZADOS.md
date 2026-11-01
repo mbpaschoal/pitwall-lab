@@ -58,3 +58,7 @@ A revisão pública em inglês levou a medir o Campeonato/2026/18 localmente: o 
 ## 0.7.2 — Cor da equipe precisa fazer parte da arte
 
 As bases neutras evitaram atribuir um uniforme posterior a corridas históricas, mas não cumpriram o pedido visual: a carta do Norris continuava sem laranja na ilustração. Uma borda colorida não transmitia a identidade da McLaren. A correção liga cada arte a piloto, equipe e período compatível, com cores visíveis no macacão, capacete e ornamentos. Pilotos que mudaram de equipe recebem variantes próprias; as bases neutras ficam arquivadas. Cobertura de arquivos, identidade histórica e inspeção visual das cores são verificações diferentes. Os testes de seleção não demonstram sozinhos a qualidade da arte. [Galeria](galeria-cartas.html) e [contrato](../tests/test_tarot_catalog.py).
+
+## 0.7.3 — Verificar composição, além de presença
+
+Uma tela podia conter todos os componentes esperados e ainda apresentar um título repetido ou esconder o final do pódio atrás da navegação. A comparação visual levou a um pódio compacto com nome completo acessível, clima antes dos detalhes opcionais e separação clara entre explicação e legenda dos acertos. A conferência passou a medir relações entre blocos nos dois idiomas e a densidade natural das imagens em 2×. A versão em inglês precisa de revisão própria: uma frase maior pode mudar a altura de um cartão. [Contrato e limites](JORNADA_DO_FA.md).

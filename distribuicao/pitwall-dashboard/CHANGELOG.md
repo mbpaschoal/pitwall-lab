@@ -4,6 +4,14 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.7.3 — 2026-11-01
+
+- Refinada a disposição da Jornada do Fã: fotografia e pódio com proporções mais equilibradas, clima antes dos detalhes opcionais da pista e comparação antes/depois mais compacta, sem repetir o título do pódio.
+- Acertos do Lab ganha bandeiras, rótulos curtos de GPs e legenda visual ao lado da explicação. Etapas sem avaliação continuam identificadas e não viram acertos ou zeros. A tela Como funciona aproxima os passos e os links sem reduzir a legibilidade.
+- Texto móvel da explicação ampliado para 13 px. O atalho de calor utiliza fotografia de pista seca; a cena molhada fica associada à chuva. Cores, fontes, originais fotográficos e cartas aprovadas permanecem preservados.
+- Novo aceite visual no CI mede as seis telas em PT/EN e computador/celular: resolução natural para exibição 2×, sobreposições, campeonato completo, controles com pelo menos 44 px e visibilidade do pódio e dos links antes da navegação fixa. Capturas e medidas acompanham o artefato do CI.
+- Aprendizado: títulos e contêineres presentes não provam uma boa composição. O aceite agora verifica relações entre blocos e o espaço ocupado pela navegação; fotos reais, dados e reservas do Streamlit continuam distintos da imagem conceitual. Modelo, probabilidades e 614 arquivos científicos preservados.
+
 ## 0.7.2 — 2026-11-01
 
 - Corrigida a identidade das cartas: as cores da equipe passam a aparecer no macacão, capacete e ornamentos da própria ilustração. Norris e Piastri usam laranja papaya da McLaren; a moldura deixa de ser a única indicação de cor.

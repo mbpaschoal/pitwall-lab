@@ -347,8 +347,8 @@ def render(root):
             "track_hot": "Quem se destaca no calor?",
             "ccw": "Quem se destaca no sentido anti-horário?",
         }.get(condition, "Quem se destaca em cada condição?") if view == "Visão geral" else "Pilotos"
-        image = "drivers" if condition == "rain" and view == "Visão geral" else (
-            "performance" if condition == "track_hot" else "forecast")
+        # Dry Miami photograph for heat; the wet scene belongs to rain only.
+        image = "drivers" if condition == "rain" and view == "Visão geral" else "forecast"
         names = driver_names(asset)
         person = None
         if view == "Perfil individual" and names:

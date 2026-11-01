@@ -44,3 +44,9 @@ From 0.7.1, English translation parses HTML before translating its text and acce
 ## Preserved limits
 
 Navigation remains offline: it neither collects data, trains nor runs inference. Registered forecasts, retrospective analysis and later observations retain their meanings. Frozen v1, its 15 inputs and previous emissions remain preserved. A new interface does not fill provider gaps; those remain explicit.
+
+## Visual acceptance for delivery 0.7.3
+
+[aceite_visual.cjs](https://github.com/mbpaschoal/pitwall-lab/blob/main/tests/browser/aceite_visual.cjs) visits all six screens in both languages, at 1040 × 992 pixels for C's upper three panels, 1040 × 875 for the lower panels and 390 × 844 on mobile, at 2× density. It records screenshots and measurements without adopting the previous CSS as an approved baseline. It checks reading order, overlaps, natural resolution, legend, full standings and controls; the observed podium and explanatory links must sit above navigation in desktop acceptance. CI retains this evidence for three days.
+
+Comparison preserves legitimate differences: real photographs replace conceptual imagery, ties remain ties, every standings row stays available and unevaluated rounds receive no fictional scores. Space is reserved for Streamlit's external badge. The reference guides composition without a claim of pixel-for-pixel identity.

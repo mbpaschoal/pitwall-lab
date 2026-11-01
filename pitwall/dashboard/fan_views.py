@@ -8,6 +8,7 @@ from urllib.parse import urlencode
 from pitwall.paths import PROJECT_ROOT
 from pitwall.i18n import language, translate
 from pitwall.dashboard.hero_assets import HERO_IMAGES, PORTRAIT_OVERRIDES
+from pitwall.dashboard.journey import race_identity
 
 
 def text(value):
@@ -105,7 +106,7 @@ def gp_chapters(year, round_, active='Visão geral'):
     return '<nav class="fan-gp-tabs" aria-label="{}">{}</nav>'.format(text('Explorar este GP'),''.join(links))
 
 
-def podium(rows, year, title='Pódio da corrida'):
+def podium(rows, year, title='Pódio da corrida', compact=False):
     """Positions only from observed results. Never use probability ranks."""
     positions = {r.get('position'): r for r in rows if r.get('position') in (1,2,3)}
     cards = []
@@ -114,10 +115,13 @@ def podium(rows, year, title='Pódio da corrida'):
         if row is None:
             continue
         url = href('Pilotos',piloto=row['id'],visao='perfil',anos=year) if row.get('id') else None
-        cards.append('<a class="fan-podium-place fan-place-{}" href="{}" target="_self"><b>{}º</b>{}<strong>{}</strong><small>{}</small></a>'.format(pos,escape(url or '#',quote=True),pos,portrait(row.get('id') or '',row['name']),escape(row['name']),escape(row.get('team') or '—')))
+        display_name = row['name'].rsplit(' ',1)[-1] if compact else row['name']
+        cards.append('<a class="fan-podium-place fan-place-{}" href="{}" target="_self"><b>{}º</b>{}<strong title="{}">{}</strong><small>{}</small></a>'.format(pos,escape(url or '#',quote=True),pos,portrait(row.get('id') or '',row['name']),escape(row['name'],quote=True),escape(display_name),escape(row.get('team') or '—')))
     cards=[c.replace('<a ','<article ').replace(' href="#"','').replace('</a>','</article>') if 'href="#"' in c else c for c in cards]
     body = '<div class="fan-podium">{}</div>'.format(''.join(cards)) if cards else '<div class="fan-awaiting">{}</div>'.format(text('Resultado ainda indisponível para este GP.'))
-    return '<section class="fan-podium-panel"><h2>{}</h2>{}</section>'.format(text(title),body)
+    heading = '' if compact else '<h2>{}</h2>'.format(text(title))
+    return '<section class="fan-podium-panel{}" aria-label="{}">{}{}</section>'.format(
+        ' fan-podium-compact' if compact else '', text(title), heading, body)
 
 
 def forecast_rows(rows, year):
@@ -147,7 +151,7 @@ def circuit_details(info, climate=None, weather_href=None):
     temperature=('{:.1f} °C'.format(value).replace('.',',') if language()=='pt' else '{:.1f} °C'.format(value)) if isinstance(value,(int,float)) and not isinstance(value,bool) else '—'
     note='Ar durante a corrida · OpenF1' if actual else 'Fim de semana · Open-Meteo' if value is not None else 'Clima não disponível'
     weather_title='<a href="{}" target="_self">{}</a>'.format(escape(weather_href,quote=True),text('Clima e medições')) if weather_href else text('Clima e medições')
-    return '<aside class="fan-circuit-details"><h2>{}</h2><dl>{}</dl><details class="fan-circuit-more"><summary>{}</summary><dl>{}</dl></details><div class="fan-weather"><span aria-hidden="true">🌡</span><div><h3>{}</h3><strong>{}</strong><small>{}</small></div></div></aside>'.format(text('Sobre o circuito'),primary,text('Mais sobre a pista'),secondary,weather_title,temperature,text(note))
+    return '<aside class="fan-circuit-details"><h2>{}</h2><dl>{}</dl><div class="fan-weather"><span aria-hidden="true">🌡</span><div><h3>{}</h3><strong>{}</strong><small>{}</small></div></div><details class="fan-circuit-more"><summary>{}</summary><dl>{}</dl></details></aside>'.format(text('Sobre o circuito'),primary,weather_title,temperature,text(note),text('Mais sobre a pista'),secondary)
 
 
 ICONS = {'database': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6c0-4 18-4 18 0s-18 4-18 0m0 0v12c0 4 18 4 18 0V6M3 12c0 4 18 4 18 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'settings': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M9 2h6v4l4 2 3 4-3 4-4 2v4H9v-4l-4-2-3-4 3-4 4-2V2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'bar_chart': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12h4v8m3 0V4h4v16m3 0V8h4v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'description': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5V2m10 0v6h5M8 12h9M8 16h9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'sports_score': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3m0 1c5-4 9 4 16 0v10c-7 4-11-4-16 0M9 3v10m4-9v10m4-10v10M5 8h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'}
@@ -205,13 +209,13 @@ def performance_cards(rows, races, year):
     cards=[]
     for race in window:
         row=by_round.get(race['rodada'])
-        label=race['corrida'].replace('Grand Prix','').strip()
+        flag,label=race_identity(race['corrida'],language())
         if row:
             dots=''.join('<div class="fan-result-dots"><small>{}</small>{}</div>'.format(text(name),''.join('<i class="{}" aria-hidden="true"></i>'.format('fan-hit' if i<row[key] else 'fan-miss') for i in range(3))) for key,name in [('modelo','Lab'),('classificacao','Classificação')])
             content='<span class="fan-result-label">{}</span>{}'.format(text('{} de 3').format(row['modelo']),dots)
         else:
             content='<p>{}</p>'.format(text('Corrida aguardada' if race.get('estado_previsao')=='previsao_registrada' else 'Sem previsão registrada'))
-        cards.append('<a class="fan-gp-result" data-evaluated="{}" href="{}" target="_self"><strong>{}</strong>{}</a>'.format('true' if row else 'false',escape(href('Previsões',temporada=year,gp=race['rodada']),quote=True),escape(label),content))
+        cards.append('<a class="fan-gp-result" data-evaluated="{}" href="{}" title="{}" target="_self"><strong><span aria-hidden="true">{}</span>{}</strong>{}</a>'.format('true' if row else 'false',escape(href('Previsões',temporada=year,gp=race['rodada']),quote=True),escape(race['corrida'],quote=True),flag,escape(label),content))
     wins=sum(r['modelo']>r['classificacao'] for r in rows)
     ties=sum(r['modelo']==r['classificacao'] for r in rows)
     note=text('Em {} de {} corridas, o Lab acertou mais integrantes do pódio.').format(wins,len(rows))
@@ -220,4 +224,10 @@ def performance_cards(rows, races, year):
         note=text('Empate na corrida avaliada')
         detail=text('As duas seleções acertaram {} dos três integrantes do pódio.').format(rows[0]['modelo'])
     limit='Somente previsões registradas e resultados validados. Uma amostra pequena não demonstra superioridade.' if year==2026 else 'Estudo retrospectivo com dados históricos.'
-    return '<section class="fan-results"><h2>{}</h2><p>{}</p><div class="fan-gp-results">{}</div><div class="fan-insights"><article><span class="fan-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3m0 1c5-4 9 4 16 0v10c-7 4-11-4-16 0M9 3v10m4-9v10m4-10v10M5 8h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>{}</strong><p>{}</p></div></article><article><span class="fan-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12h4v8m3 0V4h4v16m3 0V8h4v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>{}</strong><p>{}</p></div></article></div></section>'.format(text('Comparação com a classificação'),text('Azul: piloto no pódio. Cinza: piloto fora do pódio. Etapas sem avaliação ficam identificadas.'),''.join(cards),note,detail,text('Amostra limitada'),text(limit))
+    header = '<header class="fan-results-header"><div><h2>{}</h2><p>{}</p></div><div class="fan-results-legend"><span><i class="fan-legend-hit" aria-hidden="true"></i>{}</span><span><i class="fan-miss" aria-hidden="true"></i>{}</span></div></header>'.format(
+        text('Comparação com a classificação'),
+        text('Compare os três nomes escolhidos pelo Lab e pela classificação com o pódio real.'),
+        text('Piloto no pódio'), text('Piloto fora do pódio'))
+    return '<section class="fan-results">{}<div class="fan-gp-results">{}</div><div class="fan-insights"><article><span class="fan-symbol">{}</span><div><strong>{}</strong><p>{}</p></div></article><article><span class="fan-symbol">{}</span><div><strong>{}</strong><p>{}</p></div></article></div></section>'.format(
+        header, ''.join(cards), ICONS['sports_score'], note, detail,
+        ICONS['bar_chart'], text('Amostra limitada'), text(limit))

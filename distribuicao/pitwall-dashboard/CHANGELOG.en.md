@@ -4,6 +4,14 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.7.3 — 2026-11-01
+
+- Refined the Fan Journey composition: better-balanced photograph and podium proportions, weather before optional circuit details and a more compact before/after comparison without a repeated podium heading.
+- Lab results adds flags, short GP labels and a visual legend alongside the explanation. Unevaluated rounds remain labelled and never become hits or zeros. How it works brings steps and document links closer without reducing readability.
+- Mobile explanation text increased to 13 px. The heat shortcut uses a dry-track photograph; the wet scene stays associated with rain. Colours, fonts, original photographs and approved cards remain preserved.
+- New CI visual acceptance measures all six screens in PT/EN on desktop/mobile: natural resolution for 2× display, overlaps, complete standings, targets of at least 44 px and podium/document visibility above fixed navigation. Screenshots and measurements accompany the CI artifact.
+- Learning: the presence of headings and containers does not establish good composition. Acceptance now checks relationships between blocks and the space occupied by navigation; real photographs, data and Streamlit reservations remain distinct from the concept image. Model, probabilities and 614 scientific files preserved.
+
 ## 0.7.2 — 2026-11-01
 
 - Fixed the cards' team identity: team colours now appear on the racing suit, helmet and ornaments inside each illustration. Norris and Piastri use McLaren papaya orange; the frame is no longer the only colour cue.

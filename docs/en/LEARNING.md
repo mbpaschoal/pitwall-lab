@@ -58,3 +58,7 @@ English public review prompted a local measurement of Championship/2026/18: the 
 ## 0.7.2 — Team colour belongs inside the artwork
 
 Neutral bases avoided assigning a later racing suit to historical races, but failed the visual request: Norris still had no orange inside the illustration. A coloured frame did not convey McLaren identity. The correction binds each illustration to a driver, team and compatible period, with visible colours on the suit, helmet and ornaments. Drivers who changed teams receive separate variants, while neutral bases remain archived. File coverage, historical identity and visual colour review are different checks. Selection tests alone do not demonstrate artwork quality. [Gallery](../galeria-cartas.html) and [contract](../../tests/test_tarot_catalog.py).
+
+## 0.7.3 — Check composition as well as presence
+
+A screen could contain every expected component while repeating a heading or hiding the end of the podium behind navigation. Visual comparison led to a compact podium with accessible full names, weather before optional details and a clear split between comparison copy and its legend. Acceptance now measures relationships between blocks in both languages and natural image density at 2×. English needs its own review: a longer sentence can change a card's height. [Contract and limits](FAN_JOURNEY.md).
