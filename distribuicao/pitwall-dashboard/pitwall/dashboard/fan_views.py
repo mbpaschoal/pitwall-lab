@@ -20,7 +20,7 @@ def href(screen, **params):
 @lru_cache(maxsize=96)
 def _image(path, modified):
     file = Path(path)
-    mime = 'image/svg+xml' if file.suffix == '.svg' else 'image/png'
+    mime = {'.svg':'image/svg+xml','.jpg':'image/jpeg','.png':'image/png'}[file.suffix]
     return 'data:{};base64,{}'.format(mime, base64.b64encode(file.read_bytes()).decode('ascii'))
 
 
@@ -48,11 +48,39 @@ def team_mark(team, label=''):
     return '<span class="fan-team-wordmark">{}</span>'.format(escape(label or str(team).replace('_',' ').title()))
 
 
+# Only identified real drivers may illustrate a driver banner. No generic fallback.
+HERO_IMAGES = {
+    'rain': dict(path='dashboard_assets/fan/banner-norris.png',driver_id='norris',
+                 name='Lando Norris',credit='Lando Norris · Formula 1',portrait=True,
+                 source='https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/12col/image.png'),
+    'helmet': dict(path='dashboard_assets/fan/banner-verstappen.png',driver_id='max_verstappen',
+                   name='Max Verstappen',credit='Max Verstappen · Formula 1',portrait=True,
+                   source='https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/12col/image.png'),
+    'car': dict(path='dashboard_assets/circuit/miami-hero.jpg',driver_id='perez',
+                name='Sergio Pérez',credit='Sergio Pérez · Miami 2022 · David Castro · CC BY-SA 4.0',portrait=False,
+                source='https://commons.wikimedia.org/wiki/File:2022_Miami_GP_-_Red_Bull_RB18_of_Sergio_P%C3%A9rez.jpg'),
+}
+
+
 def hero(title, subtitle='', image='helmet', extra='', dark=False, photo=None, alt='', photo_left=False):
-    source = photo or asset(image+'.png')
-    image_html = '<img class="fan-hero-image{}" src="{}" alt="{}">'.format(' fan-photo-left' if photo_left else '',source,escape(alt,quote=True)) if source else ''
-    credit = '' if photo and 'gerada por IA' not in alt else '<small class="fan-art-label">{}</small>'.format(text('Ilustração IA'))
-    return '<section class="fan-hero {}">{}<div class="fan-hero-copy"><h1>{}</h1><p>{}</p>{}</div>{}</section>'.format('fan-hero-dark' if dark else '', image_html,text(title),text(subtitle),extra,credit)
+    spec = HERO_IMAGES[image] if photo is None else None
+    css = ['fan-hero', 'fan-hero-dark' if dark else '']
+    driver = ''
+    if spec:
+        path = PROJECT_ROOT / spec['path']
+        source = _image(str(path),path.stat().st_mtime_ns)
+        alt = translate('Fotografia de {}').format(spec['name'])
+        driver = ' data-driver-id="{}"'.format(escape(spec['driver_id'],quote=True))
+        css.append('fan-hero-portrait' if spec['portrait'] else 'fan-hero-action')
+        if spec['portrait']:css.append('fan-hero-person-'+spec['driver_id'])
+        credit = '<a class="fan-art-label" href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(escape(spec['source'],quote=True),escape(spec['credit']))
+    else:
+        source = photo
+        credit = '<small class="fan-art-label">{}</small>'.format(text('Ilustração IA')) if 'gerada por IA' in alt else ''
+    image_css = 'fan-hero-image' + (' fan-photo-left' if photo_left else '')
+    if spec and spec['portrait']:image_css += ' fan-hero-real-portrait'
+    image_html = '<img class="{}" src="{}" alt="{}">'.format(image_css,source,escape(alt,quote=True)) if source else ''
+    return '<section class="{}"{}>{}<div class="fan-hero-copy"><h1>{}</h1><p>{}</p>{}</div>{}</section>'.format(' '.join(css),driver,image_html,text(title),text(subtitle),extra,credit)
 
 
 def podium(rows, year, title='Pódio da corrida'):

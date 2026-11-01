@@ -273,3 +273,10 @@
 /* Community Cloud's outer-frame badge must never cover navigation targets. */
 .st-key-journey-navigation{bottom:calc(60px + env(safe-area-inset-bottom))}
 [data-testid="stMainBlockContainer"]{padding-bottom:calc(152px + env(safe-area-inset-bottom))}
+/* Identified photographs replace the former anonymous AI drivers. */
+.fan-hero-portrait{background:linear-gradient(110deg,#dfecf8,#b3cce3)}
+.fan-hero-portrait.fan-hero-dark{background:linear-gradient(110deg,#102b48,#466984)}
+.stApp .fan-hero-real-portrait{left:auto;right:0;top:0;width:44%!important;height:130%!important;object-fit:contain!important;object-position:center top!important}
+.stApp .fan-art-label{color:white!important;text-decoration:none!important;max-width:90%;font-size:10px}
+@media(max-width:600px){.stApp .fan-hero-real-portrait{width:58%!important;height:100%!important;object-fit:contain!important}.fan-hero-portrait .fan-hero-copy{max-width:87%}.fan-hero-portrait::before{background:linear-gradient(90deg,#e8f3fcf5,#e8f3fcc4 53%,#e8f3fc24)}.fan-hero-portrait.fan-hero-dark::before{background:linear-gradient(90deg,#102b48fa,#102b48bb 53%,#102b4830)}}
+@media(max-width:600px){.fan-hero-portrait h1{max-width:210px;font-size:32px}.fan-hero-portrait .fan-hero-copy>p{max-width:200px}}

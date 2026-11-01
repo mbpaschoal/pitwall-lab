@@ -1,12 +1,28 @@
 """Visual presentation must not invent observed places or missing evaluations."""
 import unittest
-from pitwall.dashboard.fan_views import podium, forecast_rows, performance_cards, condition_rows
+from pitwall.dashboard.fan_views import podium, forecast_rows, performance_cards, condition_rows, hero, HERO_IMAGES
 from pitwall.i18n import set_language
 
 
 class FanCompositionTests(unittest.TestCase):
     def setUp(self):
         set_language('pt')
+
+    def test_driver_banners_require_documented_real_identity(self):
+        for preset in ('rain','helmet','car'):
+            rendered=hero('Título',image=preset)
+            self.assertIn('data-driver-id="'+HERO_IMAGES[preset]['driver_id']+'"',rendered)
+            self.assertIn(HERO_IMAGES[preset]['name'],rendered)
+            self.assertNotIn('Ilustração IA',rendered)
+            self.assertIn('<a class="fan-art-label"',rendered)
+        with self.assertRaises(KeyError):hero('Título',image='invented_driver')
+
+    def test_photo_mime_and_identity_survive_english_rendering(self):
+        set_language('en')
+        rendered=hero('Chances de pódio',image='car')
+        self.assertIn('data:image/jpeg;base64,',rendered)
+        self.assertIn('Photograph of Sergio Pérez',rendered)
+        self.assertIn('Miami 2022',rendered)
 
     def test_podium_never_turns_forecast_order_into_observed_places(self):
         rows=[dict(id='norris',name='Lando Norris',team='McLaren',probability=.9)]

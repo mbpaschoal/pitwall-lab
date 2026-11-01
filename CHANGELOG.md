@@ -4,6 +4,12 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.6.3 — 2026-11-01
+
+- Banners de pilotos fictícios substituídos por fotografias identificadas de Lando Norris e Max Verstappen em alta resolução; crédito clicável junto à imagem.
+- Banner de carro usa a foto real de Sergio Pérez em Miami 2022, com autor, data e licença. Ilustrações anônimas anteriores deixam a distribuição.
+- Cartas aprovadas de pilotos reais preservadas. Layout, dados e probabilidades não mudam; regressão impede fallback para um piloto fictício.
+
 ## 0.6.2 — 2026-11-01
 
 - Cartões de acertos de 2024/2025 identificam o estudo retrospectivo; o aviso sobre previsões registradas fica restrito à avaliação prospectiva de 2026.

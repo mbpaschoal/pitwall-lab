@@ -208,5 +208,21 @@
     "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/redbull.svg",
     "sha256": "731284f4a061e181bb50987ba0d880c04ba8155fee168f4716f258275731ad49",
     "retrieved": "2026-11-01T14:31:41.173077+00:00"
+  },
+  {
+    "file": "banner-norris.png",
+    "url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/12col/image.png",
+    "sha256": "5de64fb3a18e392eb9fa1d7a982038d6ebe287d2d8c347a109f1081cbf051bdd",
+    "retrieved": "2026-11-01T15:58:16.681592+00:00",
+    "driver_id": "norris",
+    "kind": "photograph"
+  },
+  {
+    "file": "banner-verstappen.png",
+    "url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/12col/image.png",
+    "sha256": "8f265b3d7de7ca041d38d2afd539ae3a39e97165a29c2858fae2cc4af2178124",
+    "retrieved": "2026-11-01T15:58:17.099121+00:00",
+    "driver_id": "max_verstappen",
+    "kind": "photograph"
   }
 ]

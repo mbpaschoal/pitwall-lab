@@ -9,13 +9,13 @@ Approved composition C guides the entire product: Races, Drivers, Championship, 
 The logo, season, GP and search share one compact header. Language flags remain at the top right. A nearby-race ribbon and six-item bottom navigation follow the approved composition.
 
 1. **Races:** title and date over the circuit image, map on the right, observed portrait podium in visual 2–1–3 order next to circuit facts and weather.
-2. **Drivers:** rain image, a direct question, condition shortcuts and portrait rankings with bars. Real ties stay tied; full rankings, criteria, individual profiles and duels remain accessible.
+2. **Drivers:** identified Lando Norris photograph, a direct question, condition shortcuts and portrait rankings with bars. Real ties stay tied; full rankings, criteria, individual profiles and duels remain accessible.
 3. **Championship:** image banner, season progress and complete standings with portraits and team identifiers. No source rows are removed.
 4. **Podium chances:** racing image and before/after timeline, individual probability bars, observed result when published and optional tarot cards.
 5. **Lab results:** racing image, per-GP visual comparisons with qualifying and two insight cards. Missing forecasts are not scored zero and future races have no observed result. One evaluated race is never presented as six evaluated races to imitate the mockup.
-6. **How it works:** helmet image, three illustrated steps and two document links. Technical detail stays in an expander which opens when following a document link.
+6. **How it works:** identified Max Verstappen photograph, three illustrated steps and two document links. Technical detail stays in an expander which opens when following a document link.
 
-Decorative banners are labelled as illustrations. Portraits do not establish a driver's historical uniform or team. [Image credits](../../dashboard_assets/fan/ATTRIBUTION.md) record sources and rights. The mockup guides composition and navigation; displayed figures come from real artifacts, without copying its fictional values.
+Driver banners use identified photographs of real people. AI circuit illustrations and tarot art retain their own labels. Portraits do not establish a driver's historical uniform or team. [Image credits](../../dashboard_assets/fan/ATTRIBUTION.md) record sources and rights. The mockup guides composition and navigation; displayed figures come from real artifacts, without copying its fictional values.
 
 ## Navigation
 

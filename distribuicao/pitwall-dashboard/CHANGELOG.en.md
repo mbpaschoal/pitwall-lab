@@ -4,6 +4,12 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.6.3 — 2026-11-01
+
+- Fictional driver banners replaced with identified high-resolution photographs of Lando Norris and Max Verstappen, with clickable image credits.
+- Car banner uses a real photograph of Sergio Pérez at Miami 2022, with author, date and license. Former anonymous illustrations leave the distribution.
+- Approved tarot art of real drivers is preserved. Layout, data and probabilities stay unchanged; a regression prevents fallback to a fictional driver.
+
 ## 0.6.2 — 2026-11-01
 
 - Evaluation cards for 2024/2025 identify retrospective analysis; the recorded-forecast notice is restricted to prospective 2026 evaluation.

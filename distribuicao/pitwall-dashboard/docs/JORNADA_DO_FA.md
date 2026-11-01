@@ -13,13 +13,13 @@ Corridas mantém os seis capítulos acessíveis nas abas: Resumo, Sessões e vol
 ## Composição C nas seis telas
 
 1. **Corridas:** título e data sobre a foto, traçado à direita; pódio observado com retratos em ordem visual 2–1–3, ao lado dos dados do circuito e do clima. As posições vêm exclusivamente dos resultados oficiais disponíveis.
-2. **Pilotos:** imagem de chuva, pergunta direta, atalhos por condição e ranking com retratos e barras. Empates reais aparecem como empates; o ranking completo, critérios, perfis e duelos continuam acessíveis.
+2. **Pilotos:** fotografia identificada de Lando Norris, pergunta direta, atalhos por condição e ranking com retratos e barras. Empates reais aparecem como empates; o ranking completo, critérios, perfis e duelos continuam acessíveis.
 3. **Campeonato:** imagem de destaque, progressão da temporada e classificação completa com retratos e marcas de equipes. Todas as linhas da fonte são preservadas.
 4. **Chances de pódio:** imagem de corrida e linha antes/depois. Chances individuais em barras, resultado observado após publicação e cartas opcionais. O período da previsão continua explícito.
 5. **Acertos do Lab:** imagem de corrida, cartões por GP com acertos do Lab e da classificação e dois destaques. Corrida sem emissão não recebe nota zero; corrida ainda não disputada não recebe resultado. Uma corrida avaliada não vira uma amostra de seis corridas para reproduzir a prancha.
-6. **Como funciona:** imagem de capacete, três passos ilustrados e dois links para os documentos. Detalhes técnicos ficam em uma seção expansível, aberta automaticamente ao seguir um link de documento.
+6. **Como funciona:** fotografia identificada de Max Verstappen, três passos ilustrados e dois links para os documentos. Detalhes técnicos ficam em uma seção expansível, aberta automaticamente ao seguir um link de documento.
 
-As imagens de destaque são decorativas e identificadas como ilustrações. Retratos não estabelecem uniforme ou equipe de temporadas anteriores. Fontes e direitos estão em [créditos das imagens](../dashboard_assets/fan/ATTRIBUTION.md). A prancha orienta hierarquia, composição e navegação; os números exibidos vêm dos artefatos reais, sem copiar valores fictícios do estudo visual.
+Os banners de pilotos usam fotografias identificadas de pessoas reais; ilustrações de circuitos e cartas geradas por IA mantêm sua identificação própria. Retratos não estabelecem uniforme ou equipe de temporadas anteriores. Fontes e direitos estão em [créditos das imagens](../dashboard_assets/fan/ATTRIBUTION.md). A prancha orienta hierarquia, composição e navegação; os números exibidos vêm dos artefatos reais, sem copiar valores fictícios do estudo visual.
 
 ## Abrir as cartas
 
