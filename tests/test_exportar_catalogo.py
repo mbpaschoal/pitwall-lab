@@ -49,6 +49,21 @@ class TestExportarCatalogo(unittest.TestCase):
         self.assertIn('dashboard_assets/tarot/catalog.json', arquivos)
         self.assertIn('tests/test_tarot_catalog.py', arquivos)
 
+    def test_cartas_de_equipes_sao_126_caminhos_explicitos_separados_do_arquivo_neutro(self):
+        exportador = modulo()
+        arquivos = set(exportador.runtime_worktree(RAIZ))
+        catalogo = json.loads((RAIZ / 'dashboard_assets/tarot/catalog.json').read_text())
+        self.assertEqual(len(exportador.TAROT_TEAM_PAIRS), 42)
+        self.assertEqual(len(set(exportador.TAROT_TEAM_PAIRS)), 42)
+        self.assertEqual(len(exportador.TAROT_TEAM_VARIANTS), 126)
+        self.assertEqual(len(set(exportador.TAROT_TEAM_VARIANTS)), 126)
+        self.assertEqual(set(exportador.TAROT_TEAM_VARIANTS),
+                         {entry['path'] for entry in catalogo['team_cards']})
+        self.assertEqual(set(exportador.TAROT_TEAM_PAIRS),
+                         {(entry['driver_id'], entry['team_id']) for entry in catalogo['team_cards']})
+        self.assertTrue(set(exportador.TAROT_TEAM_VARIANTS).issubset(arquivos))
+        self.assertTrue(set(exportador.TAROT_VARIANTS).isdisjoint(exportador.TAROT_TEAM_VARIANTS))
+
     def test_fotos_e_29_retratos_referenciados_viajam_com_o_runtime(self):
         exportador = modulo()
         arquivos = set(exportador.runtime_worktree(RAIZ))
@@ -73,6 +88,9 @@ class TestExportarCatalogo(unittest.TestCase):
                 'dashboard_assets/fan/photos/private-reference.jpg',
                 'dashboard_assets/tarot/variants/hamilton/pose-secret.png',
                 'dashboard_assets/tarot/variants/unlisted_driver/pose-0.png',
+                'dashboard_assets/tarot/teams/mclaren/norris/pose-secret.png',
+                'dashboard_assets/tarot/teams/mercedes/norris/pose-0.png',
+                'dashboard_assets/tarot/teams/unlisted_team/norris/pose-0.png',
                 'reports/tarot_variantes_20261101/generation/hamilton-pose-0.json',
                 'notes/private.md', '.env',
             )
@@ -84,6 +102,7 @@ class TestExportarCatalogo(unittest.TestCase):
                 arquivos = set(exportador.runtime_worktree(root))
             self.assertTrue(set(private_paths).isdisjoint(arquivos))
             self.assertTrue(set(exportador.TAROT_VARIANTS).issubset(arquivos))
+            self.assertTrue(set(exportador.TAROT_TEAM_VARIANTS).issubset(arquivos))
 
 
 if __name__ == '__main__':

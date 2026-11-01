@@ -4,6 +4,13 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.7.2 — 2026-11-01
+
+- Corrigida a identidade das cartas: as cores da equipe passam a aparecer no macacão, capacete e ornamentos da própria ilustração. Norris e Piastri usam laranja papaya da McLaren; a moldura deixa de ser a única indicação de cor.
+- Catálogo de 126 artes de equipe, com três poses para cada uma das 42 combinações de piloto/equipe conhecidas no acervo. A seleção usa a equipe da linha do GP e o período compatível; Hamilton/Mercedes e Hamilton/Ferrari possuem artes distintas. Registros sem equipe reconhecida permanecem sem arte de equipe por suposição.
+- As 87 artes neutras ficam arquivadas, sem substituir silenciosamente cartas de equipe ausentes. As três artes aprovadas do México permanecem preservadas. Galeria PT/EN, cobertura separada, verificações de integridade e allowlist explícita acompanham o catálogo.
+- O diálogo continua opcional e sem percentuais; poses distintas, favoritos, empates, probabilidades e artefatos científicos são preservados.
+
 ## 0.7.1 — 2026-11-01
 
 - Corrigido o gargalo de tradução em inglês que submetia o HTML completo, incluindo imagens e fontes em base64, às regras de tradução de mensagens. O HTML agora é separado primeiro; somente textos e rótulos de acessibilidade são traduzidos.

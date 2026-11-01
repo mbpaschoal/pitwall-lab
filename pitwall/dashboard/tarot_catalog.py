@@ -1,7 +1,7 @@
-"""Local tarot artwork catalog, independent of forecasts and team history.
+"""Verified tarot illustrations scoped to the driver, team and GP year.
 
-Neutral driver illustrations are reusable across historical teams. Approved
-team-specific originals are allowed only for their explicit team and season.
+Neutral illustrations remain an archive. They never replace missing team art.
+The three approved originals retain their explicit identities and fixed hashes.
 """
 import hashlib
 import itertools
@@ -45,6 +45,8 @@ def team_id(row):
     label = " ".join(str(row.get("team") or "").split()).casefold()
     from_label = _TEAM_IDS.get(label)
     explicit = row.get("team_id")
+    if explicit is not None and not isinstance(explicit, str):
+        return None
     if explicit and explicit not in TEAM_LABELS:
         return None
     if explicit and from_label and explicit != from_label:
@@ -74,13 +76,17 @@ def load_catalog(root):
         catalog = json.loads((Path(root) / CATALOG_PATH).read_text(encoding="utf-8"))
     except (OSError, ValueError) as error:
         raise TarotCatalogError("Tarot catalog unavailable or invalid") from error
-    if not isinstance(catalog, dict) or catalog.get("schema_version") != 1:
+    if (not isinstance(catalog, dict) or type(catalog.get("schema_version")) is not int
+            or catalog.get("schema_version") not in (1, 2)):
         raise TarotCatalogError("Unsupported tarot catalog schema")
     if not isinstance(catalog.get("cards"), list) or not isinstance(catalog.get("overrides"), list):
         raise TarotCatalogError("Tarot catalog needs neutral cards and explicit overrides")
-    for group, neutral in (("cards", True), ("overrides", False)):
+    team_cards = catalog.get("team_cards", [])
+    if not isinstance(team_cards, list) or (catalog["schema_version"] == 2 and "team_cards" not in catalog):
+        raise TarotCatalogError("Tarot catalog needs explicit team artwork")
+    for group, neutral in (("cards", True), ("overrides", False), ("team_cards", False)):
         seen = set()
-        for entry in catalog[group]:
+        for entry in catalog.get(group, []):
             if not isinstance(entry, dict):
                 raise TarotCatalogError("Invalid tarot card entry")
             driver = entry.get("driver_id")
@@ -99,15 +105,23 @@ def load_catalog(root):
             else:
                 team = entry.get("team_id")
                 years = entry.get("years")
-                if (team not in TEAM_LABELS or not isinstance(years, list) or not years
-                        or any(isinstance(y, bool) or not isinstance(y, int) for y in years)):
+                if (not isinstance(team, str) or team not in TEAM_LABELS
+                        or not isinstance(years, list) or not years
+                        or any(isinstance(y, bool) or not isinstance(y, int)
+                               or not 1900 <= y <= 9999 for y in years)
+                        or len(set(years)) != len(years)):
                     raise TarotCatalogError("Team-specific artwork needs a team and explicit years")
                 key = (driver, team, pose)
-                approved = APPROVED_OVERRIDES.get(key)
-                if (approved is None
-                        or entry.get("path") != "dashboard_assets/tarot/" + approved[0]
-                        or entry.get("sha256") != approved[1]):
-                    raise TarotCatalogError("Team override does not match an approved original")
+                if group == "overrides":
+                    approved = APPROVED_OVERRIDES.get(key)
+                    if (approved is None
+                            or entry.get("path") != "dashboard_assets/tarot/" + approved[0]
+                            or entry.get("sha256") != approved[1]):
+                        raise TarotCatalogError("Team override does not match an approved original")
+                else:
+                    expected = "dashboard_assets/tarot/teams/{}/{}/pose-{}.png".format(team, driver, pose)
+                    if entry.get("path") != expected:
+                        raise TarotCatalogError("Team artwork path does not match its driver and team")
             if key in seen:
                 raise TarotCatalogError("Duplicate tarot driver/pose identity")
             seen.add(key)
@@ -124,6 +138,36 @@ def load_catalog(root):
         if {entry["pose_id"] for entry in catalog["cards"]
                 if entry["driver_id"] == driver} != {0, 1, 2}:
             raise TarotCatalogError("Each driver needs three explicit planned or ready poses")
+    pairs = {}
+    for entry in team_cards:
+        if entry["driver_id"] not in drivers:
+            raise TarotCatalogError("Team artwork must identify an archived driver")
+        key = (entry["driver_id"], entry["team_id"])
+        poses, years = pairs.setdefault(key, (set(), set(entry["years"])))
+        if set(entry["years"]) != years:
+            raise TarotCatalogError("All three team poses must use the same explicit years")
+        poses.add(entry["pose_id"])
+    if any(poses != {0, 1, 2} for poses, _ in pairs.values()):
+        raise TarotCatalogError("Each driver/team pair needs three explicit poses")
+    compositions = catalog.get("approved_compositions", [])
+    if not isinstance(compositions, list):
+        raise TarotCatalogError("Approved compositions must be an explicit list")
+    seen_compositions = set()
+    for entry in compositions:
+        if not isinstance(entry, dict):
+            raise TarotCatalogError("Invalid approved composition")
+        year, round_, poses = entry.get("year"), entry.get("round"), entry.get("driver_poses")
+        if (isinstance(year, bool) or not isinstance(year, int) or not 1900 <= year <= 9999
+                or isinstance(round_, bool) or not isinstance(round_, int) or not 1 <= round_ <= 99
+                or not isinstance(poses, dict) or len(poses) != 3
+                or any(driver not in drivers for driver in poses)
+                or any(isinstance(pose, bool) or not isinstance(pose, int) for pose in poses.values())
+                or sorted(poses.values()) != [0, 1, 2]):
+            raise TarotCatalogError("Invalid approved composition year, round, drivers or poses")
+        key = (year, round_, tuple(sorted(poses)))
+        if key in seen_compositions:
+            raise TarotCatalogError("Duplicate approved composition")
+        seen_compositions.add(key)
     return catalog
 
 
@@ -141,25 +185,32 @@ def read_artwork(root, entry):
     return content
 
 
-def artwork_for(catalog, row, pose_id, year=None):
-    """Select only the requested driver and pose, then the matching team override."""
+def _matching_artworks(catalog, row, pose_id, year):
+    """Yield approved then team art; unknown or contradictory context has no art."""
     driver = row.get("driver_id")
     team = team_id(row)
-    for entry in catalog["overrides"]:
-        if (entry["driver_id"] == driver and entry["pose_id"] == pose_id
-                and entry["team_id"] == team
-                and (year is None or year in entry["years"])
-                and entry["status"] == "ready"):
-            return entry
-    return next((entry for entry in catalog["cards"]
-                 if entry["driver_id"] == driver and entry["pose_id"] == pose_id), None)
+    if (team is None or isinstance(year, bool) or not isinstance(year, int)
+            or isinstance(pose_id, bool) or not isinstance(pose_id, int)
+            or pose_id not in (0, 1, 2)):
+        return
+    for group in ("overrides", "team_cards"):
+        for entry in catalog.get(group, []):
+            if (entry["driver_id"] == driver and entry["pose_id"] == pose_id
+                    and entry["team_id"] == team and year in entry["years"]
+                    and entry["status"] == "ready"):
+                yield entry
+
+
+def artwork_for(catalog, row, pose_id, year=None):
+    """Select metadata for this exact driver/team/year, never a neutral archive."""
+    return next(_matching_artworks(catalog, row, pose_id, year), None)
 
 
 def select_cards(rows, root, year=None, round_=None, catalog=None):
     """Keep forecast row order while assigning three distinct deterministic poses.
 
 Artwork availability can prefer another permutation during staged delivery;
-once all neutral artworks exist, the GP seed alone selects the permutation.
+once all scoped team artworks exist, the GP seed alone selects the permutation.
 Ties retain every row and repeat balanced cycles instead of dropping drivers.
 """
     catalog = load_catalog(root) if catalog is None else catalog
@@ -188,13 +239,12 @@ Ties retain every row and repeat balanced cycles instead of dropping drivers.
     available = {}
     for driver in ordered:
         for pose in (0, 1, 2):
-            entry = artwork_for(catalog, by_driver[driver], pose, year)
-            content = read_artwork(root, entry)
-            # A corrupt optional override does not hide a valid neutral card.
-            if content is None and entry and not entry["team_neutral"]:
-                entry = next((card for card in catalog["cards"]
-                              if card["driver_id"] == driver and card["pose_id"] == pose), None)
-                content = read_artwork(root, entry)
+            entry, content = None, None
+            for candidate in _matching_artworks(catalog, by_driver[driver], pose, year):
+                verified = read_artwork(root, candidate)
+                if verified is not None:
+                    entry, content = candidate, verified
+                    break
             available[driver, pose] = (entry, content)
     def score(permutation):
         return sum(available[driver, permutation[index % 3]][1] is not None
@@ -208,15 +258,14 @@ Ties retain every row and repeat balanced cycles instead of dropping drivers.
     return [dict(row=row, **selected[row["driver_id"]]) for row in rows]
 
 
-def coverage(root, catalog=None):
-    """Audit actual neutral-art coverage without claiming planned files exist."""
-    catalog = load_catalog(root) if catalog is None else catalog
+def _coverage_group(root, entries, team_scoped):
     ready, missing = [], []
     digests = {}
     duplicates = []
-    for entry in catalog["cards"]:
+    for entry in entries:
         content = read_artwork(root, entry)
-        identity = "{}:{}".format(entry["driver_id"], entry["pose_id"])
+        identity = ("{}:{}:{}".format(entry["driver_id"], entry["team_id"], entry["pose_id"])
+                    if team_scoped else "{}:{}".format(entry["driver_id"], entry["pose_id"]))
         if content is None:
             missing.append(identity)
             continue
@@ -225,6 +274,15 @@ def coverage(root, catalog=None):
         if digest in digests:
             duplicates.append([digests[digest], identity])
         digests[digest] = identity
-    return dict(required=len(catalog["cards"]), ready=len(ready), missing=missing,
+    return dict(required=len(entries), ready=len(ready), missing=missing,
                 duplicate_artworks=duplicates,
-                complete=bool(catalog["cards"]) and not missing and not duplicates)
+                complete=bool(entries) and not missing and not duplicates)
+
+
+def coverage(root, catalog=None):
+    """Count verified team art separately from the preserved neutral archive."""
+    catalog = load_catalog(root) if catalog is None else catalog
+    result = _coverage_group(root, catalog.get("team_cards", []), True)
+    result["neutral_archive"] = _coverage_group(root, catalog["cards"], False)
+    result["approved_originals"] = _coverage_group(root, catalog["overrides"], True)
+    return result

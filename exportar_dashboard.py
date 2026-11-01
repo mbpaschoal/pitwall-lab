@@ -46,6 +46,54 @@ TAROT_VARIANTS = tuple(
     'dashboard_assets/tarot/variants/{}/pose-{}.png'.format(driver, pose)
     for driver in TAROT_DRIVER_IDS for pose in (0, 1, 2)
 )
+TAROT_TEAM_PAIRS = (
+    ('albon', 'williams'),
+    ('alonso', 'aston_martin'),
+    ('antonelli', 'mercedes'),
+    ('arvid_lindblad', 'rb'),
+    ('bearman', 'ferrari'),
+    ('bearman', 'haas'),
+    ('bortoleto', 'audi'),
+    ('bortoleto', 'sauber'),
+    ('bottas', 'cadillac'),
+    ('bottas', 'sauber'),
+    ('colapinto', 'alpine'),
+    ('colapinto', 'williams'),
+    ('doohan', 'alpine'),
+    ('gasly', 'alpine'),
+    ('hadjar', 'rb'),
+    ('hadjar', 'red_bull'),
+    ('hamilton', 'ferrari'),
+    ('hamilton', 'mercedes'),
+    ('hulkenberg', 'audi'),
+    ('hulkenberg', 'haas'),
+    ('hulkenberg', 'sauber'),
+    ('kevin_magnussen', 'haas'),
+    ('lawson', 'rb'),
+    ('lawson', 'red_bull'),
+    ('leclerc', 'ferrari'),
+    ('max_verstappen', 'red_bull'),
+    ('norris', 'mclaren'),
+    ('ocon', 'alpine'),
+    ('ocon', 'haas'),
+    ('perez', 'cadillac'),
+    ('perez', 'red_bull'),
+    ('piastri', 'mclaren'),
+    ('ricciardo', 'rb'),
+    ('russell', 'mercedes'),
+    ('ryo_hirakawa', 'haas'),
+    ('sainz', 'ferrari'),
+    ('sainz', 'williams'),
+    ('sargeant', 'williams'),
+    ('stroll', 'aston_martin'),
+    ('tsunoda', 'rb'),
+    ('tsunoda', 'red_bull'),
+    ('zhou', 'sauber'),
+)
+TAROT_TEAM_VARIANTS = tuple(
+    'dashboard_assets/tarot/teams/{}/{}/pose-{}.png'.format(team, driver, pose)
+    for driver, team in TAROT_TEAM_PAIRS for pose in (0, 1, 2)
+)
 RUNTIME_WORKTREE = (
     'pitwall/dashboard/fan_views.py',
     'pitwall/dashboard/hero_assets.py',
@@ -261,7 +309,7 @@ def _ler_catalogo_visual(raiz):
 
 def runtime_worktree(raiz):
     """Allowlist de runtime: núcleo explícito + ativos declarados no catálogo validado."""
-    arquivos = list(RUNTIME_WORKTREE) + list(TAROT_VARIANTS) + [
+    arquivos = list(RUNTIME_WORKTREE) + list(TAROT_VARIANTS) + list(TAROT_TEAM_VARIANTS) + [
         'contexto_editorial.py', 'catalogo_visual.py', 'registro_emissoes.py',
         'frontend_assets/contexto_editorial.json', 'dashboard_assets/circuit/catalogo_visual.json',
     ]

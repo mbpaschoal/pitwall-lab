@@ -4,6 +4,13 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.7.2 — 2026-11-01
+
+- Fixed the cards' team identity: team colours now appear on the racing suit, helmet and ornaments inside each illustration. Norris and Piastri use McLaren papaya orange; the frame is no longer the only colour cue.
+- The catalogue contains 126 team illustrations, with three poses for each of the 42 driver/team combinations known to the archive. Selection follows the GP row's team and compatible period; Hamilton/Mercedes and Hamilton/Ferrari have distinct artwork. Records without a recognised team do not receive a guessed team illustration.
+- The 87 neutral originals remain archived and never silently substitute for missing team artwork. The three approved Mexico cards remain preserved. The catalogue includes a PT/EN gallery, separate coverage, integrity checks and an explicit export allowlist.
+- The dialog remains optional without percentages; distinct poses, favourites, ties, probabilities and scientific artifacts are preserved.
+
 ## 0.7.1 — 2026-11-01
 
 - Fixed an English translation bottleneck that passed entire HTML documents, including base64 images and fonts, through message translation rules. HTML is now parsed first; only text and accessibility labels are translated.

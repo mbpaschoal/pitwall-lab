@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "1a7fc38c85c2bcfed8523db126776bf647573e66aad0b82827ed2415b19e2832",
+  "apresentacao_build_sha256": "876af776c0608576bee9118c6d46e28e01b70e253462841aedcbcf31a39ea476",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "5f9bc2533a1792e29b2fc2f9542611e506d1985f6a74d8f33103719d1c2c8546",
+      "sha256_destino": "e4f8a6194baaa0dc1091dcb32c259a5ddca00885d9ce9256f3eea07a35b80486",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "ac1cc0d86360e8c5c23ccc89be64607d199c513dc560ec2c522f8ed59f112fb1",
-      "sha256_origem": "9b5c81b1c7f2e2877cc35b28300eefc33aba0c7ea77394c6b89fef8553f6ed5a"
+      "sha256_destino": "30e0508a20c02010e7c2eb5fae8ebdc98148ca08a521b9ed29b289cb52b78fe9",
+      "sha256_origem": "22c98ecc52a8361ed952660bdc1835742be09bf1e1de659448c7b0414beb5b8d"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "729bca29090dfe304913b56094744c3b81a98aee7357496705d8d896000709bd",
-      "sha256_origem": "d564161d7d4f18e4b22994ea216fed2c8c4e9bb899edcdd291519faee68bf6c0"
+      "sha256_destino": "b35bc16b8b047d5eb7d7343a494b53e23ff1f33403afc124e7b3f977c020f247",
+      "sha256_origem": "580dea4bf5c3a739e16bbabf52bb3d4f35edb64a243e7a0efda9d4362cf8ca4b"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "902311c7bb38fa1658ff403def6158ee7378fe9d6e2e284fa1c38735c31bd30b",
-      "sha256_origem": "902311c7bb38fa1658ff403def6158ee7378fe9d6e2e284fa1c38735c31bd30b"
+      "sha256_destino": "d0176718bd214ce8474c06ed61c395ca113fdfc2acdd86d9aa9933b40d9b561e",
+      "sha256_origem": "d0176718bd214ce8474c06ed61c395ca113fdfc2acdd86d9aa9933b40d9b561e"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -959,15 +959,15 @@
       "caminho": "dashboard_assets/tarot/ATTRIBUTION.md",
       "fonte": "dashboard_assets/tarot/ATTRIBUTION.md",
       "modo": "copia",
-      "sha256_destino": "9314b611e42915530ec5ac07ab02a6df357d28a63d2d9dc959f6b6eafa160181",
-      "sha256_origem": "9314b611e42915530ec5ac07ab02a6df357d28a63d2d9dc959f6b6eafa160181"
+      "sha256_destino": "58ffbafc7a862565877aa659080223053e3a3787ec182b501dcc285a5fb0f8c3",
+      "sha256_origem": "58ffbafc7a862565877aa659080223053e3a3787ec182b501dcc285a5fb0f8c3"
     },
     {
       "caminho": "dashboard_assets/tarot/catalog.json",
       "fonte": "dashboard_assets/tarot/catalog.json",
       "modo": "copia",
-      "sha256_destino": "b7686241fcf5c8989c875247af36b62b98c8f0a298e185513d8e7227c73c263e",
-      "sha256_origem": "b7686241fcf5c8989c875247af36b62b98c8f0a298e185513d8e7227c73c263e"
+      "sha256_destino": "dfc568585c6db54f96972c00f60bc3f5ab26e7c9821414f63b0f86d9f2d86b45",
+      "sha256_origem": "dfc568585c6db54f96972c00f60bc3f5ab26e7c9821414f63b0f86d9f2d86b45"
     },
     {
       "caminho": "dashboard_assets/tarot/hamilton.png",
@@ -982,6 +982,888 @@
       "modo": "copia",
       "sha256_destino": "eb5db2342b4be6014f9d1ec58308ffd105baf2a84253e9d42439dfeedf3c7933",
       "sha256_origem": "eb5db2342b4be6014f9d1ec58308ffd105baf2a84253e9d42439dfeedf3c7933"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/colapinto/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/colapinto/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "1ce82d9d67c66ab9245145023528b4fd1b0b8a27973f139104f7410910ae6688",
+      "sha256_origem": "1ce82d9d67c66ab9245145023528b4fd1b0b8a27973f139104f7410910ae6688"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/colapinto/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/colapinto/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "61ff8259b853bb8d597bf1c00cd74e98a77e36ff6dc916131abbd1f60563d56f",
+      "sha256_origem": "61ff8259b853bb8d597bf1c00cd74e98a77e36ff6dc916131abbd1f60563d56f"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/colapinto/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/colapinto/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "e62ff3ebec97eec3d9359dbda51f8655c36436d17039121dca1205432e052af1",
+      "sha256_origem": "e62ff3ebec97eec3d9359dbda51f8655c36436d17039121dca1205432e052af1"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/doohan/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/doohan/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "d25dacf2d6480e3e7ef66438219b926d52bd8cb72134787a1d8a3f6f902faa7a",
+      "sha256_origem": "d25dacf2d6480e3e7ef66438219b926d52bd8cb72134787a1d8a3f6f902faa7a"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/doohan/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/doohan/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "66c0bbff23aa5c5cf2e3933012c4c14e73ee6b9489bb5443d8d4cb4476f66692",
+      "sha256_origem": "66c0bbff23aa5c5cf2e3933012c4c14e73ee6b9489bb5443d8d4cb4476f66692"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/doohan/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/doohan/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "74f5821becefff8d0ca064691e21cb75134507a578e434edda31ddc8f8efe139",
+      "sha256_origem": "74f5821becefff8d0ca064691e21cb75134507a578e434edda31ddc8f8efe139"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/gasly/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/gasly/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "e318003b55a7c2bbf7e298b892cdb2f1e843bcc2d78dc0737d0ef1ad16e6ad04",
+      "sha256_origem": "e318003b55a7c2bbf7e298b892cdb2f1e843bcc2d78dc0737d0ef1ad16e6ad04"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/gasly/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/gasly/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "fed91adebc67ed4871abe1f48283bb508b56c3e792ad2739a18054a5b330521e",
+      "sha256_origem": "fed91adebc67ed4871abe1f48283bb508b56c3e792ad2739a18054a5b330521e"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/gasly/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/gasly/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "8d4e1c27614320828ef1a4b32e8ccac605491df96931f9ab5c5f22d1f3a16ce2",
+      "sha256_origem": "8d4e1c27614320828ef1a4b32e8ccac605491df96931f9ab5c5f22d1f3a16ce2"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/ocon/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/ocon/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "cd27bf34b5a14ea07d7d2c14e61f93c341df6d5bf8e58d694166191afe7ecef1",
+      "sha256_origem": "cd27bf34b5a14ea07d7d2c14e61f93c341df6d5bf8e58d694166191afe7ecef1"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/ocon/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/ocon/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "72d2866d5fe79c90bf208464a6dada0c18b4b56d38d7f3268883df8437f3830e",
+      "sha256_origem": "72d2866d5fe79c90bf208464a6dada0c18b4b56d38d7f3268883df8437f3830e"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/alpine/ocon/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/alpine/ocon/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "4bcc8ddb4ecb7855c50a8e7b68517a4b1a1af1d7e8b27c24a73c127e02f8cb61",
+      "sha256_origem": "4bcc8ddb4ecb7855c50a8e7b68517a4b1a1af1d7e8b27c24a73c127e02f8cb61"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/aston_martin/alonso/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/aston_martin/alonso/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "158ec9e54270e5f2112e5bc0a025577baa41c608215f8743370c20fa0c678da3",
+      "sha256_origem": "158ec9e54270e5f2112e5bc0a025577baa41c608215f8743370c20fa0c678da3"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/aston_martin/alonso/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/aston_martin/alonso/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "9af0bc2cc0a4f56c326cc24f07e4f02ae27db0e0d537644134d73f939822815e",
+      "sha256_origem": "9af0bc2cc0a4f56c326cc24f07e4f02ae27db0e0d537644134d73f939822815e"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/aston_martin/alonso/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/aston_martin/alonso/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "421316536271dcebd061b7b2cf0a2d4b08ed0bf13a8a76287b545bb91de039df",
+      "sha256_origem": "421316536271dcebd061b7b2cf0a2d4b08ed0bf13a8a76287b545bb91de039df"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/aston_martin/stroll/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/aston_martin/stroll/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "eaa7a3d3a87ff6ac208ee302d55455f2f961ab33808811918a3c9080124c18ee",
+      "sha256_origem": "eaa7a3d3a87ff6ac208ee302d55455f2f961ab33808811918a3c9080124c18ee"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/aston_martin/stroll/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/aston_martin/stroll/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "0ed8328b49237fa2e4259081c45d2fb85f0c9981387354f9ca4f3835e779106c",
+      "sha256_origem": "0ed8328b49237fa2e4259081c45d2fb85f0c9981387354f9ca4f3835e779106c"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/aston_martin/stroll/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/aston_martin/stroll/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "7dbeadef4838e26b49167b35ebd4f4fe5ceeb6065eebf4fd4c425a1767152c49",
+      "sha256_origem": "7dbeadef4838e26b49167b35ebd4f4fe5ceeb6065eebf4fd4c425a1767152c49"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/audi/bortoleto/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/audi/bortoleto/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "4237433cbbd02a092d079ecfcf096ba669df6732d4a19b7efd8b56aba41f5200",
+      "sha256_origem": "4237433cbbd02a092d079ecfcf096ba669df6732d4a19b7efd8b56aba41f5200"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/audi/bortoleto/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/audi/bortoleto/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "ffdec6b8003e552715e34da2bb2a09547f9dd5bb1287c6d6212fb6270e800a14",
+      "sha256_origem": "ffdec6b8003e552715e34da2bb2a09547f9dd5bb1287c6d6212fb6270e800a14"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/audi/bortoleto/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/audi/bortoleto/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "dbfb886c5085a770fde610970eee6c28dbc3e3ed4523cb34320651831edf92d4",
+      "sha256_origem": "dbfb886c5085a770fde610970eee6c28dbc3e3ed4523cb34320651831edf92d4"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/audi/hulkenberg/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/audi/hulkenberg/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "b75bed701eac5f601b2c235e6aa7c24ac7544c3b939963a87b7c67ccdb5ed0a4",
+      "sha256_origem": "b75bed701eac5f601b2c235e6aa7c24ac7544c3b939963a87b7c67ccdb5ed0a4"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/audi/hulkenberg/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/audi/hulkenberg/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "8606cd952a137ce692701d3ac8edae4074219daffc22a96093080016c15a93a5",
+      "sha256_origem": "8606cd952a137ce692701d3ac8edae4074219daffc22a96093080016c15a93a5"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/audi/hulkenberg/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/audi/hulkenberg/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "0df0b89a6ac342e2b39519406a4a78de17e7348cd3bf337d8acfb8e49d06cf3e",
+      "sha256_origem": "0df0b89a6ac342e2b39519406a4a78de17e7348cd3bf337d8acfb8e49d06cf3e"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/cadillac/bottas/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/cadillac/bottas/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "a0a65d80cb16f6f81050840cb2411e5e13fa0a5abe8b3ab833c418cd63115439",
+      "sha256_origem": "a0a65d80cb16f6f81050840cb2411e5e13fa0a5abe8b3ab833c418cd63115439"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/cadillac/bottas/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/cadillac/bottas/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "94206960cd40a1eff8ee9fab16819264fc71298864cf01e8acb8fcf6794b7a8d",
+      "sha256_origem": "94206960cd40a1eff8ee9fab16819264fc71298864cf01e8acb8fcf6794b7a8d"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/cadillac/bottas/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/cadillac/bottas/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "fc7cdef369d6fd12f610a79180bed2cd97e4671695fd9062a5d95d9118e5e3e2",
+      "sha256_origem": "fc7cdef369d6fd12f610a79180bed2cd97e4671695fd9062a5d95d9118e5e3e2"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/cadillac/perez/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/cadillac/perez/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "30eddfb51daccbdef82593c4bef169e77f30f2668b363dc0b6a24c59ca8b74ea",
+      "sha256_origem": "30eddfb51daccbdef82593c4bef169e77f30f2668b363dc0b6a24c59ca8b74ea"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/cadillac/perez/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/cadillac/perez/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "d179df7eae85bc2e78d55adb1e5747a53d885e7cd8976af178a07c76c441eefa",
+      "sha256_origem": "d179df7eae85bc2e78d55adb1e5747a53d885e7cd8976af178a07c76c441eefa"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/cadillac/perez/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/cadillac/perez/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "d05d2eac282424567f6998f80a73da74014042ec6d51d11f2ceb815e17c72d1d",
+      "sha256_origem": "d05d2eac282424567f6998f80a73da74014042ec6d51d11f2ceb815e17c72d1d"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/bearman/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/bearman/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "86b2f17add16dafb0c118dd226f91cb79009de42a1d176f0fb09e4356ba18f27",
+      "sha256_origem": "86b2f17add16dafb0c118dd226f91cb79009de42a1d176f0fb09e4356ba18f27"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/bearman/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/bearman/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "c290db15f138be92ab88a45099ab9dba99d0b4bdc1048db93bad0f27af6bd520",
+      "sha256_origem": "c290db15f138be92ab88a45099ab9dba99d0b4bdc1048db93bad0f27af6bd520"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/bearman/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/bearman/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "96f8003dd8b1da5c5181c47bbd328ac62d5087c208fbfd4c02545e0c09bca2e8",
+      "sha256_origem": "96f8003dd8b1da5c5181c47bbd328ac62d5087c208fbfd4c02545e0c09bca2e8"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/hamilton/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/hamilton/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "6fee1d32e4f4d94f7b6d80968ffaca5ac1feeee0665a125c540757cefcc62925",
+      "sha256_origem": "6fee1d32e4f4d94f7b6d80968ffaca5ac1feeee0665a125c540757cefcc62925"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/hamilton/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/hamilton/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "9bc82d2b88fb3550cf95222c45828747f8e7f565f8f3d5f8dd0fb19bb7b3b33d",
+      "sha256_origem": "9bc82d2b88fb3550cf95222c45828747f8e7f565f8f3d5f8dd0fb19bb7b3b33d"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/hamilton/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/hamilton/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "ac026316b3bf6d5d8dc77b0787a764250778dbb56a6692b2537b2f7e770b5066",
+      "sha256_origem": "ac026316b3bf6d5d8dc77b0787a764250778dbb56a6692b2537b2f7e770b5066"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/leclerc/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/leclerc/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "bae9a5bd6b1ab258aaab725ebaa56959448e1804fe6f73b7460bf2ea38755963",
+      "sha256_origem": "bae9a5bd6b1ab258aaab725ebaa56959448e1804fe6f73b7460bf2ea38755963"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/leclerc/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/leclerc/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "8db5c6d4dd89c5494563edf5f6238da211f661b74cdef35941ee6c2f9e860786",
+      "sha256_origem": "8db5c6d4dd89c5494563edf5f6238da211f661b74cdef35941ee6c2f9e860786"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/leclerc/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/leclerc/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "f3a27bad6aaf76aa9008a3611522d32b73a485dd07cfc4d76296e00724643683",
+      "sha256_origem": "f3a27bad6aaf76aa9008a3611522d32b73a485dd07cfc4d76296e00724643683"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/sainz/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/sainz/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "bdbcea5b6e667fe6e88121bf721ee4b2745a4a2947b7b18111f53c13023533c8",
+      "sha256_origem": "bdbcea5b6e667fe6e88121bf721ee4b2745a4a2947b7b18111f53c13023533c8"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/sainz/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/sainz/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "beb276062959b95283f724320dd6db4446c87554a976c5bfcfef6a5257241022",
+      "sha256_origem": "beb276062959b95283f724320dd6db4446c87554a976c5bfcfef6a5257241022"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/ferrari/sainz/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/ferrari/sainz/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "30630915b515d39d148c3e5d0c2cee91d17f0ace65be3b37cdf66196f249acb0",
+      "sha256_origem": "30630915b515d39d148c3e5d0c2cee91d17f0ace65be3b37cdf66196f249acb0"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/bearman/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/bearman/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "0c647e8b5a2581d6678f8a686fc68aeeaba551b56f137a1f30d184a91be1588a",
+      "sha256_origem": "0c647e8b5a2581d6678f8a686fc68aeeaba551b56f137a1f30d184a91be1588a"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/bearman/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/bearman/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "7957c3e89afd9a3349cb554656119fee1cefd4c287b16a3caed8f23b2cc2be50",
+      "sha256_origem": "7957c3e89afd9a3349cb554656119fee1cefd4c287b16a3caed8f23b2cc2be50"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/bearman/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/bearman/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "c920b00a6a1c7eacbf265cf87ceeba4b79555e3dcfed30657d60a0f8c4a8b113",
+      "sha256_origem": "c920b00a6a1c7eacbf265cf87ceeba4b79555e3dcfed30657d60a0f8c4a8b113"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/hulkenberg/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/hulkenberg/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "e0da282a93fa7c553b0b3477606627ff644aa606937df2a5ee9d5b0145af5ef3",
+      "sha256_origem": "e0da282a93fa7c553b0b3477606627ff644aa606937df2a5ee9d5b0145af5ef3"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/hulkenberg/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/hulkenberg/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "12b9722c136a9973b7370b1d61b4a08cd313436c3ac6c0a379d06eee3c0b7b25",
+      "sha256_origem": "12b9722c136a9973b7370b1d61b4a08cd313436c3ac6c0a379d06eee3c0b7b25"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/hulkenberg/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/hulkenberg/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "b60f749e6c5f26b1c565dfea8952ea83af9f4d980c514bbc520078585a636df9",
+      "sha256_origem": "b60f749e6c5f26b1c565dfea8952ea83af9f4d980c514bbc520078585a636df9"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/kevin_magnussen/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/kevin_magnussen/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "6c596c7dc412220db93340fe86ea1e8d62f6b78ddd72d9d004600e39421faafd",
+      "sha256_origem": "6c596c7dc412220db93340fe86ea1e8d62f6b78ddd72d9d004600e39421faafd"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/kevin_magnussen/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/kevin_magnussen/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "bc63e19e9ff46e40b4179b553b32fe8aca0c6877d49be045538b6da0bc3f5f70",
+      "sha256_origem": "bc63e19e9ff46e40b4179b553b32fe8aca0c6877d49be045538b6da0bc3f5f70"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/kevin_magnussen/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/kevin_magnussen/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "4a3384e4ab039e63f096042ba453d34f9b297bf132e216327d0a1ad7c1424ea9",
+      "sha256_origem": "4a3384e4ab039e63f096042ba453d34f9b297bf132e216327d0a1ad7c1424ea9"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/ocon/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/ocon/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "a29ea5051c8598158aea3475b3a12eb0036f94f184ec586409daa55b0f6f6c76",
+      "sha256_origem": "a29ea5051c8598158aea3475b3a12eb0036f94f184ec586409daa55b0f6f6c76"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/ocon/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/ocon/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "cbee81d0ef4fef46b3008e23b26ca279d7de0ab6bfec10ca83f1bba77dd3d1af",
+      "sha256_origem": "cbee81d0ef4fef46b3008e23b26ca279d7de0ab6bfec10ca83f1bba77dd3d1af"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/ocon/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/ocon/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "0e6d50654bc4ce2c4c21f7507fb5766f21eeca56d2a9a035f92722b4ef91670e",
+      "sha256_origem": "0e6d50654bc4ce2c4c21f7507fb5766f21eeca56d2a9a035f92722b4ef91670e"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/ryo_hirakawa/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/ryo_hirakawa/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "a5f8c2310e8e829761e376675a3c4beba0a90873feed802ab8c97750288f598d",
+      "sha256_origem": "a5f8c2310e8e829761e376675a3c4beba0a90873feed802ab8c97750288f598d"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/ryo_hirakawa/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/ryo_hirakawa/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "9150203a7bc93fb2fd272ae865f68bb8b8299e64dbe5b10abb818afca6fc3ad7",
+      "sha256_origem": "9150203a7bc93fb2fd272ae865f68bb8b8299e64dbe5b10abb818afca6fc3ad7"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/haas/ryo_hirakawa/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/haas/ryo_hirakawa/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "ea8ccd7a7ff0940b9ac52771da252150fe3bbad15c3e76c33d54c0d05bf83885",
+      "sha256_origem": "ea8ccd7a7ff0940b9ac52771da252150fe3bbad15c3e76c33d54c0d05bf83885"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mclaren/norris/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/mclaren/norris/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "af7717c51a3517c4614b9ba3d23738613cb0c5121d37e92d00e733322cf1c623",
+      "sha256_origem": "af7717c51a3517c4614b9ba3d23738613cb0c5121d37e92d00e733322cf1c623"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mclaren/norris/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/mclaren/norris/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "f7299f33829a4e77b823805da5fa0624658ea31761b057dd8c112eb0478e1418",
+      "sha256_origem": "f7299f33829a4e77b823805da5fa0624658ea31761b057dd8c112eb0478e1418"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mclaren/norris/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/mclaren/norris/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "dc1848f49b45f6d2c29ead23e2cfbdeb70338254b0f65ac239a9a75cc4d1fc76",
+      "sha256_origem": "dc1848f49b45f6d2c29ead23e2cfbdeb70338254b0f65ac239a9a75cc4d1fc76"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mclaren/piastri/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/mclaren/piastri/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "c36e4bfaeab55648341133ab7ce31e66a521b7d86390d33459813016aa10564b",
+      "sha256_origem": "c36e4bfaeab55648341133ab7ce31e66a521b7d86390d33459813016aa10564b"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mclaren/piastri/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/mclaren/piastri/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "9955431e97ea6deed34d7a1b1fe2c4073a7c38aa5d7b6ce11346671a48519b41",
+      "sha256_origem": "9955431e97ea6deed34d7a1b1fe2c4073a7c38aa5d7b6ce11346671a48519b41"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mclaren/piastri/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/mclaren/piastri/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "0adf6fc6bcb73ac07fb903ad0c7e1ea7d155886efb36adc0016356bb6f438b55",
+      "sha256_origem": "0adf6fc6bcb73ac07fb903ad0c7e1ea7d155886efb36adc0016356bb6f438b55"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mercedes/antonelli/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/mercedes/antonelli/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "7ad68e49c3b328979116dee59231e1034936728fa59eff5b0243caedc6b9235b",
+      "sha256_origem": "7ad68e49c3b328979116dee59231e1034936728fa59eff5b0243caedc6b9235b"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mercedes/antonelli/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/mercedes/antonelli/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "7e7a3748bf77d71efdaf42d2c7ba10fc3c1c3bcaeb1637ef566972709659cb3d",
+      "sha256_origem": "7e7a3748bf77d71efdaf42d2c7ba10fc3c1c3bcaeb1637ef566972709659cb3d"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mercedes/antonelli/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/mercedes/antonelli/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "690cea8c1ed4097cf3b5169537e2056473990ae5f4bb6c216af0dfe894f31794",
+      "sha256_origem": "690cea8c1ed4097cf3b5169537e2056473990ae5f4bb6c216af0dfe894f31794"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mercedes/hamilton/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/mercedes/hamilton/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "2537009ac415fae6fe4af2d668a52f9335c794c3a1906e9da398d5a6564d9c94",
+      "sha256_origem": "2537009ac415fae6fe4af2d668a52f9335c794c3a1906e9da398d5a6564d9c94"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mercedes/hamilton/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/mercedes/hamilton/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "5797b1029593daef3467b10e2ed434e2d9e447c18c11ba3bf79ef173b5ced421",
+      "sha256_origem": "5797b1029593daef3467b10e2ed434e2d9e447c18c11ba3bf79ef173b5ced421"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mercedes/hamilton/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/mercedes/hamilton/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "7a8837ca9232b153051b5c8fd11e36ace08ced79e728120fc65b93a9ca69ed62",
+      "sha256_origem": "7a8837ca9232b153051b5c8fd11e36ace08ced79e728120fc65b93a9ca69ed62"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mercedes/russell/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/mercedes/russell/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "79cc9097073648348737acabe1c6df7dc75da3568a658615e3bcee8aebb564ad",
+      "sha256_origem": "79cc9097073648348737acabe1c6df7dc75da3568a658615e3bcee8aebb564ad"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mercedes/russell/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/mercedes/russell/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "b4f63baac81cb1c02af63d1292403ff3e681c9d068eab531930c7dcb15df1dc0",
+      "sha256_origem": "b4f63baac81cb1c02af63d1292403ff3e681c9d068eab531930c7dcb15df1dc0"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/mercedes/russell/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/mercedes/russell/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "7bc40411426629e9350e18e2385d7ba06c8e9b45c1ff64a3969e2af9a950f3ed",
+      "sha256_origem": "7bc40411426629e9350e18e2385d7ba06c8e9b45c1ff64a3969e2af9a950f3ed"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/arvid_lindblad/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/arvid_lindblad/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "c8d7dd0da9992c1e5ec021757fe605ac8396614659775fb74617064861644e7f",
+      "sha256_origem": "c8d7dd0da9992c1e5ec021757fe605ac8396614659775fb74617064861644e7f"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/arvid_lindblad/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/arvid_lindblad/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "6f9d0ba674f4af88703cb48adc47d7748924703e756408bd71cc274204ff09fe",
+      "sha256_origem": "6f9d0ba674f4af88703cb48adc47d7748924703e756408bd71cc274204ff09fe"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/arvid_lindblad/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/arvid_lindblad/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "48c9ae43ca55529d12204949afa2cc8fd0d05884fe14f69a8f3c6e1787a7d0e3",
+      "sha256_origem": "48c9ae43ca55529d12204949afa2cc8fd0d05884fe14f69a8f3c6e1787a7d0e3"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/hadjar/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/hadjar/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "58990b163874519e7d582899c9bea8271440bf1ea64bc50fbc947cbae8b4c87e",
+      "sha256_origem": "58990b163874519e7d582899c9bea8271440bf1ea64bc50fbc947cbae8b4c87e"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/hadjar/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/hadjar/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "b745a37ee818255c34b7dd3604abca9d0430034f22bf63d8f226bde9765c6f77",
+      "sha256_origem": "b745a37ee818255c34b7dd3604abca9d0430034f22bf63d8f226bde9765c6f77"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/hadjar/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/hadjar/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "fe6c2ece3c305fb14476f227575dfa59d1cd1b648647a0ac42d7e7d8ccf577a8",
+      "sha256_origem": "fe6c2ece3c305fb14476f227575dfa59d1cd1b648647a0ac42d7e7d8ccf577a8"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/lawson/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/lawson/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "3cfea1ad7795de26bd8533e38daf1ab7dbbcf2d69e16ad024081bed34d2af641",
+      "sha256_origem": "3cfea1ad7795de26bd8533e38daf1ab7dbbcf2d69e16ad024081bed34d2af641"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/lawson/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/lawson/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "aea5d131321ff483980cf404f7fe9e1308919fd1ad4569ac606143f3a4d2642d",
+      "sha256_origem": "aea5d131321ff483980cf404f7fe9e1308919fd1ad4569ac606143f3a4d2642d"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/lawson/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/lawson/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "c72e9a8b646ebd0bf0549175cd378066671401eba6caa765d700f9c32411419f",
+      "sha256_origem": "c72e9a8b646ebd0bf0549175cd378066671401eba6caa765d700f9c32411419f"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/ricciardo/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/ricciardo/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "b1baa566589e7e18b22bf87cd6559dade3e458e4412456c0a163d590dcf58a59",
+      "sha256_origem": "b1baa566589e7e18b22bf87cd6559dade3e458e4412456c0a163d590dcf58a59"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/ricciardo/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/ricciardo/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "3f2d4077fe7eb632d5bd48517c646bc2dc62ca32feda36cc803be3274409534e",
+      "sha256_origem": "3f2d4077fe7eb632d5bd48517c646bc2dc62ca32feda36cc803be3274409534e"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/ricciardo/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/ricciardo/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "568dcbd16f3be4f3e95f08a0bc4a0c00ff2cfdc894d3dc1f082a249c84f4d0c3",
+      "sha256_origem": "568dcbd16f3be4f3e95f08a0bc4a0c00ff2cfdc894d3dc1f082a249c84f4d0c3"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/tsunoda/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/tsunoda/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "d0e186e9a7b74c4f2086082b1e43c106eb9c8d223b063fe109a3f73bfd1bc545",
+      "sha256_origem": "d0e186e9a7b74c4f2086082b1e43c106eb9c8d223b063fe109a3f73bfd1bc545"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/tsunoda/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/tsunoda/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "84264fc8f397cc9380e5602b108309ebd62ece884ede7e31161ffb01e139badc",
+      "sha256_origem": "84264fc8f397cc9380e5602b108309ebd62ece884ede7e31161ffb01e139badc"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/rb/tsunoda/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/rb/tsunoda/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "8ae252bc5389302f4ccd1f21fe91d0734f0420f4c93e21953ff21f41088f16dd",
+      "sha256_origem": "8ae252bc5389302f4ccd1f21fe91d0734f0420f4c93e21953ff21f41088f16dd"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/hadjar/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/hadjar/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "37fdab61b6665fce7cc74626163e3d4f9baa12dfbf4757deef3cc6a2dea1127f",
+      "sha256_origem": "37fdab61b6665fce7cc74626163e3d4f9baa12dfbf4757deef3cc6a2dea1127f"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/hadjar/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/hadjar/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "cce542cffb56a11e4c3e714687342cf8a761acb1cbf479ccf81cd105979ad67e",
+      "sha256_origem": "cce542cffb56a11e4c3e714687342cf8a761acb1cbf479ccf81cd105979ad67e"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/hadjar/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/hadjar/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "18b27a2bc706d679a758795dd99d9757bfdd8646a9820b2f7e8e92a8909a59be",
+      "sha256_origem": "18b27a2bc706d679a758795dd99d9757bfdd8646a9820b2f7e8e92a8909a59be"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/lawson/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/lawson/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "e96370974e557cc789ea23c5336b219861065e7993e9f41b8cba82d0abfb1b61",
+      "sha256_origem": "e96370974e557cc789ea23c5336b219861065e7993e9f41b8cba82d0abfb1b61"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/lawson/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/lawson/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "6e16a9c9ac05779d182ebdf3d376846e24c570bf49bdd861261244be0144ad94",
+      "sha256_origem": "6e16a9c9ac05779d182ebdf3d376846e24c570bf49bdd861261244be0144ad94"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/lawson/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/lawson/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "1e5665acaf055ae36e8cac14746002181844c50691ea5ff6c9f5d05876fb34cf",
+      "sha256_origem": "1e5665acaf055ae36e8cac14746002181844c50691ea5ff6c9f5d05876fb34cf"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/max_verstappen/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/max_verstappen/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "f615fa3c2fde8c034ee5577fdd72002bc746a012cf655161c79e4589d9cef128",
+      "sha256_origem": "f615fa3c2fde8c034ee5577fdd72002bc746a012cf655161c79e4589d9cef128"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/max_verstappen/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/max_verstappen/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "393aac9f4420beff11744ae2ce0b7276bed09822f8df9986ca5f13786a6820b0",
+      "sha256_origem": "393aac9f4420beff11744ae2ce0b7276bed09822f8df9986ca5f13786a6820b0"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/max_verstappen/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/max_verstappen/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "7a25a6fd56e751dd3c7c88de29b16a71e4df5d2dcc9f115b3da945d1a89d6253",
+      "sha256_origem": "7a25a6fd56e751dd3c7c88de29b16a71e4df5d2dcc9f115b3da945d1a89d6253"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/perez/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/perez/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "578eb3a461bb2ad54a0d98747d32cc6e22d592f265bb19e239ff21944ef7e31a",
+      "sha256_origem": "578eb3a461bb2ad54a0d98747d32cc6e22d592f265bb19e239ff21944ef7e31a"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/perez/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/perez/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "aafb58b7bea4ca076b241cebd065db8b977a1cd9ee402e3969c3b413cec92015",
+      "sha256_origem": "aafb58b7bea4ca076b241cebd065db8b977a1cd9ee402e3969c3b413cec92015"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/perez/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/perez/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "72f3e1719f1aecb3a23677ea486b47b968413a4fe5d6a941412567ad3197f557",
+      "sha256_origem": "72f3e1719f1aecb3a23677ea486b47b968413a4fe5d6a941412567ad3197f557"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/tsunoda/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/tsunoda/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "0be72706de73a17324b5ffe8e6a14424ad6d8ead805a84ee7573f197d6383b39",
+      "sha256_origem": "0be72706de73a17324b5ffe8e6a14424ad6d8ead805a84ee7573f197d6383b39"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/tsunoda/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/tsunoda/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "7f0774f89a55ed9555e65e9c81b0c650397248f050be6ed83810c7ea92846c64",
+      "sha256_origem": "7f0774f89a55ed9555e65e9c81b0c650397248f050be6ed83810c7ea92846c64"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/red_bull/tsunoda/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/red_bull/tsunoda/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "8be32fa85bd71760e496c723893b535c4a7c93d50e251a3b8b3ea87b5fb2e68b",
+      "sha256_origem": "8be32fa85bd71760e496c723893b535c4a7c93d50e251a3b8b3ea87b5fb2e68b"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/bortoleto/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/bortoleto/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "7a12c3328dc99b6c7f3550203c0773426f2b7196f303c60cdeca855314cc41c7",
+      "sha256_origem": "7a12c3328dc99b6c7f3550203c0773426f2b7196f303c60cdeca855314cc41c7"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/bortoleto/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/bortoleto/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "64efbb1a59528d46440a82c182ed8d08a546299ed4635ada7616b4881386caed",
+      "sha256_origem": "64efbb1a59528d46440a82c182ed8d08a546299ed4635ada7616b4881386caed"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/bortoleto/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/bortoleto/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "1255f6c4eca2f18c8953e208d6303c7b2fb13e66311fc0d3b512653a2ff949ba",
+      "sha256_origem": "1255f6c4eca2f18c8953e208d6303c7b2fb13e66311fc0d3b512653a2ff949ba"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/bottas/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/bottas/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "1c38c5b51ee86f772d79c30c51622a08eebaa08996bdc57480fc66a1b5fa0a5f",
+      "sha256_origem": "1c38c5b51ee86f772d79c30c51622a08eebaa08996bdc57480fc66a1b5fa0a5f"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/bottas/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/bottas/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "dafb60d1309d2ec47bcc4e4fcc6e69043a473662193871abfb2d4228810a1a2a",
+      "sha256_origem": "dafb60d1309d2ec47bcc4e4fcc6e69043a473662193871abfb2d4228810a1a2a"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/bottas/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/bottas/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "fdf7bd09e8def2cf21101385c2b18c89eaa8690fd1ac02126e3c737fa5a50d31",
+      "sha256_origem": "fdf7bd09e8def2cf21101385c2b18c89eaa8690fd1ac02126e3c737fa5a50d31"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/hulkenberg/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/hulkenberg/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "687c2624d1388cd1fd8270d451279165f3966e72693161fc0e5aa3bbb77f8443",
+      "sha256_origem": "687c2624d1388cd1fd8270d451279165f3966e72693161fc0e5aa3bbb77f8443"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/hulkenberg/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/hulkenberg/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "a3bd31d26c01bbb72aa156c279a7fe8d9afa6c31aad3f72e0bef3b05983fed4e",
+      "sha256_origem": "a3bd31d26c01bbb72aa156c279a7fe8d9afa6c31aad3f72e0bef3b05983fed4e"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/hulkenberg/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/hulkenberg/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "0d788914adbb5625ef08b601bf58b89060705bb3534679e0d6de756037f8ffc9",
+      "sha256_origem": "0d788914adbb5625ef08b601bf58b89060705bb3534679e0d6de756037f8ffc9"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/zhou/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/zhou/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "51f042790364b81c9ec188205d3e4a0364f6719e37b216f59dda264b4db6de44",
+      "sha256_origem": "51f042790364b81c9ec188205d3e4a0364f6719e37b216f59dda264b4db6de44"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/zhou/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/zhou/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "d16793f8d1f00d805237a63e9ab99d948b8136576de13e568d453c3aa6c01c12",
+      "sha256_origem": "d16793f8d1f00d805237a63e9ab99d948b8136576de13e568d453c3aa6c01c12"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/sauber/zhou/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/sauber/zhou/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "0dd4f167034d7071ad6a4a09a7c37ddd1ca42ab90bc2b4aff1c51eba8cd1e403",
+      "sha256_origem": "0dd4f167034d7071ad6a4a09a7c37ddd1ca42ab90bc2b4aff1c51eba8cd1e403"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/albon/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/albon/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "a6dbf1717854a10823d1c86245271ac56f0ac31987a6d9ac5df0fec53bcbd482",
+      "sha256_origem": "a6dbf1717854a10823d1c86245271ac56f0ac31987a6d9ac5df0fec53bcbd482"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/albon/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/albon/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "bba15e0c0af325734155ae0a3bae4e209924831ac231290eb898a7b5af6b385a",
+      "sha256_origem": "bba15e0c0af325734155ae0a3bae4e209924831ac231290eb898a7b5af6b385a"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/albon/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/albon/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "44ac3adadd7e99e27cca296432f74f9e0ea897dbfceb4f32411d187b07419d5e",
+      "sha256_origem": "44ac3adadd7e99e27cca296432f74f9e0ea897dbfceb4f32411d187b07419d5e"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/colapinto/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/colapinto/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "f1d6eed7f3c374d08a48c1d775d2ae6a6c3291ccfa6a4f1182b3e4e310cb6dac",
+      "sha256_origem": "f1d6eed7f3c374d08a48c1d775d2ae6a6c3291ccfa6a4f1182b3e4e310cb6dac"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/colapinto/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/colapinto/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "6a6531380503b03ba56b99dccf936a5e857a924797dcc5753c7a1a8d5381a37b",
+      "sha256_origem": "6a6531380503b03ba56b99dccf936a5e857a924797dcc5753c7a1a8d5381a37b"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/colapinto/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/colapinto/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "52639b316db9ac51f1948ef92ac7d628cad8903d74197b4ce2d8c7867cfc4a13",
+      "sha256_origem": "52639b316db9ac51f1948ef92ac7d628cad8903d74197b4ce2d8c7867cfc4a13"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/sainz/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/sainz/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "edd41b914a885524c4e6c5995829036beb871417d38d03b04d3cfe3ec3fe94a6",
+      "sha256_origem": "edd41b914a885524c4e6c5995829036beb871417d38d03b04d3cfe3ec3fe94a6"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/sainz/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/sainz/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "95faebec828ff8ae9a087d5469839a767bbe26e47cbd7f6a6722545de153cfba",
+      "sha256_origem": "95faebec828ff8ae9a087d5469839a767bbe26e47cbd7f6a6722545de153cfba"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/sainz/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/sainz/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "ec9341b26885548dc70923413c46e013ba68e1be6d090da6ef9091e32cd64b90",
+      "sha256_origem": "ec9341b26885548dc70923413c46e013ba68e1be6d090da6ef9091e32cd64b90"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/sargeant/pose-0.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/sargeant/pose-0.png",
+      "modo": "copia",
+      "sha256_destino": "6342c9ca9e6726091adc70caf8fe045019bef1b8ce03f822c3f66f43c9a713f4",
+      "sha256_origem": "6342c9ca9e6726091adc70caf8fe045019bef1b8ce03f822c3f66f43c9a713f4"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/sargeant/pose-1.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/sargeant/pose-1.png",
+      "modo": "copia",
+      "sha256_destino": "9c7f80d87986b0b06d688d1de5866b3c028b7730fcf9fae912e3e0b2db73e639",
+      "sha256_origem": "9c7f80d87986b0b06d688d1de5866b3c028b7730fcf9fae912e3e0b2db73e639"
+    },
+    {
+      "caminho": "dashboard_assets/tarot/teams/williams/sargeant/pose-2.png",
+      "fonte": "dashboard_assets/tarot/teams/williams/sargeant/pose-2.png",
+      "modo": "copia",
+      "sha256_destino": "996cc2ae46bba6eaabcd75a2e5bddb22ca8f8dc3eff13fff8d79cee94d38d3aa",
+      "sha256_origem": "996cc2ae46bba6eaabcd75a2e5bddb22ca8f8dc3eff13fff8d79cee94d38d3aa"
     },
     {
       "caminho": "dashboard_assets/tarot/variants/albon/pose-0.png",
@@ -1610,8 +2492,8 @@
       "caminho": "docs/JORNADA_DO_FA.md",
       "fonte": "docs/JORNADA_DO_FA.md",
       "modo": "copia",
-      "sha256_destino": "119e6d701afc1017d7e3873e6467a9358af2de9897a64b66c57bb9f9165fa9d6",
-      "sha256_origem": "119e6d701afc1017d7e3873e6467a9358af2de9897a64b66c57bb9f9165fa9d6"
+      "sha256_destino": "aa684cf6a32a205453963cc91dc5c3f01e0c08e8ef61a77189732479b5341b72",
+      "sha256_origem": "aa684cf6a32a205453963cc91dc5c3f01e0c08e8ef61a77189732479b5341b72"
     },
     {
       "caminho": "docs/OPERACAO_FIM_SEMANA.md",
@@ -1645,8 +2527,8 @@
       "caminho": "docs/en/FAN_JOURNEY.md",
       "fonte": "docs/en/FAN_JOURNEY.md",
       "modo": "copia",
-      "sha256_destino": "aca4729feb414a8fed22128612905691ee63d735729c301917112a531a72ed41",
-      "sha256_origem": "aca4729feb414a8fed22128612905691ee63d735729c301917112a531a72ed41"
+      "sha256_destino": "088ec9871e644016e53d27373dfc3e5a3475c6ec90abd2aebdf89cc010027ee2",
+      "sha256_origem": "088ec9871e644016e53d27373dfc3e5a3475c6ec90abd2aebdf89cc010027ee2"
     },
     {
       "caminho": "docs/en/REVIEW_030.md",
@@ -1716,8 +2598,8 @@
       "caminho": "docs/galeria-cartas.html",
       "fonte": "docs/galeria-cartas.html",
       "modo": "copia",
-      "sha256_destino": "b1eec4410e9de0cb807ae5c405fc20902f67fd285d68019016d1f7e776e4415e",
-      "sha256_origem": "b1eec4410e9de0cb807ae5c405fc20902f67fd285d68019016d1f7e776e4415e"
+      "sha256_destino": "65849ccd95942df899c797b050fde46619d03fc7577c3dbfc9e4249ae7477a62",
+      "sha256_origem": "65849ccd95942df899c797b050fde46619d03fc7577c3dbfc9e4249ae7477a62"
     },
     {
       "caminho": "docs/images/pitwall-pilotos-en.png",
@@ -1920,15 +2802,15 @@
       "caminho": "pitwall/dashboard/tarot.py",
       "fonte": "pitwall/dashboard/tarot.py",
       "modo": "copia",
-      "sha256_destino": "b452ce4620d127b6d6f96146944a78d148051e1a2accc74a1fc92a68cc76a8be",
-      "sha256_origem": "b452ce4620d127b6d6f96146944a78d148051e1a2accc74a1fc92a68cc76a8be"
+      "sha256_destino": "0c4c31be57eb7b22338425bd7662e68bf747ea70cdb05a7b153a1dd85e13e805",
+      "sha256_origem": "0c4c31be57eb7b22338425bd7662e68bf747ea70cdb05a7b153a1dd85e13e805"
     },
     {
       "caminho": "pitwall/dashboard/tarot_catalog.py",
       "fonte": "pitwall/dashboard/tarot_catalog.py",
       "modo": "copia",
-      "sha256_destino": "5ea57d4c81539801e0623125d4422ee935cba9c2168ec1e433e3164de780c363",
-      "sha256_origem": "5ea57d4c81539801e0623125d4422ee935cba9c2168ec1e433e3164de780c363"
+      "sha256_destino": "4762d28664cea3546e0f20f7b8f63d3951318cd3586c2e4f9bf1bb8359874bfa",
+      "sha256_origem": "4762d28664cea3546e0f20f7b8f63d3951318cd3586c2e4f9bf1bb8359874bfa"
     },
     {
       "caminho": "pitwall/dashboard/tokens.py",
@@ -2235,8 +3117,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "6f3bf096ca999c4ff24398f84bb7cf3758a7a9d43aadba3b4c18beb59bd8372a",
-      "sha256_origem": "6f3bf096ca999c4ff24398f84bb7cf3758a7a9d43aadba3b4c18beb59bd8372a"
+      "sha256_destino": "7f94424ef70b73d847b5bcbaec7bdc94d366d81db1f72a8d58499d10b0bc80d4",
+      "sha256_origem": "7f94424ef70b73d847b5bcbaec7bdc94d366d81db1f72a8d58499d10b0bc80d4"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -2334,8 +3216,8 @@
       "caminho": "tests/test_tarot_catalog.py",
       "fonte": "tests/test_tarot_catalog.py",
       "modo": "copia",
-      "sha256_destino": "d3669fc826bb48d846b46b980f7e4a7c13c23d9fddef46bb47cabd30aa3d10df",
-      "sha256_origem": "d3669fc826bb48d846b46b980f7e4a7c13c23d9fddef46bb47cabd30aa3d10df"
+      "sha256_destino": "7de44c6dc4a94a27ba07897fc3b85dcccb83897b73e7ce1c189b3866ac756dfd",
+      "sha256_origem": "7de44c6dc4a94a27ba07897fc3b85dcccb83897b73e7ce1c189b3866ac756dfd"
     },
     {
       "caminho": "tests/test_weekend_ui.py",
@@ -2364,7 +3246,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "886866c0c9a840f31b47d4f23a652b6a1d2fd56948f2766cd5e870d0e12a4bb0"
+      "sha256": "62a2777b6c6d5d9de5a76617e1fc0ee01156b41da249ae4b67425b8ebf2c1248"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
@@ -2392,7 +3274,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "6f3bf096ca999c4ff24398f84bb7cf3758a7a9d43aadba3b4c18beb59bd8372a"
+      "sha256": "7f94424ef70b73d847b5bcbaec7bdc94d366d81db1f72a8d58499d10b0bc80d4"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -2411,5 +3293,5 @@
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.7.1"
+  "versao_produto": "0.7.2"
 }

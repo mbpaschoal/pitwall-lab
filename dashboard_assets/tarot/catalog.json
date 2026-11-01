@@ -1,8 +1,8 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "created_by": "MBPaschoal",
   "status": "ready",
-  "type": "generated_presentation_catalog",
+  "type": "team_scoped_generated_presentation_catalog",
   "poses": [
     {
       "pose_id": 0,
@@ -1229,6 +1229,2369 @@
         "russell": 2
       },
       "reason": "User-approved Mexico cards; retain the three original artworks."
+    }
+  ],
+  "team_cards": [
+    {
+      "driver_id": "albon",
+      "driver_name": "Alexander Albon",
+      "team_id": "williams",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/williams/albon/pose-0.png",
+      "sha256": "a6dbf1717854a10823d1c86245271ac56f0ac31987a6d9ac5df0fec53bcbd482",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "albon",
+      "driver_name": "Alexander Albon",
+      "team_id": "williams",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/williams/albon/pose-1.png",
+      "sha256": "bba15e0c0af325734155ae0a3bae4e209924831ac231290eb898a7b5af6b385a",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "albon",
+      "driver_name": "Alexander Albon",
+      "team_id": "williams",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/williams/albon/pose-2.png",
+      "sha256": "44ac3adadd7e99e27cca296432f74f9e0ea897dbfceb4f32411d187b07419d5e",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "alonso",
+      "driver_name": "Fernando Alonso",
+      "team_id": "aston_martin",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/aston_martin/alonso/pose-0.png",
+      "sha256": "158ec9e54270e5f2112e5bc0a025577baa41c608215f8743370c20fa0c678da3",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#00694f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "alonso",
+      "driver_name": "Fernando Alonso",
+      "team_id": "aston_martin",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/aston_martin/alonso/pose-1.png",
+      "sha256": "9af0bc2cc0a4f56c326cc24f07e4f02ae27db0e0d537644134d73f939822815e",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#00694f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "alonso",
+      "driver_name": "Fernando Alonso",
+      "team_id": "aston_martin",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/aston_martin/alonso/pose-2.png",
+      "sha256": "421316536271dcebd061b7b2cf0a2d4b08ed0bf13a8a76287b545bb91de039df",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#00694f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "antonelli",
+      "driver_name": "Andrea Kimi Antonelli",
+      "team_id": "mercedes",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/mercedes/antonelli/pose-0.png",
+      "sha256": "7ad68e49c3b328979116dee59231e1034936728fa59eff5b0243caedc6b9235b",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#006f65",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "antonelli",
+      "driver_name": "Andrea Kimi Antonelli",
+      "team_id": "mercedes",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/mercedes/antonelli/pose-1.png",
+      "sha256": "7e7a3748bf77d71efdaf42d2c7ba10fc3c1c3bcaeb1637ef566972709659cb3d",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#006f65",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "antonelli",
+      "driver_name": "Andrea Kimi Antonelli",
+      "team_id": "mercedes",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/mercedes/antonelli/pose-2.png",
+      "sha256": "690cea8c1ed4097cf3b5169537e2056473990ae5f4bb6c216af0dfe894f31794",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#006f65",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "arvid_lindblad",
+      "driver_name": "Arvid Lindblad",
+      "team_id": "rb",
+      "years": [
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/rb/arvid_lindblad/pose-0.png",
+      "sha256": "c8d7dd0da9992c1e5ec021757fe605ac8396614659775fb74617064861644e7f",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "arvid_lindblad",
+      "driver_name": "Arvid Lindblad",
+      "team_id": "rb",
+      "years": [
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/rb/arvid_lindblad/pose-1.png",
+      "sha256": "6f9d0ba674f4af88703cb48adc47d7748924703e756408bd71cc274204ff09fe",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "arvid_lindblad",
+      "driver_name": "Arvid Lindblad",
+      "team_id": "rb",
+      "years": [
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/rb/arvid_lindblad/pose-2.png",
+      "sha256": "48c9ae43ca55529d12204949afa2cc8fd0d05884fe14f69a8f3c6e1787a7d0e3",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bearman",
+      "driver_name": "Oliver Bearman",
+      "team_id": "ferrari",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/ferrari/bearman/pose-0.png",
+      "sha256": "86b2f17add16dafb0c118dd226f91cb79009de42a1d176f0fb09e4356ba18f27",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bearman",
+      "driver_name": "Oliver Bearman",
+      "team_id": "ferrari",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/ferrari/bearman/pose-1.png",
+      "sha256": "c290db15f138be92ab88a45099ab9dba99d0b4bdc1048db93bad0f27af6bd520",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bearman",
+      "driver_name": "Oliver Bearman",
+      "team_id": "ferrari",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/ferrari/bearman/pose-2.png",
+      "sha256": "96f8003dd8b1da5c5181c47bbd328ac62d5087c208fbfd4c02545e0c09bca2e8",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bearman",
+      "driver_name": "Oliver Bearman",
+      "team_id": "haas",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/haas/bearman/pose-0.png",
+      "sha256": "0c647e8b5a2581d6678f8a686fc68aeeaba551b56f137a1f30d184a91be1588a",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bearman",
+      "driver_name": "Oliver Bearman",
+      "team_id": "haas",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/haas/bearman/pose-1.png",
+      "sha256": "7957c3e89afd9a3349cb554656119fee1cefd4c287b16a3caed8f23b2cc2be50",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bearman",
+      "driver_name": "Oliver Bearman",
+      "team_id": "haas",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/haas/bearman/pose-2.png",
+      "sha256": "c920b00a6a1c7eacbf265cf87ceeba4b79555e3dcfed30657d60a0f8c4a8b113",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bortoleto",
+      "driver_name": "Gabriel Bortoleto",
+      "team_id": "audi",
+      "years": [
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/audi/bortoleto/pose-0.png",
+      "sha256": "4237433cbbd02a092d079ecfcf096ba669df6732d4a19b7efd8b56aba41f5200",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#9b0921",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bortoleto",
+      "driver_name": "Gabriel Bortoleto",
+      "team_id": "audi",
+      "years": [
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/audi/bortoleto/pose-1.png",
+      "sha256": "ffdec6b8003e552715e34da2bb2a09547f9dd5bb1287c6d6212fb6270e800a14",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#9b0921",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bortoleto",
+      "driver_name": "Gabriel Bortoleto",
+      "team_id": "audi",
+      "years": [
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/audi/bortoleto/pose-2.png",
+      "sha256": "dbfb886c5085a770fde610970eee6c28dbc3e3ed4523cb34320651831edf92d4",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#9b0921",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bortoleto",
+      "driver_name": "Gabriel Bortoleto",
+      "team_id": "sauber",
+      "years": [
+        2025
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/sauber/bortoleto/pose-0.png",
+      "sha256": "7a12c3328dc99b6c7f3550203c0773426f2b7196f303c60cdeca855314cc41c7",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bortoleto",
+      "driver_name": "Gabriel Bortoleto",
+      "team_id": "sauber",
+      "years": [
+        2025
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/sauber/bortoleto/pose-1.png",
+      "sha256": "64efbb1a59528d46440a82c182ed8d08a546299ed4635ada7616b4881386caed",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bortoleto",
+      "driver_name": "Gabriel Bortoleto",
+      "team_id": "sauber",
+      "years": [
+        2025
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/sauber/bortoleto/pose-2.png",
+      "sha256": "1255f6c4eca2f18c8953e208d6303c7b2fb13e66311fc0d3b512653a2ff949ba",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bottas",
+      "driver_name": "Valtteri Bottas",
+      "team_id": "cadillac",
+      "years": [
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/cadillac/bottas/pose-0.png",
+      "sha256": "a0a65d80cb16f6f81050840cb2411e5e13fa0a5abe8b3ab833c418cd63115439",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#4c5363",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bottas",
+      "driver_name": "Valtteri Bottas",
+      "team_id": "cadillac",
+      "years": [
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/cadillac/bottas/pose-1.png",
+      "sha256": "94206960cd40a1eff8ee9fab16819264fc71298864cf01e8acb8fcf6794b7a8d",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#4c5363",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bottas",
+      "driver_name": "Valtteri Bottas",
+      "team_id": "cadillac",
+      "years": [
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/cadillac/bottas/pose-2.png",
+      "sha256": "fc7cdef369d6fd12f610a79180bed2cd97e4671695fd9062a5d95d9118e5e3e2",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#4c5363",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bottas",
+      "driver_name": "Valtteri Bottas",
+      "team_id": "sauber",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/sauber/bottas/pose-0.png",
+      "sha256": "1c38c5b51ee86f772d79c30c51622a08eebaa08996bdc57480fc66a1b5fa0a5f",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bottas",
+      "driver_name": "Valtteri Bottas",
+      "team_id": "sauber",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/sauber/bottas/pose-1.png",
+      "sha256": "dafb60d1309d2ec47bcc4e4fcc6e69043a473662193871abfb2d4228810a1a2a",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "bottas",
+      "driver_name": "Valtteri Bottas",
+      "team_id": "sauber",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/sauber/bottas/pose-2.png",
+      "sha256": "fdf7bd09e8def2cf21101385c2b18c89eaa8690fd1ac02126e3c737fa5a50d31",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "colapinto",
+      "driver_name": "Franco Colapinto",
+      "team_id": "alpine",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/alpine/colapinto/pose-0.png",
+      "sha256": "1ce82d9d67c66ab9245145023528b4fd1b0b8a27973f139104f7410910ae6688",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "colapinto",
+      "driver_name": "Franco Colapinto",
+      "team_id": "alpine",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/alpine/colapinto/pose-1.png",
+      "sha256": "61ff8259b853bb8d597bf1c00cd74e98a77e36ff6dc916131abbd1f60563d56f",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "colapinto",
+      "driver_name": "Franco Colapinto",
+      "team_id": "alpine",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/alpine/colapinto/pose-2.png",
+      "sha256": "e62ff3ebec97eec3d9359dbda51f8655c36436d17039121dca1205432e052af1",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "colapinto",
+      "driver_name": "Franco Colapinto",
+      "team_id": "williams",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/williams/colapinto/pose-0.png",
+      "sha256": "f1d6eed7f3c374d08a48c1d775d2ae6a6c3291ccfa6a4f1182b3e4e310cb6dac",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "colapinto",
+      "driver_name": "Franco Colapinto",
+      "team_id": "williams",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/williams/colapinto/pose-1.png",
+      "sha256": "6a6531380503b03ba56b99dccf936a5e857a924797dcc5753c7a1a8d5381a37b",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "colapinto",
+      "driver_name": "Franco Colapinto",
+      "team_id": "williams",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/williams/colapinto/pose-2.png",
+      "sha256": "52639b316db9ac51f1948ef92ac7d628cad8903d74197b4ce2d8c7867cfc4a13",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "doohan",
+      "driver_name": "Jack Doohan",
+      "team_id": "alpine",
+      "years": [
+        2024,
+        2025
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/alpine/doohan/pose-0.png",
+      "sha256": "d25dacf2d6480e3e7ef66438219b926d52bd8cb72134787a1d8a3f6f902faa7a",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "doohan",
+      "driver_name": "Jack Doohan",
+      "team_id": "alpine",
+      "years": [
+        2024,
+        2025
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/alpine/doohan/pose-1.png",
+      "sha256": "66c0bbff23aa5c5cf2e3933012c4c14e73ee6b9489bb5443d8d4cb4476f66692",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "doohan",
+      "driver_name": "Jack Doohan",
+      "team_id": "alpine",
+      "years": [
+        2024,
+        2025
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/alpine/doohan/pose-2.png",
+      "sha256": "74f5821becefff8d0ca064691e21cb75134507a578e434edda31ddc8f8efe139",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "gasly",
+      "driver_name": "Pierre Gasly",
+      "team_id": "alpine",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/alpine/gasly/pose-0.png",
+      "sha256": "e318003b55a7c2bbf7e298b892cdb2f1e843bcc2d78dc0737d0ef1ad16e6ad04",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "gasly",
+      "driver_name": "Pierre Gasly",
+      "team_id": "alpine",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/alpine/gasly/pose-1.png",
+      "sha256": "fed91adebc67ed4871abe1f48283bb508b56c3e792ad2739a18054a5b330521e",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "gasly",
+      "driver_name": "Pierre Gasly",
+      "team_id": "alpine",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/alpine/gasly/pose-2.png",
+      "sha256": "8d4e1c27614320828ef1a4b32e8ccac605491df96931f9ab5c5f22d1f3a16ce2",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hadjar",
+      "driver_name": "Isack Hadjar",
+      "team_id": "rb",
+      "years": [
+        2025
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/rb/hadjar/pose-0.png",
+      "sha256": "58990b163874519e7d582899c9bea8271440bf1ea64bc50fbc947cbae8b4c87e",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hadjar",
+      "driver_name": "Isack Hadjar",
+      "team_id": "rb",
+      "years": [
+        2025
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/rb/hadjar/pose-1.png",
+      "sha256": "b745a37ee818255c34b7dd3604abca9d0430034f22bf63d8f226bde9765c6f77",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hadjar",
+      "driver_name": "Isack Hadjar",
+      "team_id": "rb",
+      "years": [
+        2025
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/rb/hadjar/pose-2.png",
+      "sha256": "fe6c2ece3c305fb14476f227575dfa59d1cd1b648647a0ac42d7e7d8ccf577a8",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hadjar",
+      "driver_name": "Isack Hadjar",
+      "team_id": "red_bull",
+      "years": [
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/red_bull/hadjar/pose-0.png",
+      "sha256": "37fdab61b6665fce7cc74626163e3d4f9baa12dfbf4757deef3cc6a2dea1127f",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hadjar",
+      "driver_name": "Isack Hadjar",
+      "team_id": "red_bull",
+      "years": [
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/red_bull/hadjar/pose-1.png",
+      "sha256": "cce542cffb56a11e4c3e714687342cf8a761acb1cbf479ccf81cd105979ad67e",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hadjar",
+      "driver_name": "Isack Hadjar",
+      "team_id": "red_bull",
+      "years": [
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/red_bull/hadjar/pose-2.png",
+      "sha256": "18b27a2bc706d679a758795dd99d9757bfdd8646a9820b2f7e8e92a8909a59be",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hamilton",
+      "driver_name": "Lewis Hamilton",
+      "team_id": "ferrari",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/ferrari/hamilton/pose-0.png",
+      "sha256": "6fee1d32e4f4d94f7b6d80968ffaca5ac1feeee0665a125c540757cefcc62925",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hamilton",
+      "driver_name": "Lewis Hamilton",
+      "team_id": "ferrari",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/ferrari/hamilton/pose-1.png",
+      "sha256": "9bc82d2b88fb3550cf95222c45828747f8e7f565f8f3d5f8dd0fb19bb7b3b33d",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hamilton",
+      "driver_name": "Lewis Hamilton",
+      "team_id": "ferrari",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/ferrari/hamilton/pose-2.png",
+      "sha256": "ac026316b3bf6d5d8dc77b0787a764250778dbb56a6692b2537b2f7e770b5066",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hamilton",
+      "driver_name": "Lewis Hamilton",
+      "team_id": "mercedes",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/mercedes/hamilton/pose-0.png",
+      "sha256": "2537009ac415fae6fe4af2d668a52f9335c794c3a1906e9da398d5a6564d9c94",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#006f65",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hamilton",
+      "driver_name": "Lewis Hamilton",
+      "team_id": "mercedes",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/mercedes/hamilton/pose-1.png",
+      "sha256": "5797b1029593daef3467b10e2ed434e2d9e447c18c11ba3bf79ef173b5ced421",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#006f65",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hamilton",
+      "driver_name": "Lewis Hamilton",
+      "team_id": "mercedes",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/mercedes/hamilton/pose-2.png",
+      "sha256": "7a8837ca9232b153051b5c8fd11e36ace08ced79e728120fc65b93a9ca69ed62",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#006f65",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hulkenberg",
+      "driver_name": "Nico Hulkenberg",
+      "team_id": "audi",
+      "years": [
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/audi/hulkenberg/pose-0.png",
+      "sha256": "b75bed701eac5f601b2c235e6aa7c24ac7544c3b939963a87b7c67ccdb5ed0a4",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#9b0921",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hulkenberg",
+      "driver_name": "Nico Hulkenberg",
+      "team_id": "audi",
+      "years": [
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/audi/hulkenberg/pose-1.png",
+      "sha256": "8606cd952a137ce692701d3ac8edae4074219daffc22a96093080016c15a93a5",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#9b0921",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hulkenberg",
+      "driver_name": "Nico Hulkenberg",
+      "team_id": "audi",
+      "years": [
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/audi/hulkenberg/pose-2.png",
+      "sha256": "0df0b89a6ac342e2b39519406a4a78de17e7348cd3bf337d8acfb8e49d06cf3e",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#9b0921",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hulkenberg",
+      "driver_name": "Nico Hülkenberg",
+      "team_id": "haas",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/haas/hulkenberg/pose-0.png",
+      "sha256": "e0da282a93fa7c553b0b3477606627ff644aa606937df2a5ee9d5b0145af5ef3",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hulkenberg",
+      "driver_name": "Nico Hülkenberg",
+      "team_id": "haas",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/haas/hulkenberg/pose-1.png",
+      "sha256": "12b9722c136a9973b7370b1d61b4a08cd313436c3ac6c0a379d06eee3c0b7b25",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hulkenberg",
+      "driver_name": "Nico Hülkenberg",
+      "team_id": "haas",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/haas/hulkenberg/pose-2.png",
+      "sha256": "b60f749e6c5f26b1c565dfea8952ea83af9f4d980c514bbc520078585a636df9",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hulkenberg",
+      "driver_name": "Nico Hülkenberg",
+      "team_id": "sauber",
+      "years": [
+        2025
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/sauber/hulkenberg/pose-0.png",
+      "sha256": "687c2624d1388cd1fd8270d451279165f3966e72693161fc0e5aa3bbb77f8443",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hulkenberg",
+      "driver_name": "Nico Hülkenberg",
+      "team_id": "sauber",
+      "years": [
+        2025
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/sauber/hulkenberg/pose-1.png",
+      "sha256": "a3bd31d26c01bbb72aa156c279a7fe8d9afa6c31aad3f72e0bef3b05983fed4e",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "hulkenberg",
+      "driver_name": "Nico Hülkenberg",
+      "team_id": "sauber",
+      "years": [
+        2025
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/sauber/hulkenberg/pose-2.png",
+      "sha256": "0d788914adbb5625ef08b601bf58b89060705bb3534679e0d6de756037f8ffc9",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "kevin_magnussen",
+      "driver_name": "Kevin Magnussen",
+      "team_id": "haas",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/haas/kevin_magnussen/pose-0.png",
+      "sha256": "6c596c7dc412220db93340fe86ea1e8d62f6b78ddd72d9d004600e39421faafd",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "kevin_magnussen",
+      "driver_name": "Kevin Magnussen",
+      "team_id": "haas",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/haas/kevin_magnussen/pose-1.png",
+      "sha256": "bc63e19e9ff46e40b4179b553b32fe8aca0c6877d49be045538b6da0bc3f5f70",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "kevin_magnussen",
+      "driver_name": "Kevin Magnussen",
+      "team_id": "haas",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/haas/kevin_magnussen/pose-2.png",
+      "sha256": "4a3384e4ab039e63f096042ba453d34f9b297bf132e216327d0a1ad7c1424ea9",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "lawson",
+      "driver_name": "Liam Lawson",
+      "team_id": "rb",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/rb/lawson/pose-0.png",
+      "sha256": "3cfea1ad7795de26bd8533e38daf1ab7dbbcf2d69e16ad024081bed34d2af641",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "lawson",
+      "driver_name": "Liam Lawson",
+      "team_id": "rb",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/rb/lawson/pose-1.png",
+      "sha256": "aea5d131321ff483980cf404f7fe9e1308919fd1ad4569ac606143f3a4d2642d",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "lawson",
+      "driver_name": "Liam Lawson",
+      "team_id": "rb",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/rb/lawson/pose-2.png",
+      "sha256": "c72e9a8b646ebd0bf0549175cd378066671401eba6caa765d700f9c32411419f",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "lawson",
+      "driver_name": "Liam Lawson",
+      "team_id": "red_bull",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/red_bull/lawson/pose-0.png",
+      "sha256": "e96370974e557cc789ea23c5336b219861065e7993e9f41b8cba82d0abfb1b61",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "lawson",
+      "driver_name": "Liam Lawson",
+      "team_id": "red_bull",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/red_bull/lawson/pose-1.png",
+      "sha256": "6e16a9c9ac05779d182ebdf3d376846e24c570bf49bdd861261244be0144ad94",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "lawson",
+      "driver_name": "Liam Lawson",
+      "team_id": "red_bull",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/red_bull/lawson/pose-2.png",
+      "sha256": "1e5665acaf055ae36e8cac14746002181844c50691ea5ff6c9f5d05876fb34cf",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "leclerc",
+      "driver_name": "Charles Leclerc",
+      "team_id": "ferrari",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/ferrari/leclerc/pose-0.png",
+      "sha256": "bae9a5bd6b1ab258aaab725ebaa56959448e1804fe6f73b7460bf2ea38755963",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "leclerc",
+      "driver_name": "Charles Leclerc",
+      "team_id": "ferrari",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/ferrari/leclerc/pose-1.png",
+      "sha256": "8db5c6d4dd89c5494563edf5f6238da211f661b74cdef35941ee6c2f9e860786",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "leclerc",
+      "driver_name": "Charles Leclerc",
+      "team_id": "ferrari",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/ferrari/leclerc/pose-2.png",
+      "sha256": "f3a27bad6aaf76aa9008a3611522d32b73a485dd07cfc4d76296e00724643683",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "max_verstappen",
+      "driver_name": "Max Verstappen",
+      "team_id": "red_bull",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/red_bull/max_verstappen/pose-0.png",
+      "sha256": "f615fa3c2fde8c034ee5577fdd72002bc746a012cf655161c79e4589d9cef128",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "max_verstappen",
+      "driver_name": "Max Verstappen",
+      "team_id": "red_bull",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/red_bull/max_verstappen/pose-1.png",
+      "sha256": "393aac9f4420beff11744ae2ce0b7276bed09822f8df9986ca5f13786a6820b0",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "max_verstappen",
+      "driver_name": "Max Verstappen",
+      "team_id": "red_bull",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/red_bull/max_verstappen/pose-2.png",
+      "sha256": "7a25a6fd56e751dd3c7c88de29b16a71e4df5d2dcc9f115b3da945d1a89d6253",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "norris",
+      "driver_name": "Lando Norris",
+      "team_id": "mclaren",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/mclaren/norris/pose-0.png",
+      "sha256": "af7717c51a3517c4614b9ba3d23738613cb0c5121d37e92d00e733322cf1c623",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#d45600",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "norris",
+      "driver_name": "Lando Norris",
+      "team_id": "mclaren",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/mclaren/norris/pose-1.png",
+      "sha256": "f7299f33829a4e77b823805da5fa0624658ea31761b057dd8c112eb0478e1418",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#d45600",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "norris",
+      "driver_name": "Lando Norris",
+      "team_id": "mclaren",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/mclaren/norris/pose-2.png",
+      "sha256": "dc1848f49b45f6d2c29ead23e2cfbdeb70338254b0f65ac239a9a75cc4d1fc76",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#d45600",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ocon",
+      "driver_name": "Esteban Ocon",
+      "team_id": "alpine",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/alpine/ocon/pose-0.png",
+      "sha256": "cd27bf34b5a14ea07d7d2c14e61f93c341df6d5bf8e58d694166191afe7ecef1",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ocon",
+      "driver_name": "Esteban Ocon",
+      "team_id": "alpine",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/alpine/ocon/pose-1.png",
+      "sha256": "72d2866d5fe79c90bf208464a6dada0c18b4b56d38d7f3268883df8437f3830e",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ocon",
+      "driver_name": "Esteban Ocon",
+      "team_id": "alpine",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/alpine/ocon/pose-2.png",
+      "sha256": "4bcc8ddb4ecb7855c50a8e7b68517a4b1a1af1d7e8b27c24a73c127e02f8cb61",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#93436f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ocon",
+      "driver_name": "Esteban Ocon",
+      "team_id": "haas",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/haas/ocon/pose-0.png",
+      "sha256": "a29ea5051c8598158aea3475b3a12eb0036f94f184ec586409daa55b0f6f6c76",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ocon",
+      "driver_name": "Esteban Ocon",
+      "team_id": "haas",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/haas/ocon/pose-1.png",
+      "sha256": "cbee81d0ef4fef46b3008e23b26ca279d7de0ab6bfec10ca83f1bba77dd3d1af",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ocon",
+      "driver_name": "Esteban Ocon",
+      "team_id": "haas",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/haas/ocon/pose-2.png",
+      "sha256": "0e6d50654bc4ce2c4c21f7507fb5766f21eeca56d2a9a035f92722b4ef91670e",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "perez",
+      "driver_name": "Sergio Perez",
+      "team_id": "cadillac",
+      "years": [
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/cadillac/perez/pose-0.png",
+      "sha256": "30eddfb51daccbdef82593c4bef169e77f30f2668b363dc0b6a24c59ca8b74ea",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#4c5363",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "perez",
+      "driver_name": "Sergio Perez",
+      "team_id": "cadillac",
+      "years": [
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/cadillac/perez/pose-1.png",
+      "sha256": "d179df7eae85bc2e78d55adb1e5747a53d885e7cd8976af178a07c76c441eefa",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#4c5363",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "perez",
+      "driver_name": "Sergio Perez",
+      "team_id": "cadillac",
+      "years": [
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/cadillac/perez/pose-2.png",
+      "sha256": "d05d2eac282424567f6998f80a73da74014042ec6d51d11f2ceb815e17c72d1d",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#4c5363",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "perez",
+      "driver_name": "Sergio Pérez",
+      "team_id": "red_bull",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/red_bull/perez/pose-0.png",
+      "sha256": "578eb3a461bb2ad54a0d98747d32cc6e22d592f265bb19e239ff21944ef7e31a",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "perez",
+      "driver_name": "Sergio Pérez",
+      "team_id": "red_bull",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/red_bull/perez/pose-1.png",
+      "sha256": "aafb58b7bea4ca076b241cebd065db8b977a1cd9ee402e3969c3b413cec92015",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "perez",
+      "driver_name": "Sergio Pérez",
+      "team_id": "red_bull",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/red_bull/perez/pose-2.png",
+      "sha256": "72f3e1719f1aecb3a23677ea486b47b968413a4fe5d6a941412567ad3197f557",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "piastri",
+      "driver_name": "Oscar Piastri",
+      "team_id": "mclaren",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/mclaren/piastri/pose-0.png",
+      "sha256": "c36e4bfaeab55648341133ab7ce31e66a521b7d86390d33459813016aa10564b",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#d45600",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "piastri",
+      "driver_name": "Oscar Piastri",
+      "team_id": "mclaren",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/mclaren/piastri/pose-1.png",
+      "sha256": "9955431e97ea6deed34d7a1b1fe2c4073a7c38aa5d7b6ce11346671a48519b41",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#d45600",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "piastri",
+      "driver_name": "Oscar Piastri",
+      "team_id": "mclaren",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/mclaren/piastri/pose-2.png",
+      "sha256": "0adf6fc6bcb73ac07fb903ad0c7e1ea7d155886efb36adc0016356bb6f438b55",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#d45600",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ricciardo",
+      "driver_name": "Daniel Ricciardo",
+      "team_id": "rb",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/rb/ricciardo/pose-0.png",
+      "sha256": "b1baa566589e7e18b22bf87cd6559dade3e458e4412456c0a163d590dcf58a59",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ricciardo",
+      "driver_name": "Daniel Ricciardo",
+      "team_id": "rb",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/rb/ricciardo/pose-1.png",
+      "sha256": "3f2d4077fe7eb632d5bd48517c646bc2dc62ca32feda36cc803be3274409534e",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ricciardo",
+      "driver_name": "Daniel Ricciardo",
+      "team_id": "rb",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/rb/ricciardo/pose-2.png",
+      "sha256": "568dcbd16f3be4f3e95f08a0bc4a0c00ff2cfdc894d3dc1f082a249c84f4d0c3",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "russell",
+      "driver_name": "George Russell",
+      "team_id": "mercedes",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/mercedes/russell/pose-0.png",
+      "sha256": "79cc9097073648348737acabe1c6df7dc75da3568a658615e3bcee8aebb564ad",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#006f65",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "russell",
+      "driver_name": "George Russell",
+      "team_id": "mercedes",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/mercedes/russell/pose-1.png",
+      "sha256": "b4f63baac81cb1c02af63d1292403ff3e681c9d068eab531930c7dcb15df1dc0",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#006f65",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "russell",
+      "driver_name": "George Russell",
+      "team_id": "mercedes",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/mercedes/russell/pose-2.png",
+      "sha256": "7bc40411426629e9350e18e2385d7ba06c8e9b45c1ff64a3969e2af9a950f3ed",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#006f65",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ryo_hirakawa",
+      "driver_name": "Ryo Hirakawa",
+      "team_id": "haas",
+      "years": [
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/haas/ryo_hirakawa/pose-0.png",
+      "sha256": "a5f8c2310e8e829761e376675a3c4beba0a90873feed802ab8c97750288f598d",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ryo_hirakawa",
+      "driver_name": "Ryo Hirakawa",
+      "team_id": "haas",
+      "years": [
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/haas/ryo_hirakawa/pose-1.png",
+      "sha256": "9150203a7bc93fb2fd272ae865f68bb8b8299e64dbe5b10abb818afca6fc3ad7",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "ryo_hirakawa",
+      "driver_name": "Ryo Hirakawa",
+      "team_id": "haas",
+      "years": [
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/haas/ryo_hirakawa/pose-2.png",
+      "sha256": "ea8ccd7a7ff0940b9ac52771da252150fe3bbad15c3e76c33d54c0d05bf83885",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#393d47",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "sainz",
+      "driver_name": "Carlos Sainz",
+      "team_id": "ferrari",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/ferrari/sainz/pose-0.png",
+      "sha256": "bdbcea5b6e667fe6e88121bf721ee4b2745a4a2947b7b18111f53c13023533c8",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "sainz",
+      "driver_name": "Carlos Sainz",
+      "team_id": "ferrari",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/ferrari/sainz/pose-1.png",
+      "sha256": "beb276062959b95283f724320dd6db4446c87554a976c5bfcfef6a5257241022",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "sainz",
+      "driver_name": "Carlos Sainz",
+      "team_id": "ferrari",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/ferrari/sainz/pose-2.png",
+      "sha256": "30630915b515d39d148c3e5d0c2cee91d17f0ace65be3b37cdf66196f249acb0",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#c30d22",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "sainz",
+      "driver_name": "Carlos Sainz",
+      "team_id": "williams",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/williams/sainz/pose-0.png",
+      "sha256": "edd41b914a885524c4e6c5995829036beb871417d38d03b04d3cfe3ec3fe94a6",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "sainz",
+      "driver_name": "Carlos Sainz",
+      "team_id": "williams",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/williams/sainz/pose-1.png",
+      "sha256": "95faebec828ff8ae9a087d5469839a767bbe26e47cbd7f6a6722545de153cfba",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "sainz",
+      "driver_name": "Carlos Sainz",
+      "team_id": "williams",
+      "years": [
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/williams/sainz/pose-2.png",
+      "sha256": "ec9341b26885548dc70923413c46e013ba68e1be6d090da6ef9091e32cd64b90",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "sargeant",
+      "driver_name": "Logan Sargeant",
+      "team_id": "williams",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/williams/sargeant/pose-0.png",
+      "sha256": "6342c9ca9e6726091adc70caf8fe045019bef1b8ce03f822c3f66f43c9a713f4",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "sargeant",
+      "driver_name": "Logan Sargeant",
+      "team_id": "williams",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/williams/sargeant/pose-1.png",
+      "sha256": "9c7f80d87986b0b06d688d1de5866b3c028b7730fcf9fae912e3e0b2db73e639",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "sargeant",
+      "driver_name": "Logan Sargeant",
+      "team_id": "williams",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/williams/sargeant/pose-2.png",
+      "sha256": "996cc2ae46bba6eaabcd75a2e5bddb22ca8f8dc3eff13fff8d79cee94d38d3aa",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#0750ad",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "stroll",
+      "driver_name": "Lance Stroll",
+      "team_id": "aston_martin",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/aston_martin/stroll/pose-0.png",
+      "sha256": "eaa7a3d3a87ff6ac208ee302d55455f2f961ab33808811918a3c9080124c18ee",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#00694f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "stroll",
+      "driver_name": "Lance Stroll",
+      "team_id": "aston_martin",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/aston_martin/stroll/pose-1.png",
+      "sha256": "0ed8328b49237fa2e4259081c45d2fb85f0c9981387354f9ca4f3835e779106c",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#00694f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "stroll",
+      "driver_name": "Lance Stroll",
+      "team_id": "aston_martin",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/aston_martin/stroll/pose-2.png",
+      "sha256": "7dbeadef4838e26b49167b35ebd4f4fe5ceeb6065eebf4fd4c425a1767152c49",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#00694f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "tsunoda",
+      "driver_name": "Yuki Tsunoda",
+      "team_id": "rb",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/rb/tsunoda/pose-0.png",
+      "sha256": "d0e186e9a7b74c4f2086082b1e43c106eb9c8d223b063fe109a3f73bfd1bc545",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "tsunoda",
+      "driver_name": "Yuki Tsunoda",
+      "team_id": "rb",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/rb/tsunoda/pose-1.png",
+      "sha256": "84264fc8f397cc9380e5602b108309ebd62ece884ede7e31161ffb01e139badc",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "tsunoda",
+      "driver_name": "Yuki Tsunoda",
+      "team_id": "rb",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/rb/tsunoda/pose-2.png",
+      "sha256": "8ae252bc5389302f4ccd1f21fe91d0734f0420f4c93e21953ff21f41088f16dd",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#2348a6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "tsunoda",
+      "driver_name": "Yuki Tsunoda",
+      "team_id": "red_bull",
+      "years": [
+        2025
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/red_bull/tsunoda/pose-0.png",
+      "sha256": "0be72706de73a17324b5ffe8e6a14424ad6d8ead805a84ee7573f197d6383b39",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "tsunoda",
+      "driver_name": "Yuki Tsunoda",
+      "team_id": "red_bull",
+      "years": [
+        2025
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/red_bull/tsunoda/pose-1.png",
+      "sha256": "7f0774f89a55ed9555e65e9c81b0c650397248f050be6ed83810c7ea92846c64",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "tsunoda",
+      "driver_name": "Yuki Tsunoda",
+      "team_id": "red_bull",
+      "years": [
+        2025
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/red_bull/tsunoda/pose-2.png",
+      "sha256": "8be32fa85bd71760e496c723893b535c4a7c93d50e251a3b8b3ea87b5fb2e68b",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#173574",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "zhou",
+      "driver_name": "Guanyu Zhou",
+      "team_id": "sauber",
+      "years": [
+        2024
+      ],
+      "pose_id": 0,
+      "pose_key": "helmet_under_arm",
+      "path": "dashboard_assets/tarot/teams/sauber/zhou/pose-0.png",
+      "sha256": "51f042790364b81c9ec188205d3e4a0364f6719e37b216f59dda264b4db6de44",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "zhou",
+      "driver_name": "Guanyu Zhou",
+      "team_id": "sauber",
+      "years": [
+        2024
+      ],
+      "pose_id": 1,
+      "pose_key": "arms_crossed",
+      "path": "dashboard_assets/tarot/teams/sauber/zhou/pose-1.png",
+      "sha256": "d16793f8d1f00d805237a63e9ab99d948b8136576de13e568d453c3aa6c01c12",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "driver_id": "zhou",
+      "driver_name": "Guanyu Zhou",
+      "team_id": "sauber",
+      "years": [
+        2024
+      ],
+      "pose_id": 2,
+      "pose_key": "helmet_held_front",
+      "path": "dashboard_assets/tarot/teams/sauber/zhou/pose-2.png",
+      "sha256": "0dd4f167034d7071ad6a4a09a7c37ddd1ca42ab90bc2b4aff1c51eba8cd1e403",
+      "status": "ready",
+      "origin": "built_in_imagegen",
+      "team_neutral": false,
+      "team_color": "#357a1d",
+      "width": 1024,
+      "height": 1536
     }
   ]
 }

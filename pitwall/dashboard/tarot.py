@@ -27,14 +27,15 @@ def cards_html(rows, root, year=None, round_=None):
         entry = item['entry']
         team = team_id(row) or 'unknown'
         pose = '' if item['pose_id'] is None else str(item['pose_id'])
-        kind = 'neutral' if entry and entry['team_neutral'] else 'team' if entry else 'missing'
+        kind = 'team' if entry else 'missing'
         if item['content'] is not None:
             image = '<img src="data:image/png;base64,{}" alt="{}">'.format(
                 base64.b64encode(item['content']).decode('ascii'),
                 escape('{} · {}'.format(row['name'], row['team']), quote=True))
         else:
             kind = 'missing'
-            missing = 'Illustration unavailable' if language() == 'en' else 'Ilustração indisponível'
+            missing = ('Illustration unavailable for this team' if language() == 'en'
+                       else 'Ilustração indisponível para esta equipe')
             image = '<div class="tarot-art-unavailable">{}</div>'.format(missing)
         # Team labels and framing belong to this GP, not to a driver's current team.
         image += '<figcaption class="tarot-card-label"><h3>{}</h3><span>{}</span></figcaption>'.format(
