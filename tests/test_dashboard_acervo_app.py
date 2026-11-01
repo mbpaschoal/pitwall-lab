@@ -98,7 +98,13 @@ class TestDashboardAcervoApp(unittest.TestCase):
         self.assertEqual(hashes, {p: hashlib.sha256(p.read_bytes()).hexdigest() for p in fontes})
 
     def test_gp_futuro_sem_acervo_mantem_ausencia_sem_probabilidades(self):
-        self.executar(2026, 19)
+        # Escolha um GP realmente sem emissão: México agora tem previsão registrada.
+        dados = json.loads((self.raiz / 'frontend_assets/race_weekend.json').read_text())['dados_2026']
+        emitidas = {p['rodada'] for p in dados['previsoes']}
+        candidatas = [r['rodada'] for r in dados['corridas'] if r['rodada'] not in emitidas and '2026:{}'.format(r['rodada']) not in self.asset['gps']]
+        if not candidatas:
+            self.skipTest('O asset não possui GP sem emissão e sem acervo.')
+        self.executar(2026, candidatas[0])
         texto = texto_renderizado(self.at)
         self.assertNotIn('Favoritos por ranking publicado', texto)
         self.assertIn('Estratégias indisponíveis no pacote local.', texto)

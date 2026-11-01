@@ -4,6 +4,10 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.4.7 — 2026-11-01
+
+The Mexico forecast remains unchanged. The missing-data test now selects a genuinely unissued GP instead of assuming Mexico will always lack probabilities. This preserves the check against borrowing predictions between races.
+
 ## 0.4.6 — 2026-11-01
 
 Mexico 2026 prospective forecast recorded on Nov 1 at 04:32 UTC, before the scheduled 20:00 UTC start. Canonical qualifying with 22 drivers, verified Q3 finish and frozen v1 model. Individual podium probabilities do not predict finishing order. Later race outcomes were excluded from inputs. Sources, manifest and probabilities preserved for audit.

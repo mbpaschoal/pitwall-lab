@@ -4,6 +4,10 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.4.7 — 2026-11-01
+
+A previsão do México permanece intacta. O teste de ausência agora seleciona um GP realmente sem emissão, em vez de presumir que o México continuaria sem probabilidades. Essa correção preserva a verificação contra empréstimo de previsões entre GPs.
+
 ## 0.4.6 — 2026-11-01
 
 Previsão prospectiva do México 2026 registrada em 01/11 às 04:32 UTC, antes da largada programada para 20h UTC. Classificação canônica com 22 pilotos, encerramento de Q3 comprovado e modelo v1 congelado. As probabilidades individuais de pódio não indicam ordem de chegada. Dados posteriores da corrida foram excluídos das entradas. Fontes, manifesto e probabilidades preservados para auditoria.
