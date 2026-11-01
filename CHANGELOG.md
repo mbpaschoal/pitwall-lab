@@ -4,6 +4,10 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.5.1 — 2026-11-01
+
+Cartas de tarô aprovadas para o México, com cores das equipes, poses distintas e rostos ajustados a referências fornecidas pelo proprietário. A janela continua opcional; percentuais ficam somente na tabela de previsões. Retratos só aparecem quando a equipe do registro corresponde à arte, preservando os períodos históricos. Nenhuma probabilidade, emissão ou modelo foi alterado.
+
 ## 0.5.0 — 2026-11-01
 
 A Jornada do fã substitui o menu lateral pela navegação inferior com seis destinos e controles nativos de teclado. Temporada/GP no topo, faixa de etapas próximas e imagem da pista em destaque com traçado e ficha abaixo. Pilotos ganha uma descoberta principal; campeonato continua completo, com tabelas em sequência. As cartas são opcionais, abertas por botão ou link direto nas previsões, com percentuais da emissão real, equipe do período e fallback de capacete. PT/EN e celular preservados. As ilustrações são decorativas, sem inferência ou alteração do modelo, das previsões ou dos dados.

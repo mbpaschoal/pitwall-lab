@@ -26,11 +26,11 @@ class JourneyTests(unittest.TestCase):
         self.assertNotIn('<article',cards_html(rows,ROOT))
         set_language('pt')
         html=cards_html([dict(driver_id='unknown',name='<driver>',team='Team',probability=.5)],ROOT)
-        self.assertIn('50,0%',html)
+        self.assertNotIn('%',html)
         self.assertIn('&lt;driver&gt;',html)
         self.assertNotIn('src="http',html)
 
-    def test_mexico_cards_use_recorded_probabilities_and_do_not_mutate_emission(self):
+    def test_mexico_cards_show_art_without_percentages_or_emission_changes(self):
         path=ROOT/'frontend_assets/race_weekend.json'
         before=hashlib.sha256(path.read_bytes()).hexdigest()
         app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=40)
@@ -39,10 +39,20 @@ class JourneyTests(unittest.TestCase):
         self.assertFalse(app.exception)
         html='\n'.join(x.value for x in app.markdown if '<div class="tarot-cards">' in x.value)
         self.assertIn('Max Verstappen',html)
-        self.assertIn('68,2%',html)
-        self.assertIn('61,9%',html)
-        self.assertIn('57,5%',html)
+        self.assertNotIn('%',html)
+        self.assertEqual(html.count('<img '),3)
+        self.assertIn('Lewis Hamilton',html)
+        self.assertIn('George Russell',html)
         self.assertEqual(before,hashlib.sha256(path.read_bytes()).hexdigest())
+
+    def test_historical_team_cannot_show_later_team_artwork(self):
+        row=dict(driver_id='hamilton',name='Lewis Hamilton',team='Mercedes',probability=.5)
+        html=cards_html([row],ROOT)
+        self.assertNotIn('<img ',html)
+        self.assertIn('Mercedes',html)
+        self.assertNotIn('Ferrari',html)
+        row['team']='Ferrari'
+        self.assertIn('<img ',cards_html([row],ROOT))
 
     def test_gp_without_emission_does_not_open_cards(self):
         app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=40)

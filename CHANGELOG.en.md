@@ -4,6 +4,10 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.5.1 — 2026-11-01
+
+Approved Mexico tarot artwork with team colours, distinct poses and likenesses refined from owner-provided references. The dialog remains optional; percentages appear only in the forecast table. Portraits are shown only when the record's team matches the artwork, preserving historical context. No probabilities, registered forecasts or model were changed.
+
 ## 0.5.0 — 2026-11-01
 
 Fan Journey replaces the sidebar with a six-destination bottom navigation using native keyboard controls. Season/GP controls move to the top, with nearby calendar events and a prominent circuit image, outline and facts. Drivers has a leading discovery; championship standings remain complete in sequential tables. Optional cards open by button or direct forecast link, using actual recorded probabilities, period-specific teams and a helmet fallback. PT/EN and mobile are supported. Artwork is decorative and never changes inference, the model, forecasts or data.

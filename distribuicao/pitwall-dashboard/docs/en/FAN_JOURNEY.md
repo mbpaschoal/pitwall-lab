@@ -14,7 +14,7 @@ Races retains six chapters through tabs: Summary, Sessions and laps, Tyres and p
 
 In Podium chances, **Open the GP cards** opens an optional dialog. Direct links can use `?tela=Previsões&temporada=2026&gp=19&cartas=1&lang=en`. Close with X, Escape or the table link. Closing or changing GP clears the opening state. Normal navigation never opens the dialog automatically.
 
-Drivers and percentages come from the selected GP's stored favorites, including ties. There is no random draw, recalculation or P1/P2/P3 prediction. Team names follow the period's record. Missing forecasts do not produce cards. Retrospective studies are labeled accordingly. Drivers without artwork receive a helmet symbol. Mobile stacks cards in a scrollable dialog.
+Drivers come from the selected GP's stored favorites, including ties. Cards show only artwork, name and team; percentages remain in the forecast table. There is no random draw, recalculation or P1/P2/P3 prediction. Team names follow the period's record. Missing forecasts do not produce cards. Retrospective studies are labeled accordingly. Drivers without artwork matching the period's team receive a helmet symbol. Mobile stacks cards in a scrollable dialog.
 
 Verstappen, Hamilton and Russell illustrations are AI-generated decorative art, not photographs, endorsements or outcomes. Credits: [card artwork](../../dashboard_assets/tarot/ATTRIBUTION.md). Probabilities remain individual and never predict finishing order.
 

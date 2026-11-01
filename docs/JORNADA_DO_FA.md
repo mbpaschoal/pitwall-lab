@@ -14,7 +14,7 @@ Corridas mantém os seis capítulos acessíveis nas abas: Resumo, Sessões e vol
 
 Em Chances de pódio, **Abrir as cartas do GP** abre um diálogo opcional. O link direto pode usar `?tela=Previsões&temporada=2026&gp=19&cartas=1&lang=pt`. O usuário fecha pelo X, Escape ou pelo link para a tabela; o estado da abertura é removido ao fechar ou mudar de GP. Nada abre automaticamente na navegação normal.
 
-Os pilotos e percentuais vêm dos favoritos da emissão do GP selecionado, inclusive empates. Não há sorteio, recálculo ou P1/P2/P3. A equipe acompanha o registro daquele período. Ausência de emissão não gera cartas. Para estudos retrospectivos, o diálogo identifica essa condição. Outros pilotos recebem um símbolo de capacete quando não há retrato. No celular, as cartas são empilhadas e o diálogo permite rolagem.
+Os pilotos vêm dos favoritos da emissão do GP selecionado, inclusive empates. As cartas exibem somente arte, nome e equipe; os percentuais permanecem na tabela de previsões. Não há sorteio, recálculo ou P1/P2/P3. A equipe acompanha o registro daquele período. Ausência de emissão não gera cartas. Para estudos retrospectivos, o diálogo identifica essa condição. Outros pilotos recebem um símbolo de capacete quando não há retrato compatível com a equipe daquele período. No celular, as cartas são empilhadas e o diálogo permite rolagem.
 
 As ilustrações de Verstappen, Hamilton e Russell foram geradas por IA e são decorativas. Não representam fotografias, endosso ou resultados. Créditos: [arte das cartas](../dashboard_assets/tarot/ATTRIBUTION.md). As probabilidades continuam individuais e não indicam ordem de chegada.
 

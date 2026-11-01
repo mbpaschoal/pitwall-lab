@@ -116,12 +116,11 @@
 .tarot-card { min-width:0; text-align:center; }
 .tarot-card figure { position:relative; margin:0; border:1px solid var(--pw-line); border-radius:10px; overflow:hidden; background:var(--pw-bg); }
 .tarot-card img { display:block; width:100%; height:auto; }
-.tarot-card figcaption { position:absolute; left:7%; right:7%; bottom:5%; display:flex; flex-direction:column; align-items:center; gap:2px; }
+.tarot-card figcaption { padding:10px; display:flex; flex-direction:column; align-items:center; gap:2px; }
 .tarot-card figcaption h3 { font:400 20px/1.1 AbrilFatfaceLocal,Georgia,serif; margin:0; padding:0; }
-.tarot-card figcaption strong { color:var(--pw-red); font-size:28px; line-height:1.1; }
 .tarot-card figcaption span { font-size:11px; line-height:1.2; }
 .tarot-card p { margin:6px 0!important; font-size:12px; color:var(--pw-muted); }
-.tarot-symbol { min-height:290px; background:linear-gradient(#e8f3fc,#fff); display:grid; place-items:center; padding:18px 18px 100px; color:var(--pw-ink); }
+.tarot-symbol { min-height:290px; background:linear-gradient(#e8f3fc,#fff); display:grid; place-items:center; padding:18px; color:var(--pw-ink); }
 .tarot-symbol svg { width:120px; }
 [data-testid="stDialog"] [role="dialog"] { border-radius:14px; background:#f4faff; }
 [data-testid="stDialog"] [role="dialog"] h2 { font-family:AbrilFatfaceLocal,Georgia,serif; }
@@ -129,7 +128,6 @@
 @media(max-width:600px) {
  .tarot-cards { grid-template-columns:1fr; max-width:290px; margin:auto; gap:20px; }
  .tarot-card figcaption h3 { font-size:23px; }
- .tarot-card figcaption strong { font-size:32px; }
  .tarot-card figcaption span { font-size:13px; }
 }
 /* Context selectors always have a valid value; no empty-state clear action. */
