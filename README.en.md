@@ -16,6 +16,9 @@ Mexico 2026 preparation: five-session tracking, explicit sources and times, coll
 
 Collection is now scheduled through GitHub Actions, independent of the personal computer: new sessions are validated, versioned and published automatically. [Track runs](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml).
 
+
+The interface uses **Fan Journey**: bottom navigation, GP context at the top, a prominent circuit view and optional cards for exploring recorded probabilities. [Usage and accessibility](docs/en/FAN_JOURNEY.md).
+
 ## The product today
 
 - **Drivers:** condition leaders, profiles, shared-race duels, a browser-local favourite and shareable cards, with explicit sample sizes and ties. [Data audit](reports/pilotos_condicoes_20261029/README.en.md).

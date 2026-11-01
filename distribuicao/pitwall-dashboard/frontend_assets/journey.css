@@ -1,0 +1,141 @@
+/* Jornada do fã. Shared colors and fonts remain in pitwall.css/tokens.py. */
+:root { --journey-dock-height:92px; }
+[data-testid="stSidebar"], [data-testid="stSidebarCollapsedControl"] { display:none; }
+[data-testid="stMainBlockContainer"] { max-width:1320px; margin:auto; padding:24px 40px calc(var(--journey-dock-height) + 54px + env(safe-area-inset-bottom)); }
+.journey-masthead { min-height:70px; padding-right:155px; margin-bottom:14px; }
+.journey-masthead a { font:400 38px/1.1 AbrilFatfaceLocal,Georgia,serif; color:var(--pw-ink); text-decoration:none; letter-spacing:-1px; }
+.journey-masthead p { font-size:10px; color:var(--pw-muted); margin:5px 0 0; letter-spacing:1px; }
+.st-key-journey-filters { max-width:680px; margin:0 0 12px auto; }
+.st-key-journey-filters [data-testid="stWidgetLabel"] p { font-size:12px; }
+.st-key-journey-filters [data-testid="stHorizontalBlock"] { display:grid; grid-template-columns:136px minmax(0,1fr); gap:12px; align-items:start; }
+.st-key-journey-filters [data-testid="stColumn"] { width:auto!important; min-width:0!important; }
+.st-key-topbar { margin:0 0 14px; min-height:46px; height:auto; padding:0; }
+.st-key-topbar [data-testid="stHorizontalBlock"] { align-items:center; }
+.journey-calendar { display:flex; gap:6px; overflow-x:auto; padding:10px 2px 14px; margin:0 0 14px; scrollbar-width:thin; border-bottom:1px solid var(--pw-line); }
+.journey-calendar a { flex:1 0 100px; display:flex; align-items:center; gap:8px; max-width:170px; padding:10px; border-radius:7px; color:var(--pw-muted); text-decoration:none; font-size:12px; line-height:1.4; }
+.journey-calendar a span { flex-shrink:0; font-size:11px; padding:3px 5px; border:1px solid var(--pw-line); border-radius:50%; }
+.journey-calendar a[aria-current] { color:var(--pw-ink); background:#fff; border-bottom:3px solid var(--pw-red); font-weight:700; }
+.journey-calendar a:hover { background:rgba(255,255,255,.65); }
+.journey-calendar a:focus-visible { outline-offset:-2px; }
+.st-key-journey-navigation { position:fixed; z-index:999980; bottom:calc(16px + env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); width:min(840px,calc(100% - 32px))!important; background:#fff; border:1px solid var(--pw-line); border-radius:15px; box-shadow:0 6px 28px #06122618; padding:0 10px; }
+.st-key-tela [role="radiogroup"] > label::before { font-family:"Material Symbols Rounded"; font-size:25px; line-height:25px; margin-right:25px; font-weight:400; }
+.st-key-tela [role="radiogroup"] > label:nth-child(1)::before { content:"sports_score"; }
+.st-key-tela [role="radiogroup"] > label:nth-child(2)::before { content:""; width:25px; height:25px; background:currentColor; mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M24 15a10 10 0 0 0-20 0v6l8 3h10l2-5H13l-2-6h12M5 15h5M7 21v-3'/%3E%3C/svg%3E") center / contain no-repeat; }
+.st-key-tela [role="radiogroup"] > label:nth-child(3)::before { content:"emoji_events"; }
+.st-key-tela [role="radiogroup"] > label:nth-child(4)::before { content:"task_alt"; }
+.st-key-tela [role="radiogroup"] > label:nth-child(5)::before { content:"bar_chart"; }
+.st-key-tela [role="radiogroup"] > label:nth-child(6)::before { content:"help_outline"; }
+.st-key-journey-navigation .st-key-tela [role="radiogroup"] { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:2px; }
+.st-key-journey-navigation .st-key-tela [role="radiogroup"] > label { position:relative; display:flex; flex-direction:column; justify-content:center; gap:6px; width:auto!important; min-height:78px; padding:9px 4px; border:0; border-top:3px solid transparent; border-radius:0; margin:0; text-align:center; }
+.st-key-journey-navigation .st-key-tela [role="radiogroup"] > label:has(input:checked) { background:transparent; color:var(--pw-red); font-weight:700; border-top-color:var(--pw-red); }
+.st-key-journey-navigation .st-key-tela [role="radiogroup"] > label::before { display:block; margin:0; font-size:25px; line-height:25px; }
+.st-key-journey-navigation .st-key-tela [role="radiogroup"] > label p { font-size:12px; line-height:1.25; margin:0; white-space:normal; }
+.st-key-journey-navigation .st-key-tela [role="radiogroup"] > label > div:last-child { width:100%; margin:0!important; max-width:none!important; }
+.st-key-journey-navigation .st-key-tela [role="radiogroup"] > label > div:first-child { display:block; position:absolute; width:1px; height:1px; opacity:0; }
+.st-key-journey-navigation label:focus-within { outline:2px solid var(--pw-red); outline-offset:-4px; border-radius:6px; }
+.st-key-journey-navigation .stElementContainer, .st-key-journey-navigation [data-testid="stVerticalBlock"] { gap:0; }
+[class*="st-key-pw_language_switch_"] { top:20px; right:24px; box-shadow:none; }
+.gp-cabecalho { height:auto; min-height:0; padding:12px 0 24px; gap:20px; align-items:center; }
+.gp-titulo { border:0; padding:0; min-height:0; }
+.gp-cabecalho h1 { font-size:clamp(36px,4.4vw,62px); line-height:1.1; letter-spacing:-1.7px; white-space:normal; }
+.gp-meta { margin-top:10px; font-size:14px; letter-spacing:1px; gap:14px; flex-wrap:wrap; white-space:normal; }
+.gp-status-area { width:230px; padding-top:0; }
+[data-baseweb="tab-list"] { gap:24px; }
+.pw-overview { display:flex; flex-direction:column; gap:18px; }
+.pw-track { position:relative; display:block; width:100%; height:auto; border-radius:12px; border:0; }
+.hero-circuito { height:440px; }
+.hero-sobreposicao { padding:26px 30px; background:linear-gradient(180deg,transparent 30%,#061226cc 100%); }
+.hero-sobreposicao h2 { font-size:36px; margin-bottom:20px; max-width:64%; }
+.pw-track-metrics { width:64%; grid-template-columns:1fr .7fr .7fr 1.4fr; }
+.mapa-circuito { position:absolute; bottom:24px; right:24px; width:240px; height:230px; padding:16px; border-radius:10px; background:#ffffffed; }
+.mapa-circuito img { width:100%; height:168px; object-fit:contain; }
+.coluna-circuito { display:grid; grid-template-columns:1fr 2fr; grid-template-rows:auto; gap:18px; width:100%; }
+.pw-circuit-info { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px 20px; }
+.pw-circuit-info div { display:block; padding:5px 0; }
+.pw-circuit-info dd { text-align:left; font-weight:700; margin-top:3px; }
+.pw-weather { padding-top:12px; }
+.painel-editorial { border-radius:10px; padding:20px; }
+.pw-standings { grid-template-columns:1fr; gap:24px; }
+.pw-standings .painel-editorial { padding:24px; }
+.tabela-editorial td { padding-top:10px; padding-bottom:10px; }
+.pilot-header { padding:18px 0 12px; }
+.pilot-header h1 { font-size:clamp(38px,4vw,58px); }
+.pilot-cards { grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.pilot-card { min-height:230px; padding:26px; border:0; border-radius:10px; }
+.pilot-card:first-child { grid-column:span 2; background:#fff; border-left:4px solid var(--pw-red); }
+.pilot-card:first-child .pilot-card-heading { font-size:24px; }
+.pilot-card:first-child strong { font:400 62px/1.1 AbrilFatfaceLocal,Georgia,serif; }
+.pilot-card:first-child h3 { font-size:26px; }
+.pilot-card:first-child .pilot-card-heading span { font-size:40px; }
+.pilot-profile { border:0; padding:24px; border-radius:10px; background:white; }
+@media(max-width:900px) {
+ [data-testid="stMainBlockContainer"] { padding-left:24px; padding-right:24px; }
+ .hero-circuito { height:400px; }
+ .mapa-circuito { width:180px; height:190px; right:18px; bottom:20px; }
+ .mapa-circuito img { height:130px; }
+ .coluna-circuito { grid-template-columns:1fr; }
+ .hero-sobreposicao h2 { font-size:30px; }
+ .pilot-cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+ :root { --journey-dock-height:88px; }
+ [data-testid="stMainBlockContainer"] { padding:18px 16px calc(var(--journey-dock-height) + 42px + env(safe-area-inset-bottom)); }
+ .journey-masthead { min-height:64px; padding-right:140px; margin-bottom:10px; }
+ .journey-masthead a { font-size:29px; letter-spacing:-.8px; }
+ .journey-masthead p { font-size:8px; letter-spacing:.5px; }
+ [class*="st-key-pw_language_switch_"] { top:15px; right:12px; width:126px!important; padding:4px 6px; }
+ .st-key-journey-navigation { width:calc(100% - 16px)!important; bottom:calc(8px + env(safe-area-inset-bottom)); padding:0 3px; border-radius:12px; }
+ .st-key-journey-navigation .st-key-tela [role="radiogroup"] > label { gap:5px; min-height:74px; padding:7px 1px; }
+ .st-key-journey-navigation .st-key-tela [role="radiogroup"] > label p { font-size:10px; line-height:1.2; }
+ .st-key-journey-navigation .st-key-tela [role="radiogroup"] > label::before { font-size:23px; line-height:23px; }
+ .st-key-topbar { padding-left:0; margin-bottom:12px; height:auto; }
+ .journey-calendar { margin-bottom:6px; }
+ .journey-calendar a { flex:1 1 0; min-width:0; max-width:none; padding:8px 4px; font-size:11px; }
+ .journey-calendar a[data-distance="-3"],.journey-calendar a[data-distance="-2"],.journey-calendar a[data-distance="2"],.journey-calendar a[data-distance="3"],.journey-calendar a[data-distance="4"],.journey-calendar a[data-distance="5"],.journey-calendar a[data-distance="6"] { display:none; }
+ .st-key-journey-filters { margin-bottom:4px; }
+ .st-key-journey-filters [data-testid="stHorizontalBlock"] { grid-template-columns:128px minmax(0,1fr); gap:8px; }
+ .st-key-journey-navigation .st-key-tela [role="radiogroup"] > label p { font-size:10.5px; overflow-wrap:normal; word-break:normal; }
+ .gp-cabecalho { padding-top:14px; padding-bottom:20px; gap:12px; align-items:flex-start; }
+ .gp-cabecalho h1 { font-size:35px; letter-spacing:-1px; }
+ .gp-status-area { width:auto; }
+ .hero-circuito { height:285px; }
+ .hero-sobreposicao { padding:18px; }
+ .hero-sobreposicao h2 { max-width:100%; font-size:27px; margin-bottom:14px; }
+ .pw-track-metrics { width:100%; grid-template-columns:1fr 1fr; }
+ .mapa-circuito { position:relative; width:auto; height:175px; inset:auto; padding:18px; border-radius:0; background:#ffffffb8; }
+ .mapa-circuito img { position:absolute; width:58%; height:150px; top:10px; right:14px; }
+ .pw-circuit-info { grid-template-columns:1fr 1fr; gap:8px 16px; }
+ .pw-track { height:auto; }
+ .painel-editorial { padding:18px; }
+ .pilot-cards { grid-template-columns:1fr; }
+ .pilot-card:first-child { grid-column:auto; }
+ .pilot-card:first-child strong { font-size:54px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+.tarot-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; padding:12px 0; }
+.tarot-card { min-width:0; text-align:center; }
+.tarot-card figure { position:relative; margin:0; border:1px solid var(--pw-line); border-radius:10px; overflow:hidden; background:var(--pw-bg); }
+.tarot-card img { display:block; width:100%; height:auto; }
+.tarot-card figcaption { position:absolute; left:7%; right:7%; bottom:5%; display:flex; flex-direction:column; align-items:center; gap:2px; }
+.tarot-card figcaption h3 { font:400 20px/1.1 AbrilFatfaceLocal,Georgia,serif; margin:0; padding:0; }
+.tarot-card figcaption strong { color:var(--pw-red); font-size:28px; line-height:1.1; }
+.tarot-card figcaption span { font-size:11px; line-height:1.2; }
+.tarot-card p { margin:6px 0!important; font-size:12px; color:var(--pw-muted); }
+.tarot-symbol { min-height:290px; background:linear-gradient(#e8f3fc,#fff); display:grid; place-items:center; padding:18px 18px 100px; color:var(--pw-ink); }
+.tarot-symbol svg { width:120px; }
+[data-testid="stDialog"] [role="dialog"] { border-radius:14px; background:#f4faff; }
+[data-testid="stDialog"] [role="dialog"] h2 { font-family:AbrilFatfaceLocal,Georgia,serif; }
+.tarot-back { display:inline-block; padding:8px 0; }
+@media(max-width:600px) {
+ .tarot-cards { grid-template-columns:1fr; max-width:290px; margin:auto; gap:20px; }
+ .tarot-card figcaption h3 { font-size:23px; }
+ .tarot-card figcaption strong { font-size:32px; }
+ .tarot-card figcaption span { font-size:13px; }
+}
+/* Context selectors always have a valid value; no empty-state clear action. */
+.st-key-journey-filters [aria-label="Clear value"] { display:none; }
+.st-key-journey-navigation .st-key-tela [role="radiogroup"] > label { color:var(--pw-ink); }
+.st-key-journey-navigation .st-key-tela [role="radiogroup"] > label:has(input:checked) { color:var(--pw-red); }
+
+[role="dialog"], [role="dialog"] p, [role="dialog"] button { font-family:LatoLocal,Arial,sans-serif; }
+[role="dialog"] h2, [role="dialog"] h3 { font-family:AbrilFatfaceLocal,Georgia,serif; }

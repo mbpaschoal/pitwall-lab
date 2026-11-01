@@ -16,6 +16,9 @@ Preparação do México 2026: acompanhamento das cinco sessões, fontes e horár
 
 A coleta agora é agendada no GitHub Actions, sem depender do computador pessoal: novas sessões são validadas, versionadas e publicadas automaticamente. [Acompanhar execuções](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml).
 
+
+A interface usa a **Jornada do fã**: navegação inferior, contexto de GP no topo, pista em destaque e cartas opcionais para explorar as probabilidades registradas. [Uso e acessibilidade](docs/JORNADA_DO_FA.md).
+
 ## O produto hoje
 
 - **Pilotos:** destaques por condição, perfil, duelos, favorito no navegador e cartões para compartilhar. Filtros, amostras e empates ficam explícitos. [Auditoria dos dados](reports/pilotos_condicoes_20261029/README.md).

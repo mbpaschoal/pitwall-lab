@@ -345,10 +345,10 @@ class TestDashboardApp(unittest.TestCase):
         self.assertTrue((RAIZ / 'dashboard_assets/fonts/abrilfatface.ttf').is_file())
         self.assertTrue((RAIZ / 'dashboard_assets/fonts/lato.ttf').is_file())
 
-    def test_menu_lateral_mantem_controle_nativo_e_adapta_ao_viewport(self):
+    def test_jornada_mantem_controle_nativo_e_adapta_ao_viewport(self):
         codigo = Path(app.__file__).read_text(encoding='utf-8')
         css = app.estilo_dashboard()
-        self.assertRegex(codigo, "initial_sidebar_state=[\"']auto[\"']")
+        self.assertRegex(codigo, "initial_sidebar_state=[\"']collapsed[\"']")
         self.assertNotIn('header[data-testid="stHeader"] { display: none; }', css)
 
     def test_corridas_austin_exibe_contexto_programacao_e_previsao_registrada(self):

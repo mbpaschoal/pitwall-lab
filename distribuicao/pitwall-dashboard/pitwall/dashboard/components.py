@@ -109,10 +109,11 @@ def stylesheet(root):
             )
         except OSError:
             pass
-    # O CSS do aplicativo está num arquivo único; evita cascatas de patches.
+    # Base visual compartilhada e composição da Jornada do fã.
     return "<style>{}{}</style>".format(
         "".join(fontes),
-        (PROJECT_ROOT / "frontend_assets/pitwall.css").read_text(encoding="utf-8"),
+        (PROJECT_ROOT / "frontend_assets/pitwall.css").read_text(encoding="utf-8")
+        + (PROJECT_ROOT / "frontend_assets/journey.css").read_text(encoding="utf-8"),
     )
 
 

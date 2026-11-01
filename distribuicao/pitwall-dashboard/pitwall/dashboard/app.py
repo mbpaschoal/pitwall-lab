@@ -692,6 +692,11 @@ def renderizar_previsoes(pacote, bloco, participantes):
         )
         return
     st.subheader("Quem tinha mais chance de pódio")
+    from pitwall.dashboard.tarot import render as render_tarot
+    render_tarot(st,raiz_artefatos(),[
+        dict(driver_id=p['piloto_id'],name=nome_piloto(pacote,p),team=nome_equipe(pacote,p),probability=p['probabilidade_modelo'])
+        for p in bloco['favoritos_modelo']
+    ],pacote['temporada'],bloco['corrida']['rodada'],bloco['corrida'].get('estado_previsao')=='previsao_registrada')
     esquerda, direita = st.columns(2)
     with esquerda:
         st.markdown("**Modelo — top 3 por probabilidade**")
@@ -852,7 +857,12 @@ def sincronizar_navegacao():
     """Commit a native page change before query restoration runs."""
     st.query_params.pop("documento", None)
     st.query_params.pop("painel", None)
-    st.query_params.update(tela=st.session_state["tela"])
+    st.query_params.pop("cartas", None)
+    params = dict(tela=st.session_state["tela"])
+    gp = st.session_state.get("_gp_context",st.session_state.get("gp"))
+    if isinstance(gp,str) and re.fullmatch(r"202[456]:[0-9]{1,2}",gp):
+        params.update(temporada=gp.split(':')[0],gp=gp.split(':')[1])
+    st.query_params.update(params)
     st.session_state["_query_aplicada"] = tuple(st.query_params.get(key) for key in ("temporada", "gp", "painel", "tela", "aba", "documento", "lang"))
 
 
@@ -1134,7 +1144,7 @@ def tela_como_funciona():
 
 def executar_app():
     st.set_page_config(
-        page_title="Pitwall Lab", layout="wide", initial_sidebar_state="auto"
+        page_title="Pitwall Lab", layout="wide", initial_sidebar_state="collapsed"
     )
     from pitwall.i18n.controls import initialize, render as render_language
 
@@ -1161,17 +1171,15 @@ def executar_app():
             st.session_state["temporada"] = int(ano)
             st.session_state["_query_gp_pendente"] = "{}:{}".format(ano, int(gp_query))
         st.session_state["_query_aplicada"] = query_token
-    st.sidebar.markdown(
-        '<div class="sidebar-title">Pitwall Lab</div>', unsafe_allow_html=True
-    )
-    st.sidebar.markdown(
-        '<div class="sidebar-caption">DADOS · CONTEXTO · PERFORMANCE</div>',
-        unsafe_allow_html=True,
-    )
-    tela = st.sidebar.radio(
-        "Navegação", ("Corridas", "Pilotos", "Campeonato", "Previsões", "Desempenho", "Metodologia"), key="tela", on_change=sincronizar_navegacao, format_func=lambda value: {"Previsões": "Chances de pódio", "Desempenho": "Acertos do Lab", "Metodologia": "Como funciona"}.get(value, value)
-    )
-    st.sidebar.markdown('<div class="sidebar-divider"></div>', unsafe_allow_html=True)
+    from pitwall.dashboard.journey import masthead, calendar
+    from pitwall.i18n import language
+    st.markdown(masthead(language()),unsafe_allow_html=True)
+    with st.container(key="journey-navigation"):
+        tela = st.radio(
+            "Navegação", ("Corridas", "Pilotos", "Campeonato", "Previsões", "Desempenho", "Metodologia"),
+            key="tela",on_change=sincronizar_navegacao,label_visibility="collapsed",horizontal=True,
+            format_func=lambda value: {"Previsões":"Chances de pódio","Desempenho":"Acertos do Lab","Metodologia":"Como funciona"}.get(value,value),
+        )
     if tela == "Pilotos":
         from pitwall.dashboard.pilot_views import render
         renderizar_topo({"temporada": "2024–2026"})
@@ -1186,12 +1194,15 @@ def executar_app():
                 "_temporada_anterior_dashboard", 2025
             )
 
-    temporada = st.sidebar.selectbox(
+    with st.container(key="journey-filters"):
+        year_control,gp_control = st.columns([1,3])
+    temporada = year_control.selectbox(
         "Temporada",
         (2024, 2025, 2026),
         index=None,
         key="temporada",
         on_change=manter_temporada,
+        label_visibility="collapsed",
     )
     try:
         pacote = carregar(temporada)
@@ -1225,24 +1236,27 @@ def executar_app():
         st.session_state["gp"] = gp_pendente
 
     def manter_gp():
+        st.query_params.pop('cartas',None)
         if st.session_state.get("gp") not in valores:
             st.session_state["gp"] = valores[0]
 
     if "gp" not in st.session_state and st.session_state.get("_gp_context") in valores:
         st.session_state["gp"] = st.session_state["_gp_context"]
     if tela in ("Corridas", "Previsões", "Campeonato"):
-        gp = st.sidebar.selectbox(
+        gp = gp_control.selectbox(
             "Grande Prêmio",
             valores,
             format_func=lambda valor: descricoes.get(valor, str(valor)),
             key="gp",
             index=None if "gp" in st.session_state else 0,
             on_change=manter_gp,
+            label_visibility="collapsed",
         )
         st.session_state["_gp_context"] = gp
     else:
         gp = st.session_state.get("_gp_context", st.session_state.get("gp", valores[0]))
-    st.sidebar.caption("Dados até Austin 2026")
+    if tela in ("Corridas","Previsões","Campeonato"):
+        st.markdown(calendar(opcoes,temporada,gp,tela,language()),unsafe_allow_html=True)
     if tela != "Corridas":
         render_language(st)
     if gp not in descricoes:

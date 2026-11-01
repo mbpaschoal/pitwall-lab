@@ -4,6 +4,10 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.5.0 — 2026-11-01
+
+Fan Journey replaces the sidebar with a six-destination bottom navigation using native keyboard controls. Season/GP controls move to the top, with nearby calendar events and a prominent circuit image, outline and facts. Drivers has a leading discovery; championship standings remain complete in sequential tables. Optional cards open by button or direct forecast link, using actual recorded probabilities, period-specific teams and a helmet fallback. PT/EN and mobile are supported. Artwork is decorative and never changes inference, the model, forecasts or data.
+
 ## 0.4.7 — 2026-11-01
 
 The Mexico forecast remains unchanged. The missing-data test now selects a genuinely unissued GP instead of assuming Mexico will always lack probabilities. This preserves the check against borrowing predictions between races.

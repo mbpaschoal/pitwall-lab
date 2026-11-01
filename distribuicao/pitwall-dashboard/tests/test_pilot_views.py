@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class PilotViewTests(unittest.TestCase):
     def test_overview_profile_and_language_preserve_the_selection(self):
         app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30).run()
-        app.sidebar.radio[0].set_value("Pilotos").run()
+        app.radio(key="tela").set_value("Pilotos").run()
         self.assertFalse(app.exception)
         self.assertTrue(any("pilot-cards" in x.value and "Norris" in x.value for x in app.markdown))
         app.multiselect(key="pilot_years").set_value([2025, 2026]).run()
@@ -40,14 +40,14 @@ class PilotViewTests(unittest.TestCase):
         at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30)
         at.query_params.update(temporada="2024", gp="12")
         at.run()
-        at.sidebar.radio[0].set_value("Pilotos").run()
+        at.radio(key="tela").set_value("Pilotos").run()
         at.multiselect(key="pilot_years").set_value([2025]).run()
-        at.sidebar.radio[0].set_value("Corridas").run()
+        at.radio(key="tela").set_value("Corridas").run()
         self.assertFalse(at.exception)
-        self.assertEqual(at.sidebar.radio[0].value, "Corridas")
+        self.assertEqual(at.radio(key="tela").value, "Corridas")
         self.assertEqual(at.selectbox(key="temporada").value, 2024)
         self.assertEqual(at.selectbox(key="gp").value, "2024:12")
-        at.sidebar.radio[0].set_value("Pilotos").run()
+        at.radio(key="tela").set_value("Pilotos").run()
         self.assertEqual(at.multiselect(key="pilot_years").value, [2025])
 
     def test_shared_duel_opens_in_english_with_both_drivers(self):
