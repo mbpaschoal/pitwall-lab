@@ -1,0 +1,70 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/mexico-avaliacao-saopaulo-20261102T034031Z",
+  "sources": [
+    {
+      "provider": "fia",
+      "endpoint": "final_race",
+      "arquivo": "fia-final-race.pdf",
+      "arquivo_requisicao": "fia-final-race.pdf",
+      "url": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_race_classification.pdf",
+      "url_real": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_race_classification.pdf",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T03:40:32.957574Z",
+      "sha256": "681fc44eb9dd8e73096dcafb63d18257d344ead5617aab6fc0b1a3f2f4591cd3",
+      "bytes": 348727,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "formula1",
+      "endpoint": "race_result",
+      "arquivo": "f1-race-result.html",
+      "arquivo_requisicao": "f1-race-result.html",
+      "url": "https://www.formula1.com/en/results/2026/races/1298/mexico/race-result",
+      "url_real": "https://www.formula1.com/en/results/2026/races/1298/mexico/race-result",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T03:40:40.023310Z",
+      "sha256": "1b2ee45e1b11f2fbaffed36e09e1a8f8a456739fa8c07a67484f1ec98c003764",
+      "bytes": 443049,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "jolpica",
+      "endpoint": "resultados",
+      "arquivo": "jolpica-resultados.json",
+      "arquivo_requisicao": "jolpica-resultados.json",
+      "url": "https://api.jolpi.ca/ergast/f1/2026/19/results/?limit=100&offset=0",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2026/19/results/?limit=100&offset=0",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T03:40:48.370343Z",
+      "sha256": "c3ff9401f39f58edc621731371c9d7e45c3fbe03e6bf0be738fc6fa7a60565f8",
+      "bytes": 13065,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "openf1",
+      "endpoint": "sessions_brazil",
+      "arquivo": "openf1-brazil-sessions.json",
+      "arquivo_requisicao": "openf1-brazil-sessions.json",
+      "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Brazil",
+      "url_real": "https://api.openf1.org/v1/sessions?year=2026&country_name=Brazil",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T03:40:56.744977Z",
+      "sha256": "d6ce1580630182903442140ac5b58a316d34ea9161274b07039bad1baf9b7bc2",
+      "bytes": 1843,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "formula1",
+      "endpoint": "sao_paulo_schedule",
+      "arquivo": "f1-saopaulo.html",
+      "arquivo_requisicao": "f1-saopaulo.html",
+      "url": "https://www.formula1.com/en/racing/2026/brazil",
+      "url_real": "https://www.formula1.com/en/racing/2026/brazil",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T03:41:04.336023Z",
+      "sha256": "684061987b20df64fc508db7b1ff260096c64069ae55fc0ec98616020f9c63c6",
+      "bytes": 452829,
+      "response_format": "bytes"
+    }
+  ]
+}

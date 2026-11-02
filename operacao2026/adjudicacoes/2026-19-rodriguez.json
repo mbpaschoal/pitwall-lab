@@ -1,6 +1,6 @@
 {
   "schema": "pitwall-weekend-adjudication-v1",
-  "id": "mexico-2026-fontes-20261101-v1",
+  "id": "mexico-2026-fontes-20261102-v2",
   "identidade": {
     "temporada": 2026,
     "rodada": 19,
@@ -63,6 +63,30 @@
       "status": 200,
       "obtido_em_utc": "2026-11-02T00:39:52.823993Z",
       "sha256": "86a3df8a22e818900812a911f412d3dd2d0ee2a65cfd087bdc16fc43ad861346"
+    },
+    "race_final": {
+      "provider": "fia",
+      "endpoint": "final_race",
+      "url": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_race_classification.pdf",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T03:40:32.957574Z",
+      "sha256": "681fc44eb9dd8e73096dcafb63d18257d344ead5617aab6fc0b1a3f2f4591cd3"
+    },
+    "race_f1_final": {
+      "provider": "formula1",
+      "endpoint": "race_result",
+      "url": "https://www.formula1.com/en/results/2026/races/1298/mexico/race-result",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T03:40:40.023310Z",
+      "sha256": "1b2ee45e1b11f2fbaffed36e09e1a8f8a456739fa8c07a67484f1ec98c003764"
+    },
+    "race_identity": {
+      "provider": "jolpica",
+      "endpoint": "resultados",
+      "url": "https://api.jolpi.ca/ergast/f1/2026/19/results/?limit=100&offset=0",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T03:40:48.370343Z",
+      "sha256": "c3ff9401f39f58edc621731371c9d7e45c3fbe03e6bf0be738fc6fa7a60565f8"
     }
   },
   "sessoes": {
@@ -127,7 +151,305 @@
             "race_weather"
           ]
         }
-      ]
+      ],
+      "classificacao_final": {
+        "documento": "FIA Doc 86",
+        "fonte": "race_final",
+        "conferencia": [
+          "race_f1_final"
+        ],
+        "identidade_canonica": "race_identity",
+        "encerramento_observado_utc": "2026-11-01T22:23:54.505000+00:00",
+        "regra_nc": "ordem mantém a ordenação administrativa dos cinco NC; posicao oficial e tempo final permanecem nulos.",
+        "linhas": [
+          {
+            "numero": 3,
+            "piloto_id": "max_verstappen",
+            "full_name": "Max VERSTAPPEN",
+            "team_name": "Red Bull Racing",
+            "ordem": 1,
+            "posicao": 1,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 25,
+            "duracao": 8428.772,
+            "gap": 0.0
+          },
+          {
+            "numero": 44,
+            "piloto_id": "hamilton",
+            "full_name": "Lewis HAMILTON",
+            "team_name": "Ferrari",
+            "ordem": 2,
+            "posicao": 2,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 18,
+            "duracao": 8429.571,
+            "gap": 0.799
+          },
+          {
+            "numero": 12,
+            "piloto_id": "antonelli",
+            "full_name": "Kimi ANTONELLI",
+            "team_name": "Mercedes",
+            "ordem": 3,
+            "posicao": 3,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 15,
+            "duracao": 8432.778,
+            "gap": 4.006
+          },
+          {
+            "numero": 16,
+            "piloto_id": "leclerc",
+            "full_name": "Charles LECLERC",
+            "team_name": "Ferrari",
+            "ordem": 4,
+            "posicao": 4,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 12,
+            "duracao": 8439.479,
+            "gap": 10.707
+          },
+          {
+            "numero": 1,
+            "piloto_id": "norris",
+            "full_name": "Lando NORRIS",
+            "team_name": "McLaren",
+            "ordem": 5,
+            "posicao": 5,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 10,
+            "duracao": 8440.55,
+            "gap": 11.778
+          },
+          {
+            "numero": 63,
+            "piloto_id": "russell",
+            "full_name": "George RUSSELL",
+            "team_name": "Mercedes",
+            "ordem": 6,
+            "posicao": 6,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 8,
+            "duracao": 8441.035,
+            "gap": 12.263
+          },
+          {
+            "numero": 30,
+            "piloto_id": "lawson",
+            "full_name": "Liam LAWSON",
+            "team_name": "Racing Bulls",
+            "ordem": 7,
+            "posicao": 7,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 6,
+            "duracao": 8449.671,
+            "gap": 20.899
+          },
+          {
+            "numero": 5,
+            "piloto_id": "bortoleto",
+            "full_name": "Gabriel BORTOLETO",
+            "team_name": "Audi",
+            "ordem": 8,
+            "posicao": 8,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 4,
+            "duracao": 8450.813,
+            "gap": 22.041
+          },
+          {
+            "numero": 6,
+            "piloto_id": "hadjar",
+            "full_name": "Isack HADJAR",
+            "team_name": "Red Bull Racing",
+            "ordem": 9,
+            "posicao": 9,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 2,
+            "duracao": 8451.275,
+            "gap": 22.503
+          },
+          {
+            "numero": 50,
+            "piloto_id": "ryo_hirakawa",
+            "full_name": "Ryo HIRAKAWA",
+            "team_name": "Haas F1 Team",
+            "ordem": 10,
+            "posicao": 10,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 1,
+            "duracao": 8454.145,
+            "gap": 25.373
+          },
+          {
+            "numero": 23,
+            "piloto_id": "albon",
+            "full_name": "Alexander ALBON",
+            "team_name": "Williams",
+            "ordem": 11,
+            "posicao": 11,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 0,
+            "duracao": 8456.334,
+            "gap": 27.562
+          },
+          {
+            "numero": 55,
+            "piloto_id": "sainz",
+            "full_name": "Carlos SAINZ",
+            "team_name": "Williams",
+            "ordem": 12,
+            "posicao": 12,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 0,
+            "duracao": 8457.41,
+            "gap": 28.638
+          },
+          {
+            "numero": 81,
+            "piloto_id": "piastri",
+            "full_name": "Oscar PIASTRI",
+            "team_name": "McLaren",
+            "ordem": 13,
+            "posicao": 13,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 0,
+            "duracao": 8458.247,
+            "gap": 29.475
+          },
+          {
+            "numero": 27,
+            "piloto_id": "hulkenberg",
+            "full_name": "Nico HULKENBERG",
+            "team_name": "Audi",
+            "ordem": 14,
+            "posicao": 14,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 0,
+            "duracao": 8458.749,
+            "gap": 29.977
+          },
+          {
+            "numero": 43,
+            "piloto_id": "colapinto",
+            "full_name": "Franco COLAPINTO",
+            "team_name": "Alpine",
+            "ordem": 15,
+            "posicao": 15,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 0,
+            "duracao": 8458.976,
+            "gap": 30.204
+          },
+          {
+            "numero": 11,
+            "piloto_id": "perez",
+            "full_name": "Sergio PEREZ",
+            "team_name": "Cadillac",
+            "ordem": 16,
+            "posicao": 16,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 0,
+            "duracao": 8459.467,
+            "gap": 30.695
+          },
+          {
+            "numero": 10,
+            "piloto_id": "gasly",
+            "full_name": "Pierre GASLY",
+            "team_name": "Alpine",
+            "ordem": 17,
+            "posicao": 17,
+            "situacao": "Finished",
+            "voltas": 71,
+            "pontos": 0,
+            "duracao": 8480.255,
+            "gap": 51.483
+          },
+          {
+            "numero": 41,
+            "piloto_id": "arvid_lindblad",
+            "full_name": "Arvid LINDBLAD",
+            "team_name": "Racing Bulls",
+            "ordem": 18,
+            "posicao": null,
+            "situacao": "NC",
+            "voltas": 58,
+            "pontos": 0,
+            "duracao": null,
+            "gap": null
+          },
+          {
+            "numero": 87,
+            "piloto_id": "bearman",
+            "full_name": "Oliver BEARMAN",
+            "team_name": "Haas F1 Team",
+            "ordem": 19,
+            "posicao": null,
+            "situacao": "NC",
+            "voltas": 47,
+            "pontos": 0,
+            "duracao": null,
+            "gap": null
+          },
+          {
+            "numero": 77,
+            "piloto_id": "bottas",
+            "full_name": "Valtteri BOTTAS",
+            "team_name": "Cadillac",
+            "ordem": 20,
+            "posicao": null,
+            "situacao": "NC",
+            "voltas": 42,
+            "pontos": 0,
+            "duracao": null,
+            "gap": null
+          },
+          {
+            "numero": 18,
+            "piloto_id": "stroll",
+            "full_name": "Lance STROLL",
+            "team_name": "Aston Martin",
+            "ordem": 21,
+            "posicao": null,
+            "situacao": "NC",
+            "voltas": 5,
+            "pontos": 0,
+            "duracao": null,
+            "gap": null
+          },
+          {
+            "numero": 14,
+            "piloto_id": "alonso",
+            "full_name": "Fernando ALONSO",
+            "team_name": "Aston Martin",
+            "ordem": 22,
+            "posicao": null,
+            "situacao": "NC",
+            "voltas": 5,
+            "pontos": 0,
+            "duracao": null,
+            "gap": null
+          }
+        ]
+      }
     }
   }
 }

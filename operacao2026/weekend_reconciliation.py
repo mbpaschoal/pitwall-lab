@@ -76,6 +76,13 @@ def reconcile(data, session, review):
             anterior={k:result.get(k) for k in ('position','duration','dsq','number_of_laps')},fontes=sources(review,decision['fontes'])))
         result.update(position=None,dsq=True,duration=[None,None,None],gap_to_leader=None,
                       fonte_validacao=review['fontes'][decision['fontes'][0]]['url'])
+    final = item.get('classificacao_final')
+    if final:
+        from operacao2026.final_results import final_source, reconcile_native
+        source = final_source(review, final)
+        previous = reconcile_native(output, final, source)
+        audit['acoes'].append(dict(tipo='classificacao_final_oficial', anterior=previous,
+                                  fontes=sources(review, [final['fonte']])))
     return output, audit
 
 

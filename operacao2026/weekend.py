@@ -322,6 +322,8 @@ def session_times(data, session):
         if result.get('dsq'):
             rows[-1]['status']='DSQ'
             rows[-1]['duracao']=None
+        elif result.get('dnf') and result.get('fonte_validacao'):
+            rows[-1]['status']='NC'
         if result.get('fonte_validacao'):
             rows[-1]['fonte_validacao']=result['fonte_validacao']
         duration = result.get('duration')
