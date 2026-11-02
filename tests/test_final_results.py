@@ -1,11 +1,10 @@
-"""Reviewed targets cannot change forecasts or cross event/temporal boundaries."""
+"""Final classifications preserve captures and bounded event collection."""
 from copy import deepcopy
 from datetime import datetime, timezone
 import json
 from pathlib import Path
 import tempfile
 import unittest
-from unittest.mock import patch
 
 from operacao2026 import final_results, weekend, cloud
 from operacao2026.weekend_reconciliation import load_review, reconcile
@@ -85,6 +84,24 @@ class FinalResultTests(unittest.TestCase):
         self.assertFalse(cloud.in_window(event, datetime(2026, 11, 2, tzinfo=timezone.utc)))
         self.assertTrue(cloud.in_window(event, datetime(2026, 11, 6, tzinfo=timezone.utc)))
         self.assertFalse(cloud.in_window(self.event, datetime(2026, 11, 6, tzinfo=timezone.utc)))
+
+    def test_identical_discovered_weekend_prefers_explicit_configuration(self):
+        event = weekend.load_event(ROOT / 'operacao2026/eventos/saopaulo2026.json')
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            explicit = root / 'operacao2026/eventos/saopaulo2026.json'
+            discovered = root / cloud.STATE / 'configuracoes/interlagos-2026.json'
+            for path in (explicit, discovered):
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(json.dumps(event))
+            selected = cloud.discover(root, datetime(2026, 11, 6, tzinfo=timezone.utc),
+                                      client_factory=lambda *a: self.fail('No HTTP needed'))
+            self.assertEqual(selected, explicit)
+            # A genuinely different schedule cannot be silently selected.
+            event['sessions'][0]['date_end'] = '2026-11-06T17:30:00+00:00'
+            discovered.write_text(json.dumps(event))
+            with self.assertRaisesRegex(ValueError, 'Overlapping'):
+                cloud.discover(root, datetime(2026, 11, 6, tzinfo=timezone.utc))
 
 
 

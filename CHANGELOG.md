@@ -1,5 +1,13 @@
 # Evolução do Pitwall Lab
 
+## 0.8.9 — 2026-11-02
+
+Correção preventiva da coleta de São Paulo: a configuração explícita e uma configuração descoberta em cache podem representar o mesmo GP. O coletor agora reutiliza a explícita quando identidade, sessões e horários coincidem; conflitos reais de identidade ou programação continuam bloqueados.
+
+O aceite público do fim de semana aguarda as métricas e o fim da renderização de Clima antes de conferir valores. Uma tentativa anterior chegou ao título antes das medições no celular em inglês; o recibo foi preservado. A correção mantém todas as verificações de conteúdo e os 22 resultados, sem reduzir o teste.
+
+Validação operacional: 27 testes, incluindo configuração duplicada idêntica e divergência de horário. Modelo, probabilidades e capturas originais preservados. [Fontes e evidências](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/mexico_avaliacao_saopaulo_20261102/README.md).
+
 ## 0.8.8 — 2026-11-02
 
 - Corrige o aceite do checkout público: testes legados que exigem capturas científicas locais continuam executados localmente. O CI mantém os testes de vínculo da avaliação, UI/leitor e o pacote portátil sem fontes privadas.

@@ -46,6 +46,8 @@ fs.mkdirSync(output,{recursive:true});
    await page.screenshot({path:path.join(output,key+'-summary.png')});
    await surface.locator('.fan-gp-tabs').getByRole('link',{name:lang==='pt'?'Clima':'Weather',exact:true}).click();
    await surface.getByRole('heading',{name:lang==='pt'?'Clima observado durante a corrida':'Observed race weather',exact:true}).waitFor({timeout:60000});
+   await surface.locator('[data-testid="stMetricValue"]').first().waitFor({timeout:60000});
+   await surface.waitForFunction(()=>document.querySelector('.stApp')?.getAttribute('data-test-script-state')==='notRunning',null,{timeout:60000});
    const metrics=(await surface.locator('[data-testid="stMetricValue"]').allTextContents()).map(s=>s.replace(',','.'));
    for(const field of ['air_temperature','track_temperature']){
     const measurement=race.clima_observado.campos[field];

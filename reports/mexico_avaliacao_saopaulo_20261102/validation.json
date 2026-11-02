@@ -10,9 +10,10 @@
     "colapinto": 15,
     "gasly": 17
   },
-  "tests": 26,
+  "tests": 27,
   "blueprint_errors": 0,
   "local_checkpoint_preserved": true,
   "hirakawa_team": "Haas F1 Team",
-  "original_profile_unchanged": true
+  "original_profile_unchanged": true,
+  "duplicate_configuration_test": "identical reused; differing schedule rejected"
 }

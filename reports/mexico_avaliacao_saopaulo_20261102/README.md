@@ -1,7 +1,7 @@
 # México final e preparação de São Paulo
 
 Created by: MBPaschoal
-Status: locally verified; publication pending
+Status: verified operational implementation
 Type: operational data delivery
 
 ## Fontes e correções
@@ -34,6 +34,8 @@ O composto das voltas 1–8 de Lawson no TL3 e a leitura verdadeira do asfalto r
 A coleta permanece serial, limitada e condicionada à janela do evento; nenhuma sessão futura é tratada como encerrada. A previsão de São Paulo depende da classificação principal e da conferência do histórico final do México. A revisão descritiva não é admissão automática de features.
 
 ## Evidências
+
+Complemento 0.8.9: configurações explícita e descoberta do mesmo GP são reutilizadas somente quando identidade, sessões, cancelamento e horários coincidem; divergências reais continuam bloqueadas. O aceite de Clima aguarda medições e renderização completa antes de comparar os valores, incluindo o celular em inglês. Passaram 27 testes operacionais, 289 testes de origem e 141 testes portáteis. O pacote tem 473 arquivos e corresponde à receita padrão; o ZIP é gerado independentemente pelo CI. [Recibo do pacote](package-089.json). O estado da [release 0.8.9](https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.9) e a verificação do aplicativo servido são etapas distintas desta conferência de fontes.
 
 [Recibos de aquisição](acquisition.json) guardam URL, UTC, status, tamanho e SHA-256 de cinco respostas. A primeira tentativa parou por falta de espaço e continua preservada; a retomada usa diretório novo. Dois ZIPs temporários anteriores foram removidos após conferência de todos os membros contra árvores completas preservadas; [recibo de espaço](storage.json).
 

@@ -1,5 +1,13 @@
 # Pitwall Lab evolution
 
+## 0.8.9 — 2026-11-02
+
+Preventive São Paulo collection fix: an explicit configuration and a cached discovery may describe the same GP. The collector reuses the explicit configuration when identities, sessions and schedules agree; genuine identity or schedule conflicts still stop collection.
+
+The public weekend acceptance now waits for weather metrics and completed rendering before comparing values. An earlier English mobile attempt reached the heading before the measurements; its receipt is retained. All content assertions and 22-driver result checks remain enabled.
+
+Operational validation: 27 tests, including identical duplicate configurations and a conflicting schedule. Model, forecasts and original captures remain unchanged. [Sources and evidence](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/mexico_avaliacao_saopaulo_20261102/README.md).
+
 ## 0.8.8 — 2026-11-02
 
 - Fixes public-checkout acceptance: legacy tests requiring local scientific captures remain part of local validation. CI retains evaluation-binding tests, UI/reader tests and the isolated portable package without private sources.

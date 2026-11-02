@@ -57,18 +57,24 @@ def discover(root, now, client_factory=CaptureClient):
     """Prefer explicit configurations, otherwise use canonical date/meeting joins."""
     paths = list((root / 'operacao2026/eventos').glob('*.json'))
     paths += list((root / STATE / 'configuracoes').glob('*.json'))
-    active = []
+    active = {}
     for path in paths:
         value = json.loads(path.read_text())
         if not isinstance(value, dict) or value.get('schema') != 'pitwall-weekend-event-v1':
             continue
         event = weekend.load_event(path)
         if in_window(event, now):
-            active.append(path)
+            # Explicit and cached discovery may describe the same weekend.
+            # Compare identities and schedule, not provenance timestamps.
+            fingerprint = (identity(event), tuple(sorted(
+                (s['session_key'], s['meeting_key'], s['session_name'], s['session_type'],
+                 instant(s['date_start']), instant(s['date_end']), s.get('is_cancelled', False))
+                for s in event['sessions'])))
+            active.setdefault(fingerprint, path)
     if len(active) > 1:
         raise ValueError('Overlapping event configurations')
     if active:
-        return active[0]
+        return next(iter(active.values()))
     if now.year != 2026:
         return None
     base = root / STATE / 'descoberta'
