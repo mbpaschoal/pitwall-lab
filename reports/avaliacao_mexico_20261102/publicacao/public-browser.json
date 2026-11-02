@@ -1,0 +1,33 @@
+{
+  "version": "0.8.8",
+  "expected_build": "43755f64207769d1a49fa50bd0148155d0967841e0f1aee5a786db9409302485",
+  "served_build": "43755f64207769d1a49fa50bd0148155d0967841e0f1aee5a786db9409302485",
+  "public_url": "https://pitwall-lab.streamlit.app/",
+  "focus_cases": 8,
+  "six_screen_cases": 24,
+  "languages": [
+    "pt",
+    "en"
+  ],
+  "viewports": [
+    390,
+    1040,
+    1440
+  ],
+  "mobile": "emulated viewport and touch",
+  "status": "passed",
+  "probability_percentages_pt": [
+    "68,2%",
+    "61,9%",
+    "57,5%"
+  ],
+  "probability_percentages_en": [
+    "68.2%",
+    "61.9%",
+    "57.5%"
+  ],
+  "physical_device_tested": false,
+  "screen_reader_tested": false,
+  "clean_contexts_per_suite": 4,
+  "total_clean_contexts": 8
+}

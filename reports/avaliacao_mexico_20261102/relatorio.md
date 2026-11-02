@@ -1,7 +1,7 @@
 # Avaliação prospectiva do México — 2026
 
 Created by: MBPaschoal
-Status: implemented; publication pending verification
+Status: published and publicly verified in 0.8.8
 Type: posterior evaluation report
 
 [English](relatorio.en.md)
@@ -23,3 +23,5 @@ A versão do produto é **0.8.7**, incorporando a avaliação e preservando a en
 Verificações locais e públicas serão detalhadas nos recibos deste diretório. Celular significa viewport e interação por toque emulados; não representa ensaio em aparelho físico ou leitor de tela.
 
 A publicação final usa **0.8.8**, pois o aceite CI da 0.8.7 incluiu cinco testes legados dependentes de capturas locais não publicadas. A correção mantém esses testes locais e preserva os testes CI de integridade e do pacote portátil; a tag 0.8.7 não foi reescrita. O build final será confirmado em sessão pública nova.
+
+Publicação concluída em **0.8.8**, com CI aprovado em main e tag. Os 32 cenários públicos passaram e os 473 membros do ZIP publicado são idênticos ao manifesto da tag imutável. [Recibo completo](publicacao/relatorio.md).

@@ -1,7 +1,7 @@
 # Mexico prospective evaluation — 2026
 
 Created by: MBPaschoal
-Status: implemented; publication pending verification
+Status: published and publicly verified in 0.8.8
 Type: posterior evaluation report
 
 [Português](relatorio.md)
@@ -23,3 +23,5 @@ Product version **0.8.7** integrates this evaluation while preserving the locall
 Local and public checks are recorded alongside this report. Mobile checks use emulated viewport/touch settings, not a physical handset or screen reader.
 
 Final publication uses **0.8.8**: 0.8.7 CI included five legacy tests depending on unpublished local captures. The correction retains local validation and the public CI integrity/portable tests, preserving tag0.8.7. The final served build requires a fresh public-session check.
+
+Publication completed in **0.8.8**, with successful main/tag CI, 32 passed public scenarios and all 473 released ZIP members matching the immutable tagged manifest. [Complete receipt](publicacao/relatorio.md).

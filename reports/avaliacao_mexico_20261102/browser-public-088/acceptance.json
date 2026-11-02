@@ -1,0 +1,71 @@
+{
+  "utc": "2026-11-02T04:19:42.798Z",
+  "base": "https://pitwall-lab.streamlit.app",
+  "version": "0.8.8",
+  "cases": [
+    {
+      "route": "Desempenho",
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "mexico": "🇲🇽\nMéxico\nLab: 2 de 3\nClassificação: 1 de 3",
+      "evaluated": 2
+    },
+    {
+      "route": "Previsões",
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "forecasts": "Max Verstappen\nRed Bull\n68,2%\n›\nLewis Hamilton\nFerrari\n61,9%\n›\nGeorge Russell\nMercedes\n57,5%\n›",
+      "podium": "2º\nHAMILTON\nFerrari\n1º\nVERSTAPPEN\nRed Bull Racing\n3º\nANTONELLI\nMercedes"
+    },
+    {
+      "route": "Desempenho",
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "mexico": "🇲🇽\nMexico\nLab: 2 of 3\nQualifying: 1 of 3",
+      "evaluated": 2
+    },
+    {
+      "route": "Previsões",
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "forecasts": "Max Verstappen\nRed Bull\n68.2%\n›\nLewis Hamilton\nFerrari\n61.9%\n›\nGeorge Russell\nMercedes\n57.5%\n›",
+      "podium": "2º\nHAMILTON\nFerrari\n1º\nVERSTAPPEN\nRed Bull Racing\n3º\nANTONELLI\nMercedes"
+    },
+    {
+      "route": "Desempenho",
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "mexico": "🇲🇽\nMéxico\nLab: 2 de 3\nClassificação: 1 de 3",
+      "evaluated": 2
+    },
+    {
+      "route": "Previsões",
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "forecasts": "Max Verstappen\nRed Bull\n68,2%\nLewis Hamilton\nFerrari\n61,9%\nGeorge Russell\nMercedes\n57,5%",
+      "podium": "2º\nHAMILTON\nFerrari\n1º\nVERSTAPPEN\nRed Bull Racing\n3º\nANTONELLI\nMercedes"
+    },
+    {
+      "route": "Desempenho",
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "mexico": "🇲🇽\nMexico\nLab: 2 of 3\nQualifying: 1 of 3",
+      "evaluated": 2
+    },
+    {
+      "route": "Previsões",
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "forecasts": "Max Verstappen\nRed Bull\n68.2%\nLewis Hamilton\nFerrari\n61.9%\nGeorge Russell\nMercedes\n57.5%",
+      "podium": "2º\nHAMILTON\nFerrari\n1º\nVERSTAPPEN\nRed Bull Racing\n3º\nANTONELLI\nMercedes"
+    }
+  ]
+}

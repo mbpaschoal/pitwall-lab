@@ -1,0 +1,714 @@
+{
+  "schema": "pitwall-product-ci-readonly-v1",
+  "version": "0.8.8",
+  "repository": "mbpaschoal/pitwall-lab",
+  "commit": "aae764db7145c287587136fcc870177593593994",
+  "expected_presentation_build": "43755f64207769d1a49fa50bd0148155d0967841e0f1aee5a786db9409302485",
+  "expected_package_files": 473,
+  "created_at_utc": "2026-11-02T04:18:25.692Z",
+  "status": "completed_success_release_metadata_verified",
+  "runs": [
+    {
+      "id": 41387564561,
+      "head_branch": "main",
+      "head_sha": "aae764db7145c287587136fcc870177593593994",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-02T04:16:50Z",
+      "updated_at": "2026-11-02T04:26:28Z",
+      "run_attempt": 1,
+      "html_url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41387564561",
+      "jobs": [
+        {
+          "id": 125091684168,
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 41387564561,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run actions/setup-node@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run python -m pip install -r publicacao/templates/requirements.txt",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run npm install --no-save playwright@1.62.1",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Jornadas de fãs / Fan journeys",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/setup-node@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Post Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            },
+            {
+              "name": "Post Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 18
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 19
+            }
+          ]
+        },
+        {
+          "id": 125091684389,
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 41387564561,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Dependências de apresentação / Presentation dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Versão e documentação / Version and documentation",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Testes PT e EN / PT and EN tests",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Integridade do pacote publicado / Published package integrity",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Post Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Post Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            }
+          ]
+        },
+        {
+          "id": 125094449739,
+          "name": "release",
+          "status": "completed",
+          "conclusion": "skipped",
+          "run_id": 41387564561,
+          "logs_url": null,
+          "steps": null
+        }
+      ],
+      "jobs_observed_at_utc": "2026-11-02T04:26:49.711Z",
+      "run_metadata_observed_at_utc": "2026-11-02T04:27:12.609Z"
+    },
+    {
+      "id": 41387564272,
+      "head_branch": "v0.8.8",
+      "head_sha": "aae764db7145c287587136fcc870177593593994",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-02T04:16:50Z",
+      "updated_at": "2026-11-02T04:27:29Z",
+      "run_attempt": 1,
+      "html_url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41387564272",
+      "jobs": [
+        {
+          "id": 125091683839,
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 41387564272,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run actions/setup-node@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run python -m pip install -r publicacao/templates/requirements.txt",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run npm install --no-save playwright@1.62.1",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Jornadas de fãs / Fan journeys",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/setup-node@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Post Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            },
+            {
+              "name": "Post Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 18
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 19
+            }
+          ]
+        },
+        {
+          "id": 125091684037,
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 41387564272,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Dependências de apresentação / Presentation dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Versão e documentação / Version and documentation",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Testes PT e EN / PT and EN tests",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Integridade do pacote publicado / Published package integrity",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Post Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Post Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            }
+          ]
+        },
+        {
+          "id": 125094415864,
+          "name": "release",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 41387564272,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Pacote da release / Release package",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Notas PT e EN / PT and EN release notes",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        }
+      ],
+      "jobs_observed_at_utc": "2026-11-02T04:28:22.748Z",
+      "run_metadata_observed_at_utc": "2026-11-02T04:29:02.196Z"
+    }
+  ],
+  "logs": [],
+  "release_check": {
+    "performed": true,
+    "endpoint": "https://api.github.com/repos/mbpaschoal/pitwall-lab/releases/tags/v0.8.8",
+    "checked_at_utc": "2026-11-02T04:29:11.784Z",
+    "metadata": {
+      "id": 431071125,
+      "tag_name": "v0.8.8",
+      "target_commitish": "main",
+      "name": "Pitwall Lab 0.8.8",
+      "html_url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.8",
+      "draft": false,
+      "prerelease": false,
+      "created_at": "2026-11-02T04:16:47Z",
+      "published_at": "2026-11-02T04:27:03Z",
+      "immutable": false,
+      "assets": [
+        {
+          "id": 700502408,
+          "name": "pitwall-dashboard.zip",
+          "label": "",
+          "state": "uploaded",
+          "content_type": "application/zip",
+          "size": 665821985,
+          "digest": "sha256:dd28af172eeb02be5c78ac413465ec2b8ee2142addcacfbb21351f942321de1e",
+          "created_at": "2026-11-02T04:27:04Z",
+          "updated_at": "2026-11-02T04:27:25Z",
+          "browser_download_url": "https://github.com/mbpaschoal/pitwall-lab/releases/download/v0.8.8/pitwall-dashboard.zip"
+        }
+      ]
+    },
+    "no_binary_download_performed": true,
+    "tag_matches": true,
+    "published": true,
+    "assets_uploaded": true,
+    "assets_have_sha256_digest": true,
+    "tag_ref": {
+      "endpoint": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/ref/tags/v0.8.8",
+      "ref": "refs/tags/v0.8.8",
+      "object": {
+        "sha": "2393d84a56cbfccbfc401a3820c07cf695dbdca6",
+        "type": "tag",
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/tags/2393d84a56cbfccbfc401a3820c07cf695dbdca6"
+      },
+      "dereferenced_commit": "aae764db7145c287587136fcc870177593593994",
+      "type": "commit",
+      "matches_pinned_commit": true,
+      "checked_at_utc": "2026-11-02T04:29:35.970Z"
+    }
+  },
+  "actions": {
+    "read_only": true,
+    "rerun": false,
+    "product_edits": false
+  },
+  "last_poll_at_utc": "2026-11-02T04:28:22.748Z",
+  "poll_history": [
+    {
+      "at_utc": "2026-11-02T04:19:57.373Z",
+      "runs": [
+        {
+          "id": 41387564561,
+          "jobs": [
+            {
+              "id": 125091684168,
+              "name": "browser",
+              "status": "in_progress",
+              "conclusion": null,
+              "in_progress_step": "Jornadas de fãs / Fan journeys"
+            },
+            {
+              "id": 125091684389,
+              "name": "validate",
+              "status": "in_progress",
+              "conclusion": null,
+              "in_progress_step": "Integridade do pacote publicado / Published package integrity"
+            }
+          ]
+        },
+        {
+          "id": 41387564272,
+          "jobs": [
+            {
+              "id": 125091683839,
+              "name": "browser",
+              "status": "in_progress",
+              "conclusion": null,
+              "in_progress_step": "Jornadas de fãs / Fan journeys"
+            },
+            {
+              "id": 125091684037,
+              "name": "validate",
+              "status": "in_progress",
+              "conclusion": null,
+              "in_progress_step": "Integridade do pacote publicado / Published package integrity"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-11-02T04:23:08.375Z",
+      "runs": [
+        {
+          "id": 41387564561,
+          "jobs": [
+            {
+              "id": 125091684168,
+              "name": "browser",
+              "status": "in_progress",
+              "conclusion": null,
+              "in_progress_step": "Jornadas de fãs / Fan journeys"
+            },
+            {
+              "id": 125091684389,
+              "name": "validate",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 41387564272,
+          "jobs": [
+            {
+              "id": 125091683839,
+              "name": "browser",
+              "status": "in_progress",
+              "conclusion": null,
+              "in_progress_step": "Jornadas de fãs / Fan journeys"
+            },
+            {
+              "id": 125091684037,
+              "name": "validate",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-11-02T04:24:55.643Z",
+      "runs": [
+        {
+          "id": 41387564561,
+          "jobs": [
+            {
+              "id": 125091684168,
+              "name": "browser",
+              "status": "in_progress",
+              "conclusion": null,
+              "in_progress_step": "Jornadas de fãs / Fan journeys"
+            },
+            {
+              "id": 125091684389,
+              "name": "validate",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 41387564272,
+          "jobs": [
+            {
+              "id": 125091683839,
+              "name": "browser",
+              "status": "in_progress",
+              "conclusion": null,
+              "in_progress_step": "Jornadas de fãs / Fan journeys"
+            },
+            {
+              "id": 125091684037,
+              "name": "validate",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-11-02T04:26:49.711Z",
+      "runs": [
+        {
+          "id": 41387564561,
+          "jobs": [
+            {
+              "id": 125091684168,
+              "name": "browser",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "id": 125091684389,
+              "name": "validate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "id": 125094449739,
+              "name": "release",
+              "status": "completed",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 41387564272,
+          "jobs": [
+            {
+              "id": 125091683839,
+              "name": "browser",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "id": 125091684037,
+              "name": "validate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "id": 125094415864,
+              "name": "release",
+              "status": "in_progress",
+              "conclusion": null,
+              "in_progress_step": "Pacote da release / Release package"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-11-02T04:28:22.748Z",
+      "runs": [
+        {
+          "id": 41387564561,
+          "jobs": [
+            {
+              "id": 125091684168,
+              "name": "browser",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "id": 125091684389,
+              "name": "validate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "id": 125094449739,
+              "name": "release",
+              "status": "completed",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 41387564272,
+          "jobs": [
+            {
+              "id": 125091683839,
+              "name": "browser",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "id": 125091684037,
+              "name": "validate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "id": 125094415864,
+              "name": "release",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "finished_at_utc": "2026-11-02T04:29:11.784Z"
+}
