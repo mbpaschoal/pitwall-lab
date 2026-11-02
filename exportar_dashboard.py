@@ -95,6 +95,8 @@ TAROT_TEAM_VARIANTS = tuple(
     for driver, team in TAROT_TEAM_PAIRS for pose in (0, 1, 2)
 )
 RUNTIME_WORKTREE = (
+    'pitwall/dashboard/motion.py',
+    'frontend_assets/motion.js',
     'pitwall/data/post_race_evaluation.py',
     'frontend_assets/avaliacao_posterior_mexico_2026.json',
     'pitwall/dashboard/media.py',

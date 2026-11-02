@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.8.10 — 2026-11-02
+
+- Navegação com foco no destino, retorno ao topo e rolagem suave no contêiner do Streamlit, preservando URL e filtros.
+- Feedback discreto nos controles e entrada breve dos passos de Como funciona, uma vez por sessão da página. Preferência do sistema e controle de movimento respeitados.
+- Validação PT/EN, computador e celular emulado; dados, modelos e identidade visual preservados. Aceite local não comprova publicação.
+
 ## 0.8.9 — 2026-11-02
 
 Correção preventiva da coleta de São Paulo: a configuração explícita e uma configuração descoberta em cache podem representar o mesmo GP. O coletor agora reutiliza a explícita quando identidade, sessões e horários coincidem; conflitos reais de identidade ou programação continuam bloqueados.
