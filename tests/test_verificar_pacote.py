@@ -16,3 +16,10 @@ class PacoteGuardTest(unittest.TestCase):
                          'test_fan_journey.py', 'test_fan_composition.py'):
             self.assertIn(filename, TESTES_PORTATEIS)
             self.assertIn('tests/' + filename, RUNTIME_WORKTREE)
+
+    def test_complemento_idade_tem_teste_portatil_e_allowlist_explicitos(self):
+        from exportar_dashboard import RUNTIME_WORKTREE, TEMPLATES
+        self.assertIn('pitwall/data/tyre_age.py', RUNTIME_WORKTREE)
+        self.assertIn('frontend_assets/complemento_idade_pneus_v1.json', RUNTIME_WORKTREE)
+        self.assertIn('publicacao/templates/test_complemento_idade_publico.py', TEMPLATES)
+        self.assertIn('test_complemento_idade_publico.py', TESTES_PORTATEIS)

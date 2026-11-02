@@ -376,6 +376,7 @@ docs/protocolo_temporal.md
 docs/relatorio_2024.md
 documentacao_local.py
 frontend_assets/acervo_dashboard.json
+frontend_assets/complemento_idade_pneus_v1.json
 frontend_assets/contexto_editorial.json
 frontend_assets/favorite/index.html
 frontend_assets/journey.css
@@ -411,6 +412,7 @@ pitwall/data/driver_conditions.py
 pitwall/data/editorial.py
 pitwall/data/editorial_panels.py
 pitwall/data/race_weekend.py
+pitwall/data/tyre_age.py
 pitwall/data/visual_catalog.py
 pitwall/i18n/__init__.py
 pitwall/i18n/controls.py
@@ -445,6 +447,7 @@ reports/pilotos_condicoes_20261029/consolidado_v1/gate_dados.json
 reports/pilotos_condicoes_20261029/consolidado_v1/pendencias.csv
 requirements.txt
 tests/test_acervo_publico.py
+tests/test_complemento_idade_publico.py
 tests/test_dashboard_app.py
 tests/test_dashboard_dados.py
 tests/test_distribuicao.py

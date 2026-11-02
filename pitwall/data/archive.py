@@ -188,7 +188,9 @@ def carregar(raiz):
             raw.decode("utf-8"),
             parse_constant=lambda x: (_ for _ in ()).throw(ValueError(x)),
         )
-        return validar(asset)
+        validar(asset)
+        from pitwall.data.tyre_age import carregar as carregar_idade_pneus
+        return validar(carregar_idade_pneus(root, asset, raw))
     except AcervoDashboardErro:
         raise
     except (

@@ -11,7 +11,7 @@ Quem ganha mais na chuva? Como dois pilotos se saem nos mesmos GPs? Quem já foi
 ![Pilotos: comparações históricas por condição](docs/images/pitwall-pilotos.png)
 
 
-México 2026: resultado observado, voltas, pneus, paradas e campeonato da rodada 19 disponíveis; clima do ar consolidado e média do asfalto em revisão. Coleta automática a cada 30 minutos, respeitando a disponibilidade gratuita da fonte. [Dados e limites](docs/DADOS_ATUAIS.md) · [Operação](docs/OPERACAO_FIM_SEMANA.md).
+México 2026: resultado observado, voltas, pneus, paradas e campeonato da rodada 19 disponíveis; tempos do TL3 recuperados, DSQ confirmado na classificação e clima do asfalto consolidado com exclusão auditada de uma leitura anômala. Coleta automática a cada 30 minutos, respeitando a disponibilidade gratuita da fonte. [Dados e limites](docs/DADOS_ATUAIS.md) · [Operação](docs/OPERACAO_FIM_SEMANA.md).
 
 
 A coleta agora é agendada no GitHub Actions, sem depender do computador pessoal: novas sessões são validadas, versionadas e publicadas automaticamente. [Acompanhar execuções](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml).

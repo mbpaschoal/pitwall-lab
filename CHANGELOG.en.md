@@ -4,6 +4,18 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.8.3 — 2026-11-01
+
+- FIA/F1 cross-checks recover all 22 FP3 times and Lawson's profile without borrowing from another GP. One pre-FP3 row and 84 pre-qualifying pit rows are excluded from the projection; original bytes and indices remain audited. The validated scope contains 88 FP3 and 89 qualifying pit records.
+- FIA decision 57 and final classification 59 confirm Lawson as DSQ. The UI leaves numeric position and voided times empty; the final table's zero is not interpreted as no physical laps. This descriptive change does not reissue the forecast.
+- The FIA weather report also records the isolated zero. A specific documentary exclusion recalculates the track mean over 100 valid readings: 40.7 °C, 98.0% coverage, without interpolating the missing minute. Other sensors and active windows stay unchanged. Unreviewed readings remain withheld.
+- Lawson's FP3 compound for laps 1–8 remains unavailable and is not inferred from the next stint. The official timing archive returned 401 and Formula1Dashboard lap requests returned empty data; this does not establish universal absence. Reviews also reach completed caches and future collection, with regressions for session identity, coverage gates and DSQ handling.
+- A versioned complement revises only initial tyre age for 262 observed archive stints across 55 sessions/47 Grands Prix: 210 zero-to-positive changes, 36 positive-to-zero and 16 between positive values. All other fields stay unchanged.
+- The reader applies the revision offline to a copy of the original projection, checking hashes, session, driver, compound, lap bounds and previous age. A missing, corrupt or incompatible required complement stops loading rather than silently presenting known old ages.
+- Original snapshots and the base projection retain their bytes. The v1 model, its 15 inputs and recorded forecasts stay unchanged. Structurally revised or ambiguously linked cases remain outside this complement.
+- Validation covers table and CSV values, PT/EN, desktop/mobile, integrity counterchecks and the isolated portable package. Evidence is kept in `reports/complemento_idade_pneus_20261101/`; this local delivery does not establish a new public deployment.
+- Learning: upstream revisions require a traceable complement and verification of each physical stint; a published zero does not prove a fresh tyre set.
+
 ## 0.8.1 — 2026-11-01
 
 - Lab results presents both model and qualifying counts as text for each GP, with dots as decorative visual support. Unevaluated races remain unscored and ties stay explicit.

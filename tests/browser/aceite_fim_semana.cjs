@@ -6,6 +6,13 @@ if(!base||!output)throw Error('Usage: node aceite_fim_semana.cjs URL OUTPUT');
 const state=JSON.parse(fs.readFileSync(path.join(__dirname,'../../frontend_assets/operacao_fim_semana.json'),'utf8'));
 const race=state.sessoes.find(s=>s.nome==='Race');
 const check=(ok,message)=>{if(!ok)throw Error(message);};
+function parseCSV(text){
+ return text.replace(/^\uFEFF/,'').trim().split(/\r?\n/).map(line=>{
+  const cells=[];let cell='',quoted=false;
+  for(let i=0;i<line.length;i++){const c=line[i];if(c==='"'){if(quoted&&line[i+1]==='"'){cell+='"';i++;}else quoted=!quoted;}else if(c===','&&!quoted){cells.push(cell);cell='';}else cell+=c;}
+  cells.push(cell);return cells;
+ });
+}
 fs.mkdirSync(output,{recursive:true});
 (async()=>{
  if(!race?.encerramento_observado_utc||!race.tempos?.length){
@@ -45,6 +52,32 @@ fs.mkdirSync(output,{recursive:true});
     check(metrics.some(s=>measurement.elegivel?s.includes(measurement.media_amostras.toFixed(1)):s.trim()==='—'),'Observed temperature or explicit withholding missing: '+field);
    }
    await page.screenshot({path:path.join(output,key+'-weather.png')});
+   const qualifying=state.sessoes.find(s=>s.nome==='Qualifying');
+   if(state.temporada===2026&&state.rodada===19&&qualifying?.revisao_fontes&&qualifying.tempos.some(r=>r.status==='DSQ')){
+    await surface.locator('.fan-gp-tabs').getByRole('link',{name:lang==='pt'?'Sessões e voltas':'Sessions and laps',exact:true}).click();
+    await surface.getByRole('heading',{name:lang==='pt'?'Tempos de sessão':'Session times',exact:true}).waitFor({timeout:60000});
+    const select=surface.locator('.st-key-acervo_2026_19_sessao_tempos').getByRole('combobox');
+    async function downloadSession(option,suffix){
+     await select.click();await surface.getByRole('option',{name:option,exact:true}).click();
+     await surface.getByText(option==='TL3'?(lang==='pt'?'Melhor volta publicada de cada piloto nesta sessão de treino.':"Each driver's published fastest lap in this practice session."):/^DSQ (indica|means)/).waitFor({timeout:60000});
+     await surface.waitForFunction(()=>document.querySelector('.stApp')?.getAttribute('data-test-script-state')==='notRunning',null,{timeout:60000});
+     const button=surface.locator('.st-key-acervo_2026_19_csv_tempos').getByRole('button',{includeHidden:true});
+     const expander=surface.locator('[data-testid="stExpander"]').filter({has:button}).getByText(lang==='pt'?'Exportar tabela':'Export table',{exact:true});
+     if(!await expander.evaluate(e=>e.closest('details')?.open))await expander.click();
+     const ready=page.waitForEvent('download');await button.click();
+     const downloaded=await ready,target=path.join(output,key+'-'+suffix+'.csv');await downloaded.saveAs(target);return parseCSV(fs.readFileSync(target,'utf8'));
+    }
+    const fp3=await downloadSession('TL3','fp3');
+    check(fp3.length===23,'FP3 must retain all 22 drivers');
+    const lawson=fp3.slice(1).find(r=>r.some(c=>/Liam.*LAWSON/i.test(c)));
+    check(lawson&&lawson[0]==='9'&&lawson.includes('1:18.113'),'Lawson FP3 identity/result not recovered');
+    const q=await downloadSession(lang==='pt'?'Classificação':'Qualifying','qualifying');
+    check(q.length===23,'Qualifying must retain all 22 drivers');
+    const dq=q.slice(1).find(r=>r.some(c=>/Liam.*LAWSON/i.test(c)));
+    check(dq&&dq[0]==='—'&&dq[q[0].indexOf(lang==='pt'?'Situação':'Status')]==='DSQ','Disqualification became a numeric rank');
+    for(const phase of ['Q1','Q2','Q3'])check(dq[q[0].indexOf(phase)]==='—','Disqualified time shown as valid');
+    await page.screenshot({path:path.join(output,key+'-qualifying-dsq.png')});
+   }
    surface=await open('Previsões');
    check(await surface.locator('.fan-podium-compact').count()===1,'Observed before/after comparison missing');
    check((await surface.locator('.fan-probability-row').count())>=3,'Recorded forecast missing');

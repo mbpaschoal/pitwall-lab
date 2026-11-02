@@ -72,7 +72,7 @@ def render_times(state):
     race = next((s for s in sessions if s['nome'] == 'Race'), {})
     gp['historico'] = {'voltas_por_piloto': race.get('dados_descritivos', {}).get('voltas_por_piloto', [])}
     renderizar_tempos(gp)
-    st.caption('Resultados nativos OpenF1. Não são probabilidades de pódio nem alteram uma previsão registrada.')
+    st.caption('Tempos OpenF1 com conferências documentais identificadas quando disponíveis. Não alteram a previsão registrada.')
     return True
 
 def render_strategies(state):
@@ -114,6 +114,11 @@ def render_weather(state):
         st.caption('Medições OpenF1 nos intervalos ativos da corrida. Pausas por bandeira vermelha são excluídas.')
         if observed['campos']['track_temperature'].get('qualidade', {}).get('codigo') == 'zero_isolado_em_conferencia':
             st.caption('Temperatura do asfalto em conferência: leitura isolada de 0 °C entre medições acima de 20 °C. Média retida, sem substituir o registro original.')
+        quality = observed['campos']['track_temperature'].get('qualidade', {})
+        if quality.get('codigo') == 'zero_isolado_excluido':
+            st.caption('Asfalto: média das leituras válidas. Uma leitura isolada de 0 °C foi excluída após conferência documental; sem interpolação, com cobertura recalculada e registro original preservado.')
+            for source in quality.get('fontes',[]):
+                st.markdown('[Relatório oficial do clima da corrida]({})'.format(source['url']))
     forecast = state.get('previsao_meteorologica', {})
     hours = forecast.get('horas', [])
     if hours:

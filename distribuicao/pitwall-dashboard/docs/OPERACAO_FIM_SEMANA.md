@@ -77,3 +77,9 @@ A corrida trouxe 205 medições meteorológicas e 1360 registros de voltas. A fo
 Há três sessões completas de cinco. TL3 permanece parcial pelo cadastro 30 ausente e paradas 236 sem cadastro; Q preserva resultados/voltas/pneus e retém as paradas afetadas. Resultado OpenF1 observado e campeonatos da rodada 19 são contexto posterior. A emissão do México e suas probabilidades não foram alteradas; sua admissão à avaliação do modelo continua uma etapa separada.
 
 O calendário também foi confrontado com a F1: [Bahrein na Malásia é um evento oficial em Sepang](https://www.formula1.com/en/latest/article/formula-1-and-fia-confirm-that-malaysia-will-join-the-2026-calendar-as-host-venue-for-the-bahrain-grand-prix.6lL7vjFEM2VVynRHvg1TCf). Nome do evento, país anfitrião e circuito são campos distintos; a apresentação não altera a identidade canônica.
+
+## Fontes alternativas — entrega 0.8.3
+
+A revisão documental recupera os 22 tempos do TL3 e identifica Lawson por número, nome e equipe na lista oficial deste evento. O recorte temporal exclui um registro de paradas anterior ao TL3 e 84 anteriores à classificação; os originais não são apagados. A classificação final e a decisão dos comissários mostram Lawson como DSQ, sem posição numérica nem tempos válidos.
+
+A média do asfalto agora usa 100 leituras válidas: 40,7 °C, 98,0% de cobertura, sem interpolação. O relatório FIA também registra o zero anômalo; ele não revela a temperatura real daquele minuto. Permanece ausente o composto do stint inicial de Lawson (voltas 1–8 do TL3), não inferido dos stints posteriores. A revisão aplica-se também ao cache e à automação. [Fontes, decisões e pendências](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/mexico_fontes_alternativas_20261101/README.md).

@@ -19,7 +19,9 @@ class TestExportarAcervo(unittest.TestCase):
             result = exportar(ROOT, destination)
             manifest = json.loads((destination / 'MANIFESTO.json').read_text())
             self.assertEqual(manifest['commit_origem'], COMMIT_BASE_PADRAO)
-            for name in ('acervo_dashboard_dados.py', 'acervo_dashboard_ui.py', 'frontend_assets/acervo_dashboard.json', 'tests/test_acervo_publico.py'):
+            for name in ('acervo_dashboard_dados.py', 'acervo_dashboard_ui.py', 'frontend_assets/acervo_dashboard.json',
+                         'pitwall/data/tyre_age.py', 'frontend_assets/complemento_idade_pneus_v1.json',
+                         'tests/test_acervo_publico.py', 'tests/test_complemento_idade_publico.py'):
                 self.assertTrue((destination / name).is_file(), name)
             for relative in FONTES_CIENTIFICAS:
                 self.assertEqual((destination / relative).read_bytes(), (ROOT / relative).read_bytes())

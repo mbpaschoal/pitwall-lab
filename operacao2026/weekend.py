@@ -103,6 +103,8 @@ def retry_deadline(manifest):
 def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClient, recheck_completed=False):
     root = Path(root)
     event = load_event(event_path)
+    from operacao2026.weekend_reconciliation import load_review, session_review
+    review = load_review(root, event)
     now = now or datetime.now(timezone.utc)
     if now.tzinfo is None:
         raise ValueError('UTC clock required')
@@ -134,6 +136,11 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
                 entry = dict(session_key=session['session_key'], nome=session['session_name'],
                              inicio_utc=session['date_start'], fim_programado_utc=session['date_end'], estado='aguardando_sessao')
                 if not recheck_completed and cached_session(old, root):
+                    if session_review(review,session) and old.get('revisao_fontes',{}).get('sha256') != review['sha256']:
+                        old = dict(old)
+                        cached = {source['endpoint']:json.loads((root/source['arquivo_local']).read_text())
+                                  for source in old['fontes'] if source['endpoint'] in ENDPOINTS and source['status']==200}
+                        project_received(old,cached,session,review)
                     state['sessoes'].append(old)
                     continue
                 if now < instant(session['date_end']) + timedelta(minutes=10):
@@ -157,16 +164,8 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
                 if end and any(instant(source['obtido_em_utc']) < end for source in sources if source.get('status') == 200):
                     raise ValueError('Source receipt predates observed session finish')
                 if end and end <= now and data.get('session_result') and data.get('drivers'):
-                    entry['estado'] = 'dados_recebidos' if all(key in data for key in ENDPOINTS) and bool(data.get('weather')) and len(data['session_result']) == len(data['drivers']) else 'parcial'
                     entry['encerramento_observado_utc'] = end.isoformat()
-                    project_session(entry, data, session)
-                    if session['session_name'] == 'Race' and data.get('weather'):
-                        from pitwall.data.race_weather import RaceWeatherError
-                        try:
-                            entry['clima_observado'] = observed_weather(data, session)
-                        except RaceWeatherError as error:
-                            entry['estado'] = 'parcial'
-                            entry['qualidade_clima'] = str(error)
+                    project_received(entry, data, session, review)
                 else:
                     entry['estado'] = 'encerramento_ou_resultado_pendente'
                 state['sessoes'].append(entry)
@@ -203,7 +202,29 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
         return state
 
 
-def observed_weather(data, session):
+def project_received(entry, data, session, review=None):
+    from operacao2026.weekend_reconciliation import reconcile, mark_tyre_gaps
+    from pitwall.data.race_weather import RaceWeatherError
+    normalized, audit = reconcile(data,session,review)
+    entry['estado'] = ('dados_recebidos' if all(key in normalized for key in ENDPOINTS)
+                      and bool(normalized.get('weather'))
+                      and len(normalized['session_result']) == len(normalized['drivers']) else 'parcial')
+    if audit:
+        entry['revisao_fontes']=audit
+        entry['cobertura_validada']={key:len(normalized.get(key,[])) for key in ENDPOINTS}
+    for key in ('lacunas_documentadas','qualidade_clima'):
+        entry.pop(key,None)
+    project_session(entry,normalized,session)
+    mark_tyre_gaps(entry,session,review)
+    if session['session_name']=='Race' and normalized.get('weather'):
+        try:
+            entry['clima_observado']=observed_weather(normalized,session,review)
+        except RaceWeatherError as error:
+            entry['estado']='parcial'
+            entry['qualidade_clima']=str(error)
+
+
+def observed_weather(data, session, review=None):
     """Apply operational sensor review without changing historical audit policy.
 
     An isolated zero between two track readings >=20 C (at most 180 seconds
@@ -229,6 +250,20 @@ def observed_weather(data, session):
         result['campos']['track_temperature']['elegivel'] = False
         result['campos']['track_temperature']['qualidade'] = dict(codigo='zero_isolado_em_conferencia', registros=anomalies,
             uso_media='Diagnóstico bruto; não publicar como temperatura representativa.')
+        from operacao2026.weekend_reconciliation import session_review, sources
+        approvals = (session_review(review,session) or {}).get('exclusoes_clima',[])
+        approved = [a for a in anomalies if any(instant(a['data'])==instant(p['date'])
+                    and (a['valor'],a['anterior'],a['posterior']) == (p['track_temperature'],p['anterior'],p['posterior'])
+                    for p in approvals)]
+        if len(approved)==len(anomalies):
+            selected=[dict(row) for row in data['weather']]
+            for anomaly in approved:
+                selected[anomaly['indice_fonte']]['track_temperature']=None
+            validated=summarize_sensors(selected,window)['campos']['track_temperature']
+            validated['qualidade']=dict(codigo='zero_isolado_excluido',registros=approved,n_excluidos=len(approved),
+                diagnostico_bruto=result['campos']['track_temperature'],fontes=sources(review,sorted({name for p in approvals for name in p['fontes']})),
+                metodo='Excluir apenas a célula adjudicada; sem interpolar. Cobertura e intervalo máximo recalculados.')
+            result['campos']['track_temperature']=validated
     return result
 
 
@@ -284,6 +319,11 @@ def session_times(data, session):
         rows.append(dict(numero=number, piloto_id=canonical_id, piloto=driver.get('full_name') or driver.get('broadcast_name'),
                          equipe=driver.get('team_name'), posicao=result.get('position'),
                          duracao=result.get('duration'), gap=result.get('gap_to_leader'), voltas=result.get('number_of_laps')))
+        if result.get('dsq'):
+            rows[-1]['status']='DSQ'
+            rows[-1]['duracao']=None
+        if result.get('fonte_validacao'):
+            rows[-1]['fonte_validacao']=result['fonte_validacao']
         duration = result.get('duration')
         if session.get('session_name') in ('Qualifying', 'Sprint Qualifying') and isinstance(duration, list):
             if len(duration) > 3:

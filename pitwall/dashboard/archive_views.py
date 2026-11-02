@@ -139,6 +139,10 @@ def renderizar_tempos(gp):
             "Diferença publicada": _valor(item.get("gap")),
             "Voltas na sessão": item.get("voltas"),
         }
+        if any(row.get('status')=='DSQ' for row in sessao.get('tempos',[])):
+            linha['Situação'] = 'DSQ' if item.get('status')=='DSQ' else '—'
+            if item.get('status')=='DSQ':
+                linha['Voltas na sessão'] = None
         if "Qualifying" in nome or "Shootout" in nome:
             linha.update(
                 {
@@ -148,6 +152,8 @@ def renderizar_tempos(gp):
                 }
             )
         linhas.append(linha)
+    if any(row.get('status')=='DSQ' for row in sessao.get('tempos',[])):
+        st.caption('DSQ indica desclassificação. Sem posição numérica ou tempos válidos; o zero da classificação anulada não significa ausência de voltas na pista.')
     _tabela(
         linhas,
         _chave(gp, "csv_tempos"),

@@ -36,7 +36,7 @@ def copiar_artefatos(raiz):
                 shutil.copy2(arquivo, destino / arquivo.name)
     destino_asset = raiz / 'frontend_assets'
     destino_asset.mkdir(parents=True, exist_ok=True)
-    for nome in ('race_weekend.json', 'contexto_editorial.json', 'paineis_editoriais.json'):
+    for nome in ('race_weekend.json', 'contexto_editorial.json', 'paineis_editoriais.json', 'complemento_idade_pneus_v1.json'):
         shutil.copy2(RAIZ / 'frontend_assets' / nome, destino_asset / nome)
     shutil.copytree(RAIZ / 'dashboard_assets' / 'circuit', raiz / 'dashboard_assets' / 'circuit')
     return raiz

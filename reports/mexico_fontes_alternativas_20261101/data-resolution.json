@@ -1,0 +1,104 @@
+{
+  "identity": {
+    "temporada": 2026,
+    "rodada": 19,
+    "circuito_id": "rodriguez"
+  },
+  "sessions_received": 4,
+  "sessions": 5,
+  "fp3": {
+    "results": 22,
+    "pit_records": 88,
+    "missing_compound_laps": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "qualifying": {
+    "results": 22,
+    "pit_records": 89,
+    "disqualified": [
+      {
+        "numero": 30,
+        "piloto": "Liam LAWSON",
+        "status": "DSQ",
+        "posicao": null,
+        "q1": null,
+        "q2": null,
+        "q3": null,
+        "fonte_validacao": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_qualifying_classification.pdf"
+      }
+    ]
+  },
+  "track": {
+    "n_medicoes_validas": 100,
+    "cobertura_bins_60s": 0.9802934502325865,
+    "maior_intervalo_sem_medicao_s": 120.041,
+    "elegivel": true,
+    "min": 34.3,
+    "max": 46.8,
+    "media_amostras": 40.72,
+    "qualidade": {
+      "codigo": "zero_isolado_excluido",
+      "registros": [
+        {
+          "indice_fonte": 171,
+          "data": "2026-11-01T22:01:42.606000+00:00",
+          "valor": 0,
+          "anterior": 37.4,
+          "posterior": 37.5
+        }
+      ],
+      "n_excluidos": 1,
+      "diagnostico_bruto": {
+        "n_medicoes_validas": 101,
+        "cobertura_bins_60s": 0.9901467251162933,
+        "maior_intervalo_sem_medicao_s": 120.041,
+        "elegivel": false,
+        "min": 0.0,
+        "max": 46.8,
+        "media_amostras": 40.31683168316832,
+        "qualidade": {
+          "codigo": "zero_isolado_em_conferencia",
+          "registros": [
+            {
+              "indice_fonte": 171,
+              "data": "2026-11-01T22:01:42.606000+00:00",
+              "valor": 0,
+              "anterior": 37.4,
+              "posterior": 37.5
+            }
+          ],
+          "uso_media": "Diagnóstico bruto; não publicar como temperatura representativa."
+        }
+      },
+      "fontes": [
+        {
+          "provider": "fia",
+          "endpoint": "race_weather",
+          "url": "https://www.fia.com/sites/default/files/2026_19_mex_f1_r0_timing_raceweatherreport_v01.pdf",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T00:39:52.823993Z",
+          "sha256": "86a3df8a22e818900812a911f412d3dd2d0ee2a65cfd087bdc16fc43ad861346"
+        }
+      ],
+      "metodo": "Excluir apenas a célula adjudicada; sem interpolar. Cobertura e intervalo máximo recalculados."
+    }
+  },
+  "acquisition": {
+    "destination": "data/operacao_2026/fontes_alternativas/mexico-pendencias-20261102T003912Z",
+    "sources": 14
+  },
+  "scientific_inputs_changed": false,
+  "recorded_probabilities_changed": false,
+  "unresolved": [
+    "Lawson FP3 compound, laps 1–8",
+    "Actual track-temperature value for the excluded minute; no interpolation"
+  ]
+}

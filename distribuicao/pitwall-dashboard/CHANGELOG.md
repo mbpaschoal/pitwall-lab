@@ -4,6 +4,18 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.8.3 — 2026-11-01
+
+- Conferências FIA/F1 recuperam os 22 tempos do TL3 e o cadastro de Lawson sem empréstimo de outro GP. Removidos da projeção um registro anterior ao TL3 e 84 paradas anteriores à classificação; os índices e bytes originais permanecem auditados. São 88 paradas do TL3 e 89 da classificação no recorte validado.
+- A decisão FIA 57 e a classificação final 59 confirmam Lawson como DSQ. A interface deixa posição e tempos anulados sem valor; o zero da tabela final não é interpretado como ausência de voltas físicas. A alteração é descritiva e não refaz a previsão.
+- O relatório meteorológico FIA também registra o zero isolado. Uma exclusão documental específica permite recalcular a média do asfalto nas 100 leituras válidas: 40,7 °C, cobertura de 98,0%, sem interpolar o minuto ausente. Outros sensores e intervalos ativos permanecem iguais. Leituras não adjudicadas continuam retidas.
+- Permanece ausente o composto das voltas 1–8 de Lawson no TL3. O trecho não foi inferido do stint seguinte. O arquivo oficial de cronometragem respondeu 401 e as consultas de voltas do Formula1Dashboard retornaram vazias; isso não demonstra inexistência em qualquer fonte. A revisão alcança caches completos e futuras coletas automaticamente, com testes contra troca de sessão, identidade, regra de cobertura e regressão de DSQ.
+- Complemento versionado revisa somente a idade inicial de 262 stints observados do acervo, em 55 sessões/47 GPs. São 210 valores de zero para positivo, 36 de positivo para zero e 16 entre valores positivos; os demais campos permanecem iguais.
+- O leitor aplica a revisão offline sobre uma cópia da projeção original, conferindo hashes, sessão, piloto, composto, limites e idade anterior. Complemento obrigatório ausente, corrompido ou incompatível interrompe a leitura; não reapresenta silenciosamente as idades antigas conhecidas.
+- Snapshots e projeção-base preservam seus bytes. Modelo v1, 15 entradas e previsões registradas não mudam. Casos com revisão estrutural ou associação ambígua continuam fora deste complemento.
+- Validação cobre valores em tabela e CSV, PT/EN, desktop/celular, contraprovas de integridade e pacote portátil isolado. Relatório e recibos em `reports/complemento_idade_pneus_20261101/`; esta entrega local não comprova nova publicação pública.
+- Aprendizado: uma revisão do fornecedor pede complemento rastreável e verificação da identidade física do stint; zero publicado não comprova pneu novo.
+
 ## 0.8.1 — 2026-11-01
 
 - Acertos do Lab mostra as contagens do modelo e da classificação em texto por GP; as bolinhas ficam como apoio visual decorativo. Etapas sem avaliação continuam sem nota, e empates permanecem explícitos.

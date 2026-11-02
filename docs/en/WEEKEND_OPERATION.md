@@ -77,3 +77,9 @@ The race returned 205 weather observations and 1360 lap records. The feed also c
 Three of five sessions are complete. FP3 remains partial because profile 30 and pit identity 236 are missing; qualifying retains results/laps/tyres while withholding affected pit data. Observed OpenF1 results and round-19 standings are posterior context. Mexico's recorded prediction and probabilities remain unchanged; admission to model evaluation is a separate step.
 
 Calendar review also checked Formula 1's [official Bahrain-in-Malaysia announcement for Sepang](https://www.formula1.com/en/latest/article/formula-1-and-fia-confirm-that-malaysia-will-join-the-2026-calendar-as-host-venue-for-the-bahrain-grand-prix.6lL7vjFEM2VVynRHvg1TCf). Event name, host country and circuit are distinct fields; presentation does not change canonical identity.
+
+## Alternative sources — release 0.8.3
+
+Documentary review recovers all 22 FP3 times and identifies Lawson by number, name and team in this event's official entry list. Temporal scope excludes one pre-FP3 pit record and 84 pre-qualifying records; originals remain preserved. The final classification and stewards' decision establish Lawson as DSQ, without a numeric position or valid times.
+
+The track mean now uses 100 valid readings: 40.7 °C, 98.0% coverage, without interpolation. The FIA report also records the anomalous zero; it does not reveal that minute's real temperature. Lawson's initial FP3 compound (laps 1–8) remains unavailable and is not inferred from later stints. Reviews reach both cache and automatic collection. [Sources, decisions and remaining gaps](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/mexico_fontes_alternativas_20261101/README.md).

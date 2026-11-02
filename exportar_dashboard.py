@@ -177,6 +177,7 @@ RUNTIME_WORKTREE = (
     'pitwall/data/dashboard.py',
     'pitwall/data/race_weekend.py',
     'pitwall/data/archive.py',
+    'pitwall/data/tyre_age.py',
     'pitwall/dashboard/archive_views.py',
     'pitwall/dashboard/pilot_views.py',
     'docs/galeria-cartas.html',
@@ -211,6 +212,7 @@ RUNTIME_WORKTREE = (
     'app.py', 'documentacao_local.py', 'dashboard_dados.py', 'race_weekend_dados.py',
     'acervo_dashboard_dados.py', 'acervo_dashboard_ui.py', 'historico_circuito.py',
     'frontend_assets/acervo_dashboard.json',
+    'frontend_assets/complemento_idade_pneus_v1.json',
     'pitwall_ui.py', 'pitwall_ui_dados.py', 'frontend_assets/pitwall.css',
     'frontend_assets/paineis_editoriais.json',
     'frontend_assets/race_weekend.json', 'dashboard_assets/fonts/abrilfatface.ttf',
@@ -231,6 +233,7 @@ TEMPLATES = (
     'publicacao/templates/.gitignore',
     'publicacao/templates/test_distribuicao.py',
     'publicacao/templates/test_acervo_publico.py',
+    'publicacao/templates/test_complemento_idade_publico.py',
 )
 
 
@@ -498,6 +501,7 @@ def _montar_arquivos(raiz, conteudos, commit):
         ('publicacao/templates/GUIA_HOSPEDAGEM.md', 'GUIA_HOSPEDAGEM.md'),
         ('publicacao/templates/test_distribuicao.py', 'tests/test_distribuicao.py'),
         ('publicacao/templates/test_acervo_publico.py', 'tests/test_acervo_publico.py'),
+        ('publicacao/templates/test_complemento_idade_publico.py', 'tests/test_complemento_idade_publico.py'),
         ('publicacao/templates/requirements.txt', 'requirements.txt'),
         ('publicacao/templates/.python-version', '.python-version'),
         ('publicacao/templates/.gitignore', '.gitignore'),

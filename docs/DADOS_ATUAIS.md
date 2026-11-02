@@ -4,9 +4,23 @@ Português · [English](en/CURRENT_DATA.md)
 
 O acervo é descritivo e separado das entradas v1: 66 GPs/330 sessões de 2024–2026 até Austin. A aquisição complementar de 29/10 foi serial e cacheada. Os nove artefatos científicos e as emissões anteriores foram preservados.
 
+## Fontes alternativas do México — 0.8.3
+
+A revisão documental recupera os 22 tempos do TL3 e identifica Lawson por número, nome e equipe na lista oficial deste evento. O recorte temporal exclui um registro de paradas anterior ao TL3 e 84 anteriores à classificação; os originais não são apagados. A classificação final e a decisão dos comissários mostram Lawson como DSQ, sem posição numérica nem tempos válidos.
+
+A média do asfalto agora usa 100 leituras válidas: 40,7 °C, 98,0% de cobertura, sem interpolação. O relatório FIA também registra o zero anômalo; ele não revela a temperatura real daquele minuto. Permanece ausente o composto do stint inicial de Lawson (voltas 1–8 do TL3), não inferido dos stints posteriores. A revisão aplica-se também ao cache e à automação. [Fontes, decisões e pendências](../reports/mexico_fontes_alternativas_20261101/README.md).
+
 ## Operação do México — 0.8.1
 
 O acompanhamento separado do fim de semana agora tem resultado observado de 22 pilotos, 1360 registros de voltas, pneus, paradas e campeonatos completos da rodada 19 (24 pilotos e 11 equipes). O clima considera os intervalos efetivos da corrida: média do ar de 24,2 °C; a média do asfalto fica retida por uma leitura isolada de 0 °C entre 37,4 e 37,5 °C. TL3 e algumas paradas da classificação permanecem parcialmente retidos por cadastros ausentes na fonte. Esses dados operacionais não ampliam silenciosamente o acervo de condições de Pilotos nem alteram o modelo ou a avaliação científica. [Auditoria e pendências](../reports/auditoria_calendario_mexico_20261101/README.md) · [Operação automática](OPERACAO_FIM_SEMANA.md).
+
+## Revisão da idade dos pneus — 0.8.2
+
+O [complemento v1](../frontend_assets/complemento_idade_pneus_v1.json) revisa somente a idade inicial de 262 stints do acervo, em 55 sessões e 47 GPs: 210 valores antes zero agora são positivos, 36 passaram a zero e 16 mudaram entre valores positivos. A tabela e o CSV de detalhes mostram as idades revisadas. O gráfico conserva composto e limites.
+
+A projeção-base e os snapshots originais permanecem intactos. O leitor aplica o complemento offline, com hashes e correspondência única por sessão, piloto, composto, limites e valor antigo. Se faltar a revisão obrigatória ou houver divergência, a leitura falha explicitamente. O JSON conserva as identidades nativas e as URLs, hashes e UTC das três respostas históricas usadas na auditoria. São revisões descritivas posteriores, não informações retroativamente disponíveis no corte da previsão.
+
+Os 194 casos com revisão estrutural e 58 sem associação única ficaram fora desta entrega. As 388 idades da projeção operacional do México já concordavam com a consulta e não foram alteradas. O [PR OpenF1 #478](https://github.com/br-g/openf1/pull/478) explica a atualização de `StartLaps`; nem toda divergência da fonte foi atribuída automaticamente a ele. Modelo v1 e probabilidades registradas permanecem preservados.
 
 ## Controle de qualidade de Pilotos — 0.2.0
 

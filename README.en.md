@@ -11,7 +11,7 @@ Who wins more often in the rain? How do two drivers compare at the same races? W
 ![Drivers: historical comparisons by condition](docs/images/pitwall-pilotos-en.png)
 
 
-Mexico 2026: observed results, laps, tyres, stops and round-19 standings are available; race-air weather is consolidated and the track-temperature mean is under review. Automatic collection runs every 30 minutes, respecting free-tier availability. [Data and limits](docs/en/CURRENT_DATA.md) · [Operation](docs/en/WEEKEND_OPERATION.md).
+Mexico 2026: observed results, laps, tyres, stops and round-19 standings are available; FP3 times are recovered, the qualifying DSQ is documented and track weather is consolidated with an audited anomalous-reading exclusion. Automatic collection runs every 30 minutes, respecting free-tier availability. [Data and limits](docs/en/CURRENT_DATA.md) · [Operation](docs/en/WEEKEND_OPERATION.md).
 
 
 Collection is now scheduled through GitHub Actions, independent of the personal computer: new sessions are validated, versioned and published automatically. [Track runs](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml).

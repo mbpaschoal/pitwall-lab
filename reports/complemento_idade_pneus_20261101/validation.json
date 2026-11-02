@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "product_version": "0.8.2",
+  "corrected_stints": 262,
+  "gps_other_fields_changed": 0,
+  "protected_originals_checked": 1682,
+  "protected_changed": [],
+  "root_focused_tests": 38,
+  "export_focused_tests": 6,
+  "portable_tests": 135,
+  "portable_modules": 15,
+  "final_browser_journeys": 12,
+  "csv_pairs_identical": 6,
+  "baseline_cientifico_commit": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
+  "apresentacao_build_sha256": "c8b2b32085f42be2fa419bd5f64db469d5dae207820096458f19a91b2cbfcf7f",
+  "package_files": 464,
+  "relative_links_checked": 43,
+  "link_errors": [],
+  "previous_package_preserved": true,
+  "public_deployment": false,
+  "runtime": "macOS; CPython 3.9.6; Streamlit 1.50.0",
+  "evidence": [
+    "validation-tests.log",
+    "independent-review.json",
+    "ui/root-final/root-final-browser.json",
+    "ui/package/package-browser.json",
+    "ui/csv-root-package.json",
+    "package/portable-validation.json",
+    "package/promotion.json"
+  ]
+}
