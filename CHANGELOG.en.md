@@ -4,6 +4,13 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.8.5 — 2026-11-01
+
+- Fixed weekend acceptance to select FP3 in English and TL3 in Portuguese. The canonical session identifier and checks of all 22 drivers, Lawson timings, disqualification and CSV content remain unchanged.
+- Version 0.8.4 reached main and the dashboard, but its automated release was blocked by the test's old selector. Its commit and tag are preserved. This correction completes delivery of the 22 UI/UX improvements through bilingual publication checks.
+- Interface behaviour, descriptive sources, frozen v1 and recorded probabilities remain as implemented in 0.8.4. Validation covers the corrected acceptance, isolated-package tests and the public served build in PT/EN, desktop and emulated mobile; receipts live in `reports/ui_ux_pro_max_implementacao_20261101/publicacao/`.
+- Learning: UI tests must locate the selected language's display label while preserving scientific IDs and independent content checks.
+
 ## 0.8.4 — 2026-11-01
 
 - Implemented all 22 proposals from the six-screen review, preserving composition C, palette, Abril Fatface/Lato, documented photos and approved cards. A compact UTC schedule, mobile driver-team labels, one GP ribbon and localised session/date labels improve PT/EN parity.

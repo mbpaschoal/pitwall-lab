@@ -58,7 +58,8 @@ fs.mkdirSync(output,{recursive:true});
     await surface.getByRole('heading',{name:lang==='pt'?'Tempos de sessão':'Session times',exact:true}).waitFor({timeout:60000});
     const select=surface.locator('.st-key-acervo_2026_19_sessao_tempos').getByRole('combobox');
     async function downloadSession(option,suffix){
-     await select.click();await surface.getByRole('option',{name:option,exact:true}).click();
+     const label=option==='TL3'&&lang==='en'?'FP3':option;
+     await select.click();await surface.getByRole('option',{name:label,exact:true}).click();
      await surface.getByText(option==='TL3'?(lang==='pt'?'Melhor volta publicada de cada piloto nesta sessão de treino.':"Each driver's published fastest lap in this practice session."):/^DSQ (indica|means)/).waitFor({timeout:60000});
      await surface.waitForFunction(()=>document.querySelector('.stApp')?.getAttribute('data-test-script-state')==='notRunning',null,{timeout:60000});
      const button=surface.locator('.st-key-acervo_2026_19_csv_tempos').getByRole('button',{includeHidden:true});

@@ -4,6 +4,13 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.8.5 — 2026-11-01
+
+- Corrigido o aceite do fim de semana para selecionar FP3 na interface em inglês e TL3 em português. O identificador canônico da sessão e as verificações dos 22 pilotos, tempos de Lawson, DSQ e CSV permanecem iguais.
+- A 0.8.4 chegou ao main e ao dashboard, mas a release automática foi bloqueada pelo seletor antigo do teste. Seu commit e sua tag permanecem preservados. Esta correção conclui a entrega das 22 melhorias de UI/UX com o fluxo de publicação validado nos dois idiomas.
+- A interface, as fontes descritivas, o modelo v1 e as probabilidades mantêm o comportamento da 0.8.4. Validação inclui o aceite corrigido, testes do pacote e confirmação do build público em PT/EN, computador e celular emulado; recibos em `reports/ui_ux_pro_max_implementacao_20261101/publicacao/`.
+- Aprendizado: testes de interface precisam localizar o rótulo do idioma selecionado, mantendo os IDs científicos e as contraprovas de conteúdo.
+
 ## 0.8.4 — 2026-11-01
 
 - Implementadas as 22 propostas da revisão das seis telas, preservando composição C, paleta, Abril Fatface/Lato, fotografias e cartas aprovadas. Programação compacta com UTC explícito, equipes acessíveis no celular, faixa única de GPs e localização de sessões, datas e rótulos em PT/EN.
