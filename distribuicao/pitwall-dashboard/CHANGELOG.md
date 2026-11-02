@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.8.14 — 2026-11-02
+
+Atualização automática de dados de Mexico City Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 4/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.8.13 — 2026-11-02
 
 Corrige a publicação automática quando outro commit chega ao `main` durante a coleta/validação. A execução detecta o avanço antes de criar commit/tag e também após uma rejeição do push atômico. Em vez de mesclar pacotes gerados antigos, agenda uma execução nova sobre o `main` atual, restaura as capturas e refaz versão, pacote e testes.

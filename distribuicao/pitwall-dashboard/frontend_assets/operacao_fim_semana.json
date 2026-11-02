@@ -2,7 +2,7 @@
   "temporada": 2026,
   "rodada": 19,
   "circuito_id": "rodriguez",
-  "atualizado_em_utc": "2026-11-02T04:09:52.726508+00:00",
+  "atualizado_em_utc": "2026-11-02T05:28:10.851717Z",
   "previsao_meteorologica": {
     "natureza": "previsao_arquivada",
     "disponivel": true,
@@ -406,39 +406,39 @@
       },
       {
         "hora_utc": "2026-11-01T18:00Z",
-        "temperature_2m": 23.8,
+        "temperature_2m": 22.6,
         "precipitation": 0.0,
-        "wind_speed_10m": 0.83
+        "wind_speed_10m": 0.79
       },
       {
         "hora_utc": "2026-11-01T19:00Z",
-        "temperature_2m": 25.4,
+        "temperature_2m": 24.0,
         "precipitation": 0.0,
-        "wind_speed_10m": 0.83
+        "wind_speed_10m": 1.61
       },
       {
         "hora_utc": "2026-11-01T20:00Z",
-        "temperature_2m": 26.7,
+        "temperature_2m": 24.4,
         "precipitation": 0.0,
-        "wind_speed_10m": 1.87
+        "wind_speed_10m": 2.69
       },
       {
         "hora_utc": "2026-11-01T21:00Z",
-        "temperature_2m": 26.2,
-        "precipitation": 0.0,
-        "wind_speed_10m": 2.9
+        "temperature_2m": 24.3,
+        "precipitation": 0.1,
+        "wind_speed_10m": 2.82
       },
       {
         "hora_utc": "2026-11-01T22:00Z",
-        "temperature_2m": 26.0,
+        "temperature_2m": 25.1,
         "precipitation": 0.0,
-        "wind_speed_10m": 3.2
+        "wind_speed_10m": 3.16
       },
       {
         "hora_utc": "2026-11-01T23:00Z",
-        "temperature_2m": 25.2,
+        "temperature_2m": 23.8,
         "precipitation": 0.0,
-        "wind_speed_10m": 3.3
+        "wind_speed_10m": 3.88
       }
     ]
   },
@@ -739,7 +739,7 @@
       "rodada_referencia": 19,
       "escopo": "Campeonato oficial da rodada",
       "fonte": "Jolpica-F1",
-      "obtido_em_utc": "2026-11-01T23:45:59.447322Z",
+      "obtido_em_utc": "2026-11-02T00:26:07.289254Z",
       "url": "https://api.jolpi.ca/ergast/f1/2026/19/driverstandings/?limit=100&offset=0"
     },
     "constructor_standings": {
@@ -826,7 +826,7 @@
       "rodada_referencia": 19,
       "escopo": "Campeonato oficial da rodada",
       "fonte": "Jolpica-F1",
-      "obtido_em_utc": "2026-11-01T23:46:07.458862Z",
+      "obtido_em_utc": "2026-11-02T00:26:15.171621Z",
       "url": "https://api.jolpi.ca/ergast/f1/2026/19/constructorstandings/?limit=100&offset=0"
     }
   },
@@ -851,7 +851,6 @@
       "tempos": [
         {
           "numero": 16,
-          "piloto_id": "leclerc",
           "piloto": "Charles LECLERC",
           "equipe": "Ferrari",
           "posicao": 1,
@@ -861,7 +860,6 @@
         },
         {
           "numero": 12,
-          "piloto_id": "antonelli",
           "piloto": "Kimi ANTONELLI",
           "equipe": "Mercedes",
           "posicao": 2,
@@ -871,7 +869,6 @@
         },
         {
           "numero": 72,
-          "piloto_id": null,
           "piloto": "Frederik VESTI",
           "equipe": "Mercedes",
           "posicao": 3,
@@ -881,7 +878,6 @@
         },
         {
           "numero": 44,
-          "piloto_id": "hamilton",
           "piloto": "Lewis HAMILTON",
           "equipe": "Ferrari",
           "posicao": 4,
@@ -891,7 +887,6 @@
         },
         {
           "numero": 36,
-          "piloto_id": null,
           "piloto": "Ayumu IWASA",
           "equipe": "Red Bull Racing",
           "posicao": 5,
@@ -901,7 +896,6 @@
         },
         {
           "numero": 10,
-          "piloto_id": "gasly",
           "piloto": "Pierre GASLY",
           "equipe": "Alpine",
           "posicao": 6,
@@ -911,7 +905,6 @@
         },
         {
           "numero": 14,
-          "piloto_id": "alonso",
           "piloto": "Fernando ALONSO",
           "equipe": "Aston Martin",
           "posicao": 7,
@@ -921,7 +914,6 @@
         },
         {
           "numero": 81,
-          "piloto_id": "piastri",
           "piloto": "Oscar PIASTRI",
           "equipe": "McLaren",
           "posicao": 8,
@@ -931,7 +923,6 @@
         },
         {
           "numero": 87,
-          "piloto_id": "bearman",
           "piloto": "Oliver BEARMAN",
           "equipe": "Haas F1 Team",
           "posicao": 9,
@@ -941,7 +932,6 @@
         },
         {
           "numero": 41,
-          "piloto_id": "arvid_lindblad",
           "piloto": "Arvid LINDBLAD",
           "equipe": "Racing Bulls",
           "posicao": 10,
@@ -951,7 +941,6 @@
         },
         {
           "numero": 6,
-          "piloto_id": "hadjar",
           "piloto": "Isack HADJAR",
           "equipe": "Red Bull Racing",
           "posicao": 11,
@@ -961,7 +950,6 @@
         },
         {
           "numero": 91,
-          "piloto_id": null,
           "piloto": "Nikola TSOLOV",
           "equipe": "Racing Bulls",
           "posicao": 12,
@@ -971,7 +959,6 @@
         },
         {
           "numero": 27,
-          "piloto_id": "hulkenberg",
           "piloto": "Nico HULKENBERG",
           "equipe": "Audi",
           "posicao": 13,
@@ -981,7 +968,6 @@
         },
         {
           "numero": 62,
-          "piloto_id": null,
           "piloto": "Gabriele MINI",
           "equipe": "Alpine",
           "posicao": 14,
@@ -991,7 +977,6 @@
         },
         {
           "numero": 50,
-          "piloto_id": null,
           "piloto": "Ryo HIRAKAWA",
           "equipe": "Haas F1 Team",
           "posicao": 15,
@@ -1001,7 +986,6 @@
         },
         {
           "numero": 55,
-          "piloto_id": "sainz",
           "piloto": "Carlos SAINZ",
           "equipe": "Williams",
           "posicao": 16,
@@ -1011,7 +995,6 @@
         },
         {
           "numero": 67,
-          "piloto_id": null,
           "piloto": "Leonardo FORNAROLI",
           "equipe": "McLaren",
           "posicao": 17,
@@ -1021,7 +1004,6 @@
         },
         {
           "numero": 11,
-          "piloto_id": "perez",
           "piloto": "Sergio PEREZ",
           "equipe": "Cadillac",
           "posicao": 18,
@@ -1031,7 +1013,6 @@
         },
         {
           "numero": 34,
-          "piloto_id": null,
           "piloto": "Jak CRAWFORD",
           "equipe": "Aston Martin",
           "posicao": 19,
@@ -1041,7 +1022,6 @@
         },
         {
           "numero": 46,
-          "piloto_id": null,
           "piloto": "Luke BROWNING",
           "equipe": "Williams",
           "posicao": 20,
@@ -1051,7 +1031,6 @@
         },
         {
           "numero": 98,
-          "piloto_id": null,
           "piloto": "Freddie SLATER",
           "equipe": "Audi",
           "posicao": 21,
@@ -1061,7 +1040,6 @@
         },
         {
           "numero": 25,
-          "piloto_id": null,
           "piloto": "Colton HERTA",
           "equipe": "Cadillac",
           "posicao": 22,
@@ -5182,7 +5160,6 @@
       "tempos": [
         {
           "numero": 16,
-          "piloto_id": "leclerc",
           "piloto": "Charles LECLERC",
           "equipe": "Ferrari",
           "posicao": 1,
@@ -5192,7 +5169,6 @@
         },
         {
           "numero": 1,
-          "piloto_id": "norris",
           "piloto": "Lando NORRIS",
           "equipe": "McLaren",
           "posicao": 2,
@@ -5202,7 +5178,6 @@
         },
         {
           "numero": 63,
-          "piloto_id": "russell",
           "piloto": "George RUSSELL",
           "equipe": "Mercedes",
           "posicao": 3,
@@ -5212,7 +5187,6 @@
         },
         {
           "numero": 12,
-          "piloto_id": "antonelli",
           "piloto": "Kimi ANTONELLI",
           "equipe": "Mercedes",
           "posicao": 4,
@@ -5222,7 +5196,6 @@
         },
         {
           "numero": 3,
-          "piloto_id": "max_verstappen",
           "piloto": "Max VERSTAPPEN",
           "equipe": "Red Bull Racing",
           "posicao": 5,
@@ -5232,7 +5205,6 @@
         },
         {
           "numero": 6,
-          "piloto_id": "hadjar",
           "piloto": "Isack HADJAR",
           "equipe": "Red Bull Racing",
           "posicao": 6,
@@ -5242,7 +5214,6 @@
         },
         {
           "numero": 41,
-          "piloto_id": "arvid_lindblad",
           "piloto": "Arvid LINDBLAD",
           "equipe": "Racing Bulls",
           "posicao": 7,
@@ -5252,7 +5223,6 @@
         },
         {
           "numero": 10,
-          "piloto_id": "gasly",
           "piloto": "Pierre GASLY",
           "equipe": "Alpine",
           "posicao": 8,
@@ -5262,7 +5232,6 @@
         },
         {
           "numero": 30,
-          "piloto_id": "lawson",
           "piloto": "Liam LAWSON",
           "equipe": "Racing Bulls",
           "posicao": 9,
@@ -5272,7 +5241,6 @@
         },
         {
           "numero": 81,
-          "piloto_id": "piastri",
           "piloto": "Oscar PIASTRI",
           "equipe": "McLaren",
           "posicao": 10,
@@ -5282,7 +5250,6 @@
         },
         {
           "numero": 44,
-          "piloto_id": "hamilton",
           "piloto": "Lewis HAMILTON",
           "equipe": "Ferrari",
           "posicao": 11,
@@ -5292,7 +5259,6 @@
         },
         {
           "numero": 14,
-          "piloto_id": "alonso",
           "piloto": "Fernando ALONSO",
           "equipe": "Aston Martin",
           "posicao": 12,
@@ -5302,7 +5268,6 @@
         },
         {
           "numero": 31,
-          "piloto_id": "ocon",
           "piloto": "Esteban OCON",
           "equipe": "Haas F1 Team",
           "posicao": 13,
@@ -5312,7 +5277,6 @@
         },
         {
           "numero": 87,
-          "piloto_id": "bearman",
           "piloto": "Oliver BEARMAN",
           "equipe": "Haas F1 Team",
           "posicao": 14,
@@ -5322,7 +5286,6 @@
         },
         {
           "numero": 27,
-          "piloto_id": "hulkenberg",
           "piloto": "Nico HULKENBERG",
           "equipe": "Audi",
           "posicao": 15,
@@ -5332,7 +5295,6 @@
         },
         {
           "numero": 43,
-          "piloto_id": "colapinto",
           "piloto": "Franco COLAPINTO",
           "equipe": "Alpine",
           "posicao": 16,
@@ -5342,7 +5304,6 @@
         },
         {
           "numero": 55,
-          "piloto_id": "sainz",
           "piloto": "Carlos SAINZ",
           "equipe": "Williams",
           "posicao": 17,
@@ -5352,7 +5313,6 @@
         },
         {
           "numero": 11,
-          "piloto_id": "perez",
           "piloto": "Sergio PEREZ",
           "equipe": "Cadillac",
           "posicao": 18,
@@ -5362,7 +5322,6 @@
         },
         {
           "numero": 23,
-          "piloto_id": "albon",
           "piloto": "Alexander ALBON",
           "equipe": "Williams",
           "posicao": 19,
@@ -5372,7 +5331,6 @@
         },
         {
           "numero": 18,
-          "piloto_id": "stroll",
           "piloto": "Lance STROLL",
           "equipe": "Aston Martin",
           "posicao": 20,
@@ -5382,7 +5340,6 @@
         },
         {
           "numero": 77,
-          "piloto_id": "bottas",
           "piloto": "Valtteri BOTTAS",
           "equipe": "Cadillac",
           "posicao": 21,
@@ -5392,7 +5349,6 @@
         },
         {
           "numero": 5,
-          "piloto_id": "bortoleto",
           "piloto": "Gabriel BORTOLETO",
           "equipe": "Audi",
           "posicao": 22,
@@ -13681,7 +13637,7 @@
           "endpoint": "sessions",
           "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:43:03.372906Z",
+          "obtido_em_utc": "2026-11-02T05:27:07.174306Z",
           "sha256": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313"
         },
         {
@@ -13689,7 +13645,7 @@
           "endpoint": "race_control",
           "url": "https://api.openf1.org/v1/race_control?session_key=11399",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:43:11.417255Z",
+          "obtido_em_utc": "2026-11-02T05:27:15.174292Z",
           "sha256": "2e666f3754fd8b800f1d1aa33c00c9233ef0cea5a3be25b8632255622dfca76d"
         },
         {
@@ -13697,7 +13653,7 @@
           "endpoint": "drivers",
           "url": "https://api.openf1.org/v1/drivers?session_key=11399",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:43:19.249218Z",
+          "obtido_em_utc": "2026-11-02T05:27:23.495139Z",
           "sha256": "82bb185115e4b44d1e088d44e6347df82d00c75dc986d9e5d7452930592c020f"
         },
         {
@@ -13705,7 +13661,7 @@
           "endpoint": "session_result",
           "url": "https://api.openf1.org/v1/session_result?session_key=11399",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:43:27.303239Z",
+          "obtido_em_utc": "2026-11-02T05:27:31.267390Z",
           "sha256": "fc455d1f11098779565a5a9c3a29b5d6b1731f21da5da9f11444c5959d2281c7"
         },
         {
@@ -13713,7 +13669,7 @@
           "endpoint": "weather",
           "url": "https://api.openf1.org/v1/weather?session_key=11399",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:43:35.532941Z",
+          "obtido_em_utc": "2026-11-02T05:27:39.147000Z",
           "sha256": "706c2cd4e9b6fb47e1b2b084ef3edeb148f92ec3656c1d3362ec20d0fa268d65"
         },
         {
@@ -13721,7 +13677,7 @@
           "endpoint": "laps",
           "url": "https://api.openf1.org/v1/laps?session_key=11399",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:43:44.042229Z",
+          "obtido_em_utc": "2026-11-02T05:27:47.617758Z",
           "sha256": "44b80b00f0ce0f535c0881d27f2d3d61f989cce6200b06e2f479dfa147209876"
         },
         {
@@ -13729,7 +13685,7 @@
           "endpoint": "stints",
           "url": "https://api.openf1.org/v1/stints?session_key=11399",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:43:51.369151Z",
+          "obtido_em_utc": "2026-11-02T05:27:55.085195Z",
           "sha256": "ce34552f596d8f1c371dbecd1cb6ca28c5ad25ea7359fb40a00f7f3c2dfe2df3"
         },
         {
@@ -13737,7 +13693,7 @@
           "endpoint": "pit",
           "url": "https://api.openf1.org/v1/pit?session_key=11399",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:43:59.504591Z",
+          "obtido_em_utc": "2026-11-02T05:28:03.464142Z",
           "sha256": "55f9e12bdb8d3fb5b92e029a0570a759fc2edfd913b94ba7be4046b78a358214"
         }
       ]
@@ -17593,7 +17549,7 @@
           "endpoint": "sessions",
           "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:43:03.372906Z",
+          "obtido_em_utc": "2026-11-02T01:19:01.354293Z",
           "sha256": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313"
         },
         {
@@ -17601,7 +17557,7 @@
           "endpoint": "race_control",
           "url": "https://api.openf1.org/v1/race_control?session_key=11400",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:44:07.519404Z",
+          "obtido_em_utc": "2026-11-02T01:20:05.468225Z",
           "sha256": "98327eb439baacdfe0afb5bf4c2cabcc5fced45073f34310fa6ef6cb2076fb3f"
         },
         {
@@ -17609,7 +17565,7 @@
           "endpoint": "drivers",
           "url": "https://api.openf1.org/v1/drivers?session_key=11400",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:44:15.373510Z",
+          "obtido_em_utc": "2026-11-02T01:20:13.261310Z",
           "sha256": "71102a78c03c367531aa72b4b2ec2a75d66283152f839b31d18f57dcd2f6421d"
         },
         {
@@ -17617,7 +17573,7 @@
           "endpoint": "session_result",
           "url": "https://api.openf1.org/v1/session_result?session_key=11400",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:44:23.308046Z",
+          "obtido_em_utc": "2026-11-02T01:20:21.295287Z",
           "sha256": "2554d62c1596185013a986558cde917b517275600948eceab8b2b0eae54980d6"
         },
         {
@@ -17625,7 +17581,7 @@
           "endpoint": "weather",
           "url": "https://api.openf1.org/v1/weather?session_key=11400",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:44:31.523156Z",
+          "obtido_em_utc": "2026-11-02T01:20:29.432796Z",
           "sha256": "96aa3fc9264a2549b99a45e2618851bf50551b34c254caffb16bfe30c7b6c308"
         },
         {
@@ -17633,7 +17589,7 @@
           "endpoint": "laps",
           "url": "https://api.openf1.org/v1/laps?session_key=11400",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:44:39.875209Z",
+          "obtido_em_utc": "2026-11-02T01:20:37.744070Z",
           "sha256": "6a02db80b21790046290fbbdc7dea2a74967a32c5a9a44cbb97934dbb3d0312c"
         },
         {
@@ -17641,7 +17597,7 @@
           "endpoint": "stints",
           "url": "https://api.openf1.org/v1/stints?session_key=11400",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:44:47.487291Z",
+          "obtido_em_utc": "2026-11-02T01:20:45.414480Z",
           "sha256": "24a844e115c2a2e1dc4460518cddd34b0c04cfcfef7a43364da382a11eb81053"
         },
         {
@@ -17649,7 +17605,7 @@
           "endpoint": "pit",
           "url": "https://api.openf1.org/v1/pit?session_key=11400",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:44:55.683265Z",
+          "obtido_em_utc": "2026-11-02T01:20:53.413989Z",
           "sha256": "ef03495e2f356fcfa843f3aab72b79c855e3f945439c4eac08362a29a005214d"
         }
       ]
@@ -25226,7 +25182,7 @@
           "endpoint": "sessions",
           "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:43:03.372906Z",
+          "obtido_em_utc": "2026-11-02T00:23:11.315399Z",
           "sha256": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313"
         },
         {
@@ -25234,7 +25190,7 @@
           "endpoint": "race_control",
           "url": "https://api.openf1.org/v1/race_control?session_key=11404",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:45:03.747125Z",
+          "obtido_em_utc": "2026-11-02T00:25:11.440462Z",
           "sha256": "2bf76136a810bbf59416de98fcd5087af11797de52abea2d4fc54167afdd1a98"
         },
         {
@@ -25242,7 +25198,7 @@
           "endpoint": "drivers",
           "url": "https://api.openf1.org/v1/drivers?session_key=11404",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:45:11.448835Z",
+          "obtido_em_utc": "2026-11-02T00:25:19.174982Z",
           "sha256": "d8a2c578fec57f01baae4bcef02fc11751c06eec79690364ad48330f28ea8a20"
         },
         {
@@ -25250,7 +25206,7 @@
           "endpoint": "session_result",
           "url": "https://api.openf1.org/v1/session_result?session_key=11404",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:45:19.385788Z",
+          "obtido_em_utc": "2026-11-02T00:25:27.165802Z",
           "sha256": "57b0dea60812fc7afe3e8a5d1d34f015f76f9d63f389ef55b9adcf7f48762a45"
         },
         {
@@ -25258,7 +25214,7 @@
           "endpoint": "weather",
           "url": "https://api.openf1.org/v1/weather?session_key=11404",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:45:27.776988Z",
+          "obtido_em_utc": "2026-11-02T00:25:35.416470Z",
           "sha256": "d223003c89efa1fc2512f35f69460088cfe49f58715e97e80cc3b84fc71a1bc3"
         },
         {
@@ -25266,7 +25222,7 @@
           "endpoint": "laps",
           "url": "https://api.openf1.org/v1/laps?session_key=11404",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:45:36.616030Z",
+          "obtido_em_utc": "2026-11-02T00:25:43.961592Z",
           "sha256": "e944a3c5bf7cc9ce9bce181eb7110d6083ee4886eb3e5b57327f9378e7a9a3aa"
         },
         {
@@ -25274,7 +25230,7 @@
           "endpoint": "stints",
           "url": "https://api.openf1.org/v1/stints?session_key=11404",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:45:43.602018Z",
+          "obtido_em_utc": "2026-11-02T00:25:51.374005Z",
           "sha256": "24443d278b7bf88057fe7b425c8df667164da5639be6ae522817d334de71378e"
         },
         {
@@ -25282,7 +25238,7 @@
           "endpoint": "pit",
           "url": "https://api.openf1.org/v1/pit?session_key=11404",
           "status": 200,
-          "obtido_em_utc": "2026-11-01T23:45:51.590417Z",
+          "obtido_em_utc": "2026-11-02T00:25:59.376880Z",
           "sha256": "e3dee3ff3089d36bfc3b5073f72b0a10987bb40cf1305eb173c45073607a6f23"
         }
       ]
