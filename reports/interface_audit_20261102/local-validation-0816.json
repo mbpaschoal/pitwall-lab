@@ -1,0 +1,38 @@
+{
+  "utc": "2026-11-02T07:20:30.600401+00:00",
+  "version": "0.8.16",
+  "build": "cf5f36655486530283b3dcc800aad0dbe40ab6a4331170df1150fdf5b008415e",
+  "portable_test_batches": [
+    "4",
+    "2",
+    "2",
+    "3",
+    "3",
+    "33",
+    "15",
+    "6",
+    "10",
+    "3",
+    "8",
+    "5",
+    "2",
+    "5",
+    "16",
+    "20",
+    "4"
+  ],
+  "source_ci_batches": [
+    "34",
+    "12",
+    "263"
+  ],
+  "final_targeted_tests": 57,
+  "final_agent_tests": 67,
+  "public_confirmation": "pending",
+  "notes": [
+    "The 0.8.15 tag is preserved.",
+    "Final changes use native query publication once per WebSocket session and atomic document return.",
+    "Both driver controls are covered by the enlarged-text guard.",
+    "CSS is byte-identical to the approved 0.8.16 visual candidate."
+  ]
+}

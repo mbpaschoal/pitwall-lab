@@ -1,5 +1,12 @@
 # Pitwall Lab evolution
 
+## 0.8.16 — 2026-11-02
+
+- Fixes the public URL after following calendar, chapter and panel links. Streamlit's native channel synchronizes the route, so reloads and copied URLs retain GP, screen and language.
+- Document return uses a native control to remove the document from the URL, without nesting another Streamlit wrapper or reopening the document on reload.
+- Extends enlarged-icon spacing to the Explore drivers button. Tests check both controls and wait for native widgets to hydrate before measuring the interface.
+- Public verification of 0.8.15 exposed the iframe issue, which was absent from unwrapped local execution. Regressions retain the public scenario and language, season and GP context. Scientific data and forecasts are unchanged; the 0.8.15 tag is preserved.
+
 ## 0.8.15 — 2026-11-02
 
 - Fixes the podium covering collection notices, portraits covering statistics and photo credits blocking links. Driver blocks and controls reserve space in normal flow; the scroll viewport ends above the fixed navigation, including after window-height changes.

@@ -1,6 +1,6 @@
 """Historical and forecast links retain GP context without changing identities."""
 from html.parser import HTMLParser
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, urlsplit, urljoin
 from unittest.mock import patch
 import unittest
 from streamlit.testing.v1 import AppTest
@@ -103,5 +103,30 @@ class LinkContextTests(unittest.TestCase):
                 self.assertEqual(link['gp'],[str(round_)])
                 self.assertEqual(link['anos'],[str(year)])
                 self.assertIn('referência da rodada 18',html)
+
+    def test_same_frame_shortcuts_preserve_hosted_app_path(self):
+        from pitwall.dashboard.components import link_interno
+        for lang in ('pt','en'):
+            set_language(lang)
+            for screen,chapter in [('Corridas','Clima'),('Previsões',None)]:
+                href=link_interno(2024,1,tela=screen,aba=chapter)
+                target=urlsplit(urljoin('https://pitwall-lab.streamlit.app/~/+/?documento=fontes-atuais',href))
+                self.assertEqual(target.path,'/~/+/')
+                self.assertEqual(parse_qs(target.query)['temporada'],['2024'])
+                self.assertEqual(parse_qs(target.query)['gp'],['1'])
+
+    def test_document_return_preserves_hosted_frame_without_nesting_wrapper(self):
+        for lang in ('pt','en'):
+            app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=45)
+            app.query_params.update(tela='Metodologia',documento='fontes-atuais',temporada='2024',gp='1',lang=lang)
+            app.run();self.assertFalse(app.exception)
+            app.button(key='fan-document-return').click().run()
+            self.assertFalse(app.exception)
+            self.assertNotIn('documento',app.query_params)
+            self.assertNotIn('download',app.query_params)
+            self.assertEqual(app.query_params['tela'],['Metodologia'])
+            self.assertEqual(app.query_params['temporada'],['2024']);self.assertEqual(app.query_params['gp'],['1'])
+            self.assertEqual(app.query_params['lang'],[lang])
+            self.assertTrue(any('fan-hero' in item.value for item in app.markdown))
 
 if __name__=='__main__':unittest.main()

@@ -1168,6 +1168,8 @@ def executar_app():
     from pitwall.i18n.controls import initialize, render as render_language
 
     initialize(st)
+    from pitwall.dashboard.journey import sync_host_query
+    sync_host_query(st)
     aplicar_estilo()
     st.markdown('<a class="pw-skip-link" href="#pw-main-content">{}</a>'.format(escape(translate('Pular para o conteúdo'))), unsafe_allow_html=True)
     st.markdown('<span id="pw-page-top" tabindex="-1" aria-label="{}"></span>'.format(escape(translate("Topo da página"), quote=True)), unsafe_allow_html=True)

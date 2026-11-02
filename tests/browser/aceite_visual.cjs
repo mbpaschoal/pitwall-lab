@@ -63,6 +63,14 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
      await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
     });
     await surface.waitForFunction(expected=>document.documentElement.lang===expected,lang,{timeout:15000});
+    // Server idle can precede Streamlit's lazy native-widget hydration.
+    // Geometry and hit tests require the real controls, not their skeletons.
+    await surface.waitForFunction(expected=>{
+     const labels=Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"]>label'));
+     const selects=document.querySelectorAll('.st-key-journey-context-row [data-baseweb="select"]');
+     return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===6&&labels.every(el=>el.getClientRects().length)&&selects.length===2;
+    },lang,{timeout:90000});
+    await surface.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});
     await page.waitForTimeout(700);
     requireCheck(await surface.locator('[data-testid="stException"]').count()===0,'Application exception');
     requireCheck(errors.length===0,errors.join('; '));

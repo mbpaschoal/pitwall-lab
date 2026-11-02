@@ -542,8 +542,8 @@ html[data-pw-reduced-motion="true"] .stMain{scroll-behavior:auto}
 .st-key-pilot-cover .fan-photo-credits[open]{width:auto}
 .st-key-pilot-cover:has(.fan-hero-dark) .fan-pilot-toolbar{color:var(--fan-ink)}
 .st-key-pilot-cover .st-key-pilot-comparison-toolbar [data-testid="stHorizontalBlock"]{grid-template-columns:minmax(0,1fr) max-content}
-.st-key-pilot-comparison-toolbar [data-testid="stIconMaterial"]{width:1em!important;min-width:1em!important;flex:0 0 1em}
-.st-key-pilot-comparison-toolbar :has(>[data-testid="stIconMaterial"]){width:max-content!important;min-width:max-content!important;flex:0 0 auto!important}
+:is(.st-key-pilot-comparison-toolbar,.st-key-pilot-view-navigation) [data-testid="stIconMaterial"]{width:1em!important;min-width:1em!important;flex:0 0 1em}
+:is(.st-key-pilot-comparison-toolbar,.st-key-pilot-view-navigation) :has(>[data-testid="stIconMaterial"]){width:max-content!important;min-width:max-content!important;flex:0 0 auto!important}
 @media(max-width:600px){
  .st-key-pilot-cover .st-key-pilot-comparison-toolbar [data-testid="stHorizontalBlock"]{grid-template-columns:minmax(0,1fr)}
  .st-key-pilot-cover .st-key-pilot-comparison-toolbar [data-testid="stColumn"]:last-child{justify-self:end;width:auto!important}

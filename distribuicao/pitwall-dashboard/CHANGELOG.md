@@ -1,5 +1,12 @@
 # Evolução do Pitwall Lab
 
+## 0.8.16 — 2026-11-02
+
+- Corrige a URL pública após navegar por links de calendário, capítulos e painéis. A rota é sincronizada pelo canal nativo do Streamlit: recarregar e copiar a URL conservam GP, tela e idioma.
+- O retorno dos documentos usa um controle nativo que remove o documento da URL, sem criar outra camada do Streamlit nem reabrir o documento ao recarregar.
+- Estende a reserva de espaço do ícone ao botão Explorar pilotos com texto ampliado. Os testes passam a verificar os dois controles e a aguardar a hidratação dos widgets antes de medir a interface.
+- A validação pública da 0.8.15 revelou o problema do iframe, ausente na execução local sem wrapper. Regressões preservam o cenário público e o contexto de idioma, temporada e GP. Dados científicos e previsões não são alterados; a tag 0.8.15 permanece preservada.
+
 ## 0.8.15 — 2026-11-02
 
 - Corrige o pódio sobre o aviso de coleta, retratos sobre estatísticas e créditos de foto sobre links. Blocos e controles de Pilotos reservam espaço no fluxo da página; a área rolável termina acima do menu fixo, inclusive ao mudar a altura da janela.

@@ -3,20 +3,31 @@ const pw=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto');
 const [base,out]=process.argv.slice(2);if(!base||!out)throw Error('BASE OUT required');fs.mkdirSync(out,{recursive:true});const cases=[],links=[];
 const engine=process.env.PLAYWRIGHT_BROWSER||process.env.PLAYWRIGHT_ENGINE||'chromium';
+const expectedVersion=process.env.PITWALL_EXPECTED_VERSION||'';
+const evidenceFile=path.join(out,'links-browser.json');
+if(process.env.PITWALL_RESUME==='1'&&fs.existsSync(evidenceFile)){
+ const previous=JSON.parse(fs.readFileSync(evidenceFile,'utf8'));
+ assert.equal(previous.base,base,'Resume base mismatch');
+ assert.equal(previous.engine,engine,'Resume engine mismatch');
+ assert.equal(previous.expectedVersion,expectedVersion,'Resume expected-version mismatch');
+ cases.push(...previous.cases.filter(row=>row.status==='passed'));
+ const approved=new Set(cases.map(row=>row.id));links.push(...previous.links.filter(row=>approved.has(row.id)));
+}
+function persist(payload){const tmp=evidenceFile+'.tmp';fs.writeFileSync(tmp,JSON.stringify({...payload,expectedVersion},null,2));fs.renameSync(tmp,evidenceFile);}
 async function app(page){if(!base.includes('streamlit.app'))return page;for(let i=0;i<120;i++){let f=page.frames().find(f=>f.url().includes('/~/+/'));if(f)return f;await page.waitForTimeout(500)}throw Error('App frame missing')}
-async function ready(page,doc=false,expected={}){const s=await app(page);await s.locator(doc?'h1':'.fan-hero').first().waitFor({timeout:60000});await s.waitForFunction(()=>document.querySelector('.stApp')?.dataset.testScriptState==='notRunning',null,{timeout:60000});await s.waitForFunction(({expected,version})=>{const q=new URL(location.href).searchParams;if(Object.entries(expected).some(([k,v])=>q.get(k)!==String(v)))return false;const kinds={Corridas:'race',Campeonato:'championship','Previsões':'forecast',Desempenho:'performance',Metodologia:'method'},kind=kinds[q.get('tela')];if(!q.get('documento')&&kind&&!document.querySelector('.fan-hero[data-hero-kind=\"'+kind+'\"]'))return false;if(q.get('lang')&&document.documentElement.lang!==q.get('lang'))return false;if(version&&!document.querySelector('.st-key-journey-header')?.innerText.includes('v'+version))return false;return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'}, {expected,version:process.env.PITWALL_EXPECTED_VERSION||''},{timeout:90000});await page.waitForTimeout(350);await s.locator('.stApp[data-test-script-state=notRunning]').waitFor({timeout:60000});assert.equal(await s.locator('[data-testid=stException]').count(),0);return s;}
+async function ready(page,doc=false,expected={}){const s=await app(page);await s.locator(doc?'h1':'.fan-hero').first().waitFor({timeout:60000});await s.waitForFunction(()=>document.querySelector('.stApp')?.dataset.testScriptState==='notRunning',null,{timeout:60000});await s.waitForFunction(({expected,version})=>{const q=new URL(location.href).searchParams;if(Object.entries(expected).some(([k,v])=>q.get(k)!==String(v)))return false;const kinds={Corridas:'race',Campeonato:'championship','Previsões':'forecast',Desempenho:'performance',Metodologia:'method'},kind=kinds[q.get('tela')];if(!q.get('documento')&&kind&&!document.querySelector('.fan-hero[data-hero-kind=\"'+kind+'\"]'))return false;if(q.get('lang')&&document.documentElement.lang!==q.get('lang'))return false;if(version&&!document.querySelector('.st-key-journey-header')?.innerText.includes('v'+version))return false;return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'}, {expected,version:process.env.PITWALL_EXPECTED_VERSION||''},{timeout:90000});await page.waitForTimeout(350);await s.locator('.stApp[data-test-script-state=notRunning]').waitFor({timeout:60000});if(base.includes('streamlit.app')){const keys=['tela','temporada','gp','lang','aba','documento','visao','piloto','rival','duelo_condicao','anos','metrica','minimo','condicao','faixas','cartas','origem_tela','origem_temporada','origem_gp'];const inner=new URL(s.url()).searchParams;const route=Object.fromEntries(keys.map(k=>[k,inner.get(k)]));await page.waitForFunction(route=>{const outer=new URL(location.href).searchParams;return Object.entries(route).every(([k,v])=>outer.get(k)===v)},route,{timeout:60000});}assert.equal(await s.locator('[data-testid=stException]').count(),0);return s;}
 async function download(page,button){const [d]=await Promise.all([page.waitForEvent('download'),button.click()]);assert(!await d.failure());const stream=await d.createReadStream(),parts=[];for await(const x of stream)parts.push(x);const bytes=Buffer.concat(parts);assert(bytes.length>0);return {name:d.suggestedFilename(),bytes,sha256:crypto.createHash('sha256').update(bytes).digest('hex')};}
-function record(row){cases.push(row);fs.writeFileSync(path.join(out,'links-browser.json'),JSON.stringify({engine,base,cases,links},null,2));console.log(row.id+' '+row.status);}
+function record(row){cases.push(row);persist({engine,base,cases,links});console.log(row.id+' '+row.status);}
 (async()=>{const launch={headless:true};if(engine==='chromium'&&process.env.PLAYWRIGHT_CHANNEL)launch.channel=process.env.PLAYWRIGHT_CHANNEL;const browser=await pw[engine].launch(launch);try{
-for(const width of [390,1440])for(const lang of ['pt','en']){
+async function audit(width,lang){
 const context=await browser.newContext({viewport:{width,height:800},isMobile:width===390,hasTouch:width===390,acceptDownloads:true}),p=await context.newPage();
 const queries=[];for(const tela of ['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'])queries.push({tela,temporada:2026,gp:19,lang});
 for(const documento of ['fontes-atuais','metodo-v1','relatorio-2024','avaliacao-2025','plano-avaliacao-2025','protocolo-temporal','dicionario-variaveis'])queries.push({tela:'Metodologia',documento,temporada:2026,gp:19,lang});
 for(const visao of ['perfil','duelo'])queries.push({tela:'Pilotos',visao,piloto:'max_verstappen',rival:'hamilton',anos:'2024,2025,2026',metrica:'win_rate',minimo:5,temporada:2024,gp:1,lang});
 for(const aba of ['Tempos','Estratégias','Clima','Histórico','Comparativo de equipes'])queries.push({tela:'Corridas',temporada:2026,gp:19,aba,lang});
 for(const [temporada,gp] of [[2024,1],[2026,17],[2026,18],[2026,20],[2025,21]])queries.push({tela:'Corridas',temporada,gp,lang});
-for(const q of queries){const id=[lang,width,q.documento||q.aba||q.visao||q.tela,q.temporada,q.gp].join('-');try{
- await p.goto(base+'/?'+new URLSearchParams(q),{timeout:90000});const s=await ready(p,q.documento,Object.fromEntries(Object.entries(q).filter(([k])=>['tela','documento','temporada','gp','lang'].includes(k))));
+for(const q of queries){const id=[lang,width,q.documento||q.aba||q.visao||q.tela,q.temporada,q.gp].join('-');if(cases.some(x=>x.id===id&&x.status==='passed'))continue;try{
+ await p.goto(base+'/?'+new URLSearchParams(q),{timeout:90000,waitUntil:'domcontentloaded'});const s=await ready(p,q.documento,Object.fromEntries(Object.entries(q).filter(([k])=>['tela','documento','temporada','gp','lang'].includes(k))));
  const pageLinks=await s.locator('a').evaluateAll(aa=>aa.map(a=>{let href=a.getAttribute('href');let fragment=null;if(href?.startsWith('#')){try{fragment=!!document.getElementById(decodeURIComponent(href.slice(1)))}catch{fragment=false}}return {href,text:a.innerText.trim(),target:a.target,visible:!!a.getClientRects().length,fragmentExists:fragment}}).filter(a=>a.href&&!a.href.startsWith('data:')));
  links.push({id,url:s.url(),links:pageLinks});const row={id,query:q,status:'passed',anchors:pageLinks.length,brokenFragments:pageLinks.filter(a=>a.fragmentExists===false)};
  assert.equal(row.brokenFragments.length,0,'Broken same-page fragments');
@@ -24,4 +35,5 @@ for(const q of queries){const id=[lang,width,q.documento||q.aba||q.visao||q.tela
  record(row);
  }catch(e){record({id,query:q,status:'failed',error:e.message});throw e;}}
 await context.close();}
+let next=0;const jobs=[[390,'pt'],[390,'en'],[1440,'pt'],[1440,'en']];const workers=Math.min(2,Math.max(1,Math.floor(Number(process.env.PITWALL_CONCURRENCY)||1)));await Promise.all(Array.from({length:workers},async()=>{while(next<jobs.length){const job=jobs[next++];await audit(...job)}}));
 }finally{await browser.close()}})().catch(e=>{console.error(e);process.exit(1)});

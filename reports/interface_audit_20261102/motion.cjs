@@ -13,7 +13,7 @@ for(const width of [390,1440])for(const lang of ['pt','en'])for(const reduce of 
  await surface.locator('.fan-process-step').last().waitFor();await surface.waitForFunction(()=>window.__pitwallMotion&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning');
  await p.waitForTimeout(600);
  assert.equal(await surface.locator('[data-testid=stException]').count(),0);
- if(base.includes('streamlit.app'))assert((await surface.locator('body').innerText()).includes('v0.8.15'),'Wrong public version');
+ if(base.includes('streamlit.app'))assert((await surface.locator('body').innerText()).includes('v0.8.16'),'Wrong public version');
  assert.equal(await surface.evaluate(()=>window.motionCalls),reduce?0:3);
  assert.equal(await surface.locator('[data-pw-motion]').isDisabled(),reduce);
  if(reduce)assert.equal(await surface.locator('[data-pw-motion]').innerText(),lang==='pt'?'Movimento reduzido pelo sistema':'System reduced motion');
@@ -26,9 +26,9 @@ for(const width of [390,1440])for(const lang of ['pt','en'])for(const reduce of 
  if(!reduce){await toggleMotion();assert.equal(await surface.locator('[data-pw-motion]').innerText(),lang==='pt'?'Ativar movimento':'Enable motion');assert.equal(await surface.locator('.stMain').evaluate(n=>getComputedStyle(n).scrollBehavior),'auto');await toggleMotion();}
  for(let i=0;i<6;i++){
   await activate(surface.locator('.st-key-journey-navigation [role=radiogroup]>label').nth(i));
-  await surface.waitForFunction(expected=>document.querySelector('.fan-hero')?.dataset.heroKind===expected && document.querySelector('.stApp')?.dataset.testScriptState==='notRunning' && document.body.innerText.includes('v0.8.15'),['race','drivers','championship','forecast','performance','method'][i],{timeout:60000});await p.waitForTimeout(500);
+  await surface.waitForFunction(expected=>document.querySelector('.fan-hero')?.dataset.heroKind===expected && document.querySelector('.stApp')?.dataset.testScriptState==='notRunning' && document.body.innerText.includes('v0.8.16'),['race','drivers','championship','forecast','performance','method'][i],{timeout:60000});await p.waitForTimeout(500);
   assert.equal(await surface.locator('[data-testid=stException]').count(),0);
- if(base.includes('streamlit.app'))assert((await surface.locator('body').innerText()).includes('v0.8.15'),'Wrong public version');assert.equal(await surface.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
+ if(base.includes('streamlit.app'))assert((await surface.locator('body').innerText()).includes('v0.8.16'),'Wrong public version');assert.equal(await surface.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
  }
  assert.equal(await surface.evaluate(()=>window.motionCalls),reduce?0:3,'Method entrance repeated after navigation');
  assert.equal(await surface.locator('.pw-page-tools').count(),1);

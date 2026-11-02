@@ -9,7 +9,7 @@ import zipfile
 import subprocess
 
 ROOT=Path(__file__).resolve().parents[2]
-VERSION='0.8.15'
+VERSION='0.8.16'
 TAG='v'+VERSION
 OUT=ROOT/'reports/interface_audit_20261102'
 OUT.mkdir(exist_ok=True)

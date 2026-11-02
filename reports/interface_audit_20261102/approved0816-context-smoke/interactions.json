@@ -1,0 +1,167 @@
+{
+  "engine": "chromium",
+  "base": "http://localhost:8672",
+  "cases": [
+    {
+      "id": "chromium-390-pt-context-championship",
+      "selected_gp_retained": "2024:1",
+      "requested_profile": "max_verstappen",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-context-championship",
+      "selected_gp_retained": "2024:1",
+      "requested_profile": "max_verstappen",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-context-search-short",
+      "checks": [
+        {
+          "term": "sa",
+          "label": "Sauber",
+          "year": 2024,
+          "round": 1
+        },
+        {
+          "term": "au",
+          "label": "Audi · 2026",
+          "year": 2026,
+          "round": 18
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-context-search-short",
+      "checks": [
+        {
+          "term": "sa",
+          "label": "Sauber",
+          "year": 2024,
+          "round": 1
+        },
+        {
+          "term": "au",
+          "label": "Audi · 2026",
+          "year": 2026,
+          "round": 18
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-brand-podium",
+      "url": "http://localhost:8672/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "heading": [
+        "Sergio Pérez"
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-brand-podium",
+      "url": "http://localhost:8672/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "heading": [
+        "Sergio Pérez"
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-context-championship",
+      "selected_gp_retained": "2024:1",
+      "requested_profile": "max_verstappen",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-context-championship",
+      "selected_gp_retained": "2024:1",
+      "requested_profile": "max_verstappen",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-context-search-short",
+      "checks": [
+        {
+          "term": "sa",
+          "label": "Sauber",
+          "year": 2024,
+          "round": 1
+        },
+        {
+          "term": "au",
+          "label": "Audi · 2026",
+          "year": 2026,
+          "round": 18
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-context-search-short",
+      "checks": [
+        {
+          "term": "sa",
+          "label": "Sauber",
+          "year": 2024,
+          "round": 1
+        },
+        {
+          "term": "au",
+          "label": "Audi · 2026",
+          "year": 2026,
+          "round": 18
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-brand-podium",
+      "url": "http://localhost:8672/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "heading": [
+        "Sergio Pérez"
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-brand-podium",
+      "url": "http://localhost:8672/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "heading": [
+        "Sergio Pérez"
+      ],
+      "status": "passed"
+    }
+  ],
+  "expectedVersion": "0.8.16"
+}

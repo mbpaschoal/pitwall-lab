@@ -268,10 +268,15 @@ def renderizar_documentacao_local(st, documento_primeiro=False):
     identificador = st.query_params.get("documento")
     if documento_primeiro and documento_disponivel(identificador):
         from pitwall.i18n import language
-        retorno = "/?" + urlencode(dict(tela="Metodologia", lang=language(),
-                                      **_contexto_gp(st.query_params.get("temporada"), st.query_params.get("gp"))))
-        st.markdown('<a class="fan-document-return" href="{}" target="_self">{}</a>'.format(
-            escape(retorno, quote=True), "Voltar à explicação do Lab"), unsafe_allow_html=True)
+        retorno = dict(tela="Metodologia", lang=language(),
+                       **_contexto_gp(st.query_params.get("temporada"), st.query_params.get("gp")))
+
+        def voltar_explicacao():
+            st.session_state["tela"] = "Metodologia"
+            st.query_params.from_dict(retorno)
+
+        st.button("Voltar à explicação do Lab", key="fan-document-return",
+                  on_click=voltar_explicacao)
         _renderizar_documento(st, identificador)
         with st.expander("Outros documentos e identificação da versão"):
             _renderizar_indice_documentos(st)

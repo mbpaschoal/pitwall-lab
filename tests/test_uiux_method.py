@@ -36,9 +36,16 @@ def evaluated_rows(package):
             for row in package["corridas"] if row["avaliavel_ranking"]]
 
 
+class RecordingQueryParams(dict):
+    def from_dict(self, values):
+        self.clear()
+        self.update(values)
+
+
 class RecordingStreamlit:
     def __init__(self, query):
-        self.query_params = query
+        self.query_params = RecordingQueryParams(query)
+        self.session_state = {}
         self.events = []
 
     def markdown(self, content, **kwargs):
@@ -54,6 +61,7 @@ class RecordingStreamlit:
         self.events.append(("download", kwargs))
 
     def button(self, *args, **kwargs):
+        self.events.append(("button", dict(label=args[0], **kwargs)))
         return False
 
     def dialog(self, *args, **kwargs):
@@ -269,8 +277,10 @@ class ResultsMethodUXTests(unittest.TestCase):
                       if event[0] == "markdown" and event[1].startswith("# "))
         index = next(index for index, event in enumerate(recorder.events) if event[0] == "subheader")
         self.assertLess(report, index)
-        back = Links(recorder.events[0][1]).links[0]
-        self.assertEqual(parse_qs(urlsplit(back["href"]).query), {"tela":["Metodologia"], "lang":["pt"]})
+        back = next(event[1] for event in recorder.events if event[0] == "button"
+                    and event[1].get("key") == "fan-document-return")
+        back["on_click"]()
+        self.assertEqual(recorder.query_params, {"tela":"Metodologia", "lang":"pt"})
         download = next(event[1] for event in recorder.events if event[0] == "download")
         self.assertEqual(download["data"], (ROOT / "reports/modelo_v1/previsoes_validacao.csv").read_bytes())
         self.assertTrue(any("Protocolo histórico (etapa 3)" in event[1]

@@ -1,0 +1,674 @@
+{
+  "utc": "2026-11-02T07:13:50.914Z",
+  "base": "http://127.0.0.1:8671",
+  "browser": "chromium",
+  "expectedVersion": "0.8.16",
+  "scope": "Final0.8.16 overview controls2x and query-sync readiness, PT/EN mobile/desktop",
+  "limitations": [
+    "Canvas/Plotly internals and cross-origin iframe text require separate functional tests.",
+    "Background hero images and foreground title overlays are intentional and excluded from image collisions.",
+    "Partly clipped lines at scroll-viewport edges and CSS-hidden accessibility labels are excluded.",
+    "Text2x doubles computed font-size/line-height as a deterministic reflow stress test; it is not native browser zoom."
+  ],
+  "samples": [],
+  "stress": [
+    {
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "type": "pilot_controls_text2x",
+      "controls": [
+        {
+          "name": "explore",
+          "rect": {
+            "x": 12,
+            "y": 108.796875,
+            "right": 329.9375,
+            "bottom": 182,
+            "width": 317.9375,
+            "height": 73.203125
+          },
+          "slot": {
+            "x": 25,
+            "y": 135.390625,
+            "right": 65,
+            "bottom": 155.390625,
+            "width": 40,
+            "height": 20
+          },
+          "glyph": {
+            "x": 25,
+            "y": 121.390625,
+            "right": 65,
+            "bottom": 169.390625,
+            "width": 40,
+            "height": 48
+          },
+          "text": {
+            "x": 81,
+            "y": 119.796875,
+            "right": 299.9375,
+            "bottom": 158.796875,
+            "width": 218.9375,
+            "height": 39
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-18nn5ul ejhh0er0",
+              "rect": {
+                "x": 25,
+                "y": 135.390625,
+                "right": 65,
+                "bottom": 155.390625,
+                "width": 40,
+                "height": 20
+              },
+              "width": "40px",
+              "minWidth": "40px",
+              "display": "flex",
+              "flex": "0 0 40px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-cli92z e1t4gh342",
+              "rect": {
+                "x": 25,
+                "y": 135.390625,
+                "right": 73,
+                "bottom": 155.390625,
+                "width": 48,
+                "height": 20
+              },
+              "width": "48px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 16,
+          "labelFontSize": 32,
+          "issues": []
+        },
+        {
+          "name": "filters",
+          "rect": {
+            "x": 230.671875,
+            "y": 116.859375,
+            "right": 378,
+            "bottom": 174.0625,
+            "width": 147.328125,
+            "height": 57.203125
+          },
+          "slot": {
+            "x": 237.671875,
+            "y": 135.453125,
+            "right": 277.671875,
+            "bottom": 155.453125,
+            "width": 40,
+            "height": 20
+          },
+          "glyph": {
+            "x": 237.671875,
+            "y": 121.453125,
+            "right": 277.671875,
+            "bottom": 169.453125,
+            "width": 40,
+            "height": 48
+          },
+          "text": {
+            "x": 293.671875,
+            "y": 125.859375,
+            "right": 354,
+            "bottom": 152.859375,
+            "width": 60.328125,
+            "height": 27
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-18nn5ul ejhh0er0",
+              "rect": {
+                "x": 237.671875,
+                "y": 135.453125,
+                "right": 277.671875,
+                "bottom": 155.453125,
+                "width": 40,
+                "height": 20
+              },
+              "width": "40px",
+              "minWidth": "40px",
+              "display": "flex",
+              "flex": "0 0 40px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-cli92z e1t4gh342",
+              "rect": {
+                "x": 237.671875,
+                "y": 135.453125,
+                "right": 285.671875,
+                "bottom": 155.453125,
+                "width": 48,
+                "height": 20
+              },
+              "width": "48px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 11,
+          "labelFontSize": 22,
+          "issues": []
+        }
+      ],
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "type": "pilot_controls_text2x",
+      "controls": [
+        {
+          "name": "explore",
+          "rect": {
+            "x": 12,
+            "y": 108.796875,
+            "right": 320.75,
+            "bottom": 182,
+            "width": 308.75,
+            "height": 73.203125
+          },
+          "slot": {
+            "x": 25,
+            "y": 135.390625,
+            "right": 65,
+            "bottom": 155.390625,
+            "width": 40,
+            "height": 20
+          },
+          "glyph": {
+            "x": 25,
+            "y": 121.390625,
+            "right": 65,
+            "bottom": 169.390625,
+            "width": 40,
+            "height": 48
+          },
+          "text": {
+            "x": 81,
+            "y": 119.796875,
+            "right": 290.75,
+            "bottom": 158.796875,
+            "width": 209.75,
+            "height": 39
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-18nn5ul ejhh0er0",
+              "rect": {
+                "x": 25,
+                "y": 135.390625,
+                "right": 65,
+                "bottom": 155.390625,
+                "width": 40,
+                "height": 20
+              },
+              "width": "40px",
+              "minWidth": "40px",
+              "display": "flex",
+              "flex": "0 0 40px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-cli92z e1t4gh342",
+              "rect": {
+                "x": 25,
+                "y": 135.390625,
+                "right": 73,
+                "bottom": 155.390625,
+                "width": 48,
+                "height": 20
+              },
+              "width": "48px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 16,
+          "labelFontSize": 32,
+          "issues": []
+        },
+        {
+          "name": "filters",
+          "rect": {
+            "x": 231.203125,
+            "y": 116.421875,
+            "right": 378,
+            "bottom": 173.625,
+            "width": 146.796875,
+            "height": 57.203125
+          },
+          "slot": {
+            "x": 238.203125,
+            "y": 135.015625,
+            "right": 278.203125,
+            "bottom": 155.015625,
+            "width": 40,
+            "height": 20
+          },
+          "glyph": {
+            "x": 238.203125,
+            "y": 121.015625,
+            "right": 278.203125,
+            "bottom": 169.015625,
+            "width": 40,
+            "height": 48
+          },
+          "text": {
+            "x": 294.203125,
+            "y": 125.421875,
+            "right": 354,
+            "bottom": 152.421875,
+            "width": 59.796875,
+            "height": 27
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-18nn5ul ejhh0er0",
+              "rect": {
+                "x": 238.203125,
+                "y": 135.015625,
+                "right": 278.203125,
+                "bottom": 155.015625,
+                "width": 40,
+                "height": 20
+              },
+              "width": "40px",
+              "minWidth": "40px",
+              "display": "flex",
+              "flex": "0 0 40px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-cli92z e1t4gh342",
+              "rect": {
+                "x": 238.203125,
+                "y": 135.015625,
+                "right": 286.203125,
+                "bottom": 155.015625,
+                "width": 48,
+                "height": 20
+              },
+              "width": "48px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 11,
+          "labelFontSize": 22,
+          "issues": []
+        }
+      ],
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "type": "pilot_controls_text2x",
+      "controls": [
+        {
+          "name": "explore",
+          "rect": {
+            "x": 952,
+            "y": 270,
+            "right": 1269.9375,
+            "bottom": 343.203125,
+            "width": 317.9375,
+            "height": 73.203125
+          },
+          "slot": {
+            "x": 965,
+            "y": 296.59375,
+            "right": 1005,
+            "bottom": 316.59375,
+            "width": 40,
+            "height": 20
+          },
+          "glyph": {
+            "x": 965,
+            "y": 282.59375,
+            "right": 1005,
+            "bottom": 330.59375,
+            "width": 40,
+            "height": 48
+          },
+          "text": {
+            "x": 1021,
+            "y": 281,
+            "right": 1239.9375,
+            "bottom": 320,
+            "width": 218.9375,
+            "height": 39
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-18nn5ul ejhh0er0",
+              "rect": {
+                "x": 965,
+                "y": 296.59375,
+                "right": 1005,
+                "bottom": 316.59375,
+                "width": 40,
+                "height": 20
+              },
+              "width": "40px",
+              "minWidth": "40px",
+              "display": "flex",
+              "flex": "0 0 40px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-cli92z e1t4gh342",
+              "rect": {
+                "x": 965,
+                "y": 296.59375,
+                "right": 1013,
+                "bottom": 316.59375,
+                "width": 48,
+                "height": 20
+              },
+              "width": "48px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 16,
+          "labelFontSize": 32,
+          "issues": []
+        },
+        {
+          "name": "filters",
+          "rect": {
+            "x": 1181.203125,
+            "y": 322.71875,
+            "right": 1342,
+            "bottom": 383.125,
+            "width": 160.796875,
+            "height": 60.40625
+          },
+          "slot": {
+            "x": 1192.203125,
+            "y": 342.921875,
+            "right": 1232.203125,
+            "bottom": 362.921875,
+            "width": 40,
+            "height": 20
+          },
+          "glyph": {
+            "x": 1192.203125,
+            "y": 328.921875,
+            "right": 1232.203125,
+            "bottom": 376.921875,
+            "width": 40,
+            "height": 48
+          },
+          "text": {
+            "x": 1248.203125,
+            "y": 331.71875,
+            "right": 1314,
+            "bottom": 360.71875,
+            "width": 65.796875,
+            "height": 29
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-18nn5ul ejhh0er0",
+              "rect": {
+                "x": 1192.203125,
+                "y": 342.921875,
+                "right": 1232.203125,
+                "bottom": 362.921875,
+                "width": 40,
+                "height": 20
+              },
+              "width": "40px",
+              "minWidth": "40px",
+              "display": "flex",
+              "flex": "0 0 40px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-cli92z e1t4gh342",
+              "rect": {
+                "x": 1192.203125,
+                "y": 342.921875,
+                "right": 1240.203125,
+                "bottom": 362.921875,
+                "width": 48,
+                "height": 20
+              },
+              "width": "48px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 12,
+          "labelFontSize": 24,
+          "issues": []
+        }
+      ],
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "type": "pilot_controls_text2x",
+      "controls": [
+        {
+          "name": "explore",
+          "rect": {
+            "x": 952,
+            "y": 270,
+            "right": 1260.75,
+            "bottom": 343.203125,
+            "width": 308.75,
+            "height": 73.203125
+          },
+          "slot": {
+            "x": 965,
+            "y": 296.59375,
+            "right": 1005,
+            "bottom": 316.59375,
+            "width": 40,
+            "height": 20
+          },
+          "glyph": {
+            "x": 965,
+            "y": 282.59375,
+            "right": 1005,
+            "bottom": 330.59375,
+            "width": 40,
+            "height": 48
+          },
+          "text": {
+            "x": 1021,
+            "y": 281,
+            "right": 1230.75,
+            "bottom": 320,
+            "width": 209.75,
+            "height": 39
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-18nn5ul ejhh0er0",
+              "rect": {
+                "x": 965,
+                "y": 296.59375,
+                "right": 1005,
+                "bottom": 316.59375,
+                "width": 40,
+                "height": 20
+              },
+              "width": "40px",
+              "minWidth": "40px",
+              "display": "flex",
+              "flex": "0 0 40px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-cli92z e1t4gh342",
+              "rect": {
+                "x": 965,
+                "y": 296.59375,
+                "right": 1013,
+                "bottom": 316.59375,
+                "width": 48,
+                "height": 20
+              },
+              "width": "48px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 16,
+          "labelFontSize": 32,
+          "issues": []
+        },
+        {
+          "name": "filters",
+          "rect": {
+            "x": 1181.765625,
+            "y": 322.125,
+            "right": 1342,
+            "bottom": 382.53125,
+            "width": 160.234375,
+            "height": 60.40625
+          },
+          "slot": {
+            "x": 1192.765625,
+            "y": 342.328125,
+            "right": 1232.765625,
+            "bottom": 362.328125,
+            "width": 40,
+            "height": 20
+          },
+          "glyph": {
+            "x": 1192.765625,
+            "y": 328.328125,
+            "right": 1232.765625,
+            "bottom": 376.328125,
+            "width": 40,
+            "height": 48
+          },
+          "text": {
+            "x": 1248.765625,
+            "y": 331.125,
+            "right": 1314,
+            "bottom": 360.125,
+            "width": 65.234375,
+            "height": 29
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-18nn5ul ejhh0er0",
+              "rect": {
+                "x": 1192.765625,
+                "y": 342.328125,
+                "right": 1232.765625,
+                "bottom": 362.328125,
+                "width": 40,
+                "height": 20
+              },
+              "width": "40px",
+              "minWidth": "40px",
+              "display": "flex",
+              "flex": "0 0 40px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-cli92z e1t4gh342",
+              "rect": {
+                "x": 1192.765625,
+                "y": 342.328125,
+                "right": 1240.765625,
+                "bottom": 362.328125,
+                "width": 48,
+                "height": 20
+              },
+              "width": "48px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 12,
+          "labelFontSize": 24,
+          "issues": []
+        }
+      ],
+      "issues": []
+    }
+  ],
+  "finishedAt": "2026-11-02T07:14:22.208Z",
+  "status": "passed"
+}

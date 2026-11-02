@@ -3,6 +3,18 @@ from html import escape
 from urllib.parse import urlencode
 
 
+def sync_host_query(st):
+    """Publish a new frame route through Streamlit's native hosting channel."""
+    if not st.session_state.get('_public_query_synced'):
+        # A relative HTML link reloads the app frame. Re-emitting its current
+        # query also updates the Cloud wrapper, so refresh/share keep that route.
+        # An empty update preserves repeated values and reserved embed options.
+        st.query_params.update({})
+        # HTML navigation starts a new WebSocket/session. Native widget reruns
+        # retain this marker and already publish their own query changes.
+        st.session_state['_public_query_synced'] = True
+
+
 _RACE_IDENTITIES = {
     'Bahrain': ('🇧🇭', 'Bahrein', 'Bahrain'),
     'Bahrain in Malaysia': ('🇲🇾', 'Malásia · Sepang', 'Malaysia · Sepang'),

@@ -1,0 +1,59 @@
+{
+  "engine": "chromium",
+  "base": "http://localhost:8672",
+  "cases": [
+    {
+      "id": "chromium-390-pt-documents-clicks",
+      "documents": [
+        {
+          "id": "fontes-atuais",
+          "heading": [
+            "Fontes e cobertura atuais"
+          ],
+          "return_persisted_after_reload": true
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-documents-clicks",
+      "documents": [
+        {
+          "id": "fontes-atuais",
+          "heading": [
+            "Current sources and coverage"
+          ],
+          "return_persisted_after_reload": true
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-documents-clicks",
+      "documents": [
+        {
+          "id": "fontes-atuais",
+          "heading": [
+            "Fontes e cobertura atuais"
+          ],
+          "return_persisted_after_reload": true
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-documents-clicks",
+      "documents": [
+        {
+          "id": "fontes-atuais",
+          "heading": [
+            "Current sources and coverage"
+          ],
+          "return_persisted_after_reload": true
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "expectedVersion": "0.8.16"
+}

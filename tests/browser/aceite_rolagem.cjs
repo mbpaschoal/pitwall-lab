@@ -13,7 +13,7 @@ if(!base||!output)throw Error('Usage: node aceite_rolagem.cjs BASE_URL OUTPUT_DI
 fs.mkdirSync(output,{recursive:true});
 const routes=['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
 const kinds=['race','drivers','championship','forecast','performance','method'];
-const audit={utc:new Date().toISOString(),base,browser:browserName,expectedVersion,scope:'6 screens x PT/EN x 390x560 and 1440x900 x five scroll positions; header and pilot filter text2x; mobile resize',limitations:['Canvas/Plotly internals and cross-origin iframe text require separate functional tests.','Background hero images and foreground title overlays are intentional and excluded from image collisions.','Partly clipped lines at scroll-viewport edges and CSS-hidden accessibility labels are excluded.','Text2x doubles computed font-size/line-height as a deterministic reflow stress test; it is not native browser zoom.'],samples:[],stress:[]};
+const audit={utc:new Date().toISOString(),base,browser:browserName,expectedVersion,scope:'6 screens x PT/EN x 390x560 and 1440x900 x five scroll positions; header and pilot controls text2x; mobile resize',limitations:['Canvas/Plotly internals and cross-origin iframe text require separate functional tests.','Background hero images and foreground title overlays are intentional and excluded from image collisions.','Partly clipped lines at scroll-viewport edges and CSS-hidden accessibility labels are excluded.','Text2x doubles computed font-size/line-height as a deterministic reflow stress test; it is not native browser zoom.'],samples:[],stress:[]};
 const launch={headless:true};if(browserName==='chromium'&&process.env.PLAYWRIGHT_CHANNEL)launch.channel=process.env.PLAYWRIGHT_CHANNEL;
 const save=()=>fs.writeFileSync(path.join(output,'scroll-audit.json'),JSON.stringify(audit,null,2));
 const doubleTextMetrics=surface=>surface.evaluate(async()=>{
@@ -43,7 +43,15 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
      await document.fonts.ready;
      await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
     });
-    await surface.waitForFunction(expected=>document.documentElement.lang===expected,lang,{timeout:15000});await page.waitForTimeout(650);
+    await surface.waitForFunction(expected=>document.documentElement.lang===expected,lang,{timeout:15000});
+    // Server idle can precede Streamlit's lazy native-widget hydration.
+    // Geometry and hit tests require the real controls, not their skeletons.
+    await surface.waitForFunction(expected=>{
+     const labels=Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"]>label'));
+     const selects=document.querySelectorAll('.st-key-journey-context-row [data-baseweb="select"]');
+     return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===6&&labels.every(el=>el.getClientRects().length)&&selects.length===2;
+    },lang,{timeout:90000});
+    await surface.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});await page.waitForTimeout(650);
   for(const fraction of [0,.25,.5,.75,1]){
    await surface.locator('.stMain').evaluate((main,f)=>main.scrollTo({top:f*(main.scrollHeight-main.clientHeight),behavior:'instant'}),fraction);await page.waitForTimeout(250);
    const result=await surface.evaluate(({fraction,expectedLang,expectedVersion})=>{
@@ -130,26 +138,33 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
   }
   if(route==='Pilotos'){
    await surface.waitForFunction(()=>{if(document.querySelector('.stApp')?.dataset.testScriptState!=='notRunning'){window.pwAuditIdleSince=0;return false;}window.pwAuditIdleSince||=performance.now();return performance.now()-window.pwAuditIdleSince>=1000;},null,{timeout:45000});
-   const filter=surface.getByRole('button',{name:lang==='pt'?'Filtros':'Filters',exact:false});
-   const baselineLabelFontSize=await filter.locator('p').evaluate(label=>parseFloat(getComputedStyle(label).fontSize));
+   const controls=[
+    {name:'explore',locator:surface.locator('.st-key-pilot-view-navigation').getByRole('button',{name:lang==='pt'?'Explorar pilotos':'Explore drivers',exact:false})},
+    {name:'filters',locator:surface.locator('.st-key-pilot-comparison-toolbar').getByRole('button',{name:lang==='pt'?'Filtros':'Filters',exact:false})}
+   ];
+   for(const control of controls)control.baselineLabelFontSize=await control.locator.locator('p').evaluate(label=>parseFloat(getComputedStyle(label).fontSize));
    await doubleTextMetrics(surface);await page.waitForTimeout(250);
-   await filter.scrollIntoViewIfNeeded();
-   const result=await filter.evaluate((button,baselineLabelFontSize)=>{
+   const reflow={route,lang,viewport,type:'pilot_controls_text2x',controls:[],issues:[]};
+   for(const control of controls){
+   await control.locator.scrollIntoViewIfNeeded();
+   const result=await control.locator.evaluate((button,baselineLabelFontSize)=>{
     const box=n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height};},rangeBox=n=>{const r=document.createRange();r.selectNodeContents(n);const b=r.getBoundingClientRect();return{x:b.x,y:b.y,right:b.right,bottom:b.bottom,width:b.width,height:b.height};};
     const rect=box(button),main=box(document.querySelector('.stMain')),dock=box(document.querySelector('.st-key-journey-navigation')),icon=button.querySelector('[data-testid="stIconMaterial"]'),label=button.querySelector('p'),issues=[];
     const inside=(a,b)=>a.x>=b.x-1&&a.right<=b.right+1&&a.y>=b.y-1&&a.bottom<=b.bottom+1,overlap=(a,b)=>Math.min(a.right,b.right)-Math.max(a.x,b.x)>1&&Math.min(a.bottom,b.bottom)-Math.max(a.y,b.y)>1;
     const hit=document.elementFromPoint((rect.x+rect.right)/2,(rect.y+rect.bottom)/2);
-    if(main.bottom>dock.y-4+.5||!inside(rect,main)||!hit||(hit!==button&&!button.contains(hit)))issues.push({kind:'pilot_filter_inaccessible_text2x',rect,main,dock});
-    if(!icon||!label)return{issues:[...issues,{kind:'pilot_filter_parts_missing'}]};
+    if(main.bottom>dock.y-4+.5||!inside(rect,main)||!hit||(hit!==button&&!button.contains(hit)))issues.push({kind:'pilot_control_inaccessible_text2x',rect,main,dock});
+    if(!icon||!label)return{issues:[...issues,{kind:'pilot_control_parts_missing'}]};
     const slot=box(icon),glyph=rangeBox(icon),text=rangeBox(label),c=getComputedStyle(icon),labelFontSize=parseFloat(getComputedStyle(label).fontSize),fontLoaded=document.fonts.check(c.fontSize+' '+c.fontFamily,icon.textContent);
-    if(!fontLoaded)issues.push({kind:'pilot_filter_icon_font_unavailable',font:c.fontFamily});
+    if(!fontLoaded)issues.push({kind:'pilot_control_icon_font_unavailable',font:c.fontFamily});
     if(labelFontSize<baselineLabelFontSize*2-.5)issues.push({kind:'text2x_reset_by_rerender',baselineLabelFontSize,labelFontSize});
-    if(!inside(slot,rect)||!inside(glyph,rect)||!inside(text,rect)||glyph.width>slot.width+1||overlap(glyph,text))issues.push({kind:'pilot_filter_icon_over_text2x',rect,slot,glyph,text,font:c.fontFamily});
+    if(!inside(slot,rect)||!inside(glyph,rect)||!inside(text,rect)||glyph.width>slot.width+1||overlap(glyph,text))issues.push({kind:'pilot_control_icon_over_text2x',rect,slot,glyph,text,font:c.fontFamily});
     const iconAncestors=[];for(let n=icon;n&&n!==button;n=n.parentElement){const s=getComputedStyle(n);iconAncestors.push({tag:n.tagName,className:n.className,rect:box(n),width:s.width,minWidth:s.minWidth,display:s.display,flex:s.flex,gap:s.gap});}
     return{rect,slot,glyph,text,iconAncestors,font:c.fontFamily,fontLoaded,baselineLabelFontSize,labelFontSize,issues};
-   },baselineLabelFontSize);
-   audit.stress.push({route,lang,viewport,type:'pilot_filter_text2x',...result});save();
-   await page.screenshot({path:path.join(output,`${id}-filter-text2x.jpg`),type:'jpeg',quality:65,scale:'css'});
+   },control.baselineLabelFontSize);
+   reflow.controls.push({name:control.name,...result});reflow.issues.push(...result.issues.map(issue=>({control:control.name,...issue})));
+   await page.screenshot({path:path.join(output,`${id}-${control.name}-text2x.jpg`),type:'jpeg',quality:65,scale:'css'});
+   }
+   audit.stress.push(reflow);save();
   }
   console.log(id+': '+[...audit.samples.slice(sampleStart),...audit.stress.slice(stressStart)].reduce((sum,s)=>sum+s.issues.length,0)+' issues');
  }catch(error){audit.samples.push({route,lang,viewport,status:'error',error:error.message,issues:[{kind:'audit_setup_or_navigation_error'}]});save();try{await page.screenshot({path:path.join(output,id+'-error.jpg'),type:'jpeg',quality:65,scale:'css'});}catch(_){}console.error(id+': '+error.message)}finally{await context.close()}

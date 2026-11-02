@@ -1,0 +1,22 @@
+{
+  "candidate": "/private/tmp/pitwall-interface-0816-candidate/pitwall-dashboard",
+  "final": "/private/tmp/pitwall-interface-0816-final/pitwall-dashboard",
+  "expected_final_build": "2c41ace71d08def16d912dc0e23b3ad4f587e6a5ed9f8098b13724ea9fdc6a48",
+  "visual_cases_passed": 24,
+  "visual_css_sha256": "192defe381d175e1d3977661a52f3e46d47b5d65aaa5b20e9cdc26df7140193d",
+  "stylesheets": [
+    {
+      "file": "frontend_assets/journey.css",
+      "candidate_sha256": "192defe381d175e1d3977661a52f3e46d47b5d65aaa5b20e9cdc26df7140193d",
+      "final_sha256": "192defe381d175e1d3977661a52f3e46d47b5d65aaa5b20e9cdc26df7140193d",
+      "equal": true
+    },
+    {
+      "file": "frontend_assets/pitwall.css",
+      "candidate_sha256": "bdcd3cce09c7d2b497173a2c4f4f5d588acc4cd008a26be624c1231194e4b523",
+      "final_sha256": "bdcd3cce09c7d2b497173a2c4f4f5d588acc4cd008a26be624c1231194e4b523",
+      "equal": true
+    }
+  ],
+  "status": "passed"
+}

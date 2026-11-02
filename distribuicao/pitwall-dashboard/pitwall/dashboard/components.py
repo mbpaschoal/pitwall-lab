@@ -127,7 +127,9 @@ def link_interno(
         parametros["aba"] = aba
     if documento:
         parametros["documento"] = documento
-    return "/?" + urlencode(parametros)
+    # Stay inside the current app frame on Streamlit Cloud. A root URL would
+    # load another hosting wrapper inside that frame for target=_self links.
+    return "?" + urlencode(parametros)
 
 
 def cabecalho(corrida, temporada, status, show_prediction_note=True):
