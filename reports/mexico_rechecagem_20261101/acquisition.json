@@ -1,0 +1,57 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/mexico-rechecagem-20261102T014951Z",
+  "sources": [
+    {
+      "provider": "openf1",
+      "endpoint": "stints",
+      "arquivo": "stints-lawson-fp3.json",
+      "arquivo_requisicao": "stints-lawson-fp3.json",
+      "url": "https://api.openf1.org/v1/stints?session_key=11399&driver_number=30",
+      "url_real": "https://api.openf1.org/v1/stints?session_key=11399&driver_number=30",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T01:49:52.046395Z",
+      "sha256": "0b1a6a6a0d6d649314c2ada50ab10b98523149a35fdc552c67f906bc587e0b8a",
+      "bytes": 585,
+      "registros": 4
+    },
+    {
+      "provider": "openf1",
+      "endpoint": "weather",
+      "arquivo": "weather-race-point.json",
+      "arquivo_requisicao": "weather-race-point.json",
+      "url": "https://api.openf1.org/v1/weather?session_key=11404&date%3E%3D=2026-11-01T22%3A00%3A00Z&date%3C%3D=2026-11-01T22%3A03%3A00Z",
+      "url_real": "https://api.openf1.org/v1/weather?session_key=11404&date%3E%3D=2026-11-01T22%3A00%3A00Z&date%3C%3D=2026-11-01T22%3A03%3A00Z",
+      "status": 404,
+      "obtido_em_utc": "2026-11-02T01:49:59.817211Z",
+      "sha256": "79e458c7f1cd32213fb418a50acca1646db353c29a8775154e0fbf8bc6ebd79d",
+      "bytes": 30,
+      "erro": "HTTP Error 404: Not Found"
+    },
+    {
+      "provider": "openf1",
+      "endpoint": "weather",
+      "arquivo": "weather-race-point-correct-filter.json",
+      "arquivo_requisicao": "weather-race-point-correct-filter.json",
+      "url": "https://api.openf1.org/v1/weather?session_key=11404&date%3E=2026-11-01T22%3A00%3A00Z&date%3C=2026-11-01T22%3A03%3A00Z",
+      "url_real": "https://api.openf1.org/v1/weather?session_key=11404&date%3E=2026-11-01T22%3A00%3A00Z&date%3C=2026-11-01T22%3A03%3A00Z",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T01:50:41.818161Z",
+      "sha256": "f53dcb7fff3a78029a236faf027d513ee9683f309f3eda0b59dcd7010a5b5899",
+      "bytes": 645,
+      "registros": 3
+    },
+    {
+      "provider": "fia",
+      "endpoint": "race_weather",
+      "arquivo": "fia-race-weather-recheck.pdf",
+      "arquivo_requisicao": "fia-race-weather-recheck.pdf",
+      "url": "https://www.fia.com/sites/default/files/2026_19_mex_f1_r0_timing_raceweatherreport_v01.pdf",
+      "url_real": "https://www.fia.com/sites/default/files/2026_19_mex_f1_r0_timing_raceweatherreport_v01.pdf",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T01:50:49.211220Z",
+      "sha256": "86a3df8a22e818900812a911f412d3dd2d0ee2a65cfd087bdc16fc43ad861346",
+      "bytes": 428100,
+      "response_format": "bytes"
+    }
+  ]
+}

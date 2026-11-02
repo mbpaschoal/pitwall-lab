@@ -1,0 +1,80 @@
+{
+  "checked_at": "2026-11-02T01:51:08.149721+00:00",
+  "identity": {
+    "season": 2026,
+    "round": 19,
+    "circuit": "rodriguez",
+    "fp3": 11399,
+    "race": 11404
+  },
+  "verdict": "no_verified_replacement",
+  "missing_initial_stint": {
+    "driver_number": 30,
+    "laps": [
+      1,
+      8
+    ],
+    "received_stints": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "zero_observation": {
+    "date": "2026-11-01T22:01:42.606000+00:00",
+    "raw_value": 0.0,
+    "neighbours": [
+      37.4,
+      37.5
+    ]
+  },
+  "fia_weather_unchanged": true,
+  "receipt_integrity": true,
+  "protected_files": 614,
+  "protected_changes": [],
+  "tests": {
+    "command": ".venv/bin/python -B -m unittest tests.test_weekend_reconciliation tests.test_weekend_cloud",
+    "passed": 20
+  },
+  "scheduled_collection": {
+    "workflow": ".github/workflows/coletar-dados.yml",
+    "cron": "7,37 * * * *",
+    "last_confirmed_success": 41371809147
+  },
+  "invalid_query": {
+    "file": "weather-race-point.json",
+    "status": 404,
+    "reason": "Invalid encoded comparison keys; superseded by corrected documented date filter. Not evidence of missing weather records."
+  },
+  "receipts": [
+    {
+      "endpoint": "stints",
+      "arquivo": "stints-lawson-fp3.json",
+      "status": 200,
+      "sha256": "0b1a6a6a0d6d649314c2ada50ab10b98523149a35fdc552c67f906bc587e0b8a",
+      "obtido_em_utc": "2026-11-02T01:49:52.046395Z"
+    },
+    {
+      "endpoint": "weather",
+      "arquivo": "weather-race-point.json",
+      "status": 404,
+      "sha256": "79e458c7f1cd32213fb418a50acca1646db353c29a8775154e0fbf8bc6ebd79d",
+      "obtido_em_utc": "2026-11-02T01:49:59.817211Z"
+    },
+    {
+      "endpoint": "weather",
+      "arquivo": "weather-race-point-correct-filter.json",
+      "status": 200,
+      "sha256": "f53dcb7fff3a78029a236faf027d513ee9683f309f3eda0b59dcd7010a5b5899",
+      "obtido_em_utc": "2026-11-02T01:50:41.818161Z"
+    },
+    {
+      "endpoint": "race_weather",
+      "arquivo": "fia-race-weather-recheck.pdf",
+      "status": 200,
+      "sha256": "86a3df8a22e818900812a911f412d3dd2d0ee2a65cfd087bdc16fc43ad861346",
+      "obtido_em_utc": "2026-11-02T01:50:49.211220Z"
+    }
+  ]
+}
