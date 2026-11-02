@@ -2,7 +2,7 @@
   "temporada": 2026,
   "rodada": 19,
   "circuito_id": "rodriguez",
-  "atualizado_em_utc": "2026-11-02T04:03:29.152250+00:00",
+  "atualizado_em_utc": "2026-11-02T04:09:52.726508+00:00",
   "previsao_meteorologica": {
     "natureza": "previsao_arquivada",
     "disponivel": true,
@@ -17846,7 +17846,11 @@
                 "duration": 8428.772,
                 "gap_to_leader": 0,
                 "points": 25.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Max VERSTAPPEN",
+                  "team_name": "Red Bull Racing"
+                }
               },
               {
                 "driver_number": 44,
@@ -17854,7 +17858,11 @@
                 "duration": 8429.571,
                 "gap_to_leader": 0.799,
                 "points": 18.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Lewis HAMILTON",
+                  "team_name": "Ferrari"
+                }
               },
               {
                 "driver_number": 12,
@@ -17862,7 +17870,11 @@
                 "duration": 8432.778,
                 "gap_to_leader": 4.006,
                 "points": 15.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Kimi ANTONELLI",
+                  "team_name": "Mercedes"
+                }
               },
               {
                 "driver_number": 16,
@@ -17870,7 +17882,11 @@
                 "duration": 8439.479,
                 "gap_to_leader": 10.707,
                 "points": 12.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Charles LECLERC",
+                  "team_name": "Ferrari"
+                }
               },
               {
                 "driver_number": 1,
@@ -17878,7 +17894,11 @@
                 "duration": 8440.55,
                 "gap_to_leader": 11.778,
                 "points": 10.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Lando NORRIS",
+                  "team_name": "McLaren"
+                }
               },
               {
                 "driver_number": 63,
@@ -17886,7 +17906,11 @@
                 "duration": 8441.035,
                 "gap_to_leader": 12.263,
                 "points": 8.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "George RUSSELL",
+                  "team_name": "Mercedes"
+                }
               },
               {
                 "driver_number": 81,
@@ -17894,7 +17918,11 @@
                 "duration": 8448.247,
                 "gap_to_leader": 19.475,
                 "points": 6.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Oscar PIASTRI",
+                  "team_name": "McLaren"
+                }
               },
               {
                 "driver_number": 43,
@@ -17902,7 +17930,11 @@
                 "duration": 8448.976,
                 "gap_to_leader": 20.204,
                 "points": 4.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Franco COLAPINTO",
+                  "team_name": "Alpine"
+                }
               },
               {
                 "driver_number": 30,
@@ -17910,7 +17942,11 @@
                 "duration": 8449.671,
                 "gap_to_leader": 20.899,
                 "points": 2.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Liam LAWSON",
+                  "team_name": "Racing Bulls"
+                }
               },
               {
                 "driver_number": 10,
@@ -17918,7 +17954,11 @@
                 "duration": 8450.255,
                 "gap_to_leader": 21.483,
                 "points": 1.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Pierre GASLY",
+                  "team_name": "Alpine"
+                }
               },
               {
                 "driver_number": 5,
@@ -17926,7 +17966,11 @@
                 "duration": 8450.813,
                 "gap_to_leader": 22.041,
                 "points": 0.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Gabriel BORTOLETO",
+                  "team_name": "Audi"
+                }
               },
               {
                 "driver_number": 6,
@@ -17934,7 +17978,11 @@
                 "duration": 8451.275,
                 "gap_to_leader": 22.503,
                 "points": 0.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Isack HADJAR",
+                  "team_name": "Red Bull Racing"
+                }
               },
               {
                 "driver_number": 50,
@@ -17942,7 +17990,11 @@
                 "duration": 8454.145,
                 "gap_to_leader": 25.373,
                 "points": 0.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Ryo HIRAKAWA",
+                  "team_name": null
+                }
               },
               {
                 "driver_number": 23,
@@ -17950,7 +18002,11 @@
                 "duration": 8456.334,
                 "gap_to_leader": 27.562,
                 "points": 0.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Alexander ALBON",
+                  "team_name": "Williams"
+                }
               },
               {
                 "driver_number": 55,
@@ -17958,7 +18014,11 @@
                 "duration": 8457.41,
                 "gap_to_leader": 28.638,
                 "points": 0.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Carlos SAINZ",
+                  "team_name": "Williams"
+                }
               },
               {
                 "driver_number": 27,
@@ -17966,7 +18026,11 @@
                 "duration": 8458.749,
                 "gap_to_leader": 29.977,
                 "points": 0.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Nico HULKENBERG",
+                  "team_name": "Audi"
+                }
               },
               {
                 "driver_number": 11,
@@ -17974,7 +18038,11 @@
                 "duration": 8459.467,
                 "gap_to_leader": 30.695,
                 "points": 0.0,
-                "number_of_laps": 71
+                "number_of_laps": 71,
+                "perfil": {
+                  "full_name": "Sergio PEREZ",
+                  "team_name": "Cadillac"
+                }
               },
               {
                 "driver_number": 41,
@@ -17982,7 +18050,11 @@
                 "duration": null,
                 "gap_to_leader": null,
                 "points": 0.0,
-                "number_of_laps": 58
+                "number_of_laps": 58,
+                "perfil": {
+                  "full_name": "Arvid LINDBLAD",
+                  "team_name": "Racing Bulls"
+                }
               },
               {
                 "driver_number": 87,
@@ -17990,7 +18062,11 @@
                 "duration": null,
                 "gap_to_leader": null,
                 "points": 0.0,
-                "number_of_laps": 47
+                "number_of_laps": 47,
+                "perfil": {
+                  "full_name": "Oliver BEARMAN",
+                  "team_name": "Haas F1 Team"
+                }
               },
               {
                 "driver_number": 77,
@@ -17998,7 +18074,11 @@
                 "duration": null,
                 "gap_to_leader": null,
                 "points": 0.0,
-                "number_of_laps": 42
+                "number_of_laps": 42,
+                "perfil": {
+                  "full_name": "Valtteri BOTTAS",
+                  "team_name": "Cadillac"
+                }
               },
               {
                 "driver_number": 18,
@@ -18006,7 +18086,11 @@
                 "duration": null,
                 "gap_to_leader": null,
                 "points": 0.0,
-                "number_of_laps": 5
+                "number_of_laps": 5,
+                "perfil": {
+                  "full_name": "Lance STROLL",
+                  "team_name": "Aston Martin"
+                }
               },
               {
                 "driver_number": 14,
@@ -18014,7 +18098,11 @@
                 "duration": null,
                 "gap_to_leader": null,
                 "points": 0.0,
-                "number_of_laps": 5
+                "number_of_laps": 5,
+                "perfil": {
+                  "full_name": "Fernando ALONSO",
+                  "team_name": "Aston Martin"
+                }
               }
             ],
             "fontes": [
@@ -18143,7 +18231,7 @@
           "numero": 50,
           "piloto_id": null,
           "piloto": "Ryo HIRAKAWA",
-          "equipe": null,
+          "equipe": "Haas F1 Team",
           "posicao": 10,
           "duracao": 8454.145,
           "gap": 25.373,
@@ -23908,7 +23996,7 @@
           {
             "numero": 50,
             "piloto": "Ryo HIRAKAWA",
-            "equipe": null,
+            "equipe": "Haas F1 Team",
             "modalidade": "Race",
             "session_key": 11404,
             "sequencia_stints": [
@@ -24797,7 +24885,7 @@
           {
             "numero": 50,
             "piloto": "Ryo HIRAKAWA",
-            "equipe": null,
+            "equipe": "Haas F1 Team",
             "volta": 35,
             "duracao_s": 22.8,
             "fonte": "https://openf1.org/docs/#pit"
@@ -24877,7 +24965,7 @@
           {
             "numero": 50,
             "piloto": "Ryo HIRAKAWA",
-            "equipe": null,
+            "equipe": "Haas F1 Team",
             "volta": 43,
             "duracao_s": 23.8,
             "fonte": "https://openf1.org/docs/#pit"
@@ -24933,7 +25021,7 @@
           {
             "numero": 50,
             "piloto": "Ryo HIRAKAWA",
-            "equipe": null,
+            "equipe": "Haas F1 Team",
             "volta": 44,
             "duracao_s": 2178.9,
             "fonte": "https://openf1.org/docs/#pit"
@@ -25085,7 +25173,7 @@
           {
             "numero": 50,
             "piloto": "Ryo HIRAKAWA",
-            "equipe": null,
+            "equipe": "Haas F1 Team",
             "volta": 45,
             "duracao_s": 57.3,
             "fonte": "https://openf1.org/docs/#pit"
@@ -25109,7 +25197,7 @@
           {
             "numero": 50,
             "piloto": "Ryo HIRAKAWA",
-            "equipe": null,
+            "equipe": "Haas F1 Team",
             "volta": 59,
             "duracao_s": 22.9,
             "fonte": "https://openf1.org/docs/#pit"

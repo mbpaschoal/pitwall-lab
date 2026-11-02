@@ -48,6 +48,16 @@ class FinalResultTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, 'population|profile'):
                     reconcile(data, self.race, self.review)
 
+    def test_missing_team_is_supplied_only_in_the_reviewed_copy(self):
+        profile = next(p for p in self.data['drivers'] if p['driver_number'] == 50)
+        profile['team_name'] = None
+        output, audit = reconcile(self.data, self.race, self.review)
+        restored = next(p for p in output['drivers'] if p['driver_number'] == 50)
+        self.assertEqual(restored['team_name'], 'Haas F1 Team')
+        self.assertIsNone(profile['team_name'])
+        before = next(r for r in audit['acoes'][-1]['anterior'] if r['driver_number'] == 50)
+        self.assertIsNone(before['perfil']['team_name'])
+
     def test_invalid_review_does_not_turn_nc_into_a_finish(self):
         final = deepcopy(self.final)
         final['linhas'][-1]['duracao'] = 100

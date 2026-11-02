@@ -15,7 +15,7 @@ A [classificação final FIA, documento 86](https://www.fia.com/system/files/dec
 
 `operacao2026/final_results.py` valida população, números, perfis, campos finais e proveniência posterior da FIA. A integração em `weekend_reconciliation.py` altera somente uma cópia dos dados, registra o estado anterior e acompanha o hash da adjudicação. Assim, uma consulta automática futura não restaura a classificação anterior às penalidades. O bruto, o v1 e as probabilidades permanecem preservados.
 
-O cadastro nativo de Ryo Hirakawa tem nome completo e número 50, mas não informa nome/sobrenome separados nem equipe. Sua identidade nesta revisão é documentada pelo número/nome exatos da FIA/F1 e pelo driverId literal da Jolpica. Os campos ausentes do cadastro bruto não são preenchidos nem promovidos ao mapa global de inscritos de outras sessões.
+O cadastro nativo de Ryo Hirakawa tem nome completo e número 50, mas não informa nome/sobrenome separados nem equipe. Sua identidade nesta revisão é documentada pelo número/nome exatos da FIA/F1 e pelo driverId literal da Jolpica. A equipe é exibida como Haas F1 Team somente na cópia revisada, com o campo anterior ausente registrado na auditoria. O cadastro bruto e o mapa global de inscritos de outras sessões permanecem preservados.
 
 O composto das voltas 1–8 de Lawson no TL3 e a leitura verdadeira do asfalto registrada como zero continuam indisponíveis. As correções de resultado final não removem essas limitações.
 

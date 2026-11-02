@@ -58,9 +58,10 @@ fs.mkdirSync(output,{recursive:true});
     await surface.getByRole('heading',{name:lang==='pt'?'Tempos de sessão':'Session times',exact:true}).waitFor({timeout:60000});
     const select=surface.locator('.st-key-acervo_2026_19_sessao_tempos').getByRole('combobox');
     async function downloadSession(option,suffix){
-     const label=option==='TL3'&&lang==='en'?'FP3':option;
+     const label=lang==='en'?({'TL3':'FP3','Corrida':'Race'}[option]||option):option;
      await select.click();await surface.getByRole('option',{name:label,exact:true}).click();
-     await surface.getByText(option==='TL3'?(lang==='pt'?'Melhor volta publicada de cada piloto nesta sessão de treino.':"Each driver's published fastest lap in this practice session."):/^DSQ (indica|means)/).waitFor({timeout:60000});
+     const caption=option==='TL3'?(lang==='pt'?'Melhor volta publicada de cada piloto nesta sessão de treino.':"Each driver's published fastest lap in this practice session."):(option==='Corrida'?/^NC (indica|means)/:/^DSQ (indica|means)/);
+     await surface.getByText(caption).waitFor({timeout:60000});
      await surface.waitForFunction(()=>document.querySelector('.stApp')?.getAttribute('data-test-script-state')==='notRunning',null,{timeout:60000});
      const button=surface.locator('.st-key-acervo_2026_19_csv_tempos').getByRole('button',{includeHidden:true});
      const expander=surface.locator('[data-testid="stExpander"]').filter({has:button}).getByText(lang==='pt'?'Exportar tabela':'Export table',{exact:true});
@@ -78,6 +79,20 @@ fs.mkdirSync(output,{recursive:true});
     check(dq&&dq[0]==='—'&&dq[q[0].indexOf(lang==='pt'?'Situação':'Status')]==='DSQ','Disqualification became a numeric rank');
     for(const phase of ['Q1','Q2','Q3'])check(dq[q[0].indexOf(phase)]==='—','Disqualified time shown as valid');
     await page.screenshot({path:path.join(output,key+'-qualifying-dsq.png')});
+    if(race.tempos.some(r=>String(r.fonte_validacao||'').endsWith('_final_race_classification.pdf'))){
+     const final=await downloadSession('Corrida','race-final');
+     check(final.length===23,'Final race must retain all 22 drivers');
+     for(const [driver,position,time] of [['PIASTRI','13','2:20:58.247'],['COLAPINTO','15','2:20:58.976'],['GASLY','17','2:21:20.255']]){
+      const row=final.slice(1).find(r=>r.some(c=>c.toUpperCase().includes(driver)));
+      check(row&&row[0]===position&&row.includes(time),'Final penalty result missing: '+driver);
+     }
+     const status=final[0].indexOf(lang==='pt'?'Situação':'Status');
+     const nc=final.slice(1).filter(r=>r[status]==='NC');
+     check(nc.length===5&&nc.every(r=>r[0]==='—'),'NC drivers gained invented finishing positions');
+     const hirakawa=final.slice(1).find(r=>r.some(c=>c.includes('HIRAKAWA')));
+     check(hirakawa&&hirakawa.includes('Haas F1 Team'),'Reviewed Hirakawa team missing');
+     await page.screenshot({path:path.join(output,key+'-race-final.png')});
+    }
    }
    surface=await open('Previsões');
    check(await surface.locator('.fan-podium-compact').count()===1,'Observed before/after comparison missing');

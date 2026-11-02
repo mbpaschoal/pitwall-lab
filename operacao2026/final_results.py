@@ -64,8 +64,11 @@ def reconcile_native(data, final, source):
     previous = []
     for result in results:
         row = by_number[result['driver_number']]
-        previous.append({k: result.get(k) for k in (
-            'driver_number', 'position', 'duration', 'gap_to_leader', 'points', 'number_of_laps')})
+        previous.append(dict({k: result.get(k) for k in (
+            'driver_number', 'position', 'duration', 'gap_to_leader', 'points', 'number_of_laps')},
+            perfil={k: drivers[row['numero']].get(k) for k in ('full_name', 'team_name')}))
+        if drivers[row['numero']].get('team_name') is None:
+            drivers[row['numero']]['team_name'] = row['team_name']
         result.update(position=row['posicao'], duration=row['duracao'],
                       gap_to_leader=row['gap'], points=row['pontos'],
                       number_of_laps=row['voltas'],
