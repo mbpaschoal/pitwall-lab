@@ -9,6 +9,7 @@ from pitwall.paths import PROJECT_ROOT
 
 RAIZ = PROJECT_ROOT
 DOCUMENTOS = (
+    ("fontes-atuais", "Fontes e cobertura atuais", "FONTES_E_DADOS.md"),
     ("metodo-v1", "Método do modelo v1", "docs/experimento_modelo_v1.md"),
     (
         "relatorio-2024",
@@ -38,6 +39,7 @@ DOWNLOADS = {
     ),
 }
 ENGLISH_DOCUMENTS = {
+    "fontes-atuais": "FONTES_E_DADOS.md",
     "metodo-v1": "docs/en/experimento_modelo_v1.md",
     "relatorio-2024": "docs/en/relatorio_2024.md",
     "avaliacao-2025": "docs/en/relatorio_2025.md",
@@ -65,6 +67,7 @@ def _arquivo_allowlistado(caminho_relativo):
         set(_MAPA_CAMINHOS)
         | set(ENGLISH_DOCUMENTS.values())
         | {item[2] for itens in DOWNLOADS.values() for item in itens}
+        | {"publicacao/templates/FONTES_E_DADOS.md"}
     )
     if caminho_relativo not in permitidos:
         raise ValueError(
@@ -93,21 +96,41 @@ def _arquivo_allowlistado(caminho_relativo):
 
 def documentos_disponiveis():
     return [
-        {"id": identificador, "titulo": titulo, "caminho": caminho}
+        {"id": identificador, "titulo": titulo,
+         "caminho": _caminho_fontes_atuais() if identificador == "fontes-atuais" else caminho}
         for identificador, titulo, caminho in DOCUMENTOS
     ]
 
 
-def conteudo_documento(identificador):
+def documento_disponivel(identificador):
+    """Validate a document identity, never a user-supplied filesystem path."""
+    return identificador in _MAPA_DOCUMENTOS
+
+
+def _caminho_fontes_atuais():
+    # The portable package already includes this bilingual source document.
+    if (RAIZ / "FONTES_E_DADOS.md").is_file():
+        return "FONTES_E_DADOS.md"
+    return "publicacao/templates/FONTES_E_DADOS.md"
+
+
+def conteudo_documento(identificador, temporada=None, rodada=None):
     try:
         _, caminho = _MAPA_DOCUMENTOS[identificador]
     except KeyError:
         raise ValueError("Documento fora da allowlist: {}".format(identificador))
     from pitwall.i18n import language
 
+    if identificador == "fontes-atuais":
+        texto = _arquivo_allowlistado(_caminho_fontes_atuais()).read_text(encoding="utf-8")
+        if language() == "en":
+            corpo = texto.split("## English", 1)[1].split("\n## ", 1)[0].strip()
+            return reescrever_links("# Current sources and coverage\n\n" + corpo, temporada, rodada)
+        corpo = texto.split("## Português", 1)[1].split("## English", 1)[0].strip()
+        return reescrever_links("# Fontes e cobertura atuais\n\n" + corpo, temporada, rodada)
     if language() == "en":
         caminho = ENGLISH_DOCUMENTS[identificador]
-    return reescrever_links(_arquivo_allowlistado(caminho).read_text(encoding="utf-8"))
+    return reescrever_links(_arquivo_allowlistado(caminho).read_text(encoding="utf-8"), temporada, rodada)
 
 
 def downloads_documento(identificador):
@@ -123,10 +146,19 @@ def downloads_documento(identificador):
     return itens
 
 
-def url_documento(identificador, download=False, idioma=None):
+def _contexto_gp(temporada, rodada):
+    try:
+        ano, gp = int(str(temporada)), int(str(rodada))
+    except (TypeError, ValueError):
+        return {}
+    return {"temporada": ano, "gp": gp} if ano in (2024, 2025, 2026) and 1 <= gp <= 24 else {}
+
+
+def url_documento(identificador, download=False, idioma=None, temporada=None, rodada=None):
     if identificador not in _MAPA_DOCUMENTOS:
         raise ValueError("Documento fora da allowlist: {}".format(identificador))
     parametros = {"tela": "Metodologia", "documento": identificador}
+    parametros.update(_contexto_gp(temporada, rodada))
     from pitwall.i18n import language
 
     selected_language = idioma or language()
@@ -137,7 +169,7 @@ def url_documento(identificador, download=False, idioma=None):
     return "/?" + urlencode(parametros)
 
 
-def reescrever_links(texto):
+def reescrever_links(texto, temporada=None, rodada=None):
     """Mantém referências allowlistadas navegáveis; não abre caminhos arbitrários."""
 
     def substituir(encontro):
@@ -151,6 +183,7 @@ def reescrever_links(texto):
                         url_documento(
                             _IDS_POR_TITULO[titulo],
                             idioma="pt" if rotulo == "Português" else None,
+                            temporada=temporada, rodada=rodada,
                         ),
                         quote=True,
                     ),
@@ -160,13 +193,14 @@ def reescrever_links(texto):
         if normalizado.endswith("previsoes_validacao.csv"):
             return (
                 '<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(
-                    escape(url_documento("relatorio-2024", download=True), quote=True),
+                    escape(url_documento("relatorio-2024", download=True, temporada=temporada, rodada=rodada), quote=True),
                     escape(rotulo),
                 )
             )
         if destino.startswith(("https://", "http://", "#")):
             return encontro.group(0)
-        return "{} (artefato de auditoria fora desta demonstração)".format(rotulo)
+        from pitwall.i18n import translate
+        return translate("{} (artefato de auditoria fora desta demonstração)").format(rotulo)
 
     return re.sub(r"(?<!!)\[([^\]]+)\]\(([^)]+)\)", substituir, texto)
 
@@ -185,14 +219,21 @@ def versao_interface():
     return build
 
 
-def renderizar_documentacao_local(st):
+def _rotulo_documento(identificador, titulo):
+    if identificador == "protocolo-temporal":
+        return "Protocolo histórico (etapa 3)"
+    return titulo
+
+
+def _renderizar_indice_documentos(st):
     st.markdown('<div id="documentacao"></div>', unsafe_allow_html=True)
     st.subheader("Documentação e relatórios")
     st.caption("Versão da interface: {}".format(versao_interface()))
     por_id = {item["id"]: item["titulo"] for item in documentos_disponiveis()}
     links = [
         '<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(
-            escape(url_documento(identificador), quote=True), escape(titulo)
+            escape(url_documento(identificador, temporada=st.query_params.get("temporada"), rodada=st.query_params.get("gp")), quote=True),
+            escape(_rotulo_documento(identificador, titulo))
         )
         for identificador, titulo in por_id.items()
     ]
@@ -200,12 +241,14 @@ def renderizar_documentacao_local(st):
         '<nav aria-label="Documentação">{}</nav>'.format(" · ".join(links)),
         unsafe_allow_html=True,
     )
-    identificador = st.query_params.get("documento")
-    if identificador not in por_id:
-        return
-    st.caption(
-        "Registros históricos do projeto. Comandos nos documentos não são executados pelo aplicativo."
-    )
+    return por_id
+
+
+def _renderizar_documento(st, identificador):
+    if identificador == "fontes-atuais":
+        st.caption("Fontes e limites do produto atual. Dados descritivos não alteram as previsões registradas.")
+    else:
+        st.caption("Documento histórico preservado. O estado descrito pertence à etapa original; comandos não são executados pelo aplicativo.")
     downloads = downloads_documento(identificador)
     if downloads:
         st.markdown('<div id="download-documento"></div>', unsafe_allow_html=True)
@@ -217,4 +260,22 @@ def renderizar_documentacao_local(st):
             mime="text/csv",
             key="download-{}".format(item["nome"]),
         )
-    st.markdown(conteudo_documento(identificador), unsafe_allow_html=True)
+    st.markdown(conteudo_documento(identificador, temporada=st.query_params.get("temporada"), rodada=st.query_params.get("gp")), unsafe_allow_html=True)
+
+
+def renderizar_documentacao_local(st, documento_primeiro=False):
+    """Render a requested document first without repeating the introduction."""
+    identificador = st.query_params.get("documento")
+    if documento_primeiro and documento_disponivel(identificador):
+        from pitwall.i18n import language
+        retorno = "/?" + urlencode(dict(tela="Metodologia", lang=language(),
+                                      **_contexto_gp(st.query_params.get("temporada"), st.query_params.get("gp"))))
+        st.markdown('<a class="fan-document-return" href="{}" target="_self">{}</a>'.format(
+            escape(retorno, quote=True), "Voltar à explicação do Lab"), unsafe_allow_html=True)
+        _renderizar_documento(st, identificador)
+        with st.expander("Outros documentos e identificação da versão"):
+            _renderizar_indice_documentos(st)
+        return
+    por_id = _renderizar_indice_documentos(st)
+    if identificador in por_id:
+        _renderizar_documento(st, identificador)

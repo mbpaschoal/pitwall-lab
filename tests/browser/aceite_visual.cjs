@@ -10,6 +10,7 @@ const expectedCSS=fs.readFileSync(path.join(__dirname,'../../frontend_assets/jou
 const cssHash=crypto.createHash('sha256').update(expectedCSS).digest('hex');
 const heroCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../dashboard_assets/fan/hero_catalog.json'),'utf8')).heroes;
 const circuitCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../dashboard_assets/circuit/catalogo_visual.json'),'utf8')).circuitos;
+const mediaCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../static/pitwall-media/catalog.json'),'utf8')).method;
 const expectedHeroes={Corridas:circuitCatalog.americas.foto.sha256,Pilotos:heroCatalog.drivers.sha256,Campeonato:heroCatalog.championship.sha256,'Previsões':heroCatalog.forecast.sha256,Desempenho:heroCatalog.performance.sha256,Metodologia:heroCatalog.method.sha256};
 const routes = ['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
 const launch = {headless:true};
@@ -41,9 +42,16 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     await surface.locator('.fan-hero h1').waitFor({timeout:90000});
     await surface.waitForFunction(()=>document.querySelector('.stApp')?.getAttribute('data-test-script-state')==='notRunning',null,{timeout:90000});
     await surface.locator('.fan-hero-image').evaluate(img=>img.decode());
-    const photoSource=await surface.locator('.fan-hero-image').getAttribute('src');
-    const photoHash=crypto.createHash('sha256').update(Buffer.from(photoSource.split(',')[1],'base64')).digest('hex');
-    requireCheck(photoHash===expectedHeroes[route],'Served photograph differs from the original source');
+    const photoSource=await surface.locator('.fan-hero-image').evaluate(img=>img.currentSrc);
+    let photoBytes,variant;
+    if(photoSource.startsWith('data:'))photoBytes=Buffer.from(photoSource.split(',')[1],'base64');
+    else {
+     variant=mediaCatalog.variants.find(v=>new URL(photoSource).pathname.endsWith('/app/'+v.path));
+     requireCheck(variant&&mediaCatalog.source_sha256===expectedHeroes[route],'Responsive photo is not derived from the expected original');
+     const response=await page.request.get(photoSource);requireCheck(response.ok(),'Responsive image did not load');photoBytes=await response.body();
+    }
+    const photoHash=crypto.createHash('sha256').update(photoBytes).digest('hex');
+    requireCheck(photoHash===(variant?variant.sha256:expectedHeroes[route]),'Served photograph differs from its documented source or variant');
     await surface.evaluate(()=>document.fonts.ready);
     await page.waitForTimeout(700);
     requireCheck(await surface.locator('[data-testid="stException"]').count()===0,'Application exception');
@@ -53,7 +61,7 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     const measurements=await surface.evaluate(({route,mobile})=>{
      const box=element=>{if(!element)return null;const r=element.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom,right:r.right};};
      const one=selector=>box(document.querySelector(selector));
-     const photos=Array.from(document.querySelectorAll('.fan-hero-image,.fan-hero-backdrop,.fan-portrait')).filter(i=>i.getBoundingClientRect().width>0).map(i=>({driver:i.dataset.driverId,natural:[i.naturalWidth,i.naturalHeight],display:[i.getBoundingClientRect().width,i.getBoundingClientRect().height]}));
+     const photos=Array.from(document.querySelectorAll('.fan-hero-image,.fan-hero-backdrop,.fan-portrait')).filter(i=>i.getBoundingClientRect().width>0).map(i=>({driver:i.dataset.driverId,natural:[i.naturalWidth,i.naturalHeight],responsive:i.hasAttribute('srcset'),display:[i.getBoundingClientRect().width,i.getBoundingClientRect().height]}));
      return {viewport:[innerWidth,innerHeight],overflow:document.documentElement.scrollWidth>innerWidth,
       hero:one('.fan-hero'),heading:one('.fan-hero h1'),copy:one('.fan-hero-copy>p'),ribbon:one('.journey-calendar'),
       dock:one('.st-key-journey-navigation'),targets:Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"]>label')).map(box),photos,
@@ -69,6 +77,9 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
       bars:Array.from(document.querySelectorAll('.fan-condition-bar>i,.fan-probability-track>i')).map(i=>parseFloat(i.style.width))};
     },{route,mobile});
     const m=measurements, width=m.viewport[0];
+    // srcset naturalWidth is density-corrected; source pixels come from the
+    // byte-verified derivative, rather than treating CSS pixels as source pixels.
+    for(const photo of m.photos)if(photo.responsive&&variant)photo.sourcePixels=[variant.width,variant.height];
     fs.writeFileSync(path.join(output,key+'-geometry.json'),JSON.stringify(m,null,2));
     requireCheck(!m.overflow,'Horizontal overflow');
     requireCheck(m.h1Count===1,'One main title required');
@@ -76,7 +87,7 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     requireCheck(m.heading.y>=m.hero.y&&m.heading.bottom<=m.hero.bottom,'Title clipped by cover');
     requireCheck(m.targets.length===6&&m.targets.every(r=>r.width>=44&&r.height>=44&&r.x>=0&&r.right<=width+1),'Dock target clipped or too small');
     requireCheck(m.dock.bottom<=m.viewport[1]-54,'Dock overlaps the Streamlit host area');
-    requireCheck(m.photos.every(i=>i.natural[0]>=i.display[0]*2 && i.natural[1]>=i.display[1]*2),'Photograph lacks source resolution for 2x display');
+    requireCheck(m.photos.every(i=>(i.sourcePixels||i.natural)[0]>=i.display[0]*2 && (i.sourcePixels||i.natural)[1]>=i.display[1]*2),'Photograph lacks source resolution for 2x display');
     requireCheck(m.bars.every(value=>value>=0&&value<=100),'Chart exceeds its container');
     if(route==='Corridas'){
      requireCheck(m.podiumHeading.y>=m.hero.y+m.hero.height*.8,'Podium displaced above the photograph');

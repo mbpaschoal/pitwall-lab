@@ -31,14 +31,14 @@ const server = http.createServer((req,res) => {
       await page.goto(shell+'/?temporada=2026&gp=18&aba=Hist%C3%B3rico');
       let frame=page.frameLocator('iframe');
       await frame.getByText('Desempenho dos pilotos nesta pista',{exact:true}).waitFor({timeout:60000});
-      await frame.getByRole('button',{name:'🇬🇧',exact:true}).click();
+      await frame.getByRole('button',{name:'🇬🇧 English',exact:true}).click();
       await frame.getByText('Driver performance at this circuit',{exact:true}).waitFor({timeout:60000});
       const iframe=page.frames().find(f=>f.url().includes('lang=en'));
       check(!!iframe,'Language query was not retained');
       const state=new URL(iframe.url()).searchParams;
       check(state.get('gp')==='18' && state.get('temporada')==='2026' && state.get('aba')==='Histórico','Season, GP or tab lost on flag click');
-      const flag=frame.getByRole('button',{name:'🇬🇧',exact:true});
-      const box=await flag.boundingBox();const brBox=await frame.getByRole('button',{name:'🇧🇷',exact:true}).boundingBox();check(Math.abs(box.y-brBox.y)<5,'Flags stacked vertically');check(box && box.y>=0 && box.y+box.height<=125 && box.x>viewport.width-180 && box.x+box.width<=viewport.width,'Flags are not in the upper-right corner');
+      const flag=frame.getByRole('button',{name:'🇬🇧 English',exact:true});
+      const box=await flag.boundingBox();const brBox=await frame.getByRole('button',{name:'🇧🇷 Português',exact:true}).boundingBox();check(Math.abs(box.y-brBox.y)<5,'Flags stacked vertically');check(box && box.y>=0 && box.y+box.height<=125 && box.x>viewport.width-180 && box.x+box.width<=viewport.width,'Flags are not in the upper-right corner');
       const switches=frame.locator('[class*="st-key-pw_language_switch_"]:visible').first();
       const switchBox=await switches.boundingBox();
       const controls=await frame.locator('.st-key-topbar button:visible, .gp-cabecalho:visible').all();
@@ -72,7 +72,7 @@ const server = http.createServer((req,res) => {
       const downloadPromise=doc.waitForEvent('download');await doc.getByRole('button',{name:'Download 2024 predictions (CSV)',exact:true}).click();
       const download=await downloadPromise;const scientific=path.join(output,`scientific-${viewport.width}.csv`);await download.saveAs(scientific);
       check(sha(fs.readFileSync(scientific))===sha(expectedCsv),'Scientific CSV changed during translation');
-      await frame.getByRole('button',{name:'🇧🇷',exact:true}).click();
+      await frame.getByRole('button',{name:'🇧🇷 Português',exact:true}).click();
       await frame.getByText('Método histórico',{exact:true}).waitFor({timeout:60000});
       const portuguese=page.frames().find(f=>f.url().includes('lang=pt'));
       check(new URL(portuguese.url()).searchParams.get('gp')==='18','Return to Portuguese lost GP');

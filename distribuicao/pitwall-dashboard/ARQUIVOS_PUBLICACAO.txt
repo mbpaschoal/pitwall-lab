@@ -395,6 +395,7 @@ pitwall/dashboard/fan_views.py
 pitwall/dashboard/favorites.py
 pitwall/dashboard/hero_assets.py
 pitwall/dashboard/journey.py
+pitwall/dashboard/media.py
 pitwall/dashboard/model_views.py
 pitwall/dashboard/pilot_views.py
 pitwall/dashboard/search.py
@@ -446,6 +447,10 @@ reports/pilotos_condicoes_20261029/circuitos_revisados.csv
 reports/pilotos_condicoes_20261029/consolidado_v1/gate_dados.json
 reports/pilotos_condicoes_20261029/consolidado_v1/pendencias.csv
 requirements.txt
+static/pitwall-media/catalog.json
+static/pitwall-media/method-9776d0597fe6-1200.webp
+static/pitwall-media/method-9776d0597fe6-2400.webp
+static/pitwall-media/method-9776d0597fe6-3600.webp
 tests/test_acervo_publico.py
 tests/test_complemento_idade_publico.py
 tests/test_dashboard_app.py

@@ -64,5 +64,5 @@ def render(st, root, rows, year, round_, registered):
         st.markdown(cards_html(rows,root,year,round_),unsafe_allow_html=True)
         st.caption('Arte gerada por IA. As cartas não indicam a ordem de chegada. Consulte os percentuais na tabela de previsões.')
         href='?'+urlencode(dict(tela='Previsões',temporada=year,gp=round_,lang=language()))
-        st.markdown('<a class="tarot-back" href="{}" target="_self">{}</a>'.format(escape(href,quote=True),escape(translate('Ver todos os pilotos e como calculamos'))),unsafe_allow_html=True)
+        st.markdown('<a class="tarot-back" href="{}" target="_self">{}</a>'.format(escape(href,quote=True),escape(translate('Voltar às chances deste GP'))),unsafe_allow_html=True)
     show()

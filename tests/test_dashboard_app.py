@@ -474,7 +474,9 @@ class TestDashboardApp(unittest.TestCase):
             [('Modelo', '2.32 de 3'), ('Classificação', '2.27 de 3'),
              ('Modelo', '8 de 22 GPs'), ('Classificação', '8 de 22 GPs')],
         )
-        self.assertTrue(any('Detalhes técnicos' in str(item.label) for item in self.at.get('expander')))
+        labels = {str(item.label) for item in self.at.get('expander')}
+        self.assertIn('Resumo estatístico e todos os GPs', labels)
+        self.assertIn('Qualidade das probabilidades: log loss, Brier e calibração', labels)
 
     def test_corridas_e_previsoes_priorizam_blocos_distintos_sem_trocar_o_gp(self):
         self.executar()

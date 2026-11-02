@@ -206,7 +206,7 @@ nav[aria-label="Documentação"] { line-height:1.9; padding:4px 0 12px; }
 .pw-inline-team { display:none; }
 .gp-status-area p:empty { display:none; }
 @media (max-width:700px) {
- .pw-inline-team { display:block; font-size:12px; color:var(--pw-muted); margin-left:23px; }
+ .pw-inline-team { display:block; font-size:12px; color:var(--pw-muted); margin-left:23px; white-space:normal; overflow-wrap:anywhere; }
  .pw-drivers-table { min-width:0; width:100%; font-size:14px; }
  .pw-drivers-table th:nth-child(3), .pw-drivers-table td:nth-child(3) { display:none; }
  .pw-drivers-table th:nth-child(2), .pw-drivers-table td:nth-child(2) { width:58%; padding-left:0; }

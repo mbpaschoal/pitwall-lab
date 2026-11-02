@@ -1,4 +1,5 @@
 [server]
+enableStaticServing = true
 headless = true
 fileWatcherType = "none"
 

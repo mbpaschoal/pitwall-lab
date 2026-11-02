@@ -1,5 +1,6 @@
 """Historical driver views. No collection, training or prediction occurs here."""
 
+from datetime import date
 from html import escape
 from urllib.parse import urlencode
 
@@ -35,6 +36,18 @@ TEAM_NAMES = {
 }
 
 
+def _forecast_origin_params(query):
+    """Keep a matching GP origin separate from the profile's historical years."""
+    year, round_ = query.get("origem_temporada"), query.get("origem_gp")
+    if (query.get("origem_tela") == "Previsões" and year in ("2024", "2025", "2026")
+            and isinstance(round_, str) and 1 <= len(round_) <= 2 and round_.isdigit()
+            and str(int(round_)) == round_ and 1 <= int(round_) <= 24
+            and query.get("temporada") == year and query.get("gp") == round_):
+        return dict(temporada=year, gp=round_, origem_tela="Previsões",
+                    origem_temporada=year, origem_gp=round_)
+    return {}
+
+
 def _condition_chips(years, metric, minimum, condition):
     """Quick conditions keep the comparison scope; Clear restores valid defaults."""
     chips = []
@@ -42,6 +55,7 @@ def _condition_chips(years, metric, minimum, condition):
         query = dict(tela="Pilotos", visao="geral", condicao=key,
                      anos=",".join(map(str, years)), metrica=metric,
                      minimo=minimum, lang=language())
+        query.update(_forecast_origin_params(st.query_params))
         chips.append('<a href="?{}" target="_self"{}>{}</a>'.format(
             escape(urlencode(query), quote=True),
             ' aria-current="true"' if key == condition else "",
@@ -49,6 +63,7 @@ def _condition_chips(years, metric, minimum, condition):
     reset = dict(tela="Pilotos", visao="geral", condicao="rain",
                  anos="2024,2025,2026", metrica="win_rate", minimo=5,
                  faixas=",".join(HIGHLIGHTS), lang=language())
+    reset.update(_forecast_origin_params(st.query_params))
     chips.append('<a class="fan-condition-reset" href="?{}" target="_self" title="{}">{}</a>'.format(
         escape(urlencode(reset), quote=True),
         escape(translate("Restaurar período e critérios padrão"), quote=True),
@@ -95,12 +110,14 @@ def _overview_details(asset, rows, years, metric, minimum):
 
 
 def _link(driver, condition="rain"):
-    return "?" + urlencode({"tela": "Pilotos", "piloto": driver, "visao": "perfil",
+    params = {"tela": "Pilotos", "piloto": driver, "visao": "perfil",
                              "condicao": condition, "lang": language(),
         "anos": ",".join(map(str, st.session_state.get("pilot_years", [2024, 2025, 2026]))),
         "metrica": st.session_state.get("pilot_metric", "win_rate"),
         "minimo": st.session_state.get("pilot_minimum", 5),
-        "faixas": ",".join(st.session_state.get("profile_conditions", HIGHLIGHTS))})
+        "faixas": ",".join(st.session_state.get("profile_conditions", HIGHLIGHTS))}
+    params.update(_forecast_origin_params(st.query_params))
+    return "?" + urlencode(params)
 
 
 def _value(value, metric):
@@ -118,6 +135,34 @@ def _figure(figure, height=350):
         font=dict(family="Lato, Arial, sans-serif", color=INK),
         legend=dict(orientation="h", y=-.22), hovermode="closest", separators=",." if language() == "pt" else ".,")
     st.plotly_chart(figure, use_container_width=True, config={"displayModeBar": False})
+
+
+def _condition_values_html(comparisons, series, metric, minimum):
+    """Expose exactly the plotted aggregates and denominators as native text."""
+    headings = ("Condição", "Grupo", METRICS[metric], "Largadas (N)")
+    header = "".join('<th scope="col">{}</th>'.format(escape(translate(label)))
+                     for label in headings)
+    rows = []
+    for item in comparisons:
+        for field, label, _ in series:
+            stats = item[field]
+            value = stats[metric] if stats["starts"] >= minimum else None
+            rows.append('<tr><th scope="row">{}</th><td>{}</td><td>{}</td><td>{}</td></tr>'.format(
+                escape(translate(BY_KEY[item["condition"]].short)),
+                escape(translate(label)), escape(_value(value, metric)), stats["starts"]))
+    return '<table class="pilot-condition-values"><caption>{}</caption><thead><tr>{}</tr></thead><tbody>{}</tbody></table>'.format(
+        escape(translate("Valores e amostras por condição")), header, "".join(rows))
+
+
+def _appearance_date_label(value):
+    """Label the published UTC date without browser-locale or timezone changes."""
+    try:
+        published = date.fromisoformat(str(value)[:10])
+    except ValueError:
+        return str(value)
+    months = ("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec" if language() == "en"
+              else "jan fev mar abr mai jun jul ago set out nov dez").split()
+    return "{} {} {}".format(published.day, months[published.month - 1], published.year)
 
 
 def _evidence(asset, rows, key):
@@ -241,6 +286,11 @@ def _individual(asset, years, metric, minimum):
             figure.update_yaxes(autorange="reversed")
             _figure(figure, 390)
             st.caption("A referência usa os outros pilotos nos mesmos GPs em que este piloto largou. Contagens mostram apenas o piloto; taxas permitem comparação.")
+        if comparisons:
+            with st.expander("Ver valores e amostras"):
+                st.caption("Os valores e as amostras são os mesmos do gráfico. — indica amostra abaixo do mínimo escolhido.")
+                st.markdown(_condition_values_html(comparisons, series, metric, minimum),
+                            unsafe_allow_html=True)
     with right:
         st.subheader("Contra o companheiro de equipe")
         st.caption("Todas as condições no período selecionado.")
@@ -389,6 +439,8 @@ def render(root):
     def show_favorite():
         st.session_state["pilot_view"] = "Perfil individual"
         st.session_state["pilot_driver"] = favorite
+    with st.container(key="pilot-favorite-control"):
+        favorite_control(names, favorite)
     if favorite:
         st.button("Ver meu favorito", on_click=show_favorite)
     if not years:
@@ -407,14 +459,11 @@ def render(root):
         st.markdown("Chuva significa registro do sensor durante os intervalos ativos da corrida, sem a pausa por bandeira vermelha. Ausência de chuva registrada não comprova pista seca. Temperaturas são médias das amostras nesses intervalos; as faixas são escolhas de análise, não limites universais.")
         st.markdown("Altitude é uma aproximação pontual do terreno. Suzuka fica no grupo de traçado em oito. Curvas, sentido e comprimento correspondem ao mapa FIA de cada edição.")
         st.caption("Também disponíveis como contexto auditado: umidade, pressão, velocidade e direção do vento, comprimento do circuito, nuvens e código WMO. As condições podem se sobrepor; suas largadas não devem ser somadas entre grupos.")
-        st.markdown("O confronto exige dois pilotos da mesma equipe na mesma corrida, ambos com largada e posição válidas, sem desclassificação. Não mede ritmo isolado do carro.")
+        st.markdown("No Duelo, os dois pilotos podem pertencer a equipes diferentes. Entram apenas GPs em que ambos largaram; o placar de posições usa resultados válidos e sem desclassificação.")
+        st.markdown("Na comparação com o companheiro, os pilotos precisam estar na mesma equipe no mesmo GP, ambos com largada e posição válidas, sem desclassificação. Nenhum dos confrontos isola o efeito do carro.")
         st.markdown("17 compostos de pneus de treinos ou classificação seguem indisponíveis nas fontes consultadas. Eles permanecem ausentes e não participam destes rankings.")
         st.dataframe(pd.DataFrame([{"Condição": x.label, "Variável": x.variable} for x in CONDITIONS]), hide_index=True, width="stretch")
         st.markdown("[OpenF1](https://openf1.org/docs/) · [Open-Meteo](https://open-meteo.com/en/docs/historical-weather-api) · [Mapas FIA por edição](https://github.com/TracingInsights/DDocs/tree/9f647f7c62a838405c85219e5eb2feb5c3575027) · [Auditoria dos dados](https://github.com/mbpaschoal/pitwall-lab/tree/main/reports/pilotos_condicoes_20261029)")
-
-    with st.container(key="pilot-favorite-control"):
-        favorite_control(names, favorite)
-
 
 def _form(asset, rows):
     recent = sorted(rows, key=lambda x: (asset["gps"][x["race_id"]]["temporada"], asset["gps"][x["race_id"]]["rodada"]))[-10:]
@@ -424,8 +473,15 @@ def _form(asset, rows):
         return
     figure = go.Figure(go.Scatter(x=[asset["gps"][x["race_id"]]["date_utc"] for x in recent],
         y=[x["position"] if x["started"] and not x["disqualified"] else None for x in recent],
-        text=[asset["gps"][x["race_id"]]["name"] for x in recent], mode="lines+markers", connectgaps=False,
+        text=[asset["gps"][x["race_id"]]["name"] + "<br>" + _appearance_date_label(
+            asset["gps"][x["race_id"]]["date_utc"]) for x in recent], mode="lines+markers", connectgaps=False,
         marker_color=INK, hovertemplate="%{text}<br>%{y}<extra></extra>"))
+    tick_rows = recent[::max(1, (len(recent) + 3) // 4)]
+    if tick_rows[-1] is not recent[-1]:
+        tick_rows.append(recent[-1])
+    tick_dates = [asset["gps"][row["race_id"]]["date_utc"] for row in tick_rows]
+    figure.update_xaxes(tickmode="array", tickvals=tick_dates,
+                        ticktext=[_appearance_date_label(value) for value in tick_dates])
     figure.update_yaxes(autorange="reversed", title_text="Posição publicada", dtick=1)
     _figure(figure, 260)
     st.caption("Até dez participações. Não largadas e desclassificações ficam sem posição no gráfico; abandonos conservam a posição oficial.")
@@ -474,6 +530,7 @@ def _share(asset, years, metric, minimum, view):
     params = dict(tela="Pilotos", visao=mapping[view], anos=",".join(map(str, years)), metrica=metric,
         minimo=minimum, lang=language(), condicao=st.session_state.get("pilot_condition", "rain"),
         faixas=",".join(st.session_state.get("profile_conditions", HIGHLIGHTS)))
+    params.update(_forecast_origin_params(st.query_params))
     driver = st.session_state.get("pilot_driver")
     if driver:
         params["piloto"] = driver

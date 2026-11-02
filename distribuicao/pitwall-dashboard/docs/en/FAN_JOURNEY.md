@@ -10,10 +10,10 @@ The logo, season, GP and search share one compact header. Language flags remain 
 
 1. **Races:** title and date over the circuit image, map on the right, observed portrait podium in visual 2–1–3 order next to circuit facts and weather.
 2. **Drivers:** an identified Daniel Ricciardo helmet-and-cockpit photograph in a right-side panel, with Oscar Piastri on a wet track in the backdrop. These are separate photographs: Ricciardo at Miami in May/2024 and Piastri at Silverstone in July/2024; they do not represent the same person, event or weather. A direct question, condition shortcuts and portrait rankings complete the screen. Each leader has four bars: rain, no recorded rain, heat and anticlockwise circuits. Every tied leader remains visible; complete rankings, criteria, profiles and duels stay accessible. Period, metric and minimum starts live in compact filter controls.
-3. **Championship:** Lewis Hamilton cockpit photograph, season progress and complete standings with portraits and team identifiers. No source rows are removed.
+3. **Championship:** Lewis Hamilton cockpit photograph, one canonical GP ribbon and complete standings with portraits and team identifiers. No source rows are removed; driver-team relations also appear within each mobile driver row.
 4. **Podium chances:** a historical Sergio Pérez at Miami photograph and before/after timeline with explicit emission-time context. The earlier stage contains individual probability bars; the later stage gives more space to the observed podium when available. Cards remain optional, and the historical photograph does not depict the forecast's GP.
 5. **Lab results:** Max Verstappen at Silverstone photograph, per-GP visual comparisons with qualifying and two insight cards. Missing forecasts are not scored zero and future races have no observed result. One evaluated race is never presented as six evaluated races to imitate the mockup.
-6. **How it works:** identified Andrea Kimi Antonelli cockpit photograph, three illustrated steps and two document links. Technical detail stays in an expander which opens when following a document link.
+6. **How it works:** identified Andrea Kimi Antonelli cockpit photograph, three illustrated steps and two document links. Steps distinguish v1 inputs, probabilities and descriptive context. A selected document opens directly in the reading area, with a return link and an index of other references.
 
 All 26 circuit photographs and five hero photographs are naturally at least 2488 pixels wide. The 29 portraits exceed the minimum of 512 pixels on each axis; 28 are 1336 pixels wide. The app uses these original sources: enlarging the former 93 × 93 portraits would not add detail. Portraits do not establish a driver's historical uniform or team. [Image credits](../../dashboard_assets/fan/ATTRIBUTION.md) and [resolution checks](../../tests/test_high_resolution_assets.py) record sources and dimensions. The mockup guides composition and navigation; displayed figures come from real artifacts, without copying its fictional values. No recorded rain does not prove a dry track, and the four condition samples can overlap.
 
@@ -22,6 +22,14 @@ All 26 circuit photographs and five hero photographs are naturally at least 2488
 Six destinations appear in the bottom navigation, with icons, labels and visible selection. The native control supports keyboard interaction. The page reserves bottom space so the menu does not remove content. Season and GP selectors appear at the top of context-dependent areas. The selector includes every event; the visual ribbon shows nearby events and identifies the selected one. Mobile emphasizes the selected GP and its neighbors.
 
 Races retains six chapters through tabs: Summary, Sessions and laps, Tyres and pit stops, Weather, At this track and Teams. The image and outline precede the podium. Tabs preserve existing routes and avoid opening every table in a single long page. Drivers retains highlights, profiles and duels with independent filters. Championship retains every published driver and constructor row, now in sequence. Sources, limitations and documents remain accessible throughout the product.
+
+## Continuity and access — 0.8.4
+
+Flags retain their header position and scroll with it; accessible names, selection and programmatic language follow PT/EN. A keyboard skip link reaches the content. The schedule uses compact UTC rows; session/date labels follow the locale, preserving canonical IDs and timestamps.
+
+Profiles offer an equivalent table of chart conditions, series, values and sample sizes, distinguishing insufficient samples from observed zero. Favourite selection sits near driver identity; head-to-head and teammate rules are explained separately. Links and criteria changes preserve a forecast's origin GP, independently of the profile's historical period.
+
+Lab results labels its latest-six-GP window and season summary. Existing historical forecasts excluded from evaluation show a reason without a score; missing probabilities remain explicit. Documents distinguish current sources from the historical protocol and open directly in the reading area. The How it works photo uses three local viewport/DPR WebP variants; its original, credits and framing are preserved. The package delivers only explicitly allowlisted variants.
 
 ## Counts, samples and readability — 0.8.1
 

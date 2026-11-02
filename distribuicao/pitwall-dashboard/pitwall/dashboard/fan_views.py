@@ -9,6 +9,7 @@ from pitwall.paths import PROJECT_ROOT
 from pitwall.i18n import language, translate
 from pitwall.dashboard.hero_assets import HERO_IMAGES, PORTRAIT_OVERRIDES
 from pitwall.dashboard.journey import race_identity
+from pitwall.dashboard.media import responsive_attributes
 
 
 def text(value):
@@ -63,6 +64,7 @@ def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, a
     css = ['fan-hero', 'fan-hero-dark' if dark else '']
     attrs = ' data-hero-kind="{}"'.format(escape(image,quote=True))
     backdrop_html=''
+    responsive_attrs=None
     if person:
         override=PORTRAIT_OVERRIDES.get(person['id'],{})
         relative=override.get('path','dashboard_assets/fan/portraits/{}.png'.format(person['id']))
@@ -72,7 +74,8 @@ def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, a
                   credit=person['name']+' · Formula 1',source='https://www.formula1.com/en/drivers',position='center top')
     if spec:
         path = PROJECT_ROOT / spec['path']
-        source = _image(str(path),path.stat().st_mtime_ns)
+        responsive_attrs=responsive_attributes(spec)
+        source = '' if responsive_attrs else _image(str(path),path.stat().st_mtime_ns)
         alt = spec.get('alt_'+language()) or translate('Fotografia de {}').format(spec['name'])
         attrs+=' data-driver-id="{}"'.format(escape(spec['driver_id'],quote=True))
         css.append('fan-hero-portrait' if spec['portrait'] else 'fan-hero-action')
@@ -96,7 +99,8 @@ def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, a
         if photo_meta.get('credito_curto') and photo_meta.get('pagina'):
             credit='<a class="fan-art-label" href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(escape(photo_meta['pagina'],quote=True),escape(photo_meta['credito_curto']))
     image_css='fan-hero-image'+(' fan-photo-left' if photo_left else '')+(' fan-hero-real-portrait' if spec and spec['portrait'] else '')
-    image_html='<img class="{}" style="object-position:{}" src="{}" alt="{}" decoding="async">'.format(image_css,escape(position,quote=True),source,escape(alt,quote=True)) if source else ''
+    source_attrs=responsive_attrs or 'src="{}"'.format(source)
+    image_html='<img class="{}" style="object-position:{}" {} alt="{}" decoding="async">'.format(image_css,escape(position,quote=True),source_attrs,escape(alt,quote=True)) if source or responsive_attrs else ''
     return '<section class="{}"{}>{}<div class="fan-hero-copy"><h1>{}</h1><p>{}</p>{}</div>{}</section>'.format(' '.join(css),attrs,backdrop_html+image_html,text(title),text(subtitle),extra,credit)
 
 
@@ -127,7 +131,7 @@ def podium(rows, year, title='Pódio da corrida', compact=False):
         ' fan-podium-compact' if compact else '', text(title), heading, body)
 
 
-def forecast_rows(rows, year):
+def forecast_rows(rows, year, origin_round=None):
     result=[]
     for row in rows:
         value = row.get('probability')
@@ -135,7 +139,10 @@ def forecast_rows(rows, year):
             continue
         percent = '{:.1f}%'.format(value*100)
         if language() == 'pt': percent=percent.replace('.',',')
-        result.append('<a class="fan-probability-row" href="{}" target="_self">{}<span class="fan-driver-name"><strong>{}</strong><small>{}</small></span><span class="fan-probability-track"><i style="width:{:.4f}%"></i></span><b>{}</b><span aria-hidden="true">›</span></a>'.format(escape(href('Pilotos',piloto=row['id'],visao='perfil',anos=year),quote=True),portrait(row['id'],row['name']),escape(row['name']),escape(row.get('team') or '—'),max(0,min(100,value*100)),percent))
+        context = dict(piloto=row['id'],visao='perfil',anos=year)
+        if origin_round is not None:
+            context.update(temporada=year,gp=origin_round,origem_tela='Previsões',origem_temporada=year,origem_gp=origin_round)
+        result.append('<a class="fan-probability-row" href="{}" target="_self">{}<span class="fan-driver-name"><strong>{}</strong><small>{}</small></span><span class="fan-probability-track"><i style="width:{:.4f}%"></i></span><b>{}</b><span aria-hidden="true">›</span></a>'.format(escape(href('Pilotos',**context),quote=True),portrait(row['id'],row['name']),escape(row['name']),escape(row.get('team') or '—'),max(0,min(100,value*100)),percent))
     return '<div class="fan-probability-list">{}</div>'.format(''.join(result))
 
 
@@ -159,12 +166,13 @@ def circuit_details(info, climate=None, weather_href=None):
 
 ICONS = {'database': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6c0-4 18-4 18 0s-18 4-18 0m0 0v12c0 4 18 4 18 0V6M3 12c0 4 18 4 18 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'settings': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M9 2h6v4l4 2 3 4-3 4-4 2v4H9v-4l-4-2-3-4 3-4 4-2V2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'bar_chart': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12h4v8m3 0V4h4v16m3 0V8h4v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'description': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5V2m10 0v6h5M8 12h9M8 16h9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'sports_score': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3m0 1c5-4 9 4 16 0v10c-7 4-11-4-16 0M9 3v10m4-9v10m4-10v10M5 8h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'}
 
-def process_steps():
-    steps=[('database','Dados históricos','Resultados e tempos de corridas passadas, condições da pista e características de cada circuito.'),('settings','Modelo de análise','O Lab usa essas informações para estimar a chance de cada piloto terminar entre os três primeiros.'),('bar_chart','Resultados no site','Explore chances de pódio, compare pilotos e veja o que o Lab acertou. As previsões registradas ficam preservadas.')]
+def process_steps(year=None, round_=None):
+    steps=[('database','Entradas do modelo v1','Classificação, histórico recente de pilotos e equipes e indicadores de ausência.'),('settings','Probabilidades de pódio','O v1 congelado estima chances individuais de integrar o pódio; não prevê a ordem de chegada.'),('bar_chart','Contexto do dashboard','Tempos, clima e características do circuito ajudam a explorar os dados; não alteram as entradas ou previsões registradas.')]
     cards=''.join('<article class="fan-process-step"><b>{}</b><span class="fan-symbol" aria-hidden="true">{}</span><div><h2>{}</h2><p>{}</p></div></article>'.format(i,ICONS[icon],text(title),text(description)) for i,(icon,title,description) in enumerate(steps,1))
     links=[]
-    for doc,title,description,icon in [('metodo-v1','Metodologia completa','Conheça as escolhas e os limites do modelo.','description'),('protocolo-temporal','Origem dos dados','Veja as fontes e os cuidados com cada informação.','database')]:
-        links.append('<a href="{}" target="_self"><span class="fan-symbol" aria-hidden="true">{}</span><span><strong>{}</strong><small>{}</small></span><b>›</b></a>'.format(escape(href('Metodologia',documento=doc),quote=True),ICONS[icon],text(title),text(description)))
+    context = dict(temporada=year,gp=round_) if year is not None and round_ is not None else {}
+    for doc,title,description,icon in [('metodo-v1','Metodologia completa','Conheça as escolhas e os limites do modelo.','description'),('fontes-atuais','Fontes e cobertura atuais','Veja as fontes, a cobertura e os limites do dashboard.','database')]:
+        links.append('<a href="{}" target="_self"><span class="fan-symbol" aria-hidden="true">{}</span><span><strong>{}</strong><small>{}</small></span><b>›</b></a>'.format(escape(href('Metodologia',documento=doc,**context),quote=True),ICONS[icon],text(title),text(description)))
     return '<div class="fan-process">{}</div><div class="fan-document-links">{}</div>'.format(cards,''.join(links))
 
 
@@ -205,7 +213,8 @@ def performance_cards(rows, races, year, observed_rounds=None):
         return '<p class="fan-awaiting">{}</p>'.format(text('Ainda não há previsão registrada com resultado validado para avaliar em 2026.' if year==2026 else 'Nenhuma corrida avaliável neste recorte.'))
     by_round={r['rodada']:r for r in rows}
     issued=[r['rodada'] for r in races if r.get('estado_previsao')=='previsao_registrada']
-    end=max(issued,default=max(by_round,default=0))
+    end=(max((r['rodada'] for r in races),default=max(by_round,default=0))
+         if year < 2026 else max(issued,default=max(by_round,default=0)))
     window=[r for r in races if r['rodada']<=end][-6:]
     if not window:
         window=[dict(rodada=r['rodada'],corrida=r['corrida']) for r in rows[-6:]]
@@ -216,8 +225,21 @@ def performance_cards(rows, races, year, observed_rounds=None):
         if row:
             content=''.join('<div class="fan-result-dots"><span class="fan-result-label">{}: {}</span><span class="fan-result-symbols" aria-hidden="true">{}</span></div>'.format(text(name),text('{} de 3').format(row[key]),''.join('<i class="{}" aria-hidden="true"></i>'.format('fan-hit' if i<row[key] else 'fan-miss') for i in range(3))) for key,name in [('modelo','Lab'),('classificacao','Classificação')])
         else:
-            pending=('Resultado em conferência' if race['rodada'] in (observed_rounds or set()) else 'Corrida aguardada')
-            content='<p>{}</p>'.format(text(pending if race.get('estado_previsao')=='previsao_registrada' else 'Sem previsão registrada'))
+            if year < 2026 and race.get('elegiveis',0)>0:
+                reasons = {
+                    'participante_inelegivel': 'Há participante inelegível para a avaliação.',
+                    'alvo_desconhecido': 'Resultado necessário à avaliação ausente.',
+                }
+                codes = [code.strip() for code in str(race.get('motivos_nao_avaliavel') or '').split(';')]
+                detail = ' '.join(reasons[code] for code in codes if code in reasons)
+                if not detail:
+                    detail = 'Critérios de avaliação não atendidos.'
+                content='<p>{}</p><small class="fan-evaluation-reason">{}</small>'.format(text('Fora da avaliação'),text(detail))
+            elif year < 2026:
+                content='<p>{}</p>'.format(text('Sem probabilidades históricas disponíveis'))
+            else:
+                pending=('Resultado em conferência' if race['rodada'] in (observed_rounds or set()) else 'Corrida aguardada')
+                content='<p>{}</p>'.format(text(pending if race.get('estado_previsao')=='previsao_registrada' else 'Sem previsão registrada'))
         cards.append('<a class="fan-gp-result" data-evaluated="{}" href="{}" title="{}" target="_self"><strong><span aria-hidden="true">{}</span>{}</strong>{}</a>'.format('true' if row else 'false',escape(href('Previsões',temporada=year,gp=race['rodada']),quote=True),escape(race['corrida'],quote=True),flag,escape(label),content))
     wins=sum(r['modelo']>r['classificacao'] for r in rows)
     ties=sum(r['modelo']==r['classificacao'] for r in rows)
@@ -227,10 +249,14 @@ def performance_cards(rows, races, year, observed_rounds=None):
         note=text('Empate na corrida avaliada')
         detail=text('As duas seleções acertaram {} dos três integrantes do pódio.').format(rows[0]['modelo'])
     limit='Somente previsões registradas e resultados validados. Uma amostra pequena não demonstra superioridade.' if year==2026 else 'Estudo retrospectivo com dados históricos.'
-    header = '<header class="fan-results-header"><div><h2>{}</h2><p>{}</p></div><div class="fan-results-legend"><span><i class="fan-legend-hit" aria-hidden="true"></i>{}</span><span><i class="fan-miss" aria-hidden="true"></i>{}</span></div></header>'.format(
+    status = '<p class="fan-results-status">{}</p>'.format(text('Estudo retrospectivo com dados históricos.')) if year < 2026 else ''
+    header = '<header class="fan-results-header"><div><h2>{}</h2><p>{}</p>{}</div><div class="fan-results-legend"><span><i class="fan-legend-hit" aria-hidden="true"></i>{}</span><span><i class="fan-miss" aria-hidden="true"></i>{}</span></div></header>'.format(
         text('Comparação com a classificação'),
         text('Compare os três nomes escolhidos pelo Lab e pela classificação com o pódio real.'),
-        text('Piloto no pódio'), text('Piloto fora do pódio'))
-    return '<section class="fan-results">{}<div class="fan-gp-results">{}</div><div class="fan-insights"><article><span class="fan-symbol">{}</span><div><strong>{}</strong><p>{}</p></div></article><article><span class="fan-symbol">{}</span><div><strong>{}</strong><p>{}</p></div></article></div></section>'.format(
-        header, ''.join(cards), ICONS['sports_score'], note, detail,
+        status, text('Piloto no pódio'), text('Piloto fora do pódio'))
+    window_label = text('Últimos {} GPs').format(len(window)) if len(window)>1 else text('Último GP')
+    summary_description = text('Um GP avaliável nesta temporada.') if len(rows)==1 else text('{} GPs avaliáveis nesta temporada.').format(len(rows))
+    summary = '<h3 class="fan-results-summary">{}</h3><p class="fan-results-scope">{}</p>'.format(text('Resumo da temporada'),summary_description)
+    return '<section class="fan-results">{}<p class="fan-results-window">{}</p><div class="fan-gp-results">{}</div>{}<div class="fan-insights"><article><span class="fan-symbol">{}</span><div><strong>{}</strong><p>{}</p></div></article><article><span class="fan-symbol">{}</span><div><strong>{}</strong><p>{}</p></div></article></div></section>'.format(
+        header, window_label, ''.join(cards), summary, ICONS['sports_score'], note, detail,
         ICONS['bar_chart'], text('Amostra limitada'), text(limit))

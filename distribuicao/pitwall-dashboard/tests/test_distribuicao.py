@@ -75,7 +75,8 @@ class TestDistribuicao(unittest.TestCase):
         st = StubStreamlit()
         modulo.renderizar_documentacao_local(st)
         self.assertTrue(any('Relatório de 2024' in texto for texto in st.markdowns))
-        self.assertTrue(any('Registros históricos do projeto' in texto for texto in st.markdowns))
+        self.assertTrue(any('Documento histórico preservado. O estado descrito pertence à etapa original' in texto for texto in st.markdowns))
+        self.assertTrue(any('Protocolo histórico (etapa 3)' in texto for texto in st.markdowns))
         self.assertEqual(len(st.downloads), 1)
         rotulo, kwargs = st.downloads[0]
         self.assertEqual(rotulo, 'Baixar previsões de 2024 (CSV)')

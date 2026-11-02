@@ -69,22 +69,16 @@ def e(valor):
 def data_editorial(valor):
     try:
         d = date.fromisoformat(valor)
+        from pitwall.i18n import language
+
+        meses = (
+            ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+            if language() == "en"
+            else ("jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez")
+        )
         return "{} {} {}".format(
             d.day,
-            (
-                "jan",
-                "fev",
-                "mar",
-                "abr",
-                "mai",
-                "jun",
-                "jul",
-                "ago",
-                "set",
-                "out",
-                "nov",
-                "dez",
-            )[d.month - 1],
+            meses[d.month - 1],
             d.year,
         )
     except (ValueError, TypeError):
@@ -205,7 +199,9 @@ def standings_table(snapshot, teams=False, season=None):
         )
         if not teams:
             from pitwall.dashboard.fan_views import portrait
-            label=portrait(item.get('piloto_id',''),item['piloto'])+'<span class="fan-standing-name">'+e(item['piloto'])+'</span>'
+            label=(portrait(item.get('piloto_id',''),item['piloto'])
+                   +'<span class="fan-standing-name">'+e(item['piloto'])+'</span>'
+                   +'<span class="pw-inline-team">'+e(item.get('equipe'))+'</span>')
             if item.get("piloto_id"):
                 from urllib.parse import urlencode
                 from pitwall.i18n import language

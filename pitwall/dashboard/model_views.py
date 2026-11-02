@@ -151,9 +151,8 @@ def tela_desempenho(pacote, show_title=True):
     if not show_title:
         from pitwall.dashboard.fan_views import performance_cards
         rows=[dict(rodada=r['rodada'],corrida=r['corrida'],modelo=r['acertos_modelo'],classificacao=r['acertos_classificacao']) for r in pacote['corridas'] if r.get('avaliavel_ranking') and type(r.get('acertos_modelo')) is int and type(r.get('acertos_classificacao')) is int]
-        st.caption('Estudo retrospectivo com dados históricos.')
         st.markdown(performance_cards(rows,pacote['corridas'],pacote['temporada']),unsafe_allow_html=True)
-        with st.expander('Detalhes técnicos e resultados por GP'):
+        with st.expander('Resumo estatístico e todos os GPs'):
             _historical(pacote,False)
         return
     _historical(pacote,True)
@@ -201,7 +200,7 @@ def _historical(pacote,show_title):
         "Classificação", "{} de {} GPs".format(completos_classificacao, total_gp)
     )
 
-    st.subheader("Comparação com a classificação")
+    st.subheader("Comparação com a classificação" if show_title else "Distribuição dos acertos")
     st.caption(
         "As duas listas são comparadas nos mesmos {} GPs avaliáveis. A tabela mostra quantos integrantes do pódio foram acertados; não promete ganho futuro.".format(
             total_gp
@@ -209,7 +208,7 @@ def _historical(pacote,show_title):
     )
     st.dataframe(tabela_distribuicao(metricas), width="stretch", hide_index=True)
 
-    with st.expander("Detalhes técnicos"):
+    with st.expander("Qualidade das probabilidades: log loss, Brier e calibração"):
         st.write(
             "Log loss penaliza especialmente probabilidades muito confiantes que erram; Brier mede a distância quadrática entre probabilidade e resultado. Em ambas, menor é melhor; nenhuma é porcentagem de acerto."
         )

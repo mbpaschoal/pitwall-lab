@@ -95,6 +95,11 @@ TAROT_TEAM_VARIANTS = tuple(
     for driver, team in TAROT_TEAM_PAIRS for pose in (0, 1, 2)
 )
 RUNTIME_WORKTREE = (
+    'pitwall/dashboard/media.py',
+    'static/pitwall-media/catalog.json',
+    'static/pitwall-media/method-9776d0597fe6-1200.webp',
+    'static/pitwall-media/method-9776d0597fe6-2400.webp',
+    'static/pitwall-media/method-9776d0597fe6-3600.webp',
     'pitwall/dashboard/fan_views.py',
     'pitwall/dashboard/hero_assets.py',
     'pitwall/dashboard/tarot_catalog.py',

@@ -4,6 +4,15 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.8.4 — 2026-11-01
+
+- Implemented all 22 proposals from the six-screen review, preserving composition C, palette, Abril Fatface/Lato, documented photos and approved cards. A compact UTC schedule, mobile driver-team labels, one GP ribbon and localised session/date labels improve PT/EN parity.
+- Profiles expose an equivalent table of chart conditions, series, values and sample sizes; favourite selection sits near driver identity. Head-to-head and teammate rules are explained separately. Profile visits retain the origin forecast GP, including after changing criteria.
+- Lab results distinguish historical forecasts excluded from evaluation from missing forecasts, label the latest six GPs and season summaries, and use descriptive detail disclosures. How it works separates the 15 frozen-v1 inputs from dashboard context; selected documents open directly, identifying current sources and the historical protocol.
+- Programmatic language follows PT/EN; flag buttons expose accessible names and selection. A keyboard skip link reaches the content; language controls scroll with the header without obscuring data. The How it works photograph uses local viewport/DPR variants, preserving its original, framing and attribution.
+- Focused checks and local six-screen browser evidence are recorded in `reports/ui_ux_pro_max_implementacao_20261101/`. The v1 model, probabilities and scientific artefacts are preserved; local implementation does not prove public deployment.
+- Learning: navigation context, missing versus unevaluated states and chart alternatives require interaction checks; translating visible text alone does not declare programmatic language.
+
 ## 0.8.3 — 2026-11-01
 
 - FIA/F1 cross-checks recover all 22 FP3 times and Lawson's profile without borrowing from another GP. One pre-FP3 row and 84 pre-qualifying pit rows are excluded from the projection; original bytes and indices remain audited. The validated scope contains 88 FP3 and 89 qualifying pit records.

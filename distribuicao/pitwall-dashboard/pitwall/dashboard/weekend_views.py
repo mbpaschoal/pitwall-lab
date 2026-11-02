@@ -110,7 +110,9 @@ def render_weather(state):
         cols = st.columns(2)
         for (column, field, label) in ((cols[0], 'air_temperature', 'Temperatura do ar'), (cols[1], 'track_temperature', 'Temperatura da pista')):
             value = observed['campos'][field]
-            column.metric(label, '{:.1f} °C'.format(value['media_amostras']) if value['elegivel'] else '—')
+            from pitwall.i18n import language
+            formatted = '{:.1f} °C'.format(value['media_amostras']) if value['elegivel'] else '—'
+            column.metric(label, formatted.replace('.', ',') if language() == 'pt' else formatted)
         st.caption('Medições OpenF1 nos intervalos ativos da corrida. Pausas por bandeira vermelha são excluídas.')
         if observed['campos']['track_temperature'].get('qualidade', {}).get('codigo') == 'zero_isolado_em_conferencia':
             st.caption('Temperatura do asfalto em conferência: leitura isolada de 0 °C entre medições acima de 20 °C. Média retida, sem substituir o registro original.')

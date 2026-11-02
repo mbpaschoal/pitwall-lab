@@ -1,0 +1,31 @@
+{
+  "method": {
+    "source_path": "dashboard_assets/fan/photos/antonelli-cockpit-mercedes.jpg",
+    "source_sha256": "9776d0597fe66dff26cec778429d449dd29d4d7c37491843ee900af8b6b4f409",
+    "source_bytes": 2652065,
+    "transform": "Aspect-preserving downsample only; no crop, mirroring, upscale or semantic edit; WebP quality90",
+    "variants": [
+      {
+        "path": "static/pitwall-media/method-9776d0597fe6-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 125260,
+        "sha256": "199087ee240277ace9455e3183a49923138917b993305b68c9b652fcdc47f3f5"
+      },
+      {
+        "path": "static/pitwall-media/method-9776d0597fe6-2400.webp",
+        "width": 2400,
+        "height": 1350,
+        "bytes": 418084,
+        "sha256": "e9e34038b1b297e07a8f11cb55dab00437c8bfbaaab130d0007e76cfb2324fd1"
+      },
+      {
+        "path": "static/pitwall-media/method-9776d0597fe6-3600.webp",
+        "width": 3600,
+        "height": 2025,
+        "bytes": 818184,
+        "sha256": "a1596b9cc5304a9888fa42365ba2b822d20fb8ee43c7e89c3c2805cbe4863baa"
+      }
+    ]
+  }
+}

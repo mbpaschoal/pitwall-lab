@@ -4,6 +4,15 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.8.4 — 2026-11-01
+
+- Implementadas as 22 propostas da revisão das seis telas, preservando composição C, paleta, Abril Fatface/Lato, fotografias e cartas aprovadas. Programação compacta com UTC explícito, equipes acessíveis no celular, faixa única de GPs e localização de sessões, datas e rótulos em PT/EN.
+- Perfis oferecem tabela equivalente aos gráficos, com condições, séries, valores e N; favorito fica perto da identidade. Duelo e companheiros recebem explicações próprias. A visita a um perfil conserva o GP da previsão, inclusive ao ajustar os critérios.
+- Acertos diferencia previsão histórica não avaliável de ausência de previsão, identifica os últimos seis GPs e o resumo da temporada, e usa rótulos descritivos para os detalhes. Como funciona separa as 15 entradas do v1 do contexto do dashboard; documentos abrem diretamente, com fontes atuais e protocolo histórico identificados.
+- Idioma programático acompanha PT/EN; bandeiras ganham nome acessível e estado selecionado. Atalho de teclado leva ao conteúdo; o controle de idioma acompanha a rolagem sem cobrir textos ou valores. A foto de Como funciona recebe variantes locais por viewport/DPR, com original, enquadramento e atribuição preservados.
+- Validação focal e aceite local das seis telas estão registrados em `reports/ui_ux_pro_max_implementacao_20261101/`. Modelo v1, probabilidades e artefatos científicos preservados; a implementação local não comprova publicação pública.
+- Aprendizado: contexto de navegação, ausência versus não avaliação e alternativas aos gráficos precisam de verificação por interação; traduzir textos visíveis não define o idioma programático.
+
 ## 0.8.3 — 2026-11-01
 
 - Conferências FIA/F1 recuperam os 22 tempos do TL3 e o cadastro de Lawson sem empréstimo de outro GP. Removidos da projeção um registro anterior ao TL3 e 84 paradas anteriores à classificação; os índices e bytes originais permanecem auditados. São 88 paradas do TL3 e 89 da classificação no recorte validado.

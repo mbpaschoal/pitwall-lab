@@ -14,6 +14,10 @@ A fotografia de dados atual não prova sua disponibilidade num corte histórico.
 
 O pacote inclui nove artefatos científicos congelados e projeções preparadas offline para 66 GPs/330 sessões. Não contém dados brutos nem modelos executáveis. Fontes históricas podem ter revisões posteriores. Condições não comerciais não autorizam automaticamente todos os usos pretendidos; consulte os termos originais. Código tem situação de licença independente. Projeto sem endosso oficial; dados sem garantias.
 
+Derivados WebP mudam dimensão/formato para apresentação; os originais, créditos e condições de cada ativo estão preservados no catálogo visual.
+
+Retratos e ilustrações têm proveniência e direitos próprios: [créditos PT/EN](dashboard_assets/fan/ATTRIBUTION.md). Fotografias de terceiros ficam fora da licença MIT do código.
+
 ## English
 
 The product presents derived data with provenance and missingness preserved. One source's licence does not replace another's.
@@ -28,12 +32,6 @@ A current snapshot does not prove availability at a historical cutoff. Later dat
 
 The package includes nine frozen scientific artefacts and offline projections for 66 GPs/330 sessions, without raw data or executable models. Historical sources can contain later revisions. Non-commercial conditions do not automatically permit every intended use: consult original terms. Code licensing is separate. No official endorsement; data carry no guarantees.
 
-Derivados WebP mudam dimensão/formato para apresentação; os originais, créditos e condições de cada ativo estão preservados no catálogo visual.
-
 WebP presentation derivatives change dimensions/format; original files, credits and individual terms remain preserved in the visual catalogue.
-
-## Imagens da jornada / Journey imagery
-
-Retratos e ilustrações têm proveniência e direitos próprios: [créditos PT/EN](dashboard_assets/fan/ATTRIBUTION.md). Fotografias de terceiros ficam fora da licença MIT do código.
 
 Portraits and illustrations retain their own provenance and rights: [PT/EN credits](dashboard_assets/fan/ATTRIBUTION.md). Third-party photographs are outside the code MIT license.
