@@ -1,0 +1,245 @@
+{
+  "version": "0.8.1",
+  "identity": {
+    "temporada": 2026,
+    "rodada": 19,
+    "circuito_id": "rodriguez"
+  },
+  "public_asset_sha256": "55d5b6256f8f9bdb278c230e414b5a64d525abb78f34bececb97e1fd705b2543",
+  "last_source_utc": "2026-11-01T23:46:15.755714Z",
+  "sessions": [
+    {
+      "nome": "Practice 1",
+      "estado": "dados_recebidos"
+    },
+    {
+      "nome": "Practice 2",
+      "estado": "dados_recebidos"
+    },
+    {
+      "nome": "Practice 3",
+      "estado": "parcial"
+    },
+    {
+      "nome": "Qualifying",
+      "estado": "parcial"
+    },
+    {
+      "nome": "Race",
+      "estado": "dados_recebidos"
+    }
+  ],
+  "race_counts": {
+    "race_control": 169,
+    "drivers": 22,
+    "session_result": 22,
+    "weather": 205,
+    "laps": 1360,
+    "stints": 80,
+    "pit": 67
+  },
+  "weather": {
+    "session_key": 11404,
+    "inicio_efetivo_utc": "2026-11-01T20:03:25.510000+00:00",
+    "fim_status_utc": "2026-11-01T22:23:54.505000+00:00",
+    "bandeirada_utc": "2026-11-01T22:23:53+00:00",
+    "criterio_fim": "chequered_flag",
+    "intervalos_ativos": [
+      [
+        "2026-11-01T20:03:25.510000+00:00",
+        "2026-11-01T21:06:02.012000+00:00"
+      ],
+      [
+        "2026-11-01T21:45:00.156000+00:00",
+        "2026-11-01T22:23:53+00:00"
+      ]
+    ],
+    "duracao_ativa_s": 6089.346,
+    "n_suspensoes": 1,
+    "indices_status_fonte": [
+      12,
+      65,
+      110,
+      163
+    ],
+    "limite_contexto_utc": "2026-11-01T20:00:00+00:00",
+    "indices_anteriores_sessao": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "n_medicoes_na_sessao": 205,
+    "n_medicoes_ativas": 101,
+    "n_duplicatas_identicas": 0,
+    "campos": {
+      "rainfall": {
+        "n_medicoes_validas": 101,
+        "cobertura_bins_60s": 0.9901467251162933,
+        "maior_intervalo_sem_medicao_s": 120.041,
+        "elegivel": true,
+        "min": 0.0,
+        "max": 0.0,
+        "media_amostras": 0.0
+      },
+      "air_temperature": {
+        "n_medicoes_validas": 101,
+        "cobertura_bins_60s": 0.9901467251162933,
+        "maior_intervalo_sem_medicao_s": 120.041,
+        "elegivel": true,
+        "min": 23.5,
+        "max": 25.1,
+        "media_amostras": 24.23861386138614
+      },
+      "track_temperature": {
+        "n_medicoes_validas": 101,
+        "cobertura_bins_60s": 0.9901467251162933,
+        "maior_intervalo_sem_medicao_s": 120.041,
+        "elegivel": false,
+        "min": 0.0,
+        "max": 46.8,
+        "media_amostras": 40.31683168316832,
+        "qualidade": {
+          "codigo": "zero_isolado_em_conferencia",
+          "registros": [
+            {
+              "indice_fonte": 171,
+              "data": "2026-11-01T22:01:42.606000+00:00",
+              "valor": 0,
+              "anterior": 37.4,
+              "posterior": 37.5
+            }
+          ],
+          "uso_media": "Diagnóstico bruto; não publicar como temperatura representativa."
+        }
+      },
+      "humidity": {
+        "n_medicoes_validas": 101,
+        "cobertura_bins_60s": 0.9901467251162933,
+        "maior_intervalo_sem_medicao_s": 120.041,
+        "elegivel": true,
+        "min": 36.5,
+        "max": 41.6,
+        "media_amostras": 39.268316831683165
+      },
+      "pressure": {
+        "n_medicoes_validas": 101,
+        "cobertura_bins_60s": 0.9901467251162933,
+        "maior_intervalo_sem_medicao_s": 120.041,
+        "elegivel": true,
+        "min": 782.9,
+        "max": 784.2,
+        "media_amostras": 783.4841584158415
+      },
+      "wind_speed": {
+        "n_medicoes_validas": 101,
+        "cobertura_bins_60s": 0.9901467251162933,
+        "maior_intervalo_sem_medicao_s": 120.041,
+        "elegivel": true,
+        "min": 0.3,
+        "max": 4.6,
+        "media_amostras": 1.9574257425742574
+      },
+      "wind_direction": {
+        "n_medicoes_validas": 101,
+        "cobertura_bins_60s": 0.9901467251162933,
+        "maior_intervalo_sem_medicao_s": 120.041,
+        "elegivel": true,
+        "min": 51.0,
+        "max": 350.0,
+        "media_amostras": null,
+        "media_circular_graus": 260.90823713724603
+      }
+    },
+    "chuva_observada_em_alguma_medicao": false,
+    "condicao_chuva": "sem_chuva_registrada",
+    "politica": {
+      "cobertura_minima": 0.95,
+      "gap_maximo_s": 180,
+      "bin_s": 60
+    },
+    "uso": "contexto historico observado; sem inferir pista seca/molhada e sem uso no v1"
+  },
+  "standings": {
+    "driver_standings": 24,
+    "constructor_standings": 11
+  },
+  "sources": [
+    {
+      "provider": "openf1",
+      "endpoint": "sessions",
+      "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
+      "status": 200,
+      "obtido_em_utc": "2026-11-01T23:43:03.372906Z",
+      "sha256": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313"
+    },
+    {
+      "provider": "openf1",
+      "endpoint": "race_control",
+      "url": "https://api.openf1.org/v1/race_control?session_key=11404",
+      "status": 200,
+      "obtido_em_utc": "2026-11-01T23:45:03.747125Z",
+      "sha256": "2bf76136a810bbf59416de98fcd5087af11797de52abea2d4fc54167afdd1a98"
+    },
+    {
+      "provider": "openf1",
+      "endpoint": "drivers",
+      "url": "https://api.openf1.org/v1/drivers?session_key=11404",
+      "status": 200,
+      "obtido_em_utc": "2026-11-01T23:45:11.448835Z",
+      "sha256": "d8a2c578fec57f01baae4bcef02fc11751c06eec79690364ad48330f28ea8a20"
+    },
+    {
+      "provider": "openf1",
+      "endpoint": "session_result",
+      "url": "https://api.openf1.org/v1/session_result?session_key=11404",
+      "status": 200,
+      "obtido_em_utc": "2026-11-01T23:45:19.385788Z",
+      "sha256": "57b0dea60812fc7afe3e8a5d1d34f015f76f9d63f389ef55b9adcf7f48762a45"
+    },
+    {
+      "provider": "openf1",
+      "endpoint": "weather",
+      "url": "https://api.openf1.org/v1/weather?session_key=11404",
+      "status": 200,
+      "obtido_em_utc": "2026-11-01T23:45:27.776988Z",
+      "sha256": "d223003c89efa1fc2512f35f69460088cfe49f58715e97e80cc3b84fc71a1bc3"
+    },
+    {
+      "provider": "openf1",
+      "endpoint": "laps",
+      "url": "https://api.openf1.org/v1/laps?session_key=11404",
+      "status": 200,
+      "obtido_em_utc": "2026-11-01T23:45:36.616030Z",
+      "sha256": "e944a3c5bf7cc9ce9bce181eb7110d6083ee4886eb3e5b57327f9378e7a9a3aa"
+    },
+    {
+      "provider": "openf1",
+      "endpoint": "stints",
+      "url": "https://api.openf1.org/v1/stints?session_key=11404",
+      "status": 200,
+      "obtido_em_utc": "2026-11-01T23:45:43.602018Z",
+      "sha256": "24443d278b7bf88057fe7b425c8df667164da5639be6ae522817d334de71378e"
+    },
+    {
+      "provider": "openf1",
+      "endpoint": "pit",
+      "url": "https://api.openf1.org/v1/pit?session_key=11404",
+      "status": 200,
+      "obtido_em_utc": "2026-11-01T23:45:51.590417Z",
+      "sha256": "e3dee3ff3089d36bfc3b5073f72b0a10987bb40cf1305eb173c45073607a6f23"
+    }
+  ],
+  "protected": {
+    "files": 614,
+    "changed": []
+  }
+}

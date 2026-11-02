@@ -3,12 +3,43 @@ from html import escape
 from urllib.parse import urlencode
 
 
+_RACE_IDENTITIES = {
+    'Bahrain': ('🇧🇭', 'Bahrein', 'Bahrain'),
+    'Bahrain in Malaysia': ('🇲🇾', 'Malásia · Sepang', 'Malaysia · Sepang'),
+    'Saudi Arabian': ('🇸🇦', 'Arábia Saudita', 'Saudi Arabia'),
+    'Japanese': ('🇯🇵', 'Japão', 'Japan'),
+    'Chinese': ('🇨🇳', 'China', 'China'),
+    'Australian': ('🇦🇺', 'Austrália', 'Australia'),
+    'Miami': ('🇺🇸', 'Miami', 'Miami'),
+    'Emilia Romagna': ('🇮🇹', 'Emília-Romanha', 'Emilia Romagna'),
+    'Monaco': ('🇲🇨', 'Monaco', 'Monaco'),
+    'Barcelona': ('🇪🇸', 'Barcelona', 'Barcelona'),
+    'Spanish': ('🇪🇸', 'Espanha', 'Spain'),
+    'Canadian': ('🇨🇦', 'Canadá', 'Canada'),
+    'Austrian': ('🇦🇹', 'Áustria', 'Austria'),
+    'British': ('🇬🇧', 'Grã-Bretanha', 'Britain'),
+    'Belgian': ('🇧🇪', 'Bélgica', 'Belgium'),
+    'Hungarian': ('🇭🇺', 'Hungria', 'Hungary'),
+    'Dutch': ('🇳🇱', 'Países Baixos', 'Netherlands'),
+    'Italian': ('🇮🇹', 'Itália', 'Italy'),
+    'Azerbaijan': ('🇦🇿', 'Azerbaijão', 'Azerbaijan'),
+    'Singapore': ('🇸🇬', 'Singapura', 'Singapore'),
+    'United States': ('🇺🇸', 'EUA', 'USA'),
+    'Mexico City': ('🇲🇽', 'México', 'Mexico'),
+    'São Paulo': ('🇧🇷', 'São Paulo', 'São Paulo'),
+    'Brazilian': ('🇧🇷', 'Brasil', 'Brazil'),
+    'Las Vegas': ('🇺🇸', 'Las Vegas', 'Las Vegas'),
+    'Qatar': ('🇶🇦', 'Catar', 'Qatar'),
+    'Abu Dhabi': ('🇦🇪', 'Abu Dhabi', 'Abu Dhabi'),
+    'Madrid': ('🇪🇸', 'Madrid', 'Madrid'),
+}
+
+
 def race_identity(name, lang='pt'):
-    """Shared country cue and short label; unknown events keep their own name."""
-    short = name.replace('Grand Prix','').strip()
-    flags={'Bahrain':'🇧🇭','Saudi Arabian':'🇸🇦','Japanese':'🇯🇵','Chinese':'🇨🇳','Australian':'🇦🇺','Miami':'🇺🇸','Emilia Romagna':'🇮🇹','Monaco':'🇲🇨','Spanish':'🇪🇸','Canadian':'🇨🇦','Austrian':'🇦🇹','British':'🇬🇧','Belgian':'🇧🇪','Hungarian':'🇭🇺','Dutch':'🇳🇱','Italian':'🇮🇹','Azerbaijan':'🇦🇿','Singapore':'🇸🇬','United States':'🇺🇸','Mexico City':'🇲🇽','São Paulo':'🇧🇷','Brazilian':'🇧🇷','Las Vegas':'🇺🇸','Qatar':'🇶🇦','Abu Dhabi':'🇦🇪','Madrid':'🇪🇸'}
-    localized={'Bahrain':('Bahrein','Bahrain'),'Saudi Arabian':('Arábia Saudita','Saudi Arabia'),'Japanese':('Japão','Japan'),'Chinese':('China','China'),'Australian':('Austrália','Australia'),'Emilia Romagna':('Emília-Romanha','Emilia Romagna'),'Spanish':('Espanha','Spain'),'Canadian':('Canadá','Canada'),'Austrian':('Áustria','Austria'),'British':('Grã-Bretanha','Britain'),'Belgian':('Bélgica','Belgium'),'Hungarian':('Hungria','Hungary'),'Dutch':('Países Baixos','Netherlands'),'Italian':('Itália','Italy'),'Azerbaijan':('Azerbaijão','Azerbaijan'),'United States':('EUA','USA'),'Mexico City':('México','Mexico'),'Brazilian':('Brasil','Brazil'),'Singapore':('Singapura','Singapore'),'Qatar':('Catar','Qatar')}
-    return flags.get(short,''),localized.get(short,(short,short))[1 if lang=='en' else 0]
+    """Use exact event names, preserving a relocated GP's host country."""
+    short = ' '.join(name.replace('Grand Prix', '').split())
+    flag, pt, en = _RACE_IDENTITIES.get(short, ('', short, short))
+    return flag, en if lang == 'en' else pt
 
 
 def masthead(lang='pt'):

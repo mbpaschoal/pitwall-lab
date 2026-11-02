@@ -29,6 +29,55 @@ class FakeClient:
         return payload
 
 class WeekendTests(unittest.TestCase):
+    def test_isolated_track_zero_is_retained_but_its_mean_is_withheld(self):
+        from tests.test_race_weather import event, observation
+        data=dict(race_control=[event('10:00:00','SESSION STARTED'),event('10:04:00','SESSION FINISHED')],
+                  weather=[observation('10:00:30',air_temperature=25,track_temperature=40),
+                           observation('10:01:30',air_temperature=25,track_temperature=0),
+                           observation('10:02:30',air_temperature=25,track_temperature=41),
+                           observation('10:03:30',air_temperature=25,track_temperature=42)])
+        original=deepcopy(data)
+        result=weekend.observed_weather(data,dict(session_key=7,date_start='2024-01-01T10:00:00Z'))
+        track=result['campos']['track_temperature']
+        self.assertFalse(track['elegivel'])
+        self.assertEqual(track['media_amostras'],30.75)
+        self.assertEqual(track['qualidade']['registros'][0]['indice_fonte'],1)
+        self.assertTrue(result['campos']['air_temperature']['elegivel'])
+        self.assertEqual(data,original)
+        for row in data['weather']:
+            row['track_temperature']=0
+        result=weekend.observed_weather(data,dict(session_key=7,date_start='2024-01-01T10:00:00Z'))
+        self.assertTrue(result['campos']['track_temperature']['elegivel'])
+        self.assertNotIn('qualidade',result['campos']['track_temperature'])
+
+    def test_restricted_catalogue_keeps_its_receipt_without_overwriting_state(self):
+        from io import BytesIO
+        from urllib.error import HTTPError
+        from pitwall.data.archive_collection import CaptureClient
+        def restricted(request, timeout):
+            raise HTTPError(request.full_url,401,'Restricted',{},BytesIO(b'{"detail":"restricted"}'))
+        def client(destination, interval):
+            return CaptureClient(destination,interval,opener=restricted)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp) / 'data/operacao_2026/fins_de_semana/rodriguez-2026'
+            base.mkdir(parents=True)
+            checkpoint = base / 'estado.json'
+            checkpoint.write_text('{"previous":true}')
+            with self.assertRaises(weekend.ProviderAccessUnavailable) as caught:
+                weekend.collect(CONFIG, tmp, datetime(2026,11,2,1,tzinfo=timezone.utc), client)
+            self.assertEqual(caught.exception.status, 401)
+            self.assertEqual(checkpoint.read_text(), '{"previous":true}')
+            receipts = list(base.glob('*/coleta_online.json'))
+            self.assertEqual(len(receipts), 1)
+            self.assertEqual(json.loads(receipts[0].read_text())['fontes'][0]['status'], 401)
+
+    def test_canonical_portrait_identity_requires_the_literal_profile(self):
+        profile=dict(driver_number=44,first_name='Lewis',last_name='Hamilton',team_name='Ferrari',full_name='Lewis HAMILTON')
+        data=dict(drivers=[profile],session_result=[dict(driver_number=44,position=2)])
+        self.assertEqual(weekend.session_times(data,dict(session_name='Race'))[0]['piloto_id'],'hamilton')
+        data['drivers'][0]['last_name']='Another Driver'
+        self.assertIsNone(weekend.session_times(data,dict(session_name='Race'))[0]['piloto_id'])
 
     def test_qualifying_phases_preserve_source_values_and_missing_times(self):
         data=dict(drivers=[dict(driver_number=7)],session_result=[dict(driver_number=7,duration=[78.3,77.1,None])])

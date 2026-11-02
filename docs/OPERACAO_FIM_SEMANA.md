@@ -63,3 +63,17 @@ No TL3 (`11399`), a captura trouxe 22 resultados e 21 cadastros: o número 30 ap
 A correção foi testada com cadastro ausente, continuação até Q, conservação de resultados válidos, duplicações e conflitos de voltas. A comparação da previsão do México aguarda o resultado posterior validado; esta recuperação não reemite probabilidades.
 
 Fontes: [cadastros TL3](https://api.openf1.org/v1/drivers?session_key=11399), [resultados TL3](https://api.openf1.org/v1/session_result?session_key=11399), [paradas Q](https://api.openf1.org/v1/pit?session_key=11400). A disponibilidade pode mudar após as capturas registradas.
+
+## Revisão pós-corrida — 0.8.1
+
+A [política da OpenF1](https://openf1.org/#faq) classifica como ao vivo os 30 minutos anteriores e posteriores às sessões. A coleta gratuita agora aguarda essa janela, sem autenticação paga. Isso explica os 401 observados nas execuções agendadas; não significa inexistência dos dados históricos. Fora da janela, falhas de identidade ou catálogo continuam interrompendo a operação.
+
+Se o catálogo continuar respondendo 401/403, a execução registra `provider_access_restricted`, preserva a resposta bruta e mantém os dados públicos anteriores. O próximo horário agendado tenta novamente; não há repetição imediata nem contratação automática. Essa restrição de acesso não é tratada como uma coleta bem-sucedida ou como ausência de resultados.
+
+O catálogo do México estendeu o fim programado de Race de 22h para 23h UTC; a revisão e o SHA da fonte estão na configuração. Essa alteração serve à espera da coleta. O encerramento efetivo observado foi 22:23:54 UTC e não foi substituído pelo horário programado.
+
+A corrida trouxe 205 medições meteorológicas e 1360 registros de voltas. A fonte também incluiu 12 mensagens anteriores ao início declarado, com IDs da corrida. A janela de clima registra seus índices e as exclui por contexto temporal, sem apagar o bruto ou usar a programação como largada real. O início e a retomada reais continuam necessários; um segundo início dentro da sessão, sem suspensão, continua inválido. A interrupção entre 21:06 e 21:45 UTC fica fora das médias. A média do ar é 24,2 °C. A média bruta do asfalto (40,3 °C) fica retida para revisão: inclui uma leitura isolada de 0 °C entre 37,4 e 37,5 °C.
+
+Há três sessões completas de cinco. TL3 permanece parcial pelo cadastro 30 ausente e paradas 236 sem cadastro; Q preserva resultados/voltas/pneus e retém as paradas afetadas. Resultado OpenF1 observado e campeonatos da rodada 19 são contexto posterior. A emissão do México e suas probabilidades não foram alteradas; sua admissão à avaliação do modelo continua uma etapa separada.
+
+O calendário também foi confrontado com a F1: [Bahrein na Malásia é um evento oficial em Sepang](https://www.formula1.com/en/latest/article/formula-1-and-fia-confirm-that-malaysia-will-join-the-2026-calendar-as-host-venue-for-the-bahrain-grand-prix.6lL7vjFEM2VVynRHvg1TCf). Nome do evento, país anfitrião e circuito são campos distintos; a apresentação não altera a identidade canônica.

@@ -4,6 +4,10 @@ Português · [English](en/CURRENT_DATA.md)
 
 O acervo é descritivo e separado das entradas v1: 66 GPs/330 sessões de 2024–2026 até Austin. A aquisição complementar de 29/10 foi serial e cacheada. Os nove artefatos científicos e as emissões anteriores foram preservados.
 
+## Operação do México — 0.8.1
+
+O acompanhamento separado do fim de semana agora tem resultado observado de 22 pilotos, 1360 registros de voltas, pneus, paradas e campeonatos completos da rodada 19 (24 pilotos e 11 equipes). O clima considera os intervalos efetivos da corrida: média do ar de 24,2 °C; a média do asfalto fica retida por uma leitura isolada de 0 °C entre 37,4 e 37,5 °C. TL3 e algumas paradas da classificação permanecem parcialmente retidos por cadastros ausentes na fonte. Esses dados operacionais não ampliam silenciosamente o acervo de condições de Pilotos nem alteram o modelo ou a avaliação científica. [Auditoria e pendências](../reports/auditoria_calendario_mexico_20261101/README.md) · [Operação automática](OPERACAO_FIM_SEMANA.md).
+
 ## Controle de qualidade de Pilotos — 0.2.0
 
 A [auditoria atual](../reports/pilotos_condicoes_20261029/README.md) substitui o estado de pneus da revisão inicial abaixo: 295 verificações tratadas, 50 limites adjudicados, nove compostos recuperados e 17 compostos de treinos/classificação indisponíveis nas duas fontes consultadas. Essas lacunas permanecem ausentes e impedem análises que dependam delas; não afetam resultados por condições de corrida. São 66 corridas principais, 1.354 resultados, 1.340 largadas e oito provas com chuva registrada durante os intervalos efetivamente disputados. Os 66 mapas FIA foram conferidos por edição, inclusive comprimentos que mudaram entre anos e o traçado em oito de Suzuka. Nenhum resultado da própria corrida entrou nas previsões congeladas.

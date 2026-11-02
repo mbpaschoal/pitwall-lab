@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "8744f28238c586ee20ed2f82a992457dbbe27ab4174e2a788add1617c1c80b60",
+  "apresentacao_build_sha256": "aeaac1dd36995f3e165028a4e84e2abe3472a969499520763778ea16e456130b",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "557c88b1165d9a5bcd3e7f1922f167b68861404e4dad9ef58fa413a250f17b6c",
-      "sha256_origem": "4d3451e33aa2e18406ff1a5d4b13daf25ef7615a124cad151b68fb441ab2c657"
+      "sha256_destino": "fb871b6e3faa6168cce429d1b461d89d7c7c20779efeb9e764865e596e811ef7",
+      "sha256_origem": "3bb9166210e2d2c0f0a6ac2e445ca468ff9947f4755c251ba57730331572f9e2"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "f63e7612b18db6aee87e6a9b2eb1fce1f6efb6771562c589cf6f775f63f6dde9",
-      "sha256_origem": "49679c54b763fd281551f49bf52bb2911e1c162eb40418d2422167503f3f15c5"
+      "sha256_destino": "8f79caa12362b6cd4e52821f82e35694f3013baa720f712d8f7dce6541534d53",
+      "sha256_origem": "21dc79e01d4ea09012ff56fa30ee64d7024470d8f5e66f30d6c12713438fd2ab"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "9c788a838dc1f6bfd80fa39757a95f94260071c35011c9a05301da1c73507657",
-      "sha256_origem": "9c788a838dc1f6bfd80fa39757a95f94260071c35011c9a05301da1c73507657"
+      "sha256_destino": "aaf6721dc37c40b4233accfc081f25776ff3bd1d2a4b9d5cea760d1c2cf86665",
+      "sha256_origem": "aaf6721dc37c40b4233accfc081f25776ff3bd1d2a4b9d5cea760d1c2cf86665"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -203,8 +203,8 @@
       "caminho": "dashboard_assets/circuit/catalogo_visual.json",
       "fonte": "dashboard_assets/circuit/catalogo_visual.json",
       "modo": "copia",
-      "sha256_destino": "c186faa49040e66054490f28891fe7d6da9248f0285b8abc29bb02efa44bc64d",
-      "sha256_origem": "c186faa49040e66054490f28891fe7d6da9248f0285b8abc29bb02efa44bc64d"
+      "sha256_destino": "ab945bfdb3f00c8bd661509301073cfd31c1fdeb021413ca9a6836dcdc592135",
+      "sha256_origem": "ab945bfdb3f00c8bd661509301073cfd31c1fdeb021413ca9a6836dcdc592135"
     },
     {
       "caminho": "dashboard_assets/circuit/catalunya-layout.svg",
@@ -2492,15 +2492,15 @@
       "caminho": "docs/JORNADA_DO_FA.md",
       "fonte": "docs/JORNADA_DO_FA.md",
       "modo": "copia",
-      "sha256_destino": "48453cfaaf76852b26e56ff1a721686d85ea6b0ab00d092efa13313fc524e4ce",
-      "sha256_origem": "48453cfaaf76852b26e56ff1a721686d85ea6b0ab00d092efa13313fc524e4ce"
+      "sha256_destino": "ae0d84d78a3882f5aa4ced91516d5f2773decb077b8dff5e1964f6c71d58d4d1",
+      "sha256_origem": "ae0d84d78a3882f5aa4ced91516d5f2773decb077b8dff5e1964f6c71d58d4d1"
     },
     {
       "caminho": "docs/OPERACAO_FIM_SEMANA.md",
       "fonte": "docs/OPERACAO_FIM_SEMANA.md",
       "modo": "copia",
-      "sha256_destino": "a1346434c4aa9d7b6e766cebefa9448bfd4b522163fdfaea287a7fa4b3c69ef6",
-      "sha256_origem": "a1346434c4aa9d7b6e766cebefa9448bfd4b522163fdfaea287a7fa4b3c69ef6"
+      "sha256_destino": "3b820548071368bec85fc511991ee5a82fbf4eda9f6aa418ba4d1705be485ea7",
+      "sha256_origem": "3b820548071368bec85fc511991ee5a82fbf4eda9f6aa418ba4d1705be485ea7"
     },
     {
       "caminho": "docs/REVISAO_030.md",
@@ -2527,8 +2527,8 @@
       "caminho": "docs/en/FAN_JOURNEY.md",
       "fonte": "docs/en/FAN_JOURNEY.md",
       "modo": "copia",
-      "sha256_destino": "4b2cd210bd3ecee289b01cfb1e65db0f3cfec170b0a739c48ebb256795e7ae52",
-      "sha256_origem": "4b2cd210bd3ecee289b01cfb1e65db0f3cfec170b0a739c48ebb256795e7ae52"
+      "sha256_destino": "0fdb41e1d1ae1cc26e7dc70b53b9959e0d30df644aa6dc32f6e4f721df146843",
+      "sha256_origem": "0fdb41e1d1ae1cc26e7dc70b53b9959e0d30df644aa6dc32f6e4f721df146843"
     },
     {
       "caminho": "docs/en/REVIEW_030.md",
@@ -2541,8 +2541,8 @@
       "caminho": "docs/en/WEEKEND_OPERATION.md",
       "fonte": "docs/en/WEEKEND_OPERATION.md",
       "modo": "copia",
-      "sha256_destino": "6eff9937b49ae69bb017673d349130a16db0eb2b8afe80227ea73eb25f917dba",
-      "sha256_origem": "6eff9937b49ae69bb017673d349130a16db0eb2b8afe80227ea73eb25f917dba"
+      "sha256_destino": "797ef1c0a1c4433961c4db55c4935b9fbc3983f9b933f3d45fe0c91de5689a88",
+      "sha256_origem": "797ef1c0a1c4433961c4db55c4935b9fbc3983f9b933f3d45fe0c91de5689a88"
     },
     {
       "caminho": "docs/en/avaliacao_final_v1.md",
@@ -2662,15 +2662,15 @@
       "caminho": "frontend_assets/journey.css",
       "fonte": "frontend_assets/journey.css",
       "modo": "copia",
-      "sha256_destino": "daaca86eb4000aa78d2a43e8986e32ab1b0231344811cad107945949dac656d5",
-      "sha256_origem": "daaca86eb4000aa78d2a43e8986e32ab1b0231344811cad107945949dac656d5"
+      "sha256_destino": "c3275a78e8817c07afa6573e977772b04feafd3bcac59acb5b356056e2f513f0",
+      "sha256_origem": "c3275a78e8817c07afa6573e977772b04feafd3bcac59acb5b356056e2f513f0"
     },
     {
       "caminho": "frontend_assets/operacao_fim_semana.json",
       "fonte": "frontend_assets/operacao_fim_semana.json",
       "modo": "copia",
-      "sha256_destino": "6300d0701a8ff7b2ae2ff8cf61c1779c211fed5b4f2555f48f24186061ade5c1",
-      "sha256_origem": "6300d0701a8ff7b2ae2ff8cf61c1779c211fed5b4f2555f48f24186061ade5c1"
+      "sha256_destino": "55d5b6256f8f9bdb278c230e414b5a64d525abb78f34bececb97e1fd705b2543",
+      "sha256_origem": "55d5b6256f8f9bdb278c230e414b5a64d525abb78f34bececb97e1fd705b2543"
     },
     {
       "caminho": "frontend_assets/paineis_editoriais.json",
@@ -2725,8 +2725,8 @@
       "caminho": "pitwall/dashboard/app.py",
       "fonte": "pitwall/dashboard/app.py",
       "modo": "copia",
-      "sha256_destino": "eef9ea7ad586b1cfb586952ff5afcac44f990b182e5b199102a3d673127451c9",
-      "sha256_origem": "eef9ea7ad586b1cfb586952ff5afcac44f990b182e5b199102a3d673127451c9"
+      "sha256_destino": "2199fe8102b9f5e4fe38bde9035849bfab2876c5656c2b77056bb718260edbd1",
+      "sha256_origem": "2199fe8102b9f5e4fe38bde9035849bfab2876c5656c2b77056bb718260edbd1"
     },
     {
       "caminho": "pitwall/dashboard/archive_views.py",
@@ -2746,8 +2746,8 @@
       "caminho": "pitwall/dashboard/fan_views.py",
       "fonte": "pitwall/dashboard/fan_views.py",
       "modo": "copia",
-      "sha256_destino": "bf7d2bfe74eeff45212c39933b9f867216afeabe64cdc3045859708f5d366980",
-      "sha256_origem": "bf7d2bfe74eeff45212c39933b9f867216afeabe64cdc3045859708f5d366980"
+      "sha256_destino": "804513103d6b26adfc91d09dc3b742a7ab2f4dd0a7c44e296180711f33ed3ddf",
+      "sha256_origem": "804513103d6b26adfc91d09dc3b742a7ab2f4dd0a7c44e296180711f33ed3ddf"
     },
     {
       "caminho": "pitwall/dashboard/favorites.py",
@@ -2767,15 +2767,15 @@
       "caminho": "pitwall/dashboard/journey.py",
       "fonte": "pitwall/dashboard/journey.py",
       "modo": "copia",
-      "sha256_destino": "e787a2088db5b61c15cd1d5c52252fed2c20598fa04f0851d9ce697949550f05",
-      "sha256_origem": "e787a2088db5b61c15cd1d5c52252fed2c20598fa04f0851d9ce697949550f05"
+      "sha256_destino": "089bb8a54ffa848e56e314e9e7f7b072b368a6bdd4af41d1a6aafb9ee3b2876e",
+      "sha256_origem": "089bb8a54ffa848e56e314e9e7f7b072b368a6bdd4af41d1a6aafb9ee3b2876e"
     },
     {
       "caminho": "pitwall/dashboard/model_views.py",
       "fonte": "pitwall/dashboard/model_views.py",
       "modo": "copia",
-      "sha256_destino": "5f135254dae209987efe4833fff8fdebd933a278d329ca435ee710e04924b1d1",
-      "sha256_origem": "5f135254dae209987efe4833fff8fdebd933a278d329ca435ee710e04924b1d1"
+      "sha256_destino": "248e3ab0bd72ce6009cc630c083666b709a275b2a8c18de76d1f2b13a7a29a86",
+      "sha256_origem": "248e3ab0bd72ce6009cc630c083666b709a275b2a8c18de76d1f2b13a7a29a86"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
@@ -2823,8 +2823,8 @@
       "caminho": "pitwall/dashboard/weekend_views.py",
       "fonte": "pitwall/dashboard/weekend_views.py",
       "modo": "copia",
-      "sha256_destino": "9e2285f898cae5e3e9e40731f7874ae96fd4e9e70529335d808193b66889e7f5",
-      "sha256_origem": "9e2285f898cae5e3e9e40731f7874ae96fd4e9e70529335d808193b66889e7f5"
+      "sha256_destino": "04a0089bf5c5c4a6b3ff095f7d92526d5fd49fb5c1a7cbe1fd3cf091460d6c49",
+      "sha256_origem": "04a0089bf5c5c4a6b3ff095f7d92526d5fd49fb5c1a7cbe1fd3cf091460d6c49"
     },
     {
       "caminho": "pitwall/data/__init__.py",
@@ -2914,8 +2914,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "48a5d823ae3694a2270b50111cb9870ef5e15e8813160fb5509154086ce525e1",
-      "sha256_origem": "48a5d823ae3694a2270b50111cb9870ef5e15e8813160fb5509154086ce525e1"
+      "sha256_destino": "c436b421e021e7d241fe069b61b3218ddc53a95a759c4a1649711bd37c473536",
+      "sha256_origem": "c436b421e021e7d241fe069b61b3218ddc53a95a759c4a1649711bd37c473536"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -3117,8 +3117,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "1b5d28e3734ff8917e9e6d5fdd5976752f8c43eb7a2fedf4f3f77c3260a85ae4",
-      "sha256_origem": "1b5d28e3734ff8917e9e6d5fdd5976752f8c43eb7a2fedf4f3f77c3260a85ae4"
+      "sha256_destino": "3ea6c2441065e93b5c302b3f68551cea89c9d5278c273f94975258335ea023c5",
+      "sha256_origem": "3ea6c2441065e93b5c302b3f68551cea89c9d5278c273f94975258335ea023c5"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -3167,8 +3167,8 @@
       "caminho": "tests/test_fan_composition.py",
       "fonte": "tests/test_fan_composition.py",
       "modo": "copia",
-      "sha256_destino": "804fa46e0fce24a7986d2d7b61aa891137b2a85342a82d7535592a57bed118bf",
-      "sha256_origem": "804fa46e0fce24a7986d2d7b61aa891137b2a85342a82d7535592a57bed118bf"
+      "sha256_destino": "a529f0276bf692f186c109ac86d85aa8ea45ff4d93ea26cb231f61418bdf50b7",
+      "sha256_origem": "a529f0276bf692f186c109ac86d85aa8ea45ff4d93ea26cb231f61418bdf50b7"
     },
     {
       "caminho": "tests/test_fan_exploration.py",
@@ -3274,7 +3274,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "1b5d28e3734ff8917e9e6d5fdd5976752f8c43eb7a2fedf4f3f77c3260a85ae4"
+      "sha256": "3ea6c2441065e93b5c302b3f68551cea89c9d5278c273f94975258335ea023c5"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -3293,5 +3293,5 @@
       "sha256": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     }
   ],
-  "versao_produto": "0.7.3"
+  "versao_produto": "0.8.1"
 }

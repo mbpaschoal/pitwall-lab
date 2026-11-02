@@ -23,6 +23,16 @@ Six destinations appear in the bottom navigation, with icons, labels and visible
 
 Races retains six chapters through tabs: Summary, Sessions and laps, Tyres and pit stops, Weather, At this track and Teams. The image and outline precede the podium. Tabs preserve existing routes and avoid opening every table in a single long page. Drivers retains highlights, profiles and duels with independent filters. Championship retains every published driver and constructor row, now in sequence. Sources, limitations and documents remain accessible throughout the product.
 
+## Counts, samples and readability — 0.8.1
+
+Lab results presents model and qualifying counts as text for every evaluated GP. Dots are decorative; unevaluated races remain unscored. Drivers displays start counts for the ranking and each condition comparison without relying on hover. Missing rates remain distinct from zero.
+
+Small blue text uses its own higher-contrast token, while bars retain their decorative blue. Mobile navigation labels use 12 px and may wrap. Scroll clearance keeps focus above the fixed menu; on mobile, up to 600 px, ranking leaders use one column to accommodate ties and sample sizes, and navigation uses two rows. Identity, photographs and recorded probabilities remain unchanged.
+
+On desktop, available width and text size determine the leader-card layout; larger text may move cards into a single column. Percentages retain space for their complete value.
+
+The [local acceptance report](../../reports/ui_ux_pro_max_20261101/implementacao/relatorio.md) distinguishes automated tests, browser measurements and limitations. Simulated larger text and a 320 CSS px viewport are not presented as native browser zoom or full accessibility certification.
+
 ## Optional cards
 
 In Podium chances, **Open the GP cards** opens an optional dialog. Direct links can use `?tela=Previsões&temporada=2026&gp=19&cartas=1&lang=en`. Close with X, Escape or the table link. Closing or changing GP clears the opening state. Normal navigation never opens the dialog automatically.

@@ -22,6 +22,13 @@ SESSION_TYPES = {
 }
 
 
+class ProviderAccessUnavailable(RuntimeError):
+    """Public historical access is temporarily restricted; raw receipt is kept."""
+    def __init__(self, status):
+        self.status=status
+        super().__init__('OpenF1 public access restricted (HTTP {})'.format(status))
+
+
 def load_event(path):
     event = json.loads(Path(path).read_text())
     if event.get('schema') != 'pitwall-weekend-event-v1':
@@ -115,6 +122,8 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
             # This also verifies that the currently published catalogue still agrees.
             catalog = client.capture('openf1', 'sessions', 'sessions.json',
                 'https://api.openf1.org/v1/sessions?' + urlencode(dict(year=event['temporada'], country_name=event['country_name'])))
+            if catalog is None and client.manifest['fontes'][-1].get('status') in (401,403):
+                raise ProviderAccessUnavailable(client.manifest['fontes'][-1]['status'])
             if not isinstance(catalog, list):
                 raise ValueError('Session catalogue unavailable')
             for session in event['sessions']:
@@ -152,9 +161,9 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
                     entry['encerramento_observado_utc'] = end.isoformat()
                     project_session(entry, data, session)
                     if session['session_name'] == 'Race' and data.get('weather'):
-                        from pitwall.data.race_weather import race_windows, summarize_sensors, RaceWeatherError
+                        from pitwall.data.race_weather import RaceWeatherError
                         try:
-                            entry['clima_observado'] = summarize_sensors(data['weather'], race_windows(data['race_control'],session['session_key']))
+                            entry['clima_observado'] = observed_weather(data, session)
                         except RaceWeatherError as error:
                             entry['estado'] = 'parcial'
                             entry['qualidade_clima'] = str(error)
@@ -192,6 +201,35 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
                 previous['retry_after_utc'] = deadline.isoformat()
                 save_checkpoint(base/'estado.json',previous)
         return state
+
+
+def observed_weather(data, session):
+    """Apply operational sensor review without changing historical audit policy.
+
+    An isolated zero between two track readings >=20 C (at most 180 seconds
+    away, in the same active interval) is retained as evidence, but blocks
+    publication of that field's mean. No interpolation or replacement occurs.
+    """
+    from pitwall.data.race_weather import race_windows, summarize_sensors
+    window = race_windows(data['race_control'], session['session_key'], not_before=session['date_start'])
+    result = summarize_sensors(data['weather'], window)
+    anomalies = []
+    for start, end in window['intervalos_ativos']:
+        points = sorted([(instant(row['date']), index, row) for index, row in enumerate(data['weather'])
+                         if instant(start) <= instant(row['date']) < instant(end)], key=lambda point:point[0])
+        for previous, current, following in zip(points, points[1:], points[2:]):
+            if (current[2].get('track_temperature') == 0
+                and all(isinstance(point[2].get('track_temperature'), (int,float)) and point[2]['track_temperature'] >= 20
+                        for point in (previous, following))
+                and (current[0]-previous[0]).total_seconds() <= 180
+                and (following[0]-current[0]).total_seconds() <= 180):
+                anomalies.append(dict(indice_fonte=current[1], data=current[2]['date'], valor=0,
+                                      anterior=previous[2]['track_temperature'], posterior=following[2]['track_temperature']))
+    if anomalies:
+        result['campos']['track_temperature']['elegivel'] = False
+        result['campos']['track_temperature']['qualidade'] = dict(codigo='zero_isolado_em_conferencia', registros=anomalies,
+            uso_media='Diagnóstico bruto; não publicar como temperatura representativa.')
+    return result
 
 
 
@@ -238,7 +276,12 @@ def session_times(data, session):
             raise DriverIdentityUnavailable(number)
         seen.add(number)
         driver = drivers[number]
-        rows.append(dict(numero=number, piloto=driver.get('full_name') or driver.get('broadcast_name'),
+        from operacao2026.openf1_qualificacao import MAPEAMENTO_2026
+        mapped = MAPEAMENTO_2026.get(number)
+        canonical_id = (mapped[0] if mapped and
+            (driver.get('first_name'),driver.get('last_name'),driver.get('team_name'))
+            == (mapped[2],mapped[3],mapped[4]) else None)
+        rows.append(dict(numero=number, piloto_id=canonical_id, piloto=driver.get('full_name') or driver.get('broadcast_name'),
                          equipe=driver.get('team_name'), posicao=result.get('position'),
                          duracao=result.get('duration'), gap=result.get('gap_to_leader'), voltas=result.get('number_of_laps')))
         duration = result.get('duration')

@@ -4,6 +4,21 @@ Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
 
+## 0.8.1 — 2026-11-01
+
+- Acertos do Lab mostra as contagens do modelo e da classificação em texto por GP; as bolinhas ficam como apoio visual decorativo. Etapas sem avaliação continuam sem nota, e empates permanecem explícitos.
+- Pilotos mostra o número de largadas de cada condição e dos demais classificados sem depender de hover. Valores ausentes continuam distintos de zero e as comparações usam as amostras reais.
+- Azul de texto separado do azul decorativo para melhorar o contraste dos ranks pequenos e dos cards. Rótulos da navegação móvel ampliados, com quebra de linha, e espaço de rolagem reservado para o foco acima do menu fixo. A grade dos líderes se reorganiza com texto ampliado; o menu móvel usa duas linhas.
+- Validação focal cobre PT/EN, contagens, amostras e estados científicos. O aceite local verifica contraste, reflow e teclado; os recibos ficam em `reports/ui_ux_pro_max_20261101/implementacao/`. A verificação pública tem etapa própria.
+- Aprendizado: legenda e tooltip não substituem contagens e denominadores acessíveis. A skill orienta a revisão; a implementação preserva identidade visual, fontes, modelo e probabilidades registradas.
+
+- Publicados os dados observados do México: resultado com 22 pilotos, 1360 registros de voltas, pneus e paradas, além dos campeonatos da rodada 19 (24 pilotos e 11 equipes). O pódio observado aparece separado das probabilidades registradas; observar um resultado não o promove automaticamente à avaliação do modelo.
+- Clima consolidado somente nos intervalos ativos: média de 24,2 °C no ar. A média do asfalto fica retida por uma leitura isolada de 0 °C entre 37,4 e 37,5 °C, com registro e diagnóstico bruto preservados. Doze mensagens anteriores ao início declarado da sessão ficam auditadas e fora da janela; a interrupção é excluída e os horários efetivos continuam vindo do controle de corrida. Originais e índices de exclusão preservados.
+- Automação respeita a janela de acesso gratuito da OpenF1: aguarda os 30 minutos anteriores/posteriores às sessões. A extensão publicada do horário da corrida foi conferida e registrada para a coleta, sem reescrever a previsão. TL3 e paradas de Q continuam parcialmente retidos pelos cadastros ausentes 30/236; ausências não foram preenchidas por aproximação.
+- Corrigido o diagnóstico sobre “Bahrain Grand Prix in Malaysia”: a F1 confirma o evento em Sepang. A interface mostra Malásia/Sepang com bandeira do país anfitrião, preservando nome e identidade originais. Barcelona também recebe seu rótulo explícito.
+- Capa de Austin ganha crédito clicável e ajuste no espaço do mapa. A foto real de 5822 × 3275 px permanece preservada, com enquadramento por CSS. Paleta, fontes, cartas aprovadas e probabilidades preservadas. Aceite visual passa a acompanhar também as publicações automáticas de dados.
+- Aprendizado: nomes incomuns exigem confirmação em fontes primárias; indisponibilidade durante a janela ao vivo, mudança de horário e dados contaminados de outra sessão são problemas diferentes. Há testes específicos para essas distinções e para impedir associação de pilotos apenas pelo número.
+
 ## 0.7.3 — 2026-11-01
 
 - Refinada a disposição da Jornada do Fã: fotografia e pódio com proporções mais equilibradas, clima antes dos detalhes opcionais da pista e comparação antes/depois mais compacta, sem repetir o título do pódio.

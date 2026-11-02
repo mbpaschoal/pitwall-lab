@@ -4,6 +4,21 @@
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
 
+## 0.8.1 — 2026-11-01
+
+- Lab results presents both model and qualifying counts as text for each GP, with dots as decorative visual support. Unevaluated races remain unscored and ties stay explicit.
+- Drivers exposes the start count for each condition and other ranked drivers without relying on hover. Missing values remain distinct from zero and comparisons use real sample sizes.
+- Text blue is separated from decorative blue to improve contrast in small rank labels and result cards. Mobile navigation labels are larger and wrap, with scroll clearance for focus above the fixed menu. Leader cards reflow with larger text; mobile navigation uses two rows.
+- Focused validation covers PT/EN, counts, sample sizes and scientific states. Local acceptance checks contrast, reflow and keyboard use; receipts are kept in `reports/ui_ux_pro_max_20261101/implementacao/`. Public verification remains a separate step.
+- Learning: legends and tooltips do not replace accessible counts and denominators. The skill guides review while implementation preserves visual identity, sources, the model and recorded probabilities.
+
+- Published observed Mexico data: 22-driver result, 1360 lap records, tyres and stops, plus round-19 standings (24 drivers and 11 constructors). The observed podium stays separate from recorded probabilities; observing a result does not automatically admit it to model evaluation.
+- Weather is summarised only during active racing: mean air temperature 24.2 °C. The track mean is withheld because an isolated 0 °C reading sits between 37.4 and 37.5 °C; the original record and raw diagnostic remain preserved. Twelve messages preceding the declared session start are audited outside the window; the suspension is excluded and actual transitions still come from race control. Original files and excluded indices remain preserved.
+- Automation respects OpenF1's free-access window, waiting through the 30 minutes before/after sessions. The published extension of the race schedule was reviewed and recorded for collection without rewriting the prediction. FP3 and qualifying pit data remain partially withheld due to missing profiles 30/236; missing identities are never guessed.
+- Corrected the diagnosis of “Bahrain Grand Prix in Malaysia”: Formula 1 confirms the event at Sepang. The UI shows Malaysia/Sepang and the host-country flag while preserving the original name and identity. Barcelona also gets an explicit label.
+- Austin's cover gains a clickable credit and adjusted map spacing. The real 5822 × 3275 photograph remains preserved with CSS framing. Palette, fonts, approved cards and probabilities remain preserved. Visual acceptance now also accompanies automatic data publication.
+- Learning: unusual names need primary-source verification; live-window unavailability, revised scheduling and stale session messages are different issues. Specific regressions cover these distinctions and prevent matching drivers by number alone.
+
 ## 0.7.3 — 2026-11-01
 
 - Refined the Fan Journey composition: better-balanced photograph and podium proportions, weather before optional circuit details and a more compact before/after comparison without a repeated podium heading.

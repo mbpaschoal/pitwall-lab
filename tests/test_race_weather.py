@@ -26,6 +26,22 @@ def window():
 
 
 class RaceWeatherTests(unittest.TestCase):
+    def test_pre_session_status_is_audited_without_inventing_a_start(self):
+        messages=[event('09:00:00','SESSION STARTED'),
+                  event('10:03:00','SESSION STARTED'),
+                  event('10:05:00','SESSION ABORTED'),
+                  event('10:08:00','SESSION STARTED'),
+                  event('10:10:00','SESSION FINISHED')]
+        with self.assertRaisesRegex(RaceWeatherError,'Repeated start'):
+            race_windows(messages,7)
+        result=race_windows(messages,7,not_before='2024-01-01T10:00:00Z')
+        self.assertEqual(result['indices_anteriores_sessao'],[0])
+        self.assertEqual(result['inicio_efetivo_utc'],'2024-01-01T10:03:00+00:00')
+        self.assertEqual(result['duracao_ativa_s'],240)
+        self.assertEqual(result['n_suspensoes'],1)
+        with self.assertRaisesRegex(RaceWeatherError,'Repeated start'):
+            race_windows([event('10:01:00','SESSION STARTED'),event('10:02:00','SESSION STARTED'),event('10:05:00','SESSION FINISHED')],7,not_before='2024-01-01T10:00:00Z')
+
     def test_race_name_separates_sprint_with_identical_native_type(self):
         self.assertEqual(main_race_session([
             {"nome": "Sprint", "tipo": "Race", "session_key": 6},

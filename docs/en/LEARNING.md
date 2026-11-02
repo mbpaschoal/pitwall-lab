@@ -62,3 +62,9 @@ Neutral bases avoided assigning a later racing suit to historical races, but fai
 ## 0.7.3 — Check composition as well as presence
 
 A screen could contain every expected component while repeating a heading or hiding the end of the podium behind navigation. Visual comparison led to a compact podium with accessible full names, weather before optional details and a clear split between comparison copy and its legend. Acceptance now measures relationships between blocks in both languages and natural image density at 2×. English needs its own review: a longer sentence can change a card's height. [Contract and limits](FAN_JOURNEY.md).
+
+## 0.8.1 — Verify the source before diagnosing
+
+I treated “Bahrain Grand Prix in Malaysia” as an anomaly because the name appeared inconsistent. Primary verification showed Formula 1 had officially announced Bahrain's GP at Sepang. The data was correct; it needed a localised label and separation between event name and host country. The earlier record stays preserved with this explicit correction.
+
+Mexico collection exposed three distinct causes: HTTP 401 during the free tier's live window, a revised scheduled finish and stale messages carrying current IDs. The solution separates access waiting, an audited configuration revision and recorded temporal exclusions. None permits guessed driver identities, fabricated measurements or rewriting an already recorded prediction. [Operational review](WEEKEND_OPERATION.md).

@@ -58,7 +58,7 @@ def team_mark(team, label=''):
 
 
 
-def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, alt='', photo_left=False, person=None):
+def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, alt='', photo_left=False, person=None, photo_meta=None):
     spec = dict(HERO_IMAGES[image]) if photo is None else None
     css = ['fan-hero', 'fan-hero-dark' if dark else '']
     attrs = ' data-hero-kind="{}"'.format(escape(image,quote=True))
@@ -90,8 +90,11 @@ def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, a
 
     else:
         source=photo
-        position='20% center' if photo_left else 'center'
+        photo_meta=photo_meta or {}
+        position=photo_meta.get('object_position') or ('20% center' if photo_left else 'center')
         credit='<small class="fan-art-label">{}</small>'.format(text('Ilustração IA')) if 'gerada por IA' in alt else ''
+        if photo_meta.get('credito_curto') and photo_meta.get('pagina'):
+            credit='<a class="fan-art-label" href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(escape(photo_meta['pagina'],quote=True),escape(photo_meta['credito_curto']))
     image_css='fan-hero-image'+(' fan-photo-left' if photo_left else '')+(' fan-hero-real-portrait' if spec and spec['portrait'] else '')
     image_html='<img class="{}" style="object-position:{}" src="{}" alt="{}" decoding="async">'.format(image_css,escape(position,quote=True),source,escape(alt,quote=True)) if source else ''
     return '<section class="{}"{}>{}<div class="fan-hero-copy"><h1>{}</h1><p>{}</p>{}</div>{}</section>'.format(' '.join(css),attrs,backdrop_html+image_html,text(title),text(subtitle),extra,credit)
@@ -189,7 +192,7 @@ def condition_rows(rows, metric, links, comparisons=None, teams=None):
             for item in comparisons[driver]:
                 value=item['score'];limit=1 if metric.endswith('rate') else item.get('maximum',maximum)
                 title='{} · {}'.format(translate(item['label']),text('{} largadas').format(item['starts']))
-                chart.append('<div class="fan-mini-comparison" title="{}"><span>{}</span><i class="fan-condition-bar"><i style="width:{}%"></i></i><b>{}</b></div>'.format(escape(title,quote=True),text(item['label']),bar(value,limit),formatted(value)))
+                chart.append('<span class="fan-mini-comparison" title="{}"><span class="fan-mini-comparison-label">{} <small class="fan-mini-comparison-sample">{}</small></span><i class="fan-condition-bar" aria-hidden="true"><i style="width:{}%"></i></i><b>{}</b></span>'.format(escape(title,quote=True),text(item['label']),text('{} largadas').format(item['starts']),bar(value,limit),formatted(value)))
             ending='<span class="fan-mini-comparisons">{}</span>'.format(''.join(chart))
         else:
             ending='<span class="fan-condition-bar"><i style="width:{}%"></i></span><em>{}</em><span aria-hidden="true">›</span>'.format(bar(score,1 if metric.endswith('rate') else maximum),formatted(score))
@@ -197,7 +200,7 @@ def condition_rows(rows, metric, links, comparisons=None, teams=None):
     return '<div class="pilot-cards fan-pilot-ranking" data-leaders="{}">{}</div>'.format(sum(r['rank']==1 for r in rows),''.join(result))
 
 
-def performance_cards(rows, races, year):
+def performance_cards(rows, races, year, observed_rounds=None):
     if not rows:
         return '<p class="fan-awaiting">{}</p>'.format(text('Ainda não há previsão registrada com resultado validado para avaliar em 2026.' if year==2026 else 'Nenhuma corrida avaliável neste recorte.'))
     by_round={r['rodada']:r for r in rows}
@@ -211,10 +214,10 @@ def performance_cards(rows, races, year):
         row=by_round.get(race['rodada'])
         flag,label=race_identity(race['corrida'],language())
         if row:
-            dots=''.join('<div class="fan-result-dots"><small>{}</small>{}</div>'.format(text(name),''.join('<i class="{}" aria-hidden="true"></i>'.format('fan-hit' if i<row[key] else 'fan-miss') for i in range(3))) for key,name in [('modelo','Lab'),('classificacao','Classificação')])
-            content='<span class="fan-result-label">{}</span>{}'.format(text('{} de 3').format(row['modelo']),dots)
+            content=''.join('<div class="fan-result-dots"><span class="fan-result-label">{}: {}</span><span class="fan-result-symbols" aria-hidden="true">{}</span></div>'.format(text(name),text('{} de 3').format(row[key]),''.join('<i class="{}" aria-hidden="true"></i>'.format('fan-hit' if i<row[key] else 'fan-miss') for i in range(3))) for key,name in [('modelo','Lab'),('classificacao','Classificação')])
         else:
-            content='<p>{}</p>'.format(text('Corrida aguardada' if race.get('estado_previsao')=='previsao_registrada' else 'Sem previsão registrada'))
+            pending=('Resultado em conferência' if race['rodada'] in (observed_rounds or set()) else 'Corrida aguardada')
+            content='<p>{}</p>'.format(text(pending if race.get('estado_previsao')=='previsao_registrada' else 'Sem previsão registrada'))
         cards.append('<a class="fan-gp-result" data-evaluated="{}" href="{}" title="{}" target="_self"><strong><span aria-hidden="true">{}</span>{}</strong>{}</a>'.format('true' if row else 'false',escape(href('Previsões',temporada=year,gp=race['rodada']),quote=True),escape(race['corrida'],quote=True),flag,escape(label),content))
     wins=sum(r['modelo']>r['classificacao'] for r in rows)
     ties=sum(r['modelo']==r['classificacao'] for r in rows)

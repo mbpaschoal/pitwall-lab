@@ -63,3 +63,17 @@ FP3 (`11399`) returned 22 results but 21 driver profiles: number 30 appears in r
 Regression checks cover missing profiles, continuation to qualifying, preservation of valid results, duplicates and conflicting laps. Mexico forecast evaluation awaits a validated later race result; this recovery never reissues probabilities.
 
 Sources: [FP3 profiles](https://api.openf1.org/v1/drivers?session_key=11399), [FP3 results](https://api.openf1.org/v1/session_result?session_key=11399), [qualifying pit records](https://api.openf1.org/v1/pit?session_key=11400). Availability may change after the recorded captures.
+
+## Post-race review — 0.8.1
+
+[OpenF1's access policy](https://openf1.org/#faq) treats the 30 minutes before and after each session as live. Free collection now waits through that window without paid authentication. This explains the scheduled runs' observed 401 responses, rather than establishing missing historical data. Identity and catalogue failures outside the window still stop collection.
+
+If the catalogue still returns 401/403, the run reports `provider_access_restricted`, preserves the raw response and retains the previous public data. The next scheduled run retries; there is no immediate retry loop or automatic subscription. Restricted access is not treated as successful collection or evidence of missing results.
+
+Mexico's catalogue extended Race's scheduled end from 22:00 to 23:00 UTC; the configuration records the reviewed change and source SHA. This changes collection timing only. The actual observed finish was 22:23:54 UTC, not the scheduled end.
+
+The race returned 205 weather observations and 1360 lap records. The feed also contained 12 messages predating the declared session start with the race's IDs. The weather window records their indices and excludes them through temporal context, without deleting raw data or substituting the schedule for actual lights out. Actual starts and restarts remain required; repeated starts within the session without a suspension remain invalid. The 21:06–21:45 UTC suspension is excluded. Mean active-race air temperature is 24.2 °C. The raw track mean (40.3 °C) is withheld pending review because it includes an isolated 0 °C reading between 37.4 and 37.5 °C.
+
+Three of five sessions are complete. FP3 remains partial because profile 30 and pit identity 236 are missing; qualifying retains results/laps/tyres while withholding affected pit data. Observed OpenF1 results and round-19 standings are posterior context. Mexico's recorded prediction and probabilities remain unchanged; admission to model evaluation is a separate step.
+
+Calendar review also checked Formula 1's [official Bahrain-in-Malaysia announcement for Sepang](https://www.formula1.com/en/latest/article/formula-1-and-fia-confirm-that-malaysia-will-join-the-2026-calendar-as-host-venue-for-the-bahrain-grand-prix.6lL7vjFEM2VVynRHvg1TCf). Event name, host country and circuit are distinct fields; presentation does not change canonical identity.

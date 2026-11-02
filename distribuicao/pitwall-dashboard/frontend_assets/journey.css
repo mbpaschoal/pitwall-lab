@@ -1,7 +1,8 @@
 /* Fan journey C. Layout tokens are shared; source data never drive geometry. */
-:root{--journey-dock-height:68px;--fan-ink:#061226;--fan-blue:#297eee;--fan-line:#dce5ef}
+:root{--journey-dock-height:80px;--fan-ink:#061226;--fan-blue:#297eee;--fan-blue-text:#1c62ba;--fan-line:#dce5ef}
+.stMain{scroll-padding-block:16px calc(var(--journey-dock-height) + 90px + env(safe-area-inset-bottom))}
 [data-testid="stSidebar"],[data-testid="stSidebarCollapsedControl"]{display:none}
-[data-testid="stMainBlockContainer"]{max-width:1300px;margin:0 auto;padding:8px 28px calc(152px + env(safe-area-inset-bottom))}
+[data-testid="stMainBlockContainer"]{max-width:1300px;margin:0 auto;padding:8px 28px calc(var(--journey-dock-height) + 90px + env(safe-area-inset-bottom))}
 [data-testid="stMainBlockContainer"]>[data-testid="stVerticalBlock"]{gap:5px;position:relative}
 .stElementContainer:has([data-testid="stMarkdownContainer"]>style:only-child){display:none}
 [data-testid="stLayoutWrapper"]:has(>.st-key-journey-navigation),[data-testid="stLayoutWrapper"]:has(>[class*="st-key-pw_language_switch_"]){display:contents}
@@ -43,8 +44,8 @@
 .fan-hero:has(.fan-hero-map) h1{font-size:62px;max-width:550px}
 .fan-hero:has(.fan-hero-map) .fan-hero-copy>p{font-size:22px;white-space:pre-line}
 .fan-hero:has(.fan-hero-map)::before{background:linear-gradient(90deg,#dcebf6b0,#dcebf666 40%,transparent 76%)}
-.fan-hero-map{position:absolute;right:28px;top:50px;width:220px;text-align:center;color:white;text-shadow:0 1px 5px #061226}
-.fan-hero-map img{display:block;width:220px;height:155px;object-fit:contain;filter:invert(1);mix-blend-mode:screen}
+.fan-hero-map{position:absolute;right:28px;top:50px;width:180px;text-align:center;color:white;text-shadow:0 1px 5px #061226}
+.fan-hero-map img{display:block;width:180px;height:130px;object-fit:contain;filter:invert(1);mix-blend-mode:screen}
 .fan-hero-map strong{display:block;font:700 18px LatoLocal}
 .fan-gp-status{display:inline-block;background:#ffffffe0;padding:5px 10px;border-radius:20px;font:400 11px LatoLocal;color:var(--fan-ink);margin-top:12px}
 .fan-context-note,.fan-forecast-note{display:block;font:400 11px/1.3 LatoLocal;color:#3c5271;margin-top:5px}
@@ -120,14 +121,14 @@
 .st-key-pilot-comparison-toolbar button p{font-size:12px}
 .st-key-pilot-comparison-toolbar button{font-size:12px;min-height:32px;padding:4px 10px}
 .fan-pilot-toolbar{font:400 11px/1.4 LatoLocal;color:var(--pw-muted);background:#fffffff2;border-radius:4px;padding:7px 10px;margin:0}
-.pilot-cards.fan-pilot-ranking{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;background:white;border-radius:7px;padding:12px 18px;margin-top:-34px;position:relative;z-index:2}
+.pilot-cards.fan-pilot-ranking{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,28em),1fr));gap:0 16px;background:white;border-radius:7px;padding:12px 18px;margin-top:-34px;position:relative;z-index:2}
 .fan-condition-row{display:grid;grid-column:1/-1;grid-template-columns:30px 40px minmax(130px,1fr) minmax(120px,.9fr) 62px 12px;align-items:center;gap:10px;min-height:52px;border-bottom:1px solid #e6edf5;padding:3px 0}
-.fan-condition-row>b{color:var(--fan-blue);font:700 15px LatoLocal}
+.fan-condition-row>b{color:var(--fan-blue-text);font:700 15px LatoLocal}
 .fan-condition-row .fan-portrait{height:38px;width:38px;object-fit:cover;object-position:center 22%}
 .fan-ranking-identity{min-width:0}
 .fan-ranking-identity strong{display:block;font:700 18px/1.15 LatoLocal;color:var(--fan-ink)}
 .fan-ranking-identity small{display:block;font:400 12px/1.25 LatoLocal;color:var(--pw-muted);margin-top:3px}
-.fan-ranking-sample{display:none!important}
+.fan-ranking-identity .fan-ranking-sample{display:block;font-size:12px;line-height:1.4}
 .fan-ranking-identity .fan-team-mark{width:18px;height:13px;margin:0 4px 0 0;vertical-align:middle}
 .fan-condition-row em{font:700 16px LatoLocal;font-style:normal;color:var(--fan-ink)}
 .fan-condition-bar,.fan-probability-track{display:block;height:12px;background:#e8edf5;overflow:hidden;border-radius:1px}
@@ -140,7 +141,9 @@
 .fan-pilot-ranking[data-leaders="1"] .fan-condition-leader{grid-column:1/-1;grid-template-columns:54px 120px minmax(180px,1fr) minmax(240px,.9fr);min-height:220px}
 .fan-pilot-ranking[data-leaders="1"] .fan-condition-leader .fan-portrait{width:160px;height:180px}
 .fan-mini-comparisons{display:flex;flex-direction:column;gap:7px;min-width:0}
-.fan-mini-comparison{display:grid;grid-template-columns:90px minmax(35px,1fr) 48px;gap:7px;align-items:center;font:400 13px/1.2 LatoLocal;color:var(--pw-muted)}
+.fan-mini-comparison{display:grid;grid-template-columns:minmax(7em,1fr) minmax(35px,1fr) max-content;gap:7px;align-items:center;font:400 13px/1.2 LatoLocal;color:var(--pw-muted)}
+.fan-mini-comparison-label{min-width:0;overflow-wrap:anywhere}
+.fan-mini-comparison-sample{display:block;font-size:12px;line-height:1.4;margin-top:2px}
 .fan-mini-comparison b{font-weight:700;color:var(--fan-ink);font-size:13px;text-align:right}
 .fan-mini-comparison .fan-condition-bar{height:9px}
 .fan-discoveries{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0}
@@ -149,11 +152,11 @@
 .fan-discovery strong{display:block;font:700 13px LatoLocal}
 .fan-discovery small{display:block;font:400 11px/1.3 LatoLocal;color:var(--pw-muted);margin-top:3px}
 @media(min-width:601px){
- .fan-pilot-ranking:not([data-leaders="1"]) .fan-condition-leader{position:relative;grid-template-columns:210px minmax(0,1fr);grid-template-rows:auto 1fr;gap:4px 14px;min-height:220px;padding:5px 0 10px;align-content:start}
+ .fan-pilot-ranking:not([data-leaders="1"]) .fan-condition-leader{position:relative;grid-template-columns:210px minmax(0,1fr);grid-template-rows:auto 1fr;gap:4px 14px;min-height:220px;padding:12px 0 10px;align-content:start}
  .fan-pilot-ranking:not([data-leaders="1"]) .fan-condition-leader>b{position:absolute;left:0;top:8px;font-size:44px;z-index:1}
  .fan-pilot-ranking:not([data-leaders="1"]) .fan-condition-leader .fan-portrait{grid-column:1;grid-row:1/3;width:210px;height:210px;object-fit:contain}
  .fan-pilot-ranking:not([data-leaders="1"]) .fan-condition-leader .fan-ranking-identity{grid-column:2;grid-row:1}
- .fan-pilot-ranking:not([data-leaders="1"]) .fan-condition-leader .fan-ranking-identity strong{font-size:34px;max-width:200px}
+ .fan-pilot-ranking:not([data-leaders="1"]) .fan-condition-leader .fan-ranking-identity strong{font-size:34px}
  .fan-pilot-ranking:not([data-leaders="1"]) .fan-mini-comparisons{grid-column:2;grid-row:2;gap:5px;margin:0;align-self:start}
 }
 /* Championship and probability story use compact rows. */
@@ -211,14 +214,14 @@
 .fan-results-legend i{display:block;width:12px;height:12px;border-radius:50%;background:#ccdaeb;flex-shrink:0}
 .fan-results-legend i.fan-legend-hit{background:var(--fan-blue)}
 .fan-gp-results{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
-.fan-gp-result{display:flex;flex-direction:column;justify-content:flex-start;min-height:120px;background:#eaf1fa;border-radius:5px;padding:10px;font:400 11px LatoLocal;color:#405775;text-align:center}
+.fan-gp-result{display:flex;flex-direction:column;justify-content:flex-start;min-width:0;min-height:120px;background:#eaf1fa;border-radius:5px;padding:10px;font:400 12px/1.4 LatoLocal;color:#405775;text-align:center}
 .fan-gp-result>strong{font-size:15px;color:var(--fan-ink);min-height:25px;line-height:1.3}
 .fan-gp-result>strong>span{display:block;font-size:18px;margin-bottom:5px}
 .fan-gp-result>p{font-size:14px;line-height:1.35;margin:10px 0}
-.fan-result-label{display:block;color:#287be1;margin:5px 0}
-.fan-result-dots{display:flex;align-items:center;justify-content:flex-end;gap:5px;margin:6px 0 0}
-.fan-result-dots small{margin-right:auto;font-size:10px}
-.fan-result-dots i{display:block;width:13px;height:13px;border-radius:50%;background:#ccdaeb}
+.fan-result-label{display:block;min-width:0;color:var(--fan-blue-text);margin:0;overflow-wrap:anywhere}
+.fan-result-dots{display:flex;flex-direction:column;align-items:center;gap:4px;margin:8px 0 0}
+.fan-result-symbols{display:flex;justify-content:center;gap:5px}
+.fan-result-dots i{display:block;width:13px;height:13px;border-radius:50%;background:#ccdaeb;flex-shrink:0}
 .fan-result-dots i.fan-hit{background:var(--fan-blue)}
 .fan-insights{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
 .fan-insights article{display:flex;align-items:center;gap:12px;padding:14px;background:#edf4fd;border-radius:5px;min-height:130px}
@@ -271,6 +274,7 @@
 .stApp .fan-podium-place,.stApp .fan-probability-row,.stApp .fan-condition-row,.stApp .fan-gp-result,.stApp .fan-document-links>a,.stApp .fan-discovery{color:var(--fan-ink)!important;text-decoration:none!important}
 .stApp .fan-podium-place *,.stApp .fan-probability-row *,.stApp .fan-condition-row *,.stApp .fan-gp-result *{text-decoration:none!important}
 a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-offset:3px}
+.fan-condition-row,.fan-gp-result,.fan-document-links>a{scroll-margin-block:16px calc(var(--journey-dock-height) + 90px)}
 .fan-portrait[data-driver-id="arvid_lindblad"]{object-fit:cover!important;object-position:center top!important}
 @media(max-width:1000px) and (min-width:601px){
  .st-key-journey-header [data-testid="stHorizontalBlock"]{grid-template-columns:170px 80px minmax(0,1fr) 44px;gap:8px}
@@ -283,7 +287,8 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-of
  .fan-hero h1{font-size:42px}
 }
 @media(max-width:600px){
- [data-testid="stMainBlockContainer"]{padding:8px 12px calc(152px + env(safe-area-inset-bottom))}
+ :root{--journey-dock-height:160px}
+ [data-testid="stMainBlockContainer"]{padding:8px 12px calc(var(--journey-dock-height) + 90px + env(safe-area-inset-bottom))}
  [data-testid="stMainBlockContainer"]>[data-testid="stVerticalBlock"]{gap:8px}
  .st-key-journey-header{height:auto;padding:0;margin:0}
  .st-key-journey-header [data-testid="stHorizontalBlock"]{grid-template-columns:94px minmax(0,1fr) 44px;gap:7px}
@@ -354,8 +359,15 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-of
  .st-key-pilot-comparison-toolbar [data-testid="stColumn"]{min-width:0!important}
  .fan-pilot-toolbar{font-size:10px;padding:5px 7px;line-height:1.3}
  .st-key-pilot-comparison-toolbar button{font-size:10px;min-height:32px;padding:4px 6px}
- .pilot-cards.fan-pilot-ranking{padding:8px 10px;gap:0 8px;margin-top:-28px}
+ .pilot-cards.fan-pilot-ranking{grid-template-columns:minmax(0,1fr);padding:8px 10px;gap:0 8px;margin-top:-28px}
  .fan-condition-row{grid-template-columns:20px 30px minmax(85px,1fr) minmax(40px,.65fr) 43px 6px;gap:5px;min-height:41px}
+ .fan-condition-row:not(.fan-condition-leader){grid-template-columns:max-content 30px minmax(0,1fr) max-content 8px;row-gap:4px}
+ .fan-condition-row:not(.fan-condition-leader)>b{grid-column:1;grid-row:1/3}
+ .fan-condition-row:not(.fan-condition-leader)>.fan-portrait{grid-column:2;grid-row:1/3}
+ .fan-condition-row:not(.fan-condition-leader)>.fan-ranking-identity{grid-column:3/5;grid-row:1}
+ .fan-condition-row:not(.fan-condition-leader)>.fan-condition-bar{grid-column:3;grid-row:2}
+ .fan-condition-row:not(.fan-condition-leader)>em{grid-column:4;grid-row:2}
+ .fan-condition-row:not(.fan-condition-leader)>span[aria-hidden]{grid-column:5;grid-row:1/3}
  .fan-condition-row .fan-portrait{width:29px;height:32px}
  .fan-ranking-identity strong{font-size:12px}
  .fan-ranking-identity small{font-size:9px}
@@ -363,18 +375,18 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-of
  .fan-condition-row>b{font-size:12px}
  .fan-condition-row em{font-size:11px}
  .fan-condition-bar{height:8px}
- .fan-condition-leader{grid-template-columns:32px 44px minmax(55px,1fr);gap:4px;min-height:166px;align-content:start;padding:5px 0 8px}
+ .fan-condition-leader{grid-template-columns:max-content 44px minmax(0,1fr);gap:4px;min-height:166px;align-content:start;padding:5px 0 8px}
  .fan-condition-leader>b{font-size:26px;white-space:nowrap}
  .fan-condition-leader .fan-portrait{width:44px;height:61px}
  .fan-condition-leader strong{font-size:16px;line-height:1.05}
- .fan-condition-leader .fan-ranking-sample{font-size:9px}
+ .fan-condition-leader .fan-ranking-sample{font-size:12px}
  .fan-mini-comparisons{grid-column:1/-1;gap:5px;margin-top:5px}
- .fan-mini-comparison{grid-template-columns:72px minmax(22px,1fr) 34px;gap:4px;font-size:10px}
- .fan-mini-comparison b{font-size:10px}
+ .fan-mini-comparison{grid-template-columns:minmax(72px,1fr) minmax(22px,.8fr) max-content;gap:4px;font-size:12px;line-height:1.4}
+ .fan-mini-comparison b{font-size:12px}
  .fan-mini-comparison .fan-condition-bar{height:7px}
- .fan-pilot-ranking[data-leaders="1"] .fan-condition-leader{grid-template-columns:30px 78px 1fr;min-height:152px}
+ .fan-pilot-ranking[data-leaders="1"] .fan-condition-leader{grid-template-columns:max-content 78px minmax(0,1fr);min-height:152px}
  .fan-pilot-ranking[data-leaders="1"] .fan-condition-leader .fan-portrait{width:78px;height:88px}
- .fan-pilot-ranking[data-leaders="1"] .fan-mini-comparisons{grid-column:3;grid-row:2;margin-top:-45px}
+ .fan-pilot-ranking[data-leaders="1"] .fan-mini-comparisons{grid-column:1/-1;margin-top:5px}
  .fan-discoveries{grid-template-columns:1fr 1fr;gap:7px}
  .fan-discovery{padding:9px;gap:6px}
  .fan-discovery strong{font-size:12px}
@@ -425,10 +437,10 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-of
  .tabela-editorial td{font-size:12px;padding:5px}
  .tabela-editorial .fan-portrait{width:28px;height:30px;margin-right:6px}
  .st-key-journey-navigation{width:calc(100% - 16px)!important;padding:0 2px}
- .st-key-journey-navigation [role="radiogroup"]>label{min-height:66px;padding:5px 0}
+ .st-key-journey-navigation [role="radiogroup"]{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .st-key-journey-navigation [role="radiogroup"]>label{min-height:70px;padding:5px 2px}
  .st-key-journey-navigation [role="radiogroup"]>label::before{width:24px;height:24px}
- .st-key-journey-navigation [role="radiogroup"]>label p{font-size:9.5px;line-height:1.2;overflow-wrap:normal;word-break:normal}
- .st-key-journey-navigation [role="radiogroup"]>label:nth-child(3) p{font-size:9px}
+ .st-key-journey-navigation [role="radiogroup"]>label p{font-size:12px;line-height:1.25;overflow-wrap:anywhere;word-break:normal}
  .tarot-cards{grid-template-columns:1fr;max-width:300px;margin:auto;gap:18px}
  .tarot-card-label h3{font-size:20px}
  .tarot-card-label span{font-size:12px}

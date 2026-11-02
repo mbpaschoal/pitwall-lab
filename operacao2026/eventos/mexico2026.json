@@ -84,7 +84,7 @@
       "session_type": "Race",
       "session_name": "Race",
       "date_start": "2026-11-01T20:00:00+00:00",
-      "date_end": "2026-11-01T22:00:00+00:00",
+      "date_end": "2026-11-01T23:00:00+00:00",
       "meeting_key": 1298,
       "circuit_key": 65,
       "circuit_short_name": "Mexico City",
@@ -112,5 +112,17 @@
       "registros": 5
     }
   ],
-  "qualifying_mapping": "literal_2026_v1"
+  "qualifying_mapping": "literal_2026_v1",
+  "revisoes_coleta": [
+    {
+      "obtido_em_utc": "2026-11-01T23:42:59.737399+00:00",
+      "session_key": 11404,
+      "campo": "date_end",
+      "anterior": "2026-11-01T22:00:00+00:00",
+      "atual": "2026-11-01T23:00:00+00:00",
+      "fonte": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
+      "sha256_catalogo": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313",
+      "uso": "Atualiza somente a janela de coleta; não comprova encerramento nem altera a emissão."
+    }
+  ]
 }

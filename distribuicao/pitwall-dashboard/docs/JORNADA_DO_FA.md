@@ -21,6 +21,16 @@ Corridas mantém os seis capítulos acessíveis nas abas: Resumo, Sessões e vol
 
 As fotografias dos 26 circuitos e dos cinco cabeçalhos usam fontes com largura natural de pelo menos 2488 pixels. Os 29 retratos superam o mínimo de 512 pixels por eixo; 28 têm largura de 1336 pixels. A aplicação usa essas fontes originais: ampliar os antigos retratos de 93 × 93 pixels não criaria detalhe. Retratos não estabelecem uniforme ou equipe de temporadas anteriores. Fontes e direitos estão em [créditos das imagens](../dashboard_assets/fan/ATTRIBUTION.md) e nos [testes de resolução](../tests/test_high_resolution_assets.py). A prancha orienta hierarquia, composição e navegação; os números exibidos vêm dos artefatos reais, sem copiar valores fictícios do estudo visual. Sem chuva registrada não comprova pista seca; as amostras das quatro condições podem se sobrepor.
 
+## Contagens, amostras e leitura — 0.8.1
+
+Acertos do Lab apresenta, em cada GP avaliado, as contagens do Lab e da classificação como texto. As bolinhas são decorativas; etapas sem avaliação continuam sem nota. Pilotos mostra o número de largadas do ranking e de cada comparação de condição, sem depender de passar o mouse. Uma taxa ausente continua distinta de zero.
+
+O azul dos textos pequenos tem um token próprio, com contraste maior que o azul decorativo das barras. Rótulos da navegação móvel usam 12 px e podem quebrar linha. A rolagem reserva espaço para o foco acima do menu fixo; no celular, até 600 px, os líderes do ranking ficam em uma coluna para acomodar empates e amostras, e o menu se distribui em duas linhas. A identidade, as fotos e as probabilidades permanecem as mesmas.
+
+No desktop, a grade usa a largura disponível e o tamanho do texto para acomodar os líderes; com texto ampliado, os cards podem passar a uma coluna. Os percentuais conservam espaço para o valor completo.
+
+O [relatório de aceite local](../reports/ui_ux_pro_max_20261101/implementacao/relatorio.md) separa testes automatizados, medição em navegador e limites. Texto ampliado por simulação e largura de 320 CSS px não são apresentados como teste de zoom nativo ou certificação completa de acessibilidade.
+
 ## Abrir as cartas
 
 Em Chances de pódio, **Abrir as cartas do GP** abre um diálogo opcional. O link direto pode usar `?tela=Previsões&temporada=2026&gp=19&cartas=1&lang=pt`. O usuário fecha pelo X, Escape ou pelo link para a tabela; o estado da abertura é removido ao fechar ou mudar de GP. Nada abre automaticamente na navegação normal.

@@ -62,3 +62,9 @@ As bases neutras evitaram atribuir um uniforme posterior a corridas históricas,
 ## 0.7.3 — Verificar composição, além de presença
 
 Uma tela podia conter todos os componentes esperados e ainda apresentar um título repetido ou esconder o final do pódio atrás da navegação. A comparação visual levou a um pódio compacto com nome completo acessível, clima antes dos detalhes opcionais e separação clara entre explicação e legenda dos acertos. A conferência passou a medir relações entre blocos nos dois idiomas e a densidade natural das imagens em 2×. A versão em inglês precisa de revisão própria: uma frase maior pode mudar a altura de um cartão. [Contrato e limites](JORNADA_DO_FA.md).
+
+## 0.8.1 — Conferir a fonte antes de diagnosticar
+
+Tratei “Bahrain Grand Prix in Malaysia” como anomalia por parecer um nome incoerente. A confirmação primária mostrou que a F1 anunciou oficialmente o GP de Bahrein em Sepang. O dado estava correto; faltavam um rótulo localizado e a distinção entre nome do evento e país anfitrião. O registro anterior fica preservado, com esta correção explícita.
+
+A coleta do México revelou três causas distintas: HTTP 401 durante a janela ao vivo do acesso gratuito, uma revisão do fim programado e mensagens antigas com IDs atuais. A solução separa espera de acesso, revisão auditada de configuração e exclusão temporal identificada. Nenhuma dessas ações autoriza adivinhar pilotos, fabricar medições ou refazer uma previsão já registrada. [Revisão operacional](OPERACAO_FIM_SEMANA.md).

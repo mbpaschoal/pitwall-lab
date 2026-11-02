@@ -53,13 +53,19 @@ def main_race_session(sessions):
     return races[0]
 
 
-def race_windows(messages, session_key):
+def race_windows(messages, session_key, *, not_before=None):
     """Use actual status transitions, not scheduled start or planned restarts."""
     ordered = []
+    excluded_before_session = []
+    lower_bound = instant(not_before) if not_before is not None else None
     for index, message in enumerate(messages):
         if int(message.get("session_key", -1)) != int(session_key):
             raise RaceWeatherError("Race-control session identity mismatch")
-        ordered.append((instant(message["date"]), index, message))
+        stamp = instant(message["date"])
+        if lower_bound is not None and stamp < lower_bound:
+            excluded_before_session.append(index)
+            continue
+        ordered.append((stamp, index, message))
     ordered.sort(key=lambda x: (x[0], x[1]))
     active, finish = None, None
     intervals, evidence, seen = [], [], set()
@@ -114,6 +120,8 @@ def race_windows(messages, session_key):
         "duracao_ativa_s": sum((b - a).total_seconds() for a, b in intervals),
         "n_suspensoes": len(intervals) - 1,
         "indices_status_fonte": evidence,
+        "limite_contexto_utc": lower_bound.isoformat() if lower_bound else None,
+        "indices_anteriores_sessao": excluded_before_session,
     }
 
 

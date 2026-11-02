@@ -31,6 +31,19 @@ def in_window(event, now):
     return start - timedelta(hours=24) <= now <= end + timedelta(hours=48)
 
 
+def historical_access_after(event, now):
+    """The free OpenF1 tier excludes 30 minutes around each live session.
+
+    Use the event's verified schedule only to defer requests, never as evidence
+    that a session finished. Collection still requires observed finish records.
+    """
+    deadlines = [instant(s['date_end']) + timedelta(minutes=30)
+                 for s in event['sessions']
+                 if instant(s['date_start']) - timedelta(minutes=30)
+                 <= now <= instant(s['date_end']) + timedelta(minutes=30)]
+    return max(deadlines, default=None)
+
+
 def cooldown(root, now):
     deadlines = []
     for path in (root / STATE).glob('*/estado.json'):
@@ -142,12 +155,19 @@ def collect(root=PROJECT_ROOT, now=None):
     if not path:
         return dict(changed=False,reason='outside_race_weekend')
     event = weekend.load_event(path)
+    access_after = historical_access_after(event, now)
+    if access_after:
+        return dict(changed=False, reason='provider_live_window',
+                    retry_after_utc=access_after.isoformat())
     old_path = root / PUBLIC
     old = json.loads(old_path.read_text()) if old_path.exists() else {}
     marker = root/STATE/'{}-{}'.format(event['circuito_id'],event['temporada'])/'conferencia_final.json'
     race = next(s for s in event['sessions'] if s['session_name']=='Race')
     recheck = now >= instant(race['date_end'])+timedelta(hours=16) and not marker.exists()
-    state = weekend.collect(path,root,now,recheck_completed=recheck)
+    try:
+        state = weekend.collect(path,root,now,recheck_completed=recheck)
+    except weekend.ProviderAccessUnavailable as error:
+        return dict(changed=False,reason='provider_access_restricted',http_status=error.status)
     if recheck and all(s['estado']=='dados_recebidos' for s in state['sessoes']) and all(state.get('campeonatos',{}).get(key,{}).get('disponivel') for key in ('driver_standings','constructor_standings')):
         save_checkpoint(marker,{'utc':now.isoformat()})
     new = dict(weekend.public_status(state),automacao=AUTOMATION)

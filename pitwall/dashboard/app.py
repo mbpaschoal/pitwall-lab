@@ -447,7 +447,7 @@ def renderizar_estado_dados(corrida):
         linha[1].write(estado.replace("_", " "))
 
 
-def renderizar_contexto_circuito(pacote, corrida, acervo_gp=None, mode="full"):
+def renderizar_contexto_circuito(pacote, corrida, acervo_gp=None, mode="full", weekend=None):
     ativos = (
         para_circuito(pacote.get("catalogo_visual", {}), corrida.get("circuito_id"))
         or {}
@@ -467,12 +467,18 @@ def renderizar_contexto_circuito(pacote, corrida, acervo_gp=None, mode="full"):
             date_label=pitwall_ui.data_editorial(corrida.get('data')).removesuffix(str(pacote['temporada'])).strip()
             meta='{} · {}\n{}'.format(corrida.get('cidade',''),pacote['temporada'],date_label)
             tooltip='Temporada {} · {}, {} · {}'.format(pacote['temporada'],corrida.get('cidade',''),corrida.get('pais',''),corrida.get('data',''))
-            map_html+='<span class="fan-gp-status" title="{}">{}</span>'.format(escape(tooltip,quote=True),escape(translate(situacao_corrida(corrida))))
+            observed=next((s for s in (weekend or {}).get('sessoes',[]) if s['nome']=='Race'),{})
+            status='Resultado publicado pela OpenF1' if observed.get('encerramento_observado_utc') and observed.get('tempos') else situacao_corrida(corrida)
+            map_html+='<span class="fan-gp-status" title="{}">{}</span>'.format(escape(tooltip,quote=True),escape(translate(status)))
             if corrida.get('estado_previsao')!='previsao_registrada' and (pacote['temporada']!=2026 or corrida.get('estado_previsao')=='ensaio_retrospectivo'):
                 map_html+='<small class="fan-context-note">{}</small>'.format(escape(translate('Estudo retrospectivo com dados históricos.')))
-            st.markdown(hero(corrida['corrida'],meta,image='race',photo=foto,alt=ativos.get('alt_foto_en' if language()=='en' else 'alt_foto',ativos.get('alt_foto','')),extra=map_html,photo_left=(foto_meta or {}).get('enquadramento')=='pista-esquerda'),unsafe_allow_html=True)
+            st.markdown(hero(corrida['corrida'],meta,image='race',photo=foto,alt=ativos.get('alt_foto_en' if language()=='en' else 'alt_foto',ativos.get('alt_foto','')),extra=map_html,photo_left=(foto_meta or {}).get('enquadramento')=='pista-esquerda',photo_meta=foto_meta),unsafe_allow_html=True)
         else:
             climate=dict((acervo_gp or {}).get('clima') or {},corrida_efetiva=(acervo_gp or {}).get('clima_corrida_efetiva'))
+            observed=next((s for s in (weekend or {}).get('sessoes',[]) if s['nome']=='Race'),{}).get('clima_observado',{})
+            air=observed.get('campos',{}).get('air_temperature',{})
+            if air.get('elegivel'):
+                climate['corrida_efetiva']=dict(air_temperature=air['media_amostras'])
             st.markdown(circuit_details(paineis['circuit_info'],climate,pitwall_ui.link_interno(pacote['temporada'],corrida['rodada'],aba='Clima')),unsafe_allow_html=True)
         return
     if acervo_gp:
@@ -578,7 +584,7 @@ def renderizar_podio(pacote, corrida, participantes, acervo_gp=None, weekend=Non
         rows=[dict(id=p['piloto_id'],name=nome_piloto(pacote,p),team=nome_equipe(pacote,p),position=p.get('posicao_observada')) for p in participantes if p.get('posicao_observada') in (1,2,3)]
     if not rows and weekend:
         race=next((r for r in weekend.get('sessoes',[]) if r['nome']=='Race'),{})
-        rows=[dict(id=None,name=r['piloto'],team=r.get('equipe'),position=r['posicao']) for r in race.get('tempos',[]) if r.get('posicao') in (1,2,3)]
+        rows=[dict(id=r.get('piloto_id'),name=nome_exibicao_piloto(r.get('piloto_id'),r['piloto']),team=r.get('equipe'),position=r['posicao']) for r in race.get('tempos',[]) if r.get('posicao') in (1,2,3)]
     if rows or not corrida.get('podio_observado'):
         st.markdown(podium(rows,pacote['temporada'],compact=compact),unsafe_allow_html=True)
     if not rows and corrida.get('podio_observado'):
@@ -727,7 +733,9 @@ def renderizar_previsoes(pacote, bloco, participantes, acervo_gp=None, weekend=N
             for item in bloco['favoritos_classificacao']:
                 st.write(nome_piloto(pacote,item))
     corrida=bloco['corrida']
-    if corrida.get('podio_observado') or any(p.get('posicao_observada') in (1,2,3) for p in participantes):
+    observed=next((s for s in (weekend or {}).get('sessoes',[]) if s['nome']=='Race'),{})
+    observed_places={r.get('posicao') for r in observed.get('tempos',[]) if r.get('posicao') in (1,2,3)}
+    if corrida.get('podio_observado') or any(p.get('posicao_observada') in (1,2,3) for p in participantes) or (observed.get('encerramento_observado_utc') and observed_places=={1,2,3}):
         with st.container(key='prediction-after'):
             phase,result=st.columns([1,2.3],vertical_alignment='center')
             with phase:
@@ -951,7 +959,7 @@ def tela_explorar(pacote, rodada, foco, topbar_slot=None):
         active_chapter=st.query_params.get('aba','Visão geral')
         if active_chapter!='Visão geral':
             st.markdown(gp_chapters(pacote['temporada'],rodada,active_chapter),unsafe_allow_html=True)
-        renderizar_contexto_circuito(pacote,corrida,acervo_gp,mode='hero')
+        renderizar_contexto_circuito(pacote,corrida,acervo_gp,mode='hero',weekend=weekend)
     else:
         metadata='Temporada {} · {}, {} · {}'.format(pacote['temporada'],corrida.get('cidade',''),corrida.get('pais',''),corrida.get('data',''))
         if corrida.get('estado_previsao')=='previsao_registrada':
@@ -985,7 +993,7 @@ def tela_explorar(pacote, rodada, foco, topbar_slot=None):
                 with podium_column:
                     renderizar_podio(pacote,corrida,participantes,acervo_gp,weekend)
                 with context_column:
-                    renderizar_contexto_circuito(pacote,corrida,acervo_gp,mode='details')
+                    renderizar_contexto_circuito(pacote,corrida,acervo_gp,mode='details',weekend=weekend)
             st.markdown(gp_chapters(pacote['temporada'],rodada),unsafe_allow_html=True)
             if acervo_gp:
                 atalho_gp(pacote, corrida, "Corridas", "Ver classificação completa da corrida", aba="Tempos")

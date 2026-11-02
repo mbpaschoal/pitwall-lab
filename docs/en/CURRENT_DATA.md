@@ -4,6 +4,10 @@
 
 The descriptive archive is separate from v1 inputs: 66 GPs/330 sessions in 2024–2026 through Austin. Supplementary acquisition on 29 October was serial and cached. The nine scientific artefacts and previous recorded predictions were preserved.
 
+## Mexico operation — 0.8.1
+
+The separate weekend feed now contains 22 observed results, 1360 lap records, tyres, stops and full round-19 standings (24 drivers and 11 teams). Weather uses actual racing intervals: mean air temperature is 24.2 °C; the track mean is withheld because an isolated 0 °C reading lies between 37.4 and 37.5 °C. FP3 and some qualifying pit data remain partly withheld because source profiles are missing. Operational data do not silently extend the Drivers conditions archive or alter the model or its scientific evaluation. [Audit and outstanding gaps](../../reports/auditoria_calendario_mexico_20261101/README.md) · [Automatic operation](WEEKEND_OPERATION.md).
+
 ## Drivers quality gate — 0.2.0
 
 The [current audit](../../reports/pilotos_condicoes_20261029/README.en.md) supersedes the tyre status in the initial review below: 295 checks handled, 50 bounds adjudicated, nine compounds recovered and 17 practice/qualifying compounds unavailable in both consulted feeds. These gaps remain missing and block analyses that need them; they do not affect race-result comparisons by conditions. There are 66 main races, 1,354 results, 1,340 starts and eight races with rain recorded during actual racing intervals. All 66 FIA maps were reviewed by edition, including lengths that changed between years and Suzuka's figure-eight layout. No same-race result entered the frozen predictions.

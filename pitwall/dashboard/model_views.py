@@ -138,7 +138,9 @@ def tela_desempenho(pacote, show_title=True):
             st.info("Ainda não há previsão registrada com resultado validado para avaliar em 2026.")
             return
         from pitwall.dashboard.fan_views import performance_cards
-        st.markdown(performance_cards(rows,pacote['corridas'],2026),unsafe_allow_html=True)
+        from pitwall.dashboard.weekend_views import observed_rounds
+        from pitwall.paths import PROJECT_ROOT
+        st.markdown(performance_cards(rows,pacote['corridas'],2026,observed_rounds=observed_rounds(PROJECT_ROOT,2026)),unsafe_allow_html=True)
         from urllib.parse import urlencode
         from pitwall.i18n import language
         frame = pd.DataFrame([{'GP':r['corrida'],'Acertos do Lab':r['modelo'],'Acertos da classificação':r['classificacao'],

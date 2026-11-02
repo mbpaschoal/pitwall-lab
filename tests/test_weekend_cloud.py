@@ -1,6 +1,6 @@
 """Hosted scheduling, idempotence and archive isolation without HTTP."""
 from copy import deepcopy
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import json
 from pathlib import Path
 import tempfile
@@ -14,6 +14,37 @@ CONFIG = ROOT/'operacao2026/eventos/mexico2026.json'
 
 
 class CloudTests(unittest.TestCase):
+    def test_free_access_waits_through_the_live_window_without_any_collection(self):
+        event=weekend.load_event(CONFIG)
+        race=next(s for s in event['sessions'] if s['session_name']=='Race')
+        expected=cloud.instant(race['date_end'])+timedelta(minutes=30)
+        for now in [datetime(2026,11,1,19,30,tzinfo=timezone.utc),
+                    datetime(2026,11,1,23,9,tzinfo=timezone.utc),expected]:
+            with self.subTest(now=now), tempfile.TemporaryDirectory() as tmp:
+                with patch.object(cloud,'discover',return_value=CONFIG), patch.object(weekend,'collect',side_effect=AssertionError('No live HTTP')):
+                    result=cloud.collect(Path(tmp),now)
+                self.assertFalse(result['changed'])
+                self.assertEqual(result['reason'],'provider_live_window')
+                self.assertEqual(cloud.instant(result['retry_after_utc']),expected)
+                self.assertFalse((Path(tmp)/cloud.PUBLIC).exists())
+
+    def test_free_access_resumes_after_the_window_and_preserves_finish_validation(self):
+        event=weekend.load_event(CONFIG)
+        self.assertIsNone(cloud.historical_access_after(event,datetime(2026,11,1,23,31,tzinfo=timezone.utc)))
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch.object(cloud,'discover',return_value=CONFIG), patch.object(weekend,'collect',side_effect=ValueError('Session catalogue changed; review configuration')):
+                with self.assertRaisesRegex(ValueError,'catalogue changed'):
+                    cloud.collect(Path(tmp),datetime(2026,11,1,23,31,tzinfo=timezone.utc))
+
+    def test_restricted_access_keeps_last_public_data_and_reports_a_pending_source(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);public=root/cloud.PUBLIC;public.parent.mkdir(parents=True)
+            public.write_text(json.dumps(self.state()));before=public.read_bytes()
+            with patch.object(cloud,'discover',return_value=CONFIG),patch.object(weekend,'collect',side_effect=weekend.ProviderAccessUnavailable(401)):
+                result=cloud.collect(root,datetime(2026,11,1,23,31,tzinfo=timezone.utc))
+            self.assertEqual(result,dict(changed=False,reason='provider_access_restricted',http_status=401))
+            self.assertEqual(public.read_bytes(),before)
+
     def test_original_capture_archive_preserves_bytes_and_rejects_symlinks(self):
         import tarfile
         with tempfile.TemporaryDirectory() as tmp:

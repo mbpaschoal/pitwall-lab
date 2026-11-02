@@ -55,6 +55,7 @@ jobs:
           done
           node tests/browser/aceite_exploracao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/browser-evidence"
           node tests/browser/aceite_visual.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/visual-evidence"
+          node tests/browser/aceite_fim_semana.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/weekend-evidence"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -63,6 +64,7 @@ jobs:
           path: |
             ${{ runner.temp }}/browser-evidence
             ${{ runner.temp }}/visual-evidence
+            ${{ runner.temp }}/weekend-evidence
             ${{ runner.temp }}/streamlit.log
   release:
     if: startsWith(github.ref, 'refs/tags/v')

@@ -6,6 +6,23 @@ import pandas as pd
 from pitwall.i18n.streamlit import st
 STATES = {'aguardando_sessao': 'Sessão ainda não encerrada', 'aguardando_publicacao': 'Aguardando publicação da fonte', 'encerramento_ou_resultado_pendente': 'Encerramento ou resultado ainda não confirmado', 'parcial': 'Dados parciais; nova consulta necessária', 'dados_recebidos': 'Dados recebidos após a sessão'}
 
+def observed_rounds(root, year):
+    """Observed results are context, not automatic admission to model scoring."""
+    path=Path(root)/'frontend_assets/operacao_fim_semana.json'
+    if not path.is_file():
+        return set()
+    raw=json.loads(path.read_text())
+    rounds=set()
+    for record in [raw]+raw.get('arquivo_eventos',[]):
+        if record.get('temporada')!=year:
+            continue
+        state=load_status(root,year,record['rodada'],record['circuito_id'])
+        race=next((s for s in state['sessoes'] if s['nome']=='Race'),{})
+        if race.get('encerramento_observado_utc') and race.get('tempos'):
+            rounds.add(record['rodada'])
+    return rounds
+
+
 def load_status(root, year, round_, circuit):
     path = Path(root) / 'frontend_assets/operacao_fim_semana.json'
     if not path.is_file():
@@ -95,6 +112,8 @@ def render_weather(state):
             value = observed['campos'][field]
             column.metric(label, '{:.1f} °C'.format(value['media_amostras']) if value['elegivel'] else '—')
         st.caption('Medições OpenF1 nos intervalos ativos da corrida. Pausas por bandeira vermelha são excluídas.')
+        if observed['campos']['track_temperature'].get('qualidade', {}).get('codigo') == 'zero_isolado_em_conferencia':
+            st.caption('Temperatura do asfalto em conferência: leitura isolada de 0 °C entre medições acima de 20 °C. Média retida, sem substituir o registro original.')
     forecast = state.get('previsao_meteorologica', {})
     hours = forecast.get('horas', [])
     if hours:

@@ -1,8 +1,33 @@
 """Visual presentation must not invent observed places or missing evaluations."""
 import unittest
+from html.parser import HTMLParser
 from pitwall.dashboard.fan_views import podium, forecast_rows, performance_cards, condition_rows, hero, HERO_IMAGES, circuit_details
 from pitwall.i18n import set_language
 from pitwall.dashboard.journey import race_identity
+
+
+class VisibleText(HTMLParser):
+    """Read the textual equivalent without decorative aria-hidden content."""
+    def __init__(self, markup):
+        super().__init__()
+        self.parts=[]
+        self.hidden=[]
+        self.feed(markup)
+
+    def handle_starttag(self, tag, attrs):
+        if tag not in ('area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'):
+            self.hidden.append((self.hidden and self.hidden[-1]) or dict(attrs).get('aria-hidden')=='true')
+
+    def handle_endtag(self, tag):
+        if self.hidden:
+            self.hidden.pop()
+
+    def handle_data(self, value):
+        if not self.hidden or not self.hidden[-1]:
+            self.parts.append(value)
+
+    def __str__(self):
+        return ' '.join(' '.join(self.parts).split())
 
 
 class FanCompositionTests(unittest.TestCase):
@@ -55,7 +80,10 @@ class FanCompositionTests(unittest.TestCase):
         self.assertIn('Ar durante a corrida · OpenF1',rendered)
 
     def test_results_use_country_cues_without_inventing_a_known_country(self):
-        self.assertEqual(race_identity('Bahrain in Malaysia Grand Prix'),('', 'Bahrain in Malaysia'))
+        self.assertEqual(race_identity('Bahrain Grand Prix in Malaysia'),('🇲🇾', 'Malásia · Sepang'))
+        self.assertEqual(race_identity('Bahrain Grand Prix in Malaysia','en'),('🇲🇾', 'Malaysia · Sepang'))
+        self.assertEqual(race_identity('Bahrain Grand Prix in Unknownland'),('', 'Bahrain in Unknownland'))
+        self.assertEqual(race_identity('Bahrain Grand Prix'),('🇧🇭', 'Bahrein'))
         self.assertEqual(race_identity('Spanish Grand Prix'),('🇪🇸', 'Espanha'))
         rows=[dict(rodada=18,corrida='United States Grand Prix',modelo=2,classificacao=2)]
         rendered=performance_cards(rows,[dict(rodada=18,corrida='United States Grand Prix')],2026)
@@ -82,6 +110,40 @@ class FanCompositionTests(unittest.TestCase):
         self.assertIn('Estudo retrospectivo com dados históricos.',rendered)
         self.assertNotIn('Somente previsões registradas',rendered)
 
+    def test_each_evaluated_card_names_both_counts_in_both_languages(self):
+        rows=[dict(rodada=18,corrida='United States Grand Prix',modelo=2,classificacao=1),
+              dict(rodada=19,corrida='Mexico City Grand Prix',modelo=0,classificacao=3)]
+        races=[dict(rodada=row['rodada'],corrida=row['corrida'],estado_previsao='previsao_registrada') for row in rows]
+        races.append(dict(rodada=20,corrida='São Paulo Grand Prix',estado_previsao='previsao_registrada'))
+        for lang,baseline,of,pending in [('pt','Classificação','de','Corrida aguardada'),('en','Qualifying','of','Awaiting race')]:
+            with self.subTest(lang=lang):
+                set_language(lang)
+                rendered=performance_cards(rows,races,2026)
+                spoken=str(VisibleText(rendered))
+                for count in ('Lab: 2 {} 3',baseline+': 1 {} 3','Lab: 0 {} 3',baseline+': 3 {} 3'):
+                    self.assertIn(count.format(of),spoken)
+                self.assertIn(pending,spoken)
+                self.assertEqual(rendered.count('class="fan-result-label"'),4)
+                self.assertEqual(rendered.count('class="fan-result-symbols" aria-hidden="true"'),4)
+                self.assertEqual(rendered.count('data-evaluated="true"'),2)
+
+    def test_tied_evaluation_has_both_textual_counts_without_inventing_an_order(self):
+        row=dict(rodada=18,corrida='United States Grand Prix',modelo=2,classificacao=2)
+        rendered=performance_cards([row],[dict(rodada=18,corrida=row['corrida'])],2026)
+        spoken=str(VisibleText(rendered))
+        self.assertIn('Lab: 2 de 3',spoken)
+        self.assertIn('Classificação: 2 de 3',spoken)
+        self.assertIn('Empate na corrida avaliada',spoken)
+        self.assertEqual(rendered.count('class="fan-hit"'),4)
+
+    def test_observed_result_does_not_automatically_become_a_model_score(self):
+        rows=[dict(rodada=18,corrida='United States Grand Prix',modelo=2,classificacao=2)]
+        races=[dict(rodada=18,corrida='United States Grand Prix'),dict(rodada=19,corrida='Mexico City Grand Prix',estado_previsao='previsao_registrada')]
+        rendered=performance_cards(rows,races,2026,observed_rounds={19})
+        self.assertIn('Resultado em conferência',rendered)
+        self.assertEqual(rendered.count('data-evaluated="true"'),1)
+        self.assertNotIn('Corrida aguardada',rendered)
+
     def test_count_metric_has_visible_relative_bars_without_a_fake_percentage(self):
         row=dict(score=3,rank=1,driver_id='norris',driver_name='Lando Norris',starts=8)
         rendered=condition_rows([row],'wins',{'norris':'?piloto=norris'})
@@ -96,12 +158,31 @@ class FanCompositionTests(unittest.TestCase):
         self.assertNotIn('fan-place-1',html)
 
 
-    def test_comparison_tooltip_uses_the_selected_language(self):
+    def test_condition_denominator_is_visible_and_uses_the_selected_language(self):
         set_language('en')
         row=dict(score=.375,rank=1,driver_id='norris',driver_name='Lando Norris',starts=8)
         comparisons={'norris':[dict(label='Chuva',score=.375,starts=8,maximum=1)]}
         html=condition_rows([row],'win_rate',{'norris':'?piloto=norris'},comparisons=comparisons)
         self.assertIn('title="Rain · 8 starts"',html)
         self.assertNotIn('title="Chuva',html)
+        self.assertIn('Rain 8 starts 37.5%',str(VisibleText(html)))
+        self.assertIn('class="fan-mini-comparison-sample">8 starts</small>',html)
+
+    def test_condition_samples_preserve_ties_missing_scores_and_true_zero(self):
+        rows=[dict(score=.5,rank=1,driver_id='norris',driver_name='Lando Norris',starts=8),
+              dict(score=.5,rank=1,driver_id='leclerc',driver_name='Charles Leclerc',starts=12)]
+        comparisons={
+            'norris':[dict(label='Chuva',score=None,starts=0,maximum=1)],
+            'leclerc':[dict(label='Chuva',score=0,starts=5,maximum=1)]}
+        for lang,lead,starts in [('pt','Empate na liderança','largadas'),('en','Joint lead','starts')]:
+            with self.subTest(lang=lang):
+                set_language(lang)
+                html=condition_rows(rows,'win_rate',{'norris':'?piloto=norris','leclerc':'?piloto=leclerc'},comparisons=comparisons)
+                spoken=str(VisibleText(html))
+                self.assertEqual(spoken.count(lead),2)
+                self.assertIn('0 '+starts+' —',spoken)
+                self.assertIn('5 '+starts+(' 0,0%' if lang=='pt' else ' 0.0%'),spoken)
+                self.assertEqual(html.count('class="fan-mini-comparison-sample"'),2)
+                self.assertIn('data-leaders="2"',html)
 
 if __name__=='__main__':unittest.main()
