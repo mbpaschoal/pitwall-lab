@@ -346,10 +346,14 @@ class TestAssetsRaceWeekend(unittest.TestCase):
             destino = raiz / 'frontend_assets' / 'race_weekend.json'
             destino.parent.mkdir()
             asset = preparar.gerar(RAIZ, destino)
-            corrida = next(item for item in asset['dados_2026']['corridas'] if item['rodada'] == 18)
+            from pitwall.data.post_race_evaluation import ANNEX
+            anexo = raiz / ANNEX
+            anexo.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(RAIZ / ANNEX, anexo)
+            corrida = next(item for item in asset['dados_2026']['corridas'] if item['rodada'] == 20)
             corrida.update({'estado_previsao': 'previsao_registrada', 'estado_operacao': 'previsao_registrada'})
             asset['dados_2026']['previsoes'].append(preparar._participante_da_emissao(
-                18, 'piloto_teste',
+                20, 'piloto_teste',
                 {'piloto': 'Piloto Teste', 'equipe_id': 'equipe_teste', 'equipe': 'Equipe Teste'},
                 {'elegivel_previsao': 'True', 'probabilidade_modelo': '0.25', 'ranking_modelo': '1',
                  'ranking_classificacao': '2'},
@@ -357,7 +361,7 @@ class TestAssetsRaceWeekend(unittest.TestCase):
             destino.write_text(json.dumps(asset), encoding='utf-8')
             carregado = race_weekend_dados.carregar_asset(raiz)
         pacote = race_weekend_dados.pacote_2026(carregado)
-        piloto = next(item for item in pacote['participantes_por_rodada'][18] if item['piloto_id'] == 'piloto_teste')
+        piloto = next(item for item in pacote['participantes_por_rodada'][20] if item['piloto_id'] == 'piloto_teste')
         self.assertFalse(piloto['alvo_conhecido'])
         self.assertIsNone(piloto['podio'])
 
@@ -434,8 +438,18 @@ class TestAssetsRaceWeekend(unittest.TestCase):
         self.assertEqual(singapura[0]['piloto'], 'Max Verstappen')
         self.assertEqual(singapura[0]['equipe_id'], 'red_bull')
         observados = [item for item in asset['dados_2026']['previsoes'] if item['resultado_observado'] is not None]
-        self.assertEqual(len(observados), 396)
-        self.assertEqual(len({(item['temporada'], item['rodada'], item['piloto_id']) for item in observados}), 396)
+        self.assertEqual(len(observados), 396 + 17)
+        self.assertEqual(len({(item['temporada'], item['rodada'], item['piloto_id']) for item in observados}), 396 + 17)
+        mexico = [item for item in asset['dados_2026']['previsoes'] if item['rodada'] == 19]
+        self.assertEqual(len(mexico), 22)
+        dnf = [item for item in mexico if item['resultado_observado'] is None]
+        self.assertEqual(len(dnf), 5)
+        self.assertTrue(all(item['status_resultado'] == 'DNF' and item['podio_resultado_confirmado'] == 0 for item in dnf))
+        package = race_weekend_dados.pacote_2026(asset)
+        race_mexico = next(item for item in package['corridas'] if item['rodada'] == 19)
+        self.assertEqual(race_mexico['alvos_conhecidos'], 22)
+        self.assertTrue(race_mexico['avaliavel_ranking'])
+        self.assertEqual((race_mexico['acertos_modelo'], race_mexico['acertos_classificacao']), (2, 1))
         ausentes_classificacao = {(item['rodada'], item['piloto_id']) for item in asset['dados_2026']['previsoes']
                                   if item['probabilidade_modelo'] is None}
         self.assertEqual(ausentes_classificacao, {(1, 'max_verstappen'), (1, 'sainz'), (1, 'stroll'),

@@ -1,0 +1,236 @@
+{
+  "avaliacao": {
+    "acertos_classificacao": 1,
+    "acertos_modelo": 2,
+    "podio": [
+      "max_verstappen",
+      "hamilton",
+      "antonelli"
+    ]
+  },
+  "cobertura": {
+    "conhecidos": 22,
+    "esperados": 22,
+    "excluidos": 0
+  },
+  "emissao": {
+    "campos_preservados": [
+      "temporada",
+      "rodada",
+      "piloto_id",
+      "equipe_id",
+      "elegivel_previsao",
+      "probabilidade_modelo",
+      "ranking_modelo",
+      "ranking_classificacao"
+    ],
+    "diretorio": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z",
+    "emitido_em_utc": "2026-11-01T04:32:23.054391Z",
+    "manifesto_sha256": "dd1269793d8d7e9cb2893e592941730cd99de3b0a0483e64d2f8cfc20061b647",
+    "probabilidades_sha256": "e11587ce3373cd3e9c2fa975ae11b8cd104f9e3d2842b3319f17b90c5e0d926a",
+    "projecao_previsao_sha256": "3b1df2d39aa12428c1c69cc8427f82f840a23b5393dc0fc4062c1e71ecf5e2b8"
+  },
+  "escopo": "Somente avaliacao posterior; nenhuma reemissao, treinamento ou ajuste de probabilidades.",
+  "evento": {
+    "circuito_id": "rodriguez",
+    "meeting_key": 1298,
+    "rodada": 19,
+    "session_key": 11404,
+    "temporada": 2026
+  },
+  "fonte": {
+    "documento": 86,
+    "obtido_em_utc": "2026-11-02T03:42:24.143473Z",
+    "pagina": 2,
+    "sha256": "681fc44eb9dd8e73096dcafb63d18257d344ead5617aab6fc0b1a3f2f4591cd3",
+    "url": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_race_classification.pdf"
+  },
+  "janela": {
+    "encerramento_observado_utc": "2026-11-01T22:23:54.505000+00:00",
+    "largada_utc": "2026-11-01T20:00:00Z",
+    "resultado_final_publicado_utc": "2026-11-02T01:50:00Z"
+  },
+  "normalizacao": {
+    "arquivo": "reports/avaliacao_mexico_20261102/resultado_final_normalizado.json",
+    "sha256": "8a12d72646e3884c2e9d4c79f280e18a48e13bcd18ce54981a5c787777dd468f"
+  },
+  "resultado": [
+    {
+      "equipe_id": "red_bull",
+      "numero": 3,
+      "piloto_id": "max_verstappen",
+      "podio_resultado_confirmado": 1,
+      "resultado_observado": 1,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "ferrari",
+      "numero": 44,
+      "piloto_id": "hamilton",
+      "podio_resultado_confirmado": 1,
+      "resultado_observado": 2,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "mercedes",
+      "numero": 12,
+      "piloto_id": "antonelli",
+      "podio_resultado_confirmado": 1,
+      "resultado_observado": 3,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "ferrari",
+      "numero": 16,
+      "piloto_id": "leclerc",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 4,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "mclaren",
+      "numero": 1,
+      "piloto_id": "norris",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 5,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "mercedes",
+      "numero": 63,
+      "piloto_id": "russell",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 6,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "rb",
+      "numero": 30,
+      "piloto_id": "lawson",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 7,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "audi",
+      "numero": 5,
+      "piloto_id": "bortoleto",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 8,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "red_bull",
+      "numero": 6,
+      "piloto_id": "hadjar",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 9,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "haas",
+      "numero": 50,
+      "piloto_id": "ryo_hirakawa",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 10,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "williams",
+      "numero": 23,
+      "piloto_id": "albon",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 11,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "williams",
+      "numero": 55,
+      "piloto_id": "sainz",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 12,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "mclaren",
+      "numero": 81,
+      "piloto_id": "piastri",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 13,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "audi",
+      "numero": 27,
+      "piloto_id": "hulkenberg",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 14,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "alpine",
+      "numero": 43,
+      "piloto_id": "colapinto",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 15,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "cadillac",
+      "numero": 11,
+      "piloto_id": "perez",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 16,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "alpine",
+      "numero": 10,
+      "piloto_id": "gasly",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": 17,
+      "status_resultado": "Finished"
+    },
+    {
+      "equipe_id": "rb",
+      "numero": 41,
+      "piloto_id": "arvid_lindblad",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": null,
+      "status_resultado": "DNF"
+    },
+    {
+      "equipe_id": "haas",
+      "numero": 87,
+      "piloto_id": "bearman",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": null,
+      "status_resultado": "DNF"
+    },
+    {
+      "equipe_id": "cadillac",
+      "numero": 77,
+      "piloto_id": "bottas",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": null,
+      "status_resultado": "DNF"
+    },
+    {
+      "equipe_id": "aston_martin",
+      "numero": 18,
+      "piloto_id": "stroll",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": null,
+      "status_resultado": "DNF"
+    },
+    {
+      "equipe_id": "aston_martin",
+      "numero": 14,
+      "piloto_id": "alonso",
+      "podio_resultado_confirmado": 0,
+      "resultado_observado": null,
+      "status_resultado": "DNF"
+    }
+  ],
+  "schema": "pitwall-posterior-evaluation-v1"
+}

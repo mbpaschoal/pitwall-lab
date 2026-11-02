@@ -134,13 +134,15 @@ def tela_desempenho(pacote, show_title=True):
         if show_title: st.title("Acertos do Lab")
         from pitwall.research.prospective_evaluation import prospective_races
         rows = prospective_races(pacote)
-        if not rows:
+        from pitwall.dashboard.fan_views import performance_cards, has_validated_exclusions
+        if not rows and not has_validated_exclusions(pacote['corridas']):
             st.info("Ainda não há previsão registrada com resultado validado para avaliar em 2026.")
             return
-        from pitwall.dashboard.fan_views import performance_cards
         from pitwall.dashboard.weekend_views import observed_rounds
         from pitwall.paths import PROJECT_ROOT
         st.markdown(performance_cards(rows,pacote['corridas'],2026,observed_rounds=observed_rounds(PROJECT_ROOT,2026)),unsafe_allow_html=True)
+        if not rows:
+            return
         from urllib.parse import urlencode
         from pitwall.i18n import language
         frame = pd.DataFrame([{'GP':r['corrida'],'Acertos do Lab':r['modelo'],'Acertos da classificação':r['classificacao'],

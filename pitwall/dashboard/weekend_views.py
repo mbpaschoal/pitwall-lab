@@ -73,6 +73,11 @@ def render_times(state):
     gp['historico'] = {'voltas_por_piloto': race.get('dados_descritivos', {}).get('voltas_por_piloto', [])}
     renderizar_tempos(gp)
     st.caption('Tempos OpenF1 com conferências documentais identificadas quando disponíveis. Não alteram a previsão registrada.')
+    final_sources = {row.get('fonte_validacao') for row in race.get('tempos', [])}
+    if ('https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_race_classification.pdf' in final_sources):
+        st.caption('México: classificação final da FIA, incluindo penalidades. Os cinco não classificados mantêm a posição ausente; o alvo de pódio é conhecido.')
+        st.markdown('[Classificação final oficial · FIA]({})'.format(next(
+            url for url in final_sources if url and url.endswith('_final_race_classification.pdf'))))
     return True
 
 def render_strategies(state):
@@ -94,7 +99,8 @@ def render_podium(state):
     rows = sorted([r for r in race.get('tempos', []) if r.get('posicao') in (1, 2, 3)], key=lambda r: r['posicao'])
     if not rows:
         return False
-    st.subheader('Resultado publicado pela OpenF1')
+    reviewed = any(r.get('fonte_validacao', '').endswith('_final_race_classification.pdf') for r in rows)
+    st.subheader('Classificação final oficial · FIA' if reviewed else 'Resultado publicado pela OpenF1')
     for row in rows:
         st.markdown('**{} · {}** · {}'.format(row['posicao'], row['piloto'], row['equipe']))
     st.caption('Resultado descritivo da fonte; sujeito à conferência e a revisões oficiais.')

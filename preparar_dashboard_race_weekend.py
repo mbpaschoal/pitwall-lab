@@ -667,6 +667,8 @@ def gerar(root, destino, snapshot=None):
             'sem_recalculo': True,
         },
     }
+    from pitwall.data.post_race_evaluation import apply_posterior
+    apply_posterior(root, asset)
     destino.parent.mkdir(parents=True, exist_ok=True)
     destino.write_text(json.dumps(asset, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
     return asset

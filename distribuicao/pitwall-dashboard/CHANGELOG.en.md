@@ -1,8 +1,28 @@
 # Pitwall Lab evolution
 
+## 0.8.7 — 2026-11-02
+
+- The collector applies Mexico's final FIA classification, including post-penalty positions, times and points while preserving the earlier response in its audit. São Paulo has an explicit configuration for five sessions on 6–8 November; race start is 14:00 local time. [Operational sources and validation](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/mexico_avaliacao_saopaulo_20261102/README.md).
+
+### Changed
+
+- Mexico: posterior evaluation of the registered prospective prediction, bound to the emission hashes and the final FIA classification. The Lab selected 2 of 3 podium drivers; qualifying selected 1 of 3. All 22 participants are covered, with no exclusions.
+- Five retirements retain an unknown finishing position and a confirmed non-podium target. Later results do not alter the recorded probabilities or rankings.
+- Exclusion reasons and pending states remain readable in Portuguese and English, without an invented score.
+- Validation: UI/reader and evaluation-binding tests, isolated portable package and six-screen acceptance in PT/EN, desktop/mobile. Limitation: two evaluable prospective races do not establish superiority.
+
+
 [Português](CHANGELOG.md) · English
 
 Versions describe product deliveries. Scientific model v1 remains frozen. Earlier commits have not been assigned retrospective versions.
+
+## 0.8.6 — 2026-11-02
+
+- Focused tyre review: missing or `UNKNOWN` compounds appear as “Not reported” in the table, CSV and legend. Known codes retain their identities with a textual legend; original data is not normalised or overwritten.
+- Initial age is explained as laps already accumulated by the tyre set before the stint. Zero remains a published value without proving new tyres; missing age stays empty. Hover shows the same age as the table, including single-lap markers, without changing boundaries or bar widths.
+- Comparable boundaries uses Yes/No/Not reported in EN and Sim/Não/Não informado in PT, with its driver-sequence scope explained. Stints without valid boundaries remain in the table without invented bars.
+- Local validation and delivery limits are recorded in `reports/revisao_pneus_p02_20261102/`. The frozen v1 model, 262-stint complement, snapshots and registered forecasts are preserved. Local evidence does not establish a new public deployment.
+- Learning: tyre age, compound and boundary validity are separate facts; legends and units must explain the distinction without inferring new tyres from zero.
 
 ## 0.8.5 — 2026-11-01
 

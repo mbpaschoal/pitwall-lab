@@ -139,8 +139,8 @@ def renderizar_tempos(gp):
             "Diferença publicada": _valor(item.get("gap")),
             "Voltas na sessão": item.get("voltas"),
         }
-        if any(row.get('status')=='DSQ' for row in sessao.get('tempos',[])):
-            linha['Situação'] = 'DSQ' if item.get('status')=='DSQ' else '—'
+        if any(row.get('status') in ('DSQ', 'NC') for row in sessao.get('tempos',[])):
+            linha['Situação'] = item.get('status') or '—'
             if item.get('status')=='DSQ':
                 linha['Voltas na sessão'] = None
         if "Qualifying" in nome or "Shootout" in nome:
@@ -154,6 +154,8 @@ def renderizar_tempos(gp):
         linhas.append(linha)
     if any(row.get('status')=='DSQ' for row in sessao.get('tempos',[])):
         st.caption('DSQ indica desclassificação. Sem posição numérica ou tempos válidos; o zero da classificação anulada não significa ausência de voltas na pista.')
+    if any(row.get('status')=='NC' for row in sessao.get('tempos',[])):
+        st.caption('NC indica não classificado. Posição e tempo final permanecem ausentes conforme a classificação oficial.')
     _tabela(
         linhas,
         _chave(gp, "csv_tempos"),
@@ -198,7 +200,9 @@ def renderizar_tempos(gp):
 
 def renderizar_estrategias(gp):
     st.subheader("Pneus e paradas observados")
-    st.caption("Compostos e limites de voltas publicados por piloto.")
+    st.caption(
+        "As barras mostram limites de volta publicados, não a idade do pneu. Trechos sem limites válidos aparecem somente na tabela."
+    )
     estrategias = gp.get("estrategias", [])
     modalidades = list(dict.fromkeys(e.get("modalidade", "Race") for e in estrategias))
     if modalidades:
@@ -223,8 +227,13 @@ def renderizar_estrategias(gp):
         if qualidade:
             sinalizadas += 1
         for indice, stint in enumerate(item.get("sequencia_stints", []), 1):
-            composto = stint.get("composto") or "Não informado"
+            composto = stint.get("composto")
+            if composto is None or str(composto).strip().upper() in {"", "UNKNOWN"}:
+                composto = "Não informado"
             inicio, fim = stint.get("inicio"), stint.get("fim")
+            idade = stint.get("idade")
+            idade_hover = "Não informado" if idade is None else _valor(idade, " voltas")
+            comparavel = item.get("comparavel")
             linhas.append(
                 {
                     "Piloto": piloto,
@@ -233,14 +242,18 @@ def renderizar_estrategias(gp):
                     "Composto": composto,
                     "Volta inicial publicada": inicio,
                     "Volta final publicada": fim,
-                    "Idade inicial do pneu": stint.get("idade"),
-                    "Limites comparáveis": item.get("comparavel"),
+                    "Idade inicial do pneu": idade,
+                    "Limites comparáveis": "Sim" if comparavel is True else "Não" if comparavel is False else "Não informado",
                     "Observações de qualidade": _qualidade_texto(qualidade),
                 }
             )
             conhecidos = (
                 isinstance(inicio, (int, float))
                 and isinstance(fim, (int, float))
+                and not isinstance(inicio, bool)
+                and not isinstance(fim, bool)
+                and math.isfinite(inicio)
+                and math.isfinite(fim)
                 and inicio > 0
                 and fim >= inicio
             )
@@ -257,7 +270,8 @@ def renderizar_estrategias(gp):
                         name=composto,
                         legendgroup=composto,
                         showlegend=composto not in legenda,
-                        hovertemplate="%{y}<br>Volta %{x}<extra>"
+                        customdata=[[inicio, fim, idade_hover]],
+                        hovertemplate="%{y}<br>Volta %{x}<br>Idade inicial: %{customdata[2]}<extra>"
                         + str(composto)
                         + "</extra>",
                     )
@@ -278,8 +292,8 @@ def renderizar_estrategias(gp):
                             "color": cor,
                             "line": {"color": "#546477", "width": 0.5},
                         },
-                        customdata=[[inicio, fim]],
-                        hovertemplate="%{y}<br>Limites: %{customdata[0]}–%{customdata[1]}<extra>"
+                        customdata=[[inicio, fim, idade_hover]],
+                        hovertemplate="%{y}<br>Limites: %{customdata[0]}–%{customdata[1]}<br>Idade inicial: %{customdata[2]}<extra>"
                         + str(composto)
                         + "</extra>",
                     )
@@ -299,6 +313,10 @@ def renderizar_estrategias(gp):
             config={"displayModeBar": False},
             key=_chave(gp, "pneus_grafico"),
         )
+    if linhas:
+        st.caption(
+            "Compostos: SOFT (macio), MEDIUM (médio), HARD (duro), INTERMEDIATE (intermediário) e WET (chuva extrema). Não informado: composto ausente ou desconhecido na fonte."
+        )
     if sinalizadas:
         st.info(
             "{} piloto(s) têm observações de qualidade nos limites dos stints. Valores ausentes ou inconsistentes permanecem na tabela.".format(
@@ -307,6 +325,12 @@ def renderizar_estrategias(gp):
         )
     if linhas:
         with st.expander("Detalhes dos stints e qualidade dos dados"):
+            st.caption(
+                "Idade inicial: voltas já acumuladas pelo jogo no início do stint. Zero é o valor publicado, sem comprovar pneu novo; campo vazio significa idade não informada."
+            )
+            st.caption(
+                "Limites comparáveis refere-se à sequência do piloto; não certifica a idade ou o composto."
+            )
             _tabela(
                 linhas,
                 _chave(gp, "csv_stints"),

@@ -112,7 +112,7 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     if(route==='Desempenho'){
      requireCheck(m.resultsHeader&&m.legend,'Missing results legend');
      if(!mobile)requireCheck(m.legend.x>m.resultsHeader.x+m.resultsHeader.width*.5,'Legend displaces comparison heading');
-     requireCheck(await surface.locator('.fan-gp-result[data-evaluated="true"]').count()===1,'Unvalidated races counted as evaluations');
+     requireCheck(await surface.locator('.fan-gp-result[data-evaluated="true"]').count()===2,'Validated Austin and Mexico must be evaluated');
     }
     if(route==='Metodologia'){
      requireCheck(m.steps.length===3&&m.documents.length===2,'Method explanation incomplete');

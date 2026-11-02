@@ -181,7 +181,7 @@ def rotulo_resultado(posicao, status):
     status_normalizado = str(status or "").strip().lower()
     if status_normalizado in ("disqualified", "disqualificado", "desclassificado"):
         return "Desclassificação"
-    if status_normalizado in ("retired", "abandoned", "abandonou"):
+    if status_normalizado in ("retired", "abandoned", "abandonou", "dnf", "nc"):
         return "Abandono"
     if status_normalizado in ("did not start", "dns", "não largou"):
         return "Não largou"
@@ -467,6 +467,10 @@ def renderizar_contexto_circuito(pacote, corrida, acervo_gp=None, mode="full", w
             tooltip='Temporada {} · {}, {} · {}'.format(pacote['temporada'],corrida.get('cidade',''),corrida.get('pais',''),corrida.get('data',''))
             observed=next((s for s in (weekend or {}).get('sessoes',[]) if s['nome']=='Race'),{})
             status='Resultado publicado pela OpenF1' if observed.get('encerramento_observado_utc') and observed.get('tempos') else situacao_corrida(corrida)
+            if corrida.get('resultado_posterior_validado') and any(
+                    str(row.get('fonte_validacao', '')).endswith('_final_race_classification.pdf')
+                    for row in observed.get('tempos', [])):
+                status='Resultado final conferido com a FIA'
             map_html+='<span class="fan-gp-status" title="{}">{}</span>'.format(escape(tooltip,quote=True),escape(translate(status)))
             if corrida.get('estado_previsao')!='previsao_registrada' and (pacote['temporada']!=2026 or corrida.get('estado_previsao')=='ensaio_retrospectivo'):
                 map_html+='<small class="fan-context-note">{}</small>'.format(escape(translate('Estudo retrospectivo com dados históricos.')))
@@ -784,9 +788,13 @@ def renderizar_resultados_observados(pacote, corrida, bloco, participantes):
                 "Comparação retrospectiva; conta os integrantes corretos, sem considerar a ordem."
             )
     else:
+        motivo = corrida["motivos_nao_avaliavel"].replace("_", " ")
+        if pacote["temporada"] == 2026 and corrida.get("estado_previsao") == "previsao_registrada":
+            from pitwall.dashboard.fan_views import evaluation_reason
+            motivo = translate(evaluation_reason(corrida["motivos_nao_avaliavel"]))
         st.markdown(
             "**N/A — não avaliável.** Motivo: {}.".format(
-                corrida["motivos_nao_avaliavel"].replace("_", " ")
+                motivo
             )
         )
         alvos_desconhecidos = [
@@ -820,7 +828,13 @@ def renderizar_resultados_observados(pacote, corrida, bloco, participantes):
                     ", ".join(identificados)
                 )
             )
-        if pacote["temporada"] == 2026 and corrida["podio_observado"]:
+        if pacote["temporada"] == 2026 and corrida.get("estado_previsao") == "previsao_registrada":
+            st.caption(
+                "Resultado posterior validado; este GP ficou fora da avaliação de ranking. A previsão registrada e suas probabilidades permanecem preservadas."
+                if corrida.get("resultado_posterior_validado") is True and corrida.get("estado_resultado") == "observado_local" else
+                "Resultado posterior ainda não validado; a previsão registrada permanece preservada, sem placar artificial."
+            )
+        elif pacote["temporada"] == 2026 and corrida["podio_observado"]:
             st.caption(
                 "O resultado observado permanece visível. Não há avaliação prospectiva oficial ou anual: a comparação disponível é retrospectiva, sem placar zero nem reclassificação da emissão."
             )
@@ -1057,9 +1071,13 @@ def tela_explorar(pacote, rodada, foco, topbar_slot=None):
                 )
             )
             if not corrida["avaliavel_ranking"]:
+                motivo = corrida["motivos_nao_avaliavel"].replace("_", " ")
+                if pacote["temporada"] == 2026 and corrida.get("estado_previsao") == "previsao_registrada":
+                    from pitwall.dashboard.fan_views import evaluation_reason
+                    motivo = translate(evaluation_reason(corrida["motivos_nao_avaliavel"]))
                 st.write(
                     "Ranking não avaliável: {}.".format(
-                        corrida["motivos_nao_avaliavel"].replace("_", " ")
+                        motivo
                     )
                 )
         if any(item["probabilidade_modelo"] is not None for item in participantes):

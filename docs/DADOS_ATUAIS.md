@@ -16,6 +16,8 @@ O acompanhamento separado do fim de semana agora tem resultado observado de 22 p
 
 ## Revisão da idade dos pneus — 0.8.2
 
+Na apresentação 0.8.6, composto ausente ou `UNKNOWN` aparece como “Não informado”; os códigos conhecidos têm legenda textual. A idade inicial corresponde às voltas já acumuladas pelo jogo no início do stint: zero permanece o valor publicado, sem comprovar pneu novo, e ausência permanece vazia na tabela/CSV. O hover usa a mesma idade; a largura das barras continua representando somente os limites publicados. “Limites comparáveis” refere-se à sequência do piloto, não à validade da idade ou do composto. Essas adaptações PT/EN são de apresentação e não alteram a base, o complemento ou as previsões.
+
 O [complemento v1](../frontend_assets/complemento_idade_pneus_v1.json) revisa somente a idade inicial de 262 stints do acervo, em 55 sessões e 47 GPs: 210 valores antes zero agora são positivos, 36 passaram a zero e 16 mudaram entre valores positivos. A tabela e o CSV de detalhes mostram as idades revisadas. O gráfico conserva composto e limites.
 
 A projeção-base e os snapshots originais permanecem intactos. O leitor aplica o complemento offline, com hashes e correspondência única por sessão, piloto, composto, limites e valor antigo. Se faltar a revisão obrigatória ou houver divergência, a leitura falha explicitamente. O JSON conserva as identidades nativas e as URLs, hashes e UTC das três respostas históricas usadas na auditoria. São revisões descritivas posteriores, não informações retroativamente disponíveis no corte da previsão.
@@ -52,3 +54,8 @@ As 26 fichas incluem altitude aproximada nas coordenadas do calendário pelo Ope
 O [resumo verificável](evidence/data-resolution.json) registra contagens, hashes e URLs oficiais. Os complementos [de classificação](evidence/qualifying-complements.csv), [voltas FIA](evidence/fia-laps.csv) e a [fila adjudicada](evidence/pendencias.csv) mantêm IDs canônicos e valores originais. As definições em inglês estão no dicionário e no resumo. Caminhos de evidência na fila são referências ao acervo local; documentos brutos e caches não são redistribuídos por esse índice. As URLs oficiais permitem inspecionar as fontes originais; obter dados hoje não prova sua disponibilidade histórica.
 
 A origem do archive foi identificada por metadados do ZIP original, ID Kaggle e igualdade de 14 CSVs. O UTC original continua desconhecido. A licença atualmente declarada não certifica separadamente a versão histórica. As [condições por fonte](../publicacao/templates/FONTES_E_DADOS.md) permanecem distintas.
+
+
+## Avaliação posterior do México — 0.8.7
+
+A classificação final da FIA admite os 22 alvos de pódio: Lab 2/3, classificação 1/3, zero exclusões. Os cinco abandonos documentados mantêm a posição ausente. O anexo público vincula a avaliação aos hashes da emissão congelada; evidência posterior não altera probabilidades ou rankings. [Relatório de auditoria](../reports/avaliacao_mexico_20261102/relatorio.md).

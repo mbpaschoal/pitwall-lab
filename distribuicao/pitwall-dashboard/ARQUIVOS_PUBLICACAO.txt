@@ -376,6 +376,7 @@ docs/protocolo_temporal.md
 docs/relatorio_2024.md
 documentacao_local.py
 frontend_assets/acervo_dashboard.json
+frontend_assets/avaliacao_posterior_mexico_2026.json
 frontend_assets/complemento_idade_pneus_v1.json
 frontend_assets/contexto_editorial.json
 frontend_assets/favorite/index.html
@@ -412,6 +413,7 @@ pitwall/data/driver_archive_projection.py
 pitwall/data/driver_conditions.py
 pitwall/data/editorial.py
 pitwall/data/editorial_panels.py
+pitwall/data/post_race_evaluation.py
 pitwall/data/race_weekend.py
 pitwall/data/tyre_age.py
 pitwall/data/visual_catalog.py
@@ -452,6 +454,7 @@ static/pitwall-media/method-9776d0597fe6-1200.webp
 static/pitwall-media/method-9776d0597fe6-2400.webp
 static/pitwall-media/method-9776d0597fe6-3600.webp
 tests/test_acervo_publico.py
+tests/test_avaliacao_posterior_publico.py
 tests/test_complemento_idade_publico.py
 tests/test_dashboard_app.py
 tests/test_dashboard_dados.py
@@ -464,6 +467,7 @@ tests/test_fan_journey.py
 tests/test_high_resolution_assets.py
 tests/test_interface_editorial.py
 tests/test_pilot_views.py
+tests/test_pneus_apresentacao.py
 tests/test_review_regressions.py
 tests/test_tarot_catalog.py
 tests/test_weekend_ui.py

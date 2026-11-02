@@ -1,0 +1,113 @@
+{
+  "schema": "pitwall-posterior-module-independent-review-v1",
+  "utc": "2026-11-02T04:04:09.441Z",
+  "created_by": "MBPaschoal",
+  "type": "Read-only product review with authorized public test template",
+  "status": "approved_for_current_mexico_annex",
+  "reviewed_module": "pitwall/data/post_race_evaluation.py",
+  "reviewed_module_sha256": "0e6dee0269474b8351c1d173f9b0ab981814d1117b8efb7fd31b2e98666f76db",
+  "annex_sha256": "55432f9010b201dba5b61702ce708eebea085957790dcee5e5c82c8aff2ba606",
+  "scope": "Reviewed hash/UTC/population binding and projection integrity. No product module, generator, exporter or forecast was edited by this reviewer. The sole test-code addition is publicacao/templates/test_avaliacao_posterior_publico.py.",
+  "initial_metadata_probes": [
+    {
+      "case": "source_circuit",
+      "accepted": true
+    },
+    {
+      "case": "source_date",
+      "accepted": true
+    },
+    {
+      "case": "emission_event_metadata",
+      "accepted": true
+    },
+    {
+      "case": "participant_mode",
+      "accepted": true
+    },
+    {
+      "case": "expected_population_duplicate",
+      "accepted": true
+    },
+    {
+      "case": "annex_source_index_digest",
+      "accepted": true
+    }
+  ],
+  "metadata_probes_after_root_correction": [
+    {
+      "case": "source_circuit",
+      "accepted": false,
+      "exception": "Posterior projected provenance mismatch"
+    },
+    {
+      "case": "source_date",
+      "accepted": false,
+      "exception": "Posterior projected provenance mismatch"
+    },
+    {
+      "case": "emission_event_metadata",
+      "accepted": false,
+      "exception": "Posterior targets do not match the frozen emission"
+    },
+    {
+      "case": "participant_mode",
+      "accepted": false,
+      "exception": "Posterior targets do not match the frozen emission"
+    },
+    {
+      "case": "expected_population_duplicate",
+      "accepted": false,
+      "exception": "Posterior targets do not match the frozen emission"
+    },
+    {
+      "case": "annex_source_index_digest",
+      "accepted": false,
+      "exception": "Posterior projected provenance mismatch"
+    }
+  ],
+  "portable_test": {
+    "utc": "2026-11-02T04:03:39.726079Z",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_alteracao_de_previsao_alvo_ou_vinculo_e_rejeitada (test_avaliacao_posterior_publico.TestAvaliacaoPosteriorPublico) ... ok\ntest_digest_previsao_e_anexo_vinculados_sem_fontes_privadas (test_avaliacao_posterior_publico.TestAvaliacaoPosteriorPublico) ... ok\ntest_mexico_tem_22_alvos_e_cinco_dnf_sem_posicao_inventada (test_avaliacao_posterior_publico.TestAvaliacaoPosteriorPublico) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.028s\n\nOK\n",
+    "fixture_files": [
+      "pitwall/__init__.py",
+      "pitwall/data/__init__.py",
+      "pitwall/data/race_weekend.py",
+      "pitwall/data/post_race_evaluation.py",
+      "frontend_assets/race_weekend.json",
+      "frontend_assets/avaliacao_posterior_mexico_2026.json",
+      "tests/test_avaliacao_posterior_publico.py"
+    ],
+    "fixture_contains_reports": false,
+    "fixture_contains_data": false,
+    "fixture_contains_models": false,
+    "fixture_bytes": 612130,
+    "sha256": {
+      "pitwall/__init__.py": "6a1c9c4476843d4ca2e8d40268a18ac473f147e292f8b7c45b27082e27edeb17",
+      "pitwall/data/__init__.py": "dc20b0154db2fafa374f424abae48d1278a131a7794eb3f06af220743009f1f9",
+      "pitwall/data/race_weekend.py": "586c93b29040613e47213e08da202fa3e3762f600d19becad9ff09b9380c932f",
+      "pitwall/data/post_race_evaluation.py": "0e6dee0269474b8351c1d173f9b0ab981814d1117b8efb7fd31b2e98666f76db",
+      "frontend_assets/race_weekend.json": "15d53034b7d8cf16145f29bb5ae50cfa1c1bdaa2cf14e0a7054e69e9f75c9e5b",
+      "frontend_assets/avaliacao_posterior_mexico_2026.json": "55432f9010b201dba5b61702ce708eebea085957790dcee5e5c82c8aff2ba606",
+      "publicacao/templates/test_avaliacao_posterior_publico.py": "0e48f17455af5e120682f444285f1e08ab38f958acf9e30de49de6f52714f484"
+    }
+  },
+  "review_conclusions_pt": [
+    "O anexo público é fixado porSHA-256 e sua cadeia vincula manifesto original, probabilidades congeladas, normalização e documento final FIA. A admissão offline verifica bytes das fontes; o leitor portátil usa apenas o anexo e o asset públicos.",
+    "A cadeia cronológica é específica do México e usa encerramento observado da Race11404, publicação final e captura posteriores; não depende de posições numéricas dos cincoDNF.",
+    "Digest dos campos congelados e correspondência exata dos22IDs preservam previsão/elegibilidade/ranking/equipe. Projeção de resultado/status/alvo é conferida contra o anexo conhecido.",
+    "As seis inconsistências reproduzidas inicialmente foram fechadas por root: circuito/data da fonte, identidade do manifesto emproveniência, modo porlinha, população esperada semduplicata e índice SHAdoanexo. As seis contraprovas agora rejeitam o assetadulterado.",
+    "Template público executou3testes emsubprocesso isolado com7arquivos/612130bytes, semreports/data/models; México22alvos,5DNFnull, pódioVER/HAM/ANT, acertos2/1 e rejeição de alterações emprobabilidade/alvo/vínculo.",
+    "Não resta bloqueio concreto identificado nesta revisão do anexo e módulo atuais. O módulo é deliberadamente específico do México; nova revisão de fonte/resultado requer novo anexo/artefato identificado e revisão do hashpinado, sem sobrescrever a emissão original."
+  ],
+  "remaining_scope": [
+    "Exporter/allowlist integration and full portable-package suite belong to root; this review did not modify or run the exporter.",
+    "Public dashboard version/build and PT/EN browser acceptance remain separate from this local portable proof."
+  ],
+  "emission_baseline_expected_files": 27,
+  "baseline_source": "reports/avaliacao_mexico_20261102/auditoria_emissao.json",
+  "oracle_source": "reports/avaliacao_mexico_20261102/oracle_avaliacao.json",
+  "oracle_sha256": "ac15a03177865a3d0c79f6ef673c4303ad84260750598762ec2ab4433107f963"
+}

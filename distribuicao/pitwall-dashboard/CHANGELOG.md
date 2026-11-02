@@ -1,8 +1,27 @@
 # Evolução do Pitwall Lab
 
+## 0.8.7 — 2026-11-02
+
+### Alterado
+
+- México: avaliação posterior da previsão prospectiva registrada, vinculada aos hashes da emissão e à classificação final da FIA. O Lab acertou 2 de 3 pilotos do pódio; a classificação, 1 de 3. Cobertura de 22 participantes, sem exclusões.
+- Cinco abandonos mantêm a posição final ausente, com alvo de pódio confirmado como não. Dados posteriores não alteram as probabilidades ou os rankings registrados.
+- Motivos de exclusão e estados pendentes permanecem legíveis em português e inglês, sem placar artificial.
+- A coleta incorpora a classificação final FIA do México, com posições, tempos e pontos após as punições, mantendo a resposta anterior na auditoria. São Paulo recebe configuração explícita para as cinco sessões de 6–8/11; a corrida está marcada para 14h locais. [Fontes e validação operacional](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/mexico_avaliacao_saopaulo_20261102/README.md).
+- Validação: testes de UI/leitor e de vínculo da avaliação, pacote portátil isolado e aceite das seis telas em PT/EN, computador/celular. Limite: duas corridas prospectivas avaliáveis não demonstram superioridade.
+
+
 Português · [English](CHANGELOG.en.md)
 
 Versões descrevem entregas do produto. O modelo científico v1 permanece congelado. Não foram atribuídas versões retroativas aos commits anteriores.
+
+## 0.8.6 — 2026-11-02
+
+- Revisão focal de pneus: composto ausente ou `UNKNOWN` aparece como “Não informado” em tabela, CSV e legenda. Os códigos conhecidos permanecem identificados por legenda textual; os dados originais não são normalizados nem sobrescritos.
+- Idade inicial é explicada em voltas acumuladas pelo jogo antes do stint. Zero permanece um valor publicado, sem comprovar pneu novo; ausência permanece vazia. O hover mostra a mesma idade da tabela, incluindo pontos de uma volta, sem mudar limites ou largura das barras.
+- “Limites comparáveis” usa Sim/Não/Não informado em PT e Yes/No/Not reported em EN, com escopo explícito sobre a sequência do piloto. Trechos sem limites válidos permanecem na tabela, sem barra inventada.
+- Validação e limites da entrega local em `reports/revisao_pneus_p02_20261102/`. Modelo v1, complemento dos 262 stints, snapshots e previsões preservados. Verificação local não comprova nova publicação pública.
+- Aprendizado: idade, composto e validade dos limites são informações distintas; legenda e unidade precisam esclarecer essas diferenças, sem inferir um jogo novo a partir de zero.
 
 ## 0.8.5 — 2026-11-01
 

@@ -23,6 +23,29 @@ def _inteiro_positivo(valor):
     return isinstance(valor, int) and not isinstance(valor, bool) and valor > 0
 
 
+ESTADOS_NAO_PODIO = frozenset((
+    "dnf", "retired", "not classified", "nc", "dns", "did not start",
+    "dsq", "disqualified",
+))
+
+
+def alvo_podio_posterior(participante, resultado_validado=False):
+    """Known podium membership never invents an unclassified finishing position."""
+    posicao = participante.get("resultado_observado")
+    confirmado = participante.get("podio_resultado_confirmado")
+    if confirmado is not None and (type(confirmado) is not int or confirmado not in (0, 1)):
+        return None
+    status = str(participante.get("status_resultado") or "").strip().casefold()
+    if _inteiro_positivo(posicao):
+        if posicao <= 3 and status in ESTADOS_NAO_PODIO:
+            return None
+        alvo = int(posicao <= 3)
+        return alvo if confirmado is None or confirmado == alvo else None
+    if posicao is None and resultado_validado is True and confirmado == 0 and status in ESTADOS_NAO_PODIO:
+        return 0
+    return None
+
+
 def avaliar_previsao_registrada(
     modo,
     participantes,
@@ -54,22 +77,35 @@ def avaliar_previsao_registrada(
         or any(not isinstance(x, str) or not x for x in esperada)
     ):
         return _nao_avaliavel("cobertura_elegivel_incompleta")
-    if any(item.get("resultado_observado") is None for item in participantes):
-        return _nao_avaliavel("resultado_posterior_ausente")
-    posicoes = [item.get("resultado_observado") for item in participantes]
+    posicoes = [item["resultado_observado"] for item in participantes if item.get("resultado_observado") is not None]
     if any(not _inteiro_positivo(posicao) for posicao in posicoes) or len(
         set(posicoes)
     ) != len(posicoes):
         return _nao_avaliavel("resultado_posterior_invalido")
+    for item in participantes:
+        confirmado = item.get("podio_resultado_confirmado")
+        if confirmado is not None and (type(confirmado) is not int or confirmado not in (0, 1)):
+            return _nao_avaliavel("alvo_posterior_invalido")
+        posicao = item.get("resultado_observado")
+        status = str(item.get("status_resultado") or "").strip().casefold()
+        contradiz_posicao = confirmado is not None and (
+            (posicao is not None and confirmado != int(posicao <= 3))
+            or (posicao is None and confirmado == 1)
+        )
+        contradiz_status = posicao in (1, 2, 3) and status in ESTADOS_NAO_PODIO
+        if contradiz_posicao or contradiz_status:
+            return _nao_avaliavel("alvo_posterior_inconsistente")
+        if alvo_podio_posterior(item, resultado_validado=True) is None:
+            return _nao_avaliavel("resultado_posterior_ausente")
     podio = [
         item["piloto_id"]
         for item in participantes
-        if item["resultado_observado"] in (1, 2, 3)
+        if item.get("resultado_observado") in (1, 2, 3)
     ]
     if {
-        item["resultado_observado"]
+        item.get("resultado_observado")
         for item in participantes
-        if item["resultado_observado"] in (1, 2, 3)
+        if item.get("resultado_observado") in (1, 2, 3)
     } != {1, 2, 3}:
         return _nao_avaliavel("podio_posterior_incompleto")
     for item in elegiveis:
@@ -238,6 +274,11 @@ def carregar_asset(raiz):
                 raise RaceWeekendDadosErro(
                     "Asset Race Weekend sem campo consumido: {}.".format(campo)
                 )
+        confirmado = item.get("podio_resultado_confirmado")
+        if confirmado is not None and (type(confirmado) is not int or confirmado not in (0, 1)):
+            raise RaceWeekendDadosErro("Asset Race Weekend com alvo de pódio confirmado inválido.")
+    from pitwall.data.post_race_evaluation import validate_projected_asset
+    validate_projected_asset(Path(raiz), asset)
     return asset
 
 
@@ -269,8 +310,14 @@ def pacote_2026(asset):
     if not isinstance(dados, dict):
         raise RaceWeekendDadosErro("Dados 2026 ausentes no asset Race Weekend.")
     participantes_por_rodada = {}
+    resultados_validados = {
+        corrida["rodada"]: corrida.get("resultado_posterior_validado") is True
+        and corrida.get("estado_resultado") == "observado_local"
+        for corrida in dados.get("corridas", [])
+    }
     for item in dados.get("previsoes", []):
         participante = dict(item)
+        alvo = alvo_podio_posterior(participante, resultados_validados.get(participante["rodada"], False))
         participante.update(
             {
                 "motivos_inelegibilidade": participante.get("motivos_inelegibilidade")
@@ -278,12 +325,8 @@ def pacote_2026(asset):
                 "favorito_modelo": participante.get("ranking_modelo") in (1, 2, 3),
                 "favorito_classificacao": participante.get("ranking_classificacao")
                 in (1, 2, 3),
-                "alvo_conhecido": participante.get("resultado_observado") is not None,
-                "podio": (
-                    None
-                    if participante.get("resultado_observado") is None
-                    else int(participante["resultado_observado"] <= 3)
-                ),
+                "alvo_conhecido": alvo is not None,
+                "podio": alvo,
             }
         )
         participantes_por_rodada.setdefault(participante["rodada"], []).append(

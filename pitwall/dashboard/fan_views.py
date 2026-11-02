@@ -208,8 +208,39 @@ def condition_rows(rows, metric, links, comparisons=None, teams=None):
     return '<div class="pilot-cards fan-pilot-ranking" data-leaders="{}">{}</div>'.format(sum(r['rank']==1 for r in rows),''.join(result))
 
 
+def _validated_exclusion(race):
+    return (race.get('estado_previsao')=='previsao_registrada'
+            and race.get('resultado_posterior_validado') is True
+            and race.get('estado_resultado')=='observado_local'
+            and race.get('avaliavel_ranking') is False)
+
+
+def has_validated_exclusions(races):
+    return any(_validated_exclusion(race) for race in races)
+
+
+def evaluation_reason(codes):
+    reasons = {
+        'participante_inelegivel': 'Há participante inelegível para a avaliação.',
+        'alvo_desconhecido': 'Resultado necessário à avaliação ausente.',
+        'cobertura_elegivel_incompleta': 'Cobertura de participantes elegíveis incompleta.',
+        'participantes_invalidos_ou_duplicados': 'Participantes inválidos ou repetidos.',
+        'resultado_posterior_ausente': 'Alvo de pódio desconhecido para ao menos um participante.',
+        'resultado_posterior_nao_validado': 'Resultado posterior ainda não validado.',
+        'resultado_posterior_invalido': 'Posições posteriores inválidas ou repetidas.',
+        'podio_posterior_incompleto': 'Pódio posterior incompleto.',
+        'alvo_posterior_invalido': 'Alvo de pódio confirmado inválido.',
+        'alvo_posterior_inconsistente': 'Alvo de pódio confirmado contradiz o resultado.',
+        'probabilidade_publicada_invalida': 'Probabilidade registrada inválida.',
+        'ranking_publicado_invalido': 'Ranking registrado inválido ou incompleto.',
+        'ranking_publicado_incompleto': 'Ranking registrado inválido ou incompleto.',
+    }
+    detail=' '.join(reasons[code.strip()] for code in str(codes or '').split(';') if code.strip() in reasons)
+    return detail or 'Critérios de avaliação não atendidos.'
+
+
 def performance_cards(rows, races, year, observed_rounds=None):
-    if not rows:
+    if not rows and not (year==2026 and has_validated_exclusions(races)):
         return '<p class="fan-awaiting">{}</p>'.format(text('Ainda não há previsão registrada com resultado validado para avaliar em 2026.' if year==2026 else 'Nenhuma corrida avaliável neste recorte.'))
     by_round={r['rodada']:r for r in rows}
     issued=[r['rodada'] for r in races if r.get('estado_previsao')=='previsao_registrada']
@@ -226,17 +257,11 @@ def performance_cards(rows, races, year, observed_rounds=None):
             content=''.join('<div class="fan-result-dots"><span class="fan-result-label">{}: {}</span><span class="fan-result-symbols" aria-hidden="true">{}</span></div>'.format(text(name),text('{} de 3').format(row[key]),''.join('<i class="{}" aria-hidden="true"></i>'.format('fan-hit' if i<row[key] else 'fan-miss') for i in range(3))) for key,name in [('modelo','Lab'),('classificacao','Classificação')])
         else:
             if year < 2026 and race.get('elegiveis',0)>0:
-                reasons = {
-                    'participante_inelegivel': 'Há participante inelegível para a avaliação.',
-                    'alvo_desconhecido': 'Resultado necessário à avaliação ausente.',
-                }
-                codes = [code.strip() for code in str(race.get('motivos_nao_avaliavel') or '').split(';')]
-                detail = ' '.join(reasons[code] for code in codes if code in reasons)
-                if not detail:
-                    detail = 'Critérios de avaliação não atendidos.'
-                content='<p>{}</p><small class="fan-evaluation-reason">{}</small>'.format(text('Fora da avaliação'),text(detail))
+                content='<p>{}</p><small class="fan-evaluation-reason">{}</small>'.format(text('Fora da avaliação'),text(evaluation_reason(race.get('motivos_nao_avaliavel'))))
             elif year < 2026:
                 content='<p>{}</p>'.format(text('Sem probabilidades históricas disponíveis'))
+            elif _validated_exclusion(race):
+                content='<p>{}</p><small class="fan-evaluation-reason">{}</small>'.format(text('Fora da avaliação'),text(evaluation_reason(race.get('motivos_nao_avaliavel'))))
             else:
                 pending=('Resultado em conferência' if race['rodada'] in (observed_rounds or set()) else 'Corrida aguardada')
                 content='<p>{}</p>'.format(text(pending if race.get('estado_previsao')=='previsao_registrada' else 'Sem previsão registrada'))
@@ -245,6 +270,11 @@ def performance_cards(rows, races, year, observed_rounds=None):
     ties=sum(r['modelo']==r['classificacao'] for r in rows)
     note=text('Em {} de {} corridas, o Lab acertou mais integrantes do pódio.').format(wins,len(rows))
     detail=text('{} corridas com o mesmo número de acertos.').format(ties)
+    if ties == 1:
+        detail=text('Uma corrida com o mesmo número de acertos.')
+    if not rows:
+        note=text('Nenhuma corrida avaliável neste recorte.')
+        detail=text('GPs fora da avaliação não entram no resumo de acertos.')
     if len(rows)==1 and ties==1:
         note=text('Empate na corrida avaliada')
         detail=text('As duas seleções acertaram {} dos três integrantes do pódio.').format(rows[0]['modelo'])

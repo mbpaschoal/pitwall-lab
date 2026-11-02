@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "1e7c03487393435c0fc15e1d47e2b0e3e009ed5fc68496d5a5bc326f8d70fafd",
+  "apresentacao_build_sha256": "0bbc55509a593b58df96d04274627c88ced91c808ca01e975233d9e79be024c3",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "faf6b77149ebb470782a6caa3c2861e293d3ac97df46bf253476d68518d5d4ef",
+      "sha256_destino": "38290627221bd5f3e1e13de0f6960a68694b3677cc46e5a5ddbf8040f82655da",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "3a3fe60d31c6657855160bcff3115cb1b75665a01b6cbdd66b14a81d85b44dde",
-      "sha256_origem": "a5ffd9cad9804765ddcd14e1537c1352dc1a61cb28940ae3b97d3c28e6493815"
+      "sha256_destino": "e4b5f5bded0d517981f521c2e3fe1ac5ce4ed79c73c3fddcbe94ff79a0994eed",
+      "sha256_origem": "72dfde6113d1a1c8e98194f46a119d9492275df7f8fbe303985de71157beaddb"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "902b6811e6a34f1b56551d13cc5f36816023263ed42ec5be7a45b102e17d5aa5",
-      "sha256_origem": "d1555abbbf0937752dfe802d694a9f21fe7e1d4e7faab2a0175a62746eac4d23"
+      "sha256_destino": "cdbf70bd3c6d084a9d8f910e14fe3db8f72d0bcd5a634a88a86b890a46b31015",
+      "sha256_origem": "d7004195ed0fb9c54dd2be9ff2ee80f1fbc0d2f84b67e0acc7d577090318a19c"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "a92b0248b8baacfaf54e8d59caaca7d5e6b9a0a25ee140c81ea973b4ae25142f",
-      "sha256_origem": "a92b0248b8baacfaf54e8d59caaca7d5e6b9a0a25ee140c81ea973b4ae25142f"
+      "sha256_destino": "02939ea165d14df175ec4d4212b9937ec97bd5d4d79133a013a0ced33cc17aa6",
+      "sha256_origem": "02939ea165d14df175ec4d4212b9937ec97bd5d4d79133a013a0ced33cc17aa6"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2645,6 +2645,13 @@
       "sha256_origem": "6c7c3b4cf82a346ec626135444001ec5e156481545ba0889d2ec30b715948dfb"
     },
     {
+      "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
+      "fonte": "frontend_assets/avaliacao_posterior_mexico_2026.json",
+      "modo": "copia",
+      "sha256_destino": "55432f9010b201dba5b61702ce708eebea085957790dcee5e5c82c8aff2ba606",
+      "sha256_origem": "55432f9010b201dba5b61702ce708eebea085957790dcee5e5c82c8aff2ba606"
+    },
+    {
       "caminho": "frontend_assets/complemento_idade_pneus_v1.json",
       "fonte": "frontend_assets/complemento_idade_pneus_v1.json",
       "modo": "copia",
@@ -2676,8 +2683,8 @@
       "caminho": "frontend_assets/operacao_fim_semana.json",
       "fonte": "frontend_assets/operacao_fim_semana.json",
       "modo": "copia",
-      "sha256_destino": "14bc66686299eefcc1964f1151e9735a6f4a0da775253d81d4c5ee6c2004ac64",
-      "sha256_origem": "14bc66686299eefcc1964f1151e9735a6f4a0da775253d81d4c5ee6c2004ac64"
+      "sha256_destino": "0406e08ec4ee518449e926695d1c8b1b7f1e77004b69f8cecd472bc1577bd1f5",
+      "sha256_origem": "0406e08ec4ee518449e926695d1c8b1b7f1e77004b69f8cecd472bc1577bd1f5"
     },
     {
       "caminho": "frontend_assets/paineis_editoriais.json",
@@ -2704,8 +2711,8 @@
       "caminho": "frontend_assets/race_weekend.json",
       "fonte": "frontend_assets/race_weekend.json",
       "modo": "copia",
-      "sha256_destino": "f9cdaaa3739542dd05f1bdfd110a18d796d949a58aa967b5838c5c3582242ade",
-      "sha256_origem": "f9cdaaa3739542dd05f1bdfd110a18d796d949a58aa967b5838c5c3582242ade"
+      "sha256_destino": "15d53034b7d8cf16145f29bb5ae50cfa1c1bdaa2cf14e0a7054e69e9f75c9e5b",
+      "sha256_origem": "15d53034b7d8cf16145f29bb5ae50cfa1c1bdaa2cf14e0a7054e69e9f75c9e5b"
     },
     {
       "caminho": "historico_circuito.py",
@@ -2732,15 +2739,15 @@
       "caminho": "pitwall/dashboard/app.py",
       "fonte": "pitwall/dashboard/app.py",
       "modo": "copia",
-      "sha256_destino": "157a2e875705c596707c0dd405d2a64f0cf2a1fc43e48d50d4c5119be59db331",
-      "sha256_origem": "157a2e875705c596707c0dd405d2a64f0cf2a1fc43e48d50d4c5119be59db331"
+      "sha256_destino": "a2d2224a2e8652b5fd512cab7db0ab2fe9d1901c17c8b4e3ca31d44b4948ea20",
+      "sha256_origem": "a2d2224a2e8652b5fd512cab7db0ab2fe9d1901c17c8b4e3ca31d44b4948ea20"
     },
     {
       "caminho": "pitwall/dashboard/archive_views.py",
       "fonte": "pitwall/dashboard/archive_views.py",
       "modo": "copia",
-      "sha256_destino": "ddb77c670f2fa434b95ac45811a7725c8b7343b57f0843b4fc68483de80349d8",
-      "sha256_origem": "ddb77c670f2fa434b95ac45811a7725c8b7343b57f0843b4fc68483de80349d8"
+      "sha256_destino": "68eef662319c8dc196a173051c322e584d17744b7d81f70fe312bb75516709aa",
+      "sha256_origem": "68eef662319c8dc196a173051c322e584d17744b7d81f70fe312bb75516709aa"
     },
     {
       "caminho": "pitwall/dashboard/components.py",
@@ -2753,8 +2760,8 @@
       "caminho": "pitwall/dashboard/fan_views.py",
       "fonte": "pitwall/dashboard/fan_views.py",
       "modo": "copia",
-      "sha256_destino": "ac3fc9bdcb44f1941ba1772c61ea6a75655878e12176a72fffbc13adcfc4c1be",
-      "sha256_origem": "ac3fc9bdcb44f1941ba1772c61ea6a75655878e12176a72fffbc13adcfc4c1be"
+      "sha256_destino": "b635ce8bd30d5a3f91a0aab3da704aed8a60b7292e2dfbfa20cb465a7658c7a3",
+      "sha256_origem": "b635ce8bd30d5a3f91a0aab3da704aed8a60b7292e2dfbfa20cb465a7658c7a3"
     },
     {
       "caminho": "pitwall/dashboard/favorites.py",
@@ -2788,8 +2795,8 @@
       "caminho": "pitwall/dashboard/model_views.py",
       "fonte": "pitwall/dashboard/model_views.py",
       "modo": "copia",
-      "sha256_destino": "5af376f2ee1fa1f492f8548f82db35b1f1a5ffd214ec55635a2e0d19d495d4e7",
-      "sha256_origem": "5af376f2ee1fa1f492f8548f82db35b1f1a5ffd214ec55635a2e0d19d495d4e7"
+      "sha256_destino": "464738fb166a9ed6b6a59650b28d2a78b885b1999fc5ba96ca5f8f6e12bcdfae",
+      "sha256_origem": "464738fb166a9ed6b6a59650b28d2a78b885b1999fc5ba96ca5f8f6e12bcdfae"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
@@ -2837,8 +2844,8 @@
       "caminho": "pitwall/dashboard/weekend_views.py",
       "fonte": "pitwall/dashboard/weekend_views.py",
       "modo": "copia",
-      "sha256_destino": "fd05d4278b55e69edb3c1fdf920b6ecbe4d9f2bc2e72be0db68fff41e6631f27",
-      "sha256_origem": "fd05d4278b55e69edb3c1fdf920b6ecbe4d9f2bc2e72be0db68fff41e6631f27"
+      "sha256_destino": "d93c91f724e4ef8cd6637d9fb2d8968273981b168faa8e51f96890f1d8ef9c18",
+      "sha256_origem": "d93c91f724e4ef8cd6637d9fb2d8968273981b168faa8e51f96890f1d8ef9c18"
     },
     {
       "caminho": "pitwall/data/__init__.py",
@@ -2897,11 +2904,18 @@
       "sha256_origem": "367de39d8c5ef7bd3fbc3ff70402c29d81ba4c96f55a906b141a2f77b3d628ea"
     },
     {
+      "caminho": "pitwall/data/post_race_evaluation.py",
+      "fonte": "pitwall/data/post_race_evaluation.py",
+      "modo": "copia",
+      "sha256_destino": "a0b13844ebf4763513b4cf709e4568bbbbf0954265bd5f557addb31cb08b24e3",
+      "sha256_origem": "a0b13844ebf4763513b4cf709e4568bbbbf0954265bd5f557addb31cb08b24e3"
+    },
+    {
       "caminho": "pitwall/data/race_weekend.py",
       "fonte": "pitwall/data/race_weekend.py",
       "modo": "copia",
-      "sha256_destino": "a3f80b8b199cc423cfc7aebd3bf28e5182e8b1d3455dc33fe193a506a17a036d",
-      "sha256_origem": "a3f80b8b199cc423cfc7aebd3bf28e5182e8b1d3455dc33fe193a506a17a036d"
+      "sha256_destino": "586c93b29040613e47213e08da202fa3e3762f600d19becad9ff09b9380c932f",
+      "sha256_origem": "586c93b29040613e47213e08da202fa3e3762f600d19becad9ff09b9380c932f"
     },
     {
       "caminho": "pitwall/data/tyre_age.py",
@@ -2935,8 +2949,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "6928e518ce371f4b5603c2660417ff8bd941004467e5b57e147500e80cb723a9",
-      "sha256_origem": "6928e518ce371f4b5603c2660417ff8bd941004467e5b57e147500e80cb723a9"
+      "sha256_destino": "b22122184ddd5478c33dc3b5e9dab0e862cab3981d27de218e87833934297675",
+      "sha256_origem": "b22122184ddd5478c33dc3b5e9dab0e862cab3981d27de218e87833934297675"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -3138,8 +3152,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "cbd53b98765bb4c870aaa43e3ddc4cdc1c4beeba497d71967d8950cf31344831",
-      "sha256_origem": "cbd53b98765bb4c870aaa43e3ddc4cdc1c4beeba497d71967d8950cf31344831"
+      "sha256_destino": "c678564cf00f4ce3a59a490775b0ecc21486ded6511afc35fe457bf8b4b7fc19",
+      "sha256_origem": "c678564cf00f4ce3a59a490775b0ecc21486ded6511afc35fe457bf8b4b7fc19"
     },
     {
       "caminho": "static/pitwall-media/catalog.json",
@@ -3177,6 +3191,13 @@
       "sha256_origem": "32b5c28b60e6f91561bf75558fa6fea6c470e200bdb54abe1e8290b7308dfb52"
     },
     {
+      "caminho": "tests/test_avaliacao_posterior_publico.py",
+      "fonte": "publicacao/templates/test_avaliacao_posterior_publico.py",
+      "modo": "gerado",
+      "sha256_destino": "0e48f17455af5e120682f444285f1e08ab38f958acf9e30de49de6f52714f484",
+      "sha256_origem": "0e48f17455af5e120682f444285f1e08ab38f958acf9e30de49de6f52714f484"
+    },
+    {
       "caminho": "tests/test_complemento_idade_publico.py",
       "fonte": "publicacao/templates/test_complemento_idade_publico.py",
       "modo": "gerado",
@@ -3188,8 +3209,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "84f3ffb270fea6f2824744bcb6ac0137f8b6f7ba38bd1f797425b522fa4bbb87",
-      "sha256_origem": "b9530c6bacc225388c65f3cc74a88b56dd0eafc85233095fc6888106b120a289"
+      "sha256_destino": "c59a780150dcc78090413f2e839c21cd4b9b88293d9ee04b02cf3ae2b905765b",
+      "sha256_origem": "acab93cca521fbd2388d89d68e346a4bdb1db8813dd4954407678c1a4d223af2"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -3262,6 +3283,13 @@
       "sha256_origem": "2e49ec824ffcd283fc3252e91a6a71a9f16d1240aff876a6c7884cfb1f2ff82d"
     },
     {
+      "caminho": "tests/test_pneus_apresentacao.py",
+      "fonte": "publicacao/templates/test_pneus_apresentacao.py",
+      "modo": "gerado",
+      "sha256_destino": "2801551f5ac5e3a6fa4abfc5cf7bcdb1ecb9581895e843b0f85571d6d5e82d0f",
+      "sha256_origem": "2801551f5ac5e3a6fa4abfc5cf7bcdb1ecb9581895e843b0f85571d6d5e82d0f"
+    },
+    {
       "caminho": "tests/test_review_regressions.py",
       "fonte": "tests/test_review_regressions.py",
       "modo": "copia",
@@ -3302,7 +3330,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "1893df109ac9ba5bc13e5c0d924829f1a55fda8394b0b73868bf348bc9241cf3"
+      "sha256": "af9de413851718f5b64f717c2b0ecef977c8e6996d8b108b8950924316e15e74"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
@@ -3330,7 +3358,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "cbd53b98765bb4c870aaa43e3ddc4cdc1c4beeba497d71967d8950cf31344831"
+      "sha256": "c678564cf00f4ce3a59a490775b0ecc21486ded6511afc35fe457bf8b4b7fc19"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -3351,7 +3379,15 @@
     {
       "caminho": "publicacao/templates/test_complemento_idade_publico.py",
       "sha256": "89975dbb0b43123bee0e9a7439ae85eac5755755afb7c6798622290a2e3cf65f"
+    },
+    {
+      "caminho": "publicacao/templates/test_pneus_apresentacao.py",
+      "sha256": "2801551f5ac5e3a6fa4abfc5cf7bcdb1ecb9581895e843b0f85571d6d5e82d0f"
+    },
+    {
+      "caminho": "publicacao/templates/test_avaliacao_posterior_publico.py",
+      "sha256": "0e48f17455af5e120682f444285f1e08ab38f958acf9e30de49de6f52714f484"
     }
   ],
-  "versao_produto": "0.8.5"
+  "versao_produto": "0.8.7"
 }

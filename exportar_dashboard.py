@@ -95,6 +95,8 @@ TAROT_TEAM_VARIANTS = tuple(
     for driver, team in TAROT_TEAM_PAIRS for pose in (0, 1, 2)
 )
 RUNTIME_WORKTREE = (
+    'pitwall/data/post_race_evaluation.py',
+    'frontend_assets/avaliacao_posterior_mexico_2026.json',
     'pitwall/dashboard/media.py',
     'static/pitwall-media/catalog.json',
     'static/pitwall-media/method-9776d0597fe6-1200.webp',
@@ -239,6 +241,8 @@ TEMPLATES = (
     'publicacao/templates/test_distribuicao.py',
     'publicacao/templates/test_acervo_publico.py',
     'publicacao/templates/test_complemento_idade_publico.py',
+    'publicacao/templates/test_pneus_apresentacao.py',
+    'publicacao/templates/test_avaliacao_posterior_publico.py',
 )
 
 
@@ -507,6 +511,8 @@ def _montar_arquivos(raiz, conteudos, commit):
         ('publicacao/templates/test_distribuicao.py', 'tests/test_distribuicao.py'),
         ('publicacao/templates/test_acervo_publico.py', 'tests/test_acervo_publico.py'),
         ('publicacao/templates/test_complemento_idade_publico.py', 'tests/test_complemento_idade_publico.py'),
+        ('publicacao/templates/test_pneus_apresentacao.py', 'tests/test_pneus_apresentacao.py'),
+        ('publicacao/templates/test_avaliacao_posterior_publico.py', 'tests/test_avaliacao_posterior_publico.py'),
         ('publicacao/templates/requirements.txt', 'requirements.txt'),
         ('publicacao/templates/.python-version', '.python-version'),
         ('publicacao/templates/.gitignore', '.gitignore'),

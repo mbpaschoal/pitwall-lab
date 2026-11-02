@@ -29,7 +29,7 @@ def copiar_artefatos(raiz):
                 shutil.copy2(arquivo, destino / arquivo.name)
     destino_asset = raiz / 'frontend_assets'
     destino_asset.mkdir(parents=True, exist_ok=True)
-    for nome in ('race_weekend.json', 'contexto_editorial.json', 'paineis_editoriais.json', 'complemento_idade_pneus_v1.json'):
+    for nome in ('race_weekend.json', 'contexto_editorial.json', 'paineis_editoriais.json', 'complemento_idade_pneus_v1.json', 'avaliacao_posterior_mexico_2026.json'):
         shutil.copy2(RAIZ / 'frontend_assets' / nome, destino_asset / nome)
     shutil.copytree(RAIZ / 'dashboard_assets' / 'circuit', raiz / 'dashboard_assets' / 'circuit')
     return raiz
@@ -263,7 +263,8 @@ class TestDashboardApp(unittest.TestCase):
     def test_2026_abre_no_ultimo_gp_observado_com_nomes_equipes_e_resultado(self):
         self.executar()
         self.escolher('temporada', 2026)
-        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:18')
+        # A admissão do resultado final do México avança o último GP observado para19.
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:19')
         texto = texto_renderizado(self.at)
         self.assertIn('Max Verstappen', texto)
         self.assertIn('Red Bull', texto)
@@ -474,7 +475,8 @@ class TestDashboardApp(unittest.TestCase):
     def test_corridas_e_previsoes_priorizam_blocos_distintos_sem_trocar_o_gp(self):
         self.executar()
         self.escolher('temporada', 2026)
-        self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2026:18')
+        # O GP padrão agora é México; a troca de tela preserva a seleção admitida.
+        self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2026:19')
         corridas = texto_renderizado(self.at)
         self.assertNotIn('Campeonato de pilotos', corridas)
         self.assertIn('Integrantes do pódio observado', corridas)
@@ -483,7 +485,7 @@ class TestDashboardApp(unittest.TestCase):
         por_chave(self.at.radio, 'tela').set_value('Previsões')
         self.executar()
         previsoes = texto_renderizado(self.at)
-        self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2026:18')
+        self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2026:19')
         self.assertIn('Antes da corrida', previsoes)
         self.assertIn('Avaliação posterior desta previsão registrada', previsoes)
         self.assertNotIn('Campeonato de pilotos', previsoes)

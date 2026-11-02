@@ -1,0 +1,1125 @@
+{
+  "schema": "pitwall-emission-independent-audit-v1",
+  "status": "passed",
+  "external_evidence": {
+    "actions": {
+      "apiURL": "https://api.github.com/repos/mbpaschoal/pitwall-lab/actions/runs?head_sha=ad26842d99543f376a5734b809e3ed809d2d0772&per_page=100",
+      "fetchedAt": "2026-11-02T03:38:14.898Z",
+      "total_count": 3,
+      "runs": [
+        {
+          "id": 41274344722,
+          "name": "Coleta automática / Automatic collection",
+          "event": "schedule",
+          "head_sha": "ad26842d99543f376a5734b809e3ed809d2d0772",
+          "head_branch": "main",
+          "created_at": "2026-11-01T04:45:56Z",
+          "run_started_at": "2026-11-01T04:45:56Z",
+          "updated_at": "2026-11-01T04:47:07Z",
+          "status": "completed",
+          "conclusion": "failure",
+          "html_url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41274344722",
+          "repository_private": false,
+          "head_commit": {
+            "id": "ad26842d99543f376a5734b809e3ed809d2d0772",
+            "tree_id": "3bef7e90bb2bc8cca89460bac3b5ecbd77daab01"
+          }
+        },
+        {
+          "id": 41273944637,
+          "name": "Produto e idiomas / Product and languages",
+          "event": "push",
+          "head_sha": "ad26842d99543f376a5734b809e3ed809d2d0772",
+          "head_branch": "v0.4.7",
+          "created_at": "2026-11-01T04:39:36Z",
+          "run_started_at": "2026-11-01T04:39:36Z",
+          "updated_at": "2026-11-01T04:42:05Z",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41273944637",
+          "repository_private": false,
+          "head_commit": {
+            "id": "ad26842d99543f376a5734b809e3ed809d2d0772",
+            "tree_id": "3bef7e90bb2bc8cca89460bac3b5ecbd77daab01"
+          }
+        },
+        {
+          "id": 41273944620,
+          "name": "Produto e idiomas / Product and languages",
+          "event": "push",
+          "head_sha": "ad26842d99543f376a5734b809e3ed809d2d0772",
+          "head_branch": "main",
+          "created_at": "2026-11-01T04:39:36Z",
+          "run_started_at": "2026-11-01T04:39:36Z",
+          "updated_at": "2026-11-01T04:42:08Z",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41273944620",
+          "repository_private": false,
+          "head_commit": {
+            "id": "ad26842d99543f376a5734b809e3ed809d2d0772",
+            "tree_id": "3bef7e90bb2bc8cca89460bac3b5ecbd77daab01"
+          }
+        }
+      ]
+    },
+    "commit": "ad26842d99543f376a5734b809e3ed809d2d0772",
+    "tree_api": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/trees/3bef7e90bb2bc8cca89460bac3b5ecbd77daab01?recursive=1",
+    "tree_sha": "3bef7e90bb2bc8cca89460bac3b5ecbd77daab01",
+    "tree_truncated": false,
+    "emission_tree": [
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/cobertura.json",
+        "sha": "52aaeaafdda357f0eafeb6628d62ea40b3b9a177",
+        "size": 94,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/52aaeaafdda357f0eafeb6628d62ea40b3b9a177",
+        "local_git_blob_sha": "52aaeaafdda357f0eafeb6628d62ea40b3b9a177",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/entradas.json",
+        "sha": "b5194fe5ac1a67a75e2f6b11d2f33f6c6412b5eb",
+        "size": 42587,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/b5194fe5ac1a67a75e2f6b11d2f33f6c6412b5eb",
+        "local_git_blob_sha": "b5194fe5ac1a67a75e2f6b11d2f33f6c6412b5eb",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/fontes.json",
+        "sha": "c53c1765c847e69858b68fd61322d18bc38b3b40",
+        "size": 11054,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/c53c1765c847e69858b68fd61322d18bc38b3b40",
+        "local_git_blob_sha": "c53c1765c847e69858b68fd61322d18bc38b3b40",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/historicos.json",
+        "sha": "3bc78ac21fb16211f77cab0824c30ddbcdb1f4d0",
+        "size": 3044137,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/3bc78ac21fb16211f77cab0824c30ddbcdb1f4d0",
+        "local_git_blob_sha": "3bc78ac21fb16211f77cab0824c30ddbcdb1f4d0",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/manifesto.json",
+        "sha": "f1ba92eccae9526f2397bf68d55d08dbf19ba9f2",
+        "size": 3343505,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/f1ba92eccae9526f2397bf68d55d08dbf19ba9f2",
+        "local_git_blob_sha": "f1ba92eccae9526f2397bf68d55d08dbf19ba9f2",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/probabilidades.csv",
+        "sha": "379e1e909e5eaaa4a9e2ea95605f86c25672fdcc",
+        "size": 5029,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/379e1e909e5eaaa4a9e2ea95605f86c25672fdcc",
+        "local_git_blob_sha": "379e1e909e5eaaa4a9e2ea95605f86c25672fdcc",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/calendario_offset_0000.json",
+        "sha": "106e4051feac842163ac11a3964baed6a961c1f8",
+        "size": 14289,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/106e4051feac842163ac11a3964baed6a961c1f8",
+        "local_git_blob_sha": "106e4051feac842163ac11a3964baed6a961c1f8",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/classificacao_19_offset_0000.json",
+        "sha": "65f2e1a3c3d8142cd7d4c157c7b973be742c1d29",
+        "size": 9859,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/65f2e1a3c3d8142cd7d4c157c7b973be742c1d29",
+        "local_git_blob_sha": "65f2e1a3c3d8142cd7d4c157c7b973be742c1d29",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_10_offset_0000.json",
+        "sha": "ef488912f4c6cdc5562509977cb3f940e22c6516",
+        "size": 13067,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/ef488912f4c6cdc5562509977cb3f940e22c6516",
+        "local_git_blob_sha": "ef488912f4c6cdc5562509977cb3f940e22c6516",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_11_offset_0000.json",
+        "sha": "3ded257f5528f498061e5d26f0ab465c7b737258",
+        "size": 13081,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/3ded257f5528f498061e5d26f0ab465c7b737258",
+        "local_git_blob_sha": "3ded257f5528f498061e5d26f0ab465c7b737258",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_12_offset_0000.json",
+        "sha": "fb9c8ce0db3d2df56416f3d5f03bd5c96cbd08d4",
+        "size": 12875,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/fb9c8ce0db3d2df56416f3d5f03bd5c96cbd08d4",
+        "local_git_blob_sha": "fb9c8ce0db3d2df56416f3d5f03bd5c96cbd08d4",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_13_offset_0000.json",
+        "sha": "6878f2cf96bf7125f9b038fcb8d1c66df2df73f3",
+        "size": 13046,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/6878f2cf96bf7125f9b038fcb8d1c66df2df73f3",
+        "local_git_blob_sha": "6878f2cf96bf7125f9b038fcb8d1c66df2df73f3",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_14_offset_0000.json",
+        "sha": "b853d4da817a4cfbc7123120125544a79fef907e",
+        "size": 13030,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/b853d4da817a4cfbc7123120125544a79fef907e",
+        "local_git_blob_sha": "b853d4da817a4cfbc7123120125544a79fef907e",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_15_offset_0000.json",
+        "sha": "cd92365176593c2ae6196ca04b3fd2e5ac3f2d25",
+        "size": 12957,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/cd92365176593c2ae6196ca04b3fd2e5ac3f2d25",
+        "local_git_blob_sha": "cd92365176593c2ae6196ca04b3fd2e5ac3f2d25",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_16_offset_0000.json",
+        "sha": "03d348dc3f765a2b1349b0f468219e2458f609c2",
+        "size": 13177,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/03d348dc3f765a2b1349b0f468219e2458f609c2",
+        "local_git_blob_sha": "03d348dc3f765a2b1349b0f468219e2458f609c2",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_17_offset_0000.json",
+        "sha": "d055384844ec21441e88e1a3b557c38946a8b9bb",
+        "size": 13116,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/d055384844ec21441e88e1a3b557c38946a8b9bb",
+        "local_git_blob_sha": "d055384844ec21441e88e1a3b557c38946a8b9bb",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_18_offset_0000.json",
+        "sha": "266e4d40fd440a903e64075f606043652caa352e",
+        "size": 13123,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/266e4d40fd440a903e64075f606043652caa352e",
+        "local_git_blob_sha": "266e4d40fd440a903e64075f606043652caa352e",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_1_offset_0000.json",
+        "sha": "314887af9218bf256a1babb0441a4b5de114a7d1",
+        "size": 12845,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/314887af9218bf256a1babb0441a4b5de114a7d1",
+        "local_git_blob_sha": "314887af9218bf256a1babb0441a4b5de114a7d1",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_2_offset_0000.json",
+        "sha": "37fdb6f1d970df52a602c7e74a3d6ebbc0fd475e",
+        "size": 12691,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/37fdb6f1d970df52a602c7e74a3d6ebbc0fd475e",
+        "local_git_blob_sha": "37fdb6f1d970df52a602c7e74a3d6ebbc0fd475e",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_3_offset_0000.json",
+        "sha": "91f5858a83dcb16291aed88b9052119b5cf26a69",
+        "size": 13161,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/91f5858a83dcb16291aed88b9052119b5cf26a69",
+        "local_git_blob_sha": "91f5858a83dcb16291aed88b9052119b5cf26a69",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_4_offset_0000.json",
+        "sha": "b065021043039d552cb3d6564317714235f3eda7",
+        "size": 13058,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/b065021043039d552cb3d6564317714235f3eda7",
+        "local_git_blob_sha": "b065021043039d552cb3d6564317714235f3eda7",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_5_offset_0000.json",
+        "sha": "f3cc9010a073e1a73accf7e05a4e9435a8299305",
+        "size": 12898,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/f3cc9010a073e1a73accf7e05a4e9435a8299305",
+        "local_git_blob_sha": "f3cc9010a073e1a73accf7e05a4e9435a8299305",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_6_offset_0000.json",
+        "sha": "60f8aa38fca5b82ded00061dd6dfc8cc46cc8b3d",
+        "size": 12886,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/60f8aa38fca5b82ded00061dd6dfc8cc46cc8b3d",
+        "local_git_blob_sha": "60f8aa38fca5b82ded00061dd6dfc8cc46cc8b3d",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_7_offset_0000.json",
+        "sha": "9e2559d7ccf105d584ff3f288c76d751927fd080",
+        "size": 12996,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/9e2559d7ccf105d584ff3f288c76d751927fd080",
+        "local_git_blob_sha": "9e2559d7ccf105d584ff3f288c76d751927fd080",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_8_offset_0000.json",
+        "sha": "4c8ce3d30ca504256972538460ac159c06d7cbb9",
+        "size": 12971,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/4c8ce3d30ca504256972538460ac159c06d7cbb9",
+        "local_git_blob_sha": "4c8ce3d30ca504256972538460ac159c06d7cbb9",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_9_offset_0000.json",
+        "sha": "d302d98d1f74e8632ef12ba5f3c96ed3a68024c3",
+        "size": 13126,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/d302d98d1f74e8632ef12ba5f3c96ed3a68024c3",
+        "local_git_blob_sha": "d302d98d1f74e8632ef12ba5f3c96ed3a68024c3",
+        "local_matches_remote": true
+      },
+      {
+        "path": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/relatorio.md",
+        "sha": "bf8b84594409a89d081caee697f7aa097a51d0be",
+        "size": 394,
+        "url": "https://api.github.com/repos/mbpaschoal/pitwall-lab/git/blobs/bf8b84594409a89d081caee697f7aa097a51d0be",
+        "local_git_blob_sha": "bf8b84594409a89d081caee697f7aa097a51d0be",
+        "local_matches_remote": true
+      }
+    ],
+    "probabilities_api": "https://api.github.com/repos/mbpaschoal/pitwall-lab/contents/reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/probabilidades.csv?ref=ad26842d99543f376a5734b809e3ed809d2d0772",
+    "remote_probabilities_sha256": "e11587ce3373cd3e9c2fa975ae11b8cd104f9e3d2842b3319f17b90c5e0d926a",
+    "interpretation_pt": "GitHub Actions fornece horário externo de execução associado ao commit público e à árvore que contém os mesmos 27 arquivos da emissão. O recibo e a captura Streamlit são evidência local adicional de exibição, sem equivaler a carimbo de tempo independente do conteúdo renderizado.",
+    "interpretation_en": "GitHub Actions supplies an external execution time tied to the public commit and its tree containing the same 27 emission files. The Streamlit receipt and screenshot add local display evidence; they are not an independent timestamp of the rendered page."
+  },
+  "audited_at_utc": "2026-11-02T03:41:39.847857Z",
+  "scope": "Independent read-only audit of the original Mexico 2026/19 emission. No acquisition of sports data, training, inference, emission changes or target-result reading.",
+  "event": {
+    "season": 2026,
+    "round": 19,
+    "circuit_id": "rodriguez",
+    "race_name": "Mexico City Grand Prix",
+    "race_date": "2026-11-01"
+  },
+  "declaration": {
+    "temporada": 2026,
+    "rodada": 19,
+    "circuito_id": "rodriguez",
+    "snapshot": "mexico-previsao-20261101T0432Z",
+    "diretorio": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z",
+    "modo": "PROSPECTIVO"
+  },
+  "emission_directory": "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z",
+  "snapshot": "data/operacao_2026/snapshots/mexico-previsao-20261101T0432Z",
+  "emission_mode": "PROSPECTIVO",
+  "emission_manifest_sha256": "dd1269793d8d7e9cb2893e592941730cd99de3b0a0483e64d2f8cfc20061b647",
+  "emission_before_after_sha256": {
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/cobertura.json": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/entradas.json": "93f7f446f88b6c049c9212432a2286f75aac99039269e67431102c7f42215b9b",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/fontes.json": "4a425097e5a3a0ccb71fb81b86c5a58078e4be9ca2fafdd0c9b361bfcbf9cbaa",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/historicos.json": "c1503f548ae26e2def3697c01acaa9ef0be7837b8f0baa2e4e1113b6e5d1de6e",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/manifesto.json": "dd1269793d8d7e9cb2893e592941730cd99de3b0a0483e64d2f8cfc20061b647",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/probabilidades.csv": "e11587ce3373cd3e9c2fa975ae11b8cd104f9e3d2842b3319f17b90c5e0d926a",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/calendario_offset_0000.json": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/classificacao_19_offset_0000.json": "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_10_offset_0000.json": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_11_offset_0000.json": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_12_offset_0000.json": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_13_offset_0000.json": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_14_offset_0000.json": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_15_offset_0000.json": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_16_offset_0000.json": "214e44691da4d4f228448b269e12cab57b27a081751da4c6768a89637658fc31",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_17_offset_0000.json": "4efc2b9d5515c1d7ff13677e97bb7565ade55cfd2567a071e0cab64c85e642bf",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_18_offset_0000.json": "1f29359d86fb349b987e313ed39ca20cd62e1846ff3a3daac747e57a8e57ab61",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_1_offset_0000.json": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_2_offset_0000.json": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_3_offset_0000.json": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_4_offset_0000.json": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_5_offset_0000.json": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_6_offset_0000.json": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_7_offset_0000.json": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_8_offset_0000.json": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/raw/resultados_9_offset_0000.json": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+    "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/relatorio.md": "72c95fac1ead6221127ed3991b6bfea21146e8066f432d9022c83ed1354f4e32"
+  },
+  "checks": {
+    "declared_event_exactly_mexico_2026_19_rodriguez": true,
+    "qualification_identity_matches": true,
+    "qualification_page_complete": true,
+    "population_exact_qualification_and_unique": true,
+    "all_prediction_identities_match": true,
+    "eligibility_frozen_22": true,
+    "all_probabilities_valid": true,
+    "model_ranking_and_favorites_consistent": true,
+    "qualifying_reference_and_favorites_consistent": true,
+    "utc_order_qstart_qend_qavailable_cut_emission_start": true,
+    "own_race_result_excluded": true,
+    "all_source_utc_before_cutoff": true,
+    "q_source_obtained_after_observed_end_before_cutoff": true,
+    "source_list_matches_manifest_and_snapshot": true,
+    "all_26_declared_output_hashes_match": true,
+    "all_20_source_and_snapshot_hashes_match": true,
+    "model_metadata_schema_hashes_match_frozen_manifest": true,
+    "exact_15_model_inputs_no_target": true,
+    "stored_input_matrix_matches_rows": true,
+    "frozen_csv_matches_full_input_records": true,
+    "train_constant_unchanged": true,
+    "all_actual_history_windows_exclude_target_future": true,
+    "stored_history_no_target_or_future": true,
+    "history_released_by_conservative_qstart": true,
+    "emission_components_match_recorded_committed_code": true,
+    "observed_q3_finish_evidence_identity_hash_before_cutoff": true,
+    "remote_csv_exact_bytes_match_frozen_emission": true,
+    "all_27_emission_files_match_prepublished_github_tree": true,
+    "public_commit_tree_matches_local_git_object": true,
+    "externally_timestamped_public_push_run_before_start": true,
+    "local_public_browser_receipt_matches_event_and_emission_before_start": true,
+    "emission_bytes_unchanged_during_audit": true
+  },
+  "coverage": {
+    "elegiveis": 22,
+    "lacunas_resultados_relevantes": [],
+    "registros_classificacao": 22
+  },
+  "probability_rank": [
+    {
+      "driver_id": "max_verstappen",
+      "probability": 0.6824631450207722,
+      "rank": 1,
+      "favorite": true
+    },
+    {
+      "driver_id": "hamilton",
+      "probability": 0.6188153257245499,
+      "rank": 2,
+      "favorite": true
+    },
+    {
+      "driver_id": "russell",
+      "probability": 0.5754100003469584,
+      "rank": 3,
+      "favorite": true
+    },
+    {
+      "driver_id": "leclerc",
+      "probability": 0.5516680040985348,
+      "rank": 4,
+      "favorite": false
+    },
+    {
+      "driver_id": "antonelli",
+      "probability": 0.5297330373034154,
+      "rank": 5,
+      "favorite": false
+    },
+    {
+      "driver_id": "hadjar",
+      "probability": 0.2291227116540247,
+      "rank": 6,
+      "favorite": false
+    },
+    {
+      "driver_id": "norris",
+      "probability": 0.15748879937067303,
+      "rank": 7,
+      "favorite": false
+    },
+    {
+      "driver_id": "gasly",
+      "probability": 0.02409766852598063,
+      "rank": 8,
+      "favorite": false
+    },
+    {
+      "driver_id": "piastri",
+      "probability": 0.019481238293652812,
+      "rank": 9,
+      "favorite": false
+    },
+    {
+      "driver_id": "hulkenberg",
+      "probability": 0.019377612135897514,
+      "rank": 10,
+      "favorite": false
+    },
+    {
+      "driver_id": "colapinto",
+      "probability": 0.011075026822397999,
+      "rank": 11,
+      "favorite": false
+    },
+    {
+      "driver_id": "bortoleto",
+      "probability": 0.005407641828532923,
+      "rank": 12,
+      "favorite": false
+    },
+    {
+      "driver_id": "lawson",
+      "probability": 0.0047736425726922545,
+      "rank": 13,
+      "favorite": false
+    },
+    {
+      "driver_id": "arvid_lindblad",
+      "probability": 0.004302300298333095,
+      "rank": 14,
+      "favorite": false
+    },
+    {
+      "driver_id": "bearman",
+      "probability": 0.004158025102047383,
+      "rank": 15,
+      "favorite": false
+    },
+    {
+      "driver_id": "sainz",
+      "probability": 0.0026979978399320104,
+      "rank": 16,
+      "favorite": false
+    },
+    {
+      "driver_id": "albon",
+      "probability": 0.0017112776722318565,
+      "rank": 17,
+      "favorite": false
+    },
+    {
+      "driver_id": "alonso",
+      "probability": 0.001399313378406835,
+      "rank": 18,
+      "favorite": false
+    },
+    {
+      "driver_id": "stroll",
+      "probability": 0.0006351261268520311,
+      "rank": 19,
+      "favorite": false
+    },
+    {
+      "driver_id": "perez",
+      "probability": 0.00043777898511275986,
+      "rank": 20,
+      "favorite": false
+    },
+    {
+      "driver_id": "bottas",
+      "probability": 0.0002948651085978731,
+      "rank": 21,
+      "favorite": false
+    },
+    {
+      "driver_id": "ryo_hirakawa",
+      "probability": 0.000194265091618331,
+      "rank": 22,
+      "favorite": false
+    }
+  ],
+  "model_favorites": [
+    "max_verstappen",
+    "hamilton",
+    "russell"
+  ],
+  "qualifying_favorites": [
+    "hamilton",
+    "russell",
+    "leclerc"
+  ],
+  "probability_sum_not_normalized": 3.444744803301214,
+  "qualifying_ties": {
+    "8": [
+      "arvid_lindblad",
+      "lawson"
+    ]
+  },
+  "input_order": [
+    "posicao_classificacao",
+    "posicao_classificacao_repetida",
+    "classificacao_ausente",
+    "posicao_classificacao_ausente",
+    "media_posicao_final_5",
+    "taxa_podios_5",
+    "n_posicoes_5",
+    "n_podios_5",
+    "media_pontos_equipe_5",
+    "n_corridas_equipe_5",
+    "n_participacoes_equipe_5",
+    "historico_piloto_insuficiente",
+    "historico_equipe_insuficiente",
+    "equipe_pre_corrida_ausente",
+    "referencia_temporal_ausente"
+  ],
+  "history_events_used": [
+    [
+      "2026",
+      "11"
+    ],
+    [
+      "2026",
+      "14"
+    ],
+    [
+      "2026",
+      "15"
+    ],
+    [
+      "2026",
+      "16"
+    ],
+    [
+      "2026",
+      "17"
+    ],
+    [
+      "2026",
+      "18"
+    ]
+  ],
+  "output_hashes": [
+    {
+      "path": "cobertura.json",
+      "expected": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "actual": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "matches": true
+    },
+    {
+      "path": "entradas.json",
+      "expected": "93f7f446f88b6c049c9212432a2286f75aac99039269e67431102c7f42215b9b",
+      "actual": "93f7f446f88b6c049c9212432a2286f75aac99039269e67431102c7f42215b9b",
+      "matches": true
+    },
+    {
+      "path": "fontes.json",
+      "expected": "4a425097e5a3a0ccb71fb81b86c5a58078e4be9ca2fafdd0c9b361bfcbf9cbaa",
+      "actual": "4a425097e5a3a0ccb71fb81b86c5a58078e4be9ca2fafdd0c9b361bfcbf9cbaa",
+      "matches": true
+    },
+    {
+      "path": "historicos.json",
+      "expected": "c1503f548ae26e2def3697c01acaa9ef0be7837b8f0baa2e4e1113b6e5d1de6e",
+      "actual": "c1503f548ae26e2def3697c01acaa9ef0be7837b8f0baa2e4e1113b6e5d1de6e",
+      "matches": true
+    },
+    {
+      "path": "probabilidades.csv",
+      "expected": "e11587ce3373cd3e9c2fa975ae11b8cd104f9e3d2842b3319f17b90c5e0d926a",
+      "actual": "e11587ce3373cd3e9c2fa975ae11b8cd104f9e3d2842b3319f17b90c5e0d926a",
+      "matches": true
+    },
+    {
+      "path": "raw/calendario_offset_0000.json",
+      "expected": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "actual": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "matches": true
+    },
+    {
+      "path": "raw/classificacao_19_offset_0000.json",
+      "expected": "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219",
+      "actual": "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_10_offset_0000.json",
+      "expected": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "actual": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_11_offset_0000.json",
+      "expected": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+      "actual": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_12_offset_0000.json",
+      "expected": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2",
+      "actual": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_13_offset_0000.json",
+      "expected": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4",
+      "actual": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_14_offset_0000.json",
+      "expected": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911",
+      "actual": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_15_offset_0000.json",
+      "expected": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3",
+      "actual": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_16_offset_0000.json",
+      "expected": "214e44691da4d4f228448b269e12cab57b27a081751da4c6768a89637658fc31",
+      "actual": "214e44691da4d4f228448b269e12cab57b27a081751da4c6768a89637658fc31",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_17_offset_0000.json",
+      "expected": "4efc2b9d5515c1d7ff13677e97bb7565ade55cfd2567a071e0cab64c85e642bf",
+      "actual": "4efc2b9d5515c1d7ff13677e97bb7565ade55cfd2567a071e0cab64c85e642bf",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_18_offset_0000.json",
+      "expected": "1f29359d86fb349b987e313ed39ca20cd62e1846ff3a3daac747e57a8e57ab61",
+      "actual": "1f29359d86fb349b987e313ed39ca20cd62e1846ff3a3daac747e57a8e57ab61",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_1_offset_0000.json",
+      "expected": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "actual": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_2_offset_0000.json",
+      "expected": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "actual": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_3_offset_0000.json",
+      "expected": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "actual": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_4_offset_0000.json",
+      "expected": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "actual": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_5_offset_0000.json",
+      "expected": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "actual": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_6_offset_0000.json",
+      "expected": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "actual": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_7_offset_0000.json",
+      "expected": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "actual": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_8_offset_0000.json",
+      "expected": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "actual": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "matches": true
+    },
+    {
+      "path": "raw/resultados_9_offset_0000.json",
+      "expected": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "actual": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "matches": true
+    },
+    {
+      "path": "relatorio.md",
+      "expected": "72c95fac1ead6221127ed3991b6bfea21146e8066f432d9022c83ed1354f4e32",
+      "actual": "72c95fac1ead6221127ed3991b6bfea21146e8066f432d9022c83ed1354f4e32",
+      "matches": true
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": "raw/calendario_offset_0000.json",
+      "endpoint": "calendario",
+      "round": null,
+      "obtained_utc": "2026-11-01T04:31:23.853528Z",
+      "expected": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_1_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "1",
+      "obtained_utc": "2026-10-19T16:47:21.905012Z",
+      "expected": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_2_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "2",
+      "obtained_utc": "2026-10-19T16:47:29.885883Z",
+      "expected": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_3_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "3",
+      "obtained_utc": "2026-10-19T16:47:37.839604Z",
+      "expected": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_4_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "4",
+      "obtained_utc": "2026-10-19T16:47:45.873036Z",
+      "expected": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_5_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "5",
+      "obtained_utc": "2026-10-19T16:47:53.863127Z",
+      "expected": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_6_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "6",
+      "obtained_utc": "2026-10-19T16:48:01.945307Z",
+      "expected": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_7_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "7",
+      "obtained_utc": "2026-10-19T16:48:09.931253Z",
+      "expected": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_8_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "8",
+      "obtained_utc": "2026-10-19T16:48:18.123233Z",
+      "expected": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_9_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "9",
+      "obtained_utc": "2026-10-19T16:48:25.852779Z",
+      "expected": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_10_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "10",
+      "obtained_utc": "2026-10-19T16:48:33.893412Z",
+      "expected": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_11_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "11",
+      "obtained_utc": "2026-10-19T16:48:41.880305Z",
+      "expected": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_12_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "12",
+      "obtained_utc": "2026-10-19T16:48:49.970900Z",
+      "expected": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_13_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "13",
+      "obtained_utc": "2026-10-19T16:48:57.827867Z",
+      "expected": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_14_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "14",
+      "obtained_utc": "2026-10-19T16:49:05.823776Z",
+      "expected": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_15_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "15",
+      "obtained_utc": "2026-10-19T16:49:13.912096Z",
+      "expected": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_16_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "16",
+      "obtained_utc": "2026-10-19T16:49:21.833269Z",
+      "expected": "214e44691da4d4f228448b269e12cab57b27a081751da4c6768a89637658fc31",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_17_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "17",
+      "obtained_utc": "2026-10-19T16:49:29.864340Z",
+      "expected": "4efc2b9d5515c1d7ff13677e97bb7565ade55cfd2567a071e0cab64c85e642bf",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/resultados_18_offset_0000.json",
+      "endpoint": "resultados",
+      "round": "18",
+      "obtained_utc": "2026-10-26T11:10:38.235157Z",
+      "expected": "1f29359d86fb349b987e313ed39ca20cd62e1846ff3a3daac747e57a8e57ab61",
+      "emission_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "raw/classificacao_19_offset_0000.json",
+      "endpoint": "classificacao",
+      "round": "19",
+      "obtained_utc": "2026-11-01T04:31:31.934952Z",
+      "expected": "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219",
+      "emission_matches": true,
+      "snapshot_matches": true
+    }
+  ],
+  "frozen_model_hashes": {
+    "modelo": {
+      "path": "models/modelo_v1/modelo.joblib",
+      "expected": "16718ea5c4a7f662e72f09d38b073e545df1bba5c64c87b2cc1a0973ad9116e3",
+      "actual": "16718ea5c4a7f662e72f09d38b073e545df1bba5c64c87b2cc1a0973ad9116e3",
+      "matches": true
+    },
+    "metadados": {
+      "path": "models/modelo_v1/metadados.json",
+      "expected": "77d24dc765d773e49b717b79844dd4678a91087dbbc091e3e9cb184215ea9cc6",
+      "actual": "77d24dc765d773e49b717b79844dd4678a91087dbbc091e3e9cb184215ea9cc6",
+      "matches": true
+    },
+    "esquema": {
+      "path": "data/preparado/colunas.json",
+      "expected": "1b14e532cd3001ad6b38442cab4a14e52e63208fbe37bec77d8b464dfb98efdd",
+      "actual": "1b14e532cd3001ad6b38442cab4a14e52e63208fbe37bec77d8b464dfb98efdd",
+      "matches": true
+    }
+  },
+  "code_at_emission": [
+    {
+      "path": "avaliar_modelo_v1.py",
+      "expected": "2befdf9afea8b281b76529bd21b330e52d5f9b442efd4bc50d1821cd39c88668",
+      "at_emission_commit": "2befdf9afea8b281b76529bd21b330e52d5f9b442efd4bc50d1821cd39c88668",
+      "commit_matches": true,
+      "current": "2befdf9afea8b281b76529bd21b330e52d5f9b442efd4bc50d1821cd39c88668",
+      "current_matches_emission": true
+    },
+    {
+      "path": "operacao2026/__init__.py",
+      "expected": "d3302f4f67797c0db32fc7c020c86291ac7222b5ee6653bd0bbacf0ae2320e8a",
+      "at_emission_commit": "d3302f4f67797c0db32fc7c020c86291ac7222b5ee6653bd0bbacf0ae2320e8a",
+      "commit_matches": true,
+      "current": "d3302f4f67797c0db32fc7c020c86291ac7222b5ee6653bd0bbacf0ae2320e8a",
+      "current_matches_emission": true
+    },
+    {
+      "path": "operacao2026/eventos/mexico2026.json",
+      "expected": "7d807d243c05dad29338e85ceb9fac8cc793bf41f5fa96784caa0f21dea9c520",
+      "at_emission_commit": "7d807d243c05dad29338e85ceb9fac8cc793bf41f5fa96784caa0f21dea9c520",
+      "commit_matches": true,
+      "current": "3a244deb245743124b0cfbfc1f376bffda7579a17112eccc7558d8104c94729d",
+      "current_matches_emission": false
+    },
+    {
+      "path": "operacao2026/fastf1_contexto.py",
+      "expected": "e598839b64c0d7635be66b32bf5f0e43cc42c732cf722451f10d23282eb368e4",
+      "at_emission_commit": "e598839b64c0d7635be66b32bf5f0e43cc42c732cf722451f10d23282eb368e4",
+      "commit_matches": true,
+      "current": "e598839b64c0d7635be66b32bf5f0e43cc42c732cf722451f10d23282eb368e4",
+      "current_matches_emission": true
+    },
+    {
+      "path": "operacao2026/fontes.py",
+      "expected": "c78570d89379658a62b7464755b45f7ee92807fcb4d4843d8a72ba709d86a8f4",
+      "at_emission_commit": "c78570d89379658a62b7464755b45f7ee92807fcb4d4843d8a72ba709d86a8f4",
+      "commit_matches": true,
+      "current": "c78570d89379658a62b7464755b45f7ee92807fcb4d4843d8a72ba709d86a8f4",
+      "current_matches_emission": true
+    },
+    {
+      "path": "operacao2026/formula1dashboard_tempos.py",
+      "expected": "39abbd20a5dfb558a8db54704feff700da6ce7df86c5651914195ac937e4f3fb",
+      "at_emission_commit": "39abbd20a5dfb558a8db54704feff700da6ce7df86c5651914195ac937e4f3fb",
+      "commit_matches": true,
+      "current": "39abbd20a5dfb558a8db54704feff700da6ce7df86c5651914195ac937e4f3fb",
+      "current_matches_emission": true
+    },
+    {
+      "path": "operacao2026/openf1_qualificacao.py",
+      "expected": "fbc937a33f8a32d89c3542ab73039801148e6a4a84d036e4ec4de2f8c66091e8",
+      "at_emission_commit": "fbc937a33f8a32d89c3542ab73039801148e6a4a84d036e4ec4de2f8c66091e8",
+      "commit_matches": true,
+      "current": "fbc937a33f8a32d89c3542ab73039801148e6a4a84d036e4ec4de2f8c66091e8",
+      "current_matches_emission": true
+    },
+    {
+      "path": "operacao2026/previsao.py",
+      "expected": "b9da25baaafc2971bbe2bd527bafb12c1a0d30c9e9e12b27c278c445b1fc878a",
+      "at_emission_commit": "b9da25baaafc2971bbe2bd527bafb12c1a0d30c9e9e12b27c278c445b1fc878a",
+      "commit_matches": true,
+      "current": "b9da25baaafc2971bbe2bd527bafb12c1a0d30c9e9e12b27c278c445b1fc878a",
+      "current_matches_emission": true
+    },
+    {
+      "path": "operacao2026/weekend.py",
+      "expected": "cecc404e7ee65afa244b242d21af2e93695dcb72a170c0f5085f676a6beb54d0",
+      "at_emission_commit": "cecc404e7ee65afa244b242d21af2e93695dcb72a170c0f5085f676a6beb54d0",
+      "commit_matches": true,
+      "current": "8d90d0ff3adb71b9cd18087ff0c1fa7dfbbd2ebdc8ccc4fc5655d8f2d13a2562",
+      "current_matches_emission": false
+    },
+    {
+      "path": "operacao2026/weekend_official.py",
+      "expected": "5a8f9c2a0089b30b521f4270bd0271e49bdc8953a89822c1b1bb1e7f9084b35a",
+      "at_emission_commit": "5a8f9c2a0089b30b521f4270bd0271e49bdc8953a89822c1b1bb1e7f9084b35a",
+      "commit_matches": true,
+      "current": "5a8f9c2a0089b30b521f4270bd0271e49bdc8953a89822c1b1bb1e7f9084b35a",
+      "current_matches_emission": true
+    },
+    {
+      "path": "operacao2026/weekend_projection.py",
+      "expected": "aef8c374b87946b8b730e19556b5690ae523913a6d80929fe722bbcd76a51ffa",
+      "at_emission_commit": "aef8c374b87946b8b730e19556b5690ae523913a6d80929fe722bbcd76a51ffa",
+      "commit_matches": true,
+      "current": "c64e620f7083a55cbfb3b8f114b454c1bfe3729e31888438a24a61635d30bc94",
+      "current_matches_emission": false
+    },
+    {
+      "path": "operar_2026.py",
+      "expected": "b6fd95b5abbb23a96054bc1839a95e7646b8b3e619b1bdda6d97281978ad7f4a",
+      "at_emission_commit": "b6fd95b5abbb23a96054bc1839a95e7646b8b3e619b1bdda6d97281978ad7f4a",
+      "commit_matches": true,
+      "current": "b6fd95b5abbb23a96054bc1839a95e7646b8b3e619b1bdda6d97281978ad7f4a",
+      "current_matches_emission": true
+    },
+    {
+      "path": "treinar_modelo_v1.py",
+      "expected": "cdf1c2ea005f36f032ebd1694786e9118ae343a282172fafb748cbf5c2294de3",
+      "at_emission_commit": "cdf1c2ea005f36f032ebd1694786e9118ae343a282172fafb748cbf5c2294de3",
+      "commit_matches": true,
+      "current": "cdf1c2ea005f36f032ebd1694786e9118ae343a282172fafb748cbf5c2294de3",
+      "current_matches_emission": true
+    }
+  ],
+  "timeline": {
+    "corrida_programada_em_utc": "2026-11-01T20:00:00Z",
+    "corte_utc": "2026-11-01T04:32:22.021863Z",
+    "qualificacao_disponivel_em_utc": "2026-11-01T04:31:31.934952Z",
+    "qualificacao_encerrada_em_utc": "2026-10-31T22:08:00.164000Z",
+    "qualificacao_inicio_utc": "2026-10-31T21:00:00Z",
+    "resultado_alvo_incluido": false,
+    "emitido_em_utc": "2026-11-01T04:32:23.054391Z",
+    "race_control_obtained_utc": "2026-11-01T04:32:03.041826Z",
+    "first_external_public_push_run_created_utc": "2026-11-01T04:39:36Z",
+    "local_public_browser_verified_utc": "2026-11-01T04:41:08.879Z"
+  },
+  "observed_finish_evidence": {
+    "path": "data/operacao_2026/fontes_alternativas/mexico-fim-q-20261101T0434Z/race_control.json",
+    "sha256": "98327eb439baacdfe0afb5bf4c2cabcc5fced45073f34310fa6ef6cb2076fb3f",
+    "metadata": {
+      "provider": "openf1",
+      "endpoint": "race_control",
+      "arquivo": "race_control.json",
+      "arquivo_requisicao": "race_control.json",
+      "url": "https://api.openf1.org/v1/race_control?session_key=11400",
+      "url_real": "https://api.openf1.org/v1/race_control?session_key=11400",
+      "status": 200,
+      "obtido_em_utc": "2026-11-01T04:32:03.041826Z",
+      "sha256": "98327eb439baacdfe0afb5bf4c2cabcc5fced45073f34310fa6ef6cb2076fb3f",
+      "bytes": 20727,
+      "registros": 79
+    },
+    "record": [
+      {
+        "meeting_key": 1298,
+        "session_key": 11400,
+        "date": "2026-10-31T22:08:00.164000+00:00",
+        "driver_number": null,
+        "lap_number": null,
+        "category": "SessionStatus",
+        "flag": null,
+        "scope": null,
+        "sector": null,
+        "qualifying_phase": 3,
+        "message": "SESSION FINISHED"
+      }
+    ]
+  },
+  "public_browser_receipt": {
+    "path": "reports/mexico_previsao_20261101/verificacao_publica.json",
+    "sha256": "93db1937d528267fc072067dbe812faf9de816a21adc393140b342668c35e928",
+    "record": {
+      "version": "0.4.7",
+      "gp": 19,
+      "verified": true,
+      "utc": "2026-11-01T04:41:08.879Z",
+      "emitido_em_utc": "2026-11-01T04:32:23.054391Z",
+      "corte_temporal": {
+        "corrida_programada_em_utc": "2026-11-01T20:00:00Z",
+        "corte_utc": "2026-11-01T04:32:22.021863Z",
+        "qualificacao_disponivel_em_utc": "2026-11-01T04:31:31.934952Z",
+        "qualificacao_encerrada_em_utc": "2026-10-31T22:08:00.164000Z",
+        "qualificacao_inicio_utc": "2026-10-31T21:00:00Z",
+        "resultado_alvo_incluido": false
+      },
+      "commit": "ad26842d99543f376a5734b809e3ed809d2d0772",
+      "emissao": "mexico-prospectivo-20261101T0435Z",
+      "origem_classificacao": "Jolpica canônica",
+      "registros": 22,
+      "pendencia_independente": "Coletor de sessões OpenF1 rejeita identidade ausente/duplicada; sem relaxar validação.",
+      "layouts": "reports/layouts_20261101/comparar.html"
+    },
+    "screenshot_path": "reports/mexico_previsao_20261101/previsao-publica.png",
+    "screenshot_sha256": "84daa65540ea5a3b7d667119d0c1b877728fe6a5fc6b884a85c1f30b75d2607c",
+    "screenshot_visual_review": "Viewed: version 0.4.7, GP19 Mexico City Grand Prix, pre-race notice and VER/HAM/RUS percentages match the frozen file."
+  },
+  "limitations_pt": [
+    "Horários declarados em arquivos locais e data do commit não são, isoladamente, prova externa imutável; a auditoria usa adicionalmente horário do GitHub Actions e igualdade da árvore/bytes.",
+    "O recibo público e sua PNG são locais. Não há nesta auditoria carimbo de tempo independente da página Streamlit renderizada; há comprovação externa de que os mesmos arquivos estavam no commit público antes da largada.",
+    "Os 22 registros e a posição repetida P8 refletem a classificação admitida no corte, não uma lista independente completa de inscritos nem revisão posterior de DSQ. Não se deve alterar população, posição ou probabilidades da emissão por evidência posterior.",
+    "O nome da pasta termina em 0435Z, mas o instante efetivo preservado é 04:32:23.054391Z; o nome não substitui o UTC do manifesto.",
+    "A configuração atual do evento contém revisão posterior do fim programado da corrida; o hash do componente é validado no commit original da emissão, não exigido igual ao arquivo atual.",
+    "Esta auditoria não admite nem avalia o resultado do México. A avaliação deve usar alvo posterior validado em fluxo separado, sem reemitir ou ajustar modelo."
+  ],
+  "conclusion_pt": "Emissão original apta à avaliação posterior do México 2026/19, condicionada à admissão independente do resultado. Integridade e ordem temporal verificadas; mesmos arquivos/probabilidades vinculados a commit público com execução GitHub anterior à largada. Nenhuma reemissão ou retrodatação.",
+  "conclusion_en": "The original Mexico 2026/19 emission is suitable for subsequent evaluation, subject to independent admission of the race outcome. Integrity and temporal ordering were checked; identical files/probabilities are tied to a public commit with a GitHub execution preceding the scheduled start. No re-emission or backdating.",
+  "read_only_preserved": true
+}

@@ -1624,17 +1624,18 @@
         "data": "2026-11-01",
         "data_corrida": "2026-11-01",
         "emissao_sha256": "dd1269793d8d7e9cb2893e592941730cd99de3b0a0483e64d2f8cfc20061b647",
-        "estado_operacao": "previsao_registrada",
+        "estado_operacao": "resultado_observado",
         "estado_previsao": "previsao_registrada",
         "estado_qualificacao": "local_disponivel",
-        "estado_resultado": "indisponivel",
+        "estado_resultado": "observado_local",
         "fonte_qualificacao_sha256": "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219",
+        "fonte_resultado_sha256": "681fc44eb9dd8e73096dcafb63d18257d344ead5617aab6fc0b1a3f2f4591cd3",
         "fontes_qualificacao_sha256": [
           "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219"
         ],
         "motivo_previsao": "previsão registrada antes da corrida",
         "motivo_qualificacao": null,
-        "motivo_resultado": "snapshot local de resultados ausente; o calendário não prova que a corrida não foi concluída",
+        "motivo_resultado": null,
         "pais": "Mexico",
         "participantes_esperados_previsao": [
           "albon",
@@ -1687,7 +1688,10 @@
             "sessao": "Corrida"
           }
         ],
-        "resultado_posterior_validado": false,
+        "resultado_circuito_id": "rodriguez",
+        "resultado_data_fonte": "2026-11-01",
+        "resultado_obtido_em_utc": "2026-11-02T03:42:24.143473Z",
+        "resultado_posterior_validado": true,
         "rodada": 19,
         "temporada": 2026
       },
@@ -7833,12 +7837,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Lewis Hamilton",
         "piloto_id": "hamilton",
+        "podio_resultado_confirmado": 1,
         "probabilidade_modelo": 0.6188153257245499,
         "ranking_classificacao": 1,
         "ranking_modelo": 2,
-        "resultado_observado": null,
+        "resultado_observado": 2,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -7848,12 +7853,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "George Russell",
         "piloto_id": "russell",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.5754100003469584,
         "ranking_classificacao": 2,
         "ranking_modelo": 3,
-        "resultado_observado": null,
+        "resultado_observado": 6,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -7863,12 +7869,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Charles Leclerc",
         "piloto_id": "leclerc",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.5516680040985348,
         "ranking_classificacao": 3,
         "ranking_modelo": 4,
-        "resultado_observado": null,
+        "resultado_observado": 4,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -7878,12 +7885,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Max Verstappen",
         "piloto_id": "max_verstappen",
+        "podio_resultado_confirmado": 1,
         "probabilidade_modelo": 0.6824631450207722,
         "ranking_classificacao": 4,
         "ranking_modelo": 1,
-        "resultado_observado": null,
+        "resultado_observado": 1,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -7893,12 +7901,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Andrea Kimi Antonelli",
         "piloto_id": "antonelli",
+        "podio_resultado_confirmado": 1,
         "probabilidade_modelo": 0.5297330373034154,
         "ranking_classificacao": 5,
         "ranking_modelo": 5,
-        "resultado_observado": null,
+        "resultado_observado": 3,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -7908,12 +7917,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Lando Norris",
         "piloto_id": "norris",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.15748879937067303,
         "ranking_classificacao": 6,
         "ranking_modelo": 7,
-        "resultado_observado": null,
+        "resultado_observado": 5,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -7923,12 +7933,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Isack Hadjar",
         "piloto_id": "hadjar",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.2291227116540247,
         "ranking_classificacao": 7,
         "ranking_modelo": 6,
-        "resultado_observado": null,
+        "resultado_observado": 9,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -7938,12 +7949,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Arvid Lindblad",
         "piloto_id": "arvid_lindblad",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.004302300298333095,
         "ranking_classificacao": 8,
         "ranking_modelo": 14,
         "resultado_observado": null,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "DNF",
         "temporada": 2026
       },
       {
@@ -7953,12 +7965,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Liam Lawson",
         "piloto_id": "lawson",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.0047736425726922545,
         "ranking_classificacao": 9,
         "ranking_modelo": 13,
-        "resultado_observado": null,
+        "resultado_observado": 7,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -7968,12 +7981,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Pierre Gasly",
         "piloto_id": "gasly",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.02409766852598063,
         "ranking_classificacao": 10,
         "ranking_modelo": 8,
-        "resultado_observado": null,
+        "resultado_observado": 17,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -7983,12 +7997,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Nico Hülkenberg",
         "piloto_id": "hulkenberg",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.019377612135897514,
         "ranking_classificacao": 11,
         "ranking_modelo": 10,
-        "resultado_observado": null,
+        "resultado_observado": 14,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -7998,12 +8013,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Franco Colapinto",
         "piloto_id": "colapinto",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.011075026822397999,
         "ranking_classificacao": 12,
         "ranking_modelo": 11,
-        "resultado_observado": null,
+        "resultado_observado": 15,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -8013,12 +8029,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Oscar Piastri",
         "piloto_id": "piastri",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.019481238293652812,
         "ranking_classificacao": 13,
         "ranking_modelo": 9,
-        "resultado_observado": null,
+        "resultado_observado": 13,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -8028,12 +8045,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Gabriel Bortoleto",
         "piloto_id": "bortoleto",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.005407641828532923,
         "ranking_classificacao": 14,
         "ranking_modelo": 12,
-        "resultado_observado": null,
+        "resultado_observado": 8,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -8043,12 +8061,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Oliver Bearman",
         "piloto_id": "bearman",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.004158025102047383,
         "ranking_classificacao": 15,
         "ranking_modelo": 15,
         "resultado_observado": null,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "DNF",
         "temporada": 2026
       },
       {
@@ -8058,12 +8077,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Carlos Sainz",
         "piloto_id": "sainz",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.0026979978399320104,
         "ranking_classificacao": 16,
         "ranking_modelo": 16,
-        "resultado_observado": null,
+        "resultado_observado": 12,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -8073,12 +8093,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Alexander Albon",
         "piloto_id": "albon",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.0017112776722318565,
         "ranking_classificacao": 17,
         "ranking_modelo": 17,
-        "resultado_observado": null,
+        "resultado_observado": 11,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -8088,12 +8109,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Fernando Alonso",
         "piloto_id": "alonso",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.001399313378406835,
         "ranking_classificacao": 18,
         "ranking_modelo": 18,
         "resultado_observado": null,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "DNF",
         "temporada": 2026
       },
       {
@@ -8103,12 +8125,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Ryo Hirakawa",
         "piloto_id": "ryo_hirakawa",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.000194265091618331,
         "ranking_classificacao": 19,
         "ranking_modelo": 22,
-        "resultado_observado": null,
+        "resultado_observado": 10,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -8118,12 +8141,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Lance Stroll",
         "piloto_id": "stroll",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.0006351261268520311,
         "ranking_classificacao": 20,
         "ranking_modelo": 19,
         "resultado_observado": null,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "DNF",
         "temporada": 2026
       },
       {
@@ -8133,12 +8157,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Sergio Pérez",
         "piloto_id": "perez",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.00043777898511275986,
         "ranking_classificacao": 21,
         "ranking_modelo": 20,
-        "resultado_observado": null,
+        "resultado_observado": 16,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "Finished",
         "temporada": 2026
       },
       {
@@ -8148,12 +8173,13 @@
         "modo_previsao": "previsao_registrada",
         "piloto": "Valtteri Bottas",
         "piloto_id": "bottas",
+        "podio_resultado_confirmado": 0,
         "probabilidade_modelo": 0.0002948651085978731,
         "ranking_classificacao": 22,
         "ranking_modelo": 21,
         "resultado_observado": null,
         "rodada": 19,
-        "status_resultado": null,
+        "status_resultado": "DNF",
         "temporada": 2026
       }
     ],
@@ -18189,6 +18215,38 @@
     }
   },
   "proveniencia": {
+    "avaliacoes_posteriores": {
+      "2026:19:rodriguez": {
+        "anexo": "frontend_assets/avaliacao_posterior_mexico_2026.json",
+        "avaliacao": {
+          "acertos_classificacao": 1,
+          "acertos_modelo": 2,
+          "podio": [
+            "max_verstappen",
+            "hamilton",
+            "antonelli"
+          ]
+        },
+        "cobertura": {
+          "conhecidos": 22,
+          "esperados": 22,
+          "excluidos": 0
+        },
+        "fonte": {
+          "documento": 86,
+          "obtido_em_utc": "2026-11-02T03:42:24.143473Z",
+          "pagina": 2,
+          "sha256": "681fc44eb9dd8e73096dcafb63d18257d344ead5617aab6fc0b1a3f2f4591cd3",
+          "url": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_race_classification.pdf"
+        },
+        "janela": {
+          "encerramento_observado_utc": "2026-11-01T22:23:54.505000+00:00",
+          "largada_utc": "2026-11-01T20:00:00Z",
+          "resultado_final_publicado_utc": "2026-11-02T01:50:00Z"
+        },
+        "sha256": "55432f9010b201dba5b61702ce708eebea085957790dcee5e5c82c8aff2ba606"
+      }
+    },
     "emissao": {
       "emissoes": {
         "2026:10:spa": {
@@ -18856,7 +18914,12 @@
       "data/operacao_2026/snapshots/coleta-20261020T020130Z/raw/classificacao_17_offset_0000.json": "6305533d29c113c39c3fed73704f34e1c195f7af9c8988c0cb99b8d0f4af6109",
       "data/operacao_2026/snapshots/mexico-previsao-20261101T0432Z/indice.json": "2e7de73a4be99a7f7433584f43712233ea91f846c3112be096165dae147d1b5c",
       "data/operacao_2026/snapshots/mexico-previsao-20261101T0432Z/raw/classificacao_19_offset_0000.json": "bbc192324242874b3a72af2c1f62084b972b8976eb006932b262e4e975e97219",
-      "data/preparado/identificacao.csv": "bfc7fb9c2b488229ba1461fec6bdc45d88854db6c4a0d7f7290ee0aa6d2754df"
+      "data/preparado/identificacao.csv": "bfc7fb9c2b488229ba1461fec6bdc45d88854db6c4a0d7f7290ee0aa6d2754df",
+      "frontend_assets/avaliacao_posterior_mexico_2026.json": "55432f9010b201dba5b61702ce708eebea085957790dcee5e5c82c8aff2ba606",
+      "reports/avaliacao_mexico_20261102/fia_final_race_classification.pdf": "681fc44eb9dd8e73096dcafb63d18257d344ead5617aab6fc0b1a3f2f4591cd3",
+      "reports/avaliacao_mexico_20261102/resultado_final_normalizado.json": "8a12d72646e3884c2e9d4c79f280e18a48e13bcd18ce54981a5c787777dd468f",
+      "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/manifesto.json": "dd1269793d8d7e9cb2893e592941730cd99de3b0a0483e64d2f8cfc20061b647",
+      "reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z/probabilidades.csv": "e11587ce3373cd3e9c2fa975ae11b8cd104f9e3d2842b3319f17b90c5e0d926a"
     },
     "gerador": "preparar_dashboard_race_weekend.py",
     "sem_recalculo": true,

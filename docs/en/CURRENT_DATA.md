@@ -47,8 +47,15 @@ Archive origin was identified through original-ZIP metadata, Kaggle ID and equal
 
 ## Tyre-age revision — 0.8.2
 
+Presentation 0.8.6 labels missing or `UNKNOWN` compounds as “Not reported” and provides a textual legend for known codes. Initial age is the laps already accumulated by the tyre set at the start of the stint: zero remains the published value without proving new tyres, while missing age stays empty in the table/CSV. Hover uses the same age; bar width still represents only published boundaries. “Comparable boundaries” refers to the driver’s stint sequence, not the validity of tyre age or compound. These PT/EN display changes do not alter the base archive, complement or forecasts.
+
 The [v1 complement](../../frontend_assets/complemento_idade_pneus_v1.json) revises only initial age for 262 archive stints across 55 sessions and 47 Grands Prix: 210 previously zero values are now positive, 36 changed to zero and 16 changed between positive values. The details table and CSV show revised ages; chart compounds and lap bounds remain unchanged.
 
 The base projection and original snapshots remain intact. The reader applies the revision offline, checking hashes and a unique match by session, driver, compound, lap bounds and previous age. A missing required revision or mismatch fails explicitly. The JSON retains native identities, source URLs, hashes and UTC capture times for the three historical responses used in the audit. These are later descriptive revisions, not information retrospectively available at the forecast cutoff.
 
 The 194 structurally revised cells and 58 without unique linkage remain excluded. All 388 operational Mexico ages already agreed with the captured response and were left unchanged. [OpenF1 PR #478](https://github.com/br-g/openf1/pull/478) explains the `StartLaps` change; not every upstream revision is automatically attributed to it. The v1 model and recorded forecast probabilities remain preserved.
+
+
+## Mexico posterior evaluation — 0.8.7
+
+The final FIA classification admits all 22 podium targets: Lab 2/3, qualifying 1/3, zero exclusions. Five documented retirements retain unknown positions. The public annex is hash-bound to the frozen emission; later evidence never changes its probabilities or rankings. [Audit report](../../reports/avaliacao_mexico_20261102/relatorio.en.md).
