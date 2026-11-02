@@ -1,0 +1,21 @@
+{
+  "created_at_utc": "2026-11-02T05:16:20.682816+00:00",
+  "type": "controlled_live_concurrency_test",
+  "collection_run": 41392763522,
+  "source_commit": "5c55e9be1faba9717a2b160df5579984e935b778",
+  "expected": [
+    "retry_scheduled",
+    "workflow_dispatch on latest main",
+    "restored capture cache",
+    "full package and browser revalidation",
+    "atomic commit/tag publication"
+  ],
+  "pt": "Este recibo avança main enquanto a coleta está ativa para validar a recuperação real; não altera código, dados nem versão.",
+  "en": "This receipt advances main during active collection to verify live recovery; it changes no code, data or product version.",
+  "original_incident": {
+    "run": 41388497516,
+    "reason": "atomic push rejected because main advanced",
+    "captures_preserved": true
+  },
+  "result": "pending"
+}

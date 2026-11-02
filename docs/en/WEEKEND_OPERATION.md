@@ -1,5 +1,9 @@
 # Mexico race weekend · 2026
 
+## Publication and concurrency
+
+Publication checks remote main before commit/tag creation and after an atomic push rejection. A proven branch advance dispatches a fresh run on main, reusing preserved captures and repeating all validation with current code and version. Generated packages are never rebased or force-pushed. A lineage permits at most two recoveries; authentication failures and limits remain explicit. [PT/EN runbook](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/runbooks/automatic-publication.md).
+
 [Português](../OPERACAO_FIM_SEMANA.md)
 
 Track what each source has actually published. Identity: **2026 / 19 / rodriguez**, OpenF1 meeting **1298**. The explicit configuration is [`mexico2026.json`](https://github.com/mbpaschoal/pitwall-lab/blob/main/operacao2026/eventos/mexico2026.json).

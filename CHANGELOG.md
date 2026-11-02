@@ -1,5 +1,13 @@
 # Evolução do Pitwall Lab
 
+## 0.8.13 — 2026-11-02
+
+Corrige a publicação automática quando outro commit chega ao `main` durante a coleta/validação. A execução detecta o avanço antes de criar commit/tag e também após uma rejeição do push atômico. Em vez de mesclar pacotes gerados antigos, agenda uma execução nova sobre o `main` atual, restaura as capturas e refaz versão, pacote e testes.
+
+As fontes originais ficam em cache e em artefato da execução antes do envio. Há até duas recuperações por cadeia; falhas de permissão, transporte e esgotamento continuam explícitas. Só uma versão realmente publicada é conferida no Streamlit. Não há push forçado nem alteração de probabilidades/modelo.
+
+Oito testes com repositórios Git temporários reais verificam concorrência antes/durante o push, versão recalculada, tags e commits preservados, staging alheio e erros de permissão. [Runbook PT/EN](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/runbooks/automatic-publication.md).
+
 ## 0.8.12 — 2026-11-02
 
 - Corrige a semântica acessível do controle de movimento: o botão anuncia a ação disponível, sem um estado de alternância que contradiga seu texto. Preferência do sistema e persistência continuam preservadas.
