@@ -1,0 +1,15 @@
+{
+  "version": "0.8.16",
+  "status": "passed",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "language": "en",
+  "method": "Real hover and click on the visible Open GP cell in the canvas grid; no force. New page observed at browser-context level because the link has no opener.",
+  "outer_url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&temporada=2024&gp=24&lang=en",
+  "inner_url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&temporada=2024&gp=24&lang=en",
+  "heading": [
+    "Abu Dhabi Grand Prix"
+  ]
+}

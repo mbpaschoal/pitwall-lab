@@ -1,0 +1,177 @@
+{
+  "generated_utc": "2026-11-02T07:51:57.100682+00:00",
+  "version": "0.8.16",
+  "public_url": "https://pitwall-lab.streamlit.app",
+  "deployment_identity": {
+    "confirmed_by_root_utc": "2026-11-02 07:21 UTC",
+    "commit_prefix": "2326477",
+    "build": "cf5f36655486530283b3dcc800aad0dbe40ab6a4331170df1150fdf5b008415e"
+  },
+  "status": "passed",
+  "scientific_changes": false,
+  "public_cases_reused_from_0_8_15": 0,
+  "public_route_matrix": {
+    "file": "public0816-links/links-browser.json",
+    "base": "https://pitwall-lab.streamlit.app",
+    "engine": "chromium",
+    "expected_version": "0.8.16",
+    "expected_cases": 100,
+    "recorded_cases": 100,
+    "unique_cases": 100,
+    "passed": 100,
+    "failed": 0,
+    "complete": true,
+    "failures": [],
+    "sha256": "fbb8ca2beb863ebc21d96b47f732c15bcb0087bc2dd1b2c81f395e7905fe2e5b"
+  },
+  "public_interactions_chromium": {
+    "file": "public0816-interactions/interactions.json",
+    "base": "https://pitwall-lab.streamlit.app",
+    "engine": "chromium",
+    "expected_version": "0.8.16",
+    "expected_cases": 56,
+    "recorded_cases": 56,
+    "unique_cases": 56,
+    "passed": 56,
+    "failed": 0,
+    "complete": true,
+    "failures": [],
+    "sha256": "29d3f150371b05728c89a2bb12a2566b06ce6d5168acc610b4266fce44311124"
+  },
+  "public_interactions_webkit": {
+    "file": "public0816-webkit-interactions/interactions.json",
+    "base": "https://pitwall-lab.streamlit.app",
+    "engine": "webkit",
+    "expected_version": "0.8.16",
+    "expected_cases": 56,
+    "recorded_cases": 56,
+    "unique_cases": 56,
+    "passed": 56,
+    "failed": 0,
+    "complete": true,
+    "failures": [],
+    "sha256": "83cff0d9f55f8069367a2171914d5359282f41317f6fe5084f41da707a56597c"
+  },
+  "public_anchor_inventory": {
+    "anchors": 3814,
+    "visible": 2936,
+    "hidden": 878,
+    "missing_local_fragments": 0
+  },
+  "scientific_csv_downloads": [
+    {
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    },
+    {
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    },
+    {
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    },
+    {
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    }
+  ],
+  "local_preflight": {
+    "source_regressions": {
+      "passed": 67,
+      "file": "source0816-regressions-final.log"
+    },
+    "context_regressions": {
+      "passed": 10,
+      "file": "context0816-final.log"
+    },
+    "approved_context_smoke": {
+      "file": "approved0816-context-smoke/interactions.json",
+      "base": "http://localhost:8672",
+      "engine": "chromium",
+      "expected_version": "0.8.16",
+      "expected_cases": 16,
+      "recorded_cases": 16,
+      "unique_cases": 16,
+      "passed": 16,
+      "failed": 0,
+      "complete": true,
+      "failures": [],
+      "sha256": "e2f4002deca77819b33f0b3896807f0583256399292b1bb5f1f15b6f9e5f6a18"
+    },
+    "approved_native_document_reload": {
+      "file": "approved0816-native-doc-smoke/interactions.json",
+      "base": "http://localhost:8672",
+      "engine": "chromium",
+      "expected_version": "0.8.16",
+      "expected_cases": 4,
+      "recorded_cases": 4,
+      "unique_cases": 4,
+      "passed": 4,
+      "failed": 0,
+      "complete": true,
+      "failures": [],
+      "sha256": "144d6a7eb55b850f7aa841050e2d4671cc1be7179de25961c62ffaaf7b6a4ce3"
+    }
+  },
+  "external_links": {
+    "count": 119,
+    "dom_unique": 65,
+    "additional_historical_canvas_urls": 54,
+    "canvas_pdf_signatures_verified": 54,
+    "http_statuses": {
+      "206": 86,
+      "200": 33
+    },
+    "file": "external-links-final-119.json",
+    "method": "Public GET with Range bytes=0-2047; body read limited to 2048 bytes per request."
+  },
+  "coverage": [
+    "Six screens, six race chapters, seven documents, profiles/duels and historical/retrospective/observed/future/excluded GP states.",
+    "PT/EN at widths390/1440; Chromium and WebKit real clicks, native filters, language, favorites iframe, search, share, cards and CSV/SVG downloads.",
+    "Every public ready checks served version, route, hero, locale, idle and canonical outer/iframe URL equality. Race chapter and native document return are reloaded to verify persistence.",
+    "All 100+56+56 public cases are fresh0.8.16 checks, with at most two concurrent contexts per suite."
+  ],
+  "known_limits": [
+    "HTTP success establishes reachability during the audit, not future availability or full external PDF correctness.",
+    "Scientific CSV bytes are compared with the original protected artifact. Generated evidence CSV and SVG cards are parsed separately.",
+    "This evidence does not replace physical iPhone testing or every browser/version."
+  ],
+  "historical_defects_and_fix_evidence": {
+    "0_8_15_outer_route_loss": "public-outer-navigation-probe.json",
+    "document_wrapper_nesting": "public-document-return-nesting.json",
+    "relative_href_alone_insufficient": "public-document-relative-probe.log",
+    "top_navigation_sandbox_blocked": "public-document-top-probe.log",
+    "native_same_language_update_proves_host_channel": "public-document-native-same-probe.log"
+  },
+  "public_canvas_gp_link": {
+    "version": "0.8.16",
+    "status": "passed",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "language": "en",
+    "method": "Real hover and click on the visible Open GP cell in the canvas grid; no force. New page observed at browser-context level because the link has no opener.",
+    "outer_url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&temporada=2024&gp=24&lang=en",
+    "inner_url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&temporada=2024&gp=24&lang=en",
+    "heading": [
+      "Abu Dhabi Grand Prix"
+    ]
+  },
+  "public_query_validation": {
+    "file": "public0816-query-validation.json",
+    "unique_internal_hrefs": 395,
+    "invalid_queries": 0,
+    "unknown_keys": 0,
+    "profile_links_without_gp": 4
+  }
+}

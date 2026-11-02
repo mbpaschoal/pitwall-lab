@@ -1,0 +1,111 @@
+{
+  "utc": "2026-11-02T07:24:26.575Z",
+  "version": "0.8.16",
+  "build": "cf5f36655486530283b3dcc800aad0dbe40ab6a4331170df1150fdf5b008415e",
+  "cases": [
+    {
+      "width": 390,
+      "lang": "pt",
+      "status": "passed",
+      "geometry": {
+        "status": {
+          "top": -254.8125,
+          "bottom": -67.25
+        },
+        "summary": {
+          "top": 59.75,
+          "bottom": 574.21875
+        },
+        "main": {
+          "top": 0,
+          "bottom": 634
+        },
+        "dock": {
+          "top": 642,
+          "bottom": 784
+        },
+        "exceptions": 0,
+        "overflow": false
+      },
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&temporada=2026&gp=19&lang=pt"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "status": "passed",
+      "geometry": {
+        "status": {
+          "top": -228.8125,
+          "bottom": -66.84375
+        },
+        "summary": {
+          "top": 60.15625,
+          "bottom": 574.625
+        },
+        "main": {
+          "top": 0,
+          "bottom": 634
+        },
+        "dock": {
+          "top": 642,
+          "bottom": 784
+        },
+        "exceptions": 0,
+        "overflow": false
+      },
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&temporada=2026&gp=19&lang=en"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "status": "passed",
+      "geometry": {
+        "status": {
+          "top": -58,
+          "bottom": 81.578125
+        },
+        "summary": {
+          "top": 166.46875,
+          "bottom": 527.140625
+        },
+        "main": {
+          "top": 0,
+          "bottom": 694
+        },
+        "dock": {
+          "top": 702,
+          "bottom": 784
+        },
+        "exceptions": 0,
+        "overflow": false
+      },
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&temporada=2026&gp=19&lang=pt"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "status": "passed",
+      "geometry": {
+        "status": {
+          "top": -58,
+          "bottom": 81.578125
+        },
+        "summary": {
+          "top": 166.46875,
+          "bottom": 527.140625
+        },
+        "main": {
+          "top": 0,
+          "bottom": 694
+        },
+        "dock": {
+          "top": 702,
+          "bottom": 784
+        },
+        "exceptions": 0,
+        "overflow": false
+      },
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&temporada=2026&gp=19&lang=en"
+    }
+  ]
+}

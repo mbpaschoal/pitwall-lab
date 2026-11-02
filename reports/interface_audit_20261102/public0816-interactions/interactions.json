@@ -1,0 +1,631 @@
+{
+  "engine": "chromium",
+  "base": "https://pitwall-lab.streamlit.app",
+  "cases": [
+    {
+      "id": "chromium-390-en-context-championship",
+      "selected_gp_retained": "2024:1",
+      "requested_profile": "max_verstappen",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-context-championship",
+      "selected_gp_retained": "2024:1",
+      "requested_profile": "max_verstappen",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-context-search-short",
+      "checks": [
+        {
+          "term": "sa",
+          "label": "Sauber",
+          "year": 2024,
+          "round": 1
+        },
+        {
+          "term": "au",
+          "label": "Audi · 2026",
+          "year": 2026,
+          "round": 18
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-context-search-short",
+      "checks": [
+        {
+          "term": "sa",
+          "label": "Sauber",
+          "year": 2024,
+          "round": 1
+        },
+        {
+          "term": "au",
+          "label": "Audi · 2026",
+          "year": 2026,
+          "round": 18
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-main-navigation",
+      "screens": 6,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&visao=geral&anos=2024%2C2025%2C2026&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-main-navigation",
+      "screens": 6,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&visao=geral&anos=2024%2C2025%2C2026&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-calendar-chapters",
+      "chapters": 6,
+      "calendar": "2024:2",
+      "language_kept_chapter": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-calendar-chapters",
+      "chapters": 6,
+      "calendar": "2024:2",
+      "language_kept_chapter": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-brand-podium",
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "heading": [
+        "Sergio Pérez"
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-brand-podium",
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "heading": [
+        "Sergio Pérez"
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-profile-download-share",
+      "csv": {
+        "name": "pitwall-pilotos-perez.csv",
+        "bytes": 7723,
+        "sha256": "2d6dfbc24c59fa0abfda903d80d62ffb89b96c862369d0670c5bacbd86c6b261"
+      },
+      "svg": {
+        "name": "pitwall-comparacao.svg",
+        "bytes": 831,
+        "sha256": "d48817bf66864bc2a455064ebba4366d44913da61ddea33d306e48b2e34b5912"
+      },
+      "shared": "https://pitwall-lab.streamlit.app/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-profile-download-share",
+      "csv": {
+        "name": "pitwall-pilotos-perez.csv",
+        "bytes": 7596,
+        "sha256": "5f97d5fbd861bf39b7adbb41a91d4460fab040a9191ba8d6b4d1d9ee9ea43ec1"
+      },
+      "svg": {
+        "name": "pitwall-comparacao.svg",
+        "bytes": 817,
+        "sha256": "0329d4e36de71a5dd3878ba18d29061ee2bba9e24cf9414e0d73347f4e2f3261"
+      },
+      "shared": "https://pitwall-lab.streamlit.app/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-favourite",
+      "favorite": "hamilton",
+      "shared_profile_retained": "perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-favourite",
+      "favorite": "hamilton",
+      "shared_profile_retained": "perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-search-driver-team",
+      "driver_context": "2024:1",
+      "team_context": "2024:1",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-search-driver-team",
+      "driver_context": "2024:1",
+      "team_context": "2024:1",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-documents-clicks",
+      "documents": [
+        {
+          "id": "fontes-atuais",
+          "heading": [
+            "Current sources and coverage"
+          ],
+          "return_persisted_after_reload": true
+        },
+        {
+          "id": "metodo-v1",
+          "heading": [
+            "Model v1 experiment — plan fixed before training"
+          ]
+        },
+        {
+          "id": "relatorio-2024",
+          "heading": [
+            "Stage 4 — v1 podium-probability model"
+          ],
+          "csv": {
+            "bytes": 86031,
+            "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+            "matched_original": true
+          }
+        },
+        {
+          "id": "avaliacao-2025",
+          "heading": [
+            "Stage 5 — retrospective final evaluation of v1 in 2025"
+          ]
+        },
+        {
+          "id": "plano-avaliacao-2025",
+          "heading": [
+            "Retrospective final evaluation of v1 — plan preceding access to 2025"
+          ]
+        },
+        {
+          "id": "protocolo-temporal",
+          "heading": [
+            "Temporal protocol and evaluation split — stage 3"
+          ]
+        },
+        {
+          "id": "dicionario-variaveis",
+          "heading": [
+            "Variable dictionary — stage 3"
+          ]
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-documents-clicks",
+      "documents": [
+        {
+          "id": "fontes-atuais",
+          "heading": [
+            "Fontes e cobertura atuais"
+          ],
+          "return_persisted_after_reload": true
+        },
+        {
+          "id": "metodo-v1",
+          "heading": [
+            "Experimento modelo v1 — plano fixado antes do treinamento"
+          ]
+        },
+        {
+          "id": "relatorio-2024",
+          "heading": [
+            "Etapa 4 — modelo v1 de probabilidade de pódio"
+          ],
+          "csv": {
+            "bytes": 86031,
+            "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+            "matched_original": true
+          }
+        },
+        {
+          "id": "avaliacao-2025",
+          "heading": [
+            "Etapa 5 — avaliação final retrospectiva do modelo v1 em 2025"
+          ]
+        },
+        {
+          "id": "plano-avaliacao-2025",
+          "heading": [
+            "Avaliação final retrospectiva do v1 — plano anterior à abertura de 2025"
+          ]
+        },
+        {
+          "id": "protocolo-temporal",
+          "heading": [
+            "Protocolo temporal e divisão da avaliação — etapa 3"
+          ]
+        },
+        {
+          "id": "dicionario-variaveis",
+          "heading": [
+            "Dicionário das variáveis — etapa 3"
+          ]
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-cards-dialog-return",
+      "cards": 3,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-unavailable-profile",
+      "requested_identity_retained": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-cards-dialog-return",
+      "cards": 3,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-unavailable-profile",
+      "requested_identity_retained": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-language-perfil",
+      "preserved_query": true,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-language-perfil",
+      "preserved_query": true,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-language-duelo",
+      "preserved_query": true,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=duelo&anos=2024&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez&rival=hamilton&duelo_condicao=track_hot",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-pt-language-duelo",
+      "preserved_query": true,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=duelo&anos=2024&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez&rival=hamilton&duelo_condicao=track_hot",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-context-championship",
+      "selected_gp_retained": "2024:1",
+      "requested_profile": "max_verstappen",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-context-championship",
+      "selected_gp_retained": "2024:1",
+      "requested_profile": "max_verstappen",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-context-search-short",
+      "checks": [
+        {
+          "term": "sa",
+          "label": "Sauber",
+          "year": 2024,
+          "round": 1
+        },
+        {
+          "term": "au",
+          "label": "Audi · 2026",
+          "year": 2026,
+          "round": 18
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-context-search-short",
+      "checks": [
+        {
+          "term": "sa",
+          "label": "Sauber",
+          "year": 2024,
+          "round": 1
+        },
+        {
+          "term": "au",
+          "label": "Audi · 2026",
+          "year": 2026,
+          "round": 18
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-main-navigation",
+      "screens": 6,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&visao=geral&anos=2024%2C2025%2C2026&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-main-navigation",
+      "screens": 6,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&visao=geral&anos=2024%2C2025%2C2026&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-calendar-chapters",
+      "chapters": 6,
+      "calendar": "2024:2",
+      "language_kept_chapter": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-calendar-chapters",
+      "chapters": 6,
+      "calendar": "2024:2",
+      "language_kept_chapter": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-brand-podium",
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "heading": [
+        "Sergio Pérez"
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-brand-podium",
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "heading": [
+        "Sergio Pérez"
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-profile-download-share",
+      "csv": {
+        "name": "pitwall-pilotos-perez.csv",
+        "bytes": 7723,
+        "sha256": "2d6dfbc24c59fa0abfda903d80d62ffb89b96c862369d0670c5bacbd86c6b261"
+      },
+      "svg": {
+        "name": "pitwall-comparacao.svg",
+        "bytes": 831,
+        "sha256": "d48817bf66864bc2a455064ebba4366d44913da61ddea33d306e48b2e34b5912"
+      },
+      "shared": "https://pitwall-lab.streamlit.app/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-profile-download-share",
+      "csv": {
+        "name": "pitwall-pilotos-perez.csv",
+        "bytes": 7596,
+        "sha256": "5f97d5fbd861bf39b7adbb41a91d4460fab040a9191ba8d6b4d1d9ee9ea43ec1"
+      },
+      "svg": {
+        "name": "pitwall-comparacao.svg",
+        "bytes": 817,
+        "sha256": "0329d4e36de71a5dd3878ba18d29061ee2bba9e24cf9414e0d73347f4e2f3261"
+      },
+      "shared": "https://pitwall-lab.streamlit.app/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-favourite",
+      "favorite": "hamilton",
+      "shared_profile_retained": "perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-favourite",
+      "favorite": "hamilton",
+      "shared_profile_retained": "perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-search-driver-team",
+      "driver_context": "2024:1",
+      "team_context": "2024:1",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-search-driver-team",
+      "driver_context": "2024:1",
+      "team_context": "2024:1",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-documents-clicks",
+      "documents": [
+        {
+          "id": "fontes-atuais",
+          "heading": [
+            "Fontes e cobertura atuais"
+          ],
+          "return_persisted_after_reload": true
+        },
+        {
+          "id": "metodo-v1",
+          "heading": [
+            "Experimento modelo v1 — plano fixado antes do treinamento"
+          ]
+        },
+        {
+          "id": "relatorio-2024",
+          "heading": [
+            "Etapa 4 — modelo v1 de probabilidade de pódio"
+          ],
+          "csv": {
+            "bytes": 86031,
+            "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+            "matched_original": true
+          }
+        },
+        {
+          "id": "avaliacao-2025",
+          "heading": [
+            "Etapa 5 — avaliação final retrospectiva do modelo v1 em 2025"
+          ]
+        },
+        {
+          "id": "plano-avaliacao-2025",
+          "heading": [
+            "Avaliação final retrospectiva do v1 — plano anterior à abertura de 2025"
+          ]
+        },
+        {
+          "id": "protocolo-temporal",
+          "heading": [
+            "Protocolo temporal e divisão da avaliação — etapa 3"
+          ]
+        },
+        {
+          "id": "dicionario-variaveis",
+          "heading": [
+            "Dicionário das variáveis — etapa 3"
+          ]
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-documents-clicks",
+      "documents": [
+        {
+          "id": "fontes-atuais",
+          "heading": [
+            "Current sources and coverage"
+          ],
+          "return_persisted_after_reload": true
+        },
+        {
+          "id": "metodo-v1",
+          "heading": [
+            "Model v1 experiment — plan fixed before training"
+          ]
+        },
+        {
+          "id": "relatorio-2024",
+          "heading": [
+            "Stage 4 — v1 podium-probability model"
+          ],
+          "csv": {
+            "bytes": 86031,
+            "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+            "matched_original": true
+          }
+        },
+        {
+          "id": "avaliacao-2025",
+          "heading": [
+            "Stage 5 — retrospective final evaluation of v1 in 2025"
+          ]
+        },
+        {
+          "id": "plano-avaliacao-2025",
+          "heading": [
+            "Retrospective final evaluation of v1 — plan preceding access to 2025"
+          ]
+        },
+        {
+          "id": "protocolo-temporal",
+          "heading": [
+            "Temporal protocol and evaluation split — stage 3"
+          ]
+        },
+        {
+          "id": "dicionario-variaveis",
+          "heading": [
+            "Variable dictionary — stage 3"
+          ]
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-cards-dialog-return",
+      "cards": 3,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-unavailable-profile",
+      "requested_identity_retained": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-cards-dialog-return",
+      "cards": 3,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-language-perfil",
+      "preserved_query": true,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-unavailable-profile",
+      "requested_identity_retained": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-language-duelo",
+      "preserved_query": true,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=duelo&anos=2024&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez&rival=hamilton&duelo_condicao=track_hot",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-language-perfil",
+      "preserved_query": true,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=perfil&anos=2024&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez",
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-language-duelo",
+      "preserved_query": true,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Pilotos&visao=duelo&anos=2024&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1&piloto=perez&rival=hamilton&duelo_condicao=track_hot",
+      "status": "passed"
+    }
+  ],
+  "expectedVersion": "0.8.16"
+}

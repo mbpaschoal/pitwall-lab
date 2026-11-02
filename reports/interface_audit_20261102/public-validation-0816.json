@@ -1,0 +1,59 @@
+{
+  "utc": "2026-11-02T07:52:15.202968+00:00",
+  "status": "passed",
+  "version": "0.8.16",
+  "tag": "v0.8.16",
+  "commit": "2326477c25dac7601b3db7d160c012e9e685cc13",
+  "build": "cf5f36655486530283b3dcc800aad0dbe40ab6a4331170df1150fdf5b008415e",
+  "url": "https://pitwall-lab.streamlit.app/",
+  "checks": [
+    {
+      "receipt": "public0816-links/links-browser.json",
+      "cases": 100,
+      "status": "passed"
+    },
+    {
+      "receipt": "public0816-interactions/interactions.json",
+      "cases": 56,
+      "status": "passed"
+    },
+    {
+      "receipt": "public0816-webkit-interactions/interactions.json",
+      "cases": 56,
+      "status": "passed"
+    },
+    {
+      "receipt": "public0816-visual-chromium/acceptance.json",
+      "cases": 24,
+      "status": "passed"
+    },
+    {
+      "receipt": "public-critical.json",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "receipt": "public-motion-0816/browser.json",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "receipt": "public0816-rolagem-chromium/scroll-audit.json",
+      "samples": 120,
+      "stress": 14,
+      "status": "passed"
+    },
+    {
+      "receipt": "public0816-rolagem-webkit/scroll-audit.json",
+      "samples": 120,
+      "stress": 14,
+      "status": "passed"
+    }
+  ],
+  "interface_cases": 292,
+  "route_states": 100,
+  "functional_flows_per_engine": 56,
+  "external_urls": 119,
+  "release_zip_members_verified": 475,
+  "physical_iphone_tested": false
+}

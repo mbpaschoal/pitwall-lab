@@ -1,0 +1,2147 @@
+{
+  "schema": "pitwall-canonical-query-validation-v2",
+  "created_by": "MBPaschoal",
+  "created_at": "2026-11-02T07:38:54.754399+00:00",
+  "source": "/private/tmp/pitwall-interface-audit-20261102/distribuicao/pitwall-dashboard",
+  "inventory": {
+    "path": "reports/interface_audit_20261102/public0816-links/links-browser.json",
+    "bytes": 887514,
+    "sha256": "fbb8ca2beb863ebc21d96b47f732c15bcb0087bc2dd1b2c81f395e7905fe2e5b",
+    "engine": "chromium",
+    "base": "https://pitwall-lab.streamlit.app"
+  },
+  "scope": "Public Chromium 0.8.16: 100 fresh states, PT/EN, 390/1440; query allowlists checked against the canonical published package.",
+  "cases": 100,
+  "case_statuses": {
+    "passed": 100
+  },
+  "anchors": 3814,
+  "visible": 2936,
+  "hidden": 878,
+  "unique_raw_hrefs": 648,
+  "internal_instances": 1818,
+  "unique_internal_hrefs": 395,
+  "route_instances": {
+    "Corridas": 736,
+    "Pilotos": 412,
+    "Campeonato": 60,
+    "Previsões": 96,
+    "Desempenho": 28,
+    "Metodologia": 486
+  },
+  "route_unique_hrefs": {
+    "Metodologia": 39,
+    "Campeonato": 18,
+    "Corridas": 139,
+    "Desempenho": 14,
+    "Pilotos": 150,
+    "Previsões": 35
+  },
+  "invalid_queries": [],
+  "unknown_query_keys": [],
+  "canonical_profiles_without_conditions": [
+    {
+      "href": "?tela=Pilotos&visao=perfil&piloto=ryo_hirakawa&lang=en&anos=2026&temporada=2026&gp=19",
+      "field": "piloto",
+      "driver": "ryo_hirakawa",
+      "meaning": "canonical identity with no historical conditions profile; candidate shows explicit unavailability"
+    },
+    {
+      "href": "?tela=Pilotos&visao=perfil&piloto=ryo_hirakawa&lang=pt&anos=2026&temporada=2026&gp=19",
+      "field": "piloto",
+      "driver": "ryo_hirakawa",
+      "meaning": "canonical identity with no historical conditions profile; candidate shows explicit unavailability"
+    }
+  ],
+  "local_fragments": {
+    "instances": 1248,
+    "unique": 184,
+    "visible": 792,
+    "hidden": 456,
+    "broken": [],
+    "unchecked": []
+  },
+  "mastheads": {
+    "instances": 100,
+    "context_errors": []
+  },
+  "profile_links_without_race_context": {
+    "instances": 0,
+    "unique_hrefs": 0,
+    "hrefs": [],
+    "meaning": "standings_table profiles preserve canonical driver and year, but omit selected GP; valid destinations, residual context limitation"
+  },
+  "document_variants": [
+    {
+      "lang": "pt",
+      "id": "fontes-atuais",
+      "nonempty": true,
+      "bytes": 2639,
+      "downloads": []
+    },
+    {
+      "lang": "pt",
+      "id": "metodo-v1",
+      "nonempty": true,
+      "bytes": 11679,
+      "downloads": []
+    },
+    {
+      "lang": "pt",
+      "id": "relatorio-2024",
+      "nonempty": true,
+      "bytes": 3711,
+      "downloads": [
+        {
+          "name": "previsoes_validacao.csv",
+          "bytes": 86031,
+          "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "id": "avaliacao-2025",
+      "nonempty": true,
+      "bytes": 2251,
+      "downloads": []
+    },
+    {
+      "lang": "pt",
+      "id": "plano-avaliacao-2025",
+      "nonempty": true,
+      "bytes": 8971,
+      "downloads": []
+    },
+    {
+      "lang": "pt",
+      "id": "protocolo-temporal",
+      "nonempty": true,
+      "bytes": 9366,
+      "downloads": []
+    },
+    {
+      "lang": "pt",
+      "id": "dicionario-variaveis",
+      "nonempty": true,
+      "bytes": 9804,
+      "downloads": []
+    },
+    {
+      "lang": "en",
+      "id": "fontes-atuais",
+      "nonempty": true,
+      "bytes": 2459,
+      "downloads": []
+    },
+    {
+      "lang": "en",
+      "id": "metodo-v1",
+      "nonempty": true,
+      "bytes": 9984,
+      "downloads": []
+    },
+    {
+      "lang": "en",
+      "id": "relatorio-2024",
+      "nonempty": true,
+      "bytes": 3157,
+      "downloads": [
+        {
+          "name": "previsoes_validacao.csv",
+          "bytes": 86031,
+          "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "id": "avaliacao-2025",
+      "nonempty": true,
+      "bytes": 2248,
+      "downloads": []
+    },
+    {
+      "lang": "en",
+      "id": "plano-avaliacao-2025",
+      "nonempty": true,
+      "bytes": 7893,
+      "downloads": []
+    },
+    {
+      "lang": "en",
+      "id": "protocolo-temporal",
+      "nonempty": true,
+      "bytes": 7830,
+      "downloads": []
+    },
+    {
+      "lang": "en",
+      "id": "dicionario-variaveis",
+      "nonempty": true,
+      "bytes": 8211,
+      "downloads": []
+    }
+  ],
+  "browser_downloads": [
+    {
+      "case": "pt-390-relatorio-2024-2026-19",
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    },
+    {
+      "case": "en-390-relatorio-2024-2026-19",
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    },
+    {
+      "case": "en-1440-relatorio-2024-2026-19",
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    },
+    {
+      "case": "pt-1440-relatorio-2024-2026-19",
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    }
+  ],
+  "browser_exceptions": [],
+  "search_cases": [
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "Austin",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=pt"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "São Paulo",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=pt"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "Hamilton",
+      "results": [
+        {
+          "kind": "driver",
+          "label": "Lewis Hamilton",
+          "href": "?tela=Pilotos&piloto=hamilton&visao=perfil&lang=pt&temporada=2024&gp=1"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "Ferrari",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Imola · Emilia Romagna Grand Prix",
+          "value": "2024:7",
+          "href": "?tela=Corridas&temporada=2024&gp=7&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Imola · Emilia Romagna Grand Prix",
+          "value": "2025:7",
+          "href": "?tela=Corridas&temporada=2025&gp=7&lang=pt"
+        },
+        {
+          "kind": "team",
+          "label": "Ferrari",
+          "href": "?tela=Campeonato&lang=pt&temporada=2024&gp=1#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "McLaren",
+      "results": [
+        {
+          "kind": "team",
+          "label": "McLaren",
+          "href": "?tela=Campeonato&lang=pt&temporada=2024&gp=1#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "Audi",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=pt"
+        },
+        {
+          "kind": "team",
+          "label": "Audi · 2026",
+          "href": "?tela=Campeonato&lang=pt&temporada=2026&gp=18#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "Sauber",
+      "results": [
+        {
+          "kind": "team",
+          "label": "Sauber",
+          "href": "?tela=Campeonato&lang=pt&temporada=2024&gp=1#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "au",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Melbourne · Australian Grand Prix",
+          "value": "2024:3",
+          "href": "?tela=Corridas&temporada=2024&gp=3&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Miami · Miami Grand Prix",
+          "value": "2024:6",
+          "href": "?tela=Corridas&temporada=2024&gp=6&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Imola · Emilia Romagna Grand Prix",
+          "value": "2024:7",
+          "href": "?tela=Corridas&temporada=2024&gp=7&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Spielberg · Austrian Grand Prix",
+          "value": "2024:11",
+          "href": "?tela=Corridas&temporada=2024&gp=11&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Monza · Italian Grand Prix",
+          "value": "2024:16",
+          "href": "?tela=Corridas&temporada=2024&gp=16&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Mexico City · Mexico City Grand Prix",
+          "value": "2024:20",
+          "href": "?tela=Corridas&temporada=2024&gp=20&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Melbourne · Australian Grand Prix",
+          "value": "2025:1",
+          "href": "?tela=Corridas&temporada=2025&gp=1&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Miami · Miami Grand Prix",
+          "value": "2025:6",
+          "href": "?tela=Corridas&temporada=2025&gp=6&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Imola · Emilia Romagna Grand Prix",
+          "value": "2025:7",
+          "href": "?tela=Corridas&temporada=2025&gp=7&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Spielberg · Austrian Grand Prix",
+          "value": "2025:11",
+          "href": "?tela=Corridas&temporada=2025&gp=11&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Monza · Italian Grand Prix",
+          "value": "2025:16",
+          "href": "?tela=Corridas&temporada=2025&gp=16&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Mexico City · Mexico City Grand Prix",
+          "value": "2025:20",
+          "href": "?tela=Corridas&temporada=2025&gp=20&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Melbourne · Australian Grand Prix",
+          "value": "2026:1",
+          "href": "?tela=Corridas&temporada=2026&gp=1&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Miami · Miami Grand Prix",
+          "value": "2026:4",
+          "href": "?tela=Corridas&temporada=2026&gp=4&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Spielberg · Austrian Grand Prix",
+          "value": "2026:8",
+          "href": "?tela=Corridas&temporada=2026&gp=8&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Monza · Italian Grand Prix",
+          "value": "2026:13",
+          "href": "?tela=Corridas&temporada=2026&gp=13&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Mexico City · Mexico City Grand Prix",
+          "value": "2026:19",
+          "href": "?tela=Corridas&temporada=2026&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=pt"
+        },
+        {
+          "kind": "team",
+          "label": "Audi · 2026",
+          "href": "?tela=Campeonato&lang=pt&temporada=2026&gp=18#equipes-completo"
+        },
+        {
+          "kind": "team",
+          "label": "Sauber",
+          "href": "?tela=Campeonato&lang=pt&temporada=2024&gp=1#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "sa",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Sakhir · Bahrain Grand Prix",
+          "value": "2024:1",
+          "href": "?tela=Corridas&temporada=2024&gp=1&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Miami · Miami Grand Prix",
+          "value": "2024:6",
+          "href": "?tela=Corridas&temporada=2024&gp=6&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2024:22",
+          "href": "?tela=Corridas&temporada=2024&gp=22&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Lusail · Qatar Grand Prix",
+          "value": "2024:23",
+          "href": "?tela=Corridas&temporada=2024&gp=23&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Sakhir · Bahrain Grand Prix",
+          "value": "2025:4",
+          "href": "?tela=Corridas&temporada=2025&gp=4&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Miami · Miami Grand Prix",
+          "value": "2025:6",
+          "href": "?tela=Corridas&temporada=2025&gp=6&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2025:22",
+          "href": "?tela=Corridas&temporada=2025&gp=22&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Lusail · Qatar Grand Prix",
+          "value": "2025:23",
+          "href": "?tela=Corridas&temporada=2025&gp=23&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Miami · Miami Grand Prix",
+          "value": "2026:4",
+          "href": "?tela=Corridas&temporada=2026&gp=4&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2026:21",
+          "href": "?tela=Corridas&temporada=2026&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Lusail · Qatar Grand Prix",
+          "value": "2026:22",
+          "href": "?tela=Corridas&temporada=2026&gp=22&lang=pt"
+        },
+        {
+          "kind": "driver",
+          "label": "Carlos Sainz",
+          "href": "?tela=Pilotos&piloto=sainz&visao=perfil&lang=pt&temporada=2024&gp=1"
+        },
+        {
+          "kind": "driver",
+          "label": "Isack Hadjar",
+          "href": "?tela=Pilotos&piloto=hadjar&visao=perfil&lang=pt&temporada=2024&gp=1"
+        },
+        {
+          "kind": "driver",
+          "label": "Logan Sargeant",
+          "href": "?tela=Pilotos&piloto=sargeant&visao=perfil&lang=pt&temporada=2024&gp=1"
+        },
+        {
+          "kind": "team",
+          "label": "Sauber",
+          "href": "?tela=Campeonato&lang=pt&temporada=2024&gp=1#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "Hirakawa",
+      "results": [
+        {
+          "kind": "driver",
+          "label": "Ryo Hirakawa",
+          "href": "?tela=Pilotos&piloto=ryo_hirakawa&visao=perfil&lang=pt&temporada=2024&gp=1"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2024,
+      "gp": 1,
+      "query": "xxunmatchxx",
+      "results": []
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "Austin",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=pt"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "São Paulo",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=pt"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "Hamilton",
+      "results": [
+        {
+          "kind": "driver",
+          "label": "Lewis Hamilton",
+          "href": "?tela=Pilotos&piloto=hamilton&visao=perfil&lang=pt&temporada=2026&gp=19"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "Ferrari",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Imola · Emilia Romagna Grand Prix",
+          "value": "2024:7",
+          "href": "?tela=Corridas&temporada=2024&gp=7&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Imola · Emilia Romagna Grand Prix",
+          "value": "2025:7",
+          "href": "?tela=Corridas&temporada=2025&gp=7&lang=pt"
+        },
+        {
+          "kind": "team",
+          "label": "Ferrari",
+          "href": "?tela=Campeonato&lang=pt&temporada=2026&gp=19#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "McLaren",
+      "results": [
+        {
+          "kind": "team",
+          "label": "McLaren",
+          "href": "?tela=Campeonato&lang=pt&temporada=2026&gp=19#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "Audi",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=pt"
+        },
+        {
+          "kind": "team",
+          "label": "Audi",
+          "href": "?tela=Campeonato&lang=pt&temporada=2026&gp=19#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "Sauber",
+      "results": [
+        {
+          "kind": "team",
+          "label": "Sauber · 2025",
+          "href": "?tela=Campeonato&lang=pt&temporada=2025&gp=24#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "au",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Melbourne · Australian Grand Prix",
+          "value": "2024:3",
+          "href": "?tela=Corridas&temporada=2024&gp=3&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Miami · Miami Grand Prix",
+          "value": "2024:6",
+          "href": "?tela=Corridas&temporada=2024&gp=6&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Imola · Emilia Romagna Grand Prix",
+          "value": "2024:7",
+          "href": "?tela=Corridas&temporada=2024&gp=7&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Spielberg · Austrian Grand Prix",
+          "value": "2024:11",
+          "href": "?tela=Corridas&temporada=2024&gp=11&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Monza · Italian Grand Prix",
+          "value": "2024:16",
+          "href": "?tela=Corridas&temporada=2024&gp=16&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Mexico City · Mexico City Grand Prix",
+          "value": "2024:20",
+          "href": "?tela=Corridas&temporada=2024&gp=20&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Melbourne · Australian Grand Prix",
+          "value": "2025:1",
+          "href": "?tela=Corridas&temporada=2025&gp=1&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Miami · Miami Grand Prix",
+          "value": "2025:6",
+          "href": "?tela=Corridas&temporada=2025&gp=6&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Imola · Emilia Romagna Grand Prix",
+          "value": "2025:7",
+          "href": "?tela=Corridas&temporada=2025&gp=7&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Spielberg · Austrian Grand Prix",
+          "value": "2025:11",
+          "href": "?tela=Corridas&temporada=2025&gp=11&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Monza · Italian Grand Prix",
+          "value": "2025:16",
+          "href": "?tela=Corridas&temporada=2025&gp=16&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Mexico City · Mexico City Grand Prix",
+          "value": "2025:20",
+          "href": "?tela=Corridas&temporada=2025&gp=20&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Melbourne · Australian Grand Prix",
+          "value": "2026:1",
+          "href": "?tela=Corridas&temporada=2026&gp=1&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Miami · Miami Grand Prix",
+          "value": "2026:4",
+          "href": "?tela=Corridas&temporada=2026&gp=4&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Spielberg · Austrian Grand Prix",
+          "value": "2026:8",
+          "href": "?tela=Corridas&temporada=2026&gp=8&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Monza · Italian Grand Prix",
+          "value": "2026:13",
+          "href": "?tela=Corridas&temporada=2026&gp=13&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Mexico City · Mexico City Grand Prix",
+          "value": "2026:19",
+          "href": "?tela=Corridas&temporada=2026&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=pt"
+        },
+        {
+          "kind": "team",
+          "label": "Audi",
+          "href": "?tela=Campeonato&lang=pt&temporada=2026&gp=19#equipes-completo"
+        },
+        {
+          "kind": "team",
+          "label": "Sauber · 2025",
+          "href": "?tela=Campeonato&lang=pt&temporada=2025&gp=24#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "sa",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Sakhir · Bahrain Grand Prix",
+          "value": "2024:1",
+          "href": "?tela=Corridas&temporada=2024&gp=1&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Miami · Miami Grand Prix",
+          "value": "2024:6",
+          "href": "?tela=Corridas&temporada=2024&gp=6&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2024:22",
+          "href": "?tela=Corridas&temporada=2024&gp=22&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Lusail · Qatar Grand Prix",
+          "value": "2024:23",
+          "href": "?tela=Corridas&temporada=2024&gp=23&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Sakhir · Bahrain Grand Prix",
+          "value": "2025:4",
+          "href": "?tela=Corridas&temporada=2025&gp=4&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Miami · Miami Grand Prix",
+          "value": "2025:6",
+          "href": "?tela=Corridas&temporada=2025&gp=6&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2025:22",
+          "href": "?tela=Corridas&temporada=2025&gp=22&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Lusail · Qatar Grand Prix",
+          "value": "2025:23",
+          "href": "?tela=Corridas&temporada=2025&gp=23&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Miami · Miami Grand Prix",
+          "value": "2026:4",
+          "href": "?tela=Corridas&temporada=2026&gp=4&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2026:21",
+          "href": "?tela=Corridas&temporada=2026&gp=21&lang=pt"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Lusail · Qatar Grand Prix",
+          "value": "2026:22",
+          "href": "?tela=Corridas&temporada=2026&gp=22&lang=pt"
+        },
+        {
+          "kind": "driver",
+          "label": "Carlos Sainz",
+          "href": "?tela=Pilotos&piloto=sainz&visao=perfil&lang=pt&temporada=2026&gp=19"
+        },
+        {
+          "kind": "driver",
+          "label": "Isack Hadjar",
+          "href": "?tela=Pilotos&piloto=hadjar&visao=perfil&lang=pt&temporada=2026&gp=19"
+        },
+        {
+          "kind": "driver",
+          "label": "Logan Sargeant",
+          "href": "?tela=Pilotos&piloto=sargeant&visao=perfil&lang=pt&temporada=2026&gp=19"
+        },
+        {
+          "kind": "team",
+          "label": "Sauber · 2025",
+          "href": "?tela=Campeonato&lang=pt&temporada=2025&gp=24#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "Hirakawa",
+      "results": [
+        {
+          "kind": "driver",
+          "label": "Ryo Hirakawa",
+          "href": "?tela=Pilotos&piloto=ryo_hirakawa&visao=perfil&lang=pt&temporada=2026&gp=19"
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "year": 2026,
+      "gp": 19,
+      "query": "xxunmatchxx",
+      "results": []
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "Austin",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=en"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "São Paulo",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=en"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "Hamilton",
+      "results": [
+        {
+          "kind": "driver",
+          "label": "Lewis Hamilton",
+          "href": "?tela=Pilotos&piloto=hamilton&visao=perfil&lang=en&temporada=2024&gp=1"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "Ferrari",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Imola · Emilia Romagna Grand Prix",
+          "value": "2024:7",
+          "href": "?tela=Corridas&temporada=2024&gp=7&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Imola · Emilia Romagna Grand Prix",
+          "value": "2025:7",
+          "href": "?tela=Corridas&temporada=2025&gp=7&lang=en"
+        },
+        {
+          "kind": "team",
+          "label": "Ferrari",
+          "href": "?tela=Campeonato&lang=en&temporada=2024&gp=1#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "McLaren",
+      "results": [
+        {
+          "kind": "team",
+          "label": "McLaren",
+          "href": "?tela=Campeonato&lang=en&temporada=2024&gp=1#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "Audi",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=en"
+        },
+        {
+          "kind": "team",
+          "label": "Audi · 2026",
+          "href": "?tela=Campeonato&lang=en&temporada=2026&gp=18#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "Sauber",
+      "results": [
+        {
+          "kind": "team",
+          "label": "Sauber",
+          "href": "?tela=Campeonato&lang=en&temporada=2024&gp=1#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "au",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Melbourne · Australian Grand Prix",
+          "value": "2024:3",
+          "href": "?tela=Corridas&temporada=2024&gp=3&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Miami · Miami Grand Prix",
+          "value": "2024:6",
+          "href": "?tela=Corridas&temporada=2024&gp=6&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Imola · Emilia Romagna Grand Prix",
+          "value": "2024:7",
+          "href": "?tela=Corridas&temporada=2024&gp=7&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Spielberg · Austrian Grand Prix",
+          "value": "2024:11",
+          "href": "?tela=Corridas&temporada=2024&gp=11&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Monza · Italian Grand Prix",
+          "value": "2024:16",
+          "href": "?tela=Corridas&temporada=2024&gp=16&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Mexico City · Mexico City Grand Prix",
+          "value": "2024:20",
+          "href": "?tela=Corridas&temporada=2024&gp=20&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Melbourne · Australian Grand Prix",
+          "value": "2025:1",
+          "href": "?tela=Corridas&temporada=2025&gp=1&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Miami · Miami Grand Prix",
+          "value": "2025:6",
+          "href": "?tela=Corridas&temporada=2025&gp=6&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Imola · Emilia Romagna Grand Prix",
+          "value": "2025:7",
+          "href": "?tela=Corridas&temporada=2025&gp=7&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Spielberg · Austrian Grand Prix",
+          "value": "2025:11",
+          "href": "?tela=Corridas&temporada=2025&gp=11&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Monza · Italian Grand Prix",
+          "value": "2025:16",
+          "href": "?tela=Corridas&temporada=2025&gp=16&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Mexico City · Mexico City Grand Prix",
+          "value": "2025:20",
+          "href": "?tela=Corridas&temporada=2025&gp=20&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Melbourne · Australian Grand Prix",
+          "value": "2026:1",
+          "href": "?tela=Corridas&temporada=2026&gp=1&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Miami · Miami Grand Prix",
+          "value": "2026:4",
+          "href": "?tela=Corridas&temporada=2026&gp=4&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Spielberg · Austrian Grand Prix",
+          "value": "2026:8",
+          "href": "?tela=Corridas&temporada=2026&gp=8&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Monza · Italian Grand Prix",
+          "value": "2026:13",
+          "href": "?tela=Corridas&temporada=2026&gp=13&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Mexico City · Mexico City Grand Prix",
+          "value": "2026:19",
+          "href": "?tela=Corridas&temporada=2026&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=en"
+        },
+        {
+          "kind": "team",
+          "label": "Audi · 2026",
+          "href": "?tela=Campeonato&lang=en&temporada=2026&gp=18#equipes-completo"
+        },
+        {
+          "kind": "team",
+          "label": "Sauber",
+          "href": "?tela=Campeonato&lang=en&temporada=2024&gp=1#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "sa",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Sakhir · Bahrain Grand Prix",
+          "value": "2024:1",
+          "href": "?tela=Corridas&temporada=2024&gp=1&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Miami · Miami Grand Prix",
+          "value": "2024:6",
+          "href": "?tela=Corridas&temporada=2024&gp=6&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2024:22",
+          "href": "?tela=Corridas&temporada=2024&gp=22&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Lusail · Qatar Grand Prix",
+          "value": "2024:23",
+          "href": "?tela=Corridas&temporada=2024&gp=23&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Sakhir · Bahrain Grand Prix",
+          "value": "2025:4",
+          "href": "?tela=Corridas&temporada=2025&gp=4&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Miami · Miami Grand Prix",
+          "value": "2025:6",
+          "href": "?tela=Corridas&temporada=2025&gp=6&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2025:22",
+          "href": "?tela=Corridas&temporada=2025&gp=22&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Lusail · Qatar Grand Prix",
+          "value": "2025:23",
+          "href": "?tela=Corridas&temporada=2025&gp=23&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Miami · Miami Grand Prix",
+          "value": "2026:4",
+          "href": "?tela=Corridas&temporada=2026&gp=4&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2026:21",
+          "href": "?tela=Corridas&temporada=2026&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Lusail · Qatar Grand Prix",
+          "value": "2026:22",
+          "href": "?tela=Corridas&temporada=2026&gp=22&lang=en"
+        },
+        {
+          "kind": "driver",
+          "label": "Carlos Sainz",
+          "href": "?tela=Pilotos&piloto=sainz&visao=perfil&lang=en&temporada=2024&gp=1"
+        },
+        {
+          "kind": "driver",
+          "label": "Isack Hadjar",
+          "href": "?tela=Pilotos&piloto=hadjar&visao=perfil&lang=en&temporada=2024&gp=1"
+        },
+        {
+          "kind": "driver",
+          "label": "Logan Sargeant",
+          "href": "?tela=Pilotos&piloto=sargeant&visao=perfil&lang=en&temporada=2024&gp=1"
+        },
+        {
+          "kind": "team",
+          "label": "Sauber",
+          "href": "?tela=Campeonato&lang=en&temporada=2024&gp=1#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "Hirakawa",
+      "results": [
+        {
+          "kind": "driver",
+          "label": "Ryo Hirakawa",
+          "href": "?tela=Pilotos&piloto=ryo_hirakawa&visao=perfil&lang=en&temporada=2024&gp=1"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2024,
+      "gp": 1,
+      "query": "xxunmatchxx",
+      "results": []
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "Austin",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=en"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "São Paulo",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=en"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "Hamilton",
+      "results": [
+        {
+          "kind": "driver",
+          "label": "Lewis Hamilton",
+          "href": "?tela=Pilotos&piloto=hamilton&visao=perfil&lang=en&temporada=2026&gp=19"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "Ferrari",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Imola · Emilia Romagna Grand Prix",
+          "value": "2024:7",
+          "href": "?tela=Corridas&temporada=2024&gp=7&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Imola · Emilia Romagna Grand Prix",
+          "value": "2025:7",
+          "href": "?tela=Corridas&temporada=2025&gp=7&lang=en"
+        },
+        {
+          "kind": "team",
+          "label": "Ferrari",
+          "href": "?tela=Campeonato&lang=en&temporada=2026&gp=19#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "McLaren",
+      "results": [
+        {
+          "kind": "team",
+          "label": "McLaren",
+          "href": "?tela=Campeonato&lang=en&temporada=2026&gp=19#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "Audi",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=en"
+        },
+        {
+          "kind": "team",
+          "label": "Audi",
+          "href": "?tela=Campeonato&lang=en&temporada=2026&gp=19#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "Sauber",
+      "results": [
+        {
+          "kind": "team",
+          "label": "Sauber · 2025",
+          "href": "?tela=Campeonato&lang=en&temporada=2025&gp=24#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "au",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Melbourne · Australian Grand Prix",
+          "value": "2024:3",
+          "href": "?tela=Corridas&temporada=2024&gp=3&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Miami · Miami Grand Prix",
+          "value": "2024:6",
+          "href": "?tela=Corridas&temporada=2024&gp=6&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Imola · Emilia Romagna Grand Prix",
+          "value": "2024:7",
+          "href": "?tela=Corridas&temporada=2024&gp=7&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Spielberg · Austrian Grand Prix",
+          "value": "2024:11",
+          "href": "?tela=Corridas&temporada=2024&gp=11&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Monza · Italian Grand Prix",
+          "value": "2024:16",
+          "href": "?tela=Corridas&temporada=2024&gp=16&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Mexico City · Mexico City Grand Prix",
+          "value": "2024:20",
+          "href": "?tela=Corridas&temporada=2024&gp=20&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Melbourne · Australian Grand Prix",
+          "value": "2025:1",
+          "href": "?tela=Corridas&temporada=2025&gp=1&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Miami · Miami Grand Prix",
+          "value": "2025:6",
+          "href": "?tela=Corridas&temporada=2025&gp=6&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Imola · Emilia Romagna Grand Prix",
+          "value": "2025:7",
+          "href": "?tela=Corridas&temporada=2025&gp=7&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Spielberg · Austrian Grand Prix",
+          "value": "2025:11",
+          "href": "?tela=Corridas&temporada=2025&gp=11&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Monza · Italian Grand Prix",
+          "value": "2025:16",
+          "href": "?tela=Corridas&temporada=2025&gp=16&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Mexico City · Mexico City Grand Prix",
+          "value": "2025:20",
+          "href": "?tela=Corridas&temporada=2025&gp=20&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Melbourne · Australian Grand Prix",
+          "value": "2026:1",
+          "href": "?tela=Corridas&temporada=2026&gp=1&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Miami · Miami Grand Prix",
+          "value": "2026:4",
+          "href": "?tela=Corridas&temporada=2026&gp=4&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Spielberg · Austrian Grand Prix",
+          "value": "2026:8",
+          "href": "?tela=Corridas&temporada=2026&gp=8&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Monza · Italian Grand Prix",
+          "value": "2026:13",
+          "href": "?tela=Corridas&temporada=2026&gp=13&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Mexico City · Mexico City Grand Prix",
+          "value": "2026:19",
+          "href": "?tela=Corridas&temporada=2026&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=en"
+        },
+        {
+          "kind": "team",
+          "label": "Audi",
+          "href": "?tela=Campeonato&lang=en&temporada=2026&gp=19#equipes-completo"
+        },
+        {
+          "kind": "team",
+          "label": "Sauber · 2025",
+          "href": "?tela=Campeonato&lang=en&temporada=2025&gp=24#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "sa",
+      "results": [
+        {
+          "kind": "gp",
+          "label": "2024 · Sakhir · Bahrain Grand Prix",
+          "value": "2024:1",
+          "href": "?tela=Corridas&temporada=2024&gp=1&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2024:2",
+          "href": "?tela=Corridas&temporada=2024&gp=2&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Miami · Miami Grand Prix",
+          "value": "2024:6",
+          "href": "?tela=Corridas&temporada=2024&gp=6&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Austin · United States Grand Prix",
+          "value": "2024:19",
+          "href": "?tela=Corridas&temporada=2024&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · São Paulo · São Paulo Grand Prix",
+          "value": "2024:21",
+          "href": "?tela=Corridas&temporada=2024&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2024:22",
+          "href": "?tela=Corridas&temporada=2024&gp=22&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2024 · Lusail · Qatar Grand Prix",
+          "value": "2024:23",
+          "href": "?tela=Corridas&temporada=2024&gp=23&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Sakhir · Bahrain Grand Prix",
+          "value": "2025:4",
+          "href": "?tela=Corridas&temporada=2025&gp=4&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Jeddah · Saudi Arabian Grand Prix",
+          "value": "2025:5",
+          "href": "?tela=Corridas&temporada=2025&gp=5&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Miami · Miami Grand Prix",
+          "value": "2025:6",
+          "href": "?tela=Corridas&temporada=2025&gp=6&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Austin · United States Grand Prix",
+          "value": "2025:19",
+          "href": "?tela=Corridas&temporada=2025&gp=19&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · São Paulo · São Paulo Grand Prix",
+          "value": "2025:21",
+          "href": "?tela=Corridas&temporada=2025&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2025:22",
+          "href": "?tela=Corridas&temporada=2025&gp=22&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2025 · Lusail · Qatar Grand Prix",
+          "value": "2025:23",
+          "href": "?tela=Corridas&temporada=2025&gp=23&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Miami · Miami Grand Prix",
+          "value": "2026:4",
+          "href": "?tela=Corridas&temporada=2026&gp=4&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Austin · United States Grand Prix",
+          "value": "2026:18",
+          "href": "?tela=Corridas&temporada=2026&gp=18&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · São Paulo · Brazilian Grand Prix",
+          "value": "2026:20",
+          "href": "?tela=Corridas&temporada=2026&gp=20&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Las Vegas · Las Vegas Grand Prix",
+          "value": "2026:21",
+          "href": "?tela=Corridas&temporada=2026&gp=21&lang=en"
+        },
+        {
+          "kind": "gp",
+          "label": "2026 · Lusail · Qatar Grand Prix",
+          "value": "2026:22",
+          "href": "?tela=Corridas&temporada=2026&gp=22&lang=en"
+        },
+        {
+          "kind": "driver",
+          "label": "Carlos Sainz",
+          "href": "?tela=Pilotos&piloto=sainz&visao=perfil&lang=en&temporada=2026&gp=19"
+        },
+        {
+          "kind": "driver",
+          "label": "Isack Hadjar",
+          "href": "?tela=Pilotos&piloto=hadjar&visao=perfil&lang=en&temporada=2026&gp=19"
+        },
+        {
+          "kind": "driver",
+          "label": "Logan Sargeant",
+          "href": "?tela=Pilotos&piloto=sargeant&visao=perfil&lang=en&temporada=2026&gp=19"
+        },
+        {
+          "kind": "team",
+          "label": "Sauber · 2025",
+          "href": "?tela=Campeonato&lang=en&temporada=2025&gp=24#equipes-completo"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "Hirakawa",
+      "results": [
+        {
+          "kind": "driver",
+          "label": "Ryo Hirakawa",
+          "href": "?tela=Pilotos&piloto=ryo_hirakawa&visao=perfil&lang=en&temporada=2026&gp=19"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "year": 2026,
+      "gp": 19,
+      "query": "xxunmatchxx",
+      "results": []
+    }
+  ],
+  "external": {
+    "unique_raw_hrefs": 69,
+    "unique_without_fragment": 65,
+    "previous_check_file": "reports/interface_audit_20261102/external-links.json",
+    "previous_reachable": 40,
+    "reused_previous_urls": 40,
+    "new_urls_for_http_validation": [
+      "https://circuitoftheamericas.com/blog/2014/10/25/austin-circuit-of-the-americas-get-high-praise-from-formula-one-drivers-teams/",
+      "https://commons.wikimedia.org/wiki/File:2014_Interlagos_circuit_map.svg",
+      "https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_COTA.svg",
+      "https://commons.wikimedia.org/wiki/File:Bahrain_International_Circuit--Grand_Prix_Layout_with_DRS.svg",
+      "https://commons.wikimedia.org/wiki/File:Circuit_of_the_Americas,_Austin,_TX_(30066328424).jpg",
+      "https://commons.wikimedia.org/wiki/File:F%C3%B3rmula_1_Heineken_Grande_Pr%C3%AAmio_de_S%C3%A3o_Paulo_2022_(52498140708).jpg",
+      "https://commons.wikimedia.org/wiki/File:Marina_Bay_circuit_2023.svg",
+      "https://commons.wikimedia.org/wiki/File:Singapore_(SG),_Marina_Bay_Street_Circuit,_F1_Pit_Building_--_2019_--_4478.jpg",
+      "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/bahrain-grand-prix/event-notes-circuit-map-and-red-zone.pdf",
+      "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/s%C3%A3o-paulo-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/singapore-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/united-states-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/bahrain-grand-prix/event-notes-circuit-map-v4.pdf",
+      "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/s%C3%A3o-paulo-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-and-red-zones-map.pdf",
+      "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/singapore-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-map-and-quarantine-zone.pdf",
+      "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/united-states-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-map-red-zones-map.pdf",
+      "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/singapore-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+      "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/united-states-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+      "https://www.fia.com/system/files/decision-document/2025_united_states_grand_prix_-_event_notes_-_circuit_map_pit_lane_drawing_emergency_exits_map_quarantine_zone_map_red_zones_map.pdf",
+      "https://www.formula1.com/en/latest/article/piastri-storms-to-controlled-victory-in-bahrain-grand-prix-ahead-of-russell.47YQh0Ex2gkZcx58fRaRqJ",
+      "https://www.formula1.com/en/racing/2025/bahrain/circuit",
+      "https://www.formula1.com/en/racing/2025/brazil/circuit",
+      "https://www.formula1.com/en/racing/2025/singapore/circuit",
+      "https://www.formula1.com/en/racing/2025/united-states/circuit",
+      "https://www.formula1.com/en/racing/2026/united-states"
+    ],
+    "final_http_receipt": "external-links-final-119.json",
+    "all_public_dom_urls_in_verified_receipt": true
+  },
+  "limitations": [
+    "Hidden links in inactive race tabs remain in the DOM; all inventoried local fragment targets exist and hidden status is not a broken-link finding.",
+    "Dataframe/canvas links, iframe favorites, popover state and share text inputs are outside this DOM-anchor inventory and require the parent's interactive checks.",
+    "The inventory is the public Chromium 0.8.16 snapshot. Separate 56-case Chromium and WebKit interaction receipts verify iframe controls, downloads and outer-route persistence.",
+    "External HTTP 200/206 establishes reachability, not full PDF content, page correctness, copyright status or permanence.",
+    "Search year shadowing was detected in the candidate during this audit and fixed by the root before this report's pure-search rerun."
+  ],
+  "status": "verified_publicly"
+}

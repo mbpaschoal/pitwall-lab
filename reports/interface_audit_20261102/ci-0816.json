@@ -1,0 +1,54 @@
+{
+  "utc": "2026-11-02 07:50:30 UTC",
+  "version": "0.8.16",
+  "runs": [
+    {
+      "run_id": 41405762884,
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41405762884",
+      "jobs": [
+        {
+          "id": 125147288029,
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125147288243,
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125155794984,
+          "name": "release",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 41405762679,
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41405762679",
+      "jobs": [
+        {
+          "id": 125147287381,
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125147287675,
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125154718183,
+          "name": "release",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    }
+  ]
+}
