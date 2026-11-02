@@ -21,7 +21,15 @@ O composto das voltas 1–8 de Lawson no TL3 e a leitura verdadeira do asfalto r
 
 ## São Paulo
 
-[Configuração explícita](../../operacao2026/eventos/saopaulo2026.json): 2026/20/interlagos, meeting 1299, sessões 11405/11406/11407/11408/11412. Datas/horários conferidos entre calendário canônico local, catálogo OpenF1 e [programação oficial F1](https://www.formula1.com/en/racing/2026/brazil). O [registro de preparação](<../../projects/Pitwall Lab - Preparacao Sao Paulo 2026.md>) contém horários locais e requisitos da próxima emissão.
+[Configuração explícita](../../operacao2026/eventos/saopaulo2026.json): 2026/20/interlagos, meeting 1299, sessões 11405/11406/11407/11408/11412. Datas/horários conferidos entre calendário canônico local, catálogo OpenF1 e [programação oficial F1](https://www.formula1.com/en/racing/2026/brazil).
+
+| Sessão | Horário local (UTC−3) | UTC |
+|---|---|---|
+| TL1 | 06/11, 12h30 | 15h30 |
+| TL2 | 06/11, 16h | 19h |
+| TL3 | 07/11, 11h30 | 14h30 |
+| Classificação | 07/11, 15h | 18h |
+| Corrida | 08/11, 14h | 17h |
 
 A coleta permanece serial, limitada e condicionada à janela do evento; nenhuma sessão futura é tratada como encerrada. A previsão de São Paulo depende da classificação principal e da conferência do histórico final do México. A revisão descritiva não é admissão automática de features.
 
