@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.8.15 — 2026-11-02
+
+- Corrige o pódio sobre o aviso de coleta, retratos sobre estatísticas e créditos de foto sobre links. Blocos e controles de Pilotos reservam espaço no fluxo da página; a área rolável termina acima do menu fixo, inclusive ao mudar a altura da janela.
+- Cabeçalho e seletores passam a refluir com texto ampliado. Links, busca e troca de idioma conservam temporada, GP, perfil e filtros; um piloto sem acervo histórico recebe uma mensagem explícita, sem substituição por outro piloto.
+- Amplia o aceite para posições intermediárias de rolagem, alvos realmente clicáveis, PT/EN, computador/celular e reflow de texto. Os testes anteriores não cobriam as colisões reveladas pela captura do usuário. Chromium/WebKit emulados não substituem teste físico de iPhone. Ciência, emissões e identidade visual preservadas.
+
 ## 0.8.14 — 2026-11-02
 
 Atualização automática de dados de Mexico City Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 4/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.

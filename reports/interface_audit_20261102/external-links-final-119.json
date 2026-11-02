@@ -1,0 +1,1047 @@
+{
+  "method": "public GET; Range bytes=0-2047; response body read at most 2048 bytes",
+  "count": 119,
+  "scope": {
+    "dom_inventory_unique": 65,
+    "historical_canvas_source_urls": 66,
+    "canvas_additional_unique": 54,
+    "canvas_already_in_dom": 12
+  },
+  "statuses": {
+    "206": 86,
+    "200": 33
+  },
+  "results": [
+    {
+      "url": "https://circuitoftheamericas.com/blog/2014/10/25/austin-circuit-of-the-americas-get-high-praise-from-formula-one-drivers-teams/",
+      "status": 206,
+      "final_url": "https://circuitoftheamericas.com/blog/2014/10/25/austin-circuit-of-the-americas-get-high-praise-from-formula-one-drivers-teams/",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 1.63
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:2014_Interlagos_circuit_map.svg",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:2014_Interlagos_circuit_map.svg",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.75
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_COTA.svg",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_COTA.svg",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.55
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:2022_Miami_GP_-_Red_Bull_RB18_of_Sergio_P%C3%A9rez.jpg",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:2022_Miami_GP_-_Red_Bull_RB18_of_Sergio_P%C3%A9rez.jpg",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "seconds": 0.83
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:2024_British_Grand_Prix,_Piastri_(1).jpg",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:2024_British_Grand_Prix,_Piastri_(1).jpg",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "seconds": 0.76
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:2024_British_Grand_Prix,_Verstappen_(2).jpg",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:2024_British_Grand_Prix,_Verstappen_(2).jpg",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "seconds": 0.62
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Autodromo_Hermanos_Rodriguez_(National_Circuit_with_Foro_Sol).png",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Autodromo_Hermanos_Rodriguez_(National_Circuit_with_Foro_Sol).png",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "seconds": 0.48
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Bahrain_International_Circuit--Grand_Prix_Layout_with_DRS.svg",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Bahrain_International_Circuit--Grand_Prix_Layout_with_DRS.svg",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.66
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Circuit_of_the_Americas,_Austin,_TX_(30066328424).jpg",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Circuit_of_the_Americas,_Austin,_TX_(30066328424).jpg",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.71
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:F%C3%B3rmula_1_Heineken_Grande_Pr%C3%AAmio_de_S%C3%A3o_Paulo_2022_(52498140708).jpg",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:F%C3%B3rmula_1_Heineken_Grande_Pr%C3%AAmio_de_S%C3%A3o_Paulo_2022_(52498140708).jpg",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.85
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Marina_Bay_circuit_2023.svg",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Marina_Bay_circuit_2023.svg",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.69
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Singapore_(SG),_Marina_Bay_Street_Circuit,_F1_Pit_Building_--_2019_--_4478.jpg",
+      "status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Singapore_(SG),_Marina_Bay_Street_Circuit,_F1_Pit_Building_--_2019_--_4478.jpg",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.68
+    },
+    {
+      "url": "https://github.com/TracingInsights/DDocs/tree/9f647f7c62a838405c85219e5eb2feb5c3575027",
+      "status": 206,
+      "final_url": "https://github.com/TracingInsights/DDocs/tree/9f647f7c62a838405c85219e5eb2feb5c3575027",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.86
+    },
+    {
+      "url": "https://github.com/jolpica/jolpica-f1",
+      "status": 206,
+      "final_url": "https://github.com/jolpica/jolpica-f1",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.5
+    },
+    {
+      "url": "https://github.com/jolpica/jolpica-f1/blob/main/TERMS.md",
+      "status": 206,
+      "final_url": "https://github.com/jolpica/jolpica-f1/blob/main/TERMS.md",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.48
+    },
+    {
+      "url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/README.md",
+      "status": 206,
+      "final_url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/README.md",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.44
+    },
+    {
+      "url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/endpoints/qualifying.md",
+      "status": 206,
+      "final_url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/endpoints/qualifying.md",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.48
+    },
+    {
+      "url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/endpoints/races.md",
+      "status": 206,
+      "final_url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/endpoints/races.md",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.56
+    },
+    {
+      "url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/endpoints/results.md",
+      "status": 206,
+      "final_url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/endpoints/results.md",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.51
+    },
+    {
+      "url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/rate_limits.md",
+      "status": 206,
+      "final_url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/rate_limits.md",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.5
+    },
+    {
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml",
+      "status": 206,
+      "final_url": "https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.62
+    },
+    {
+      "url": "https://github.com/mbpaschoal/pitwall-lab/tree/main/reports/pilotos_condicoes_20261029",
+      "status": 206,
+      "final_url": "https://github.com/mbpaschoal/pitwall-lab/tree/main/reports/pilotos_condicoes_20261029",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.59
+    },
+    {
+      "url": "https://open-meteo.com/",
+      "status": 200,
+      "final_url": "https://open-meteo.com/",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.13
+    },
+    {
+      "url": "https://open-meteo.com/en/docs/elevation-api",
+      "status": 200,
+      "final_url": "https://open-meteo.com/en/docs/elevation-api",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.1
+    },
+    {
+      "url": "https://open-meteo.com/en/docs/historical-weather-api",
+      "status": 200,
+      "final_url": "https://open-meteo.com/en/docs/historical-weather-api",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.13
+    },
+    {
+      "url": "https://open-meteo.com/en/licence",
+      "status": 200,
+      "final_url": "https://open-meteo.com/en/licence",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.11
+    },
+    {
+      "url": "https://openf1.org/",
+      "status": 206,
+      "final_url": "https://openf1.org/",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.45
+    },
+    {
+      "url": "https://openf1.org/docs/",
+      "status": 206,
+      "final_url": "https://openf1.org/docs/",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.44
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/abu-dhabi-grand-prix/event-notes-circuit-map-pit-lane-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/abu-dhabi-grand-prix/event-notes-circuit-map-pit-lane-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.83
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/australian-grand-prix/event-notes-circuit-map-pit-lane-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/australian-grand-prix/event-notes-circuit-map-pit-lane-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.64
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/austrian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/austrian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.69
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/azerbaijan-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones-v2.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/azerbaijan-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones-v2.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.53
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/bahrain-grand-prix/event-notes-circuit-map-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/bahrain-grand-prix/event-notes-circuit-map-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.48
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/belgian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones-v2.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/belgian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones-v2.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.43
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/british-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/british-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.47
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/canadian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/canadian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.46
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/chinese-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/chinese-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.42
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/dutch-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/dutch-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.61
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/emilia-romagna-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/emilia-romagna-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.94
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/hungarian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/hungarian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.42
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/italian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/italian-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.42
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/japanese-grand-prix/event-notes-circuit-map.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/japanese-grand-prix/event-notes-circuit-map.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.94
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/las-vegas-grand-prix/event-notes-circuit-map-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/las-vegas-grand-prix/event-notes-circuit-map-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.49
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/mexico-city-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/mexico-city-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "seconds": 1.07
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/miami-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/miami-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.6
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/monaco-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/monaco-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.43
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/qatar-grand-prix/event-notes-circuit-map-pit-lane-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/qatar-grand-prix/event-notes-circuit-map-pit-lane-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.95
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/s%C3%A3o-paulo-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/s%C3%A3o-paulo-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.5
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/saudi-arabian-grand-prix/event-notes-circuit-map-pit-lane-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/saudi-arabian-grand-prix/event-notes-circuit-map-pit-lane-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.47
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/singapore-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/singapore-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.64
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/spanish-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones-v2.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/spanish-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones-v2.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.44
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/united-states-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2024/united-states-grand-prix/event-notes-circuit-map-pit-lane-drawing-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.78
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/abu-dhabi-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/abu-dhabi-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 1.14
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/australian-grand-prix/event-notes-circuit-map-pit-lane-and-quarantine-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/australian-grand-prix/event-notes-circuit-map-pit-lane-and-quarantine-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 1.37
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/austrian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exit-map-quarantine-zone-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/austrian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exit-map-quarantine-zone-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 2.03
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/azerbaijan-grand-prix/event-notes-circuit-map-pit-lane-quarantine-zone-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/azerbaijan-grand-prix/event-notes-circuit-map-pit-lane-quarantine-zone-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.63
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/bahrain-grand-prix/event-notes-circuit-map-v4.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/bahrain-grand-prix/event-notes-circuit-map-v4.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.33
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/belgian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-quarantine-zone-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/belgian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-quarantine-zone-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 1.21
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/british-grand-prix/event-notes-circuit-map-v2.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/british-grand-prix/event-notes-circuit-map-v2.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.48
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/canadian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-map-ers-battery-containment-area-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/canadian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-map-ers-battery-containment-area-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.63
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/chinese-grand-prix/event-notes-circuit-map-pit-lane-and-quarantine-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/chinese-grand-prix/event-notes-circuit-map-pit-lane-and-quarantine-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.59
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/dutch-grand-prix/event-notes-circuit-map-pit-lane-map-emergency-exit-map-quarantine-zone-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/dutch-grand-prix/event-notes-circuit-map-pit-lane-map-emergency-exit-map-quarantine-zone-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 1.17
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/emilia-romagna-grand-prix/race-director-event-notes-circuit-map-pit-lane-emergency-exits-quarantine-zone-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/emilia-romagna-grand-prix/race-director-event-notes-circuit-map-pit-lane-emergency-exits-quarantine-zone-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.71
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/hungarian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-map-quarantine-zone-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/hungarian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-map-quarantine-zone-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.58
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/italian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exit-map-quarantine-zone-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/italian-grand-prix/event-notes-circuit-map-pit-lane-emergency-exit-map-quarantine-zone-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 1.89
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/japanese-grand-prix/event-notes-circuit-map-pit-lane-quarantine-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/japanese-grand-prix/event-notes-circuit-map-pit-lane-quarantine-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.5
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/las-vegas-grand-prix/event-notes-circuit-map-v2-pit-lane-drawing-emergency-map-exits-quarantine-zone-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/las-vegas-grand-prix/event-notes-circuit-map-v2-pit-lane-drawing-emergency-map-exits-quarantine-zone-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.62
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/mexico-city-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-quarantine-zone-area.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/mexico-city-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-quarantine-zone-area.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "seconds": 0.82
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/miami-grand-prix/event-notes-circuit-map-pit-lane-quarantine-zone-emergency-exits-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/miami-grand-prix/event-notes-circuit-map-pit-lane-quarantine-zone-emergency-exits-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 1.02
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/monaco-grand-prix/race-directors-event-notes-circuit-map-pit-lane-map-ers-battery-containment-area-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/monaco-grand-prix/race-directors-event-notes-circuit-map-pit-lane-map-ers-battery-containment-area-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.62
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/qatar-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-ers-battery-containment-area-red-zones-map.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/qatar-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-ers-battery-containment-area-red-zones-map.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.45
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/s%C3%A3o-paulo-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-and-red-zones-map.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/s%C3%A3o-paulo-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-and-red-zones-map.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.68
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/saudi-arabian-grand-prix/event-notes-circuit-map-pit-lane-and-quarantine-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/saudi-arabian-grand-prix/event-notes-circuit-map-pit-lane-and-quarantine-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.45
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/singapore-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-map-and-quarantine-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/singapore-grand-prix/event-notes-circuit-map-pit-lane-emergency-exits-map-and-quarantine-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.66
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/spanish-grand-prix/race-director-event-notes-circuit-map-pit-lane-quarantine-zone-and-red-zones.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/spanish-grand-prix/race-director-event-notes-circuit-map-pit-lane-quarantine-zone-and-red-zones.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 1.16
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/united-states-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-map-red-zones-map.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2025/united-states-grand-prix/event-notes-circuit-map-pit-lane-drawing-emergency-exits-map-quarantine-zone-map-red-zones-map.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.52
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/australian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-quarantine-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/australian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-quarantine-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.46
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/austrian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/austrian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.66
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/azerbaijan-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/azerbaijan-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.47
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/bahrain-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/bahrain-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.68
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/belgian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/belgian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.77
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/british-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/british-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.7
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/canadian-grand-prix/competition-notes-circuit-map-v2.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/canadian-grand-prix/competition-notes-circuit-map-v2.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.41
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/chinese-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-battery-containment-area-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/chinese-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-battery-containment-area-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 1.53
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/dutch-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/dutch-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.69
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/hungarian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/hungarian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.78
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/italian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/italian-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.62
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/japanese-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-battery-containment-area-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/japanese-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-battery-containment-area-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.79
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/miami-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/miami-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 1.15
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/monaco-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/monaco-grand-prix/competition-notes-circuit-map-pit-lane-drawing-emergency-exits-map-and-red-zone.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 1.3
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/singapore-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/singapore-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.8
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/spanish-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/spanish-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.78
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/united-states-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+      "status": 206,
+      "final_url": "https://raw.githubusercontent.com/TracingInsights/DDocs/9f647f7c62a838405c85219e5eb2feb5c3575027/documents/2026/united-states-grand-prix/competition-notes-circuit-map-pit-lane-drawing-and-emergency-exits-map.pdf",
+      "content_type": "application/octet-stream",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.64
+    },
+    {
+      "url": "https://scikit-learn.org/1.6/common_pitfalls.html",
+      "status": 206,
+      "final_url": "https://scikit-learn.org/1.6/common_pitfalls.html",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.24
+    },
+    {
+      "url": "https://scikit-learn.org/1.6/model_persistence.html",
+      "status": 206,
+      "final_url": "https://scikit-learn.org/1.6/model_persistence.html",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.22
+    },
+    {
+      "url": "https://scikit-learn.org/1.6/modules/calibration.html",
+      "status": 206,
+      "final_url": "https://scikit-learn.org/1.6/modules/calibration.html",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.26
+    },
+    {
+      "url": "https://scikit-learn.org/1.6/modules/generated/sklearn.impute.SimpleImputer.html",
+      "status": 206,
+      "final_url": "https://scikit-learn.org/1.6/modules/generated/sklearn.impute.SimpleImputer.html",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.21
+    },
+    {
+      "url": "https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LogisticRegression.html",
+      "status": 206,
+      "final_url": "https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LogisticRegression.html",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.28
+    },
+    {
+      "url": "https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.StandardScaler.html",
+      "status": 206,
+      "final_url": "https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.StandardScaler.html",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.25
+    },
+    {
+      "url": "https://www.fia.com/sites/default/files/2026_19_mex_f1_r0_timing_raceweatherreport_v01.pdf",
+      "status": 200,
+      "final_url": "https://www.fia.com/sites/default/files/2026_19_mex_f1_r0_timing_raceweatherreport_v01.pdf",
+      "content_type": "application/pdf",
+      "sample_bytes": 2048,
+      "seconds": 0.15
+    },
+    {
+      "url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf",
+      "status": 206,
+      "final_url": "https://www.fia.com/sites/default/files/pdf_saudi_media_kit-2025-english.pdf",
+      "content_type": "application/pdf",
+      "sample_bytes": 2048,
+      "seconds": 0.57
+    },
+    {
+      "url": "https://www.fia.com/system/files/decision-document/2025_united_states_grand_prix_-_event_notes_-_circuit_map_pit_lane_drawing_emergency_exits_map_quarantine_zone_map_red_zones_map.pdf",
+      "status": 200,
+      "final_url": "https://www.fia.com/system/files/decision-document/2025_united_states_grand_prix_-_event_notes_-_circuit_map_pit_lane_drawing_emergency_exits_map_quarantine_zone_map_red_zones_map.pdf",
+      "content_type": "application/pdf",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.73
+    },
+    {
+      "url": "https://www.fia.com/system/files/decision-document/2026_barcelona-catalunya_grand_prix_-_competition_notes_-_circuit_map_pit_lane_drawing_and_emergency_exits_map.pdf",
+      "status": 200,
+      "final_url": "https://www.fia.com/system/files/decision-document/2026_barcelona-catalunya_grand_prix_-_competition_notes_-_circuit_map_pit_lane_drawing_and_emergency_exits_map.pdf",
+      "content_type": "application/pdf",
+      "sample_bytes": 2048,
+      "pdf_header": true,
+      "seconds": 0.72
+    },
+    {
+      "url": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_race_classification.pdf",
+      "status": 200,
+      "final_url": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_race_classification.pdf",
+      "content_type": "application/pdf",
+      "sample_bytes": 2048,
+      "seconds": 0.67
+    },
+    {
+      "url": "https://www.formula1.com/en/drivers",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/drivers",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.38
+    },
+    {
+      "url": "https://www.formula1.com/en/latest/article/formula-1-confirms-f1-sprint-format-tweaks-for-2023-season.6v1c2lGggpLNEom2MMtjj0",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/latest/article/formula-1-confirms-f1-sprint-format-tweaks-for-2023-season.6v1c2lGggpLNEom2MMtjj0",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.84
+    },
+    {
+      "url": "https://www.formula1.com/en/latest/article/in-photos-check-out-the-special-driver-helmets-and-one-off-car-liveries-at.2rwTyWzqc4tkVDKgMNrZ0t",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/latest/article/in-photos-check-out-the-special-driver-helmets-and-one-off-car-liveries-at.2rwTyWzqc4tkVDKgMNrZ0t",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.31
+    },
+    {
+      "url": "https://www.formula1.com/en/latest/article/norris-seals-commanding-win-in-action-packed-mexico-city-gp-to-take-world.5ztiajHhdtqagu0qQLx0vS",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/latest/article/norris-seals-commanding-win-in-action-packed-mexico-city-gp-to-take-world.5ztiajHhdtqagu0qQLx0vS",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.84
+    },
+    {
+      "url": "https://www.formula1.com/en/latest/article/piastri-storms-to-controlled-victory-in-bahrain-grand-prix-ahead-of-russell.47YQh0Ex2gkZcx58fRaRqJ",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/latest/article/piastri-storms-to-controlled-victory-in-bahrain-grand-prix-ahead-of-russell.47YQh0Ex2gkZcx58fRaRqJ",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.94
+    },
+    {
+      "url": "https://www.formula1.com/en/latest/article/revealed-your-favourite-driver-helmet-of-the-2025-f1-season.3jrBIyUQBKeNwcjm3uvrCh",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/latest/article/revealed-your-favourite-driver-helmet-of-the-2025-f1-season.3jrBIyUQBKeNwcjm3uvrCh",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.32
+    },
+    {
+      "url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.37
+    },
+    {
+      "url": "https://www.formula1.com/en/racing/2025/bahrain/circuit",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/racing/2025/bahrain",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.63
+    },
+    {
+      "url": "https://www.formula1.com/en/racing/2025/brazil/circuit",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/racing/2025/brazil",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.68
+    },
+    {
+      "url": "https://www.formula1.com/en/racing/2025/mexico/circuit",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/racing/2025/mexico",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 1.09
+    },
+    {
+      "url": "https://www.formula1.com/en/racing/2025/singapore/circuit",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/racing/2025/singapore",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 1.13
+    },
+    {
+      "url": "https://www.formula1.com/en/racing/2025/united-states/circuit",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/racing/2025/united-states",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.82
+    },
+    {
+      "url": "https://www.formula1.com/en/racing/2026/united-states",
+      "status": 200,
+      "final_url": "https://www.formula1.com/en/racing/2026/united-states",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "pdf_header": false,
+      "seconds": 0.34
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/jtrotman/formula-1-race-data",
+      "status": 200,
+      "final_url": "https://www.kaggle.com/datasets/jtrotman/formula-1-race-data",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.24
+    },
+    {
+      "url": "https://www.mercedesamgf1.com/news/kimi-antonelli-everything-you-need-to-know",
+      "status": 206,
+      "final_url": "https://www.mercedesamgf1.com/news/kimi-antonelli-everything-you-need-to-know",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 2048,
+      "seconds": 0.55
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "season": 2026,
+      "round": 19,
+      "podium": [
+        "hamilton",
+        "max_verstappen",
+        "antonelli"
+      ],
+      "standings": 35
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "season": 2026,
+      "round": 19,
+      "podium": [
+        "hamilton",
+        "max_verstappen",
+        "antonelli"
+      ],
+      "standings": 35
+    },
+    {
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "season": 2026,
+      "round": 19,
+      "podium": [
+        "hamilton",
+        "max_verstappen",
+        "antonelli"
+      ],
+      "standings": 35
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "season": 2026,
+      "round": 19,
+      "podium": [
+        "hamilton",
+        "max_verstappen",
+        "antonelli"
+      ],
+      "standings": 35
+    }
+  ]
+}

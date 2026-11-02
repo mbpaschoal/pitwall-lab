@@ -1,0 +1,175 @@
+[
+  {
+    "journey": "persisted-favourite-profile",
+    "attempt": 0,
+    "driver": "norris",
+    "period": "2026",
+    "scopeHistory": [
+      "History: 2026 · Win rate · minimum 5 races per condition."
+    ]
+  },
+  {
+    "journey": "persisted-favourite-profile",
+    "attempt": 1,
+    "driver": "norris",
+    "period": "2026",
+    "scopeHistory": [
+      "History: 2026 · Win rate · minimum 5 races per condition."
+    ]
+  },
+  {
+    "journey": "persisted-favourite-profile",
+    "attempt": 2,
+    "driver": "norris",
+    "period": "2026",
+    "scopeHistory": [
+      "History: 2026 · Win rate · minimum 5 races per condition."
+    ]
+  },
+  {
+    "journey": "persisted-favourite-profile",
+    "attempt": 3,
+    "driver": "norris",
+    "period": "2026",
+    "scopeHistory": [
+      "History: 2026 · Win rate · minimum 5 races per condition."
+    ]
+  },
+  {
+    "journey": "persisted-favourite-profile",
+    "attempt": 4,
+    "driver": "norris",
+    "period": "2026",
+    "scopeHistory": [
+      "History: 2026 · Win rate · minimum 5 races per condition."
+    ]
+  },
+  {
+    "journey": "concurrent-session-headers",
+    "round": 0,
+    "pages": [
+      {
+        "title": "Lando Norris",
+        "headings": [
+          "Lando Norris"
+        ]
+      },
+      {
+        "title": "Quem se destaca na chuva?",
+        "headings": [
+          "Quem se destaca na chuva?"
+        ]
+      },
+      {
+        "title": "How it works",
+        "headings": [
+          "How it works"
+        ]
+      }
+    ]
+  },
+  {
+    "journey": "concurrent-session-headers",
+    "round": 1,
+    "pages": [
+      {
+        "title": "Lando Norris",
+        "headings": [
+          "Lando Norris"
+        ]
+      },
+      {
+        "title": "Quem se destaca na chuva?",
+        "headings": [
+          "Quem se destaca na chuva?"
+        ]
+      },
+      {
+        "title": "How it works",
+        "headings": [
+          "How it works"
+        ]
+      }
+    ]
+  },
+  {
+    "journey": "concurrent-session-headers",
+    "round": 2,
+    "pages": [
+      {
+        "title": "Lando Norris",
+        "headings": [
+          "Lando Norris"
+        ]
+      },
+      {
+        "title": "Quem se destaca na chuva?",
+        "headings": [
+          "Quem se destaca na chuva?"
+        ]
+      },
+      {
+        "title": "How it works",
+        "headings": [
+          "How it works"
+        ]
+      }
+    ]
+  },
+  {
+    "journey": "duel-en",
+    "url": "https://pitwall-lab.streamlit.app/?tela=Pilotos&visao=duelo&anos=2026&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2026&gp=19&piloto=max_verstappen&rival=norris&duelo_condicao=all",
+    "metrics": [
+      "Finished ahead of rival 9 ",
+      "Win rate 11.8% ",
+      "Finished ahead of rival 8 ",
+      "Win rate 11.8% "
+    ]
+  },
+  {
+    "journey": "driver-mode-menu-en",
+    "period": "2026",
+    "mode": "duelo"
+  },
+  {
+    "journey": "championship",
+    "rows": 34
+  },
+  {
+    "journey": "circuit-first-desktop",
+    "imageBottom": 635,
+    "podiumTop": 735.890625
+  },
+  {
+    "journey": "mexico-pending-en"
+  },
+  {
+    "journey": "dock-and-cards",
+    "cards": 3,
+    "gp": 19
+  },
+  {
+    "journey": "mobile",
+    "tabs": [
+      "Resumo",
+      "Sessões e voltas",
+      "Pneus e paradas",
+      "Clima",
+      "Nesta pista",
+      "Equipes"
+    ]
+  },
+  {
+    "journey": "mobile-long-condition-title",
+    "lang": "pt",
+    "condition": "ccw"
+  },
+  {
+    "journey": "mobile-long-condition-title",
+    "lang": "en",
+    "condition": "ccw"
+  },
+  {
+    "journey": "mobile-all-pages-and-cards"
+  }
+]

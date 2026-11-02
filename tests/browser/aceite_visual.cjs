@@ -1,8 +1,10 @@
-/* PT/EN: Composition C geometry, readability and real image checks. */
+/* PT/EN: Composition C geometry, scroll access and real image checks. */
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const engines = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const browserName = process.env.PLAYWRIGHT_BROWSER || 'chromium';
+if (!['chromium','webkit'].includes(browserName)) throw Error('Unsupported PLAYWRIGHT_BROWSER');
 const [base, output] = process.argv.slice(2);
 if (!base || !output) throw Error('Usage: node aceite_visual.cjs URL OUTPUT');
 const version = fs.readFileSync(path.join(__dirname,'../../VERSION'),'utf8').trim();
@@ -14,16 +16,16 @@ const mediaCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../static/
 const expectedHeroes={Corridas:circuitCatalog.americas.foto.sha256,Pilotos:heroCatalog.drivers.sha256,Campeonato:heroCatalog.championship.sha256,'Previsões':heroCatalog.forecast.sha256,Desempenho:heroCatalog.performance.sha256,Metodologia:heroCatalog.method.sha256};
 const routes = ['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
 const launch = {headless:true};
-if (process.env.PLAYWRIGHT_CHANNEL) launch.channel=process.env.PLAYWRIGHT_CHANNEL;
+if (browserName==='chromium' && process.env.PLAYWRIGHT_CHANNEL) launch.channel=process.env.PLAYWRIGHT_CHANNEL;
 fs.mkdirSync(output,{recursive:true});
 const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
 
 (async()=>{
- const browser=await chromium.launch(launch);
+ const browser=await engines[browserName].launch(launch);
  const evidence=[];
  try {
   for(const mobile of [false,true]) for(const lang of ['pt','en']) for(const route of routes){
-   // C's lower three panels have a shallower aspect ratio than the top row.
+   // Content can scroll: the main scrollport must end above the persistent dock.
    const viewport=mobile?{width:390,height:844}:{width:1040,height:routes.indexOf(route)<3?992:875};
    const context=await browser.newContext({viewport,isMobile:mobile,hasTouch:mobile,deviceScaleFactor:2});
    const page=await context.newPage();
@@ -52,7 +54,15 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     }
     const photoHash=crypto.createHash('sha256').update(photoBytes).digest('hex');
     requireCheck(photoHash===(variant?variant.sha256:expectedHeroes[route]),'Served photograph differs from its documented source or variant');
-    await surface.evaluate(()=>document.fonts.ready);
+    await surface.evaluate(async()=>{
+     await document.fonts.ready;
+     // Streamlit can introduce Material Symbols after the first fonts.ready.
+     // Load those faces explicitly instead of treating a fallback word as a glyph.
+     for(const icon of document.querySelectorAll('[data-testid="stIconMaterial"]')){const c=getComputedStyle(icon);await document.fonts.load(c.fontSize+' '+c.fontFamily,icon.textContent);}
+     await document.fonts.ready;
+     await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+    });
+    await surface.waitForFunction(expected=>document.documentElement.lang===expected,lang,{timeout:15000});
     await page.waitForTimeout(700);
     requireCheck(await surface.locator('[data-testid="stException"]').count()===0,'Application exception');
     requireCheck(errors.length===0,errors.join('; '));
@@ -62,11 +72,13 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
      const box=element=>{if(!element)return null;const r=element.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom,right:r.right};};
      const one=selector=>box(document.querySelector(selector));
      const photos=Array.from(document.querySelectorAll('.fan-hero-image,.fan-hero-backdrop,.fan-portrait')).filter(i=>i.getBoundingClientRect().width>0).map(i=>({driver:i.dataset.driverId,natural:[i.naturalWidth,i.naturalHeight],responsive:i.hasAttribute('srcset'),display:[i.getBoundingClientRect().width,i.getBoundingClientRect().height]}));
+     const blocks='.st-key-race-summary,.stTabs:has(.fan-circuit-details),.fan-pilot-ranking,.st-key-fan-prediction-intro,.fan-results,.fan-process,.st-key-pilot-view-navigation,.fan-pilot-toolbar,.fan-condition-chips,.fan-photo-credits';
      return {viewport:[innerWidth,innerHeight],overflow:document.documentElement.scrollWidth>innerWidth,
+      main:one('.stMain'),normalBlocks:Array.from(document.querySelectorAll(blocks)).filter(n=>n.getClientRects().length).map(n=>({className:n.className,marginTop:parseFloat(getComputedStyle(n).marginTop),marginBottom:parseFloat(getComputedStyle(n).marginBottom),position:getComputedStyle(n).position})),
       hero:one('.fan-hero'),heading:one('.fan-hero h1'),copy:one('.fan-hero-copy>p'),ribbon:one('.journey-calendar'),
       dock:one('.st-key-journey-navigation'),targets:Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"]>label')).map(box),photos,
       podium:one('.fan-podium-panel'),podiumHeading:one('.fan-podium-panel h2'),weather:one('.fan-weather'),details:one('.fan-circuit-more'),
-      chips:one('.fan-condition-chips'),scope:one('.fan-pilot-toolbar'),
+      chips:one('.fan-condition-chips'),scope:one('.fan-pilot-toolbar'),pilotNavigation:one('.st-key-pilot-view-navigation'),
       championshipRows:document.querySelectorAll('.tabela-editorial tbody tr').length,
       probabilities:one('.fan-probability-list'),after:one('.st-key-prediction-after'),compact:one('.fan-podium-compact'),
       results:one('.fan-results'),resultsHeader:one('.fan-results-header'),legend:one('.fan-results-legend'),
@@ -83,7 +95,10 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     fs.writeFileSync(path.join(output,key+'-geometry.json'),JSON.stringify(m,null,2));
     requireCheck(!m.overflow,'Horizontal overflow');
     requireCheck(m.h1Count===1,'One main title required');
-    requireCheck(m.hero.y>=m.ribbon.bottom-1 && m.hero.y<m.ribbon.bottom+(route==='Pilotos'&&mobile?80:24),'Cover detached from the GP ribbon');
+    requireCheck(m.main.bottom<=m.dock.y-4,'Main scrollport extends behind navigation');
+    requireCheck(m.normalBlocks.every(b=>b.marginTop>=0&&b.marginBottom>=0&&!['absolute','fixed'].includes(b.position)),'Content section leaves normal flow or uses a negative margin');
+    const beforeCover=route==='Pilotos'?m.pilotNavigation:m.ribbon;
+    requireCheck(beforeCover&&m.hero.y>=beforeCover.bottom-1&&m.hero.y<beforeCover.bottom+24,'Cover overlaps or detaches from its preceding navigation');
     requireCheck(m.heading.y>=m.hero.y&&m.heading.bottom<=m.hero.bottom,'Title clipped by cover');
     requireCheck(m.targets.length===6&&m.targets.every(r=>r.width>=44&&r.height>=44&&r.x>=0&&r.right<=width+1),'Dock target clipped or too small');
     requireCheck(m.dock.bottom<=m.viewport[1]-54,'Dock overlaps the Streamlit host area');
@@ -95,7 +110,7 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
      requireCheck((await surface.locator('.fan-podium-place').evaluateAll(items=>items.map(i=>i.className.match(/fan-place-(\d)/)[1]))).join(',')==='2,1,3','Observed podium order changed');
     }
     if(route==='Pilotos'){
-     requireCheck(m.scope.bottom<=m.heading.y-4,'Driver criteria overlap title');
+     requireCheck(m.scope.y>=m.hero.bottom-1,'Driver metadata overlaps cover');
      requireCheck(m.copy.bottom<=m.chips.y-4,'Driver copy overlaps filters');
     }
     if(route==='Campeonato'){
@@ -107,7 +122,6 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
      requireCheck(!m.podiumHeading,'Duplicate podium heading in forecast');
      requireCheck(m.probabilities.y>=m.copy.bottom,'Forecast rows overlap introduction');
      requireCheck(m.after.y>=m.probabilities.bottom,'Before/after stages overlap');
-     if(!mobile)requireCheck(m.after.bottom<=m.dock.y-8,'Observed podium hidden behind navigation');
     }
     if(route==='Desempenho'){
      requireCheck(m.resultsHeader&&m.legend,'Missing results legend');
@@ -118,11 +132,32 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
      requireCheck(m.steps.length===3&&m.documents.length===2,'Method explanation incomplete');
      requireCheck(m.steps.every((r,i)=>i===0||r.y>=m.steps[i-1].bottom),'Method cards overlap');
      requireCheck(m.documents[0].y>=m.steps[2].bottom,'Document links overlap steps');
-     if(!mobile)requireCheck(m.documents.every(r=>r.bottom<=m.dock.y-8),'Method documents hidden behind navigation');
      if(mobile)requireCheck(m.stepFont>=13,'Mobile explanation too small');
     }
+    // Long screens no longer compress all stages above the dock. Reach each
+    // relevant item by scrolling, then verify that its painted target is usable.
+    const reachable=[];
+    const selector=route==='Metodologia'?'.fan-document-links>a':route==='Previsões'?'.st-key-prediction-after .fan-timeline-stage':null;
+    if(selector){
+     const items=surface.locator(selector);
+     requireCheck(await items.count()>0,'Missing scroll-access targets');
+     for(let i=0;i<await items.count();i++){
+      await items.nth(i).scrollIntoViewIfNeeded();await page.waitForTimeout(150);
+      const hit=await items.nth(i).evaluate(el=>{
+       const main=document.querySelector('.stMain').getBoundingClientRect(),dock=document.querySelector('.st-key-journey-navigation').getBoundingClientRect();
+       const rects=Array.from(el.getClientRects()).filter(r=>r.width>0&&r.height>0&&r.top>=main.top&&r.bottom<=main.bottom&&r.left>=main.left&&r.right<=main.right);
+       const r=rects.sort((a,b)=>b.width*b.height-a.width*a.height)[0];
+       if(!r)return{label:el.innerText,accessible:false};
+       const target=document.elementFromPoint((r.left+r.right)/2,(r.top+r.bottom)/2);
+       return{label:el.innerText,accessible:main.bottom<=dock.top-4&&!!target&&(target===el||el.contains(target)),rect:{x:r.x,y:r.y,right:r.right,bottom:r.bottom}};
+      });
+      reachable.push(hit);requireCheck(hit.accessible,'Scrolled item is clipped or covered: '+hit.label);
+     }
+    }
+    await surface.locator('.stMain').evaluate(main=>main.scrollTo({top:0,behavior:'instant'}));
+    await page.waitForTimeout(150);
     await page.screenshot({path:path.join(output,key+'.png')});
-    evidence.push({route,lang,mobile,status:'passed',photo_sha256:photoHash,measurements:m});
+    evidence.push({route,lang,mobile,browser:browserName,status:'passed',photo_sha256:photoHash,measurements:m,reachable});
     fs.writeFileSync(path.join(output,'acceptance.json'),JSON.stringify({version,css_sha256:cssHash,cases:evidence},null,2));
     console.log(key+' passed');
    }catch(error){await page.screenshot({path:path.join(output,key+'-failure.png')});throw Error(key+': '+error.message);}

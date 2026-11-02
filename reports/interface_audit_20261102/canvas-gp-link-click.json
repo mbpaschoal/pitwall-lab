@@ -1,0 +1,21 @@
+{
+  "base": "http://localhost:8666",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "language": "en",
+  "source_route": {
+    "tela": "Pilotos",
+    "visao": "perfil",
+    "piloto": "perez",
+    "anos": "2024",
+    "temporada": "2024",
+    "gp": "1"
+  },
+  "interaction": "Real pointer hover and click on visible Open GP text in Streamlit canvas table; no force click. New page appeared at browser context level without popup opener.",
+  "observed_url": "http://localhost:8666/?tela=Corridas&temporada=2024&gp=24&lang=en",
+  "observed_heading": "Abu Dhabi Grand Prix",
+  "status": "passed",
+  "scope": "one rendered canvas link type; target URLs for all historical circuit source cells are checked separately"
+}

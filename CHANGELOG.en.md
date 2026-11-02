@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.8.15 — 2026-11-02
+
+- Fixes the podium covering collection notices, portraits covering statistics and photo credits blocking links. Driver blocks and controls reserve space in normal flow; the scroll viewport ends above the fixed navigation, including after window-height changes.
+- Header and selectors reflow with enlarged text. Links, search and language changes retain season, GP, profile and filters; drivers missing historical coverage get an explicit message without substitution by another driver.
+- Extends acceptance to intermediate scroll positions, actual clickable targets, PT/EN, desktop/mobile and text reflow. Earlier tests missed the collisions shown in the user screenshot. Emulated Chromium/WebKit do not replace physical iPhone testing. Scientific artifacts, registered forecasts and visual identity remain intact.
+
 ## 0.8.14 — 2026-11-02
 
 Automatic Mexico City Grand Prix data update through GitHub Actions. Sessions with received data: 4/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.

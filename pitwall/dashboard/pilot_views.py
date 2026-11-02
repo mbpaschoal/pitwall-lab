@@ -36,6 +36,20 @@ TEAM_NAMES = {
 }
 
 
+def _race_context_params(query):
+    """Keep a canonical GP independently of historical profile criteria."""
+    year, round_ = query.get("temporada"), query.get("gp")
+    if (year in ("2024", "2025", "2026") and isinstance(round_, str)
+            and round_.isdigit() and str(int(round_)) == round_
+            and 1 <= int(round_) <= 24):
+        return dict(temporada=year, gp=round_)
+    return {}
+
+
+def _navigation_context_params(query):
+    return dict(_race_context_params(query), **_forecast_origin_params(query))
+
+
 def _forecast_origin_params(query):
     """Keep a matching GP origin separate from the profile's historical years."""
     year, round_ = query.get("origem_temporada"), query.get("origem_gp")
@@ -55,7 +69,7 @@ def _condition_chips(years, metric, minimum, condition):
         query = dict(tela="Pilotos", visao="geral", condicao=key,
                      anos=",".join(map(str, years)), metrica=metric,
                      minimo=minimum, lang=language())
-        query.update(_forecast_origin_params(st.query_params))
+        query.update(_navigation_context_params(st.query_params))
         chips.append('<a href="?{}" target="_self"{}>{}</a>'.format(
             escape(urlencode(query), quote=True),
             ' aria-current="true"' if key == condition else "",
@@ -63,7 +77,7 @@ def _condition_chips(years, metric, minimum, condition):
     reset = dict(tela="Pilotos", visao="geral", condicao="rain",
                  anos="2024,2025,2026", metrica="win_rate", minimo=5,
                  faixas=",".join(HIGHLIGHTS), lang=language())
-    reset.update(_forecast_origin_params(st.query_params))
+    reset.update(_navigation_context_params(st.query_params))
     chips.append('<a class="fan-condition-reset" href="?{}" target="_self" title="{}">{}</a>'.format(
         escape(urlencode(reset), quote=True),
         escape(translate("Restaurar período e critérios padrão"), quote=True),
@@ -116,7 +130,7 @@ def _link(driver, condition="rain"):
         "metrica": st.session_state.get("pilot_metric", "win_rate"),
         "minimo": st.session_state.get("pilot_minimum", 5),
         "faixas": ",".join(st.session_state.get("profile_conditions", HIGHLIGHTS))}
-    params.update(_forecast_origin_params(st.query_params))
+    params.update(_navigation_context_params(st.query_params))
     return "?" + urlencode(params)
 
 
@@ -338,6 +352,33 @@ def render(root):
     except DriverConditionsError as error:
         st.error(str(error))
         return
+    names = driver_names(asset)
+    requested_ids = ([st.query_params.get("piloto"), st.query_params.get("rival")]
+                     if st.query_params.get("visao") == "duelo"
+                     else [st.query_params.get("piloto")])
+    requested = next((pid for pid in requested_ids if pid and pid not in names), None)
+    if requested and st.query_params.get("visao") in ("perfil", "duelo"):
+        # Never silently replace an uncovered/unknown identity with another driver.
+        name = None
+        try:
+            from pitwall.data.race_weekend import carregar_asset
+            identities = carregar_asset(root).get("identidades", {})
+            name = next((value.get("piloto") for key, value in identities.items()
+                         if key.rsplit(":", 1)[-1] == requested and value.get("piloto")), None)
+        except (OSError, ValueError, KeyError):
+            pass
+        title = name or translate("Perfil histórico indisponível")
+        st.markdown('<section class="fan-hero fan-hero-empty" data-hero-kind="drivers"><div class="fan-hero-copy"><h1>{}</h1><p>{}</p></div></section>'.format(
+            escape(title), escape(translate("Perfil histórico indisponível"))), unsafe_allow_html=True)
+        st.info("Ainda não há dados deste piloto no acervo histórico de condições. O piloto solicitado não foi substituído.")
+        st.caption("Dados até Austin 2026")
+        params = dict(tela="Pilotos", visao="geral", lang=language(), **_navigation_context_params(st.query_params))
+        for key in ("anos", "metrica", "minimo", "condicao", "faixas"):
+            if key in st.query_params:
+                params[key] = st.query_params[key]
+        st.markdown('<a href="?{}" target="_self">← {}</a>'.format(
+            escape(urlencode(params), quote=True), escape(translate("Voltar à visão geral"))), unsafe_allow_html=True)
+        return
     for key, value in st.session_state.get("_pilot_filters", {}).items():
         if key in CRITERION_DEFAULTS or key not in st.session_state:
             st.session_state[key] = list(value) if isinstance(value, list) else value
@@ -530,7 +571,7 @@ def _share(asset, years, metric, minimum, view):
     params = dict(tela="Pilotos", visao=mapping[view], anos=",".join(map(str, years)), metrica=metric,
         minimo=minimum, lang=language(), condicao=st.session_state.get("pilot_condition", "rain"),
         faixas=",".join(st.session_state.get("profile_conditions", HIGHLIGHTS)))
-    params.update(_forecast_origin_params(st.query_params))
+    params.update(_navigation_context_params(st.query_params))
     driver = st.session_state.get("pilot_driver")
     if driver:
         params["piloto"] = driver

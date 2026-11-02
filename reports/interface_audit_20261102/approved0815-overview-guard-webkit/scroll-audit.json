@@ -1,0 +1,346 @@
+{
+  "utc": "2026-11-02T06:38:25.507Z",
+  "base": "http://127.0.0.1:8669",
+  "browser": "webkit",
+  "expectedVersion": "0.8.15",
+  "scope": "Targeted permanent overview Filters2x guard, PT/EN mobile/desktop",
+  "limitations": [
+    "Canvas/Plotly internals and cross-origin iframe text require separate functional tests.",
+    "Background hero images and foreground title overlays are intentional and excluded from image collisions.",
+    "Partly clipped lines at scroll-viewport edges and CSS-hidden accessibility labels are excluded.",
+    "Text2x doubles computed font-size/line-height as a deterministic reflow stress test; it is not native browser zoom."
+  ],
+  "samples": [],
+  "stress": [
+    {
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "type": "pilot_filter_text2x",
+      "rect": {
+        "x": 230.671875,
+        "y": 116.4375,
+        "right": 378,
+        "bottom": 173.625,
+        "width": 147.328125,
+        "height": 57.1875
+      },
+      "slot": {
+        "x": 237.671875,
+        "y": 135.03125,
+        "right": 277.671875,
+        "bottom": 155.03125,
+        "width": 40,
+        "height": 20
+      },
+      "glyph": {
+        "x": 237.671875,
+        "y": 121.031005859375,
+        "right": 277.671875,
+        "bottom": 169.031494140625,
+        "width": 40,
+        "height": 48.00048828125
+      },
+      "text": {
+        "x": 293.679443359375,
+        "y": 125.83753204345703,
+        "right": 353.992431640625,
+        "bottom": 152.2374725341797,
+        "width": 60.31298828125,
+        "height": 26.399940490722656
+      },
+      "iconAncestors": [
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-18nn5ul ejhh0er0",
+          "rect": {
+            "x": 237.671875,
+            "y": 135.03125,
+            "right": 277.671875,
+            "bottom": 155.03125,
+            "width": 40,
+            "height": 20
+          },
+          "width": "40px",
+          "minWidth": "40px",
+          "display": "flex",
+          "flex": "0 0 40px",
+          "gap": "normal"
+        },
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-cli92z e1t4gh342",
+          "rect": {
+            "x": 237.671875,
+            "y": 135.03125,
+            "right": 285.671875,
+            "bottom": 155.03125,
+            "width": 48,
+            "height": 20
+          },
+          "width": "48px",
+          "minWidth": "max-content",
+          "display": "flex",
+          "flex": "0 0 auto",
+          "gap": "normal"
+        }
+      ],
+      "font": "Material Symbols Rounded",
+      "fontLoaded": true,
+      "baselineLabelFontSize": 11,
+      "labelFontSize": 22,
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "type": "pilot_filter_text2x",
+      "rect": {
+        "x": 231.203125,
+        "y": 116,
+        "right": 378,
+        "bottom": 173.1875,
+        "width": 146.796875,
+        "height": 57.1875
+      },
+      "slot": {
+        "x": 238.203125,
+        "y": 134.59375,
+        "right": 278.203125,
+        "bottom": 154.59375,
+        "width": 40,
+        "height": 20
+      },
+      "glyph": {
+        "x": 238.203125,
+        "y": 120.593505859375,
+        "right": 278.203125,
+        "bottom": 168.593994140625,
+        "width": 40,
+        "height": 48.00048828125
+      },
+      "text": {
+        "x": 294.20904541015625,
+        "y": 125.40003204345703,
+        "right": 353.99407958984375,
+        "bottom": 151.7999725341797,
+        "width": 59.7850341796875,
+        "height": 26.399940490722656
+      },
+      "iconAncestors": [
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-18nn5ul ejhh0er0",
+          "rect": {
+            "x": 238.203125,
+            "y": 134.59375,
+            "right": 278.203125,
+            "bottom": 154.59375,
+            "width": 40,
+            "height": 20
+          },
+          "width": "40px",
+          "minWidth": "40px",
+          "display": "flex",
+          "flex": "0 0 40px",
+          "gap": "normal"
+        },
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-cli92z e1t4gh342",
+          "rect": {
+            "x": 238.203125,
+            "y": 134.59375,
+            "right": 286.203125,
+            "bottom": 154.59375,
+            "width": 48,
+            "height": 20
+          },
+          "width": "48px",
+          "minWidth": "max-content",
+          "display": "flex",
+          "flex": "0 0 auto",
+          "gap": "normal"
+        }
+      ],
+      "font": "Material Symbols Rounded",
+      "fontLoaded": true,
+      "baselineLabelFontSize": 11,
+      "labelFontSize": 22,
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "type": "pilot_filter_text2x",
+      "rect": {
+        "x": 1181.203125,
+        "y": 322.21875,
+        "right": 1342,
+        "bottom": 382.609375,
+        "width": 160.796875,
+        "height": 60.390625
+      },
+      "slot": {
+        "x": 1192.203125,
+        "y": 342.40625,
+        "right": 1232.203125,
+        "bottom": 362.40625,
+        "width": 40,
+        "height": 20
+      },
+      "glyph": {
+        "x": 1192.203125,
+        "y": 328.406005859375,
+        "right": 1232.203125,
+        "bottom": 376.406494140625,
+        "width": 40,
+        "height": 48.00048828125
+      },
+      "text": {
+        "x": 1248.20361328125,
+        "y": 332.018798828125,
+        "right": 1313.99951171875,
+        "bottom": 360.8187255859375,
+        "width": 65.7958984375,
+        "height": 28.7999267578125
+      },
+      "iconAncestors": [
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-18nn5ul ejhh0er0",
+          "rect": {
+            "x": 1192.203125,
+            "y": 342.40625,
+            "right": 1232.203125,
+            "bottom": 362.40625,
+            "width": 40,
+            "height": 20
+          },
+          "width": "40px",
+          "minWidth": "40px",
+          "display": "flex",
+          "flex": "0 0 40px",
+          "gap": "normal"
+        },
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-cli92z e1t4gh342",
+          "rect": {
+            "x": 1192.203125,
+            "y": 342.40625,
+            "right": 1240.203125,
+            "bottom": 362.40625,
+            "width": 48,
+            "height": 20
+          },
+          "width": "48px",
+          "minWidth": "max-content",
+          "display": "flex",
+          "flex": "0 0 auto",
+          "gap": "normal"
+        }
+      ],
+      "font": "Material Symbols Rounded",
+      "fontLoaded": true,
+      "baselineLabelFontSize": 12,
+      "labelFontSize": 24,
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "type": "pilot_filter_text2x",
+      "rect": {
+        "x": 1181.765625,
+        "y": 321.625,
+        "right": 1342,
+        "bottom": 382.015625,
+        "width": 160.234375,
+        "height": 60.390625
+      },
+      "slot": {
+        "x": 1192.765625,
+        "y": 341.8125,
+        "right": 1232.765625,
+        "bottom": 361.8125,
+        "width": 40,
+        "height": 20
+      },
+      "glyph": {
+        "x": 1192.765625,
+        "y": 327.812255859375,
+        "right": 1232.765625,
+        "bottom": 375.812744140625,
+        "width": 40,
+        "height": 48.00048828125
+      },
+      "text": {
+        "x": 1248.7728271484375,
+        "y": 331.425048828125,
+        "right": 1313.9927978515625,
+        "bottom": 360.2249755859375,
+        "width": 65.219970703125,
+        "height": 28.7999267578125
+      },
+      "iconAncestors": [
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-18nn5ul ejhh0er0",
+          "rect": {
+            "x": 1192.765625,
+            "y": 341.8125,
+            "right": 1232.765625,
+            "bottom": 361.8125,
+            "width": 40,
+            "height": 20
+          },
+          "width": "40px",
+          "minWidth": "40px",
+          "display": "flex",
+          "flex": "0 0 40px",
+          "gap": "normal"
+        },
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-cli92z e1t4gh342",
+          "rect": {
+            "x": 1192.765625,
+            "y": 341.8125,
+            "right": 1240.765625,
+            "bottom": 361.8125,
+            "width": 48,
+            "height": 20
+          },
+          "width": "48px",
+          "minWidth": "max-content",
+          "display": "flex",
+          "flex": "0 0 auto",
+          "gap": "normal"
+        }
+      ],
+      "font": "Material Symbols Rounded",
+      "fontLoaded": true,
+      "baselineLabelFontSize": 12,
+      "labelFontSize": 24,
+      "issues": []
+    }
+  ],
+  "finishedAt": "2026-11-02T06:38:43.177Z",
+  "status": "passed"
+}

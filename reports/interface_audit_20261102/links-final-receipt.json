@@ -1,0 +1,159 @@
+{
+  "generated_utc": "2026-11-02T06:33:05.251429+00:00",
+  "version": "0.8.15",
+  "local_package": "/private/tmp/pitwall-interface-0815-final/pitwall-dashboard",
+  "publication_verified": false,
+  "scientific_changes": false,
+  "unit_regressions": {
+    "source": {
+      "passed": 46,
+      "file": "link-regression-tests.log"
+    },
+    "final_package": {
+      "passed": 46,
+      "file": "package-final-link-regressions.log"
+    }
+  },
+  "route_matrix": {
+    "file": "package-final-links/links-browser.json",
+    "base": "http://localhost:8666",
+    "engine": "chromium",
+    "expected_cases": 100,
+    "recorded_cases": 100,
+    "passed": 100,
+    "failed": 0,
+    "complete": true,
+    "failures": []
+  },
+  "anchors": {
+    "total": 3842,
+    "visible": 2964,
+    "hidden": 878,
+    "missing_fragments": 0,
+    "invalid_queries": 0,
+    "unknown_query_keys": 0
+  },
+  "original_csv_downloads": [
+    {
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    },
+    {
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    },
+    {
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    },
+    {
+      "name": "previsoes_validacao.csv",
+      "bytes": 86031,
+      "sha256": "b36f5e9717cbaafd9010602921a71cd60226295a491c48936c41e8db7122133e",
+      "originalBytesCompared": true
+    }
+  ],
+  "context_smoke_chromium": {
+    "file": "package-context-smoke-final/interactions.json",
+    "base": "http://localhost:8666",
+    "engine": "chromium",
+    "expected_cases": 16,
+    "recorded_cases": 16,
+    "passed": 16,
+    "failed": 0,
+    "complete": true,
+    "failures": []
+  },
+  "context_smoke_webkit": {
+    "file": "package-context-smoke-webkit-final/interactions.json",
+    "base": "http://localhost:8666",
+    "engine": "webkit",
+    "expected_cases": 16,
+    "recorded_cases": 16,
+    "passed": 16,
+    "failed": 0,
+    "complete": true,
+    "failures": []
+  },
+  "interaction_coverage_chromium": {
+    "file": "package-coverage-chromium.json",
+    "base": "http://localhost:8666",
+    "engine": "chromium",
+    "expected_cases": 56,
+    "recorded_cases": 56,
+    "passed": 56,
+    "failed": 0,
+    "complete": true,
+    "failures": []
+  },
+  "interaction_coverage_webkit": {
+    "file": "package-coverage-webkit.json",
+    "base": "http://localhost:8666",
+    "engine": "webkit",
+    "expected_cases": 56,
+    "recorded_cases": 56,
+    "passed": 56,
+    "failed": 0,
+    "complete": true,
+    "failures": []
+  },
+  "interactions_chromium": {
+    "file": "package-final-interactions/interactions.json",
+    "base": "http://localhost:8666",
+    "engine": "chromium",
+    "expected_cases": 48,
+    "recorded_cases": 48,
+    "passed": 48,
+    "failed": 0,
+    "complete": true,
+    "failures": []
+  },
+  "interactions_webkit_initial_harness": {
+    "file": "package-final-webkit-interactions/interactions.json",
+    "base": "http://localhost:8666",
+    "engine": "webkit",
+    "expected_cases": 56,
+    "recorded_cases": 56,
+    "passed": 52,
+    "failed": 4,
+    "complete": true,
+    "failures": [
+      {
+        "id": "webkit-390-pt-context-search-short",
+        "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('checkbox', { name: 'Mostrar todos os resultados', exact: true }) to be visible\u001b[22m\n\u001b[2m    50 × locator resolved to hidden <input value=\"\" type=\"checkbox\" aria-checked=\"false\" aria-label=\"Mostrar todos os resultados\" class=\"st-er st-es st-dk st-cl st-dy st-et st-c4\"/>\u001b[22m\n"
+      },
+      {
+        "id": "webkit-390-en-context-search-short",
+        "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('checkbox', { name: 'Show all results', exact: true }) to be visible\u001b[22m\n\u001b[2m    57 × locator resolved to hidden <input value=\"\" type=\"checkbox\" aria-checked=\"false\" aria-label=\"Show all results\" class=\"st-er st-dc st-cd st-ar st-e4 st-es st-c9\"/>\u001b[22m\n"
+      },
+      {
+        "id": "webkit-1440-pt-context-search-short",
+        "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('checkbox', { name: 'Mostrar todos os resultados', exact: true }) to be visible\u001b[22m\n\u001b[2m    53 × locator resolved to hidden <input value=\"\" type=\"checkbox\" aria-checked=\"false\" aria-label=\"Mostrar todos os resultados\" class=\"st-er st-es st-dk st-cl st-dy st-et st-c4\"/>\u001b[22m\n"
+      },
+      {
+        "id": "webkit-1440-en-context-search-short",
+        "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('checkbox', { name: 'Show all results', exact: true }) to be visible\u001b[22m\n\u001b[2m    58 × locator resolved to hidden <input value=\"\" type=\"checkbox\" aria-checked=\"false\" aria-label=\"Show all results\" class=\"st-er st-dc st-cd st-ar st-e4 st-es st-c9\"/>\u001b[22m\n"
+      }
+    ]
+  },
+  "external_http": {
+    "unique": 119,
+    "statuses": {
+      "206": 86,
+      "200": 33
+    },
+    "file": "external-links-final-119.json",
+    "body_limit_bytes": 2048
+  },
+  "notes": [
+    "Full interaction harness now contains 14 flows × 4 language/viewport combinations = 56 cases. The earlier Chromium run has 12 flows × 4 = 48; the 16-case smoke additionally covers the two new context flows.",
+    "The initial WebKit full run used an inaccessible native-checkbox wait in context-search-short. That harness selector was corrected to click the visible label without force. Final WebKit context smoke is the authoritative replay for that flow.",
+    "Route matrix and context checks use separate fresh browser contexts for each language/viewport. Public deployment verification is separate from local package acceptance."
+  ]
+}

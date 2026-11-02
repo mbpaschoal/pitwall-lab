@@ -28,38 +28,12 @@ def _browser_accessibility(st, selected):
           button.setAttribute('lang', pt ? 'pt' : 'en');
           button.setAttribute('aria-pressed', String((pt ? 'pt' : 'en') === locale));
         });
-        scroll();
       }
       function schedule() { if (!pending) { pending = true; host.requestAnimationFrame(update); } }
-      function scroll() {
-        // The header controls travel with the page instead of obscuring rows.
-        const y = doc.querySelector('.stMain')?.scrollTop || 0;
-        doc.querySelectorAll('[class*="st-key-pw_language_switch_"]').forEach(el => {
-          el.style.transform = `translateY(${-y}px)`;
-        });
-      }
-      function focus(event) {
-        if (event.target.closest('[class*="st-key-pw_language_switch_"]')) {
-          const main = doc.querySelector('.stMain');
-          if (main) main.scrollTop = 0;
-          scroll();
-        }
-      }
-      function skip(event) {
-        if (!event.target.closest('.pw-skip-link')) return;
-        const target = doc.querySelector('#pw-main-content');
-        if (target) { event.preventDefault(); target.focus(); target.scrollIntoView({block:'start'}); }
-      }
       const observer = new MutationObserver(schedule);
       observer.observe(doc.body, {childList:true, subtree:true});
-      doc.addEventListener('scroll', scroll, true);
-      doc.addEventListener('focusin', focus);
-      doc.addEventListener('click', skip);
       host.pitwallAccessibility = () => {
         observer.disconnect();
-        doc.removeEventListener('scroll', scroll, true);
-        doc.removeEventListener('focusin', focus);
-        doc.removeEventListener('click', skip);
       };
       update();
     })();
@@ -79,25 +53,21 @@ def initialize(st):
 
 
 def render(st, active_tab=None):
-    params = {
-        key: st.query_params[key]
-        for key in ("temporada", "gp", "tela", "documento")
-        if key in st.query_params
-    }
-    for key in ("temporada", "tela"):
-        if st.session_state.get(key) is not None:
-            params[key] = st.session_state[key]
-    if st.session_state.get("gp"):
-        params["gp"] = str(st.session_state["gp"]).split(":")[-1]
-    if active_tab is not None:
-        params["aba"] = active_tab
-
     def choose(selected):
-        st.session_state["_language"] = selected
-        st.query_params.update(dict(params, lang=selected))
+        # Read the latest URL at click time: profile filters can update it later
+        # in the same run, after this header has been rendered.
+        keys=("temporada","gp","tela","documento","aba","visao","piloto","rival",
+              "duelo_condicao","faixas","anos","metrica","minimo","condicao","cartas",
+              "origem_tela","origem_temporada","origem_gp")
+        params={key:st.query_params[key] for key in keys if key in st.query_params}
+        for key in ("temporada","tela"):
+            if st.session_state.get(key) is not None: params[key]=st.session_state[key]
+        if st.session_state.get("gp"): params["gp"]=str(st.session_state["gp"]).split(":")[-1]
+        if active_tab is not None: params["aba"]=active_tab
+        st.session_state["_language"]=selected
+        st.query_params.update(dict(params,lang=selected))
 
-    # Each tab owns one control; only the active tab is visible. Stable keys keep
-    # callbacks separate, including when a document is opened in its own session.
+    # One header control retains the active chapter and current view context.
     suffix = (active_tab or "page").encode("utf-8").hex()
     key = "pw_language_switch_" + suffix
     with st.container(key=key):

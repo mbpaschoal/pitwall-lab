@@ -1,0 +1,182 @@
+{
+  "utc": "2026-11-02T06:38:24.677Z",
+  "base": "http://127.0.0.1:8669",
+  "browser": "chromium",
+  "expectedVersion": "0.8.15",
+  "scope": "Targeted mobile Pilots profile text2x, PT/EN",
+  "limitations": [
+    "Canvas/Plotly internals and cross-origin iframe text require separate functional tests.",
+    "Background hero images and foreground title overlays are intentional and excluded from image collisions.",
+    "Partly clipped lines at scroll-viewport edges and CSS-hidden accessibility labels are excluded.",
+    "Text2x doubles computed font-size/line-height as a deterministic reflow stress test; it is not native browser zoom."
+  ],
+  "samples": [],
+  "stress": [
+    {
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "type": "pilot_filter_text2x",
+      "rect": {
+        "x": 230.671875,
+        "y": 258.734375,
+        "right": 378,
+        "bottom": 315.9375,
+        "width": 147.328125,
+        "height": 57.203125
+      },
+      "slot": {
+        "x": 237.671875,
+        "y": 277.328125,
+        "right": 277.671875,
+        "bottom": 297.328125,
+        "width": 40,
+        "height": 20
+      },
+      "glyph": {
+        "x": 237.671875,
+        "y": 263.328125,
+        "right": 277.671875,
+        "bottom": 311.328125,
+        "width": 40,
+        "height": 48
+      },
+      "text": {
+        "x": 293.671875,
+        "y": 267.734375,
+        "right": 354,
+        "bottom": 294.734375,
+        "width": 60.328125,
+        "height": 27
+      },
+      "iconAncestors": [
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-18nn5ul ejhh0er0",
+          "rect": {
+            "x": 237.671875,
+            "y": 277.328125,
+            "right": 277.671875,
+            "bottom": 297.328125,
+            "width": 40,
+            "height": 20
+          },
+          "width": "40px",
+          "minWidth": "40px",
+          "display": "flex",
+          "flex": "0 0 40px",
+          "gap": "normal"
+        },
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-cli92z e1t4gh342",
+          "rect": {
+            "x": 237.671875,
+            "y": 277.328125,
+            "right": 285.671875,
+            "bottom": 297.328125,
+            "width": 48,
+            "height": 20
+          },
+          "width": "48px",
+          "minWidth": "max-content",
+          "display": "flex",
+          "flex": "0 0 auto",
+          "gap": "normal"
+        }
+      ],
+      "font": "\"Material Symbols Rounded\"",
+      "fontLoaded": true,
+      "baselineLabelFontSize": 11,
+      "labelFontSize": 22,
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "type": "pilot_filter_text2x",
+      "rect": {
+        "x": 231.203125,
+        "y": 258.734375,
+        "right": 378,
+        "bottom": 315.9375,
+        "width": 146.796875,
+        "height": 57.203125
+      },
+      "slot": {
+        "x": 238.203125,
+        "y": 277.328125,
+        "right": 278.203125,
+        "bottom": 297.328125,
+        "width": 40,
+        "height": 20
+      },
+      "glyph": {
+        "x": 238.203125,
+        "y": 263.328125,
+        "right": 278.203125,
+        "bottom": 311.328125,
+        "width": 40,
+        "height": 48
+      },
+      "text": {
+        "x": 294.203125,
+        "y": 267.734375,
+        "right": 354,
+        "bottom": 294.734375,
+        "width": 59.796875,
+        "height": 27
+      },
+      "iconAncestors": [
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-18nn5ul ejhh0er0",
+          "rect": {
+            "x": 238.203125,
+            "y": 277.328125,
+            "right": 278.203125,
+            "bottom": 297.328125,
+            "width": 40,
+            "height": 20
+          },
+          "width": "40px",
+          "minWidth": "40px",
+          "display": "flex",
+          "flex": "0 0 40px",
+          "gap": "normal"
+        },
+        {
+          "tag": "SPAN",
+          "className": "st-emotion-cache-cli92z e1t4gh342",
+          "rect": {
+            "x": 238.203125,
+            "y": 277.328125,
+            "right": 286.203125,
+            "bottom": 297.328125,
+            "width": 48,
+            "height": 20
+          },
+          "width": "48px",
+          "minWidth": "max-content",
+          "display": "flex",
+          "flex": "0 0 auto",
+          "gap": "normal"
+        }
+      ],
+      "font": "\"Material Symbols Rounded\"",
+      "fontLoaded": true,
+      "baselineLabelFontSize": 11,
+      "labelFontSize": 22,
+      "issues": []
+    }
+  ],
+  "finishedAt": "2026-11-02T06:38:33.088Z",
+  "status": "passed"
+}

@@ -197,7 +197,7 @@ class TestEnglishApplication(unittest.TestCase):
         button = next(
             button
             for button in at.button
-            if button.label == "🇧🇷" and "48697374c3b37269636f" in button.key
+            if button.label == "🇧🇷"
         )
         button.click()
         at.run(timeout=30)

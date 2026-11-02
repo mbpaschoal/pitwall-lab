@@ -1,0 +1,146 @@
+{
+  "utc": "2026-11-02T06:39:20.692840+00:00",
+  "version": "0.8.15",
+  "build": "2abe292e375518b8b8c6fa2543993528f89937cfdb6a1aa614041202ba3c1608",
+  "source_ci_test_batches": [
+    "34",
+    "7",
+    "263"
+  ],
+  "portable_test_batches": [
+    "4",
+    "2",
+    "2",
+    "3",
+    "3",
+    "33",
+    "15",
+    "6",
+    "10",
+    "3",
+    "8",
+    "5",
+    "2",
+    "5",
+    "16",
+    "20",
+    "4"
+  ],
+  "notes": [
+    "Source CI batches were run before the last localized CSS-only filter reflow change.",
+    "The final package was rebuilt and portable checks repeated after that change.",
+    "Detailed geometry and actual-click receipts are recorded separately.",
+    "No physical iPhone or screen-reader testing was performed.",
+    "Filter icon sizing was subsequently fixed and revalidated with the focused enlarged-text guard."
+  ],
+  "checks": [
+    {
+      "receipt": "freeze0815-visual-chromium/acceptance.json",
+      "samples": 24,
+      "stress": 0,
+      "status": "passed"
+    },
+    {
+      "receipt": "freeze0815-visual-webkit/acceptance.json",
+      "samples": 24,
+      "stress": 0,
+      "status": "passed"
+    },
+    {
+      "receipt": "freeze0815-rolagem-chromium/scroll-audit.json",
+      "samples": 120,
+      "stress": 10,
+      "status": "passed"
+    },
+    {
+      "receipt": "freeze0815-rolagem-webkit-ready/scroll-audit.json",
+      "samples": 120,
+      "stress": 10,
+      "status": "passed"
+    },
+    {
+      "receipt": "freeze0815-320-chromium/scroll-audit.json",
+      "samples": 24,
+      "stress": 0,
+      "status": "passed"
+    },
+    {
+      "receipt": "freeze0815-320-webkit-ready/scroll-audit.json",
+      "samples": 24,
+      "stress": 0,
+      "status": "passed"
+    },
+    {
+      "receipt": "package-final-links/links-browser.json",
+      "samples": 100,
+      "stress": 0,
+      "status": "passed"
+    },
+    {
+      "receipt": "package-context-smoke-final/interactions.json",
+      "samples": 16,
+      "stress": 0,
+      "status": "passed"
+    },
+    {
+      "receipt": "package-context-smoke-webkit-final/interactions.json",
+      "samples": 16,
+      "stress": 0,
+      "status": "passed"
+    },
+    {
+      "receipt": "package-weekend/acceptance.json",
+      "samples": 4,
+      "stress": 0,
+      "status": "passed"
+    },
+    {
+      "receipt": "package-motion/browser.json",
+      "samples": 8,
+      "stress": 0,
+      "status": "passed"
+    },
+    {
+      "receipt": "approved0815-visual-chromium/acceptance.json",
+      "samples": 24,
+      "stress": 0,
+      "status": "passed",
+      "final_package": true
+    },
+    {
+      "receipt": "approved0815-heat-chromium/scroll-audit.json",
+      "samples": 0,
+      "stress": 2,
+      "status": "passed",
+      "final_package": true
+    },
+    {
+      "receipt": "approved0815-heat-webkit/scroll-audit.json",
+      "samples": 0,
+      "stress": 2,
+      "status": "passed",
+      "final_package": true
+    },
+    {
+      "receipt": "approved0815-profile-chromium/scroll-audit.json",
+      "samples": 0,
+      "stress": 2,
+      "status": "passed",
+      "final_package": true
+    },
+    {
+      "receipt": "approved0815-profile-webkit/scroll-audit.json",
+      "samples": 0,
+      "stress": 2,
+      "status": "passed",
+      "final_package": true
+    },
+    {
+      "receipt": "approved0815-overview-guard-webkit/scroll-audit.json",
+      "samples": 0,
+      "stress": 4,
+      "status": "passed",
+      "final_package": true
+    }
+  ]
+}

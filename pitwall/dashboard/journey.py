@@ -42,8 +42,11 @@ def race_identity(name, lang='pt'):
     return flag, en if lang == 'en' else pt
 
 
-def masthead(lang='pt'):
-    href='?'+urlencode(dict(tela='Corridas',lang=lang))
+def masthead(lang='pt', year=None, round_=None):
+    params = dict(tela='Corridas', lang=lang)
+    if year in (2024, 2025, 2026) and type(round_) is int and 1 <= round_ <= 24:
+        params.update(temporada=year, gp=round_)
+    href='?'+urlencode(params)
     return '<header class="journey-masthead"><a href="{}" target="_self" aria-label="Pitwall Lab">Pitwall Lab</a><p>Dados · contexto · mais F1</p></header>'.format(escape(href,quote=True))
 
 

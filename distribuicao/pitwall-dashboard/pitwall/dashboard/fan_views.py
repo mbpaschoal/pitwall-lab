@@ -113,7 +113,7 @@ def gp_chapters(year, round_, active='Visão geral'):
     return '<nav class="fan-gp-tabs" aria-label="{}">{}</nav>'.format(text('Explorar este GP'),''.join(links))
 
 
-def podium(rows, year, title='Pódio da corrida', compact=False):
+def podium(rows, year, title='Pódio da corrida', compact=False, round_=None):
     """Positions only from observed results. Never use probability ranks."""
     positions = {r.get('position'): r for r in rows if r.get('position') in (1,2,3)}
     cards = []
@@ -121,7 +121,12 @@ def podium(rows, year, title='Pódio da corrida', compact=False):
         row = positions.get(pos)
         if row is None:
             continue
-        url = href('Pilotos',piloto=row['id'],visao='perfil',anos=year) if row.get('id') else None
+        context = dict(piloto=row.get('id'), visao='perfil', anos=year)
+        if year in (2024, 2025, 2026) and type(round_) is int and 1 <= round_ <= 24:
+            context.update(temporada=year, gp=round_)
+            if compact:
+                context.update(origem_tela='Previsões', origem_temporada=year, origem_gp=round_)
+        url = href('Pilotos', **context) if row.get('id') else None
         display_name = row['name'].rsplit(' ',1)[-1] if compact else row['name']
         cards.append('<a class="fan-podium-place fan-place-{}" href="{}" target="_self"><b>{}º</b>{}<strong title="{}">{}</strong><small>{}</small></a>'.format(pos,escape(url or '#',quote=True),pos,portrait(row.get('id') or '',row['name']),escape(row['name'],quote=True),escape(display_name),escape(row.get('team') or '—')))
     cards=[c.replace('<a ','<article ').replace(' href="#"','').replace('</a>','</article>') if 'href="#"' in c else c for c in cards]

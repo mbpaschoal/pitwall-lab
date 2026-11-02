@@ -46,22 +46,43 @@ fs.mkdirSync(output, {recursive:true});
 
   try{await p.getByRole('heading', {level:1, name:title, exact:true}).waitFor({timeout:45000});}catch(error){await p.screenshot({path:path.join(output,'failure.png')});throw Error(JSON.stringify({expected:title,url:p.url(),headings:await p.locator('h1').allTextContents(),exceptions:await p.locator('[data-testid=stException]').allTextContents(),frontendErrors}));}
   await p.waitForFunction(() => document.querySelector('.stApp')?.getAttribute('data-test-script-state') === 'notRunning');
-  await p.waitForTimeout(700);
+  await stableIdle(p);
+  await p.evaluate(async()=>{
+   await document.fonts.ready;
+   for(const icon of document.querySelectorAll('[data-testid="stIconMaterial"]')){const c=getComputedStyle(icon);await document.fonts.load(c.fontSize+' '+c.fontFamily,icon.textContent);}
+   await document.fonts.ready;
+  });
   check(frontendErrors.length===0,'Frontend rendering error: '+frontendErrors.join('; '));
   check(await p.locator('[data-testid="stException"]').count() === 0, 'Application exception');
   const hero=await p.locator('.fan-hero').boundingBox();
-  check(hero&&hero.y>=0&&hero.y<270,'Composition C: image header too far below the navigation');
+  const preceding=await p.locator(route==='Pilotos'?'.st-key-pilot-view-navigation':'.journey-calendar').boundingBox();
+  check(hero&&preceding&&hero.y>=preceding.y+preceding.height-1&&hero.y<preceding.y+preceding.height+24,'Cover overlaps or detaches from preceding navigation');
+  check(await p.evaluate(()=>{
+   const main=document.querySelector('.stMain').getBoundingClientRect(),dock=document.querySelector('.st-key-journey-navigation').getBoundingClientRect();
+   return main.bottom<=dock.top-4;
+  }),'Main scrollport extends behind navigation');
   if(route==='Pilotos') {
    const scope=await p.locator('.fan-pilot-toolbar').boundingBox();
    const heading=await p.locator('.fan-hero h1').boundingBox();
-   const filters=await p.getByRole('button',{name:en?'Filters':'Filtros',exact:false}).boundingBox();
+   const filterControl=p.getByRole('button',{name:en?'Filters':'Filtros',exact:false});
+   const filters=await filterControl.boundingBox();
    const subtitle=await p.locator('.fan-hero-copy>p').boundingBox();
    const chips=await p.locator('.fan-condition-chips').boundingBox();
-   check(scope&&heading&&scope.y+scope.height<=heading.y-4,'Driver criteria overlap the title');
+   check(scope&&heading&&(scope.y+scope.height<=heading.y-4||scope.y>=heading.y+heading.height+4),'Driver criteria overlap the title');
    check(filters&&filters.x>=hero.x&&filters.x+filters.width<=hero.x+hero.width,'Driver filter button clipped');
    check(subtitle&&chips&&subtitle.y+subtitle.height<=chips.y-4,'Driver text overlaps condition controls');
+   const chipTargets=await p.locator('.fan-condition-chips a').evaluateAll(items=>items.map(el=>{const r=el.getBoundingClientRect();return{width:r.width,height:r.height};}));
+   check(chipTargets.length>0&&chipTargets.every(r=>r.width>=44&&r.height>=44),'Condition target smaller than44px');
+   await filterControl.scrollIntoViewIfNeeded();
+   check(await filterControl.evaluate(el=>{
+    const r=el.getBoundingClientRect(),main=document.querySelector('.stMain').getBoundingClientRect(),hit=document.elementFromPoint((r.left+r.right)/2,(r.top+r.bottom)/2);
+    return r.top>=main.top&&r.bottom<=main.bottom&&!!hit&&(hit===el||el.contains(hit));
+   }),'Scrolled driver filter is covered or clipped');
+   await p.locator('.stMain').evaluate(main=>main.scrollTo({top:0,behavior:'instant'}));
   }
   await p.locator('.fan-hero-image').evaluate(img=>img.decode());
+  await stableIdle(p);
+  await p.waitForFunction(()=>document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"] > label').length===6,null,{timeout:15000});
   check(await p.locator('.st-key-journey-navigation [role="radiogroup"] > label').count()===6,'Composition C: six destinations required');
 
   return p;

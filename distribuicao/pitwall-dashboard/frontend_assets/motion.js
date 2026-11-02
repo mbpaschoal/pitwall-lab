@@ -6,7 +6,32 @@
   let disabled = false, seenMethod = false;
   try { disabled = w.sessionStorage.getItem('pitwall-motion-disabled') === 'true'; } catch (_) {}
   const reduced = () => disabled || preference.matches;
+  // The dock occupies its own viewport area; content cannot scroll behind it.
+  let layoutPending = false, observedDock = null, observedMain = null;
+  const resizeObserver = new w.ResizeObserver(scheduleLayout);
+  function scheduleLayout() {
+    if (layoutPending) return;
+    layoutPending = true;
+    w.requestAnimationFrame(() => {
+      layoutPending = false;
+      const main = d.querySelector('.stMain'), dock = d.querySelector('.st-key-journey-navigation');
+      if (!main || !dock) return;
+      for (const [next,old] of [[dock,observedDock],[main,observedMain]]) {
+        if (next !== old) { if (old) resizeObserver.unobserve(old); resizeObserver.observe(next); }
+      }
+      observedDock = dock; observedMain = main;
+      const viewportEnd = w.visualViewport ? w.visualViewport.offsetTop + w.visualViewport.height : w.innerHeight;
+      const height = Math.max(0, Math.floor(Math.min(dock.getBoundingClientRect().top,viewportEnd) - main.getBoundingClientRect().top - 8));
+      const value = height + 'px';
+      if (d.documentElement.style.getPropertyValue('--pw-content-max-height') !== value)
+        d.documentElement.style.setProperty('--pw-content-max-height', value);
+    });
+  }
+  w.addEventListener('resize',scheduleLayout);
+  if (w.visualViewport) w.visualViewport.addEventListener('resize',scheduleLayout);
+
   function refresh() {
+    scheduleLayout();
     d.documentElement.dataset.pwReducedMotion = String(reduced());
     for (const button of d.querySelectorAll('[data-pw-motion]')) {
       const label = preference.matches ? button.dataset.system : (reduced() ? button.dataset.enable : button.dataset.reduce);

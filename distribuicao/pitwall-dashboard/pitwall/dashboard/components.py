@@ -170,7 +170,7 @@ def _pontos(valor):
     return "{:g}".format(float(valor))
 
 
-def standings_table(snapshot, teams=False, season=None):
+def standings_table(snapshot, teams=False, season=None, round_=None):
     classificacao = (
         snapshot.get("classificacao", []) if snapshot.get("disponivel") else []
     )
@@ -208,6 +208,8 @@ def standings_table(snapshot, teams=False, season=None):
                 params = dict(tela="Pilotos", visao="perfil", piloto=item["piloto_id"], lang=language())
                 if season is not None:
                     params["anos"] = season
+                if season in (2024, 2025, 2026) and type(round_) is int and 1 <= round_ <= 24:
+                    params.update(temporada=season, gp=round_)
                 href = "?" + urlencode(params)
                 label = '<a href="{}">{}</a>'.format(e(href), label)
 
@@ -235,7 +237,7 @@ def standings_table(snapshot, teams=False, season=None):
     )
 
 
-def campeonatos(paineis, temporada):
+def campeonatos(paineis, temporada, rodada=None):
     cards = []
     for teams, titulo, ancora in [
         (False, "Campeonato de pilotos", "campeonato-completo"),
@@ -244,7 +246,7 @@ def campeonatos(paineis, temporada):
         snapshot = paineis["constructor_standings" if teams else "driver_standings"]
         cards.append(
             '<section class="painel-editorial" id="{}"><div class="pw-card-head"><h3>{} <span>{}</span></h3></div>{}</section>'.format(
-                ancora, e(titulo), temporada, standings_table(snapshot, teams, temporada)
+                ancora, e(titulo), temporada, standings_table(snapshot, teams, temporada, round_=rodada)
             )
         )
     return '<div class="pw-standings" aria-label="Campeonato · referência da rodada {}">{}</div>'.format(
