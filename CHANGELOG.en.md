@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.8.8 — 2026-11-02
+
+- Fixes public-checkout acceptance: legacy tests requiring local scientific captures remain part of local validation. CI retains evaluation-binding tests, UI/reader tests and the isolated portable package without private sources.
+- Tag0.8.7 is preserved. This correction completes delivery of the Mexico evaluation and tyre presentation improvements; probabilities, rankings and posterior targets do not change.
+- Validation: package reproduction, portable tests and public PT/EN desktop/mobile checks. Learning: public-checkout tests must declare dependencies actually available in that checkout.
+
 ## 0.8.7 — 2026-11-02
 
 - The collector applies Mexico's final FIA classification, including post-penalty positions, times and points while preserving the earlier response in its audit. São Paulo has an explicit configuration for five sessions on 6–8 November; race start is 14:00 local time. [Operational sources and validation](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/mexico_avaliacao_saopaulo_20261102/README.md).

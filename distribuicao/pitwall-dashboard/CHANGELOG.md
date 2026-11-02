@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.8.8 — 2026-11-02
+
+- Corrige o aceite do checkout público: testes legados que exigem capturas científicas locais continuam executados localmente. O CI mantém os testes de vínculo da avaliação, UI/leitor e o pacote portátil sem fontes privadas.
+- A tag 0.8.7 permanece preservada. Esta correção conclui a entrega da avaliação do México e das melhorias de pneus; probabilidades, rankings e alvos posteriores não mudam.
+- Validação: reprodução do pacote, testes portáteis e conferência pública PT/EN em computador/celular. Aprendizado: testes de um checkout público precisam declarar dependências disponíveis nesse checkout.
+
 ## 0.8.7 — 2026-11-02
 
 ### Alterado

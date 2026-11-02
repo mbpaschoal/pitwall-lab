@@ -21,3 +21,5 @@ O [produtor offline](../../preparar_dashboard_race_weekend.py) aplica os alvos a
 A versão do produto é **0.8.7**, incorporando a avaliação e preservando a entrega local 0.8.6 de apresentação dos pneus, já validada em fluxo paralelo. A correção operacional da classificação final e a preparação de São Paulo foram feitas em paralelo; não houve treinamento ou nova emissão neste trabalho. Os modelos e o baseline científico continuam congelados.
 
 Verificações locais e públicas serão detalhadas nos recibos deste diretório. Celular significa viewport e interação por toque emulados; não representa ensaio em aparelho físico ou leitor de tela.
+
+A publicação final usa **0.8.8**, pois o aceite CI da 0.8.7 incluiu cinco testes legados dependentes de capturas locais não publicadas. A correção mantém esses testes locais e preserva os testes CI de integridade e do pacote portátil; a tag 0.8.7 não foi reescrita. O build final será confirmado em sessão pública nova.
