@@ -1,0 +1,659 @@
+{
+  "version": "0.8.17",
+  "engine": "chromium",
+  "base": "http://127.0.0.1:8673",
+  "cases": [
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Corridas",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Acompanhar chegada dos dados",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Fontes e cobertura",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Pilotos",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Classificação completa por condição",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Mais condições",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Mapa de condições",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Corridas que sustentam a comparação",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Compartilhar esta análise",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Como os números são calculados",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Campeonato",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Previsões",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Acompanhar chegada dos dados",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Comparar com a classificação",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Chances de pódio por piloto",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Cobertura e exclusões",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Avaliação da previsão",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Desempenho",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Resultados por GP e previsões registradas",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Metodologia",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Termos da corrida",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Para quem quer ir além",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Corridas",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Track incoming data",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Sources and coverage",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Pilotos",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Complete condition ranking",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "More conditions",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Condition map",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Races behind the comparison",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Share this analysis",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "How the numbers are calculated",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Campeonato",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Previsões",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Track incoming data",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Compare with qualifying",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Podium chances by driver",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Coverage and exclusions",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Prediction evaluation",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Desempenho",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Results by Grand Prix and recorded forecasts",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Metodologia",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Race terms",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "For a closer look",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Corridas",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Acompanhar chegada dos dados",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Fontes e cobertura",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Pilotos",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Classificação completa por condição",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Mais condições",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Mapa de condições",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Corridas que sustentam a comparação",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Compartilhar esta análise",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Como os números são calculados",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Campeonato",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Previsões",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Acompanhar chegada dos dados",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Comparar com a classificação",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Chances de pódio por piloto",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Cobertura e exclusões",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Avaliação da previsão",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Desempenho",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Resultados por GP e previsões registradas",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Metodologia",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Termos da corrida",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Para quem quer ir além",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Corridas",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Track incoming data",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Sources and coverage",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Pilotos",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Complete condition ranking",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "More conditions",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Condition map",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Races behind the comparison",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Share this analysis",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "How the numbers are calculated",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Campeonato",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Previsões",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Track incoming data",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Compare with qualifying",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Podium chances by driver",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Coverage and exclusions",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "Prediction evaluation",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Desempenho",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Results by Grand Prix and recorded forecasts",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Metodologia",
+      "flag": {
+        "black": 562,
+        "white": 257,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Race terms",
+          "delta": 0,
+          "margin": "0px"
+        },
+        {
+          "text": "For a closer look",
+          "delta": 0,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    }
+  ]
+}

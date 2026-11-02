@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.8.17 — 2026-11-02
+
+Fixes the Races icon with a black-and-white chequered flag, including its selected state. Aligns expander titles and arrows by removing the paragraph margin that displaced labels. The shared rule supports PT/EN, wrapped labels and desktop/mobile. Focused browser and package validation; photographs, colors, data and forecasts preserved. Learning: check painted text alignment as well as the control rectangle.
+
 ## 0.8.16 — 2026-11-02
 
 - Fixes the public URL after following calendar, chapter and panel links. Streamlit's native channel synchronizes the route, so reloads and copied URLs retain GP, screen and language.

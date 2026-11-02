@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.8.17 — 2026-11-02
+
+Corrige o ícone de Corridas para uma bandeira quadriculada preta e branca, inclusive quando selecionada. Alinha títulos e setas dos expansores, removendo a margem de parágrafo que deslocava o texto. A regra compartilhada atende PT/EN, títulos longos e computador/celular. Validação focal em navegador e pacote; fotos, cores, dados e previsões preservados. Aprendizado: conferir o alinhamento do texto pintado, além do retângulo do controle.
+
 ## 0.8.16 — 2026-11-02
 
 - Corrige a URL pública após navegar por links de calendário, capítulos e painéis. A rota é sincronizada pelo canal nativo do Streamlit: recarregar e copiar a URL conservam GP, tela e idioma.

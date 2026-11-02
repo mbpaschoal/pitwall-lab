@@ -33,3 +33,7 @@ Checks wait for the expected version, route, language and idle state. Streamlit 
 `PITWALL_CONCURRENCY=2` permite até dois contextos simultâneos por conjunto; o padrão é um. `PITWALL_RESUME=1` retoma somente casos aprovados de uma execução com mesma URL, engine e versão esperada, preservando a evidência original. As saídas são gravadas atomicamente. Em publicação, o aceite compara também URL externa/iframe e recarrega capítulos e retorno documental para conferir persistência.
 
 `PITWALL_CONCURRENCY=2` enables at most two concurrent contexts per suite; the default is one. `PITWALL_RESUME=1` reuses only passed cases for the same base URL, engine and expected version, preserving the original evidence. Output files are written atomically. Public acceptance also compares outer/iframe routes and reloads chapters and document returns to verify persistence.
+
+`aceite_controles.cjs` mede a bandeira preta/branca e o alinhamento dos expansores nas seis telas PT/EN em 390/1440 px; aceita Chromium/WebKit e verifica abertura/fechamento, margem, centro vertical e área mínima de toque de 44 px.
+
+`aceite_controles.cjs` checks the black/white flag and expander alignment across all six screens in PT/EN at 390/1440 px, with Chromium/WebKit, toggles, paragraph margins, vertical centers and 44 px touch targets.

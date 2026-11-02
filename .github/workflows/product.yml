@@ -61,11 +61,13 @@ jobs:
           done
           node tests/browser/aceite_exploracao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/browser-evidence"
           node tests/browser/aceite_visual.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/visual-evidence"
+          node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-evidence"
           node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-evidence"
           node tests/browser/aceite_fim_semana.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/weekend-evidence"
           node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-evidence"
           PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-webkit-evidence"
           PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-webkit-evidence"
+          PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-webkit-evidence"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -74,6 +76,8 @@ jobs:
           path: |
             ${{ runner.temp }}/browser-evidence
             ${{ runner.temp }}/visual-evidence
+            ${{ runner.temp }}/controls-evidence
+            ${{ runner.temp }}/controls-webkit-evidence
             ${{ runner.temp }}/scroll-evidence
             ${{ runner.temp }}/weekend-evidence
             ${{ runner.temp }}/context-evidence
