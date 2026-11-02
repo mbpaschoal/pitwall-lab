@@ -1,5 +1,13 @@
 # Pitwall Lab evolution
 
+## 0.8.13 — 2026-11-02
+
+Fix automatic data publication when another commit reaches main during collection/validation. Detect branch advances before commit/tag creation and after an atomic push rejection. Dispatch a fresh run on current main, restore captures and regenerate version, package and tests instead of rebasing stale generated artifacts.
+
+Original captures survive in bounded cache and a workflow artifact before publication. A lineage allows at most two recoveries; permission/transport failures and exhaustion remain explicit. Only actually published versions undergo Streamlit verification. No force push or forecast/model changes.
+
+Eight tests with real temporary Git repositories cover both race windows, recalculated versions, preserved tags/commits, unrelated staging and permission errors. [PT/EN runbook](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/runbooks/automatic-publication.md).
+
 ## 0.8.12 — 2026-11-02
 
 - Fixes the motion control accessibility semantics: its name announces the available action without a toggle state contradicting its text. System preferences and persistence remain preserved.

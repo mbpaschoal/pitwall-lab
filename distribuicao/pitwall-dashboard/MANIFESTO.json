@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "87a68758a2a2017e9c66ce1946af3d7baf7ed359cfad03f3fb3dc5c9e5ddd0df",
+  "apresentacao_build_sha256": "e80e1ac56758e0b34582a9eed3de2fb335d10b71ff2c40c64e2551a593464aeb",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "ac41af62fb7ad29ecb2bb29987ba7f04fa8dbe9be9cb9548d0642f882c8af340",
-      "sha256_origem": "7488f1ec7d694113298bd074bde1554f28abd23a0a0cc74bb0b1d8ebf1632b45"
+      "sha256_destino": "ced9bf47e21663181e25963b759ed94d54a2e1db2ff4c8717a8854fb68a21f65",
+      "sha256_origem": "7c5346c123ff523f14156a306402b4f6edbc275aa4acd0d187a61b2f52af28bc"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "5f02ab1722d083a92680e8409137971de4bad6d64c5ec2b7f458f3b3dfb10c95",
-      "sha256_origem": "46d3c55a86bf948569f4bf467bb5cf4395890394fb6e97b582ec679827491f34"
+      "sha256_destino": "30be457cd0edd140c00a7e0aeb8d0391a717f3b060ee261ad7497b0da5d9e943",
+      "sha256_origem": "0e63eb6237ed1f1a7d1e6f9571eff302c0994bda78a94375e5e9006201d417a4"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "48732179dae488fe78e7210c84f94a44cc6913283f845d7d978302f20750f8f8",
-      "sha256_origem": "48732179dae488fe78e7210c84f94a44cc6913283f845d7d978302f20750f8f8"
+      "sha256_destino": "414f2b8d3ed8f7c983632c4765179167948b1519b0cfc3596c68db66c9617dc3",
+      "sha256_origem": "414f2b8d3ed8f7c983632c4765179167948b1519b0cfc3596c68db66c9617dc3"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2499,8 +2499,8 @@
       "caminho": "docs/OPERACAO_FIM_SEMANA.md",
       "fonte": "docs/OPERACAO_FIM_SEMANA.md",
       "modo": "copia",
-      "sha256_destino": "cb2960da4122b5392306e0f191c2a224f2d8df765f9a6c1fd6526c0c48f74bce",
-      "sha256_origem": "cb2960da4122b5392306e0f191c2a224f2d8df765f9a6c1fd6526c0c48f74bce"
+      "sha256_destino": "d724cdadf68d2cda7e2f01c6ad33cc27c6f848187baa6056ec70e71939fea20e",
+      "sha256_origem": "d724cdadf68d2cda7e2f01c6ad33cc27c6f848187baa6056ec70e71939fea20e"
     },
     {
       "caminho": "docs/REVISAO_030.md",
@@ -2541,8 +2541,8 @@
       "caminho": "docs/en/WEEKEND_OPERATION.md",
       "fonte": "docs/en/WEEKEND_OPERATION.md",
       "modo": "copia",
-      "sha256_destino": "d5383f8b63d84b80b2129b8f91c430a76c42738415845af36c290cc659b0e350",
-      "sha256_origem": "d5383f8b63d84b80b2129b8f91c430a76c42738415845af36c290cc659b0e350"
+      "sha256_destino": "5bdbcc88534e860dd9c8ad0a64458a5f156ce47d5d35c40db9e2bb0373fcfe13",
+      "sha256_origem": "5bdbcc88534e860dd9c8ad0a64458a5f156ce47d5d35c40db9e2bb0373fcfe13"
     },
     {
       "caminho": "docs/en/avaliacao_final_v1.md",
@@ -3166,8 +3166,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "65ae019d47e64dbe13af729a6db0d5792e8d537f8bf8ab74acf48d6766aaaf72",
-      "sha256_origem": "65ae019d47e64dbe13af729a6db0d5792e8d537f8bf8ab74acf48d6766aaaf72"
+      "sha256_destino": "9cc3acf26e8da67847708700179c19c8e0e1288395f538d5a0f8e6e9934f2ad5",
+      "sha256_origem": "9cc3acf26e8da67847708700179c19c8e0e1288395f538d5a0f8e6e9934f2ad5"
     },
     {
       "caminho": "static/pitwall-media/catalog.json",
@@ -3372,7 +3372,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "65ae019d47e64dbe13af729a6db0d5792e8d537f8bf8ab74acf48d6766aaaf72"
+      "sha256": "9cc3acf26e8da67847708700179c19c8e0e1288395f538d5a0f8e6e9934f2ad5"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -3403,5 +3403,5 @@
       "sha256": "0e48f17455af5e120682f444285f1e08ab38f958acf9e30de49de6f52714f484"
     }
   ],
-  "versao_produto": "0.8.12"
+  "versao_produto": "0.8.13"
 }
