@@ -1,0 +1,19 @@
+{
+  "publication_branch": "codex/publicar-motion-0811",
+  "published_tag": "v0.8.12",
+  "published_commit": "3aaff725c6efe377b18e005031d9dd22be368c26",
+  "isolated_source": "/private/tmp/pitwall-motion-source-0811",
+  "root_local_head": "57a8471bbca99245f8bf3a77127629412093787e",
+  "root_working_version": "0.10.0",
+  "root_preexisting_changes_preserved": [
+    "CHANGELOG.en.md",
+    "CHANGELOG.md",
+    "README.en.md",
+    "README.md",
+    "VERSION",
+    "docs/README.md",
+    "docs/comandos_operacao_2026.md",
+    "projects/Pitwall Lab.md"
+  ],
+  "root_worktree_reset_or_stash": false
+}

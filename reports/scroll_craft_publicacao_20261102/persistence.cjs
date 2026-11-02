@@ -1,0 +1,14 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const fs=require('fs'),path=require('path'),assert=require('assert/strict');
+(async()=>{const browser=await chromium.launch({channel:'chrome',headless:true});const results=[];
+try{for(const [lang,width] of [['pt',1440],['en',390]]){
+const context=await browser.newContext({viewport:{width,height:900},isMobile:width===390,hasTouch:width===390,reducedMotion:'no-preference'});const page=await context.newPage();
+await page.addInitScript(()=>{window.motionCalls=0;const animate=Element.prototype.animate;Element.prototype.animate=function(...args){if(this.classList.contains('fan-process-step'))window.motionCalls++;return animate.apply(this,args)}});
+async function surface(){let app;for(let i=0;i<120;i++){app=page.frames().find(f=>f.url().includes('/~/+/'));if(app)break;await page.waitForTimeout(500)}assert(app);await app.waitForFunction(()=>window.__pitwallMotion&&document.querySelector('.fan-process-step')&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.body.innerText.includes('v0.8.12'),null,{timeout:60000});return app;}
+await page.goto('https://pitwall-lab.streamlit.app/?tela=Metodologia&temporada=2026&gp=19&lang='+lang);let app=await surface();
+let button=app.locator('[data-pw-motion]');await button.press('Space');await app.waitForFunction(()=>document.documentElement.dataset.pwReducedMotion==='true');
+await page.reload();app=await surface();assert.equal(await app.locator('[data-pw-motion]').innerText(),lang==='pt'?'Ativar movimento':'Enable motion');assert.equal(await app.evaluate(()=>window.motionCalls),0);assert.equal(await app.locator('.stMain').evaluate(n=>getComputedStyle(n).scrollBehavior),'auto');
+await app.locator('[data-pw-motion]').press('Space');await app.waitForFunction(()=>document.documentElement.dataset.pwReducedMotion==='false');assert.equal(await app.evaluate(()=>window.motionCalls),0,'Enabling motion must not replay already read content');
+await page.emulateMedia({reducedMotion:'reduce'});await app.waitForFunction(()=>document.querySelector('[data-pw-motion]')?.disabled===true);assert.equal(await app.locator('[data-pw-motion]').innerText(),lang==='pt'?'Movimento reduzido pelo sistema':'System reduced motion');assert.equal(await app.locator('[data-testid=stException]').count(),0);
+await app.locator('.pw-page-tools').screenshot({path:path.join(__dirname,`motion-controls-${lang}.jpg`),type:'jpeg',quality:80});results.push({lang,width,status:'passed',preference_survives_reload:true,no_replay_on_enable:true,live_system_preference:true});console.log(results.at(-1));await context.close();
+}fs.writeFileSync(path.join(__dirname,'persistence.json'),JSON.stringify(results,null,2));}finally{await browser.close()}})().catch(e=>{console.error(e);process.exit(1)});

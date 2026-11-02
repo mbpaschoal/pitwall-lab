@@ -1,0 +1,5626 @@
+{
+  "version": "0.8.12",
+  "css_sha256": "a7a69669bed34d4758999da1b9116c1b374b50cd88e0af42f83aa6776c2caa77",
+  "cases": [
+    {
+      "route": "Corridas",
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "a49f718f36996c7cb7b39db6659af31fe7eb600bf4ea9205c4a6b04194754993",
+      "measurements": {
+        "viewport": [
+          1040,
+          992
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 450,
+          "bottom": 570.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 58,
+          "y": 150.59375,
+          "width": 471.359375,
+          "height": 128.9375,
+          "bottom": 279.53125,
+          "right": 529.359375
+        },
+        "copy": {
+          "x": 58,
+          "y": 289.53125,
+          "width": 471.359375,
+          "height": 63.78125,
+          "bottom": 353.3125,
+          "right": 529.359375
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 850,
+          "width": 984,
+          "height": 82,
+          "bottom": 932,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 851,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 931,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5822,
+              3275
+            ],
+            "responsive": false,
+            "display": [
+              984,
+              450
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              140,
+              160
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              140,
+              160
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              140,
+              160
+            ]
+          }
+        ],
+        "podium": {
+          "x": 28,
+          "y": 509.59375,
+          "width": 604.671875,
+          "height": 315.390625,
+          "bottom": 824.984375,
+          "right": 632.671875
+        },
+        "podiumHeading": {
+          "x": 46,
+          "y": 525.59375,
+          "width": 568.671875,
+          "height": 30,
+          "bottom": 555.59375,
+          "right": 614.671875
+        },
+        "weather": {
+          "x": 666.671875,
+          "y": 728.78125,
+          "width": 327.328125,
+          "height": 87.484375,
+          "bottom": 816.265625,
+          "right": 994
+        },
+        "details": {
+          "x": 666.671875,
+          "y": 816.265625,
+          "width": 327.328125,
+          "height": 38,
+          "bottom": 854.265625,
+          "right": 994
+        },
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Pilotos",
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "d45309c1791dd091ab17b2a62702cab850fc9df939051ea1a46b5da24e92c456",
+      "measurements": {
+        "viewport": [
+          1040,
+          992
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 408,
+          "bottom": 528.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 56,
+          "y": 184.59375,
+          "width": 475.359375,
+          "height": 120.625,
+          "bottom": 305.21875,
+          "right": 531.359375
+        },
+        "copy": {
+          "x": 56,
+          "y": 315.21875,
+          "width": 475.359375,
+          "height": 52.1875,
+          "bottom": 367.40625,
+          "right": 531.359375
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 850,
+          "width": 984,
+          "height": 82,
+          "bottom": 932,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 851,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 931,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5157,
+              2970
+            ],
+            "responsive": false,
+            "display": [
+              984,
+              408
+            ]
+          },
+          {
+            "natural": [
+              3840,
+              2549
+            ],
+            "responsive": false,
+            "display": [
+              570.71875,
+              408
+            ]
+          },
+          {
+            "driver": "norris",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              210,
+              210
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              210,
+              210
+            ]
+          },
+          {
+            "driver": "hamilton",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              38,
+              38
+            ]
+          },
+          {
+            "driver": "piastri",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              38,
+              38
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": {
+          "x": 54,
+          "y": 430.59375,
+          "width": 787.1875,
+          "height": 56,
+          "bottom": 486.59375,
+          "right": 841.1875
+        },
+        "scope": {
+          "x": 56,
+          "y": 153.484375,
+          "width": 822,
+          "height": 23.390625,
+          "bottom": 176.875,
+          "right": 878
+        },
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": [
+          37.5,
+          17.5439,
+          18.5185,
+          18.1818,
+          37.5,
+          27.5862,
+          22.2222,
+          40.9091,
+          12.5,
+          12.5
+        ]
+      }
+    },
+    {
+      "route": "Campeonato",
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "97b42c7afea07d1de0ea31bb962e2d9ca7561e8aaea8b97eee39374f4217a3a8",
+      "measurements": {
+        "viewport": [
+          1040,
+          992
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 160,
+          "bottom": 280.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 56,
+          "y": 144.59375,
+          "width": 928,
+          "height": 56.15625,
+          "bottom": 200.75,
+          "right": 984
+        },
+        "copy": {
+          "x": 56,
+          "y": 210.75,
+          "width": 560,
+          "height": 26.09375,
+          "bottom": 236.84375,
+          "right": 616
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 850,
+          "width": 984,
+          "height": 82,
+          "bottom": 932,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 851,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 931,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              3840,
+              2565
+            ],
+            "responsive": false,
+            "display": [
+              984,
+              160
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "russell",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "hamilton",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "norris",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "piastri",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "hadjar",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "lawson",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "gasly",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "arvid_lindblad",
+            "natural": [
+              1336,
+              3840
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "colapinto",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "bearman",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "hulkenberg",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "bortoleto",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "ocon",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "alonso",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "sainz",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "albon",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "tsunoda",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "stroll",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "bottas",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "perez",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 34,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Previsões",
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "c52ce464d7557adf49348533eef9e4e1a5d8288399a9418ad85302f99f0a58d2",
+      "measurements": {
+        "viewport": [
+          1040,
+          875
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 225,
+          "bottom": 345.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 56,
+          "y": 144.59375,
+          "width": 583.59375,
+          "height": 56.15625,
+          "bottom": 200.75,
+          "right": 639.59375
+        },
+        "copy": {
+          "x": 56,
+          "y": 210.75,
+          "width": 560,
+          "height": 26.09375,
+          "bottom": 236.84375,
+          "right": 616
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 733,
+          "width": 984,
+          "height": 82,
+          "bottom": 815,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 734,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 814,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              4589,
+              2401
+            ],
+            "responsive": false,
+            "display": [
+              984,
+              225
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              46,
+              50
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              46,
+              50
+            ]
+          },
+          {
+            "driver": "hadjar",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              46,
+              50
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          }
+        ],
+        "podium": {
+          "x": 339.6875,
+          "y": 574.78125,
+          "width": 658.3125,
+          "height": 129.578125,
+          "bottom": 704.359375,
+          "right": 998
+        },
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": {
+          "x": 28,
+          "y": 355.59375,
+          "width": 984,
+          "height": 188,
+          "bottom": 543.59375,
+          "right": 1012
+        },
+        "after": {
+          "x": 28,
+          "y": 564.78125,
+          "width": 984,
+          "height": 149.578125,
+          "bottom": 714.359375,
+          "right": 1012
+        },
+        "compact": {
+          "x": 339.6875,
+          "y": 574.78125,
+          "width": 658.3125,
+          "height": 129.578125,
+          "bottom": 704.359375,
+          "right": 998
+        },
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": [
+          83.5369,
+          79.8281,
+          52.0849
+        ]
+      }
+    },
+    {
+      "route": "Desempenho",
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "92b949f0d2e8183cb236053fdc1f3d3ee9c59a9603c350a90c6408ae6c071d2e",
+      "measurements": {
+        "viewport": [
+          1040,
+          875
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 260,
+          "bottom": 380.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 56,
+          "y": 144.59375,
+          "width": 583.59375,
+          "height": 56.15625,
+          "bottom": 200.75,
+          "right": 639.59375
+        },
+        "copy": {
+          "x": 56,
+          "y": 210.75,
+          "width": 560,
+          "height": 52.1875,
+          "bottom": 262.9375,
+          "right": 616
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 733,
+          "width": 984,
+          "height": 82,
+          "bottom": 815,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 734,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 814,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5095,
+              2908
+            ],
+            "responsive": false,
+            "display": [
+              984,
+              260
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": {
+          "x": 28,
+          "y": 321.59375,
+          "width": 984,
+          "height": 534.25,
+          "bottom": 855.84375,
+          "right": 1012
+        },
+        "resultsHeader": {
+          "x": 48,
+          "y": 341.59375,
+          "width": 944,
+          "height": 66.390625,
+          "bottom": 407.984375,
+          "right": 992
+        },
+        "legend": {
+          "x": 692.3125,
+          "y": 353.59375,
+          "width": 299.6875,
+          "height": 42.375,
+          "bottom": 395.96875,
+          "right": 992
+        },
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Metodologia",
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "a1596b9cc5304a9888fa42365ba2b822d20fb8ee43c7e89c3c2805cbe4863baa",
+      "measurements": {
+        "viewport": [
+          1040,
+          875
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 245,
+          "bottom": 365.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 56,
+          "y": 144.59375,
+          "width": 583.59375,
+          "height": 56.15625,
+          "bottom": 200.75,
+          "right": 639.59375
+        },
+        "copy": {
+          "x": 56,
+          "y": 210.75,
+          "width": 560,
+          "height": 52.1875,
+          "bottom": 262.9375,
+          "right": 616
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 733,
+          "width": 984,
+          "height": 82,
+          "bottom": 815,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 734,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 814,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              1455,
+              818
+            ],
+            "responsive": true,
+            "display": [
+              1377.59375,
+              245
+            ],
+            "sourcePixels": [
+              3600,
+              2025
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [
+          {
+            "x": 28,
+            "y": 316.59375,
+            "width": 984,
+            "height": 100,
+            "bottom": 416.59375,
+            "right": 1012
+          },
+          {
+            "x": 28,
+            "y": 426.59375,
+            "width": 984,
+            "height": 100,
+            "bottom": 526.59375,
+            "right": 1012
+          },
+          {
+            "x": 28,
+            "y": 536.59375,
+            "width": 984,
+            "height": 106.875,
+            "bottom": 643.46875,
+            "right": 1012
+          }
+        ],
+        "stepFont": 17,
+        "documents": [
+          {
+            "x": 28,
+            "y": 647.46875,
+            "width": 485,
+            "height": 74,
+            "bottom": 721.46875,
+            "right": 513
+          },
+          {
+            "x": 527,
+            "y": 647.46875,
+            "width": 485,
+            "height": 74,
+            "bottom": 721.46875,
+            "right": 1012
+          }
+        ],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Corridas",
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "a49f718f36996c7cb7b39db6659af31fe7eb600bf4ea9205c4a6b04194754993",
+      "measurements": {
+        "viewport": [
+          1040,
+          992
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 450,
+          "bottom": 570.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 58,
+          "y": 150.59375,
+          "width": 471.359375,
+          "height": 128.9375,
+          "bottom": 279.53125,
+          "right": 529.359375
+        },
+        "copy": {
+          "x": 58,
+          "y": 289.53125,
+          "width": 471.359375,
+          "height": 63.78125,
+          "bottom": 353.3125,
+          "right": 529.359375
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 850,
+          "width": 984,
+          "height": 82,
+          "bottom": 932,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 851,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 931,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5822,
+              3275
+            ],
+            "responsive": false,
+            "display": [
+              984,
+              450
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              140,
+              160
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              140,
+              160
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              140,
+              160
+            ]
+          }
+        ],
+        "podium": {
+          "x": 28,
+          "y": 509.59375,
+          "width": 604.671875,
+          "height": 315.390625,
+          "bottom": 824.984375,
+          "right": 632.671875
+        },
+        "podiumHeading": {
+          "x": 46,
+          "y": 525.59375,
+          "width": 568.671875,
+          "height": 30,
+          "bottom": 555.59375,
+          "right": 614.671875
+        },
+        "weather": {
+          "x": 666.671875,
+          "y": 728.78125,
+          "width": 327.328125,
+          "height": 87.484375,
+          "bottom": 816.265625,
+          "right": 994
+        },
+        "details": {
+          "x": 666.671875,
+          "y": 816.265625,
+          "width": 327.328125,
+          "height": 38,
+          "bottom": 854.265625,
+          "right": 994
+        },
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Pilotos",
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "d45309c1791dd091ab17b2a62702cab850fc9df939051ea1a46b5da24e92c456",
+      "measurements": {
+        "viewport": [
+          1040,
+          992
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 408,
+          "bottom": 528.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 56,
+          "y": 184.59375,
+          "width": 475.359375,
+          "height": 120.625,
+          "bottom": 305.21875,
+          "right": 531.359375
+        },
+        "copy": {
+          "x": 56,
+          "y": 315.21875,
+          "width": 475.359375,
+          "height": 52.1875,
+          "bottom": 367.40625,
+          "right": 531.359375
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 850,
+          "width": 984,
+          "height": 82,
+          "bottom": 932,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 851,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 931,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5157,
+              2970
+            ],
+            "responsive": false,
+            "display": [
+              984,
+              408
+            ]
+          },
+          {
+            "natural": [
+              3840,
+              2549
+            ],
+            "responsive": false,
+            "display": [
+              570.71875,
+              408
+            ]
+          },
+          {
+            "driver": "norris",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              210,
+              210
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              210,
+              210
+            ]
+          },
+          {
+            "driver": "hamilton",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              38,
+              38
+            ]
+          },
+          {
+            "driver": "piastri",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              38,
+              38
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": {
+          "x": 54,
+          "y": 430.59375,
+          "width": 787.1875,
+          "height": 56,
+          "bottom": 486.59375,
+          "right": 841.1875
+        },
+        "scope": {
+          "x": 56,
+          "y": 153.484375,
+          "width": 822,
+          "height": 23.390625,
+          "bottom": 176.875,
+          "right": 878
+        },
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": [
+          37.5,
+          17.5439,
+          18.5185,
+          18.1818,
+          37.5,
+          27.5862,
+          22.2222,
+          40.9091,
+          12.5,
+          12.5
+        ]
+      }
+    },
+    {
+      "route": "Campeonato",
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "97b42c7afea07d1de0ea31bb962e2d9ca7561e8aaea8b97eee39374f4217a3a8",
+      "measurements": {
+        "viewport": [
+          1040,
+          992
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 160,
+          "bottom": 280.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 56,
+          "y": 144.59375,
+          "width": 928,
+          "height": 56.15625,
+          "bottom": 200.75,
+          "right": 984
+        },
+        "copy": {
+          "x": 56,
+          "y": 210.75,
+          "width": 560,
+          "height": 26.09375,
+          "bottom": 236.84375,
+          "right": 616
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 850,
+          "width": 984,
+          "height": 82,
+          "bottom": 932,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 851,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 931,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 851,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 931,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              3840,
+              2565
+            ],
+            "responsive": false,
+            "display": [
+              984,
+              160
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "russell",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "hamilton",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "norris",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "piastri",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "hadjar",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "lawson",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "gasly",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "arvid_lindblad",
+            "natural": [
+              1336,
+              3840
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "colapinto",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "bearman",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "hulkenberg",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "bortoleto",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "ocon",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "alonso",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "sainz",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "albon",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "tsunoda",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "stroll",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "bottas",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          },
+          {
+            "driver": "perez",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              42,
+              42
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 34,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Previsões",
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "c52ce464d7557adf49348533eef9e4e1a5d8288399a9418ad85302f99f0a58d2",
+      "measurements": {
+        "viewport": [
+          1040,
+          875
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 225,
+          "bottom": 345.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 56,
+          "y": 144.59375,
+          "width": 583.59375,
+          "height": 56.15625,
+          "bottom": 200.75,
+          "right": 639.59375
+        },
+        "copy": {
+          "x": 56,
+          "y": 210.75,
+          "width": 560,
+          "height": 26.09375,
+          "bottom": 236.84375,
+          "right": 616
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 733,
+          "width": 984,
+          "height": 82,
+          "bottom": 815,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 734,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 814,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              4589,
+              2401
+            ],
+            "responsive": false,
+            "display": [
+              984,
+              225
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              46,
+              50
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              46,
+              50
+            ]
+          },
+          {
+            "driver": "hadjar",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              46,
+              50
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          }
+        ],
+        "podium": {
+          "x": 339.6875,
+          "y": 574.78125,
+          "width": 658.3125,
+          "height": 129.578125,
+          "bottom": 704.359375,
+          "right": 998
+        },
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": {
+          "x": 28,
+          "y": 355.59375,
+          "width": 984,
+          "height": 188,
+          "bottom": 543.59375,
+          "right": 1012
+        },
+        "after": {
+          "x": 28,
+          "y": 564.78125,
+          "width": 984,
+          "height": 149.578125,
+          "bottom": 714.359375,
+          "right": 1012
+        },
+        "compact": {
+          "x": 339.6875,
+          "y": 574.78125,
+          "width": 658.3125,
+          "height": 129.578125,
+          "bottom": 704.359375,
+          "right": 998
+        },
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": [
+          83.5369,
+          79.8281,
+          52.0849
+        ]
+      }
+    },
+    {
+      "route": "Desempenho",
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "92b949f0d2e8183cb236053fdc1f3d3ee9c59a9603c350a90c6408ae6c071d2e",
+      "measurements": {
+        "viewport": [
+          1040,
+          875
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 260,
+          "bottom": 380.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 56,
+          "y": 144.59375,
+          "width": 583.59375,
+          "height": 56.15625,
+          "bottom": 200.75,
+          "right": 639.59375
+        },
+        "copy": {
+          "x": 56,
+          "y": 210.75,
+          "width": 560,
+          "height": 52.1875,
+          "bottom": 262.9375,
+          "right": 616
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 733,
+          "width": 984,
+          "height": 82,
+          "bottom": 815,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 734,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 814,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5095,
+              2908
+            ],
+            "responsive": false,
+            "display": [
+              984,
+              260
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": {
+          "x": 28,
+          "y": 321.59375,
+          "width": 984,
+          "height": 534.25,
+          "bottom": 855.84375,
+          "right": 1012
+        },
+        "resultsHeader": {
+          "x": 48,
+          "y": 341.59375,
+          "width": 944,
+          "height": 66.390625,
+          "bottom": 407.984375,
+          "right": 992
+        },
+        "legend": {
+          "x": 692.3125,
+          "y": 353.59375,
+          "width": 299.6875,
+          "height": 42.375,
+          "bottom": 395.96875,
+          "right": 992
+        },
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Metodologia",
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "photo_sha256": "a1596b9cc5304a9888fa42365ba2b822d20fb8ee43c7e89c3c2805cbe4863baa",
+      "measurements": {
+        "viewport": [
+          1040,
+          875
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 28,
+          "y": 120.59375,
+          "width": 984,
+          "height": 245,
+          "bottom": 365.59375,
+          "right": 1012
+        },
+        "heading": {
+          "x": 56,
+          "y": 144.59375,
+          "width": 583.59375,
+          "height": 56.15625,
+          "bottom": 200.75,
+          "right": 639.59375
+        },
+        "copy": {
+          "x": 56,
+          "y": 210.75,
+          "width": 560,
+          "height": 52.1875,
+          "bottom": 262.9375,
+          "right": 616
+        },
+        "ribbon": {
+          "x": 28,
+          "y": 69.59375,
+          "width": 984,
+          "height": 41,
+          "bottom": 110.59375,
+          "right": 1012
+        },
+        "dock": {
+          "x": 28,
+          "y": 733,
+          "width": 984,
+          "height": 82,
+          "bottom": 815,
+          "right": 1012
+        },
+        "targets": [
+          {
+            "x": 36,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 197.328125
+          },
+          {
+            "x": 197.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 358.65625
+          },
+          {
+            "x": 358.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 519.984375
+          },
+          {
+            "x": 519.984375,
+            "y": 734,
+            "width": 161.34375,
+            "height": 80,
+            "bottom": 814,
+            "right": 681.328125
+          },
+          {
+            "x": 681.328125,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 842.65625
+          },
+          {
+            "x": 842.65625,
+            "y": 734,
+            "width": 161.328125,
+            "height": 80,
+            "bottom": 814,
+            "right": 1003.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              1455,
+              818
+            ],
+            "responsive": true,
+            "display": [
+              1377.59375,
+              245
+            ],
+            "sourcePixels": [
+              3600,
+              2025
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [
+          {
+            "x": 28,
+            "y": 316.59375,
+            "width": 984,
+            "height": 100,
+            "bottom": 416.59375,
+            "right": 1012
+          },
+          {
+            "x": 28,
+            "y": 426.59375,
+            "width": 984,
+            "height": 100,
+            "bottom": 526.59375,
+            "right": 1012
+          },
+          {
+            "x": 28,
+            "y": 536.59375,
+            "width": 984,
+            "height": 106.875,
+            "bottom": 643.46875,
+            "right": 1012
+          }
+        ],
+        "stepFont": 17,
+        "documents": [
+          {
+            "x": 28,
+            "y": 647.46875,
+            "width": 485,
+            "height": 74,
+            "bottom": 721.46875,
+            "right": 513
+          },
+          {
+            "x": 527,
+            "y": 647.46875,
+            "width": 485,
+            "height": 74,
+            "bottom": 721.46875,
+            "right": 1012
+          }
+        ],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Corridas",
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "a49f718f36996c7cb7b39db6659af31fe7eb600bf4ea9205c4a6b04194754993",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 155.59375,
+          "width": 366,
+          "height": 220,
+          "bottom": 375.59375,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 176.59375,
+          "width": 275,
+          "height": 72.78125,
+          "bottom": 249.375,
+          "right": 304
+        },
+        "copy": {
+          "x": 29,
+          "y": 259.375,
+          "width": 248,
+          "height": 40.5,
+          "bottom": 299.875,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5822,
+              3275
+            ],
+            "responsive": false,
+            "display": [
+              366,
+              220
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              82,
+              91
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              82,
+              91
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              82,
+              91
+            ]
+          }
+        ],
+        "podium": {
+          "x": 12,
+          "y": 347.59375,
+          "width": 366,
+          "height": 232.171875,
+          "bottom": 579.765625,
+          "right": 378
+        },
+        "podiumHeading": {
+          "x": 22,
+          "y": 359.59375,
+          "width": 346,
+          "height": 26.390625,
+          "bottom": 385.984375,
+          "right": 368
+        },
+        "weather": {
+          "x": 24,
+          "y": 758.53125,
+          "width": 342,
+          "height": 67.921875,
+          "bottom": 826.453125,
+          "right": 366
+        },
+        "details": {
+          "x": 24,
+          "y": 826.453125,
+          "width": 342,
+          "height": 38,
+          "bottom": 864.453125,
+          "right": 366
+        },
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Pilotos",
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "d45309c1791dd091ab17b2a62702cab850fc9df939051ea1a46b5da24e92c456",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 211.1875,
+          "width": 366,
+          "height": 260,
+          "bottom": 471.1875,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 269.1875,
+          "width": 260,
+          "height": 66.53125,
+          "bottom": 335.71875,
+          "right": 289
+        },
+        "copy": {
+          "x": 29,
+          "y": 345.71875,
+          "width": 248,
+          "height": 32.375,
+          "bottom": 378.09375,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5157,
+              2970
+            ],
+            "responsive": false,
+            "display": [
+              366,
+              260
+            ]
+          },
+          {
+            "natural": [
+              3840,
+              2549
+            ],
+            "responsive": false,
+            "display": [
+              212.265625,
+              260
+            ]
+          },
+          {
+            "driver": "norris",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              44,
+              61
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              44,
+              61
+            ]
+          },
+          {
+            "driver": "hamilton",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              29,
+              32
+            ]
+          },
+          {
+            "driver": "piastri",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              29,
+              32
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": {
+          "x": 24,
+          "y": 399.1875,
+          "width": 346,
+          "height": 34,
+          "bottom": 433.1875,
+          "right": 370
+        },
+        "scope": {
+          "x": 26,
+          "y": 219.390625,
+          "width": 236,
+          "height": 34,
+          "bottom": 253.390625,
+          "right": 262
+        },
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": [
+          37.5,
+          17.5439,
+          18.5185,
+          18.1818,
+          37.5,
+          27.5862,
+          22.2222,
+          40.9091,
+          12.5,
+          12.5
+        ]
+      }
+    },
+    {
+      "route": "Campeonato",
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "97b42c7afea07d1de0ea31bb962e2d9ca7561e8aaea8b97eee39374f4217a3a8",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 155.59375,
+          "width": 366,
+          "height": 160,
+          "bottom": 315.59375,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 176.59375,
+          "width": 290,
+          "height": 66.53125,
+          "bottom": 243.125,
+          "right": 319
+        },
+        "copy": {
+          "x": 29,
+          "y": 253.125,
+          "width": 248,
+          "height": 32.375,
+          "bottom": 285.5,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              3840,
+              2565
+            ],
+            "responsive": false,
+            "display": [
+              366,
+              160
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "russell",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "hamilton",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "norris",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "piastri",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "hadjar",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "lawson",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "gasly",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "arvid_lindblad",
+            "natural": [
+              1336,
+              3840
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "colapinto",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "bearman",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "hulkenberg",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "bortoleto",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "ocon",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "alonso",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "sainz",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "albon",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "tsunoda",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "stroll",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "bottas",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "perez",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 34,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Previsões",
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "c52ce464d7557adf49348533eef9e4e1a5d8288399a9418ad85302f99f0a58d2",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 155.59375,
+          "width": 366,
+          "height": 250,
+          "bottom": 405.59375,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 176.59375,
+          "width": 290,
+          "height": 33.265625,
+          "bottom": 209.859375,
+          "right": 319
+        },
+        "copy": {
+          "x": 29,
+          "y": 219.859375,
+          "width": 248,
+          "height": 32.375,
+          "bottom": 252.234375,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              4589,
+              2401
+            ],
+            "responsive": false,
+            "display": [
+              366,
+              250
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              31,
+              37
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              31,
+              37
+            ]
+          },
+          {
+            "driver": "hadjar",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              31,
+              37
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          }
+        ],
+        "podium": {
+          "x": 26,
+          "y": 721.875,
+          "width": 338,
+          "height": 205,
+          "bottom": 926.875,
+          "right": 364
+        },
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": {
+          "x": 12,
+          "y": 489.53125,
+          "width": 366,
+          "height": 155,
+          "bottom": 644.53125,
+          "right": 378
+        },
+        "after": {
+          "x": 12,
+          "y": 671.71875,
+          "width": 366,
+          "height": 265.15625,
+          "bottom": 936.875,
+          "right": 378
+        },
+        "compact": {
+          "x": 26,
+          "y": 721.875,
+          "width": 338,
+          "height": 205,
+          "bottom": 926.875,
+          "right": 364
+        },
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": [
+          83.5369,
+          79.8281,
+          52.0849
+        ]
+      }
+    },
+    {
+      "route": "Desempenho",
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "92b949f0d2e8183cb236053fdc1f3d3ee9c59a9603c350a90c6408ae6c071d2e",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 155.59375,
+          "width": 366,
+          "height": 230,
+          "bottom": 385.59375,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 176.59375,
+          "width": 290,
+          "height": 33.265625,
+          "bottom": 209.859375,
+          "right": 319
+        },
+        "copy": {
+          "x": 29,
+          "y": 219.859375,
+          "width": 248,
+          "height": 48.5625,
+          "bottom": 268.421875,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5095,
+              2908
+            ],
+            "responsive": false,
+            "display": [
+              366,
+              230
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": {
+          "x": 12,
+          "y": 368.59375,
+          "width": 366,
+          "height": 969.859375,
+          "bottom": 1338.453125,
+          "right": 378
+        },
+        "resultsHeader": {
+          "x": 24,
+          "y": 381.59375,
+          "width": 342,
+          "height": 122,
+          "bottom": 503.59375,
+          "right": 366
+        },
+        "legend": {
+          "x": 24,
+          "y": 488.75,
+          "width": 342,
+          "height": 14.84375,
+          "bottom": 503.59375,
+          "right": 366
+        },
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Metodologia",
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "199087ee240277ace9455e3183a49923138917b993305b68c9b652fcdc47f3f5",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 155.59375,
+          "width": 366,
+          "height": 230,
+          "bottom": 385.59375,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 176.59375,
+          "width": 290,
+          "height": 33.265625,
+          "bottom": 209.859375,
+          "right": 319
+        },
+        "copy": {
+          "x": 29,
+          "y": 219.859375,
+          "width": 248,
+          "height": 32.375,
+          "bottom": 252.234375,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              526,
+              296
+            ],
+            "responsive": true,
+            "display": [
+              494.09375,
+              230
+            ],
+            "sourcePixels": [
+              1200,
+              675
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [
+          {
+            "x": 12,
+            "y": 369.59375,
+            "width": 366,
+            "height": 83.53125,
+            "bottom": 453.125,
+            "right": 378
+          },
+          {
+            "x": 12,
+            "y": 461.125,
+            "width": 366,
+            "height": 101.71875,
+            "bottom": 562.84375,
+            "right": 378
+          },
+          {
+            "x": 12,
+            "y": 570.84375,
+            "width": 366,
+            "height": 101.71875,
+            "bottom": 672.5625,
+            "right": 378
+          }
+        ],
+        "stepFont": 13,
+        "documents": [
+          {
+            "x": 12,
+            "y": 676.5625,
+            "width": 366,
+            "height": 66.796875,
+            "bottom": 743.359375,
+            "right": 378
+          },
+          {
+            "x": 12,
+            "y": 752.359375,
+            "width": 366,
+            "height": 83.59375,
+            "bottom": 835.953125,
+            "right": 378
+          }
+        ],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Corridas",
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "a49f718f36996c7cb7b39db6659af31fe7eb600bf4ea9205c4a6b04194754993",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 155.59375,
+          "width": 366,
+          "height": 220,
+          "bottom": 375.59375,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 176.59375,
+          "width": 275,
+          "height": 72.78125,
+          "bottom": 249.375,
+          "right": 304
+        },
+        "copy": {
+          "x": 29,
+          "y": 259.375,
+          "width": 248,
+          "height": 40.5,
+          "bottom": 299.875,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5822,
+              3275
+            ],
+            "responsive": false,
+            "display": [
+              366,
+              220
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              82,
+              91
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              82,
+              91
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              82,
+              91
+            ]
+          }
+        ],
+        "podium": {
+          "x": 12,
+          "y": 347.59375,
+          "width": 366,
+          "height": 232.171875,
+          "bottom": 579.765625,
+          "right": 378
+        },
+        "podiumHeading": {
+          "x": 22,
+          "y": 359.59375,
+          "width": 346,
+          "height": 26.390625,
+          "bottom": 385.984375,
+          "right": 368
+        },
+        "weather": {
+          "x": 24,
+          "y": 758.53125,
+          "width": 342,
+          "height": 67.921875,
+          "bottom": 826.453125,
+          "right": 366
+        },
+        "details": {
+          "x": 24,
+          "y": 826.453125,
+          "width": 342,
+          "height": 38,
+          "bottom": 864.453125,
+          "right": 366
+        },
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Pilotos",
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "d45309c1791dd091ab17b2a62702cab850fc9df939051ea1a46b5da24e92c456",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 211.1875,
+          "width": 366,
+          "height": 260,
+          "bottom": 471.1875,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 269.1875,
+          "width": 260,
+          "height": 66.53125,
+          "bottom": 335.71875,
+          "right": 289
+        },
+        "copy": {
+          "x": 29,
+          "y": 345.71875,
+          "width": 248,
+          "height": 32.375,
+          "bottom": 378.09375,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5157,
+              2970
+            ],
+            "responsive": false,
+            "display": [
+              366,
+              260
+            ]
+          },
+          {
+            "natural": [
+              3840,
+              2549
+            ],
+            "responsive": false,
+            "display": [
+              212.265625,
+              260
+            ]
+          },
+          {
+            "driver": "norris",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              44,
+              61
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              44,
+              61
+            ]
+          },
+          {
+            "driver": "hamilton",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              29,
+              32
+            ]
+          },
+          {
+            "driver": "piastri",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              29,
+              32
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": {
+          "x": 24,
+          "y": 399.1875,
+          "width": 346,
+          "height": 34,
+          "bottom": 433.1875,
+          "right": 370
+        },
+        "scope": {
+          "x": 26,
+          "y": 219.390625,
+          "width": 236,
+          "height": 34,
+          "bottom": 253.390625,
+          "right": 262
+        },
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": [
+          37.5,
+          17.5439,
+          18.5185,
+          18.1818,
+          37.5,
+          27.5862,
+          22.2222,
+          40.9091,
+          12.5,
+          12.5
+        ]
+      }
+    },
+    {
+      "route": "Campeonato",
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "97b42c7afea07d1de0ea31bb962e2d9ca7561e8aaea8b97eee39374f4217a3a8",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 155.59375,
+          "width": 366,
+          "height": 170.984375,
+          "bottom": 326.578125,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 176.59375,
+          "width": 290,
+          "height": 99.796875,
+          "bottom": 276.390625,
+          "right": 319
+        },
+        "copy": {
+          "x": 29,
+          "y": 286.390625,
+          "width": 248,
+          "height": 16.1875,
+          "bottom": 302.578125,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              3840,
+              2565
+            ],
+            "responsive": false,
+            "display": [
+              366,
+              170.984375
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "russell",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "hamilton",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "norris",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "piastri",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "hadjar",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "lawson",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "gasly",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "arvid_lindblad",
+            "natural": [
+              1336,
+              3840
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "colapinto",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "bearman",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "hulkenberg",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "bortoleto",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "ocon",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "alonso",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "sainz",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "albon",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "tsunoda",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "stroll",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "bottas",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          },
+          {
+            "driver": "perez",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              28,
+              30
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 34,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Previsões",
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "c52ce464d7557adf49348533eef9e4e1a5d8288399a9418ad85302f99f0a58d2",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 155.59375,
+          "width": 366,
+          "height": 250,
+          "bottom": 405.59375,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 176.59375,
+          "width": 290,
+          "height": 33.265625,
+          "bottom": 209.859375,
+          "right": 319
+        },
+        "copy": {
+          "x": 29,
+          "y": 219.859375,
+          "width": 248,
+          "height": 16.1875,
+          "bottom": 236.046875,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              4589,
+              2401
+            ],
+            "responsive": false,
+            "display": [
+              366,
+              250
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              31,
+              37
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              31,
+              37
+            ]
+          },
+          {
+            "driver": "hadjar",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              31,
+              37
+            ]
+          },
+          {
+            "driver": "leclerc",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          },
+          {
+            "driver": "antonelli",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          },
+          {
+            "driver": "max_verstappen",
+            "natural": [
+              1336,
+              1336
+            ],
+            "responsive": false,
+            "display": [
+              64,
+              64
+            ]
+          }
+        ],
+        "podium": {
+          "x": 26,
+          "y": 721.875,
+          "width": 338,
+          "height": 205,
+          "bottom": 926.875,
+          "right": 364
+        },
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": {
+          "x": 12,
+          "y": 489.53125,
+          "width": 366,
+          "height": 155,
+          "bottom": 644.53125,
+          "right": 378
+        },
+        "after": {
+          "x": 12,
+          "y": 671.71875,
+          "width": 366,
+          "height": 265.15625,
+          "bottom": 936.875,
+          "right": 378
+        },
+        "compact": {
+          "x": 26,
+          "y": 721.875,
+          "width": 338,
+          "height": 205,
+          "bottom": 926.875,
+          "right": 364
+        },
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": [
+          83.5369,
+          79.8281,
+          52.0849
+        ]
+      }
+    },
+    {
+      "route": "Desempenho",
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "92b949f0d2e8183cb236053fdc1f3d3ee9c59a9603c350a90c6408ae6c071d2e",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 155.59375,
+          "width": 366,
+          "height": 230,
+          "bottom": 385.59375,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 176.59375,
+          "width": 290,
+          "height": 33.265625,
+          "bottom": 209.859375,
+          "right": 319
+        },
+        "copy": {
+          "x": 29,
+          "y": 219.859375,
+          "width": 248,
+          "height": 48.5625,
+          "bottom": 268.421875,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              5095,
+              2908
+            ],
+            "responsive": false,
+            "display": [
+              366,
+              230
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": {
+          "x": 12,
+          "y": 368.59375,
+          "width": 366,
+          "height": 943.46875,
+          "bottom": 1312.0625,
+          "right": 378
+        },
+        "resultsHeader": {
+          "x": 24,
+          "y": 381.59375,
+          "width": 342,
+          "height": 95.609375,
+          "bottom": 477.203125,
+          "right": 366
+        },
+        "legend": {
+          "x": 24,
+          "y": 462.359375,
+          "width": 342,
+          "height": 14.84375,
+          "bottom": 477.203125,
+          "right": 366
+        },
+        "steps": [],
+        "stepFont": null,
+        "documents": [],
+        "h1Count": 1,
+        "bars": []
+      }
+    },
+    {
+      "route": "Metodologia",
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "photo_sha256": "199087ee240277ace9455e3183a49923138917b993305b68c9b652fcdc47f3f5",
+      "measurements": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "hero": {
+          "x": 12,
+          "y": 155.59375,
+          "width": 366,
+          "height": 230,
+          "bottom": 385.59375,
+          "right": 378
+        },
+        "heading": {
+          "x": 29,
+          "y": 176.59375,
+          "width": 290,
+          "height": 33.265625,
+          "bottom": 209.859375,
+          "right": 319
+        },
+        "copy": {
+          "x": 29,
+          "y": 219.859375,
+          "width": 248,
+          "height": 32.375,
+          "bottom": 252.234375,
+          "right": 277
+        },
+        "ribbon": {
+          "x": 12,
+          "y": 110,
+          "width": 366,
+          "height": 29.59375,
+          "bottom": 139.59375,
+          "right": 378
+        },
+        "dock": {
+          "x": 8,
+          "y": 642,
+          "width": 374,
+          "height": 142,
+          "bottom": 784,
+          "right": 382
+        },
+        "targets": [
+          {
+            "x": 11,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 643,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 713,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 643,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 713,
+            "right": 378.984375
+          },
+          {
+            "x": 11,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 133.65625
+          },
+          {
+            "x": 133.65625,
+            "y": 713,
+            "width": 122.671875,
+            "height": 70,
+            "bottom": 783,
+            "right": 256.328125
+          },
+          {
+            "x": 256.328125,
+            "y": 713,
+            "width": 122.65625,
+            "height": 70,
+            "bottom": 783,
+            "right": 378.984375
+          }
+        ],
+        "photos": [
+          {
+            "natural": [
+              526,
+              296
+            ],
+            "responsive": true,
+            "display": [
+              494.09375,
+              230
+            ],
+            "sourcePixels": [
+              1200,
+              675
+            ]
+          }
+        ],
+        "podium": null,
+        "podiumHeading": null,
+        "weather": null,
+        "details": null,
+        "chips": null,
+        "scope": null,
+        "championshipRows": 0,
+        "probabilities": null,
+        "after": null,
+        "compact": null,
+        "results": null,
+        "resultsHeader": null,
+        "legend": null,
+        "steps": [
+          {
+            "x": 12,
+            "y": 369.59375,
+            "width": 366,
+            "height": 83.53125,
+            "bottom": 453.125,
+            "right": 378
+          },
+          {
+            "x": 12,
+            "y": 461.125,
+            "width": 366,
+            "height": 101.71875,
+            "bottom": 562.84375,
+            "right": 378
+          },
+          {
+            "x": 12,
+            "y": 570.84375,
+            "width": 366,
+            "height": 101.71875,
+            "bottom": 672.5625,
+            "right": 378
+          }
+        ],
+        "stepFont": 13,
+        "documents": [
+          {
+            "x": 12,
+            "y": 676.5625,
+            "width": 366,
+            "height": 66.796875,
+            "bottom": 743.359375,
+            "right": 378
+          },
+          {
+            "x": 12,
+            "y": 752.359375,
+            "width": 366,
+            "height": 66.796875,
+            "bottom": 819.15625,
+            "right": 378
+          }
+        ],
+        "h1Count": 1,
+        "bars": []
+      }
+    }
+  ]
+}

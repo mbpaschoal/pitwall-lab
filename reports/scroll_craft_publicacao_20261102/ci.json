@@ -1,0 +1,54 @@
+{
+  "version": "0.8.12",
+  "commit": "3aaff725c6efe377b18e005031d9dd22be368c26",
+  "observed_at": "2026-11-02 05:16:12 UTC",
+  "status": "main_and_tag_succeeded",
+  "runs": [
+    {
+      "run_id": 41391758789,
+      "jobs": [
+        {
+          "id": 125104488690,
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125104488837,
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125106506401,
+          "name": "release",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 41391758705,
+      "jobs": [
+        {
+          "id": 125104488437,
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125104488666,
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125107294155,
+          "name": "release",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    }
+  ]
+}
