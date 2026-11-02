@@ -11,7 +11,6 @@
     for (const button of d.querySelectorAll('[data-pw-motion]')) {
       const label = preference.matches ? button.dataset.system : (reduced() ? button.dataset.enable : button.dataset.reduce);
       if (button.textContent !== label) button.textContent = label;
-      button.setAttribute('aria-pressed', String(reduced()));
       button.disabled = preference.matches;
     }
     const process = d.querySelector('.fan-process');

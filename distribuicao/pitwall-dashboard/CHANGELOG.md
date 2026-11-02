@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.8.12 — 2026-11-02
+
+- Corrige a semântica acessível do controle de movimento: o botão anuncia a ação disponível, sem um estado de alternância que contradiga seu texto. Preferência do sistema e persistência continuam preservadas.
+- Conclui a publicação da navegação suave, com testes portáteis, validação pública PT/EN e respeito a movimento reduzido em computador e celular emulado. As tags anteriores permanecem intactas.
+- Aprendizado: um botão cujo nome muda com a ação deve usar a semântica de ação, sem aria-pressed. Nenhum dado, previsão ou composição visual foi alterado.
+
 ## 0.8.11 — 2026-11-02
 
 - Publica a navegação suave implementada e validada em 0.8.10, mantendo a tag local original. Atalhos com foco, feedback discreto e entrada única em Como funciona respeitam as preferências de movimento.

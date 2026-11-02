@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.8.12 — 2026-11-02
+
+- Fixes the motion control accessibility semantics: its name announces the available action without a toggle state contradicting its text. System preferences and persistence remain preserved.
+- Completes smooth-navigation publication with portable tests, public PT/EN acceptance and reduced-motion support on desktop and emulated mobile. Earlier tags remain intact.
+- Learning: a button whose name changes with its action should use action semantics without aria-pressed. Data, predictions and visual composition are unchanged.
+
 ## 0.8.11 — 2026-11-02
 
 - Publishes the smooth navigation implemented and validated in 0.8.10 while preserving its original local tag. Focus-aware anchors, subtle feedback and a single methodology entrance respect motion preferences.
