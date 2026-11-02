@@ -1,5 +1,9 @@
 # Fim de semana do México · 2026
 
+## Publicação e concorrência
+
+A publicação confere o `main` remoto antes do commit/tag e após uma rejeição do push atômico. Se o ramo avançou, agenda uma execução nova em `main`, com as capturas preservadas e todas as validações refeitas sobre o código e a versão atuais. Não se faz rebase de pacotes gerados nem push forçado. Há até duas recuperações por cadeia; erros de autenticação e limites permanecem explícitos. [Runbook PT/EN](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/runbooks/automatic-publication.md).
+
 [English](en/WEEKEND_OPERATION.md)
 
 O objetivo é acompanhar o que cada fonte já publicou, sem chamar uma sessão futura de dado observado. Identidade: **2026 / 19 / rodriguez**, meeting OpenF1 **1298**. Configuração auditável: [`mexico2026.json`](https://github.com/mbpaschoal/pitwall-lab/blob/main/operacao2026/eventos/mexico2026.json).
