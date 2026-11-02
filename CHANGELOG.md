@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.8.11 — 2026-11-02
+
+- Publica a navegação suave implementada e validada em 0.8.10, mantendo a tag local original. Atalhos com foco, feedback discreto e entrada única em Como funciona respeitam as preferências de movimento.
+- Pacote preparado a partir do commit validado, sem incorporar a pesquisa 0.9.0 em andamento. UI PT/EN, dados e identidade preservados.
+- Validação: testes portáteis isolados e aceite público PT/EN em computador e celular emulado, incluindo movimento reduzido e navegação por teclado/toque. Aprendizado: publicar exige vincular código, pacote e build servido.
+
 ## 0.8.10 — 2026-11-02
 
 - Navegação com foco no destino, retorno ao topo e rolagem suave no contêiner do Streamlit, preservando URL e filtros.

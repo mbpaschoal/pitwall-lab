@@ -1,5 +1,17 @@
 # Pitwall Lab evolution
 
+## 0.8.11 — 2026-11-02
+
+- Publishes the smooth navigation implemented and validated in 0.8.10 while preserving its original local tag. Focus-aware anchors, subtle feedback and a single methodology entrance respect motion preferences.
+- Package prepared from the validated commit without incorporating the ongoing 0.9.0 research. PT/EN UI, data and visual identity remain preserved.
+- Validation: isolated portable tests and public PT/EN desktop/emulated mobile acceptance, including reduced motion and keyboard/touch navigation. Learning: publication must bind source, package and served build.
+
+## 0.8.10 — 2026-11-02
+
+- Focus-aware page navigation and smooth scrolling in the Streamlit container preserve URLs and filters.
+- Subtle control feedback and brief methodology step entrance, once per page session, honor system and user motion preferences.
+- PT/EN desktop and emulated mobile acceptance; data, models and visual identity preserved. Local acceptance does not establish publication.
+
 ## 0.8.9 — 2026-11-02
 
 Preventive São Paulo collection fix: an explicit configuration and a cached discovery may describe the same GP. The collector reuses the explicit configuration when identities, sessions and schedules agree; genuine identity or schedule conflicts still stop collection.

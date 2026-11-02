@@ -483,3 +483,21 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-of
 .st-key-pw-a11y-bridge,[data-testid="stLayoutWrapper"]:has(>.st-key-pw-a11y-bridge){display:none}
 .stElementContainer:has(.pw-skip-link){position:absolute;width:0;height:0;min-height:0}
 .fan-results-status{font:400 13px/1.4 LatoLocal;color:var(--pw-muted);margin:8px 0 0}
+
+/* Scroll Craft principles adapted to Streamlit's own scroll container. */
+.pw-page-tools{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:4px;font:14px LatoLocal}
+.pw-page-tools a,.pw-page-tools button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:6px 10px;border:1px solid transparent;border-radius:4px;background:transparent;color:var(--fan-ink);text-decoration:none;font:inherit;cursor:pointer}
+.pw-page-tools :focus-visible{outline:2px solid var(--pw-red);outline-offset:1px}
+.pw-page-tools button:disabled{cursor:default}
+#pw-page-top{scroll-margin-top:12px}
+#pw-main-content{scroll-margin-block:16px calc(var(--journey-dock-height) + 90px)}
+@media(prefers-reduced-motion:no-preference){
+ html:not([data-pw-reduced-motion="true"]) .stMain{scroll-behavior:smooth}
+ html:not([data-pw-reduced-motion="true"]) :is(.fan-condition-row,.fan-gp-result,.fan-document-links>a,.journey-calendar a,.st-key-journey-navigation label,.pw-page-tools a,.pw-page-tools button){transition:background-color 160ms ease-out,border-color 160ms ease-out,color 160ms ease-out}
+}
+@media(hover:hover){
+ .pw-page-tools a:hover,.pw-page-tools button:not(:disabled):hover,.fan-gp-result:hover,.fan-document-links>a:hover,.st-key-journey-navigation label:hover{background-color:#dce5ef}
+}
+html[data-pw-reduced-motion="true"] .stMain{scroll-behavior:auto}
+@media(prefers-reduced-motion:reduce){.stMain{scroll-behavior:auto}}
+.stElementContainer:has(#pw-page-top){position:absolute;height:0;min-height:0}

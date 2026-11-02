@@ -1179,6 +1179,9 @@ def executar_app():
     initialize(st)
     aplicar_estilo()
     st.markdown('<a class="pw-skip-link" href="#pw-main-content">{}</a>'.format(escape(translate('Pular para o conteúdo'))), unsafe_allow_html=True)
+    st.markdown('<span id="pw-page-top" tabindex="-1" aria-label="{}"></span>'.format(escape(translate("Topo da página"), quote=True)), unsafe_allow_html=True)
+    from pitwall.dashboard.motion import install as install_motion, render as render_motion
+    install_motion()
     # Links dos painéis preservam temporada e GP; nenhum parâmetro altera dados.
     query_token = tuple(
         st.query_params.get(chave)
@@ -1299,6 +1302,7 @@ def executar_app():
                 escape(retorno, quote=True), escape(translate('Voltar às chances de {} · {}').format(corrida_origem, temporada))
             ), unsafe_allow_html=True)
         render(raiz_artefatos())
+        render_motion()
         return
     if tela in ("Corridas", "Previsões"):
         tela_explorar(pacote, rodada, tela, topbar_slot=tool_control)
@@ -1331,6 +1335,7 @@ def executar_app():
     else:
         renderizar_topo(pacote, slot=tool_control)
         tela_como_funciona()
+    render_motion()
 
 
 if __name__ == "__main__":
