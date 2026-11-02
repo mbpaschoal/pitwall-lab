@@ -1,0 +1,45 @@
+{
+  "version": "0.8.17",
+  "runs": [
+    {
+      "run_id": 41493902658,
+      "jobs": [
+        {
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "release",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 41493903205,
+      "jobs": [
+        {
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "release",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    }
+  ]
+}

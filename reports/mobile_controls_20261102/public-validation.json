@@ -1,0 +1,25 @@
+{
+  "utc": "2026-11-02T17:51:24.581704+00:00",
+  "version": "0.8.17",
+  "build": "6e672756d862029d6e9651c8d8c502f349c067adedb04b18f8911224dd179023",
+  "status": "passed",
+  "checks": [
+    {
+      "engine": "chromium",
+      "cases": 24,
+      "expander_samples": 64,
+      "max_vertical_delta_px": 0,
+      "minimum_target_height_px": 44,
+      "status": "passed"
+    },
+    {
+      "engine": "webkit",
+      "cases": 24,
+      "expander_samples": 68,
+      "max_vertical_delta_px": 0,
+      "minimum_target_height_px": 44,
+      "status": "passed"
+    }
+  ],
+  "physical_device": false
+}
