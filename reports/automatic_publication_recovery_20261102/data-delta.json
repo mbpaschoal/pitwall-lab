@@ -1,0 +1,42 @@
+{
+  "previous": "0.8.13",
+  "published": "0.8.14",
+  "sessions": [
+    {
+      "session": "Practice 1",
+      "timing_rows": 22,
+      "published_timing_values_unchanged": true,
+      "canonical_id_keys_before": 22,
+      "canonical_id_keys_after": 0
+    },
+    {
+      "session": "Practice 2",
+      "timing_rows": 22,
+      "published_timing_values_unchanged": true,
+      "canonical_id_keys_before": 22,
+      "canonical_id_keys_after": 0
+    },
+    {
+      "session": "Practice 3",
+      "timing_rows": 22,
+      "published_timing_values_unchanged": true,
+      "canonical_id_keys_before": 22,
+      "canonical_id_keys_after": 22
+    },
+    {
+      "session": "Qualifying",
+      "timing_rows": 22,
+      "published_timing_values_unchanged": true,
+      "canonical_id_keys_before": 22,
+      "canonical_id_keys_after": 22
+    },
+    {
+      "session": "Race",
+      "timing_rows": 22,
+      "published_timing_values_unchanged": true,
+      "canonical_id_keys_before": 22,
+      "canonical_id_keys_after": 22
+    }
+  ],
+  "note": "Restored legacy FP1/FP2 cache has no optional piloto_id timing key; timing values/names/numbers remain unchanged. Current session_times emits this optional field for fresh projections. Original source bytes are retained in the release archive."
+}

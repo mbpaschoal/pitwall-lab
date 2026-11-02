@@ -1,0 +1,37 @@
+{
+  "archive_sha256": "2ca1b56851bd63523f56b916f33b233e7d3f7ef33c3d8d27a4b4fadfef8ee164",
+  "archive_members": 776,
+  "capture_manifests": 86,
+  "verified_source_receipts": 603,
+  "earliest_original_receipt": "2026-10-30T14:11:58.494171Z",
+  "latest_original_receipt": "2026-11-02T05:28:10.851717Z",
+  "all_sources_match_receipt_sha256": true,
+  "safe_regular_members": true,
+  "scientific_files_unchanged": 614,
+  "sessions": [
+    {
+      "name": "Practice 1",
+      "state": "dados_recebidos"
+    },
+    {
+      "name": "Practice 2",
+      "state": "dados_recebidos"
+    },
+    {
+      "name": "Practice 3",
+      "state": "parcial"
+    },
+    {
+      "name": "Qualifying",
+      "state": "dados_recebidos"
+    },
+    {
+      "name": "Race",
+      "state": "dados_recebidos"
+    }
+  ],
+  "source_limitations": [
+    "FP3: initial Lawson tyre compound unavailable; original source driver roster has 21 records."
+  ],
+  "public_asset_matches_portable": true
+}

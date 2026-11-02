@@ -1,0 +1,58 @@
+{
+  "observed_utc": "2026-11-02 05:40:09 UTC",
+  "original_blocked_run": {
+    "id": 41388497516,
+    "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41388497516",
+    "failure": [
+      "2026-11-02T04:37:27.9099169Z error: atomic push failed for ref refs/heads/main. status: 5",
+      "2026-11-02T04:37:27.9102719Z  ! [rejected]        HEAD -> main (fetch first)",
+      "2026-11-02T04:37:27.9103244Z error: failed to push some refs to 'https://github.com/mbpaschoal/pitwall-lab'"
+    ]
+  },
+  "parent_run": {
+    "id": 41392763522,
+    "conclusion": "success",
+    "publication_state": "retry_scheduled"
+  },
+  "recovery_run": {
+    "id": 41394062050,
+    "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41394062050",
+    "event": "workflow_dispatch",
+    "conclusion": "success",
+    "source_commit": "d841b06f464110e4003d11075d871e66fb6b2eb7",
+    "restored_cache_key": "pitwall-collection-v1-41392763522-1"
+  },
+  "publication": {
+    "estado": "published",
+    "published": true,
+    "version": "0.8.14",
+    "commit": "135212dacaddb7b02dd7a01a05dc23cde248ec71",
+    "recovery_attempt": 1,
+    "run_id": "41394062050"
+  },
+  "hosted_public_check": {
+    "publicVersion": "0.8.14",
+    "round": 19,
+    "verified": true,
+    "utc": "2026-11-02T05:36:39.360Z"
+  },
+  "release": {
+    "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.14",
+    "version": "v0.8.14",
+    "published": "2026-11-02T05:36:26Z",
+    "assets": [
+      {
+        "name": "capturas-originais.tar.gz",
+        "size": 3368755,
+        "digest": "sha256:2ca1b56851bd63523f56b916f33b233e7d3f7ef33c3d8d27a4b4fadfef8ee164",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/releases/download/v0.8.14/capturas-originais.tar.gz"
+      },
+      {
+        "name": "pitwall-dashboard.zip",
+        "size": 665826840,
+        "digest": "sha256:8807e973d198583b7f8c8609787c745ac90e1119de0f25fc7c1398fcace61fa6",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/releases/download/v0.8.14/pitwall-dashboard.zip"
+      }
+    ]
+  }
+}
