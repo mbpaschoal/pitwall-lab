@@ -1,0 +1,414 @@
+{
+  "viewport": [
+    1040,
+    992
+  ],
+  "overflow": false,
+  "main": {
+    "x": 0,
+    "y": 0,
+    "width": 1040,
+    "height": 842,
+    "bottom": 842,
+    "right": 1040
+  },
+  "normalBlocks": [],
+  "hero": {
+    "x": 28,
+    "y": 185,
+    "width": 984,
+    "height": 160,
+    "bottom": 345,
+    "right": 1012
+  },
+  "heading": {
+    "x": 56,
+    "y": 209,
+    "width": 928,
+    "height": 56.15625,
+    "bottom": 265.15625,
+    "right": 984
+  },
+  "copy": {
+    "x": 56,
+    "y": 275.15625,
+    "width": 560,
+    "height": 26.09375,
+    "bottom": 301.25,
+    "right": 616
+  },
+  "ribbon": {
+    "x": 28,
+    "y": 134,
+    "width": 984,
+    "height": 41,
+    "bottom": 175,
+    "right": 1012
+  },
+  "dock": {
+    "x": 28,
+    "y": 850,
+    "width": 984,
+    "height": 82,
+    "bottom": 932,
+    "right": 1012
+  },
+  "targets": [
+    {
+      "x": 36,
+      "y": 851,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 931,
+      "right": 197.328125
+    },
+    {
+      "x": 197.328125,
+      "y": 851,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 931,
+      "right": 358.65625
+    },
+    {
+      "x": 358.65625,
+      "y": 851,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 931,
+      "right": 519.984375
+    },
+    {
+      "x": 519.984375,
+      "y": 851,
+      "width": 161.34375,
+      "height": 80,
+      "bottom": 931,
+      "right": 681.328125
+    },
+    {
+      "x": 681.328125,
+      "y": 851,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 931,
+      "right": 842.65625
+    },
+    {
+      "x": 842.65625,
+      "y": 851,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 931,
+      "right": 1003.984375
+    }
+  ],
+  "photos": [
+    {
+      "natural": [
+        3840,
+        2565
+      ],
+      "responsive": false,
+      "display": [
+        984,
+        160
+      ]
+    },
+    {
+      "driver": "antonelli",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "russell",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "hamilton",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "max_verstappen",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "leclerc",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "norris",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "piastri",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "hadjar",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "lawson",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "gasly",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "arvid_lindblad",
+      "natural": [
+        1336,
+        3840
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "colapinto",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "bearman",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "hulkenberg",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "bortoleto",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "ocon",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "alonso",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "sainz",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "albon",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "tsunoda",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "stroll",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "bottas",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    },
+    {
+      "driver": "perez",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        42,
+        42
+      ]
+    }
+  ],
+  "podium": null,
+  "podiumHeading": null,
+  "weather": null,
+  "details": null,
+  "chips": null,
+  "scope": null,
+  "pilotNavigation": null,
+  "championshipRows": 34,
+  "probabilities": null,
+  "after": null,
+  "compact": null,
+  "results": null,
+  "resultsHeader": null,
+  "legend": null,
+  "steps": [],
+  "stepFont": null,
+  "documents": [],
+  "h1Count": 1,
+  "bars": []
+}

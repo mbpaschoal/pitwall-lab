@@ -356,10 +356,12 @@ dashboard_assets/tarot/verstappen.png
 dashboard_dados.py
 docs/JORNADA_DO_FA.md
 docs/OPERACAO_FIM_SEMANA.md
+docs/PILOTOS_ATUALIZACAO.md
 docs/PREPARACAO_SAO_PAULO.md
 docs/REVISAO_030.md
 docs/avaliacao_final_v1.md
 docs/dicionario_variaveis.md
+docs/en/DRIVER_UPDATES.md
 docs/en/FAN_JOURNEY.md
 docs/en/REVIEW_030.md
 docs/en/SAO_PAULO_PREPARATION.md
@@ -387,6 +389,7 @@ frontend_assets/motion.js
 frontend_assets/operacao_fim_semana.json
 frontend_assets/paineis_editoriais.json
 frontend_assets/pilotos_condicoes.json
+frontend_assets/pilotos_condicoes_operacao.json
 frontend_assets/pitwall.css
 frontend_assets/race_weekend.json
 historico_circuito.py
@@ -415,6 +418,7 @@ pitwall/data/circuit_history.py
 pitwall/data/dashboard.py
 pitwall/data/driver_archive_projection.py
 pitwall/data/driver_conditions.py
+pitwall/data/driver_updates.py
 pitwall/data/editorial.py
 pitwall/data/editorial_panels.py
 pitwall/data/post_race_evaluation.py

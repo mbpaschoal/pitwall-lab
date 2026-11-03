@@ -1,0 +1,215 @@
+{
+  "viewport": [
+    1040,
+    992
+  ],
+  "overflow": false,
+  "main": {
+    "x": 0,
+    "y": 0,
+    "width": 1040,
+    "height": 842,
+    "bottom": 842,
+    "right": 1040
+  },
+  "normalBlocks": [
+    {
+      "className": "stTabs st-emotion-cache-8atqhb e1mp0uwq0",
+      "marginTop": 12,
+      "marginBottom": 0,
+      "position": "static"
+    },
+    {
+      "className": "stVerticalBlock st-key-race-summary st-emotion-cache-1n6tfoc e196pkbe2",
+      "marginTop": 12,
+      "marginBottom": 0,
+      "position": "relative"
+    }
+  ],
+  "hero": {
+    "x": 28,
+    "y": 185,
+    "width": 984,
+    "height": 450,
+    "bottom": 635,
+    "right": 1012
+  },
+  "heading": {
+    "x": 58,
+    "y": 215,
+    "width": 471.359375,
+    "height": 128.9375,
+    "bottom": 343.9375,
+    "right": 529.359375
+  },
+  "copy": {
+    "x": 58,
+    "y": 353.9375,
+    "width": 471.359375,
+    "height": 63.78125,
+    "bottom": 417.71875,
+    "right": 529.359375
+  },
+  "ribbon": {
+    "x": 28,
+    "y": 134,
+    "width": 984,
+    "height": 41,
+    "bottom": 175,
+    "right": 1012
+  },
+  "dock": {
+    "x": 28,
+    "y": 850,
+    "width": 984,
+    "height": 82,
+    "bottom": 932,
+    "right": 1012
+  },
+  "targets": [
+    {
+      "x": 36,
+      "y": 851,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 931,
+      "right": 197.328125
+    },
+    {
+      "x": 197.328125,
+      "y": 851,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 931,
+      "right": 358.65625
+    },
+    {
+      "x": 358.65625,
+      "y": 851,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 931,
+      "right": 519.984375
+    },
+    {
+      "x": 519.984375,
+      "y": 851,
+      "width": 161.34375,
+      "height": 80,
+      "bottom": 931,
+      "right": 681.328125
+    },
+    {
+      "x": 681.328125,
+      "y": 851,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 931,
+      "right": 842.65625
+    },
+    {
+      "x": 842.65625,
+      "y": 851,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 931,
+      "right": 1003.984375
+    }
+  ],
+  "photos": [
+    {
+      "natural": [
+        5822,
+        3275
+      ],
+      "responsive": false,
+      "display": [
+        984,
+        450
+      ]
+    },
+    {
+      "driver": "leclerc",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        140,
+        160
+      ]
+    },
+    {
+      "driver": "antonelli",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        140,
+        160
+      ]
+    },
+    {
+      "driver": "max_verstappen",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        140,
+        160
+      ]
+    }
+  ],
+  "podium": {
+    "x": 28,
+    "y": 719.890625,
+    "width": 604.671875,
+    "height": 315.390625,
+    "bottom": 1035.28125,
+    "right": 632.671875
+  },
+  "podiumHeading": {
+    "x": 46,
+    "y": 735.890625,
+    "width": 568.671875,
+    "height": 30,
+    "bottom": 765.890625,
+    "right": 614.671875
+  },
+  "weather": {
+    "x": 666.671875,
+    "y": 939.078125,
+    "width": 327.328125,
+    "height": 87.484375,
+    "bottom": 1026.5625,
+    "right": 994
+  },
+  "details": {
+    "x": 666.671875,
+    "y": 1026.5625,
+    "width": 327.328125,
+    "height": 38,
+    "bottom": 1064.5625,
+    "right": 994
+  },
+  "chips": null,
+  "scope": null,
+  "pilotNavigation": null,
+  "championshipRows": 0,
+  "probabilities": null,
+  "after": null,
+  "compact": null,
+  "results": null,
+  "resultsHeader": null,
+  "legend": null,
+  "steps": [],
+  "stepFont": null,
+  "documents": [],
+  "h1Count": 1,
+  "bars": []
+}

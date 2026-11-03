@@ -89,3 +89,6 @@ O calendário também foi confrontado com a F1: [Bahrein na Malásia é um event
 A revisão documental recupera os 22 tempos do TL3 e identifica Lawson por número, nome e equipe na lista oficial deste evento. O recorte temporal exclui um registro de paradas anterior ao TL3 e 84 anteriores à classificação; os originais não são apagados. A classificação final e a decisão dos comissários mostram Lawson como DSQ, sem posição numérica nem tempos válidos.
 
 A média do asfalto agora usa 100 leituras válidas: 40,7 °C, 98,0% de cobertura, sem interpolação. O relatório FIA também registra o zero anômalo; ele não revela a temperatura real daquele minuto. Permanece ausente o composto do stint inicial de Lawson (voltas 1–8 do TL3), não inferido dos stints posteriores. A revisão aplica-se também ao cache e à automação. [Fontes, decisões e pendências](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/mexico_fontes_alternativas_20261101/README.md).
+
+
+Análises de Pilotos recebem os GPs concluídos pelo [fluxo automático com conferência](PILOTOS_ATUALIZACAO.md). Referência de circuito da edição é pré-requisito; uma lacuna mantém o último estado válido e aciona o monitor após seis horas.

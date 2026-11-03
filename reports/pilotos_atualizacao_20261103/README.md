@@ -1,7 +1,7 @@
 # Pilotos: México e atualização agendada
 
 Created by: MBPaschoal
-Status: local implementation; publication checks pending
+Status: local tests and package passed; public verification pending
 Type: delivery report
 
 Português · [English](README.en.md)
@@ -17,3 +17,8 @@ A coleta agendada atualiza o complemento mesmo quando o painel do fim de semana 
 O perfil de Ryo Hirakawa revelou uma incompatibilidade entre o campo `file` do catálogo e o leitor que pressupunha PNG. A foto JPEG original de alta resolução agora é usada com seu enquadramento e crédito Haas/Simon Galloway; perfis sem foto aprovada têm fallback sem tomar outro rosto. Datas de cobertura e cartões acompanham a projeção validada.
 
 [Contrato PT/EN](../../docs/PILOTOS_ATUALIZACAO.md). Validação, pacote, CI e observação pública serão registrados separadamente após execução real.
+
+
+## Verificação local
+
+349 testes de código aprovados e 31 reconferências após o ajuste dos créditos; 143 testes do pacote final. O aceite focal do pacote final passou em quatro combinações PT/EN e desktop/Android, com CSV e SVG reais e SHA da foto original. A varredura visual prévia passou em 24 cenários nas seis telas. 231 arquivos protegidos conferidos contra `bb83c75`, sem alteração. [Pacote e hash](package.json) · [Fonte](source-tests.json) · [Pacote](package-tests.json) · [Navegador final](browser-final-local/acceptance.json) · [Integridade](protected-integrity.json). Implementação em cópia isolada, preservando os rascunhos da raiz original.

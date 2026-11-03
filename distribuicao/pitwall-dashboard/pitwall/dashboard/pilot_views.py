@@ -346,12 +346,22 @@ def _remember_criterion(key):
     st.session_state["_pilot_filters"] = filters
 
 
+def coverage_label(asset):
+    latest=max(asset['gps'].values(),key=lambda gp:(gp['date_utc'],gp['temporada'],gp['rodada']))
+    label=translate('Dados até {gp} · {date}')
+    return label.format(gp=translate(latest['name']),date=date.fromisoformat(latest['date_utc']).strftime('%d/%m/%Y'))
+
+
 def render(root):
     try:
         asset = load(root)
     except DriverConditionsError as error:
         st.error(str(error))
         return
+    st.caption(coverage_label(asset))
+    pending=asset.get('atualizacao_operacional',{}).get('pendencias',{})
+    if pending:
+        st.info(translate('Há {n} GP(s) em conferência. As comparações mantêm os últimos dados validados.').format(n=len(pending)))
     names = driver_names(asset)
     requested_ids = ([st.query_params.get("piloto"), st.query_params.get("rival")]
                      if st.query_params.get("visao") == "duelo"
@@ -371,7 +381,6 @@ def render(root):
         st.markdown('<section class="fan-hero fan-hero-empty" data-hero-kind="drivers"><div class="fan-hero-copy"><h1>{}</h1><p>{}</p></div></section>'.format(
             escape(title), escape(translate("Perfil histórico indisponível"))), unsafe_allow_html=True)
         st.info("Ainda não há dados deste piloto no acervo histórico de condições. O piloto solicitado não foi substituído.")
-        st.caption("Dados até Austin 2026")
         params = dict(tela="Pilotos", visao="geral", lang=language(), **_navigation_context_params(st.query_params))
         for key in ("anos", "metrica", "minimo", "condicao", "faixas"):
             if key in st.query_params:
@@ -502,7 +511,7 @@ def render(root):
         st.caption("Também disponíveis como contexto auditado: umidade, pressão, velocidade e direção do vento, comprimento do circuito, nuvens e código WMO. As condições podem se sobrepor; suas largadas não devem ser somadas entre grupos.")
         st.markdown("No Duelo, os dois pilotos podem pertencer a equipes diferentes. Entram apenas GPs em que ambos largaram; o placar de posições usa resultados válidos e sem desclassificação.")
         st.markdown("Na comparação com o companheiro, os pilotos precisam estar na mesma equipe no mesmo GP, ambos com largada e posição válidas, sem desclassificação. Nenhum dos confrontos isola o efeito do carro.")
-        st.markdown("17 compostos de pneus de treinos ou classificação seguem indisponíveis nas fontes consultadas. Eles permanecem ausentes e não participam destes rankings.")
+        st.markdown("Na auditoria da base até Austin, 17 compostos de pneus de treinos ou classificação ficaram indisponíveis. Essas lacunas permanecem ausentes e não participam destes rankings.")
         st.dataframe(pd.DataFrame([{"Condição": x.label, "Variável": x.variable} for x in CONDITIONS]), hide_index=True, width="stretch")
         st.markdown("[OpenF1](https://openf1.org/docs/) · [Open-Meteo](https://open-meteo.com/en/docs/historical-weather-api) · [Mapas FIA por edição](https://github.com/TracingInsights/DDocs/tree/9f647f7c62a838405c85219e5eb2feb5c3575027) · [Auditoria dos dados](https://github.com/mbpaschoal/pitwall-lab/tree/main/reports/pilotos_condicoes_20261029)")
 
@@ -561,7 +570,7 @@ def _duel(asset, years, metric, minimum):
             st.caption("{} vitórias · {} pódios".format(result[side]["wins"], result[side]["podiums"]))
     if result["common_starts"] < minimum:
         st.info("Poucas corridas em comum para o mínimo escolhido. Explore os resultados ou reduza o filtro.")
-    st.caption("O confronto compara posições oficiais; abandonos contam. Resultados desclassificados ficam fora do placar de posições. Carro e época também contam.")
+    st.caption("Abandonos contam nas largadas. O placar compara posições oficiais conhecidas, sem desclassificações. Carro e época também contam.")
     _evidence(asset, [row for x in result["evidence"] for row in (x["left"], x["right"])], "duelo")
 
 
@@ -607,6 +616,6 @@ def _share(asset, years, metric, minimum, view):
         st.session_state["share_current_url"] = url
         st.text_input("Link para compartilhar", key="share_current_url")
         st.caption("O link guarda período, métrica, condição e mínimo. O cartão resume resultados históricos no período selecionado.")
-        svg = card_svg(title, ", ".join(map(str, years)) + " · " + translate("Dados até Austin 2026"), facts,
+        svg = card_svg(title, ", ".join(map(str, years)) + " · " + coverage_label(asset), facts,
             "OpenF1 · Jolpica-F1 · Open-Meteo · pitwall-lab.streamlit.app", language() == "en")
         st.download_button("Baixar cartão (SVG)", svg, file_name="pitwall-comparacao.svg", mime="image/svg+xml", key="share_svg")

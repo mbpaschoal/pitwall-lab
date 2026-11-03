@@ -1,5 +1,12 @@
 # Pitwall Lab evolution
 
+## 0.8.22 — 2026-11-03
+
+- Adds Mexico to Drivers analysis: 67 GPs, 1,376 results and 1,362 starts. Uses weather within actual racing intervals and a reviewed FIA 2026 map; five NC positions remain missing.
+- Appends a traceable descriptive supplement to the preserved 66-GP baseline. Scheduled collection updates comparisons even if the GP panel is unchanged; disagreements retain the last validated version and gaps over six hours trigger the existing monitor.
+- Makes coverage dates and shared cards follow validated data. Debutants' profiles work without an approved portrait, without substituting another identity.
+- Upcoming GPs require reviewed results, weather and an edition-specific circuit reference. This delivery's map registry certifies Mexico; further references must be admitted before inclusion. No training, new prediction or v1 probability changes.
+
 ## 0.8.21 — 2026-11-03
 
 - Repairs the release highlight by selecting the highest stable version with a complete hash-bearing ZIP, even when an older release finishes later. New releases wait for asset completion before promotion.

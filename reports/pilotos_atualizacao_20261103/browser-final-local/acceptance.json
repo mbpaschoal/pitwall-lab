@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "lang": "pt",
+      "mobile": false,
+      "version": "0.8.22",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "À frente do rival 15 ",
+        "Taxa de vitórias 15,8% ",
+        "À frente do rival 3 ",
+        "Taxa de vitórias 0,0% "
+      ],
+      "status": "passed"
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "version": "0.8.22",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "Finished ahead of rival 15 ",
+        "Win rate 15.8% ",
+        "Finished ahead of rival 3 ",
+        "Win rate 0.0% "
+      ],
+      "status": "passed"
+    },
+    {
+      "lang": "pt",
+      "mobile": true,
+      "version": "0.8.22",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "À frente do rival 15 ",
+        "Taxa de vitórias 15,8% ",
+        "À frente do rival 3 ",
+        "Taxa de vitórias 0,0% "
+      ],
+      "status": "passed"
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "version": "0.8.22",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "Finished ahead of rival 15 ",
+        "Win rate 15.8% ",
+        "Finished ahead of rival 3 ",
+        "Win rate 0.0% "
+      ],
+      "status": "passed"
+    }
+  ]
+}

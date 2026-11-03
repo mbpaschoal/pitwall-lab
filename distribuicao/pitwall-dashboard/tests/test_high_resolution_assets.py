@@ -7,7 +7,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from pitwall.dashboard.hero_assets import HERO_IMAGES, hero_asset
+from pitwall.dashboard.hero_assets import HERO_IMAGES, hero_asset, portrait_asset
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -64,6 +64,16 @@ class TestHighResolutionAssets(unittest.TestCase):
         self.assertNotEqual(backdrop['driver_id'], drivers['driver_id'])
         self.assertTrue(drivers['composition_pt'])
         self.assertTrue(drivers['composition_en'])
+
+    def test_real_jpeg_portrait_is_used_for_mexico_debutant(self):
+        from pitwall.dashboard.fan_views import portrait
+        spec=portrait_asset('ryo_hirakawa')
+        self.assertEqual(spec['path'],'dashboard_assets/fan/portraits/ryo_hirakawa.jpg')
+        self.assertIn('haasf1team.com',spec['source'])
+        self.assertIn('Simon Galloway',spec['credit'])
+        self.assertIn('data:image/jpeg;base64,',portrait('ryo_hirakawa','Ryo Hirakawa'))
+        self.assertIsNone(portrait_asset('unregistered_driver'))
+        self.assertIn('fan-avatar-fallback',portrait('unregistered_driver','Unknown Driver'))
 
     def test_legacy_aliases_and_detached_spec(self):
         for alias, canonical in [('rain', 'drivers'), ('helmet', 'method'), ('car', 'forecast')]:

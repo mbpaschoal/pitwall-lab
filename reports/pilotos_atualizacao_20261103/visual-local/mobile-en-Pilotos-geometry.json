@@ -1,0 +1,260 @@
+{
+  "viewport": [
+    390,
+    844
+  ],
+  "overflow": false,
+  "main": {
+    "x": 0,
+    "y": 0,
+    "width": 390,
+    "height": 634,
+    "bottom": 634,
+    "right": 390
+  },
+  "normalBlocks": [
+    {
+      "className": "stVerticalBlock st-key-pilot-view-navigation st-emotion-cache-1n6tfoc e196pkbe2",
+      "marginTop": 0,
+      "marginBottom": 0,
+      "position": "relative"
+    },
+    {
+      "className": "fan-condition-chips",
+      "marginTop": 20,
+      "marginBottom": 0,
+      "position": "static"
+    },
+    {
+      "className": "fan-photo-credits",
+      "marginTop": 0,
+      "marginBottom": 12,
+      "position": "static"
+    },
+    {
+      "className": "fan-pilot-toolbar",
+      "marginTop": 0,
+      "marginBottom": 0,
+      "position": "static"
+    },
+    {
+      "className": "pilot-cards fan-pilot-ranking",
+      "marginTop": 12,
+      "marginBottom": 28,
+      "position": "relative"
+    }
+  ],
+  "hero": {
+    "x": 12,
+    "y": 372.171875,
+    "width": 366,
+    "height": 295.5,
+    "bottom": 667.671875,
+    "right": 378
+  },
+  "heading": {
+    "x": 29,
+    "y": 396.171875,
+    "width": 260,
+    "height": 66.53125,
+    "bottom": 462.703125,
+    "right": 289
+  },
+  "copy": {
+    "x": 29,
+    "y": 472.703125,
+    "width": 248,
+    "height": 32.375,
+    "bottom": 505.078125,
+    "right": 277
+  },
+  "ribbon": {
+    "x": 12,
+    "y": 240.59375,
+    "width": 366,
+    "height": 29.59375,
+    "bottom": 270.1875,
+    "right": 378
+  },
+  "dock": {
+    "x": 8,
+    "y": 642,
+    "width": 374,
+    "height": 142,
+    "bottom": 784,
+    "right": 382
+  },
+  "targets": [
+    {
+      "x": 11,
+      "y": 643,
+      "width": 122.65625,
+      "height": 70,
+      "bottom": 713,
+      "right": 133.65625
+    },
+    {
+      "x": 133.65625,
+      "y": 643,
+      "width": 122.671875,
+      "height": 70,
+      "bottom": 713,
+      "right": 256.328125
+    },
+    {
+      "x": 256.328125,
+      "y": 643,
+      "width": 122.65625,
+      "height": 70,
+      "bottom": 713,
+      "right": 378.984375
+    },
+    {
+      "x": 11,
+      "y": 713,
+      "width": 122.65625,
+      "height": 70,
+      "bottom": 783,
+      "right": 133.65625
+    },
+    {
+      "x": 133.65625,
+      "y": 713,
+      "width": 122.671875,
+      "height": 70,
+      "bottom": 783,
+      "right": 256.328125
+    },
+    {
+      "x": 256.328125,
+      "y": 713,
+      "width": 122.65625,
+      "height": 70,
+      "bottom": 783,
+      "right": 378.984375
+    }
+  ],
+  "photos": [
+    {
+      "natural": [
+        5157,
+        2970
+      ],
+      "responsive": false,
+      "display": [
+        366,
+        295.5
+      ]
+    },
+    {
+      "natural": [
+        3840,
+        2549
+      ],
+      "responsive": false,
+      "display": [
+        212.265625,
+        295.5
+      ]
+    },
+    {
+      "driver": "norris",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        44,
+        61
+      ]
+    },
+    {
+      "driver": "max_verstappen",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        44,
+        61
+      ]
+    },
+    {
+      "driver": "hamilton",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        29,
+        32
+      ]
+    },
+    {
+      "driver": "piastri",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        29,
+        32
+      ]
+    }
+  ],
+  "podium": null,
+  "podiumHeading": null,
+  "weather": null,
+  "details": null,
+  "chips": {
+    "x": 29,
+    "y": 525.078125,
+    "width": 291.734375,
+    "height": 96,
+    "bottom": 621.078125,
+    "right": 320.734375
+  },
+  "scope": {
+    "x": 12,
+    "y": 675.671875,
+    "width": 366,
+    "height": 21,
+    "bottom": 696.671875,
+    "right": 378
+  },
+  "pilotNavigation": {
+    "x": 12,
+    "y": 316.578125,
+    "width": 366,
+    "height": 47.59375,
+    "bottom": 364.171875,
+    "right": 378
+  },
+  "championshipRows": 0,
+  "probabilities": null,
+  "after": null,
+  "compact": null,
+  "results": null,
+  "resultsHeader": null,
+  "legend": null,
+  "steps": [],
+  "stepFont": null,
+  "documents": [],
+  "h1Count": 1,
+  "bars": [
+    37.5,
+    17.2414,
+    17.8571,
+    18.1818,
+    37.5,
+    28.8136,
+    25,
+    40.9091,
+    12.5,
+    12.5
+  ]
+}

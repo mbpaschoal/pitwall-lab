@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "a24128aa2fdb9cb6355b648784b672d6376f789ae3d3e18cddff8aeb5b9f77ae",
+  "apresentacao_build_sha256": "cc98c49d04304f423935bd250b452461e42e8db9c192bc948481c4729e9d4c6e",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "97d620467d18770e5cf4c840c86d7624cf7134443b1a301dbbc5ccb1dba9bf37",
+      "sha256_destino": "895a2b0332ad1154a281595a6bf4056fd943f305edd9f8a6972627338448a394",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "cbade806b8a38c876a1e2c69a0496f974e95971165f02d1d8a6132c14fd8eae3",
-      "sha256_origem": "a3f9583819c157db7b067e0a1845e1e38f46c352d34da136abfde58f7b2e2f09"
+      "sha256_destino": "5dc4bd492e225cc1e721c27317f0ce603e2ce043d69d70e2ace490890bfac776",
+      "sha256_origem": "340613dcf11b285c3141c97aba78535e74de77259c8508b29d1f1817bce4f7f8"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "39468c0dfb5817d0c50e3204b3d61ef35d636542c0a5890362f1387ce7ec5609",
-      "sha256_origem": "5bcd2ce597f9c5e6567af6f3d97248546e06c7429c70a5acbd40655eb0f1bd87"
+      "sha256_destino": "7d77dbb79e0f74d95be910709a950d54a7110199182420e69d6239fb2cdaa6e9",
+      "sha256_origem": "b93c823ca3d4008a1ff9e3675f21d112e81661fb7e8bb0d1a4d5cd0dd2bf4aaf"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -84,22 +84,22 @@
       "caminho": "README.en.md",
       "fonte": "publicacao/templates/README_PUBLICO.en.md.tpl",
       "modo": "gerado",
-      "sha256_destino": "2b62e39eaabfacad132e4b4bdca744005c0088d35129f18d1c8f23a8867f9bf8",
-      "sha256_origem": "d4e567bd603b9d0543020acc76838807463b0ef7a93c82779b7264bce1c228b5"
+      "sha256_destino": "0a560c38fd6d77ebba87521ab70e3e12d9addd8f9bbe9a19768689ff69690e83",
+      "sha256_origem": "6f1c0d16cfd143b69deb056fceed7f01d0791060a8e25179e4cb8b8323ac3596"
     },
     {
       "caminho": "README.md",
       "fonte": "publicacao/templates/README_PUBLICO.md.tpl",
       "modo": "gerado",
-      "sha256_destino": "5519da8f7a42429d44ba38c5ae8f9468b6d5752c63a480479ae369c239a7cbda",
-      "sha256_origem": "80640226f6c9305bde16131a3d1ebf64ad7eb371b572ecee1dd6c336120dad65"
+      "sha256_destino": "d54ca0a94040c047433bdf89123e1b08abe5425748848ca783a51dffac283003",
+      "sha256_origem": "9ce77d8592924743d2742ab79a48406a90eeff000fe914667743ee24217829ce"
     },
     {
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "14f2df7b94315d4dcd8adba946a2421fe03b0e18f69cdc48fa45d527e13a5536",
-      "sha256_origem": "14f2df7b94315d4dcd8adba946a2421fe03b0e18f69cdc48fa45d527e13a5536"
+      "sha256_destino": "86456bcc629d981e2e34d7fd53096f0dba9690460593b3b84583be05f3fd544e",
+      "sha256_origem": "86456bcc629d981e2e34d7fd53096f0dba9690460593b3b84583be05f3fd544e"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2499,8 +2499,15 @@
       "caminho": "docs/OPERACAO_FIM_SEMANA.md",
       "fonte": "docs/OPERACAO_FIM_SEMANA.md",
       "modo": "copia",
-      "sha256_destino": "c2a255984584bbd82b0955eaedbaec186ca55e955b9a5ea0bd11260a1922be0e",
-      "sha256_origem": "c2a255984584bbd82b0955eaedbaec186ca55e955b9a5ea0bd11260a1922be0e"
+      "sha256_destino": "2263426a9b2f77b44a1f36df5254f777790e96ca40dbf985fc1bbbed3b8fc356",
+      "sha256_origem": "2263426a9b2f77b44a1f36df5254f777790e96ca40dbf985fc1bbbed3b8fc356"
+    },
+    {
+      "caminho": "docs/PILOTOS_ATUALIZACAO.md",
+      "fonte": "docs/PILOTOS_ATUALIZACAO.md",
+      "modo": "copia",
+      "sha256_destino": "1454d3a55deee962a29cd832a8cac176eead1d6aa58d2d8e6783e9ab17fb2470",
+      "sha256_origem": "1454d3a55deee962a29cd832a8cac176eead1d6aa58d2d8e6783e9ab17fb2470"
     },
     {
       "caminho": "docs/PREPARACAO_SAO_PAULO.md",
@@ -2531,6 +2538,13 @@
       "sha256_origem": "00e68aadb984952868d10268f9d2253a8cbe110c0a625e942ee65c6837be8155"
     },
     {
+      "caminho": "docs/en/DRIVER_UPDATES.md",
+      "fonte": "docs/en/DRIVER_UPDATES.md",
+      "modo": "copia",
+      "sha256_destino": "8f2263b42ab0ea62b2b5d3147c97a8558fb66ee2e221790e988face83b6380e7",
+      "sha256_origem": "8f2263b42ab0ea62b2b5d3147c97a8558fb66ee2e221790e988face83b6380e7"
+    },
+    {
       "caminho": "docs/en/FAN_JOURNEY.md",
       "fonte": "docs/en/FAN_JOURNEY.md",
       "modo": "copia",
@@ -2555,8 +2569,8 @@
       "caminho": "docs/en/WEEKEND_OPERATION.md",
       "fonte": "docs/en/WEEKEND_OPERATION.md",
       "modo": "copia",
-      "sha256_destino": "25f0c76b39ac197bdcb7760a27b8b7977574338701cd4e42ae4c5126f43933e3",
-      "sha256_origem": "25f0c76b39ac197bdcb7760a27b8b7977574338701cd4e42ae4c5126f43933e3"
+      "sha256_destino": "203b6474d464375da1e40690d7bc0a040cfe81140669ee4be629ea684508cbc0",
+      "sha256_origem": "203b6474d464375da1e40690d7bc0a040cfe81140669ee4be629ea684508cbc0"
     },
     {
       "caminho": "docs/en/avaliacao_final_v1.md",
@@ -2722,6 +2736,13 @@
       "sha256_origem": "dfc760dfb9a78e2cf087c89b7175ab671070bc2b6eed3dab70297a2df7ae2535"
     },
     {
+      "caminho": "frontend_assets/pilotos_condicoes_operacao.json",
+      "fonte": "frontend_assets/pilotos_condicoes_operacao.json",
+      "modo": "copia",
+      "sha256_destino": "d5fbe04310d154c317147c319e5ea0cde904920201946e1969ddeb90701e083e",
+      "sha256_origem": "d5fbe04310d154c317147c319e5ea0cde904920201946e1969ddeb90701e083e"
+    },
+    {
       "caminho": "frontend_assets/pitwall.css",
       "fonte": "frontend_assets/pitwall.css",
       "modo": "copia",
@@ -2781,8 +2802,8 @@
       "caminho": "pitwall/dashboard/fan_views.py",
       "fonte": "pitwall/dashboard/fan_views.py",
       "modo": "copia",
-      "sha256_destino": "06a331fc04a7174eff74002ba60279f3a40b16106c286a70b5ff30d2d63e264d",
-      "sha256_origem": "06a331fc04a7174eff74002ba60279f3a40b16106c286a70b5ff30d2d63e264d"
+      "sha256_destino": "22c570cec5fcbafa80d8f493195e9285c1aa58ee4b3e10d06fe9aececdce6adf",
+      "sha256_origem": "22c570cec5fcbafa80d8f493195e9285c1aa58ee4b3e10d06fe9aececdce6adf"
     },
     {
       "caminho": "pitwall/dashboard/favorites.py",
@@ -2795,8 +2816,8 @@
       "caminho": "pitwall/dashboard/hero_assets.py",
       "fonte": "pitwall/dashboard/hero_assets.py",
       "modo": "copia",
-      "sha256_destino": "33ac068fcd0b1e9b29e655cf2e24e1b87b3e4b6f552b21dda9e6f7d117619cb8",
-      "sha256_origem": "33ac068fcd0b1e9b29e655cf2e24e1b87b3e4b6f552b21dda9e6f7d117619cb8"
+      "sha256_destino": "0fce0c2912dfc0d0c17897a1bc368cc9c78a5e424695d9c4601d1b48b25cdb1c",
+      "sha256_origem": "0fce0c2912dfc0d0c17897a1bc368cc9c78a5e424695d9c4601d1b48b25cdb1c"
     },
     {
       "caminho": "pitwall/dashboard/journey.py",
@@ -2830,8 +2851,8 @@
       "caminho": "pitwall/dashboard/pilot_views.py",
       "fonte": "pitwall/dashboard/pilot_views.py",
       "modo": "copia",
-      "sha256_destino": "f5184b65b17276a6217c234f23c28d87442cabc3b50eb3d350dadd7a991081dd",
-      "sha256_origem": "f5184b65b17276a6217c234f23c28d87442cabc3b50eb3d350dadd7a991081dd"
+      "sha256_destino": "b6d2b37b58cf3ae45e2e68eb1ac448c378f102cfc7c557cc090ba72df9253e9e",
+      "sha256_origem": "b6d2b37b58cf3ae45e2e68eb1ac448c378f102cfc7c557cc090ba72df9253e9e"
     },
     {
       "caminho": "pitwall/dashboard/search.py",
@@ -2914,8 +2935,15 @@
       "caminho": "pitwall/data/driver_conditions.py",
       "fonte": "pitwall/data/driver_conditions.py",
       "modo": "copia",
-      "sha256_destino": "8fa53e8b98cd20155d2a865ab1f21381558506bc59b7206938dc3b424c697f7c",
-      "sha256_origem": "8fa53e8b98cd20155d2a865ab1f21381558506bc59b7206938dc3b424c697f7c"
+      "sha256_destino": "97d0cb96265fee62cd1d8aa49044cb227afa15c26f5ece35fb7ace7dfc28d306",
+      "sha256_origem": "97d0cb96265fee62cd1d8aa49044cb227afa15c26f5ece35fb7ace7dfc28d306"
+    },
+    {
+      "caminho": "pitwall/data/driver_updates.py",
+      "fonte": "pitwall/data/driver_updates.py",
+      "modo": "copia",
+      "sha256_destino": "8cad50b531b48b99daeb91bb4a3665bd1b10988690e7ef263b81d3ff9068c2fb",
+      "sha256_origem": "8cad50b531b48b99daeb91bb4a3665bd1b10988690e7ef263b81d3ff9068c2fb"
     },
     {
       "caminho": "pitwall/data/editorial.py",
@@ -2977,8 +3005,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "7cb92b175b9508effb7bb2f205f953bc710f6f037f7f6e512091309138935209",
-      "sha256_origem": "7cb92b175b9508effb7bb2f205f953bc710f6f037f7f6e512091309138935209"
+      "sha256_destino": "540fd07f0dd38ec327e62e62441c61acf09df9843127013f0934b2558fba2c08",
+      "sha256_origem": "540fd07f0dd38ec327e62e62441c61acf09df9843127013f0934b2558fba2c08"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -3180,8 +3208,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "aff423092142c1197d9bbf564953515eb0ca1215dc42f98b25d77caa53a8e4f9",
-      "sha256_origem": "aff423092142c1197d9bbf564953515eb0ca1215dc42f98b25d77caa53a8e4f9"
+      "sha256_destino": "2a6b0534de4014468d7edf2d50d59ead2ff59ff30ba483080887bd81be5876fa",
+      "sha256_origem": "2a6b0534de4014468d7edf2d50d59ead2ff59ff30ba483080887bd81be5876fa"
     },
     {
       "caminho": "static/pitwall-media/catalog.json",
@@ -3265,8 +3293,8 @@
       "caminho": "tests/test_driver_projection.py",
       "fonte": "tests/test_driver_projection.py",
       "modo": "copia",
-      "sha256_destino": "64d51624e71d3c39154f56d820b9740f30b858edb47f998c72520e579d73e972",
-      "sha256_origem": "64d51624e71d3c39154f56d820b9740f30b858edb47f998c72520e579d73e972"
+      "sha256_destino": "357e0576eb5f70f2d9a971c1ffd3e6bafb6e86b965ecc09649802217a9775197",
+      "sha256_origem": "357e0576eb5f70f2d9a971c1ffd3e6bafb6e86b965ecc09649802217a9775197"
     },
     {
       "caminho": "tests/test_fan_composition.py",
@@ -3293,8 +3321,8 @@
       "caminho": "tests/test_high_resolution_assets.py",
       "fonte": "tests/test_high_resolution_assets.py",
       "modo": "copia",
-      "sha256_destino": "81c9a244d09b804521f5792e2e9b56485656d4af7cfbd5adff5fa280e39b8776",
-      "sha256_origem": "81c9a244d09b804521f5792e2e9b56485656d4af7cfbd5adff5fa280e39b8776"
+      "sha256_destino": "870c636116c5a98135ea703763c13e9424c91c1fef86923c23900d39ef8bdd4b",
+      "sha256_origem": "870c636116c5a98135ea703763c13e9424c91c1fef86923c23900d39ef8bdd4b"
     },
     {
       "caminho": "tests/test_interface_editorial.py",
@@ -3307,8 +3335,8 @@
       "caminho": "tests/test_pilot_views.py",
       "fonte": "tests/test_pilot_views.py",
       "modo": "copia",
-      "sha256_destino": "2e49ec824ffcd283fc3252e91a6a71a9f16d1240aff876a6c7884cfb1f2ff82d",
-      "sha256_origem": "2e49ec824ffcd283fc3252e91a6a71a9f16d1240aff876a6c7884cfb1f2ff82d"
+      "sha256_destino": "66b2d3035364f154280858c1a3b8e65924f7577fcd2fe77635bfd61b7fe99478",
+      "sha256_origem": "66b2d3035364f154280858c1a3b8e65924f7577fcd2fe77635bfd61b7fe99478"
     },
     {
       "caminho": "tests/test_pneus_apresentacao.py",
@@ -3358,15 +3386,15 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "98285c9bbd5942a0b2c318331cebce967330efe406dfd5dd2b1ac92ca39bae17"
+      "sha256": "441bd2acaeee7af3ed432eaad5b6e178d821d571605c6b779657e259a2651c0d"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
-      "sha256": "80640226f6c9305bde16131a3d1ebf64ad7eb371b572ecee1dd6c336120dad65"
+      "sha256": "9ce77d8592924743d2742ab79a48406a90eeff000fe914667743ee24217829ce"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.en.md.tpl",
-      "sha256": "d4e567bd603b9d0543020acc76838807463b0ef7a93c82779b7264bce1c228b5"
+      "sha256": "6f1c0d16cfd143b69deb056fceed7f01d0791060a8e25179e4cb8b8323ac3596"
     },
     {
       "caminho": "publicacao/templates/FONTES_E_DADOS.md",
@@ -3386,7 +3414,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "aff423092142c1197d9bbf564953515eb0ca1215dc42f98b25d77caa53a8e4f9"
+      "sha256": "2a6b0534de4014468d7edf2d50d59ead2ff59ff30ba483080887bd81be5876fa"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -3417,5 +3445,5 @@
       "sha256": "0e48f17455af5e120682f444285f1e08ab38f958acf9e30de49de6f52714f484"
     }
   ],
-  "versao_produto": "0.8.21"
+  "versao_produto": "0.8.22"
 }
