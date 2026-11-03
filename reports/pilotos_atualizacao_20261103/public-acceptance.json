@@ -1,0 +1,98 @@
+{
+  "status": "data_views_verified_with_export_and_bootstrap_limits",
+  "served_build": {
+    "publicVersion": "0.8.25",
+    "build": "5e6f3c3be744311d0ecda31df1dcf640923e0f4351ed9b33221147b7c67ed7e7",
+    "verified": true,
+    "reloads": 0,
+    "utc": "2026-11-03T20:17:08.007Z",
+    "freshBrowserContext": true,
+    "url": "https://pitwall-lab.streamlit.app/?tela=Metodologia&temporada=2026&gp=19&lang=en"
+  },
+  "runtime_024_equals_025": true,
+  "cases": [
+    {
+      "lang": "pt",
+      "mobile": false,
+      "version": "0.8.24",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "À frente do rival 15 ",
+        "Taxa de vitórias 15,8% ",
+        "À frente do rival 3 ",
+        "Taxa de vitórias 0,0% "
+      ],
+      "status": "passed",
+      "evidence": "browser-public-024-r2/acceptance.json"
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "version": "0.8.24",
+      "reloads": 2,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "Finished ahead of rival 15 ",
+        "Win rate 15.8% ",
+        "Finished ahead of rival 3 ",
+        "Win rate 0.0% "
+      ],
+      "status": "passed",
+      "evidence": "browser-public-024-desktop-en-r3/acceptance.json"
+    },
+    {
+      "lang": "pt",
+      "mobile": true,
+      "version": "0.8.24",
+      "reloads": 1,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "svg_separate_page": true,
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "À frente do rival 15 ",
+        "Taxa de vitórias 15,8% ",
+        "À frente do rival 3 ",
+        "Taxa de vitórias 0,0% "
+      ],
+      "status": "passed",
+      "evidence": "browser-public-024-mobile-pt-r5/acceptance.json"
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "responsiveDesktopBootstrap": true,
+      "version": "0.8.25",
+      "reloads": 0,
+      "maxStarts": 67,
+      "verification_scope": "read-only profiles, original portraits and duel denominators",
+      "native_exports_verified": false,
+      "english_selected_by_flag": false,
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "Finished ahead of rival 15 ",
+        "Win rate 15.8% ",
+        "Finished ahead of rival 3 ",
+        "Win rate 0.0% "
+      ],
+      "status": "passed",
+      "evidence": "browser-public-025-responsive-en-readonly/acceptance.json"
+    }
+  ],
+  "native_export_cases": 3,
+  "public_english_mobile_native_exports_certified": false,
+  "physical_phones_tested": false,
+  "limits": [
+    "English at 390px used desktop bootstrap and read-only checks; fresh Android English bootstrap remained intermittent.",
+    "Native CSV/SVG downloads passed both desktop languages and Pixel 7 Portuguese. English mobile native SVG save was not certified; HTTP 200 attachment responses were observed.",
+    "Earlier failed attempts and hosting module-loading errors are retained; successful cases were selected explicitly, not presented as first-attempt passes."
+  ]
+}

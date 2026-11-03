@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "lang": "en",
+      "mobile": true,
+      "responsiveDesktopBootstrap": true,
+      "version": "0.8.25",
+      "reloads": 0,
+      "maxStarts": 67,
+      "verification_scope": "read-only profiles, original portraits and duel denominators",
+      "native_exports_verified": false,
+      "english_selected_by_flag": false,
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "Finished ahead of rival 15 ",
+        "Win rate 15.8% ",
+        "Finished ahead of rival 3 ",
+        "Win rate 0.0% "
+      ],
+      "status": "passed"
+    }
+  ]
+}

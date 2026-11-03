@@ -1,49 +1,46 @@
-# Pilotos: México e atualização agendada
+# Pilotos: México, atualização automática e aceite
 
 Created by: MBPaschoal
-Status: local tests and package passed; public verification pending
+Status: released and public build verified; mobile export limits documented
 Type: delivery report
 
 Português · [English](README.en.md)
 
-A base descritiva até Austin continua preservada. O complemento desta entrega acrescenta México 2026: 67 GPs, 1.376 resultados, 1.362 largadas e 14 DNS no conjunto. Permanecem oito corridas com chuva registrada nos intervalos efetivos. Cinco posições NC do México não são substituídas por ranks nativos; os duelos contam essas largadas sem criar placares de posição.
+O México 2026 entra nas análises de Pilotos: **67 GPs, 1.376 resultados e 1.362 largadas**. Perfis, filtros, duelos, busca e cartões usam o complemento validado, preservando a base de 66 GPs até Austin. As cinco posições NC do México continuam ausentes; largadas entram no denominador, mas posições desconhecidas não entram no placar do duelo.
 
-A referência é o mapa FIA 2026, Doc. 7, página 2: 17 curvas, sentido horário, 4,304 km. [Captura e hash](acquisition.json). A altitude é aproximação pontual de 2.234 m já documentada no acervo, não intervalo de elevações. O resultado Jolpica previamente capturado e a fonte nativa da release 0.8.20 foram reutilizados, com identidade e hashes conferidos. [Reuso das capturas](captures-acquisition.json). Nenhuma fonte preditiva, probabilidade ou modelo foi reescrita.
+A versão pública confirmada é **0.8.25**, build `5e6f3c3be744311d0ecda31df1dcf640923e0f4351ed9b33221147b7c67ed7e7`. [Build servido](public-build-025/public-build.json) · [Pacote e comparação](package.json). O código e os dados de runtime são idênticos aos da 0.8.24; a 0.8.25 corrige o aceite e sua organização no CI. Modelo v1, probabilidades registradas e entradas preditivas permanecem preservados.
 
-## Comportamento e limites
+## O que atualiza sozinho
 
-A coleta agendada atualiza o complemento mesmo quando o painel do fim de semana não muda. Repetir dados idênticos não gera uma nova versão. Falhas de qualidade mantêm a última contribuição válida; a tela mostra pendências e o monitor sinaliza atraso superior a seis horas. Retry-After persiste no cache. A atualização exige referência do circuito por edição: o registro desta entrega admite México 2026, e futuros mapas ainda precisam ser conferidos. Não é uma promessa de completude irrestrita de dados futuros.
+A coleta serial do GitHub Actions acrescenta GPs encerrados após conferir identidade, população, largadas, resultados, clima efetivo e referência do circuito da edição. Isso funciona mesmo quando só Pilotos muda. Repetições idênticas não geram novas versões. Divergências mantêm a última contribuição válida, mostram pendência e acionam o monitor após seis horas. Retry-After persiste entre execuções.
 
-O perfil de Ryo Hirakawa revelou uma incompatibilidade entre o campo `file` do catálogo e o leitor que pressupunha PNG. A foto JPEG original de alta resolução agora é usada com seu enquadramento e crédito Haas/Simon Galloway; perfis sem foto aprovada têm fallback sem tomar outro rosto. Datas de cobertura e cartões acompanham a projeção validada.
+A recuperação real foi comprovada na execução [41705250105](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41705250105): Jolpica HTTP 200, 67 GPs, nenhuma pendência ou alteração substantiva. A execução [41706516200](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41706516200) reconfirmou esse estado. O monitor fechou sozinho a [ocorrência 1](https://github.com/mbpaschoal/pitwall-lab/issues/1). [Recibo](collector-recovery.json) · [Contrato PT/EN](../../docs/PILOTOS_ATUALIZACAO.md).
 
-[Contrato PT/EN](../../docs/PILOTOS_ATUALIZACAO.md). Validação, pacote, CI e observação pública serão registrados separadamente após execução real.
+## Fontes e preservação
 
+- Resultado canônico [Jolpica já capturado](../saopaulo_readiness_20261103/admitted-sources/mexico-results.json) e capturas nativas da 0.8.20 foram reutilizados, sem reescrever os originais. [Reuso e hash](captures-acquisition.json).
+- Mapa FIA 2026, Doc. 7, página 2: 17 curvas, sentido horário, 4,304 km. [URL, UTC e SHA da captura](acquisition.json). A altitude de 2.234 m é aproximação pontual Open-Meteo, não a amplitude de elevações do traçado.
+- Clima usa intervalos efetivamente disputados, sem pausas de bandeira vermelha e sem a leitura anômala já adjudicada. O complemento não inventa nuvens ou código WMO para o México.
+- A base permanece com SHA `dfc760dfb9a78e2cf087c89b7175ab671070bc2b6eed3dab70297a2df7ae2535`. Foram conferidos 231 arquivos protegidos sem alteração. [Integridade](protected-integrity-final.json). Rascunhos da raiz original não foram incorporados; trabalho em checkout isolado.
 
-## Verificação local
+## Verificação e aprendizados
 
-349 testes de código aprovados e 31 reconferências após o ajuste dos créditos; 143 testes do pacote final. O aceite focal do pacote final passou em quatro combinações PT/EN e desktop/Android, com CSV e SVG reais e SHA da foto original. A varredura visual prévia passou em 24 cenários nas seis telas. 231 arquivos protegidos conferidos contra `bb83c75`, sem alteração. [Pacote e hash](package.json) · [Fonte](source-tests.json) · [Pacote](package-tests.json) · [Navegador final](browser-final-local/acceptance.json) · [Integridade](protected-integrity.json). Implementação em cópia isolada, preservando os rascunhos da raiz original.
+352 testes de código e 144 do pacote passaram localmente. As 11 suítes Chromium/WebKit foram mantidas e divididas em dois grupos; ambos são exigidos pela release. [Matriz](browser-matrix.json) · [Testes](source-tests.json) · [Pacote](package-tests.json).
 
+| Problema encontrado | Correção verificável |
+|---|---|
+| Consulta sem cache falhou antes de gravar o manifesto | A 0.8.23 cria a pasta e testa o construtor real, respostas HTTP e 429. Coleta hospedada recuperada. |
+| Perfis perderam retratos antigos sem `driver_id` explícito | A 0.8.24 preserva a identidade literal dos arquivos e verifica os 29 retratos; Hirakawa usa o JPEG original e seu crédito correto. |
+| Um teste exigia Audi na rodada 18 após o México | A 0.8.25 exige a última corrida validada da equipe. [Falha reproduzida](search-context-stale-reproduction/interactions.json) e [quatro casos corrigidos](search-context-corrected/interactions.json), sem retirar verificações. |
 
-## Correção após a primeira execução hospedada
+Tags, erros anteriores e recibos foram preservados. A lição é verificar consumidores e estados reais, testar o cliente sem cache e evitar expectativas de UI presas a uma rodada histórica.
 
-A primeira coleta em `41704012731` falhou porque o construtor real do cliente tentou salvar o manifesto antes de existir a pasta da consulta. Os testes anteriores exercitavam cache válido ou clientes substitutos e não expunham essa pré-condição. A 0.8.23 cria a pasta explicitamente e testa o cliente real com respostas HTTP controladas de sucesso e 429. A interrupção real por 429 também mantém Retry-After persistido. A 0.8.22 e seus recibos ficam preservados, sem reescrever a tag. A falha inicial não alterou os dados publicados.
+## Prova pública e limites
 
+[Conferência pública](public-acceptance.json): dados, retratos reais e duelos verificados em PT/EN, desktop e largura de celular. CSV/SVG nativos foram salvos nos dois idiomas no desktop e em português no Pixel 7 emulado. O inglês em 390 px usou inicialização desktop e verificações de leitura; o salvamento nativo do SVG em inglês móvel não foi certificado. Houve sessões de carregamento intermitente e eventos de download cancelados; as tentativas anteriores estão preservadas no cofre local, com amostras publicadas de [bootstrap interrompido](browser-public-025-mobile-en-r3/mobile-en-failure.json) e [download cancelado](browser-public-025-responsive-en/mobile-en-failure.json). Não foi testado aparelho físico. O recibo distingue esses casos e as versões 0.8.24/0.8.25, cujo runtime é idêntico.
 
-0.8.23: 351 source tests / testes de código, 143 portable tests / testes do pacote; four final-package browser cases / quatro casos de navegador finais em PT/EN e desktop/Android. [Package / Pacote](package.json) · [Browser / Navegador](browser-local-023/acceptance.json).
+O registro atual admite o mapa do México 2026. **Mapas de próximas edições ainda exigem conferência**; sem ela, o GP fica pendente e o monitor avisa. As 17 lacunas de compostos na auditoria da base permanecem declaradas e não entram nos rankings. A previsão de São Paulo continua aguardando Q e snapshot preditivo validado; não houve nova emissão ou treino.
 
+## Publicação final
 
-## Correção dos retratos e pacote 0.8.24
-
-O CI de navegação da 0.8.22 detectou a falta de imagem no perfil de Norris: o catálogo legado usa identidade literal no nome do arquivo, enquanto o leitor novo exigia `driver_id`. A correção preserva ambos os formatos e confere os 29 retratos. A 0.8.24 passou em 352 testes de código, 144 do pacote, quatro casos focais e na jornada completa de navegação que detectou a regressão. [Jornadas completas](exploration-local-024/evidence.json) · [Quatro casos finais](browser-local-024/acceptance.json). Versões anteriores e suas falhas ficam auditáveis; nenhuma tag foi reescrita. O monitor abriu automaticamente a ocorrência 1 pela falha da coleta inicial; a recuperação ainda precisa ser confirmada na execução corrigida.
-
-
-## Recuperação automática comprovada
-
-A coleta corrigida [41705250105](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41705250105) consultou Jolpica com HTTP 200 em 19:45:21 UTC e confirmou 67 GPs, sem pendências ou mudança substantiva. A execução não criou nova versão. A ocorrência [1](https://github.com/mbpaschoal/pitwall-lab/issues/1), aberta automaticamente pela falha anterior, foi encerrada pelo monitor em 19:45:41 UTC. [Recibo](collector-recovery.json).
-
-
-## Aceite corrigido, 0.8.25
-
-O CI da 0.8.24 passou nas suítes anteriores ao contexto de busca, mas quatro verificações de Audi exigiam a rodada 18, embora a busca corretamente oferecesse o México/19. A reprodução local registra `19 !== 18` nos quatro contextos. A correção exige a última corrida validada da equipe, preserva ano/rodada/destino e passou nos mesmos quatro contextos. As 11 suítes permanecem; dois grupos independentes precisam aprovar antes da release. [Reprodução](search-context-stale-reproduction/interactions.json) · [Correção](search-context-corrected/interactions.json) · [Matriz preservada](browser-matrix.json).
-
-O pacote 0.8.25 tem 352 testes de fonte e 144 do pacote aprovados. Código e dados de runtime são byte a byte iguais aos da 0.8.24; apenas versão, changelogs, comentário de dependências e manifesto diferem. [Comparação](package.json). A prova pública e a release finais serão registradas após sua conclusão.
+[Release 0.8.25](https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.25) publicada e destacada como Latest. As etapas da [CI da tag](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41710817366) terminaram com sucesso: 352 testes de fonte, 144 do pacote e 11 suítes de navegador. ZIP de 665.854.558 bytes, SHA-256 `d927d471984e0c42d1306f7282c646ce14465f8546904ea9134f33cc5eaf11cd`, igual ao pacote local. [Recibo final](delivery-final.json). A [CI separada da main](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41710817082) também passou nas verificações; a publicação nela é ignorada por ser exclusiva da tag.

@@ -1,0 +1,26 @@
+{
+  "run": 41710817366,
+  "commit": "540f699",
+  "version": "0.8.25",
+  "validate": {
+    "job": 126178081480,
+    "conclusion": "success",
+    "source_tests": 352,
+    "portable_tests": 144
+  },
+  "browser_core": {
+    "job": 126178081565,
+    "conclusion": "success",
+    "suites": 7
+  },
+  "browser_navigation": {
+    "job": 126178081496,
+    "conclusion": "success",
+    "suites": 4
+  },
+  "all_11_suites_preserved": true,
+  "release": {
+    "job": 126194132857,
+    "status": "in_progress"
+  }
+}

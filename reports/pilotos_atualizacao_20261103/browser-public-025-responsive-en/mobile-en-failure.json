@@ -1,0 +1,57 @@
+{
+  "message": "download.saveAs: canceled",
+  "network": [
+    {
+      "path": "/js/heap-.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "type": "media",
+      "path": "/~/+/media/836278627f41f12d3bdb322bece0f010062987c163bbba629c5c7d7b.svg",
+      "status": 200,
+      "disposition": "attachment; filename=\"pitwall-comparacao.svg\""
+    },
+    {
+      "type": "media",
+      "path": "/~/+/media/26b96d7f8db0a8893d5bc8d322c53b25cc43fb599afa756802bd2b55.csv",
+      "status": 200,
+      "disposition": "attachment; filename=\"pitwall-pilotos-max_verstappen.csv\""
+    },
+    {
+      "path": "/js/heap-.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/_stcore/health",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "type": "media",
+      "path": "/~/+/media/26b96d7f8db0a8893d5bc8d322c53b25cc43fb599afa756802bd2b55.csv",
+      "status": 200,
+      "disposition": "attachment; filename=\"pitwall-pilotos-max_verstappen.csv\""
+    },
+    {
+      "type": "media",
+      "path": "/~/+/media/836278627f41f12d3bdb322bece0f010062987c163bbba629c5c7d7b.svg",
+      "status": 200,
+      "disposition": "attachment; filename=\"pitwall-comparacao.svg\""
+    },
+    {
+      "path": "/~/+/static/js/Toolbar.C77ar7rq.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/createSuper.Dh9w1cs8.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/withFullScreenWrapper.C3561XxJ.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/iframeResizer.contentWindow.yMw_ARIL.js",
+      "failure": "net::ERR_ABORTED"
+    }
+  ]
+}

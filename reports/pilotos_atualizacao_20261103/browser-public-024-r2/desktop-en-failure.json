@@ -1,0 +1,21 @@
+{
+  "message": "page.waitForEvent: Timeout 30000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================",
+  "network": [
+    {
+      "path": "/js/heap-.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/css/index.CIiu7Ygf.css",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/index.6xX1278W.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/js/heap-.js",
+      "failure": "net::ERR_ABORTED"
+    }
+  ]
+}

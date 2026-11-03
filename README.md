@@ -28,7 +28,7 @@ A interface usa a **Jornada do fã**: navegação inferior, contexto de GP no to
 - **Acertos do Lab:** log loss, Brier, calibração, ranking e cobertura, com denominadores explícitos.
 - **Como funciona:** documentos e relatórios offline. As bandeiras 🇧🇷 e 🇬🇧 no canto superior direito selecionam português ou inglês e acompanham a navegação.
 
-O acervo descritivo cobre **66 GPs e 330 sessões de 2024–2026 até Austin**. Pilotos incorpora também o México: 67 GPs, 1.376 resultados e 1.362 largadas. Usa sensores nos intervalos efetivos e mapas FIA de cada edição. O período atualizado aparece na tela. [Atualização e validação](docs/PILOTOS_ATUALIZACAO.md). A auditoria registra 295 verificações; 17 compostos de treinos/classificação continuam ausentes e não entram nesses rankings. O Histórico compara edições anteriores da mesma pista. [Correções e limites](docs/DADOS_ATUAIS.md).
+O acervo descritivo cobre **66 GPs e 330 sessões de 2024–2026 até Austin**. Na entrega 0.8.25, Pilotos incorpora também o México: 67 GPs, 1.376 resultados e 1.362 largadas. Usa sensores nos intervalos efetivos e mapas FIA de cada edição. O período atualizado aparece na tela. [Atualização e validação](docs/PILOTOS_ATUALIZACAO.md). A auditoria registra 295 verificações; 17 compostos de treinos/classificação continuam ausentes e não entram nesses rankings. O Histórico compara edições anteriores da mesma pista. [Correções e limites](docs/DADOS_ATUAIS.md).
 
 ## O que aprendi com os erros
 

@@ -1,0 +1,104 @@
+{
+  "status": "released_and_public_build_verified_with_documented_mobile_test_limits",
+  "version": "0.8.25",
+  "commit": "540f699fa6745ba56cfc5f6ec1f9b079161402c9",
+  "release": {
+    "id": 433199096,
+    "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.25",
+    "published_at": "2026-11-03T20:46:28Z",
+    "latest": true,
+    "asset": {
+      "id": 707034855,
+      "name": "pitwall-dashboard.zip",
+      "state": "uploaded",
+      "bytes": 665854558,
+      "sha256": "d927d471984e0c42d1306f7282c646ce14465f8546904ea9134f33cc5eaf11cd"
+    }
+  },
+  "build": "5e6f3c3be744311d0ecda31df1dcf640923e0f4351ed9b33221147b7c67ed7e7",
+  "source_tests": 352,
+  "portable_tests": 144,
+  "browser_suites": 11,
+  "ci_tag": {
+    "id": 41710817366,
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 126178081480,
+        "name": "validate",
+        "conclusion": "success"
+      },
+      {
+        "id": 126178081496,
+        "name": "browser (navigation)",
+        "conclusion": "success"
+      },
+      {
+        "id": 126178081565,
+        "name": "browser (core)",
+        "conclusion": "success"
+      },
+      {
+        "id": 126194132857,
+        "name": "release",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "ci_main": {
+    "id": 41710817082,
+    "jobs": [
+      {
+        "id": 126178080502,
+        "name": "validate",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 126178080842,
+        "name": "browser (core)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 126178081004,
+        "name": "browser (navigation)",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "note": "All main verification jobs passed; its release job is intentionally skipped because publication is tag-only.",
+    "conclusion": "success"
+  },
+  "data": {
+    "races": 67,
+    "results": 1376,
+    "starts": 1362,
+    "dns": 14,
+    "rain_races": 8
+  },
+  "automation": {
+    "healthy_runs": [
+      41705250105,
+      41706516200
+    ],
+    "incident": 1,
+    "incident_closed_at": "2026-11-03T19:45:41Z"
+  },
+  "scientific_files_checked": 231,
+  "scientific_changes": [],
+  "public_verification": {
+    "current_build": true,
+    "data_view_cases": 4,
+    "native_export_cases": 3,
+    "english_mobile_native_svg_certified": false,
+    "physical_phone_tested": false,
+    "evidence": "public-acceptance.json"
+  },
+  "limits": [
+    "New circuit editions require reviewed references; unverified races remain pending and trigger monitoring.",
+    "São Paulo prediction awaits observed qualifying and admitted predictive snapshot.",
+    "Fresh English Android bootstrap was intermittent; 390px English data/profile checks used desktop bootstrap. Native English mobile SVG save was not certified."
+  ],
+  "verified_at_utc": "2026-11-03T20:51:35.008589+00:00"
+}
