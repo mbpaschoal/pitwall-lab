@@ -55,7 +55,10 @@ with tarfile.open(args.captures) as archive:
         checks.append(dict(session_key=session['session_key'],timings_unchanged=True,laps_unchanged=True,observed_weather_unchanged=True,
             optional_id_keys_restored=sum('piloto_id' not in old and 'piloto_id' in new for old,new in zip(previous['tempos'],entry['tempos'])),
             raw_groups_verified=len(raw),state=entry['estado']))
-stamp=max(s['obtido_em_utc'] for s in review['fontes'].values())
+receipts=[s['obtido_em_utc'] for s in review['fontes'].values()]
+if event.get('revisao_catalogo',{}).get('fonte'):
+    receipts.append(event['revisao_catalogo']['fonte']['obtido_em_utc'])
+stamp=max(receipts)
 state['atualizado_em_utc']=stamp
 path.write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n')
 fp3=next(s for s in state['sessoes'] if s['session_key']==11399)
