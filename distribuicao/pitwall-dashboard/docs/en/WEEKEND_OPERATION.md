@@ -1,5 +1,7 @@
 # Mexico race weekend · 2026
 
+[São Paulo, alerts and release ordering](SAO_PAULO_PREPARATION.md) · 0.8.21
+
 ## Publication and concurrency
 
 Publication checks remote main before commit/tag creation and after an atomic push rejection. A proven branch advance dispatches a fresh run on main, reusing preserved captures and repeating all validation with current code and version. Generated packages are never rebased or force-pushed. A lineage permits at most two recoveries; authentication failures and limits remain explicit. [PT/EN runbook](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/runbooks/automatic-publication.md).

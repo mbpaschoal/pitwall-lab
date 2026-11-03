@@ -1,0 +1,249 @@
+{
+  "viewport": [
+    1040,
+    875
+  ],
+  "overflow": false,
+  "main": {
+    "x": 0,
+    "y": 0,
+    "width": 1040,
+    "height": 725,
+    "bottom": 725,
+    "right": 1040
+  },
+  "normalBlocks": [
+    {
+      "className": "stVerticalBlock st-key-fan-prediction-intro st-emotion-cache-1n6tfoc e196pkbe2",
+      "marginTop": 12,
+      "marginBottom": 0,
+      "position": "relative"
+    }
+  ],
+  "hero": {
+    "x": 28,
+    "y": 185,
+    "width": 984,
+    "height": 225,
+    "bottom": 410,
+    "right": 1012
+  },
+  "heading": {
+    "x": 56,
+    "y": 209,
+    "width": 583.59375,
+    "height": 56.15625,
+    "bottom": 265.15625,
+    "right": 639.59375
+  },
+  "copy": {
+    "x": 56,
+    "y": 275.15625,
+    "width": 560,
+    "height": 26.09375,
+    "bottom": 301.25,
+    "right": 616
+  },
+  "ribbon": {
+    "x": 28,
+    "y": 134,
+    "width": 984,
+    "height": 41,
+    "bottom": 175,
+    "right": 1012
+  },
+  "dock": {
+    "x": 28,
+    "y": 733,
+    "width": 984,
+    "height": 82,
+    "bottom": 815,
+    "right": 1012
+  },
+  "targets": [
+    {
+      "x": 36,
+      "y": 734,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 814,
+      "right": 197.328125
+    },
+    {
+      "x": 197.328125,
+      "y": 734,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 814,
+      "right": 358.65625
+    },
+    {
+      "x": 358.65625,
+      "y": 734,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 814,
+      "right": 519.984375
+    },
+    {
+      "x": 519.984375,
+      "y": 734,
+      "width": 161.34375,
+      "height": 80,
+      "bottom": 814,
+      "right": 681.328125
+    },
+    {
+      "x": 681.328125,
+      "y": 734,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 814,
+      "right": 842.65625
+    },
+    {
+      "x": 842.65625,
+      "y": 734,
+      "width": 161.328125,
+      "height": 80,
+      "bottom": 814,
+      "right": 1003.984375
+    }
+  ],
+  "photos": [
+    {
+      "natural": [
+        4589,
+        2401
+      ],
+      "responsive": false,
+      "display": [
+        984,
+        225
+      ]
+    },
+    {
+      "driver": "antonelli",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        46,
+        50
+      ]
+    },
+    {
+      "driver": "max_verstappen",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        46,
+        50
+      ]
+    },
+    {
+      "driver": "hadjar",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        46,
+        50
+      ]
+    },
+    {
+      "driver": "leclerc",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        64,
+        64
+      ]
+    },
+    {
+      "driver": "antonelli",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        64,
+        64
+      ]
+    },
+    {
+      "driver": "max_verstappen",
+      "natural": [
+        1336,
+        1336
+      ],
+      "responsive": false,
+      "display": [
+        64,
+        64
+      ]
+    }
+  ],
+  "podium": {
+    "x": 339.6875,
+    "y": 711.1875,
+    "width": 658.3125,
+    "height": 129.578125,
+    "bottom": 840.765625,
+    "right": 998
+  },
+  "podiumHeading": null,
+  "weather": null,
+  "details": null,
+  "chips": null,
+  "scope": null,
+  "pilotNavigation": null,
+  "championshipRows": 0,
+  "probabilities": {
+    "x": 28,
+    "y": 492,
+    "width": 984,
+    "height": 188,
+    "bottom": 680,
+    "right": 1012
+  },
+  "after": {
+    "x": 28,
+    "y": 701.1875,
+    "width": 984,
+    "height": 149.578125,
+    "bottom": 850.765625,
+    "right": 1012
+  },
+  "compact": {
+    "x": 339.6875,
+    "y": 711.1875,
+    "width": 658.3125,
+    "height": 129.578125,
+    "bottom": 840.765625,
+    "right": 998
+  },
+  "results": null,
+  "resultsHeader": null,
+  "legend": null,
+  "steps": [],
+  "stepFont": null,
+  "documents": [],
+  "h1Count": 1,
+  "bars": [
+    83.5369,
+    79.8281,
+    52.0849
+  ]
+}

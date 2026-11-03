@@ -1,5 +1,12 @@
 # Evolução do Pitwall Lab
 
+## 0.8.21 — 2026-11-03
+
+- Corrige o destaque de releases: escolhe a maior versão estável com ZIP completo e hash, mesmo quando uma versão antiga termina depois. Novas releases aguardam o pacote antes de concorrer ao destaque.
+- Instala monitor de coleta no GitHub: uma ocorrência atribuída ao proprietário por falha ou seis horas sem conclusão; repetição silenciosa e encerramento após recuperação. Restrições reais da fonte deixam de aparentar coleta saudável.
+- Reconferência de São Paulo em OpenF1, Jolpica, F1 e GP Tempo; identidade alternativa 21 versus rodada canônica 20 documentada. Verificador offline confere janela, separação entre GPs e três artes distintas por piloto/equipe do catálogo.
+- Previsão continua aguardando classificação observada e snapshot preditivo validado. Sem emissão antecipada, alteração do modelo ou das probabilidades registradas. Guia operacional PT/EN com passos e bloqueios.
+
 ## 0.8.20 — 2026-11-03
 
 Atualização automática de dados de Mexico City Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 5/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.

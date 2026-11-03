@@ -1,0 +1,166 @@
+{
+  "viewport": [
+    390,
+    844
+  ],
+  "overflow": false,
+  "main": {
+    "x": 0,
+    "y": 0,
+    "width": 390,
+    "height": 634,
+    "bottom": 634,
+    "right": 390
+  },
+  "normalBlocks": [
+    {
+      "className": "fan-results",
+      "marginTop": 12,
+      "marginBottom": 0,
+      "position": "relative"
+    }
+  ],
+  "hero": {
+    "x": 12,
+    "y": 286.1875,
+    "width": 366,
+    "height": 230,
+    "bottom": 516.1875,
+    "right": 378
+  },
+  "heading": {
+    "x": 29,
+    "y": 307.1875,
+    "width": 290,
+    "height": 33.265625,
+    "bottom": 340.453125,
+    "right": 319
+  },
+  "copy": {
+    "x": 29,
+    "y": 350.453125,
+    "width": 248,
+    "height": 48.5625,
+    "bottom": 399.015625,
+    "right": 277
+  },
+  "ribbon": {
+    "x": 12,
+    "y": 240.59375,
+    "width": 366,
+    "height": 29.59375,
+    "bottom": 270.1875,
+    "right": 378
+  },
+  "dock": {
+    "x": 8,
+    "y": 642,
+    "width": 374,
+    "height": 142,
+    "bottom": 784,
+    "right": 382
+  },
+  "targets": [
+    {
+      "x": 11,
+      "y": 643,
+      "width": 122.65625,
+      "height": 70,
+      "bottom": 713,
+      "right": 133.65625
+    },
+    {
+      "x": 133.65625,
+      "y": 643,
+      "width": 122.671875,
+      "height": 70,
+      "bottom": 713,
+      "right": 256.328125
+    },
+    {
+      "x": 256.328125,
+      "y": 643,
+      "width": 122.65625,
+      "height": 70,
+      "bottom": 713,
+      "right": 378.984375
+    },
+    {
+      "x": 11,
+      "y": 713,
+      "width": 122.65625,
+      "height": 70,
+      "bottom": 783,
+      "right": 133.65625
+    },
+    {
+      "x": 133.65625,
+      "y": 713,
+      "width": 122.671875,
+      "height": 70,
+      "bottom": 783,
+      "right": 256.328125
+    },
+    {
+      "x": 256.328125,
+      "y": 713,
+      "width": 122.65625,
+      "height": 70,
+      "bottom": 783,
+      "right": 378.984375
+    }
+  ],
+  "photos": [
+    {
+      "natural": [
+        5095,
+        2908
+      ],
+      "responsive": false,
+      "display": [
+        366,
+        230
+      ]
+    }
+  ],
+  "podium": null,
+  "podiumHeading": null,
+  "weather": null,
+  "details": null,
+  "chips": null,
+  "scope": null,
+  "pilotNavigation": null,
+  "championshipRows": 0,
+  "probabilities": null,
+  "after": null,
+  "compact": null,
+  "results": {
+    "x": 12,
+    "y": 536.1875,
+    "width": 366,
+    "height": 969.859375,
+    "bottom": 1506.046875,
+    "right": 378
+  },
+  "resultsHeader": {
+    "x": 24,
+    "y": 549.1875,
+    "width": 342,
+    "height": 122,
+    "bottom": 671.1875,
+    "right": 366
+  },
+  "legend": {
+    "x": 24,
+    "y": 656.34375,
+    "width": 342,
+    "height": 14.84375,
+    "bottom": 671.1875,
+    "right": 366
+  },
+  "steps": [],
+  "stepFont": null,
+  "documents": [],
+  "h1Count": 1,
+  "bars": []
+}
