@@ -23,7 +23,7 @@ Cada caso admite uma repetição por carregamento, dentro de seis minutos no con
 
 ## Contraprovas e validação
 
-[Seis testes com navegador real](../../tests/browser/test_verificar_publicacao.cjs) cobrem foto admitida, hash incorreto, imagem quebrada, idiomas/controles, origem externa e identidade/versão incompatível. Entram no grupo core do CI, junto com um ensaio completo local do verificador: 12 aceites, preservando os 11 anteriores. O verificador completo passou nos quatro fluxos locais, ambos os idiomas e tamanhos, com fotos e build reais do pacote anterior. [Quatro casos locais](local-027-r2/publication.json), [401 testes Python](source-tests.json).
+[Sete testes com navegador real](../../tests/browser/test_verificar_publicacao.cjs) cobrem foto admitida, hash incorreto, imagem quebrada, idiomas/controles, origem externa e identidade/versão incompatível. Entram no grupo core do CI, junto com um ensaio completo local do verificador: 12 aceites, preservando os 11 anteriores. O verificador completo passou nos quatro fluxos locais, ambos os idiomas e tamanhos, com fotos e build reais do pacote anterior. [Quatro casos locais](local-027-r2/publication.json), [401 testes Python](source-tests.json).
 
 O primeiro ensaio da nova condição de prontidão expôs uma passagem incorreta de argumentos no próprio teste Playwright. Foi corrigida e ganhou contraprova específica. Uma tentativa diagnóstica usou o GP futuro 20; o contrato agora rejeita esse evento quando não houver estado coletado correspondente. Esses ensaios ficam preservados; a validação de publicação usa o GP coletado 19. Isso não altera o calendário ou a expectativa futura de São Paulo.
 
@@ -36,3 +36,7 @@ Nova consulta serial de identificação em 03/11 às 23h21 UTC: Jolpica trouxe 3
 ## Aprendizado
 
 A verificação precisa responder se o fã consegue usar o conteúdo servido. Identificar a versão prova qual entrega respondeu; fotos decodificadas, controles prontos e arquivos conferidos acrescentam evidência do conteúdo que de fato chegou. Uma falha do teste e uma falha da hospedagem precisam permanecer distinguíveis.
+
+## Pacote final local
+
+A distribuição 0.8.28 passou em 144 testes e nos quatro fluxos completos do novo verificador, sem repetição. O conjunto de contraprovas totaliza sete testes: os seis iniciais e a preservação de recibo quando a validação prévia rejeita o pacote antes da rede. [Pacote e ZIP](package-validation.json), [recibo local final](local-028/publication.json), [sete contraprovas](browser-counterexamples-final.txt). Os 533 arquivos científicos conferidos e o original da foto permanecem idênticos. [Integridade](protected-integrity.json).

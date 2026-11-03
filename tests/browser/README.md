@@ -42,4 +42,4 @@ Checks wait for the expected version, route, language and idle state. Streamlit 
 
 `verificar_publicacao.cjs VERSION COLLECTION_JSON [OUTPUT]` checks an already-published data delivery in four PT/EN desktop/mobile cases. It requires the event in both the package calendar and collected state, decoded photographs with matching hashes, ready controls and exact build. Two attempts per case, six minutes total; JSON retains failures and screenshots. `PITWALL_SOURCE_ROOT` selects the expected package; `PITWALL_PUBLIC_BASE_URL` permits explicit local rehearsal. The workflow defaults to the public domain.
 
-`node --test tests/browser/test_verificar_publicacao.cjs` executa seis contraprovas com navegador real / runs six real-browser counterexamples: approved pixels, wrong SHA, broken photo, PT/EN readiness, foreign origin and package/event/version mismatch.
+`node --test tests/browser/test_verificar_publicacao.cjs` executa sete contraprovas com navegador real / runs seven real-browser counterexamples: approved pixels, wrong SHA, broken photo, PT/EN readiness, foreign origin and package/event/version mismatch.

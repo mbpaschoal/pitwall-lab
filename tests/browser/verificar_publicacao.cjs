@@ -68,12 +68,14 @@ function expectations(root,version,identity){
 async function verifyDeployment(version,resultPath,output){
  const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  const root=path.resolve(process.env.PITWALL_SOURCE_ROOT||path.join(__dirname,'../../distribuicao/pitwall-dashboard'));
- const identity=JSON.parse(fs.readFileSync(resultPath,'utf8')).identidade,expected=expectations(root,version,identity);
+ const identity=JSON.parse(fs.readFileSync(resultPath,'utf8')).identidade;
  const base=process.env.PITWALL_PUBLIC_BASE_URL||'https://pitwall-lab.streamlit.app',baseURL=new URL(base);
- integrity(baseURL.protocol==='https:'||['127.0.0.1','localhost'].includes(baseURL.hostname),'Public check requires HTTPS or localhost');
- const report={schema:'pitwall-publication-acceptance-v1',version,identity,expected_build:expected.build,base,verifier_sha256:sha256(fs.readFileSync(__filename)),cases:[]};
+ const report={schema:'pitwall-publication-acceptance-v1',version,identity,base,verifier_sha256:sha256(fs.readFileSync(__filename)),cases:[]};
  output=path.resolve(output||path.join(path.dirname(resultPath),'public-deployment'));fs.mkdirSync(output,{recursive:true});
  const save=()=>{const temporary=path.join(output,'publication.json.tmp');fs.writeFileSync(temporary,JSON.stringify(report,null,2));fs.renameSync(temporary,path.join(output,'publication.json'));};
+ let expected;
+ try{integrity(baseURL.protocol==='https:'||['127.0.0.1','localhost'].includes(baseURL.hostname),'Public check requires HTTPS or localhost');expected=expectations(root,version,identity);report.expected_build=expected.build;}
+ catch(error){report.status='failed';report.stage='preflight';report.error=error.message;save();throw error;}
  const launch={headless:true};if(process.env.PLAYWRIGHT_CHANNEL)launch.channel=process.env.PLAYWRIGHT_CHANNEL;
  const browser=await chromium.launch(launch),deadline=Date.now()+360000;
  try{

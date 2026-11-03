@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.8.28 — 2026-11-03
+
+Strengthens public confirmation after automatic data publication: four PT/EN desktop/mobile cases, decoded photographs, image hashes, hydrated native controls, the collected GP and exact package build. Loading failures get one retry per case within six minutes, with 30-day evidence retention; identity or file mismatches never become acceptance. Six real-browser counterexamples enter CI without removing the existing 11 acceptance suites. The How it works cover was rechecked against its documented image without replacing it or changing visual identity. Preparation queries still lack Câmara’s ID; his three approved illustrations remain preserved. Frozen model, scientific sources and existing emissions stay unchanged.
+
 ## 0.8.27 — 2026-11-03
 
 Preparation for Rafael Câmara’s announced São Paulo debut. An explicit review checks the qualifying roster and blocks emission while the replaced Ocon remains; canonical IDs come unchanged from the source, with no guessed number or borrowed driver history. Optional tarot artwork now produces a coverage report without blocking a scientifically valid forecast. An official photograph and three distinct Haas-coloured illustrations are staged outside the active catalogue while the canonical ID is pending. Frozen v1, inputs and previous emissions remain unchanged.

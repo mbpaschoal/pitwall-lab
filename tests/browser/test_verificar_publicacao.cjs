@@ -2,7 +2,7 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
-const {verifyImage,expectations,ready}=require('./verificar_publicacao.cjs');
+const {verifyImage,expectations,verifyDeployment,ready}=require('./verificar_publicacao.cjs');
 const root=path.resolve(__dirname,'../../distribuicao/pitwall-dashboard');
 const catalog=JSON.parse(fs.readFileSync(path.join(root,'static/pitwall-media/catalog.json'))).method;
 const variant=catalog.variants[0],raw=fs.readFileSync(path.join(root,variant.path));
@@ -44,4 +44,14 @@ test('calendar, circuit and version must belong to the package',()=>{
  assert.match(expectations(root,version,[state.temporada,state.rodada,state.circuito_id]).build,/^[a-f0-9]{64}$/);
  assert.throws(()=>expectations(root,version,[2026,20,'americas']),{code:'integrity'});
  assert.throws(()=>expectations(root,'0.0.0',[2026,20,'interlagos']),{code:'integrity'});
+});
+test('a rejected package produces a failure receipt before network access',async()=>{
+ const tmp=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'pitwall-preflight-'));
+ try{
+  const state=JSON.parse(fs.readFileSync(path.join(root,'frontend_assets/operacao_fim_semana.json')));
+  const input=path.join(tmp,'event.json');fs.writeFileSync(input,JSON.stringify({identidade:[state.temporada,state.rodada,state.circuito_id]}));
+  await assert.rejects(verifyDeployment('0.0.0',input,path.join(tmp,'out')),{code:'integrity'});
+  const receipt=JSON.parse(fs.readFileSync(path.join(tmp,'out/publication.json')));
+  assert.equal(receipt.status,'failed');assert.equal(receipt.stage,'preflight');assert.deepEqual(receipt.cases,[]);
+ }finally{fs.rmSync(tmp,{recursive:true,force:true});}
 });

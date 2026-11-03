@@ -19,7 +19,7 @@ The main routine runs on GitHub Actions and does not need the personal computer 
 | Recover a concurrent publication | Restore identical emission bytes and reproject on current `main`; never recalculate probabilities or force-push. |
 | Version and publish data | Real changes only; PT/EN notes, package, tests, original sources and atomic push. |
 | Publish a forecast on time | Recheck before push with a minimum one-hour margin before race start. Preserve an unpublished emission if the window closes. |
-| Verify package, languages and navigation | Code/version CI runs both full browser suites (12 checks: the previous 11 plus the public-verifier rehearsal), and six counterexamples. Automatic data publication runs four focused browser checks plus package validation. |
+| Verify package, languages and navigation | Code/version CI runs both full browser suites (12 checks: the previous 11 plus the public-verifier rehearsal), and seven counterexamples. Automatic data publication runs four focused browser checks plus package validation. |
 | CSV/SVG downloads | PT/EN desktop/mobile tests check file bytes, language and absence of an app rerun. |
 | Alert on failures or stale runs | One bilingual GitHub issue; unchanged conditions produce no comments. Healthy recovery closes the issue. |
 | Select `Latest` | Highest stable release with a complete, hashed ZIP, bounded by `main`'s version. |

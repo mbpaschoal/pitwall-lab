@@ -23,7 +23,7 @@ Each case gets one loading retry within a six-minute overall deadline. Origin/ha
 
 ## Counterexamples and validation
 
-[Six real-browser tests](../../tests/browser/test_verificar_publicacao.cjs) cover approved pixels, wrong hash, broken image, language/readiness, foreign origin and mismatched event/version. They enter core CI alongside a complete local verifier rehearsal: 12 acceptance checks, retaining the previous 11. The complete verifier passed all four local flows, both languages and widths, using real images and build from the previous package. [Local cases](local-027-r2/publication.json), [401 Python tests](source-tests.json).
+[Seven real-browser tests](../../tests/browser/test_verificar_publicacao.cjs) cover approved pixels, wrong hash, broken image, language/readiness, foreign origin and mismatched event/version. They enter core CI alongside a complete local verifier rehearsal: 12 acceptance checks, retaining the previous 11. The complete verifier passed all four local flows, both languages and widths, using real images and build from the previous package. [Local cases](local-027-r2/publication.json), [401 Python tests](source-tests.json).
 
 The first new-readiness rehearsal exposed incorrect Playwright argument handling in the test itself. It was corrected and received a specific counterexample. An exploratory run used future round 20; the contract now rejects an event without matching collected state. These attempts remain preserved; publication validation uses collected round 19. São Paulo's calendar and future expectations are unchanged.
 
@@ -36,3 +36,7 @@ A new serial identity lookup at 23:21 UTC on 3 November returned 35 Jolpica driv
 ## What this delivery taught us
 
 Verification needs to show whether fans can use served content. A version label identifies the responding delivery; decoded photographs, ready controls and matching bytes add evidence of what actually arrived. A test failure and a hosting failure must remain distinguishable.
+
+## Final local package
+
+Distribution 0.8.28 passed 144 tests and all four complete verifier flows without retries. Counterexamples total seven: the initial six plus failure-receipt retention when preflight rejects a package before network access. [Package and ZIP](package-validation.json), [final local receipt](local-028/publication.json), [seven counterexamples](browser-counterexamples-final.txt). All 533 checked scientific files and the original photograph remain unchanged. [Integrity](protected-integrity.json).

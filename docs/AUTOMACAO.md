@@ -19,7 +19,7 @@ A rotina principal fica no GitHub Actions, sem depender de o computador pessoal 
 | Recuperar publicação concorrente | Retoma os mesmos bytes da emissão e nova projeção em `main`; não recalcula probabilidades nem força push. |
 | Versionar e publicar dados | Nova versão só quando existe mudança real; notas PT/EN, pacote, testes, fontes e push atômico. |
 | Publicar previsão dentro do prazo | Reconfere antes do push; margem mínima de uma hora para a largada. Se a janela fechar, preserva a emissão sem publicá-la. |
-| Conferir pacote, idiomas e navegação | O CI de código/versão roda as duas suítes completas (12 aceites: 11 anteriores e o ensaio do verificador público), além de seis contraprovas. A publicação automatizada de dados roda quatro aceites focais e as verificações do pacote. |
+| Conferir pacote, idiomas e navegação | O CI de código/versão roda as duas suítes completas (12 aceites: 11 anteriores e o ensaio do verificador público), além de sete contraprovas. A publicação automatizada de dados roda quatro aceites focais e as verificações do pacote. |
 | Downloads CSV e SVG | Testes PT/EN em computador e celular verificam bytes, idioma e ausência de reexecução da página. |
 | Alertar sobre falha ou atraso | Uma ocorrência PT/EN no GitHub; repetições não criam comentários. Recuperação saudável encerra a ocorrência. |
 | Escolher `Latest` | Maior versão estável com ZIP completo e hash, limitada à versão de `main`. |
