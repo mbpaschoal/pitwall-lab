@@ -1,9 +1,17 @@
 {
-  "version": "0.8.24",
+  "version": "0.8.25",
   "files": 481,
-  "source_commit": "4d49bad",
-  "build": "3ad6f735a080208d8950231d990269496f73efe403d2a987f040ed7a6fad22eb",
-  "zip_sha256": "83685aafc138ee2ed83758c4df6c801d6c45963e227d2be4f8f9f5053d660653",
-  "zip_bytes": 665854145,
-  "preserved_previous_package": "/private/tmp/pitwall-drivers-package-023/pitwall-dashboard"
+  "source_commit": "e3ee108",
+  "build": "5e6f3c3be744311d0ecda31df1dcf640923e0f4351ed9b33221147b7c67ed7e7",
+  "zip_sha256": "d927d471984e0c42d1306f7282c646ce14465f8546904ea9134f33cc5eaf11cd",
+  "zip_bytes": 665854558,
+  "preserved_previous_package": "/private/tmp/pitwall-drivers-package-024/pitwall-dashboard",
+  "runtime_code_and_data_identical_to_024": true,
+  "changed_files_from_024": [
+    "MANIFESTO.json",
+    "requirements.txt",
+    "CHANGELOG.md",
+    "VERSION",
+    "CHANGELOG.en.md"
+  ]
 }

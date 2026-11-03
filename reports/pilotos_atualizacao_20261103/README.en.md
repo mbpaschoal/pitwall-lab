@@ -34,4 +34,16 @@ Initial collection run `41704012731` failed because the real client constructor 
 
 ## Portrait correction and package 0.8.24
 
-Version 0.8.22 navigation CI detected Norris' missing profile image: the legacy catalogue uses literal filenames as identity while the new reader required `driver_id`. The correction supports both formats and verifies all 29 portraits. Version 0.8.24 passed 352 source tests, 144 portable tests, four focused browser cases and the full journey that detected the regression. [Full journeys](exploration-local-024/acceptance.json) · [Four final cases](browser-local-024/acceptance.json). Earlier versions and failures remain auditable without rewriting tags. Monitoring automatically opened issue 1 for initial collection failure; recovery still needs verification from a corrected hosted run.
+Version 0.8.22 navigation CI detected Norris' missing profile image: the legacy catalogue uses literal filenames as identity while the new reader required `driver_id`. The correction supports both formats and verifies all 29 portraits. Version 0.8.24 passed 352 source tests, 144 portable tests, four focused browser cases and the full journey that detected the regression. [Full journeys](exploration-local-024/evidence.json) · [Four final cases](browser-local-024/acceptance.json). Earlier versions and failures remain auditable without rewriting tags. Monitoring automatically opened issue 1 for initial collection failure; recovery still needs verification from a corrected hosted run.
+
+
+## Verified automatic recovery
+
+Corrected collection [41705250105](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41705250105) received Jolpica HTTP 200 at 19:45:21 UTC and confirmed 67 GPs with no pending states or substantive change. It created no extra version. Issue [1](https://github.com/mbpaschoal/pitwall-lab/issues/1), automatically opened after the earlier failure, was closed by monitoring at 19:45:41 UTC. [Receipt](collector-recovery.json).
+
+
+## Corrected acceptance, 0.8.25
+
+Version 0.8.24 CI passed the preceding suites, but four Audi search checks required round 18 while search correctly offered Mexico/19. Local reproduction records `19 !== 18` in all four contexts. The fix requires the team's latest validated race, preserves year/round/destination and passed those same four cases. All 11 suites remain; both independent groups must pass before release. [Reproduction](search-context-stale-reproduction/interactions.json) · [Correction](search-context-corrected/interactions.json) · [Retained matrix](browser-matrix.json).
+
+The 0.8.25 package passed 352 source and 144 portable tests. Runtime code and data are byte-identical to 0.8.24; only version, changelogs, dependency comment and manifest differ. [Comparison](package.json). Final public/release receipts will follow actual completion.

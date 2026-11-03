@@ -1,0 +1,27 @@
+{
+  "engine": "chromium",
+  "base": "http://127.0.0.1:8525",
+  "cases": [
+    {
+      "id": "chromium-390-pt-context-search-short",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n'19' !== '18'\n"
+    },
+    {
+      "id": "chromium-390-en-context-search-short",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n'19' !== '18'\n"
+    },
+    {
+      "id": "chromium-1440-pt-context-search-short",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n'19' !== '18'\n"
+    },
+    {
+      "id": "chromium-1440-en-context-search-short",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n'19' !== '18'\n"
+    }
+  ],
+  "expectedVersion": "0.8.24"
+}
