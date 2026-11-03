@@ -1,0 +1,37 @@
+{
+  "message": "locator.tap: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByRole('button', { name: '🇬🇧 English', exact: true })\u001b[22m\n",
+  "network": [
+    {
+      "path": "/js/heap-.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/css/index.CIiu7Ygf.css",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/js/heap-.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/_stcore/health",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "type": "media",
+      "path": "/~/+/media/17564eff5af0943a6f8f4993471cdced75b568fb02c97ac2cc7e2220.svg",
+      "status": 200,
+      "disposition": "attachment; filename=\"pitwall-comparacao.svg\""
+    },
+    {
+      "type": "media",
+      "path": "/~/+/media/4f99e293f09d0a5b961625f7db417f937109c8ff0b2d148c188e1f86.csv",
+      "status": 200,
+      "disposition": "attachment; filename=\"pitwall-pilotos-max_verstappen.csv\""
+    },
+    {
+      "path": "/~/_stcore/host-config",
+      "failure": "net::ERR_ABORTED"
+    }
+  ]
+}

@@ -19,7 +19,7 @@ The main routine runs on GitHub Actions and does not need the personal computer 
 | Recover a concurrent publication | Restore identical emission bytes and reproject on current `main`; never recalculate probabilities or force-push. |
 | Version and publish data | Real changes only; PT/EN notes, package, tests, original sources and atomic push. |
 | Publish a forecast on time | Recheck before push with a minimum one-hour margin before race start. Preserve an unpublished emission if the window closes. |
-| Verify package, languages and navigation | Code, hashes, package and browser checks. Product releases require both browser suites. |
+| Verify package, languages and navigation | Code/version CI runs both full browser suites (11 checks). Automatic data publication runs four focused browser checks plus package validation. |
 | CSV/SVG downloads | PT/EN desktop/mobile tests check file bytes, language and absence of an app rerun. |
 | Alert on failures or stale runs | One bilingual GitHub issue; unchanged conditions produce no comments. Healthy recovery closes the issue. |
 | Select `Latest` | Highest stable release with a complete, hashed ZIP, bounded by `main`'s version. |
@@ -37,3 +37,6 @@ Other GPs can receive automatic collection and descriptive comparisons. This del
 - [Delivery report](../../reports/automacao_saopaulo_20261103/README.en.md).
 
 Forecast failures do not block valid descriptive publication. Attempts retain diagnostics and files in persisted state; a new attempt's original captures also receive a 30-day workflow artifact. Published emissions/raws enter Git and the release source archive. Cache is not external publication evidence: CI, releases and the served version are checked separately.
+
+
+Public 0.8.26 verification completed English CSV/SVG downloads on emulated Android without app reruns. Other attempts failed during bootstrap, Streamlit-module loading or download completion. Those limits remain recorded; a fully passing public matrix is not claimed. [Receipts and attempts](../../reports/automacao_saopaulo_20261103/README.en.md).

@@ -1,0 +1,29 @@
+{
+  "status": "failed",
+  "message": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().locator('.st-key-share_svg button') to be visible\u001b[22m\n",
+  "welcomeBootstrap": false,
+  "canonicalUrl": true,
+  "network": [
+    {
+      "path": "/js/heap-.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/css/index.CIiu7Ygf.css",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/withFullScreenWrapper.C3561XxJ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/possibleConstructorReturn.CqidKeei.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/index.Bj9JgOEC.js",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "utc": "2026-11-03T22:07:34.616Z"
+}

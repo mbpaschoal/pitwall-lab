@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-11-03 22:12:33 UTC",
+  "ci": [
+    {
+      "id": 41723723615,
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "87fd29840c30aec35a0b4790c63cac68d39bc4ce",
+      "branch": "v0.8.26",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41723723615"
+    },
+    {
+      "id": 41723723849,
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "87fd29840c30aec35a0b4790c63cac68d39bc4ce",
+      "branch": "main",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41723723849"
+    },
+    {
+      "id": 41723723825,
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "87fd29840c30aec35a0b4790c63cac68d39bc4ce",
+      "branch": "main",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41723723825"
+    }
+  ],
+  "release": {
+    "id": 433265840,
+    "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.26",
+    "tag": "v0.8.26",
+    "created_at": "2026-11-03T21:38:11Z",
+    "published_at": "2026-11-03T22:02:45Z",
+    "asset": {
+      "id": 707249718,
+      "state": "uploaded",
+      "size": 665855915,
+      "digest": "sha256:8a7d60cb69b17d0977d9650bc909a9b39323ab08de671b10939c43e148b35ceb"
+    }
+  }
+}

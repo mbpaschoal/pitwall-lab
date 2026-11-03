@@ -1,0 +1,188 @@
+{
+  "version": "0.8.26",
+  "completed_utc": "2026-11-03T22:12:33.286252+00:00",
+  "runtime_commit": "87fd29840c30aec35a0b4790c63cac68d39bc4ce",
+  "source_implementation_commit": "3c100180d4eaf27c168302411039adea8c68f211",
+  "github": {
+    "checked_at": "2026-11-03 22:12:33 UTC",
+    "ci": [
+      {
+        "id": 41723723615,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "87fd29840c30aec35a0b4790c63cac68d39bc4ce",
+        "branch": "v0.8.26",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41723723615"
+      },
+      {
+        "id": 41723723849,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "87fd29840c30aec35a0b4790c63cac68d39bc4ce",
+        "branch": "main",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41723723849"
+      },
+      {
+        "id": 41723723825,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "87fd29840c30aec35a0b4790c63cac68d39bc4ce",
+        "branch": "main",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41723723825"
+      }
+    ],
+    "release": {
+      "id": 433265840,
+      "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.26",
+      "tag": "v0.8.26",
+      "created_at": "2026-11-03T21:38:11Z",
+      "published_at": "2026-11-03T22:02:45Z",
+      "asset": {
+        "id": 707249718,
+        "state": "uploaded",
+        "size": 665855915,
+        "digest": "sha256:8a7d60cb69b17d0977d9650bc909a9b39323ab08de671b10939c43e148b35ceb"
+      }
+    }
+  },
+  "source_tests": 394,
+  "package_tests": 144,
+  "local_export_cases": 4,
+  "ci_browser_suites": 11,
+  "public_build": {
+    "publicVersion": "0.8.26",
+    "build": "f60379c599caaaddb05c4d66340713e0e0227914a874cd42049361abd8c03c0a",
+    "verified": true,
+    "reloads": 0,
+    "utc": "2026-11-03T21:39:39.082Z",
+    "freshBrowserContext": true,
+    "url": "https://pitwall-lab.streamlit.app/?tela=Metodologia&temporada=2026&gp=19&lang=en"
+  },
+  "protected": {
+    "reference": "a31b006",
+    "files_checked": 232,
+    "changed": [],
+    "base_file_sha256": "dfc760dfb9a78e2cf087c89b7175ab671070bc2b6eed3dab70297a2df7ae2535",
+    "original_artifacts_restored": 344
+  },
+  "automatic_collection": {
+    "run": 41723723825,
+    "status": "success",
+    "reason": "no_substantive_change",
+    "races": 67,
+    "pending": {},
+    "upcoming_references": "ready"
+  },
+  "forecast": {
+    "admitted_event": [
+      2026,
+      20,
+      "interlagos"
+    ],
+    "status": "waiting_for_observed_qualifying",
+    "emitted_in_this_delivery": false,
+    "model_trained": false
+  },
+  "public_exports": {
+    "english_mobile": [
+      {
+        "status": "passed",
+        "version": "0.8.26",
+        "lang": "en",
+        "device": "Pixel 7",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "welcomeBootstrap": false,
+        "canonicalUrl": true,
+        "svgFirst": true,
+        "reloads": 0,
+        "download_reruns": 0,
+        "utc": "2026-11-03T21:55:20.179Z",
+        "receipt": "public-mobile-focused/direct.json"
+      },
+      {
+        "status": "passed",
+        "version": "0.8.26",
+        "lang": "en",
+        "device": "Pixel 7",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "welcomeBootstrap": true,
+        "canonicalUrl": true,
+        "svgFirst": true,
+        "reloads": 1,
+        "download_reruns": 0,
+        "utc": "2026-11-03T21:57:09.637Z",
+        "receipt": "public-mobile-focused/welcome.json"
+      }
+    ],
+    "portuguese_desktop_receipts": [
+      "public-downloads/acceptance.json",
+      "public-exports-desktop-final/desktop-pt.json"
+    ],
+    "complete_public_matrix_claimed": false,
+    "failed_attempts": [
+      {
+        "receipt": "public-mobile-pt-final/welcome.json",
+        "category": "public_loading_or_download",
+        "message": "locator.waitFor: Timeout 45000ms exceeded."
+      },
+      {
+        "receipt": "public-mobile-pt-final/direct.json",
+        "category": "public_loading_or_download",
+        "message": "locator.waitFor: Timeout 45000ms exceeded."
+      },
+      {
+        "receipt": "public-responsive-en/mobile-en-failure.json",
+        "category": "public_loading_or_download",
+        "message": "locator.tap: Timeout 30000ms exceeded."
+      },
+      {
+        "receipt": "public-desktop-en-final/welcome.json",
+        "category": "public_loading_or_download",
+        "message": "locator.waitFor: Timeout 45000ms exceeded."
+      },
+      {
+        "receipt": "public-desktop-en-final/direct.json",
+        "category": "public_loading_or_download",
+        "message": "locator.waitFor: Timeout 45000ms exceeded."
+      },
+      {
+        "receipt": "public-exports-desktop-final/desktop-en.json",
+        "category": "public_loading_or_download",
+        "message": "locator.waitFor: Timeout 60000ms exceeded."
+      },
+      {
+        "receipt": "public-exports-matrix/desktop-pt.json",
+        "category": "test_harness",
+        "message": "locator.tap: The page does not support tap. Use hasTouch context option to enable touch support."
+      },
+      {
+        "receipt": "public-exports-matrix/desktop-en.json",
+        "category": "test_harness",
+        "message": "locator.tap: The page does not support tap. Use hasTouch context option to enable touch support."
+      },
+      {
+        "receipt": "public-exports-matrix/mobile-pt.json",
+        "category": "public_loading_or_download",
+        "message": "locator.waitFor: Timeout 45000ms exceeded."
+      },
+      {
+        "receipt": "public-exports-matrix/mobile-en.json",
+        "category": "public_loading_or_download",
+        "message": "Download did not complete"
+      },
+      {
+        "receipt": "public-mobile-en/mobile-en-failure.json",
+        "category": "public_loading_or_download",
+        "message": "locator.waitFor: Timeout 45000ms exceeded."
+      }
+    ],
+    "limitation": "Some fresh public sessions still failed at bootstrap, Streamlit module loading or download completion. Confirmed English-mobile CSV/SVG exports do not imply every public entry path passed."
+  },
+  "documentation": "https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/AUTOMACAO.md"
+}

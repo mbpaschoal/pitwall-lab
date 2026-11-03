@@ -1,0 +1,25 @@
+{
+  "status": "failed",
+  "message": "Download did not complete",
+  "welcomeBootstrap": false,
+  "canonicalUrl": true,
+  "network": [
+    {
+      "path": "/js/heap-.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/css/index.CIiu7Ygf.css",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/FileDownload.esm.CN4j9-1w.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/FormClearHelper.DTcdrasw.js",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "utc": "2026-11-03T22:01:16.618Z"
+}

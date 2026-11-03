@@ -1,0 +1,13 @@
+{
+  "status": "failed",
+  "message": "locator.tap: The page does not support tap. Use hasTouch context option to enable touch support.",
+  "welcomeBootstrap": false,
+  "canonicalUrl": true,
+  "network": [
+    {
+      "path": "/js/heap-.js",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "utc": "2026-11-03T21:58:28.400Z"
+}

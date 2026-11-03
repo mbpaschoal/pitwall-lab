@@ -19,7 +19,7 @@ A rotina principal fica no GitHub Actions, sem depender de o computador pessoal 
 | Recuperar publicação concorrente | Retoma os mesmos bytes da emissão e nova projeção em `main`; não recalcula probabilidades nem força push. |
 | Versionar e publicar dados | Nova versão só quando existe mudança real; notas PT/EN, pacote, testes, fontes e push atômico. |
 | Publicar previsão dentro do prazo | Reconfere antes do push; margem mínima de uma hora para a largada. Se a janela fechar, preserva a emissão sem publicá-la. |
-| Conferir pacote, idiomas e navegação | Testes de código, hashes, pacote e navegador. A release de produto requer as duas suítes de navegador. |
+| Conferir pacote, idiomas e navegação | O CI de código/versão roda as duas suítes completas (11 aceites). A publicação automatizada de dados roda quatro aceites focais e as verificações do pacote. |
 | Downloads CSV e SVG | Testes PT/EN em computador e celular verificam bytes, idioma e ausência de reexecução da página. |
 | Alertar sobre falha ou atraso | Uma ocorrência PT/EN no GitHub; repetições não criam comentários. Recuperação saudável encerra a ocorrência. |
 | Escolher `Latest` | Maior versão estável com ZIP completo e hash, limitada à versão de `main`. |
@@ -37,3 +37,6 @@ Os outros GPs podem receber coleta e comparações descritivas automaticamente. 
 - [Relatório desta entrega](../reports/automacao_saopaulo_20261103/README.md).
 
 Erros da previsão não impedem publicar dados descritivos válidos. Tentativas preservam diagnósticos e arquivos no estado persistido; capturas de uma tentativa nova também vão para um artefato de execução por 30 dias. Emissões publicadas e seus raws entram no Git e no arquivo de fontes da release. Cache não é prova externa de publicação; CI, release e versão servida são conferências distintas.
+
+
+Na conferência pública de 0.8.26, CSV e SVG em inglês foram baixados no Android emulado sem reexecução da página. Algumas outras entradas falharam ao carregar a hospedagem, módulos do Streamlit ou completar o download. Esses limites continuam registrados; não se declara a matriz pública inteira aprovada. [Recibos e tentativas](../reports/automacao_saopaulo_20261103/README.md).

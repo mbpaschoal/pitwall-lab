@@ -1,0 +1,57 @@
+{
+  "message": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().locator('.st-key-csv_max_verstappen button') to be visible\u001b[22m\n",
+  "network": [
+    {
+      "path": "/js/heap-.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/_stcore/host-config",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/_stcore/host-config",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/_stcore/host-config",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/js/heap-.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/_stcore/host-config",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/_stcore/health",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/_stcore/host-config",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/index.Ctn27_AE.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/index.Bj9JgOEC.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/js/heap-.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/_stcore/health",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/index.Bj9JgOEC.js",
+      "failure": "net::ERR_ABORTED"
+    }
+  ]
+}
