@@ -1,10 +1,30 @@
 {
-  "checked_utc": "2026-11-03T00:09:56.259644+00:00",
+  "checked_utc": "2026-11-03T00:24:24.490810+00:00",
   "sessions": [
+    {
+      "session_key": 11397,
+      "timings_unchanged": true,
+      "laps_unchanged": true,
+      "observed_weather_unchanged": true,
+      "optional_id_keys_restored": 22,
+      "raw_groups_verified": 7,
+      "state": "dados_recebidos"
+    },
+    {
+      "session_key": 11398,
+      "timings_unchanged": true,
+      "laps_unchanged": true,
+      "observed_weather_unchanged": true,
+      "optional_id_keys_restored": 22,
+      "raw_groups_verified": 7,
+      "state": "dados_recebidos"
+    },
     {
       "session_key": 11399,
       "timings_unchanged": true,
       "laps_unchanged": true,
+      "observed_weather_unchanged": true,
+      "optional_id_keys_restored": 0,
       "raw_groups_verified": 7,
       "state": "dados_recebidos"
     },
@@ -12,6 +32,8 @@
       "session_key": 11400,
       "timings_unchanged": true,
       "laps_unchanged": true,
+      "observed_weather_unchanged": true,
+      "optional_id_keys_restored": 0,
       "raw_groups_verified": 7,
       "state": "dados_recebidos"
     },
@@ -19,6 +41,8 @@
       "session_key": 11404,
       "timings_unchanged": true,
       "laps_unchanged": true,
+      "observed_weather_unchanged": true,
+      "optional_id_keys_restored": 0,
       "raw_groups_verified": 7,
       "state": "dados_recebidos"
     }
@@ -133,5 +157,5 @@
     "comparavel": true,
     "qualidade": []
   },
-  "public_asset_sha256": "7adbdf80ea723eaa2b6d765ccf88a9b1d1f63e8844269b0239153f0a55ffc413"
+  "public_asset_sha256": "16963fae3958758777b4210324f988e9b68017b32db294aaa56ff5167dc93a79"
 }

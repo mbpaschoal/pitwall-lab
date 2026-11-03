@@ -84,7 +84,7 @@
       "session_type": "Race",
       "session_name": "Race",
       "date_start": "2026-11-01T20:00:00+00:00",
-      "date_end": "2026-11-01T23:00:00+00:00",
+      "date_end": "2026-11-01T22:00:00+00:00",
       "meeting_key": 1298,
       "circuit_key": 65,
       "circuit_short_name": "Mexico City",
@@ -124,5 +124,29 @@
       "sha256_catalogo": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313",
       "uso": "Atualiza somente a janela de coleta; não comprova encerramento nem altera a emissão."
     }
-  ]
+  ],
+  "revisao_catalogo": {
+    "fonte": {
+      "provider": "openf1",
+      "endpoint": "mexico_catalogue_review",
+      "arquivo": "sessions.json",
+      "arquivo_requisicao": "sessions.json",
+      "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
+      "url_real": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
+      "status": 200,
+      "obtido_em_utc": "2026-11-03T00:22:01.241741Z",
+      "sha256": "1fe58a2661f7c18c47119f7261e5023f0f9ba8eca5d8b43218c866bfc51dfb65",
+      "bytes": 1848,
+      "response_format": "bytes"
+    },
+    "alteracoes": [
+      {
+        "session": "Race",
+        "field": "date_end",
+        "configured": "2026-11-01T23:00:00+00:00",
+        "source": "2026-11-01T22:00:00+00:00"
+      }
+    ],
+    "uso": "Apenas fim programado do catálogo. Largada, identidade e encerramento observado preservados; sem alterar previsão registrada."
+  }
 }

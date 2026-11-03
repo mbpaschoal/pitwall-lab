@@ -18,6 +18,7 @@ REPORT=Path(__file__).parent
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--captures',type=Path,required=True,help='Preserved capturas-originais.tar.gz from release v0.8.14')
 parser.add_argument('--baseline',default='4166cd3c1f6fad47709f224d8226d904fbfe79bc')
+parser.add_argument('--all-sessions',action='store_true',help='Normalize all cached sessions with the current projector')
 args=parser.parse_args()
 path=ROOT/'frontend_assets/operacao_fim_semana.json'
 backup=REPORT/'public-before.json'
@@ -37,7 +38,7 @@ with tarfile.open(args.captures) as archive:
     checks=[]
     for entry in state['sessoes']:
         session=next(s for s in event['sessions'] if s['session_key']==entry['session_key'])
-        if str(session['session_key']) not in review['sessoes']:continue
+        if not args.all_sessions and str(session['session_key']) not in review['sessoes']:continue
         raw={}
         for source in entry['fontes']:
             if source['endpoint'] in ENDPOINTS and source['status']==200:
@@ -45,10 +46,15 @@ with tarfile.open(args.captures) as archive:
                 assert sha256(data).hexdigest()==source['sha256']
                 raw[source['endpoint']]=json.loads(data)
         previous=deepcopy(entry)
+        entry['fim_programado_utc']=session['date_end']
         project_received(entry,raw,session,review)
-        assert entry['tempos']==previous['tempos']
+        timing_values=lambda rows:[{k:v for k,v in row.items() if k!='piloto_id'} for row in rows]
+        assert timing_values(entry['tempos'])==timing_values(previous['tempos'])
         assert entry['dados_descritivos']['voltas_por_piloto']==previous['dados_descritivos']['voltas_por_piloto']
-        checks.append(dict(session_key=session['session_key'],timings_unchanged=True,laps_unchanged=True,raw_groups_verified=len(raw),state=entry['estado']))
+        assert entry.get('clima_observado')==previous.get('clima_observado')
+        checks.append(dict(session_key=session['session_key'],timings_unchanged=True,laps_unchanged=True,observed_weather_unchanged=True,
+            optional_id_keys_restored=sum('piloto_id' not in old and 'piloto_id' in new for old,new in zip(previous['tempos'],entry['tempos'])),
+            raw_groups_verified=len(raw),state=entry['estado']))
 stamp=max(s['obtido_em_utc'] for s in review['fontes'].values())
 state['atualizado_em_utc']=stamp
 path.write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n')
