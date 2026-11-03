@@ -1,7 +1,48 @@
 {
   "schema": "pitwall-automatic-forecast-policy-v1",
-  "events": [[2026, 20, "interlagos"]],
+  "events": [
+    [
+      2026,
+      20,
+      "interlagos"
+    ]
+  ],
   "max_attempts": 4,
   "retry_hours": 2,
-  "publication_margin_minutes": 60
+  "publication_margin_minutes": 60,
+  "roster_reviews": [
+    {
+      "identity": [
+        2026,
+        20,
+        "interlagos"
+      ],
+      "source": {
+        "url": "https://www.formula1.com/en/latest/article/f2-racer-camara-to-make-f1-debut-at-sao-paulo-grand-prix-as-haas-confirm-ocon-will-not-return.12Qa0tpaMZ9kgnEuGJBKFp",
+        "file": "reports/camara_preparacao_20261103/sources/f1-camara-announcement.html",
+        "sha256": "f0ea9c364c8964dd6621bf1ae2bb6c16ce98d65ccf200c5aee03dcfa03fdf898",
+        "obtido_em_utc": "2026-11-03T22:30:45.653200+00:00"
+      },
+      "absent_driver_ids": [
+        "ocon"
+      ],
+      "required_entries": [
+        {
+          "literal_names": [
+            [
+              "Rafael",
+              "Camara"
+            ],
+            [
+              "Rafael",
+              "Câmara"
+            ]
+          ],
+          "team_id": "haas"
+        }
+      ],
+      "canonical_id": "Use the unchanged driverId from validated qualifying; not available at preparation time.",
+      "openf1_fallback": "Requires reviewed literal mapping; no number or ID is inferred from the announcement."
+    }
+  ]
 }

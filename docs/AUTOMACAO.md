@@ -14,7 +14,7 @@ A rotina principal fica no GitHub Actions, sem depender de o computador pessoal 
 | Referências das quatro pistas restantes de 2026 | Admitidas nesta entrega com mapas oficiais F1 de 2026, revisão visual e hashes. Altitude Open-Meteo é aproximação pontual. |
 | Conferir referências futuras | Checagem offline com sete dias de antecedência; falta de referência gera ocorrência. |
 | Preparar previsão de São Paulo | Nova rotina hospedada, condicionada a Q realmente encerrada. Não existe previsão de São Paulo nesta entrega. |
-| Emitir e registrar v1 | Automático apenas para **2026/20/interlagos**, passando pelo CLI científico existente. Exige snapshot validado, 22 pilotos, fontes/UTC admitidas, código commitado e cartas da equipe efetiva. Sem treino ou ajuste do modelo. |
+| Emitir e registrar v1 | Automático apenas para **2026/20/interlagos**, passando pelo CLI científico existente. Exige snapshot validado, 22 pilotos, fontes/UTC admitidas, código commitado e lista de pilotos compatível com as substituições revisadas. Sem treino ou ajuste do modelo. |
 | Repetir uma tentativa de previsão | Até quatro tentativas, separadas por pelo menos duas horas. Depois, bloqueia e alerta; não consulta indefinidamente. |
 | Recuperar publicação concorrente | Retoma os mesmos bytes da emissão e nova projeção em `main`; não recalcula probabilidades nem força push. |
 | Versionar e publicar dados | Nova versão só quando existe mudança real; notas PT/EN, pacote, testes, fontes e push atômico. |
@@ -23,6 +23,12 @@ A rotina principal fica no GitHub Actions, sem depender de o computador pessoal 
 | Downloads CSV e SVG | Testes PT/EN em computador e celular verificam bytes, idioma e ausência de reexecução da página. |
 | Alertar sobre falha ou atraso | Uma ocorrência PT/EN no GitHub; repetições não criam comentários. Recuperação saudável encerra a ocorrência. |
 | Escolher `Latest` | Maior versão estável com ZIP completo e hash, limitada à versão de `main`. |
+
+## Pilotos substitutos e artes opcionais
+
+A revisão de São Paulo exige Rafael Câmara na Haas e rejeita uma classificação que ainda contenha Ocon. O nome é conferido literalmente no registro da fonte; não é usado para unir ou inventar IDs. O `driverId` original da classificação canônica permanece intacto. Na rota OpenF1, um piloto novo continua exigindo mapeamento literal revisado. A consulta de preparação de 03/11 ainda não identificava Câmara nas APIs; não é um snapshot de classificação.
+
+A disponibilidade de cartas é registrada em `artwork_coverage`. Uma arte ausente ou não verificada gera indicação de indisponibilidade, sem emprestar o rosto de outro piloto nem impedir uma previsão válida. As barreiras científicas, a população de 22 pilotos e as regras de prazo permanecem obrigatórias. A falta de histórico próprio de um estreante conserva contadores zero, médias ausentes e os indicadores já previstos pelo v1; não recebe o histórico de quem substituiu. [Fontes, artes preparadas e verificações](../reports/camara_preparacao_20261103/README.md).
 
 ## O que continua exigindo revisão
 

@@ -1,5 +1,6 @@
 """Hosted forecasts must keep temporal gates, immutable evidence and bounded retry."""
 from copy import deepcopy
+import csv
 from datetime import datetime, timedelta, timezone
 import hashlib
 import json
@@ -23,6 +24,10 @@ class PostQualifyingTests(unittest.TestCase):
         self.config.parent.mkdir(parents=True)
         shutil.copyfile(ROOT/'operacao2026/eventos/saopaulo2026.json', self.config)
         shutil.copyfile(ROOT/pq.POLICY, self.root/pq.POLICY)
+        for review in pq.policy(self.root).get('roster_reviews', []):
+            name = review['source']['file']
+            (self.root/name).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(ROOT/name, self.root/name)
         self.event = weekend.load_event(self.config)
         self.now = datetime(2026, 11, 7, 20, tzinfo=timezone.utc)
         self.state = dict(temporada=2026, rodada=20, circuito_id='interlagos', sessoes=[])
@@ -156,19 +161,125 @@ class PostQualifyingTests(unittest.TestCase):
             emission=args[args.index('--id')+1]
             path=root/'reports/operacao_2026/emissoes'/emission/'manifesto.json'
             path.parent.mkdir(parents=True);path.write_text('immutable emitted bytes')
+            shutil.copyfile(self.probabilities()/'probabilidades.csv',path.parent/'probabilidades.csv')
             return ''
         with patch.object(pq,'source_control',return_value={}), patch.object(pq.fontes,'coletar_snapshot',side_effect=snapshot), patch.object(pq,'utc_now',return_value=self.now), \
-             patch.object(pq,'verify_cards'),patch.object(pq,'register_and_project') as register:
+             patch.object(pq,'review_forecast_roster',return_value={'status':'fixture'}), \
+             patch.object(pq,'register_and_project') as register:
             result=pq.prepare(self.root,self.config,self.state,self.now,run)
             self.assertEqual(result['status'],'prepared');self.assertEqual(len(calls),2)
             self.assertNotIn('--openf1-diretorio',calls[1]);register.assert_called_once()
+            self.assertEqual(result['artwork_coverage']['status'],'partial')
+            self.assertFalse(result['artwork_coverage']['required_for_forecast'])
             calls.clear();register.reset_mock()
             recovered=pq.prepare(self.root,self.config,self.state,self.now+timedelta(minutes=10),run)
             self.assertEqual(recovered['files'],result['files']);self.assertEqual(calls,[])
             register.assert_called_once()
 
     def test_team_artworks_match_actual_emission_participants(self):
-        pq.verify_cards(ROOT,ROOT/'reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z',2026)
+        result = pq.verify_cards(ROOT,ROOT/'reports/operacao_2026/emissoes/mexico-prospectivo-20261101T0435Z',2026)
+        self.assertEqual((result['status'],result['verified_driver_pairs']),('complete',22))
+        self.assertFalse(result['required_for_forecast'])
+
+    def probabilities(self, duplicate=False):
+        """Synthetic unknown IDs deliberately do not claim Camara's canonical ID."""
+        path=self.root/'emission';path.mkdir(exist_ok=True)
+        with (path/'probabilidades.csv').open('w') as stream:
+            writer=csv.DictWriter(stream,fieldnames=['piloto_id','equipe_id_entrada'])
+            writer.writeheader()
+            writer.writerows(dict(piloto_id='synthetic_'+str(0 if duplicate else i),equipe_id_entrada='haas')
+                             for i in range(22))
+        return path
+
+    def test_optional_artwork_absence_is_reported_without_forecast_rejection(self):
+        result=pq.verify_cards(self.root,self.probabilities(),2026)
+        self.assertEqual(result['status'],'partial')
+        self.assertEqual(result['catalog_status'],'unavailable')
+        self.assertEqual(len(result['missing']),22)
+        self.assertFalse(result['required_for_forecast'])
+        self.assertEqual(result['missing'][0]['poses'],[0,1,2])
+
+    def test_missing_optional_art_never_weakens_the_population_guard(self):
+        with self.assertRaisesRegex(ValueError,'complete 2026 population'):
+            pq.verify_cards(self.root,self.probabilities(duplicate=True),2026)
+
+    def test_new_driver_has_no_borrowed_history_and_frozen_v1_stays_eligible(self):
+        from operacao2026 import previsao
+        from treinar_modelo_v1 import motivos_inelegibilidade
+        from tests.test_operacao_2026_r1 import corrida,resultado
+        previous=corrida(19,'2026-11-01','rodriguez','2026-10-31')
+        target=corrida(20,'2026-11-08','interlagos','2026-11-07')
+        target['time']='17:00:00Z'
+        q=[self.roster_rows()[-1]]
+        state=previsao.preparar_alvo(target,q,prospectivo=True)
+        old=dict(resultado('ocon'),Constructor=dict(constructorId='haas'))
+        rows,audit=previsao.gerar_entradas(state,[previous,target],{('2026','19'):[old]})
+        self.assertEqual(rows[0]['piloto_id'],'synthetic_rookie_id')
+        self.assertEqual(rows[0]['n_posicoes_5'],0)
+        self.assertIsNone(rows[0]['media_posicao_final_5'])
+        self.assertIsNone(rows[0]['taxa_podios_5'])
+        self.assertEqual(rows[0]['historico_piloto_insuficiente'],1)
+        self.assertEqual(rows[0]['n_participacoes_equipe_5'],1)
+        self.assertEqual(audit['janelas'][0]['piloto'],[])
+        self.assertEqual(motivos_inelegibilidade(rows[0]),[])
+
+    def roster_rows(self):
+        rows=[dict(position=str(i+1),Driver=dict(driverId='synthetic_'+str(i),givenName='Fixture',familyName=str(i)),
+                   Constructor=dict(constructorId='fixture')) for i in range(21)]
+        rows.append(dict(position='22',Driver=dict(driverId='synthetic_rookie_id',givenName='Rafael',familyName='Camara'),
+                         Constructor=dict(constructorId='haas')))
+        return rows
+
+    def roster_snapshot(self, records, snapshot='fixture', circuit='interlagos'):
+        from tests.test_operacao_2026_r1 import raw_page,source
+        race=dict(season='2026',round='20',date=self.event['data'],time='17:00:00Z',
+                  Circuit=dict(circuitId=circuit),QualifyingResults=records)
+        raw=raw_page([race],'classificacao')
+        pq.fontes.gravar_snapshot(self.root/'data/operacao_2026/snapshots',snapshot,
+                                 {'classificacao':[source(raw,'classificacao',20,got=self.now.isoformat())]})
+
+    def test_review_accepts_canonical_id_unchanged_and_only_literal_names_and_team(self):
+        rows=self.roster_rows();self.roster_snapshot(rows)
+        result=pq.review_forecast_roster(self.root,self.event,'fixture')
+        self.assertEqual(result['admitted_entries'],[dict(driver_id='synthetic_rookie_id',team_id='haas')])
+        self.assertEqual(result['id_origin'],'unchanged_qualifying_record')
+        rows[-1]['Driver']['familyName']='Câmara';self.roster_snapshot(rows,'accent')
+        self.assertEqual(pq.review_forecast_roster(self.root,self.event,'accent')['status'],'verified')
+
+    def test_stale_replaced_driver_wrong_team_similar_name_and_foreign_gp_block(self):
+        for field,value in [('id','ocon'),('team','ferrari'),('name','Camara Junior')]:
+            rows=self.roster_rows()
+            if field=='id':rows[-1]['Driver']['driverId']=value
+            elif field=='team':rows[-1]['Constructor']['constructorId']=value
+            else:rows[-1]['Driver']['familyName']=value
+            self.roster_snapshot(rows,field)
+            with self.assertRaises(ValueError):pq.review_forecast_roster(self.root,self.event,field)
+        self.roster_snapshot(self.roster_rows(),'foreign',circuit='americas')
+        with self.assertRaisesRegex(ValueError,'another event'):
+            pq.review_forecast_roster(self.root,self.event,'foreign')
+
+    def test_review_source_tampering_is_rejected_before_opening_q(self):
+        source=pq.policy(self.root)['roster_reviews'][0]['source']
+        (self.root/source['file']).write_text('modified announcement')
+        with patch.object(pq.fontes,'ler_snapshot') as read:
+            with self.assertRaisesRegex(ValueError,'source changed'):
+                pq.review_forecast_roster(self.root,self.event,'unused')
+            read.assert_not_called()
+
+    def test_stale_roster_stops_before_inference_or_registry(self):
+        self.observed();rows=self.roster_rows();rows[-1]['Driver']['driverId']='ocon'
+        def snapshot(root,snapshot_id,**kwargs):self.roster_snapshot(rows,snapshot_id)
+        calls=[]
+        def run(root,args):
+            calls.append(args)
+            if args[1]!='estado':self.fail('Stale roster reached inference')
+            return json.dumps(dict(estado='pronto',registros_classificacao=22))
+        with patch.object(pq,'source_control',return_value={}),patch.object(pq.fontes,'coletar_snapshot',side_effect=snapshot):
+            with self.assertRaisesRegex(ValueError,'replaced driver'):
+                pq.prepare(self.root,self.config,self.state,self.now,run)
+        self.assertEqual(len(calls),1)
+        self.assertFalse((self.root/pq.REGISTRY).exists())
+        self.assertFalse((self.base/'prepared.json').exists())
 
     def test_complete_historical_registry_and_restored_sources_are_available(self):
         from registro_emissoes import DECLARACOES,validar_declaracoes
@@ -199,7 +310,8 @@ class PostQualifyingTests(unittest.TestCase):
             path.parent.mkdir(parents=True);path.write_text('immutable fixture');return ''
         with patch.object(pq,'source_control',return_value={}),patch.object(pq.fontes,'coletar_snapshot',side_effect=snapshot), \
              patch.object(pq.weekend,'qualification_bundle',return_value=bundle),patch.object(pq,'utc_now',return_value=self.now), \
-             patch.object(pq,'verify_cards'),patch.object(pq,'register_and_project'):
+             patch.object(pq,'review_forecast_roster',return_value={'status':'fixture'}), \
+             patch.object(pq,'verify_cards',return_value={'status':'complete'}),patch.object(pq,'register_and_project'):
             result=pq.prepare(self.root,self.config,self.state,self.now,run)
         emission=calls[1]
         self.assertEqual(emission[emission.index('--openf1-evento')+1],str(self.config.resolve()))

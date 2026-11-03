@@ -33,6 +33,9 @@ def command(root, args):
 
 def source_control(root, event_path):
     names = ['operacao2026/post_qualifying.py', str(POLICY), str(event_path.relative_to(root))]
+    for review in policy(root).get('roster_reviews', []):
+        if review['identity'] == list(cloud.identity(weekend.load_event(event_path))):
+            names.append(review['source']['file'])
     subprocess.run(['git', 'ls-files', '--error-unmatch', '--', *names], cwd=root,
                    check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     subprocess.run(['git', 'diff', '--quiet', 'HEAD', '--', *names], cwd=root, check=True)
@@ -157,20 +160,91 @@ def restore(root, base, prepared):
 
 
 def verify_cards(root, directory, year):
-    from pitwall.dashboard.tarot_catalog import load_catalog, artwork_for, read_artwork
-    catalog = load_catalog(root)
+    """Report optional artwork coverage without withholding a valid forecast.
+
+    The scientific population remains mandatory. A missing illustration must
+    never borrow another driver's face or prevent publication of probabilities.
+    """
+    from pitwall.dashboard.tarot_catalog import (load_catalog, artwork_for,
+                                               read_artwork, TarotCatalogError)
     with (directory/'probabilidades.csv').open() as source:
         rows = list(csv.DictReader(source))
-    if len(rows) != 22 or len({r['piloto_id'] for r in rows}) != 22:
+    if (len(rows) != 22 or len({r['piloto_id'] for r in rows}) != 22
+            or any(not r['piloto_id'] or not r['equipe_id_entrada'] for r in rows)):
         raise ValueError('Prospective emission requires the complete 2026 population')
+    result = dict(required_for_forecast=False, drivers_checked=len(rows),
+                  verified_driver_pairs=0, missing=[])
+    try:
+        catalog = load_catalog(root)
+    except TarotCatalogError:
+        catalog = None
+        result['catalog_status'] = 'unavailable'
     for row in rows:
         identity = dict(driver_id=row['piloto_id'], team_id=row['equipe_id_entrada'])
-        entries = [artwork_for(catalog, identity, pose, year) for pose in (0, 1, 2)]
-        if any(e is None for e in entries):
-            raise ValueError('Actual driver/team lacks verified artworks')
-        variants = [read_artwork(root, e) for e in entries]
-        if any(v is None for v in variants) or len({hashlib.sha256(v).hexdigest() for v in variants}) != 3:
-            raise ValueError('Actual driver/team lacks three verified artworks')
+        entries = [artwork_for(catalog, identity, pose, year) if catalog else None
+                   for pose in (0, 1, 2)]
+        variants = [read_artwork(root, e) if e else None for e in entries]
+        missing = [pose for pose, content in enumerate(variants) if content is None]
+        if not missing and len({hashlib.sha256(v).hexdigest() for v in variants}) != 3:
+            missing = [0, 1, 2]
+        if missing:
+            result['missing'].append(dict(identity, poses=missing))
+        else:
+            result['verified_driver_pairs'] += 1
+    result['status'] = 'partial' if result['missing'] else 'complete'
+    return result
+
+
+def review_forecast_roster(root, config, snapshot, bundle=None):
+    """Validate explicit announcements against Q; never manufacture driver IDs.
+
+    Literal name variants are assertions on canonical records, not an ID join.
+    The provider's original driverId is retained. A reviewed replacement also
+    prevents an old 22-driver population from silently passing the count gate.
+    """
+    identity = list(cloud.identity(config))
+    reviews = [r for r in policy(root).get('roster_reviews', []) if r['identity'] == identity]
+    if not reviews:
+        return dict(status='no_event_review', identity=identity)
+    if len(reviews) != 1:
+        raise ValueError('Ambiguous event roster review')
+    review = reviews[0]
+    source = review['source']
+    if hashlib.sha256(relative_file(root, source['file']).read_bytes()).hexdigest() != source['sha256']:
+        raise ValueError('Roster announcement source changed')
+    if bundle is not None:
+        from operacao2026.openf1_qualificacao import carregar, MAPEAMENTO_2026
+        expected = next(s for s in config['sessions'] if s['session_name'] == 'Qualifying')
+        records = carregar(bundle, sessao_esperada=expected, prefixo='openf1-q',
+                           mapeamento=MAPEAMENTO_2026)['registros']
+    else:
+        _, pages = fontes.ler_snapshot(root/'data/operacao_2026/snapshots', snapshot,
+            endpoints={'classificacao'}, rodadas={str(config['rodada'])})
+        records = []
+        for _, payload in pages.get('classificacao', []):
+            for race in payload['MRData']['RaceTable']['Races']:
+                received = (race.get('season'), race.get('round'),
+                            race.get('Circuit', {}).get('circuitId'), race.get('date'))
+                if received != (str(config['temporada']), str(config['rodada']),
+                                config['circuito_id'], config['data']):
+                    raise ValueError('Roster qualifying belongs to another event')
+                records.extend(race.get('QualifyingResults', []))
+    ids = [r['Driver']['driverId'] for r in records]
+    if len(ids) != 22 or len(set(ids)) != 22 or not all(ids):
+        raise ValueError('Roster review requires 22 distinct canonical driver IDs')
+    if set(ids).intersection(review['absent_driver_ids']):
+        raise ValueError('Qualifying roster still contains the replaced driver')
+    admitted = []
+    for expected in review['required_entries']:
+        matches = [r for r in records
+            if [r['Driver'].get('givenName'), r['Driver'].get('familyName')] in expected['literal_names']
+            and r['Constructor']['constructorId'] == expected['team_id']]
+        if len(matches) != 1:
+            raise ValueError('Announced driver/team is absent or ambiguous in qualifying')
+        admitted.append(dict(driver_id=matches[0]['Driver']['driverId'],
+                             team_id=expected['team_id']))
+    return dict(status='verified', identity=identity, source=source,
+                admitted_entries=admitted, id_origin='unchanged_qualifying_record')
 
 
 def prepare(root, event_path, state, now=None, run=command):
@@ -202,7 +276,11 @@ def prepare(root, event_path, state, now=None, run=command):
             raise ValueError('Retained forecast has a different event')
         publication_guard(root, prepared, now)
         restore(root, base, prepared)
-        verify_cards(root, root/prepared['declaration']['diretorio'], config['temporada'])
+        bundle = prepared.get('qualifying_bundle')
+        prepared['roster_review'] = review_forecast_roster(root, config,
+            prepared['declaration']['snapshot'], root/bundle if bundle else None)
+        prepared['artwork_coverage'] = verify_cards(root,
+            root/prepared['declaration']['diretorio'], config['temporada'])
         register_and_project(root, prepared, run)
         return prepared
     receipt = base/'attempts.json'
@@ -227,6 +305,7 @@ def prepare(root, event_path, state, now=None, run=command):
         if readiness.get('registros_classificacao') not in (0,22):
             raise ValueError('Canonical qualifying population is incomplete')
         alternative = []
+        bundle = None
         directories = ['data/operacao_2026/snapshots/'+snapshot]
         if readiness['estado'] != 'pronto':
             bundle = weekend.qualification_bundle(event_path, state, root)
@@ -234,6 +313,7 @@ def prepare(root, event_path, state, now=None, run=command):
                 raise ValueError('Neither canonical nor admitted OpenF1 Q is available')
             alternative = ['--openf1-diretorio', str(bundle), '--openf1-evento', str(event_path)]
             directories.append(str(bundle.relative_to(root)))
+        roster = review_forecast_roster(root, config, snapshot, bundle)
         cutoff = utc_now().isoformat()
         run(root, ['operar_2026.py', 'emitir', *common, '--id', emission,
                    '--sessao-encerrada-em', end, '--fonte-encerramento', evidence_url,
@@ -241,12 +321,15 @@ def prepare(root, event_path, state, now=None, run=command):
         directory = 'reports/operacao_2026/emissoes/'+emission
         prepared = dict(status='prepared', identity=identity, race_start_utc=config['largada_utc'],
                         automation_source=source,
+                        roster_review=roster,
+                        qualifying_bundle=str(bundle.relative_to(root)) if bundle else None,
                         declaration=dict(temporada=config['temporada'], rodada=config['rodada'],
                             circuito_id=config['circuito_id'], snapshot=snapshot, diretorio=directory, modo='PROSPECTIVO'),
                         directories=directories+[directory])
         # Retain the immutable emission before any later presentation/release failure.
         retain(root, base, prepared)
-        verify_cards(root, root/directory, config['temporada'])
+        prepared['artwork_coverage'] = verify_cards(root, root/directory, config['temporada'])
+        save_checkpoint(base/'prepared.json', prepared)
         publication_guard(root, prepared)
         register_and_project(root, prepared, run)
         attempt['status'] = 'prepared'
