@@ -65,6 +65,20 @@ class TestHighResolutionAssets(unittest.TestCase):
         self.assertTrue(drivers['composition_pt'])
         self.assertTrue(drivers['composition_en'])
 
+    def test_all_29_portrait_identities_resolve_with_legacy_filename_metadata(self):
+        from pitwall.dashboard.fan_views import hero
+        portraits=[x for x in json.loads((ROOT/'dashboard_assets/fan/sources.json').read_text())
+                   if x.get('file','').startswith('portraits/')]
+        self.assertEqual(len(portraits),29)
+        for item in portraits:
+            pid=item.get('driver_id') or Path(item['file']).stem
+            with self.subTest(driver=pid):
+                spec=portrait_asset(pid,pid.replace('_',' ').title())
+                self.assertEqual(spec['path'],'dashboard_assets/fan/'+item['file'])
+                self.assertEqual(spec['driver_id'],pid)
+                self.assertIn('fan-hero-image',hero(pid,person=dict(id=pid,name=pid)))
+        self.assertEqual(portrait_asset('norris')['path'],'dashboard_assets/fan/portraits/norris.png')
+
     def test_real_jpeg_portrait_is_used_for_mexico_debutant(self):
         from pitwall.dashboard.fan_views import portrait
         spec=portrait_asset('ryo_hirakawa')

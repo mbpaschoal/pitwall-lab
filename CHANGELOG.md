@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.8.24 — 2026-11-03
+
+Corrige a leitura dos retratos legados, identificados literalmente pelo nome do arquivo, além dos IDs explícitos de fotografias novas. O CI de navegação encontrou perfis que perderam a imagem após a unificação do leitor. Os 29 retratos agora têm teste de resolução e renderização; fontes, bytes originais, dados e probabilidades permanecem preservados.
+
 ## 0.8.23 — 2026-11-03
 
 Corrige a criação da pasta de uma consulta de Pilotos sem cache, falha identificada na primeira execução hospedada da 0.8.22. Testes agora usam o construtor e o protocolo HTTP reais do cliente, com respostas locais controladas, cobrindo sucesso e HTTP 429. A espera da fonte é persistida mesmo quando o cliente interrompe a consulta por limite. Dados, modelo e probabilidades anteriores permanecem preservados.

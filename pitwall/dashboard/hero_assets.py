@@ -3,6 +3,7 @@
 Only local metadata is read. Importing this module never fetches assets or data.
 """
 import json
+from pathlib import Path
 from pitwall.paths import PROJECT_ROOT
 
 CATALOG_PATH = PROJECT_ROOT / 'dashboard_assets/fan/hero_catalog.json'
@@ -20,9 +21,9 @@ def hero_asset(name):
 
 
 # Portrait metadata uses `file`, including non-PNG original photographs.
-_PORTRAITS = {item['driver_id']: item for item in json.loads(
+_PORTRAITS = {(item.get('driver_id') or Path(item['file']).stem): item for item in json.loads(
     (PROJECT_ROOT/'dashboard_assets/fan/sources.json').read_text(encoding='utf-8'))
-    if item.get('driver_id') and item.get('file','').startswith('portraits/')}
+    if item.get('file','').startswith('portraits/')}
 
 
 def portrait_asset(driver, name=None):
