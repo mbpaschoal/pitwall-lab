@@ -1,0 +1,24 @@
+{
+  "original_suites": 11,
+  "retained_suites": 11,
+  "all_preserved": true,
+  "core": [
+    "node tests/browser/aceite_exploracao.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/browser-evidence\"",
+    "node tests/browser/aceite_pilotos_atualizacao.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/driver-updates-evidence\"",
+    "node tests/browser/aceite_visual.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/visual-evidence\"",
+    "node tests/browser/aceite_fim_semana.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/weekend-evidence\"",
+    "node tests/browser/aceite_pneus_lawson.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/lawson-tyres-evidence\"",
+    "node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/controls-evidence\"",
+    "node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/scroll-evidence\""
+  ],
+  "navigation": [
+    "node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/context-evidence\"",
+    "PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/scroll-webkit-evidence\"",
+    "PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/context-webkit-evidence\"",
+    "PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 \"$RUNNER_TEMP/controls-webkit-evidence\""
+  ],
+  "release_requires": [
+    "validate",
+    "browser (all matrix groups)"
+  ]
+}

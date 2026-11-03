@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.8.25 — 2026-11-03
+
+- Consolida a entrega do México em Pilotos: 67 GPs e 1.362 largadas, atualização agendada com qualidade e recuperação monitorada, retratos compatíveis e probabilidades v1 preservadas. As correções 0.8.22–0.8.24 permanecem registradas.
+- Corrige o aceite de busca que fixava Audi em Austin: passa a exigir a última corrida validada da equipe, hoje o México, preservando a comparação literal de temporada, rodada e destino.
+- Divide as suítes de navegador em dois grupos independentes, mantendo todas as verificações Chromium/WebKit e exigindo os dois grupos antes da release. Nenhum teste foi retirado. Referências de circuito de futuras edições ainda precisam de conferência antes da inclusão.
+
 ## 0.8.24 — 2026-11-03
 
 Corrige a leitura dos retratos legados, identificados literalmente pelo nome do arquivo, além dos IDs explícitos de fotografias novas. O CI de navegação encontrou perfis que perderam a imagem após a unificação do leitor. Os 29 retratos agora têm teste de resolução e renderização; fontes, bytes originais, dados e probabilidades permanecem preservados.

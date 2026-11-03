@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.8.25 — 2026-11-03
+
+- Consolidates Mexico in Drivers: 67 GPs and 1,362 starts, quality-gated scheduled updates with monitored recovery, compatible portraits and preserved v1 probabilities. Corrections 0.8.22–0.8.24 remain recorded.
+- Fixes search acceptance that pinned Audi to Austin: it now requires the team's latest validated race, currently Mexico, retaining exact season, round and destination checks.
+- Splits browser suites into two independent groups, retaining every Chromium/WebKit check and requiring both groups before release. No tests were removed. Upcoming circuit editions still require reviewed references before inclusion.
+
 ## 0.8.24 — 2026-11-03
 
 Fixes legacy portrait lookup using literal filenames alongside explicit IDs in newer photographs. Navigation CI found profiles whose images disappeared after reader unification. All 29 portraits now have resolution and rendering checks; source attribution, original bytes, data and probabilities remain preserved.

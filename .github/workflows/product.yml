@@ -38,6 +38,10 @@ jobs:
           diff -qr --exclude=__pycache__ "$RUNNER_TEMP/expected-package/pitwall-dashboard" "$GITHUB_WORKSPACE/distribuicao/pitwall-dashboard"
           python -B verificar_pacote.py --pacote "$GITHUB_WORKSPACE/distribuicao/pitwall-dashboard"
   browser:
+    strategy:
+      fail-fast: false
+      matrix:
+        suite: [core, navigation]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -51,6 +55,8 @@ jobs:
       - run: npm install --no-save playwright@1.62.1
       - run: npx playwright install --with-deps chromium webkit
       - name: Jornadas de fãs / Fan journeys
+        env:
+          PITWALL_BROWSER_SUITE: ${{ matrix.suite }}
         run: |
           export PITWALL_EXPECTED_VERSION="$(cat VERSION)"
           export PITWALL_SOURCE_ROOT="$GITHUB_WORKSPACE/distribuicao/pitwall-dashboard"
@@ -59,21 +65,24 @@ jobs:
             if curl --fail --silent http://127.0.0.1:8501/_stcore/health; then break; fi
             sleep 1
           done
-          node tests/browser/aceite_exploracao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/browser-evidence"
-          node tests/browser/aceite_pilotos_atualizacao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/driver-updates-evidence"
-          node tests/browser/aceite_visual.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/visual-evidence"
-          node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-evidence"
-          node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-evidence"
-          node tests/browser/aceite_fim_semana.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/weekend-evidence"
-          node tests/browser/aceite_pneus_lawson.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/lawson-tyres-evidence"
-          node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-evidence"
-          PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-webkit-evidence"
-          PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-webkit-evidence"
-          PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-webkit-evidence"
+          if [ "$PITWALL_BROWSER_SUITE" = "core" ]; then
+            node tests/browser/aceite_exploracao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/browser-evidence"
+            node tests/browser/aceite_pilotos_atualizacao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/driver-updates-evidence"
+            node tests/browser/aceite_visual.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/visual-evidence"
+            node tests/browser/aceite_fim_semana.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/weekend-evidence"
+            node tests/browser/aceite_pneus_lawson.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/lawson-tyres-evidence"
+            node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-evidence"
+            node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-evidence"
+          else
+            node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-evidence"
+            PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-webkit-evidence"
+            PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-webkit-evidence"
+            PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-webkit-evidence"
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: fan-journey-evidence
+          name: fan-journey-evidence-${{ matrix.suite }}
           retention-days: 3
           path: |
             ${{ runner.temp }}/browser-evidence
