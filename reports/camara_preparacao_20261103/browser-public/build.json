@@ -1,0 +1,82 @@
+{
+  "version": "0.8.27",
+  "expected_build": "d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53').first() to be visible\u001b[22m\n\u001b[2m    33 × locator resolved to hidden <p>Versão da interface: d0b2abe139e1295b4dd8516558ef…</p>\u001b[22m\n",
+          "utc": "2026-11-03T22:49:35.568Z"
+        },
+        {
+          "attempt": 1,
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53').first() to be visible\u001b[22m\n\u001b[2m    33 × locator resolved to hidden <p>Versão da interface: d0b2abe139e1295b4dd8516558ef…</p>\u001b[22m\n",
+          "utc": "2026-11-03T22:49:55.162Z"
+        }
+      ],
+      "status": "failed",
+      "error": "Served build was not verified",
+      "network_failures": [
+        {
+          "path": "/js/heap-.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/~/+/_stcore/host-config",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/~/_stcore/health",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/js/heap-.js",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "page_errors": [],
+      "utc": "2026-11-03T22:49:55.162Z"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": "failed",
+          "error": "locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53').first() to be visible\u001b[22m\n\u001b[2m    20 × locator resolved to hidden <p>Interface build: d0b2abe139e1295b4dd8516558ef4d92…</p>\u001b[22m\n",
+          "utc": "2026-11-03T22:50:28.083Z"
+        },
+        {
+          "attempt": 1,
+          "status": "failed",
+          "error": "page.goto: Target page, context or browser has been closed",
+          "utc": "2026-11-03T22:50:28.084Z"
+        }
+      ],
+      "status": "failed",
+      "error": "Served build was not verified",
+      "network_failures": [
+        {
+          "path": "/js/heap-.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/~/+/_stcore/health",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/~/+/_stcore/host-config",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "page_errors": [],
+      "utc": "2026-11-03T22:50:28.084Z"
+    }
+  ]
+}

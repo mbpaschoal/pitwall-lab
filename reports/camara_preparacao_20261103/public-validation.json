@@ -1,0 +1,21 @@
+{
+  "version": "0.8.27",
+  "commit": "b6772db42d976d15c73eeeb634fdd944e5b03c36",
+  "build": "d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53",
+  "cases_verified": 4,
+  "widths": [
+    390,
+    1440
+  ],
+  "languages": [
+    "pt",
+    "en"
+  ],
+  "total_reloads": 2,
+  "limitations": [
+    "Read-only build and language checks on How it works; no full public functional matrix or physical device certification.",
+    "PT mobile and EN desktop needed one reload; all failed attempts retained.",
+    "Initial v1 harness incorrectly expected a build caption to be visible inside a closed expander; interrupted and preserved."
+  ],
+  "last_verified_utc": "2026-11-03T22:55:03.686Z"
+}

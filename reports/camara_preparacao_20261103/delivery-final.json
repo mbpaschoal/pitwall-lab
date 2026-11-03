@@ -1,0 +1,117 @@
+{
+  "version": "0.8.27",
+  "status": "published_and_served",
+  "implementation_commit": "16b9032",
+  "runtime_commit": "b6772db42d976d15c73eeeb634fdd944e5b03c36",
+  "release": {
+    "id": 433313981,
+    "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.27",
+    "published_at": "2026-11-03T23:04:04Z",
+    "latest": true,
+    "zip": {
+      "id": 707418140,
+      "bytes": 665856329,
+      "sha256": "fe30e53a0777e839b86341fa6e5635edebb2c44d694c08b752a5d8dd9a390cc8"
+    }
+  },
+  "ci": {
+    "tag_run": 41733894174,
+    "main_run": 41733893305,
+    "tag_jobs": [
+      {
+        "id": 126257972645,
+        "name": "browser (navigation)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41733894174/job/126257972645"
+      },
+      {
+        "id": 126257972993,
+        "name": "validate",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41733894174/job/126257972993"
+      },
+      {
+        "id": 126257973057,
+        "name": "browser (core)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41733894174/job/126257973057"
+      },
+      {
+        "id": 126265255057,
+        "name": "release",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41733894174/job/126265255057"
+      }
+    ],
+    "main_jobs": [
+      {
+        "id": 126257970055,
+        "name": "browser (core)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41733893305/job/126257970055"
+      },
+      {
+        "id": 126257970371,
+        "name": "browser (navigation)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41733893305/job/126257970371"
+      },
+      {
+        "id": 126257970598,
+        "name": "validate",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41733893305/job/126257970598"
+      },
+      {
+        "id": 126266143330,
+        "name": "release",
+        "status": "completed",
+        "conclusion": "skipped",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41733893305/job/126266143330"
+      }
+    ],
+    "source_tests": 401,
+    "package_tests": 144,
+    "browser_suites": 11
+  },
+  "collection": {
+    "run": 41733893580,
+    "status": "success"
+  },
+  "public": {
+    "build": "d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53",
+    "verified_cases": 4,
+    "widths": [
+      390,
+      1440
+    ],
+    "languages": [
+      "pt",
+      "en"
+    ],
+    "scope": "Served version/build and How it works reading; two reloads were needed, not a full public functional matrix."
+  },
+  "artwork": {
+    "approved_by_owner": true,
+    "count": 3,
+    "active": false,
+    "reason": "Canonical driver ID not yet supplied by the captured sources."
+  },
+  "scientific": {
+    "files_verified_unchanged": 533,
+    "new_real_emissions": 0,
+    "frozen_v1_changed": false
+  },
+  "pending": [
+    "Canonical ID for Rafael Câmara; source-confirmed literal OpenF1 mapping remains unavailable.",
+    "Activation of approved illustrations after canonical identity review.",
+    "Public media diagnostics showed the How it works hero still pending after a bounded decode wait; not certified as a visual acceptance."
+  ]
+}

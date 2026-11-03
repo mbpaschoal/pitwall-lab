@@ -1,0 +1,37 @@
+{
+  "status": "approved_by_owner_pending_canonical_identity",
+  "recorded_utc": "2026-11-03T22:57:25.914275+00:00",
+  "approval_source": "Explicit user approval in this Codex chat: Aprovo as três cartas",
+  "approved_for": "Haas, Rafael Câmara; activate only after a source-confirmed canonical identity",
+  "cards": [
+    {
+      "pose_id": 0,
+      "path": "reports/camara_preparacao_20261103/drafts/rafael-camara-haas-pose-0.png",
+      "sha256": "868b752efeb9d5969d01a79f5e838dc755f375c05c942855685c2d871261d0b9",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "pose_id": 1,
+      "path": "reports/camara_preparacao_20261103/drafts/rafael-camara-haas-pose-1.png",
+      "sha256": "0266caccef855017534c7a2fe046a4c2c591e79cf9e6261d4708410cddcc04bf",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "pose_id": 2,
+      "path": "reports/camara_preparacao_20261103/drafts/rafael-camara-haas-pose-2.png",
+      "sha256": "cda2dcc997d7e66cb29b254675822290c7ebeaebd6d3a0f9f23268d4875c23ad",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    }
+  ],
+  "active_catalog_changed": false,
+  "scientific_inputs_changed": false
+}

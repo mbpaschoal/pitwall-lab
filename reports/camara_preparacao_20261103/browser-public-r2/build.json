@@ -1,0 +1,134 @@
+{
+  "version": "0.8.27",
+  "expected_build": "d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": "passed",
+          "utc": "2026-11-03T22:51:45.331Z"
+        }
+      ],
+      "status": "passed",
+      "observed_build": "d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53",
+      "network_failures": [
+        {
+          "path": "/js/heap-.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/~/+/static/css/index.CIiu7Ygf.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "page_errors": [],
+      "utc": "2026-11-03T22:51:45.331Z"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.27', { exact: true }).first() to be visible\u001b[22m\n",
+          "utc": "2026-11-03T22:52:48.376Z"
+        },
+        {
+          "attempt": 1,
+          "status": "passed",
+          "utc": "2026-11-03T22:52:54.509Z"
+        }
+      ],
+      "status": "passed",
+      "observed_build": "d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53",
+      "network_failures": [
+        {
+          "path": "/js/heap-.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/~/+/static/css/index.CIiu7Ygf.css",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/~/+/static/js/index.6xX1278W.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/js/heap-.js",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "page_errors": [],
+      "utc": "2026-11-03T22:52:54.509Z"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.27', { exact: true }).first() to be visible\u001b[22m\n",
+          "utc": "2026-11-03T22:53:57.568Z"
+        },
+        {
+          "attempt": 1,
+          "status": "passed",
+          "utc": "2026-11-03T22:54:03.588Z"
+        }
+      ],
+      "status": "passed",
+      "observed_build": "d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53",
+      "network_failures": [
+        {
+          "path": "/js/heap-.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/~/+/static/media/SourceSansVF-Upright.ttf.BsWL4Kly.woff2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/~/+/static/js/index.6xX1278W.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/js/heap-.js",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "page_errors": [],
+      "utc": "2026-11-03T22:54:03.588Z"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": "passed",
+          "utc": "2026-11-03T22:55:03.686Z"
+        }
+      ],
+      "status": "passed",
+      "observed_build": "d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53",
+      "network_failures": [
+        {
+          "path": "/js/heap-.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/~/+/static/css/index.CIiu7Ygf.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "page_errors": [],
+      "utc": "2026-11-03T22:55:03.686Z"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 Português · [English](README.en.md)
 
 Created by: MBPaschoal
-Status: implementation under validation; canonical driver identity pending
+Status: published v0.8.27; artworks approved; canonical driver identity pending
 Type: delivery evidence
 
 A F1 anunciou Rafael Câmara na Haas para São Paulo em 03/11/2026 às 20h30 UTC. A conferência posterior encontrou 35 pilotos no endpoint da temporada Jolpica e 22 na consulta de identificação OpenF1 da classificação de São Paulo, sem Câmara; a segunda ainda listava Ocon e Bearman na Haas. Esses dados preparatórios não são uma lista homologada de inscritos nem um snapshot preditivo. Número e identificador de Câmara continuam desconhecidos; não foi escolhido o número desejado para 2027 nem reutilizado o ID de outro piloto.
@@ -27,7 +27,7 @@ As três ilustrações de **1024 × 1536 pixels** usam esse rosto como referênc
 | 2 | Sentado nos pneus, mãos sobre as pernas | [Carta 2](drafts/rafael-camara-haas-pose-1.png) |
 | 3 | Apoiado nos pneus, uma mão no bolso | [Carta 3](drafts/rafael-camara-haas-pose-2.png) |
 
-Geradas pela ferramenta nativa `image_gen`. [Prompts e referências](prompts.json), [hashes e dimensões](artwork-receipt.json). Os arquivos são rascunhos de apresentação, fora do catálogo ativo, aguardando revisão e ID canônico conferido. Uma ilustração não anuncia favoritos nem constitui previsão.
+Geradas pela ferramenta nativa `image_gen`. [Prompts e referências](prompts.json), [hashes e dimensões](artwork-receipt.json). As artes foram aprovadas pelo proprietário e continuam fora do catálogo ativo, aguardando apenas o ID canônico conferido. Uma ilustração não anuncia favoritos nem constitui previsão.
 
 ## Fontes e verificações
 
@@ -46,3 +46,19 @@ Ter três artes para cada piloto do catálogo não prova que todos os inscritos 
 Passaram **401 testes de código**, incluindo os 27 casos da operação pós-Q. A conferência byte a byte preservou **533 arquivos científicos e fontes anteriores**, sem diferenças; nenhuma previsão real foi emitida. [Resultado dos testes](source-tests.json), [saída completa](source-tests.txt) e [integridade](protected-integrity.json). Pacote, CI e versão pública serão conferidos separadamente após o commit.
 
 Pacote portátil: **144 testes aprovados** e 481 arquivos conferidos. Navegador Chrome local: **24/24 casos**, seis destinos em PT/EN e larguras 390/1440 px, sem erro de página ou transbordamento. [Pacote, build e ZIP](package-validation.json), [aceite de navegador](browser-local/controls.json). Isso não certifica a hospedagem pública.
+
+## Conferência pública do build
+
+O Streamlit serviu **0.8.27**, build `d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53`, nos quatro casos PT/EN em 390/1440 px. Dois casos precisaram de uma recarga por falha de inicialização; tentativas e falhas foram preservadas. Esse aceite verifica versão, build, idioma e leitura de Como funciona; não é uma matriz funcional pública completa nem certificação em aparelho físico. A primeira versão do teste esperava o build visível em um painel fechado e foi corrigida para abri-lo pela interface. [Recibo](public-validation.json), [quatro casos](browser-public-r2/build.json), [primeiro teste preservado](browser-public/build.json).
+
+## Aprovação das artes
+
+O proprietário aprovou explicitamente **as três cartas** nesta conversa. A revisão visual está encerrada; resta conferir o identificador canônico antes de vinculá-las ao catálogo. A aprovação não alterou os arquivos PNG, probabilidades ou o modelo. O recibo inicial conserva o estado de rascunho no momento da geração; [a aprovação posterior fica registrada separadamente](approval.json).
+
+## Fechamento da entrega
+
+**0.8.27 publicada e Latest**, CIs de main e tag aprovados: 401 testes de código, 144 do pacote e 11 suítes de navegador. O ZIP publicado tem 665.856.329 bytes e SHA `fe30e53a0777e839b86341fa6e5635edebb2c44d694c08b752a5d8dd9a390cc8`, igual ao pacote local. Coleta automática executada com sucesso nesta revisão. Modelo, entradas e emissões anteriores permanecem preservados; nenhuma previsão real futura foi emitida.
+
+[Release e ZIP](https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.27), [recibo final](delivery-final.json), [validação hospedada](ci-validation.json). Cartas aprovadas, com a identidade canônica ainda pendente nas fontes capturadas. Os rascunhos de código preexistentes na raiz original foram preservados; a implementação está no checkout isolado e em main.
+
+Uma sondagem adicional de mídia encontrou a capa de Como funciona ainda sem decodificação após espera limitada, com as URLs relativas preservadas no diagnóstico. Fontes de ícones também apareceram antes de terminar o carregamento em uma captura inicial. Isso não foi certificado como aceite visual nem atribuído a uma causa sem evidência; o aceite desta entrega é de build/idioma. [Mídia após espera](media-diagnostic-settled/fonts.json), [fonte carregada](font-diagnostic/fonts.json). Esses limites permanecem separados da automação científica e da aprovação das três ilustrações.
