@@ -2,6 +2,9 @@
 from copy import deepcopy
 from datetime import datetime, timedelta, timezone
 import hashlib
+import io
+from unittest.mock import patch
+from urllib.error import HTTPError
 import json
 from pathlib import Path
 import shutil
@@ -128,6 +131,38 @@ class DriverUpdateTests(unittest.TestCase):
         self.assertEqual(json.loads((root/ASSET).read_text())['events']['2026:19'],previous)
         self.assertEqual(load(root)['qualidade']['corridas'],67)
         with self.assertRaisesRegex(RuntimeError,'need review'):driver_archive.check_pending(root,NOW)
+
+    def test_fresh_capture_uses_real_client_constructor_and_persists_receipts(self):
+        root,state=self.folder()
+        folder=root/'data/operacao_2026/fins_de_semana/rodriguez-2026/pilotos'
+        (folder/'consulta.json').unlink()
+        payload=json.dumps(self.canonical).encode()
+        class Response(io.BytesIO):
+            status=200
+            def geturl(self):return 'https://api.jolpi.ca/ergast/f1/2026/19/results/?limit=100&offset=0'
+        def factory(directory,interval):
+            return driver_archive.CaptureClient(directory,interval,opener=lambda *a,**kw:Response(payload))
+        with patch('pitwall.data.archive_collection.utc_now',return_value=NOW.isoformat()):
+            result=driver_archive.update(root,state,self.event,NOW,factory)
+        self.assertEqual(result['races'],67)
+        cached=json.loads((folder/'consulta.json').read_text())
+        self.assertEqual((root/cached['path']).read_bytes(),payload)
+        self.assertTrue((root/cached['path']).with_name('coleta_online.json').is_file())
+        self.assertEqual(cached['receipt']['sha256'],hashlib.sha256(payload).hexdigest())
+
+    def test_real_client_429_exception_preserves_cooldown_and_previous_data(self):
+        root,state=self.folder();driver_archive.update(root,state,self.event,NOW)
+        previous=json.loads((root/ASSET).read_text())['events']['2026:19']
+        (root/'data/operacao_2026/fins_de_semana/rodriguez-2026/pilotos/consulta.json').unlink()
+        def opener(request,timeout):
+            raise HTTPError(request.full_url,429,'Limited',{'Retry-After':'7200'},io.BytesIO(b'limited'))
+        def factory(directory,interval):return driver_archive.CaptureClient(directory,interval,opener=opener)
+        with patch('pitwall.data.archive_collection.utc_now',return_value=NOW.isoformat()):
+            result=driver_archive.update(root,state,self.event,NOW,factory)
+        self.assertEqual(result['status'],'pending')
+        self.assertEqual(json.loads((root/ASSET).read_text())['events']['2026:19'],previous)
+        self.assertEqual(driver_archive.cloud.cooldown(root,NOW+timedelta(minutes=30)),
+                         (NOW+timedelta(hours=2)).isoformat())
 
     def test_retry_after_is_persisted_and_blocks_next_runner_before_http(self):
         root,state=self.folder()

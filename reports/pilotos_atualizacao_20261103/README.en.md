@@ -22,3 +22,8 @@ Ryo Hirakawa's profile exposed a mismatch between the catalogue's `file` field a
 ## Local verification
 
 349 source tests passed, with 31 follow-up checks after credit-label correction; 143 final portable-package tests passed. Four final-package PT/EN desktop/Android cases downloaded real CSV/SVG files and verified the original portrait SHA. The prior visual sweep passed 24 cases across six screens. 231 protected files checked against `bb83c75` remained unchanged. [Package and digest](package.json) · [Source](source-tests.json) · [Package](package-tests.json) · [Final browser](browser-final-local/acceptance.json) · [Integrity](protected-integrity.json). Work used an isolated checkout, preserving original-root drafts.
+
+
+## Correction after the first hosted execution
+
+Initial collection run `41704012731` failed because the real client constructor wrote its manifest before the query directory existed. Earlier tests used valid caches or replacement clients and missed that prerequisite. Version 0.8.23 creates the directory explicitly and tests the real client with controlled successful and 429 HTTP responses. Actual 429 interruption also persists Retry-After. Version 0.8.22 and its receipts remain preserved without rewriting its tag. The initial failure did not alter published data.

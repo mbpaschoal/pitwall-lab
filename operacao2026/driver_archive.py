@@ -145,10 +145,15 @@ def update(root, state, event, now=None, client_factory=CaptureClient):
                 if hashlib.sha256(raw).hexdigest()!=record['receipt']['sha256']:raise ValueError('Canonical cache changed')
                 canonical=json.loads(raw);receipt=record['receipt']
             else:
-                run=directory/now.strftime('%Y%m%dT%H%M%S%fZ');client=client_factory(run,8)
-                canonical=client.capture('jolpica','race_results','results.json',
-                    'https://api.jolpi.ca/ergast/f1/{}/{}/results/?limit=100&offset=0'.format(event['temporada'],event['rodada']))
-                receipt=client.manifest['fontes'][-1]
+                run=directory/now.strftime('%Y%m%dT%H%M%S%fZ')
+                run.mkdir(parents=True,exist_ok=False)
+                client=client_factory(run,8)
+                try:
+                    canonical=client.capture('jolpica','race_results','results.json',
+                        'https://api.jolpi.ca/ergast/f1/{}/{}/results/?limit=100&offset=0'.format(event['temporada'],event['rodada']))
+                except RuntimeError:
+                    if not weekend.retry_deadline(client.manifest):raise
+                    canonical=None
                 if canonical is None:
                     deadline=weekend.retry_deadline(client.manifest)
                     if deadline:
@@ -157,6 +162,7 @@ def update(root, state, event, now=None, client_factory=CaptureClient):
                         save_checkpoint(retry_path,
                                         dict(retry_after_utc=deadline.isoformat()))
                     raise PendingDriverUpdate('canonical_result_unavailable')
+                receipt=client.manifest['fontes'][-1]
                 save_checkpoint(cache,dict(path=str((run/'results.json').relative_to(root)),receipt=receipt))
             candidate=build(event,race,canonical,receipt,results,native_receipt,circuit,now)
         previous=value['events'].get(key)

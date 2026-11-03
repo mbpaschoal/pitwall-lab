@@ -22,3 +22,8 @@ O perfil de Ryo Hirakawa revelou uma incompatibilidade entre o campo `file` do c
 ## Verificação local
 
 349 testes de código aprovados e 31 reconferências após o ajuste dos créditos; 143 testes do pacote final. O aceite focal do pacote final passou em quatro combinações PT/EN e desktop/Android, com CSV e SVG reais e SHA da foto original. A varredura visual prévia passou em 24 cenários nas seis telas. 231 arquivos protegidos conferidos contra `bb83c75`, sem alteração. [Pacote e hash](package.json) · [Fonte](source-tests.json) · [Pacote](package-tests.json) · [Navegador final](browser-final-local/acceptance.json) · [Integridade](protected-integrity.json). Implementação em cópia isolada, preservando os rascunhos da raiz original.
+
+
+## Correção após a primeira execução hospedada
+
+A primeira coleta em `41704012731` falhou porque o construtor real do cliente tentou salvar o manifesto antes de existir a pasta da consulta. Os testes anteriores exercitavam cache válido ou clientes substitutos e não expunham essa pré-condição. A 0.8.23 cria a pasta explicitamente e testa o cliente real com respostas HTTP controladas de sucesso e 429. A interrupção real por 429 também mantém Retry-After persistido. A 0.8.22 e seus recibos ficam preservados, sem reescrever a tag. A falha inicial não alterou os dados publicados.

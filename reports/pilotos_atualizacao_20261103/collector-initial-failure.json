@@ -1,0 +1,8 @@
+{
+  "run": 41704012731,
+  "job": 126154417791,
+  "status": "failure",
+  "reason": "Fresh query directory missing before real CaptureClient constructor",
+  "original_sources_preserved": true,
+  "correction": "0.8.23: create directory and test real-client success/429 paths"
+}
