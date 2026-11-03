@@ -19,6 +19,8 @@ A coleta agora é agendada no GitHub Actions, sem depender do computador pessoal
 
 A interface usa a **Jornada do fã**: navegação inferior, contexto de GP no topo, pista em destaque e cartas opcionais para explorar as probabilidades registradas. [Uso e acessibilidade](docs/JORNADA_DO_FA.md).
 
+A preparação e emissão pós-Q de São Paulo agora têm rotina hospedada com bloqueios temporais e tentativas limitadas. [O que está automatizado e o que exige revisão](docs/AUTOMACAO.md).
+
 ## O produto hoje
 
 - **Pilotos:** destaques por condição, perfil, duelos, favorito no navegador e cartões para compartilhar. Filtros, amostras e empates ficam explícitos. [Auditoria dos dados](reports/pilotos_condicoes_20261029/README.md).

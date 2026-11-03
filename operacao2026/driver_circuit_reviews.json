@@ -20,5 +20,136 @@
       "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a",
       "criterion": "Approximate elevation at the calendar coordinates; not circuit elevation range"
     }
+  },
+  "2026:interlagos": {
+    "temporada": 2026,
+    "circuito_id": "interlagos",
+    "direction": "anti_horario",
+    "corners": 15,
+    "length_km": 4.309,
+    "altitude_m": 779.0,
+    "source": {
+      "provider": "formula1",
+      "url": "https://media.formula1.com/image/upload/c_fit,h_1408/q_auto/v1740000001/common/f1/2026/track/2026trackinterlagosdetailed.webp",
+      "url_real": "https://media.formula1.com/image/upload/c_fit,h_1408/q_auto/v1740000001/common/f1/2026/track/2026trackinterlagosdetailed.webp",
+      "status": 200,
+      "sha256": "d9f977eb104b3b230def25fac3aba1b8210804b715bedfaebb1255e568ea7e5f",
+      "obtido_em_utc": "2026-11-03T21:10:44.281441+00:00",
+      "arquivo": "interlagos-2026.webp",
+      "bytes": 242934,
+      "edition": 2026,
+      "criterion": "Official 2026 detailed map: turns 1–15 and start/finish direction arrow visually reviewed; length from official 2026 race page",
+      "race_page_url": "https://www.formula1.com/en/racing/2026/brazil"
+    },
+    "altitude_source": {
+      "provider": "open-meteo",
+      "url": "https://api.open-meteo.com/v1/elevation?latitude=-23.7036&longitude=-46.6997",
+      "url_real": "https://api.open-meteo.com/v1/elevation?latitude=-23.7036&longitude=-46.6997",
+      "status": 200,
+      "sha256": "2c58f05e5c73815c7817a3ad35e76fbc3989f5283a4bcf4e6aaedab15e1a20da",
+      "obtido_em_utc": "2026-11-03T21:10:53.317331+00:00",
+      "arquivo": "interlagos-elevation.json",
+      "bytes": 21,
+      "criterion": "Approximate elevation at canonical calendar coordinates; not circuit elevation range"
+    }
+  },
+  "2026:vegas": {
+    "temporada": 2026,
+    "circuito_id": "vegas",
+    "direction": "anti_horario",
+    "corners": 17,
+    "length_km": 6.201,
+    "altitude_m": 644.0,
+    "source": {
+      "provider": "formula1",
+      "url": "https://media.formula1.com/image/upload/c_fit,h_1408/q_auto/v1740000001/common/f1/2026/track/2026tracklasvegasdetailed.webp",
+      "url_real": "https://media.formula1.com/image/upload/c_fit,h_1408/q_auto/v1740000001/common/f1/2026/track/2026tracklasvegasdetailed.webp",
+      "status": 200,
+      "sha256": "faf7cb2a32569eb1f12d5c2b8cfb198b9e888fbd10d0fae0bd0a6f3c71c9dd2d",
+      "obtido_em_utc": "2026-11-03T21:21:43.029943+00:00",
+      "arquivo": "vegas-2026.webp",
+      "bytes": 153356,
+      "edition": 2026,
+      "criterion": "Official 2026 detailed map: numbered corners and direction through the start/finish line reviewed visually; length from official 2026 race page",
+      "race_page_url": "https://www.formula1.com/en/racing/2026/las-vegas"
+    },
+    "altitude_source": {
+      "provider": "open-meteo",
+      "url": "https://api.open-meteo.com/v1/elevation?latitude=36.1147,25.49,24.4672&longitude=-115.173,51.4542,54.6031",
+      "url_real": "https://api.open-meteo.com/v1/elevation?latitude=36.1147,25.49,24.4672&longitude=-115.173,51.4542,54.6031",
+      "status": 200,
+      "sha256": "60f5a0c911b62e666588124b164ca2c5447ccc1812e638e69a14581dff9800fb",
+      "obtido_em_utc": "2026-11-03T21:22:09.086668+00:00",
+      "arquivo": "remaining-elevations.json",
+      "bytes": 32,
+      "index": 0,
+      "criterion": "Approximate elevation at canonical calendar coordinates, in listed order; not circuit elevation range"
+    }
+  },
+  "2026:losail": {
+    "temporada": 2026,
+    "circuito_id": "losail",
+    "direction": "horario",
+    "corners": 16,
+    "length_km": 5.419,
+    "altitude_m": 12.0,
+    "source": {
+      "provider": "formula1",
+      "url": "https://media.formula1.com/image/upload/c_fit,h_1408/q_auto/v1740000001/common/f1/2026/track/2026tracklusaildetailed.webp",
+      "url_real": "https://media.formula1.com/image/upload/c_fit,h_1408/q_auto/v1740000001/common/f1/2026/track/2026tracklusaildetailed.webp",
+      "status": 200,
+      "sha256": "fda2d797c92ed86288df97f9ad210b6e90761866b9500af1e81b867d12db4a75",
+      "obtido_em_utc": "2026-11-03T21:21:51.539721+00:00",
+      "arquivo": "losail-2026.webp",
+      "bytes": 184186,
+      "edition": 2026,
+      "criterion": "Official 2026 detailed map: numbered corners and direction through the start/finish line reviewed visually; length from official 2026 race page",
+      "race_page_url": "https://www.formula1.com/en/racing/2026/qatar"
+    },
+    "altitude_source": {
+      "provider": "open-meteo",
+      "url": "https://api.open-meteo.com/v1/elevation?latitude=36.1147,25.49,24.4672&longitude=-115.173,51.4542,54.6031",
+      "url_real": "https://api.open-meteo.com/v1/elevation?latitude=36.1147,25.49,24.4672&longitude=-115.173,51.4542,54.6031",
+      "status": 200,
+      "sha256": "60f5a0c911b62e666588124b164ca2c5447ccc1812e638e69a14581dff9800fb",
+      "obtido_em_utc": "2026-11-03T21:22:09.086668+00:00",
+      "arquivo": "remaining-elevations.json",
+      "bytes": 32,
+      "index": 1,
+      "criterion": "Approximate elevation at canonical calendar coordinates, in listed order; not circuit elevation range"
+    }
+  },
+  "2026:yas_marina": {
+    "temporada": 2026,
+    "circuito_id": "yas_marina",
+    "direction": "anti_horario",
+    "corners": 16,
+    "length_km": 5.281,
+    "altitude_m": 7.0,
+    "source": {
+      "provider": "formula1",
+      "url": "https://media.formula1.com/image/upload/c_fit,h_1408/q_auto/v1740000001/common/f1/2026/track/2026trackyasmarinacircuitdetailed.webp",
+      "url_real": "https://media.formula1.com/image/upload/c_fit,h_1408/q_auto/v1740000001/common/f1/2026/track/2026trackyasmarinacircuitdetailed.webp",
+      "status": 200,
+      "sha256": "d3df195f895a912a57dd07bd3cf6d441e108cc981ecefcf21c5f71e01f4c9eb6",
+      "obtido_em_utc": "2026-11-03T21:22:00.043049+00:00",
+      "arquivo": "yas_marina-2026.webp",
+      "bytes": 168466,
+      "edition": 2026,
+      "criterion": "Official 2026 detailed map: numbered corners and direction through the start/finish line reviewed visually; length from official 2026 race page",
+      "race_page_url": "https://www.formula1.com/en/racing/2026/united-arab-emirates"
+    },
+    "altitude_source": {
+      "provider": "open-meteo",
+      "url": "https://api.open-meteo.com/v1/elevation?latitude=36.1147,25.49,24.4672&longitude=-115.173,51.4542,54.6031",
+      "url_real": "https://api.open-meteo.com/v1/elevation?latitude=36.1147,25.49,24.4672&longitude=-115.173,51.4542,54.6031",
+      "status": 200,
+      "sha256": "60f5a0c911b62e666588124b164ca2c5447ccc1812e638e69a14581dff9800fb",
+      "obtido_em_utc": "2026-11-03T21:22:09.086668+00:00",
+      "arquivo": "remaining-elevations.json",
+      "bytes": 32,
+      "index": 2,
+      "criterion": "Approximate elevation at canonical calendar coordinates, in listed order; not circuit elevation range"
+    }
   }
 }

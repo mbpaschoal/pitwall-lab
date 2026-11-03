@@ -1,0 +1,1727 @@
+{
+  "schema": "pitwall-restored-original-artifacts-v1",
+  "created_utc": "2026-11-03",
+  "original_utc_fields_unchanged": true,
+  "files": [
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/indice.json",
+      "sha256": "006371428d002dbd8e272480b8cb80703ec06a9b32884dd4383d0c0bc24bf5b9",
+      "bytes": 15807
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+      "bytes": 13081
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_15_offset_0000.json",
+      "sha256": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3",
+      "bytes": 12957
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_4_offset_0000.json",
+      "sha256": "ffb9dc40ad5e514b10b0c80ac112897ef9fa14306ea557bc514f99f960029f03",
+      "bytes": 9934
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "bytes": 12971
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_13_offset_0000.json",
+      "sha256": "98c22d89ebbfa526067b5145d698ee912d3662c750b80acbbf7ea2c119a26261",
+      "bytes": 9937
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_1_offset_0000.json",
+      "sha256": "2fc2f98a5076530f32d934bca814438f274e79a1d1c687c0f3cdcd909f66c24e",
+      "bytes": 8727
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_16_offset_0000.json",
+      "sha256": "d1454c8699f0008905a560e38af9149ad6e429f502995031c8863addabaabf3f",
+      "bytes": 9955
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "bytes": 13067
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_14_offset_0000.json",
+      "sha256": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911",
+      "bytes": 13030
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_12_offset_0000.json",
+      "sha256": "32e4a69ef6f84757f5665675c54dd1af2eaf5d475331a5e30be9a2eac8c1fe33",
+      "bytes": 9945
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "bytes": 13126
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_5_offset_0000.json",
+      "sha256": "dca8a70206c44ff269c23f5847fab72473dd1d9a6c944cbf5a58c7dc66d5bbdf",
+      "bytes": 9948
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_13_offset_0000.json",
+      "sha256": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4",
+      "bytes": 13046
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_9_offset_0000.json",
+      "sha256": "2a8df6fabb6de06a94110c736cce8addde1ebe27437a6077c8a7f13e20ca46ef",
+      "bytes": 9937
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_2_offset_0000.json",
+      "sha256": "0d0e00ff6bb10d9431715c66fdf535aecbef2e7911601c518b7a9d4ed8b5d638",
+      "bytes": 9954
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_15_offset_0000.json",
+      "sha256": "2d24401cdb0d1bb7473ec52d7d1463b09c8ff86cd41b35f79484e817d9ca9a5e",
+      "bytes": 9927
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_11_offset_0000.json",
+      "sha256": "d28d84a989563a9d1e3242238c69dd41249dbfaa2d20bf9cf09f0bf6255749be",
+      "bytes": 9929
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_6_offset_0000.json",
+      "sha256": "0d753d9459b716b62fbf25587b7560292403f6c9c3f32cb5e9d5a6eb1f6248d4",
+      "bytes": 9921
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_17_offset_0000.json",
+      "sha256": "4efc2b9d5515c1d7ff13677e97bb7565ade55cfd2567a071e0cab64c85e642bf",
+      "bytes": 13116
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_8_offset_0000.json",
+      "sha256": "d2c64a9a2f5e318e82a87696c2075e80ec8cb6bc32e716f309d8f733fe00f209",
+      "bytes": 9931
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_12_offset_0000.json",
+      "sha256": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2",
+      "bytes": 12875
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_14_offset_0000.json",
+      "sha256": "044caf313057dcceebd86c35b7dcae508f87e6362301f738151d82013542f97d",
+      "bytes": 9097
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_3_offset_0000.json",
+      "sha256": "71fc18173eabf68648e75ecd46c97f82427a5b7f9b6c5f08414175b6e2e04b9b",
+      "bytes": 9941
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_7_offset_0000.json",
+      "sha256": "b927c9b3bafc7631014802dad566502bb561f0d3dc00f9497f0b89d1e96cb4c6",
+      "bytes": 9950
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/classificacao_10_offset_0000.json",
+      "sha256": "4fcbb5708c6c8fa8ea0833f277eaf9681071a6581f9eb5cac13f463cc5c11a42",
+      "bytes": 9938
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "data/operacao_2026/snapshots/classificacoes-retro-20261024T064010Z/raw/resultados_16_offset_0000.json",
+      "sha256": "214e44691da4d4f228448b269e12cab57b27a081751da4c6768a89637658fc31",
+      "bytes": 13177
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/manifesto.json",
+      "sha256": "f58c228e8c4bbcebffa221e64277f776f526d870439844230f0121484826f855",
+      "bytes": 3344069
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/fontes.json",
+      "sha256": "1f2e2af334b143a82fdaa2aefb6f540d64edf5f5e4c8941b9b2a0aaed6b40d1d",
+      "bytes": 12091
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/relatorio.md",
+      "sha256": "2a220cc0086eed657cd862a7958e282e76b1cf417be5d626a496a718b0edabf0",
+      "bytes": 393
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/probabilidades.csv",
+      "sha256": "f324e14b9f5f707b3196fdfacdfbd63d5c2e441e80a5952c982adbfac250b40d",
+      "bytes": 4562
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/entradas.json",
+      "sha256": "497d8cb8dc88a2568bcaa17fddbdd6969f6e9c40e66f180fa85f856e50a07a4c",
+      "bytes": 42148
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/historicos.json",
+      "sha256": "1608bf3f16dbe4ac57020115d9ce97b8e423a15b14ca57e522f53d8ab70bf478",
+      "bytes": 3044111
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+      "bytes": 13081
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_15_offset_0000.json",
+      "sha256": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3",
+      "bytes": 12957
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "bytes": 12971
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "bytes": 13067
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_14_offset_0000.json",
+      "sha256": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911",
+      "bytes": 13030
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "bytes": 13126
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_13_offset_0000.json",
+      "sha256": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4",
+      "bytes": 13046
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_17_offset_0000.json",
+      "sha256": "4efc2b9d5515c1d7ff13677e97bb7565ade55cfd2567a071e0cab64c85e642bf",
+      "bytes": 13116
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_12_offset_0000.json",
+      "sha256": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2",
+      "bytes": 12875
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/austin-prospectivo-openf1-20261025T054420Z/raw/resultados_16_offset_0000.json",
+      "sha256": "214e44691da4d4f228448b269e12cab57b27a081751da4c6768a89637658fc31",
+      "bytes": 13177
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r1-20261024T141514Z/manifesto.json",
+      "sha256": "74f7ee1cfd32817909a209dc4a2f7afcc1d64e9350484c8a5632884b8bfc772f",
+      "bytes": 2974986
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r1-20261024T141514Z/fontes.json",
+      "sha256": "a068f5a48264cefd442735351ecdc89f7c9753a0696cb0fc7e13a3af57b4b497",
+      "bytes": 1024
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r1-20261024T141514Z/relatorio.md",
+      "sha256": "12280fae8d280fd137675593c06a36d0bef0c91f2a49b8f3f09957e356f114d7",
+      "bytes": 483
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r1-20261024T141514Z/probabilidades.csv",
+      "sha256": "95f6cdfda9a65976d80e4a8f496fa7ddd6b7789eb23460a007fe4d7a7631b0e9",
+      "bytes": 3936
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r1-20261024T141514Z/entradas.json",
+      "sha256": "707b2dd420d4230b2deabe62c45f4357fc893f83b8c232737135faf3d13c01ef",
+      "bytes": 36442
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r1-20261024T141514Z/historicos.json",
+      "sha256": "88b2076ba9924f14fe9a4261172da4c1de0c7ee0dd21142e9b876a39d9e710fc",
+      "bytes": 2713229
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r1-20261024T141514Z/cobertura.json",
+      "sha256": "b8ef6b7e0182ffd4d554d3a959c3c9202fceea6dda10a138d4f28d7eb6b26873",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r1-20261024T141514Z/raw/classificacao_1_offset_0000.json",
+      "sha256": "2fc2f98a5076530f32d934bca814438f274e79a1d1c687c0f3cdcd909f66c24e",
+      "bytes": 8727
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r1-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/manifesto.json",
+      "sha256": "5b2e92ca34d125dfa6b4c9bef7ad2aac5f6e94068702292fc9e8cdac1296680e",
+      "bytes": 3094150
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/fontes.json",
+      "sha256": "9c26c36435871f1a6e8ad11d1e9fd5de2d50045f952d5ce4975700e06ce9114e",
+      "bytes": 6014
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/relatorio.md",
+      "sha256": "df17c84aefddd0a0d3ece2f82cd9c4051c4b80372f588450b8428d112d91a42e",
+      "bytes": 476
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/probabilidades.csv",
+      "sha256": "34b921820f4fc8df5a414c7830703196b8418bc1d60a4108c928c189e697d294",
+      "bytes": 4315
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/entradas.json",
+      "sha256": "a7d6ccc0a9bc8c0828a5565204157c77320b70e5915b61e73743ca96c25c7f99",
+      "bytes": 41914
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/historicos.json",
+      "sha256": "11cc0adf33f43e7863eb1a72d8bcaff992f20bb6cc05a0b0c976ed556ee398d2",
+      "bytes": 2818168
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "bytes": 12971
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "bytes": 13126
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/classificacao_10_offset_0000.json",
+      "sha256": "4fcbb5708c6c8fa8ea0833f277eaf9681071a6581f9eb5cac13f463cc5c11a42",
+      "bytes": 9938
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r10-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/manifesto.json",
+      "sha256": "683921838c2880bb121d64c4ad2bf5a95917ccec31f822155b2beaaa3a0843b9",
+      "bytes": 3119286
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/fontes.json",
+      "sha256": "3f45929f201d616c6d9d68872ede7d2c4661371e7160c674b6858ae1ec4c9a55",
+      "bytes": 6572
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/relatorio.md",
+      "sha256": "772691aa8d52b17acbf8c6827ca09713755162b4f6ea2e4e5a7064f2d243f3ab",
+      "bytes": 484
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/probabilidades.csv",
+      "sha256": "f49e2ca53e79aa879c42f44827dc2bfc45b4f0cf0e3a8fb42882db0dde6cd2a7",
+      "bytes": 4535
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/entradas.json",
+      "sha256": "e907877ff8223865b67b1879ffe1cea25b4ca23522a7229e30648354a4880718",
+      "bytes": 42128
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/historicos.json",
+      "sha256": "ba6da33153e8d36fab76462aec03ebb9e4397ca29c1f423de2b0ac5680ba08d8",
+      "bytes": 2841010
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "bytes": 12971
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "bytes": 13067
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "bytes": 13126
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/classificacao_11_offset_0000.json",
+      "sha256": "d28d84a989563a9d1e3242238c69dd41249dbfaa2d20bf9cf09f0bf6255749be",
+      "bytes": 9929
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r11-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/manifesto.json",
+      "sha256": "808f36116e420264a489f76785fac026afb82c6b53e1f61990cfb67439b39601",
+      "bytes": 3253512
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/fontes.json",
+      "sha256": "1f6f13bde484727c036020c9ab1b7263d1e590b1fa134590d030632328a3242d",
+      "bytes": 7130
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/relatorio.md",
+      "sha256": "2cb8548831b22cf11a9fd8dd1a23c27441e8d31d0774a2a813a7246149170416",
+      "bytes": 482
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/probabilidades.csv",
+      "sha256": "358f33d04cec6fddf50234316ca87b9456e069e9d9865a310804a297379e19a1",
+      "bytes": 4407
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/entradas.json",
+      "sha256": "438dae092f12865f59e63c321700ba66c7e8598064b1185a8d7321648f202e27",
+      "bytes": 42006
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/historicos.json",
+      "sha256": "7a2d524f6c6ef7683f646e411769657a5c9f0d31bc0de68f8ec3848aee1465e7",
+      "bytes": 2966029
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+      "bytes": 13081
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "bytes": 12971
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "bytes": 13067
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/classificacao_12_offset_0000.json",
+      "sha256": "32e4a69ef6f84757f5665675c54dd1af2eaf5d475331a5e30be9a2eac8c1fe33",
+      "bytes": 9945
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "bytes": 13126
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r12-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/manifesto.json",
+      "sha256": "926250fc5da9e746221668b1af4f2c80c3e6aadad26c72724a5d762c53df0562",
+      "bytes": 3255631
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/fontes.json",
+      "sha256": "031b2c037b53397ecfef75cba40276a43ce063b9858da5b47525f6c09dd04900",
+      "bytes": 7688
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/relatorio.md",
+      "sha256": "67e0858e7261d1b5f9267c850fd377f338999c8766a1bc249350e62b2c88b3f9",
+      "bytes": 478
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/probabilidades.csv",
+      "sha256": "529e67eecfd5a08f317e0bce77db43606c6c21c347b91b534cda0499f2f783c8",
+      "bytes": 4369
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/entradas.json",
+      "sha256": "7d17675c776fdc742d9b1122ed1d873a21eac92866c8d3d95faf284b77948dc2",
+      "bytes": 41970
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/historicos.json",
+      "sha256": "ac6f1d5543e38aad2914a231b0cdd19953b3d1c179626a95fc6f2a38d16783ca",
+      "bytes": 2967380
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+      "bytes": 13081
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "bytes": 12971
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/classificacao_13_offset_0000.json",
+      "sha256": "98c22d89ebbfa526067b5145d698ee912d3662c750b80acbbf7ea2c119a26261",
+      "bytes": 9937
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "bytes": 13067
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "bytes": 13126
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/resultados_12_offset_0000.json",
+      "sha256": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2",
+      "bytes": 12875
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r13-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/manifesto.json",
+      "sha256": "c9186603c493e9ad7fba2eabb70588c9a8f65cbd31e8ba146d7f68e98b4d3d27",
+      "bytes": 3256650
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/fontes.json",
+      "sha256": "0b327a2356f8f29dd464edfe877b59ee9a57e8479448271b5d4f15614b5973ec",
+      "bytes": 8246
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/relatorio.md",
+      "sha256": "f4118f4907e85d9c754bedd290a7c2a7be79c75d3d1102d4cff2cd3cefc7f0bd",
+      "bytes": 480
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/probabilidades.csv",
+      "sha256": "71cdd48ca5da99fdcecef06d4b5bc06afc91c144662a1837de55a657d074d794",
+      "bytes": 4026
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/entradas.json",
+      "sha256": "96fa9d6f9c453ed38ec012d5101b5b44922fd268b4981299261fb9c1382df993",
+      "bytes": 38229
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/historicos.json",
+      "sha256": "69450028f295279d609a97176a555902b5f00a34940fa6da2832fb4bad9ec683",
+      "bytes": 2967722
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/cobertura.json",
+      "sha256": "5e0c84b92cb74f6db87cfce70604f86dce2ac3871919ccf8fdb9ee4d671fb3e5",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+      "bytes": 13081
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "bytes": 12971
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "bytes": 13067
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "bytes": 13126
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_13_offset_0000.json",
+      "sha256": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4",
+      "bytes": 13046
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/resultados_12_offset_0000.json",
+      "sha256": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2",
+      "bytes": 12875
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/classificacao_14_offset_0000.json",
+      "sha256": "044caf313057dcceebd86c35b7dcae508f87e6362301f738151d82013542f97d",
+      "bytes": 9097
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r14-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/manifesto.json",
+      "sha256": "34677e8c7801dd720dad312e2a3b3a1626f02e42c93c106f667107f557b78244",
+      "bytes": 3290369
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/fontes.json",
+      "sha256": "51baf2a59277655b721f3477b702ea3014c922e600a20a1d815427a6c71dc363",
+      "bytes": 8804
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/relatorio.md",
+      "sha256": "595533d78edb9368ceb4a46a2607e7e69e23743665c25ee606c5aa55a02a74e0",
+      "bytes": 477
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/probabilidades.csv",
+      "sha256": "f7d38a6c317b9cd0f437aab15e5d6c2dcc893f956afef020c370847e293d121d",
+      "bytes": 4402
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/entradas.json",
+      "sha256": "91e08e105c0c1f2d089f1b95941561d8e2bc3ba39aec10ae4c0a0ecee7242a1d",
+      "bytes": 41997
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/historicos.json",
+      "sha256": "6c8536f51a65f6821546db58890f32be4bf1811185b474d1a6959bc4fc2c2d5a",
+      "bytes": 2998362
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+      "bytes": 13081
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "bytes": 12971
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "bytes": 13067
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_14_offset_0000.json",
+      "sha256": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911",
+      "bytes": 13030
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "bytes": 13126
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_13_offset_0000.json",
+      "sha256": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4",
+      "bytes": 13046
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/classificacao_15_offset_0000.json",
+      "sha256": "2d24401cdb0d1bb7473ec52d7d1463b09c8ff86cd41b35f79484e817d9ca9a5e",
+      "bytes": 9927
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/resultados_12_offset_0000.json",
+      "sha256": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2",
+      "bytes": 12875
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r15-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/manifesto.json",
+      "sha256": "e0c4fb57852dac1b86303f7e5bfe6cc3dd99162c5a33b8b33938ee1ecbbf8121",
+      "bytes": 3314865
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/fontes.json",
+      "sha256": "d410593d8c617a81b384d28d391d526e7d63fe8d461e9d525b7aeadc60e35af0",
+      "bytes": 9362
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/relatorio.md",
+      "sha256": "bdf356b2b8a4646cd39f8b5c41399d0ed6721b44d53c8eb1b774fd0a507f9eaf",
+      "bytes": 479
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/probabilidades.csv",
+      "sha256": "839057fbc642be0bade180e426a748c68e2522fad73c58390db8bddabe0c9694",
+      "bytes": 4649
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/entradas.json",
+      "sha256": "b2f05bb0bb139f4e49a937b7c3bb2edab432520496d0199b94118214c3bd9b6a",
+      "bytes": 42246
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/historicos.json",
+      "sha256": "aa5b46403730ad0dddfb22d516832482d60a79ae0380eb414aa97341b49d1f93",
+      "bytes": 3020612
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_11_offset_0000.json",
+      "sha256": "8cb0c878f0deea5b49c5a0b9e6f930fbc13e533d2e2fb13757dc5dcb9516bc82",
+      "bytes": 13081
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_15_offset_0000.json",
+      "sha256": "88308f2655d860ce345ba360a9ef306cd30cf6928953fb8c2a19e92124304aa3",
+      "bytes": 12957
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "bytes": 12971
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/classificacao_16_offset_0000.json",
+      "sha256": "d1454c8699f0008905a560e38af9149ad6e429f502995031c8863addabaabf3f",
+      "bytes": 9955
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_10_offset_0000.json",
+      "sha256": "1fba41b73988b0f5bbfd1d0d99bdac07ab5628b58930044283c94bdc79629380",
+      "bytes": 13067
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_14_offset_0000.json",
+      "sha256": "7056dbc4a7411a3f9e479ecb58d4aa8db7665a1b95de53890536aa977f33e911",
+      "bytes": 13030
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_9_offset_0000.json",
+      "sha256": "8c0cb08ef31b197211cd987da1c63e03730255b18855a36aa45a314b9a32db0b",
+      "bytes": 13126
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_13_offset_0000.json",
+      "sha256": "504a8776105f5309721ef3bd9071c473fff248408628f8dca45776160257fbf4",
+      "bytes": 13046
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/resultados_12_offset_0000.json",
+      "sha256": "36260f0c1d851b43268dbe347ec69be0664a07f033123fde5f4c0f5fd1a5cbd2",
+      "bytes": 12875
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r16-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r2-20261024T141514Z/manifesto.json",
+      "sha256": "355b716f892107e3d37d3cbaf6325f6678fb3d679d22cb6d0c37f5c58f336dc8",
+      "bytes": 2981033
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r2-20261024T141514Z/fontes.json",
+      "sha256": "c3e37e242bd68b906a5772038c0e32f75d909c4bcf8cb88c3248e635d0798ef3",
+      "bytes": 1578
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r2-20261024T141514Z/relatorio.md",
+      "sha256": "7878c30ba9c335ad3980ae7bca07eca888d5b5c8e065c89034c49f60831e54e8",
+      "bytes": 480
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r2-20261024T141514Z/probabilidades.csv",
+      "sha256": "25f1ccd00e469d168c82320bc8fbee61809633c28bc3ffb306f1e94f6c8c86a7",
+      "bytes": 4405
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r2-20261024T141514Z/entradas.json",
+      "sha256": "4721e9597fd26df7809421f124059dc9e4da98b3dae4482a4ad5579d2de11174",
+      "bytes": 41998
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r2-20261024T141514Z/historicos.json",
+      "sha256": "853dac26629126073b75b144558a1265ada14b2cf9a4ed024568b49f06a3bd41",
+      "bytes": 2718070
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r2-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r2-20261024T141514Z/raw/classificacao_2_offset_0000.json",
+      "sha256": "0d0e00ff6bb10d9431715c66fdf535aecbef2e7911601c518b7a9d4ed8b5d638",
+      "bytes": 9954
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r2-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r2-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/manifesto.json",
+      "sha256": "2108255b9562e9324b4e719414dd8ad549afb29cb237cdf5c6dfa69566ac6b63",
+      "bytes": 2983670
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/fontes.json",
+      "sha256": "5815ceef672b4bcb1b4fa26adfd5ce4f67a065cdc4aa1fc47292a6419791c108",
+      "bytes": 2132
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/relatorio.md",
+      "sha256": "345a7ccdd2a6254f6634b2c135e044943655e346b4218069938f7928fcdc8341",
+      "bytes": 478
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/probabilidades.csv",
+      "sha256": "8e6021df6bf8daffb17af9cbb13efc12b2e5f494540572dcbee4a74103495b39",
+      "bytes": 4385
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/entradas.json",
+      "sha256": "1a9e67a13724a54fedd7bf4bd31070e12cb1621e417da1baa49f37ddcad6365a",
+      "bytes": 41976
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/historicos.json",
+      "sha256": "4ca1296cd927e511b37478963f696c1108a230a2a811fca61f3d618e874216d2",
+      "bytes": 2719760
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/raw/classificacao_3_offset_0000.json",
+      "sha256": "71fc18173eabf68648e75ecd46c97f82427a5b7f9b6c5f08414175b6e2e04b9b",
+      "bytes": 9941
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r3-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/manifesto.json",
+      "sha256": "8e00b234035a544454a9b2b33d02e5497a69ad61f9b9f1e5bb1cd664615466a3",
+      "bytes": 2988119
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/fontes.json",
+      "sha256": "931dd022345a4e277feffab201df828abcaac5e235a20ec5b2cbbb98c9daf6f1",
+      "bytes": 2686
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/relatorio.md",
+      "sha256": "1cdc24452e903fdd10ec5d2c54ca9d66168ed30682b397c9067af27610380ded",
+      "bytes": 477
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/probabilidades.csv",
+      "sha256": "b19be19c46b8344c953309e6bff87550bc18f414deeddd90f22a466483a20594",
+      "bytes": 4297
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/entradas.json",
+      "sha256": "9ee80dc8c0ac8ce7f353f83dfaf3aa3fa8d77b35b9b3ae763285cb2e338f958b",
+      "bytes": 41978
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/historicos.json",
+      "sha256": "98428936ed8bdee625f8f3891eb0d3d3cf763a4a22f11343697a77e4df1fe161",
+      "bytes": 2723243
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/raw/classificacao_4_offset_0000.json",
+      "sha256": "ffb9dc40ad5e514b10b0c80ac112897ef9fa14306ea557bc514f99f960029f03",
+      "bytes": 9934
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r4-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/manifesto.json",
+      "sha256": "bea0932abc8e3aef0974c6b557e61a2cfadec00d91ec1ede30fea4ee5039dbfe",
+      "bytes": 2992061
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/fontes.json",
+      "sha256": "08ffd1e53313bd229a10667efa6bf4a5fd74b2dcc1581fd68f93a4087d34b7f3",
+      "bytes": 3240
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/relatorio.md",
+      "sha256": "d36fb7192b77d4266e282dd9c6000884078c892765a7a26f2624094d20d1be7b",
+      "bytes": 482
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/probabilidades.csv",
+      "sha256": "ea1482f4f95bd53ab64653b7c715a229598c9236e60cd2b82c804f1c759c0caf",
+      "bytes": 4469
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/entradas.json",
+      "sha256": "7064795f5d527425b196bddfbbe329a0e4ddd131192ab2a8c072505c2d938437",
+      "bytes": 42070
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/historicos.json",
+      "sha256": "62f12f9c77948266987295b98f0cdad94420bfef7bb0efae62a6c49e73dc2a0d",
+      "bytes": 2726257
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/raw/classificacao_5_offset_0000.json",
+      "sha256": "dca8a70206c44ff269c23f5847fab72473dd1d9a6c944cbf5a58c7dc66d5bbdf",
+      "bytes": 9948
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r5-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/manifesto.json",
+      "sha256": "0e7774e3aba59abb667dc056bea0bd76f8e3772a14625755910a9ead1fea2c0e",
+      "bytes": 2994755
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/fontes.json",
+      "sha256": "320b1987f1ea36b139edd8f182330667cb762994bc63963228c06932be516bb6",
+      "bytes": 3794
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/relatorio.md",
+      "sha256": "c67910fdd12f863248f23701a9ad85f73a6db7bf6823b61ed1f108e6e803741c",
+      "bytes": 478
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/probabilidades.csv",
+      "sha256": "804a2147019b3a54b33a882d873bc34d16ccde241114df31c104d5512a7a49e1",
+      "bytes": 4345
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/entradas.json",
+      "sha256": "5a66778dda0e406d3b0159b497cb2938bf585bcf4aa794bf3a59548a602ba16e",
+      "bytes": 41950
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/historicos.json",
+      "sha256": "1f591507fb252fe023976ca988e7da4be95648c3cb9fcf38a89642f5fe3edccf",
+      "bytes": 2727864
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/raw/classificacao_6_offset_0000.json",
+      "sha256": "0d753d9459b716b62fbf25587b7560292403f6c9c3f32cb5e9d5a6eb1f6248d4",
+      "bytes": 9921
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r6-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/manifesto.json",
+      "sha256": "9660dadae0d48bb98e3dd833aee1c3a45b8e416a7a77c40dbce5fafdbd5b259c",
+      "bytes": 3019325
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/fontes.json",
+      "sha256": "bdcadfa7355a538175d7ec38812c2ff68f5a91b118c327404f124bb0f06dbdf5",
+      "bytes": 4348
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/relatorio.md",
+      "sha256": "d47c1430a8fd0c9902aab1e2ce6a155168e51a9df2817d308c2ff1f7afc5ba87",
+      "bytes": 481
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/probabilidades.csv",
+      "sha256": "7fca98bc751ef5993fdd0afa85415dbbb69898b7a2e621eabc91212ae2aff96a",
+      "bytes": 4473
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/entradas.json",
+      "sha256": "1c8fdcfccc762bfdef71a61b347c1425067655f2a4fd5df45e75e68f98564ec8",
+      "bytes": 42074
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/historicos.json",
+      "sha256": "a8fec97813fdf402e2af01d5a88e6f592b2378e00ef9b58d388d0790a5dd1292",
+      "bytes": 2750184
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/raw/classificacao_7_offset_0000.json",
+      "sha256": "b927c9b3bafc7631014802dad566502bb561f0d3dc00f9497f0b89d1e96cb4c6",
+      "bytes": 9950
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r7-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/manifesto.json",
+      "sha256": "c47c8df87fa9bbc15f5f7bf82774be1f42df4dc549a4cfacffeb39d18a64eab6",
+      "bytes": 3044816
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/fontes.json",
+      "sha256": "9a3d040d4be2f2a23c73e03cdb24471ac9ec79722f97aa5d06c1435ccbdb1b07",
+      "bytes": 4902
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/relatorio.md",
+      "sha256": "beaa911b9f168ba963f39574c8bd8a9c4821a3ff6333dc4bfc43af8006f0a8fc",
+      "bytes": 485
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/probabilidades.csv",
+      "sha256": "bd91c5bb985994a3d0779c8d050d57f4d597dd7ccb8d805789509a184139a4db",
+      "bytes": 4534
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/entradas.json",
+      "sha256": "736f19cfd390919ca19eda8b15930f4bb7551ed2dbd8ca628bb1c7aef71d2cca",
+      "bytes": 42131
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/historicos.json",
+      "sha256": "c5ac6c3e816f35d0f01c669bfc82a23a76fb6ab5d2088c9187b92d2118ea33da",
+      "bytes": 2773344
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/raw/classificacao_8_offset_0000.json",
+      "sha256": "d2c64a9a2f5e318e82a87696c2075e80ec8cb6bc32e716f309d8f733fe00f209",
+      "bytes": 9931
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r8-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/manifesto.json",
+      "sha256": "e7a79348ae69fc5f80839d3d108ba1f3f732fe2de376ae6a82d04e98487dd5c6",
+      "bytes": 3068997
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/fontes.json",
+      "sha256": "f3f5c7efed228dfd1eae7d7514212b2b18eafff95aaf14c9d9e101b255d43208",
+      "bytes": 5456
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/relatorio.md",
+      "sha256": "6dce23110b8e797173b7385bb0b823df219dcc0b9bbe737fe9aa7f3aa0a03f19",
+      "bytes": 483
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/probabilidades.csv",
+      "sha256": "00c6d8a7f102dfbd833f8c4db7310274f8d65093e64b6ef3bda36e33f74ec219",
+      "bytes": 4470
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/entradas.json",
+      "sha256": "917a29bc027e301b98801f9a4d5bde53409e98193d43668faa2440ba367ff592",
+      "bytes": 42065
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/historicos.json",
+      "sha256": "abb0a7c47d137fa500c65ed0ede2458a4a64593f245b65bccf55f202018cf684",
+      "bytes": 2795308
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/cobertura.json",
+      "sha256": "b8cb7e1f742e7fce00c04a96b186984af53c54001b6620d777f8bed98bfbde1c",
+      "bytes": 94
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/raw/resultados_7_offset_0000.json",
+      "sha256": "b109d06a18ce974a4a5c041951ebebe6bd5ade37d11495aaa74185650f76e607",
+      "bytes": 12996
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/raw/resultados_3_offset_0000.json",
+      "sha256": "2851253f571e453fed5fbc85c0b1c31df8427972438eb46165e32dc398ecd1aa",
+      "bytes": 13161
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/raw/resultados_8_offset_0000.json",
+      "sha256": "bc199c5a9cb2a2eb8a3411133b6a04c8fb6248f03722e1eb77bce85f5288c23b",
+      "bytes": 12971
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/raw/resultados_6_offset_0000.json",
+      "sha256": "ff00d2cf93c775c0c92bfbe0a0db6d563767b9cd47e813fad4eafe66de7e27f6",
+      "bytes": 12886
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/raw/resultados_2_offset_0000.json",
+      "sha256": "063cefbd1ee60f5c85bf2ff2abde072f2df49eeaa6931162417812ea301774d4",
+      "bytes": 12691
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/raw/classificacao_9_offset_0000.json",
+      "sha256": "2a8df6fabb6de06a94110c736cce8addde1ebe27437a6077c8a7f13e20ca46ef",
+      "bytes": 9937
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/raw/resultados_5_offset_0000.json",
+      "sha256": "9cfd5a9078a3c6af7d95daa2f561a7ade6f01992fa109773de812af69b2295f6",
+      "bytes": 12898
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/raw/resultados_1_offset_0000.json",
+      "sha256": "5633e5f50de5ed38b1e3d1b757e3c9b7d6e1327a40b2db1ade1e837b049ecef1",
+      "bytes": 12845
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/raw/resultados_4_offset_0000.json",
+      "sha256": "ef7c159114513a28e46ea1e2cfe3ba65b8624d35d40f04ee8f28a9924befeeb1",
+      "bytes": 13058
+    },
+    {
+      "path": "reports/operacao_2026/emissoes/ensaio-retro-r9-20261024T141514Z/raw/calendario_offset_0000.json",
+      "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+      "bytes": 14289
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/jolpica-q-vazia.json",
+      "sha256": "01bed0e2a0197da66664487070c30a92eaeda369da04d1bc1969934ebf3c33a2",
+      "bytes": 189
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/classificacao_conferida.json",
+      "sha256": "c5b3c98522a5aea622155294cd4d749f9b1e5444f7ff4f05433244bbd4c73abe",
+      "bytes": 8629
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/fia-doc43-table.png",
+      "sha256": "cc105f94954bc9419442a56df861d92e9619e6a0d201d9105b3f2e36d2a11489",
+      "bytes": 445031
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/inventario.json",
+      "sha256": "68e301249c60c73649601111037aaf9446f6a65ad8e4d75a5c37d05739260d70",
+      "bytes": 6547
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/f1-qualifying-table.json",
+      "sha256": "e683ac66c63902735faf34b3cc8952d4eba2797e9e42958a70ebf77332af0a7f",
+      "bytes": 3475
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/livetiming-index-2026.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/openf1-austin-q-drivers.json",
+      "sha256": "575aca9f077c22c9a197512aa19c51f239806fbf694086b7272ae6701c1bc753",
+      "bytes": 9166
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/openf1-austin-q-session_result.json",
+      "sha256": "db3a7c1d52cc9f0b7b966f540e0a6538849c770ffee4ce54895c9c1616bad725",
+      "bytes": 4303
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/f1-qualifying.html",
+      "sha256": "f0905780812d471191403015d9632c401b287c9e062399baab6f67dacdfa4be1",
+      "bytes": 447785
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/fia-doc43-final-qualifying.meta.json",
+      "sha256": "2b9ee01da7d37f6ad8918f4f2e6e70106a852bf9f95b842d75d8cd2909d978e3",
+      "bytes": 762
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/livetiming-index-2026.json.meta.json",
+      "sha256": "01ddc0d51a356aa8e3c467c38fe114c1e9674e392e9bb5adece6377f44598a66",
+      "bytes": 396
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/openf1-austin-q-sessions.json",
+      "sha256": "f31f13abd56e26503ba9a968ac87d93d880a7107393a234c013b77672adb8ac7",
+      "bytes": 1127
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/openf1-austin-q-race_control.meta.json",
+      "sha256": "69f60eff53cf6e113e08f6881c946f634a76a6bae43a2d8f9b86269d1896dabe",
+      "bytes": 393
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/openf1-austin-q-sessions.meta.json",
+      "sha256": "940f08da0784434bd0bd10bc80fea9dd504347bacde41faa35dbde035a9c3685",
+      "bytes": 467
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/openf1-austin-q-race_control.json",
+      "sha256": "d6b3da005e08ea1fe4c397716262539baff179e8a90d913b9b8abc7ba54835be",
+      "bytes": 10664
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/jolpica-q-vazia.meta.json",
+      "sha256": "5973bccad906e981fb5e95ee2e5406aa62c6afc70c80acb0aba0c3d356395c20",
+      "bytes": 494
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/openf1-austin-q-session_result.meta.json",
+      "sha256": "dc16458235420f78e5a5c85e429a3d1a75ad1e4b1e85e733bce9b36d83085253",
+      "bytes": 399
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/fia-doc43-final-qualifying.pdf",
+      "sha256": "8b57dc5ac451ed6421a99dcbf1eb2084748231e8b4e2ed435c56a2a56ffa29c4",
+      "bytes": 564712
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/f1-qualifying.html.meta.json",
+      "sha256": "7d38b6494d4214dfbea1f2a27304c30b6daf862d56f982821a7ca0fee6bea7fd",
+      "bytes": 437
+    },
+    {
+      "path": "data/operacao_2026/fontes_alternativas/austin-q-20261025T052624Z/openf1-austin-q-drivers.meta.json",
+      "sha256": "47b3ffa0382a18eb619ed0d5314b55dc5ad1e77da9aa2259c1ef01246d4cfb6e",
+      "bytes": 378
+    }
+  ]
+}

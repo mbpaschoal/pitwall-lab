@@ -2,6 +2,7 @@
 from copy import deepcopy
 from datetime import datetime, timedelta, timezone
 import json
+import io
 from pathlib import Path
 import tempfile
 import unittest
@@ -14,6 +15,31 @@ CONFIG = ROOT/'operacao2026/eventos/mexico2026.json'
 
 
 class CloudTests(unittest.TestCase):
+    def test_real_discovery_client_preserves_first_response_in_a_new_directory(self):
+        payload=json.dumps(dict(MRData=dict(offset='0',total='0',RaceTable=dict(season='2026',Races=[])))).encode()
+        class Response(io.BytesIO):
+            status=200
+            def geturl(self):return 'https://api.jolpi.ca/ergast/f1/2026/?limit=100&offset=0'
+        def factory(directory,interval):return cloud.CaptureClient(directory,interval,opener=lambda *a,**kw:Response(payload))
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.assertIsNone(cloud.discover(root,datetime(2026,11,3,tzinfo=timezone.utc),factory))
+            raws=list((root/cloud.STATE/'descoberta').rglob('calendar.json'))
+            self.assertEqual(len(raws),1);self.assertEqual(raws[0].read_bytes(),payload)
+            self.assertTrue(raws[0].with_name('coleta_online.json').exists())
+
+    def test_blocked_forecast_does_not_block_valid_descriptive_publication(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);(root/'operacao2026').mkdir()
+            (root/'frontend_assets').mkdir()
+            (root/'operacao2026/forecast_policy.json').write_text('{}')
+            with patch.object(cloud,'discover',return_value=CONFIG),patch.object(weekend,'collect',return_value=self.state()), \
+                 patch('operacao2026.post_qualifying.prepare',side_effect=ValueError('Prior result unavailable')):
+                result=cloud.collect(root,datetime(2026,11,1,23,31,tzinfo=timezone.utc))
+            self.assertTrue(result['changed'])
+            self.assertEqual(result['forecast']['status'],'blocked')
+            self.assertEqual(json.loads((root/cloud.PUBLIC).read_text())['rodada'],19)
+
     def test_free_access_waits_through_the_live_window_without_any_collection(self):
         event=weekend.load_event(CONFIG)
         race=next(s for s in event['sessions'] if s['session_name']=='Race')

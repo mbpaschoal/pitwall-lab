@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://media.formula1.com/image/upload/c_fit,h_1408/q_auto/v1740000001/common/f1/2026/track/2026trackinterlagosdetailed.webp",
+    "url_real": "https://media.formula1.com/image/upload/c_fit,h_1408/q_auto/v1740000001/common/f1/2026/track/2026trackinterlagosdetailed.webp",
+    "status": 200,
+    "sha256": "d9f977eb104b3b230def25fac3aba1b8210804b715bedfaebb1255e568ea7e5f",
+    "obtido_em_utc": "2026-11-03T21:10:44.281441+00:00",
+    "arquivo": "interlagos-2026.webp",
+    "bytes": 242934
+  },
+  {
+    "url": "https://api.open-meteo.com/v1/elevation?latitude=-23.7036&longitude=-46.6997",
+    "url_real": "https://api.open-meteo.com/v1/elevation?latitude=-23.7036&longitude=-46.6997",
+    "status": 200,
+    "sha256": "2c58f05e5c73815c7817a3ad35e76fbc3989f5283a4bcf4e6aaedab15e1a20da",
+    "obtido_em_utc": "2026-11-03T21:10:53.317331+00:00",
+    "arquivo": "interlagos-elevation.json",
+    "bytes": 21
+  }
+]

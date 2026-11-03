@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-11-03T21:30:54.711063+00:00",
+  "forecast": {
+    "status": "waiting_for_observed_qualifying"
+  },
+  "upcoming": {
+    "status": "ready",
+    "horizon_days": 7,
+    "verified_events": 1,
+    "new_acquisition": false
+  },
+  "frozen_model_hashes": {
+    "modelo": "16718ea5c4a7f662e72f09d38b073e545df1bba5c64c87b2cc1a0973ad9116e3",
+    "metadados": "77d24dc765d773e49b717b79844dd4678a91087dbbc091e3e9cb184215ea9cc6",
+    "esquema": "1b14e532cd3001ad6b38442cab4a14e52e63208fbe37bec77d8b464dfb98efdd"
+  },
+  "no_inference": true,
+  "no_collection": true
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "arquivo": "raw/calendario_offset_0000.json",
+    "endpoint": "calendario",
+    "obtido_em_utc": "2026-10-24T06:40:12.734643Z",
+    "origem": "rede",
+    "parametros": {
+      "limit": 100,
+      "offset": 0
+    },
+    "sha256": "e76df544e63a1e00348adb13daa291db205cfcc5bbdb8f517951e2b6b371ef27",
+    "status": 200,
+    "url_real": "https://api.jolpi.ca/ergast/f1/2026/?limit=100&offset=0",
+    "url_solicitada": "https://api.jolpi.ca/ergast/f1/2026/?limit=100&offset=0"
+  },
+  {
+    "arquivo": "raw/classificacao_1_offset_0000.json",
+    "endpoint": "classificacao",
+    "obtido_em_utc": "2026-10-24T06:40:20.828691Z",
+    "origem": "rede",
+    "parametros": {
+      "limit": 100,
+      "offset": 0
+    },
+    "rodada": "1",
+    "sha256": "2fc2f98a5076530f32d934bca814438f274e79a1d1c687c0f3cdcd909f66c24e",
+    "status": 200,
+    "url_real": "https://api.jolpi.ca/ergast/f1/2026/1/qualifying/?limit=100&offset=0",
+    "url_solicitada": "https://api.jolpi.ca/ergast/f1/2026/1/qualifying/?limit=100&offset=0"
+  }
+]

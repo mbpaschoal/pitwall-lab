@@ -200,9 +200,9 @@ def _evidence(asset, rows, key):
         return
     st.dataframe(frame, hide_index=True, width="stretch", column_config={
         "Corrida": st.column_config.LinkColumn(translate("Corrida"), display_text=translate("Abrir GP")),
-        "Fonte do circuito": st.column_config.LinkColumn(translate("Fonte do circuito"), display_text="FIA")})
+        "Fonte do circuito": st.column_config.LinkColumn(translate("Fonte do circuito"), display_text=translate("Fonte"))})
     st.download_button("Baixar evidências (CSV)", dataframe(frame).to_csv(index=False).encode("utf-8-sig"),
-                       file_name="pitwall-pilotos-{}.csv".format(key), mime="text/csv", key="csv_" + key)
+                       file_name="pitwall-pilotos-{}.csv".format(key), mime="text/csv", key="csv_" + key, on_click="ignore")
 
 
 def _overview(asset, years, metric, minimum):
@@ -618,4 +618,4 @@ def _share(asset, years, metric, minimum, view):
         st.caption("O link guarda período, métrica, condição e mínimo. O cartão resume resultados históricos no período selecionado.")
         svg = card_svg(title, ", ".join(map(str, years)) + " · " + coverage_label(asset), facts,
             "OpenF1 · Jolpica-F1 · Open-Meteo · pitwall-lab.streamlit.app", language() == "en")
-        st.download_button("Baixar cartão (SVG)", svg, file_name="pitwall-comparacao.svg", mime="image/svg+xml", key="share_svg")
+        st.download_button("Baixar cartão (SVG)", svg, file_name="pitwall-comparacao.svg", mime="image/svg+xml", key="share_svg", on_click="ignore")

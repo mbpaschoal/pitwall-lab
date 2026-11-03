@@ -1,0 +1,7 @@
+{
+  "schema": "pitwall-automatic-forecast-policy-v1",
+  "events": [[2026, 20, "interlagos"]],
+  "max_attempts": 4,
+  "retry_hours": 2,
+  "publication_margin_minutes": 60
+}

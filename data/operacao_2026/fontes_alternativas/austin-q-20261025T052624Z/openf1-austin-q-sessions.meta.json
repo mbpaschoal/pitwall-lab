@@ -1,0 +1,8 @@
+{
+  "url_solicitada": "https://api.openf1.org/v1/sessions?year=2026&country_name=United+States&session_name=Qualifying",
+  "url_real": "https://api.openf1.org/v1/sessions?year=2026&country_name=United+States&session_name=Qualifying",
+  "status": 200,
+  "obtido_em_utc": "2026-10-25T05:25:12.842688Z",
+  "sha256": "f31f13abd56e26503ba9a968ac87d93d880a7107393a234c013b77672adb8ac7",
+  "raw": "/private/tmp/pitwall-fontes-austin-20261025/openf1-austin-q-sessions.json"
+}

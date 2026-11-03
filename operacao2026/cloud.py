@@ -1,4 +1,4 @@
-"""Hosted collection and publication preparation; never trains or emits forecasts.
+"""Hosted collection and gated publication preparation; never trains models.
 
 GitHub Actions supplies persistence, tests and publication. No personal token or
 paid API is needed. A missing cache causes a new capture, never backdating.
@@ -8,6 +8,7 @@ from datetime import datetime, timedelta, timezone
 import json
 from pathlib import Path
 import re
+import subprocess
 import tarfile
 
 from operacao2026 import weekend
@@ -88,6 +89,7 @@ def discover(root, now, client_factory=CaptureClient):
         return None
     with _lock(root / 'data/operacao_2026/snapshots'):
         run = base / now.strftime('%Y%m%dT%H%M%S%fZ')
+        run.mkdir(exist_ok=False)
         client = client_factory(run, 8)
         try:
             calendar = client.capture('jolpica', 'calendar', 'calendar.json', 'https://api.jolpi.ca/ergast/f1/2026/?limit=100&offset=0')
@@ -157,6 +159,7 @@ def merge_archive(previous, current):
 
 def collect(root=PROJECT_ROOT, now=None):
     root = Path(root)
+    fixed_clock = now is not None
     now = now or datetime.now(timezone.utc)
     delay = cooldown(root,now)
     if delay:
@@ -185,12 +188,25 @@ def collect(root=PROJECT_ROOT, now=None):
     if (root/'frontend_assets/pilotos_condicoes.json').is_file():
         from operacao2026.driver_archive import update
         drivers=update(root,state,event,now)
+    forecast = dict(status='not_configured')
+    if (root/'operacao2026/forecast_policy.json').is_file():
+        from operacao2026.post_qualifying import prepare
+        # Native responses are captured after collection began. Validate them
+        # against a fresh real clock, while retaining injectable test clocks.
+        forecast_now = now if fixed_clock else datetime.now(timezone.utc)
+        try:
+            forecast = prepare(root, path, state, forecast_now)
+        except (ValueError, RuntimeError, OSError, subprocess.CalledProcessError) as error:
+            forecast = dict(status='blocked',error_type=type(error).__name__)
+        attempts = root/STATE/'forecasts'/('{}-{}'.format(event['temporada'],event['circuito_id']))/'attempts.json'
+        history = json.loads(attempts.read_text()) if attempts.exists() else []
+        forecast['attempted_this_run'] = bool(history and instant(history[-1]['utc']) == forecast_now)
     existing = next((s for s in [old]+old.get('arquivo_eventos',[]) if s and identity(s)==identity(new)),{})
     native_changed=not existing or semantic(existing)!=semantic(new)
-    if not native_changed and not drivers['changed']:
-        return dict(changed=False,reason='no_substantive_change',pilotos=drivers)
+    if not native_changed and not drivers['changed'] and forecast['status'] != 'prepared':
+        return dict(changed=False,reason='no_substantive_change',pilotos=drivers,forecast=forecast)
     if native_changed:save_checkpoint(old_path,merge_archive(old,new))
-    return dict(changed=True,reason='new_data',evento=event['nome'],identidade=list(identity(new)),sessoes_completas=sum(s['estado']=='dados_recebidos' for s in state['sessoes']),sessoes=len(state['sessoes']),pilotos=drivers)
+    return dict(changed=True,reason='new_data',evento=event['nome'],identidade=list(identity(new)),sessoes_completas=sum(s['estado']=='dados_recebidos' for s in state['sessoes']),sessoes=len(state['sessoes']),pilotos=drivers,forecast=forecast)
 
 
 def prepare_release(result, root=PROJECT_ROOT, now=None):
@@ -209,6 +225,9 @@ def prepare_release(result, root=PROJECT_ROOT, now=None):
         'CHANGELOG.md':'Atualização automática de dados de {} pelo GitHub Actions. Sessões com dados recebidos: {}/{}. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.'.format(name,result['sessoes_completas'],result['sessoes']),
         'CHANGELOG.en.md':'Automatic {} data update through GitHub Actions. Sessions with received data: {}/{}. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.'.format(name,result['sessoes_completas'],result['sessoes']),
     }
+    if result.get('forecast',{}).get('status') == 'prepared':
+        notes['CHANGELOG.md'] += ' Nova emissão prospectiva v1 registrada após Q, com snapshot e fontes preservados; nenhuma emissão anterior foi substituída.'
+        notes['CHANGELOG.en.md'] += ' New prospective v1 emission registered after Q, with its snapshot and sources retained; no prior emission was replaced.'
     for filename,body in notes.items():
         path = root/filename
         text = path.read_text()

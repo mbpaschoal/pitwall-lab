@@ -1,0 +1,113 @@
+{
+  "schema": "pitwall-source-availability-evidence-v1",
+  "finalidade": "Verificação e preservação de fontes alternativas gratuitas para Austin Q 2026, antes da corrida. Não contém previsão.",
+  "fontes": [
+    {
+      "url_solicitada": "https://www.formula1.com/en/results/2026/races/1297/united-states/qualifying",
+      "url_real": "https://www.formula1.com/en/results/2026/races/1297/united-states/qualifying",
+      "status": 200,
+      "obtido_em_utc": "2026-10-25T05:17:17.881617Z",
+      "sha256": "f0905780812d471191403015d9632c401b287c9e062399baab6f67dacdfa4be1",
+      "bytes": 447785,
+      "arquivo": "f1-qualifying.html",
+      "recibo_original": "f1-qualifying.html.meta.json"
+    },
+    {
+      "url_solicitada": "https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_final_qualifying_classification.pdf",
+      "url_real": "https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_final_qualifying_classification.pdf",
+      "status": 200,
+      "obtido_em_utc": "2026-10-25T05:20:02.168769Z",
+      "sha256": "8b57dc5ac451ed6421a99dcbf1eb2084748231e8b4e2ed435c56a2a56ffa29c4",
+      "bytes": 564712,
+      "documento": "FIA Doc 43 Final Qualifying Classification",
+      "data_documento": "2026-10-24",
+      "hora_local_documento": "19:20",
+      "horario_real_encerramento": "nao extraido; horario do documento nao e fim observado da sessao",
+      "arquivo": "fia-doc43-final-qualifying.pdf",
+      "recibo_original": "fia-doc43-final-qualifying.meta.json"
+    },
+    {
+      "url_solicitada": "https://api.jolpi.ca/ergast/f1/2026/18/qualifying/?limit=100&offset=0",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2026/18/qualifying/?limit=100&offset=0",
+      "status": 200,
+      "obtido_em_utc": "2026-10-25T05:15:40.125030Z",
+      "sha256": "01bed0e2a0197da66664487070c30a92eaeda369da04d1bc1969934ebf3c33a2",
+      "total": "0",
+      "limit": "100",
+      "offset": "0",
+      "corridas": 0,
+      "qualificacoes": 0,
+      "arquivo": "jolpica-q-vazia.json",
+      "recibo_original": "jolpica-q-vazia.meta.json"
+    },
+    {
+      "url_solicitada": "https://livetiming.formula1.com/static/2026/Index.json",
+      "url_real": "https://livetiming.formula1.com/static/2026/Index.json",
+      "status": 401,
+      "obtido_em_utc": "2026-10-25T05:17:25.976279Z",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "arquivo": "livetiming-index-2026.json",
+      "recibo_original": "livetiming-index-2026.json.meta.json"
+    },
+    {
+      "url_solicitada": "https://api.openf1.org/v1/drivers?session_key=11392",
+      "url_real": "https://api.openf1.org/v1/drivers?session_key=11392",
+      "status": 200,
+      "obtido_em_utc": "2026-10-25T05:26:33.347494Z",
+      "sha256": "575aca9f077c22c9a197512aa19c51f239806fbf694086b7272ae6701c1bc753",
+      "arquivo": "openf1-austin-q-drivers.json",
+      "recibo_original": "openf1-austin-q-drivers.meta.json"
+    },
+    {
+      "url_solicitada": "https://api.openf1.org/v1/race_control?session_key=11392",
+      "url_real": "https://api.openf1.org/v1/race_control?session_key=11392",
+      "status": 200,
+      "obtido_em_utc": "2026-10-25T05:26:42.257240Z",
+      "sha256": "d6b3da005e08ea1fe4c397716262539baff179e8a90d913b9b8abc7ba54835be",
+      "arquivo": "openf1-austin-q-race_control.json",
+      "recibo_original": "openf1-austin-q-race_control.meta.json"
+    },
+    {
+      "url_solicitada": "https://api.openf1.org/v1/session_result?session_key=11392",
+      "url_real": "https://api.openf1.org/v1/session_result?session_key=11392",
+      "status": 200,
+      "obtido_em_utc": "2026-10-25T05:26:24.441302Z",
+      "sha256": "db3a7c1d52cc9f0b7b966f540e0a6538849c770ffee4ce54895c9c1616bad725",
+      "arquivo": "openf1-austin-q-session_result.json",
+      "recibo_original": "openf1-austin-q-session_result.meta.json"
+    },
+    {
+      "url_solicitada": "https://api.openf1.org/v1/sessions?year=2026&country_name=United+States&session_name=Qualifying",
+      "url_real": "https://api.openf1.org/v1/sessions?year=2026&country_name=United+States&session_name=Qualifying",
+      "status": 200,
+      "obtido_em_utc": "2026-10-25T05:25:12.842688Z",
+      "sha256": "f31f13abd56e26503ba9a968ac87d93d880a7107393a234c013b77672adb8ac7",
+      "arquivo": "openf1-austin-q-sessions.json",
+      "recibo_original": "openf1-austin-q-sessions.meta.json"
+    }
+  ],
+  "sem_coleta_resultado_corrida": true,
+  "sem_inferencia": true,
+  "sha256_arquivos": {
+    "classificacao_conferida.json": "c5b3c98522a5aea622155294cd4d749f9b1e5444f7ff4f05433244bbd4c73abe",
+    "f1-qualifying-table.json": "e683ac66c63902735faf34b3cc8952d4eba2797e9e42958a70ebf77332af0a7f",
+    "f1-qualifying.html": "f0905780812d471191403015d9632c401b287c9e062399baab6f67dacdfa4be1",
+    "f1-qualifying.html.meta.json": "7d38b6494d4214dfbea1f2a27304c30b6daf862d56f982821a7ca0fee6bea7fd",
+    "fia-doc43-final-qualifying.meta.json": "2b9ee01da7d37f6ad8918f4f2e6e70106a852bf9f95b842d75d8cd2909d978e3",
+    "fia-doc43-final-qualifying.pdf": "8b57dc5ac451ed6421a99dcbf1eb2084748231e8b4e2ed435c56a2a56ffa29c4",
+    "fia-doc43-table.png": "cc105f94954bc9419442a56df861d92e9619e6a0d201d9105b3f2e36d2a11489",
+    "jolpica-q-vazia.json": "01bed0e2a0197da66664487070c30a92eaeda369da04d1bc1969934ebf3c33a2",
+    "jolpica-q-vazia.meta.json": "5973bccad906e981fb5e95ee2e5406aa62c6afc70c80acb0aba0c3d356395c20",
+    "livetiming-index-2026.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "livetiming-index-2026.json.meta.json": "01ddc0d51a356aa8e3c467c38fe114c1e9674e392e9bb5adece6377f44598a66",
+    "openf1-austin-q-drivers.json": "575aca9f077c22c9a197512aa19c51f239806fbf694086b7272ae6701c1bc753",
+    "openf1-austin-q-drivers.meta.json": "47b3ffa0382a18eb619ed0d5314b55dc5ad1e77da9aa2259c1ef01246d4cfb6e",
+    "openf1-austin-q-race_control.json": "d6b3da005e08ea1fe4c397716262539baff179e8a90d913b9b8abc7ba54835be",
+    "openf1-austin-q-race_control.meta.json": "69f60eff53cf6e113e08f6881c946f634a76a6bae43a2d8f9b86269d1896dabe",
+    "openf1-austin-q-session_result.json": "db3a7c1d52cc9f0b7b966f540e0a6538849c770ffee4ce54895c9c1616bad725",
+    "openf1-austin-q-session_result.meta.json": "dc16458235420f78e5a5c85e429a3d1a75ad1e4b1e85e733bce9b36d83085253",
+    "openf1-austin-q-sessions.json": "f31f13abd56e26503ba9a968ac87d93d880a7107393a234c013b77672adb8ac7",
+    "openf1-austin-q-sessions.meta.json": "940f08da0784434bd0bd10bc80fea9dd504347bacde41faa35dbde035a9c3685"
+  }
+}

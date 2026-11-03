@@ -4,11 +4,20 @@ import json
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from operacao2026 import publication
 
 
 class PublicationTests(unittest.TestCase):
+    def test_forecast_cannot_publish_after_its_temporal_gate_closes(self):
+        self.result.write_text(json.dumps(dict(changed=True,forecast=dict(status='prepared'))))
+        before=self.git(self.worker,'rev-parse','HEAD')
+        with patch('operacao2026.post_qualifying.publication_guard',side_effect=ValueError('Forecast publication window closed')):
+            with self.assertRaisesRegex(ValueError,'window closed'):self.publish()
+        self.assertEqual(self.git(self.worker,'rev-parse','HEAD'),before)
+        self.assertEqual(self.gh,[])
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)

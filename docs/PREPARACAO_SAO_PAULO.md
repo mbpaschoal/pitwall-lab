@@ -2,6 +2,10 @@
 
 Português · [English](en/SAO_PAULO_PREPARATION.md)
 
+## Automação admitida em 0.8.26
+
+A [rotina hospedada](AUTOMACAO.md) passa a preparar e tentar uma única emissão prospectiva v1 após o encerramento observado de Q, somente para 2026/20/interlagos. Mantém todas as barreiras do produtor científico, limita tentativas e exige margem de uma hora antes da largada para publicar. O procedimento manual abaixo continua como diagnóstico e recuperação; não deve ser executado em paralelo com o coletor. Não existe previsão de São Paulo nesta entrega.
+
 ## O que está preparado
 
 São Paulo está cadastrado como **2026/20/interlagos**, meeting OpenF1 **1299**, com cinco sessões tradicionais. Calendário Jolpica, catálogo OpenF1 e [programação oficial da F1](https://www.formula1.com/en/racing/2026/brazil) foram reconferidos em 03/11/2026. A corrida começa em 08/11 às 14h locais / 17h UTC. TL1: sexta às 12h30; TL2: 16h; TL3: sábado às 11h30; classificação: 15h (todos UTC−3).
@@ -40,7 +44,7 @@ python -B operar_2026.py estado --snapshot "$SNAPSHOT" --temporada 2026 --rodada
 
 Pare se o estado não for `pronto`. Confira o histórico canônico final do México, as fontes/UTC das janelas v1 e a população efetiva de Q. O complemento descritivo não corrige automaticamente as entradas do modelo. A rota OpenF1 exige a configuração explícita de São Paulo (`--openf1-evento operacao2026/eventos/saopaulo2026.json`), inventário preservado e admissão pelo adaptador; o evento Austin do adaptador não deve ser reutilizado. GP Tempo não está admitido como substituto preditivo.
 
-Somente com os dados reais e o estado `pronto`, informe `--temporada 2026 --rodada 20 --circuito interlagos` ao comando `emitir`, com ID novo, fim observado, URL da evidência e corte UTC atual. Siga a [cadeia operacional](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/comandos_operacao_2026.md): validar a emissão, registrá-la, gerar o asset, conferir cartas/equipes dos favoritos reais, incrementar versão, exportar, publicar e comprovar a versão pública **antes da largada**. Se faltar dependência ou a janela fechar, mantenha a indisponibilidade explícita. Não há emissão agendada ou automática por este documento ou pelo verificador de preparação.
+Somente com os dados reais e o estado `pronto`, informe `--temporada 2026 --rodada 20 --circuito interlagos` ao comando `emitir`, com ID novo, fim observado, URL da evidência e corte UTC atual. Siga a [cadeia operacional](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/comandos_operacao_2026.md): validar a emissão, registrá-la, gerar o asset, conferir cartas/equipes dos favoritos reais, incrementar versão, exportar, publicar e comprovar a versão pública **antes da largada**. Se faltar dependência ou a janela fechar, mantenha a indisponibilidade explícita. O verificador offline não emite previsões; a rotina hospedada é separada e segue a política explícita.
 
 ## Destaque de versão
 

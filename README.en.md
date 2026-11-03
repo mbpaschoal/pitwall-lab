@@ -19,6 +19,8 @@ Collection is now scheduled through GitHub Actions, independent of the personal 
 
 The interface uses **Fan Journey**: bottom navigation, GP context at the top, a prominent circuit view and optional cards for exploring recorded probabilities. [Usage and accessibility](docs/en/FAN_JOURNEY.md).
 
+São Paulo now has a hosted post-Q preparation and emission routine with temporal gates and bounded attempts. [Automation inventory and review limits](docs/en/AUTOMATION.md).
+
 ## The product today
 
 - **Drivers:** condition leaders, profiles, shared-race duels, a browser-local favourite and shareable cards, with explicit sample sizes and ties. [Data audit](reports/pilotos_condicoes_20261029/README.en.md).

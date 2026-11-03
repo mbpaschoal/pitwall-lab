@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.8.26 — 2026-11-03
+
+Post-qualifying automation for São Paulo: a new snapshot, frozen-v1 producer validation, a single emission, actual-team artworks and publication at least one hour before race start. Spaced and bounded attempts, byte-identical recovery and an alert that does not block descriptive data. Official 2026 F1 circuit references admitted for Interlagos, Las Vegas, Lusail and Yas Marina; point elevation from Open-Meteo. CSV/SVG downloads without rerunning the app, with real file, language and no-rerun tests in PT/EN on desktop and mobile. Bilingual automation inventory and limits. No future forecast was emitted in this delivery; model and existing emissions preserved. Original evidence for 19 historical emissions is now complete in the repository: 344 missing files added without changing bytes, UTCs or probabilities; CI now validates the complete registry. Calendar discovery now preserves its first capture.
+
 ## 0.8.25 — 2026-11-03
 
 - Consolidates Mexico in Drivers: 67 GPs and 1,362 starts, quality-gated scheduled updates with monitored recovery, compatible portraits and preserved v1 probabilities. Corrections 0.8.22–0.8.24 remain recorded.

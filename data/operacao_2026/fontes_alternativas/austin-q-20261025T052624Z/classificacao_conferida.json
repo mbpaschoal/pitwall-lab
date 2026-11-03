@@ -1,0 +1,346 @@
+{
+  "schema": "pitwall-austin-q-source-evidence-v1",
+  "fonte": "OpenF1",
+  "sessao": {
+    "session_key": 11392,
+    "session_type": "Qualifying",
+    "session_name": "Qualifying",
+    "date_start": "2026-10-24T21:00:00+00:00",
+    "date_end": "2026-10-24T22:00:00+00:00",
+    "meeting_key": 1297,
+    "circuit_key": 9,
+    "circuit_short_name": "Austin",
+    "country_key": 19,
+    "country_code": "USA",
+    "country_name": "United States",
+    "location": "Austin",
+    "gmt_offset": "-05:00:00",
+    "year": 2026,
+    "is_cancelled": false
+  },
+  "encerramento_q3_reportado": {
+    "meeting_key": 1297,
+    "session_key": 11392,
+    "date": "2026-10-24T22:00:00.097000+00:00",
+    "driver_number": null,
+    "lap_number": null,
+    "category": "SessionStatus",
+    "flag": null,
+    "scope": null,
+    "sector": null,
+    "qualifying_phase": 3,
+    "message": "SESSION FINISHED"
+  },
+  "corroboracao": "22/22 posições e números conferem com tabela oficial Formula1.com; FIA Doc 43 inspecionado visualmente",
+  "linhas": [
+    {
+      "posicao_classificacao": 1,
+      "numero_carro": 12,
+      "piloto_fonte": "Kimi ANTONELLI",
+      "primeiro_nome_fonte": "Kimi",
+      "sobrenome_fonte": "Antonelli",
+      "sigla": "ANT",
+      "equipe_fonte": "Mercedes",
+      "tempos_qualificacao_segundos": [
+        95.39,
+        94.278,
+        94.035
+      ]
+    },
+    {
+      "posicao_classificacao": 2,
+      "numero_carro": 3,
+      "piloto_fonte": "Max VERSTAPPEN",
+      "primeiro_nome_fonte": "Max",
+      "sobrenome_fonte": "Verstappen",
+      "sigla": "VER",
+      "equipe_fonte": "Red Bull Racing",
+      "tempos_qualificacao_segundos": [
+        95.215,
+        94.471,
+        94.214
+      ]
+    },
+    {
+      "posicao_classificacao": 3,
+      "numero_carro": 6,
+      "piloto_fonte": "Isack HADJAR",
+      "primeiro_nome_fonte": "Isack",
+      "sobrenome_fonte": "Hadjar",
+      "sigla": "HAD",
+      "equipe_fonte": "Red Bull Racing",
+      "tempos_qualificacao_segundos": [
+        95.286,
+        94.887,
+        94.25
+      ]
+    },
+    {
+      "posicao_classificacao": 4,
+      "numero_carro": 16,
+      "piloto_fonte": "Charles LECLERC",
+      "primeiro_nome_fonte": "Charles",
+      "sobrenome_fonte": "Leclerc",
+      "sigla": "LEC",
+      "equipe_fonte": "Ferrari",
+      "tempos_qualificacao_segundos": [
+        95.2,
+        94.198,
+        94.267
+      ]
+    },
+    {
+      "posicao_classificacao": 5,
+      "numero_carro": 44,
+      "piloto_fonte": "Lewis HAMILTON",
+      "primeiro_nome_fonte": "Lewis",
+      "sobrenome_fonte": "Hamilton",
+      "sigla": "HAM",
+      "equipe_fonte": "Ferrari",
+      "tempos_qualificacao_segundos": [
+        95.355,
+        94.833,
+        94.311
+      ]
+    },
+    {
+      "posicao_classificacao": 6,
+      "numero_carro": 63,
+      "piloto_fonte": "George RUSSELL",
+      "primeiro_nome_fonte": "George",
+      "sobrenome_fonte": "Russell",
+      "sigla": "RUS",
+      "equipe_fonte": "Mercedes",
+      "tempos_qualificacao_segundos": [
+        95.73,
+        94.305,
+        94.476
+      ]
+    },
+    {
+      "posicao_classificacao": 7,
+      "numero_carro": 81,
+      "piloto_fonte": "Oscar PIASTRI",
+      "primeiro_nome_fonte": "Oscar",
+      "sobrenome_fonte": "Piastri",
+      "sigla": "PIA",
+      "equipe_fonte": "McLaren",
+      "tempos_qualificacao_segundos": [
+        95.842,
+        94.818,
+        94.803
+      ]
+    },
+    {
+      "posicao_classificacao": 8,
+      "numero_carro": 1,
+      "piloto_fonte": "Lando NORRIS",
+      "primeiro_nome_fonte": "Lando",
+      "sobrenome_fonte": "Norris",
+      "sigla": "NOR",
+      "equipe_fonte": "McLaren",
+      "tempos_qualificacao_segundos": [
+        95.029,
+        94.539,
+        95.049
+      ]
+    },
+    {
+      "posicao_classificacao": 9,
+      "numero_carro": 41,
+      "piloto_fonte": "Arvid LINDBLAD",
+      "primeiro_nome_fonte": "Arvid",
+      "sobrenome_fonte": "Lindblad",
+      "sigla": "LIN",
+      "equipe_fonte": "Racing Bulls",
+      "tempos_qualificacao_segundos": [
+        95.755,
+        94.95,
+        96.049
+      ]
+    },
+    {
+      "posicao_classificacao": 10,
+      "numero_carro": 30,
+      "piloto_fonte": "Liam LAWSON",
+      "primeiro_nome_fonte": "Liam",
+      "sobrenome_fonte": "Lawson",
+      "sigla": "LAW",
+      "equipe_fonte": "Racing Bulls",
+      "tempos_qualificacao_segundos": [
+        95.662,
+        95.058,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 11,
+      "numero_carro": 10,
+      "piloto_fonte": "Pierre GASLY",
+      "primeiro_nome_fonte": "Pierre",
+      "sobrenome_fonte": "Gasly",
+      "sigla": "GAS",
+      "equipe_fonte": "Alpine",
+      "tempos_qualificacao_segundos": [
+        95.969,
+        95.08,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 12,
+      "numero_carro": 27,
+      "piloto_fonte": "Nico HULKENBERG",
+      "primeiro_nome_fonte": "Nico",
+      "sobrenome_fonte": "Hulkenberg",
+      "sigla": "HUL",
+      "equipe_fonte": "Audi",
+      "tempos_qualificacao_segundos": [
+        95.704,
+        95.158,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 13,
+      "numero_carro": 5,
+      "piloto_fonte": "Gabriel BORTOLETO",
+      "primeiro_nome_fonte": "Gabriel",
+      "sobrenome_fonte": "Bortoleto",
+      "sigla": "BOR",
+      "equipe_fonte": "Audi",
+      "tempos_qualificacao_segundos": [
+        95.632,
+        95.691,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 14,
+      "numero_carro": 43,
+      "piloto_fonte": "Franco COLAPINTO",
+      "primeiro_nome_fonte": "Franco",
+      "sobrenome_fonte": "Colapinto",
+      "sigla": "COL",
+      "equipe_fonte": "Alpine",
+      "tempos_qualificacao_segundos": [
+        95.898,
+        95.722,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 15,
+      "numero_carro": 14,
+      "piloto_fonte": "Fernando ALONSO",
+      "primeiro_nome_fonte": "Fernando",
+      "sobrenome_fonte": "Alonso",
+      "sigla": "ALO",
+      "equipe_fonte": "Aston Martin",
+      "tempos_qualificacao_segundos": [
+        96.24,
+        95.818,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 16,
+      "numero_carro": 87,
+      "piloto_fonte": "Oliver BEARMAN",
+      "primeiro_nome_fonte": "Oliver",
+      "sobrenome_fonte": "Bearman",
+      "sigla": "BEA",
+      "equipe_fonte": "Haas F1 Team",
+      "tempos_qualificacao_segundos": [
+        96.175,
+        96.031,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 17,
+      "numero_carro": 31,
+      "piloto_fonte": "Esteban OCON",
+      "primeiro_nome_fonte": "Esteban",
+      "sobrenome_fonte": "Ocon",
+      "sigla": "OCO",
+      "equipe_fonte": "Haas F1 Team",
+      "tempos_qualificacao_segundos": [
+        96.531,
+        null,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 18,
+      "numero_carro": 18,
+      "piloto_fonte": "Lance STROLL",
+      "primeiro_nome_fonte": "Lance",
+      "sobrenome_fonte": "Stroll",
+      "sigla": "STR",
+      "equipe_fonte": "Aston Martin",
+      "tempos_qualificacao_segundos": [
+        96.677,
+        null,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 19,
+      "numero_carro": 55,
+      "piloto_fonte": "Carlos SAINZ",
+      "primeiro_nome_fonte": "Carlos",
+      "sobrenome_fonte": "Sainz",
+      "sigla": "SAI",
+      "equipe_fonte": "Williams",
+      "tempos_qualificacao_segundos": [
+        96.77,
+        null,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 20,
+      "numero_carro": 23,
+      "piloto_fonte": "Alexander ALBON",
+      "primeiro_nome_fonte": "Alexander",
+      "sobrenome_fonte": "Albon",
+      "sigla": "ALB",
+      "equipe_fonte": "Williams",
+      "tempos_qualificacao_segundos": [
+        96.967,
+        null,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 21,
+      "numero_carro": 11,
+      "piloto_fonte": "Sergio PEREZ",
+      "primeiro_nome_fonte": "Sergio",
+      "sobrenome_fonte": "Perez",
+      "sigla": "PER",
+      "equipe_fonte": "Cadillac",
+      "tempos_qualificacao_segundos": [
+        97.433,
+        null,
+        null
+      ]
+    },
+    {
+      "posicao_classificacao": 22,
+      "numero_carro": 77,
+      "piloto_fonte": "Valtteri BOTTAS",
+      "primeiro_nome_fonte": "Valtteri",
+      "sobrenome_fonte": "Bottas",
+      "sigla": "BOT",
+      "equipe_fonte": "Cadillac",
+      "tempos_qualificacao_segundos": [
+        97.523,
+        null,
+        null
+      ]
+    }
+  ],
+  "limite": "Evidência de fonte; ainda não é snapshot operacional admitido nem emissão de previsão. driverId/constructorId ainda devem ser mapeados e validados."
+}

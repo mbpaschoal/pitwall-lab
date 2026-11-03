@@ -17,11 +17,20 @@ const common=rows.filter(x=>x.started&&x.driver_id==='alonso'&&gps[x.race_id].te
 const comparable=common.filter(x=>x.position!==null&&!x.disqualified&&left.get(x.race_id).position!==null&&!left.get(x.race_id).disqualified).length;
 const source=JSON.parse(fs.readFileSync(path.join(root,'dashboard_assets/fan/sources.json'))).find(x=>x.driver_id==='ryo_hirakawa');
 const check=(ok,msg)=>{if(!ok)throw Error(msg);};fs.mkdirSync(output,{recursive:true});
+// BackMsg protobuf field 11 is rerun_script. Ignore heartbeat/ack traffic.
+function requestsRerun(payload){
+ const b=Buffer.isBuffer(payload)?payload:Buffer.from(payload);let i=0;
+ function uint(){let n=0,s=0,v;do{if(i>=b.length||s>49)throw Error('Invalid BackMsg');v=b[i++];n+=(v&127)*2**s;s+=7;}while(v&128);return n;}
+ while(i<b.length){const tag=uint(),field=Math.floor(tag/8),wire=tag%8;if(field===11)return true;
+  if(wire===0)uint();else if(wire===1)i+=8;else if(wire===2){const len=uint();i+=len;}else if(wire===5)i+=4;else return false;
+ }return false;
+}
 (async()=>{
  const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHANNEL?{channel:process.env.PLAYWRIGHT_CHANNEL}:{})}),cases=[];
  try{for(const mobile of [false,true])for(const lang of ['pt','en']){
   const context=await browser.newContext(mobile?{...devices['Pixel 7'],viewport:{width:390,height:844}}:{viewport:{width:1440,height:1100}});
-  const page=await context.newPage(),key=(mobile?'mobile':'desktop')+'-'+lang;let reloads=0;
+  const page=await context.newPage(),key=(mobile?'mobile':'desktop')+'-'+lang;let reloads=0,reruns=0;
+  page.on('websocket',ws=>{if(ws.url().includes('_stcore/stream'))ws.on('framesent',event=>{if(requestsRerun(event.payload))reruns++;});});
   try{
    async function open(params){
     await page.goto(base+'/?'+new URLSearchParams({tela:'Pilotos',temporada:'2026',gp:'19',lang,...params}),{waitUntil:'domcontentloaded',timeout:60000});
@@ -41,14 +50,20 @@ const check=(ok,msg)=>{if(!ok)throw Error(msg);};fs.mkdirSync(output,{recursive:
    await app.locator('.st-key-csv_max_verstappen').evaluate(e=>e.scrollIntoView({block:'center'}));
    const csvButton=app.locator('.st-key-csv_max_verstappen button');
    await csvButton.waitFor({state:'visible',timeout:45000});
-   const [csv]=await Promise.all([page.waitForEvent('download'),csvButton.click()]);const csvPath=path.join(output,key+'-max.csv');await csv.saveAs(csvPath);
+   const beforeCSV=reruns;
+   const [csv]=await Promise.all([page.waitForEvent('download'),mobile?csvButton.tap():csvButton.click()]);const csvPath=path.join(output,key+'-max.csv');await csv.saveAs(csvPath);
+   await page.waitForTimeout(700);check(reruns===beforeCSV,'CSV download reran the app');
    const raw=fs.readFileSync(csvPath,'utf8');check(raw.includes('Mexico')&&raw.includes('gp=19'),'Mexico missing from exported evidence');
    await app.getByText(lang==='pt'?'Compartilhar esta análise':'Share this analysis',{exact:true}).click();
    await app.locator('.st-key-share_svg').evaluate(e=>e.scrollIntoView({block:'center'}));
    const svgButton=app.locator('.st-key-share_svg button');
    await svgButton.waitFor({state:'visible',timeout:45000});
-   const [svg]=await Promise.all([page.waitForEvent('download'),svgButton.click()]);
-   const svgPath=path.join(output,key+'-card.svg');await svg.saveAs(svgPath);check(fs.readFileSync(svgPath,'utf8').includes(cutoff),'Stale shared cutoff');
+   const beforeSVG=reruns;
+   const [svg]=await Promise.all([page.waitForEvent('download'),mobile?svgButton.tap():svgButton.click()]);
+   const svgPath=path.join(output,key+'-card.svg');await svg.saveAs(svgPath);const shared=fs.readFileSync(svgPath,'utf8');check(shared.includes(cutoff),'Stale shared cutoff');
+   check(shared.includes(lang==='en'?'Starts':'Largadas'),'Shared SVG language changed');
+   await page.waitForTimeout(700);check(reruns===beforeSVG,'SVG download reran the app');
+   check((await app.locator('.fan-hero h1').innerText()).includes('Max Verstappen'),'Download changed selected driver');
    await page.screenshot({path:path.join(output,key+'-max.png')});
    app=await open({visao:'perfil',piloto:'ryo_hirakawa',anos:'2026'});
    check((await app.locator('.fan-hero h1').innerText()).includes('Hirakawa'),'Driver identity replaced');
@@ -64,7 +79,7 @@ const check=(ok,msg)=>{if(!ok)throw Error(msg);};fs.mkdirSync(output,{recursive:
    await denominator.waitFor({timeout:30000});
    check((await denominator.innerText()).includes(String(comparable)),'Wrong comparable-result denominator');
    const metrics=await app.locator('[data-testid="stMetric"]').allTextContents();
-   cases.push({lang,mobile,version,reloads,maxStarts,csv:true,svg:true,hirakawa_original_sha256:source.sha256,duel_metrics:metrics,status:'passed'});
+   cases.push({lang,mobile,version,reloads,maxStarts,csv:true,svg:true,download_reruns:0,svg_language:lang,hirakawa_original_sha256:source.sha256,duel_metrics:metrics,status:'passed'});
    fs.writeFileSync(path.join(output,'acceptance.json'),JSON.stringify({status:'passed',cases},null,2)+'\n');console.log(key+' passed');
   }catch(e){await page.screenshot({path:path.join(output,key+'-failure.png')});throw e;}finally{await context.close();}
  }}finally{await browser.close();}

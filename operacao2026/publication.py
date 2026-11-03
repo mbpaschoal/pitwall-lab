@@ -18,6 +18,7 @@ PUBLIC_PATHS = (
     'publicacao/templates/requirements.txt',
     'frontend_assets/operacao_fim_semana.json', 'distribuicao/pitwall-dashboard',
     'frontend_assets/pilotos_condicoes_operacao.json',
+    'frontend_assets/race_weekend.json', 'operacao2026/eventos/emissoes_registradas.json',
 )
 
 
@@ -65,6 +66,23 @@ def publish(root, result_path, zip_path, captures_path, *, attempt=0, run_id='',
     result = json.loads(result_path.read_text())
     if result.get('changed') is not True:
         raise ValueError('No substantive data change to publish')
+    forecast = result.get('forecast')
+    extra_paths = []
+    if forecast and forecast.get('status') == 'prepared':
+        from operacao2026.post_qualifying import publication_guard, relative_file
+        import hashlib
+        publication_guard(root, forecast)
+        declaration = forecast['declaration']
+        allowed = ('data/operacao_2026/snapshots/'+declaration['snapshot']+'/',
+                   declaration['diretorio']+'/', 'data/operacao_2026/fontes_alternativas/q-')
+        for name, digest in forecast['files'].items():
+            if not name.startswith(allowed):
+                raise ValueError('Unexpected forecast publication path')
+            if hashlib.sha256(relative_file(root, name).read_bytes()).hexdigest() != digest:
+                raise ValueError('Forecast artifact changed before publication')
+            extra_paths.append(name)
+        if not extra_paths:
+            raise ValueError('Forecast evidence inventory is empty')
     if run(root, ['git', 'diff', '--cached', '--name-only']):
         raise ValueError('Unexpected staged files before data publication')
     source = run(root, ['git', 'rev-parse', 'HEAD'])
@@ -85,11 +103,13 @@ def publish(root, result_path, zip_path, captures_path, *, attempt=0, run_id='',
     body.write_text('## Português\n\n' + notes('pt', root) + '\n\n## English\n\n' + notes('en', root))
     run(root, ['git', 'config', 'user.name', 'Pitwall Lab automation'])
     run(root, ['git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com'])
-    run(root, ['git', 'add', '--', *PUBLIC_PATHS])
+    run(root, ['git', 'add', '--', *PUBLIC_PATHS, *extra_paths])
     run(root, ['git', 'commit', '-m', 'data: atualização automática / automatic update v' + version])
     tag = 'v' + version
     run(root, ['git', 'tag', '-a', tag, '-m', 'Pitwall Lab ' + version + ' — automatic data update / atualização automática'])
     try:
+        if forecast and forecast.get('status') == 'prepared':
+            publication_guard(root, forecast)
         run(root, ['git', 'push', '--atomic', 'origin', 'HEAD:main', 'refs/tags/' + tag])
     except subprocess.CalledProcessError:
         latest = remote_head(root, run)
