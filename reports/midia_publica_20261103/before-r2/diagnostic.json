@@ -1,0 +1,72 @@
+{
+  "events": [
+    {
+      "type": "request",
+      "url": "https://pitwall-lab.streamlit.app/~/+/app/static/pitwall-media/method-9776d0597fe6-1200.webp",
+      "resource": "image",
+      "utc": "2026-11-03T23:24:07.652Z"
+    },
+    {
+      "type": "response",
+      "url": "https://pitwall-lab.streamlit.app/~/+/app/static/pitwall-media/method-9776d0597fe6-1200.webp",
+      "status": 200,
+      "content_type": "image/webp"
+    },
+    {
+      "type": "direct_get",
+      "url": "https://pitwall-lab.streamlit.app/~/+/app/static/pitwall-media/method-9776d0597fe6-1200.webp",
+      "status": 200,
+      "content_type": "image/webp",
+      "bytes": 125260,
+      "sha256": "199087ee240277ace9455e3183a49923138917b993305b68c9b652fcdc47f3f5"
+    },
+    {
+      "type": "direct_get",
+      "url": "https://pitwall-lab.streamlit.app/~/+/app/static/pitwall-media/method-9776d0597fe6-1200.webp",
+      "status": 200,
+      "content_type": "image/webp",
+      "bytes": 125260,
+      "sha256": "199087ee240277ace9455e3183a49923138917b993305b68c9b652fcdc47f3f5"
+    }
+  ],
+  "console": [
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Unrecognized feature: 'ambient-light-sensor'.",
+    "Unrecognized feature: 'battery'.",
+    "Unrecognized feature: 'document-domain'.",
+    "Unrecognized feature: 'layout-animations'.",
+    "Unrecognized feature: 'legacy-image-formats'.",
+    "Unrecognized feature: 'oversized-images'.",
+    "Unrecognized feature: 'vr'.",
+    "Unrecognized feature: 'wake-lock'.",
+    "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "image": {
+    "decoded": true,
+    "src": "https://pitwall-lab.streamlit.app/~/+/app/static/pitwall-media/method-9776d0597fe6-1200.webp",
+    "currentSrc": "https://pitwall-lab.streamlit.app/~/+/app/static/pitwall-media/method-9776d0597fe6-1200.webp",
+    "srcset": "app/static/pitwall-media/method-9776d0597fe6-1200.webp 1200w, app/static/pitwall-media/method-9776d0597fe6-2400.webp 2400w, app/static/pitwall-media/method-9776d0597fe6-3600.webp 3600w",
+    "complete": true,
+    "natural": [
+      526,
+      296
+    ],
+    "base": "https://pitwall-lab.streamlit.app/~/+/?tela=Metodologia&temporada=2026&gp=19&lang=pt",
+    "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Metodologia&temporada=2026&gp=19&lang=pt",
+    "loading": "auto",
+    "html": "<img class=\"fan-hero-image\" src=\"app/static/pitwall-media/method-9776d0597fe6-1200.webp\" srcset=\"app/static/pitwall-media/method-9776d0597fe6-1200.webp 1200w, app/static/pitwall-media/method-9776d0597fe6-2400.webp 2400w, app/static/pitwall-media/method-9776d0597fe6-3600.webp 3600w\" sizes=\"(max-width:600px) 135vw, (min-width:1300px) 1742px, 140vw\" alt=\"Andrea Kimi Antonelli no cockpit da Mercedes durante os testes do Bahrein em 26 de fevereiro de 2025. Fotografia histórica ilustrativa.\" decoding=\"async\" style=\"object-position: center 49%;\">",
+    "resources": [
+      {
+        "name": "https://pitwall-lab.streamlit.app/~/+/app/static/pitwall-media/method-9776d0597fe6-1200.webp",
+        "duration": 301.59999999403954,
+        "transfer": 125560
+      }
+    ],
+    "metas": []
+  },
+  "status": "observed",
+  "utc": "2026-11-03T23:24:09.120Z"
+}

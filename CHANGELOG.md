@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.8.28 — 2026-11-03
+
+Reforça a confirmação pública após uma atualização automática: quatro casos PT/EN em computador e celular, fotos realmente decodificadas, hashes das imagens, controles nativos, GP coletado e build do pacote. Falhas de carregamento têm uma repetição por caso, prazo total de seis minutos e evidências preservadas por 30 dias; divergências de identidade ou arquivo não viram aceite. Seis contraprovas de navegador entram no CI, sem retirar os 11 aceites existentes. A capa de Como funciona foi reconferida com a imagem documentada, sem trocar a foto ou alterar a identidade visual. Câmara continua sem ID nas consultas de preparação; suas três cartas permanecem aprovadas e preservadas. Modelo, fontes científicas e emissões anteriores intactos.
+
 ## 0.8.27 — 2026-11-03
 
 Preparação da estreia anunciada de Rafael Câmara em São Paulo. Uma revisão explícita confere a lista da classificação e impede emitir com Ocon ainda presente; o identificador canônico é preservado da fonte, sem presumir número ou herdar histórico. Cartas opcionais passam a gerar um relatório de cobertura, sem impedir uma previsão cientificamente válida. Foto oficial e três artes distintas nas cores da Haas ficam preparadas, fora do catálogo ativo enquanto o identificador estiver pendente. Modelo v1, entradas e emissões anteriores preservados.

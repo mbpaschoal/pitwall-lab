@@ -19,7 +19,7 @@ The main routine runs on GitHub Actions and does not need the personal computer 
 | Recover a concurrent publication | Restore identical emission bytes and reproject on current `main`; never recalculate probabilities or force-push. |
 | Version and publish data | Real changes only; PT/EN notes, package, tests, original sources and atomic push. |
 | Publish a forecast on time | Recheck before push with a minimum one-hour margin before race start. Preserve an unpublished emission if the window closes. |
-| Verify package, languages and navigation | Code/version CI runs both full browser suites (11 checks). Automatic data publication runs four focused browser checks plus package validation. |
+| Verify package, languages and navigation | Code/version CI runs both full browser suites (12 checks: the previous 11 plus the public-verifier rehearsal), and six counterexamples. Automatic data publication runs four focused browser checks plus package validation. |
 | CSV/SVG downloads | PT/EN desktop/mobile tests check file bytes, language and absence of an app rerun. |
 | Alert on failures or stale runs | One bilingual GitHub issue; unchanged conditions produce no comments. Healthy recovery closes the issue. |
 | Select `Latest` | Highest stable release with a complete, hashed ZIP, bounded by `main`'s version. |
@@ -46,3 +46,11 @@ Forecast failures do not block valid descriptive publication. Attempts retain di
 
 
 Public 0.8.26 verification completed English CSV/SVG downloads on emulated Android without app reruns. Other attempts failed during bootstrap, Streamlit-module loading or download completion. Those limits remain recorded; a fully passing public matrix is not claimed. [Receipts and attempts](../../reports/automacao_saopaulo_20261103/README.en.md).
+
+## Automatic served-deployment confirmation
+
+After publishing new data, the verifier opens four fresh contexts: PT/EN at 390/1440 px. It checks Races and How it works, the actually collected GP, ready controls, icon fonts, decoded photographs and approved original/variant hashes, plus the exact package build. A visible version alone is insufficient.
+
+Each case allows two attempts within a six-minute overall deadline. Integrity failures are not retried; bootstrap failures preserve both attempts. JSON and screenshots receive 30-day artifact retention even on failure. The workflow fails visibly and the existing collection monitor handles that failure. No extra collection, training or navigation-time inference is introduced. Public verification after a manual product release remains separate from local CI.
+
+[Verifier](../../tests/browser/verificar_publicacao.cjs), [counterexamples](../../tests/browser/test_verificar_publicacao.cjs), [review evidence](../../reports/midia_publica_20261103/README.en.md).

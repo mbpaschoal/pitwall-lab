@@ -1,0 +1,73 @@
+{
+  "version": "0.8.27",
+  "identity": [
+    2026,
+    19,
+    "rodriguez"
+  ],
+  "expected_build": "d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53",
+  "base": "http://127.0.0.1:8527",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-03T23:35:43.001Z",
+          "status": "failed",
+          "error": "locator.evaluate: Error: Language or native controls did not finish loading\n    at eval (eval at evaluate (:311:30), <anonymous>:8:10)\n    at async <anonymous>:337:30",
+          "category": "loading",
+          "network_failures": []
+        },
+        {
+          "attempt": 1,
+          "utc": "2026-11-03T23:36:15.077Z",
+          "status": "failed",
+          "error": "locator.evaluate: Error: Language or native controls did not finish loading\n    at eval (eval at evaluate (:311:30), <anonymous>:8:10)\n    at async <anonymous>:337:30",
+          "category": "loading",
+          "network_failures": []
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-03T23:36:47.192Z",
+          "status": "failed",
+          "error": "locator.evaluate: Error: Language or native controls did not finish loading\n    at eval (eval at evaluate (:311:30), <anonymous>:8:10)\n    at async <anonymous>:337:30",
+          "category": "loading",
+          "network_failures": []
+        },
+        {
+          "attempt": 1,
+          "utc": "2026-11-03T23:37:19.354Z",
+          "status": "failed",
+          "error": "locator.evaluate: Error: Language or native controls did not finish loading\n    at eval (eval at evaluate (:311:30), <anonymous>:8:10)\n    at async <anonymous>:337:30",
+          "category": "loading",
+          "network_failures": []
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-03T23:37:51.488Z",
+          "status": "failed",
+          "error": "locator.evaluate: Target page, context or browser has been closed",
+          "category": "loading",
+          "network_failures": []
+        }
+      ],
+      "status": "failed"
+    }
+  ]
+}

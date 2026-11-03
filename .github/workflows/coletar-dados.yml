@@ -160,7 +160,15 @@ jobs:
             --github-output "$GITHUB_OUTPUT"
       - name: Conferir versão pública / Verify public deployment
         if: steps.publication.outputs.published == 'true'
-        run: node tests/browser/verificar_publicacao.cjs "$(cat VERSION)" "$RUNNER_TEMP/collection.json"
+        timeout-minutes: 8
+        run: node tests/browser/verificar_publicacao.cjs "$(cat VERSION)" "$RUNNER_TEMP/collection.json" "$RUNNER_TEMP/public-deployment"
+      - name: Evidências públicas / Public evidence
+        if: always() && steps.publication.outputs.published == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-deployment-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 30
+          path: ${{ runner.temp }}/public-deployment
       - name: Registrar resultado / Record outcome
         if: always()
         run: |

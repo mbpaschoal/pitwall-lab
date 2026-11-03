@@ -1,0 +1,98 @@
+{
+  "version": "0.8.27",
+  "identity": [
+    2026,
+    20,
+    "interlagos"
+  ],
+  "expected_build": "d0b2abe139e1295b4dd8516558ef4d928bb4d7de9ea237766a03a8017b1f4a53",
+  "base": "https://pitwall-lab.streamlit.app",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-03T23:31:39.391Z",
+          "status": "failed",
+          "error": "locator.evaluate: Error: Language or native controls did not finish loading\n    at eval (eval at evaluate (:311:30), <anonymous>:8:10)\n    at async <anonymous>:337:30",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        },
+        {
+          "attempt": 1,
+          "utc": "2026-11-03T23:32:21.478Z",
+          "status": "failed",
+          "error": "locator.evaluate: Error: Language or native controls did not finish loading\n    at eval (eval at evaluate (:311:30), <anonymous>:8:10)\n    at async <anonymous>:337:30",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-03T23:33:18.736Z",
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.27', { exact: true }).first() to be visible\u001b[22m\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        },
+        {
+          "attempt": 1,
+          "utc": "2026-11-03T23:34:06.696Z",
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.27', { exact: true }).first() to be visible\u001b[22m\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-03T23:34:54.709Z",
+          "status": "failed",
+          "error": "locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.27', { exact: true }).first() to be visible\u001b[22m\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "failed"
+    }
+  ]
+}

@@ -19,7 +19,7 @@ A rotina principal fica no GitHub Actions, sem depender de o computador pessoal 
 | Recuperar publicação concorrente | Retoma os mesmos bytes da emissão e nova projeção em `main`; não recalcula probabilidades nem força push. |
 | Versionar e publicar dados | Nova versão só quando existe mudança real; notas PT/EN, pacote, testes, fontes e push atômico. |
 | Publicar previsão dentro do prazo | Reconfere antes do push; margem mínima de uma hora para a largada. Se a janela fechar, preserva a emissão sem publicá-la. |
-| Conferir pacote, idiomas e navegação | O CI de código/versão roda as duas suítes completas (11 aceites). A publicação automatizada de dados roda quatro aceites focais e as verificações do pacote. |
+| Conferir pacote, idiomas e navegação | O CI de código/versão roda as duas suítes completas (12 aceites: 11 anteriores e o ensaio do verificador público), além de seis contraprovas. A publicação automatizada de dados roda quatro aceites focais e as verificações do pacote. |
 | Downloads CSV e SVG | Testes PT/EN em computador e celular verificam bytes, idioma e ausência de reexecução da página. |
 | Alertar sobre falha ou atraso | Uma ocorrência PT/EN no GitHub; repetições não criam comentários. Recuperação saudável encerra a ocorrência. |
 | Escolher `Latest` | Maior versão estável com ZIP completo e hash, limitada à versão de `main`. |
@@ -46,3 +46,11 @@ Erros da previsão não impedem publicar dados descritivos válidos. Tentativas 
 
 
 Na conferência pública de 0.8.26, CSV e SVG em inglês foram baixados no Android emulado sem reexecução da página. Algumas outras entradas falharam ao carregar a hospedagem, módulos do Streamlit ou completar o download. Esses limites continuam registrados; não se declara a matriz pública inteira aprovada. [Recibos e tentativas](../reports/automacao_saopaulo_20261103/README.md).
+
+## Confirmação automática da versão pública
+
+Após publicar novos dados, o verificador abre quatro contextos novos: PT/EN em 390/1440 px. Confere Corridas e Como funciona, o GP efetivamente coletado, controles prontos, fontes de ícones, fotos decodificadas e SHA de originais/variantes admitidos, além do build do pacote. A versão visível sozinha não basta.
+
+Cada caso admite duas tentativas, com prazo total de seis minutos para o conjunto. Falhas por integridade não são repetidas; falhas de inicialização mantêm as duas tentativas. JSON e capturas ficam em artefato por 30 dias, inclusive quando a conferência falha. A falha aparece no workflow e é acompanhada pelo monitor existente da coleta. Isso não exige nova coleta, mudança do modelo ou navegação com inferência. A confirmação pública após uma release manual continua sendo uma etapa separada, não substituída pelo CI local.
+
+[Verificador](../tests/browser/verificar_publicacao.cjs), [contraprovas](../tests/browser/test_verificar_publicacao.cjs) e [evidências da revisão](../reports/midia_publica_20261103/README.md).

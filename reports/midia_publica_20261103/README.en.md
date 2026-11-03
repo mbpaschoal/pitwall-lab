@@ -1,0 +1,38 @@
+# Public image and deployment verification
+
+English · [Português](README.md)
+
+Created by: MBPaschoal
+Status: implementation validated locally; release pending
+Type: delivery evidence
+
+The diagnostic rechecked the How it works cover. The browser decoded the app-served WebP with the catalogued MIME, dimensions and SHA. Relative `app/static/` works inside the Streamlit iframe; the photograph and layout did not need replacement. [Official documentation](https://docs.streamlit.io/develop/concepts/configuration/serving-static-files) describes this local-file delivery. [Observed image](before-r2/observed.png), [decoded pixels and responses](before-r2/diagnostic.json), [HTTP checks](static-http.json).
+
+Initial attempts also encountered 404/HTML responses for native Streamlit JS/CSS and incomplete bootstrap. HTTP 200 for a photograph or a visible version cannot certify a fully loaded page. A single root cause for these intermittent failures has not been established. Earlier pending-image/icon captures remain preserved rather than being called visual acceptance.
+
+## Implemented improvement
+
+The [deployment verifier](../../tests/browser/verificar_publicacao.cjs) checks four fresh contexts: PT/EN at 390/1440 px, visiting Races and How it works in each. It requires:
+
+- the publication event in both the package calendar **and collected state**, without relabelling a future event as received data;
+- version, language, native controls, icon font and absence of app exceptions/overflow;
+- decoded photographs, positive dimensions, admitted origin, image MIME and the documented original/variant SHA;
+- exact package build, opened through the documentation control.
+
+Each case gets one loading retry within a six-minute overall deadline. Origin/hash/identity mismatches are not retried as instability. JSON is written atomically with the verifier SHA; attempts and screenshots remain preserved. Hosted collection keeps evidence for 30 days even on failure. This verifies a data publication; it is not continuous uptime monitoring.
+
+## Counterexamples and validation
+
+[Six real-browser tests](../../tests/browser/test_verificar_publicacao.cjs) cover approved pixels, wrong hash, broken image, language/readiness, foreign origin and mismatched event/version. They enter core CI alongside a complete local verifier rehearsal: 12 acceptance checks, retaining the previous 11. The complete verifier passed all four local flows, both languages and widths, using real images and build from the previous package. [Local cases](local-027-r2/publication.json), [401 Python tests](source-tests.json).
+
+The first new-readiness rehearsal exposed incorrect Playwright argument handling in the test itself. It was corrected and received a specific counterexample. An exploratory run used future round 20; the contract now rejects an event without matching collected state. These attempts remain preserved; publication validation uses collected round 19. São Paulo's calendar and future expectations are unchanged.
+
+Pre-delivery public attempts remain in [public-027](public-027/publication.json) and [public-027-r2](public-027-r2/publication.json). Real bootstrap/resource failures do not become acceptance through screenshots or unbounded retries. The new release requires its own public receipt.
+
+## Rafael Câmara
+
+A new serial identity lookup at 23:21 UTC on 3 November returned 35 Jolpica drivers and 22 OpenF1 drivers, still without Câmara. [URLs, UTCs, hashes and original responses](sources/20261103T232125Z/receipts.json). These are neither Q results nor model inputs. His three approved illustrations remain preserved and await a verified canonical identity before catalogue binding. No ID/number or driver history was manufactured.
+
+## What this delivery taught us
+
+Verification needs to show whether fans can use served content. A version label identifies the responding delivery; decoded photographs, ready controls and matching bytes add evidence of what actually arrived. A test failure and a hosting failure must remain distinguishable.

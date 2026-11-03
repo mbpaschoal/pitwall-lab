@@ -37,3 +37,9 @@ Checks wait for the expected version, route, language and idle state. Streamlit 
 `aceite_controles.cjs` mede a bandeira preta/branca e o alinhamento dos expansores nas seis telas PT/EN em 390/1440 px; aceita Chromium/WebKit e verifica abertura/fechamento, margem, centro vertical e área mínima de toque de 44 px.
 
 `aceite_controles.cjs` checks the black/white flag and expander alignment across all six screens in PT/EN at 390/1440 px, with Chromium/WebKit, toggles, paragraph margins, vertical centers and 44 px touch targets.
+
+`verificar_publicacao.cjs VERSION COLLECTION_JSON [OUTPUT]` confirma a entrega de dados já publicada em quatro casos PT/EN e 390/1440 px. Exige o evento no calendário e no estado coletado do pacote, fotos decodificadas e hashes conferidos, controles prontos e build exato. Limite: duas tentativas por caso, seis minutos no conjunto; JSON conserva falhas e capturas. `PITWALL_SOURCE_ROOT` define o pacote esperado; `PITWALL_PUBLIC_BASE_URL` permite ensaio local explícito. O workflow usa o domínio público padrão.
+
+`verificar_publicacao.cjs VERSION COLLECTION_JSON [OUTPUT]` checks an already-published data delivery in four PT/EN desktop/mobile cases. It requires the event in both the package calendar and collected state, decoded photographs with matching hashes, ready controls and exact build. Two attempts per case, six minutes total; JSON retains failures and screenshots. `PITWALL_SOURCE_ROOT` selects the expected package; `PITWALL_PUBLIC_BASE_URL` permits explicit local rehearsal. The workflow defaults to the public domain.
+
+`node --test tests/browser/test_verificar_publicacao.cjs` executa seis contraprovas com navegador real / runs six real-browser counterexamples: approved pixels, wrong SHA, broken photo, PT/EN readiness, foreign origin and package/event/version mismatch.
