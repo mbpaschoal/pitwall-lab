@@ -27,3 +27,6 @@ Ryo Hirakawa's profile exposed a mismatch between the catalogue's `file` field a
 ## Correction after the first hosted execution
 
 Initial collection run `41704012731` failed because the real client constructor wrote its manifest before the query directory existed. Earlier tests used valid caches or replacement clients and missed that prerequisite. Version 0.8.23 creates the directory explicitly and tests the real client with controlled successful and 429 HTTP responses. Actual 429 interruption also persists Retry-After. Version 0.8.22 and its receipts remain preserved without rewriting its tag. The initial failure did not alter published data.
+
+
+0.8.23: 351 source tests / testes de código, 143 portable tests / testes do pacote; four final-package browser cases / quatro casos de navegador finais em PT/EN e desktop/Android. [Package / Pacote](package.json) · [Browser / Navegador](browser-local-023/acceptance.json).

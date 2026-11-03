@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.8.23 — 2026-11-03
+
+Corrige a criação da pasta de uma consulta de Pilotos sem cache, falha identificada na primeira execução hospedada da 0.8.22. Testes agora usam o construtor e o protocolo HTTP reais do cliente, com respostas locais controladas, cobrindo sucesso e HTTP 429. A espera da fonte é persistida mesmo quando o cliente interrompe a consulta por limite. Dados, modelo e probabilidades anteriores permanecem preservados.
+
 ## 0.8.22 — 2026-11-03
 
 - Integra o México às análises de Pilotos: 67 GPs, 1.376 resultados e 1.362 largadas. Usa clima dos intervalos efetivos e mapa FIA 2026 conferido; cinco posições NC permanecem ausentes.

@@ -27,3 +27,6 @@ O perfil de Ryo Hirakawa revelou uma incompatibilidade entre o campo `file` do c
 ## Correção após a primeira execução hospedada
 
 A primeira coleta em `41704012731` falhou porque o construtor real do cliente tentou salvar o manifesto antes de existir a pasta da consulta. Os testes anteriores exercitavam cache válido ou clientes substitutos e não expunham essa pré-condição. A 0.8.23 cria a pasta explicitamente e testa o cliente real com respostas HTTP controladas de sucesso e 429. A interrupção real por 429 também mantém Retry-After persistido. A 0.8.22 e seus recibos ficam preservados, sem reescrever a tag. A falha inicial não alterou os dados publicados.
+
+
+0.8.23: 351 source tests / testes de código, 143 portable tests / testes do pacote; four final-package browser cases / quatro casos de navegador finais em PT/EN e desktop/Android. [Package / Pacote](package.json) · [Browser / Navegador](browser-local-023/acceptance.json).

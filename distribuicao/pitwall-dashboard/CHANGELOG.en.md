@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.8.23 — 2026-11-03
+
+Fixes creation of a fresh Drivers-query directory, a failure identified by the first hosted 0.8.22 execution. Tests now exercise the real client constructor and HTTP handling with controlled local responses, covering success and HTTP 429. Provider cooldown persists even when the client interrupts a rate-limited request. Existing data, model and probabilities remain preserved.
+
 ## 0.8.22 — 2026-11-03
 
 - Adds Mexico to Drivers analysis: 67 GPs, 1,376 results and 1,362 starts. Uses weather within actual racing intervals and a reviewed FIA 2026 map; five NC positions remain missing.
