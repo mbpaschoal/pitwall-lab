@@ -44,3 +44,5 @@ Ter três artes para cada piloto do catálogo não prova que todos os inscritos 
 ## Validação local desta revisão
 
 Passaram **401 testes de código**, incluindo os 27 casos da operação pós-Q. A conferência byte a byte preservou **533 arquivos científicos e fontes anteriores**, sem diferenças; nenhuma previsão real foi emitida. [Resultado dos testes](source-tests.json), [saída completa](source-tests.txt) e [integridade](protected-integrity.json). Pacote, CI e versão pública serão conferidos separadamente após o commit.
+
+Pacote portátil: **144 testes aprovados** e 481 arquivos conferidos. Navegador Chrome local: **24/24 casos**, seis destinos em PT/EN e larguras 390/1440 px, sem erro de página ou transbordamento. [Pacote, build e ZIP](package-validation.json), [aceite de navegador](browser-local/controls.json). Isso não certifica a hospedagem pública.

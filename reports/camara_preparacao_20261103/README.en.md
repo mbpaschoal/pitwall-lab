@@ -44,3 +44,5 @@ Three artworks for every catalogue driver do not certify coverage of an event's 
 ## Local validation of this revision
 
 **401 source tests passed**, including 27 post-Q operational cases. Byte comparisons found **533 protected scientific files and prior sources unchanged**. No real forecast was emitted. [Test receipt](source-tests.json), [full output](source-tests.txt), [integrity](protected-integrity.json). Package, CI and served deployment require separate checks after committing.
+
+Portable package: **144 passing tests** and 481 verified files. Local Chrome: **24/24 cases**, six destinations in PT/EN at 390/1440 px, without page errors or horizontal overflow. [Package, build and ZIP](package-validation.json), [browser receipt](browser-local/controls.json). This does not certify public hosting.

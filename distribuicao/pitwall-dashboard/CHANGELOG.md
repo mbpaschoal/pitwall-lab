@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.8.27 — 2026-11-03
+
+Preparação da estreia anunciada de Rafael Câmara em São Paulo. Uma revisão explícita confere a lista da classificação e impede emitir com Ocon ainda presente; o identificador canônico é preservado da fonte, sem presumir número ou herdar histórico. Cartas opcionais passam a gerar um relatório de cobertura, sem impedir uma previsão cientificamente válida. Foto oficial e três artes distintas nas cores da Haas ficam preparadas, fora do catálogo ativo enquanto o identificador estiver pendente. Modelo v1, entradas e emissões anteriores preservados.
+
 ## 0.8.26 — 2026-11-03
 
 Automação pós-classificação para São Paulo: snapshot novo, validação pelo produtor v1 congelado, emissão única, cartas da equipe efetiva e publicação com margem mínima de uma hora. Tentativas espaçadas e limitadas, preservação dos mesmos bytes na recuperação e alerta sem bloquear os dados descritivos. Referências oficiais F1 de 2026 admitidas para Interlagos, Las Vegas, Lusail e Yas Marina; altitude pontual Open-Meteo. Downloads CSV/SVG sem recarregar a página, com teste real de idioma, arquivo e ausência de reexecução em PT/EN no computador e celular. Inventário bilíngue das automações e limites. Nenhuma previsão futura foi emitida nesta entrega; modelo e emissões existentes preservados. Evidências originais de 19 emissões históricas ficaram completas no repositório: 344 arquivos ausentes incorporados sem mudar bytes, UTCs ou probabilidades; o registro completo agora é validado em CI. Descoberta de calendário corrigida para preservar sua primeira captura.
