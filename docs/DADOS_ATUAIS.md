@@ -2,6 +2,8 @@
 
 Português · [English](en/CURRENT_DATA.md)
 
+Pilotos acrescenta o México 2026 por complemento separado: **67 GPs, 1.376 resultados e 1.362 largadas** nesta entrega. Cinco registros NC mantêm posição ausente; contam como largada, mas não entram no placar de posições do duelo. O mapa FIA 2026 e o clima efetivo estão conferidos. O acervo-base de 66 GPs/330 sessões permanece preservado. [Fluxo, fontes e pendências automáticas](PILOTOS_ATUALIZACAO.md).
+
 O acervo é descritivo e separado das entradas v1: 66 GPs/330 sessões de 2024–2026 até Austin. A aquisição complementar de 29/10 foi serial e cacheada. Os nove artefatos científicos e as emissões anteriores foram preservados.
 
 ## México — composto inicial recuperado em 02/11/2026

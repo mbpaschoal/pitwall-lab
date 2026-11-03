@@ -1,5 +1,6 @@
 """Historical and forecast links retain GP context without changing identities."""
 from html.parser import HTMLParser
+import json
 from urllib.parse import parse_qs, urlsplit, urljoin
 from unittest.mock import patch
 import unittest
@@ -58,7 +59,11 @@ class LinkContextTests(unittest.TestCase):
             app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=45)
             query=dict(tela='Pilotos',visao=view,piloto='ryo_hirakawa',anos='2026',temporada='2026',gp='19',lang='en')
             if view=='duelo':query.update(piloto='max_verstappen',rival='ryo_hirakawa')
-            app.query_params.update(**query);app.run();self.assertFalse(app.exception)
+            app.query_params.update(**query)
+            # Exercise the preserved baseline where Hirakawa genuinely has no starts.
+            baseline=json.loads((ROOT/'frontend_assets/pilotos_condicoes.json').read_text())
+            with patch.object(pilot_views,'load',return_value=baseline):app.run()
+            self.assertFalse(app.exception)
             markup='\n'.join(x.value for x in app.markdown)
             self.assertIn('Hirakawa',markup)
             self.assertNotIn('Alexander Albon',markup)

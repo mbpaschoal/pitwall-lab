@@ -74,7 +74,17 @@ def load(root):
     try:
         if path.stat().st_size > 4 * 1024 * 1024:
             raise DriverConditionsError("Driver dataset exceeds portable size limit")
-        return validate(json.loads(path.read_text(encoding="utf-8")))
+        base=validate(json.loads(path.read_text(encoding="utf-8")))
+        from pitwall.data.driver_updates import ASSET as UPDATE_ASSET, merge
+        update=root/UPDATE_ASSET
+        current=update
+        while current!=root:
+            if current.is_symlink():
+                raise DriverConditionsError('Driver updates cannot use symlinks')
+            current=current.parent
+        if update.stat().st_size>4*1024*1024:
+            raise DriverConditionsError('Driver update exceeds portable size limit')
+        return merge(base,json.loads(update.read_text(encoding='utf-8')))
     except DriverConditionsError:
         raise
     except (OSError, ValueError, KeyError, TypeError) as error:

@@ -1,0 +1,19 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/pilotos-mexico-20261103T185455Z",
+  "sources": [
+    {
+      "provider": "fia",
+      "endpoint": "mexico_2026_circuit_map",
+      "arquivo": "mexico-map-2026.pdf",
+      "arquivo_requisicao": "mexico-map-2026.pdf",
+      "url": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_competition_notes_-_circuit_map_pit_lane_drawing_and_emergency_exits_map.pdf",
+      "url_real": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_competition_notes_-_circuit_map_pit_lane_drawing_and_emergency_exits_map.pdf",
+      "status": 200,
+      "obtido_em_utc": "2026-11-03T18:54:57.208963Z",
+      "sha256": "353a2b06543f06d89493c7642dae37aaf127eb41696dc62129574234c4df1525",
+      "bytes": 1874977,
+      "response_format": "bytes"
+    }
+  ],
+  "failures": []
+}

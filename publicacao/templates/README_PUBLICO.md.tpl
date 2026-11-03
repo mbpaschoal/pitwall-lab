@@ -23,7 +23,7 @@ As bandeiras BR/GB no canto superior direito selecionam o idioma. A navegação 
 
 Modelo v1 congelado: treino 2021–2023, validação 2024 já explorada e 2025 já avaliado. Nos mesmos {gps_2025} GPs de ranking de 2025, o modelo identificou 51 integrantes de pódio contra 50 da classificação; ambos acertaram três em 8/22 GPs. Métricas probabilísticas usam {casos_2025} casos. Isso não demonstra significância nem garantia futura.
 
-Pilotos cruza 66 corridas principais e 1.340 largadas com sensores nos intervalos efetivos e mapas FIA de cada edição. São oito provas com chuva registrada. A auditoria registra 295 verificações; 17 compostos de treinos/classificação continuam ausentes e não entram nesses rankings. O clima distingue sensores da corrida e reconstrução atmosférica horária. Baku/Q mantém o complemento FIA sem setores/validade inventados.
+Pilotos combina a base auditada até Austin com GPs posteriores validados. A tela informa até onde os dados chegam; as comparações usam apenas resultados, clima e referência de circuito conferidos. [Atualização e limites](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/PILOTOS_ATUALIZACAO.md). A auditoria registra 295 verificações; 17 compostos de treinos/classificação continuam ausentes e não entram nesses rankings. O clima distingue sensores da corrida e reconstrução atmosférica horária. Baku/Q mantém o complemento FIA sem setores/validade inventados.
 
 A correção do Histórico mostrou que uma tabela pode existir e responder à pergunta errada. A verificação de publicação passou a conferir o build servido porque testes locais não provam deploy. [Evolução e versões](CHANGELOG.md).
 

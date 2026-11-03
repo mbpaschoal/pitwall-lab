@@ -17,3 +17,21 @@ RESOLUTION_POLICY = _CATALOG['policy']
 def hero_asset(name):
     """Return a detached spec; unknown identities/presets fail explicitly."""
     return dict(HERO_IMAGES[name])
+
+
+# Portrait metadata uses `file`, including non-PNG original photographs.
+_PORTRAITS = {item['driver_id']: item for item in json.loads(
+    (PROJECT_ROOT/'dashboard_assets/fan/sources.json').read_text(encoding='utf-8'))
+    if item.get('driver_id') and item.get('file','').startswith('portraits/')}
+
+
+def portrait_asset(driver):
+    item = _PORTRAITS.get(driver)
+    if not item:
+        return None
+    override = PORTRAIT_OVERRIDES.get(driver,{})
+    return dict(path='dashboard_assets/fan/'+item['file'], driver_id=driver,
+        name=item.get('name') or driver, portrait=True,
+        credit=(item.get('name') or driver)+' · '+(item.get('author') or item.get('source') or 'Formula 1'),
+        source=item.get('source_page') or 'https://www.formula1.com/en/drivers',
+        position=item.get('object_position') or override.get('position','center top'))

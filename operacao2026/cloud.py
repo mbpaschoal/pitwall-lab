@@ -181,11 +181,16 @@ def collect(root=PROJECT_ROOT, now=None):
     if recheck and all(s['estado']=='dados_recebidos' for s in state['sessoes']) and all(state.get('campeonatos',{}).get(key,{}).get('disponivel') for key in ('driver_standings','constructor_standings')):
         save_checkpoint(marker,{'utc':now.isoformat()})
     new = dict(weekend.public_status(state),automacao=AUTOMATION)
+    drivers=dict(changed=False,status='not_configured')
+    if (root/'frontend_assets/pilotos_condicoes.json').is_file():
+        from operacao2026.driver_archive import update
+        drivers=update(root,state,event,now)
     existing = next((s for s in [old]+old.get('arquivo_eventos',[]) if s and identity(s)==identity(new)),{})
-    if existing and semantic(existing)==semantic(new):
-        return dict(changed=False,reason='no_substantive_change')
-    save_checkpoint(old_path,merge_archive(old,new))
-    return dict(changed=True,reason='new_data',evento=event['nome'],identidade=list(identity(new)),sessoes_completas=sum(s['estado']=='dados_recebidos' for s in state['sessoes']),sessoes=len(state['sessoes']))
+    native_changed=not existing or semantic(existing)!=semantic(new)
+    if not native_changed and not drivers['changed']:
+        return dict(changed=False,reason='no_substantive_change',pilotos=drivers)
+    if native_changed:save_checkpoint(old_path,merge_archive(old,new))
+    return dict(changed=True,reason='new_data',evento=event['nome'],identidade=list(identity(new)),sessoes_completas=sum(s['estado']=='dados_recebidos' for s in state['sessoes']),sessoes=len(state['sessoes']),pilotos=drivers)
 
 
 def prepare_release(result, root=PROJECT_ROOT, now=None):

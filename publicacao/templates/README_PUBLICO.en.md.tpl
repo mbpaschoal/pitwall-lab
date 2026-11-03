@@ -23,7 +23,7 @@ BR/GB flags in the upper-right corner select the language. Navigation retains se
 
 Frozen model v1: training 2021–2023, already explored 2024 validation and already evaluated 2025. Across the same {gps_2025} ranking GPs in 2025, the model identified 51 podium drivers versus qualifying's 50; both identified all three in 8/22 GPs. Probability metrics use {casos_2025} cases. This demonstrates neither statistical significance nor future guarantees.
 
-Drivers combines 66 main races and 1,340 starts with sensors within actual racing intervals and edition-specific FIA maps. Eight races recorded rain. The audit records 295 checks; 17 practice/qualifying compounds remain missing and do not enter these rankings. Weather separates race sensors from hourly atmospheric reconstruction. Baku/Q retains its FIA supplement without invented sectors or validity flags.
+Drivers combines the audited baseline through Austin with subsequently validated GPs. The screen shows the current coverage; comparisons require reviewed results, weather and circuit references. [Updates and limits](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/en/DRIVER_UPDATES.md). The audit records 295 checks; 17 practice/qualifying compounds remain missing and do not enter these rankings. Weather separates race sensors from hourly atmospheric reconstruction. Baku/Q retains its FIA supplement without invented sectors or validity flags.
 
 The History correction showed that an existing table can answer the wrong question. Publication now checks the served build because local tests do not prove deployment. [Evolution and versions](CHANGELOG.en.md).
 

@@ -36,3 +36,6 @@ Start from the relevant blueprint role contract. Prefer small functions, descrip
 `pitwall/dashboard/model_views.py` owns Lab evaluation; `pilot_views.py` composes exploration, profiles and duels. `driver_duel.py` calculates shared-start comparisons without UI dependencies. `search.py` searches local entities; `share_cards.py` exports SVG without external resources. Favourites use the local component in `frontend_assets/favorite/` and browser storage.
 
 `distribuicao/pitwall-dashboard/` is generated from an allowlist and must not be edited directly. ZIP files are release assets rather than large duplicated Git binaries. CI validates the actual served tree. `validar_blueprint.py` belongs to the local vault and is not required by the public installation.
+
+
+Drivers retains the original baseline and incorporates later GPs through a supplement validated by `pitwall/data/driver_updates.py`. The descriptive producer `operacao2026/driver_archive.py` runs within scheduled collection and publishes through the atomic allowlist. Pending prerequisites retain validated data and trigger monitoring. [Contract and limits](DRIVER_UPDATES.md).

@@ -95,6 +95,8 @@ TAROT_TEAM_VARIANTS = tuple(
     for driver, team in TAROT_TEAM_PAIRS for pose in (0, 1, 2)
 )
 RUNTIME_WORKTREE = (
+    'docs/PILOTOS_ATUALIZACAO.md',
+    'docs/en/DRIVER_UPDATES.md',
     'pitwall/dashboard/motion.py',
     'frontend_assets/motion.js',
     'pitwall/data/post_race_evaluation.py',
@@ -203,10 +205,12 @@ RUNTIME_WORKTREE = (
     'pitwall/research/driver_duel.py', 'frontend_assets/favorite/index.html',
     'tests/test_fan_exploration.py', 'tests/test_review_regressions.py',
     'pitwall/data/driver_conditions.py',
+    'pitwall/data/driver_updates.py',
     'pitwall/data/driver_archive_projection.py',
     'pitwall/research/__init__.py',
     'pitwall/research/driver_conditions.py',
     'frontend_assets/pilotos_condicoes.json',
+    'frontend_assets/pilotos_condicoes_operacao.json',
     'reports/pilotos_condicoes_20261029/README.md',
     'reports/pilotos_condicoes_20261029/README.en.md',
     'reports/pilotos_condicoes_20261029/circuitos_revisados.csv',

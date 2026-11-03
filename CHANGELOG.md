@@ -1,5 +1,12 @@
 # Evolução do Pitwall Lab
 
+## 0.8.22 — 2026-11-03
+
+- Integra o México às análises de Pilotos: 67 GPs, 1.376 resultados e 1.362 largadas. Usa clima dos intervalos efetivos e mapa FIA 2026 conferido; cinco posições NC permanecem ausentes.
+- Acrescenta complemento descritivo rastreável à base preservada de 66 GPs. A coleta agendada atualiza comparações mesmo quando o painel do GP não muda; divergências conservam a última versão validada e pendências com mais de seis horas acionam o monitor existente.
+- Atualiza o período mostrado e os cartões compartilhados conforme os dados validados. Perfis de estreantes funcionam sem retrato aprovado, sem substituir sua identidade.
+- Próximos GPs exigem resultados e clima conferidos e referência de circuito da edição. O registro de mapas desta entrega certifica o México; futuras referências precisam ser admitidas antes da incorporação. Sem treino, nova emissão ou alteração de probabilidades v1.
+
 ## 0.8.21 — 2026-11-03
 
 - Corrige o destaque de releases: escolhe a maior versão estável com ZIP completo e hash, mesmo quando uma versão antiga termina depois. Novas releases aguardam o pacote antes de concorrer ao destaque.

@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 
 from pitwall.paths import PROJECT_ROOT
 from pitwall.i18n import language, translate
-from pitwall.dashboard.hero_assets import HERO_IMAGES, PORTRAIT_OVERRIDES
+from pitwall.dashboard.hero_assets import HERO_IMAGES, PORTRAIT_OVERRIDES, portrait_asset
 from pitwall.dashboard.journey import race_identity
 from pitwall.dashboard.media import responsive_attributes
 
@@ -37,12 +37,12 @@ def asset(name):
 def portrait(driver, name='', css=''):
     valid = str(driver).replace('_','').isalnum()
     spec = PORTRAIT_OVERRIDES.get(driver,{}) if valid else {}
-    filename = spec.get('path','portraits/{}.png'.format(driver))
+    filename = spec.get('path') or spec.get('file') or 'portraits/{}.png'.format(driver)
     if filename.startswith('dashboard_assets/fan/'):
         filename = filename[len('dashboard_assets/fan/'):]
     image = asset(filename) if valid else ''
     if image:
-        position = escape(spec.get('object_position','center 28%'),quote=True)
+        position = escape(spec.get('object_position') or spec.get('position','center 28%'),quote=True)
         return '<img class="fan-portrait {}" data-driver-id="{}" style="object-position:{}" src="{}" alt="{}" loading="lazy" decoding="async">'.format(css,escape(driver,quote=True),position,image,escape(name,quote=True))
     initials = ''.join(word[0] for word in str(name).split()[:2]) or '—'
     return '<span class="fan-avatar-fallback {}" aria-label="{}">{}</span>'.format(css,escape(name,quote=True),escape(initials))
@@ -66,12 +66,13 @@ def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, a
     backdrop_html=''
     responsive_attrs=None
     if person:
-        override=PORTRAIT_OVERRIDES.get(person['id'],{})
-        relative=override.get('path','dashboard_assets/fan/portraits/{}.png'.format(person['id']))
-        if not relative.startswith('dashboard_assets/'):
-            relative='dashboard_assets/fan/'+relative
-        spec=dict(path=relative,driver_id=person['id'],name=person['name'],portrait=True,
-                  credit=person['name']+' · Formula 1',source='https://www.formula1.com/en/drivers',position='center top')
+        spec=portrait_asset(person['id'])
+        if spec and not (PROJECT_ROOT/spec['path']).is_file():
+            spec=None
+        if not spec:
+            # Keep newly observed drivers usable without borrowing another face.
+            photo=''
+            extra+='<small>{}</small>'.format(text('Retrato ainda não disponível.'))
     if spec:
         path = PROJECT_ROOT / spec['path']
         responsive_attrs=responsive_attributes(spec)

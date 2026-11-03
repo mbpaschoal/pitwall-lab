@@ -72,3 +72,8 @@ Uma tela podia conter todos os componentes esperados e ainda apresentar um títu
 Tratei “Bahrain Grand Prix in Malaysia” como anomalia por parecer um nome incoerente. A confirmação primária mostrou que a F1 anunciou oficialmente o GP de Bahrein em Sepang. O dado estava correto; faltavam um rótulo localizado e a distinção entre nome do evento e país anfitrião. O registro anterior fica preservado, com esta correção explícita.
 
 A coleta do México revelou três causas distintas: HTTP 401 durante a janela ao vivo do acesso gratuito, uma revisão do fim programado e mensagens antigas com IDs atuais. A solução separa espera de acesso, revisão auditada de configuração e exclusão temporal identificada. Nenhuma dessas ações autoriza adivinhar pilotos, fabricar medições ou refazer uma previsão já registrada. [Revisão operacional](OPERACAO_FIM_SEMANA.md).
+
+
+## 03/11/2026 — Coletar não basta para atualizar as comparações
+
+O México já aparecia no painel do GP, mas Pilotos ainda terminava em Austin. Aprendi a conferir cada consumidor dos dados: agora existe um complemento rastreável e uma atualização própria, inclusive quando o painel do GP não muda. O teste de um estreante revelou ainda que dados válidos não deveriam depender de um retrato disponível. Ausência de posição oficial e ausência de foto têm tratamentos explícitos. [Fluxo e limites](PILOTOS_ATUALIZACAO.md).

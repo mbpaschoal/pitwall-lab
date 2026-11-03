@@ -127,6 +127,22 @@ class CloudTests(unittest.TestCase):
             self.assertFalse(result['changed'])
             self.assertEqual(result['reason'],'provider_cooldown')
 
+    def test_driver_update_publishes_even_when_native_weekend_is_unchanged(self):
+        event=weekend.load_event(CONFIG)
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);path=root/cloud.PUBLIC;path.parent.mkdir(parents=True)
+            path.write_text(json.dumps(self.state()));before=path.read_bytes()
+            (root/'frontend_assets/pilotos_condicoes.json').write_text('{}')
+            state=self.state();state['nome']=event['nome']
+            with patch.object(cloud,'discover',return_value=CONFIG), \
+                 patch.object(weekend,'collect',return_value=state), \
+                 patch.object(weekend,'public_status',return_value=self.state()), \
+                 patch('operacao2026.driver_archive.update',return_value=dict(changed=True,status='updated',races=67)):
+                result=cloud.collect(root,datetime(2026,11,3,21,tzinfo=timezone.utc))
+            self.assertTrue(result['changed'])
+            self.assertEqual(result['pilotos']['races'],67)
+            self.assertEqual(path.read_bytes(),before)
+
     def test_release_requires_data_and_updates_both_languages(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/'publicacao/templates').mkdir(parents=True)

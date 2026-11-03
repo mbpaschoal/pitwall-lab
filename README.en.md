@@ -28,7 +28,7 @@ The interface uses **Fan Journey**: bottom navigation, GP context at the top, a 
 - **How the Lab did:** log loss, Brier, calibration, ranking and coverage with explicit denominators.
 - **How it works:** offline documents and reports. The 🇧🇷 and 🇬🇧 flags in the upper-right corner select Portuguese or English and retain the current navigation.
 
-The descriptive archive covers **66 GPs and 330 sessions in 2024–2026 through Austin**. Drivers uses 1,340 starts, sensors within actual racing intervals and edition-specific FIA maps. The audit records 295 checks; 17 practice/qualifying compounds remain missing and do not enter these rankings. History compares earlier editions at the same circuit. [Corrections and limits](docs/en/CURRENT_DATA.md).
+The descriptive archive covers **66 GPs and 330 sessions in 2024–2026 through Austin**. Drivers also includes Mexico: 67 GPs, 1,376 results and 1,362 starts. It uses sensors within actual racing intervals and edition-specific FIA maps. The current coverage appears on screen. [Updates and validation](docs/en/DRIVER_UPDATES.md). The audit records 295 checks; 17 practice/qualifying compounds remain missing and do not enter these rankings. History compares earlier editions at the same circuit. [Corrections and limits](docs/en/CURRENT_DATA.md).
 
 ## What I learned from mistakes
 

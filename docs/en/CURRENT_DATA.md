@@ -2,6 +2,8 @@
 
 [Português](../DADOS_ATUAIS.md) · English
 
+Drivers adds Mexico 2026 through a separate supplement: **67 GPs, 1,376 results and 1,362 starts** in this delivery. Five NC records keep a missing position; they count as starts but not in duel position scores. The FIA 2026 map and actual race weather are reviewed. The 66-GP/330-session baseline remains preserved. [Workflow, sources and automatic pending states](DRIVER_UPDATES.md).
+
 The descriptive archive is separate from v1 inputs: 66 GPs/330 sessions in 2024–2026 through Austin. Supplementary acquisition on 29 October was serial and cached. The nine scientific artefacts and previous recorded predictions were preserved.
 
 ## Mexico — opening compound recovered on 2 November 2026

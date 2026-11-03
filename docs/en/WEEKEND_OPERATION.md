@@ -89,3 +89,6 @@ Calendar review also checked Formula 1's [official Bahrain-in-Malaysia announcem
 Documentary review recovers all 22 FP3 times and identifies Lawson by number, name and team in this event's official entry list. Temporal scope excludes one pre-FP3 pit record and 84 pre-qualifying records; originals remain preserved. The final classification and stewards' decision establish Lawson as DSQ, without a numeric position or valid times.
 
 The track mean now uses 100 valid readings: 40.7 °C, 98.0% coverage, without interpolation. The FIA report also records the anomalous zero; it does not reveal that minute's real temperature. Lawson's initial FP3 compound (laps 1–8) remains unavailable and is not inferred from later stints. Reviews reach both cache and automatic collection. [Sources, decisions and remaining gaps](https://github.com/mbpaschoal/pitwall-lab/blob/main/reports/mexico_fontes_alternativas_20261101/README.md).
+
+
+Completed GPs enter Drivers analysis through the [automatic review workflow](DRIVER_UPDATES.md). An edition-specific circuit reference is required; missing prerequisites retain the last valid state and trigger the monitor after six hours.

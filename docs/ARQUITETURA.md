@@ -36,3 +36,6 @@ Comece pelo contrato de papel no blueprint. Mantenha funções pequenas, nomes d
 `pitwall/dashboard/model_views.py` concentra a avaliação do Lab; `pilot_views.py` compõe exploração, perfil e duelo. `driver_duel.py` calcula somente em largadas compartilhadas, sem dependências de interface. `search.py` busca entidades locais; `share_cards.py` exporta SVG sem recursos externos. O favorito usa o componente local em `frontend_assets/favorite/` e o armazenamento do navegador.
 
 `distribuicao/pitwall-dashboard/` é gerado pela allowlist e não deve ser editado diretamente. O ZIP é anexado à release, evitando duplicar um binário grande em cada commit. O CI valida a árvore realmente servida. `validar_blueprint.py` pertence ao cofre local e não é requisito da instalação pública.
+
+
+Pilotos mantém a base original e incorpora GPs posteriores em complemento validado por `pitwall/data/driver_updates.py`. O produtor descritivo `operacao2026/driver_archive.py` participa da coleta agendada e publica por allowlist atômica. Pendências conservam dados validados e acionam o monitor. [Contrato e limites](PILOTOS_ATUALIZACAO.md).

@@ -72,3 +72,8 @@ A screen could contain every expected component while repeating a heading or hid
 I treated “Bahrain Grand Prix in Malaysia” as an anomaly because the name appeared inconsistent. Primary verification showed Formula 1 had officially announced Bahrain's GP at Sepang. The data was correct; it needed a localised label and separation between event name and host country. The earlier record stays preserved with this explicit correction.
 
 Mexico collection exposed three distinct causes: HTTP 401 during the free tier's live window, a revised scheduled finish and stale messages carrying current IDs. The solution separates access waiting, an audited configuration revision and recorded temporal exclusions. None permits guessed driver identities, fabricated measurements or rewriting an already recorded prediction. [Operational review](WEEKEND_OPERATION.md).
+
+
+## 3 November 2026 — Collecting data does not update every comparison
+
+Mexico was already shown on the GP panel, while Drivers stopped at Austin. I learned to check each data consumer: a traceable supplement now updates independently, even when the GP panel is unchanged. A debutant profile test also showed that valid data must not depend on an available portrait. Missing official positions and photographs have explicit treatment. [Workflow and limits](DRIVER_UPDATES.md).

@@ -23,9 +23,19 @@ class PilotViewTests(unittest.TestCase):
         self.assertEqual(app.session_state["pilot_years"], [2025, 2026])
         self.assertEqual(app.session_state["pilot_driver"], "max_verstappen")
         self.assertEqual(app.metric[0].label, "Starts")
-        self.assertEqual(app.metric[0].value, "42")
+        self.assertGreaterEqual(int(app.metric[0].value), 43)
         columns = json.loads(app.dataframe[0].proto.columns)
         self.assertEqual(columns["Race"]["type_config"]["type"], "link")
+
+    def test_mexico_debut_and_dynamic_cutoff_are_available_in_both_languages(self):
+        for lang,prefix in [('pt','Dados até'),('en','Data through')]:
+            at=AppTest.from_file(str(ROOT/'app.py'),default_timeout=30)
+            at.query_params.update(tela='Pilotos',visao='perfil',piloto='ryo_hirakawa',anos='2026',lang=lang)
+            at.run()
+            self.assertFalse(at.exception)
+            self.assertEqual(at.selectbox(key='pilot_driver').value,'ryo_hirakawa')
+            self.assertGreaterEqual(int(at.metric[0].value),1)
+            self.assertTrue(any(prefix in x.value for x in at.caption))
 
     def test_deep_link_opens_the_named_driver(self):
         app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30)
@@ -34,7 +44,7 @@ class PilotViewTests(unittest.TestCase):
         self.assertFalse(app.exception)
         self.assertEqual(app.session_state["pilot_driver"], "max_verstappen")
         self.assertEqual(app.session_state["pilot_view"], "Perfil individual")
-        self.assertEqual(app.metric[0].value, "66")
+        self.assertGreaterEqual(int(app.metric[0].value), 67)
 
     def test_page_changes_preserve_race_and_driver_filters(self):
         at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30)
@@ -109,7 +119,7 @@ class PilotViewTests(unittest.TestCase):
         self.assertFalse(at.exception)
         self.assertTrue(any(x.value == "Selecione pelo menos uma condição." for x in at.info))
         self.assertEqual(len(at.get("plotly_chart")), charts - 1)
-        self.assertEqual(at.metric[0].value, "17")
+        self.assertGreaterEqual(int(at.metric[0].value), 18)
 
 
 if __name__ == "__main__":

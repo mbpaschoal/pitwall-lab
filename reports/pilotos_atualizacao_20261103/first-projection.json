@@ -1,0 +1,21 @@
+{
+  "result": {
+    "changed": true,
+    "status": "updated",
+    "pending": {},
+    "races": 67
+  },
+  "quality": {
+    "gate_pilotos": true,
+    "pendencias_obrigatorias_sem_tratamento": 0,
+    "completude_fisica_de_todos_os_campos": false,
+    "compostos_indisponiveis_declarados": 17,
+    "corridas": 67,
+    "chuva_registrada": 8,
+    "resultados": 1376,
+    "largadas": 1362,
+    "dns": 14
+  },
+  "base_file_sha256": "dfc760dfb9a78e2cf087c89b7175ab671070bc2b6eed3dab70297a2df7ae2535",
+  "merged_content_sha256": "edfea545f8ef5ddec419a782bf93c605cd58013c6c4fbe3de77111f1a2144973"
+}

@@ -1,0 +1,24 @@
+{
+  "2026:rodriguez": {
+    "temporada": 2026,
+    "circuito_id": "rodriguez",
+    "direction": "horario",
+    "corners": 17,
+    "length_km": 4.304,
+    "altitude_m": 2234.0,
+    "source": {
+      "provider": "fia",
+      "url": "https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_competition_notes_-_circuit_map_pit_lane_drawing_and_emergency_exits_map.pdf",
+      "sha256": "353a2b06543f06d89493c7642dae37aaf127eb41696dc62129574234c4df1525",
+      "obtido_em_utc": "2026-11-03T18:54:57.208963Z",
+      "page": 2,
+      "criterio": "FIA Doc 7, 2026 edition; numbered corners and direction arrows reviewed visually"
+    },
+    "altitude_source": {
+      "provider": "open-meteo",
+      "url": "https://open-meteo.com/en/docs/elevation-api",
+      "sha256": "5fe9126158b33556349e455059129ae85ea1fdb1dacb947b830c8dd81a48286a",
+      "criterion": "Approximate elevation at the calendar coordinates; not circuit elevation range"
+    }
+  }
+}

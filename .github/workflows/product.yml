@@ -31,7 +31,7 @@ jobs:
         run: |
           python -B -m unittest tests.test_github_maintenance tests.test_weekend_readiness tests.test_automatic_publication tests.test_final_results tests.test_posterior_binding tests.test_mexico_evaluation_ui tests.test_pneus_apresentacao
           python -B -m unittest tests.test_interface_link_context tests.test_public_navigation
-          python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_dashboard_acervo_app tests.test_interface_editorial tests.test_driver_conditions tests.test_driver_projection tests.test_pilot_views tests.test_race_weather tests.test_tyre_reconciliation tests.test_tyre_age tests.test_driver_source_audit tests.test_review_regressions tests.test_fan_exploration tests.test_weekend_operation tests.test_weekend_reconciliation tests.test_weekend_official tests.test_weekend_ui tests.test_weekend_cloud tests.test_fan_journey tests.test_fan_composition tests.test_tarot_catalog tests.test_high_resolution_assets tests.test_exportar_catalogo tests.test_verificar_pacote tests.test_uiux_profiles tests.test_uiux_races tests.test_uiux_method tests.test_uiux_media
+          python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_dashboard_acervo_app tests.test_interface_editorial tests.test_driver_conditions tests.test_driver_updates tests.test_driver_projection tests.test_pilot_views tests.test_race_weather tests.test_tyre_reconciliation tests.test_tyre_age tests.test_driver_source_audit tests.test_review_regressions tests.test_fan_exploration tests.test_weekend_operation tests.test_weekend_reconciliation tests.test_weekend_official tests.test_weekend_ui tests.test_weekend_cloud tests.test_fan_journey tests.test_fan_composition tests.test_tarot_catalog tests.test_high_resolution_assets tests.test_exportar_catalogo tests.test_verificar_pacote tests.test_uiux_profiles tests.test_uiux_races tests.test_uiux_method tests.test_uiux_media
       - name: Integridade do pacote publicado / Published package integrity
         run: |
           python -B exportar_dashboard.py --destino "$RUNNER_TEMP/expected-package/pitwall-dashboard"
@@ -60,6 +60,7 @@ jobs:
             sleep 1
           done
           node tests/browser/aceite_exploracao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/browser-evidence"
+          node tests/browser/aceite_pilotos_atualizacao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/driver-updates-evidence"
           node tests/browser/aceite_visual.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/visual-evidence"
           node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-evidence"
           node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-evidence"
@@ -76,6 +77,7 @@ jobs:
           retention-days: 3
           path: |
             ${{ runner.temp }}/browser-evidence
+            ${{ runner.temp }}/driver-updates-evidence
             ${{ runner.temp }}/visual-evidence
             ${{ runner.temp }}/controls-evidence
             ${{ runner.temp }}/controls-webkit-evidence

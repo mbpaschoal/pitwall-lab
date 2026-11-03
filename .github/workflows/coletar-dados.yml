@@ -18,6 +18,9 @@ on:
       - '.github/workflows/coletar-dados.yml'
       - 'operacao2026/cloud.py'
       - 'operacao2026/publication.py'
+      - 'operacao2026/driver_archive.py'
+      - 'operacao2026/driver_circuit_reviews.json'
+      - 'pitwall/data/driver_updates.py'
       - 'operacao2026/weekend.py'
       - 'operacao2026/weekend_projection.py'
       - 'operacao2026/weekend_reconciliation.py'
@@ -87,7 +90,7 @@ jobs:
       - name: Validar antes de publicar / Validate before publishing
         if: steps.data.outputs.changed == 'true'
         run: |
-          python -B -m unittest tests.test_automatic_publication tests.test_weekend_cloud tests.test_weekend_operation tests.test_weekend_reconciliation tests.test_final_results tests.test_weekend_official tests.test_weekend_ui tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_review_regressions tests.test_fan_exploration
+          python -B -m unittest tests.test_driver_updates tests.test_automatic_publication tests.test_weekend_cloud tests.test_weekend_operation tests.test_weekend_reconciliation tests.test_final_results tests.test_weekend_official tests.test_weekend_ui tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_review_regressions tests.test_fan_exploration
           python -B verificar_pacote.py --pacote distribuicao/pitwall-dashboard
           diff -qr --exclude=__pycache__ "$RUNNER_TEMP/generated/pitwall-dashboard" distribuicao/pitwall-dashboard
       - uses: actions/setup-node@v6
@@ -105,6 +108,7 @@ jobs:
             sleep 1
           done
           node tests/browser/aceite_exploracao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/browser-evidence"
+          node tests/browser/aceite_pilotos_atualizacao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/driver-updates-evidence"
           node tests/browser/aceite_visual.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/visual-evidence"
           node tests/browser/aceite_fim_semana.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/weekend-evidence"
       - uses: actions/upload-artifact@v4
@@ -114,6 +118,7 @@ jobs:
           retention-days: 3
           path: |
             ${{ runner.temp }}/browser-evidence
+            ${{ runner.temp }}/driver-updates-evidence
             ${{ runner.temp }}/visual-evidence
             ${{ runner.temp }}/weekend-evidence
             ${{ runner.temp }}/streamlit.log
@@ -154,3 +159,6 @@ jobs:
         if: always()
         run: |
           if [ -f "$RUNNER_TEMP/collection.json" ]; then cat "$RUNNER_TEMP/collection.json" >> "$GITHUB_STEP_SUMMARY"; fi
+      - name: Conferir atualização de Pilotos / Check driver-analysis updates
+        if: always() && steps.data.outcome == 'success'
+        run: python -B -m operacao2026.driver_archive check

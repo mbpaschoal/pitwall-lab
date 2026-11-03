@@ -17,6 +17,7 @@ PUBLIC_PATHS = (
     'VERSION', 'CHANGELOG.md', 'CHANGELOG.en.md',
     'publicacao/templates/requirements.txt',
     'frontend_assets/operacao_fim_semana.json', 'distribuicao/pitwall-dashboard',
+    'frontend_assets/pilotos_condicoes_operacao.json',
 )
 
 

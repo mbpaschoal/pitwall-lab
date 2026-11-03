@@ -1,0 +1,19 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/pilotos-capturas-20261103T185558Z",
+  "sources": [
+    {
+      "provider": "github",
+      "endpoint": "original_captures_020",
+      "arquivo": "captures.tar.gz",
+      "arquivo_requisicao": "captures.tar.gz",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/releases/download/v0.8.20/capturas-originais.tar.gz",
+      "url_real": "https://release-assets.githubusercontent.com/github-production-release-asset/1422654527/3352321b-1981-491c-9764-79ef444e6479?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-03T19%3A51%3A27Z&rscd=attachment%3B+filename%3Dcapturas-originais.tar.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-03T18%3A51%3A13Z&ske=2026-11-03T19%3A51%3A27Z&sks=b&skv=2018-11-09&sig=fSAlthFtMGA3kzey4iVAuZOK0UMYEW%2FsGELuBZCdzkU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MzczMjQ1OCwibmJmIjoxNzkzNzMyMTU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.NnS_IAVP-VYM3sWZfQTmcQlixsUf06ebwlPHmMsRaVM&response-content-disposition=attachment%3B%20filename%3Dcapturas-originais.tar.gz&response-content-type=application%2Foctet-stream",
+      "status": 200,
+      "obtido_em_utc": "2026-11-03T18:55:59.231681Z",
+      "sha256": "2c38647403d295dd992d92097859895db9d5e9808bb2088901b4fdefaad1f5cf",
+      "bytes": 5642146,
+      "response_format": "bytes"
+    }
+  ],
+  "failures": []
+}
