@@ -30,3 +30,8 @@ Initial collection run `41704012731` failed because the real client constructor 
 
 
 0.8.23: 351 source tests / testes de código, 143 portable tests / testes do pacote; four final-package browser cases / quatro casos de navegador finais em PT/EN e desktop/Android. [Package / Pacote](package.json) · [Browser / Navegador](browser-local-023/acceptance.json).
+
+
+## Portrait correction and package 0.8.24
+
+Version 0.8.22 navigation CI detected Norris' missing profile image: the legacy catalogue uses literal filenames as identity while the new reader required `driver_id`. The correction supports both formats and verifies all 29 portraits. Version 0.8.24 passed 352 source tests, 144 portable tests, four focused browser cases and the full journey that detected the regression. [Full journeys](exploration-local-024/acceptance.json) · [Four final cases](browser-local-024/acceptance.json). Earlier versions and failures remain auditable without rewriting tags. Monitoring automatically opened issue 1 for initial collection failure; recovery still needs verification from a corrected hosted run.

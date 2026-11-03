@@ -30,3 +30,8 @@ A primeira coleta em `41704012731` falhou porque o construtor real do cliente te
 
 
 0.8.23: 351 source tests / testes de código, 143 portable tests / testes do pacote; four final-package browser cases / quatro casos de navegador finais em PT/EN e desktop/Android. [Package / Pacote](package.json) · [Browser / Navegador](browser-local-023/acceptance.json).
+
+
+## Correção dos retratos e pacote 0.8.24
+
+O CI de navegação da 0.8.22 detectou a falta de imagem no perfil de Norris: o catálogo legado usa identidade literal no nome do arquivo, enquanto o leitor novo exigia `driver_id`. A correção preserva ambos os formatos e confere os 29 retratos. A 0.8.24 passou em 352 testes de código, 144 do pacote, quatro casos focais e na jornada completa de navegação que detectou a regressão. [Jornadas completas](exploration-local-024/acceptance.json) · [Quatro casos finais](browser-local-024/acceptance.json). Versões anteriores e suas falhas ficam auditáveis; nenhuma tag foi reescrita. O monitor abriu automaticamente a ocorrência 1 pela falha da coleta inicial; a recuperação ainda precisa ser confirmada na execução corrigida.

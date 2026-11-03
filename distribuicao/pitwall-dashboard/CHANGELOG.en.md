@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.8.24 — 2026-11-03
+
+Fixes legacy portrait lookup using literal filenames alongside explicit IDs in newer photographs. Navigation CI found profiles whose images disappeared after reader unification. All 29 portraits now have resolution and rendering checks; source attribution, original bytes, data and probabilities remain preserved.
+
 ## 0.8.23 — 2026-11-03
 
 Fixes creation of a fresh Drivers-query directory, a failure identified by the first hosted 0.8.22 execution. Tests now exercise the real client constructor and HTTP handling with controlled local responses, covering success and HTTP 429. Provider cooldown persists even when the client interrupts a rate-limited request. Existing data, model and probabilities remain preserved.
