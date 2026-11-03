@@ -83,11 +83,15 @@ def render_times(state):
 def render_strategies(state):
     if not state:
         return False
-    race = next((s for s in state['sessoes'] if s['nome'] == 'Race'), {})
-    data = race.get('dados_descritivos')
-    if not data:
+    sessions = [s for s in state['sessoes'] if s.get('dados_descritivos')]
+    if not sessions:
         st.info('Pneus e paradas serão mostrados após a corrida, quando publicados pela fonte.')
         return True
+    # Keep Race as the default; the existing selector also exposes practices/Q.
+    sessions.sort(key=lambda s: s['nome'] != 'Race')
+    data = {field: [dict(row, modalidade=s['nome']) for s in sessions
+                   for row in s['dados_descritivos'].get(field, [])]
+            for field in ('estrategias', 'paradas')}
     from pitwall.dashboard.archive_views import renderizar_estrategias
     renderizar_estrategias(dict(data, identidade={k: state[k] for k in ('temporada', 'rodada', 'circuito_id')}))
     return True

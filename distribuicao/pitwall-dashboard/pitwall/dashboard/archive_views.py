@@ -70,7 +70,9 @@ def _tabela(linhas, chave, nome):
     if frame.empty:
         st.info("Não há registros disponíveis para esta seleção.")
         return
-    st.dataframe(frame, width="stretch", hide_index=True)
+    links = {name: st.column_config.LinkColumn(translate(name)) for name in (
+        "Fonte complementar", "Conferência dos limites") if name in frame.columns}
+    st.dataframe(frame, width="stretch", hide_index=True, column_config=links)
     from pitwall.i18n.streamlit import dataframe as display_dataframe
 
     with st.expander("Exportar tabela"):
@@ -204,10 +206,11 @@ def renderizar_estrategias(gp):
         "As barras mostram limites de volta publicados, não a idade do pneu. Trechos sem limites válidos aparecem somente na tabela."
     )
     estrategias = gp.get("estrategias", [])
+    modalidade = None
     modalidades = list(dict.fromkeys(e.get("modalidade", "Race") for e in estrategias))
     if modalidades:
         modalidade = st.selectbox(
-            "Prova para analisar os pneus",
+            "Sessão para analisar os pneus",
             modalidades,
             format_func=lambda x: ROTULOS_SESSAO.get(x, x),
             key=_chave(gp, "prova_pneus"),
@@ -221,6 +224,8 @@ def renderizar_estrategias(gp):
     legenda = set()
     linhas = []
     sinalizadas = 0
+    revisoes = []
+    tem_revisao = any(s.get('revisao_composto') for e in estrategias for s in e.get('sequencia_stints', []))
     for item in estrategias:
         piloto = item.get("piloto") or "Piloto {}".format(item.get("numero"))
         qualidade = item.get("qualidade")
@@ -247,6 +252,16 @@ def renderizar_estrategias(gp):
                     "Observações de qualidade": _qualidade_texto(qualidade),
                 }
             )
+            if tem_revisao:
+                revisao = stint.get('revisao_composto')
+                fontes = (revisao or {}).get('fontes', [])
+                linhas[-1].update({
+                    'Origem do composto': 'Conferência documental' if revisao else 'Fonte original',
+                    'Fonte complementar': next((f['url'] for f in fontes if f.get('endpoint') == 'lawson_fp3_laps'), None),
+                    'Conferência dos limites': next((f['url'] for f in fontes if f.get('endpoint') == 'fp3_on_track'), None),
+                })
+                if revisao:
+                    revisoes.append(revisao)
             conhecidos = (
                 isinstance(inicio, (int, float))
                 and isinstance(fim, (int, float))
@@ -317,6 +332,14 @@ def renderizar_estrategias(gp):
         st.caption(
             "Compostos: SOFT (macio), MEDIUM (médio), HARD (duro), INTERMEDIATE (intermediário) e WET (chuva extrema). Não informado: composto ausente ou desconhecido na fonte."
         )
+    if revisoes:
+        st.caption('Lawson no TL3: médios no primeiro trecho de oito voltas. GP Tempo informa o composto nas voltas 2–8; a FIA confirma o trecho sem parada. A volta 1 é reconstruída por continuidade. A idade inicial permanece não informada.')
+        fontes = {f['url']: f for revisao in revisoes for f in revisao['fontes']}
+        for fonte in fontes.values():
+            if fonte['endpoint'] == 'lawson_fp3_laps':
+                st.markdown('[GP Tempo · pneus de Lawson no TL3]({})'.format(fonte['url']))
+            elif fonte['endpoint'] == 'fp3_on_track':
+                st.markdown('[FIA · trechos em pista no TL3]({})'.format(fonte['url']))
     if sinalizadas:
         st.info(
             "{} piloto(s) têm observações de qualidade nos limites dos stints. Valores ausentes ou inconsistentes permanecem na tabela.".format(
@@ -336,8 +359,8 @@ def renderizar_estrategias(gp):
                 _chave(gp, "csv_stints"),
                 "stints_{}".format(_chave(gp, "pneus")),
             )
-    st.subheader("Pit stops da corrida principal")
-    paradas = gp.get("paradas", [])
+    st.subheader("Pit stops da corrida principal" if modalidade in (None, 'Race') else "Passagens pelos boxes nesta sessão")
+    paradas = [p for p in gp.get("paradas", []) if modalidade is None or p.get('modalidade', 'Race') == modalidade]
     if paradas:
         st.caption(
             "Duração conforme a fonte de paradas. Não equivale automaticamente ao tempo parado para trocar pneus."

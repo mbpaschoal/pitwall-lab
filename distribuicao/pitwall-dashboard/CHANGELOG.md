@@ -1,5 +1,13 @@
 # Evolução do Pitwall Lab
 
+## 0.8.18 — 2026-11-02
+
+- Recupera os pneus médios do primeiro trecho de Lawson no TL3 do México: GP Tempo publica MEDIUM nas voltas 2–8; a FIA confirma um trecho contínuo de oito voltas. A atribuição à volta 1 é reconstrução documental por continuidade, identificada na interface e no CSV. Idade inicial e tempo ausentes não viram zero.
+- Confere a identidade por data, pista, piloto e sessão: o evento 20 do GP Tempo corresponde ao GP 19 no Pitwall. Mantém os tempos nativos, inclusive duas voltas que a fonte alternativa deixa vazias. TL3 passa a dados recebidos após a conferência; as coberturas original e validada continuam separadas.
+- Corrige o seletor existente de pneus para também acessar treinos e classificação, mantendo Corrida como padrão e as passagens pelos boxes separadas por sessão. Fontes clicáveis e textos PT/EN explicam a recuperação.
+- Testes bloqueiam conflito de composto, horário/tempo divergente e duplicação do stint, preservam idade nativa válida e comprovam que dados originais não são modificados. Relatório e aceite em `reports/lawson_tyres_mexico_20261102/`.
+- Aprendizado: a ausência em uma API não prova ausência na cronometragem. O cruzamento exige identidade e limites verificáveis; não autoriza copiar toda a fonte alternativa nem alterar o modelo ou as probabilidades registradas.
+
 ## 0.8.17 — 2026-11-02
 
 Corrige o ícone de Corridas para uma bandeira quadriculada preta e branca, inclusive quando selecionada. Alinha títulos e setas dos expansores, removendo a margem de parágrafo que deslocava o texto. A regra compartilhada atende PT/EN, títulos longos e computador/celular. Validação focal em navegador e pacote; fotos, cores, dados e previsões preservados. Aprendizado: conferir o alinhamento do texto pintado, além do retângulo do controle.
