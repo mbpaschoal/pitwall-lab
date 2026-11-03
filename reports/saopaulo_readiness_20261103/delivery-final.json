@@ -1,0 +1,97 @@
+{
+  "checked_utc": "2026-11-03T18:42:56.127689+00:00",
+  "release": {
+    "id": 433081753,
+    "tag": "v0.8.21",
+    "published": "2026-11-03T18:39:55Z",
+    "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.21",
+    "assets": [
+      {
+        "name": "pitwall-dashboard.zip",
+        "digest": "sha256:8dc482c4862ecc94f5eb09178a45a19181874695bd3e258cd96ea26f1777d912",
+        "size": 665842059,
+        "state": "uploaded"
+      }
+    ]
+  },
+  "latest": {
+    "id": 433081753,
+    "tag": "v0.8.21",
+    "published": "2026-11-03T18:39:55Z",
+    "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.21",
+    "assets": [
+      {
+        "name": "pitwall-dashboard.zip",
+        "digest": "sha256:8dc482c4862ecc94f5eb09178a45a19181874695bd3e258cd96ea26f1777d912",
+        "size": 665842059,
+        "state": "uploaded"
+      }
+    ]
+  },
+  "product_ci": {
+    "run": 41690371179,
+    "validate": "success",
+    "browser": "success",
+    "release": "success",
+    "main_run": 41690371427,
+    "main_conclusion": "success",
+    "source_tests": 334,
+    "portable_tests": 141,
+    "browser_suites": 10
+  },
+  "collection_after_deploy": {
+    "run": 41690371674,
+    "conclusion": "success"
+  },
+  "scientific_files_unchanged": 614,
+  "maintenance_before_release": {
+    "run": 41695778403,
+    "jobs": [
+      {
+        "id": 126125790184,
+        "name": "latest",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 126125790657,
+        "name": "health",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "sparse_checkout_commit": "79eda71dbcc01748811560f7bf36f78b49a7e89f"
+  },
+  "maintenance": {
+    "run": 41696089716,
+    "jobs": [
+      {
+        "id": 126126886516,
+        "name": "health",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 126126886982,
+        "name": "latest",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "latest": {
+      "main_version": "0.8.21",
+      "previous": "v0.8.20",
+      "selected": "v0.8.21",
+      "changed": true,
+      "applied": true,
+      "verified_utc": "2026-11-03T18:40:57.5208665Z"
+    },
+    "health": {
+      "problem": null,
+      "action": "unchanged",
+      "issue_number": null,
+      "last_run_id": 41690371674,
+      "checked_utc": "2026-11-03T18:41:29.804477+00:00"
+    }
+  }
+}

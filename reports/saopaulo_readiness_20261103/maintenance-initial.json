@@ -1,0 +1,24 @@
+{
+  "maintenance_run": 41690371533,
+  "latest": {
+    "previous": "v0.8.19",
+    "selected": "v0.8.20",
+    "changed": true,
+    "applied": true,
+    "main_version": "0.8.21",
+    "verified_utc": "2026-11-03T18:06:25.3224317Z",
+    "job": 126107056553
+  },
+  "health": {
+    "problem": null,
+    "action": "unchanged",
+    "applied": false,
+    "issue_number": null,
+    "last_run_id": 41690371674,
+    "verified_utc": "2026-11-03T18:08:36.551949+00:00",
+    "job": 126107056048
+  },
+  "collection_after_deploy": "success",
+  "sparse_checkout_commit": "79eda71",
+  "note": "0.8.21 is deployed; promotion waits for its release ZIP. Incident fail/recovery transitions are tested with an isolated API fixture, not with artificial public incidents."
+}

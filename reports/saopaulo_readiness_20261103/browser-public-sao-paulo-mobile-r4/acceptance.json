@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "version": "0.8.21",
+      "bootstrapReloads": 0,
+      "device": "Pixel 7",
+      "future_gp": 20,
+      "pending": [
+        "Sem previsão registrada para este GP."
+      ],
+      "forecast_borrowed": false,
+      "mexico_preserved": true
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "version": "0.8.21",
+      "bootstrapReloads": 1,
+      "device": "Pixel 7",
+      "future_gp": 20,
+      "pending": [
+        "No recorded forecast for this GP."
+      ],
+      "forecast_borrowed": false,
+      "mexico_preserved": true
+    }
+  ]
+}

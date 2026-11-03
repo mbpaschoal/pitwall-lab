@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "version": "0.8.21",
+      "future_gp": 20,
+      "pending": [
+        "Sem previsão registrada para este GP."
+      ],
+      "forecast_borrowed": false,
+      "mexico_preserved": true
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "version": "0.8.21",
+      "future_gp": 20,
+      "pending": [
+        "No recorded forecast for this GP."
+      ],
+      "forecast_borrowed": false,
+      "mexico_preserved": true
+    }
+  ]
+}

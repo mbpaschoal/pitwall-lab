@@ -1,0 +1,32 @@
+{
+  "run": 41696089716,
+  "jobs": [
+    {
+      "id": 126126886516,
+      "name": "health",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 126126886982,
+      "name": "latest",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "latest": {
+    "main_version": "0.8.21",
+    "previous": "v0.8.20",
+    "selected": "v0.8.21",
+    "changed": true,
+    "applied": true,
+    "verified_utc": "2026-11-03T18:40:57.5208665Z"
+  },
+  "health": {
+    "problem": null,
+    "action": "unchanged",
+    "issue_number": null,
+    "last_run_id": 41690371674,
+    "checked_utc": "2026-11-03T18:41:29.804477+00:00"
+  }
+}
