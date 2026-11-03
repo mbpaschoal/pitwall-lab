@@ -1,0 +1,58 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/lawson-tempo-app-20261102T235109Z",
+  "sources": [
+    {
+      "provider": "gp-tempo",
+      "endpoint": "public_app",
+      "arquivo": "gp-tempo-app.js",
+      "arquivo_requisicao": "gp-tempo-app.js",
+      "url": "https://www.gp-tempo.com/assets/app-DDNNHJDG.js",
+      "url_real": "https://www.gp-tempo.com/assets/app-DDNNHJDG.js",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:51:10.234211Z",
+      "sha256": "98e6d37b7cd2e204a2d118539cd7bcb6cf98b0fb3e9811911d35717a10a48864",
+      "bytes": 600423,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "gp-tempo",
+      "endpoint": "public_config",
+      "arquivo": "gp-tempo-config.js",
+      "arquivo_requisicao": "gp-tempo-config.js",
+      "url": "https://www.gp-tempo.com/config.js",
+      "url_real": "https://www.gp-tempo.com/config.js",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:51:17.792974Z",
+      "sha256": "21d7e52798c9b7709b8d8a6692acd0c95e0fb0d6908966f0b0c70f27554464b6",
+      "bytes": 763,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "gp-tempo",
+      "endpoint": "public_index",
+      "arquivo": "gp-tempo-index.js",
+      "arquivo_requisicao": "gp-tempo-index.js",
+      "url": "https://www.gp-tempo.com/assets/index-pJN3d_uC.js",
+      "url_real": "https://www.gp-tempo.com/assets/index-pJN3d_uC.js",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:51:25.795465Z",
+      "sha256": "6f50ca72a5ba6373f01d58bd7c667189f6d865077653d43dc0eb7fdb143902e6",
+      "bytes": 29993,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "the-field",
+      "endpoint": "fp3_strategy",
+      "arquivo": "thefield-fp3.html",
+      "arquivo_requisicao": "thefield-fp3.html",
+      "url": "https://www.thefieldf1.com/race/2026-mexico-city-grand-prix/practice-3?tab=strategy",
+      "url_real": "https://www.thefieldf1.com/race/2026-mexico-city-grand-prix/practice-3?tab=strategy",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:51:34.126081Z",
+      "sha256": "75c4593477aa0c797f04c903f877bc763e206fd234abfd07f2941d216449eb99",
+      "bytes": 208650,
+      "response_format": "bytes"
+    }
+  ],
+  "failures": []
+}

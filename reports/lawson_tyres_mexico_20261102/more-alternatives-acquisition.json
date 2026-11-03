@@ -1,0 +1,46 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/lawson-more-alternatives-20261102T234908Z",
+  "sources": [
+    {
+      "provider": "gp-tempo",
+      "endpoint": "homepage",
+      "arquivo": "gp-tempo.html",
+      "arquivo_requisicao": "gp-tempo.html",
+      "url": "https://www.gp-tempo.com/",
+      "url_real": "https://www.gp-tempo.com/",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:49:09.269941Z",
+      "sha256": "21d7e52798c9b7709b8d8a6692acd0c95e0fb0d6908966f0b0c70f27554464b6",
+      "bytes": 763,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "formula1",
+      "endpoint": "fp3_highlights",
+      "arquivo": "fp3-highlights.html",
+      "arquivo_requisicao": "fp3-highlights.html",
+      "url": "https://www.formula1.com/en/video/fp3-highlights-2026-mexico-city-grand-prix.1880596084677925494",
+      "url_real": "https://www.formula1.com/en/video/fp3-highlights-2026-mexico-city-grand-prix.1880596084677925494",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:49:17.457103Z",
+      "sha256": "7ec31d8b7ae9d4f8bd6cc8aadbe7ae48be2f830ddba63f4b0294a6e072a94f1c",
+      "bytes": 321056,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "motorsport",
+      "endpoint": "fp3_live_report",
+      "arquivo": "fp3-live.html",
+      "arquivo_requisicao": "fp3-live.html",
+      "url": "https://au.motorsport.com/f1/live-text/f1-mexico-gp-follow-fp3-in-mexico-city-with-live-timing-/1128185/",
+      "url_real": "https://au.motorsport.com/f1/live-text/f1-mexico-gp-follow-fp3-in-mexico-city-with-live-timing-/1128185/",
+      "status": 403,
+      "obtido_em_utc": "2026-11-02T23:50:24.862844Z",
+      "sha256": "176fa68059812646b7caa7ffb9e9d8ba0d0c09cabb4f2afdbb18fa7e29329fdc",
+      "bytes": 919,
+      "response_format": "bytes",
+      "erro": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "failures": []
+}

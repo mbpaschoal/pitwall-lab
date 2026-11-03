@@ -1,0 +1,137 @@
+{
+  "checked_utc": "2026-11-03T00:09:56.259644+00:00",
+  "sessions": [
+    {
+      "session_key": 11399,
+      "timings_unchanged": true,
+      "laps_unchanged": true,
+      "raw_groups_verified": 7,
+      "state": "dados_recebidos"
+    },
+    {
+      "session_key": 11400,
+      "timings_unchanged": true,
+      "laps_unchanged": true,
+      "raw_groups_verified": 7,
+      "state": "dados_recebidos"
+    },
+    {
+      "session_key": 11404,
+      "timings_unchanged": true,
+      "laps_unchanged": true,
+      "raw_groups_verified": 7,
+      "state": "dados_recebidos"
+    }
+  ],
+  "complete_sessions": 5,
+  "total_sessions": 5,
+  "previous_commit": "4166cd3c1f6fad47709f224d8226d904fbfe79bc",
+  "previous_public_asset_sha256": "8361ba9e5c0df2de137887c5b269c9bfd451f72cd5ae046b3be9b2fcd9f6c5cb",
+  "fp3_native_coverage": {
+    "race_control": 26,
+    "drivers": 21,
+    "session_result": 22,
+    "weather": 54,
+    "laps": 469,
+    "stints": 76,
+    "pit": 89
+  },
+  "fp3_reviewed_coverage": {
+    "race_control": 26,
+    "drivers": 22,
+    "session_result": 22,
+    "weather": 54,
+    "laps": 469,
+    "stints": 77,
+    "pit": 88
+  },
+  "lawson": {
+    "numero": 30,
+    "piloto": "Liam LAWSON",
+    "equipe": "Racing Bulls",
+    "modalidade": "Practice 3",
+    "session_key": 11399,
+    "sequencia_stints": [
+      {
+        "inicio": 1,
+        "fim": 8,
+        "composto": "MEDIUM",
+        "idade": null,
+        "revisao_composto": {
+          "metodo": "MEDIUM publicado no GP Tempo nas voltas 2–8. FIA confirma o primeiro trecho ininterrupto de oito voltas entre 17:42:06 e 17:55:03 UTC. Composto da volta 1 reconstruído por continuidade desse trecho; tempo e idade inicial permanecem ausentes.",
+          "voltas_diretas": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "primeira_volta_por_continuidade": 1,
+          "fontes": [
+            {
+              "provider": "gp-tempo",
+              "endpoint": "events",
+              "url": "https://www.gp-tempo.com/api/events?year=2026&pastOnly=true",
+              "status": 200,
+              "obtido_em_utc": "2026-11-02T23:51:50.997840Z",
+              "sha256": "0d3fabdf7f0571a40584029c7fc288cf92ae7d96ee05b05054278935fb4a41df"
+            },
+            {
+              "provider": "gp-tempo",
+              "endpoint": "fp3_results",
+              "url": "https://www.gp-tempo.com/api/results?year=2026&event=20&session=3",
+              "status": 200,
+              "obtido_em_utc": "2026-11-02T23:52:18.205135Z",
+              "sha256": "7a4bac66f6779e2976b15f95592c7f5cdd56e3cfd2ee8d80a035d86037f96265"
+            },
+            {
+              "provider": "gp-tempo",
+              "endpoint": "lawson_fp3_laps",
+              "url": "https://www.gp-tempo.com/api/laps?year=2026&event=20&session=3&driver=LAW",
+              "status": 200,
+              "obtido_em_utc": "2026-11-02T23:52:26.460252Z",
+              "sha256": "293ff2728933c44aa2b163c647d2dc64ad65745857d024784629af6949059e3d"
+            },
+            {
+              "provider": "fia",
+              "endpoint": "fp3_on_track",
+              "url": "https://www.fia.com/sites/default/files/2026_19_mex_f1_p3_timing_thirdpracticesessionontrackanalysis_v01.pdf",
+              "status": 200,
+              "obtido_em_utc": "2026-11-02T00:39:36.807654Z",
+              "sha256": "97fe47ae960909c410a7577b83a1b884e7883a4e0edb18e077d41540909c6322"
+            }
+          ]
+        }
+      },
+      {
+        "inicio": 9,
+        "fim": 11,
+        "composto": "MEDIUM",
+        "idade": 8
+      },
+      {
+        "inicio": 12,
+        "fim": 19,
+        "composto": "MEDIUM",
+        "idade": 11
+      },
+      {
+        "inicio": 20,
+        "fim": 22,
+        "composto": "SOFT",
+        "idade": 0
+      },
+      {
+        "inicio": 23,
+        "fim": 28,
+        "composto": "SOFT",
+        "idade": 3
+      }
+    ],
+    "comparavel": true,
+    "qualidade": []
+  },
+  "public_asset_sha256": "7adbdf80ea723eaa2b6d765ccf88a9b1d1f63e8844269b0239153f0a55ffc413"
+}

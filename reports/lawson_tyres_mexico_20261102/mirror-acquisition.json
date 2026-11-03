@@ -1,0 +1,32 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/lawson-mirror-20261102T234550Z",
+  "sources": [
+    {
+      "provider": "fastf1",
+      "endpoint": "schedule",
+      "arquivo": "schedule.json",
+      "arquivo_requisicao": "schedule.json",
+      "url": "https://raw.githubusercontent.com/theOehrly/f1schedule/master/schedule_2026.json",
+      "url_real": "https://raw.githubusercontent.com/theOehrly/f1schedule/master/schedule_2026.json",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:45:50.596504Z",
+      "sha256": "f7602b7a753f823b1bdcb1ed99443267101cd8c3ba8ca4fb09442785fa7b7963",
+      "bytes": 12898,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "fastf1-mirror",
+      "endpoint": "session_info",
+      "arquivo": "SessionInfo.json",
+      "arquivo_requisicao": "SessionInfo.json",
+      "url": "https://livetiming-mirror.fastf1.dev/static/2026/2026-11-01_Mexico_City_Grand_Prix/2026-10-31_Practice_3/SessionInfo.json",
+      "url_real": "https://livetiming-mirror.fastf1.dev/static/2026/2026-11-01_Mexico_City_Grand_Prix/2026-10-31_Practice_3/SessionInfo.json",
+      "status": 404,
+      "obtido_em_utc": "2026-11-02T23:45:58.631767Z",
+      "sha256": "62c1c0b235e26952857139537b65f8272026cd1c385c1bf6dba20481ee8a6619",
+      "bytes": 27150,
+      "response_format": "bytes",
+      "erro": "HTTP Error 404: Not Found"
+    }
+  ]
+}

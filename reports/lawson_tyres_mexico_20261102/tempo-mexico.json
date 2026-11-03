@@ -1,0 +1,4 @@
+[
+ {"provider":"gp-tempo","endpoint":"fp3_results","filename":"results.json","url":"https://www.gp-tempo.com/api/results?year=2026&event=20&session=3"},
+ {"provider":"gp-tempo","endpoint":"lawson_fp3_laps","filename":"lawson-laps.json","url":"https://www.gp-tempo.com/api/laps?year=2026&event=20&session=3&driver=LAW"}
+]

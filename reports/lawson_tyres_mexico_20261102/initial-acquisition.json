@@ -1,0 +1,33 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/lawson-fp3-20261102T234423Z",
+  "sources": [
+    {
+      "provider": "openf1",
+      "endpoint": "lawson_stints",
+      "arquivo": "openf1-stints.json",
+      "arquivo_requisicao": "openf1-stints.json",
+      "url": "https://api.openf1.org/v1/stints?session_key=11399&driver_number=30",
+      "url_real": "https://api.openf1.org/v1/stints?session_key=11399&driver_number=30",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:44:24.323020Z",
+      "sha256": "0b1a6a6a0d6d649314c2ada50ab10b98523149a35fdc552c67f906bc587e0b8a",
+      "bytes": 585,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "delta-trace",
+      "endpoint": "strategy",
+      "arquivo": "delta-strategy.html",
+      "arquivo_requisicao": "delta-strategy.html",
+      "url": "https://delta-trace.com/2026/mexico-city/fp3/strategy",
+      "url_real": "https://delta-trace.com/2026/mexico-city/fp3/strategy",
+      "status": 429,
+      "obtido_em_utc": "2026-11-02T23:44:31.727830Z",
+      "sha256": "137af9c2934c5a8276cd76400e8752dcc5794c6bce6d53f633af7bc956e891d6",
+      "bytes": 151,
+      "response_format": "bytes",
+      "erro": "HTTP Error 429: Too Many Requests"
+    }
+  ],
+  "outcome": "stopped_on_delta_trace_rate_limit"
+}

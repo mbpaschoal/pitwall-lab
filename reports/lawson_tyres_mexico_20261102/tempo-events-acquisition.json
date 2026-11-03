@@ -1,0 +1,19 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/lawson-tempo-events-20261102T235150Z",
+  "sources": [
+    {
+      "provider": "gp-tempo",
+      "endpoint": "events",
+      "arquivo": "events.json",
+      "arquivo_requisicao": "events.json",
+      "url": "https://www.gp-tempo.com/api/events?year=2026&pastOnly=true",
+      "url_real": "https://www.gp-tempo.com/api/events?year=2026&pastOnly=true",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:51:50.997840Z",
+      "sha256": "0d3fabdf7f0571a40584029c7fc288cf92ae7d96ee05b05054278935fb4a41df",
+      "bytes": 13332,
+      "response_format": "bytes"
+    }
+  ],
+  "failures": []
+}

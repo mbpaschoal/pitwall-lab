@@ -39,6 +39,52 @@ def sources(review, names):
     return [review['fontes'][name] for name in names]
 
 
+def _documented_stints(output, item, session, review, audit):
+    """Admit only reviewed compounds; do not import alternative lap times/ages."""
+    if 'laps' not in output or 'stints' not in output:
+        return
+    for correction in item.get('stints_documentados', []):
+        number = correction['driver_number']
+        profile = [r for r in output['drivers'] if r['driver_number'] == number]
+        if len(profile) != 1 or any(profile[0].get(k) != correction[k] for k in ('full_name', 'team_name')):
+            raise ValueError('Documented tyre identity mismatch')
+        start, end = correction['lap_start'], correction['lap_end']
+        window = correction['intervalo_sem_boxes']
+        if (type(start) is not int or type(end) is not int or not 0 < start <= end
+                or window['voltas'] != end-start+1 or correction['compound'] not in ('SOFT','MEDIUM','HARD','INTERMEDIATE','WET')
+                or not instant(session['date_start']) <= instant(window['inicio_utc']) < instant(window['fim_utc']) <= instant(session['date_end'])):
+            raise ValueError('Invalid documented tyre interval')
+        rows = {r['lap_number']: r for r in output['laps'] if r['driver_number'] == number}
+        checked = correction['voltas_verificadas']
+        if [r['lap_number'] for r in checked] != list(range(start+1, end+1)):
+            raise ValueError('Incomplete direct compound evidence')
+        for expected in checked:
+            row = rows.get(expected['lap_number'], {})
+            if (row.get('lap_duration') != expected['lap_duration'] or not row.get('date_start')
+                    or not instant(window['inicio_utc']) <= instant(row['date_start']) < instant(window['fim_utc'])):
+                raise ValueError('Documented tyre evidence differs from native laps')
+        initial = correction['registro_inicial_sem_tempo']
+        if initial['lap_number'] != start or start not in rows or any(rows[start].get(k) != initial[k] for k in ('date_start','lap_duration')):
+            raise ValueError('Initial unmeasured lap changed; review tyre continuity')
+        overlaps = [r for r in output['stints'] if r['driver_number'] == number
+                    and type(r.get('lap_start')) is int and type(r.get('lap_end')) is int
+                    and max(start, r['lap_start']) <= min(end, r['lap_end'])]
+        if overlaps:
+            if len(overlaps) != 1 or any(overlaps[0].get(k) != correction[k] for k in ('stint_number','lap_start','lap_end','compound')):
+                raise ValueError('Native stint contradicts documentary correction')
+            stint = overlaps[0]  # Preserve a compatible native age, including zero.
+        else:
+            stint = dict(session_key=session['session_key'], meeting_key=session['meeting_key'],
+                         **{k: correction[k] for k in ('driver_number','stint_number','lap_start','lap_end','compound','tyre_age_at_start')})
+            output['stints'].append(stint)
+        stint['revisao_composto'] = dict(metodo=correction['metodo'],
+            voltas_diretas=[r['lap_number'] for r in checked],
+            primeira_volta_por_continuidade=start, fontes=sources(review, correction['fontes']))
+        audit['acoes'].append(dict(tipo='composto_documentado', numero=number,
+            inicio=start, fim=end, composto=correction['compound'],
+            metodo=correction['metodo'], fontes=sources(review, correction['fontes'])))
+
+
 def reconcile(data, session, review):
     item = session_review(review, session)
     if not item:
@@ -83,6 +129,7 @@ def reconcile(data, session, review):
         previous = reconcile_native(output, final, source)
         audit['acoes'].append(dict(tipo='classificacao_final_oficial', anterior=previous,
                                   fontes=sources(review, [final['fonte']])))
+    _documented_stints(output, item, session, review, audit)
     return output, audit
 
 

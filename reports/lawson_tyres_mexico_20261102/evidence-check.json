@@ -1,0 +1,77 @@
+{
+  "identity": {
+    "season": 2026,
+    "canonical_round": 19,
+    "circuit": "rodriguez",
+    "meeting_key": 1298,
+    "session_key": 11399,
+    "driver_number": 30
+  },
+  "source_identity": {
+    "RoundNumber": 20,
+    "EventName": "Mexico City Grand Prix",
+    "EventFormat": "conventional",
+    "EventDate": "01/11/2026, 00:00:00",
+    "Location": "Mexico City",
+    "OfficialEventName": "FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2026",
+    "Country": "Mexico",
+    "Sessions": [
+      {
+        "SessionId": 1,
+        "SessionName": "FP1",
+        "ResultsAvailable": true,
+        "QualiLike": false
+      },
+      {
+        "SessionId": 2,
+        "SessionName": "FP2",
+        "ResultsAvailable": true,
+        "QualiLike": false
+      },
+      {
+        "SessionId": 3,
+        "SessionName": "FP3",
+        "ResultsAvailable": true,
+        "QualiLike": false
+      },
+      {
+        "SessionId": 4,
+        "SessionName": "Qualifying",
+        "ResultsAvailable": true,
+        "QualiLike": false
+      },
+      {
+        "SessionId": 5,
+        "SessionName": "Race",
+        "ResultsAvailable": true,
+        "QualiLike": false
+      }
+    ]
+  },
+  "native_laps_sha256": "44b80b00f0ce0f535c0881d27f2d3d61f989cce6200b06e2f479dfa147209876",
+  "published_non_null_times_matched": 25,
+  "source_missing_times_retained_from_native": [
+    12,
+    20
+  ],
+  "compound_direct_laps": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "compound": "MEDIUM",
+  "fia_first_run": {
+    "inicio_utc": "2026-10-31T17:42:06Z",
+    "fim_utc": "2026-10-31T17:55:03Z",
+    "voltas": 8,
+    "fonte": "fp3_on_track"
+  },
+  "first_lap": "Compound reconstructed by continuity of the FIA uninterrupted first run, supported by GP Tempo laps 2–8. Original timing remains absent.",
+  "tyre_age_at_start": null,
+  "decision": "documentary_reconstruction_not_raw_observation",
+  "checked_utc": "2026-11-02T23:59:14.664573+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/lawson-tempo-mexico-20261102T235217Z",
+  "sources": [
+    {
+      "provider": "gp-tempo",
+      "endpoint": "fp3_results",
+      "arquivo": "results.json",
+      "arquivo_requisicao": "results.json",
+      "url": "https://www.gp-tempo.com/api/results?year=2026&event=20&session=3",
+      "url_real": "https://www.gp-tempo.com/api/results?year=2026&event=20&session=3",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:52:18.205135Z",
+      "sha256": "7a4bac66f6779e2976b15f95592c7f5cdd56e3cfd2ee8d80a035d86037f96265",
+      "bytes": 1838,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "gp-tempo",
+      "endpoint": "lawson_fp3_laps",
+      "arquivo": "lawson-laps.json",
+      "arquivo_requisicao": "lawson-laps.json",
+      "url": "https://www.gp-tempo.com/api/laps?year=2026&event=20&session=3&driver=LAW",
+      "url_real": "https://www.gp-tempo.com/api/laps?year=2026&event=20&session=3&driver=LAW",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:52:26.460252Z",
+      "sha256": "293ff2728933c44aa2b163c647d2dc64ad65745857d024784629af6949059e3d",
+      "bytes": 23208,
+      "response_format": "bytes"
+    }
+  ],
+  "failures": []
+}

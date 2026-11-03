@@ -63,9 +63,14 @@ def project(data, session):
         number = row.get('driver_number')
         if number not in drivers:
             raise DriverIdentityUnavailable(number)
-        stints[number].append(dict(inicio=row.get('lap_start'), fim=row.get('lap_end'), composto=row.get('compound'), idade=row.get('tyre_age_at_start')))
+        stint = dict(inicio=row.get('lap_start'), fim=row.get('lap_end'), composto=row.get('compound'), idade=row.get('tyre_age_at_start'))
+        if row.get('revisao_composto'):
+            stint['revisao_composto'] = row['revisao_composto']
+        stints[number].append(stint)
     strategies = []
     for (number, rows) in stints.items():
+        if any(row.get('revisao_composto') for row in rows):
+            rows.sort(key=lambda row: row['inicio'] if type(row.get('inicio')) is int else float('inf'))
         known = all((type(s['inicio']) is int and type(s['fim']) is int and (0 < s['inicio'] <= s['fim']) and (s['composto'] in ('SOFT', 'MEDIUM', 'HARD', 'INTERMEDIATE', 'WET')) for s in rows))
         strategies.append(dict(numero=number, piloto=drivers[number].get('full_name'), equipe=drivers[number].get('team_name'), modalidade=session['session_name'], session_key=session['session_key'], sequencia_stints=rows, comparavel=known, qualidade=[] if known else [{'flags': ['limites_ou_composto_ausentes']}]))
     pits = []

@@ -2,7 +2,7 @@
   "temporada": 2026,
   "rodada": 19,
   "circuito_id": "rodriguez",
-  "atualizado_em_utc": "2026-11-02T05:28:10.851717Z",
+  "atualizado_em_utc": "2026-11-02T23:52:26.460252Z",
   "previsao_meteorologica": {
     "natureza": "previsao_arquivada",
     "disponivel": true,
@@ -9905,7 +9905,7 @@
       "nome": "Practice 3",
       "inicio_utc": "2026-10-31T17:30:00+00:00",
       "fim_programado_utc": "2026-10-31T18:30:00+00:00",
-      "estado": "parcial",
+      "estado": "dados_recebidos",
       "cobertura": {
         "race_control": 26,
         "drivers": 21,
@@ -9917,8 +9917,8 @@
       },
       "encerramento_observado_utc": "2026-10-31T18:30:00.161000+00:00",
       "revisao_fontes": {
-        "id": "mexico-2026-fontes-20261102-v2",
-        "sha256": "d812f441f0b53a447f5acbbcc49b5de161280d62315bcb1b8529ae74bb9b1795",
+        "id": "mexico-2026-fia-openf1-gptempo-20261102",
+        "sha256": "d744ab29b61cfee71481a8edb42755142daab0993c26ecdea6ed491fa0185fcd",
         "acoes": [
           {
             "tipo": "pit_contexto_anterior",
@@ -9958,6 +9958,48 @@
                 "sha256": "7742978ccdf14ff96fff3ee3740fe93c362a0f0a7d91df15f0a7e75d6c25e4f9"
               }
             ]
+          },
+          {
+            "tipo": "composto_documentado",
+            "numero": 30,
+            "inicio": 1,
+            "fim": 8,
+            "composto": "MEDIUM",
+            "metodo": "MEDIUM publicado no GP Tempo nas voltas 2–8. FIA confirma o primeiro trecho ininterrupto de oito voltas entre 17:42:06 e 17:55:03 UTC. Composto da volta 1 reconstruído por continuidade desse trecho; tempo e idade inicial permanecem ausentes.",
+            "fontes": [
+              {
+                "provider": "gp-tempo",
+                "endpoint": "events",
+                "url": "https://www.gp-tempo.com/api/events?year=2026&pastOnly=true",
+                "status": 200,
+                "obtido_em_utc": "2026-11-02T23:51:50.997840Z",
+                "sha256": "0d3fabdf7f0571a40584029c7fc288cf92ae7d96ee05b05054278935fb4a41df"
+              },
+              {
+                "provider": "gp-tempo",
+                "endpoint": "fp3_results",
+                "url": "https://www.gp-tempo.com/api/results?year=2026&event=20&session=3",
+                "status": 200,
+                "obtido_em_utc": "2026-11-02T23:52:18.205135Z",
+                "sha256": "7a4bac66f6779e2976b15f95592c7f5cdd56e3cfd2ee8d80a035d86037f96265"
+              },
+              {
+                "provider": "gp-tempo",
+                "endpoint": "lawson_fp3_laps",
+                "url": "https://www.gp-tempo.com/api/laps?year=2026&event=20&session=3&driver=LAW",
+                "status": 200,
+                "obtido_em_utc": "2026-11-02T23:52:26.460252Z",
+                "sha256": "293ff2728933c44aa2b163c647d2dc64ad65745857d024784629af6949059e3d"
+              },
+              {
+                "provider": "fia",
+                "endpoint": "fp3_on_track",
+                "url": "https://www.fia.com/sites/default/files/2026_19_mex_f1_p3_timing_thirdpracticesessionontrackanalysis_v01.pdf",
+                "status": 200,
+                "obtido_em_utc": "2026-11-02T00:39:36.807654Z",
+                "sha256": "97fe47ae960909c410a7577b83a1b884e7883a4e0edb18e077d41540909c6322"
+              }
+            ]
           }
         ]
       },
@@ -9967,9 +10009,75 @@
         "session_result": 22,
         "weather": 54,
         "laps": 469,
-        "stints": 76,
+        "stints": 77,
         "pit": 88
       },
+      "fontes": [
+        {
+          "provider": "openf1",
+          "endpoint": "sessions",
+          "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T05:27:07.174306Z",
+          "sha256": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "race_control",
+          "url": "https://api.openf1.org/v1/race_control?session_key=11399",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T05:27:15.174292Z",
+          "sha256": "2e666f3754fd8b800f1d1aa33c00c9233ef0cea5a3be25b8632255622dfca76d"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "drivers",
+          "url": "https://api.openf1.org/v1/drivers?session_key=11399",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T05:27:23.495139Z",
+          "sha256": "82bb185115e4b44d1e088d44e6347df82d00c75dc986d9e5d7452930592c020f"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "session_result",
+          "url": "https://api.openf1.org/v1/session_result?session_key=11399",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T05:27:31.267390Z",
+          "sha256": "fc455d1f11098779565a5a9c3a29b5d6b1731f21da5da9f11444c5959d2281c7"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "weather",
+          "url": "https://api.openf1.org/v1/weather?session_key=11399",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T05:27:39.147000Z",
+          "sha256": "706c2cd4e9b6fb47e1b2b084ef3edeb148f92ec3656c1d3362ec20d0fa268d65"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "laps",
+          "url": "https://api.openf1.org/v1/laps?session_key=11399",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T05:27:47.617758Z",
+          "sha256": "44b80b00f0ce0f535c0881d27f2d3d61f989cce6200b06e2f479dfa147209876"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "stints",
+          "url": "https://api.openf1.org/v1/stints?session_key=11399",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T05:27:55.085195Z",
+          "sha256": "ce34552f596d8f1c371dbecd1cb6ca28c5ad25ea7359fb40a00f7f3c2dfe2df3"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "pit",
+          "url": "https://api.openf1.org/v1/pit?session_key=11399",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T05:28:03.464142Z",
+          "sha256": "55f9e12bdb8d3fb5b92e029a0570a759fc2edfd913b94ba7be4046b78a358214"
+        }
+      ],
       "tempos": [
         {
           "numero": 1,
@@ -12259,10 +12367,57 @@
             "session_key": 11399,
             "sequencia_stints": [
               {
-                "inicio": 23,
-                "fim": 28,
-                "composto": "SOFT",
-                "idade": 3
+                "inicio": 1,
+                "fim": 8,
+                "composto": "MEDIUM",
+                "idade": null,
+                "revisao_composto": {
+                  "metodo": "MEDIUM publicado no GP Tempo nas voltas 2–8. FIA confirma o primeiro trecho ininterrupto de oito voltas entre 17:42:06 e 17:55:03 UTC. Composto da volta 1 reconstruído por continuidade desse trecho; tempo e idade inicial permanecem ausentes.",
+                  "voltas_diretas": [
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                  ],
+                  "primeira_volta_por_continuidade": 1,
+                  "fontes": [
+                    {
+                      "provider": "gp-tempo",
+                      "endpoint": "events",
+                      "url": "https://www.gp-tempo.com/api/events?year=2026&pastOnly=true",
+                      "status": 200,
+                      "obtido_em_utc": "2026-11-02T23:51:50.997840Z",
+                      "sha256": "0d3fabdf7f0571a40584029c7fc288cf92ae7d96ee05b05054278935fb4a41df"
+                    },
+                    {
+                      "provider": "gp-tempo",
+                      "endpoint": "fp3_results",
+                      "url": "https://www.gp-tempo.com/api/results?year=2026&event=20&session=3",
+                      "status": 200,
+                      "obtido_em_utc": "2026-11-02T23:52:18.205135Z",
+                      "sha256": "7a4bac66f6779e2976b15f95592c7f5cdd56e3cfd2ee8d80a035d86037f96265"
+                    },
+                    {
+                      "provider": "gp-tempo",
+                      "endpoint": "lawson_fp3_laps",
+                      "url": "https://www.gp-tempo.com/api/laps?year=2026&event=20&session=3&driver=LAW",
+                      "status": 200,
+                      "obtido_em_utc": "2026-11-02T23:52:26.460252Z",
+                      "sha256": "293ff2728933c44aa2b163c647d2dc64ad65745857d024784629af6949059e3d"
+                    },
+                    {
+                      "provider": "fia",
+                      "endpoint": "fp3_on_track",
+                      "url": "https://www.fia.com/sites/default/files/2026_19_mex_f1_p3_timing_thirdpracticesessionontrackanalysis_v01.pdf",
+                      "status": 200,
+                      "obtido_em_utc": "2026-11-02T00:39:36.807654Z",
+                      "sha256": "97fe47ae960909c410a7577b83a1b884e7883a4e0edb18e077d41540909c6322"
+                    }
+                  ]
+                }
               },
               {
                 "inicio": 9,
@@ -12281,26 +12436,16 @@
                 "fim": 22,
                 "composto": "SOFT",
                 "idade": 0
+              },
+              {
+                "inicio": 23,
+                "fim": 28,
+                "composto": "SOFT",
+                "idade": 3
               }
             ],
-            "comparavel": false,
-            "qualidade": [
-              {
-                "flags": [
-                  "composto_inicial_ausente"
-                ],
-                "voltas": [
-                  1,
-                  2,
-                  3,
-                  4,
-                  5,
-                  6,
-                  7,
-                  8
-                ]
-              }
-            ]
+            "comparavel": true,
+            "qualidade": []
           },
           {
             "numero": 77,
@@ -13603,100 +13748,7 @@
             "fonte": "https://openf1.org/docs/#pit"
           }
         ]
-      },
-      "motivo_parcial": "Composto do stint inicial de Lawson ainda indisponível; tempos e paradas recuperados.",
-      "lacunas_documentadas": [
-        {
-          "grupo": "pneus",
-          "numero": 30,
-          "voltas": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8
-          ],
-          "fontes": [
-            {
-              "provider": "fia",
-              "endpoint": "fp3_on_track",
-              "url": "https://www.fia.com/sites/default/files/2026_19_mex_f1_p3_timing_thirdpracticesessionontrackanalysis_v01.pdf",
-              "status": 200,
-              "obtido_em_utc": "2026-11-02T00:39:36.807654Z",
-              "sha256": "97fe47ae960909c410a7577b83a1b884e7883a4e0edb18e077d41540909c6322"
-            }
-          ]
-        }
-      ],
-      "fontes": [
-        {
-          "provider": "openf1",
-          "endpoint": "sessions",
-          "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T05:27:07.174306Z",
-          "sha256": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "race_control",
-          "url": "https://api.openf1.org/v1/race_control?session_key=11399",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T05:27:15.174292Z",
-          "sha256": "2e666f3754fd8b800f1d1aa33c00c9233ef0cea5a3be25b8632255622dfca76d"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "drivers",
-          "url": "https://api.openf1.org/v1/drivers?session_key=11399",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T05:27:23.495139Z",
-          "sha256": "82bb185115e4b44d1e088d44e6347df82d00c75dc986d9e5d7452930592c020f"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "session_result",
-          "url": "https://api.openf1.org/v1/session_result?session_key=11399",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T05:27:31.267390Z",
-          "sha256": "fc455d1f11098779565a5a9c3a29b5d6b1731f21da5da9f11444c5959d2281c7"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "weather",
-          "url": "https://api.openf1.org/v1/weather?session_key=11399",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T05:27:39.147000Z",
-          "sha256": "706c2cd4e9b6fb47e1b2b084ef3edeb148f92ec3656c1d3362ec20d0fa268d65"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "laps",
-          "url": "https://api.openf1.org/v1/laps?session_key=11399",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T05:27:47.617758Z",
-          "sha256": "44b80b00f0ce0f535c0881d27f2d3d61f989cce6200b06e2f479dfa147209876"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "stints",
-          "url": "https://api.openf1.org/v1/stints?session_key=11399",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T05:27:55.085195Z",
-          "sha256": "ce34552f596d8f1c371dbecd1cb6ca28c5ad25ea7359fb40a00f7f3c2dfe2df3"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "pit",
-          "url": "https://api.openf1.org/v1/pit?session_key=11399",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T05:28:03.464142Z",
-          "sha256": "55f9e12bdb8d3fb5b92e029a0570a759fc2edfd913b94ba7be4046b78a358214"
-        }
-      ]
+      }
     },
     {
       "session_key": 11400,
@@ -13715,8 +13767,8 @@
       },
       "encerramento_observado_utc": "2026-10-31T22:08:00.164000+00:00",
       "revisao_fontes": {
-        "id": "mexico-2026-fontes-20261102-v2",
-        "sha256": "d812f441f0b53a447f5acbbcc49b5de161280d62315bcb1b8529ae74bb9b1795",
+        "id": "mexico-2026-fia-openf1-gptempo-20261102",
+        "sha256": "d744ab29b61cfee71481a8edb42755142daab0993c26ecdea6ed491fa0185fcd",
         "acoes": [
           {
             "tipo": "pit_contexto_anterior",
@@ -13861,6 +13913,72 @@
         "stints": 111,
         "pit": 89
       },
+      "fontes": [
+        {
+          "provider": "openf1",
+          "endpoint": "sessions",
+          "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T01:19:01.354293Z",
+          "sha256": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "race_control",
+          "url": "https://api.openf1.org/v1/race_control?session_key=11400",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T01:20:05.468225Z",
+          "sha256": "98327eb439baacdfe0afb5bf4c2cabcc5fced45073f34310fa6ef6cb2076fb3f"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "drivers",
+          "url": "https://api.openf1.org/v1/drivers?session_key=11400",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T01:20:13.261310Z",
+          "sha256": "71102a78c03c367531aa72b4b2ec2a75d66283152f839b31d18f57dcd2f6421d"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "session_result",
+          "url": "https://api.openf1.org/v1/session_result?session_key=11400",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T01:20:21.295287Z",
+          "sha256": "2554d62c1596185013a986558cde917b517275600948eceab8b2b0eae54980d6"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "weather",
+          "url": "https://api.openf1.org/v1/weather?session_key=11400",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T01:20:29.432796Z",
+          "sha256": "96aa3fc9264a2549b99a45e2618851bf50551b34c254caffb16bfe30c7b6c308"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "laps",
+          "url": "https://api.openf1.org/v1/laps?session_key=11400",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T01:20:37.744070Z",
+          "sha256": "6a02db80b21790046290fbbdc7dea2a74967a32c5a9a44cbb97934dbb3d0312c"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "stints",
+          "url": "https://api.openf1.org/v1/stints?session_key=11400",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T01:20:45.414480Z",
+          "sha256": "24a844e115c2a2e1dc4460518cddd34b0c04cfcfef7a43364da382a11eb81053"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "pit",
+          "url": "https://api.openf1.org/v1/pit?session_key=11400",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T01:20:53.413989Z",
+          "sha256": "ef03495e2f356fcfa843f3aab72b79c855e3f945439c4eac08362a29a005214d"
+        }
+      ],
       "tempos": [
         {
           "numero": 44,
@@ -17542,73 +17660,7 @@
             "fonte": "https://openf1.org/docs/#pit"
           }
         ]
-      },
-      "fontes": [
-        {
-          "provider": "openf1",
-          "endpoint": "sessions",
-          "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T01:19:01.354293Z",
-          "sha256": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "race_control",
-          "url": "https://api.openf1.org/v1/race_control?session_key=11400",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T01:20:05.468225Z",
-          "sha256": "98327eb439baacdfe0afb5bf4c2cabcc5fced45073f34310fa6ef6cb2076fb3f"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "drivers",
-          "url": "https://api.openf1.org/v1/drivers?session_key=11400",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T01:20:13.261310Z",
-          "sha256": "71102a78c03c367531aa72b4b2ec2a75d66283152f839b31d18f57dcd2f6421d"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "session_result",
-          "url": "https://api.openf1.org/v1/session_result?session_key=11400",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T01:20:21.295287Z",
-          "sha256": "2554d62c1596185013a986558cde917b517275600948eceab8b2b0eae54980d6"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "weather",
-          "url": "https://api.openf1.org/v1/weather?session_key=11400",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T01:20:29.432796Z",
-          "sha256": "96aa3fc9264a2549b99a45e2618851bf50551b34c254caffb16bfe30c7b6c308"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "laps",
-          "url": "https://api.openf1.org/v1/laps?session_key=11400",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T01:20:37.744070Z",
-          "sha256": "6a02db80b21790046290fbbdc7dea2a74967a32c5a9a44cbb97934dbb3d0312c"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "stints",
-          "url": "https://api.openf1.org/v1/stints?session_key=11400",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T01:20:45.414480Z",
-          "sha256": "24a844e115c2a2e1dc4460518cddd34b0c04cfcfef7a43364da382a11eb81053"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "pit",
-          "url": "https://api.openf1.org/v1/pit?session_key=11400",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T01:20:53.413989Z",
-          "sha256": "ef03495e2f356fcfa843f3aab72b79c855e3f945439c4eac08362a29a005214d"
-        }
-      ]
+      }
     },
     {
       "session_key": 11404,
@@ -17790,8 +17842,8 @@
         "uso": "contexto historico observado; sem inferir pista seca/molhada e sem uso no v1"
       },
       "revisao_fontes": {
-        "id": "mexico-2026-fontes-20261102-v2",
-        "sha256": "d812f441f0b53a447f5acbbcc49b5de161280d62315bcb1b8529ae74bb9b1795",
+        "id": "mexico-2026-fia-openf1-gptempo-20261102",
+        "sha256": "d744ab29b61cfee71481a8edb42755142daab0993c26ecdea6ed491fa0185fcd",
         "acoes": [
           {
             "tipo": "classificacao_final_oficial",
@@ -18083,6 +18135,72 @@
         "stints": 80,
         "pit": 67
       },
+      "fontes": [
+        {
+          "provider": "openf1",
+          "endpoint": "sessions",
+          "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T00:23:11.315399Z",
+          "sha256": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "race_control",
+          "url": "https://api.openf1.org/v1/race_control?session_key=11404",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T00:25:11.440462Z",
+          "sha256": "2bf76136a810bbf59416de98fcd5087af11797de52abea2d4fc54167afdd1a98"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "drivers",
+          "url": "https://api.openf1.org/v1/drivers?session_key=11404",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T00:25:19.174982Z",
+          "sha256": "d8a2c578fec57f01baae4bcef02fc11751c06eec79690364ad48330f28ea8a20"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "session_result",
+          "url": "https://api.openf1.org/v1/session_result?session_key=11404",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T00:25:27.165802Z",
+          "sha256": "57b0dea60812fc7afe3e8a5d1d34f015f76f9d63f389ef55b9adcf7f48762a45"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "weather",
+          "url": "https://api.openf1.org/v1/weather?session_key=11404",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T00:25:35.416470Z",
+          "sha256": "d223003c89efa1fc2512f35f69460088cfe49f58715e97e80cc3b84fc71a1bc3"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "laps",
+          "url": "https://api.openf1.org/v1/laps?session_key=11404",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T00:25:43.961592Z",
+          "sha256": "e944a3c5bf7cc9ce9bce181eb7110d6083ee4886eb3e5b57327f9378e7a9a3aa"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "stints",
+          "url": "https://api.openf1.org/v1/stints?session_key=11404",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T00:25:51.374005Z",
+          "sha256": "24443d278b7bf88057fe7b425c8df667164da5639be6ae522817d334de71378e"
+        },
+        {
+          "provider": "openf1",
+          "endpoint": "pit",
+          "url": "https://api.openf1.org/v1/pit?session_key=11404",
+          "status": 200,
+          "obtido_em_utc": "2026-11-02T00:25:59.376880Z",
+          "sha256": "e3dee3ff3089d36bfc3b5073f72b0a10987bb40cf1305eb173c45073607a6f23"
+        }
+      ],
       "tempos": [
         {
           "numero": 3,
@@ -25175,73 +25293,7 @@
             "fonte": "https://openf1.org/docs/#pit"
           }
         ]
-      },
-      "fontes": [
-        {
-          "provider": "openf1",
-          "endpoint": "sessions",
-          "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Mexico",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T00:23:11.315399Z",
-          "sha256": "f9c4abd29495637d00788d265527d7520515565610705ac6e1d65bae7684a313"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "race_control",
-          "url": "https://api.openf1.org/v1/race_control?session_key=11404",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T00:25:11.440462Z",
-          "sha256": "2bf76136a810bbf59416de98fcd5087af11797de52abea2d4fc54167afdd1a98"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "drivers",
-          "url": "https://api.openf1.org/v1/drivers?session_key=11404",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T00:25:19.174982Z",
-          "sha256": "d8a2c578fec57f01baae4bcef02fc11751c06eec79690364ad48330f28ea8a20"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "session_result",
-          "url": "https://api.openf1.org/v1/session_result?session_key=11404",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T00:25:27.165802Z",
-          "sha256": "57b0dea60812fc7afe3e8a5d1d34f015f76f9d63f389ef55b9adcf7f48762a45"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "weather",
-          "url": "https://api.openf1.org/v1/weather?session_key=11404",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T00:25:35.416470Z",
-          "sha256": "d223003c89efa1fc2512f35f69460088cfe49f58715e97e80cc3b84fc71a1bc3"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "laps",
-          "url": "https://api.openf1.org/v1/laps?session_key=11404",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T00:25:43.961592Z",
-          "sha256": "e944a3c5bf7cc9ce9bce181eb7110d6083ee4886eb3e5b57327f9378e7a9a3aa"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "stints",
-          "url": "https://api.openf1.org/v1/stints?session_key=11404",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T00:25:51.374005Z",
-          "sha256": "24443d278b7bf88057fe7b425c8df667164da5639be6ae522817d334de71378e"
-        },
-        {
-          "provider": "openf1",
-          "endpoint": "pit",
-          "url": "https://api.openf1.org/v1/pit?session_key=11404",
-          "status": 200,
-          "obtido_em_utc": "2026-11-02T00:25:59.376880Z",
-          "sha256": "e3dee3ff3089d36bfc3b5073f72b0a10987bb40cf1305eb173c45073607a6f23"
-        }
-      ]
+      }
     }
   ],
   "automacao": {

@@ -1,0 +1,19 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/lawson-tempo-client-20261102T235020Z",
+  "sources": [
+    {
+      "provider": "gp-tempo",
+      "endpoint": "public_client",
+      "arquivo": "gp-tempo.js",
+      "arquivo_requisicao": "gp-tempo.js",
+      "url": "https://www.gp-tempo.com/assets/index-BAdvg-92.js",
+      "url_real": "https://www.gp-tempo.com/assets/index-BAdvg-92.js",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:50:21.107977Z",
+      "sha256": "58ed2cec81943cb702708c54c90711cca8b40ddea9742d7280378514ed5e5af5",
+      "bytes": 565640,
+      "response_format": "bytes"
+    }
+  ],
+  "failures": []
+}

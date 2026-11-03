@@ -1,0 +1,33 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/lawson-timing-index-20261102T234508Z",
+  "sources": [
+    {
+      "provider": "f1-livetiming",
+      "endpoint": "year_index",
+      "arquivo": "f1-index.json",
+      "arquivo_requisicao": "f1-index.json",
+      "url": "https://livetiming.formula1.com/static/2026/Index.json",
+      "url_real": "https://livetiming.formula1.com/static/2026/Index.json",
+      "status": 401,
+      "obtido_em_utc": "2026-11-02T23:45:08.980844Z",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "response_format": "bytes",
+      "erro": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "provider": "fastf1-mirror",
+      "endpoint": "year_index",
+      "arquivo": "fastf1-index.json",
+      "arquivo_requisicao": "fastf1-index.json",
+      "url": "https://livetiming-mirror.fastf1.dev/static/2026/Index.json",
+      "url_real": "https://livetiming-mirror.fastf1.dev/static/2026/Index.json",
+      "status": 404,
+      "obtido_em_utc": "2026-11-02T23:45:17.333999Z",
+      "sha256": "62c1c0b235e26952857139537b65f8272026cd1c385c1bf6dba20481ee8a6619",
+      "bytes": 27150,
+      "response_format": "bytes",
+      "erro": "HTTP Error 404: Not Found"
+    }
+  ]
+}

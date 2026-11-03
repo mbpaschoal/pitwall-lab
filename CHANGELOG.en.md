@@ -1,5 +1,13 @@
 # Pitwall Lab evolution
 
+## 0.8.18 — 2026-11-02
+
+- Recovers medium tyres for Lawson's opening Mexico FP3 run: GP Tempo publishes MEDIUM on laps 2–8, while FIA confirms an uninterrupted eight-lap run. Lap 1 is a documented reconstruction by continuity, identified in the interface and CSV. Missing initial age and lap time do not become zero.
+- Checks event date, circuit, driver and session: GP Tempo event 20 maps to Pitwall round 19. Preserves native timings, including two laps withheld by the alternative source. FP3 reaches received-data status after review; native and reviewed coverage remain separate.
+- Fixes the existing tyre selector to include practice/qualifying, with Race as default and session-specific pit-lane passages. Clickable sources and PT/EN copy explain the recovery.
+- Tests reject compound conflicts, timing/clock mismatches and duplicate stints, preserve compatible native tyre age and verify immutable raw input. Evidence and acceptance: `reports/lawson_tyres_mexico_20261102/`.
+- Lesson: a missing API record does not prove the timing data is unavailable. Reconstruction needs verified identity and run boundaries; it does not justify replacing the complete native dataset or changing the frozen model and recorded probabilities.
+
 ## 0.8.17 — 2026-11-02
 
 Fixes the Races icon with a black-and-white chequered flag, including its selected state. Aligns expander titles and arrows by removing the paragraph margin that displaced labels. The shared rule supports PT/EN, wrapped labels and desktop/mobile. Focused browser and package validation; photographs, colors, data and forecasts preserved. Learning: check painted text alignment as well as the control rectangle.

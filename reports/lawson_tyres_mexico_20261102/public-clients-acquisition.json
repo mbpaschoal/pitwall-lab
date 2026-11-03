@@ -1,0 +1,32 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/lawson-public-clients-20261102T234746Z",
+  "sources": [
+    {
+      "provider": "f1-tempo",
+      "endpoint": "public_client",
+      "arquivo": "f1tempo.js",
+      "arquivo_requisicao": "f1tempo.js",
+      "url": "https://www.f1-tempo.com/static/js/main.68a7a190.js",
+      "url_real": "https://www.f1-tempo.com/static/js/main.68a7a190.js",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:47:46.755604Z",
+      "sha256": "e3fba6e46e19900b3a0cbc34a51c26ac872d99b684cf71baa045d7ebc1126e25",
+      "bytes": 1208896,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "the-field",
+      "endpoint": "public_client",
+      "arquivo": "thefield-client.js",
+      "arquivo_requisicao": "thefield-client.js",
+      "url": "https://www.thefieldf1.com/_next/static/chunks/3cein6g_czl_y.js",
+      "url_real": "https://www.thefieldf1.com/_next/static/chunks/3cein6g_czl_y.js",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:47:54.529909Z",
+      "sha256": "3e1b4a0e6b4f0452735d100b058c0a6f1936f8be9ced649f4a01a0af185ac176",
+      "bytes": 4621,
+      "response_format": "bytes"
+    }
+  ],
+  "failures": []
+}

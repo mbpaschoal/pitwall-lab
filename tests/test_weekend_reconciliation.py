@@ -108,6 +108,60 @@ class ReconciliationTests(unittest.TestCase):
         self.assertFalse(strategy['comparavel'])
         self.assertEqual(entry['lacunas_documentadas'][0]['voltas'],list(range(1,9)))
 
+    def lawson_native(self):
+        return json.loads((ROOT/'tests/fixtures/mexico_fp3_lawson_native.json').read_text())
+
+    def test_first_compound_recovered_without_changing_raw_laps_or_initial_age(self):
+        raw=self.lawson_native(); original=deepcopy(raw)
+        output,audit=reconcile(raw,self.fp3,self.review)
+        first=next(s for s in output['stints'] if s['stint_number']==1)
+        self.assertEqual((first['lap_start'],first['lap_end'],first['compound']),(1,8,'MEDIUM'))
+        self.assertIsNone(first['tyre_age_at_start'])
+        self.assertEqual(first['revisao_composto']['voltas_diretas'],list(range(2,9)))
+        self.assertEqual(first['revisao_composto']['primeira_volta_por_continuidade'],1)
+        self.assertEqual(output['laps'],raw['laps'])
+        self.assertIsNone(output['laps'][0]['lap_duration'])
+        self.assertEqual(output['stints'][:-1],raw['stints'])
+        self.assertEqual(raw,original)
+        self.assertEqual(audit['acoes'][-1]['tipo'],'composto_documentado')
+
+    def test_missing_or_contradictory_lap_evidence_prevents_a_tyre_repair(self):
+        for change in ['time','missing','clock','initial']:
+            with self.subTest(change=change):
+                raw=self.lawson_native()
+                if change=='time':raw['laps'][3]['lap_duration']+=.001
+                elif change=='missing':raw['laps'].pop(3)
+                elif change=='clock':raw['laps'][3]['date_start']='2026-10-31T18:25:00Z'
+                else:raw['laps'][0]['lap_duration']=1
+                with self.assertRaisesRegex(ValueError,'native laps|unmeasured lap'):
+                    reconcile(raw,self.fp3,self.review)
+
+    def test_native_conflict_is_rejected_and_compatible_native_age_is_preserved(self):
+        raw=self.lawson_native()
+        first=dict(raw['stints'][0],stint_number=1,lap_start=1,lap_end=8,compound='SOFT',tyre_age_at_start=0)
+        raw['stints'].append(first)
+        with self.assertRaisesRegex(ValueError,'contradicts'):
+            reconcile(raw,self.fp3,self.review)
+        first['compound']='MEDIUM'
+        output,_=reconcile(raw,self.fp3,self.review)
+        self.assertEqual(len(output['stints']),5)
+        self.assertEqual(next(s for s in output['stints'] if s['stint_number']==1)['tyre_age_at_start'],0)
+        again,_=reconcile(output,self.fp3,self.review)
+        self.assertEqual(output,again)
+
+    def test_reviewed_stint_clears_only_the_verified_compound_gap_and_is_projected(self):
+        entry={}
+        raw=self.lawson_native();original=deepcopy(raw)
+        weekend.project_received(entry,raw,self.fp3,self.review)
+        strategy=entry['dados_descritivos']['estrategias'][0]
+        self.assertEqual(entry['estado'],'dados_recebidos')
+        self.assertTrue(strategy['comparavel'])
+        self.assertNotIn('lacunas_documentadas',entry)
+        self.assertEqual([(s['inicio'],s['fim']) for s in strategy['sequencia_stints']],[(1,8),(9,11),(12,19),(20,22),(23,28)])
+        self.assertEqual(len(strategy['sequencia_stints'][0]['revisao_composto']['fontes']),4)
+        self.assertEqual(entry['cobertura_validada']['stints'],5)
+        self.assertEqual(raw,original)
+
     def test_completed_cache_receives_a_new_review_once_without_refetching_race_data(self):
         race=next(s for s in self.event['sessions'] if s['session_name']=='Race')
         ids=dict(session_key=race['session_key'],meeting_key=race['meeting_key'])

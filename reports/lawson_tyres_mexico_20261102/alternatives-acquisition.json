@@ -1,0 +1,46 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/lawson-alternatives-20261102T234656Z",
+  "sources": [
+    {
+      "provider": "f1-livetiming",
+      "endpoint": "timing_app",
+      "arquivo": "TimingAppData.jsonStream",
+      "arquivo_requisicao": "TimingAppData.jsonStream",
+      "url": "https://livetiming.formula1.com/static/2026/2026-11-01_Mexico_City_Grand_Prix/2026-10-31_Practice_3/TimingAppData.jsonStream",
+      "url_real": "https://livetiming.formula1.com/static/2026/2026-11-01_Mexico_City_Grand_Prix/2026-10-31_Practice_3/TimingAppData.jsonStream",
+      "status": 401,
+      "obtido_em_utc": "2026-11-02T23:46:56.687767Z",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "response_format": "bytes",
+      "erro": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "provider": "the-field",
+      "endpoint": "race_page",
+      "arquivo": "thefield-race.html",
+      "arquivo_requisicao": "thefield-race.html",
+      "url": "https://www.thefieldf1.com/race/2026-mexico-city-grand-prix/race?tab=speedprofile",
+      "url_real": "https://www.thefieldf1.com/race/2026-mexico-city-grand-prix/race?tab=speedprofile",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:47:06.500258Z",
+      "sha256": "51477cd91a0c55274e94dbb75082a6a6faab95429bbe5080fc49d8b646112033",
+      "bytes": 620216,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "f1-tempo",
+      "endpoint": "homepage",
+      "arquivo": "f1tempo.html",
+      "arquivo_requisicao": "f1tempo.html",
+      "url": "https://www.f1-tempo.com/",
+      "url_real": "https://www.f1-tempo.com/",
+      "status": 200,
+      "obtido_em_utc": "2026-11-02T23:47:13.467977Z",
+      "sha256": "b7f6f31b821157294f9a21685801699e32708126e00e5372a0fbcfebfee992d7",
+      "bytes": 30319,
+      "response_format": "bytes"
+    }
+  ],
+  "failures": []
+}
