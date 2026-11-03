@@ -98,7 +98,7 @@ def publish(root, result_path, zip_path, captures_path, *, attempt=0, run_id='',
             raise
         return retry(root, result_path, result, attempt, run_id, source, latest, run)
     run(root, ['gh', 'release', 'create', tag, str(zip_path), str(captures_path),
-               '--verify-tag', '--title', 'Pitwall Lab ' + version, '--notes-file', str(body)])
+               '--verify-tag', '--latest=false', '--title', 'Pitwall Lab ' + version, '--notes-file', str(body)])
     return save_result(result_path, result, dict(estado='published', published=True,
                        version=version, commit=run(root, ['git', 'rev-parse', 'HEAD']),
                        recovery_attempt=attempt, run_id=run_id))

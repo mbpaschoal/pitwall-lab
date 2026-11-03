@@ -1,0 +1,48 @@
+{
+  "checked_utc": "2026-11-03T17:53:59.163253+00:00",
+  "identity": [
+    2026,
+    20,
+    "interlagos"
+  ],
+  "meeting_key": 1299,
+  "native_catalogue_matches": true,
+  "canonical_calendar_matches": true,
+  "official_f1_schedule": "Manually checked against public F1 programme; UTC schedule agrees.",
+  "gp_tempo_event_id": 21,
+  "gp_tempo_sessions": [
+    {
+      "SessionId": 1,
+      "SessionName": "FP1",
+      "ResultsAvailable": false,
+      "QualiLike": false
+    },
+    {
+      "SessionId": 2,
+      "SessionName": "FP2",
+      "ResultsAvailable": false,
+      "QualiLike": false
+    },
+    {
+      "SessionId": 3,
+      "SessionName": "FP3",
+      "ResultsAvailable": false,
+      "QualiLike": false
+    },
+    {
+      "SessionId": 4,
+      "SessionName": "Qualifying",
+      "ResultsAvailable": false,
+      "QualiLike": false
+    },
+    {
+      "SessionId": 5,
+      "SessionName": "Race",
+      "ResultsAvailable": false,
+      "QualiLike": false
+    }
+  ],
+  "gp_tempo_join": "country, literal location, exact event date and session type; never numeric round equality",
+  "alternative_data_available": false,
+  "alternative_admitted_as_forecast_input": false
+}

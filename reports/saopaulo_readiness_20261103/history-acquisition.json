@@ -1,0 +1,19 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/saopaulo-history-20261103T180013Z",
+  "sources": [
+    {
+      "provider": "jolpica",
+      "endpoint": "mexico_final_history",
+      "arquivo": "mexico-results.json",
+      "arquivo_requisicao": "mexico-results.json",
+      "url": "https://api.jolpi.ca/ergast/f1/2026/19/results/?limit=100&offset=0",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2026/19/results/?limit=100&offset=0",
+      "status": 200,
+      "obtido_em_utc": "2026-11-03T18:00:14.184494Z",
+      "sha256": "8882c7bb35fcab1ff630e504fb274c3ccfd85151668e6bb74e204157e9e34890",
+      "bytes": 13065,
+      "response_format": "bytes"
+    }
+  ],
+  "failures": []
+}

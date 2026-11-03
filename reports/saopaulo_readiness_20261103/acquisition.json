@@ -1,0 +1,58 @@
+{
+  "destination": "data/operacao_2026/fontes_alternativas/saopaulo-preflight-20261103T175020Z",
+  "sources": [
+    {
+      "provider": "openf1",
+      "endpoint": "sessions_brazil",
+      "arquivo": "sessions.json",
+      "arquivo_requisicao": "sessions.json",
+      "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Brazil",
+      "url_real": "https://api.openf1.org/v1/sessions?year=2026&country_name=Brazil",
+      "status": 200,
+      "obtido_em_utc": "2026-11-03T17:50:21.176739Z",
+      "sha256": "d6ce1580630182903442140ac5b58a316d34ea9161274b07039bad1baf9b7bc2",
+      "bytes": 1843,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "formula1",
+      "endpoint": "brazil_schedule",
+      "arquivo": "schedule.html",
+      "arquivo_requisicao": "schedule.html",
+      "url": "https://www.formula1.com/en/racing/2026/brazil",
+      "url_real": "https://www.formula1.com/en/racing/2026/brazil",
+      "status": 200,
+      "obtido_em_utc": "2026-11-03T17:50:28.766175Z",
+      "sha256": "74c41d93d29ccdf58f2ec4bbb4180604bac9708a2188d8c38496efd12e03db53",
+      "bytes": 452104,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "jolpica",
+      "endpoint": "brazil_calendar",
+      "arquivo": "calendar.json",
+      "arquivo_requisicao": "calendar.json",
+      "url": "https://api.jolpi.ca/ergast/f1/2026/20/?limit=100&offset=0",
+      "url_real": "https://api.jolpi.ca/ergast/f1/2026/20/?limit=100&offset=0",
+      "status": 200,
+      "obtido_em_utc": "2026-11-03T17:50:37.072495Z",
+      "sha256": "efd69fe9383d068a366743b0aa8535c5609461525e9a7196e6be20c48308b316",
+      "bytes": 801,
+      "response_format": "bytes"
+    },
+    {
+      "provider": "gp_tempo",
+      "endpoint": "events_2026",
+      "arquivo": "tempo-events.json",
+      "arquivo_requisicao": "tempo-events.json",
+      "url": "https://www.gp-tempo.com/api/events?year=2026&pastOnly=false",
+      "url_real": "https://www.gp-tempo.com/api/events?year=2026&pastOnly=false",
+      "status": 200,
+      "obtido_em_utc": "2026-11-03T17:50:45.441736Z",
+      "sha256": "fb9e0359a2e5bb22863b82c9ee1c6717a5db398a6cc57e161c8d16b295af1219",
+      "bytes": 15938,
+      "response_format": "bytes"
+    }
+  ],
+  "failures": []
+}

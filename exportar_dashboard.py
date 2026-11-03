@@ -191,6 +191,7 @@ RUNTIME_WORKTREE = (
     'pitwall/dashboard/pilot_views.py',
     'docs/galeria-cartas.html',
     'docs/JORNADA_DO_FA.md', 'docs/en/FAN_JOURNEY.md', 'docs/OPERACAO_FIM_SEMANA.md', 'docs/en/WEEKEND_OPERATION.md',
+    'docs/PREPARACAO_SAO_PAULO.md', 'docs/en/SAO_PAULO_PREPARATION.md',
     'docs/REVISAO_030.md', 'docs/en/REVIEW_030.md',
     'docs/images/pitwall-pilotos.png', 'docs/images/pitwall-pilotos-en.png',
     'pitwall/dashboard/tokens.py',

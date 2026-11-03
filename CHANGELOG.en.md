@@ -1,5 +1,12 @@
 # Pitwall Lab evolution
 
+## 0.8.21 — 2026-11-03
+
+- Repairs the release highlight by selecting the highest stable version with a complete hash-bearing ZIP, even when an older release finishes later. New releases wait for asset completion before promotion.
+- Adds a GitHub collection monitor: one owner-assigned incident on failure or six hours without completion, quiet repetition and closure after recovery. Actual provider restrictions no longer appear healthy.
+- Rechecks São Paulo against OpenF1, Jolpica, F1 and GP Tempo; documents source event 21 versus canonical round 20. Offline preparation checks event isolation, timing and three distinct artworks per catalogue driver/team pair.
+- Forecast preparation still waits for observed qualifying and validated predictive snapshots. No early emission or changes to the model and registered probabilities. Bilingual operational guide documents steps and gates.
+
 ## 0.8.20 — 2026-11-03
 
 Automatic Mexico City Grand Prix data update through GitHub Actions. Sessions with received data: 5/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.

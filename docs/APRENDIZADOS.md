@@ -19,6 +19,10 @@ Este registro explica decisões técnicas do projeto; não é uma lista de resul
 | [Revisão dos dados](DADOS_ATUAIS.md) | Histórico respondia sobre a prova atual; avisos de stint eram tratados como lacunas. | Filtrar pela identidade literal da pista e data anterior; separar aviso de qualidade de limites desconhecidos. Preservar ausências reais. |
 | [Versão 0.1.0](../CHANGELOG.md) | Código disperso e idioma único dificultavam manutenção e apresentação do portfólio. | Organizar responsabilidades, centralizar tradução offline e manter compatibilidade. Versão do produto e do modelo têm significados distintos. |
 
+## 03/11/2026 — A ordem de término não é a ordem das versões
+
+Uma release antiga terminou depois da nova e tomou seu destaque no GitHub. Aprendi a separar criação, envio do pacote e escolha da versão vigente: agora a maior versão estável completa prevalece. Também separei espera normal por dados de uma falha real de acesso à fonte. O monitor abre uma ocorrência só quando há um problema e registra a recuperação; repetir notificações não torna o produto mais confiável. São Paulo ganhou uma conferência offline, sem transformar calendário futuro ou cartas prontas em previsão emitida.
+
 ## Como registrar a próxima melhoria
 
 Descrever o comportamento anterior com um exemplo concreto, a causa conhecida (ou a incerteza), a mudança entregue, a verificação executada e o que continua limitado. Uma hipótese não vira resultado confirmado. Datas e versões devem corresponder à entrega real; não criar commits antigos fictícios nem editar resultados para contar uma história melhor.

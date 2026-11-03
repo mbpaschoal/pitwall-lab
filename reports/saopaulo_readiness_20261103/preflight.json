@@ -1,0 +1,471 @@
+{
+  "schema": "pitwall-weekend-readiness-v1",
+  "checked_utc": "2026-11-03T17:56:36.220489+00:00",
+  "identity": [
+    2026,
+    20,
+    "interlagos"
+  ],
+  "meeting_key": 1299,
+  "qualifying_session": 11408,
+  "collection_window_start": "2026-11-05T15:30:00+00:00",
+  "qualification_status": "aguardando_classificacao",
+  "forecast_emitted_by_this_check": false,
+  "forecast_emission_attempted": false,
+  "limitation": "Preparation only; predictive inputs, actual roster and historical coverage must be validated after Q.",
+  "verified_team_pairs": 25,
+  "verified_cards": 75,
+  "cards": [
+    {
+      "driver": "albon",
+      "team": "williams",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "a6dbf1717854a10823d1c86245271ac56f0ac31987a6d9ac5df0fec53bcbd482"
+        },
+        {
+          "pose": 1,
+          "sha256": "bba15e0c0af325734155ae0a3bae4e209924831ac231290eb898a7b5af6b385a"
+        },
+        {
+          "pose": 2,
+          "sha256": "44ac3adadd7e99e27cca296432f74f9e0ea897dbfceb4f32411d187b07419d5e"
+        }
+      ]
+    },
+    {
+      "driver": "alonso",
+      "team": "aston_martin",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "158ec9e54270e5f2112e5bc0a025577baa41c608215f8743370c20fa0c678da3"
+        },
+        {
+          "pose": 1,
+          "sha256": "9af0bc2cc0a4f56c326cc24f07e4f02ae27db0e0d537644134d73f939822815e"
+        },
+        {
+          "pose": 2,
+          "sha256": "421316536271dcebd061b7b2cf0a2d4b08ed0bf13a8a76287b545bb91de039df"
+        }
+      ]
+    },
+    {
+      "driver": "antonelli",
+      "team": "mercedes",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "7ad68e49c3b328979116dee59231e1034936728fa59eff5b0243caedc6b9235b"
+        },
+        {
+          "pose": 1,
+          "sha256": "7e7a3748bf77d71efdaf42d2c7ba10fc3c1c3bcaeb1637ef566972709659cb3d"
+        },
+        {
+          "pose": 2,
+          "sha256": "690cea8c1ed4097cf3b5169537e2056473990ae5f4bb6c216af0dfe894f31794"
+        }
+      ]
+    },
+    {
+      "driver": "arvid_lindblad",
+      "team": "rb",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "c8d7dd0da9992c1e5ec021757fe605ac8396614659775fb74617064861644e7f"
+        },
+        {
+          "pose": 1,
+          "sha256": "6f9d0ba674f4af88703cb48adc47d7748924703e756408bd71cc274204ff09fe"
+        },
+        {
+          "pose": 2,
+          "sha256": "48c9ae43ca55529d12204949afa2cc8fd0d05884fe14f69a8f3c6e1787a7d0e3"
+        }
+      ]
+    },
+    {
+      "driver": "bearman",
+      "team": "haas",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "0c647e8b5a2581d6678f8a686fc68aeeaba551b56f137a1f30d184a91be1588a"
+        },
+        {
+          "pose": 1,
+          "sha256": "7957c3e89afd9a3349cb554656119fee1cefd4c287b16a3caed8f23b2cc2be50"
+        },
+        {
+          "pose": 2,
+          "sha256": "c920b00a6a1c7eacbf265cf87ceeba4b79555e3dcfed30657d60a0f8c4a8b113"
+        }
+      ]
+    },
+    {
+      "driver": "bortoleto",
+      "team": "audi",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "4237433cbbd02a092d079ecfcf096ba669df6732d4a19b7efd8b56aba41f5200"
+        },
+        {
+          "pose": 1,
+          "sha256": "ffdec6b8003e552715e34da2bb2a09547f9dd5bb1287c6d6212fb6270e800a14"
+        },
+        {
+          "pose": 2,
+          "sha256": "dbfb886c5085a770fde610970eee6c28dbc3e3ed4523cb34320651831edf92d4"
+        }
+      ]
+    },
+    {
+      "driver": "bottas",
+      "team": "cadillac",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "a0a65d80cb16f6f81050840cb2411e5e13fa0a5abe8b3ab833c418cd63115439"
+        },
+        {
+          "pose": 1,
+          "sha256": "94206960cd40a1eff8ee9fab16819264fc71298864cf01e8acb8fcf6794b7a8d"
+        },
+        {
+          "pose": 2,
+          "sha256": "fc7cdef369d6fd12f610a79180bed2cd97e4671695fd9062a5d95d9118e5e3e2"
+        }
+      ]
+    },
+    {
+      "driver": "colapinto",
+      "team": "alpine",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "1ce82d9d67c66ab9245145023528b4fd1b0b8a27973f139104f7410910ae6688"
+        },
+        {
+          "pose": 1,
+          "sha256": "61ff8259b853bb8d597bf1c00cd74e98a77e36ff6dc916131abbd1f60563d56f"
+        },
+        {
+          "pose": 2,
+          "sha256": "e62ff3ebec97eec3d9359dbda51f8655c36436d17039121dca1205432e052af1"
+        }
+      ]
+    },
+    {
+      "driver": "gasly",
+      "team": "alpine",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "e318003b55a7c2bbf7e298b892cdb2f1e843bcc2d78dc0737d0ef1ad16e6ad04"
+        },
+        {
+          "pose": 1,
+          "sha256": "fed91adebc67ed4871abe1f48283bb508b56c3e792ad2739a18054a5b330521e"
+        },
+        {
+          "pose": 2,
+          "sha256": "8d4e1c27614320828ef1a4b32e8ccac605491df96931f9ab5c5f22d1f3a16ce2"
+        }
+      ]
+    },
+    {
+      "driver": "hadjar",
+      "team": "red_bull",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "37fdab61b6665fce7cc74626163e3d4f9baa12dfbf4757deef3cc6a2dea1127f"
+        },
+        {
+          "pose": 1,
+          "sha256": "cce542cffb56a11e4c3e714687342cf8a761acb1cbf479ccf81cd105979ad67e"
+        },
+        {
+          "pose": 2,
+          "sha256": "18b27a2bc706d679a758795dd99d9757bfdd8646a9820b2f7e8e92a8909a59be"
+        }
+      ]
+    },
+    {
+      "driver": "hamilton",
+      "team": "ferrari",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "6fee1d32e4f4d94f7b6d80968ffaca5ac1feeee0665a125c540757cefcc62925"
+        },
+        {
+          "pose": 1,
+          "sha256": "509138de884b2ce4bb64c1f2ef898fb6661f456467b9f2af64821a32a67e894d"
+        },
+        {
+          "pose": 2,
+          "sha256": "ac026316b3bf6d5d8dc77b0787a764250778dbb56a6692b2537b2f7e770b5066"
+        }
+      ]
+    },
+    {
+      "driver": "hulkenberg",
+      "team": "audi",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "b75bed701eac5f601b2c235e6aa7c24ac7544c3b939963a87b7c67ccdb5ed0a4"
+        },
+        {
+          "pose": 1,
+          "sha256": "8606cd952a137ce692701d3ac8edae4074219daffc22a96093080016c15a93a5"
+        },
+        {
+          "pose": 2,
+          "sha256": "0df0b89a6ac342e2b39519406a4a78de17e7348cd3bf337d8acfb8e49d06cf3e"
+        }
+      ]
+    },
+    {
+      "driver": "lawson",
+      "team": "rb",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "3cfea1ad7795de26bd8533e38daf1ab7dbbcf2d69e16ad024081bed34d2af641"
+        },
+        {
+          "pose": 1,
+          "sha256": "aea5d131321ff483980cf404f7fe9e1308919fd1ad4569ac606143f3a4d2642d"
+        },
+        {
+          "pose": 2,
+          "sha256": "c72e9a8b646ebd0bf0549175cd378066671401eba6caa765d700f9c32411419f"
+        }
+      ]
+    },
+    {
+      "driver": "lawson",
+      "team": "red_bull",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "e96370974e557cc789ea23c5336b219861065e7993e9f41b8cba82d0abfb1b61"
+        },
+        {
+          "pose": 1,
+          "sha256": "6e16a9c9ac05779d182ebdf3d376846e24c570bf49bdd861261244be0144ad94"
+        },
+        {
+          "pose": 2,
+          "sha256": "1e5665acaf055ae36e8cac14746002181844c50691ea5ff6c9f5d05876fb34cf"
+        }
+      ]
+    },
+    {
+      "driver": "leclerc",
+      "team": "ferrari",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "bae9a5bd6b1ab258aaab725ebaa56959448e1804fe6f73b7460bf2ea38755963"
+        },
+        {
+          "pose": 1,
+          "sha256": "8db5c6d4dd89c5494563edf5f6238da211f661b74cdef35941ee6c2f9e860786"
+        },
+        {
+          "pose": 2,
+          "sha256": "f3a27bad6aaf76aa9008a3611522d32b73a485dd07cfc4d76296e00724643683"
+        }
+      ]
+    },
+    {
+      "driver": "max_verstappen",
+      "team": "red_bull",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "893f1206e878a4bd30751df4f7d83a0a779a6d6d5445e5dd6e0e77b602d8a3a9"
+        },
+        {
+          "pose": 1,
+          "sha256": "393aac9f4420beff11744ae2ce0b7276bed09822f8df9986ca5f13786a6820b0"
+        },
+        {
+          "pose": 2,
+          "sha256": "7a25a6fd56e751dd3c7c88de29b16a71e4df5d2dcc9f115b3da945d1a89d6253"
+        }
+      ]
+    },
+    {
+      "driver": "norris",
+      "team": "mclaren",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "af7717c51a3517c4614b9ba3d23738613cb0c5121d37e92d00e733322cf1c623"
+        },
+        {
+          "pose": 1,
+          "sha256": "f7299f33829a4e77b823805da5fa0624658ea31761b057dd8c112eb0478e1418"
+        },
+        {
+          "pose": 2,
+          "sha256": "dc1848f49b45f6d2c29ead23e2cfbdeb70338254b0f65ac239a9a75cc4d1fc76"
+        }
+      ]
+    },
+    {
+      "driver": "ocon",
+      "team": "haas",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "a29ea5051c8598158aea3475b3a12eb0036f94f184ec586409daa55b0f6f6c76"
+        },
+        {
+          "pose": 1,
+          "sha256": "cbee81d0ef4fef46b3008e23b26ca279d7de0ab6bfec10ca83f1bba77dd3d1af"
+        },
+        {
+          "pose": 2,
+          "sha256": "0e6d50654bc4ce2c4c21f7507fb5766f21eeca56d2a9a035f92722b4ef91670e"
+        }
+      ]
+    },
+    {
+      "driver": "perez",
+      "team": "cadillac",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "30eddfb51daccbdef82593c4bef169e77f30f2668b363dc0b6a24c59ca8b74ea"
+        },
+        {
+          "pose": 1,
+          "sha256": "d179df7eae85bc2e78d55adb1e5747a53d885e7cd8976af178a07c76c441eefa"
+        },
+        {
+          "pose": 2,
+          "sha256": "d05d2eac282424567f6998f80a73da74014042ec6d51d11f2ceb815e17c72d1d"
+        }
+      ]
+    },
+    {
+      "driver": "piastri",
+      "team": "mclaren",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "c36e4bfaeab55648341133ab7ce31e66a521b7d86390d33459813016aa10564b"
+        },
+        {
+          "pose": 1,
+          "sha256": "9955431e97ea6deed34d7a1b1fe2c4073a7c38aa5d7b6ce11346671a48519b41"
+        },
+        {
+          "pose": 2,
+          "sha256": "0adf6fc6bcb73ac07fb903ad0c7e1ea7d155886efb36adc0016356bb6f438b55"
+        }
+      ]
+    },
+    {
+      "driver": "russell",
+      "team": "mercedes",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "79cc9097073648348737acabe1c6df7dc75da3568a658615e3bcee8aebb564ad"
+        },
+        {
+          "pose": 1,
+          "sha256": "b4f63baac81cb1c02af63d1292403ff3e681c9d068eab531930c7dcb15df1dc0"
+        },
+        {
+          "pose": 2,
+          "sha256": "eb5db2342b4be6014f9d1ec58308ffd105baf2a84253e9d42439dfeedf3c7933"
+        }
+      ]
+    },
+    {
+      "driver": "ryo_hirakawa",
+      "team": "haas",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "a5f8c2310e8e829761e376675a3c4beba0a90873feed802ab8c97750288f598d"
+        },
+        {
+          "pose": 1,
+          "sha256": "9150203a7bc93fb2fd272ae865f68bb8b8299e64dbe5b10abb818afca6fc3ad7"
+        },
+        {
+          "pose": 2,
+          "sha256": "ea8ccd7a7ff0940b9ac52771da252150fe3bbad15c3e76c33d54c0d05bf83885"
+        }
+      ]
+    },
+    {
+      "driver": "sainz",
+      "team": "williams",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "edd41b914a885524c4e6c5995829036beb871417d38d03b04d3cfe3ec3fe94a6"
+        },
+        {
+          "pose": 1,
+          "sha256": "95faebec828ff8ae9a087d5469839a767bbe26e47cbd7f6a6722545de153cfba"
+        },
+        {
+          "pose": 2,
+          "sha256": "ec9341b26885548dc70923413c46e013ba68e1be6d090da6ef9091e32cd64b90"
+        }
+      ]
+    },
+    {
+      "driver": "stroll",
+      "team": "aston_martin",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "eaa7a3d3a87ff6ac208ee302d55455f2f961ab33808811918a3c9080124c18ee"
+        },
+        {
+          "pose": 1,
+          "sha256": "0ed8328b49237fa2e4259081c45d2fb85f0c9981387354f9ca4f3835e779106c"
+        },
+        {
+          "pose": 2,
+          "sha256": "7dbeadef4838e26b49167b35ebd4f4fe5ceeb6065eebf4fd4c425a1767152c49"
+        }
+      ]
+    },
+    {
+      "driver": "tsunoda",
+      "team": "rb",
+      "poses": [
+        {
+          "pose": 0,
+          "sha256": "d0e186e9a7b74c4f2086082b1e43c106eb9c8d223b063fe109a3f73bfd1bc545"
+        },
+        {
+          "pose": 1,
+          "sha256": "84264fc8f397cc9380e5602b108309ebd62ece884ede7e31161ffb01e139badc"
+        },
+        {
+          "pose": 2,
+          "sha256": "8ae252bc5389302f4ccd1f21fe91d0734f0420f4c93e21953ff21f41088f16dd"
+        }
+      ]
+    }
+  ],
+  "first_free_access_after_q": "2026-11-07T19:30:00+00:00"
+}

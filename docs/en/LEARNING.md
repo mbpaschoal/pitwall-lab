@@ -19,6 +19,10 @@ This journal explains technical decisions; it is not a list of uniformly positiv
 | [Data review](CURRENT_DATA.md) | History answered a current-race question; stint warnings were treated as gaps. | Filter by literal circuit identity and earlier date; distinguish quality warnings from unknown boundaries. Preserve actual missingness. |
 | [Version 0.1.0](../../CHANGELOG.en.md) | Scattered code and one language hindered maintenance and portfolio accessibility. | Organise responsibilities, centralise offline translation and retain compatibility. Product and model versions mean different things. |
 
+## 3 November 2026 — Completion order is not version order
+
+An older release finished after the new one and displaced its GitHub highlight. I learned to separate creation, package upload and current-version selection: the highest complete stable version now wins. I also separated normal data deferral from actual provider-access failures. The monitor opens an incident only for a problem and records recovery; repeated notifications do not make a product more reliable. São Paulo now has an offline preparation check without treating a future calendar or ready artwork as an emitted forecast.
+
 ## Recording the next improvement
 
 Explain prior behaviour with a concrete example, known cause or uncertainty, delivered change, executed verification and remaining limitations. A hypothesis is not a confirmed finding. Dates and versions must match actual deliveries: no fabricated old commits or edited results to improve the narrative.

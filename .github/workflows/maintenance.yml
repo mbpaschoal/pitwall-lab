@@ -1,0 +1,64 @@
+name: Operação e versões / Operations and releases
+on:
+  workflow_run:
+    workflows: ['Coleta automática / Automatic collection', 'Produto e idiomas / Product and languages']
+    types: [completed]
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/maintenance.yml', 'operacao2026/github_maintenance.py']
+permissions:
+  contents: read
+concurrency:
+  group: pitwall-maintenance
+  cancel-in-progress: false
+jobs:
+  latest:
+    if: github.repository == 'mbpaschoal/pitwall-lab'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # Execute trusted default-branch code, never the triggering run's checkout.
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -B -m unittest tests.test_github_maintenance
+      - name: Conferir destaque / Reconcile latest release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -B -m operacao2026.github_maintenance latest --apply --result latest.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-highlight
+          retention-days: 3
+          path: latest.json
+  health:
+    if: github.repository == 'mbpaschoal/pitwall-lab'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -B -m unittest tests.test_github_maintenance
+      - name: Alertar apenas transições / Report incident transitions only
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -B -m operacao2026.github_maintenance health --apply --result health.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: collection-health
+          retention-days: 3
+          path: health.json

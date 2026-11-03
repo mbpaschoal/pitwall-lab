@@ -1,16 +1,39 @@
 """Release policy must reject an unversioned product change and incomplete notes."""
 
 from pathlib import Path
+import io
+import json
+import os
 import shutil
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
+from pitwall.publishing import releases
 from pitwall.publishing.releases import check, notes, version
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class TestReleases(unittest.TestCase):
+    def test_release_upload_does_not_promote_an_out_of_order_tag(self):
+        requests=[]
+        def opening(request,timeout):
+            requests.append(request)
+            payload=({'html_url':'https://github.com/mbpaschoal/pitwall-lab/releases/tag/v'+version(ROOT),
+                      'upload_url':'https://uploads.github.com/repos/mbpaschoal/pitwall-lab/releases/1/assets{?name,label}'}
+                     if len(requests)==1 else {'state':'uploaded'})
+            return io.StringIO(json.dumps(payload))
+        with tempfile.TemporaryDirectory() as tmp:
+            asset=Path(tmp)/'pitwall-dashboard.zip';asset.write_bytes(b'test-zip')
+            with patch.dict(os.environ,{'GITHUB_REF':'refs/tags/v'+version(ROOT),
+                                        'GITHUB_REPOSITORY':'mbpaschoal/pitwall-lab','GITHUB_TOKEN':'test-only'}), \
+                    patch.object(releases,'urlopen',side_effect=opening):
+                result=releases.publish(ROOT,asset)
+        self.assertEqual(json.loads(requests[0].data)['make_latest'],'false')
+        self.assertEqual(requests[1].data,b'test-zip')
+        self.assertEqual(result['tag'],'v'+version(ROOT))
+
     def test_real_version_has_both_languages_and_separate_model_identity(self):
         result = check(ROOT)
         self.assertEqual(result["languages"], ["pt", "en"])

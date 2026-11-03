@@ -82,6 +82,7 @@ class PublicationTests(unittest.TestCase):
         self.assertTrue(self.git(self.seed, 'ls-remote', 'origin', 'refs/tags/v1.2.4'))
         self.assertEqual((self.worker / 'model-sentinel.txt').read_text(), 'frozen scientific bytes\n')
         self.assertEqual(self.gh[-1][:3], ['gh', 'release', 'create'])
+        self.assertIn('--latest=false', self.gh[-1])
 
     def test_advanced_main_starts_fresh_retry_without_committing_stale_generated_files(self):
         source = self.git(self.worker, 'rev-parse', 'HEAD')

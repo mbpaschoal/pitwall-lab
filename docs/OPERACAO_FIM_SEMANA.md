@@ -1,5 +1,7 @@
 # Fim de semana do México · 2026
 
+[São Paulo, alertas e destaque de versões](PREPARACAO_SAO_PAULO.md) · 0.8.21
+
 ## Publicação e concorrência
 
 A publicação confere o `main` remoto antes do commit/tag e após uma rejeição do push atômico. Se o ramo avançou, agenda uma execução nova em `main`, com as capturas preservadas e todas as validações refeitas sobre o código e a versão atuais. Não se faz rebase de pacotes gerados nem push forçado. Há até duas recuperações por cadeia; erros de autenticação e limites permanecem explícitos. [Runbook PT/EN](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/runbooks/automatic-publication.md).

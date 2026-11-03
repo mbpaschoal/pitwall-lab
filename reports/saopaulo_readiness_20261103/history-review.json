@@ -1,0 +1,42 @@
+{
+  "checked_utc": "2026-11-03T18:00:56.342260+00:00",
+  "drivers": 22,
+  "classified_positions_checked": 17,
+  "points_and_laps_checked": 22,
+  "differences": [],
+  "nonclassified_representation": [
+    {
+      "driver": "arvid_lindblad",
+      "native_position": "18",
+      "native_status": "Retired",
+      "official_position": null
+    },
+    {
+      "driver": "bearman",
+      "native_position": "19",
+      "native_status": "Retired",
+      "official_position": null
+    },
+    {
+      "driver": "bottas",
+      "native_position": "20",
+      "native_status": "Retired",
+      "official_position": null
+    },
+    {
+      "driver": "stroll",
+      "native_position": "21",
+      "native_status": "Retired",
+      "official_position": null
+    },
+    {
+      "driver": "alonso",
+      "native_position": "22",
+      "native_status": "Retired",
+      "official_position": null
+    }
+  ],
+  "fia_reference": "operacao2026/adjudicacoes/2026-19-rodriguez.json",
+  "predictive_snapshot_admitted": false,
+  "limitation": "Review capture only. Recheck the actual post-Q snapshot; native NC rank and official missing finish position remain distinct."
+}

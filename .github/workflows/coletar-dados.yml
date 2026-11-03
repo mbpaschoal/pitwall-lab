@@ -67,6 +67,8 @@ jobs:
           size=sum(p.stat().st_size for p in Path('data/operacao_2026/fins_de_semana').rglob('*') if p.is_file())
           if size>128*1024*1024:raise SystemExit('Collection state exceeds 128 MiB; preserve and review before increasing storage.')
           PY
+      - name: Conferir acesso da fonte / Check provider access
+        run: python -B -m operacao2026.github_maintenance check-source --result "$RUNNER_TEMP/collection.json"
       - name: Preservar capturas mesmo em falha / Preserve captures even on failure
         if: always() && steps.storage.outcome == 'success'
         uses: actions/cache/save@v4
