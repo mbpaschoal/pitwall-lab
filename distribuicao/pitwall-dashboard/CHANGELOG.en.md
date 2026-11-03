@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.8.20 — 2026-11-03
+
+Automatic Mexico City Grand Prix data update through GitHub Actions. Sessions with received data: 5/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.8.19 — 2026-11-02
 
 - Unblocks Mexico collection after explicit review of the OpenF1 catalogue change: only the scheduled race end changed from 23:00 to 22:00 UTC. Start time, identity and observed finish remain preserved; catalogue validation is not relaxed. The conservative 23:30 UTC public-access deferral has its own field, avoiding earlier free-tier queries.

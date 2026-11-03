@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.8.20 — 2026-11-03
+
+Atualização automática de dados de Mexico City Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 5/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.8.19 — 2026-11-02
 
 - Destrava a coleta do México após revisão explícita da mudança no catálogo OpenF1: somente o fim programado da corrida passou de 23:00 para 22:00 UTC. Largada, identidade e encerramento observado continuam preservados; a validação de catálogo não foi relaxada. A espera conservadora até 23:30 UTC fica em campo próprio, sem antecipar consultas ao acesso gratuito.
