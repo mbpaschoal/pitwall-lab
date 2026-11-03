@@ -1,7 +1,7 @@
 # Pneus de Lawson no TL3 do México / Lawson Mexico FP3 tyres
 
 Created by: MBPaschoal
-Status: implemented; publication verification pending
+Status: published and publicly verified — 0.8.20
 Type: source adjudication and delivery report
 
 ## Português
@@ -44,3 +44,14 @@ A 0.8.19 atualiza esse término **programado** mediante conferência explícita,
 English: a pre-existing 0.8.17 collection failure was caused solely by a catalogue change to the scheduled race end, from 23:00 to 22:00 UTC. Version 0.8.19 explicitly reviews and updates that configuration, retaining strict catalogue checks. Start time, identity, observed finish and observed weather remain unchanged. Reprojection also restores optional driver-ID keys from legacy FP1/FP2 caches while preserving names, numbers, lap times and laps. The 0.8.18 Lawson documentary recovery is retained. Original responses, hashes, UTCs and the previous configuration are linked above; scheduled end does not substitute for observed race-control events.
 
 The previous conservative 23:30 UTC free-access deferral is retained in a separate field. Tests forbid shortening the default live-access buffer. Catalogue timing, observed finish and API-access deferral have distinct roles.
+
+## Publicação confirmada / Confirmed delivery — 0.8.20
+
+- **Pitwall Lab atualizado**: [site público](https://pitwall-lab.streamlit.app/?tela=Corridas&temporada=2026&gp=19&lang=pt), versão **0.8.20**, build `8f4df41d50f1d4562c8836e59a59532f5a43b6481b8d7bb52b310de2aed81031`. [Verificação independente em sessão limpa](public-build-020/public-build.json).
+- [Aceite público PT/EN, desktop/mobile](browser-public-020/acceptance.json): quatro casos aprovados, oito CSVs baixados, cinco stints de Lawson, MEDIUM 1–8, idade inicial vazia, duas fontes clicáveis e 88 passagens pelos boxes exclusivas do TL3. Corrida continua padrão; a nota de reconstrução não aparece nela. [Desktop PT](browser-public-020/desktop-pt-fp3.png) · [Mobile EN](browser-public-020/mobile-en-fp3.png).
+- [Release 0.8.18](https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.18): recuperação e interface; suíte integral de código, pacote e navegação aprovada. [Validação 0.8.19](validation-019.json): 317 testes de fonte, 141 do pacote e quatro casos locais.
+- [Coleta automática 41554060460](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41554060460): concluída com sucesso; 120 testes focais, 141 do pacote, três suítes de navegação e conferência pública. Publicou atomicamente a [0.8.20 com ZIP e capturas originais](https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.20), sem recuperação de concorrência necessária. [Recibos e hashes dos assets](delivery-receipts.json).
+- [Diferenças 0.8.19 → 0.8.20](automatic-diff-020.json): novas classificações de pilotos/equipes recebidas da Jolpica e recibos de coleta atualizados. Tempos, dados descritivos, clima observado e recuperação de Lawson permanecem iguais; a auditoria da corrida conserva a fotografia nativa mais recente antes da mesma revisão oficial. Não houve nova inferência de pneus.
+- [Integridade final](scientific-integrity-final.json): 614 arquivos protegidos sem alteração. Modelo v1 e probabilidades registradas preservados.
+
+English: version 0.8.20 is confirmed on the public Streamlit deployment by its complete build hash and four fresh PT/EN desktop/mobile cases with eight real CSV downloads. Lawson’s FP3 table has five correctly ordered stints, MEDIUM on laps 1–8, blank unknown initial age, clickable provenance and 88 FP3-only pit passages; Race remains the default and does not display FP3's reconstruction note. The resumed automatic collector completed successfully, passed 120 focused source tests, 141 portable tests and three browser suites, and atomically published the release and raw captures. Compared with 0.8.19 it refreshes Jolpica championship standings and acquisition receipts; session timings, descriptive records, observed weather and the documentary recovery remain unchanged. All 614 protected scientific files retain their hashes.

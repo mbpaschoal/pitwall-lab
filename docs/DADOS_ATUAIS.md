@@ -4,6 +4,16 @@ Português · [English](en/CURRENT_DATA.md)
 
 O acervo é descritivo e separado das entradas v1: 66 GPs/330 sessões de 2024–2026 até Austin. A aquisição complementar de 29/10 foi serial e cacheada. Os nove artefatos científicos e as emissões anteriores foram preservados.
 
+## México — composto inicial recuperado em 02/11/2026
+
+As cinco sessões operacionais do México têm dados recebidos após conferência. O primeiro trecho de Lawson no TL3 foi recuperado como **MEDIUM nas voltas 1–8**: o GP Tempo observa o composto nas voltas 2–8, e a FIA confirma um trecho inicial contínuo de oito voltas. A atribuição à volta 1 é reconstrução documental por continuidade, identificada na interface e no CSV. Seu tempo ausente e a idade inicial do jogo permanecem ausentes.
+
+O seletor de pneus permite acessar treinos, classificação e corrida, com as passagens pelos boxes separadas por sessão. As coberturas original e validada continuam distintas; estado de recebimento não significa que todo campo da fonte esteja completo. A revisão do catálogo preserva os horários observados da corrida e mantém a espera conservadora do acesso gratuito em campo separado. [Fontes, reconstrução, versões e recibos públicos](../reports/lawson_tyres_mexico_20261102/README.md).
+
+Publicação conferida no site na versão **0.8.20**, em PT/EN e desktop/mobile, com CSVs reais. A atualização automática seguinte preservou a recuperação e renovou as classificações do campeonato.
+
+Este complemento operacional não amplia automaticamente o acervo de condições de Pilotos nem altera o modelo ou as probabilidades registradas. Os registros por versão abaixo são históricos e preservam as limitações conhecidas em cada entrega.
+
 ## Fontes alternativas do México — 0.8.3
 
 A revisão documental recupera os 22 tempos do TL3 e identifica Lawson por número, nome e equipe na lista oficial deste evento. O recorte temporal exclui um registro de paradas anterior ao TL3 e 84 anteriores à classificação; os originais não são apagados. A classificação final e a decisão dos comissários mostram Lawson como DSQ, sem posição numérica nem tempos válidos.

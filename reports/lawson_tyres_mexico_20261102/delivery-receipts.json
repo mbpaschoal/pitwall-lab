@@ -1,0 +1,60 @@
+{
+  "checked_utc": "2026-11-03 00:55:38 UTC",
+  "automatic_update": {
+    "id": 41554060460,
+    "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41554060460",
+    "head_sha": "4c25e07bb673aa8e593ec125f00154461caaaeb7",
+    "status": "completed",
+    "conclusion": "success",
+    "updated_at": "2026-11-03T00:49:51Z"
+  },
+  "release_018": {
+    "tag": "v0.8.18",
+    "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.18",
+    "published_at": "2026-11-03T00:45:58Z",
+    "assets": [
+      {
+        "name": "pitwall-dashboard.zip",
+        "size": 665834646,
+        "digest": "sha256:22d005feba11fd52876467fa6b0f90e79c46b8e383a8fe5d0dd28065fe7d0449",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/releases/download/v0.8.18/pitwall-dashboard.zip"
+      }
+    ]
+  },
+  "release_020": {
+    "tag": "v0.8.20",
+    "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.20",
+    "published_at": "2026-11-03T00:49:29Z",
+    "assets": [
+      {
+        "name": "capturas-originais.tar.gz",
+        "size": 5642146,
+        "digest": "sha256:2c38647403d295dd992d92097859895db9d5e9808bb2088901b4fdefaad1f5cf",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/releases/download/v0.8.20/capturas-originais.tar.gz"
+      },
+      {
+        "name": "pitwall-dashboard.zip",
+        "size": 665835709,
+        "digest": "sha256:cb2607b5d85ff3a4b3320cce61af5c0e575c8ef64adc4472d5c3e5730369b0ec",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/releases/download/v0.8.20/pitwall-dashboard.zip"
+      }
+    ]
+  },
+  "automatic_validation": {
+    "source_tests": 120,
+    "portable_tests": 141,
+    "browser_suites": [
+      "aceite_exploracao",
+      "aceite_visual",
+      "aceite_fim_semana"
+    ],
+    "visual_cases": 24,
+    "weekend_cases": 4,
+    "public_version_check": true
+  },
+  "local_validation_019": {
+    "source_tests": 317,
+    "portable_tests": 141
+  },
+  "scientific_files_unchanged": 614
+}

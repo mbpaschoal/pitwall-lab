@@ -4,6 +4,16 @@
 
 The descriptive archive is separate from v1 inputs: 66 GPs/330 sessions in 2024–2026 through Austin. Supplementary acquisition on 29 October was serial and cached. The nine scientific artefacts and previous recorded predictions were preserved.
 
+## Mexico — opening compound recovered on 2 November 2026
+
+All five operational Mexico sessions have received-data status after review. Lawson's opening FP3 run is recovered as **MEDIUM on laps 1–8**: GP Tempo directly identifies the compound on laps 2–8, while FIA confirms an uninterrupted opening eight-lap run. Lap 1 is explicitly identified as documentary reconstruction by continuity in the interface and CSV. Its missing lap time and initial tyre age remain unknown.
+
+The tyre selector exposes practice, qualifying and Race with session-specific pit-lane passages. Native and reviewed coverage remain distinct; received-data status does not certify complete source fields. Catalogue review retains observed race timing and preserves the conservative free-access wait in a separate field. [Sources, reconstruction, versions and public receipts](../../reports/lawson_tyres_mexico_20261102/README.md).
+
+Version **0.8.20** is confirmed on the public site in PT/EN and desktop/mobile with actual CSV downloads. The automatic update retained the recovery and refreshed championship standings.
+
+This operational supplement does not automatically extend the Drivers conditions archive or change the model and registered probabilities. Versioned records below are historical and retain the limitations known at each delivery.
+
 ## Mexico alternative sources — 0.8.3
 
 Documentary review recovers all 22 FP3 times and identifies Lawson by number, name and team in this event's official entry list. Temporal scope excludes one pre-FP3 pit record and 84 pre-qualifying records; originals remain preserved. The final classification and stewards' decision establish Lawson as DSQ, without a numeric position or valid times.
