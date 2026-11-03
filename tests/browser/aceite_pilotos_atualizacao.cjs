@@ -12,6 +12,9 @@ const gps={...baseline.gps,...Object.fromEntries(Object.entries(supplement.event
 const latest=Object.values(gps).sort((a,b)=>a.date_utc.localeCompare(b.date_utc)).at(-1);
 const cutoff=latest.date_utc.split('-').reverse().join('/');
 const maxStarts=rows.filter(x=>x.driver_id==='max_verstappen'&&x.started).length;
+const left=new Map(rows.filter(x=>x.started&&x.driver_id==='max_verstappen'&&gps[x.race_id].temporada===2026).map(x=>[x.race_id,x]));
+const common=rows.filter(x=>x.started&&x.driver_id==='alonso'&&gps[x.race_id].temporada===2026&&left.has(x.race_id));
+const comparable=common.filter(x=>x.position!==null&&!x.disqualified&&left.get(x.race_id).position!==null&&!left.get(x.race_id).disqualified).length;
 const source=JSON.parse(fs.readFileSync(path.join(root,'dashboard_assets/fan/sources.json'))).find(x=>x.driver_id==='ryo_hirakawa');
 const check=(ok,msg)=>{if(!ok)throw Error(msg);};fs.mkdirSync(output,{recursive:true});
 (async()=>{
@@ -52,8 +55,10 @@ const check=(ok,msg)=>{if(!ok)throw Error(msg);};fs.mkdirSync(output,{recursive:
    await page.screenshot({path:path.join(output,key+'-hirakawa.png')});
    app=await open({visao:'duelo',piloto:'max_verstappen',rival:'alonso',anos:'2026'});
    check(await app.locator('[data-testid="stException"]').count()===0,'Duel exception');
+   const denominator=app.locator('[data-testid="stCaptionContainer"]').filter({hasText:new RegExp(common.length+' (largadas em comum|shared starts)','i')}).first();
+   await denominator.waitFor({timeout:30000});
+   check((await denominator.innerText()).includes(String(comparable)),'Wrong comparable-result denominator');
    const metrics=await app.locator('[data-testid="stMetric"]').allTextContents();
-   check(metrics.some(x=>/Largadas em comum|Common starts|Shared starts/.test(x)),'Missing shared-start denominator');
    cases.push({lang,mobile,version,reloads,maxStarts,csv:true,svg:true,hirakawa_original_sha256:source.sha256,duel_metrics:metrics,status:'passed'});
    fs.writeFileSync(path.join(output,'acceptance.json'),JSON.stringify({status:'passed',cases},null,2)+'\n');console.log(key+' passed');
   }catch(e){await page.screenshot({path:path.join(output,key+'-failure.png')});throw e;}finally{await context.close();}

@@ -66,7 +66,7 @@ def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, a
     backdrop_html=''
     responsive_attrs=None
     if person:
-        spec=portrait_asset(person['id'])
+        spec=portrait_asset(person['id'],person['name'])
         if spec and not (PROJECT_ROOT/spec['path']).is_file():
             spec=None
         if not spec:
