@@ -1,0 +1,32 @@
+{
+  "checked_utc": "2026-11-03 00:58:53 UTC",
+  "run_url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41554060945",
+  "version": "0.8.19",
+  "source_tests": 317,
+  "portable_tests": 141,
+  "jobs": [
+    {
+      "id": 125648482368,
+      "name": "validate",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-11-03T00:40:15Z"
+    },
+    {
+      "id": 125648482759,
+      "name": "browser",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-11-03T00:57:50Z"
+    },
+    {
+      "id": 125656638268,
+      "name": "release",
+      "status": "in_progress",
+      "conclusion": null,
+      "completed_at": null
+    }
+  ],
+  "browser_suites": 10,
+  "published_current_release": "v0.8.20"
+}
