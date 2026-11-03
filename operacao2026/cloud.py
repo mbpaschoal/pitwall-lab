@@ -37,10 +37,14 @@ def historical_access_after(event, now):
     Use the event's verified schedule only to defer requests, never as evidence
     that a session finished. Collection still requires observed finish records.
     """
-    deadlines = [instant(s['date_end']) + timedelta(minutes=30)
-                 for s in event['sessions']
-                 if instant(s['date_start']) - timedelta(minutes=30)
-                 <= now <= instant(s['date_end']) + timedelta(minutes=30)]
+    deadlines = []
+    for session in event['sessions']:
+        minimum = instant(session['date_end']) + timedelta(minutes=30)
+        deadline = instant(session['consulta_publica_apos_utc']) if session.get('consulta_publica_apos_utc') else minimum
+        if deadline < minimum:
+            raise ValueError('Public-access deferral cannot shorten the live window')
+        if instant(session['date_start']) - timedelta(minutes=30) <= now <= deadline:
+            deadlines.append(deadline)
     return max(deadlines, default=None)
 
 

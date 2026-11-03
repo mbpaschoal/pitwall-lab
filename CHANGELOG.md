@@ -2,7 +2,7 @@
 
 ## 0.8.19 — 2026-11-02
 
-- Destrava a coleta do México após revisão explícita da mudança no catálogo OpenF1: somente o fim programado da corrida passou de 23:00 para 22:00 UTC. Largada, identidade e encerramento observado continuam preservados; a validação de catálogo não foi relaxada.
+- Destrava a coleta do México após revisão explícita da mudança no catálogo OpenF1: somente o fim programado da corrida passou de 23:00 para 22:00 UTC. Largada, identidade e encerramento observado continuam preservados; a validação de catálogo não foi relaxada. A espera conservadora até 23:30 UTC fica em campo próprio, sem antecipar consultas ao acesso gratuito.
 - Mantém a recuperação documental dos pneus de Lawson da 0.8.18 e normaliza as cinco sessões a partir de capturas verificadas. Restaura as chaves opcionais de identificação nos tempos de TL1/TL2 do cache legado, sem mudar nomes, números, tempos ou observações do clima.
 - Evidências, versão anterior do evento e resposta original com URL/UTC/SHA em `reports/lawson_tyres_mexico_20261102/`. O dado de término programado da API não é usado como encerramento observado nem como entrada de previsão.
 

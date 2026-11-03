@@ -94,7 +94,8 @@
       "location": "Mexico City",
       "gmt_offset": "-06:00:00",
       "year": 2026,
-      "is_cancelled": false
+      "is_cancelled": false,
+      "consulta_publica_apos_utc": "2026-11-01T23:30:00+00:00"
     }
   ],
   "proveniencia": [
@@ -147,6 +148,7 @@
         "source": "2026-11-01T22:00:00+00:00"
       }
     ],
-    "uso": "Apenas fim programado do catálogo. Largada, identidade e encerramento observado preservados; sem alterar previsão registrada."
+    "uso": "Apenas fim programado do catálogo. Largada, identidade e encerramento observado preservados; sem alterar previsão registrada.",
+    "janela_gratuita_preservada": "A espera anterior, até 23:30 UTC, permanece explícita em consulta_publica_apos_utc; corrigir o catálogo não antecipa acesso."
   }
 }

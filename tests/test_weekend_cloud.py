@@ -17,7 +17,7 @@ class CloudTests(unittest.TestCase):
     def test_free_access_waits_through_the_live_window_without_any_collection(self):
         event=weekend.load_event(CONFIG)
         race=next(s for s in event['sessions'] if s['session_name']=='Race')
-        expected=cloud.instant(race['date_end'])+timedelta(minutes=30)
+        expected=cloud.instant(race['consulta_publica_apos_utc'])
         for now in [datetime(2026,11,1,19,30,tzinfo=timezone.utc),
                     datetime(2026,11,1,23,9,tzinfo=timezone.utc),expected]:
             with self.subTest(now=now), tempfile.TemporaryDirectory() as tmp:
@@ -27,6 +27,23 @@ class CloudTests(unittest.TestCase):
                 self.assertEqual(result['reason'],'provider_live_window')
                 self.assertEqual(cloud.instant(result['retry_after_utc']),expected)
                 self.assertFalse((Path(tmp)/cloud.PUBLIC).exists())
+
+    def test_catalogue_time_and_conservative_public_access_are_separate(self):
+        event=weekend.load_event(CONFIG)
+        race=next(s for s in event['sessions'] if s['session_name']=='Race')
+        self.assertEqual(cloud.instant(race['date_end']),datetime(2026,11,1,22,tzinfo=timezone.utc))
+        self.assertEqual(cloud.historical_access_after(event,datetime(2026,11,1,23,9,tzinfo=timezone.utc)),
+                         datetime(2026,11,1,23,30,tzinfo=timezone.utc))
+        race.pop('consulta_publica_apos_utc')
+        self.assertEqual(cloud.historical_access_after(event,datetime(2026,11,1,22,29,tzinfo=timezone.utc)),
+                         datetime(2026,11,1,22,30,tzinfo=timezone.utc))
+
+    def test_optional_public_access_deferral_cannot_shorten_the_free_tier_wait(self):
+        event=weekend.load_event(CONFIG)
+        race=next(s for s in event['sessions'] if s['session_name']=='Race')
+        race['consulta_publica_apos_utc']='2026-11-01T22:29:00Z'
+        with self.assertRaisesRegex(ValueError,'cannot shorten'):
+            cloud.historical_access_after(event,datetime(2026,11,1,21,tzinfo=timezone.utc))
 
     def test_free_access_resumes_after_the_window_and_preserves_finish_validation(self):
         event=weekend.load_event(CONFIG)

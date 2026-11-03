@@ -2,7 +2,7 @@
 
 ## 0.8.19 — 2026-11-02
 
-- Unblocks Mexico collection after explicit review of the OpenF1 catalogue change: only the scheduled race end changed from 23:00 to 22:00 UTC. Start time, identity and observed finish remain preserved; catalogue validation is not relaxed.
+- Unblocks Mexico collection after explicit review of the OpenF1 catalogue change: only the scheduled race end changed from 23:00 to 22:00 UTC. Start time, identity and observed finish remain preserved; catalogue validation is not relaxed. The conservative 23:30 UTC public-access deferral has its own field, avoiding earlier free-tier queries.
 - Retains the 0.8.18 documentary recovery of Lawson's tyres and normalizes all five sessions from verified captures. Restores optional driver-ID keys in legacy FP1/FP2 cached timings without changing names, numbers, lap times or observed weather.
 - Evidence, previous event configuration and original URL/UTC/SHA response are retained in `reports/lawson_tyres_mexico_20261102/`. The API's scheduled end is not treated as the observed finish or used as a prediction input.
 
