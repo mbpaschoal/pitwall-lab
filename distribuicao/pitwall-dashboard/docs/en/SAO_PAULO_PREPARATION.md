@@ -2,6 +2,10 @@
 
 [Português](../PREPARACAO_SAO_PAULO.md) · English
 
+## Automation admitted in 0.8.26
+
+The [hosted routine](AUTOMATION.md) now prepares and attempts one prospective v1 emission after observed Q finish, only for 2026/20/interlagos. It keeps the scientific producer gates, bounds retries and requires a one-hour pre-race publication margin. The manual procedure below remains for diagnosis/recovery and must not run alongside the collector. This delivery contains no São Paulo forecast.
+
 ## Prepared operation
 
 São Paulo is configured as **2026/20/interlagos**, OpenF1 meeting **1299**, with five conventional sessions. Jolpica calendar, OpenF1 catalogue and [F1's official programme](https://www.formula1.com/en/racing/2026/brazil) were rechecked on 3 November 2026. Race start is 8 November, 14:00 local / 17:00 UTC. FP1 is Friday 12:30; FP2 16:00; FP3 Saturday 11:30; qualifying 15:00 (UTC−3).
@@ -40,7 +44,7 @@ python -B operar_2026.py estado --snapshot "$SNAPSHOT" --temporada 2026 --rodada
 
 Stop unless status is `pronto`. Check final canonical Mexico history, v1 historical-window receipts/UTCs and the actual qualifying population. Descriptive supplements do not automatically repair model inputs. The OpenF1 route requires São Paulo's explicit configuration (`--openf1-evento operacao2026/eventos/saopaulo2026.json`), preserved inventory and adapter admission; do not reuse the adapter's Austin default. GP Tempo is not an admitted predictive substitute.
 
-Only with real data and readiness, provide `--temporada 2026 --rodada 20 --circuito interlagos` to `emitir`, with a new ID, observed finish, evidence URL and current UTC cutoff. Follow the [operational chain](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/comandos_operacao_2026.md): validate, register, generate the asset, verify actual favourites' team artwork, increment version, export, publish and verify the live revision **before race start**. Missing dependencies or a closed window remain explicit. Neither this document nor the preparation checker schedules or automatically emits a forecast.
+Only with real data and readiness, provide `--temporada 2026 --rodada 20 --circuito interlagos` to `emitir`, with a new ID, observed finish, evidence URL and current UTC cutoff. Follow the [operational chain](https://github.com/mbpaschoal/pitwall-lab/blob/main/docs/comandos_operacao_2026.md): validate, register, generate the asset, verify actual favourites' team artwork, increment version, export, publish and verify the live revision **before race start**. Missing dependencies or a closed window remain explicit. The offline checker emits no forecasts; the hosted routine follows its separate explicit policy.
 
 ## Latest release
 

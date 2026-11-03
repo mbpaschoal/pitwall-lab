@@ -15,6 +15,18 @@ CONFIG = ROOT/'operacao2026/eventos/mexico2026.json'
 
 
 class CloudTests(unittest.TestCase):
+    def test_forecast_validates_new_receipts_against_a_post_collection_clock(self):
+        start=datetime(2026,11,1,23,31,tzinfo=timezone.utc);end=start+timedelta(minutes=2)
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);(root/'operacao2026').mkdir();(root/'frontend_assets').mkdir()
+            (root/'operacao2026/forecast_policy.json').write_text('{}')
+            with patch.object(cloud,'datetime') as clock,patch.object(cloud,'discover',return_value=CONFIG), \
+                 patch.object(weekend,'collect',return_value=self.state()), \
+                 patch('operacao2026.post_qualifying.prepare',return_value=dict(status='event_not_admitted')) as prepare:
+                clock.now.side_effect=[start,end]
+                cloud.collect(root)
+            self.assertEqual(prepare.call_args.args[-1],end)
+
     def test_real_discovery_client_preserves_first_response_in_a_new_directory(self):
         payload=json.dumps(dict(MRData=dict(offset='0',total='0',RaceTable=dict(season='2026',Races=[])))).encode()
         class Response(io.BytesIO):

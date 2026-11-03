@@ -24,3 +24,8 @@ O download usa `on_click="ignore"`, opção documentada para evitar reexecução
 Também foi corrigida a criação do diretório antes de instanciar o cliente real na descoberta de calendário. O teste usa o cliente verdadeiro com transporte local, preserva a primeira resposta e não faz HTTP.
 
 O código foi desenvolvido em checkout isolado a partir de `a31b006`, preservando os rascunhos locais. Modelo v1, probabilidades e emissões existentes devem continuar byte a byte iguais; o recibo final registrará a conferência. Nenhuma automação local adicional foi criada: a antiga rotina do México está pausada e a nova rotina fica hospedada no GitHub.
+
+
+## Validação local
+
+Pacote: 144 testes aprovados. Navegação completa e quatro casos de downloads PT/EN em computador e Android emulado passaram: CSV/SVG salvos, idioma correto, zero reexecuções causadas pelo download e filtros preservados. A bateria ampliada passou em 390 testes antes dos últimos casos de reforço; a suíte focal final passou em 47. Foram incorporadas 344 cópias de originais (106.220.808 bytes), sem conflitos, e o registro de 19 emissões ficou válido. O modelo congelado carregou com seus hashes/fingerprint originais, sem inferência. [Recibo local](local-validation.json), [preparação offline](offline-readiness.json), [preservação](protected-integrity.json) e [inventário dos originais](restoration-plan.json). CI/release/deploy permanecem pendentes nesta etapa.

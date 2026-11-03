@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.8.26 — 2026-11-03
+
+Automação pós-classificação para São Paulo: snapshot novo, validação pelo produtor v1 congelado, emissão única, cartas da equipe efetiva e publicação com margem mínima de uma hora. Tentativas espaçadas e limitadas, preservação dos mesmos bytes na recuperação e alerta sem bloquear os dados descritivos. Referências oficiais F1 de 2026 admitidas para Interlagos, Las Vegas, Lusail e Yas Marina; altitude pontual Open-Meteo. Downloads CSV/SVG sem recarregar a página, com teste real de idioma, arquivo e ausência de reexecução em PT/EN no computador e celular. Inventário bilíngue das automações e limites. Nenhuma previsão futura foi emitida nesta entrega; modelo e emissões existentes preservados. Evidências originais de 19 emissões históricas ficaram completas no repositório: 344 arquivos ausentes incorporados sem mudar bytes, UTCs ou probabilidades; o registro completo agora é validado em CI. Descoberta de calendário corrigida para preservar sua primeira captura.
+
 ## 0.8.25 — 2026-11-03
 
 - Consolida a entrega do México em Pilotos: 67 GPs e 1.362 largadas, atualização agendada com qualidade e recuperação monitorada, retratos compatíveis e probabilidades v1 preservadas. As correções 0.8.22–0.8.24 permanecem registradas.

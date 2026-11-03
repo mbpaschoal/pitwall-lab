@@ -1,0 +1,114 @@
+{
+  "source_commit": "3c100180d4eaf27c168302411039adea8c68f211",
+  "product_version": "0.8.26",
+  "package_tests": 144,
+  "package_test_groups": [
+    4,
+    2,
+    2,
+    3,
+    3,
+    33,
+    15,
+    6,
+    10,
+    3,
+    9,
+    5,
+    2,
+    5,
+    16,
+    20,
+    6
+  ],
+  "package_build": "f60379c599caaaddb05c4d66340713e0e0227914a874cd42049361abd8c03c0a",
+  "zip_sha256": "8a7d60cb69b17d0977d9650bc909a9b39323ab08de671b10939c43e148b35ceb",
+  "zip_bytes": 665855915,
+  "download_cases": [
+    {
+      "lang": "pt",
+      "mobile": false,
+      "version": "0.8.26",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "download_reruns": 0,
+      "svg_language": "pt",
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "À frente do rival 15 ",
+        "Taxa de vitórias 15,8% ",
+        "À frente do rival 3 ",
+        "Taxa de vitórias 0,0% "
+      ],
+      "status": "passed"
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "version": "0.8.26",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "download_reruns": 0,
+      "svg_language": "en",
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "Finished ahead of rival 15 ",
+        "Win rate 15.8% ",
+        "Finished ahead of rival 3 ",
+        "Win rate 0.0% "
+      ],
+      "status": "passed"
+    },
+    {
+      "lang": "pt",
+      "mobile": true,
+      "version": "0.8.26",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "download_reruns": 0,
+      "svg_language": "pt",
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "À frente do rival 15 ",
+        "Taxa de vitórias 15,8% ",
+        "À frente do rival 3 ",
+        "Taxa de vitórias 0,0% "
+      ],
+      "status": "passed"
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "version": "0.8.26",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "download_reruns": 0,
+      "svg_language": "en",
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "Finished ahead of rival 15 ",
+        "Win rate 15.8% ",
+        "Finished ahead of rival 3 ",
+        "Win rate 0.0% "
+      ],
+      "status": "passed"
+    }
+  ],
+  "full_source_suite_before_final_test_additions": {
+    "count": 390,
+    "status": "passed"
+  },
+  "focused_final_suite": {
+    "count": 47,
+    "status": "passed"
+  },
+  "public_verification": "pending"
+}

@@ -180,6 +180,32 @@ class PostQualifyingTests(unittest.TestCase):
         for row in receipt['files']:
             self.assertEqual(hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest(),row['sha256'])
 
+    def test_frozen_model_loads_with_its_original_fingerprint_without_inference(self):
+        from operacao2026.previsao import carregar_modelo
+        model=carregar_modelo(str(ROOT/'models/modelo_v1/modelo.joblib'),
+            str(ROOT/'models/modelo_v1/metadados.json'),str(ROOT/'data/preparado/colunas.json'))
+        self.assertEqual(model['hashes']['modelo'],'16718ea5c4a7f662e72f09d38b073e545df1bba5c64c87b2cc1a0973ad9116e3')
+
+    def test_openf1_fallback_passes_the_explicit_target_config_to_the_frozen_cli(self):
+        self.observed();calls=[]
+        def snapshot(root,snapshot_id,**kwargs):
+            path=root/snapshot_id/'indice.json';path.parent.mkdir(parents=True);path.write_text('{}')
+        bundle=(self.root/'data/operacao_2026/fontes_alternativas/q-2026-interlagos-test').resolve()
+        bundle.mkdir(parents=True);(bundle/'inventario.json').write_text('{}')
+        def run(root,args):
+            calls.append(args)
+            if args[1]=='estado':return json.dumps(dict(estado='aguardando_classificacao',registros_classificacao=0))
+            path=root/'reports/operacao_2026/emissoes'/args[args.index('--id')+1]/'manifesto.json'
+            path.parent.mkdir(parents=True);path.write_text('immutable fixture');return ''
+        with patch.object(pq,'source_control',return_value={}),patch.object(pq.fontes,'coletar_snapshot',side_effect=snapshot), \
+             patch.object(pq.weekend,'qualification_bundle',return_value=bundle),patch.object(pq,'utc_now',return_value=self.now), \
+             patch.object(pq,'verify_cards'),patch.object(pq,'register_and_project'):
+            result=pq.prepare(self.root,self.config,self.state,self.now,run)
+        emission=calls[1]
+        self.assertEqual(emission[emission.index('--openf1-evento')+1],str(self.config.resolve()))
+        self.assertEqual(emission[emission.index('--circuito')+1],'interlagos')
+        self.assertEqual(result['identity'],[2026,20,'interlagos'])
+
     def test_blocked_retry_stays_actionable_but_future_q_does_not_alert(self):
         for status in ('blocked','blocked_retry_deferred','publication_window_closed'):
             with self.assertRaisesRegex(RuntimeError,'review'):pq.check_health(dict(forecast=dict(status=status)))
