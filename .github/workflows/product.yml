@@ -7,13 +7,16 @@ on:
 permissions:
   contents: read
 jobs:
+  security:
+    uses: ./.github/workflows/security.yml
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
+          persist-credentials: false
           fetch-depth: 0
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
       - name: Dependências de apresentação / Presentation dependencies
@@ -49,15 +52,17 @@ jobs:
         suite: [core, navigation]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '22'
       - run: python -m pip install -r publicacao/templates/requirements.txt
-      - run: npm install --no-save playwright@1.62.1
+      - run: npm install --no-save --ignore-scripts playwright@1.62.1
       - run: npx playwright install --with-deps chromium webkit
       - name: Jornadas de fãs / Fan journeys
         env:
@@ -88,7 +93,7 @@ jobs:
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-webkit-evidence"
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-webkit-evidence"
           fi
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
           name: fan-journey-evidence-${{ matrix.suite }}
@@ -110,15 +115,16 @@ jobs:
             ${{ runner.temp }}/streamlit.log
   release:
     if: startsWith(github.ref, 'refs/tags/v')
-    needs: [validate, browser]
+    needs: [validate, browser, security]
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
+          persist-credentials: false
           fetch-depth: 0
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
       - name: Pacote da release / Release package

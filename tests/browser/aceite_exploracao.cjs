@@ -82,8 +82,8 @@ fs.mkdirSync(output, {recursive:true});
   }
   await p.locator('.fan-hero-image').evaluate(img=>img.decode());
   await stableIdle(p);
-  await p.waitForFunction(()=>document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"] > label').length===6,null,{timeout:15000});
-  check(await p.locator('.st-key-journey-navigation [role="radiogroup"] > label').count()===6,'Composition C: six destinations required');
+  await p.waitForFunction(()=>document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"] label').length===6,null,{timeout:15000});
+  check(await p.locator('.st-key-journey-navigation [role="radiogroup"] label').count()===6,'Composition C: six destinations required');
 
   return p;
  }
@@ -175,7 +175,7 @@ fs.mkdirSync(output, {recursive:true});
  const journey=await browser.newContext({viewport:{width:1440,height:1100}});
  p=await open(journey,'tela=Corridas&temporada=2026&gp=18&lang=pt','United States Grand Prix');
  const dock=p.locator('.st-key-journey-navigation');
- check(await dock.locator('[role="radiogroup"] > label').count()===6,'Missing journey destinations');
+ check(await dock.locator('[role="radiogroup"] label').count()===6,'Missing journey destinations');
  await dock.getByText('Campeonato',{exact:true}).filter({visible:true}).click();
  await p.getByRole('heading',{name:'Campeonato de pilotos 2026',level:1,exact:true}).waitFor();
  check(new URL(p.url()).searchParams.get('gp')==='18','Dock lost GP');
@@ -205,7 +205,7 @@ fs.mkdirSync(output, {recursive:true});
  await p.screenshot({path:path.join(output,'corrida-mobile.png')});
  report.push({journey:'mobile',tabs:await p.locator('.fan-gp-tabs a').allTextContents()});
  const mobileDock=p.locator('.st-key-journey-navigation');
- for(const label of await mobileDock.locator('[role="radiogroup"] > label').all()){
+ for(const label of await mobileDock.locator('[role="radiogroup"] label').all()){
   const box=await label.boundingBox();check(box&&box.width>=44&&box.height>=44&&box.x>=0&&box.x+box.width<=390,'Dock target clipped or too small');
  }
  for(const [route,title] of [['Pilotos','Pilotos'],['Campeonato','Campeonato'],['Previsões','United States Grand Prix'],['Desempenho','Acertos do Lab'],['Metodologia','Como funciona']]){

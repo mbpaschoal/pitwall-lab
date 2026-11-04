@@ -97,7 +97,7 @@ class ProfileInteractionTests(unittest.TestCase):
         self.assertFalse(app.exception)
         self.assertEqual(app.multiselect(key="pilot_years").value, [2025])
         for key, value in origin.items():
-            self.assertEqual(app.query_params[key], [value])
+            self.assertEqual(app.query_params.get(key),value)
         fresh = AppTest.from_file(str(ROOT / "app.py"), default_timeout=40)
         fresh.query_params.update(**app.query_params)
         fresh.run()
@@ -133,7 +133,7 @@ class ProfileInteractionTests(unittest.TestCase):
         self.assertEqual(app.multiselect(key="pilot_years").value, [2026])
         self.assertEqual(app.selectbox(key="pilot_metric").value, "podium_rate")
         self.assertEqual(app.selectbox(key="pilot_minimum").value, 3)
-        self.assertEqual(app.query_params["piloto"], ["hamilton"])
+        self.assertEqual(app.query_params.get("piloto"),"hamilton")
 
     def test_duel_explanation_distinguishes_shared_starts_from_teammates(self):
         app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=40)

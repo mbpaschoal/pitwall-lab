@@ -68,3 +68,5 @@ Para uma instalação de apresentação independente, use Python 3.12 e as instr
 Dados de fontes diferentes conservam suas próprias condições; nenhuma licença é estendida automaticamente a outra fonte. O código original está sob a [licença MIT](LICENSE); os materiais de terceiros mantêm seus próprios termos. Projeto educacional independente, sem vínculo oficial com Fórmula 1, fontes ou equipes.
 
 - [Entrega dos 45 itens da revisão crítica](docs/REVISAO_030.md)
+
+[Segurança e relato privado](SECURITY.md) · [Controles e limites](docs/SEGURANCA.md)

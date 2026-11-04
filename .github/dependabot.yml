@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+  - package-ecosystem: pip
+    directory: /publicacao/templates
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      presentation:
+        patterns: ['*']
+# The frozen scientific recipe is audited, but is never updated automatically.
+# A presentation update requires a version bump, package regeneration and CI.

@@ -50,7 +50,7 @@ class LinkContextTests(unittest.TestCase):
         app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=45)
         app.query_params.update(tela='Pilotos',visao='perfil',piloto='max_verstappen',anos='2024',temporada='2024',gp='1',lang='en')
         app.run();self.assertFalse(app.exception)
-        self.assertEqual(app.query_params['temporada'],['2024']);self.assertEqual(app.query_params['gp'],['1'])
+        self.assertEqual(app.query_params.get('temporada'),'2024');self.assertEqual(app.query_params.get('gp'),'1')
         fresh=AppTest.from_file(str(ROOT/'app.py'),default_timeout=45);fresh.query_params.update(**app.query_params);fresh.run();self.assertFalse(fresh.exception)
         self.assertEqual(fresh.selectbox(key='temporada').value,2024);self.assertEqual(fresh.selectbox(key='gp').value,'2024:1')
 
@@ -68,8 +68,8 @@ class LinkContextTests(unittest.TestCase):
             self.assertIn('Hirakawa',markup)
             self.assertNotIn('Alexander Albon',markup)
             self.assertTrue(app.info)
-            self.assertEqual(app.query_params.get('rival' if view=='duelo' else 'piloto'),['ryo_hirakawa'])
-            self.assertEqual(app.query_params['gp'],['19'])
+            self.assertEqual(app.query_params.get('rival' if view=='duelo' else 'piloto'),'ryo_hirakawa')
+            self.assertEqual(app.query_params.get('gp'),'19')
 
     def test_search_retains_selected_gp_for_drivers_and_current_teams(self):
         from pitwall.dashboard.search import search
@@ -129,9 +129,9 @@ class LinkContextTests(unittest.TestCase):
             self.assertFalse(app.exception)
             self.assertNotIn('documento',app.query_params)
             self.assertNotIn('download',app.query_params)
-            self.assertEqual(app.query_params['tela'],['Metodologia'])
-            self.assertEqual(app.query_params['temporada'],['2024']);self.assertEqual(app.query_params['gp'],['1'])
-            self.assertEqual(app.query_params['lang'],[lang])
+            self.assertEqual(app.query_params.get('tela'),'Metodologia')
+            self.assertEqual(app.query_params.get('temporada'),'2024');self.assertEqual(app.query_params.get('gp'),'1')
+            self.assertEqual(app.query_params.get('lang'),lang)
             self.assertTrue(any('fan-hero' in item.value for item in app.markdown))
 
 if __name__=='__main__':unittest.main()

@@ -1,5 +1,6 @@
 /* PT/EN: documentary compound provenance and session isolation, with real CSVs. */
 const fs=require('node:fs'),path=require('node:path');
+const {selectComboboxOption}=require('./select_combobox.cjs');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const [base,output]=process.argv.slice(2);
 if(!base||!output)throw Error('Usage: node aceite_pneus_lawson.cjs URL OUTPUT');
@@ -32,9 +33,8 @@ fs.mkdirSync(output,{recursive:true});
    await app.locator('.fan-gp-tabs').getByRole('link',{name:lang==='pt'?'Pneus e paradas':'Tyres and stops',exact:true}).click();
    const select=app.locator('.st-key-acervo_2026_19_prova_pneus');
    await select.getByRole('combobox').waitFor({timeout:60000});await idle();
-   check((await select.innerText()).includes(lang==='pt'?'Corrida':'Race'),'Race is not the default tyre session');
-   await select.getByRole('combobox').click();
-   await app.getByRole('option',{name:lang==='pt'?'TL3':'FP3',exact:true}).click();
+   check(await select.getByRole('combobox').inputValue()===(lang==='pt'?'Corrida':'Race'),'Race is not the default tyre session');
+   await selectComboboxOption(app,select.getByRole('combobox'),lang==='pt'?'TL3':'FP3');
    await app.getByText(lang==='pt'?/^Lawson no TL3: médios/:/^Lawson in FP3: mediums/).waitFor({timeout:60000});
    await idle();
    check(await app.getByRole('link',{name:lang==='pt'?'GP Tempo · pneus de Lawson no TL3':"GP Tempo · Lawson's FP3 tyres",exact:true}).count()===1,'Clickable GP Tempo source missing');
@@ -62,7 +62,7 @@ fs.mkdirSync(output,{recursive:true});
    const pits=await download('paradas');check(pits.length===89,'FP3 must contain 88 session-specific pit passages');
    await app.getByText(lang==='pt'?/^Lawson no TL3: médios/:/^Lawson in FP3: mediums/).scrollIntoViewIfNeeded();
    await page.screenshot({path:path.join(output,key+'-fp3.png'),fullPage:false});
-   await select.getByRole('combobox').click();await app.getByRole('option',{name:lang==='pt'?'Corrida':'Race',exact:true}).click();
+   await selectComboboxOption(app,select.getByRole('combobox'),lang==='pt'?'Corrida':'Race');
    await app.getByRole('heading',{name:lang==='pt'?'Pit stops da corrida principal':'Main-race pit stops',exact:true}).waitFor({timeout:60000});
    await idle();
    check(await app.getByText(lang==='pt'?/^Lawson no TL3: médios/:/^Lawson in FP3: mediums/).count()===0,'FP3 review leaked into the race view');

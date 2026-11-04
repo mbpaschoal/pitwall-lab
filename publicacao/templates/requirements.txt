@@ -1,7 +1,8 @@
-# Pitwall Lab 0.8.29: resilient navigation / navegacao resiliente.
-streamlit==1.50.0
+# Pitwall Lab 0.8.30: security updates / atualizacoes de seguranca.
+streamlit==1.66.1
 plotly==6.3.1
 pandas==2.2.3
-pyarrow==20.0.0
+pyarrow==23.0.1
 numpy==1.26.4
-protobuf==5.29.5
+protobuf==5.29.6
+pillow==13.0.0

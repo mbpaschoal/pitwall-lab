@@ -24,7 +24,7 @@ async function check(page,lang){
  try{for(const width of [1440,390])for(const lang of ['pt','en']){
   const context=await browser.newContext({viewport:{width,height:1000},deviceScaleFactor:2,isMobile:width===390,hasTouch:width===390});
   const page=await context.newPage(),row={width,lang,blocked:[],visited:[]};report.cases.push(row);
-  await page.route(/\/static\/js\/index\.(?:FFOzOWzC|Cnpi3o3E)\.js(?:\?|$)/,route=>{row.blocked.push(new URL(route.request().url()).pathname);return route.abort();});
+  await page.route(/\/static\/js\/(?:Radio|Button)\.[^/?]+\.js(?:\?|$)/,route=>{row.blocked.push(new URL(route.request().url()).pathname);return route.abort();});
   try{
    await page.goto(base+'/?tela=Corridas&temporada=2026&gp=19&lang='+lang,{waitUntil:'domcontentloaded'});
    await check(page,lang);
@@ -45,11 +45,11 @@ async function check(page,lang){
  }
  const recovery=await browser.newContext({viewport:{width:1440,height:1000}}),page=await recovery.newPage(),releases=[];
  try{
-  await page.route(/\/static\/js\/index\.(?:FFOzOWzC|Cnpi3o3E)\.js(?:\?|$)/,async route=>{await new Promise(resolve=>releases.push(resolve));await route.continue();});
+  await page.route(/\/static\/js\/(?:Radio|Button)\.[^/?]+\.js(?:\?|$)/,async route=>{await new Promise(resolve=>releases.push(resolve));await route.continue();});
   await page.goto(base+'/?tela=Metodologia&temporada=2026&gp=19&lang=pt',{waitUntil:'domcontentloaded'});
   await check(page,'pt');const last=page.locator('.journey-navigation-fallback>a').last();await last.focus();
   assert.ok(releases.length>=2);releases.forEach(resolve=>resolve());
-  await page.waitForFunction(()=>document.querySelectorAll('.st-key-journey-navigation [role=radiogroup]>label').length===6);
+  await page.waitForFunction(()=>document.querySelectorAll('.st-key-journey-navigation [role=radiogroup] label').length===6);
   assert.equal(await last.evaluate(e=>e===document.activeElement),true,'Hydration must preserve keyboard focus');
   assert.equal((await page.locator('body').evaluate(inspectControls,'pt')).navigation,'links');
   await page.keyboard.press('Tab');

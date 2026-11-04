@@ -66,8 +66,8 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     // Server idle can precede Streamlit's lazy native-widget hydration.
     // Geometry and hit tests require the real controls, not their skeletons.
     await surface.waitForFunction(expected=>{
-     const labels=Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"]>label'));
-     const selects=document.querySelectorAll('.st-key-journey-context-row [data-baseweb="select"]');
+     const labels=Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"] label'));
+     const selects=document.querySelectorAll('.st-key-journey-context-row [data-testid="stSelectbox"]');
      return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===6&&labels.every(el=>el.getClientRects().length)&&selects.length===2;
     },lang,{timeout:90000});
     await surface.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});
@@ -84,7 +84,7 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
      return {viewport:[innerWidth,innerHeight],overflow:document.documentElement.scrollWidth>innerWidth,
       main:one('.stMain'),normalBlocks:Array.from(document.querySelectorAll(blocks)).filter(n=>n.getClientRects().length).map(n=>({className:n.className,marginTop:parseFloat(getComputedStyle(n).marginTop),marginBottom:parseFloat(getComputedStyle(n).marginBottom),position:getComputedStyle(n).position})),
       hero:one('.fan-hero'),heading:one('.fan-hero h1'),copy:one('.fan-hero-copy>p'),ribbon:one('.journey-calendar'),
-      dock:one('.st-key-journey-navigation'),targets:Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"]>label')).map(box),photos,
+      dock:one('.st-key-journey-navigation'),targets:Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"] label')).map(box),photos,
       podium:one('.fan-podium-panel'),podiumHeading:one('.fan-podium-panel h2'),weather:one('.fan-weather'),details:one('.fan-circuit-more'),
       chips:one('.fan-condition-chips'),scope:one('.fan-pilot-toolbar'),pilotNavigation:one('.st-key-pilot-view-navigation'),
       championshipRows:document.querySelectorAll('.tabela-editorial tbody tr').length,

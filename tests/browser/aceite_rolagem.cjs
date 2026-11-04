@@ -47,8 +47,8 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
     // Server idle can precede Streamlit's lazy native-widget hydration.
     // Geometry and hit tests require the real controls, not their skeletons.
     await surface.waitForFunction(expected=>{
-     const labels=Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"]>label'));
-     const selects=document.querySelectorAll('.st-key-journey-context-row [data-baseweb="select"]');
+     const labels=Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"] label'));
+     const selects=document.querySelectorAll('.st-key-journey-context-row [data-testid="stSelectbox"]');
      return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===6&&labels.every(el=>el.getClientRects().length)&&selects.length===2;
     },lang,{timeout:90000});
     await surface.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});await page.waitForTimeout(650);
@@ -94,7 +94,7 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
      const hit=document.elementFromPoint((r.x+r.right)/2,(r.y+r.bottom)/2);
      if(hit&&hit!==el&&!el.contains(hit)&&issues.filter(v=>v.kind==='occluded_control').length<10)issues.push({kind:'occluded_control',label:(el.innerText||el.getAttribute('aria-label')||el.tagName).slice(0,90),rect:r,by:hit.tagName+'.'+hit.className});
     }
-    for(const label of dock.querySelectorAll('[role="radiogroup"]>label')){
+    for(const label of dock.querySelectorAll('[role="radiogroup"] label')){
      const r=box(label),hit=document.elementFromPoint((r.x+r.right)/2,(r.y+r.bottom)/2);
      if(r.width<44||r.height<44||r.x<0||r.right>innerWidth+1||r.y<0||r.bottom>innerHeight+1)issues.push({kind:'navigation_target_clipped_or_small',label:label.innerText,rect:r});
      if(hit&&hit!==label&&!label.contains(hit))issues.push({kind:'navigation_target_occluded',label:label.innerText,by:hit.tagName+'.'+hit.className});
@@ -110,20 +110,27 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
    // the photographs' 2x source-resolution contract in aceite_visual.cjs.
    await doubleTextMetrics(surface);
    await page.waitForTimeout(450);
-   const controls=surface.locator('.st-key-journey-context-row [data-baseweb="select"]');
+   const controls=surface.locator('.st-key-journey-context-row [data-testid="stSelectbox"]');
    const reflow={route,lang,viewport,type:'shared_header_text2x',controls:[],issues:[]};
    for(let i=0;i<await controls.count();i++){
     await controls.nth(i).scrollIntoViewIfNeeded();await page.waitForTimeout(100);
     const result=await controls.nth(i).evaluate(el=>{
      const box=n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height};};
-     const main=box(document.querySelector('.stMain')),dock=box(document.querySelector('.st-key-journey-navigation')),control=box(el),value=el.querySelector('div[value]'),issues=[];
+     const main=box(document.querySelector('.stMain')),dock=box(document.querySelector('.st-key-journey-navigation')),control=box(el),value=el.querySelector('div[value],input[role=combobox]'),issues=[];
      if(main.bottom>dock.y-4+.5)issues.push({kind:'scrollport_under_navigation',main,dock});
      if(!value)return{issues:[...issues,{kind:'selected_value_missing'}],main,dock,control};
-     const selected=box(value),range=document.createRange();range.selectNodeContents(value);
-     const fragments=Array.from(range.getClientRects()).filter(r=>r.width>0&&r.height>0).map(r=>({x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height}));
+     const selected=box(value),nativeInput=value instanceof HTMLInputElement,text=nativeInput?value.value:value.innerText;
+     // React Aria exposes the complete selection in an editable, horizontally
+     // scrollable native input. Check its visible viewport and accessible name;
+     // legacy non-editable labels still require all text fragments to fit.
+     let fragments;
+     if(nativeInput){
+      fragments=[selected];
+      if(!text||!value.getAttribute('aria-label')||value.clientWidth<20)issues.push({kind:'selected_input_inaccessible'});
+     }else{const range=document.createRange();range.selectNodeContents(value);fragments=Array.from(range.getClientRects()).filter(r=>r.width>0&&r.height>0).map(r=>({x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height}));}
      const inside=(r,b)=>r.x>=b.x-1&&r.right<=b.right+1&&r.y>=b.y-1&&r.bottom<=b.bottom+1;
-     if(selected.width<1||!fragments.length||fragments.some(r=>!inside(r,control)||!inside(r,main)))issues.push({kind:'selected_value_clipped_text2x',value:value.innerText,selected,control,fragments});
-     return{value:value.innerText,main,dock,control,selected,fragments,issues};
+     if(selected.width<1||!fragments.length||fragments.some(r=>!inside(r,control)||!inside(r,main)))issues.push({kind:'selected_value_clipped_text2x',value:text,selected,control,fragments});
+     return{value:text,presentation:nativeInput?'native_scrollable_input':'text_label',main,dock,control,selected,fragments,issues};
     });
     reflow.controls.push(result);reflow.issues.push(...result.issues);
    }

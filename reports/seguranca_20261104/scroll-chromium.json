@@ -1,0 +1,6067 @@
+{
+  "utc": "2026-11-04T10:52:03.141Z",
+  "base": "http://127.0.0.1:8523",
+  "browser": "chromium",
+  "expectedVersion": "0.8.30",
+  "scope": "6 screens x PT/EN x 390x560 and 1440x900 x five scroll positions; header and pilot controls text2x; mobile resize",
+  "limitations": [
+    "Canvas/Plotly internals and cross-origin iframe text require separate functional tests.",
+    "Background hero images and foreground title overlays are intentional and excluded from image collisions.",
+    "Partly clipped lines at scroll-viewport edges and CSS-hidden accessibility labels are excluded.",
+    "Text2x doubles computed font-size/line-height as a deterministic reflow stress test; it is not native browser zoom."
+  ],
+  "samples": [
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1569,
+      "visibleTextFragments": 10,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 305,
+      "scrollHeight": 1569,
+      "visibleTextFragments": 10,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 610,
+      "scrollHeight": 1569,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 914,
+      "scrollHeight": 1569,
+      "visibleTextFragments": 16,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1219,
+      "scrollHeight": 1569,
+      "visibleTextFragments": 9,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 2161,
+      "visibleTextFragments": 12,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 453,
+      "scrollHeight": 2161,
+      "visibleTextFragments": 9,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 906,
+      "scrollHeight": 2161,
+      "visibleTextFragments": 22,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1358,
+      "scrollHeight": 2161,
+      "visibleTextFragments": 22,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1811,
+      "scrollHeight": 2161,
+      "visibleTextFragments": 7,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 2585,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 559,
+      "scrollHeight": 2585,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1118,
+      "scrollHeight": 2585,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1676,
+      "scrollHeight": 2585,
+      "visibleTextFragments": 24,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 2235,
+      "scrollHeight": 2585,
+      "visibleTextFragments": 27,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1719,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 342,
+      "scrollHeight": 1719,
+      "visibleTextFragments": 9,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 685,
+      "scrollHeight": 1719,
+      "visibleTextFragments": 13,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1027,
+      "scrollHeight": 1719,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1369,
+      "scrollHeight": 1719,
+      "visibleTextFragments": 7,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1688,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 335,
+      "scrollHeight": 1688,
+      "visibleTextFragments": 9,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 669,
+      "scrollHeight": 1688,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1004,
+      "scrollHeight": 1688,
+      "visibleTextFragments": 10,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1338,
+      "scrollHeight": 1688,
+      "visibleTextFragments": 9,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1243,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 223,
+      "scrollHeight": 1243,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 447,
+      "scrollHeight": 1243,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 670,
+      "scrollHeight": 1243,
+      "visibleTextFragments": 15,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 893,
+      "scrollHeight": 1243,
+      "visibleTextFragments": 9,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1544,
+      "visibleTextFragments": 10,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 299,
+      "scrollHeight": 1544,
+      "visibleTextFragments": 10,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 597,
+      "scrollHeight": 1544,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 896,
+      "scrollHeight": 1544,
+      "visibleTextFragments": 16,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1194,
+      "scrollHeight": 1544,
+      "visibleTextFragments": 9,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 2161,
+      "visibleTextFragments": 12,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 453,
+      "scrollHeight": 2161,
+      "visibleTextFragments": 9,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 906,
+      "scrollHeight": 2161,
+      "visibleTextFragments": 22,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1358,
+      "scrollHeight": 2161,
+      "visibleTextFragments": 22,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1811,
+      "scrollHeight": 2161,
+      "visibleTextFragments": 7,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 2596,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 562,
+      "scrollHeight": 2596,
+      "visibleTextFragments": 26,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1123,
+      "scrollHeight": 2596,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1685,
+      "scrollHeight": 2596,
+      "visibleTextFragments": 24,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 2246,
+      "scrollHeight": 2596,
+      "visibleTextFragments": 27,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1694,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 336,
+      "scrollHeight": 1694,
+      "visibleTextFragments": 7,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 672,
+      "scrollHeight": 1694,
+      "visibleTextFragments": 13,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1008,
+      "scrollHeight": 1694,
+      "visibleTextFragments": 12,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1344,
+      "scrollHeight": 1694,
+      "visibleTextFragments": 7,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1662,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 328,
+      "scrollHeight": 1662,
+      "visibleTextFragments": 8,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 656,
+      "scrollHeight": 1662,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 984,
+      "scrollHeight": 1662,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 1312,
+      "scrollHeight": 1662,
+      "visibleTextFragments": 8,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1226,
+      "visibleTextFragments": 11,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 219,
+      "scrollHeight": 1226,
+      "visibleTextFragments": 10,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 438,
+      "scrollHeight": 1226,
+      "visibleTextFragments": 10,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 657,
+      "scrollHeight": 1226,
+      "visibleTextFragments": 15,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350,
+        "width": 390,
+        "height": 350
+      },
+      "dock": {
+        "x": 8,
+        "y": 358,
+        "right": 382,
+        "bottom": 500,
+        "width": 374,
+        "height": 142
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 350
+      },
+      "scrollTop": 876,
+      "scrollHeight": 1226,
+      "visibleTextFragments": 9,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1392,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 161,
+      "scrollHeight": 1392,
+      "visibleTextFragments": 18,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 321,
+      "scrollHeight": 1392,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 482,
+      "scrollHeight": 1392,
+      "visibleTextFragments": 34,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 642,
+      "scrollHeight": 1392,
+      "visibleTextFragments": 39,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1808,
+      "visibleTextFragments": 31,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 265,
+      "scrollHeight": 1808,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 529,
+      "scrollHeight": 1808,
+      "visibleTextFragments": 45,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 794,
+      "scrollHeight": 1808,
+      "visibleTextFragments": 59,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 1058,
+      "scrollHeight": 1808,
+      "visibleTextFragments": 40,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 2101,
+      "visibleTextFragments": 61,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 338,
+      "scrollHeight": 2101,
+      "visibleTextFragments": 75,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 676,
+      "scrollHeight": 2101,
+      "visibleTextFragments": 75,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 1013,
+      "scrollHeight": 2101,
+      "visibleTextFragments": 69,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 1351,
+      "scrollHeight": 2101,
+      "visibleTextFragments": 73,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1342,
+      "visibleTextFragments": 35,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 148,
+      "scrollHeight": 1342,
+      "visibleTextFragments": 22,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 296,
+      "scrollHeight": 1342,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 444,
+      "scrollHeight": 1342,
+      "visibleTextFragments": 28,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 592,
+      "scrollHeight": 1342,
+      "visibleTextFragments": 30,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1122,
+      "visibleTextFragments": 41,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 93,
+      "scrollHeight": 1122,
+      "visibleTextFragments": 39,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 186,
+      "scrollHeight": 1122,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 279,
+      "scrollHeight": 1122,
+      "visibleTextFragments": 28,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 372,
+      "scrollHeight": 1122,
+      "visibleTextFragments": 31,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1026,
+      "visibleTextFragments": 31,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 69,
+      "scrollHeight": 1026,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 138,
+      "scrollHeight": 1026,
+      "visibleTextFragments": 34,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 207,
+      "scrollHeight": 1026,
+      "visibleTextFragments": 19,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 276,
+      "scrollHeight": 1026,
+      "visibleTextFragments": 22,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1392,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 161,
+      "scrollHeight": 1392,
+      "visibleTextFragments": 18,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 321,
+      "scrollHeight": 1392,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 482,
+      "scrollHeight": 1392,
+      "visibleTextFragments": 34,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 642,
+      "scrollHeight": 1392,
+      "visibleTextFragments": 39,
+      "issues": [],
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1808,
+      "visibleTextFragments": 31,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 265,
+      "scrollHeight": 1808,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 529,
+      "scrollHeight": 1808,
+      "visibleTextFragments": 45,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 794,
+      "scrollHeight": 1808,
+      "visibleTextFragments": 59,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 1058,
+      "scrollHeight": 1808,
+      "visibleTextFragments": 40,
+      "issues": [],
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 2101,
+      "visibleTextFragments": 61,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 338,
+      "scrollHeight": 2101,
+      "visibleTextFragments": 75,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 676,
+      "scrollHeight": 2101,
+      "visibleTextFragments": 75,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 1013,
+      "scrollHeight": 2101,
+      "visibleTextFragments": 69,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 1351,
+      "scrollHeight": 2101,
+      "visibleTextFragments": 73,
+      "issues": [],
+      "route": "Campeonato",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1342,
+      "visibleTextFragments": 35,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 148,
+      "scrollHeight": 1342,
+      "visibleTextFragments": 22,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 296,
+      "scrollHeight": 1342,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 444,
+      "scrollHeight": 1342,
+      "visibleTextFragments": 28,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 592,
+      "scrollHeight": 1342,
+      "visibleTextFragments": 30,
+      "issues": [],
+      "route": "Previsões",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1122,
+      "visibleTextFragments": 41,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 93,
+      "scrollHeight": 1122,
+      "visibleTextFragments": 39,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 186,
+      "scrollHeight": 1122,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 279,
+      "scrollHeight": 1122,
+      "visibleTextFragments": 28,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 372,
+      "scrollHeight": 1122,
+      "visibleTextFragments": 31,
+      "issues": [],
+      "route": "Desempenho",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 0,
+      "scrollHeight": 1026,
+      "visibleTextFragments": 31,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.25,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 69,
+      "scrollHeight": 1026,
+      "visibleTextFragments": 29,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.5,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 138,
+      "scrollHeight": 1026,
+      "visibleTextFragments": 34,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 0.75,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 207,
+      "scrollHeight": 1026,
+      "visibleTextFragments": 19,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    },
+    {
+      "fraction": 1,
+      "version": "v0.8.30",
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750,
+        "width": 1440,
+        "height": 750
+      },
+      "dock": {
+        "x": 98,
+        "y": 758,
+        "right": 1342,
+        "bottom": 840,
+        "width": 1244,
+        "height": 82
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 750
+      },
+      "scrollTop": 276,
+      "scrollHeight": 1026,
+      "visibleTextFragments": 22,
+      "issues": [],
+      "route": "Metodologia",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "frontendErrors": []
+    }
+  ],
+  "stress": [
+    {
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "type": "shared_header_text2x",
+      "controls": [
+        {
+          "value": "2026",
+          "presentation": "native_scrollable_input",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "right": 390,
+            "bottom": 290,
+            "width": 390,
+            "height": 290
+          },
+          "dock": {
+            "x": 8,
+            "y": 298,
+            "right": 382,
+            "bottom": 500,
+            "width": 374,
+            "height": 202
+          },
+          "control": {
+            "x": 12,
+            "y": 200.203125,
+            "right": 326,
+            "bottom": 257.40625,
+            "width": 314,
+            "height": 57.203125
+          },
+          "selected": {
+            "x": 13,
+            "y": 201.203125,
+            "right": 293,
+            "bottom": 256.40625,
+            "width": 280,
+            "height": 55.203125
+          },
+          "fragments": [
+            {
+              "x": 13,
+              "y": 201.203125,
+              "right": 293,
+              "bottom": 256.40625,
+              "width": 280,
+              "height": 55.203125
+            }
+          ],
+          "issues": []
+        },
+        {
+          "value": "19 — Mexico City Grand Prix",
+          "presentation": "native_scrollable_input",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "right": 390,
+            "bottom": 290,
+            "width": 390,
+            "height": 290
+          },
+          "dock": {
+            "x": 8,
+            "y": 298,
+            "right": 382,
+            "bottom": 500,
+            "width": 374,
+            "height": 202
+          },
+          "control": {
+            "x": 12,
+            "y": 216.40625,
+            "right": 378,
+            "bottom": 273.609375,
+            "width": 366,
+            "height": 57.203125
+          },
+          "selected": {
+            "x": 13,
+            "y": 217.40625,
+            "right": 345,
+            "bottom": 272.609375,
+            "width": 332,
+            "height": 55.203125
+          },
+          "fragments": [
+            {
+              "x": 13,
+              "y": 217.40625,
+              "right": 345,
+              "bottom": 272.609375,
+              "width": 332,
+              "height": 55.203125
+            }
+          ],
+          "issues": []
+        }
+      ],
+      "issues": []
+    },
+    {
+      "route": "Corridas",
+      "lang": "pt",
+      "type": "text2x_mobile_resize",
+      "main": {
+        "y": 0,
+        "bottom": 130,
+        "height": 130
+      },
+      "dock": {
+        "y": 138,
+        "bottom": 340,
+        "height": 202
+      },
+      "viewport": [
+        390,
+        400
+      ],
+      "issues": []
+    },
+    {
+      "route": "Corridas",
+      "lang": "pt",
+      "type": "text2x_mobile_resize",
+      "main": {
+        "y": 0,
+        "bottom": 430,
+        "height": 430
+      },
+      "dock": {
+        "y": 438,
+        "bottom": 640,
+        "height": 202
+      },
+      "viewport": [
+        390,
+        700
+      ],
+      "issues": []
+    },
+    {
+      "route": "Corridas",
+      "lang": "pt",
+      "type": "text2x_mobile_resize",
+      "main": {
+        "y": 0,
+        "bottom": 290,
+        "height": 290
+      },
+      "dock": {
+        "y": 298,
+        "bottom": 500,
+        "height": 202
+      },
+      "viewport": [
+        390,
+        560
+      ],
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "type": "pilot_controls_text2x",
+      "controls": [
+        {
+          "name": "explore",
+          "rect": {
+            "x": 12,
+            "y": 111.40625,
+            "right": 298.5625,
+            "bottom": 178.203125,
+            "width": 286.5625,
+            "height": 66.796875
+          },
+          "slot": {
+            "x": 25,
+            "y": 136.796875,
+            "right": 57,
+            "bottom": 152.796875,
+            "width": 32,
+            "height": 16
+          },
+          "glyph": {
+            "x": 25,
+            "y": 125.796875,
+            "right": 57,
+            "bottom": 163.796875,
+            "width": 32,
+            "height": 38
+          },
+          "text": {
+            "x": 65,
+            "y": 121.40625,
+            "right": 256.5625,
+            "bottom": 155.40625,
+            "width": 191.5625,
+            "height": 34
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1dkvzay e1vmumty0",
+              "rect": {
+                "x": 25,
+                "y": 136.796875,
+                "right": 57,
+                "bottom": 152.796875,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "32px",
+              "display": "flex",
+              "flex": "0 0 32px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-28gi3v e1fmktau2",
+              "rect": {
+                "x": 25,
+                "y": 136.796875,
+                "right": 57,
+                "bottom": 152.796875,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1kl7f1u e1w3uk7w23",
+              "rect": {
+                "x": 25,
+                "y": 116.40625,
+                "right": 256.5625,
+                "bottom": 173.203125,
+                "width": 231.5625,
+                "height": 56.796875
+              },
+              "width": "231.562px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "8px"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-1lads1q e1w3uk7w22",
+              "rect": {
+                "x": 25,
+                "y": 116.40625,
+                "right": 256.5625,
+                "bottom": 173.203125,
+                "width": 231.5625,
+                "height": 56.796875
+              },
+              "width": "231.562px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-3ex273 ecfxx9g1",
+              "rect": {
+                "x": 25,
+                "y": 116.40625,
+                "right": 290.5625,
+                "bottom": 173.203125,
+                "width": 265.5625,
+                "height": 56.796875
+              },
+              "width": "265.562px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "2px"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 14,
+          "labelFontSize": 28,
+          "issues": []
+        },
+        {
+          "name": "filters",
+          "rect": {
+            "x": 234.671875,
+            "y": 118.0625,
+            "right": 378,
+            "bottom": 172.859375,
+            "width": 143.328125,
+            "height": 54.796875
+          },
+          "slot": {
+            "x": 241.671875,
+            "y": 137.453125,
+            "right": 273.671875,
+            "bottom": 153.453125,
+            "width": 32,
+            "height": 16
+          },
+          "glyph": {
+            "x": 241.671875,
+            "y": 126.453125,
+            "right": 273.671875,
+            "bottom": 164.453125,
+            "width": 32,
+            "height": 38
+          },
+          "text": {
+            "x": 281.671875,
+            "y": 136.65625,
+            "right": 342,
+            "bottom": 163.65625,
+            "width": 60.328125,
+            "height": 27
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1dkvzay e1vmumty0",
+              "rect": {
+                "x": 241.671875,
+                "y": 137.453125,
+                "right": 273.671875,
+                "bottom": 153.453125,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "32px",
+              "display": "flex",
+              "flex": "0 0 32px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-28gi3v e1fmktau2",
+              "rect": {
+                "x": 241.671875,
+                "y": 137.453125,
+                "right": 273.671875,
+                "bottom": 153.453125,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-o0vne1 e1w3uk7w23",
+              "rect": {
+                "x": 241.671875,
+                "y": 123.0625,
+                "right": 342,
+                "bottom": 167.859375,
+                "width": 100.328125,
+                "height": 44.796875
+              },
+              "width": "100.328px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "8px"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-ztlrr4 e1w3uk7w22",
+              "rect": {
+                "x": 241.671875,
+                "y": 123.0625,
+                "right": 342,
+                "bottom": 167.859375,
+                "width": 100.328125,
+                "height": 44.796875
+              },
+              "width": "100.328px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-hqqroh ecfxx9g1",
+              "rect": {
+                "x": 241.671875,
+                "y": 123.0625,
+                "right": 376,
+                "bottom": 167.859375,
+                "width": 134.328125,
+                "height": 44.796875
+              },
+              "width": "134.328px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "2px"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 11,
+          "labelFontSize": 22,
+          "issues": []
+        }
+      ],
+      "issues": []
+    },
+    {
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "type": "shared_header_text2x",
+      "controls": [
+        {
+          "value": "2026",
+          "presentation": "native_scrollable_input",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "right": 390,
+            "bottom": 290,
+            "width": 390,
+            "height": 290
+          },
+          "dock": {
+            "x": 8,
+            "y": 298,
+            "right": 382,
+            "bottom": 500,
+            "width": 374,
+            "height": 202
+          },
+          "control": {
+            "x": 12,
+            "y": 200.203125,
+            "right": 326,
+            "bottom": 257.40625,
+            "width": 314,
+            "height": 57.203125
+          },
+          "selected": {
+            "x": 13,
+            "y": 201.203125,
+            "right": 293,
+            "bottom": 256.40625,
+            "width": 280,
+            "height": 55.203125
+          },
+          "fragments": [
+            {
+              "x": 13,
+              "y": 201.203125,
+              "right": 293,
+              "bottom": 256.40625,
+              "width": 280,
+              "height": 55.203125
+            }
+          ],
+          "issues": []
+        },
+        {
+          "value": "19 — Mexico City Grand Prix",
+          "presentation": "native_scrollable_input",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "right": 390,
+            "bottom": 290,
+            "width": 390,
+            "height": 290
+          },
+          "dock": {
+            "x": 8,
+            "y": 298,
+            "right": 382,
+            "bottom": 500,
+            "width": 374,
+            "height": 202
+          },
+          "control": {
+            "x": 12,
+            "y": 216.40625,
+            "right": 378,
+            "bottom": 273.609375,
+            "width": 366,
+            "height": 57.203125
+          },
+          "selected": {
+            "x": 13,
+            "y": 217.40625,
+            "right": 345,
+            "bottom": 272.609375,
+            "width": 332,
+            "height": 55.203125
+          },
+          "fragments": [
+            {
+              "x": 13,
+              "y": 217.40625,
+              "right": 345,
+              "bottom": 272.609375,
+              "width": 332,
+              "height": 55.203125
+            }
+          ],
+          "issues": []
+        }
+      ],
+      "issues": []
+    },
+    {
+      "route": "Corridas",
+      "lang": "en",
+      "type": "text2x_mobile_resize",
+      "main": {
+        "y": 0,
+        "bottom": 130,
+        "height": 130
+      },
+      "dock": {
+        "y": 138,
+        "bottom": 340,
+        "height": 202
+      },
+      "viewport": [
+        390,
+        400
+      ],
+      "issues": []
+    },
+    {
+      "route": "Corridas",
+      "lang": "en",
+      "type": "text2x_mobile_resize",
+      "main": {
+        "y": 0,
+        "bottom": 430,
+        "height": 430
+      },
+      "dock": {
+        "y": 438,
+        "bottom": 640,
+        "height": 202
+      },
+      "viewport": [
+        390,
+        700
+      ],
+      "issues": []
+    },
+    {
+      "route": "Corridas",
+      "lang": "en",
+      "type": "text2x_mobile_resize",
+      "main": {
+        "y": 0,
+        "bottom": 290,
+        "height": 290
+      },
+      "dock": {
+        "y": 298,
+        "bottom": 500,
+        "height": 202
+      },
+      "viewport": [
+        390,
+        560
+      ],
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 560
+      },
+      "type": "pilot_controls_text2x",
+      "controls": [
+        {
+          "name": "explore",
+          "rect": {
+            "x": 12,
+            "y": 111.40625,
+            "right": 290.53125,
+            "bottom": 178.203125,
+            "width": 278.53125,
+            "height": 66.796875
+          },
+          "slot": {
+            "x": 25,
+            "y": 136.796875,
+            "right": 57,
+            "bottom": 152.796875,
+            "width": 32,
+            "height": 16
+          },
+          "glyph": {
+            "x": 25,
+            "y": 125.796875,
+            "right": 57,
+            "bottom": 163.796875,
+            "width": 32,
+            "height": 38
+          },
+          "text": {
+            "x": 65,
+            "y": 121.40625,
+            "right": 248.53125,
+            "bottom": 155.40625,
+            "width": 183.53125,
+            "height": 34
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1dkvzay e1vmumty0",
+              "rect": {
+                "x": 25,
+                "y": 136.796875,
+                "right": 57,
+                "bottom": 152.796875,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "32px",
+              "display": "flex",
+              "flex": "0 0 32px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-28gi3v e1fmktau2",
+              "rect": {
+                "x": 25,
+                "y": 136.796875,
+                "right": 57,
+                "bottom": 152.796875,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1kl7f1u e1w3uk7w23",
+              "rect": {
+                "x": 25,
+                "y": 116.40625,
+                "right": 248.53125,
+                "bottom": 173.203125,
+                "width": 223.53125,
+                "height": 56.796875
+              },
+              "width": "223.531px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "8px"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-1lads1q e1w3uk7w22",
+              "rect": {
+                "x": 25,
+                "y": 116.40625,
+                "right": 248.53125,
+                "bottom": 173.203125,
+                "width": 223.53125,
+                "height": 56.796875
+              },
+              "width": "223.531px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-3ex273 ecfxx9g1",
+              "rect": {
+                "x": 25,
+                "y": 116.40625,
+                "right": 282.53125,
+                "bottom": 173.203125,
+                "width": 257.53125,
+                "height": 56.796875
+              },
+              "width": "257.531px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "2px"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 14,
+          "labelFontSize": 28,
+          "issues": []
+        },
+        {
+          "name": "filters",
+          "rect": {
+            "x": 235.203125,
+            "y": 117.625,
+            "right": 378,
+            "bottom": 172.421875,
+            "width": 142.796875,
+            "height": 54.796875
+          },
+          "slot": {
+            "x": 242.203125,
+            "y": 137.015625,
+            "right": 274.203125,
+            "bottom": 153.015625,
+            "width": 32,
+            "height": 16
+          },
+          "glyph": {
+            "x": 242.203125,
+            "y": 126.015625,
+            "right": 274.203125,
+            "bottom": 164.015625,
+            "width": 32,
+            "height": 38
+          },
+          "text": {
+            "x": 282.203125,
+            "y": 136.21875,
+            "right": 342,
+            "bottom": 163.21875,
+            "width": 59.796875,
+            "height": 27
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1dkvzay e1vmumty0",
+              "rect": {
+                "x": 242.203125,
+                "y": 137.015625,
+                "right": 274.203125,
+                "bottom": 153.015625,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "32px",
+              "display": "flex",
+              "flex": "0 0 32px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-28gi3v e1fmktau2",
+              "rect": {
+                "x": 242.203125,
+                "y": 137.015625,
+                "right": 274.203125,
+                "bottom": 153.015625,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-o0vne1 e1w3uk7w23",
+              "rect": {
+                "x": 242.203125,
+                "y": 122.625,
+                "right": 342,
+                "bottom": 167.421875,
+                "width": 99.796875,
+                "height": 44.796875
+              },
+              "width": "99.7969px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "8px"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-ztlrr4 e1w3uk7w22",
+              "rect": {
+                "x": 242.203125,
+                "y": 122.625,
+                "right": 342,
+                "bottom": 167.421875,
+                "width": 99.796875,
+                "height": 44.796875
+              },
+              "width": "99.7969px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-hqqroh ecfxx9g1",
+              "rect": {
+                "x": 242.203125,
+                "y": 122.625,
+                "right": 376,
+                "bottom": 167.421875,
+                "width": 133.796875,
+                "height": 44.796875
+              },
+              "width": "133.797px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "2px"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 11,
+          "labelFontSize": 22,
+          "issues": []
+        }
+      ],
+      "issues": []
+    },
+    {
+      "route": "Corridas",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "type": "shared_header_text2x",
+      "controls": [
+        {
+          "value": "2026",
+          "presentation": "native_scrollable_input",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "right": 1440,
+            "bottom": 705,
+            "width": 1440,
+            "height": 705
+          },
+          "dock": {
+            "x": 98,
+            "y": 713.1875,
+            "right": 1342,
+            "bottom": 840,
+            "width": 1244,
+            "height": 126.8125
+          },
+          "control": {
+            "x": 98,
+            "y": 132.203125,
+            "right": 442,
+            "bottom": 189.40625,
+            "width": 344,
+            "height": 57.203125
+          },
+          "selected": {
+            "x": 99,
+            "y": 133.203125,
+            "right": 409,
+            "bottom": 188.40625,
+            "width": 310,
+            "height": 55.203125
+          },
+          "fragments": [
+            {
+              "x": 99,
+              "y": 133.203125,
+              "right": 409,
+              "bottom": 188.40625,
+              "width": 310,
+              "height": 55.203125
+            }
+          ],
+          "issues": []
+        },
+        {
+          "value": "19 — Mexico City Grand Prix",
+          "presentation": "native_scrollable_input",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "right": 1440,
+            "bottom": 705,
+            "width": 1440,
+            "height": 705
+          },
+          "dock": {
+            "x": 98,
+            "y": 713.1875,
+            "right": 1342,
+            "bottom": 840,
+            "width": 1244,
+            "height": 126.8125
+          },
+          "control": {
+            "x": 450,
+            "y": 132.203125,
+            "right": 1290,
+            "bottom": 189.40625,
+            "width": 840,
+            "height": 57.203125
+          },
+          "selected": {
+            "x": 451,
+            "y": 133.203125,
+            "right": 1257,
+            "bottom": 188.40625,
+            "width": 806,
+            "height": 55.203125
+          },
+          "fragments": [
+            {
+              "x": 451,
+              "y": 133.203125,
+              "right": 1257,
+              "bottom": 188.40625,
+              "width": 806,
+              "height": 55.203125
+            }
+          ],
+          "issues": []
+        }
+      ],
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "pt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "type": "pilot_controls_text2x",
+      "controls": [
+        {
+          "name": "explore",
+          "rect": {
+            "x": 952,
+            "y": 313.203125,
+            "right": 1238.5625,
+            "bottom": 380,
+            "width": 286.5625,
+            "height": 66.796875
+          },
+          "slot": {
+            "x": 965,
+            "y": 338.59375,
+            "right": 997,
+            "bottom": 354.59375,
+            "width": 32,
+            "height": 16
+          },
+          "glyph": {
+            "x": 965,
+            "y": 327.59375,
+            "right": 997,
+            "bottom": 365.59375,
+            "width": 32,
+            "height": 38
+          },
+          "text": {
+            "x": 1005,
+            "y": 323.203125,
+            "right": 1196.5625,
+            "bottom": 357.203125,
+            "width": 191.5625,
+            "height": 34
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1dkvzay e1vmumty0",
+              "rect": {
+                "x": 965,
+                "y": 338.59375,
+                "right": 997,
+                "bottom": 354.59375,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "32px",
+              "display": "flex",
+              "flex": "0 0 32px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-28gi3v e1fmktau2",
+              "rect": {
+                "x": 965,
+                "y": 338.59375,
+                "right": 997,
+                "bottom": 354.59375,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1kl7f1u e1w3uk7w23",
+              "rect": {
+                "x": 965,
+                "y": 318.203125,
+                "right": 1196.5625,
+                "bottom": 375,
+                "width": 231.5625,
+                "height": 56.796875
+              },
+              "width": "231.562px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "8px"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-1lads1q e1w3uk7w22",
+              "rect": {
+                "x": 965,
+                "y": 318.203125,
+                "right": 1196.5625,
+                "bottom": 375,
+                "width": 231.5625,
+                "height": 56.796875
+              },
+              "width": "231.562px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-3ex273 ecfxx9g1",
+              "rect": {
+                "x": 965,
+                "y": 318.203125,
+                "right": 1230.5625,
+                "bottom": 375,
+                "width": 265.5625,
+                "height": 56.796875
+              },
+              "width": "265.562px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "2px"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 14,
+          "labelFontSize": 28,
+          "issues": []
+        },
+        {
+          "name": "filters",
+          "rect": {
+            "x": 1185.203125,
+            "y": 325.515625,
+            "right": 1342,
+            "bottom": 380.3125,
+            "width": 156.796875,
+            "height": 54.796875
+          },
+          "slot": {
+            "x": 1196.203125,
+            "y": 344.90625,
+            "right": 1228.203125,
+            "bottom": 360.90625,
+            "width": 32,
+            "height": 16
+          },
+          "glyph": {
+            "x": 1196.203125,
+            "y": 333.90625,
+            "right": 1228.203125,
+            "bottom": 371.90625,
+            "width": 32,
+            "height": 38
+          },
+          "text": {
+            "x": 1236.203125,
+            "y": 340.90625,
+            "right": 1302,
+            "bottom": 369.90625,
+            "width": 65.796875,
+            "height": 29
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1dkvzay e1vmumty0",
+              "rect": {
+                "x": 1196.203125,
+                "y": 344.90625,
+                "right": 1228.203125,
+                "bottom": 360.90625,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "32px",
+              "display": "flex",
+              "flex": "0 0 32px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-28gi3v e1fmktau2",
+              "rect": {
+                "x": 1196.203125,
+                "y": 344.90625,
+                "right": 1228.203125,
+                "bottom": 360.90625,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-o0vne1 e1w3uk7w23",
+              "rect": {
+                "x": 1196.203125,
+                "y": 330.515625,
+                "right": 1302,
+                "bottom": 375.3125,
+                "width": 105.796875,
+                "height": 44.796875
+              },
+              "width": "105.797px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "8px"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-ztlrr4 e1w3uk7w22",
+              "rect": {
+                "x": 1196.203125,
+                "y": 330.515625,
+                "right": 1302,
+                "bottom": 375.3125,
+                "width": 105.796875,
+                "height": 44.796875
+              },
+              "width": "105.797px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-hqqroh ecfxx9g1",
+              "rect": {
+                "x": 1196.203125,
+                "y": 330.515625,
+                "right": 1336,
+                "bottom": 375.3125,
+                "width": 139.796875,
+                "height": 44.796875
+              },
+              "width": "139.797px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "2px"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 12,
+          "labelFontSize": 24,
+          "issues": []
+        }
+      ],
+      "issues": []
+    },
+    {
+      "route": "Corridas",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "type": "shared_header_text2x",
+      "controls": [
+        {
+          "value": "2026",
+          "presentation": "native_scrollable_input",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "right": 1440,
+            "bottom": 705,
+            "width": 1440,
+            "height": 705
+          },
+          "dock": {
+            "x": 98,
+            "y": 713.1875,
+            "right": 1342,
+            "bottom": 840,
+            "width": 1244,
+            "height": 126.8125
+          },
+          "control": {
+            "x": 98,
+            "y": 132.203125,
+            "right": 442,
+            "bottom": 189.40625,
+            "width": 344,
+            "height": 57.203125
+          },
+          "selected": {
+            "x": 99,
+            "y": 133.203125,
+            "right": 409,
+            "bottom": 188.40625,
+            "width": 310,
+            "height": 55.203125
+          },
+          "fragments": [
+            {
+              "x": 99,
+              "y": 133.203125,
+              "right": 409,
+              "bottom": 188.40625,
+              "width": 310,
+              "height": 55.203125
+            }
+          ],
+          "issues": []
+        },
+        {
+          "value": "19 — Mexico City Grand Prix",
+          "presentation": "native_scrollable_input",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "right": 1440,
+            "bottom": 705,
+            "width": 1440,
+            "height": 705
+          },
+          "dock": {
+            "x": 98,
+            "y": 713.1875,
+            "right": 1342,
+            "bottom": 840,
+            "width": 1244,
+            "height": 126.8125
+          },
+          "control": {
+            "x": 450,
+            "y": 132.203125,
+            "right": 1290,
+            "bottom": 189.40625,
+            "width": 840,
+            "height": 57.203125
+          },
+          "selected": {
+            "x": 451,
+            "y": 133.203125,
+            "right": 1257,
+            "bottom": 188.40625,
+            "width": 806,
+            "height": 55.203125
+          },
+          "fragments": [
+            {
+              "x": 451,
+              "y": 133.203125,
+              "right": 1257,
+              "bottom": 188.40625,
+              "width": 806,
+              "height": 55.203125
+            }
+          ],
+          "issues": []
+        }
+      ],
+      "issues": []
+    },
+    {
+      "route": "Pilotos",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "type": "pilot_controls_text2x",
+      "controls": [
+        {
+          "name": "explore",
+          "rect": {
+            "x": 952,
+            "y": 313.203125,
+            "right": 1230.53125,
+            "bottom": 380,
+            "width": 278.53125,
+            "height": 66.796875
+          },
+          "slot": {
+            "x": 965,
+            "y": 338.59375,
+            "right": 997,
+            "bottom": 354.59375,
+            "width": 32,
+            "height": 16
+          },
+          "glyph": {
+            "x": 965,
+            "y": 327.59375,
+            "right": 997,
+            "bottom": 365.59375,
+            "width": 32,
+            "height": 38
+          },
+          "text": {
+            "x": 1005,
+            "y": 323.203125,
+            "right": 1188.53125,
+            "bottom": 357.203125,
+            "width": 183.53125,
+            "height": 34
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1dkvzay e1vmumty0",
+              "rect": {
+                "x": 965,
+                "y": 338.59375,
+                "right": 997,
+                "bottom": 354.59375,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "32px",
+              "display": "flex",
+              "flex": "0 0 32px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-28gi3v e1fmktau2",
+              "rect": {
+                "x": 965,
+                "y": 338.59375,
+                "right": 997,
+                "bottom": 354.59375,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1kl7f1u e1w3uk7w23",
+              "rect": {
+                "x": 965,
+                "y": 318.203125,
+                "right": 1188.53125,
+                "bottom": 375,
+                "width": 223.53125,
+                "height": 56.796875
+              },
+              "width": "223.531px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "8px"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-1lads1q e1w3uk7w22",
+              "rect": {
+                "x": 965,
+                "y": 318.203125,
+                "right": 1188.53125,
+                "bottom": 375,
+                "width": 223.53125,
+                "height": 56.796875
+              },
+              "width": "223.531px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-3ex273 ecfxx9g1",
+              "rect": {
+                "x": 965,
+                "y": 318.203125,
+                "right": 1222.53125,
+                "bottom": 375,
+                "width": 257.53125,
+                "height": 56.796875
+              },
+              "width": "257.531px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "2px"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 14,
+          "labelFontSize": 28,
+          "issues": []
+        },
+        {
+          "name": "filters",
+          "rect": {
+            "x": 1185.765625,
+            "y": 324.921875,
+            "right": 1342,
+            "bottom": 379.71875,
+            "width": 156.234375,
+            "height": 54.796875
+          },
+          "slot": {
+            "x": 1196.765625,
+            "y": 344.3125,
+            "right": 1228.765625,
+            "bottom": 360.3125,
+            "width": 32,
+            "height": 16
+          },
+          "glyph": {
+            "x": 1196.765625,
+            "y": 333.3125,
+            "right": 1228.765625,
+            "bottom": 371.3125,
+            "width": 32,
+            "height": 38
+          },
+          "text": {
+            "x": 1236.765625,
+            "y": 340.3125,
+            "right": 1302,
+            "bottom": 369.3125,
+            "width": 65.234375,
+            "height": 29
+          },
+          "iconAncestors": [
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-1dkvzay e1vmumty0",
+              "rect": {
+                "x": 1196.765625,
+                "y": 344.3125,
+                "right": 1228.765625,
+                "bottom": 360.3125,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "32px",
+              "display": "flex",
+              "flex": "0 0 32px",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-28gi3v e1fmktau2",
+              "rect": {
+                "x": 1196.765625,
+                "y": 344.3125,
+                "right": 1228.765625,
+                "bottom": 360.3125,
+                "width": 32,
+                "height": 16
+              },
+              "width": "32px",
+              "minWidth": "max-content",
+              "display": "flex",
+              "flex": "0 0 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "SPAN",
+              "className": "st-emotion-cache-o0vne1 e1w3uk7w23",
+              "rect": {
+                "x": 1196.765625,
+                "y": 329.921875,
+                "right": 1302,
+                "bottom": 374.71875,
+                "width": 105.234375,
+                "height": 44.796875
+              },
+              "width": "105.234px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "8px"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-ztlrr4 e1w3uk7w22",
+              "rect": {
+                "x": 1196.765625,
+                "y": 329.921875,
+                "right": 1302,
+                "bottom": 374.71875,
+                "width": 105.234375,
+                "height": 44.796875
+              },
+              "width": "105.234px",
+              "minWidth": "0px",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "normal"
+            },
+            {
+              "tag": "DIV",
+              "className": "st-emotion-cache-hqqroh ecfxx9g1",
+              "rect": {
+                "x": 1196.765625,
+                "y": 329.921875,
+                "right": 1336,
+                "bottom": 374.71875,
+                "width": 139.234375,
+                "height": 44.796875
+              },
+              "width": "139.234px",
+              "minWidth": "auto",
+              "display": "flex",
+              "flex": "0 1 auto",
+              "gap": "2px"
+            }
+          ],
+          "font": "\"Material Symbols Rounded\"",
+          "fontLoaded": true,
+          "baselineLabelFontSize": 12,
+          "labelFontSize": 24,
+          "issues": []
+        }
+      ],
+      "issues": []
+    }
+  ],
+  "finishedAt": "2026-11-04T10:53:29.847Z",
+  "status": "passed"
+}

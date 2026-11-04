@@ -29,7 +29,7 @@ async function verifyImage(page,app,expected){
 function inspectControls(_element,lang){
  const visible=e=>{if(!e.getClientRects().length)return false;for(let n=e;n;n=n.parentElement){const s=getComputedStyle(n);if(s.visibility==='hidden'||Number(s.opacity)===0)return false;}return true;};
  const screens=['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
- const native=[...document.querySelectorAll('.st-key-journey-navigation [role=radiogroup]>label')].filter(visible);
+ const native=[...document.querySelectorAll('.st-key-journey-navigation [role=radiogroup] label')].filter(visible);
  const links=[...document.querySelectorAll('.journey-navigation-fallback>a')].filter(visible);
  const validLinks=links.length===6&&links.every((e,i)=>{
   try{const u=new URL(e.href);return e.dataset.screen===screens[i]&&u.origin===location.origin&&u.pathname===location.pathname&&u.searchParams.get('tela')===screens[i]&&u.searchParams.get('lang')===lang;}catch{return false;}
@@ -40,7 +40,7 @@ function inspectControls(_element,lang){
  const codes=flags.map(e=>e.closest('[class*=st-key-pw_language_button_]').className.match(/_(pt|en)(?:\s|$)/)?.[1]).concat(flagLinks.map(e=>e.dataset.language));
  const navigation=native.length===6&&links.length===0?'native':native.length===0&&validLinks?'links':null;
  const languageControl=codes.length===2&&new Set(codes).size===2&&codes.includes('pt')&&codes.includes('en')&&validFlags?(flags.length===2?'native':flags.length?'mixed':'links'):null;
- return{ready:document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&!!navigation&&!!languageControl&&document.querySelectorAll('.st-key-journey-context-row [data-baseweb=select]').length===2,
+ return{ready:document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&!!navigation&&!!languageControl&&document.querySelectorAll('.st-key-journey-context-row [data-testid=stSelectbox]').length===2,
   navigation,language_control:languageControl,native_navigation:native.length,visible_navigation_links:links.length,native_flags:flags.length,visible_language_links:flagLinks.length,
   hidden_native_error_elements:[...document.querySelectorAll('.st-key-tela [data-testid=stAlertContentError],[class*=st-key-pw_language_button_] [data-testid=stAlertContentError]')].filter(e=>!visible(e)).length};
 }

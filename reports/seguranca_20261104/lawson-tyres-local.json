@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "lang": "pt",
+      "mobile": false,
+      "status": "passed",
+      "version": "0.8.30",
+      "lawson_stints": 5,
+      "opening_compound": "MEDIUM",
+      "bounds": [
+        1,
+        8
+      ],
+      "initial_age": null,
+      "fp3_pit_passages": 88,
+      "clickable_sources": 2
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "status": "passed",
+      "version": "0.8.30",
+      "lawson_stints": 5,
+      "opening_compound": "MEDIUM",
+      "bounds": [
+        1,
+        8
+      ],
+      "initial_age": null,
+      "fp3_pit_passages": 88,
+      "clickable_sources": 2
+    },
+    {
+      "lang": "pt",
+      "mobile": true,
+      "status": "passed",
+      "version": "0.8.30",
+      "lawson_stints": 5,
+      "opening_compound": "MEDIUM",
+      "bounds": [
+        1,
+        8
+      ],
+      "initial_age": null,
+      "fp3_pit_passages": 88,
+      "clickable_sources": 2
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "status": "passed",
+      "version": "0.8.30",
+      "lawson_stints": 5,
+      "opening_compound": "MEDIUM",
+      "bounds": [
+        1,
+        8
+      ],
+      "initial_age": null,
+      "fp3_pit_passages": 88,
+      "clickable_sources": 2
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 /* PT/EN: Observed weekend data must agree across summary, weather and standings. */
 const fs=require('node:fs'),path=require('node:path');
+const {selectComboboxOption}=require('./select_combobox.cjs');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const [base,output]=process.argv.slice(2);
 if(!base||!output)throw Error('Usage: node aceite_fim_semana.cjs URL OUTPUT');
@@ -61,7 +62,7 @@ fs.mkdirSync(output,{recursive:true});
     const select=surface.locator('.st-key-acervo_2026_19_sessao_tempos').getByRole('combobox');
     async function downloadSession(option,suffix){
      const label=lang==='en'?({'TL3':'FP3','Corrida':'Race'}[option]||option):option;
-     await select.click();await surface.getByRole('option',{name:label,exact:true}).click();
+     await selectComboboxOption(surface,select,label);
      const caption=option==='TL3'?(lang==='pt'?'Melhor volta publicada de cada piloto nesta sessão de treino.':"Each driver's published fastest lap in this practice session."):(option==='Corrida'?/^NC (indica|means)/:/^DSQ (indica|means)/);
      await surface.getByText(caption).waitFor({timeout:60000});
      await surface.waitForFunction(()=>document.querySelector('.stApp')?.getAttribute('data-test-script-state')==='notRunning',null,{timeout:60000});

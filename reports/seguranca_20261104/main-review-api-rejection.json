@@ -1,0 +1,92 @@
+{
+  "applied": false,
+  "proposed_ruleset": {
+    "name": "Pitwall reviewed changes",
+    "target": "branch",
+    "enforcement": "active",
+    "bypass_actors": [
+      {
+        "actor_id": 15368,
+        "actor_type": "Integration",
+        "bypass_mode": "always"
+      }
+    ],
+    "conditions": {
+      "ref_name": {
+        "include": [
+          "refs/heads/main"
+        ],
+        "exclude": []
+      }
+    },
+    "rules": [
+      {
+        "type": "pull_request",
+        "parameters": {
+          "dismiss_stale_reviews_on_push": true,
+          "require_code_owner_review": false,
+          "require_last_push_approval": false,
+          "required_approving_review_count": 0,
+          "required_review_thread_resolution": true,
+          "allowed_merge_methods": [
+            "merge",
+            "squash",
+            "rebase"
+          ]
+        }
+      },
+      {
+        "type": "required_status_checks",
+        "parameters": {
+          "strict_required_status_checks_policy": true,
+          "do_not_enforce_on_create": false,
+          "required_status_checks": [
+            {
+              "context": "validate",
+              "integration_id": 15368
+            },
+            {
+              "context": "browser (core)",
+              "integration_id": 15368
+            },
+            {
+              "context": "browser (navigation)",
+              "integration_id": 15368
+            },
+            {
+              "context": "security / security-policy",
+              "integration_id": 15368
+            },
+            {
+              "context": "security / security-secrets",
+              "integration_id": 15368
+            },
+            {
+              "context": "security / security-dependencies (dashboard)",
+              "integration_id": 15368
+            },
+            {
+              "context": "security / security-dependencies (frozen-science)",
+              "integration_id": 15368
+            }
+          ]
+        }
+      },
+      {
+        "type": "code_scanning",
+        "parameters": {
+          "code_scanning_tools": [
+            {
+              "tool": "CodeQL",
+              "security_alerts_threshold": "high_or_higher",
+              "alerts_threshold": "errors"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "status": 422,
+  "reason": "Actor GitHub Actions integration must be part of the ruleset source or owner organization",
+  "alternative": "Preserve atomic publication and enforce security gates before release; a dedicated installed App is required for a narrowly bypassed PR-only policy on this personal repository."
+}
