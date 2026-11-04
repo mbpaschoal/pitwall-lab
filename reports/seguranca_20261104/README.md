@@ -22,7 +22,7 @@ Gitleaks examinou 133 commits e encontrou cinco falsos positivos verificados: du
 
 2FA já configurado com aplicativo autenticador e GitHub Mobile; proprietário único, sem chaves de deploy nem secrets adicionais de Actions. Nenhuma passkey nova foi criada. Não foi configurado backup independente nem testada sua restauração. Veja [controles e limites](../../docs/SEGURANCA.md).
 
-O primeiro CI hospedado encontrou changelogs do pacote fora de sincronia e incompatibilidades de popovers no Linux. O pacote foi regenerado, o seletor legado passou a ocultar somente o indicador de rádio e o teste fecha o diálogo com Escape; quatro casos de menu e quatro de filtros/idioma foram reconferidos. As execuções iniciais continuam preservadas no histórico do PR.
+O primeiro CI hospedado encontrou changelogs do pacote fora de sincronia e incompatibilidades de popovers no Linux. O pacote foi regenerado, o seletor legado passou a ocultar somente o indicador de rádio e o teste fecha o diálogo com Escape; quatro casos de menu e quatro de filtros/idioma foram reconferidos. As execuções iniciais continuam preservadas no histórico do PR. A terceira execução aprovou validação, segurança e navegação, mas encontrou abertura instável do seletor de sessão durante rolagem suave. O teste agora aguarda a posição do campo estabilizar antes de abrir a lista, sem alterar a aplicação nem retirar verificações. Reconferidos oito casos locais de sessões/CSV e pneus/paradas, em PT/EN desktop/mobile; recibos `weekend-sessions-local.json` e `lawson-tyres-local.json`.
 
 CI hospedado, merge, release e verificação do dashboard público têm evidências próprias posteriores; os testes locais acima não comprovam implantação. Consulte o histórico de PRs/Actions e o recibo final da sessão para o estado de publicação.
 
@@ -36,7 +36,7 @@ Presentation updates include Streamlit 1.66.1, PyArrow 23.0.1, Protobuf 5.29.6 a
 
 Local validation passed: 405 product tests, seven policy counterexamples, 144 portable tests, ten public-verifier counterexamples, 48 Chromium/WebKit control cases and 16 navigation cases. Dependency audits found no known advisories in 34 presentation and five scientific packages. All 300 examined protected scientific files were unchanged. Five exact historical Gitleaks false positives were reviewed and exempted; a repeat scan was clean. This is not proof about private files or unexamined history.
 
-Existing 2FA was verified, without creating new passkeys. No independent backup/restore test was performed. Hosted CI, merge, release and clean-session public verification require their own subsequent receipts. See [controls and limits](../../docs/en/SECURITY.md).
+Existing 2FA was verified, without creating new passkeys. No independent backup/restore test was performed. Initial hosted failures remain recorded in the PR. Session selection tests now wait for smooth scrolling to settle before opening the listbox; eight local PT/EN desktop/mobile cases passed, retaining CSV and tyre-provenance assertions. Hosted CI, merge, release and clean-session public verification require their own subsequent receipts. See [controls and limits](../../docs/en/SECURITY.md).
 
 ## Sources
 
