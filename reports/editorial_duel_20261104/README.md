@@ -10,7 +10,7 @@ Primeira etapa da evolução aprovada: acabamento visual, respostas aos comandos
 
 ## Evidência local
 
-- 78 testes focais e 146 portáteis: aprovados. [Log focal](focused-final.log), [log portátil](portable-final.log).
+- 78 testes focais e 146 portáteis: aprovados. [Log focal](focused-final.txt), [log portátil](portable-final.txt).
 - [Chromium](package-chromium/editorial.json) e [WebKit](package-webkit/editorial.json): quatro contextos cada, PT/EN em 390/1440 CSS px. Mudança real de condição/métrica, denominadores, mínimo, ausência, duas trocas de idioma e movimento reduzido manual/pelo sistema. O oráculo conta diretamente os resultados-fonte.
 - 24 casos de controles no WebKit: [recibo](controls-webkit/controls.json). As varreduras de rolagem dos dois motores examinam as seis telas, cinco posições de rolagem e situações de texto ampliado/janela curta; zero problemas registrados.
 - [Pacote e ZIP](package.json): 483 membros verificados individualmente, versão e build identificados. Pacote anterior preservado fora do checkout; substituição canônica restrita aos dez arquivos esperados.
