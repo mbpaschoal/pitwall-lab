@@ -44,6 +44,17 @@ async function ready(page, lang, expected = {}) {
       document.querySelector('.st-key-journey-header')?.innerText.includes('v' + version) &&
       Object.entries(expected).every(([key, value]) => q.get(key) === String(value));
   }, {lang, version, expected}, {timeout: 90000});
+  await app.waitForFunction(() => document.querySelectorAll('.st-key-journey-navigation [role=radiogroup] label').length === 6, null, {timeout: 30000});
+  await app.locator('.fan-hero-image').evaluate(img => img.decode());
+  const favorite = app.frameLocator('iframe[src*="pitwall_favorite"]');
+  await favorite.locator('option[value="max_verstappen"]').waitFor({state: 'attached', timeout: 30000});
+  await favorite.getByText(lang === 'en' ? 'Your favourite driver · saved in this browser' : 'Seu piloto favorito · salvo neste navegador', {exact: true}).waitFor({timeout: 30000});
+  await app.evaluate(() => window.pwEditorialIdle = performance.now());
+  await app.waitForFunction(() => {
+    if (document.querySelector('.stApp')?.dataset.testScriptState !== 'notRunning') { window.pwEditorialIdle = 0; return false; }
+    window.pwEditorialIdle ||= performance.now();
+    return performance.now() - window.pwEditorialIdle >= 1200;
+  }, null, {timeout: 30000});
   await app.evaluate(() => document.fonts.ready);
   assert.equal(await app.locator('[data-testid=stException]').count(), 0);
   assert(!await app.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), 'Horizontal overflow');
@@ -63,10 +74,26 @@ async function select(app, key, name) {
       const context = await browser.newContext({viewport: {width, height: 1000}, isMobile: width === 390, hasTouch: width === 390});
       const page = await context.newPage(), row = {width, lang, checks: []}, errors = [];
       const tr = text => lang === 'en' ? (english[text] || text) : text;
-      page.on('pageerror', error => errors.push(error.message));
+      let phase = 'initializing';
+      const pendingResources = new Set();
+      page.on('request', request => {if (/\/(?:component|media|static\/js)\//.test(new URL(request.url()).pathname)) pendingResources.add(request);});
+      page.on('requestfinished', request => pendingResources.delete(request));
+      page.on('requestfailed', request => pendingResources.delete(request));
+      page.on('pageerror', error => errors.push({message: error.message, url: page.url(), phase}));
       async function open(extra = {}) {
+        const deadline = Date.now() + 30000;
+        let settledSince = 0;
+        while (Date.now() < deadline) {
+          if (pendingResources.size) settledSince = 0;
+          else {settledSince ||= Date.now(); if (Date.now() - settledSince >= 500) break;}
+          await page.waitForTimeout(50);
+        }
+        assert.equal(pendingResources.size, 0, 'Finish component/media loads before leaving the document');
+        phase = 'navigating';
         await page.goto(base + '/?' + new URLSearchParams({tela: 'Pilotos', visao: 'duelo', piloto: 'max_verstappen', rival: 'norris', anos: '2026', temporada: '2026', gp: '19', minimo: '5', metrica: 'win_rate', lang, ...extra}), {waitUntil: 'domcontentloaded', timeout: 90000});
-        return ready(page, lang, {visao: 'duelo', ...extra});
+        const app = await ready(page, lang, {visao: 'duelo', ...extra});
+        phase = 'interactive';
+        return app;
       }
       async function compare(app, condition, metric, minimum) {
         const expected = oracle(condition, metric), difference = app.locator('.fan-duel-difference');
@@ -149,6 +176,7 @@ async function select(app, key, name) {
         row.status = 'failed'; row.error = error.stack;
         await page.screenshot({path: path.join(output, `${width}-${lang}-failure.jpg`), type: 'jpeg', quality: 75}).catch(() => {});
       } finally {
+        row.frontend_errors = errors;
         report.cases.push(row); fs.writeFileSync(path.join(output, 'editorial.json'), JSON.stringify(report, null, 2));
         console.log(JSON.stringify({engine, width, lang, status: row.status, error: row.error})); await context.close();
       }
