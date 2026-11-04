@@ -14,7 +14,7 @@ const gps = {...baseline.gps, ...Object.fromEntries(events.map(x => [x.gp.tempor
 const rows = [...new Map(baseline.resultados.concat(...events.map(x => x.results)).map(x => [x.race_id + ':' + x.driver_id, x])).values()];
 const english = read('pitwall/i18n/en.json');
 fs.mkdirSync(output, {recursive: true});
-const report = {version, engine, base, cases: []};
+const report = {version, engine, base, protocol: 'Independent deep-link setup uses fresh tabs; native interactions stay in place. All pageerrors across all live tabs are retained and rejected. Full-document reload diagnostics are separate.', cases: []};
 function oracle(condition, metric) {
   const eligible = row => row.started && gps[row.race_id].temporada === 2026 &&
     (condition === 'all' || condition === 'rain' && gps[row.race_id].rain_condition === 'recorded');
@@ -72,14 +72,17 @@ async function select(app, key, name) {
   try {
     for (const width of [1440, 390]) for (const lang of ['pt', 'en']) {
       const context = await browser.newContext({viewport: {width, height: 1000}, isMobile: width === 390, hasTouch: width === 390});
-      const page = await context.newPage(), row = {width, lang, checks: []}, errors = [];
+      let page = await context.newPage(); const row = {width, lang, checks: []}, errors = [];
       const tr = text => lang === 'en' ? (english[text] || text) : text;
       let phase = 'initializing';
       const pendingResources = new Set();
-      page.on('request', request => {if (/\/(?:component|media|static\/js)\//.test(new URL(request.url()).pathname)) pendingResources.add(request);});
-      page.on('requestfinished', request => pendingResources.delete(request));
-      page.on('requestfailed', request => pendingResources.delete(request));
-      page.on('pageerror', error => errors.push({message: error.message, url: page.url(), phase}));
+      function track(target) {
+        target.on('request', request => {if (/\/(?:component|media|static\/js)\//.test(new URL(request.url()).pathname)) pendingResources.add(request);});
+        target.on('requestfinished', request => pendingResources.delete(request));
+        target.on('requestfailed', request => pendingResources.delete(request));
+        target.on('pageerror', error => errors.push({message: error.message, url: target.url(), phase}));
+      }
+      track(page);
       async function open(extra = {}) {
         const deadline = Date.now() + 30000;
         let settledSince = 0;
@@ -89,7 +92,10 @@ async function select(app, key, name) {
           await page.waitForTimeout(50);
         }
         assert.equal(pendingResources.size, 0, 'Finish component/media loads before leaving the document');
-        phase = 'navigating';
+        // Each open() sets up an independent deep-link case, not a user navigation.
+        // Keep prior tabs observed until context cleanup; do not unload a polling host to set up the next case.
+        if (page.url() !== 'about:blank') { page = await context.newPage(); track(page); }
+        phase = 'opening-independent-link';
         await page.goto(base + '/?' + new URLSearchParams({tela: 'Pilotos', visao: 'duelo', piloto: 'max_verstappen', rival: 'norris', anos: '2026', temporada: '2026', gp: '19', minimo: '5', metrica: 'win_rate', lang, ...extra}), {waitUntil: 'domcontentloaded', timeout: 90000});
         const app = await ready(page, lang, {visao: 'duelo', ...extra});
         phase = 'interactive';
