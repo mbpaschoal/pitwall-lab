@@ -70,3 +70,5 @@ Dados de fontes diferentes conservam suas próprias condições; nenhuma licenç
 - [Entrega dos 45 itens da revisão crítica](docs/REVISAO_030.md)
 
 [Segurança e relato privado](SECURITY.md) · [Controles e limites](docs/SEGURANCA.md)
+
+Fontes complementares: [integração offline F1DB/Pirelli](docs/FONTES_COMPLEMENTARES.md), com procedência por campo e admissão documental separada do modelo.

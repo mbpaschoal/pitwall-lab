@@ -36,6 +36,7 @@ jobs:
       - name: Testes PT e EN / PT and EN tests
         # Post-race admission is checked separately from frozen scientific tests.
         run: |
+          python -B -m unittest tests.test_complementary_sources
           python -B -m unittest tests.test_post_qualifying tests.test_github_maintenance tests.test_weekend_readiness tests.test_automatic_publication tests.test_final_results tests.test_posterior_binding tests.test_mexico_evaluation_ui tests.test_pneus_apresentacao
           python -B -m unittest tests.test_operacao_2026_fluxo tests.test_operacao_2026_integracao tests.test_registro_emissoes
           python -B -m unittest tests.test_interface_link_context tests.test_public_navigation

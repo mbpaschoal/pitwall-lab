@@ -227,6 +227,8 @@ RUNTIME_WORKTREE = (
     'acervo_dashboard_dados.py', 'acervo_dashboard_ui.py', 'historico_circuito.py',
     'frontend_assets/acervo_dashboard.json',
     'frontend_assets/complemento_idade_pneus_v1.json',
+    'pitwall/data/complementary_sources.py',
+    'frontend_assets/complemento_fontes_v1.json',
     'pitwall_ui.py', 'pitwall_ui_dados.py', 'frontend_assets/pitwall.css',
     'frontend_assets/paineis_editoriais.json',
     'frontend_assets/race_weekend.json', 'dashboard_assets/fonts/abrilfatface.ttf',

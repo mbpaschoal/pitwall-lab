@@ -40,7 +40,9 @@ class TyreAgeTests(unittest.TestCase):
         before=deepcopy(self.base)
         with patch('urllib.request.urlopen',side_effect=AssertionError('No network')):
             revised=carregar(ROOT)
-        delta=list(differences(self.base['gps'],revised['gps']))
+        from pitwall.data.complementary_sources import load_projection
+        expected = load_projection(ROOT, self.base)
+        delta=list(differences(expected['gps'],revised['gps']))
         self.assertEqual(len(delta),262)
         self.assertTrue(all(p[-1]=='idade' for p,_,_ in delta))
         kinds=Counter('zero_positive' if a==0 and b>0 else 'positive_zero' if a>0 and b==0 else 'positive_positive' for _,a,b in delta)

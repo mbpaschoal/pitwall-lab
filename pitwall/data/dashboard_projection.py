@@ -102,7 +102,7 @@ def _display(pid, name):
     )
 
 
-def preparar(raiz=RAIZ, acervo=None, destino=None):
+def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
     root = Path(raiz)
     source = Path(acervo) if acervo is not None else root / ACERVO
     target = Path(destino) if destino is not None else root / ASSET
@@ -790,6 +790,9 @@ def preparar(raiz=RAIZ, acervo=None, destino=None):
         "gps": gps,
         "conteudo_sha256": conteudo_sha256(gps),
     }
+    if complemento_fontes is not None:
+        from pitwall.data.complementary_sources import project
+        asset = project(asset, _json(Path(complemento_fontes)))
     validar(asset)
     raw = (
         json.dumps(
@@ -823,9 +826,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--acervo", type=Path)
     parser.add_argument("--destino", type=Path)
+    parser.add_argument("--complemento-fontes", type=Path)
     args = parser.parse_args()
     print(
         json.dumps(
-            preparar(acervo=args.acervo, destino=args.destino), ensure_ascii=False
+            preparar(acervo=args.acervo, destino=args.destino, complemento_fontes=args.complemento_fontes), ensure_ascii=False
         )
     )

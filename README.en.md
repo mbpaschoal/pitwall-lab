@@ -72,3 +72,5 @@ Original code is available under the [MIT License](LICENSE). Third-party data an
 - [Delivery of the 45 critical review items](docs/en/REVIEW_030.md)
 
 [Security and private reporting](SECURITY.md) · [Controls and limits](docs/en/SECURITY.md)
+
+Complementary sources: [offline F1DB/Pirelli integration](docs/en/COMPLEMENTARY_SOURCES.md), with field provenance and documentary admission separated from the model.

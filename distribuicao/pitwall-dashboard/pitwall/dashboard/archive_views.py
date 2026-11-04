@@ -755,6 +755,21 @@ def renderizar_fontes(gp, asset):
     st.markdown(
         "Fontes: [OpenF1](https://openf1.org/docs/), [Jolpica-F1](https://github.com/jolpica/jolpica-f1) e [Open-Meteo](https://open-meteo.com/)."
     )
+    complemento = gp.get("complemento_f1db")
+    if complemento:
+        st.markdown(
+            "Arquivo complementar: [F1DB](https://github.com/f1db/f1db), release {} · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).".format(complemento["release"])
+        )
+        documentos = sorted({
+            claim["source"]["url"]
+            for row in complemento["claims"]
+            for claim in row["admitted"].values()
+        })
+        for url in documentos:
+            st.markdown("Conferência documental: [FIA — classificação final]({}).".format(url))
+        st.caption(
+            "Valores candidatos permanecem separados dos campos admitidos. A captura atual não comprova disponibilidade histórica nem altera previsões registradas."
+        )
     cobertura = gp.get("cobertura") or []
     parciais = [r for r in cobertura if r.get("estado") in ("parcial", "indisponivel")]
     if parciais:
