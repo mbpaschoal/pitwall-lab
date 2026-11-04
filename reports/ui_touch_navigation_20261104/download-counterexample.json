@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "fault_injection": "Nonexistent event replaces the download wait in a temporary test copy; the product is unchanged.",
+  "rejected_wait_recorded_as_failure": true,
+  "failure_screenshot_preserved": true,
+  "actionability_trial_completed_before_wait": true,
+  "pre_trial_hit_observation": false,
+  "observation_limit": "The initial harness also asserted a pre-trial hit map as if it were a post-trial measurement; that extra assertion was invalid and has been removed. The deliberately rejected event wait and failed receipt remain unchanged."
+}

@@ -1,0 +1,82 @@
+{
+  "conclusion": "success",
+  "headSha": "80cef1760a12ad2e46e5083b482b5b9c79e9ae8a",
+  "jobs": [
+    {
+      "completedAt": "2026-11-04T13:24:22Z",
+      "conclusion": "success",
+      "databaseId": 126599160945,
+      "name": "validate",
+      "startedAt": "2026-11-04T13:20:42Z",
+      "status": "completed",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872/job/126599160945"
+    },
+    {
+      "completedAt": "2026-11-04T13:37:29Z",
+      "conclusion": "success",
+      "databaseId": 126599161438,
+      "name": "browser (core)",
+      "startedAt": "2026-11-04T13:20:43Z",
+      "status": "completed",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872/job/126599161438"
+    },
+    {
+      "completedAt": "2026-11-04T13:21:20Z",
+      "conclusion": "success",
+      "databaseId": 126599161465,
+      "name": "security / security-dependencies (frozen-science)",
+      "startedAt": "2026-11-04T13:20:43Z",
+      "status": "completed",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872/job/126599161465"
+    },
+    {
+      "completedAt": "2026-11-04T13:31:47Z",
+      "conclusion": "success",
+      "databaseId": 126599161658,
+      "name": "browser (navigation)",
+      "startedAt": "2026-11-04T13:20:43Z",
+      "status": "completed",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872/job/126599161658"
+    },
+    {
+      "completedAt": "2026-11-04T13:21:10Z",
+      "conclusion": "success",
+      "databaseId": 126599161712,
+      "name": "security / security-policy",
+      "startedAt": "2026-11-04T13:20:43Z",
+      "status": "completed",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872/job/126599161712"
+    },
+    {
+      "completedAt": "2026-11-04T13:21:23Z",
+      "conclusion": "success",
+      "databaseId": 126599161943,
+      "name": "security / security-dependencies (dashboard)",
+      "startedAt": "2026-11-04T13:20:44Z",
+      "status": "completed",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872/job/126599161943"
+    },
+    {
+      "completedAt": "2026-11-04T13:21:19Z",
+      "conclusion": "success",
+      "databaseId": 126599161951,
+      "name": "security / security-secrets",
+      "startedAt": "2026-11-04T13:20:43Z",
+      "status": "completed",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872/job/126599161951"
+    },
+    {
+      "completedAt": "2026-11-04T13:37:30Z",
+      "conclusion": "skipped",
+      "databaseId": 126608056794,
+      "name": "release",
+      "startedAt": "2026-11-04T13:37:30Z",
+      "status": "completed",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872/job/126608056794"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872",
+  "verified_source_tests": 405,
+  "verified_portable_tests": 144
+}

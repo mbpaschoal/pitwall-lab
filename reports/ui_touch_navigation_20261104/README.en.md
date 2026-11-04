@@ -4,7 +4,7 @@
 
 Created by: MBPaschoal
 
-Status: local validation complete; CI and public deployment pending
+Status: 0.8.31 published; CI and public acceptance passed
 
 Type: delivery evidence
 
@@ -31,6 +31,19 @@ The first local package synchronisation allowlist omitted the two navigation doc
 
 Mobile browsers are simulated; no physical-device test or WCAG certification occurred. Local tests, CI, release and public hosting are separate evidence layers. Local acceptance does not demonstrate continuous Streamlit availability.
 
-## Publication
+## Publication and acceptance complete
 
-Pending CI and confirmation of the version/build actually served.
+[Release 0.8.31](https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.31) is published and [Pitwall Lab](https://pitwall-lab.streamlit.app/) served build `06f98e667d64f02b64bc56c587aeaf7c31c19606e1c7431a92574c74e92f3a24` in all four deployment contexts. [Structured summary](summary.json).
+
+| Layer | Result and evidence |
+|---|---|
+| Branch CI | 405 source tests, 144 portable tests, ten verifier counterexamples and 13 browser suites: passed. [Run](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872), [receipt](ci-branch-final.json). |
+| Main and tag CI | Both passed at commit `80cef1760a12ad2e46e5083b482b5b9c79e9ae8a`. [Main](ci-main-final.json), [tag/release](ci-tag-final.json). |
+| Public version, build and photographs | Four PT/EN × 390/1440 px contexts, decoded photographs and matching hashes, all on the first attempt. [Receipt](publication-final/publication.json). |
+| Public pages and language flags | 24/24 scenarios in [Chromium](public-controls-chromium/controls.json) and 24/24 in [WebKit](public-controls-webkit/controls.json). Six pages; 96 edge language switches; measured minimum targets of 44 × 50 px; mobile marker inside its own cell. |
+| Public menus | Eight flows with six destinations each: 48 actual clicks/taps, retaining GP, season and outer-address synchronisation. [Chromium](public-menu-chromium/interactions.json), [WebKit](public-menu-webkit/interactions.json). |
+| Official ZIP | 481 members verified in CI; 665,860,833 bytes. The GitHub attachment digest matches the CI ZIP and local package. [CI proof](release-proof.json), [release metadata](release.json). |
+
+All 60 public scenarios completed without case retries in this version. Mobile devices were simulated. Results describe the test window and do not establish continuous hosting availability. Both initial CI failures remain documented above; a CSS preview on 0.8.30 is explicitly temporary in `live-css-preview.json` and was not counted as publication.
+
+[Public mobile PT capture](publication-final/390-pt-0-Metodologia.jpg) · [public desktop EN capture](publication-final/1440-en-0-Corridas.jpg). The [rejected-wait counterexample](download-counterexample.json) confirmed a failed receipt and screenshot; its initial observation limit remains explicit.

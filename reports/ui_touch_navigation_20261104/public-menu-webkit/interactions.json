@@ -1,0 +1,31 @@
+{
+  "engine": "webkit",
+  "base": "https://pitwall-lab.streamlit.app",
+  "cases": [
+    {
+      "id": "webkit-390-pt-main-navigation",
+      "screens": 6,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&visao=geral&anos=2024%2C2025%2C2026&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1",
+      "status": "passed"
+    },
+    {
+      "id": "webkit-390-en-main-navigation",
+      "screens": 6,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&visao=geral&anos=2024%2C2025%2C2026&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1",
+      "status": "passed"
+    },
+    {
+      "id": "webkit-1440-pt-main-navigation",
+      "screens": 6,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&visao=geral&anos=2024%2C2025%2C2026&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1",
+      "status": "passed"
+    },
+    {
+      "id": "webkit-1440-en-main-navigation",
+      "screens": 6,
+      "url": "https://pitwall-lab.streamlit.app/~/+/?tela=Corridas&visao=geral&anos=2024%2C2025%2C2026&metrica=win_rate&minimo=5&lang=en&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2024&gp=1",
+      "status": "passed"
+    }
+  ],
+  "expectedVersion": "0.8.31"
+}

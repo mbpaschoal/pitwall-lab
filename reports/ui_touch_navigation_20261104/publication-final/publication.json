@@ -1,0 +1,312 @@
+{
+  "schema": "pitwall-publication-acceptance-v2",
+  "version": "0.8.31",
+  "identity": [
+    2026,
+    19,
+    "rodriguez"
+  ],
+  "base": "https://pitwall-lab.streamlit.app",
+  "verifier_sha256": "ba725c23a77193cc88d5a3a19b8c12c0a49c3e0692b28ffa1ae3cb2b8601d4bb",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T13:40:14.275Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "Metodologia": {
+            "decoded": true,
+            "width": 1742,
+            "height": 979,
+            "sha256": "a1596b9cc5304a9888fa42365ba2b822d20fb8ee43c7e89c3c2805cbe4863baa",
+            "delivery": "static_variant",
+            "variant": "static/pitwall-media/method-9776d0597fe6-3600.webp",
+            "mime": "image/webp",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "observed_build": "06f98e667d64f02b64bc56c587aeaf7c31c19606e1c7431a92574c74e92f3a24",
+          "language_transition": {
+            "from": "pt",
+            "to": "en",
+            "control": "native",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "status": "passed",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T13:40:35.156Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "Metodologia": {
+            "decoded": true,
+            "width": 1742,
+            "height": 979,
+            "sha256": "a1596b9cc5304a9888fa42365ba2b822d20fb8ee43c7e89c3c2805cbe4863baa",
+            "delivery": "static_variant",
+            "variant": "static/pitwall-media/method-9776d0597fe6-3600.webp",
+            "mime": "image/webp",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "observed_build": "06f98e667d64f02b64bc56c587aeaf7c31c19606e1c7431a92574c74e92f3a24",
+          "language_transition": {
+            "from": "en",
+            "to": "pt",
+            "control": "native",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "status": "passed",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T13:40:54.976Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "Metodologia": {
+            "decoded": true,
+            "width": 526,
+            "height": 296,
+            "sha256": "199087ee240277ace9455e3183a49923138917b993305b68c9b652fcdc47f3f5",
+            "delivery": "static_variant",
+            "variant": "static/pitwall-media/method-9776d0597fe6-1200.webp",
+            "mime": "image/webp",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "observed_build": "06f98e667d64f02b64bc56c587aeaf7c31c19606e1c7431a92574c74e92f3a24",
+          "language_transition": {
+            "from": "pt",
+            "to": "en",
+            "control": "native",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "status": "passed",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T13:41:10.844Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "Metodologia": {
+            "decoded": true,
+            "width": 526,
+            "height": 296,
+            "sha256": "199087ee240277ace9455e3183a49923138917b993305b68c9b652fcdc47f3f5",
+            "delivery": "static_variant",
+            "variant": "static/pitwall-media/method-9776d0597fe6-1200.webp",
+            "mime": "image/webp",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "observed_build": "06f98e667d64f02b64bc56c587aeaf7c31c19606e1c7431a92574c74e92f3a24",
+          "language_transition": {
+            "from": "en",
+            "to": "pt",
+            "control": "native",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "status": "passed",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "expected_build": "06f98e667d64f02b64bc56c587aeaf7c31c19606e1c7431a92574c74e92f3a24",
+  "utc": "2026-11-04T13:41:26.450Z",
+  "status": "passed"
+}

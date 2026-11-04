@@ -4,7 +4,7 @@
 
 Created by: MBPaschoal
 
-Status: validação local concluída; CI e publicação pública pendentes
+Status: publicada 0.8.31; CI e aceite público aprovados
 
 Type: evidência de entrega
 
@@ -31,6 +31,19 @@ A primeira lista local de sincronização do pacote omitiu os dois documentos de
 
 O navegador simula celular; não houve teste em aparelho físico nem certificação WCAG. Testes locais, CI, release e hospedagem pública são camadas distintas. A aprovação local não demonstra disponibilidade contínua do Streamlit.
 
-## Publicação
+## Publicação e aceite concluídos
 
-Pendente de CI e confirmação da versão/build realmente servidos.
+A [release 0.8.31](https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.31) está publicada e o [Pitwall Lab](https://pitwall-lab.streamlit.app/) serviu o build `06f98e667d64f02b64bc56c587aeaf7c31c19606e1c7431a92574c74e92f3a24` nos quatro contextos de conferência. [Resumo estruturado](summary.json).
+
+| Camada | Resultado e evidência |
+|---|---|
+| CI da branch | 405 testes de código, 144 portáteis, dez contraprovas do verificador e 13 suítes de navegador: aprovado. [Execução](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41837228872), [recibo](ci-branch-final.json). |
+| CI de main e tag | Ambos aprovados no commit `80cef1760a12ad2e46e5083b482b5b9c79e9ae8a`. [Main](ci-main-final.json), [tag/release](ci-tag-final.json). |
+| Versão, build e fotos públicos | Quatro contextos PT/EN × 390/1440 px, fotos decodificadas e hashes corretos, todos na primeira tentativa. [Recibo](publication-final/publication.json). |
+| Páginas e bandeiras públicas | 24/24 cenários em [Chromium](public-controls-chromium/controls.json) e 24/24 em [WebKit](public-controls-webkit/controls.json). Seis páginas; 96 trocas de idioma nas bordas; alvos mínimos medidos de 44 × 50 px; marcador móvel dentro da própria célula. |
+| Menus públicos | Oito fluxos com seis destinos cada: 48 cliques/toques reais, mantendo GP, temporada e sincronização do endereço externo. [Chromium](public-menu-chromium/interactions.json), [WebKit](public-menu-webkit/interactions.json). |
+| ZIP oficial | 481 membros conferidos em CI; 665.860.833 bytes. O digest do anexo GitHub coincide com o ZIP do CI e o pacote local. [Prova do CI](release-proof.json), [metadados da release](release.json). |
+
+São 60 cenários públicos concluídos, sem repetição de caso nesta versão. O celular foi simulado. O resultado corresponde à janela de teste e não estabelece disponibilidade permanente da hospedagem. As duas falhas iniciais de CI permanecem documentadas acima; uma prévia de CSS sobre a 0.8.30 é identificada como temporária em `live-css-preview.json` e não foi contada como publicação.
+
+[Captura pública móvel PT](publication-final/390-pt-0-Metodologia.jpg) · [captura pública desktop EN](publication-final/1440-en-0-Corridas.jpg). A [contraprova de espera rejeitada](download-counterexample.json) confirmou o recibo de falha e a captura; seu limite de observação inicial também permanece explícito.

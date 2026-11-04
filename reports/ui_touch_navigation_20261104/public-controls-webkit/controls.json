@@ -1,0 +1,2163 @@
+{
+  "version": "0.8.31",
+  "engine": "webkit",
+  "base": "https://pitwall-lab.streamlit.app",
+  "cases": [
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Corridas",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Corridas",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.65625,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Acompanhar chegada dos dados",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Fontes e cobertura",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Pilotos",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Pilotos",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.671875,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Classificação completa por condição",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Mais condições",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Mapa de condições",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Corridas que sustentam a comparação",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Compartilhar esta análise",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Como os números são calculados",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Campeonato",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Campeonato",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.671875,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Previsões",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Chances de pódio",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.65625,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Acompanhar chegada dos dados",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Comparar com a classificação",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Chances de pódio por piloto",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Cobertura e exclusões",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Avaliação da previsão",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Desempenho",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Acertos do Lab",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.671875,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Resultados por GP e previsões registradas",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Metodologia",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Como funciona",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.671875,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Termos da corrida",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Para quem quer ir além",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Corridas",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Races",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.65625,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Track incoming data",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Sources and coverage",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Pilotos",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Drivers",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.671875,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Complete condition ranking",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "More conditions",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Condition map",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Races behind the comparison",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Share this analysis",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "How the numbers are calculated",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Campeonato",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Championship",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.671875,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Previsões",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Podium chances",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.65625,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Track incoming data",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Compare with qualifying",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Podium chances by driver",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Coverage and exclusions",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Prediction evaluation",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Desempenho",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "How the Lab did",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.671875,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Results by Grand Prix and recorded forecasts",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "tela": "Metodologia",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 279,
+          "top": 67.140625,
+          "right": 323,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.140625,
+          "right": 375,
+          "bottom": 117.140625,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "How it works",
+        "height": 70,
+        "label_align": "center",
+        "content": "\"\"",
+        "marker_height": 3,
+        "bottom": 4,
+        "left": 30.65625,
+        "width": 61.328125,
+        "cell_width": 122.671875,
+        "top_border": "rgba(0, 0, 0, 0)",
+        "gap_to_label": 5.5
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Race terms",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "For a closer look",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Corridas",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Corridas",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.65625,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Acompanhar chegada dos dados",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Fontes e cobertura",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Pilotos",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Pilotos",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.671875,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Classificação completa por condição",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Mais condições",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Mapa de condições",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Corridas que sustentam a comparação",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Compartilhar esta análise",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Como os números são calculados",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Campeonato",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Campeonato",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.65625,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Previsões",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Chances de pódio",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.671875,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Acompanhar chegada dos dados",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Comparar com a classificação",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Chances de pódio por piloto",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Cobertura e exclusões",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Avaliação da previsão",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Desempenho",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Acertos do Lab",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.671875,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Resultados por GP e previsões registradas",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "tela": "Metodologia",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "pt",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Como funciona",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.65625,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Termos da corrida",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Para quem quer ir além",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Corridas",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Races",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.65625,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Track incoming data",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Sources and coverage",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Pilotos",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Drivers",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.671875,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Complete condition ranking",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "More conditions",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Condition map",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Races behind the comparison",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Share this analysis",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "How the numbers are calculated",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Campeonato",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Championship",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.65625,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Previsões",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "Podium chances",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.671875,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Track incoming data",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Compare with qualifying",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Podium chances by driver",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Coverage and exclusions",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "Prediction evaluation",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Desempenho",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "How the Lab did",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.671875,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Results by Grand Prix and recorded forecasts",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "tela": "Metodologia",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 1243.015625,
+          "top": 16,
+          "right": 1287.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 1295.015625,
+          "top": 16,
+          "right": 1339.015625,
+          "bottom": 66,
+          "viewport_width": 1440,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "pt",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        },
+        {
+          "language": "en",
+          "edge": "right",
+          "position": {
+            "x": 42,
+            "y": 25
+          }
+        }
+      ],
+      "activeMarker": {
+        "text": "How it works",
+        "height": 80,
+        "label_align": "center",
+        "content": "none",
+        "marker_height": null,
+        "bottom": null,
+        "left": null,
+        "width": null,
+        "cell_width": 204.65625,
+        "top_border": "rgb(211, 7, 29)",
+        "gap_to_label": null
+      },
+      "flag": {
+        "black": 561,
+        "white": 249,
+        "mask": "none",
+        "checks": 10
+      },
+      "expanders": [
+        {
+          "text": "Race terms",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        },
+        {
+          "text": "For a closer look",
+          "height": 44,
+          "delta": 0.0078125,
+          "margin": "0px"
+        }
+      ],
+      "status": "passed"
+    }
+  ]
+}

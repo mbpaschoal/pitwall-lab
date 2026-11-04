@@ -1,0 +1,135 @@
+{
+  "preview_only": true,
+  "served_version": "0.8.30",
+  "candidate_version": "0.8.31",
+  "cases": [
+    {
+      "width": 390,
+      "lang": "pt",
+      "before": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "flags": [
+        {
+          "width": 44,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 50
+        }
+      ],
+      "marker": {
+        "text": "Como funciona",
+        "after": "\"\"",
+        "height": "3px",
+        "top": "rgba(211, 7, 29, 0.008)",
+        "labelAlign": "center"
+      },
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "before": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "flags": [
+        {
+          "width": 44,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 50
+        }
+      ],
+      "marker": {
+        "text": "How it works",
+        "after": "\"\"",
+        "height": "3px",
+        "top": "rgba(177, 9, 31, 0.043)",
+        "labelAlign": "center"
+      },
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "before": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "flags": [
+        {
+          "width": 44,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 50
+        }
+      ],
+      "marker": {
+        "text": "Como funciona",
+        "after": "none",
+        "height": "auto",
+        "top": "rgb(211, 7, 29)",
+        "labelAlign": "center"
+      },
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "before": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "flags": [
+        {
+          "width": 44,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 50
+        }
+      ],
+      "marker": {
+        "text": "How it works",
+        "after": "none",
+        "height": "auto",
+        "top": "rgb(211, 7, 29)",
+        "labelAlign": "center"
+      },
+      "status": "passed"
+    }
+  ]
+}

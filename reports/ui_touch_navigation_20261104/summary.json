@@ -1,0 +1,96 @@
+{
+  "version": "0.8.31",
+  "local": {
+    "chromium": {
+      "cases": 24,
+      "passed": 24,
+      "language_switches": 48,
+      "physical_device": false
+    },
+    "webkit": {
+      "cases": 24,
+      "passed": 24,
+      "language_switches": 48,
+      "physical_device": false
+    },
+    "resilience": {
+      "status": "passed",
+      "focus_preserved": true,
+      "native_controls_restored": true
+    },
+    "protected_files": 2182
+  },
+  "CI": {
+    "branch": {
+      "run_id": 41837228872,
+      "status": "passed",
+      "source_tests": 405,
+      "portable_tests": 144
+    },
+    "main": {
+      "run_id": 41840030220,
+      "status": "passed"
+    },
+    "tag": {
+      "run_id": 41840030702,
+      "status": "passed"
+    },
+    "initial_failed_runs": [
+      41831564137,
+      41833779259
+    ]
+  },
+  "publication": {
+    "version": "0.8.31",
+    "build": "06f98e667d64f02b64bc56c587aeaf7c31c19606e1c7431a92574c74e92f3a24",
+    "status": "passed",
+    "scenarios": 60,
+    "build_photo_contexts": 4,
+    "page_flag_cases": 48,
+    "menu_flows": 8,
+    "all_cases_passed_without_case_retries": true,
+    "edge_language_switches": 96,
+    "additional_preflight_language_switches": 4,
+    "menu_clicks": 48,
+    "minimum_flag_width": 44,
+    "minimum_flag_height": 50,
+    "engines": {
+      "chromium": {
+        "page_flag_cases": 24,
+        "passed": 24,
+        "menu_flows": 4,
+        "menu_clicks": 24
+      },
+      "webkit": {
+        "page_flag_cases": 24,
+        "passed": 24,
+        "menu_flows": 4,
+        "menu_clicks": 24
+      }
+    },
+    "physical_device_tested": false,
+    "formal_release": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.31",
+    "release_asset_digest_matches_ci_and_local_zip": true
+  },
+  "package": {
+    "version": "0.8.31",
+    "build": "06f98e667d64f02b64bc56c587aeaf7c31c19606e1c7431a92574c74e92f3a24",
+    "zip_bytes": 665860833,
+    "zip_sha256": "75708e2f19d95b16be95345dd32361de5d72eb3e5ed27a67c806e1b53b0ce739",
+    "zip_members_verified": 481,
+    "canonical_package_files_changed": [
+      "CHANGELOG.en.md",
+      "CHANGELOG.md",
+      "MANIFESTO.json",
+      "VERSION",
+      "docs/JORNADA_DO_FA.md",
+      "docs/en/FAN_JOURNEY.md",
+      "frontend_assets/journey.css",
+      "requirements.txt"
+    ]
+  },
+  "implementation_commit": "00ece93b555951cb5362d7a57ef7dbdbea40e082",
+  "candidate_commit": "80cef1760a12ad2e46e5083b482b5b9c79e9ae8a",
+  "generated_at_utc": "2026-11-04T14:05:51.157101+00:00",
+  "status": "published_ci_and_public_acceptance_passed"
+}
