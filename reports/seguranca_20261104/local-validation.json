@@ -19,5 +19,19 @@
     }
   },
   "protected_files_unchanged": 300,
-  "scope": "local package and source validation; hosted CI and public deployment are separate evidence"
+  "scope": "local package and source validation; hosted CI and public deployment are separate evidence",
+  "scroll_audit": {
+    "samples": 120,
+    "stress_cases": 14,
+    "issues": 0
+  },
+  "unavailable_native_controls": {
+    "cases": 4,
+    "passed": true,
+    "late_hydration": {
+      "status": "passed",
+      "focus_preserved": true,
+      "native_controls_restored": true
+    }
+  }
 }

@@ -14,6 +14,8 @@ Actions fixadas por SHA; checkout sem credenciais persistidas; token padrão som
 
 Dependências de apresentação: Streamlit 1.66.1, PyArrow 23.0.1, Protobuf 5.29.6 e Pillow 13.0.0. A versão mais nova de Streamlit é necessária para aceitar Pillow 13 sem violar as restrições do pacote. A instalação transitiva inicial de Pillow 12.3.0 ainda apresentou alertas: o resultado foi preservado na investigação, sem ignorá-los. Os seletores foram adaptados aos controles React Aria e as expectativas AppTest à representação escalar dos parâmetros de URL. Não houve mudança de dados, modelo ou probabilidades.
 
+Rolagem/foco: 120 amostras e 14 cenários de estresse sem ocorrências. Links alternativos: quatro cenários PT/EN desktop/mobile e recuperação tardia dos controles aprovados.
+
 Validação local: 405 testes do CI de produto, sete contraprovas de política, 144 testes portáteis, dez contraprovas do verificador público, 24 cenários Chromium + 24 WebKit e 16 jornadas de contexto. Auditorias: 34 dependências de apresentação e cinco científicas, sem alertas conhecidos na consulta. 300 arquivos científicos protegidos sem alteração. O teste focal de exportação preserva autoria textual após retirar marcação HTML de um crédito legado; continua exigindo autor e licença.
 
 Gitleaks examinou 133 commits e encontrou cinco falsos positivos verificados: duas chaves de widgets e três checksums. Somente seus fingerprints históricos foram isentados. Nova varredura sem achados; isso não certifica ausência de segredos em arquivos privados ou fora do histórico examinado.
