@@ -1,0 +1,143 @@
+{
+  "schema": "pitwall-publication-acceptance-v1",
+  "version": "0.8.28",
+  "identity": [
+    2026,
+    19,
+    "rodriguez"
+  ],
+  "base": "https://pitwall-lab.streamlit.app",
+  "verifier_sha256": "0f8a56a89bf492ac8eb5bca6e4b2922ddffd564c6c2fc95cd44dc260c3199865",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-03T23:59:26.625Z",
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.28', { exact: true }).first() to be visible\u001b[22m\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        },
+        {
+          "attempt": 1,
+          "utc": "2026-11-04T00:00:14.838Z",
+          "status": "failed",
+          "error": "locator.evaluate: Error: Language or native controls did not finish loading\n    at eval (eval at evaluate (:311:30), <anonymous>:8:10)\n    at async <anonymous>:337:30",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/~/+/static/js/iframeResizer.contentWindow.yMw_ARIL.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T00:01:28.534Z",
+          "status": "failed",
+          "error": "locator.evaluate: Error: Language or native controls did not finish loading\n    at eval (eval at evaluate (:311:30), <anonymous>:8:10)\n    at async <anonymous>:337:30",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        },
+        {
+          "attempt": 1,
+          "utc": "2026-11-04T00:02:08.253Z",
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.28', { exact: true }).first() to be visible\u001b[22m\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/~/+/static/js/index.6xX1278W.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T00:02:56.293Z",
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.28', { exact: true }).first() to be visible\u001b[22m\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        },
+        {
+          "attempt": 1,
+          "utc": "2026-11-04T00:04:13.920Z",
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.28', { exact: true }).first() to be visible\u001b[22m\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T00:05:01.955Z",
+          "status": "failed",
+          "error": "Public acceptance timed out",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "failed"
+    }
+  ],
+  "expected_build": "20efa569d021c158d69abf5c9a008ee1b81263b2666c044c1a085ffa725ef58b",
+  "utc": "2026-11-04T00:05:26.627Z",
+  "status": "failed"
+}

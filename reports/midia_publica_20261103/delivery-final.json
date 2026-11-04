@@ -1,0 +1,124 @@
+{
+  "version": "0.8.28",
+  "status": "released_public_acceptance_failed",
+  "runtime_commit": "b3ce46f86fe25eff43595131207ec640d31ba03f",
+  "release": {
+    "id": 433360145,
+    "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.28",
+    "published_at": "2026-11-04T00:13:59Z",
+    "latest": true,
+    "asset": {
+      "id": 707597441,
+      "bytes": 665856793,
+      "sha256": "b0f9061dbb2a8f0f2aa6fe7d4044cb06b548b7e1beedaaeecfd3149cc633e2d9"
+    }
+  },
+  "build": "20efa569d021c158d69abf5c9a008ee1b81263b2666c044c1a085ffa725ef58b",
+  "validation": {
+    "source_tests": 401,
+    "package_tests": 144,
+    "node_counterexamples": 7,
+    "ci_acceptance_suites": 12,
+    "local_full_cases": 4,
+    "protected_files_unchanged": 533,
+    "source_package_files_identical": 481
+  },
+  "ci": {
+    "main_run": 41743089428,
+    "tag_run": 41743089403,
+    "main_jobs": [
+      {
+        "id": 126289220152,
+        "name": "browser (navigation)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41743089428/job/126289220152"
+      },
+      {
+        "id": 126289220521,
+        "name": "validate",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41743089428/job/126289220521"
+      },
+      {
+        "id": 126289220572,
+        "name": "browser (core)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41743089428/job/126289220572"
+      },
+      {
+        "id": 126294584924,
+        "name": "release",
+        "status": "completed",
+        "conclusion": "skipped",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41743089428/job/126294584924"
+      }
+    ],
+    "tag_jobs": [
+      {
+        "id": 126289220241,
+        "name": "validate",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41743089403/job/126289220241"
+      },
+      {
+        "id": 126289220632,
+        "name": "browser (navigation)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41743089403/job/126289220632"
+      },
+      {
+        "id": 126289220661,
+        "name": "browser (core)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41743089403/job/126289220661"
+      },
+      {
+        "id": 126296222325,
+        "name": "release",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41743089403/job/126296222325"
+      }
+    ]
+  },
+  "collection": {
+    "run": 41743089379,
+    "conclusion": "success"
+  },
+  "public": {
+    "accepted": false,
+    "independent_run": 41745235515,
+    "independent_job": 126296449379,
+    "independent_branch": "codex/public-probe-network-20261104",
+    "independent_commit": "89377d1",
+    "independent_passed": 0,
+    "independent_cases": 4,
+    "artifact_id": 13283587161,
+    "artifact_sha256": "b98870c2056b426a6ab5553d26ec67fc78c7fa66556845887543cacb1686f011",
+    "reason": "Version/native controls did not load completely within bounded attempts; observed in two separate execution environments. Root cause remains undetermined.",
+    "agent_public_passed": 0,
+    "agent_public_cases": 4
+  },
+  "pending": [
+    {
+      "item": "Administrative Streamlit reboot and post-reboot verification",
+      "status": "requested_from_owner_not_confirmed",
+      "reason": "Only the public app session is available to the agent, without the authenticated management control."
+    },
+    {
+      "item": "Provider-confirmed canonical Rafael Camara identity",
+      "status": "absent_in_serial_queries_2026-11-03T23:21Z",
+      "artwork": "three approved illustrations preserved; not activated"
+    }
+  ],
+  "scientific": {
+    "frozen_v1_changed": false,
+    "real_forecasts_emitted": 0
+  }
+}

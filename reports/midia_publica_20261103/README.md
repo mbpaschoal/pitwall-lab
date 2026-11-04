@@ -3,7 +3,7 @@
 Português · [English](README.en.md)
 
 Created by: MBPaschoal
-Status: implementation validated locally; release pending
+Status: v0.8.28 released; public acceptance failed; authenticated reboot requested
 Type: delivery evidence
 
 O diagnóstico reconferiu a capa de Como funciona. O navegador decodificou o WebP servido pelo aplicativo, com MIME, resolução e SHA iguais ao catálogo. O caminho relativo `app/static/` está correto dentro do iframe do Streamlit; não foi necessário trocar a foto ou o layout. A [documentação oficial](https://docs.streamlit.io/develop/concepts/configuration/serving-static-files) descreve essa forma de servir arquivos locais. [Imagem observada](before-r2/observed.png), [decodificação e respostas](before-r2/diagnostic.json), [conferência HTTP](static-http.json).
@@ -23,7 +23,7 @@ Cada caso admite uma repetição por carregamento, dentro de seis minutos no con
 
 ## Contraprovas e validação
 
-[Sete testes com navegador real](../../tests/browser/test_verificar_publicacao.cjs) cobrem foto admitida, hash incorreto, imagem quebrada, idiomas/controles, origem externa e identidade/versão incompatível. Entram no grupo core do CI, junto com um ensaio completo local do verificador: 12 aceites, preservando os 11 anteriores. O verificador completo passou nos quatro fluxos locais, ambos os idiomas e tamanhos, com fotos e build reais do pacote anterior. [Quatro casos locais](local-027-r2/publication.json), [401 testes Python](source-tests.json).
+[Sete contraprovas](../../tests/browser/test_verificar_publicacao.cjs) combinam cinco casos com navegador real e dois de metadados/validação prévia. Cobrem foto admitida, hash incorreto, imagem quebrada, idiomas/controles, origem externa e identidade/versão incompatível. Entram no grupo core do CI, junto com um ensaio completo local do verificador: 12 aceites, preservando os 11 anteriores. O verificador completo passou nos quatro fluxos locais, ambos os idiomas e tamanhos, com fotos e build reais do pacote anterior. [Quatro casos locais](local-027-r2/publication.json), [401 testes Python](source-tests.json).
 
 O primeiro ensaio da nova condição de prontidão expôs uma passagem incorreta de argumentos no próprio teste Playwright. Foi corrigida e ganhou contraprova específica. Uma tentativa diagnóstica usou o GP futuro 20; o contrato agora rejeita esse evento quando não houver estado coletado correspondente. Esses ensaios ficam preservados; a validação de publicação usa o GP coletado 19. Isso não altera o calendário ou a expectativa futura de São Paulo.
 
@@ -40,3 +40,13 @@ A verificação precisa responder se o fã consegue usar o conteúdo servido. Id
 ## Pacote final local
 
 A distribuição 0.8.28 passou em 144 testes e nos quatro fluxos completos do novo verificador, sem repetição. O conjunto de contraprovas totaliza sete testes: os seis iniciais e a preservação de recibo quando a validação prévia rejeita o pacote antes da rede. [Pacote e ZIP](package-validation.json), [recibo local final](local-028/publication.json), [sete contraprovas](browser-counterexamples-final.txt). Os 533 arquivos científicos conferidos e o original da foto permanecem idênticos. [Integridade](protected-integrity.json).
+
+## Publicação e pendência pública
+
+**0.8.28 publicada e Latest**, CIs main/tag aprovados. ZIP com 665.856.793 bytes e SHA `b0f9061dbb2a8f0f2aa6fe7d4044cb06b548b7e1beedaaeecfd3149cc633e2d9`, igual ao pacote local. A comparação de 481 arquivos com a receita canônica teve zero diferenças. [Release](https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.28), [recibo final](delivery-final.json), [comparação com a receita](source-package-comparison.json), [validação hospedada](ci-validation.json).
+
+O aceite público completo **não passou**: os quatro contextos deste computador e os quatro de um executor independente do GitHub falharam na inicialização/controles dentro das tentativas limitadas. A captura independente mostra o carregador, sem a página concluída. O mesmo código passou nos quatro fluxos locais e nos 12 aceites do CI. Isso distingue código/pacote testados de funcionamento público; não estabelece a causa da falha pública.
+
+[Conferência pública local](public-028/publication.json), [diagnóstico independente](hosted-public-028/publication.json), [cadeia de integridade do artefato](hosted-artifact.json), [execução independente](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41745235515). Esse diagnóstico ficou isolado em `codex/public-probe-network-20261104`, sem mudar main ou o produto; seus arquivos de evidência estão preservados neste relatório, além do artefato temporário.
+
+Foi solicitado ao proprietário **Manage app → Reboot app**, pois a sessão pública disponível não oferece o controle administrativo autenticado. Não há confirmação de reinício nem teste posterior a ele. Esse é o próximo passo operacional; após a confirmação, repetir o verificador 0.8.28 em pasta nova, preservando estas falhas. A identificação canônica de Câmara continua sendo uma pendência separada; suas três artes já estão aprovadas.
