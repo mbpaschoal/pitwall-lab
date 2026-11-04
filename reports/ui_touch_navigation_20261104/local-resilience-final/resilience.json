@@ -1,0 +1,140 @@
+{
+  "base": "http://127.0.0.1:8531",
+  "utc": "2026-11-04T12:37:00.097Z",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "blocked": [
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js"
+      ],
+      "visited": [
+        "Corridas",
+        "Pilotos",
+        "Campeonato",
+        "Previsões",
+        "Desempenho",
+        "Metodologia"
+      ],
+      "language_switched": "en",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "blocked": [
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js"
+      ],
+      "visited": [
+        "Corridas",
+        "Pilotos",
+        "Campeonato",
+        "Previsões",
+        "Desempenho",
+        "Metodologia"
+      ],
+      "language_switched": "pt",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "blocked": [
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js"
+      ],
+      "visited": [
+        "Corridas",
+        "Pilotos",
+        "Campeonato",
+        "Previsões",
+        "Desempenho",
+        "Metodologia"
+      ],
+      "language_switched": "en",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "blocked": [
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js",
+        "/static/js/Radio.CR-M-CaH.js",
+        "/static/js/Button.BNvfR8OZ.js"
+      ],
+      "visited": [
+        "Corridas",
+        "Pilotos",
+        "Campeonato",
+        "Previsões",
+        "Desempenho",
+        "Metodologia"
+      ],
+      "language_switched": "pt",
+      "status": "passed"
+    }
+  ],
+  "late_hydration": {
+    "status": "passed",
+    "focus_preserved": true,
+    "native_controls_restored": true
+  },
+  "completed_at_utc": "2026-11-04T12:37:45.169Z"
+}

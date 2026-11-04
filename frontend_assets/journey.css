@@ -248,6 +248,7 @@
 .st-key-journey-navigation :is([role="radiogroup"]>label,[role="radiogroup"]>div>label)>div:first-child{position:absolute;width:1px;height:1px;opacity:0}
 .st-key-journey-navigation :is([role="radiogroup"]>label,[role="radiogroup"]>div>label)>div:last-child{margin:0!important;width:100%;text-align:center}
 .st-key-journey-navigation :is([role="radiogroup"]>label,[role="radiogroup"]>div>label) p{font:400 16px/1.2 LatoLocal;margin:0;white-space:normal}
+.st-key-journey-navigation :is([role="radiogroup"]>label,[role="radiogroup"]>div>label) [data-testid="stMarkdownContainer"]{width:100%;text-align:center}
 .st-key-journey-navigation :is([role="radiogroup"]>label,[role="radiogroup"]>div>label)::before{content:'';display:block;width:30px;height:30px;background:currentColor;mask-position:center;mask-size:contain;mask-repeat:no-repeat}
 .st-key-journey-navigation label:focus-within{outline:2px solid var(--pw-red);outline-offset:-3px}
 /* Real links remain usable until the native modules finish loading. */
@@ -262,6 +263,8 @@
 .st-key-journey-navigation:has(.journey-navigation-fallback:focus-within) .st-key-tela{visibility:hidden}
 .st-key-journey-navigation:has(.journey-navigation-fallback):not(:has(:is([role="radiogroup"]>label:nth-child(6),[role="radiogroup"]>div:nth-child(6)>label))) .st-key-tela [role="alert"]{display:none}
 [class*="st-key-pw_language_cell_"]{position:relative;gap:0;min-height:50px}
+.st-key-journey-header [class*="st-key-pw_language_button_"] button{box-sizing:border-box;width:44px;min-width:44px;min-height:50px;padding-inline:0;touch-action:manipulation}
+.st-key-journey-header [class*="st-key-pw_language_button_"] button *{pointer-events:none}
 .stElementContainer:has(.pw-language-fallback) [data-testid="stMarkdownContainer"] p{margin:0}
 .stApp a.pw-language-fallback{display:flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:50px;width:44px;border:1px solid var(--pw-line);border-radius:8px;background:white;color:var(--fan-ink);font:400 20px/1 LatoLocal,Arial,sans-serif;text-decoration:none}
 .stApp a.pw-language-fallback[aria-current]{border:2px solid var(--pw-red)}
@@ -276,6 +279,9 @@
  .journey-navigation-fallback>a{min-height:70px;padding:5px 2px}
  .journey-navigation-fallback>a::before{width:24px;height:24px}
  .journey-navigation-fallback>a>span{font-size:12px;line-height:1.25;overflow-wrap:anywhere}
+ /* Keep the active underline inside its own cell in the two-row mobile menu. */
+ .st-key-journey-navigation :is([role="radiogroup"]>label,[role="radiogroup"]>div>label):has(input:checked),.journey-navigation-fallback>a[aria-current]{border-top-color:transparent}
+ .st-key-journey-navigation :is([role="radiogroup"]>label,[role="radiogroup"]>div>label):has(input:checked)::after,.journey-navigation-fallback>a[aria-current]::after{content:"";position:absolute;left:25%;bottom:4px;width:50%;height:3px;border-radius:2px;background:var(--pw-red);pointer-events:none}
 }
 /* Tarot art is generated ahead of time. Team colour belongs to the event context. */
 .tarot-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:10px 0}
@@ -535,7 +541,7 @@ html[data-pw-reduced-motion="true"] .stMain{scroll-behavior:auto}
 .st-key-journey-context-row [data-testid="stHorizontalBlock"]{display:grid;grid-template-columns:96px minmax(0,1fr) 44px;gap:8px}
 .st-key-journey-context-row [data-testid="stColumn"]{width:100%!important;min-width:0!important}
 [class*="st-key-pw_language_switch_"]{position:static!important;transform:none!important;top:auto;right:auto;z-index:auto;width:auto!important;padding:2px!important;max-width:100%;box-shadow:none}
-[class*="st-key-pw_language_switch_"] [data-testid="stHorizontalBlock"]{display:grid;grid-template-columns:max-content 44px 44px;gap:4px;align-items:center}
+[class*="st-key-pw_language_switch_"] [data-testid="stHorizontalBlock"]{display:grid;grid-template-columns:max-content 44px 44px;gap:8px;align-items:center}
 [class*="st-key-pw_language_switch_"] [data-testid="stColumn"]{min-width:0!important;width:auto!important}
 [class*="st-key-pw_language_switch_"] [data-testid="stCaptionContainer"]{white-space:nowrap}
 .fan-ranking-identity strong,.fan-condition-row em{overflow-wrap:anywhere}

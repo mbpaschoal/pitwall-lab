@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.8.31 — 2026-11-04
+
+Expands the language flags' clickable area to 44 × 50 CSS pixels while keeping the visible symbols small and their header position. In the two-row mobile menu, the red marker moves below the label inside its own active cell; the previous line could appear associated with the item above. Both native controls and alternative links retain all six destinations, languages, focus and GP context.
+
+Control acceptance now checks target bounds, the active cell's marker and real clicks near both flag edges. Resilience acceptance also checks alternative-link markers. The delivery preserves 0.8.30 security fixes, Fan Journey identity and scientific artifacts. Local, CI and served-version results are recorded separately; larger touch targets are not WCAG certification.
+
 ## 0.8.30 — 2026-11-04
 
 React Aria control selectors and AppTest expectations were adapted to preserve navigation, language and GP context on the patched Streamlit version. Repository and publication security controls: Actions pinned to full commit SHAs, checkout without persisted credentials, write permissions restricted to publication/monitoring jobs, dependency and Gitleaks history audits, and private vulnerability reporting policy. Dependabot proposes presentation/Actions updates without automatically modifying the frozen scientific recipe. Streamlit, Protobuf, PyArrow and Pillow receive patched versions in a separate Python 3.12 presentation environment. Serial collection, bounded concurrency recovery and atomic publication remain verified; data, frozen v1 and recorded probabilities are preserved. Administrative settings and account checks are verified separately: files and CI do not prove 2FA, public deployment or the absence of vulnerabilities.

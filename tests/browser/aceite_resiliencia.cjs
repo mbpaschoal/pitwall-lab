@@ -17,6 +17,11 @@ async function check(page,lang){
  assert.equal(state.query.gp,'19');assert.equal(state.query.temporada,'2026');assert.equal(state.query.lang,lang);assert.equal(state.overflow,false);
  assert.ok(state.targets.every(t=>t.width>=44&&t.height>=44),'Every link needs a 44px target');
  assert.ok(await page.locator('.pw-language-fallback:visible').evaluateAll(es=>es.every(e=>getComputedStyle(e).textDecorationLine==='none')),'Flag links must match the native flags without underlining');
+ state.active_marker=await page.locator('.journey-navigation-fallback>a[aria-current]').evaluate(el=>{
+  const r=el.getBoundingClientRect(),m=getComputedStyle(el,'::after'),text=el.querySelector('span').getBoundingClientRect();
+  return{viewport:innerWidth,content:m.content,height:parseFloat(m.height),bottom:parseFloat(m.bottom),cell_height:r.height,gap_to_label:r.bottom-parseFloat(m.bottom)-parseFloat(m.height)-text.bottom,top_border:getComputedStyle(el).borderTopColor};
+ });
+ if(state.active_marker.viewport<=600){const m=state.active_marker;assert.ok(m.content!=='none'&&m.height===3&&m.bottom>=2&&m.bottom+m.height<m.cell_height/4&&m.gap_to_label>=0,'Fallback mobile marker must belong to its own cell');assert.ok(/rgba\([^)]*,\s*0\)$/.test(m.top_border));}
  return state;
 }
 (async()=>{fs.mkdirSync(output,{recursive:true});const options={headless:true};if(process.env.PLAYWRIGHT_CHANNEL)options.channel=process.env.PLAYWRIGHT_CHANNEL;

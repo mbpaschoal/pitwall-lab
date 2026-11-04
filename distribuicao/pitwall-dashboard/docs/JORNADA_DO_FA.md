@@ -6,6 +6,8 @@ A composição C aprovada, refinada na revisão C3, orienta o produto inteiro: C
 
 ## Navegar
 
+As bandeiras têm área clicável de 44 × 50 CSS px, com o símbolo no tamanho original. No celular, o marcador vermelho fica abaixo do rótulo e dentro da célula ativa, nas duas linhas do menu; o ícone selecionado continua vermelho. Teclado, links alternativos e contexto do GP seguem disponíveis.
+
 Os seis destinos ficam no rodapé, com ícone, rótulo e seleção visível. O controle nativo é acessível por teclado e tem links equivalentes enquanto seu módulo não carrega. As bandeiras também oferecem links nessa situação; os seis destinos e o contexto permanecem iguais. Quando o controle nativo fica disponível, os links alternativos são ocultados, sem duplicar o menu. A área final da página reserva espaço para o menu; ele não elimina conteúdo. Logo, temporada, GP e busca compartilham um único cabeçalho nas seis telas. As bandeiras de idioma permanecem no canto superior direito. O seletor inclui o calendário inteiro; a faixa visual mostra etapas próximas, com a selecionada identificada. No celular, destaca o GP e seus vizinhos.
 
 Corridas mantém os seis capítulos acessíveis nas abas: Resumo, Sessões e voltas, Pneus e paradas, Clima, Nesta pista e Equipes. Foto e traçado aparecem antes do pódio. As abas preservam as rotas antigas e evitam uma página com todas as tabelas abertas de uma vez. Pilotos mantém destaques, perfil e duelos, com seus recortes próprios. Campeonato mantém todas as linhas publicadas de pilotos e equipes, agora em sequência. As outras áreas continuam com as fontes, limites e documentos acessíveis.

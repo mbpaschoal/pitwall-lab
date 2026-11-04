@@ -1,0 +1,277 @@
+{
+  "version": "0.8.31",
+  "engine": "chromium",
+  "base": "http://127.0.0.1:8531",
+  "cases": [
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Corridas",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 283,
+          "top": 67.59375,
+          "right": 327,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.59375,
+          "right": 375,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        }
+      ],
+      "status": "failed",
+      "error": "page.waitForFunction: Timeout 45000ms exceeded."
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Pilotos",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 283,
+          "top": 67.59375,
+          "right": 327,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.59375,
+          "right": 375,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        }
+      ],
+      "status": "failed",
+      "error": "page.waitForFunction: Timeout 45000ms exceeded."
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Campeonato",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 283,
+          "top": 67.59375,
+          "right": 327,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.59375,
+          "right": 375,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        }
+      ],
+      "status": "failed",
+      "error": "page.waitForFunction: Timeout 45000ms exceeded."
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Previsões",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 283,
+          "top": 67.59375,
+          "right": 327,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.59375,
+          "right": 375,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        }
+      ],
+      "status": "failed",
+      "error": "page.waitForFunction: Timeout 45000ms exceeded."
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Desempenho",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 283,
+          "top": 67.59375,
+          "right": 327,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.59375,
+          "right": 375,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        }
+      ],
+      "status": "failed",
+      "error": "page.waitForFunction: Timeout 45000ms exceeded."
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "tela": "Metodologia",
+      "languageTargets": [
+        {
+          "language": "pt",
+          "width": 44,
+          "height": 50,
+          "left": 283,
+          "top": 67.59375,
+          "right": 327,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        },
+        {
+          "language": "en",
+          "width": 44,
+          "height": 50,
+          "left": 331,
+          "top": 67.59375,
+          "right": 375,
+          "bottom": 117.59375,
+          "viewport_width": 390,
+          "viewport_height": 844,
+          "hit": true,
+          "font": "20px"
+        }
+      ],
+      "edgeClicks": [
+        {
+          "language": "en",
+          "edge": "left",
+          "position": {
+            "x": 2,
+            "y": 25
+          }
+        }
+      ],
+      "status": "failed",
+      "error": "page.waitForFunction: Timeout 45000ms exceeded."
+    }
+  ]
+}

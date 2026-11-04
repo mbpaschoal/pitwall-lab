@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.8.31 — 2026-11-04
+
+Amplia para 44 × 50 px a área clicável das bandeiras, mantendo os símbolos pequenos e a posição no cabeçalho. No menu móvel de duas linhas, o marcador vermelho passa a ficar abaixo do rótulo, dentro da própria célula ativa; o traço anterior podia parecer pertencer ao item da linha de cima. A mudança atende aos controles nativos e aos links alternativos e preserva os seis destinos, os idiomas, o foco e o contexto do GP.
+
+O aceite de controles passa a conferir os limites dos alvos, o marcador na célula selecionada e cliques nas bordas das duas bandeiras. O teste de resiliência confere também o marcador dos links alternativos. A entrega mantém as correções de segurança da 0.8.30, a identidade da Jornada do fã e os artefatos científicos. Resultados locais, CI e versão servida são registrados separadamente; ampliar o alvo de toque não é uma certificação WCAG.
+
 ## 0.8.30 — 2026-11-04
 
 A compatibilidade dos controles React Aria e dos testes AppTest foi ajustada para preservar navegação, idioma e GP na versão corrigida do Streamlit. Proteções de segurança do repositório e da publicação: Actions fixadas por SHA, checkout sem credencial persistida, permissões de escrita restritas aos jobs que publicam ou monitoram, auditorias de dependências e histórico com Gitleaks, e política de relatos privados. Dependabot propõe atualizações de apresentação/Actions sem alterar automaticamente a receita científica congelada. Streamlit, Protobuf, PyArrow e Pillow recebem versões corrigidas em um ambiente de apresentação Python 3.12 separado. A coleta serial, recuperação por concorrência e publicação atômica permanecem verificadas; dados, modelo v1 e probabilidades registrados são preservados. Configurações administrativas e verificações de conta são conferidas separadamente: arquivos e CI não provam 2FA, implantação pública ou ausência de vulnerabilidades.

@@ -19,6 +19,8 @@ All 26 circuit photographs and five hero photographs are naturally at least 2488
 
 ## Navigation
 
+Language flags have a 44 × 50 CSS pixel hit area, retaining their original symbol size. On mobile, the red marker sits below the label inside the active cell in either menu row; the selected icon remains red. Keyboard access, alternative links and GP context remain available.
+
 Native navigation and language flags have equivalent keyboard-accessible links while their modules are unavailable. They preserve all six destinations and context. Links are hidden once native controls become available, avoiding duplicate menus.
 
 Six destinations appear in the bottom navigation, with icons, labels and visible selection. The native control supports keyboard interaction. The page reserves bottom space so the menu does not remove content. Season and GP selectors appear at the top of context-dependent areas. The selector includes every event; the visual ribbon shows nearby events and identifies the selected one. Mobile emphasizes the selected GP and its neighbors.
