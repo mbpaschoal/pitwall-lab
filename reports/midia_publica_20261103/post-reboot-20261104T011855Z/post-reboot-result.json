@@ -1,0 +1,71 @@
+{
+  "status": "post_reboot_public_acceptance_failed",
+  "version": "0.8.28",
+  "checked_at_utc": "2026-11-04T01:26:31.400161+00:00",
+  "user_reported_reboot": true,
+  "actual_reboot_timestamp": "not supplied; user confirmation preserved separately",
+  "passed": 0,
+  "cases": 4,
+  "expected_build": "20efa569d021c158d69abf5c9a008ee1b81263b2666c044c1a085ffa725ef58b",
+  "observed_version_in_failed_context": "0.8.28",
+  "version_observation_is_not_full_acceptance": true,
+  "failed_native_resources": [
+    {
+      "path": "/~/+/static/media/SourceSansVF-Upright.ttf.BsWL4Kly.woff2",
+      "status": 500,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/~/+/static/js/index.Cnpi3o3E.js",
+      "status": 500,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/~/+/static/js/FormClearHelper.DTcdrasw.js",
+      "status": 500,
+      "type": "text/html; charset=utf-8"
+    }
+  ],
+  "http1_failed_native_resources": [
+    {
+      "path": "/~/+/static/js/index.6xX1278W.js",
+      "status": 500,
+      "type": "text/html; charset=utf-8"
+    }
+  ],
+  "direct_resource_rechecks": "Two sampled JS files later returned 200, and original/query-suffixed bytes matched the installed pinned Streamlit 1.50.0 files. This does not certify successful dynamic imports.",
+  "root_cause": "not established; no authenticated hosting logs available",
+  "product_code_changed": false,
+  "scientific_artifacts_changed": false,
+  "next_steps": [
+    "Compare the owner browser experience with automated observations.",
+    "Inspect authenticated Streamlit logs/support for the failed native-resource responses.",
+    "Only rerun acceptance after a relevant external-state change or a concrete fix."
+  ],
+  "evidence": {
+    "1440-en-0-failed.jpg": "af28f20d05db476c350f19748760d2e7251067a110afa2af4bf0ae2f560139b8",
+    "1440-en-1-failed.jpg": "212454231556adc4bc6f8fa4544a38e6331f2c4313296a9d95fc8077217086f7",
+    "1440-pt-0-failed.jpg": "48d7ecd7e1e68ea96c21fec96275af2a9591933e0454646a0b1e87898669ce2f",
+    "1440-pt-1-failed.jpg": "42d8e4d00c3e61dbad45281af40d57f78b78997d7921ee3eb1babbd6acc20ad7",
+    "390-en-0-failed.jpg": "e74292700b559fe2bc8a1be62d3b466b79087cef63b3711983707ae4ddf7d19e",
+    "390-en-1-failed.jpg": "ed715c97e65f6218f8d0838986b63785532e6e5ed60bc5b3e32a448dd6c50bcd",
+    "390-pt-0-failed.jpg": "ba0ddacd546761189b6b885da9f64ebd88ea6bed113f90494f6f1a8e4fa83a64",
+    "390-pt-1-failed.jpg": "e74292700b559fe2bc8a1be62d3b466b79087cef63b3711983707ae4ddf7d19e",
+    "README.en.md": "800e8f180eb3d49fda904fff737e1f6836eb97186b59786078a63e76b550ed03",
+    "README.md": "61a5757954683b924a5bac751d1b55cfe51c9850827a712c9905cbe8701903fe",
+    "context.json": "2003d4f0b4c465fd32d1b5f5130c9542c13778db52d6c0a4f3cbee5277619782",
+    "focused-diagnostic.cjs": "6225a79a8b1a151aecb176dafebc6c6d8e982517a1202846a3b74cc9d69f002e",
+    "focused-diagnostic.json": "026423207c4de81f3a9d0a3add449e0a38d55e835e6e457554353d29dbaa8b9d",
+    "focused-method.jpg": "89c879b155ff3c7964b1dc4d0155cb47986235e6ac2ac9a023c46aa62380e2d6",
+    "http1-diagnostic/focused-diagnostic.json": "e96f56eb2faa87b779738b47ccac2f290006d2df49883f273ea799dc6e3e4148",
+    "http1-diagnostic/focused-method.jpg": "91befe8e4444d484692c96b53c38d5fd76a89bc423f6c7be754f6533aa810440",
+    "http1-diagnostic.cjs": "67537933a4d3e8620fa94d1d807d7937f84005e27e262cc60523d6c6a8ff0890",
+    "input.json": "2773a932198ebeed65de62e0be20dd317466070a01b140a9d0983dfb6f6a76cf",
+    "native-resource-probe.cjs": "72a20a52a09a02919c2aaf3dd4c560b3065acd706d48f7fdb634c3d040ceb06e",
+    "native-resource-probe.json": "fb77e780413388fd4b66f2b83dbdec07951f75ac6ba5b149c2f53b2c6429bdc6",
+    "pinned-native-comparison-initial-path.json": "9ab1ebcd18f74507d839f898d0083e4afc357dbacc429b5d1eeb200b492ec361",
+    "pinned-native-comparison.json": "7c5828840c6867720d190c5038bd85f53c4ca457ad509bbe429a119910531775",
+    "publication.json": "d2b17bd1059a92c7ac77c8516710fd3c9379c4c5721bd728fc6d1d8a858a1208",
+    "streamlit-issue-10510.json": "96a37d97f0e96b99f420364bf97f61a07e4c732c2de5a2e3e6f2ac150b11131f"
+  }
+}

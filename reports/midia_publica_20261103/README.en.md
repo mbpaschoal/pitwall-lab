@@ -3,8 +3,12 @@
 English · [Português](README.md)
 
 Created by: MBPaschoal
-Status: v0.8.28 released; public acceptance failed; authenticated reboot requested
+Status: v0.8.28 released; public acceptance still failed after owner-reported reboot
 Type: delivery evidence
+
+## Verification after the reported reboot
+
+The owner confirmed the reboot. Fresh public verification on 4 November UTC still failed all four contexts. Diagnosis captured 500/HTML responses for native Streamlit JavaScript/font resources and dynamic-import errors. Two files later returned normally and matched the local installation; the HTTP/1 comparison also failed. Root cause remains open without administrative logs. No code/data changed during this verification. [Subsequent results, screenshots and limits](post-reboot-20261104T011855Z/README.en.md). The records below describe the release and pre-reboot situation.
 
 The diagnostic rechecked the How it works cover. The browser decoded the app-served WebP with the catalogued MIME, dimensions and SHA. Relative `app/static/` works inside the Streamlit iframe; the photograph and layout did not need replacement. [Official documentation](https://docs.streamlit.io/develop/concepts/configuration/serving-static-files) describes this local-file delivery. [Observed image](before-r2/observed.png), [decoded pixels and responses](before-r2/diagnostic.json), [HTTP checks](static-http.json).
 
@@ -49,4 +53,4 @@ Full public acceptance **did not pass**: all four contexts from this machine and
 
 [Local public check](public-028/publication.json), [independent diagnosis](hosted-public-028/publication.json), [artifact chain of custody](hosted-artifact.json), [independent run](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41745235515). The diagnostic remained isolated on `codex/public-probe-network-20261104`, without changing main or the product; its evidence is preserved here beyond temporary artifact retention.
 
-The owner was asked to use **Manage app → Reboot app**, because the available public session has no authenticated administrative control. No reboot confirmation or post-reboot test has been assumed. After confirmation, repeat the 0.8.28 verifier into a new evidence directory. Câmara's canonical identity remains a separate pending item; his three illustrations are already approved.
+At initial delivery, the owner was asked to use **Manage app → Reboot app**, because the available public session has no authenticated administrative control. No confirmation or subsequent test was available then. The later confirmation and verification are recorded above, preserving these earlier failures. Câmara's canonical identity remains a separate pending item; his three illustrations are already approved.

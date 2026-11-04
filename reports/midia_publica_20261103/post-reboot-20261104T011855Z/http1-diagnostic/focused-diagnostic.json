@@ -1,0 +1,528 @@
+{
+  "start_utc": "2026-11-04T01:24:49.131Z",
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "type": "warning",
+      "text": "Unrecognized feature: 'ambient-light-sensor'."
+    },
+    {
+      "type": "warning",
+      "text": "Unrecognized feature: 'battery'."
+    },
+    {
+      "type": "warning",
+      "text": "Unrecognized feature: 'document-domain'."
+    },
+    {
+      "type": "warning",
+      "text": "Unrecognized feature: 'layout-animations'."
+    },
+    {
+      "type": "warning",
+      "text": "Unrecognized feature: 'legacy-image-formats'."
+    },
+    {
+      "type": "warning",
+      "text": "Unrecognized feature: 'oversized-images'."
+    },
+    {
+      "type": "warning",
+      "text": "Unrecognized feature: 'vr'."
+    },
+    {
+      "type": "warning",
+      "text": "Unrecognized feature: 'wake-lock'."
+    },
+    {
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 ()"
+    }
+  ],
+  "failures": [
+    {
+      "path": "/js/heap-.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "path": "/~/+/static/js/index.6xX1278W.js",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "resources": [
+    {
+      "path": "/embed/script.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/analytics.js/v1/GI7vYWHNmWwHbyFjBrvL0jOBA1TpZOXC/analytics.min.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/analytics-next/bundles/ajs-destination.bundle.40628baed746e9904edc.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "path": "/analytics-next/bundles/schemaFilter.bundle.a6a77355d52c20e3a83d.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "path": "/js/heap-.js",
+      "status": 301,
+      "type": "text/html"
+    },
+    {
+      "path": "/gtm.js",
+      "status": 200,
+      "type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "path": "/-/build/assets/snowflakeOAuth-DJsOf-uV.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/rolldown-runtime-CNC7AqOf.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/jsx-runtime-BtyjnKZj.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/error-BfS6M55g.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/SmallDivider-DuDZTfyp.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/popoverMenu-BlIhdTBl.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/usePythonVersions-OJMc8JOG.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/trim-yzKrW-as.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/tooltip-D2S4___1.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/emoji_u1f626-DA0aHyeW.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/icon_analytics-CE5MjYW7.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/errorDetails-BoeL7g8o.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/toFinite-BW9Ru4Ym.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/errorPage-j7qP-ucv.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/icon_github-CfLfIzZH.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/terminalContent-C2n1Mjw6.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/CarouselOfStreamlitExampleApp-WHt6QRj6.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/notFound-4fk-LevE.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/queryGithubRepository-DXxeIas3.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/icon_star_outline-DL_2fyLV.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/toNumber-D0RjNJYc.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/isEqual-Ctd7G7xk.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/login-CFFZ7Nsh.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/useUserDetails-YXenulOS.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/ProfilePagePreview-VBYqXefU.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/index.module-Bbot1wPI.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/streamlitAppContext-BB7rdvC6.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/iframe-PlC_b34Z.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/errorPage-CK-Jpwy3.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/streamlitAppPage-C9eLG_Fb.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/schemas-Iu3KQOQJ.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/CarouselOfStreamlitExampleApp-2FXfzJGp.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/appSettings-DA18COLj.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/icon_star_outline-DH69RDEi.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/replayStats-C6TwcZID.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/notFound-BzJWtTwJ.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/confirmationModal-BOsWCv_8.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/SmallDivider-BlS60Rb-.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/banner-DNTp_Roh.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/states-8om4j6Tx.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/login-CRVde-_5.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/index-CDJ3nEJ8.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/usePythonVersions-CBwCrTS9.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/appSettings-jOmLW4LG.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/CSSTransition-AnhMoI_S.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/icon_edit-DHRxkIDl.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/errorDetails-BDQowOym.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/analytics.js",
+      "status": 200,
+      "type": "text/javascript"
+    },
+    {
+      "path": "/-/build/assets/page-CSar2LvL.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/confirmationModal-BwNoJBuP.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/ProfilePagePreview-BWWUYPxS.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/banner-D2t2_Ovp.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/routes-CSGpNduz.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/useAppState-C67ktBD-.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/bufferedData-ymD0tp_Q.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/page-64Xl_BNC.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/useAppState-BjTUZpyD.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/popoverMenu-D49xGQkE.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/index-L1R9zUDf.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/states-C8aMn2Bd.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/cn-BZAAGw-p.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/esm-CXhqkufa.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/terminalContent-CGURstHr.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/js/heap-.js",
+      "status": 404,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/tooltip-DmtfnmdT.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/schemas-CsKhgDFl.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/draftBarLayout-Bpb6frd7.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/subdomain-CaQ_fr4L.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/subdomain-Dw7w9E7t.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/-/build/assets/source-sans-3-latin-wght-normal-BqRLTx4X.woff2",
+      "status": 200
+    },
+    {
+      "path": "/~/+/static/css/index.CIiu7Ygf.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "path": "/~/+/static/media/SourceSansVF-Upright.ttf.BsWL4Kly.woff2",
+      "status": 200,
+      "type": "application/octet-stream"
+    },
+    {
+      "path": "/~/+/static/js/index.6xX1278W.js",
+      "status": 500,
+      "type": "text/html; charset=utf-8"
+    }
+  ],
+  "samples": [
+    {
+      "utc": "2026-11-04T01:25:02.338Z",
+      "frame_found": true,
+      "language": "en",
+      "nav": 0,
+      "selects": 0,
+      "placeholders": 0,
+      "body_classes": ""
+    },
+    {
+      "utc": "2026-11-04T01:25:12.349Z",
+      "frame_found": true,
+      "language": "en",
+      "nav": 0,
+      "selects": 0,
+      "placeholders": 0,
+      "body_classes": ""
+    },
+    {
+      "utc": "2026-11-04T01:25:22.355Z",
+      "frame_found": true,
+      "language": "en",
+      "nav": 0,
+      "selects": 0,
+      "placeholders": 0,
+      "body_classes": ""
+    },
+    {
+      "utc": "2026-11-04T01:25:32.361Z",
+      "frame_found": true,
+      "language": "en",
+      "nav": 0,
+      "selects": 0,
+      "placeholders": 0,
+      "body_classes": ""
+    },
+    {
+      "utc": "2026-11-04T01:25:42.365Z",
+      "frame_found": true,
+      "language": "en",
+      "nav": 0,
+      "selects": 0,
+      "placeholders": 0,
+      "body_classes": ""
+    },
+    {
+      "utc": "2026-11-04T01:25:52.371Z",
+      "frame_found": true,
+      "language": "en",
+      "nav": 0,
+      "selects": 0,
+      "placeholders": 0,
+      "body_classes": ""
+    }
+  ],
+  "end_utc": "2026-11-04T01:25:52.413Z"
+}

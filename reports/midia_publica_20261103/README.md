@@ -3,8 +3,12 @@
 Português · [English](README.en.md)
 
 Created by: MBPaschoal
-Status: v0.8.28 released; public acceptance failed; authenticated reboot requested
+Status: v0.8.28 released; public acceptance still failed after owner-reported reboot
 Type: delivery evidence
+
+## Conferência após reinício informado
+
+O proprietário confirmou o reinício. A nova conferência pública de 04/11 UTC permaneceu reprovada nos quatro contextos. O diagnóstico capturou respostas 500/HTML de módulos JavaScript e fontes nativos do Streamlit, além de erros de importação dinâmica. Dois arquivos responderam normalmente depois e coincidem com a instalação local; a comparação HTTP/1 também falhou. A causa permanece aberta, sem acesso aos logs administrativos. Nenhum código/dado foi alterado nesta conferência. [Resultado posterior, capturas e limites](post-reboot-20261104T011855Z/README.md). Os registros abaixo descrevem a entrega e a situação anterior ao reboot.
 
 O diagnóstico reconferiu a capa de Como funciona. O navegador decodificou o WebP servido pelo aplicativo, com MIME, resolução e SHA iguais ao catálogo. O caminho relativo `app/static/` está correto dentro do iframe do Streamlit; não foi necessário trocar a foto ou o layout. A [documentação oficial](https://docs.streamlit.io/develop/concepts/configuration/serving-static-files) descreve essa forma de servir arquivos locais. [Imagem observada](before-r2/observed.png), [decodificação e respostas](before-r2/diagnostic.json), [conferência HTTP](static-http.json).
 
@@ -49,4 +53,4 @@ O aceite público completo **não passou**: os quatro contextos deste computador
 
 [Conferência pública local](public-028/publication.json), [diagnóstico independente](hosted-public-028/publication.json), [cadeia de integridade do artefato](hosted-artifact.json), [execução independente](https://github.com/mbpaschoal/pitwall-lab/actions/runs/41745235515). Esse diagnóstico ficou isolado em `codex/public-probe-network-20261104`, sem mudar main ou o produto; seus arquivos de evidência estão preservados neste relatório, além do artefato temporário.
 
-Foi solicitado ao proprietário **Manage app → Reboot app**, pois a sessão pública disponível não oferece o controle administrativo autenticado. Não há confirmação de reinício nem teste posterior a ele. Esse é o próximo passo operacional; após a confirmação, repetir o verificador 0.8.28 em pasta nova, preservando estas falhas. A identificação canônica de Câmara continua sendo uma pendência separada; suas três artes já estão aprovadas.
+Na entrega inicial, foi solicitado ao proprietário **Manage app → Reboot app**, pois a sessão pública disponível não oferece o controle administrativo autenticado. Naquele momento ainda não havia confirmação ou teste posterior. A confirmação e a conferência subsequentes estão no relatório acima, preservando estas falhas. A identificação canônica de Câmara continua sendo uma pendência separada; suas três artes já estão aprovadas.
