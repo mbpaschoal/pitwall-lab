@@ -22,6 +22,8 @@ Gitleaks examinou 133 commits e encontrou cinco falsos positivos verificados: du
 
 2FA já configurado com aplicativo autenticador e GitHub Mobile; proprietário único, sem chaves de deploy nem secrets adicionais de Actions. Nenhuma passkey nova foi criada. Não foi configurado backup independente nem testada sua restauração. Veja [controles e limites](../../docs/SEGURANCA.md).
 
+O primeiro CI hospedado encontrou changelogs do pacote fora de sincronia e incompatibilidades de popovers no Linux. O pacote foi regenerado, o seletor legado passou a ocultar somente o indicador de rádio e o teste fecha o diálogo com Escape; quatro casos de menu e quatro de filtros/idioma foram reconferidos. As execuções iniciais continuam preservadas no histórico do PR.
+
 CI hospedado, merge, release e verificação do dashboard público têm evidências próprias posteriores; os testes locais acima não comprovam implantação. Consulte o histórico de PRs/Actions e o recibo final da sessão para o estado de publicação.
 
 ## English

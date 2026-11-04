@@ -1,0 +1,39 @@
+{
+  "engine": "chromium",
+  "base": "http://127.0.0.1:8524",
+  "cases": [
+    {
+      "id": "chromium-390-pt-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-390-en-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-pt-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    },
+    {
+      "id": "chromium-1440-en-filter-language-chips",
+      "minimum_updated": 10,
+      "language_retained_filter": true,
+      "chips_retained_gp": true,
+      "reset_retained_gp": true,
+      "status": "passed"
+    }
+  ],
+  "expectedVersion": "0.8.30"
+}

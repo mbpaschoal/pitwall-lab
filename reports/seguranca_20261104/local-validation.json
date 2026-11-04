@@ -33,5 +33,10 @@
       "focus_preserved": true,
       "native_controls_restored": true
     }
+  },
+  "popover_compatibility": {
+    "menu_visibility_cases": 4,
+    "filter_language_cases": 4,
+    "all_passed": true
   }
 }
