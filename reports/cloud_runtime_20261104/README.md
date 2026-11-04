@@ -29,6 +29,8 @@ O verificador público v2 registra modo nativo/link/misto, exige controles utili
 
 ## Limite local e entrega
 
+No primeiro CI da branch, passaram 405 testes de código, 144 do pacote reconstruído, nove contraprovas, os quatro contextos bloqueados e o ensaio completo do novo verificador. O core parou depois em um teste antigo: seu seletor textual encontrou o controle nativo visível e o link alternativo oculto. Os dois testes afetados passam a selecionar o controle visível, sem retirar a verificação de clique/GP. O foco também mantém o controle substituído fora da leitura assistiva durante a transição. [Primeiro CI e falha preservada](ci-first-attempt.json). A branch precisa passar novamente antes de main.
+
 A suíte local ampla encontrou ENOSPC ao copiar fixtures temporárias: 94 testes executados, 39 erros de ambiente. A suíte portátil também foi interrompida por falta de espaço. Isso não é aprovação dessas suítes. [Limitação](local-limitations.json), [saída portátil](package-validation.txt). O pacote anterior e os artefatos originais foram preservados. O candidato local usa cópia por escrita e a receita canônica inalterada; não gerou outro ZIP local. [Materialização](candidate-materialization.json), [receita final](candidate-final.json).
 
 O CI completo passa a rodar em `codex/**` antes de main e mantém os 12 aceites anteriores, acrescentando a suíte de resiliência. Deve reconstruir o pacote pelo exportador canônico, conferir os 481 arquivos e executar as suítes Python/portátil/navegador em Python 3.12 antes da publicação. Release e novo aceite público terão recibos próprios. Dados, modelo v1, probabilidades e fontes originais não foram alterados.

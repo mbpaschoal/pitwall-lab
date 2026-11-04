@@ -1,0 +1,59 @@
+{
+  "run": 41761874865,
+  "head": "387488505310dbf21476e4f8c345ca34033043af",
+  "validate_job": 126351183788,
+  "source_groups": [
+    78,
+    18,
+    17,
+    292
+  ],
+  "package_groups": [
+    4,
+    2,
+    2,
+    3,
+    3,
+    33,
+    15,
+    6,
+    10,
+    3,
+    9,
+    5,
+    2,
+    5,
+    16,
+    20,
+    6
+  ],
+  "core_job": 126351183533,
+  "core_status": "failed",
+  "reason": "An old text-only selector matched a visible native label and a hidden link alternative. The revised test targets the visible control; underlying UI checks remain unchanged.",
+  "failure": [
+    "2026-11-04T02:42:33.1180443Z locator.click: Error: strict mode violation: locator('.st-key-journey-navigation').getByText('Campeonato', { exact: true }) resolved to 2 elements:",
+    "2026-11-04T02:42:33.1182834Z     1) <p>Campeonato</p> aka getByTestId('stRadio').getByText('Campeonato')",
+    "2026-11-04T02:42:33.1183772Z     2) <span>Campeonato</span> aka getByLabel('Navegação principal').getByText('Campeonato')",
+    "2026-11-04T02:42:33.1184194Z ",
+    "2026-11-04T02:42:33.1184296Z Call log:",
+    "2026-11-04T02:42:33.1184940Z   - waiting for locator('.st-key-journey-navigation').getByText('Campeonato', { exact: true })",
+    "2026-11-04T02:42:33.1185372Z ",
+    "2026-11-04T02:42:33.1185795Z     at /home/runner/work/pitwall-lab/pitwall-lab/tests/browser/aceite_exploracao.cjs:179:50 {",
+    "2026-11-04T02:42:33.1186309Z   log: [",
+    "2026-11-04T02:42:33.1186833Z     \"  - waiting for locator('.st-key-journey-navigation').getByText('Campeonato', { exact: true })\"",
+    "2026-11-04T02:42:33.1187312Z   ]",
+    "2026-11-04T02:42:33.1187468Z }",
+    "2026-11-04T02:42:33.1504610Z ##[error]Process completed with exit code 1."
+  ],
+  "passing_before_failure": [
+    "nine counterexamples",
+    "four blocked contexts with six destinations and language switching",
+    "late hydration",
+    "four full publication rehearsals"
+  ],
+  "artifact": {
+    "id": 13291476283,
+    "sha256": "7c3501239dd3d54b668c6b0be4a9fb467471a74afb7f44c7ad17c00c2c63e45c",
+    "bytes": 11409653
+  }
+}

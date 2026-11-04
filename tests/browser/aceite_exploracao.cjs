@@ -176,7 +176,7 @@ fs.mkdirSync(output, {recursive:true});
  p=await open(journey,'tela=Corridas&temporada=2026&gp=18&lang=pt','United States Grand Prix');
  const dock=p.locator('.st-key-journey-navigation');
  check(await dock.locator('[role="radiogroup"] > label').count()===6,'Missing journey destinations');
- await dock.getByText('Campeonato',{exact:true}).click();
+ await dock.getByText('Campeonato',{exact:true}).filter({visible:true}).click();
  await p.getByRole('heading',{name:'Campeonato de pilotos 2026',level:1,exact:true}).waitFor();
  check(new URL(p.url()).searchParams.get('gp')==='18','Dock lost GP');
  await p.screenshot({path:path.join(output,'journey-championship.png')});

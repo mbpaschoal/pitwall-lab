@@ -259,6 +259,7 @@
 .journey-navigation-fallback>a:focus-visible{outline:2px solid var(--pw-red);outline-offset:-3px}
 .st-key-journey-navigation:has([role="radiogroup"]>label:nth-child(6)):not(:has(.journey-navigation-fallback:focus-within)) .stElementContainer:has(.journey-navigation-fallback){display:none}
 .st-key-journey-navigation:not(:has([role="radiogroup"]>label:nth-child(6))) .st-key-tela,.st-key-journey-navigation:has(.journey-navigation-fallback:focus-within) .st-key-tela{position:absolute;inset:0;opacity:0;pointer-events:none}
+.st-key-journey-navigation:has(.journey-navigation-fallback:focus-within) .st-key-tela{visibility:hidden}
 .st-key-journey-navigation:has(.journey-navigation-fallback):not(:has([role="radiogroup"]>label:nth-child(6))) .st-key-tela [role="alert"]{display:none}
 [class*="st-key-pw_language_cell_"]{position:relative;gap:0;min-height:50px}
 .stElementContainer:has(.pw-language-fallback) [data-testid="stMarkdownContainer"] p{margin:0}
@@ -267,6 +268,7 @@
 .pw-language-fallback:focus-visible{outline:2px solid var(--pw-red);outline-offset:2px}
 [class*="st-key-pw_language_cell_"]:has(button):not(:has(.pw-language-fallback:focus)) .stElementContainer:has(.pw-language-fallback){display:none}
 [class*="st-key-pw_language_cell_"]:not(:has(button)) [class*="st-key-pw_language_button_"],[class*="st-key-pw_language_cell_"]:has(.pw-language-fallback:focus) [class*="st-key-pw_language_button_"]{position:absolute;inset:0;opacity:0;pointer-events:none}
+[class*="st-key-pw_language_cell_"]:has(.pw-language-fallback:focus) [class*="st-key-pw_language_button_"]{visibility:hidden}
 [class*="st-key-pw_language_cell_"]:has(.pw-language-fallback):not(:has(button)) [class*="st-key-pw_language_button_"] [role="alert"]{display:none}
 @media(hover:hover){.journey-navigation-fallback>a:hover,.stApp a.pw-language-fallback:hover{background-color:#dce5ef}}
 @media(max-width:600px){

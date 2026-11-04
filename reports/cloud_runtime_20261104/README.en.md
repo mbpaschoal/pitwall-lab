@@ -29,6 +29,8 @@ Public verifier v2 records native/link/mixed modes, requires usable controls, cl
 
 ## Local limit and delivery
 
+First branch CI passed 405 source tests, 144 rebuilt-package tests, nine counterexamples, four blocked contexts and the complete new-verifier rehearsal. Core then stopped in an older test whose text selector matched both a visible native control and a hidden alternative link. Both affected tests now target the visible control without removing click/GP checks. Focus handling also keeps the replaced control outside assistive reading during handoff. [Preserved first CI failure](ci-first-attempt.json). The branch must pass again before main.
+
 The broader local suite hit ENOSPC while copying temporary fixtures: 94 tests ran with 39 environment errors. The portable suite also stopped on disk capacity. Neither suite is claimed passing locally. [Limitation](local-limitations.json), [portable output](package-validation.txt). Earlier packages and original artifacts remain preserved. The local candidate uses copy-on-write storage and the unchanged canonical recipe without another local ZIP. [Materialization](candidate-materialization.json), [final recipe](candidate-final.json).
 
 Complete CI now runs on `codex/**` before main, retaining all previous 12 acceptance suites and adding resilience. It must reconstruct the package with the canonical exporter, compare all 481 files and run source/portable/browser suites in Python 3.12 before publication. Release and fresh public acceptance require separate receipts. Data, frozen v1, probabilities and original sources remain unchanged.
