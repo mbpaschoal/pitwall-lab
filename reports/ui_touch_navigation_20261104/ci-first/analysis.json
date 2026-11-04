@@ -1,0 +1,12 @@
+{
+  "run_id": 41831564137,
+  "job_id": 126579767817,
+  "commit": "00ece93b555951cb5362d7a57ef7dbdbea40e082",
+  "status": "failed",
+  "message": "Stale Max starts",
+  "actual_metric_not_reported_by_initial_test": true,
+  "retained_partial_receipt": "acceptance.json",
+  "partial_receipt_limit": "The initial test wrote passed after each individual case; that receipt contains only the first successful case and does not establish suite acceptance.",
+  "local_original_reproduction": "passed",
+  "change": "Wait for the exact source count without accepting another value, and record failed/in-progress suite status and observed metrics."
+}

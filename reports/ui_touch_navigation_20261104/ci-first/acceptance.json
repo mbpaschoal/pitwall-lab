@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "lang": "pt",
+      "mobile": false,
+      "version": "0.8.31",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "download_reruns": 0,
+      "svg_language": "pt",
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "À frente do rival15",
+        "Taxa de vitórias15,8%",
+        "À frente do rival3",
+        "Taxa de vitórias0,0%"
+      ],
+      "status": "passed"
+    }
+  ]
+}

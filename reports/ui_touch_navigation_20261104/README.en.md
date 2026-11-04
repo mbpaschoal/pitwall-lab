@@ -21,6 +21,8 @@ The preceding public audit recommended larger flag targets and an unambiguous se
 
 ## Retained failures and learning
 
+The first branch CI failed in `aceite_pilotos_atualizacao.cjs`, reporting “Stale Max starts” in the English profile. The original routine passed all four local contexts; the remote failure did not record the value read. Reading during a DOM update remains an inference. Acceptance now waits for the exact source start count without admitting any other value, and records metrics/identity on failure. Partial receipts now distinguish an in-progress run, failure and success of all four cases. [Initial failure and evidence](ci-first/analysis.json). The adjusted routine passed all four local contexts. A [counterexample](starts-counterexample.json) required 68 starts when both source and page contain 67: the incorrect value was rejected and a failed receipt was recorded.
+
 The initial mobile test found that a tap very close to one flag's edge activated its neighbour. Increasing width alone was insufficient; the same failure persisted with `touch-action: manipulation` and an 8 px gap. The probe compared larger gaps and targeting the whole button; the compact solution applies `pointer-events: none` to button descendants while keeping the button interactive and its accessible name intact. Both engines subsequently passed the original sequence of edge taps. Initial evidence and probes remain in this folder. This records observed behaviour without asserting an unproven hosting cause.
 
 The first local package synchronisation allowlist omitted the two navigation documents and correctly stopped before copying anything. It was corrected to the eight expected canonical files; no exporter protection was removed.

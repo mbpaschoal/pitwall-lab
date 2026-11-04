@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "deliberately_incorrect_expected_starts": 68,
+  "actual_source_starts": 67,
+  "incorrect_count_rejected": true,
+  "failed_receipt_recorded": true,
+  "observed": {
+    "language": "pt",
+    "query": "?tela=Pilotos&visao=perfil&anos=2024%2C2025%2C2026&metrica=win_rate&minimo=5&lang=pt&condicao=rain&faixas=rain%2Ctrack_hot%2Cccw%2Cmany_corners%2Chigh_altitude%2Ctrack_cold&temporada=2026&gp=19&piloto=max_verstappen",
+    "titles": [
+      "Max Verstappen"
+    ],
+    "metrics": [
+      "67",
+      "20",
+      "40"
+    ],
+    "script_state": "notRunning"
+  }
+}
