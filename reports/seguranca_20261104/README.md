@@ -6,7 +6,7 @@ Type: security delivery evidence
 
 ## Português
 
-Entrega 0.8.30 preparada em clone independente do GitHub. A cópia de autoria foi preservada; apresentou índices Git inválidos após a falta de espaço, e não foi reparada nem resetada nesta tarefa. O `.gitignore` de autoria também recebeu a exclusão de `.streamlit/secrets.toml`.
+Entrega 0.8.30 preparada em clone independente do GitHub. A cópia de autoria foi preservada; apresentou índices Git inválidos após a falta de espaço, e não foi reparada nem resetada nesta tarefa. Arquivos da árvore de autoria passaram a retornar zero bytes na verificação, incluindo Home, README, VERSION e arquivos Git. A causa não foi determinada; essa árvore não foi recuperada nem deve ser considerada corrigida. A exclusão de `.streamlit/secrets.toml` está implementada no clone independente/publicação.
 
 O GitHub CLI oficial 2.103.3 foi conferido pelo checksum e autenticado como `mbpaschoal`, com credencial no chaveiro do macOS. `gh-secure` foi inspecionado e instalado na revisão `a04d1c144f5d1b63a8aa5cd7946e8ceafa709a2a`. Não foram registrados códigos, tokens, callbacks, cookies ou códigos de recuperação.
 
@@ -28,7 +28,7 @@ CI hospedado, merge, release e verificação do dashboard público têm evidênc
 
 ## English
 
-Release 0.8.30 was prepared in an independent GitHub clone. The authoring checkout was preserved and not reset/repaired after invalid Git indexes appeared following disk exhaustion. Its `.gitignore` now also excludes Streamlit secrets.
+Release 0.8.30 was prepared in an independent GitHub clone. The authoring checkout was preserved and not reset/repaired after invalid Git indexes appeared following disk exhaustion. Existing authoring files returned zero bytes; their cause and recovery remain unresolved. Streamlit-secret exclusion is implemented in the independent/published checkout, not established for the invalid authoring tree.
 
 The official CLI was checksum-verified; the reviewed gh-secure revision is pinned. Tokens remain in the macOS keychain and are not recorded. Workflows use pinned Actions, non-persistent checkout credentials, read-only default permissions and explicitly scoped privileged jobs. Reusable/daily security checks audit workflow trust boundaries, both dependency stacks and Git history. Dependabot never automatically changes the frozen scientific recipe.
 
