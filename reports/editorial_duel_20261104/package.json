@@ -1,22 +1,18 @@
 {
   "version": "0.10.0",
-  "build": "308454669a6b610c7bd3584b819174530f88d715eaeffa45532c1d35c001bd30",
+  "build": "db13ebecfd958c9479fee8963768b5a3f799d194c500d2fe9fd951801763b9c9",
   "baseline": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
   "members_verified": 483,
-  "zip_bytes": 665875637,
-  "zip_sha256": "dda12e4ae21f06ba675c228420f720333d3693a781429ec3f1592811cb1ac648",
-  "canonical_changes": [
+  "zip_bytes": 665875807,
+  "zip_sha256": "8126e9663e4ae5e9e1d89e47a8785b48cddc2d0c52f75466943ea17fbfbdbfae",
+  "canonical_changes_from_previous_candidate": [
     "MANIFESTO.json",
-    "requirements.txt",
     "CHANGELOG.md",
-    "VERSION",
     "CHANGELOG.en.md",
     "docs/JORNADA_DO_FA.md",
     "frontend_assets/journey.css",
-    "docs/en/FAN_JOURNEY.md",
-    "pitwall/dashboard/pilot_views.py",
-    "pitwall/i18n/en.json"
+    "docs/en/FAN_JOURNEY.md"
   ],
-  "previous_package": "/private/tmp/pitwall-editorial-before-0100",
-  "package": "/private/tmp/pitwall-editorial-0100-final/pitwall-dashboard"
+  "previous_candidate": "/private/tmp/pitwall-editorial-before-reflow-0100",
+  "package": "/private/tmp/pitwall-editorial-0100-release/pitwall-dashboard"
 }

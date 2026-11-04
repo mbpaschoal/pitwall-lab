@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "308454669a6b610c7bd3584b819174530f88d715eaeffa45532c1d35c001bd30",
+  "apresentacao_build_sha256": "db13ebecfd958c9479fee8963768b5a3f799d194c500d2fe9fd951801763b9c9",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "95c4e2219251ee5bbf07ac5db822bf24fc281c237f0ac47c972db5bc3b032255",
-      "sha256_origem": "f7e821bb5bcf3c7e24248be0479044101a1fe3be994c1ff41c53965158a8bf29"
+      "sha256_destino": "a05b8157021815fee923c13b822ab50af3cd1a85b982078c49eb6a2eb350cd38",
+      "sha256_origem": "be451af787924c0fec0946882214e12e36db4589037890204ab0f20ce5b770b5"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "cf6bc2e19316429c3e581b6ac1ef02897938b33c767a4ed5efe948605c71e787",
-      "sha256_origem": "61b66e2aa1598f10ffb8e7aa9e59daa2ae1068d5a6ee8391055b59f1ed769a0a"
+      "sha256_destino": "9a0b1dafe73892aa5c0cc4e1ec11250321784677a95d0c7547c031b4853296f1",
+      "sha256_origem": "b150c2f87a2da8aeb0b0ed41d18ba617f097ec286489e0fc094ef5130cb32a76"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2492,8 +2492,8 @@
       "caminho": "docs/JORNADA_DO_FA.md",
       "fonte": "docs/JORNADA_DO_FA.md",
       "modo": "copia",
-      "sha256_destino": "27677155c42e9f354369f2250cc871fce5e79b5cfb2d8a9ae76fc2db8203b3ab",
-      "sha256_origem": "27677155c42e9f354369f2250cc871fce5e79b5cfb2d8a9ae76fc2db8203b3ab"
+      "sha256_destino": "97ba132346fcfa8aad573707af5c0fed961d28df256fc415d4e20a33429a2a9b",
+      "sha256_origem": "97ba132346fcfa8aad573707af5c0fed961d28df256fc415d4e20a33429a2a9b"
     },
     {
       "caminho": "docs/OPERACAO_FIM_SEMANA.md",
@@ -2548,8 +2548,8 @@
       "caminho": "docs/en/FAN_JOURNEY.md",
       "fonte": "docs/en/FAN_JOURNEY.md",
       "modo": "copia",
-      "sha256_destino": "940a44eec5b003d9a2234088943874960dd549a3d06d044880ff1d5b351f1bf1",
-      "sha256_origem": "940a44eec5b003d9a2234088943874960dd549a3d06d044880ff1d5b351f1bf1"
+      "sha256_destino": "f0571b99c7041d22a2105afdce6eb5574a2445bc3336a12457de50ecbf325c55",
+      "sha256_origem": "f0571b99c7041d22a2105afdce6eb5574a2445bc3336a12457de50ecbf325c55"
     },
     {
       "caminho": "docs/en/REVIEW_030.md",
@@ -2711,8 +2711,8 @@
       "caminho": "frontend_assets/journey.css",
       "fonte": "frontend_assets/journey.css",
       "modo": "copia",
-      "sha256_destino": "a26d3b888358a94addc77374502a7eddbc50cad3713d4b899d4c7faf21e95dfd",
-      "sha256_origem": "a26d3b888358a94addc77374502a7eddbc50cad3713d4b899d4c7faf21e95dfd"
+      "sha256_destino": "f233c34e677f47027a66ea1ca0387db25816bf03e11f8b74a5c0336a7da4b3c1",
+      "sha256_origem": "f233c34e677f47027a66ea1ca0387db25816bf03e11f8b74a5c0336a7da4b3c1"
     },
     {
       "caminho": "frontend_assets/motion.js",

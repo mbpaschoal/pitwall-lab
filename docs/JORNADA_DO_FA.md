@@ -45,7 +45,7 @@ O [relatório de aceite local](../reports/ui_ux_pro_max_20261101/implementacao/r
 
 A composição mantém a paleta e a tipografia aprovadas, com contornos discretos, títulos equilibrados, números tabulares e acompanhamento de fontes agrupado. As respostas de abas, condições e expansores são curtas e respeitam a preferência de movimento reduzido.
 
-No Duelo, retratos e métricas ficam lado a lado também no celular. A faixa de diferença acompanha a métrica, o período e a condição selecionados: taxas são comparadas em pontos percentuais; contagens, em números inteiros. Empate e amostra abaixo do mínimo permanecem explícitos. O placar de posições continua independente dessa diferença. Largadas em comum, resultados comparáveis e evidências ficam disponíveis, sem alteração nos dados ou nas probabilidades registradas.
+No Duelo, retratos e métricas ficam lado a lado quando há espaço, inclusive no celular. Em largura muito estreita ou com texto ampliado, os painéis passam a uma coluna para preservar a leitura. A faixa de diferença acompanha a métrica, o período e a condição selecionados: taxas são comparadas em pontos percentuais; contagens, em números inteiros. Empate e amostra abaixo do mínimo permanecem explícitos. O placar de posições continua independente dessa diferença. Largadas em comum, resultados comparáveis e evidências ficam disponíveis, sem alteração nos dados ou nas probabilidades registradas.
 
 ## Abrir as cartas
 

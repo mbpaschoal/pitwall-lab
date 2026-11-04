@@ -96,6 +96,19 @@ async function select(app, key, name) {
         assert(Math.abs(boxes[0].y - boxes[1].y) < 1.5 && boxes[0].right < boxes[1].x, 'Portraits must share a row without overlap');
         await app.locator('.st-key-duel-stage').scrollIntoViewIfNeeded();
         await page.screenshot({path: path.join(output, `${width}-${lang}-duel.jpg`), type: 'jpeg', quality: 80});
+        if (width === 390) {
+          // A narrow viewport and larger user text must reflow the comparison.
+          await page.setViewportSize({width: 320, height: 1000});
+          await app.evaluate(() => document.documentElement.style.fontSize = '200%');
+          const reflow = await driverHeaders.evaluateAll(items => items.map(e => {const r = e.getBoundingClientRect(); return {x: r.x, y: r.y, bottom: r.bottom};}));
+          assert(reflow[1].y >= reflow[0].bottom && Math.abs(reflow[0].x - reflow[1].x) < 1.5, 'Larger text in a narrow viewport must stack the driver panels');
+          assert(!await app.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), 'Larger text must not overflow');
+          await app.locator('.fan-duel-driver').first().scrollIntoViewIfNeeded();
+          await page.screenshot({path: path.join(output, `${width}-${lang}-text2x.jpg`), type: 'jpeg', quality: 80});
+          await app.evaluate(() => document.documentElement.style.removeProperty('font-size'));
+          await page.setViewportSize({width, height: 1000});
+          row.text_enlargement = 'passed';
+        }
         await select(app, 'duel_condition', tr('Com chuva registrada'));
         app = await ready(page, lang, {duelo_condicao: 'rain'});
         await compare(app, 'rain', 'win_rate', 5);

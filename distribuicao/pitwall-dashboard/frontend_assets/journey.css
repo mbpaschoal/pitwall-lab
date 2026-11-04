@@ -624,8 +624,8 @@ html[data-pw-reduced-motion="true"] .stMain{scroll-behavior:auto}
 .st-key-duel-stage [data-testid="stMetric"]{background:transparent;border:0;border-radius:0;box-shadow:none;padding:8px 0}
 .st-key-duel-stage [data-testid="stMetricLabel"] p{white-space:normal;font-size:14px}
 .fan-duel-difference{padding:14px 16px;border:1px solid var(--fan-line);border-radius:7px;background:#eef5ff;display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 16px}
-.fan-duel-difference>span{font:400 13px/1.5 LatoLocal,Arial,sans-serif;color:var(--pw-muted)}
-.fan-duel-difference>strong{font:700 16px/1.5 LatoLocal,Arial,sans-serif;color:var(--fan-ink);overflow-wrap:anywhere}
+.fan-duel-difference>span{font:400 .8125rem/1.5 LatoLocal,Arial,sans-serif;color:var(--pw-muted)}
+.fan-duel-difference>strong{font:700 1rem/1.5 LatoLocal,Arial,sans-serif;color:var(--fan-ink);overflow-wrap:anywhere}
 .fan-duel-difference[data-state="insufficient"]{background:#f6f8fb}
 html:not([data-pw-reduced-motion="true"]) .fan-duel-difference{animation:pw-duel-feedback var(--pw-response-duration) ease-out}
 @keyframes pw-duel-feedback{from{background-color:#dceaff}to{background-color:#eef5ff}}
@@ -639,14 +639,14 @@ html:not([data-pw-reduced-motion="true"]) .fan-duel-difference{animation:pw-duel
 @media(max-width:600px){
  .st-key-weekend-status{grid-template-columns:minmax(0,1fr);gap:0;padding:8px 10px}
  .st-key-duel-stage{padding:10px}
- .st-key-duel-stage>[data-testid="stHorizontalBlock"],.st-key-duel-stage>[data-testid="stLayoutWrapper"]>[data-testid="stHorizontalBlock"]{gap:10px}
+ .st-key-duel-stage>[data-testid="stHorizontalBlock"],.st-key-duel-stage>[data-testid="stLayoutWrapper"]>[data-testid="stHorizontalBlock"]{gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,8.5rem),1fr))}
  .st-key-duel-left,.st-key-duel-right{padding:10px}
  .fan-duel-driver{flex-direction:column;gap:8px;align-items:flex-start;min-height:148px}
  .fan-duel-driver .fan-portrait,.fan-duel-driver .fan-avatar-fallback{width:70px;height:80px;flex:0 0 80px;align-self:center}
- .stApp .fan-duel-driver h2{font-size:20px;line-height:1.15;min-height:2.3em}
- .st-key-duel-stage [data-testid="stMetricValue"]{font-size:26px}
- .st-key-duel-stage [data-testid="stMetricLabel"] p{font-size:12px}
+ .stApp .fan-duel-driver h2{font-size:1.25rem;line-height:1.2;min-height:2.4em}
+ .st-key-duel-stage [data-testid="stMetricValue"]{font-size:1.625rem}
+ .st-key-duel-stage [data-testid="stMetricLabel"] p{font-size:.75rem}
  .fan-duel-difference{padding:10px 12px;gap:2px}
- .fan-duel-difference>strong{font-size:14px}
+ .fan-duel-difference>strong{font-size:.875rem}
 }
 @media(prefers-reduced-motion:reduce){.fan-duel-difference{animation:none!important}.fan-gp-tabs a,.fan-condition-chips a,[data-testid="stExpander"] summary,.st-key-duel-controls [role="combobox"]{transition:none!important}}

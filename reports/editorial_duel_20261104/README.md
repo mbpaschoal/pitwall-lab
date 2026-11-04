@@ -10,8 +10,8 @@ Primeira etapa da evolução aprovada: acabamento visual, respostas aos comandos
 
 ## Evidência local
 
-- 78 testes focais e 146 portáteis: aprovados. [Log focal](focused-final.txt), [log portátil](portable-final.txt).
-- [Chromium](package-chromium/editorial.json) e [WebKit](package-webkit/editorial.json): quatro contextos cada, PT/EN em 390/1440 CSS px. Mudança real de condição/métrica, denominadores, mínimo, ausência, duas trocas de idioma e movimento reduzido manual/pelo sistema. O oráculo conta diretamente os resultados-fonte.
+- 78 testes focais e 146 portáteis: aprovados. [Log focal](focused-final.txt), [log portátil](portable-release.txt).
+- [Chromium](release-chromium/editorial.json) e [WebKit](release-webkit/editorial.json): quatro contextos cada, PT/EN em 390/1440 CSS px. Mudança real de condição/métrica, denominadores, mínimo, ausência, duas trocas de idioma, reflow em 320 px com fonte ampliada e movimento reduzido manual/pelo sistema. O oráculo conta diretamente os resultados-fonte.
 - 24 casos de controles no WebKit: [recibo](controls-webkit/controls.json). As varreduras de rolagem dos dois motores examinam as seis telas, cinco posições de rolagem e situações de texto ampliado/janela curta; zero problemas registrados.
 - [Pacote e ZIP](package.json): 483 membros verificados individualmente, versão e build identificados. Pacote anterior preservado fora do checkout; substituição canônica restrita aos dez arquivos esperados.
 - [Preservação](preservation.json): 373 caminhos científicos, de dados e de operação sem alteração. O [inventário original](protected-before.json) inclui também o manifesto gerado e o catálogo EN da distribuição, cuja alteração de apresentação é explicitamente permitida. Baseline científico mantido.
@@ -20,6 +20,8 @@ Primeira etapa da evolução aprovada: acabamento visual, respostas aos comandos
 ## Falhas de ferramentas preservadas
 
 A primeira geração de recibo tentou usar `hashlib.file_digest` no Python 3.9 padrão e falhou depois de copiar e comparar os membros do pacote. A conferência foi refeita no ambiente de apresentação Python 3.12 existente. [Registro](sync-receipt-first-failure.txt). A primeira comparação ampla do inventário JSON também sinalizou os dois arquivos de apresentação esperados; o inventário original permanece intacto, e a exceção final admite somente os dois caminhos explícitos. [Registro](preservation-check-first.txt).
+
+A sonda exploratória de nomes longos comparava glifos com sua própria caixa de linha e produziu falsos positivos de corte. [Diagnóstico preservado](duel-stress/README.md). A inspeção mostrou uma oportunidade de leitura: os painéis agora passam a uma coluna em largura estreita ou com texto ampliado. A condição está no aceite canônico e passou nos dois motores. Os dois primeiros CIs foram cancelados para testar a revisão com esse reflow; cancelamento não é aprovação.
 
 ## Publicação
 

@@ -4,7 +4,7 @@
 
 Refines the Fan journey while preserving the light-blue, white, navy and red palette, Abril Fatface/Lato and documented photographs. Panels gain consistent outlines and spacing, aligned numbers and balanced headings. Source tracking is grouped into a compact visual band while retaining dates, states and links. Chapters, condition links and expanders provide subtle command feedback, visible focus and reduced-motion support.
 
-Head to head now shows both portraits side by side, grouped selectors and the difference in the selected metric. Rates use percentage points; counts use integers. Ties and samples below the chosen minimum have explicit states without turning missing values into zero. Period, shared starts, comparable results and evidence remain available. Historical aggregates, frozen model v1, recorded probabilities and source data are unchanged. Local browser, package, CI and served-version evidence are recorded separately.
+Head to head now shows both portraits side by side, grouped selectors and the difference in the selected metric. Very narrow layouts or larger text reflow the comparison into one column. Rates use percentage points; counts use integers. Ties and samples below the chosen minimum have explicit states without turning missing values into zero. Period, shared starts, comparable results and evidence remain available. Historical aggregates, frozen model v1, recorded probabilities and source data are unchanged. Local browser, package, CI and served-version evidence are recorded separately.
 
 ## 0.9.2 — 2026-11-04
 
