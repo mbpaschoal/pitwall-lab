@@ -71,10 +71,17 @@ async function select(app, key, name) {
       async function compare(app, condition, metric, minimum) {
         const expected = oracle(condition, metric), difference = app.locator('.fan-duel-difference');
         const state = expected.n < minimum ? 'insufficient' : Math.abs(expected.values[0] - expected.values[1]) < 1e-12 ? 'tied' : expected.values[0] > expected.values[1] ? 'left' : 'right';
+        // Markdown can finish before off-screen native Metric modules hydrate.
+        await app.locator('.st-key-duel-stage').scrollIntoViewIfNeeded();
         await app.waitForFunction(({metric, state}) => {
           const e = document.querySelector('.fan-duel-difference');
           return e?.dataset.metric === metric && e?.dataset.state === state;
         }, {metric, state}, {timeout: 30000});
+        const values = expected.values.map(value => expected.n < minimum ? '—' : metric.endsWith('rate') ? (100 * value).toFixed(1).replace('.', lang === 'pt' ? ',' : '.') + '%' : String(value));
+        await app.waitForFunction(values => ['left', 'right'].every((side, i) => {
+          const metrics = document.querySelectorAll('.st-key-duel-' + side + ' [data-testid=stMetricValue]');
+          return metrics.length === 2 && metrics[1].textContent.trim() === values[i];
+        }), values, {timeout: 30000});
         const text = await difference.innerText();
         if (state !== 'insufficient' && state !== 'tied') {
           const amount = Math.abs(expected.values[0] - expected.values[1]) * (metric.endsWith('rate') ? 100 : 1);

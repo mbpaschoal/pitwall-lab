@@ -1,0 +1,245 @@
+{
+  "version": "0.10.0",
+  "engine": "webkit",
+  "base": "http://127.0.0.1:8536",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "checks": [
+        {
+          "condition": "all",
+          "metric": "win_rate",
+          "minimum": 5,
+          "n": 18,
+          "values": [
+            0.16666666666666666,
+            0.1111111111111111
+          ],
+          "comparable": 18,
+          "state": "left",
+          "text": "Diferença no recorte\nMax Verstappen tem 5,6 pontos percentuais a mais nesta métrica."
+        },
+        {
+          "condition": "rain",
+          "metric": "win_rate",
+          "minimum": 5,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Diferença no recorte\nAmostra abaixo do mínimo escolhido."
+        },
+        {
+          "condition": "rain",
+          "metric": "podiums",
+          "minimum": 5,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Diferença no recorte\nAmostra abaixo do mínimo escolhido."
+        },
+        {
+          "condition": "rain",
+          "metric": "win_rate",
+          "minimum": 15,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Diferença no recorte\nAmostra abaixo do mínimo escolhido."
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "checks": [
+        {
+          "condition": "all",
+          "metric": "win_rate",
+          "minimum": 5,
+          "n": 18,
+          "values": [
+            0.16666666666666666,
+            0.1111111111111111
+          ],
+          "comparable": 18,
+          "state": "left",
+          "text": "Difference in this selection\nMax Verstappen has 5.6 percentage points more on this metric."
+        },
+        {
+          "condition": "rain",
+          "metric": "win_rate",
+          "minimum": 5,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Difference in this selection\nSample below the selected minimum."
+        },
+        {
+          "condition": "rain",
+          "metric": "podiums",
+          "minimum": 5,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Difference in this selection\nSample below the selected minimum."
+        },
+        {
+          "condition": "rain",
+          "metric": "win_rate",
+          "minimum": 15,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Difference in this selection\nSample below the selected minimum."
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "checks": [
+        {
+          "condition": "all",
+          "metric": "win_rate",
+          "minimum": 5,
+          "n": 18,
+          "values": [
+            0.16666666666666666,
+            0.1111111111111111
+          ],
+          "comparable": 18,
+          "state": "left",
+          "text": "Diferença no recorte\nMax Verstappen tem 5,6 pontos percentuais a mais nesta métrica."
+        },
+        {
+          "condition": "rain",
+          "metric": "win_rate",
+          "minimum": 5,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Diferença no recorte\nAmostra abaixo do mínimo escolhido."
+        },
+        {
+          "condition": "rain",
+          "metric": "podiums",
+          "minimum": 5,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Diferença no recorte\nAmostra abaixo do mínimo escolhido."
+        },
+        {
+          "condition": "rain",
+          "metric": "win_rate",
+          "minimum": 15,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Diferença no recorte\nAmostra abaixo do mínimo escolhido."
+        }
+      ],
+      "text_enlargement": "passed",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "checks": [
+        {
+          "condition": "all",
+          "metric": "win_rate",
+          "minimum": 5,
+          "n": 18,
+          "values": [
+            0.16666666666666666,
+            0.1111111111111111
+          ],
+          "comparable": 18,
+          "state": "left",
+          "text": "Difference in this selection\nMax Verstappen has 5.6 percentage points more on this metric."
+        },
+        {
+          "condition": "rain",
+          "metric": "win_rate",
+          "minimum": 5,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Difference in this selection\nSample below the selected minimum."
+        },
+        {
+          "condition": "rain",
+          "metric": "podiums",
+          "minimum": 5,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Difference in this selection\nSample below the selected minimum."
+        },
+        {
+          "condition": "rain",
+          "metric": "win_rate",
+          "minimum": 15,
+          "n": 1,
+          "values": [
+            0,
+            1
+          ],
+          "comparable": 1,
+          "state": "insufficient",
+          "text": "Difference in this selection\nSample below the selected minimum."
+        }
+      ],
+      "text_enlargement": "passed",
+      "status": "passed"
+    }
+  ]
+}
