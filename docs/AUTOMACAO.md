@@ -54,3 +54,10 @@ Após publicar novos dados, o verificador abre quatro contextos novos: PT/EN em 
 Cada caso admite duas tentativas, com prazo total de seis minutos para o conjunto. Falhas por integridade não são repetidas; falhas de inicialização mantêm as duas tentativas. JSON e capturas ficam em artefato por 30 dias, inclusive quando a conferência falha. A falha aparece no workflow e é acompanhada pelo monitor existente da coleta. Isso não exige nova coleta, mudança do modelo ou navegação com inferência. A confirmação pública após uma release manual continua sendo uma etapa separada, não substituída pelo CI local.
 
 [Verificador](../tests/browser/verificar_publicacao.cjs), [contraprovas](../tests/browser/test_verificar_publicacao.cjs) e [evidências da revisão](../reports/midia_publica_20261103/README.md).
+
+
+## Navegação e conferência pública — 0.8.29
+
+O CI completo também roda nas branches `codex/**`, permitindo validar a correção antes de atualizar main. O grupo core acrescenta `aceite_resiliencia.cjs`: bloqueio dos módulos Radio/Button, seis destinos, PT/EN, teclado, contexto, alvos de toque e recuperação tardia sem perda de foco. Os 12 aceites anteriores permanecem.
+
+O verificador público v2 registra o controle realmente utilizável (nativo/link/misto), clica alternativas e troca o idioma, conferindo URL externa e iframe. Mantém identidade, fotos decodificadas/hashes, build, ausência de transbordamento e erros visíveis não recuperados. Limites: duas tentativas por caso, 120 segundos por tentativa e oito minutos no conjunto; o step tem dez minutos. A evidência permanece por 30 dias. Esse aceite é posterior à publicação de dados, não monitoramento contínuo ou prova da causa de uma falha da hospedagem.

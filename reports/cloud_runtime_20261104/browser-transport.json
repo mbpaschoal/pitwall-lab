@@ -1,0 +1,891 @@
+{
+  "started_at_utc": "2026-11-04T01:45:51.084Z",
+  "errors": [
+    {
+      "path": "/api/v2/user/details",
+      "status": 404,
+      "type": "application/json",
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "date": "Wed, 04 Nov 2026 01:45:56 GMT",
+        "server": "nginx/1.27.4"
+      },
+      "bytes": 118,
+      "sha256": "84007cd7b6cee1a88671cbe5664774ee9268077a3ac3f2cab3fcaf6ebc6a8e3e",
+      "body_excerpt": "{\"timestamp\":\"2026-11-04T01:45:56.652+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/v2/subdomain/user/details\"}"
+    },
+    {
+      "path": "/api/v2/user/details",
+      "status": 404,
+      "type": "application/json",
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "date": "Wed, 04 Nov 2026 01:46:02 GMT",
+        "server": "nginx/1.31.8"
+      },
+      "bytes": 118,
+      "sha256": "f946381398e23e173f2fed8a8a136b516ac07b28ebed1fba783d4d34a0936945",
+      "body_excerpt": "{\"timestamp\":\"2026-11-04T01:46:02.068+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/v2/subdomain/user/details\"}"
+    },
+    {
+      "path": "/~/_stcore/health",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "date": "Wed, 04 Nov 2026 01:46:13 GMT"
+      },
+      "bytes": 90,
+      "sha256": "16a296a34d54865cc4fb4204bacc5cdc972bb8b3d32cc54cc60abd95a97d061c",
+      "body_excerpt": "<head><meta http-equiv=\"Refresh\" content=\"0; URL=https://share.streamlit.io/error\"></head>"
+    },
+    {
+      "path": "/~/_stcore/host-config",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "date": "Wed, 04 Nov 2026 01:46:13 GMT"
+      },
+      "bytes": 90,
+      "sha256": "16a296a34d54865cc4fb4204bacc5cdc972bb8b3d32cc54cc60abd95a97d061c",
+      "body_excerpt": "<head><meta http-equiv=\"Refresh\" content=\"0; URL=https://share.streamlit.io/error\"></head>"
+    },
+    {
+      "path": "/api/v2/user/details",
+      "status": 404,
+      "type": "application/json",
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "date": "Wed, 04 Nov 2026 01:46:17 GMT",
+        "server": "nginx/1.31.8"
+      },
+      "bytes": 118,
+      "sha256": "84db618da6d3468f37c811f3092d2821df6d9827603e82e960121eb069551c74",
+      "body_excerpt": "{\"timestamp\":\"2026-11-04T01:46:17.492+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/v2/subdomain/user/details\"}"
+    },
+    {
+      "path": "/api/v2/user/details",
+      "status": 404,
+      "type": "application/json",
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "date": "Wed, 04 Nov 2026 01:46:42 GMT",
+        "server": "nginx/1.27.4"
+      },
+      "bytes": 118,
+      "sha256": "79d7c461b1b3f95e3370167be654ff4600c1d40c5fe496b3acb5d7dc6a64c764",
+      "body_excerpt": "{\"timestamp\":\"2026-11-04T01:46:42.877+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/v2/subdomain/user/details\"}"
+    }
+  ],
+  "console": [
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "samples": [
+    {
+      "utc": "2026-11-04T01:46:04.576Z",
+      "frame_found": true,
+      "lang": "en",
+      "state": "initial",
+      "nav": 0,
+      "selects": 0,
+      "placeholders": 0,
+      "alerts": []
+    },
+    {
+      "utc": "2026-11-04T01:46:14.592Z",
+      "frame_found": true,
+      "lang": "en",
+      "state": "initial",
+      "nav": 0,
+      "selects": 0,
+      "placeholders": 0,
+      "alerts": []
+    },
+    {
+      "utc": "2026-11-04T01:46:24.598Z",
+      "frame_found": true,
+      "lang": "pt",
+      "state": "notRunning",
+      "nav": 0,
+      "selects": 2,
+      "placeholders": 2,
+      "alerts": [],
+      "title": "Como funciona"
+    },
+    {
+      "utc": "2026-11-04T01:46:34.604Z",
+      "frame_found": true,
+      "lang": "pt",
+      "state": "notRunning",
+      "nav": 0,
+      "selects": 2,
+      "placeholders": 2,
+      "alerts": [],
+      "title": "Como funciona"
+    },
+    {
+      "utc": "2026-11-04T01:46:44.608Z",
+      "frame_found": true,
+      "lang": "pt",
+      "state": "notRunning",
+      "nav": 0,
+      "selects": 2,
+      "placeholders": 2,
+      "alerts": [],
+      "title": "Como funciona"
+    },
+    {
+      "utc": "2026-11-04T01:46:54.618Z",
+      "frame_found": true,
+      "lang": "pt",
+      "state": "notRunning",
+      "nav": 0,
+      "selects": 2,
+      "placeholders": 2,
+      "alerts": [],
+      "title": "Como funciona"
+    },
+    {
+      "utc": "2026-11-04T01:47:04.624Z",
+      "frame_found": true,
+      "lang": "pt",
+      "state": "notRunning",
+      "nav": 0,
+      "selects": 2,
+      "placeholders": 2,
+      "alerts": [],
+      "title": "Como funciona"
+    }
+  ],
+  "requests": [
+    {
+      "path": "/",
+      "at_ms": 1793756751695,
+      "type": "document"
+    },
+    {
+      "path": "/-/login",
+      "at_ms": 1793756752822,
+      "type": "document"
+    },
+    {
+      "path": "/",
+      "at_ms": 1793756753203,
+      "type": "document"
+    },
+    {
+      "path": "/-/build/assets/index-CDJ3nEJ8.js",
+      "at_ms": 1793756753620,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/rolldown-runtime-CNC7AqOf.js",
+      "at_ms": 1793756753620,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/jsx-runtime-BtyjnKZj.js",
+      "at_ms": 1793756753620,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/cn-BZAAGw-p.js",
+      "at_ms": 1793756753620,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/routes-CSGpNduz.js",
+      "at_ms": 1793756753620,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/bufferedData-ymD0tp_Q.js",
+      "at_ms": 1793756753620,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/schemas-CsKhgDFl.js",
+      "at_ms": 1793756753620,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/tooltip-DmtfnmdT.js",
+      "at_ms": 1793756753620,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/snowflakeOAuth-DJsOf-uV.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/page-CSar2LvL.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/index.module-Bbot1wPI.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/esm-CXhqkufa.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/errorDetails-BoeL7g8o.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/emoji_u1f626-DA0aHyeW.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/errorPage-j7qP-ucv.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/error-BfS6M55g.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/CarouselOfStreamlitExampleApp-WHt6QRj6.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/SmallDivider-DuDZTfyp.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/login-CFFZ7Nsh.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/notFound-4fk-LevE.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/confirmationModal-BOsWCv_8.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/toNumber-D0RjNJYc.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/icon_analytics-CE5MjYW7.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/trim-yzKrW-as.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/popoverMenu-BlIhdTBl.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/isEqual-Ctd7G7xk.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/terminalContent-CGURstHr.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/CSSTransition-AnhMoI_S.js",
+      "at_ms": 1793756753622,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/useAppState-C67ktBD-.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/queryGithubRepository-DXxeIas3.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/streamlitAppContext-BB7rdvC6.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/toFinite-BW9Ru4Ym.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/icon_star_outline-DL_2fyLV.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/usePythonVersions-OJMc8JOG.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/appSettings-DA18COLj.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/useUserDetails-YXenulOS.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/banner-DNTp_Roh.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/icon_github-CfLfIzZH.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/icon_edit-DHRxkIDl.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/iframe-PlC_b34Z.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/ProfilePagePreview-VBYqXefU.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/states-C8aMn2Bd.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/streamlitAppPage-C9eLG_Fb.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/replayStats-C6TwcZID.js",
+      "at_ms": 1793756753623,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/schemas-Iu3KQOQJ.css",
+      "at_ms": 1793756753623,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/tooltip-D2S4___1.css",
+      "at_ms": 1793756753623,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/page-64Xl_BNC.css",
+      "at_ms": 1793756753623,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/errorDetails-BDQowOym.css",
+      "at_ms": 1793756753626,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/errorPage-CK-Jpwy3.css",
+      "at_ms": 1793756753626,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/CarouselOfStreamlitExampleApp-2FXfzJGp.css",
+      "at_ms": 1793756753626,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/SmallDivider-BlS60Rb-.css",
+      "at_ms": 1793756753626,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/login-CRVde-_5.css",
+      "at_ms": 1793756753626,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/notFound-BzJWtTwJ.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/confirmationModal-BwNoJBuP.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/popoverMenu-D49xGQkE.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/terminalContent-C2n1Mjw6.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/useAppState-BjTUZpyD.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/icon_star_outline-DH69RDEi.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/usePythonVersions-CBwCrTS9.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/appSettings-jOmLW4LG.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/banner-D2t2_Ovp.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/ProfilePagePreview-BWWUYPxS.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/states-8om4j6Tx.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/index-L1R9zUDf.css",
+      "at_ms": 1793756753627,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/-/build/assets/subdomain-Dw7w9E7t.js",
+      "at_ms": 1793756754587,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/draftBarLayout-Bpb6frd7.js",
+      "at_ms": 1793756754587,
+      "type": "script"
+    },
+    {
+      "path": "/-/build/assets/subdomain-CaQ_fr4L.css",
+      "at_ms": 1793756754587,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/api/v2/app/disambiguate",
+      "at_ms": 1793756755045,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/context",
+      "at_ms": 1793756755045,
+      "type": "xhr"
+    },
+    {
+      "path": "/-/build/favicon.svg",
+      "at_ms": 1793756755047,
+      "type": "other"
+    },
+    {
+      "path": "/api/v1/app/event/open",
+      "at_ms": 1793756755482,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/context",
+      "at_ms": 1793756755482,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756755994,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/feature-flags",
+      "at_ms": 1793756755994,
+      "type": "xhr"
+    },
+    {
+      "path": "/~/+/",
+      "at_ms": 1793756756392,
+      "type": "document"
+    },
+    {
+      "path": "/api/v2/user/details",
+      "at_ms": 1793756756393,
+      "type": "xhr"
+    },
+    {
+      "path": "/-/build/assets/source-sans-3-latin-wght-normal-BqRLTx4X.woff2",
+      "at_ms": 1793756756403,
+      "type": "font"
+    },
+    {
+      "path": "/-/build/favicon.svg",
+      "at_ms": 1793756756407,
+      "type": "other"
+    },
+    {
+      "path": "/~/+/static/media/SourceSansVF-Upright.ttf.BsWL4Kly.woff2",
+      "at_ms": 1793756756816,
+      "type": "font"
+    },
+    {
+      "path": "/~/+/static/js/index.6xX1278W.js",
+      "at_ms": 1793756756816,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/css/index.CIiu7Ygf.css",
+      "at_ms": 1793756756816,
+      "type": "stylesheet"
+    },
+    {
+      "path": "/~/+/_stcore/health",
+      "at_ms": 1793756758205,
+      "type": "xhr"
+    },
+    {
+      "path": "/~/+/_stcore/host-config",
+      "at_ms": 1793756758205,
+      "type": "xhr"
+    },
+    {
+      "path": "/~/+/static/js/iframeResizer.contentWindow.yMw_ARIL.js",
+      "at_ms": 1793756758205,
+      "type": "script"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756758400,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756760854,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/user/details",
+      "at_ms": 1793756761815,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756763312,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756765712,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756768111,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756770582,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756773039,
+      "type": "xhr"
+    },
+    {
+      "path": "/~/_stcore/health",
+      "at_ms": 1793756773310,
+      "type": "xhr"
+    },
+    {
+      "path": "/~/_stcore/host-config",
+      "at_ms": 1793756773310,
+      "type": "xhr"
+    },
+    {
+      "path": "/~/+/_stcore/health",
+      "at_ms": 1793756773620,
+      "type": "xhr"
+    },
+    {
+      "path": "/~/+/_stcore/host-config",
+      "at_ms": 1793756773621,
+      "type": "xhr"
+    },
+    {
+      "path": "/~/+/static/js/index.GRUzrudl.js",
+      "at_ms": 1793756774648,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/",
+      "at_ms": 1793756774658,
+      "type": "other"
+    },
+    {
+      "path": "/~/+/",
+      "at_ms": 1793756774868,
+      "type": "other"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756775443,
+      "type": "xhr"
+    },
+    {
+      "path": "/~/+/static/js/index.64ejlaaT.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/useBasicWidgetState.CedkNjUW.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/FormClearHelper.DTcdrasw.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/index.C9BdUqTi.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/uniqueId.RI1LJdtz.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/InputInstructions.xnSDuYeQ.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/useUpdateUiValue.DeXelfRH.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/inputUtils.CptNuJwn.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/input.s6pjQ49A.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/base-input.BQft14La.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/index.B4dUQfni.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/checkbox.yZOfXCeX.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/js/index.FFOzOWzC.js",
+      "at_ms": 1793756776099,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/static/media/MaterialSymbols-Rounded.DeCZgS-4.woff2",
+      "at_ms": 1793756776112,
+      "type": "font"
+    },
+    {
+      "path": "/~/+/static/js/index.Cnpi3o3E.js",
+      "at_ms": 1793756776117,
+      "type": "script"
+    },
+    {
+      "path": "/~/+/app/static/pitwall-media/method-9776d0597fe6-2400.webp",
+      "at_ms": 1793756776117,
+      "type": "image"
+    },
+    {
+      "path": "/api/v2/user/details",
+      "at_ms": 1793756777232,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756777850,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756780251,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756782665,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v1/app/event/focus",
+      "at_ms": 1793756785017,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756785071,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756787467,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756789903,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756792299,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756794684,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756797076,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756799482,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756801876,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/user/details",
+      "at_ms": 1793756802625,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756804269,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756806664,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756809071,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756811465,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756813871,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v1/app/event/focus",
+      "at_ms": 1793756815017,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756816281,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756818704,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756821106,
+      "type": "xhr"
+    },
+    {
+      "path": "/api/v2/app/status",
+      "at_ms": 1793756823522,
+      "type": "xhr"
+    }
+  ],
+  "completed_at_utc": "2026-11-04T01:47:04.690Z"
+}

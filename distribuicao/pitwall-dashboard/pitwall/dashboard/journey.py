@@ -3,6 +3,28 @@ from html import escape
 from urllib.parse import urlencode
 
 
+def navigation_links(params, selected, lang='pt'):
+    """Usable links while the native navigation module is still unavailable."""
+    labels = (
+        ('Corridas', 'Corridas', 'Races'),
+        ('Pilotos', 'Pilotos', 'Drivers'),
+        ('Campeonato', 'Campeonato', 'Championship'),
+        ('Previsões', 'Chances de pódio', 'Podium chances'),
+        ('Desempenho', 'Acertos do Lab', 'How the Lab did'),
+        ('Metodologia', 'Como funciona', 'How it works'),
+    )
+    context = {key: value for key, value in params.items()
+               if key not in ('documento', 'painel', 'cartas')}
+    links = []
+    for screen, pt, en in labels:
+        query = urlencode(dict(context, tela=screen, lang=lang), doseq=True)
+        links.append('<a href="?{}" target="_self" data-screen="{}"{}><span>{}</span></a>'.format(
+            escape(query, quote=True), escape(screen, quote=True),
+            ' aria-current="page"' if screen == selected else '', escape(en if lang == 'en' else pt)))
+    return '<nav class="journey-navigation-fallback" aria-label="{}">{}</nav>'.format(
+        'Main navigation' if lang == 'en' else 'Navegação principal', ''.join(links))
+
+
 def sync_host_query(st):
     """Publish a new frame route through Streamlit's native hosting channel."""
     if not st.session_state.get('_public_query_synced'):

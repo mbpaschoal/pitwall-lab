@@ -1,0 +1,17 @@
+✔ an approved photograph must decode and retain its SHA (352.065834ms)
+✔ a valid image with another identity is rejected (105.236666ms)
+✔ a failed image is not accepted merely because its element exists (89.704791ms)
+✔ language and ready controls are checked against the supplied argument (158.521666ms)
+✔ usable link alternatives are admitted in both languages (184.459833ms)
+✔ hidden, foreign or duplicate links cannot replace usable controls (150.430166ms)
+✔ a foreign static source is rejected even if it serves the expected pixels (100.724709ms)
+✔ calendar, circuit and version must belong to the package (7.256584ms)
+✔ a rejected package produces a failure receipt before network access (2.404875ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1288.502959

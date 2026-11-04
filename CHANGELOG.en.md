@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.8.29 — 2026-11-03
+
+Navigation and language flags now offer ordinary links while native components remain unavailable. They retain all six destinations, the GP, language, applicable filters and the Fan Journey's colours, fonts and icons; links disappear when their native control becomes available. This addresses the navigation blockage observed after reboot without claiming an unproven cause for hosting errors.
+
+A new acceptance test blocks Radio/Button modules and visits all six destinations by keyboard, switching languages across PT/EN and desktop/mobile. Public acceptance records the available mode, requires valid links and real clicks, rejects unrecovered visible errors, and retains photograph/build/event checks. Nine counterexamples and 13 browser suites retain all earlier checks. Public verification has an eight-minute limit with failed evidence preserved. Frozen model, scientific data and recorded probabilities remain unchanged.
+
 ## 0.8.28 — 2026-11-03
 
 Strengthens public confirmation after automatic data publication: four PT/EN desktop/mobile cases, decoded photographs, image hashes, hydrated native controls, the collected GP and exact package build. Loading failures get one retry per case within six minutes, with 30-day evidence retention; identity or file mismatches never become acceptance. Six real-browser counterexamples enter CI without removing the existing 11 acceptance suites. The How it works cover was rechecked against its documented image without replacing it or changing visual identity. Preparation queries still lack Câmara’s ID; his three approved illustrations remain preserved. Frozen model, scientific sources and existing emissions stay unchanged.

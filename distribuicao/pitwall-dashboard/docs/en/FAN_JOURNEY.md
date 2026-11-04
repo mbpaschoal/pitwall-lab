@@ -19,6 +19,8 @@ All 26 circuit photographs and five hero photographs are naturally at least 2488
 
 ## Navigation
 
+Native navigation and language flags have equivalent keyboard-accessible links while their modules are unavailable. They preserve all six destinations and context. Links are hidden once native controls become available, avoiding duplicate menus.
+
 Six destinations appear in the bottom navigation, with icons, labels and visible selection. The native control supports keyboard interaction. The page reserves bottom space so the menu does not remove content. Season and GP selectors appear at the top of context-dependent areas. The selector includes every event; the visual ribbon shows nearby events and identifies the selected one. Mobile emphasizes the selected GP and its neighbors.
 
 Races retains six chapters through tabs: Summary, Sessions and laps, Tyres and pit stops, Weather, At this track and Teams. The image and outline precede the podium. Tabs preserve existing routes and avoid opening every table in a single long page. Drivers retains highlights, profiles and duels with independent filters. Championship retains every published driver and constructor row, now in sequence. Sources, limitations and documents remain accessible throughout the product.

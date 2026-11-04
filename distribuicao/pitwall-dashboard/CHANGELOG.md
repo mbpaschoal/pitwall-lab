@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.8.29 — 2026-11-03
+
+Menu e bandeiras passam a oferecer links comuns enquanto os componentes nativos não terminam de carregar. Mantêm os seis destinos, o GP, o idioma, os recortes aplicáveis, as cores, fontes e ícones da Jornada do Fã; os links ficam ocultos quando o controle nativo está disponível. A correção trata o bloqueio da navegação observado após o reboot, sem atribuir uma causa não demonstrada aos erros da hospedagem.
+
+Um novo aceite bloqueia os módulos Radio/Button e percorre os seis destinos por teclado, com troca de idioma em PT/EN e computador/celular. O aceite público registra o modo realmente disponível, exige links válidos e cliques reais, rejeita erros visíveis não recuperados e preserva fotos/build/identidade. Nove contraprovas e 13 suítes de navegador, sem retirar as anteriores. Prazo público de oito minutos, com evidências de falha preservadas. Modelo, dados científicos e probabilidades registrados permanecem intactos.
+
 ## 0.8.28 — 2026-11-03
 
 Reforça a confirmação pública após uma atualização automática: quatro casos PT/EN em computador e celular, fotos realmente decodificadas, hashes das imagens, controles nativos, GP coletado e build do pacote. Falhas de carregamento têm uma repetição por caso, prazo total de seis minutos e evidências preservadas por 30 dias; divergências de identidade ou arquivo não viram aceite. Seis contraprovas de navegador entram no CI, sem retirar os 11 aceites existentes. A capa de Como funciona foi reconferida com a imagem documentada, sem trocar a foto ou alterar a identidade visual. Câmara continua sem ID nas consultas de preparação; suas três cartas permanecem aprovadas e preservadas. Modelo, fontes científicas e emissões anteriores intactos.

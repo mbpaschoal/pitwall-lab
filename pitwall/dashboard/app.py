@@ -1196,7 +1196,7 @@ def executar_app():
             st.session_state["temporada"] = int(ano)
             st.session_state["_query_gp_pendente"] = "{}:{}".format(ano, int(gp_query))
         st.session_state["_query_aplicada"] = query_token
-    from pitwall.dashboard.journey import masthead, calendar
+    from pitwall.dashboard.journey import masthead, calendar, navigation_links
     from pitwall.i18n import language
     with st.container(key="journey-header"):
         with st.container(key="journey-brand-row"):
@@ -1209,6 +1209,7 @@ def executar_app():
             key="tela",on_change=sincronizar_navegacao,label_visibility="collapsed",horizontal=True,
             format_func=lambda value: {"Previsões":"Chances de pódio","Desempenho":"Acertos do Lab","Metodologia":"Como funciona"}.get(value,value),
         )
+        navigation_alternative = st.empty()
     st.session_state.setdefault("temporada", st.session_state.get("_temporada_anterior_dashboard", 2026 if (raiz_artefatos() / "frontend_assets/pilotos_condicoes.json").is_file() else 2025))
 
     def manter_temporada():
@@ -1287,6 +1288,10 @@ def executar_app():
             st.query_params[key] = value
     st.session_state["_query_aplicada"] = tuple(st.query_params.get(key) for key in
         ("temporada","gp","painel","tela","aba","documento","lang"))
+    navigation_context = {key: st.query_params.get_all(key) for key in st.query_params}
+    navigation_context.update(temporada=str(temporada), gp=str(rodada))
+    navigation_alternative.markdown(navigation_links(navigation_context, tela, language()),
+                                    unsafe_allow_html=True)
     with logo_control:
         st.markdown(masthead(language(),temporada,rodada),unsafe_allow_html=True)
     with language_control:

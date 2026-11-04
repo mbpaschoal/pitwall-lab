@@ -1,0 +1,140 @@
+{
+  "base": "http://127.0.0.1:8529",
+  "utc": "2026-11-04T02:20:37.552Z",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "blocked": [
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js"
+      ],
+      "visited": [
+        "Corridas",
+        "Pilotos",
+        "Campeonato",
+        "Previsões",
+        "Desempenho",
+        "Metodologia"
+      ],
+      "language_switched": "en",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "blocked": [
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js"
+      ],
+      "visited": [
+        "Corridas",
+        "Pilotos",
+        "Campeonato",
+        "Previsões",
+        "Desempenho",
+        "Metodologia"
+      ],
+      "language_switched": "pt",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "blocked": [
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js"
+      ],
+      "visited": [
+        "Corridas",
+        "Pilotos",
+        "Campeonato",
+        "Previsões",
+        "Desempenho",
+        "Metodologia"
+      ],
+      "language_switched": "en",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "blocked": [
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js",
+        "/static/js/index.FFOzOWzC.js",
+        "/static/js/index.Cnpi3o3E.js"
+      ],
+      "visited": [
+        "Corridas",
+        "Pilotos",
+        "Campeonato",
+        "Previsões",
+        "Desempenho",
+        "Metodologia"
+      ],
+      "language_switched": "pt",
+      "status": "passed"
+    }
+  ],
+  "late_hydration": {
+    "status": "passed",
+    "focus_preserved": true,
+    "native_controls_restored": true
+  },
+  "completed_at_utc": "2026-11-04T02:21:12.101Z"
+}

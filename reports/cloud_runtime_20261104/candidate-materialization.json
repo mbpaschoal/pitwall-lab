@@ -1,0 +1,20 @@
+{
+  "method": "Local candidate materialized using the unchanged canonical exporter recipe and copy-on-write storage; no local ZIP created due to disk capacity. CI must independently run the canonical exporter and verify the package before release.",
+  "files": 481,
+  "changed": [
+    "VERSION",
+    "CHANGELOG.md",
+    "CHANGELOG.en.md",
+    "pitwall/i18n/controls.py",
+    "pitwall/dashboard/app.py",
+    "docs/JORNADA_DO_FA.md",
+    "docs/en/FAN_JOURNEY.md",
+    "pitwall/dashboard/journey.py",
+    "frontend_assets/journey.css",
+    "requirements.txt",
+    "MANIFESTO.json"
+  ],
+  "build": "c1e6e79c7ee6de395e32fd47e4cc6c8e35477e2f0671d3be5f1b973f59eaed09",
+  "baseline": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
+  "original_package_preserved": true
+}

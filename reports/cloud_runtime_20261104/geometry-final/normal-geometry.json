@@ -1,0 +1,176 @@
+[
+  {
+    "width": 1440,
+    "name": "before",
+    "header": {
+      "x": 98,
+      "y": 13,
+      "width": 1244,
+      "height": 56
+    },
+    "flags": {
+      "x": 1203.609375,
+      "y": 13,
+      "width": 138.390625,
+      "height": 56
+    },
+    "dock": {
+      "x": 98,
+      "y": 858,
+      "width": 1244,
+      "height": 82
+    },
+    "hero": {
+      "x": 98,
+      "y": 185,
+      "width": 1244,
+      "height": 245
+    },
+    "visible_fallbacks": 0
+  },
+  {
+    "width": 1440,
+    "name": "after",
+    "header": {
+      "x": 98,
+      "y": 13,
+      "width": 1244,
+      "height": 51.59375
+    },
+    "flags": {
+      "x": 1203.609375,
+      "y": 13.796875,
+      "width": 138.390625,
+      "height": 50
+    },
+    "dock": {
+      "x": 98,
+      "y": 858,
+      "width": 1244,
+      "height": 82
+    },
+    "hero": {
+      "x": 98,
+      "y": 180.59375,
+      "width": 1244,
+      "height": 245
+    },
+    "visible_fallbacks": 3
+  },
+  {
+    "width": 1440,
+    "name": "after-blocked",
+    "header": {
+      "x": 98,
+      "y": 13,
+      "width": 1244,
+      "height": 51.59375
+    },
+    "flags": {
+      "x": 1203.609375,
+      "y": 13.796875,
+      "width": 138.390625,
+      "height": 50
+    },
+    "dock": {
+      "x": 98,
+      "y": 858,
+      "width": 1244,
+      "height": 82
+    },
+    "hero": {
+      "x": 98,
+      "y": 180.59375,
+      "width": 1244,
+      "height": 245
+    },
+    "visible_fallbacks": 3
+  },
+  {
+    "width": 390,
+    "name": "before",
+    "header": {
+      "x": 12,
+      "y": 16,
+      "width": 366,
+      "height": 104.59375
+    },
+    "flags": {
+      "x": 239.609375,
+      "y": 64.59375,
+      "width": 138.390625,
+      "height": 56
+    },
+    "dock": {
+      "x": 8,
+      "y": 798,
+      "width": 374,
+      "height": 142
+    },
+    "hero": {
+      "x": 12,
+      "y": 286.1875,
+      "width": 366,
+      "height": 230
+    },
+    "visible_fallbacks": 0
+  },
+  {
+    "width": 390,
+    "name": "after",
+    "header": {
+      "x": 12,
+      "y": 16,
+      "width": 366,
+      "height": 98.59375
+    },
+    "flags": {
+      "x": 239.609375,
+      "y": 64.59375,
+      "width": 138.390625,
+      "height": 50
+    },
+    "dock": {
+      "x": 8,
+      "y": 798,
+      "width": 374,
+      "height": 142
+    },
+    "hero": {
+      "x": 12,
+      "y": 280.1875,
+      "width": 366,
+      "height": 230
+    },
+    "visible_fallbacks": 2
+  },
+  {
+    "width": 390,
+    "name": "after-blocked",
+    "header": {
+      "x": 12,
+      "y": 16,
+      "width": 366,
+      "height": 98.59375
+    },
+    "flags": {
+      "x": 239.609375,
+      "y": 64.59375,
+      "width": 138.390625,
+      "height": 50
+    },
+    "dock": {
+      "x": 8,
+      "y": 798,
+      "width": 374,
+      "height": 142
+    },
+    "hero": {
+      "x": 12,
+      "y": 280.1875,
+      "width": 366,
+      "height": 230
+    },
+    "visible_fallbacks": 3
+  }
+]

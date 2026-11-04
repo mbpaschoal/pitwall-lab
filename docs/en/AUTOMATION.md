@@ -54,3 +54,10 @@ After publishing new data, the verifier opens four fresh contexts: PT/EN at 390/
 Each case allows two attempts within a six-minute overall deadline. Integrity failures are not retried; bootstrap failures preserve both attempts. JSON and screenshots receive 30-day artifact retention even on failure. The workflow fails visibly and the existing collection monitor handles that failure. No extra collection, training or navigation-time inference is introduced. Public verification after a manual product release remains separate from local CI.
 
 [Verifier](../../tests/browser/verificar_publicacao.cjs), [counterexamples](../../tests/browser/test_verificar_publicacao.cjs), [review evidence](../../reports/midia_publica_20261103/README.en.md).
+
+
+## Navigation and public verification — 0.8.29
+
+Complete CI also runs on `codex/**` branches, validating a change before updating main. Core adds `aceite_resiliencia.cjs`: blocked Radio/Button modules, all six destinations, PT/EN, keyboard, context, touch targets and late recovery without losing focus. All previous 12 checks remain.
+
+Public verifier v2 records the usable control mode (native/link/mixed), clicks alternatives and switches language while checking outer/iframe URLs. It retains event identity, decoded photographs/hashes, build, no overflow and rejection of unrecovered visible errors. Limits: two attempts per case, 120 seconds per attempt and eight minutes overall; the step has ten minutes. Evidence retention remains 30 days. This checks a data publication rather than providing continuous uptime monitoring or establishing the cause of hosting failure.

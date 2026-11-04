@@ -1,0 +1,67 @@
+{
+  "compared": 10,
+  "all_compared_equal": true,
+  "scope": "Only the ten listed runtime packages; not a claim of identical hosts. Cloud adds rich for logging.",
+  "rows": [
+    {
+      "package": "streamlit",
+      "cloud": "1.50.0",
+      "ci": "1.50.0",
+      "equal": true
+    },
+    {
+      "package": "tornado",
+      "cloud": "6.6",
+      "ci": "6.6",
+      "equal": true
+    },
+    {
+      "package": "pandas",
+      "cloud": "2.2.3",
+      "ci": "2.2.3",
+      "equal": true
+    },
+    {
+      "package": "pyarrow",
+      "cloud": "20.0.0",
+      "ci": "20.0.0",
+      "equal": true
+    },
+    {
+      "package": "numpy",
+      "cloud": "1.26.4",
+      "ci": "1.26.4",
+      "equal": true
+    },
+    {
+      "package": "protobuf",
+      "cloud": "5.29.5",
+      "ci": "5.29.5",
+      "equal": true
+    },
+    {
+      "package": "requests",
+      "cloud": "2.34.2",
+      "ci": "2.34.2",
+      "equal": true
+    },
+    {
+      "package": "pillow",
+      "cloud": "11.3.0",
+      "ci": "11.3.0",
+      "equal": true
+    },
+    {
+      "package": "plotly",
+      "cloud": "6.3.1",
+      "ci": "6.3.1",
+      "equal": true
+    },
+    {
+      "package": "python-dateutil",
+      "cloud": "4.0.0",
+      "ci": "4.0.0",
+      "equal": true
+    }
+  ]
+}

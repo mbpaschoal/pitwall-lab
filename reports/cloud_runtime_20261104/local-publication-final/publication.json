@@ -1,0 +1,264 @@
+{
+  "schema": "pitwall-publication-acceptance-v2",
+  "version": "0.8.29",
+  "identity": [
+    2026,
+    19,
+    "rodriguez"
+  ],
+  "base": "http://127.0.0.1:8529",
+  "verifier_sha256": "a38b50a73b3896c47ac2eda71cb8793497c8b23e7385a3fd93d158bcff7b7f44",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T02:25:11.264Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "Metodologia": {
+            "decoded": true,
+            "width": 1742,
+            "height": 979,
+            "sha256": "a1596b9cc5304a9888fa42365ba2b822d20fb8ee43c7e89c3c2805cbe4863baa",
+            "delivery": "static_variant",
+            "variant": "static/pitwall-media/method-9776d0597fe6-3600.webp",
+            "mime": "image/webp",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "observed_build": "114801c2aa162b8e8907462812f9575bcfb502d86771a8d0c102c405dea0ec4f",
+          "language_transition": {
+            "from": "pt",
+            "to": "en",
+            "control": "native",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "status": "passed",
+          "network_failures": []
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T02:25:14.150Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "Metodologia": {
+            "decoded": true,
+            "width": 1742,
+            "height": 979,
+            "sha256": "a1596b9cc5304a9888fa42365ba2b822d20fb8ee43c7e89c3c2805cbe4863baa",
+            "delivery": "static_variant",
+            "variant": "static/pitwall-media/method-9776d0597fe6-3600.webp",
+            "mime": "image/webp",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "observed_build": "114801c2aa162b8e8907462812f9575bcfb502d86771a8d0c102c405dea0ec4f",
+          "language_transition": {
+            "from": "en",
+            "to": "pt",
+            "control": "native",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "status": "passed",
+          "network_failures": []
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T02:25:16.728Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "Metodologia": {
+            "decoded": true,
+            "width": 526,
+            "height": 296,
+            "sha256": "199087ee240277ace9455e3183a49923138917b993305b68c9b652fcdc47f3f5",
+            "delivery": "static_variant",
+            "variant": "static/pitwall-media/method-9776d0597fe6-1200.webp",
+            "mime": "image/webp",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "observed_build": "114801c2aa162b8e8907462812f9575bcfb502d86771a8d0c102c405dea0ec4f",
+          "language_transition": {
+            "from": "pt",
+            "to": "en",
+            "control": "native",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "status": "passed",
+          "network_failures": []
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T02:25:19.239Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "Metodologia": {
+            "decoded": true,
+            "width": 526,
+            "height": 296,
+            "sha256": "199087ee240277ace9455e3183a49923138917b993305b68c9b652fcdc47f3f5",
+            "delivery": "static_variant",
+            "variant": "static/pitwall-media/method-9776d0597fe6-1200.webp",
+            "mime": "image/webp",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "observed_build": "114801c2aa162b8e8907462812f9575bcfb502d86771a8d0c102c405dea0ec4f",
+          "language_transition": {
+            "from": "en",
+            "to": "pt",
+            "control": "native",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0
+            }
+          },
+          "status": "passed",
+          "network_failures": []
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "expected_build": "114801c2aa162b8e8907462812f9575bcfb502d86771a8d0c102c405dea0ec4f",
+  "utc": "2026-11-04T02:25:21.760Z",
+  "status": "passed"
+}

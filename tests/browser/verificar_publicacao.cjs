@@ -26,20 +26,34 @@ async function verifyImage(page,app,expected){
  return{decoded:true,width:actual.width,height:actual.height,sha256:digest,delivery:variant?'static_variant':'inline_original',variant:variant?.path,mime};
 }
 
+function inspectControls(_element,lang){
+ const visible=e=>{if(!e.getClientRects().length)return false;for(let n=e;n;n=n.parentElement){const s=getComputedStyle(n);if(s.visibility==='hidden'||Number(s.opacity)===0)return false;}return true;};
+ const screens=['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
+ const native=[...document.querySelectorAll('.st-key-journey-navigation [role=radiogroup]>label')].filter(visible);
+ const links=[...document.querySelectorAll('.journey-navigation-fallback>a')].filter(visible);
+ const validLinks=links.length===6&&links.every((e,i)=>{
+  try{const u=new URL(e.href);return e.dataset.screen===screens[i]&&u.origin===location.origin&&u.pathname===location.pathname&&u.searchParams.get('tela')===screens[i]&&u.searchParams.get('lang')===lang;}catch{return false;}
+ });
+ const flags=[...document.querySelectorAll('[class*=st-key-pw_language_button_] button')].filter(visible);
+ const flagLinks=[...document.querySelectorAll('.pw-language-fallback')].filter(visible);
+ const validFlags=flagLinks.every(e=>{try{const u=new URL(e.href);return ['pt','en'].includes(e.dataset.language)&&u.origin===location.origin&&u.searchParams.get('lang')===e.dataset.language;}catch{return false;}});
+ const codes=flags.map(e=>e.closest('[class*=st-key-pw_language_button_]').className.match(/_(pt|en)(?:\s|$)/)?.[1]).concat(flagLinks.map(e=>e.dataset.language));
+ const navigation=native.length===6&&links.length===0?'native':native.length===0&&validLinks?'links':null;
+ const languageControl=codes.length===2&&new Set(codes).size===2&&codes.includes('pt')&&codes.includes('en')&&validFlags?(flags.length===2?'native':flags.length?'mixed':'links'):null;
+ return{ready:document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&!!navigation&&!!languageControl&&document.querySelectorAll('.st-key-journey-context-row [data-baseweb=select]').length===2,
+  navigation,language_control:languageControl,native_navigation:native.length,visible_navigation_links:links.length,native_flags:flags.length,visible_language_links:flagLinks.length,
+  hidden_native_error_elements:[...document.querySelectorAll('.st-key-tela [data-testid=stAlertContentError],[class*=st-key-pw_language_button_] [data-testid=stAlertContentError]')].filter(e=>!visible(e)).length};
+}
+
 async function ready(app,version,lang){
  await app.getByText('v'+version,{exact:true}).first().waitFor({timeout:45000});
  await app.locator('.fan-hero h1').waitFor({timeout:20000});
- await app.locator('body').evaluate(async (_element,lang)=>{
-  const deadline=Date.now()+30000;
-  while(Date.now()<deadline){
-   if(document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'
-    &&document.querySelectorAll('.st-key-journey-navigation [role=radiogroup]>label').length===6
-    &&document.querySelectorAll('.st-key-journey-context-row [data-baseweb=select]').length===2)return;
-   await new Promise(r=>setTimeout(r,100));
-  }throw Error('Language or native controls did not finish loading');
- },lang);
+ const deadline=Date.now()+30000;let state;
+ while(Date.now()<deadline){state=await app.locator('body').evaluate(inspectControls,lang);if(state.ready)break;await new Promise(r=>setTimeout(r,200));}
+ if(!state?.ready)throw Error('Language or usable controls did not finish loading');
  await app.locator('body').evaluate(async()=>{
   for(const icon of document.querySelectorAll('[data-testid=stIconMaterial]')){
+   if(!icon.getClientRects().length)continue;
    const c=getComputedStyle(icon),faces=await document.fonts.load(c.fontSize+' '+c.fontFamily,icon.textContent);
    if(!faces.length)throw Error('Native icon font unavailable');
   }
@@ -47,7 +61,9 @@ async function ready(app,version,lang){
   await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
  });
  integrity(await app.locator('[data-testid=stException]').count()===0,'Public application exception');
+ integrity(await app.locator('[data-testid=stAlertContentError]:visible').count()===0,'Unrecovered visible widget error');
  integrity(!await app.locator('body').evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),'Horizontal overflow');
+ return state;
 }
 
 function expectations(root,version,identity){
@@ -70,14 +86,14 @@ async function verifyDeployment(version,resultPath,output){
  const root=path.resolve(process.env.PITWALL_SOURCE_ROOT||path.join(__dirname,'../../distribuicao/pitwall-dashboard'));
  const identity=JSON.parse(fs.readFileSync(resultPath,'utf8')).identidade;
  const base=process.env.PITWALL_PUBLIC_BASE_URL||'https://pitwall-lab.streamlit.app',baseURL=new URL(base);
- const report={schema:'pitwall-publication-acceptance-v1',version,identity,base,verifier_sha256:sha256(fs.readFileSync(__filename)),cases:[]};
+ const report={schema:'pitwall-publication-acceptance-v2',version,identity,base,verifier_sha256:sha256(fs.readFileSync(__filename)),cases:[]};
  output=path.resolve(output||path.join(path.dirname(resultPath),'public-deployment'));fs.mkdirSync(output,{recursive:true});
  const save=()=>{const temporary=path.join(output,'publication.json.tmp');fs.writeFileSync(temporary,JSON.stringify(report,null,2));fs.renameSync(temporary,path.join(output,'publication.json'));};
  let expected;
  try{integrity(baseURL.protocol==='https:'||['127.0.0.1','localhost'].includes(baseURL.hostname),'Public check requires HTTPS or localhost');expected=expectations(root,version,identity);report.expected_build=expected.build;}
  catch(error){report.status='failed';report.stage='preflight';report.error=error.message;save();throw error;}
  const launch={headless:true};if(process.env.PLAYWRIGHT_CHANNEL)launch.channel=process.env.PLAYWRIGHT_CHANNEL;
- const browser=await chromium.launch(launch),deadline=Date.now()+360000;
+ const browser=await chromium.launch(launch),deadline=Date.now()+480000;
  try{
   for(const width of [1440,390])for(const lang of ['pt','en']){
    const row={width,lang,attempts:[],status:'failed'};report.cases.push(row);
@@ -87,13 +103,17 @@ async function verifyDeployment(version,resultPath,output){
     page.on('requestfailed',r=>{if(/\.(js|css|webp)(\?|$)/.test(r.url()))network.push({path:new URL(r.url()).pathname,error:r.failure()?.errorText});});
     try{
      await bounded((async()=>{
+      let previousApp;
       for(const route of ['Corridas','Metodologia']){
        const query=new URLSearchParams({tela:route,temporada:String(identity[0]),gp:String(identity[1]),lang});
-       await page.goto(base+'/?'+query,{waitUntil:'domcontentloaded',timeout:45000});
+       if(route==='Metodologia'&&receipt.Corridas?.controls.navigation==='links')await previousApp.locator('.journey-navigation-fallback>a[data-screen="Metodologia"]').click();
+       else await page.goto(base+'/?'+query,{waitUntil:'domcontentloaded',timeout:45000});
        const app=['127.0.0.1','localhost'].includes(baseURL.hostname)?page:page.frameLocator('iframe[src*="/~/+/"]').first();
-       await ready(app,version,lang);
+       const controls=await ready(app,version,lang);previousApp=app;
+       await page.waitForURL(u=>u.searchParams.get('tela')===route&&u.searchParams.get('gp')===String(identity[1])&&u.searchParams.get('lang')===lang,{timeout:15000});
        integrity(await app.locator('body').evaluate((_element,{route,round})=>new URL(location.href).searchParams.get('tela')===route&&new URL(location.href).searchParams.get('gp')===String(round),{route,round:identity[1]}),'Served route or GP differs');
        receipt[route]=await verifyImage(page,app,route==='Corridas'?expected.race:expected.method);
+       receipt[route].controls=controls;
        if(route==='Corridas')await app.getByText(lang==='pt'?'Acompanhar chegada dos dados':'Track incoming data',{exact:true}).waitFor({timeout:15000});
        else{
         const details=app.locator('[data-testid=stExpander] summary').filter({hasText:lang==='pt'?'Para quem quer ir além':'For a closer look'});
@@ -102,7 +122,15 @@ async function verifyDeployment(version,resultPath,output){
        }
        await page.screenshot({path:path.join(output,`${width}-${lang}-${attempt}-${route}.jpg`),type:'jpeg',quality:80});
       }
-     })(),Math.min(90000,deadline-Date.now()),'Public acceptance');
+      const other=lang==='pt'?'en':'pt',link=previousApp.locator('.pw-language-fallback[data-language="'+other+'"]');
+      const usedLink=await link.isVisible();
+      await (usedLink?link:previousApp.getByRole('button',{name:other==='pt'?/🇧🇷/:/🇬🇧/})).click();
+      const switched=await ready(previousApp,version,other);
+      await page.waitForURL(u=>u.searchParams.get('tela')==='Metodologia'&&u.searchParams.get('gp')===String(identity[1])&&u.searchParams.get('lang')===other,{timeout:15000});
+      integrity(await previousApp.locator('body').evaluate((_element,{other,round})=>{const u=new URL(location.href);return u.searchParams.get('lang')===other&&u.searchParams.get('gp')===String(round)&&u.searchParams.get('tela')==='Metodologia';},{other,round:identity[1]}),'Language switch lost event or route');
+      await previousApp.locator('.fan-hero h1').filter({hasText:other==='en'?'How it works':'Como funciona'}).waitFor({timeout:15000});
+      receipt.language_transition={from:lang,to:other,control:usedLink?'link':'native',controls:switched};
+     })(),Math.min(120000,deadline-Date.now()),'Public acceptance');
      receipt.status='passed';row.status='passed';break;
     }catch(error){receipt.status='failed';receipt.error=error.message;receipt.category=error.code==='integrity'?'integrity':'loading';
      await page.screenshot({path:path.join(output,`${width}-${lang}-${attempt}-failed.jpg`),type:'jpeg',quality:80,timeout:5000}).catch(()=>{});
@@ -116,5 +144,5 @@ async function verifyDeployment(version,resultPath,output){
  integrity(report.status==='passed','Public deployment acceptance failed; retained publication.json contains all attempts');return report;
 }
 
-module.exports={verifyImage,expectations,verifyDeployment,ready};
+module.exports={verifyImage,expectations,verifyDeployment,ready,inspectControls};
 if(require.main===module)verifyDeployment(...process.argv.slice(2)).catch(error=>{console.error(error.message);process.exitCode=1;});

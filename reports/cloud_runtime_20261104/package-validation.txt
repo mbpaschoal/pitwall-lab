@@ -1,0 +1,464 @@
+{"cwd": "/private/tmp/pitwall-navigation-029/pitwall-dashboard", "build": "c1e6e79c7ee6de395e32fd47e4cc6c8e35477e2f0671d3be5f1b973f59eaed09", "testes": ["test_distribuicao.py", "test_acervo_publico.py", "test_complemento_idade_publico.py", "test_pneus_apresentacao.py", "test_avaliacao_posterior_publico.py", "test_dashboard_app.py", "test_dashboard_dados.py", "test_interface_editorial.py", "test_driver_conditions.py", "test_driver_projection.py", "test_pilot_views.py", "test_fan_exploration.py", "test_review_regressions.py", "test_fan_journey.py", "test_fan_composition.py", "test_tarot_catalog.py", "test_high_resolution_assets.py"]}
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.241s
+
+OK
+..
+----------------------------------------------------------------------
+Ran 2 tests in 1.003s
+
+OK
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.802s
+
+OK
+2026-11-03 23:15:43.347 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-03 23:15:43.347 WARNING streamlit.runtime.state.session_state_proxy: Session state does not function when running a script without `streamlit run`
+.2026-11-03 23:15:43.867 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-03 23:15:43.885 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-03 23:15:43.902 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-03 23:15:43.924 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-03 23:15:43.967 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-03 23:15:44.011 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+.2026-11-03 23:15:44.126 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-03 23:15:44.130 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+.
+----------------------------------------------------------------------
+Ran 3 tests in 0.792s
+
+OK
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.023s
+
+OK
+2026-11-03 23:15:44.636 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+2026-11-03 23:15:44.638 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+======================================================================
+ERROR: test_2026_abre_no_ultimo_gp_observado_com_nomes_equipes_e_resultado (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 95, in setUp
+    self.raiz = copiar_artefatos(Path(self.tmp.name))
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 34, in copiar_artefatos
+    shutil.copytree(RAIZ / 'dashboard_assets' / 'circuit', raiz / 'dashboard_assets' / 'circuit')
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 557, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 513, in _copytree
+    raise Error(errors)
+shutil.Error: [('/private/tmp/pitwall-navigation-029/pitwall-dashboard/dashboard_assets/circuit/americas-hero.jpg', '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpcf0bdoxk/dashboard_assets/circuit/americas-hero.jpg', "[Errno 28] No space left on device: '/private/tmp/pitwall-navigation-029/pitwall-dashboard/dashboard_assets/circuit/americas-hero.jpg' -> '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpcf0bdoxk/dashboard_assets/circuit/americas-hero.jpg'"), ('/private/tmp/pitwall-navigation-029/pitwall-dashboard/dashboard_assets/circuit/hungaroring-f1-2025.webp', '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpcf0bdoxk/dashboard_assets/circuit/hungaroring-f1-2025.webp', "[Errno 28] No space left on device: '/private/tmp/pitwall-navigation-029/pitwall-dashboard/dashboard_assets/circuit/hungaroring-f1-2025.webp' -> '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpcf0bdoxk/dashboard_assets/circuit/hungaroring-f1-2025.webp'"), ('/private/tmp/pitwall-navigation-029/pitwall-dashboard/dashboard_assets/circuit/albert_park-f1-2025.webp', '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpcf0bdoxk/dashboard_assets/circuit/albert_park-f1-2025.webp', "[Errno 28] No space left on device: '/private/tmp/pitwall-navigation-029/pitwall-dashboard/dashboard_assets/circuit/albert_park-f1-2025.webp' -> '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpcf0bdoxk/dashboard_assets/circuit/albert_park-f1-2025.webp'"), ('/private/tmp/pitwall-navigation-029/pitwall-dashboard/dashboard_assets/circuit/red_bull_ring-f1-2025.webp', '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpcf0bdoxk/dashboard_assets/circuit/red_bull_ring-f1-2025.webp', "[Errno 28] No space left on device: '/private/tmp/pitwall-navigation-029/pitwall-dashboard/dashboard_assets/circuit/red_bull_ring-f1-2025.webp' -> '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpcf0bdoxk/dashboard_assets/circuit/red_bull_ring-f1-2025.webp'")]
+
+======================================================================
+ERROR: test_2026_com_resultado_observado_nao_afirma_que_o_podio_esta_vazio (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 95, in setUp
+    self.raiz = copiar_artefatos(Path(self.tmp.name))
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 29, in copiar_artefatos
+    shutil.copy2(arquivo, destino / arquivo.name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 435, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 268, in copyfile
+    _fastcopy_fcopyfile(fsrc, fdst, posix._COPYFILE_DATA)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 112, in _fastcopy_fcopyfile
+    raise err from None
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 105, in _fastcopy_fcopyfile
+    posix._fcopyfile(infd, outfd, flags)
+OSError: [Errno 28] No space left on device: '/private/tmp/pitwall-navigation-029/pitwall-dashboard/reports/avaliacao_final_v1/avaliacao_por_piloto.csv' -> '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpoplibm6o/reports/avaliacao_final_v1/avaliacao_por_piloto.csv'
+
+======================================================================
+ERROR: test_2026_separa_campeonato_local_das_probabilidades_do_gp (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1313, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpyfyv69fx/reports/modelo_v1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 95, in setUp
+    self.raiz = copiar_artefatos(Path(self.tmp.name))
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 23, in copiar_artefatos
+    destino.mkdir(parents=True, exist_ok=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1313, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpyfyv69fx/reports'
+
+======================================================================
+ERROR: test_austin_com_emissao_openf1_mostra_favoritos_da_emissao (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmp2ngd3rxp'
+
+======================================================================
+ERROR: test_busca_local_navega_gp_e_preferencias_abrem_fontes (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmp742s3b9z'
+
+======================================================================
+ERROR: test_calendario_2026_usa_corridas_locais_e_marca_gp_selecionado_sem_afetar_2025 (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpxd4jx8fa'
+
+======================================================================
+ERROR: test_calibracao_com_rotulo_invalido_exibe_erro_util_sem_traceback (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpa43xdlr9'
+
+======================================================================
+ERROR: test_calibracao_reserva_topo_para_legenda_sem_encobrir_titulo_do_eixo (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpcfk9060i'
+
+======================================================================
+ERROR: test_como_funciona_expoe_regras_congeladas_e_links_dos_dois_relatorios (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpx9tpm7oq'
+
+======================================================================
+ERROR: test_corridas_austin_exibe_contexto_programacao_e_previsao_registrada (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmp_1wnz987'
+
+======================================================================
+ERROR: test_corridas_austin_tem_hierarquia_editorial_e_navegacao_secundaria_completa (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmp0e5z7ier'
+
+======================================================================
+ERROR: test_corridas_compartilham_cabecalho_editorial_e_contexto_nas_tres_temporadas (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpgpmvlz28'
+
+======================================================================
+ERROR: test_corridas_e_previsoes_priorizam_blocos_distintos_sem_trocar_o_gp (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpv229_5zp'
+
+======================================================================
+ERROR: test_desempenho_prioriza_acertos_e_mantem_metricas_tecnicas_no_expander (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpgdan_gzp'
+
+======================================================================
+ERROR: test_espanha_e_sao_paulo_2025_exibem_na_motivo_unknown_e_inelegivel (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpzh6vzqka'
+
+======================================================================
+ERROR: test_estado_prospectivo_prioriza_previsao_sem_resultado (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmp90z9zbt1'
+
+======================================================================
+ERROR: test_execucao_app_nao_chama_socket_e_nao_importa_joblib (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpnuybou0n'
+
+======================================================================
+ERROR: test_explorar_exibe_temporada_cobertura_na_e_aviso_de_favoritos_antes_da_avaliacao (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmp8ja7ntcf'
+
+======================================================================
+ERROR: test_future_unissued_forecast_is_not_labelled_retrospective (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpmw19h25e'
+
+======================================================================
+ERROR: test_grafico_vazio_e_probabilidade_maxima_nao_criam_dado_falso_nem_eixo_acima_de_100 (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpjx2bb6om'
+
+======================================================================
+ERROR: test_historico_sem_acervo_nao_reutiliza_podio_da_corrida_atual (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpafz33kmf'
+
+======================================================================
+ERROR: test_jornada_mantem_controle_nativo_e_adapta_ao_viewport (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpcz15zx52'
+
+======================================================================
+ERROR: test_link_de_campeonato_preserva_temporada_gp_e_abre_tabela (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpwon9i4wt'
+
+======================================================================
+ERROR: test_metricas_json_com_numero_em_texto_exibe_erro_util_sem_traceback (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpiwx0zer1'
+
+======================================================================
+ERROR: test_navega_tres_telas_com_campos_e_nota_retrospectiva (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmph44ag7dd'
+
+======================================================================
+ERROR: test_query_invalida_e_limpeza_dos_filtros_nao_derrubam_app (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmp_wnn05mr'
+
+======================================================================
+ERROR: test_renderizar_campeonato_driverstandings_mostra_max_em_p4_sem_probabilidades (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpccpki01v'
+
+======================================================================
+ERROR: test_renderizar_campeonato_schema_ausente_mostra_indisponibilidade_sem_traceback (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmp8k0nxd35'
+
+======================================================================
+ERROR: test_rotulo_resultado_distingue_podio_pontos_abandono_e_desclassificacao (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmph4hnj0r8'
+
+======================================================================
+ERROR: test_shared_header_retains_gp_context_on_every_screen (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpocn_1olz'
+
+======================================================================
+ERROR: test_todas_as_24_corridas_de_cada_temporada_renderizam_e_preservam_filtros (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpumn5zy3k'
+
+======================================================================
+ERROR: test_visao_geral_austin_usa_foto_e_mapa_locais_com_atribuicao (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmph_rqmd73'
+
+======================================================================
+ERROR: test_visual_editorial_usa_fontes_locais_e_sobreposicao_legivel (test_dashboard_app.TestDashboardApp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-navigation-029/pitwall-dashboard/tests/test_dashboard_app.py", line 94, in setUp
+    self.tmp = tempfile.TemporaryDirectory()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 779, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 359, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/var/folders/0z/3sq6p4hj3cg8xl94wfwtq0_r0000gn/T/tmpywaul1vx'
+
+----------------------------------------------------------------------
+Ran 33 tests in 0.094s
+
+FAILED (errors=33)
+Traceback (most recent call last):
+  File "/private/tmp/pitwall-drivers-rolling-20261103/verificar_pacote.py", line 82, in <module>
+    main()
+  File "/private/tmp/pitwall-drivers-rolling-20261103/verificar_pacote.py", line 77, in main
+    subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', teste],
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/MBPaschoal/Dropbox/Projetos pessoais/F1/.venv/bin/python', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_dashboard_app.py']' returned non-zero exit status 1.

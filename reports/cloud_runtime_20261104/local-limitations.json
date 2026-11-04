@@ -1,0 +1,13 @@
+{
+  "source_suite": {
+    "tests_attempted": 94,
+    "errors": 39,
+    "cause": "ENOSPC while copying temporary test fixtures; not accepted as source correctness validation"
+  },
+  "portable_suite": {
+    "status": "failed_environment",
+    "cause": "ENOSPC in temporary AppTest fixture creation; canonical package suites must run remotely"
+  },
+  "artifacts_deleted": false,
+  "strategy": "Local focused/browser checks plus complete Python 3.12 CI on the working branch before main publication"
+}

@@ -2,6 +2,39 @@
 
 from . import language, set_language
 from pitwall.version import version
+from html import escape
+from urllib.parse import urlencode
+
+
+def _language_params(st, active_tab=None):
+    """The native callback and its link alternative use identical context."""
+    keys = ("temporada", "gp", "tela", "documento", "aba", "visao", "piloto", "rival",
+            "duelo_condicao", "faixas", "anos", "metrica", "minimo", "condicao", "cartas",
+            "origem_tela", "origem_temporada", "origem_gp")
+    params = {}
+    for key in keys:
+        if key in st.query_params:
+            values = st.query_params.get_all(key)
+            params[key] = values if len(values) > 1 else values[0]
+    for key in ("temporada", "tela"):
+        if st.session_state.get(key) is not None:
+            params[key] = st.session_state[key]
+    gp = st.session_state.get("gp") or st.session_state.get("_gp_context")
+    if gp:
+        params["gp"] = str(gp).split(":")[-1]
+    if active_tab is not None:
+        params["aba"] = active_tab
+    return params
+
+
+def language_link(params, code, selected):
+    """A normal same-frame link works without the native Button JS module."""
+    if code not in ("pt", "en") or selected not in ("pt", "en"):
+        raise ValueError("Unsupported language")
+    flag, label = ("🇧🇷", "Português") if code == "pt" else ("🇬🇧", "English")
+    return '<a class="pw-language-fallback" href="?{}" target="_self" data-language="{}" lang="{}" aria-label="{} {}"{}>{}</a>'.format(
+        escape(urlencode(dict(params, lang=code), doseq=True), quote=True), code, code,
+        flag, label, ' aria-current="true"' if selected == code else '', flag)
 
 
 def _browser_accessibility(st, selected):
@@ -56,14 +89,7 @@ def render(st, active_tab=None):
     def choose(selected):
         # Read the latest URL at click time: profile filters can update it later
         # in the same run, after this header has been rendered.
-        keys=("temporada","gp","tela","documento","aba","visao","piloto","rival",
-              "duelo_condicao","faixas","anos","metrica","minimo","condicao","cartas",
-              "origem_tela","origem_temporada","origem_gp")
-        params={key:st.query_params[key] for key in keys if key in st.query_params}
-        for key in ("temporada","tela"):
-            if st.session_state.get(key) is not None: params[key]=st.session_state[key]
-        if st.session_state.get("gp"): params["gp"]=str(st.session_state["gp"]).split(":")[-1]
-        if active_tab is not None: params["aba"]=active_tab
+        params = _language_params(st, active_tab)
         st.session_state["_language"]=selected
         st.query_params.update(dict(params,lang=selected))
 
@@ -77,11 +103,14 @@ def render(st, active_tab=None):
             (brazil, "pt", "🇧🇷", "Português"),
             (britain, "en", "🇬🇧", "English"),
         ]:
-            column.button(
-                flag,
-                help=title,
-                key="pw_language_button_" + suffix + "_" + code,
-                on_click=choose,
-                args=(code,),
-                type="primary" if language() == code else "secondary",
-            )
+            with column.container(key="pw_language_cell_" + suffix + "_" + code):
+                st.button(
+                    flag,
+                    help=title,
+                    key="pw_language_button_" + suffix + "_" + code,
+                    on_click=choose,
+                    args=(code,),
+                    type="primary" if language() == code else "secondary",
+                )
+                st.markdown(language_link(_language_params(st, active_tab), code, language()),
+                            unsafe_allow_html=True)
