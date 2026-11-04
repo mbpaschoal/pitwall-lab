@@ -1,0 +1,39 @@
+name: Diagnóstico público / Public diagnostic
+on:
+  push:
+    branches: [codex/public-probe-network-20261104]
+permissions:
+  contents: read
+jobs:
+  public_probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /tests/browser/verificar_publicacao.cjs
+            /distribuicao/pitwall-dashboard/VERSION
+            /distribuicao/pitwall-dashboard/MANIFESTO.json
+            /distribuicao/pitwall-dashboard/frontend_assets/race_weekend.json
+            /distribuicao/pitwall-dashboard/frontend_assets/operacao_fim_semana.json
+            /distribuicao/pitwall-dashboard/dashboard_assets/circuit/catalogo_visual.json
+            /distribuicao/pitwall-dashboard/static/pitwall-media/catalog.json
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright@1.62.1
+      - run: npx playwright install --with-deps chromium
+      - name: Conferência somente de leitura / Read-only public acceptance
+        env:
+          PITWALL_SOURCE_ROOT: ${{ github.workspace }}/distribuicao/pitwall-dashboard
+        run: |
+          node -e 'const fs=require("node:fs");const s=JSON.parse(fs.readFileSync("distribuicao/pitwall-dashboard/frontend_assets/operacao_fim_semana.json"));fs.writeFileSync(process.env.RUNNER_TEMP+"/publication-input.json",JSON.stringify({identidade:[s.temporada,s.rodada,s.circuito_id]}));'
+          node tests/browser/verificar_publicacao.cjs "$(cat distribuicao/pitwall-dashboard/VERSION)" "$RUNNER_TEMP/publication-input.json" "$RUNNER_TEMP/public-deployment"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-network-diagnostic-${{ github.run_id }}
+          retention-days: 7
+          path: ${{ runner.temp }}/public-deployment
