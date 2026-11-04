@@ -1,0 +1,69 @@
+{
+  "recorded_at_utc": "2026-11-04T03:19:30.973Z",
+  "version": "0.8.29",
+  "runtime_commit": "8235954d1a415735ca407afe7362dcb5f4206aef",
+  "branch_run": 41763201814,
+  "jobs": [
+    {
+      "id": 126355432511,
+      "name": "validate",
+      "conclusion": "success",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41763201814/job/126355432511"
+    },
+    {
+      "id": 126355432774,
+      "name": "browser (navigation)",
+      "conclusion": "success",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41763201814/job/126355432774"
+    },
+    {
+      "id": 126355432836,
+      "name": "browser (core)",
+      "conclusion": "success",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41763201814/job/126355432836"
+    },
+    {
+      "id": 126361511340,
+      "name": "release",
+      "conclusion": "skipped",
+      "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41763201814/job/126361511340"
+    }
+  ],
+  "source_groups": [
+    78,
+    18,
+    17,
+    292
+  ],
+  "package_groups": [
+    4,
+    2,
+    2,
+    3,
+    3,
+    33,
+    15,
+    6,
+    10,
+    3,
+    9,
+    5,
+    2,
+    5,
+    16,
+    20,
+    6
+  ],
+  "source_tests": 405,
+  "package_tests": 144,
+  "counterexamples": 9,
+  "browser_suites": 13,
+  "canonical_files_compared": 481,
+  "build": "03691f8190da92ec913a1868175ebf0e236b74f7106177010c7eed0f542dcfab",
+  "first_failed_run_retained": 41761874865,
+  "main_run": 41765191717,
+  "tag_run": 41765191525,
+  "collection_run": 41765191766,
+  "public_status": "verification_in_progress",
+  "local_broad_tests": "ENOSPC, not accepted as passed; complete hosted suites passed"
+}

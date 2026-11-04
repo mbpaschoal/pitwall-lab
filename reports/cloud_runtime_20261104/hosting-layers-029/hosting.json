@@ -1,0 +1,1400 @@
+{
+  "started_at_utc": "2026-11-04T03:30:40.721Z",
+  "expected_version": "0.8.29",
+  "diagnostic_only": true,
+  "cases": [
+    {
+      "mode": "public_wrapper",
+      "requests": [
+        {
+          "url": "https://pitwall-lab.streamlit.app/",
+          "status": 303,
+          "type": "document",
+          "mime": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/login",
+          "status": 303,
+          "type": "document",
+          "mime": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/",
+          "status": 200,
+          "type": "document",
+          "mime": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://cdn.heapanalytics.com/js/heap-.js",
+          "type": "script",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/rolldown-runtime-CNC7AqOf.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/jsx-runtime-BtyjnKZj.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/snowflakeOAuth-DJsOf-uV.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/icon_analytics-CE5MjYW7.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/notFound-4fk-LevE.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/index.module-Bbot1wPI.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/confirmationModal-BOsWCv_8.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/tooltip-D2S4___1.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/banner-DNTp_Roh.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/icon_star_outline-DH69RDEi.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/errorDetails-BoeL7g8o.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/errorPage-CK-Jpwy3.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/toNumber-D0RjNJYc.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/terminalContent-C2n1Mjw6.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/notFound-BzJWtTwJ.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/streamlitAppPage-C9eLG_Fb.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/usePythonVersions-CBwCrTS9.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/usePythonVersions-OJMc8JOG.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/queryGithubRepository-DXxeIas3.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/streamlitAppContext-BB7rdvC6.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/useUserDetails-YXenulOS.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/isEqual-Ctd7G7xk.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/page-64Xl_BNC.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/login-CFFZ7Nsh.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/emoji_u1f626-DA0aHyeW.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/SmallDivider-DuDZTfyp.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/login-CRVde-_5.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/errorPage-j7qP-ucv.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/CSSTransition-AnhMoI_S.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/states-8om4j6Tx.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/icon_edit-DHRxkIDl.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/trim-yzKrW-as.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/toFinite-BW9Ru4Ym.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/iframe-PlC_b34Z.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/ProfilePagePreview-BWWUYPxS.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/errorDetails-BDQowOym.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/icon_star_outline-DL_2fyLV.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/replayStats-C6TwcZID.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/index-L1R9zUDf.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/useAppState-BjTUZpyD.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/confirmationModal-BwNoJBuP.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/CarouselOfStreamlitExampleApp-WHt6QRj6.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/CarouselOfStreamlitExampleApp-2FXfzJGp.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/appSettings-DA18COLj.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/icon_github-CfLfIzZH.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/schemas-Iu3KQOQJ.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/ProfilePagePreview-VBYqXefU.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/appSettings-jOmLW4LG.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/SmallDivider-BlS60Rb-.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/routes-CSGpNduz.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/popoverMenu-D49xGQkE.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/error-BfS6M55g.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/banner-D2t2_Ovp.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/popoverMenu-BlIhdTBl.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/cn-BZAAGw-p.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/bufferedData-ymD0tp_Q.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/useAppState-C67ktBD-.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/index-CDJ3nEJ8.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/terminalContent-CGURstHr.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/page-CSar2LvL.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/esm-CXhqkufa.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/tooltip-DmtfnmdT.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/states-C8aMn2Bd.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/schemas-CsKhgDFl.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/draftBarLayout-Bpb6frd7.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/subdomain-CaQ_fr4L.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/subdomain-Dw7w9E7t.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/api/v1/app/event/open",
+          "status": 403,
+          "type": "xhr",
+          "mime": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/",
+          "status": 200,
+          "type": "document",
+          "mime": "text/html"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/api/v2/user/details",
+          "status": 404,
+          "type": "xhr",
+          "mime": "application/json"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/source-sans-3-latin-wght-normal-BqRLTx4X.woff2",
+          "status": 200,
+          "type": "font"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/media/SourceSansVF-Upright.ttf.BsWL4Kly.woff2",
+          "status": 200,
+          "type": "font",
+          "mime": "application/octet-stream"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/index.6xX1278W.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/api/v2/user/details",
+          "status": 404,
+          "type": "xhr",
+          "mime": "application/json"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/api/v2/user/details",
+          "status": 404,
+          "type": "xhr",
+          "mime": "application/json"
+        }
+      ],
+      "websockets": [],
+      "samples": [
+        {
+          "utc": "2026-11-04T03:30:48.830Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:30:53.878Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:30:58.890Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:31:03.902Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:31:08.912Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:31:13.924Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:31:18.936Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:31:23.948Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        }
+      ],
+      "status": "loading_incomplete"
+    },
+    {
+      "mode": "existing_iframe_direct",
+      "requests": [
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/",
+          "status": 200,
+          "type": "document",
+          "mime": "text/html"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/css/index.CIiu7Ygf.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/index.6xX1278W.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/_stcore/health",
+          "type": "xhr",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/_stcore/host-config",
+          "status": 404,
+          "type": "xhr",
+          "mime": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/_stcore/health",
+          "status": 404,
+          "type": "xhr",
+          "mime": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/_stcore/host-config",
+          "type": "xhr",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/_stcore/health",
+          "status": 404,
+          "type": "xhr",
+          "mime": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/_stcore/host-config",
+          "status": 404,
+          "type": "xhr",
+          "mime": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/index.GRUzrudl.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/useBasicWidgetState.CedkNjUW.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/FormClearHelper.DTcdrasw.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/uniqueId.RI1LJdtz.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/index.C9BdUqTi.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/useUpdateUiValue.DeXelfRH.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/inputUtils.CptNuJwn.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/index.64ejlaaT.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/InputInstructions.xnSDuYeQ.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/index.B4dUQfni.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/checkbox.yZOfXCeX.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/base-input.BQft14La.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/js/index.Cnpi3o3E.js",
+          "status": 200,
+          "type": "script",
+          "mime": "application/javascript"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/media/MaterialSymbols-Rounded.DeCZgS-4.woff2",
+          "status": 200,
+          "type": "font",
+          "mime": "application/octet-stream"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/media/SourceSansVF-Upright.ttf.BsWL4Kly.woff2",
+          "status": 500,
+          "type": "font",
+          "mime": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/media/SourceSansVF-Upright.ttf.BsWL4Kly.woff2",
+          "type": "font",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "websockets": [
+        {
+          "url": "wss://pitwall-lab.streamlit.app/~/+/_stcore/stream",
+          "received": 74,
+          "sent": 1,
+          "closed": false
+        }
+      ],
+      "samples": [
+        {
+          "utc": "2026-11-04T03:31:31.152Z",
+          "iframe": true,
+          "lang": "en",
+          "state": "initial",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:31:36.191Z",
+          "iframe": true,
+          "lang": "en",
+          "state": "initial",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:31:41.203Z",
+          "iframe": true,
+          "lang": "en",
+          "state": "initial",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:31:46.215Z",
+          "iframe": true,
+          "lang": "en",
+          "state": "initial",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:31:51.225Z",
+          "iframe": true,
+          "lang": "en",
+          "state": "initial",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:31:56.237Z",
+          "iframe": true,
+          "lang": "en",
+          "state": "initial",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:32:01.249Z",
+          "iframe": true,
+          "lang": "pt",
+          "state": "running",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:32:06.259Z",
+          "iframe": true,
+          "lang": "pt",
+          "state": "notRunning",
+          "version": true,
+          "title": "Como funciona",
+          "native_menu": 0,
+          "link_menu": 6,
+          "selectors": 2,
+          "photos": [
+            {
+              "complete": false,
+              "width": 0,
+              "height": 0
+            }
+          ],
+          "exceptions": 0
+        }
+      ],
+      "status": "loading_incomplete"
+    },
+    {
+      "mode": "documented_embed",
+      "requests": [
+        {
+          "url": "https://pitwall-lab.streamlit.app/",
+          "status": 200,
+          "type": "document",
+          "mime": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/snowflakeOAuth-DJsOf-uV.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/errorDetails-BoeL7g8o.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/error-BfS6M55g.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/rolldown-runtime-CNC7AqOf.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/errorPage-j7qP-ucv.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/trim-yzKrW-as.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/jsx-runtime-BtyjnKZj.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/emoji_u1f626-DA0aHyeW.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/popoverMenu-BlIhdTBl.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/toFinite-BW9Ru4Ym.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/toNumber-D0RjNJYc.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/icon_edit-DHRxkIDl.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/SmallDivider-DuDZTfyp.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/confirmationModal-BwNoJBuP.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/login-CFFZ7Nsh.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/page-64Xl_BNC.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/confirmationModal-BOsWCv_8.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/banner-DNTp_Roh.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/usePythonVersions-OJMc8JOG.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/queryGithubRepository-DXxeIas3.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/notFound-BzJWtTwJ.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/replayStats-C6TwcZID.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/index.module-Bbot1wPI.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/CarouselOfStreamlitExampleApp-WHt6QRj6.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/useUserDetails-YXenulOS.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/icon_star_outline-DH69RDEi.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/appSettings-jOmLW4LG.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/states-8om4j6Tx.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/icon_analytics-CE5MjYW7.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/streamlitAppContext-BB7rdvC6.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/tooltip-D2S4___1.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/ProfilePagePreview-VBYqXefU.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/isEqual-Ctd7G7xk.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/errorDetails-BDQowOym.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/CarouselOfStreamlitExampleApp-2FXfzJGp.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/icon_star_outline-DL_2fyLV.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/notFound-4fk-LevE.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/SmallDivider-BlS60Rb-.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/iframe-PlC_b34Z.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/banner-D2t2_Ovp.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/streamlitAppPage-C9eLG_Fb.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/terminalContent-C2n1Mjw6.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/useAppState-BjTUZpyD.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/login-CRVde-_5.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/CSSTransition-AnhMoI_S.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/icon_github-CfLfIzZH.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/index-L1R9zUDf.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/ProfilePagePreview-BWWUYPxS.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/bufferedData-ymD0tp_Q.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/schemas-Iu3KQOQJ.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/popoverMenu-D49xGQkE.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://cdn.heapanalytics.com/js/heap-.js",
+          "type": "script",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/appSettings-DA18COLj.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/errorPage-CK-Jpwy3.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/usePythonVersions-CBwCrTS9.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/routes-CSGpNduz.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/esm-CXhqkufa.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/cn-BZAAGw-p.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/index-CDJ3nEJ8.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/page-CSar2LvL.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/terminalContent-CGURstHr.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/useAppState-C67ktBD-.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/states-C8aMn2Bd.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/tooltip-DmtfnmdT.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/schemas-CsKhgDFl.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/draftBarLayout-Bpb6frd7.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/subdomain-CaQ_fr4L.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/subdomain-Dw7w9E7t.js",
+          "status": 200,
+          "type": "script",
+          "mime": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/api/v1/app/event/open",
+          "status": 403,
+          "type": "xhr",
+          "mime": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/",
+          "status": 200,
+          "type": "document",
+          "mime": "text/html"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/api/v2/user/details",
+          "status": 404,
+          "type": "xhr",
+          "mime": "application/json"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/css/index.CIiu7Ygf.css",
+          "status": 200,
+          "type": "stylesheet",
+          "mime": "text/css"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/-/build/assets/source-sans-3-latin-wght-normal-BqRLTx4X.woff2",
+          "status": 200,
+          "type": "font"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/~/+/static/media/SourceSansVF-Upright.ttf.BsWL4Kly.woff2",
+          "status": 200,
+          "type": "font",
+          "mime": "application/octet-stream"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/api/v2/user/details",
+          "status": 404,
+          "type": "xhr",
+          "mime": "application/json"
+        },
+        {
+          "url": "https://pitwall-lab.streamlit.app/api/v2/user/details",
+          "status": 404,
+          "type": "xhr",
+          "mime": "application/json"
+        }
+      ],
+      "websockets": [],
+      "samples": [
+        {
+          "utc": "2026-11-04T03:32:19.218Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:32:24.255Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:32:29.266Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:32:34.278Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:32:39.289Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:32:44.299Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:32:49.311Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        },
+        {
+          "utc": "2026-11-04T03:32:54.322Z",
+          "iframe": true,
+          "lang": "en",
+          "version": false,
+          "native_menu": 0,
+          "link_menu": 0,
+          "selectors": 0,
+          "photos": [],
+          "exceptions": 0
+        }
+      ],
+      "status": "loading_incomplete"
+    }
+  ],
+  "completed_at_utc": "2026-11-04T03:32:54.420Z"
+}

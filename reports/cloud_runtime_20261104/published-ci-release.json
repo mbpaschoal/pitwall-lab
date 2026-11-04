@@ -1,0 +1,92 @@
+{
+  "recorded_at_utc": "2026-11-04T03:29:05.110Z",
+  "version": "0.8.29",
+  "runtime_commit": "8235954d1a415735ca407afe7362dcb5f4206aef",
+  "build": "03691f8190da92ec913a1868175ebf0e236b74f7106177010c7eed0f542dcfab",
+  "runs": [
+    {
+      "id": 41765191717,
+      "jobs": [
+        {
+          "id": 126361789513,
+          "name": "browser (core)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41765191717/job/126361789513"
+        },
+        {
+          "id": 126361789572,
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41765191717/job/126361789572"
+        },
+        {
+          "id": 126361789636,
+          "name": "browser (navigation)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41765191717/job/126361789636"
+        },
+        {
+          "id": 126366427212,
+          "name": "release",
+          "status": "completed",
+          "conclusion": "skipped",
+          "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41765191717/job/126366427212"
+        }
+      ]
+    },
+    {
+      "id": 41765191525,
+      "jobs": [
+        {
+          "id": 126361789654,
+          "name": "browser (core)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41765191525/job/126361789654"
+        },
+        {
+          "id": 126361789972,
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41765191525/job/126361789972"
+        },
+        {
+          "id": 126361789978,
+          "name": "browser (navigation)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41765191525/job/126361789978"
+        },
+        {
+          "id": 126368040083,
+          "name": "release",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/41765191525/job/126368040083"
+        }
+      ]
+    }
+  ],
+  "release": {
+    "tag": "v0.8.29",
+    "url": "https://github.com/mbpaschoal/pitwall-lab/releases/tag/v0.8.29",
+    "published_at": "2026-11-04T03:27:50Z",
+    "target": "main",
+    "asset": {
+      "id": 708073466,
+      "name": "pitwall-dashboard.zip",
+      "size": 665858928,
+      "digest": "sha256:5b792ecc42e991e3af99b70eb653707531669f8dbf7443e7b2c8f4369b765538"
+    }
+  },
+  "zip_verification": {
+    "zip_sha256": "5b792ecc42e991e3af99b70eb653707531669f8dbf7443e7b2c8f4369b765538",
+    "zip_bytes": 665858928,
+    "members_verified": 481,
+    "build": "03691f8190da92ec913a1868175ebf0e236b74f7106177010c7eed0f542dcfab"
+  }
+}

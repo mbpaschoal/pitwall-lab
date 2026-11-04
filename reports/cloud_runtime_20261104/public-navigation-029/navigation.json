@@ -1,0 +1,394 @@
+{
+  "version": "0.8.29",
+  "base": "https://pitwall-lab.streamlit.app",
+  "started_at_utc": "2026-11-04T03:21:36.044Z",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "screen": "Corridas",
+      "status": "failed",
+      "control": "direct_url",
+      "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.29', { exact: true }).first() to be visible\u001b[22m\n"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "screen": "Pilotos",
+      "status": "failed",
+      "control": "direct_url",
+      "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.29', { exact: true }).first() to be visible\u001b[22m\n"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "screen": "Campeonato",
+      "status": "failed",
+      "control": "direct_url",
+      "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.29', { exact: true }).first() to be visible\u001b[22m\n"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "screen": "Previsões",
+      "status": "failed",
+      "control": "direct_url",
+      "error": "Language or usable controls did not finish loading"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "screen": "Desempenho",
+      "status": "passed",
+      "control": "direct_url",
+      "controls": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "query": {
+        "tela": "Desempenho",
+        "temporada": "2026",
+        "gp": "19",
+        "lang": "pt"
+      },
+      "photos": [
+        {
+          "width": 5095,
+          "height": 2908
+        }
+      ],
+      "title": "Acertos do Lab"
+    },
+    {
+      "width": 1440,
+      "lang": "pt",
+      "screen": "Metodologia",
+      "status": "passed",
+      "control": "native",
+      "controls": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "query": {
+        "tela": "Metodologia",
+        "temporada": "2026",
+        "gp": "19",
+        "lang": "pt"
+      },
+      "photos": [
+        {
+          "width": 5095,
+          "height": 2908
+        }
+      ],
+      "title": "Acertos do Lab"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "screen": "Corridas",
+      "status": "failed",
+      "control": "direct_url",
+      "error": "Language or usable controls did not finish loading"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "screen": "Pilotos",
+      "status": "failed",
+      "control": "direct_url",
+      "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.29', { exact: true }).first() to be visible\u001b[22m\n"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "screen": "Campeonato",
+      "status": "passed",
+      "control": "direct_url",
+      "controls": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "query": {
+        "tela": "Campeonato",
+        "temporada": "2026",
+        "gp": "19",
+        "lang": "en"
+      },
+      "photos": [
+        {
+          "width": 3840,
+          "height": 2565
+        }
+      ],
+      "title": "Drivers championship 2026"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "screen": "Previsões",
+      "status": "passed",
+      "control": "native",
+      "controls": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "query": {
+        "tela": "Previsões",
+        "temporada": "2026",
+        "gp": "19",
+        "lang": "en"
+      },
+      "photos": [
+        {
+          "width": 3840,
+          "height": 2565
+        }
+      ],
+      "title": "Drivers championship 2026"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "screen": "Desempenho",
+      "status": "passed",
+      "control": "native",
+      "controls": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "query": {
+        "tela": "Desempenho",
+        "temporada": "2026",
+        "gp": "19",
+        "lang": "en"
+      },
+      "photos": [
+        {
+          "width": 5095,
+          "height": 2908
+        }
+      ],
+      "title": "How the Lab did"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "screen": "Metodologia",
+      "status": "passed",
+      "control": "native",
+      "controls": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "query": {
+        "tela": "Metodologia",
+        "temporada": "2026",
+        "gp": "19",
+        "lang": "en"
+      },
+      "photos": [
+        {
+          "width": 5095,
+          "height": 2908
+        }
+      ],
+      "title": "How the Lab did"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "screen": "Corridas",
+      "status": "failed",
+      "control": "direct_url",
+      "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.29', { exact: true }).first() to be visible\u001b[22m\n"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "screen": "Pilotos",
+      "status": "failed",
+      "control": "direct_url",
+      "error": "Language or usable controls did not finish loading"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "screen": "Campeonato",
+      "status": "failed",
+      "control": "direct_url",
+      "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.29', { exact: true }).first() to be visible\u001b[22m\n"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "screen": "Previsões",
+      "status": "passed",
+      "control": "direct_url",
+      "controls": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "query": {
+        "tela": "Previsões",
+        "temporada": "2026",
+        "gp": "19",
+        "lang": "pt"
+      },
+      "photos": [
+        {
+          "width": 4589,
+          "height": 2401
+        }
+      ],
+      "title": "Chances de pódio"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "screen": "Desempenho",
+      "status": "passed",
+      "control": "native",
+      "controls": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "query": {
+        "tela": "Desempenho",
+        "temporada": "2026",
+        "gp": "19",
+        "lang": "pt"
+      },
+      "photos": [
+        {
+          "width": 4589,
+          "height": 2401
+        }
+      ],
+      "title": "Chances de pódio"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "screen": "Metodologia",
+      "status": "passed",
+      "control": "native",
+      "controls": {
+        "ready": true,
+        "navigation": "native",
+        "language_control": "native",
+        "native_navigation": 6,
+        "visible_navigation_links": 0,
+        "native_flags": 2,
+        "visible_language_links": 0,
+        "hidden_native_error_elements": 0
+      },
+      "query": {
+        "tela": "Metodologia",
+        "temporada": "2026",
+        "gp": "19",
+        "lang": "pt"
+      },
+      "photos": [
+        {
+          "width": 526,
+          "height": 296
+        }
+      ],
+      "title": "Como funciona"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "screen": "Corridas",
+      "status": "failed",
+      "control": "direct_url",
+      "error": "Navigation deadline reached"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "screen": "Pilotos",
+      "status": "failed",
+      "error": "Overall navigation deadline reached"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "screen": "Campeonato",
+      "status": "failed",
+      "error": "Overall navigation deadline reached"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "screen": "Previsões",
+      "status": "failed",
+      "error": "Overall navigation deadline reached"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "screen": "Desempenho",
+      "status": "failed",
+      "error": "Overall navigation deadline reached"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "screen": "Metodologia",
+      "status": "failed",
+      "error": "Overall navigation deadline reached"
+    }
+  ],
+  "completed_at_utc": "2026-11-04T03:29:36.237Z",
+  "status": "failed"
+}

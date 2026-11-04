@@ -1,0 +1,239 @@
+{
+  "schema": "pitwall-publication-acceptance-v2",
+  "version": "0.8.29",
+  "identity": [
+    2026,
+    19,
+    "rodriguez"
+  ],
+  "base": "https://pitwall-lab.streamlit.app",
+  "verifier_sha256": "d53a475b45335fdc77f8cb6beb7076c1ffafd450345a2043bf1bdacdd70c2471",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T03:08:46.953Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "status": "failed",
+          "error": "locator.evaluate: Error: Photo decoding timed out\n    at eval (eval at evaluate (:311:30), <anonymous>:2:101)",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/~/+/static/js/index.B4dUQfni.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/~/+/static/js/checkbox.yZOfXCeX.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        },
+        {
+          "attempt": 1,
+          "utc": "2026-11-04T03:10:44.472Z",
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.29', { exact: true }).first() to be visible\u001b[22m\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T03:11:32.403Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "Metodologia": {
+            "decoded": true,
+            "width": 1742,
+            "height": 979,
+            "sha256": "a1596b9cc5304a9888fa42365ba2b822d20fb8ee43c7e89c3c2805cbe4863baa",
+            "delivery": "static_variant",
+            "variant": "static/pitwall-media/method-9776d0597fe6-3600.webp",
+            "mime": "image/webp",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "observed_build": "03691f8190da92ec913a1868175ebf0e236b74f7106177010c7eed0f542dcfab",
+          "language_transition": {
+            "from": "en",
+            "to": "pt",
+            "control": "native",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "native",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 2,
+              "visible_language_links": 0,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "status": "passed",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "lang": "pt",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T03:11:50.062Z",
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.29', { exact: true }).first() to be visible\u001b[22m\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        },
+        {
+          "attempt": 1,
+          "utc": "2026-11-04T03:12:38.033Z",
+          "status": "failed",
+          "error": "Language or usable controls did not finish loading",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "attempts": [
+        {
+          "attempt": 0,
+          "utc": "2026-11-04T03:13:17.837Z",
+          "Corridas": {
+            "decoded": true,
+            "width": 3840,
+            "height": 2560,
+            "sha256": "c87cf4b5b6c30297006e1699121b0f16fc38630ef0f1130f0812369f9e3f134e",
+            "delivery": "inline_original",
+            "controls": {
+              "ready": true,
+              "navigation": "native",
+              "language_control": "links",
+              "native_navigation": 6,
+              "visible_navigation_links": 0,
+              "native_flags": 0,
+              "visible_language_links": 2,
+              "hidden_native_error_elements": 0
+            }
+          },
+          "status": "failed",
+          "error": "apiRequestContext.get: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - → GET https://pitwall-lab.streamlit.app/~/+/app/static/pitwall-media/method-9776d0597fe6-1200.webp\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - cookie: [REDACTED]\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            },
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        },
+        {
+          "attempt": 1,
+          "utc": "2026-11-04T03:14:08.335Z",
+          "status": "failed",
+          "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[src*=\"/~/+/\"]').first().contentFrame().getByText('v0.8.29', { exact: true }).first() to be visible\u001b[22m\n",
+          "category": "loading",
+          "network_failures": [
+            {
+              "path": "/js/heap-.js",
+              "error": "net::ERR_ABORTED"
+            }
+          ]
+        }
+      ],
+      "status": "failed"
+    }
+  ],
+  "expected_build": "03691f8190da92ec913a1868175ebf0e236b74f7106177010c7eed0f542dcfab",
+  "utc": "2026-11-04T03:14:56.453Z",
+  "status": "failed"
+}
