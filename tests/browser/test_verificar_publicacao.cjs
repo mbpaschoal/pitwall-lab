@@ -29,14 +29,18 @@ test('a failed image is not accepted merely because its element exists',async()=
 }));
 test('language and ready controls are checked against the supplied argument',async()=>withPage(async page=>{
  for(const lang of ['pt','en']){
-  await page.setContent('<html lang="'+lang+'"><body><div class="stApp" data-test-script-state="notRunning">v0.8.27</div><section class="fan-hero"><h1>Fixture</h1></section><div class="st-key-journey-navigation"><div role="radiogroup">'+Array(6).fill('<label>Fixture</label>').join('')+'</div></div><div class="st-key-journey-context-row"><div data-baseweb="select"></div><div data-baseweb="select"></div></div><div class="st-key-pw_language_button_page_pt"><button>PT</button></div><div class="st-key-pw_language_button_page_en"><button>EN</button></div></body></html>');
+  await page.setContent('<html lang="'+lang+'"><body><div class="stApp" data-test-script-state="notRunning">v0.8.27</div><section class="fan-hero"><h1>Fixture</h1></section><div class="st-key-journey-navigation"><div role="radiogroup">'+Array(6).fill('<label>Fixture</label>').join('')+'</div></div><div class="st-key-journey-context-row"><div data-testid="stSelectbox"></div><div data-testid="stSelectbox"></div></div><div class="st-key-pw_language_button_page_pt"><button>PT</button></div><div class="st-key-pw_language_button_page_en"><button>EN</button></div></body></html>');
   await ready(page,'0.8.27',lang);
  }
 }));
 function linkFixture(lang){
  const screens=['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
- return '<html lang="'+lang+'"><head><meta charset="utf-8"></head><body><div class="stApp" data-test-script-state="notRunning">v0.8.27</div><section class="fan-hero"><h1>Fixture</h1></section><nav class="journey-navigation-fallback">'+screens.map(s=>'<a data-screen="'+s+'" href="?tela='+encodeURIComponent(s)+'&lang='+lang+'">'+s+'</a>').join('')+'</nav><div class="st-key-journey-context-row"><div data-baseweb="select"></div><div data-baseweb="select"></div></div>'+['pt','en'].map(l=>'<a class="pw-language-fallback" data-language="'+l+'" href="?lang='+l+'">'+l+'</a>').join('')+'</body></html>';
+ return '<html lang="'+lang+'"><head><meta charset="utf-8"></head><body><div class="stApp" data-test-script-state="notRunning">v0.8.27</div><section class="fan-hero"><h1>Fixture</h1></section><nav class="journey-navigation-fallback">'+screens.map(s=>'<a data-screen="'+s+'" href="?tela='+encodeURIComponent(s)+'&lang='+lang+'">'+s+'</a>').join('')+'</nav><div class="st-key-journey-context-row"><div data-testid="stSelectbox"></div><div data-testid="stSelectbox"></div></div>'+['pt','en'].map(l=>'<a class="pw-language-fallback" data-language="'+l+'" href="?lang='+l+'">'+l+'</a>').join('')+'</body></html>';
 }
+test('wrapped React Aria radio controls remain native and usable',async()=>withPage(async page=>{
+ await page.setContent('<html lang="pt"><body><div class="stApp" data-test-script-state="notRunning">v0.8.27</div><section class="fan-hero"><h1>Fixture</h1></section><div class="st-key-journey-navigation"><div role="radiogroup">'+Array(6).fill('<div><label>Fixture</label></div>').join('')+'</div></div><div class="st-key-journey-context-row"><div data-testid="stSelectbox"></div><div data-testid="stSelectbox"></div></div><div class="st-key-pw_language_button_page_pt"><button>PT</button></div><div class="st-key-pw_language_button_page_en"><button>EN</button></div></body></html>');
+ const state=await ready(page,'0.8.27','pt');assert.equal(state.navigation,'native');
+}));
 test('usable link alternatives are admitted in both languages',async()=>withPage(async page=>{
  for(const lang of ['pt','en']){
   await page.route('https://fixture.invalid/**',route=>route.fulfill({status:200,contentType:'text/html',body:linkFixture(lang)}));

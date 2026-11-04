@@ -1,0 +1,8 @@
+# Reviewed false positives only; no path/rule-wide exemptions.
+# Test assertions compare the public key of a Streamlit selectbox, not an API key.
+3539e023b24fa20b30a168bce0fca84256811b17:tests/test_i18n.py:generic-api-key:194
+3539e023b24fa20b30a168bce0fca84256811b17:tests/test_i18n.py:generic-api-key:204
+# SHA-256 checksums of preserved artifacts; the diff repeats the same checksum.
+9e65ad25b125e78b671a763a43934385c1264363:reports/operacao_2026/revisao_r4_20261021T003337Z/hashes_pre_revisao.json:sumologic-access-token:24
+f279b4763611fc348ed9f0ef9451ec934b6f220f:reports/operacao_2026/fechamento_local_20261021T004418Z/diff_implementacao_staged.diff:sumologic-access-token:631298
+05eec0b70b24abf9a68dae45aac36730eefb5bc5:docs/dashboard_artefatos_preservados.json:sumologic-access-token:57

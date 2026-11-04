@@ -1,0 +1,78 @@
+name: Segurança / Security
+on:
+  workflow_call:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 4 * * *'
+permissions:
+  contents: read
+jobs:
+  policy:
+    name: security-policy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install PyYAML==6.0.3
+      - run: python -B scripts/security/check_workflows.py
+      - run: python -B -m unittest tests.test_security_policy
+  dependencies:
+    name: security-dependencies (${{ matrix.stack }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - stack: dashboard
+            requirements: publicacao/templates/requirements.txt
+          - stack: frozen-science
+            requirements: requirements_modelo_v1.txt
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pip-audit==2.10.1
+      - name: Auditar sem corrigir automaticamente / Audit without automatic fixes
+        env:
+          REQUIREMENTS: ${{ matrix.requirements }}
+        run: python -m pip_audit --strict -r "$REQUIREMENTS" -f json -o "$RUNNER_TEMP/dependency-audit.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: dependency-audit-${{ matrix.stack }}
+          retention-days: 30
+          path: ${{ runner.temp }}/dependency-audit.json
+  secrets:
+    name: security-secrets
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Instalar scanner verificado / Install verified scanner
+        run: |
+          mkdir -p "$RUNNER_TEMP/gitleaks"
+          curl --fail --silent --show-error --location --proto '=https' --tlsv1.2 \
+            https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz \
+            --output "$RUNNER_TEMP/gitleaks.tar.gz"
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  $RUNNER_TEMP/gitleaks.tar.gz" | sha256sum --check --strict
+          tar -xzf "$RUNNER_TEMP/gitleaks.tar.gz" -C "$RUNNER_TEMP/gitleaks" gitleaks
+      - name: Histórico com valores ocultos / History with redacted values
+        run: '"$RUNNER_TEMP/gitleaks/gitleaks" git --redact=100 --no-banner --log-opts="--all" --report-format json --report-path "$RUNNER_TEMP/gitleaks.json" .'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: redacted-secret-audit
+          retention-days: 7
+          path: ${{ runner.temp }}/gitleaks.json

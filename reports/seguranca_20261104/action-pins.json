@@ -1,0 +1,10 @@
+{
+  "actions/checkout@v6": "d23441a48e516b6c34aea4fa41551a30e30af803",
+  "actions/setup-python@v6": "ece7cb06caefa5fff74198d8649806c4678c61a1",
+  "actions/setup-node@v6": "249970729cb0ef3589644e2896645e5dc5ba9c38",
+  "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+  "actions/cache@v4": "0057852bfaa89a56745cba8c7296529d2fc39830",
+  "gitleaks/gitleaks-action@v2": "ff98106e4c7b2bc287b24eaf42907196329070c7",
+  "gitleaks/gitleaks latest": "v8.30.1",
+  "pypa/pip-audit latest": "v2.10.1"
+}

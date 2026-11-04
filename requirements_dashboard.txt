@@ -1,6 +1,9 @@
-# Dashboard local; manter intacta a pilha científica já verificada.
+# Apresentação isolada em Python 3.12; não instalar na .venv científica 3.9.
+# Isolated presentation on Python 3.12; preserve the scientific Python 3.9 environment.
 -c requirements_modelo_v1.txt
-streamlit==1.50.0
+streamlit==1.66.1
 plotly==6.3.1
 pandas==2.2.3
-pyarrow==20.0.0
+pyarrow==23.0.1
+protobuf==5.29.6
+pillow==13.0.0

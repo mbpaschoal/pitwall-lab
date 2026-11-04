@@ -1,0 +1,145 @@
+[
+  {
+    "name": "streamlit",
+    "version": "1.50.0",
+    "vulnerabilities": [
+      {
+        "id": "GHSA-7p48-42j8-8846",
+        "aliases": [
+          "CVE-2026-33682",
+          "PYSEC-2026-2285"
+        ],
+        "fixed_in": [
+          "1.54.0"
+        ],
+        "link": "https://osv.dev/vulnerability/GHSA-7p48-42j8-8846"
+      },
+      {
+        "id": "PYSEC-2026-212",
+        "aliases": [
+          "CVE-2026-10804",
+          "GHSA-vqwp-45wm-r9r5"
+        ],
+        "fixed_in": [
+          "1.53.1"
+        ],
+        "link": "https://osv.dev/vulnerability/PYSEC-2026-212"
+      },
+      {
+        "id": "PYSEC-2026-2285",
+        "aliases": [
+          "CVE-2026-33682",
+          "GHSA-7p48-42j8-8846"
+        ],
+        "fixed_in": [
+          "1.54.0"
+        ],
+        "link": "https://osv.dev/vulnerability/PYSEC-2026-2285"
+      },
+      {
+        "id": "GHSA-vqwp-45wm-r9r5",
+        "aliases": [
+          "CVE-2026-10804",
+          "PYSEC-2026-212"
+        ],
+        "fixed_in": [
+          "1.53.1"
+        ],
+        "link": "https://osv.dev/vulnerability/GHSA-vqwp-45wm-r9r5"
+      }
+    ]
+  },
+  {
+    "name": "protobuf",
+    "version": "5.29.5",
+    "vulnerabilities": [
+      {
+        "id": "GHSA-7gcm-g887-7qv7",
+        "aliases": [
+          "CVE-2026-0994",
+          "PYSEC-2026-1805"
+        ],
+        "fixed_in": [
+          "6.33.5",
+          "5.29.6"
+        ],
+        "link": "https://osv.dev/vulnerability/GHSA-7gcm-g887-7qv7"
+      },
+      {
+        "id": "PYSEC-2026-1805",
+        "aliases": [
+          "CVE-2026-0994",
+          "GHSA-7gcm-g887-7qv7"
+        ],
+        "fixed_in": [
+          "5.29.6",
+          "6.33.5"
+        ],
+        "link": "https://osv.dev/vulnerability/PYSEC-2026-1805"
+      }
+    ]
+  },
+  {
+    "name": "plotly",
+    "version": "6.3.1",
+    "vulnerabilities": []
+  },
+  {
+    "name": "pandas",
+    "version": "2.2.3",
+    "vulnerabilities": []
+  },
+  {
+    "name": "pyarrow",
+    "version": "20.0.0",
+    "vulnerabilities": [
+      {
+        "id": "PYSEC-2026-113",
+        "aliases": [
+          "CVE-2026-25087",
+          "GHSA-rgxp-2hwp-jwgg"
+        ],
+        "fixed_in": [
+          "23.0.1"
+        ],
+        "link": "https://osv.dev/vulnerability/PYSEC-2026-113"
+      },
+      {
+        "id": "GHSA-rgxp-2hwp-jwgg",
+        "aliases": [
+          "CVE-2026-25087",
+          "PYSEC-2026-113"
+        ],
+        "fixed_in": [
+          "23.0.1"
+        ],
+        "link": "https://osv.dev/vulnerability/GHSA-rgxp-2hwp-jwgg"
+      }
+    ]
+  },
+  {
+    "name": "numpy",
+    "version": "1.26.4",
+    "vulnerabilities": []
+  },
+  {
+    "name": "scipy",
+    "version": "1.13.1",
+    "vulnerabilities": []
+  },
+  {
+    "name": "scikit-learn",
+    "version": "1.6.1",
+    "vulnerabilities": []
+  },
+  {
+    "name": "joblib",
+    "version": "1.5.3",
+    "vulnerabilities": []
+  },
+  {
+    "name": "threadpoolctl",
+    "version": "3.6.0",
+    "vulnerabilities": []
+  }
+]

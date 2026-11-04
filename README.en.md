@@ -70,3 +70,5 @@ Different sources retain their own conditions; one licence does not automaticall
 Original code is available under the [MIT License](LICENSE). Third-party data and assets retain their own terms.
 
 - [Delivery of the 45 critical review items](docs/en/REVIEW_030.md)
+
+[Security and private reporting](SECURITY.md) · [Controls and limits](docs/en/SECURITY.md)

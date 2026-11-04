@@ -1,0 +1,26 @@
+[
+  {
+    "command": "python -B -m unittest tests.test_post_qualifying tests.test_github_maintenance tests.test_weekend_readiness tests.test_automatic_publication tests.test_final_results tests.test_posterior_binding tests.test_mexico_evaluation_ui tests.test_pneus_apresentacao",
+    "exit_code": 0,
+    "tests": 78,
+    "log": "/private/tmp/pitwall-security-tools/validated-unit-1.log"
+  },
+  {
+    "command": "python -B -m unittest tests.test_operacao_2026_fluxo tests.test_operacao_2026_integracao tests.test_registro_emissoes",
+    "exit_code": 0,
+    "tests": 18,
+    "log": "/private/tmp/pitwall-security-tools/validated-unit-2.log"
+  },
+  {
+    "command": "python -B -m unittest tests.test_interface_link_context tests.test_public_navigation",
+    "exit_code": 0,
+    "tests": 17,
+    "log": "/private/tmp/pitwall-security-tools/validated-unit-3.log"
+  },
+  {
+    "command": "python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_dashboard_acervo_app tests.test_interface_editorial tests.test_driver_conditions tests.test_driver_updates tests.test_driver_projection tests.test_pilot_views tests.test_race_weather tests.test_tyre_reconciliation tests.test_tyre_age tests.test_driver_source_audit tests.test_review_regressions tests.test_fan_exploration tests.test_weekend_operation tests.test_weekend_reconciliation tests.test_weekend_official tests.test_weekend_ui tests.test_weekend_cloud tests.test_fan_journey tests.test_fan_composition tests.test_tarot_catalog tests.test_high_resolution_assets tests.test_exportar_catalogo tests.test_verificar_pacote tests.test_uiux_profiles tests.test_uiux_races tests.test_uiux_method tests.test_uiux_media",
+    "exit_code": 0,
+    "tests": 292,
+    "log": "/private/tmp/pitwall-security-tools/validated-unit-4.log"
+  }
+]

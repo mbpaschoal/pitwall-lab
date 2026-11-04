@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.8.30 — 2026-11-04
+
+Proteções de segurança do repositório e da publicação: Actions fixadas por SHA, checkout sem credencial persistida, permissões de escrita restritas aos jobs que publicam ou monitoram, auditorias de dependências e histórico com Gitleaks, e política de relatos privados. Dependabot propõe atualizações de apresentação/Actions sem alterar automaticamente a receita científica congelada. Streamlit, Protobuf, PyArrow e Pillow recebem versões corrigidas em um ambiente de apresentação Python 3.12 separado. A coleta serial, recuperação por concorrência e publicação atômica permanecem verificadas; dados, modelo v1 e probabilidades registrados são preservados. Configurações administrativas e verificações de conta são conferidas separadamente: arquivos e CI não provam 2FA, implantação pública ou ausência de vulnerabilidades.
+
 ## 0.8.29 — 2026-11-03
 
 Menu e bandeiras passam a oferecer links comuns enquanto os componentes nativos não terminam de carregar. Mantêm os seis destinos, o GP, o idioma, os recortes aplicáveis, as cores, fontes e ícones da Jornada do Fã; os links ficam ocultos quando o controle nativo está disponível. A correção trata o bloqueio da navegação observado após o reboot, sem atribuir uma causa não demonstrada aos erros da hospedagem.

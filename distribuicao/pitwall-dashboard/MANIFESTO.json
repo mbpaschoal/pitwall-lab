@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "03691f8190da92ec913a1868175ebf0e236b74f7106177010c7eed0f542dcfab",
+  "apresentacao_build_sha256": "450d9d5098c4cde6762771a1dbce7b58007ca5cf1f2d7c2b5872b663aabb137c",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "8af5ca552acb293e0e4b11fb24cc2b3b54db82ba22e73afe096f4889b62fc3a3",
-      "sha256_origem": "4dd5bb12870baa6756c348f4a751b0fc5eb95c07cd38a92fb6b8a698b6f60f39"
+      "sha256_destino": "d36b342dae8a7193d6e069f8275c74ef2d53674b75d3a8d08c36cb4c7c0e6def",
+      "sha256_origem": "c7542fb7d7744bb1d8d1fff14deac1a6f8f39d59f0393d706bd9206392376a63"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "6c2608520271435330f6e17a0810e2a5cec1cb81189e3f8f11281294bb283c42",
-      "sha256_origem": "52c9f45f31ae0ded9a39e0fc332b1fd60e5eef96603f97eeea1bd44259b68fe6"
+      "sha256_destino": "429ced78e6d2391fdfca2646c850c90738b5689906fb3170b24777c610e9dd5e",
+      "sha256_origem": "800cee30380ac940d84921a4ce8bbc739287f175610246ad64166abc467407fc"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "14624c56b466c22dbace115e50c329bc4bea74a2c25e1f3aa481766ea49ddff7",
-      "sha256_origem": "14624c56b466c22dbace115e50c329bc4bea74a2c25e1f3aa481766ea49ddff7"
+      "sha256_destino": "fe9f7fe00061bf3b44b38df8fcaa8d09d689c6ee8be0fee57e7d3fe528d18e50",
+      "sha256_origem": "fe9f7fe00061bf3b44b38df8fcaa8d09d689c6ee8be0fee57e7d3fe528d18e50"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2704,8 +2704,8 @@
       "caminho": "frontend_assets/journey.css",
       "fonte": "frontend_assets/journey.css",
       "modo": "copia",
-      "sha256_destino": "176fc07aef142bc09eb79b4089c2bea05458299a6128563596c4d82273d57c7c",
-      "sha256_origem": "176fc07aef142bc09eb79b4089c2bea05458299a6128563596c4d82273d57c7c"
+      "sha256_destino": "f732cbb4a8f37861a99004f5a79030f72c8f1c2cab84127269a5abc4677367f3",
+      "sha256_origem": "f732cbb4a8f37861a99004f5a79030f72c8f1c2cab84127269a5abc4677367f3"
     },
     {
       "caminho": "frontend_assets/motion.js",
@@ -2746,8 +2746,8 @@
       "caminho": "frontend_assets/pitwall.css",
       "fonte": "frontend_assets/pitwall.css",
       "modo": "copia",
-      "sha256_destino": "bdcd3cce09c7d2b497173a2c4f4f5d588acc4cd008a26be624c1231194e4b523",
-      "sha256_origem": "bdcd3cce09c7d2b497173a2c4f4f5d588acc4cd008a26be624c1231194e4b523"
+      "sha256_destino": "a20d5fa5bb8d29bb3d82e48c714e78b737575ed09c74bffb489997bb407970f1",
+      "sha256_origem": "a20d5fa5bb8d29bb3d82e48c714e78b737575ed09c74bffb489997bb407970f1"
     },
     {
       "caminho": "frontend_assets/race_weekend.json",
@@ -3208,8 +3208,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "cfe80010f47bde5f33a2028b1adbded53c02f933ef94f0b4e4a872ad440658a5",
-      "sha256_origem": "cfe80010f47bde5f33a2028b1adbded53c02f933ef94f0b4e4a872ad440658a5"
+      "sha256_destino": "f9b8ac6c54d85d7bfaf433f6e9eb190287331725aa9b55b7e258293fbd2b2321",
+      "sha256_origem": "f9b8ac6c54d85d7bfaf433f6e9eb190287331725aa9b55b7e258293fbd2b2321"
     },
     {
       "caminho": "static/pitwall-media/catalog.json",
@@ -3414,7 +3414,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "cfe80010f47bde5f33a2028b1adbded53c02f933ef94f0b4e4a872ad440658a5"
+      "sha256": "f9b8ac6c54d85d7bfaf433f6e9eb190287331725aa9b55b7e258293fbd2b2321"
     },
     {
       "caminho": "publicacao/templates/.python-version",
@@ -3445,5 +3445,5 @@
       "sha256": "0e48f17455af5e120682f444285f1e08ab38f958acf9e30de49de6f52714f484"
     }
   ],
-  "versao_produto": "0.8.29"
+  "versao_produto": "0.8.30"
 }

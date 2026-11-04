@@ -1,0 +1,23 @@
+{
+  "product_tests": 405,
+  "security_policy_tests": 7,
+  "portable_tests": 144,
+  "browser_control_cases": {
+    "chromium": 24,
+    "webkit": 24
+  },
+  "navigation_cases": 16,
+  "public_verifier_counterexamples": 10,
+  "dependency_audits": {
+    "presentation": {
+      "packages": 34,
+      "findings": 0
+    },
+    "frozen_science": {
+      "packages": 5,
+      "findings": 0
+    }
+  },
+  "protected_files_unchanged": 300,
+  "scope": "local package and source validation; hosted CI and public deployment are separate evidence"
+}

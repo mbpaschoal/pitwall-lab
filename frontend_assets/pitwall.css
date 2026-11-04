@@ -19,9 +19,9 @@
 .pilot-profile h2 { font-family:AbrilFatfaceLocal,Georgia,serif; font-size:37px; font-weight:400; }
 .pilot-profile p { color:var(--pw-muted); }
 .st-key-pilot_view [role="radiogroup"] { border-bottom:1px solid var(--pw-line); gap:24px; }
-.st-key-pilot_view [role="radiogroup"] > label { padding:10px 2px; border-bottom:3px solid transparent; margin:0; }
-.st-key-pilot_view [role="radiogroup"] > label:has(input:checked) { border-color:var(--pw-red); font-weight:700; }
-.st-key-pilot_view [role="radiogroup"] > label > div:first-of-type { display:none; }
+.st-key-pilot_view :is([role="radiogroup"]>label,[role="radiogroup"]>div>label) { padding:10px 2px; border-bottom:3px solid transparent; margin:0; }
+.st-key-pilot_view :is([role="radiogroup"]>label,[role="radiogroup"]>div>label):has(input:checked) { border-color:var(--pw-red); font-weight:700; }
+.st-key-pilot_view :is([role="radiogroup"]>label,[role="radiogroup"]>div>label) > div:first-of-type { display:none; }
 @media(max-width:1000px) { .pilot-cards { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:600px) { .pilot-cards { grid-template-columns:1fr; } .pilot-header { padding-top:25px; } .pilot-header h1 { font-size:45px; } }
 html { font-size:16px; }

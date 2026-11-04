@@ -31,8 +31,7 @@ on:
       - 'operacao2026/eventos/*.json'
       - 'operacao2026/adjudicacoes/**'
 permissions:
-  contents: write
-  actions: write
+  contents: read
 concurrency:
   group: pitwall-automatic-collection
   cancel-in-progress: false
@@ -41,17 +40,22 @@ jobs:
     if: github.repository == 'mbpaschoal/pitwall-lab' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 40
+    # Required for atomic data/tag publication and bounded recovery dispatch.
+    permissions:
+      contents: write
+      actions: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
+          persist-credentials: false
           fetch-depth: 0
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
       - name: Dependências do produtor congelado / Frozen-producer dependencies
         run: python -m pip install -r requirements_modelo_v1.txt
       - name: Restaurar capturas e espera / Restore captures and cooldown
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: data/operacao_2026/fins_de_semana
           key: pitwall-collection-v1-${{ github.run_id }}-${{ github.run_attempt }}
@@ -80,7 +84,7 @@ jobs:
         run: python -B -m operacao2026.github_maintenance check-source --result "$RUNNER_TEMP/collection.json"
       - name: Preservar capturas mesmo em falha / Preserve captures even on failure
         if: always() && steps.storage.outcome == 'success'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: data/operacao_2026/fins_de_semana
           key: pitwall-collection-v1-${{ github.run_id }}-${{ github.run_attempt }}
@@ -99,14 +103,14 @@ jobs:
           python -B -m unittest tests.test_post_qualifying tests.test_driver_updates tests.test_automatic_publication tests.test_weekend_cloud tests.test_weekend_operation tests.test_weekend_reconciliation tests.test_final_results tests.test_weekend_official tests.test_weekend_ui tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_review_regressions tests.test_fan_exploration
           python -B verificar_pacote.py --pacote distribuicao/pitwall-dashboard
           diff -qr --exclude=__pycache__ "$RUNNER_TEMP/generated/pitwall-dashboard" distribuicao/pitwall-dashboard
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         if: steps.data.outputs.changed == 'true'
         with:
           node-version: '22'
       - name: Conferir navegação / Check navigation
         if: steps.data.outputs.changed == 'true'
         run: |
-          npm install --no-save playwright@1.62.1
+          npm install --no-save --ignore-scripts playwright@1.62.1
           npx playwright install --with-deps chromium
           python -m streamlit run distribuicao/pitwall-dashboard/app.py --server.headless true --server.address 127.0.0.1 --server.port 8501 > "$RUNNER_TEMP/streamlit.log" 2>&1 &
           for attempt in $(seq 1 30); do
@@ -117,7 +121,7 @@ jobs:
           node tests/browser/aceite_pilotos_atualizacao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/driver-updates-evidence"
           node tests/browser/aceite_visual.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/visual-evidence"
           node tests/browser/aceite_fim_semana.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/weekend-evidence"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always() && steps.data.outputs.changed == 'true'
         with:
           name: automatic-data-browser-evidence
@@ -139,12 +143,32 @@ jobs:
           from pitwall.paths import PROJECT_ROOT
           archive_captures(PROJECT_ROOT,Path(sys.argv[1]))
           PY
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always() && steps.captures.outcome == 'success'
         with:
           name: original-data-captures-${{ github.run_id }}-${{ github.run_attempt }}
           retention-days: 30
           path: ${{ runner.temp }}/capturas-originais.tar.gz
+      - name: Segurança antes da publicação / Security before publication
+        if: steps.data.outputs.changed == 'true'
+        run: |
+          python -m pip install pip-audit==2.10.1 PyYAML==6.0.3
+          python -B scripts/security/check_workflows.py
+          python -B -m unittest tests.test_security_policy
+          python -m pip_audit --strict -r publicacao/templates/requirements.txt
+          python -m pip_audit --strict -r requirements_modelo_v1.txt
+          mkdir -p "$RUNNER_TEMP/gitleaks"
+          curl --fail --silent --show-error --location --proto '=https' --tlsv1.2 \
+            https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz \
+            --output "$RUNNER_TEMP/gitleaks.tar.gz"
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  $RUNNER_TEMP/gitleaks.tar.gz" | sha256sum --check --strict
+          tar -xzf "$RUNNER_TEMP/gitleaks.tar.gz" -C "$RUNNER_TEMP/gitleaks" gitleaks
+          "$RUNNER_TEMP/gitleaks/gitleaks" git --redact=100 --no-banner --log-opts="--all" .
+          # Scan new publication bytes through a temporary index; keep the real index empty.
+          export GIT_INDEX_FILE="$RUNNER_TEMP/pitwall-security.index"
+          git read-tree HEAD
+          git add --all -- .
+          "$RUNNER_TEMP/gitleaks/gitleaks" git --staged --redact=100 --no-banner .
       - name: Publicar dados e release / Publish data and release
         id: publication
         if: steps.data.outputs.changed == 'true'
@@ -153,6 +177,7 @@ jobs:
           PITWALL_RECOVERY_ATTEMPT: ${{ inputs.recovery_attempt || '0' }}
           PITWALL_RUN_ID: ${{ github.run_id }}
         run: |
+          gh auth setup-git --hostname github.com
           python -B -m operacao2026.publication --result "$RUNNER_TEMP/collection.json" \
             --zip "$RUNNER_TEMP/generated/pitwall-dashboard.zip" \
             --captures "$RUNNER_TEMP/capturas-originais.tar.gz" \
@@ -164,7 +189,7 @@ jobs:
         run: node tests/browser/verificar_publicacao.cjs "$(cat VERSION)" "$RUNNER_TEMP/collection.json" "$RUNNER_TEMP/public-deployment"
       - name: Evidências públicas / Public evidence
         if: always() && steps.publication.outputs.published == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: public-deployment-${{ github.run_id }}-${{ github.run_attempt }}
           retention-days: 30

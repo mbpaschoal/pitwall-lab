@@ -6,6 +6,7 @@ Current documentation is available in Portuguese and English. Original scientifi
 
 | Assunto / Topic | Português | English |
 |---|---|---|
+| Segurança / Security | [Controles e limites](SEGURANCA.md) | [Controls and limits](en/SECURITY.md) |
 | Automação / Automation | [Inventário e limites](AUTOMACAO.md) | [Inventory and limits](en/AUTOMATION.md) |
 | Produto / Product | [README](../README.md) | [README](../README.en.md) |
 | Evolução / Evolution | [Changelog](../CHANGELOG.md) | [Changelog](../CHANGELOG.en.md) |

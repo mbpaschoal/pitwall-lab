@@ -1,5 +1,7 @@
 """TDD da etapa 7: exportação mínima, reproduzível e sem fontes externas."""
 import hashlib
+import html
+import re
 import importlib.util
 import json
 import errno
@@ -329,12 +331,13 @@ class TestExportacaoDashboard(unittest.TestCase):
         requisitos = [line for line in (self.destino / 'requirements.txt').read_text(encoding='utf-8').splitlines()
                       if line.strip() and not line.lstrip().startswith('#')]
         self.assertEqual(requisitos, [
-            'streamlit==1.50.0',
+            'streamlit==1.66.1',
             'plotly==6.3.1',
             'pandas==2.2.3',
-            'pyarrow==20.0.0',
+            'pyarrow==23.0.1',
             'numpy==1.26.4',
-            'protobuf==5.29.5',
+            'protobuf==5.29.6',
+            'pillow==13.0.0',
         ])
         for linha in requisitos:
             if linha.startswith(('-c ', '-r ')):
@@ -359,7 +362,8 @@ class TestExportacaoDashboard(unittest.TestCase):
             self.assertEqual(sha256(caminho), ativo['sha256'], ativo['caminho'])
         atribuicoes = (self.destino / 'dashboard_assets/circuit/ATRIBUICOES.md').read_text(encoding='utf-8')
         for ativo in (america['foto'], america['mapa']):
-            self.assertIn(ativo['autor'], atribuicoes)
+            autor = re.sub(r'<[^>]+>', '', html.unescape(ativo['autor'])).strip()
+            self.assertIn(autor, atribuicoes)
             self.assertIn(ativo['licenca'], atribuicoes)
         readme = (self.destino / 'README.md').read_text(encoding='utf-8')
         self.assertIn('python3.12 -m venv .venv', readme)

@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.8.30 — 2026-11-04
+
+Repository and publication security controls: Actions pinned to full commit SHAs, checkout without persisted credentials, write permissions restricted to publication/monitoring jobs, dependency and Gitleaks history audits, and private vulnerability reporting policy. Dependabot proposes presentation/Actions updates without automatically modifying the frozen scientific recipe. Streamlit, Protobuf, PyArrow and Pillow receive patched versions in a separate Python 3.12 presentation environment. Serial collection, bounded concurrency recovery and atomic publication remain verified; data, frozen v1 and recorded probabilities are preserved. Administrative settings and account checks are verified separately: files and CI do not prove 2FA, public deployment or the absence of vulnerabilities.
+
 ## 0.8.29 — 2026-11-03
 
 Navigation and language flags now offer ordinary links while native components remain unavailable. They retain all six destinations, the GP, language, applicable filters and the Fan Journey's colours, fonts and icons; links disappear when their native control becomes available. This addresses the navigation blockage observed after reboot without claiming an unproven cause for hosting errors.
