@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.9.2 — 2026-11-04
+
+Integra à interface e à distribuição pública o complemento descritivo F1DB/FIA/Pirelli revisado nas entregas locais 0.9.0 e 0.9.1. Conserva as correções de toque, navegação e segurança da 0.8.31. A base original e as 262 idades de pneus aprovadas permanecem intactas: o leitor valida essa revisão antes de compor o novo complemento em memória, com hash fixo e créditos PT/EN por GP.
+
+São Paulo 2024 ganha procedência FIA para três Q2 já corretos; os candidatos F1DB ficam separados dos campos admitidos. México ausente do acervo-base não é fabricado, e o contexto Pirelli de São Paulo 2026 permanece separado das sessões observadas. Dados brutos da pesquisa e capturas integrais ficam fora da publicação; o CI valida o complemento aprovado e o construtor por fixtures controladas, sem rede. Modelo v1, 15 entradas, snapshots e probabilidades preservados, sem ganho preditivo alegado. Validação local, CI, release e aceite público têm evidências separadas. Veja docs/FONTES_COMPLEMENTARES.md.
+
 ## 0.8.31 — 2026-11-04
 
 Amplia para 44 × 50 px a área clicável das bandeiras, mantendo os símbolos pequenos e a posição no cabeçalho. No menu móvel de duas linhas, o marcador vermelho passa a ficar abaixo do rótulo, dentro da própria célula ativa; o traço anterior podia parecer pertencer ao item da linha de cima. A mudança atende aos controles nativos e aos links alternativos e preserva os seis destinos, os idiomas, o foco e o contexto do GP.

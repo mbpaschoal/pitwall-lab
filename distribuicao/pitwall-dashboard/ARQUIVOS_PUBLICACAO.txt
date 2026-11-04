@@ -381,6 +381,7 @@ docs/relatorio_2024.md
 documentacao_local.py
 frontend_assets/acervo_dashboard.json
 frontend_assets/avaliacao_posterior_mexico_2026.json
+frontend_assets/complemento_fontes_v1.json
 frontend_assets/complemento_idade_pneus_v1.json
 frontend_assets/contexto_editorial.json
 frontend_assets/favorite/index.html
@@ -415,6 +416,7 @@ pitwall/dashboard/weekend_views.py
 pitwall/data/__init__.py
 pitwall/data/archive.py
 pitwall/data/circuit_history.py
+pitwall/data/complementary_sources.py
 pitwall/data/dashboard.py
 pitwall/data/driver_archive_projection.py
 pitwall/data/driver_conditions.py

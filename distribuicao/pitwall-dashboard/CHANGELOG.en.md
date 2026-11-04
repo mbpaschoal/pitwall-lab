@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.9.2 — 2026-11-04
+
+Integrates the descriptive F1DB/FIA/Pirelli supplement reviewed in local deliveries 0.9.0 and 0.9.1 into the interface and public distribution. Retains 0.8.31 touch, navigation and security fixes. The original snapshot and 262 approved tyre ages stay intact: the reader validates that revision before composing the hash-pinned source supplement in memory, with PT/EN attribution per GP.
+
+Three already-correct São Paulo 2024 Q2 times gain FIA provenance; F1DB candidates remain separate from admitted fields. Mexico is not fabricated when absent from the base archive, and São Paulo 2026 Pirelli context stays separate from observed sessions. Raw research evidence and full captures stay outside publication; CI validates the approved bundle and builder using controlled fixtures without network. Frozen v1, 15 inputs, snapshots and recorded probabilities are preserved, with no claimed predictive gain. Local, CI, release and public acceptance evidence remain separate. See docs/en/COMPLEMENTARY_SOURCES.md.
+
 ## 0.8.31 — 2026-11-04
 
 Expands the language flags' clickable area to 44 × 50 CSS pixels while keeping the visible symbols small and their header position. In the two-row mobile menu, the red marker moves below the label inside its own active cell; the previous line could appear associated with the item above. Both native controls and alternative links retain all six destinations, languages, focus and GP context.

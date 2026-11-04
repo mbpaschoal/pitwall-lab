@@ -1,0 +1,38 @@
+{
+  "version": "0.9.2",
+  "base_commit": "1c031c1231408eae8410bf6783b94555f4bcc9c0",
+  "local_focused_tests": 93,
+  "portable_suites": 17,
+  "portable_tests": 146,
+  "package_files": 483,
+  "build": "d889e42fc659aa66152b5fefd7f93c59fec0d430162a195e4d10b1468c97f3ef",
+  "zip_sha256": "36eee244ead72a1b0a74ef56b475b6bf4c596e4db301a165c35aa706403d7dec",
+  "zip_bytes": 665872853,
+  "protected_files": 282,
+  "protected_unchanged": true,
+  "ui_paths_verified": [
+    "frontend_assets/journey.css",
+    "docs/JORNADA_DO_FA.md",
+    "docs/en/FAN_JOURNEY.md",
+    "publicacao/templates/requirements.txt",
+    ".github/workflows/security.yml",
+    "tests/browser/aceite_controles.cjs",
+    "tests/browser/aceite_resiliencia.cjs"
+  ],
+  "updated_package_files": [
+    "ARQUIVOS_PUBLICACAO.txt",
+    "CHANGELOG.en.md",
+    "CHANGELOG.md",
+    "FONTES_E_DADOS.md",
+    "MANIFESTO.json",
+    "VERSION",
+    "frontend_assets/complemento_fontes_v1.json",
+    "pitwall/dashboard/archive_views.py",
+    "pitwall/data/archive.py",
+    "pitwall/data/complementary_sources.py",
+    "pitwall/i18n/en.json",
+    "tests/test_acervo_publico.py",
+    "tests/test_complemento_idade_publico.py"
+  ],
+  "raw_research_evidence_published": false
+}

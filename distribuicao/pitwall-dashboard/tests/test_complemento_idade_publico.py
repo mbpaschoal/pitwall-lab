@@ -41,7 +41,9 @@ class TestComplementoIdadePublico(unittest.TestCase):
         base = json.loads(bytes_antes)
         with patch('urllib.request.urlopen', side_effect=AssertionError('Rede proibida')):
             atual = carregar(RAIZ)
-        deltas = list(diferencas(base['gps'], atual['gps']))
+        from pitwall.data.complementary_sources import load_projection
+        expected = load_projection(RAIZ, base)
+        deltas = list(diferencas(expected['gps'], atual['gps']))
         self.assertEqual(len(deltas), 262)
         self.assertTrue(all(caminho[-1] == 'idade' for caminho, _, _ in deltas))
         self.assertTrue(all(type(a) is int and type(b) is int and a >= 0 and b >= 0
