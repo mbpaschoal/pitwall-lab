@@ -1,0 +1,88 @@
+{
+  "run_id": 41833779259,
+  "job_id": 126587342613,
+  "commit": "c3ebf1f068a9427e58068ca3b236953d864025d6",
+  "status": "failed",
+  "driver_update_cases": [
+    {
+      "lang": "pt",
+      "mobile": false,
+      "version": "0.8.31",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "download_reruns": 0,
+      "svg_language": "pt",
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "\u00c0 frente do rival15",
+        "Taxa de vit\u00f3rias15,8%",
+        "\u00c0 frente do rival3",
+        "Taxa de vit\u00f3rias0,0%"
+      ],
+      "status": "passed"
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "version": "0.8.31",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "download_reruns": 0,
+      "svg_language": "en",
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "Finished ahead of rival15",
+        "Win rate15.8%",
+        "Finished ahead of rival3",
+        "Win rate0.0%"
+      ],
+      "status": "passed"
+    },
+    {
+      "lang": "pt",
+      "mobile": true,
+      "version": "0.8.31",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "download_reruns": 0,
+      "svg_language": "pt",
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "\u00c0 frente do rival15",
+        "Taxa de vit\u00f3rias15,8%",
+        "\u00c0 frente do rival3",
+        "Taxa de vit\u00f3rias0,0%"
+      ],
+      "status": "passed"
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "version": "0.8.31",
+      "reloads": 0,
+      "maxStarts": 67,
+      "csv": true,
+      "svg": true,
+      "download_reruns": 0,
+      "svg_language": "en",
+      "hirakawa_original_sha256": "07eae0fb0b03cfb77348775b39089ccbf305df04e1ccdbd6ca5580f0e4536fe7",
+      "duel_metrics": [
+        "Finished ahead of rival15",
+        "Win rate15.8%",
+        "Finished ahead of rival3",
+        "Win rate0.0%"
+      ],
+      "status": "passed"
+    }
+  ],
+  "navigation_job": "success",
+  "failure": "Download event timed out in Lawson FP3 English desktop. Initial wait promise could reject while click awaited actionability. No failure screenshot was produced by that abrupt rejection.",
+  "actual_click_blocking_cause": "unproven",
+  "change": "Centre the native button, await actionability without forcing, handle click and download with Promise.all, and always record failed/in-progress status."
+}

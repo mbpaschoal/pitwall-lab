@@ -17,9 +17,10 @@ fs.mkdirSync(output,{recursive:true});
 (async()=>{
  const launch={headless:true};if(process.env.PLAYWRIGHT_CHANNEL)launch.channel=process.env.PLAYWRIGHT_CHANNEL;
  const browser=await chromium.launch(launch),cases=[];
+ const save=()=>fs.writeFileSync(path.join(output,'acceptance.json'),JSON.stringify({status:cases.some(c=>c.status==='failed')?'failed':cases.length===4?'passed':'in_progress',cases},null,2)+'\n');
  try{for(const mobile of [false,true])for(const lang of ['pt','en']){
   const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1100},isMobile:mobile,hasTouch:mobile});
-  const page=await context.newPage(),key=(mobile?'mobile':'desktop')+'-'+lang;
+  const page=await context.newPage(),key=(mobile?'mobile':'desktop')+'-'+lang;let target=null;
   try{
    await page.goto(base+'/?'+new URLSearchParams({tela:'Corridas',temporada:'2026',gp:'19',lang}),{waitUntil:'domcontentloaded',timeout:60000});
    let app=page;
@@ -44,9 +45,13 @@ fs.mkdirSync(output,{recursive:true});
     const button=app.locator('.st-key-acervo_2026_19_csv_'+suffix).getByRole('button',{includeHidden:true});
     const details=button.locator('xpath=ancestor::details[1]');
     if(!await details.evaluate(e=>e.open))await details.locator('summary').click();
-    const pending=page.waitForEvent('download');await button.click();
-    const file=await pending,target=path.join(output,key+'-'+suffix+'.csv');await file.saveAs(target);
-    return parseCSV(fs.readFileSync(target,'utf8'));
+    await button.evaluate(e=>e.scrollIntoView({block:'center'}));
+    target=await button.evaluate(e=>{const r=e.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return{label:e.textContent,rect:{x:r.x,y:r.y,width:r.width,height:r.height},hit:!!hit&&(hit===e||e.contains(hit))};});
+    await button.click({trial:true});
+    // Handle the download promise immediately, including actionability failures.
+    const [file]=await Promise.all([page.waitForEvent('download'),mobile?button.tap():button.click()]);
+    const destination=path.join(output,key+'-'+suffix+'.csv');await file.saveAs(destination);
+    return parseCSV(fs.readFileSync(destination,'utf8'));
    }
    const table=await download('stints'),head=table[0];
    const driver=head.indexOf(lang==='pt'?'Piloto':'Driver');
@@ -68,9 +73,9 @@ fs.mkdirSync(output,{recursive:true});
    check(await app.getByText(lang==='pt'?/^Lawson no TL3: médios/:/^Lawson in FP3: mediums/).count()===0,'FP3 review leaked into the race view');
    check(await app.locator('[data-testid="stException"]').count()===0,'Application exception');
    cases.push({lang,mobile,status:'passed',version,lawson_stints:5,opening_compound:'MEDIUM',bounds:[1,8],initial_age:null,fp3_pit_passages:88,clickable_sources:2});
-   fs.writeFileSync(path.join(output,'acceptance.json'),JSON.stringify({status:'passed',cases},null,2)+'\n');
+   save();
    console.log(key+' passed');
-  }catch(error){await page.screenshot({path:path.join(output,key+'-failure.png')});throw error;}
+  }catch(error){cases.push({lang,mobile,version,status:'failed',error:error.message,target});save();await page.screenshot({path:path.join(output,key+'-failure.png')}).catch(()=>{});throw error;}
   finally{await context.close();}
- }}finally{await browser.close();}
+ }}finally{await browser.close();save();}
 })().catch(error=>{console.error(error.message);process.exit(1)});
