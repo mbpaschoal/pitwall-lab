@@ -1,7 +1,8 @@
 """Normalização offline do acervo descritivo, sem alterar dados ou previsões v1.
 
 As identidades OpenF1 permanecem nativas. Uma associação canônica usa apenas o
-número literal do piloto no resultado Jolpica do mesmo GP, nunca nomes parecidos.
+número literal do piloto no resultado ou qualifying Jolpica do mesmo GP,
+nunca nomes parecidos. Qualifying permite identificar quem não largou a corrida.
 Estratégias são sequências observadas de stints, sem interpretação causal.
 """
 
@@ -378,18 +379,19 @@ def _locais(raiz, eventos):
                 if not piloto:
                     raise ValueError("piloto_id local ausente")
                 _unique(visto, key + (piloto,), linha, "piloto local")
-            if nome == "resultados.csv" and linha.get("numero") not in (None, ""):
+            if nome in ("resultados.csv", "classificacao.csv") and linha.get("numero") not in (None, ""):
                 numero = _inteiro(linha["numero"], "numero do piloto")
-                _unique(
-                    identidades,
-                    key + (numero,),
-                    {
-                        "piloto_id": linha["piloto_id"],
-                        "equipe_id": linha.get("equipe_id", ""),
-                        "fonte_id": linha.get("fonte_id", ""),
-                    },
-                    "número de piloto local",
-                )
+                canonical = {
+                    "piloto_id": linha["piloto_id"],
+                    "equipe_id": linha.get("equipe_id", ""),
+                    "fonte_id": linha.get("fonte_id", ""),
+                }
+                identity_key = key + (numero,)
+                previous = identidades.get(identity_key)
+                if previous is not None and any(previous[field] != canonical[field] for field in ("piloto_id", "equipe_id")):
+                    raise ValueError("identidade conflitante entre resultado e qualifying")
+                if previous is None:
+                    identidades[identity_key] = canonical
         tabelas[nome] = linhas
     return tabelas, identidades
 

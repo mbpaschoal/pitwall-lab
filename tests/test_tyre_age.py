@@ -43,6 +43,10 @@ class TyreAgeTests(unittest.TestCase):
         from pitwall.data.complementary_sources import load_projection
         expected = load_projection(ROOT, self.base)
         delta=list(differences(expected['gps'],revised['gps']))
+        identity = [(p,a,b) for p,a,b in delta if p[-1]=='piloto_id']
+        self.assertEqual(len(identity),4)
+        self.assertTrue(all(p[0]=='2025:9' and a is None and b=='stroll' for p,a,b in identity))
+        delta = [(p,a,b) for p,a,b in delta if p[-1]!='piloto_id']
         self.assertEqual(len(delta),262)
         self.assertTrue(all(p[-1]=='idade' for p,_,_ in delta))
         kinds=Counter('zero_positive' if a==0 and b>0 else 'positive_zero' if a>0 and b==0 else 'positive_positive' for _,a,b in delta)

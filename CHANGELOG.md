@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.10.1 — 2026-11-04
+
+Correção da identidade de Stroll na Espanha 2025. O acervo descritivo associa as quatro sessões disputadas por Lance Stroll ao ID canônico `stroll`, confirmado por número/sessão OpenF1, qualifying Jolpica e data de nascimento F1DB. A associação anterior dependia apenas do resultado da corrida, da qual ele não participou. A revisão é fixada por hash e aplicada em memória depois dos complementos existentes; base, tempos, posições, 262 idades de pneus, modelo v1 e previsões permanecem intactos. O produtor passa a conservar o número no qualifying e rejeita conflitos de identidade entre resultado e qualifying. Nenhuma disponibilidade histórica foi inferida. Validação local e publicação pública são provas separadas.
+
 ## 0.10.0 — 2026-11-04
 
 Refina o acabamento da Jornada do fã preservando azul claro, branco, marinho, vermelho, Abril Fatface/Lato e as fotografias. Painéis ganham contornos e espaçamento coerentes, números alinhados e títulos mais equilibrados. A faixa de acompanhamento concentra visualmente as fontes e seus detalhes, mantendo datas, estados e links. Abas, condições e expansores recebem resposta discreta aos comandos, com foco visível e movimento reduzido respeitado.
