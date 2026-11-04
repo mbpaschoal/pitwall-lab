@@ -546,32 +546,66 @@ def _duel(asset, years, metric, minimum):
         return
     if st.session_state.get("pilot_driver") not in ids:
         st.session_state["pilot_driver"] = ids[0]
-    left = st.selectbox("Primeiro piloto", ids, index=ids.index(st.session_state["pilot_driver"]), format_func=names.get, key="pilot_driver")
-    rivals = [x for x in ids if x != left]
-    if st.session_state.get("duel_right") not in rivals:
-        st.session_state["duel_right"] = rivals[0]
-    right = st.selectbox("Segundo piloto", rivals, index=rivals.index(st.session_state["duel_right"]), format_func=names.get, key="duel_right")
-    conditions = ["all"] + list(BY_KEY)
-    selected_condition = st.session_state.get("duel_condition", "all")
-    condition = st.selectbox("Condição do duelo", conditions,
-        index=conditions.index(selected_condition) if selected_condition in conditions else 0,
-        format_func=lambda x: "Todas as condições" if x == "all" else BY_KEY[x].label, key="duel_condition")
+    with st.container(key="duel-controls"):
+        first, second = st.columns(2)
+        with first:
+            left = st.selectbox("Primeiro piloto", ids, index=ids.index(st.session_state["pilot_driver"]), format_func=names.get, key="pilot_driver")
+        rivals = [x for x in ids if x != left]
+        if st.session_state.get("duel_right") not in rivals:
+            st.session_state["duel_right"] = rivals[0]
+        with second:
+            right = st.selectbox("Segundo piloto", rivals, index=rivals.index(st.session_state["duel_right"]), format_func=names.get, key="duel_right")
+        conditions = ["all"] + list(BY_KEY)
+        selected_condition = st.session_state.get("duel_condition", "all")
+        condition = st.selectbox("Condição do duelo", conditions,
+            index=conditions.index(selected_condition) if selected_condition in conditions else 0,
+            format_func=lambda x: "Todas as condições" if x == "all" else BY_KEY[x].label, key="duel_condition")
     result = duel(asset, left, right, years, None if condition == "all" else condition)
     st.caption("{} largadas em comum; {} resultados comparáveis. Só entram GPs em que ambos largaram.".format(result["common_starts"], result["comparable_results"]))
     if not result["common_starts"]:
         st.info("Sem largadas em comum nesta condição. Experimente outro período ou condição.")
         return
-    a, b = st.columns(2)
-    for column, pid, side, ahead in ((a, left, "left", "left_ahead"), (b, right, "right", "right_ahead")):
-        with column:
-            st.subheader(names[pid])
-            st.metric("À frente do rival", result[ahead])
-            st.metric(METRICS[metric], _value(result[side][metric], metric) if result["common_starts"] >= minimum else "—")
-            st.caption("{} vitórias · {} pódios".format(result[side]["wins"], result[side]["podiums"]))
+    from pitwall.dashboard.fan_views import portrait
+    with st.container(key="duel-stage"):
+        a, b = st.columns(2)
+        for column, pid, side, ahead in ((a, left, "left", "left_ahead"), (b, right, "right", "right_ahead")):
+            with column:
+                with st.container(key="duel-" + side):
+                    st.markdown('<header class="fan-duel-driver" data-driver-id="{}">{}<h2>{}</h2></header>'.format(
+                        escape(pid, quote=True), portrait(pid, names[pid]), escape(names[pid])), unsafe_allow_html=True)
+                    st.metric("À frente do rival", result[ahead])
+                    st.metric(METRICS[metric], _value(result[side][metric], metric) if result["common_starts"] >= minimum else "—")
+                    st.caption("{} vitórias · {} pódios".format(result[side]["wins"], result[side]["podiums"]))
+        st.markdown(_duel_difference_html(result, names[left], names[right], metric, minimum), unsafe_allow_html=True)
     if result["common_starts"] < minimum:
         st.info("Poucas corridas em comum para o mínimo escolhido. Explore os resultados ou reduza o filtro.")
     st.caption("Abandonos contam nas largadas. O placar compara posições oficiais conhecidas, sem desclassificações. Carro e época também contam.")
     _evidence(asset, [row for x in result["evidence"] for row in (x["left"], x["right"])], "duelo")
+
+
+def _duel_difference_html(result, left_name, right_name, metric, minimum):
+    """Describe the displayed metric, never the different finishing-order score."""
+    title = translate("Diferença no recorte")
+    a, b = result["left"][metric], result["right"][metric]
+    if result["common_starts"] < minimum or a is None or b is None:
+        detail = translate("Amostra abaixo do mínimo escolhido.")
+        state = "insufficient"
+    elif abs(a - b) < 1e-12:
+        detail = translate("Empate nesta métrica.")
+        state = "tied"
+    else:
+        difference = abs(a - b)
+        if metric.endswith("rate"):
+            amount = "{:.1f}".format(100 * difference)
+            amount = amount.replace(".", ",") if language() == "pt" else amount
+            amount += " " + translate("pontos percentuais")
+        else:
+            amount = str(int(difference))
+        detail = translate("{} tem {} a mais nesta métrica.").format(
+            left_name if a > b else right_name, amount)
+        state = "left" if a > b else "right"
+    return '<aside class="fan-duel-difference" data-state="{}" data-metric="{}" role="status"><span>{}</span><strong>{}</strong></aside>'.format(
+        state, escape(metric, quote=True), escape(title), escape(detail))
 
 
 def _share(asset, years, metric, minimum, view):

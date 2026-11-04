@@ -87,12 +87,14 @@ jobs:
             node tests/browser/aceite_fim_semana.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/weekend-evidence"
             node tests/browser/aceite_pneus_lawson.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/lawson-tyres-evidence"
             node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-evidence"
+            node tests/browser/aceite_editorial.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/editorial-evidence"
             node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-evidence"
           else
             node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-evidence"
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-webkit-evidence"
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-webkit-evidence"
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-webkit-evidence"
+            PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_editorial.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/editorial-webkit-evidence"
           fi
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
@@ -107,6 +109,8 @@ jobs:
             ${{ runner.temp }}/visual-evidence
             ${{ runner.temp }}/controls-evidence
             ${{ runner.temp }}/controls-webkit-evidence
+            ${{ runner.temp }}/editorial-evidence
+            ${{ runner.temp }}/editorial-webkit-evidence
             ${{ runner.temp }}/scroll-evidence
             ${{ runner.temp }}/weekend-evidence
             ${{ runner.temp }}/lawson-tyres-evidence

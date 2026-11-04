@@ -15,6 +15,45 @@ from pitwall.i18n import set_language
 ROOT = Path(__file__).resolve().parents[1]
 
 
+class DuelDifferenceTests(unittest.TestCase):
+    def tearDown(self):
+        set_language("pt")
+
+    def test_rate_difference_is_percentage_points_and_never_the_finish_score(self):
+        result = dict(common_starts=10, left={"win_rate": .3}, right={"win_rate": .1},
+                      left_ahead=1, right_ahead=9)
+        original = deepcopy(result)
+        for lang, amount in [("pt", "20,0 pontos percentuais"), ("en", "20.0 percentage points")]:
+            set_language(lang)
+            html = pilot_views._duel_difference_html(result, "Driver A", "Driver B", "win_rate", 5)
+            self.assertIn('data-state="left"', html)
+            self.assertIn(amount, html)
+            self.assertIn("Driver A", html)
+        self.assertEqual(result, original)
+
+    def test_zero_is_a_tie_and_insufficient_sample_does_not_publish_a_difference(self):
+        result = dict(common_starts=3, left={"wins": 0}, right={"wins": 0})
+        set_language("en")
+        hidden = pilot_views._duel_difference_html(result, "A", "B", "wins", 5)
+        self.assertIn('data-state="insufficient"', hidden)
+        self.assertIn("Sample below the selected minimum.", hidden)
+        self.assertNotIn("Tied", hidden)
+        shown = pilot_views._duel_difference_html(result, "A", "B", "wins", 3)
+        self.assertIn('data-state="tied"', shown)
+        self.assertIn("Tied on this metric.", shown)
+
+    def test_count_difference_is_integer_and_missing_value_is_not_zero(self):
+        result = dict(common_starts=10, left={"podiums": 2}, right={"podiums": 5})
+        set_language("en")
+        html = pilot_views._duel_difference_html(result, "<Driver A>", "<Driver B>", "podiums", 5)
+        self.assertIn('data-state="right"', html)
+        self.assertIn("&lt;Driver B&gt; has 3 more on this metric.", html)
+        self.assertNotIn("percentage", html)
+        result["right"]["podiums"] = None
+        self.assertIn('data-state="insufficient"', pilot_views._duel_difference_html(
+            result, "A", "B", "podiums", 5))
+
+
 class AccessibleProfileValuesTests(unittest.TestCase):
     def setUp(self):
         set_language("pt")
