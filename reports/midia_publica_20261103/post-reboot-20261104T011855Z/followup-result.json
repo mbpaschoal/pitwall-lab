@@ -1,0 +1,12 @@
+{
+  "recorded_at_utc": "2026-11-04T01:32:11.754288+00:00",
+  "status": "owner_confirms_failure_hosting_logs_requested",
+  "prior_receipt_sha256": "736659e60a78ca5a9588f7a50e04c57818d17358d9a2a85b8d0504da26ea5f04",
+  "prior_evidence_unchanged": true,
+  "new_evidence": {
+    "FOLLOWUP.md": "538be26d0d407270959d6cd7de4b9d5508a257ff5edb7866378b2e7609affc5f",
+    "owner-controls-confirmation.json": "0310201032d7d1ee292a7f8944fe2beaefbdd6ca2113e2f342eeed7db76c35aa",
+    "transport-errors/response-bodies.json": "36a4707e7f923ba28fb6035bcee407eae528101e857c6e656dec2301130cfaa0",
+    "transport-error-probe.cjs": "13a8fec125cd1f2c79d466229bdc20649f8b61c53314c7fdb44090d721dc0d21"
+  }
+}
