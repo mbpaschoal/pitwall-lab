@@ -52,3 +52,9 @@ Checks wait for the expected version, route, language and idle state. Streamlit 
 O recibo público v2 registra controles nativos/links/mistos; uma alternativa só conta quando está visível e aponta para a mesma aplicação/idiomas admitidos. O verificador clica a navegação alternativa quando usada e troca o idioma de fato, preservando GP e tela; erro visível não recuperado reprova o aceite. Duas tentativas por caso, até 120 segundos por tentativa, oito minutos totais.
 
 Public receipt v2 records native/link/mixed controls. An alternative counts only when visible and targeting the same app/admitted locales. The verifier clicks alternative navigation when used and actually switches language while retaining GP and page; unrecovered visible errors fail acceptance. Two attempts per case, at most 120 seconds each, eight minutes overall.
+
+## Acabamento e Duelo / Editorial finish and head to head
+
+`node tests/browser/aceite_editorial.cjs URL OUTPUT` cobre PT/EN em 390/1440 px, retratos na mesma linha, diferença conferida por contagem independente dos resultados-fonte, troca real de condição/métrica, mínimo de amostra, ausência de largadas em comum, idioma e redução manual/pelo sistema. `PLAYWRIGHT_BROWSER=webkit` seleciona o segundo motor. Respeita `PITWALL_SOURCE_ROOT`, `PLAYWRIGHT_MODULE` e `PLAYWRIGHT_CHANNEL`. Cada falha gera captura e recibo explícito.
+
+The runner checks PT/EN desktop/mobile portraits, independently counted metric differences, real condition/metric changes, minimum samples, no shared starts, language preservation and manual/system reduced motion. Failures produce screenshots and explicit receipts.

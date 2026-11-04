@@ -1,0 +1,13 @@
+{
+  "run": 41895913607,
+  "candidate_commit": "88f504cfd06178b548fb889b77d0cb09e9c1a4b0",
+  "scope": "WebKit native Metric hydration",
+  "original_assertion": "0 !== 2 at line 122",
+  "cases_passed": 1,
+  "cases_failed": 3,
+  "observed": "Failure screenshots show native widget skeletons while the Markdown difference is already available.",
+  "correction": "Scroll the duel stage into view and wait for the exact source-derived native values; retain the two-dash assertion.",
+  "runtime_code_changed": false,
+  "previous_core_suite": "passed",
+  "previous_validation_and_security": "passed"
+}

@@ -1,0 +1,1 @@
+The canonical package and member-by-member ZIP comparison completed. Receipt generation then failed because the shell default Python 3.9 does not provide hashlib.file_digest. The receipt was regenerated and verified with the existing presentation Python 3.12 environment; no package changes were needed.

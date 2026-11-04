@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.10.0 — 2026-11-04
+
+Refines the Fan journey while preserving the light-blue, white, navy and red palette, Abril Fatface/Lato and documented photographs. Panels gain consistent outlines and spacing, aligned numbers and balanced headings. Source tracking is grouped into a compact visual band while retaining dates, states and links. Chapters, condition links and expanders provide subtle command feedback, visible focus and reduced-motion support.
+
+Head to head now shows both portraits side by side, grouped selectors and the difference in the selected metric. Very narrow layouts or larger text reflow the comparison into one column. Rates use percentage points; counts use integers. Ties and samples below the chosen minimum have explicit states without turning missing values into zero. Period, shared starts, comparable results and evidence remain available. Historical aggregates, frozen model v1, recorded probabilities and source data are unchanged. Local browser, package, CI and served-version evidence are recorded separately.
+
 ## 0.9.2 — 2026-11-04
 
 Integrates the descriptive F1DB/FIA/Pirelli supplement reviewed in local deliveries 0.9.0 and 0.9.1 into the interface and public distribution. Retains 0.8.31 touch, navigation and security fixes. The original snapshot and 262 approved tyre ages stay intact: the reader validates that revision before composing the hash-pinned source supplement in memory, with PT/EN attribution per GP.

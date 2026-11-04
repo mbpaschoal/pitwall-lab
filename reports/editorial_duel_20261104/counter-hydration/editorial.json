@@ -1,0 +1,14 @@
+{
+  "version": "0.10.0",
+  "engine": "chromium",
+  "base": "http://127.0.0.1:8536",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "pt",
+      "checks": [],
+      "status": "failed",
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.\n    at compare (/private/tmp/pitwall-editorial-duel-20261104/reports/editorial_duel_20261104/counter-hydration.cjs:82:19)\n    at async /private/tmp/pitwall-editorial-duel-20261104/reports/editorial_duel_20261104/counter-hydration.cjs:99:9"
+    }
+  ]
+}

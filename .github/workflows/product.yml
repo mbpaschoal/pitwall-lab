@@ -77,6 +77,7 @@ jobs:
             sleep 1
           done
           if [ "$PITWALL_BROWSER_SUITE" = "core" ]; then
+            node tests/browser/aceite_editorial.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/editorial-evidence"
             node --test tests/browser/test_verificar_publicacao.cjs
             node tests/browser/aceite_resiliencia.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/resilience-evidence"
             node -e 'const fs=require("node:fs");const s=JSON.parse(fs.readFileSync("distribuicao/pitwall-dashboard/frontend_assets/operacao_fim_semana.json"));fs.writeFileSync(process.env.RUNNER_TEMP+"/publication-input.json",JSON.stringify({identidade:[s.temporada,s.rodada,s.circuito_id]}));'
@@ -89,6 +90,7 @@ jobs:
             node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-evidence"
             node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-evidence"
           else
+            PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_editorial.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/editorial-webkit-evidence"
             node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-evidence"
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-webkit-evidence"
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-webkit-evidence"
@@ -107,6 +109,8 @@ jobs:
             ${{ runner.temp }}/visual-evidence
             ${{ runner.temp }}/controls-evidence
             ${{ runner.temp }}/controls-webkit-evidence
+            ${{ runner.temp }}/editorial-evidence
+            ${{ runner.temp }}/editorial-webkit-evidence
             ${{ runner.temp }}/scroll-evidence
             ${{ runner.temp }}/weekend-evidence
             ${{ runner.temp }}/lawson-tyres-evidence

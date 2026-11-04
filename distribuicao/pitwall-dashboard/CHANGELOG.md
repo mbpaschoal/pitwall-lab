@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.10.0 — 2026-11-04
+
+Refina o acabamento da Jornada do fã preservando azul claro, branco, marinho, vermelho, Abril Fatface/Lato e as fotografias. Painéis ganham contornos e espaçamento coerentes, números alinhados e títulos mais equilibrados. A faixa de acompanhamento concentra visualmente as fontes e seus detalhes, mantendo datas, estados e links. Abas, condições e expansores recebem resposta discreta aos comandos, com foco visível e movimento reduzido respeitado.
+
+O Duelo passa a mostrar os dois retratos lado a lado, seletores agrupados e a diferença na métrica escolhida. Em telas muito estreitas ou com texto ampliado, a comparação passa a uma coluna. Taxas usam pontos percentuais; contagens usam inteiros. Empates e amostra abaixo do mínimo têm estados próprios, sem converter ausência em zero. Período, largadas em comum, resultados comparáveis e evidências permanecem disponíveis. Não há mudança nos agregados históricos, modelo v1, probabilidades registradas ou dados-fonte. A validação distingue navegador local, pacote, CI e versão realmente servida.
+
 ## 0.9.2 — 2026-11-04
 
 Integra à interface e à distribuição pública o complemento descritivo F1DB/FIA/Pirelli revisado nas entregas locais 0.9.0 e 0.9.1. Conserva as correções de toque, navegação e segurança da 0.8.31. A base original e as 262 idades de pneus aprovadas permanecem intactas: o leitor valida essa revisão antes de compor o novo complemento em memória, com hash fixo e créditos PT/EN por GP.

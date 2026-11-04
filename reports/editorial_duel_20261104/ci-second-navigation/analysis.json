@@ -1,0 +1,12 @@
+{
+  "run": 41899426862,
+  "candidate": "e369bcc97a3d3b60cb5a4a61e250b6598e40b779",
+  "passed_contexts": 2,
+  "failed_contexts": 2,
+  "metric_assertions": "passed in all four contexts",
+  "failure": "WebKit pageerror messages reference favorite iframe and SVG media access-control checks.",
+  "cause_status": "unconfirmed; interruption during document navigation is a hypothesis",
+  "mitigation_under_test": "Await initialized favorite options and correct language, stable idle and completed component/media requests before navigating; keep errors strictly rejected.",
+  "runtime_code_changed": false,
+  "workflow": "Run focused acceptance first, retaining every existing suite."
+}

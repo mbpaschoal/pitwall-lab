@@ -1,0 +1,18 @@
+{
+  "version": "0.10.0",
+  "build": "db13ebecfd958c9479fee8963768b5a3f799d194c500d2fe9fd951801763b9c9",
+  "baseline": "05eec0b70b24abf9a68dae45aac36730eefb5bc5",
+  "members_verified": 483,
+  "zip_bytes": 665875807,
+  "zip_sha256": "8126e9663e4ae5e9e1d89e47a8785b48cddc2d0c52f75466943ea17fbfbdbfae",
+  "canonical_changes_from_previous_candidate": [
+    "MANIFESTO.json",
+    "CHANGELOG.md",
+    "CHANGELOG.en.md",
+    "docs/JORNADA_DO_FA.md",
+    "frontend_assets/journey.css",
+    "docs/en/FAN_JOURNEY.md"
+  ],
+  "previous_candidate": "/private/tmp/pitwall-editorial-before-reflow-0100",
+  "package": "/private/tmp/pitwall-editorial-0100-release/pitwall-dashboard"
+}
