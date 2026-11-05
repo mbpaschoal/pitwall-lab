@@ -8,6 +8,7 @@ import yaml
 
 PRIVILEGED_JOBS = {
     ('coletar-dados.yml', 'collect'): {'contents': 'write', 'actions': 'write'},
+    ('coletar-dados.yml', 'prospective'): {'contents': 'write'},
     ('product.yml', 'release'): {'contents': 'write'},
     ('maintenance.yml', 'latest'): {'contents': 'write'},
     ('maintenance.yml', 'health'): {
@@ -35,11 +36,13 @@ def validate_workflow(name, workflow):
         if privileged and 'pull_request' in events:
             if (name, job_id) != ('product.yml', 'release') or job.get('if') != "startsWith(github.ref, 'refs/tags/v')":
                 errors.append(job_id + ': write token can reach pull request code')
-        if (name, job_id) == ('coletar-dados.yml', 'collect'):
+        if name == 'coletar-dados.yml' and job_id in ('collect','prospective'):
             if job.get('if') != "github.repository == 'mbpaschoal/pitwall-lab' && github.ref == 'refs/heads/main'":
                 errors.append('collection must be restricted to trusted main')
             if 'pull_request' in events or 'workflow_run' in events:
                 errors.append('collection cannot be triggered by untrusted runs')
+            if job_id == 'prospective' and job.get('needs') != 'collect':
+                errors.append('prospective publication must follow serial collection')
         for step in job.get('steps', []):
             action = step.get('uses')
             if action and not ACTION.fullmatch(action):
@@ -50,6 +53,8 @@ def validate_workflow(name, workflow):
                     errors.append(job_id + ': checkout must not persist credentials')
                 if 'workflow_run' in events and options.get('ref') != 'main':
                     errors.append(job_id + ': workflow_run must check out trusted main')
+                if name == 'coletar-dados.yml' and job_id == 'prospective' and options.get('ref') != 'main':
+                    errors.append('prospective publication must read the latest trusted main')
             if '${{ github.event.' in step.get('run', ''):
                 errors.append(job_id + ': event data must not be interpolated into shell code')
     return errors

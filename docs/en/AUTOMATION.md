@@ -4,6 +4,8 @@ English · [Português](../AUTOMACAO.md)
 
 The main routine runs on GitHub Actions and does not need the personal computer to stay on. Cron requests a run every 30 minutes; GitHub may delay its start. Free sources, serial collection, caching and `Retry-After` remain mandatory. The interface only reads published files.
 
+Prospective P1 adds immutable v1/Q pair preparation/publication, external server receipts, real PT/EN acceptance of all 22 displayed probabilities and separate posterior metrics. Its bounded job follows existing collection without training. [P1 operation and gates](P1_AUTOMATION.md).
+
 | Stage | State and control |
 |---|---|
 | Discover the next GP and join calendars | Automatic exact identity/date join, never another provider's round number. |

@@ -4,6 +4,8 @@ Português · [English](en/AUTOMATION.md)
 
 A rotina principal fica no GitHub Actions, sem depender de o computador pessoal estar ligado. O cron solicita execução a cada 30 minutos; o GitHub pode atrasar o início. Fontes gratuitas, coleta serial, cache e `Retry-After` continuam obrigatórios. A interface só lê os arquivos publicados.
 
+O prospectivo P1 acrescenta preparação e publicação imutável do par v1/Q, recibo externo, aceite real das 22 probabilidades em PT/EN e métricas posteriores separadas. O job segue a coleta existente, com tentativas limitadas e sem treino. [Operação P1 e bloqueios](AUTOMACAO_P1.md).
+
 | Etapa | Situação e controle |
 |---|---|
 | Descobrir o próximo GP e ligar calendários | Automática pela identidade e data, nunca pelo número de rodada de outra fonte. |

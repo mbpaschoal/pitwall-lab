@@ -1,0 +1,57 @@
+{
+  "schema": "pitwall-p1-qualifying-baseline-v1",
+  "frozen_at_utc": "2026-11-05T10:46:17.158956+00:00",
+  "name": "Q-logistic-2021-2023",
+  "fitted_years": [
+    2021,
+    2022,
+    2023
+  ],
+  "training_rows": 1319,
+  "retrained_for_p1": false,
+  "parameters_source": "reports/boosting_v1_20261104/run-01/model-parameters.json",
+  "parameters_source_sha256": "ce179b2aef1f6e0a3b5d0894b516f6a09f085e285a659641ea59f2f20569b4a3",
+  "fields": [
+    "posicao_classificacao",
+    "posicao_classificacao_ausente",
+    "posicao_classificacao_repetida"
+  ],
+  "medians": [
+    10.0,
+    0.0,
+    0.0
+  ],
+  "scaler_mean": [
+    10.489006823351023,
+    0.0,
+    0.001516300227445034
+  ],
+  "scaler_scale": [
+    5.757915776183653,
+    1.0,
+    0.03891016655149756
+  ],
+  "coefficients": [
+    -2.690121938032654,
+    0.0,
+    -0.013719055266853762
+  ],
+  "intercept": -3.5457738824304905,
+  "estimator_parameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": null,
+    "max_iter": 2000,
+    "multi_class": "deprecated",
+    "n_jobs": null,
+    "penalty": "l2",
+    "random_state": 42,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  }
+}

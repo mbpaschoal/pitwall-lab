@@ -28,6 +28,7 @@ on:
       - 'operacao2026/weekend_projection.py'
       - 'operacao2026/weekend_reconciliation.py'
       - 'operacao2026/final_results.py'
+      - 'pitwall/operations/**'
       - 'operacao2026/eventos/*.json'
       - 'operacao2026/adjudicacoes/**'
 permissions:
@@ -207,3 +208,73 @@ jobs:
       - name: Antecipar referência de pista / Check upcoming circuit references
         if: always() && steps.data.outcome == 'success'
         run: python -B -m operacao2026.readiness --check-upcoming
+  prospective:
+    needs: collect
+    if: github.repository == 'mbpaschoal/pitwall-lab' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Preparar e publicar par P1 / Prepare and publish P1 pair
+        id: pair
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python -B -m pitwall.operations.prospective --output "$RUNNER_TEMP/p1"
+          python - "$RUNNER_TEMP/p1" "$GITHUB_OUTPUT" <<'PY'
+          from pathlib import Path
+          import sys
+          with open(sys.argv[2],'a') as output:
+              output.write('host_pending='+str(any(Path(sys.argv[1]).rglob('host-input.json'))).lower()+'\n')
+          PY
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        if: steps.pair.outputs.host_pending == 'true'
+        with:
+          node-version: '22'
+      - name: Dependências de aceite público / Public acceptance dependencies
+        if: steps.pair.outputs.host_pending == 'true'
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.62.1
+          npx playwright install --with-deps chromium webkit
+      - name: Conferir previsão servida / Verify served forecast
+        if: steps.pair.outputs.host_pending == 'true'
+        timeout-minutes: 14
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python - "$RUNNER_TEMP/p1" <<'PY'
+          from pathlib import Path
+          import subprocess,sys
+          for source in sorted(Path(sys.argv[1]).rglob('host-input.json')):
+              destination=source.parent/'host'
+              subprocess.run(['node','tests/browser/verificar_p1.cjs',str(source),str(destination)],check=True)
+              subprocess.run([sys.executable,'-B','-m','pitwall.operations.prospective','--output',str(source.parent),
+                              '--finish-host',str(source),'--host-receipt',str(destination/'host-acceptance.json')],check=True)
+          PY
+      - name: Evidências P1 e falhas / P1 evidence and failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: prospective-P1-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 90
+          path: ${{ runner.temp }}/p1
+      - name: Resumo P1 / P1 summary
+        if: always()
+        run: |
+          python - "$RUNNER_TEMP/p1/status.json" "$GITHUB_STEP_SUMMARY" <<'PY'
+          from pathlib import Path
+          import sys
+          source=Path(sys.argv[1])
+          with open(sys.argv[2],'a') as output:
+              output.write(source.read_text() if source.exists() else 'P1 bloqueado; consultar logs / P1 blocked; inspect logs.\n')
+              for receipt in sorted(source.parent.rglob('finish-host-result.json')):
+                  output.write('\n'+receipt.read_text())
+          PY

@@ -1,0 +1,32 @@
+{
+  "protocol": "P1",
+  "registered_locally_at_utc": "2026-11-05T10:46:17.150381+00:00",
+  "operational_revision": "6a35f181fcd7669c317f299cb593ddc86724a417",
+  "operational_tree": "fae7ddf65e3aa96eb549becd2354d52e80e5fd26",
+  "sources": {
+    "operacao2026/post_qualifying.py": "a0292235b292810bd81f6c914b21515f7383947f905aac50c7b10ad8a719521b",
+    "operacao2026/forecast_policy.json": "25a0cfcf78888f36d270074f4e9dcab67307bd191046b3e8c3e2a23668b6e380",
+    "operacao2026/readiness.py": "17199228eae8b818b0b03c8ce49b8a4d6c2ef1c5e30165cfadf51bcb61a7e8ad",
+    "operacao2026/previsao.py": "b9da25baaafc2971bbe2bd527bafb12c1a0d30c9e9e12b27c278c445b1fc878a",
+    "operacao2026/publication.py": "defd23c7287bda41e2627a6b6f4eeb1429058975681e92f29031258a3b1d046c",
+    "operacao2026/fontes.py": "c78570d89379658a62b7464755b45f7ee92807fcb4d4843d8a72ba709d86a8f4",
+    "operacao2026/openf1_qualificacao.py": "fbc937a33f8a32d89c3542ab73039801148e6a4a84d036e4ec4de2f8c66091e8",
+    "operacao2026/cloud.py": "b9941e9cf272bc1b3266a726e06a1d2a000eb31207448c1e3662fd1a1e6a0556",
+    "operacao2026/weekend.py": "32c4237e81d18edb262e63049ceefea85e9f59466295e9055d50c744f7ebfbee",
+    "operacao2026/github_maintenance.py": "dd3cab54e842cc738438a5352341d9beacdd5761a441fd830fc70b224de821bd",
+    "operacao2026/eventos/saopaulo2026.json": "576a8aacb6ecdc763963a8fcfa8a039a3dd0ccc8adb76e4d23fcf8fc26db5fbd",
+    "operacao2026/eventos/emissoes_registradas.json": "8f12ba6af4dfcc76a9906ed9d5d52805508cc085ded1a728659f3a7d4a842fea",
+    "registro_emissoes.py": "ef434ea3ffcf63e2dbf3215336e295eb902f1b582372cb8224c8bc464ef8a1d1",
+    ".github/workflows/coletar-dados.yml": "80a18c7e5b0918588e31ea7a04963fa0a1ea808210d3350264ab5c3bcc283fb3",
+    ".github/workflows/maintenance.yml": "cb1377d807fd6692a92b33eea41ae8a34b76495f9c73b50247768dbd1f8a06f9",
+    "docs/PREPARACAO_SAO_PAULO.md": "f118d49d8ad660f2f6ffdecfda1d928d767a5cbc058e6c289c8803ce91f0da75",
+    "docs/comandos_operacao_2026.md": "8adcf2e69f984f5c82b4eb76892943704de1753f64617efa14c3d02be8ffa7b6",
+    "models/modelo_v1/modelo.joblib": "16718ea5c4a7f662e72f09d38b073e545df1bba5c64c87b2cc1a0973ad9116e3",
+    "models/modelo_v1/metadados.json": "77d24dc765d773e49b717b79844dd4678a91087dbbc091e3e9cb184215ea9cc6",
+    "data/preparado/colunas.json": "1b14e532cd3001ad6b38442cab4a14e52e63208fbe37bec77d8b464dfb98efdd"
+  },
+  "protected_path_count": 731,
+  "private_audit_registration_sha256": "28105fc67fa874755049a1f94778c17ef40273192c7ca90b042e3c69a981300a",
+  "new_event_forecast": false,
+  "scope": "Prospective protocol preparation and pipeline audit; no new race forecast or collection"
+}

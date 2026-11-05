@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.11.0 — 2026-11-05
+
+Integra o prospectivo P1 ao workflow de coleta existente: depois de Q observado e da emissão v1 validada, prepara e publica um par v1/Q imutável com prova de digest e horário do GitHub. Confere a previsão realmente servida em Chromium/WebKit, PT/EN e computador/celular, incluindo os 22 valores do gráfico. Recibos do par, do host e dos alvos posteriores ficam separados. Após resultado validado, registra Brier/log loss descritivos sem escolher ou reajustar modelos.
+
+Reutiliza a agenda e o token temporário existentes, com permissão de escrita restrita ao job em main, tentativas limitadas, cooldown e recuperação dos mesmos bytes. Falta de par/prova no prazo vira perda de cobertura, sem preenchimento tardio. A admissão continua limitada a São Paulo 2026; conflitos de fontes/IDs ou calendário exigem revisão. Protocolo público P1, modelo v1, 15 entradas e previsões anteriores preservados. Verificação local, CI, ativação hospedada e futura emissão continuam evidências distintas. Veja docs/AUTOMACAO_P1.md.
+
 ## 0.10.1 — 2026-11-04
 
 Correção da identidade de Stroll na Espanha 2025. O acervo descritivo associa as quatro sessões disputadas por Lance Stroll ao ID canônico `stroll`, confirmado por número/sessão OpenF1, qualifying Jolpica e data de nascimento F1DB. A associação anterior dependia apenas do resultado da corrida, da qual ele não participou. A revisão é fixada por hash e aplicada em memória depois dos complementos existentes; base, tempos, posições, 262 idades de pneus, modelo v1 e previsões permanecem intactos. O produtor passa a conservar o número no qualifying e rejeita conflitos de identidade entre resultado e qualifying. Nenhuma disponibilidade histórica foi inferida. Validação local e publicação pública são provas separadas.
