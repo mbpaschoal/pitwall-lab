@@ -1,0 +1,74 @@
+{
+  "checked_at_utc": "2026-11-05T10:48:54.061330+00:00",
+  "source_commit_local": "53f035e9e1b5bf15364b24e6c57a7b52e10689ce",
+  "source_tree": "fae7ddf65e3aa96eb549becd2354d52e80e5fd26",
+  "remote_main": "6a35f181fcd7669c317f299cb593ddc86724a417",
+  "remote_tree_matches_local": true,
+  "product_version": "0.10.1",
+  "native_tests": 106,
+  "p1_tests": 20,
+  "test_environment": "Python3.12, existing original pinned scientific dependencies",
+  "registry": {
+    "validated_events": 19,
+    "modes": {
+      "ENSAIO_RETROSPECTIVO": 17,
+      "PROSPECTIVO": 2
+    },
+    "sao_paulo_forecast_registered": false
+  },
+  "state": {
+    "status": "waiting_for_observed_qualifying"
+  },
+  "readiness": {
+    "schema": "pitwall-weekend-readiness-v1",
+    "checked_utc": "2026-11-05T10:48:54.061330+00:00",
+    "identity": [
+      2026,
+      20,
+      "interlagos"
+    ],
+    "meeting_key": 1299,
+    "qualifying_session": 11408,
+    "collection_window_start": "2026-11-05T15:30:00+00:00",
+    "qualification_status": "aguardando_classificacao",
+    "forecast_emitted_by_this_check": false,
+    "forecast_emission_attempted": false,
+    "limitation": "Preparation only; predictive inputs, actual roster and historical coverage must be validated after Q.",
+    "verified_team_pairs": 25,
+    "verified_cards": 75,
+    "first_free_access_after_q": "2026-11-07T19:30:00+00:00"
+  },
+  "upcoming": {
+    "status": "ready",
+    "horizon_days": 7,
+    "verified_events": 1,
+    "new_acquisition": false
+  },
+  "roster": {
+    "camara_openf1_mapping_present": false,
+    "canonical_qualifying_ids_pending": true,
+    "fallback_requires_literal_mapping_review_if_new_driver_is_unmapped": true,
+    "review_source_hash_verified": true
+  },
+  "frozen_model_hashes": {
+    "modelo": "16718ea5c4a7f662e72f09d38b073e545df1bba5c64c87b2cc1a0973ad9116e3",
+    "metadados": "77d24dc765d773e49b717b79844dd4678a91087dbbc091e3e9cb184215ea9cc6",
+    "esquema": "1b14e532cd3001ad6b38442cab4a14e52e63208fbe37bec77d8b464dfb98efdd"
+  },
+  "frozen_q_sha256": "7288daba4658cc98d5790b8a3b85df75bf33946df422dcc492750dda4e1c1ed7",
+  "protected_files_unchanged": 731,
+  "live_collection_run": 42011246914,
+  "live_collection_conclusion": "success",
+  "live_collection_functional_result": {
+    "changed": false,
+    "reason": "outside_race_weekend"
+  },
+  "maintenance_run": 42011382391,
+  "maintenance_conclusion": "success",
+  "current_source_collection_performed_by_this_audit": false,
+  "new_event_forecast_issued": false,
+  "p1_companion_invoked_by_hosted_workflow": false,
+  "public_forecast_verified": false,
+  "status": "prepared; observedQ, roster, inputs and paired public delivery pending",
+  "limit": "Controlled tests and pre-Q audit do not demonstrate future fresh collection or public forecast acceptance."
+}

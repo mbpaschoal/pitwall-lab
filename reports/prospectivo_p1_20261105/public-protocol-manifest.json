@@ -1,0 +1,22 @@
+{
+  "schema": "pitwall-p1-public-protocol-manifest-v1",
+  "prepared_at_utc": "2026-11-05T11:07:39.030750+00:00",
+  "source_main": "6a35f181fcd7669c317f299cb593ddc86724a417",
+  "files": {
+    "protocolo.md": "52eb6bf16e5fe411f60c00245f38de9b6bd5300726b1d38df6022d6f75e3d04a",
+    "protocol.en.md": "cc7a7964856b09bbce6a44c83237761f1a215b0386bf384a385f8b3f49c9fa5e",
+    "runbook.md": "4cef75a1529cd45896a453e832f170b20fa60189f9a8c635a34acb9145dd7bd6",
+    "pair_predictions.py": "3645f410ad16d280ef0241ac5159b3079e1021d98e7f362285e1f2b17b092328",
+    "verify_published_pair.py": "edb5a1ff84e42a06b1b0af3b9d4926bcb33ad14ce7e9ec3a26f0e0623035cadf",
+    "test_pair_predictions.py": "3fa22a111c2f5143dd30fe96918ae4cb8b2ff92549ef4047dc8e2f0f85662543",
+    "test_public_receipt.py": "6a35427d8cce3871cd118f3a0d916f82850ad65eeded88ac68277d6939469f69",
+    "q-baseline-frozen.json": "7288daba4658cc98d5790b8a3b85df75bf33946df422dcc492750dda4e1c1ed7",
+    "q-reconstruction-fixture.json": "4d49341e7a5fa6e66f6a52a3aa90699b6b5643963770e6cd0673a0aadffd5656",
+    "public-audit-summary.json": "b9dc858155ea9d3cde641139499819b6263a0d0d5093cd61b08af9d269a2eaac",
+    "README.md": "c88cf82b82735b902b5b8bf3da495357fdb5a84f87a777a0dca94f8e1fed52b0",
+    "registration.json": "5c345573a31223f0e3cf266315d93f092e129e4f1fe8acd6862263ecdb2c903b"
+  },
+  "self_excluded": true,
+  "public_registration_proof": "Immutable commit SHA plus GitHub pull-request created_at, to be recorded externally after publication; this timestamp alone is local.",
+  "new_event_forecast": false
+}
