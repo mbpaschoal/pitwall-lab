@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "772bd7008129fadcf805d818da793af085e8ca5562233eb3e86df9985826fb8e",
+  "apresentacao_build_sha256": "cc33659a890b78cb0c9d5c5b3db28a0bad35edc0593a854e54c7892d5ecd4895",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -3293,8 +3293,8 @@
       "fonte": "tests/test_dashboard_app.py",
       "modo": "gerado",
       "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "c59a780150dcc78090413f2e839c21cd4b9b88293d9ee04b02cf3ae2b905765b",
-      "sha256_origem": "acab93cca521fbd2388d89d68e346a4bdb1db8813dd4954407678c1a4d223af2"
+      "sha256_destino": "7e2e6400b1d15213194063c3a78e9dff42ed2545b236fb4bef68d549b9bdbc24",
+      "sha256_origem": "e4d33aa338128b70382fcb33f1db16becc90a3fc85626f6abe703934a393e1fa"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
