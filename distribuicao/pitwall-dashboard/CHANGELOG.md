@@ -6,6 +6,10 @@ Acrescenta supervisão local gratuita com n8n Community: acompanhamento público
 
 Workflow JSON e dependências fixados, dados internos fora do Dropbox, serviços locais no login e consultas sem credenciais ou APIs pagas. A agenda local depende do Mac; coleta e previsão hospedadas continuam independentes. Não dispara coletores, escrita no GitHub, inferência ou promoção de modelo. Modelo v1, entradas, previsões e protocolo P1 preservados. Instalação, testes, execução real, agendamento e publicação pública são evidências separadas. Veja docs/AUTOMACAO_N8N.md.
 
+## 0.11.1 — 2026-11-05
+
+Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 0/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.11.0 — 2026-11-05
 
 Integra o prospectivo P1 ao workflow de coleta existente: depois de Q observado e da emissão v1 validada, prepara e publica um par v1/Q imutável com prova de digest e horário do GitHub. Confere a previsão realmente servida em Chromium/WebKit, PT/EN e computador/celular, incluindo os 22 valores do gráfico. Recibos do par, do host e dos alvos posteriores ficam separados. Após resultado validado, registra Brier/log loss descritivos sem escolher ou reajustar modelos.

@@ -6,6 +6,10 @@ Adds free local n8n Community supervision: public workflow/P1-receipt monitoring
 
 Versioned workflow JSON and locked dependencies, internal data outside Dropbox, login services and keyless reads without paid APIs. Local scheduling requires the Mac; hosted collection and forecasting remain independent. No collectors, GitHub writes, inference or model promotion are triggered. Frozen v1, inputs, forecasts and registered P1 protocol remain unchanged. Installation, tests, real execution, scheduling and public deployment are separate evidence categories. See docs/en/N8N_AUTOMATION.md.
 
+## 0.11.1 — 2026-11-05
+
+Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 0/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.11.0 — 2026-11-05
 
 Integrates prospective P1 into the existing collection workflow: after observed qualifying and validated registered v1, it prepares and publishes one immutable v1/Q pair with GitHub digest/time evidence. It checks the actually served forecast on Chromium/WebKit, PT/EN and desktop/mobile, including all 22 chart values. Pair, host and posterior-target receipts remain separate. Validated results receive descriptive Brier/log-loss scores without model selection or refitting.
