@@ -1,6 +1,6 @@
 # Pitwall Lab evolution
 
-## 0.10.2 — 2026-11-05
+## 0.11.0 — 2026-11-05
 
 Integrates prospective P1 into the existing collection workflow: after observed qualifying and validated registered v1, it prepares and publishes one immutable v1/Q pair with GitHub digest/time evidence. It checks the actually served forecast on Chromium/WebKit, PT/EN and desktop/mobile, including all 22 chart values. Pair, host and posterior-target receipts remain separate. Validated results receive descriptive Brier/log-loss scores without model selection or refitting.
 

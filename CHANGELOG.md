@@ -1,6 +1,6 @@
 # Evolução do Pitwall Lab
 
-## 0.10.2 — 2026-11-05
+## 0.11.0 — 2026-11-05
 
 Integra o prospectivo P1 ao workflow de coleta existente: depois de Q observado e da emissão v1 validada, prepara e publica um par v1/Q imutável com prova de digest e horário do GitHub. Confere a previsão realmente servida em Chromium/WebKit, PT/EN e computador/celular, incluindo os 22 valores do gráfico. Recibos do par, do host e dos alvos posteriores ficam separados. Após resultado validado, registra Brier/log loss descritivos sem escolher ou reajustar modelos.
 
