@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.11.1 — 2026-11-05
+
+Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 0/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.11.0 — 2026-11-05
 
 Integra o prospectivo P1 ao workflow de coleta existente: depois de Q observado e da emissão v1 validada, prepara e publica um par v1/Q imutável com prova de digest e horário do GitHub. Confere a previsão realmente servida em Chromium/WebKit, PT/EN e computador/celular, incluindo os 22 valores do gráfico. Recibos do par, do host e dos alvos posteriores ficam separados. Após resultado validado, registra Brier/log loss descritivos sem escolher ou reajustar modelos.
