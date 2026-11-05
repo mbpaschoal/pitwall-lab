@@ -56,6 +56,15 @@ class SecurityPolicyTests(unittest.TestCase):
         workflow['jobs']['release']['if'] = 'always()'
         self.assertTrue(any('write token' in error for error in validate_workflow('product.yml', workflow)))
 
+    def test_P1_cannot_run_untrusted_parallel_or_with_recovery_dispatch_permissions(self):
+        original=yaml.safe_load((ROOT/'.github/workflows/coletar-dados.yml').read_text())
+        for field,value in [('if','always()'),('needs',[]),('permissions',{'contents':'write','actions':'write'})]:
+            workflow=copy.deepcopy(original);workflow['jobs']['prospective'][field]=value
+            self.assertTrue(validate_workflow('coletar-dados.yml',workflow))
+        workflow=copy.deepcopy(original)
+        workflow['jobs']['prospective']['steps'][0]['with']['ref']='untrusted-branch'
+        self.assertTrue(validate_workflow('coletar-dados.yml',workflow))
+
 
 if __name__ == '__main__':
     unittest.main()

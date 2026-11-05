@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.10.2 — 2026-11-05
+
+Integrates prospective P1 into the existing collection workflow: after observed qualifying and validated registered v1, it prepares and publishes one immutable v1/Q pair with GitHub digest/time evidence. It checks the actually served forecast on Chromium/WebKit, PT/EN and desktop/mobile, including all 22 chart values. Pair, host and posterior-target receipts remain separate. Validated results receive descriptive Brier/log-loss scores without model selection or refitting.
+
+Reuses the existing schedule and temporary token, with main-only job permissions, bounded attempts, cooldown and identical-byte recovery. Missing on-time pairs or host evidence count as coverage failures, never late backfills. Admission remains limited to São Paulo 2026; source/ID or calendar conflicts require review. Original public P1 protocol, frozen v1, 15 inputs and recorded forecasts remain unchanged. Local checks, CI, hosted activation and a future real emission remain distinct evidence. See docs/en/P1_AUTOMATION.md.
+
 ## 0.10.1 — 2026-11-04
 
 Stroll identity correction for Spain 2025. The descriptive archive links Lance Stroll's four participating sessions to canonical ID `stroll`, verified against OpenF1 session/car records, Jolpica qualifying and F1DB date of birth. The prior association relied only on race results, where he was absent. A hash-pinned revision is composed in memory after the existing supplements; original base, times, positions, 262 tyre ages, frozen v1 and forecasts remain unchanged. Future qualifying exports retain car numbers, and identity disagreements across race/qualifying are rejected. Historical availability is not inferred. Local validation and public deployment are separate evidence layers.
