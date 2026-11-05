@@ -1,5 +1,8 @@
 """Local n8n Community launcher. Data stays outside Dropbox; no cloud account."""
 import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
 import os
 from pathlib import Path
 import plistlib
@@ -25,6 +28,8 @@ def environment():
                N8N_DIAGNOSTICS_ENABLED='false', N8N_VERSION_NOTIFICATIONS_ENABLED='false',
                N8N_TEMPLATES_ENABLED='false', N8N_COMMUNITY_PACKAGES_ENABLED='false',
                N8N_PERSONALIZATION_ENABLED='false', N8N_BLOCK_ENV_ACCESS_IN_NODE='true',
+               NODES_INCLUDE=json.dumps(['n8n-nodes-base.manualTrigger','n8n-nodes-base.scheduleTrigger','n8n-nodes-base.httpRequest']),
+               N8N_PAYLOAD_SIZE_MAX='1',
                N8N_RUNNERS_ENABLED='false', N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS='true',
                GENERIC_TIMEZONE='America/Sao_Paulo', TZ='America/Sao_Paulo',
                EXECUTIONS_DATA_MAX_AGE='168', EXECUTIONS_DATA_PRUNE='true',
@@ -49,11 +54,14 @@ def cli(*args):
 
 def deploy():
     """Install only explicitly selected source bytes, not a recursive repo copy."""
+    validate_audit_gate()
     source = BASE/'source'; source.mkdir(parents=True,exist_ok=True)
     files = ['pitwall/__init__.py','pitwall/paths.py','pitwall/operations/__init__.py',
              'pitwall/operations/prospective.py','pitwall/operations/supervision.py',
              'operacao2026/eventos/saopaulo2026.json', 'automation/n8n/local.py',
-             'automation/n8n/supervisor.json']
+             'automation/n8n/supervisor.json','automation/n8n/audit_result.py',
+             'automation/n8n/pnpm-lock.yaml','automation/n8n/pnpm-workspace.yaml',
+             'automation/n8n/package.json','automation/n8n/UPSTREAM.md']
     folder = ROOT/'reports/prospectivo_p1_20261105'
     import json
     files += [str(Path('reports/prospectivo_p1_20261105')/name) for name in json.loads((folder/'public-protocol-manifest.json').read_text())['files']]
@@ -82,6 +90,32 @@ def install():
     pnpm=NODE.parents[1]/'../bin/fallback/pnpm'
     subprocess.run([str(pnpm.resolve()),'install','--frozen-lockfile','--store-dir',str(runtime/'store'),
                     '--config.managePackageManagerVersions=false'],cwd=runtime,env=environment(),check=True)
+    audit=subprocess.run([str(pnpm.resolve()),'audit','--prod','--json'],cwd=runtime,env=environment(),capture_output=True,text=True)
+    if audit.returncode not in (0,1):
+        raise RuntimeError('Dependency audit unavailable')
+    import runpy
+    parsed=json.loads(audit.stdout[audit.stdout.index('{'):])
+    evaluate=runpy.run_path(str(ROOT/'automation/n8n/audit_result.py'))['evaluate']
+    decision=evaluate(parsed,environment())
+    (BASE/'dependency-audit.json').write_text(json.dumps(parsed,indent=2)+'\n')
+    gate=dict(decision=decision,lock_sha256=hashlib.sha256((runtime/'pnpm-lock.yaml').read_bytes()).hexdigest(),
+              profile=audit_profile(),checked_at_utc=datetime.now(timezone.utc).isoformat())
+    (BASE/'dependency-gate.json').write_text(json.dumps(gate,indent=2)+'\n')
+    if not decision['accepted_for_restricted_local_profile']:
+        raise RuntimeError('Dependency findings block local deployment')
+
+
+def audit_profile():
+    env=environment()
+    return {k:env[k] for k in ('N8N_LISTEN_ADDRESS','NODES_INCLUDE','N8N_PAYLOAD_SIZE_MAX','N8N_COMMUNITY_PACKAGES_ENABLED')}
+
+
+def validate_audit_gate():
+    gate=json.loads((BASE/'dependency-gate.json').read_text())
+    expected=hashlib.sha256((ROOT/'automation/n8n/pnpm-lock.yaml').read_bytes()).hexdigest()
+    if (gate['lock_sha256']!=expected or gate['profile']!=audit_profile()
+            or gate['decision']['accepted_for_restricted_local_profile'] is not True):
+        raise ValueError('Install and audit the exact lockfile/profile before deployment')
 
 
 def agents():

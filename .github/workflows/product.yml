@@ -9,6 +9,36 @@ permissions:
 jobs:
   security:
     uses: ./.github/workflows/security.yml
+  n8n-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Auditar lockfile n8n / Audit n8n lockfile
+        run: |
+          python - "$RUNNER_TEMP/n8n-audit.json" <<'PYCODE'
+          import subprocess,sys
+          with open(sys.argv[1],'w') as output:
+              result=subprocess.run(['npx','--yes','pnpm@11.25.0','--dir','automation/n8n','audit','--prod','--json'],stdout=output)
+          if result.returncode not in (0,1): raise SystemExit(result.returncode)
+          PYCODE
+          python -B automation/n8n/audit_result.py "$RUNNER_TEMP/n8n-audit.json" "$RUNNER_TEMP/n8n-policy.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: n8n-dependency-audit
+          retention-days: 30
+          path: |
+            ${{ runner.temp }}/n8n-audit.json
+            ${{ runner.temp }}/n8n-policy.json
   validate:
     runs-on: ubuntu-latest
     steps:
@@ -123,7 +153,7 @@ jobs:
             ${{ runner.temp }}/streamlit.log
   release:
     if: startsWith(github.ref, 'refs/tags/v')
-    needs: [validate, browser, security]
+    needs: [validate, browser, security, n8n-audit]
     runs-on: ubuntu-latest
     permissions:
       contents: write

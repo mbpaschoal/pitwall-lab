@@ -31,3 +31,9 @@ Two LaunchAgents named `com.mbpaschoal.pitwall.n8n.bridge` and `.engine` start o
 The Mac, user session and network must be available. Scheduling punctuality is not guaranteed; hosted P1 remains independent. No Cloud subscription, paid server, external messaging channel or Dropbox write credential is provisioned.
 
 Validation: `python3 -B -m unittest tests.test_supervision tests.test_prospective_automation tests.test_releases -v`. Local installation, real CLI execution, observed scheduled execution and future post-GP scoring are separate evidence categories. Sources: [installation](https://docs.n8n.io/deploy/host-n8n/install-options/install-with-npm.md), [CLI](https://docs.n8n.io/deploy/host-n8n/configure-n8n/use-the-command-line.md), [Community](https://docs.n8n.io/deploy/host-n8n/community-edition-features.md).
+
+## Dependency review before publication
+
+The lockfile includes upstream overrides and subsequent advisory patches documented in [UPSTREAM.md](../../automation/n8n/UPSTREAM.md). The runtime loads exactly the three used nodes and caps incoming requests at 1 MiB. The first dependency audit identified critical findings not covered by functional tests; these were addressed before integration. CI now audits the lockfile and blocks critical or unreviewed high findings.
+
+Zod 3.25.76 retains an open high advisory. The scoped decision records local mitigations and residual risk; it is not a Zod fix, a zero-vulnerability attestation or permission to expose this n8n profile publicly.

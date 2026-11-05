@@ -136,6 +136,22 @@ class SupervisionTests(unittest.TestCase):
         self.assertNotIn('GITHUB_TOKEN',environment); self.assertNotIn('DROPBOX_TOKEN',environment)
         self.assertEqual(environment['N8N_LISTEN_ADDRESS'],'127.0.0.1')
         self.assertEqual(environment['N8N_COMMUNITY_PACKAGES_ENABLED'],'false')
+        self.assertEqual(environment['N8N_PAYLOAD_SIZE_MAX'],'1')
+        self.assertEqual(set(json.loads(environment['NODES_INCLUDE'])),{'n8n-nodes-base.manualTrigger','n8n-nodes-base.scheduleTrigger','n8n-nodes-base.httpRequest'})
+
+    def test_audit_gate_rejects_critical_unknown_high_and_expanded_runtime(self):
+        spec=importlib.util.spec_from_file_location('pitwall_n8n_audit',ROOT/'automation/n8n/audit_result.py')
+        module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+        report={'metadata':{'vulnerabilities':{'critical':0,'high':1,'moderate':18,'low':5}},'advisories':{
+            '1':dict(severity='high',module_name='zod',url='https://github.com/advisories/'+module.RESIDUAL,findings=[{'version':'3.25.76'}])}}
+        result=module.evaluate(report,module.runtime_profile())
+        self.assertTrue(result['accepted_for_restricted_local_profile']); self.assertFalse(result['zero_vulnerabilities_claimed'])
+        for change in [('severity','critical'),('module_name','foreign'),('url','https://github.com/advisories/GHSA-other')]:
+            changed=deepcopy(report); changed['advisories']['1'][change[0]]=change[1]
+            self.assertFalse(module.evaluate(changed,module.runtime_profile())['accepted_for_restricted_local_profile'])
+        env=module.runtime_profile(); env['N8N_LISTEN_ADDRESS']='0.0.0.0'
+        with self.assertRaises(ValueError): module.evaluate(report,env)
+        with self.assertRaises(ValueError): module.evaluate({'error':'HTTP 403'},module.runtime_profile())
 
     def test_url_allowlist_rejects_foreign_repo_credentials_and_insecure_transport(self):
         for url in ('http://api.github.com/repos/'+s.p1.REPO+'/releases',

@@ -51,3 +51,9 @@ O editor fica em <http://localhost:5678>. A criação da conta proprietária na 
 `python3 -B -m unittest tests.test_supervision tests.test_prospective_automation tests.test_releases -v` cobre ausência, erros de fonte, deduplicação, recuperação, fronteira temporal, desconhecidos e preservação. Uma execução real via n8n deve gerar evidência em `reports/supervisao_n8n/`; repetir antes do cooldown precisa retornar `cooldown`, sem nova consulta. Instalação, execução CLI, agendamento observado e futura avaliação pós-GP têm recibos separados.
 
 Referências: [instalação](https://docs.n8n.io/deploy/host-n8n/install-options/install-with-npm.md), [CLI](https://docs.n8n.io/deploy/host-n8n/configure-n8n/use-the-command-line.md), [Community](https://docs.n8n.io/deploy/host-n8n/community-edition-features.md).
+
+## Revisão das dependências antes da publicação
+
+O lockfile inclui os overrides oficiais e correções posteriores documentados em [UPSTREAM.md](../automation/n8n/UPSTREAM.md). O runtime carrega somente os três nós usados e limita requisições recebidas a 1 MiB. A primeira auditoria encontrou alertas críticos que os testes funcionais não mediam; eles foram corrigidos antes de integrar a entrega. O CI agora audita o lockfile e bloqueia críticos ou altos sem revisão explícita do perfil.
+
+Permanece o alerta alto de Zod 3.25.76 indicado na proveniência. O aceite é restrito ao supervisor local, com mitigação e risco registrados; não é correção do Zod, atestado de zero vulnerabilidades ou autorização para expor o n8n na internet.
