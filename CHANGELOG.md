@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.12.0 — 2026-11-05
+
+Acrescenta supervisão local gratuita com n8n Community: acompanhamento público de workflows e recibos P1, fila de revisão, resumos descritivos PT/EN, arquivamento por SHA-256 na pasta Dropbox existente e monitoramento diário de dois documentos oficiais. Avisos locais somente em mudanças relevantes; erros de fonte ficam indeterminados. Sucesso de workflow não equivale a previsão publicada ou aceita no host.
+
+Workflow JSON e dependências fixados, dados internos fora do Dropbox, serviços locais no login e consultas sem credenciais ou APIs pagas. A agenda local depende do Mac; coleta e previsão hospedadas continuam independentes. Não dispara coletores, escrita no GitHub, inferência ou promoção de modelo. Modelo v1, entradas, previsões e protocolo P1 preservados. Instalação, testes, execução real, agendamento e publicação pública são evidências separadas. Veja docs/AUTOMACAO_N8N.md.
+
 ## 0.11.0 — 2026-11-05
 
 Integra o prospectivo P1 ao workflow de coleta existente: depois de Q observado e da emissão v1 validada, prepara e publica um par v1/Q imutável com prova de digest e horário do GitHub. Confere a previsão realmente servida em Chromium/WebKit, PT/EN e computador/celular, incluindo os 22 valores do gráfico. Recibos do par, do host e dos alvos posteriores ficam separados. Após resultado validado, registra Brier/log loss descritivos sem escolher ou reajustar modelos.
