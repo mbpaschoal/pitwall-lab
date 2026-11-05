@@ -393,6 +393,7 @@ frontend_assets/pilotos_condicoes.json
 frontend_assets/pilotos_condicoes_operacao.json
 frontend_assets/pitwall.css
 frontend_assets/race_weekend.json
+frontend_assets/revisao_identidade_pilotos_v1.json
 historico_circuito.py
 pitwall/__init__.py
 pitwall/dashboard/__init__.py
@@ -423,6 +424,7 @@ pitwall/data/driver_conditions.py
 pitwall/data/driver_updates.py
 pitwall/data/editorial.py
 pitwall/data/editorial_panels.py
+pitwall/data/identity_revision.py
 pitwall/data/post_race_evaluation.py
 pitwall/data/race_weekend.py
 pitwall/data/tyre_age.py

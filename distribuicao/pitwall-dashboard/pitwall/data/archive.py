@@ -191,8 +191,9 @@ def carregar(raiz):
         validar(asset)
         from pitwall.data.tyre_age import carregar as carregar_idade_pneus
         from pitwall.data.complementary_sources import load_projection
+        from pitwall.data.identity_revision import load_projection as load_identity
         revised = carregar_idade_pneus(root, asset, raw)
-        return validar(load_projection(root, revised))
+        return validar(load_identity(root, load_projection(root, revised)))
     except AcervoDashboardErro:
         raise
     except (
