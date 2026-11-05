@@ -229,20 +229,59 @@ def score_rows(pairs, targets):
 def post_race(root,pair,pair_sha,output,api,release,assets,event):
     if now() <= utc(event['largada_utc']):
         return dict(status='waiting_for_race')
-    from pitwall.data.race_weekend import carregar_asset,alvo_podio_posterior
-    asset=carregar_asset(root);identity=[event[k] for k in ('temporada','rodada','circuito_id')]
-    race=next(r for r in asset['dados_2026']['corridas'] if [r[k] for k in ('temporada','rodada','circuito_id')]==identity)
-    if race.get('resultado_posterior_validado') is not True or race.get('estado_resultado')!='observado_local':
+    from pitwall.data.race_weekend import alvo_podio_posterior
+    from pitwall.data.driver_conditions import ASSET as BASELINE,validate
+    from pitwall.data.driver_updates import ASSET as UPDATES,merge
+    identity=[event[k] for k in ('temporada','rodada','circuito_id')]
+    key='{}:{}'.format(*identity[:2])
+    updates=json.loads((root/UPDATES).read_text())
+    merge(validate(json.loads((root/BASELINE).read_text())),updates)
+    if key in updates['pending'] or key not in updates['events']:
         return dict(status='waiting_for_validated_targets')
-    if (race.get('resultado_circuito_id')!=event['circuito_id'] or race.get('resultado_data_fonte')!=event['data']
-            or not utc(event['largada_utc']) < utc(race['resultado_obtido_em_utc']) <= now()
-            or not re.fullmatch('[a-f0-9]{64}',race.get('fonte_resultado_sha256',''))):
-        raise ValueError('Posterior result identity/source/clock differs')
+    candidate=updates['events'][key];gp=candidate['gp'];rows=candidate['results']
+    state=json.loads((root/'frontend_assets/operacao_fim_semana.json').read_text())
+    states=[s for s in [state]+state.get('arquivo_eventos',[]) if [s.get(k) for k in ('temporada','rodada','circuito_id')]==identity]
+    if len(states)!=1:
+        raise ValueError('Observed race state identity is absent or ambiguous')
+    races=[s for s in states[0]['sessoes'] if s['nome']=='Race']
+    if len(races)!=1 or not races[0].get('encerramento_observado_utc'):
+        return dict(status='waiting_for_observed_race_finish')
+    expected=next(s for s in event['sessions'] if s['session_name']=='Race')
+    finish=utc(races[0]['encerramento_observado_utc'])
+    if ([gp[k] for k in ('temporada','rodada','circuito_id')]!=identity or gp['date_utc']!=event['data']
+            or gp['session_name']!='Race' or gp['session_key']!=expected['session_key']
+            or races[0]['session_key']!=expected['session_key']
+            or not utc(event['largada_utc']) <= utc(gp['race_start_utc']) < finish <= now()
+            or not utc(gp['race_start_utc']) < utc(gp['race_finish_utc']) <= now()):
+        raise ValueError('Posterior result identity or observed race chronology differs')
+    canonical=[s for s in candidate['sources'] if s.get('provider')=='jolpica' and s.get('status')==200
+               and s.get('url')=='https://api.jolpi.ca/ergast/f1/{}/{}/results/?limit=100&offset=0'.format(*identity[:2])]
+    native={s['sha256']:s for s in candidate['sources'] if s.get('provider')=='openf1'
+            and s.get('endpoint')=='session_result' and s.get('status')==200
+            and s.get('url')=='https://api.openf1.org/v1/session_result?session_key='+str(expected['session_key'])}
+    if len(canonical)!=1 or len(native)!=1:
+        raise ValueError('Posterior canonical/native result evidence is absent or ambiguous')
+    sources=canonical+list(native.values())
+    if any(not re.fullmatch('[a-f0-9]{64}',s.get('sha256',''))
+           or not max(finish,utc(gp['race_finish_utc'])) <= utc(s['obtido_em_utc']) <= now() for s in sources):
+        raise ValueError('Posterior source hash or acquisition chronology differs')
     host_spec(root,pair)  # Exact original probabilities and population must still match.
-    rows=[r for r in asset['dados_2026']['previsoes'] if [r['temporada'],r['rodada']]==identity[:2]]
-    targets={r['piloto_id']:alvo_podio_posterior(r,True) for r in rows}
-    observed={'identity':identity,'targets':targets,'source_sha256':race['fonte_resultado_sha256'],
-              'obtained_at_utc':race['resultado_obtido_em_utc']}
+    original={r['piloto_id']:r for r in pair['pairs']}
+    if len(rows)!=len(original) or {r['driver_id'] for r in rows}!=set(original):
+        raise ValueError('Posterior driver population differs from the forecast')
+    targets={}
+    for row in rows:
+        if row['team_id']!=original[row['driver_id']]['equipe_id_entrada']:
+            raise ValueError('Posterior team differs from forecast team')
+        status=('DSQ' if row['disqualified'] else 'DNS' if not row['started'] else
+                'DNF' if row['retired'] else row['canonical_status'])
+        known_non_podium=row['disqualified'] or not row['started'] or row['retired']
+        participant=dict(resultado_observado=row['position'],status_resultado=status,
+                         podio_resultado_confirmado=0 if row['position'] is None and known_non_podium else None)
+        targets[row['driver_id']]=alvo_podio_posterior(participant,True)
+    observed={'identity':identity,'targets':targets,'sources':sources,
+              'observed_race_finish_utc':races[0]['encerramento_observado_utc'],
+              'validated_event_content_sha256':digest(json_bytes(candidate))}
     evidence=json_bytes(observed)
     record=dict(schema='pitwall-p1-post-race-descriptive-v1',pair_sha256=pair_sha,
                 posterior=observed,**score_rows(pair['pairs'],targets))

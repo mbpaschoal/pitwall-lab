@@ -211,12 +211,48 @@ class ActualRuntimeTests(unittest.TestCase):
     def test_posterior_reader_scores_known_DNF_targets_separately_and_never_changes_pair(self):
         pair=self.posterior_fixture();original=deepcopy(pair)
         clock=auto.utc('2026-11-05T12:00:00Z');api=FakeGitHub(clock);release=api.create('p1-fixture-only','a'*40)
-        event=dict(temporada=2026,rodada=19,circuito_id='rodriguez',data='2026-11-01',largada_utc='2026-11-01T20:00:00Z')
+        event=dict(temporada=2026,rodada=19,circuito_id='rodriguez',data='2026-11-01',largada_utc='2026-11-01T20:00:00Z',
+                   sessions=[dict(session_name='Race',session_key=11404)])
         with tempfile.TemporaryDirectory() as tmp,patch.object(auto,'now',return_value=clock):
             result=auto.post_race(ROOT,pair,'a'*64,Path(tmp),api,release,api.rows,event)
         self.assertEqual(result['known_targets'],22);self.assertEqual(pair,original)
         record=json.loads(api.raw[1]);self.assertEqual(record['posterior']['targets']['stroll'],0)
         self.assertFalse(record['model_selection_performed']);self.assertEqual(record['pair_sha256'],'a'*64)
+
+    def test_posterior_source_timing_roster_team_and_session_fail_closed(self):
+        from pitwall.data.driver_conditions import ASSET as BASELINE
+        from pitwall.data.driver_updates import ASSET as UPDATES,seal
+        pair=self.posterior_fixture();clock=auto.utc('2026-11-05T12:00:00Z')
+        event=dict(temporada=2026,rodada=19,circuito_id='rodriguez',data='2026-11-01',largada_utc='2026-11-01T20:00:00Z',
+                   sessions=[dict(session_name='Race',session_key=11404)])
+        for kind in ['early_capture','foreign_team','missing_driver','foreign_session']:
+            with self.subTest(kind=kind),tempfile.TemporaryDirectory() as tmp:
+                root=Path(tmp);(root/'frontend_assets').mkdir();api=FakeGitHub(clock);release=api.create('p1-fixture-only','a'*40)
+                for name in [BASELINE,UPDATES,'frontend_assets/operacao_fim_semana.json']:(root/name).write_bytes((ROOT/name).read_bytes())
+                updates=json.loads((root/UPDATES).read_text());candidate=updates['events']['2026:19'];config=deepcopy(event)
+                if kind=='early_capture':candidate['sources'][0]['obtido_em_utc']='2026-11-01T20:01:00Z'
+                elif kind=='foreign_team':candidate['results'][0]['team_id']='haas'
+                elif kind=='missing_driver':candidate['results'].pop()
+                else:config['sessions'][0]['session_key']=11408
+                (root/UPDATES).write_bytes(auto.json_bytes(seal(updates)))
+                with patch.object(auto,'now',return_value=clock),patch.object(auto,'host_spec',return_value={}):
+                    with self.assertRaises(ValueError):auto.post_race(root,pair,'a'*64,root,api,release,api.rows,config)
+                self.assertEqual(len(api.rows),0)
+
+    def test_missing_observed_race_finish_prevents_scores_even_with_validated_results(self):
+        from pitwall.data.driver_conditions import ASSET as BASELINE
+        from pitwall.data.driver_updates import ASSET as UPDATES
+        pair=self.posterior_fixture();clock=auto.utc('2026-11-05T12:00:00Z')
+        event=dict(temporada=2026,rodada=19,circuito_id='rodriguez',data='2026-11-01',largada_utc='2026-11-01T20:00:00Z',
+                   sessions=[dict(session_name='Race',session_key=11404)])
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);(root/'frontend_assets').mkdir();api=FakeGitHub(clock);release=api.create('p1-fixture-only','a'*40)
+            for name in [BASELINE,UPDATES,'frontend_assets/operacao_fim_semana.json']:(root/name).write_bytes((ROOT/name).read_bytes())
+            path=root/'frontend_assets/operacao_fim_semana.json';state=json.loads(path.read_text())
+            next(s for s in state['sessoes'] if s['nome']=='Race')['encerramento_observado_utc']=None
+            path.write_bytes(auto.json_bytes(state))
+            with patch.object(auto,'now',return_value=clock):result=auto.post_race(root,pair,'a'*64,root,api,release,api.rows,event)
+            self.assertEqual(result['status'],'waiting_for_observed_race_finish');self.assertEqual(api.rows,[])
 
     def test_real_pre_Q_path_does_not_collect_infer_or_publish(self):
         with tempfile.TemporaryDirectory() as tmp,patch.object(auto,'now',return_value=auto.utc('2026-11-05T12:00:00Z')), \
