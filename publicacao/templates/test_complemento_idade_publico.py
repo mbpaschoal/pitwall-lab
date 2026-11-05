@@ -44,7 +44,11 @@ class TestComplementoIdadePublico(unittest.TestCase):
         from pitwall.data.complementary_sources import load_projection
         expected = load_projection(RAIZ, base)
         deltas = list(diferencas(expected['gps'], atual['gps']))
-        self.assertEqual(len(deltas), 262)
+        identity = [(p,a,b) for p,a,b in deltas if p[-1]=='piloto_id']
+        self.assertEqual(len(identity),4)
+        self.assertTrue(all(p[0]=='2025:9' and a is None and b=='stroll' for p,a,b in identity))
+        deltas = [(p,a,b) for p,a,b in deltas if p[-1]!='piloto_id']
+        self.assertEqual(len(deltas),262)
         self.assertTrue(all(caminho[-1] == 'idade' for caminho, _, _ in deltas))
         self.assertTrue(all(type(a) is int and type(b) is int and a >= 0 and b >= 0
                             for _, a, b in deltas))

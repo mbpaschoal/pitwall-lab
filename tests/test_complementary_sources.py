@@ -119,6 +119,8 @@ class ComplementarySources(unittest.TestCase):
         previous_display = tyre_age.carregar(ROOT, original, raw)
         bundle = read(ROOT / 'frontend_assets/complemento_fontes_v1.json')
         expected = project(previous_display, bundle)
+        from pitwall.data.identity_revision import load_projection as load_identity
+        expected = load_identity(ROOT, expected)
         with patch('urllib.request.urlopen', side_effect=AssertionError('network')):
             actual = carregar(ROOT)
         self.assertEqual(actual, expected)

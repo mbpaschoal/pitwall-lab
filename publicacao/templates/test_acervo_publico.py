@@ -10,6 +10,25 @@ RAIZ = Path(__file__).resolve().parents[1]
 
 
 class TestAcervoPublico(unittest.TestCase):
+    def test_stroll_canonical_identity_without_race_entry_or_timing_changes(self):
+        import json
+        base=json.loads((RAIZ/'frontend_assets/acervo_dashboard.json').read_bytes())
+        current=carregar(RAIZ)
+        before=base['gps']['2025:9'];after=current['gps']['2025:9']
+        for s in after['sessoes']:
+            rows=[r for r in s['tempos'] if r['numero']==18]
+            if s['nome']=='Race':
+                self.assertEqual(rows,[])
+                continue
+            self.assertEqual(len(rows),1)
+            self.assertEqual(rows[0]['piloto_id'],'stroll')
+            old_s=next(x for x in before['sessoes'] if x['session_key']==s['session_key'])
+            old=next(r for r in old_s['tempos'] if r['numero']==18)
+            self.assertIsNone(old['piloto_id'])
+            self.assertEqual({k:v for k,v in rows[0].items() if k!='piloto_id'},
+                             {k:v for k,v in old.items() if k!='piloto_id'})
+        self.assertEqual(len(current['revisao_identidade']['aplicados']),4)
+
     def test_complemento_admitido_preserva_tempos_e_separa_contexto_futuro(self):
         asset = carregar(RAIZ)
         self.assertEqual(asset['cobertura']['gps'], 66)
