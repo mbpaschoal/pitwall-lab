@@ -42,6 +42,8 @@ class AutomationTests(unittest.TestCase):
         self.fixture.setUp();self.addCleanup(self.fixture.doCleanups)
         self.root=self.fixture.root;self.clock=self.fixture.now;self.api=FakeGitHub(self.clock)
         (self.root/'VERSION').write_text('0.0.0\n')
+        verifier=self.root/'tests/browser/verificar_p1.cjs';verifier.parent.mkdir(parents=True)
+        verifier.write_bytes((ROOT/'tests/browser/verificar_p1.cjs').read_bytes())
         self.entry=next(iter(self.fixture.registry.values()))
         self.event=dict(temporada=2026,rodada=20,circuito_id='interlagos',largada_utc='2026-11-08T17:00:00Z',data='2026-11-08')
         self.output=self.root/'automatic';self.output.mkdir()
@@ -70,6 +72,7 @@ class AutomationTests(unittest.TestCase):
         observed=(self.clock-timedelta(seconds=1)).isoformat()
         return dict(schema='pitwall-p1-served-forecast-v1',base='https://pitwall-lab.streamlit.app',
                     source_asset_sha256='a'*64,version='0.0.0',
+                    automation_commit='a'*40,verifier_sha256=auto.digest((ROOT/'tests/browser/verificar_p1.cjs').read_bytes()),
                     pair_sha256=pair_sha,identity=[2026,20,'interlagos'],status='passed',completed_at_utc=self.clock.isoformat(),
                     cases=[dict(engine=e,width=w,lang=l,status='passed',rows_checked=22,observed_at_utc=observed)
                            for e in ('chromium','webkit') for w in (390,1440) for l in ('pt','en')])

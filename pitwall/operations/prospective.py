@@ -190,16 +190,9 @@ def host_spec(root, pair):
 
 
 def validate_host(receipt, pair_sha, identity, start):
-    cases = receipt.get('cases',[])
-    expected = {(e,w,l) for e in ('chromium','webkit') for w in (390,1440) for l in ('pt','en')}
-    if (receipt.get('schema')!='pitwall-p1-served-forecast-v1' or receipt.get('base')!='https://pitwall-lab.streamlit.app'
-            or receipt.get('status') != 'passed' or receipt.get('pair_sha256') != pair_sha
-            or receipt.get('identity') != identity or len(cases) != 8
-            or {(c['engine'],c['width'],c['lang']) for c in cases} != expected
-            or any(c.get('status') != 'passed' or c.get('rows_checked') != 22
-                   or not utc(c['observed_at_utc']) <= now() < start for c in cases)
-            or not utc(receipt['completed_at_utc']) <= now() < start):
-        raise ValueError('Public forecast host acceptance is incomplete or late')
+    prior_host(receipt,pair_sha,identity,start)
+    if now() >= start:
+        raise ValueError('Public forecast host acceptance is late')
 
 
 def prior_host(receipt, pair_sha, identity, start):
@@ -207,6 +200,8 @@ def prior_host(receipt, pair_sha, identity, start):
     cases=receipt.get('cases',[])
     expected={(e,w,l) for e in ('chromium','webkit') for w in (390,1440) for l in ('pt','en')}
     if (receipt.get('schema')!='pitwall-p1-served-forecast-v1' or receipt.get('base')!='https://pitwall-lab.streamlit.app'
+            or not re.fullmatch('[a-f0-9]{64}',receipt.get('verifier_sha256',''))
+            or not re.fullmatch('[a-f0-9]{40}',receipt.get('automation_commit',''))
             or receipt.get('status')!='passed' or receipt.get('pair_sha256')!=pair_sha or receipt.get('identity')!=identity
             or len(cases)!=8 or {(c['engine'],c['width'],c['lang']) for c in cases}!=expected
             or any(c.get('status')!='passed' or c.get('rows_checked')!=22
@@ -290,6 +285,10 @@ def finish_host(root, spec_file, receipt_file, api=None):
         raise ValueError('Host expectations differ from native projected probabilities')
     if receipt.get('source_asset_sha256')!=spec['source_asset_sha256'] or receipt.get('version')!=spec['version']:
         raise ValueError('Host evidence comes from another package')
+    current=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
+    if (receipt.get('automation_commit')!=current or spec.get('automation_commit')!=current
+            or receipt.get('verifier_sha256')!=digest((root/'tests/browser/verificar_p1.cjs').read_bytes())):
+        raise ValueError('Host verifier or automation revision differs')
     saved=persist_asset(api,release,assets,'host-acceptance.json',Path(receipt_file).read_bytes())
     if not utc(saved['created_at']) <= utc(saved['updated_at']) < start:
         raise ValueError('Host evidence was not publicly preserved before the race')
@@ -382,7 +381,8 @@ def run_event(root, event, entry, output, api=None):
                   json_bytes(dict(started_at_utc=now().isoformat(),pair_sha256=receipt['pair_sha256'])))
     spec = host_spec(root,pair)
     spec.update(pair_sha256=digest(pair_file.read_bytes()),race_start_utc=event['largada_utc'],
-                version=(root/'VERSION').read_text().strip(),pair_asset_id=previous['id'],release_id=release['id'])
+                version=(root/'VERSION').read_text().strip(),pair_asset_id=previous['id'],release_id=release['id'],
+                automation_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip())
     (output/'host-input.json').write_bytes(json_bytes(spec))
     return dict(status='public_pair_verified',identity=identity,publication_verified=True,
                 host_acceptance_pending=True,admissible=False,release_tag=tag,pair_sha256=receipt['pair_sha256'])

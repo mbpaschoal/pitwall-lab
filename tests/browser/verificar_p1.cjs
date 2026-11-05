@@ -1,5 +1,6 @@
 /* Automatic forecast acceptance; actual observations and failed attempts retained. */
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const crypto=require('node:crypto');
 const {ready}=require('./verificar_publicacao.cjs');
 
 function checkPlot(traces,expected){
@@ -24,7 +25,8 @@ async function verify(specPath,output){
  const engines=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  output=path.resolve(output);fs.mkdirSync(output,{recursive:true});
  const report={schema:'pitwall-p1-served-forecast-v1',identity:spec.identity,pair_sha256:spec.pair_sha256,
-  source_asset_sha256:spec.source_asset_sha256,version:spec.version,base,cases:[],status:'failed'};
+  source_asset_sha256:spec.source_asset_sha256,version:spec.version,base,cases:[],status:'failed',
+  automation_commit:spec.automation_commit,verifier_sha256:crypto.createHash('sha256').update(fs.readFileSync(__filename)).digest('hex')};
  const save=()=>fs.writeFileSync(path.join(output,'host-acceptance.json'),JSON.stringify(report,null,2)+'\n');
  try{
   for(const engine of ['chromium','webkit']){
