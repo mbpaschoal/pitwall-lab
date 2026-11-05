@@ -233,5 +233,14 @@ class ActualRuntimeTests(unittest.TestCase):
         with patch.dict(auto.os.environ,{},clear=True):
             with self.assertRaisesRegex(ValueError,'token required'):api.create('p1-fixture','a'*40)
 
+    def test_control_plane_reads_use_existing_actions_token_while_public_verifier_stays_original(self):
+        captured=[]
+        def opening(request,timeout):
+            captured.append(request);return io.StringIO('{}')
+        with patch.dict(auto.os.environ,{'GITHUB_TOKEN':'fixture-only-not-a-credential'}),patch.object(auto,'urlopen',side_effect=opening):
+            auto.GitHub().release('p1-fixture')
+        self.assertEqual(captured[0].get_header('Authorization'),'Bearer fixture-only-not-a-credential')
+        self.assertNotIn('GITHUB_TOKEN',(ROOT/auto.FROZEN/'verify_published_pair.py').read_text())
+
 
 if __name__=='__main__':unittest.main()

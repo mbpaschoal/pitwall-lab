@@ -55,11 +55,12 @@ class GitHub:
             raise ValueError('Unexpected GitHub endpoint')
         headers = {'Accept': 'application/vnd.github+json', 'User-Agent': 'Pitwall-Lab-P1',
                    'X-GitHub-Api-Version': '2022-11-28'}
+        token = os.environ.get('GITHUB_TOKEN')
+        if token:
+            headers['Authorization'] = 'Bearer '+token
         if method != 'GET':
-            token = os.environ.get('GITHUB_TOKEN')
             if not token:
                 raise ValueError('Actions token required for publication')
-            headers['Authorization'] = 'Bearer '+token
             headers['Content-Type'] = 'application/octet-stream' if binary else 'application/json'
         body = data if binary else json_bytes(data) if data is not None else None
         try:
