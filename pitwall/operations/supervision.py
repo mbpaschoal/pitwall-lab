@@ -265,6 +265,20 @@ class Supervisor:
         sources = snapshot['sources']; problems = []
         def problem(kind, detail):
             problems.append(dict(kind=kind, detail=detail, status='open', id=sha((kind+':'+detail).encode())))
+        gate_path=self.state.parent/'dependency-gate.json'
+        if gate_path.exists():
+            try:
+                gate=json.loads(gate_path.read_text()); decision=gate['decision']
+                snapshot['dependency_audit']={'checked_at_utc':gate['checked_at_utc'],
+                    'counts':decision['counts'],'residual_high':decision['residual_high']}
+                if not decision['accepted_for_restricted_local_profile']:
+                    problem('dependency_security','Dependency policy requires intervention')
+                for row in decision['residual_high']:
+                    problem('dependency_security',row['package']+'@'+row['version']+': '+row['advisory']+' (open; local mitigation only)')
+                if utc_now()-p1.utc(gate['checked_at_utc'])>timedelta(days=7):
+                    problem('dependency_audit_due','Dependency audit is older than seven days; review without automatic upgrades')
+            except Exception as error:
+                problem('dependency_audit_source',str(error))
         for name in ('coletar-dados.yml','product.yml'):
             try:
                 url=p1.BASE+'/actions/workflows/'+name+'/runs?branch=main&status=completed&per_page=1'

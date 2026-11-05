@@ -102,6 +102,16 @@ class SupervisionTests(unittest.TestCase):
         asset['size']=s.MAX_BYTES+1
         with self.assertRaisesRegex(ValueError,'metadata'): self.supervisor.asset(asset,[])
 
+    def test_open_dependency_finding_and_stale_audit_remain_visible_once(self):
+        gate={'checked_at_utc':(self.clock-timedelta(days=8)).isoformat(),'decision':{
+            'accepted_for_restricted_local_profile':True,'counts':{'critical':0,'high':1},
+            'residual_high':[{'package':'zod','version':'3.25.76','advisory':'GHSA-mrhx-c7xc-m3w5'}]}}
+        (self.base/'dependency-gate.json').write_bytes(s.raw_json(gate))
+        first=self.supervisor.run(); self.assertTrue(first['changed'])
+        self.assertEqual(first['dependency_audit']['counts']['high'],1)
+        self.assertTrue({'dependency_security','dependency_audit_due'} <= {r['kind'] for r in first['queue']})
+        self.assertFalse(self.supervisor.run(force=True)['changed'])
+
     def test_post_race_scores_keep_unknown_targets_and_reject_future_finish(self):
         pairs=[dict(piloto_id='a',probabilidade_v1=.8,probabilidade_q=.5),
                dict(piloto_id='b',probabilidade_v1=.1,probabilidade_q=.5)]
