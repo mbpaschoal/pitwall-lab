@@ -37,3 +37,7 @@ Validation: `python3 -B -m unittest tests.test_supervision tests.test_prospectiv
 The lockfile includes upstream overrides and subsequent advisory patches documented in [UPSTREAM.md](../../automation/n8n/UPSTREAM.md). The runtime loads exactly the three used nodes and caps incoming requests at 1 MiB. The first dependency audit identified critical findings not covered by functional tests; these were addressed before integration. CI now audits the lockfile and blocks critical or unreviewed high findings.
 
 Zod 3.25.76 retains an open high advisory. The scoped decision records local mitigations and residual risk; it is not a Zod fix, a zero-vulnerability attestation or permission to expose this n8n profile publicly.
+
+## Pending data releases after a healthy collection
+
+The monitor reads main's version and retains data versions whose release/ZIP is not confirmed. A later successful no-change collection does not resolve an orphaned release. The check covers uploaded-asset metadata, digest, size and server timestamps only; ZIP-byte and served-host acceptance remain separate. At most five versions are checked per cycle and remaining pending entries are retained.

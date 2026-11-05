@@ -20,6 +20,7 @@ class SupervisionTests(unittest.TestCase):
         self.base=Path(temporary.name); self.clock=datetime(2026,11,5,15,tzinfo=timezone.utc)
         context=patch.object(s,'utc_now',side_effect=lambda:self.clock); context.start(); self.addCleanup(context.stop)
         self.conclusion='success'; self.fail_release=False; self.calls=[]; self.html=b'<html><p>Schedule 17:00</p></html>'
+        self.version='0.12.0'; self.missing_data_versions=set(); self.asset_state='uploaded'
         self.supervisor=s.Supervisor(ROOT,self.base/'state',self.base/'archive',self.fetch)
 
     def fetch(self,url,missing=False):
@@ -27,6 +28,12 @@ class SupervisionTests(unittest.TestCase):
         if '/actions/workflows/' in url:
             return s.raw_json({'workflow_runs':[dict(id=1,head_branch='main',event='schedule',conclusion=self.conclusion,
                                                    updated_at=self.clock.isoformat(),html_url='https://github.com/example',head_sha='a'*40)]})
+        if url==s.RAW+'VERSION': return (self.version+'\n').encode()
+        if '/releases/tags/v' in url:
+            version=url.rsplit('/v',1)[1]
+            if version in self.missing_data_versions:return None
+            return s.raw_json(dict(tag_name='v'+version,draft=False,prerelease=False,assets=[dict(name='pitwall-dashboard.zip',
+                state=self.asset_state,size=665000000,digest='sha256:'+'a'*64,created_at=self.clock.isoformat(),updated_at=self.clock.isoformat())]))
         if '/releases/' in url:
             if self.fail_release: raise RuntimeError('Public source HTTP 403')
             return None
@@ -52,6 +59,25 @@ class SupervisionTests(unittest.TestCase):
         fresh=s.Supervisor(ROOT,self.base/'state',self.base/'archive',self.fetch)
         self.assertEqual(fresh.run()['status'],'cooldown'); self.assertFalse(self.calls)
         self.assertFalse(fresh.run(force=True)['changed'])
+
+    def test_missing_data_release_survives_later_success_and_new_main_version(self):
+        self.missing_data_versions={'0.12.0'}; self.conclusion='failure'
+        first=self.supervisor.run(); self.assertIn('0.12.0',first['pending_data_releases'])
+        self.conclusion='success'; self.version='0.12.1'
+        second=self.supervisor.run(force=True)
+        self.assertIn('0.12.0',second['pending_data_releases'])
+        self.assertTrue(any(r['kind']=='data_publication' for r in second['queue']))
+        self.missing_data_versions.clear();third=self.supervisor.run(force=True)
+        self.assertFalse(third['pending_data_releases'])
+        self.assertFalse(any(r['kind']=='data_publication' for r in third['queue']))
+        self.assertFalse(any('/releases/download/' in url for url in self.calls))
+
+    def test_incomplete_data_asset_is_not_publication_and_metadata_is_not_zip_acceptance(self):
+        self.asset_state='starter'; result=self.supervisor.run()
+        self.assertEqual(result['pending_data_releases'],['0.12.0'])
+        self.asset_state='uploaded'; result=self.supervisor.run(force=True)
+        self.assertFalse(result['pending_data_releases'])
+        self.assertIn('metadata only',result['data_release_metadata']['0.12.0']['scope'])
 
     def test_rate_limit_is_indeterminate_and_never_missing_release(self):
         self.fail_release=True

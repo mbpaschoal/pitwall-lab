@@ -249,9 +249,13 @@ class ActualRuntimeTests(unittest.TestCase):
             root=Path(tmp);(root/'frontend_assets').mkdir();api=FakeGitHub(clock);release=api.create('p1-fixture-only','a'*40)
             for name in [BASELINE,UPDATES,'frontend_assets/operacao_fim_semana.json']:(root/name).write_bytes((ROOT/name).read_bytes())
             path=root/'frontend_assets/operacao_fim_semana.json';state=json.loads(path.read_text())
-            next(s for s in state['sessoes'] if s['nome']=='Race')['encerramento_observado_utc']=None
+            matches=[s for s in [state]+state.get('arquivo_eventos',[])
+                     if [s.get(k) for k in ('temporada','rodada','circuito_id')]==[2026,19,'rodriguez']]
+            self.assertEqual(len(matches),1)
+            next(s for s in matches[0]['sessoes'] if s['nome']=='Race')['encerramento_observado_utc']=None
             path.write_bytes(auto.json_bytes(state))
-            with patch.object(auto,'now',return_value=clock):result=auto.post_race(root,pair,'a'*64,root,api,release,api.rows,event)
+            with patch.object(auto,'now',return_value=clock),patch.object(auto,'host_spec',side_effect=AssertionError('No forecast binding before observed Race finish')):
+                result=auto.post_race(root,pair,'a'*64,root,api,release,api.rows,event)
             self.assertEqual(result['status'],'waiting_for_observed_race_finish');self.assertEqual(api.rows,[])
 
     def test_real_pre_Q_path_does_not_collect_infer_or_publish(self):

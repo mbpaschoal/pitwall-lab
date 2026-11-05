@@ -265,6 +265,40 @@ class Supervisor:
         sources = snapshot['sources']; problems = []
         def problem(kind, detail):
             problems.append(dict(kind=kind, detail=detail, status='open', id=sha((kind+':'+detail).encode())))
+        # A later no-change collection cannot resolve an orphaned data release.
+        pending=set(previous.get('pending_data_releases',[]))
+        snapshot['data_release_metadata']={}
+        try:
+            current=self.capture(RAW+'VERSION',sources).decode().strip()
+            if not re.fullmatch(r'\d+\.\d+\.\d+',current):
+                raise ValueError('Main product version is invalid')
+            versions=[current]+sorted(pending-{current})
+            for version in versions[:5]:
+                if not re.fullmatch(r'\d+\.\d+\.\d+',version):
+                    raise ValueError('Stored product version is invalid')
+                pending.add(version)
+                try:
+                    raw=self.capture(p1.BASE+'/releases/tags/v'+version,sources,missing=True)
+                    release=json.loads(raw) if raw else None
+                    asset=p1.unique_asset(release.get('assets',[]),'pitwall-dashboard.zip') if release else None
+                    valid=(release and release.get('tag_name')=='v'+version and not release.get('draft')
+                           and not release.get('prerelease') and asset and asset.get('size',0)>0
+                           and re.fullmatch('sha256:[a-f0-9]{64}',asset.get('digest',''))
+                           and p1.utc(asset['created_at'])<=p1.utc(asset['updated_at'])<=utc_now())
+                    if valid:
+                        pending.discard(version)
+                        snapshot['data_release_metadata'][version]={'status':'uploaded_asset_metadata_present',
+                            'digest':asset['digest'],'size':asset['size'],
+                            'scope':'metadata only; ZIP bytes and served-host acceptance remain separate'}
+                except Exception as error:
+                    problem('data_publication_source',version+': '+str(error))
+            if len(versions)>5:
+                problem('data_publication_backlog','More than five versions need review; older pending versions retained')
+        except Exception as error:
+            problem('data_publication_source',str(error))
+        snapshot['pending_data_releases']=sorted(pending)
+        for version in sorted(pending):
+            problem('data_publication',version+': release/ZIP publication not yet confirmed')
         gate_path=self.state.parent/'dependency-gate.json'
         if gate_path.exists():
             try:

@@ -57,3 +57,7 @@ Referências: [instalação](https://docs.n8n.io/deploy/host-n8n/install-options
 O lockfile inclui os overrides oficiais e correções posteriores documentados em [UPSTREAM.md](../automation/n8n/UPSTREAM.md). O runtime carrega somente os três nós usados e limita requisições recebidas a 1 MiB. A primeira auditoria encontrou alertas críticos que os testes funcionais não mediam; eles foram corrigidos antes de integrar a entrega. O CI agora audita o lockfile e bloqueia críticos ou altos sem revisão explícita do perfil.
 
 Permanece o alerta alto de Zod 3.25.76 indicado na proveniência. O aceite é restrito ao supervisor local, com mitigação e risco registrados; não é correção do Zod, atestado de zero vulnerabilidades ou autorização para expor o n8n na internet.
+
+## Release de dados pendente após uma coleta saudável
+
+O monitor lê a versão de main e conserva versões de dados cuja release/ZIP ainda não foi confirmada. Uma coleta posterior sem mudanças e com sucesso não encerra essa pendência. A confirmação é somente de metadados de upload, com digest/tamanho/UTC do GitHub; a conferência dos bytes do ZIP e do site permanece separada. São verificadas no máximo cinco versões por ciclo; pendências fora desse limite continuam registradas.
