@@ -1,0 +1,46 @@
+{
+  "id": "PitwallFreeSupervisor01",
+  "name": "Pitwall Lab — supervisor gratuito / Free supervisor",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual",
+      "name": "Conferir agora / Check now",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "rule": {"interval": [{"field": "cronExpression", "expression": "17,47 * * * *"}]}
+      },
+      "id": "schedule",
+      "name": "A cada 30 minutos / Every 30 minutes",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 220]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:5681/run",
+        "sendHeaders": true,
+        "headerParameters": {"parameters": [{"name": "X-Pitwall-Supervisor", "value": "v1"}]},
+        "options": {"timeout": 600000}
+      },
+      "id": "observe",
+      "name": "Observar e arquivar / Observe and archive",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [360, 110]
+    }
+  ],
+  "connections": {
+    "Conferir agora / Check now": {"main": [[{"node": "Observar e arquivar / Observe and archive", "type": "main", "index": 0}]]},
+    "A cada 30 minutos / Every 30 minutes": {"main": [[{"node": "Observar e arquivar / Observe and archive", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1", "timezone": "America/Sao_Paulo", "executionTimeout": 660},
+  "pinData": {},
+  "tags": []
+}
