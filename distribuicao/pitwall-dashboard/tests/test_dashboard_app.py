@@ -376,7 +376,6 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('Programação do fim de semana', texto)
         self.assertNotIn('Campeonato de pilotos', texto)
         self.assertNotIn('Campeonato de construtores', texto)
-        self.assertNotIn('Campeonato de construtores', texto)
         self.assertNotIn('Estado dos dados', texto)
         self.assertIn('Resultado observado', texto)
         self.assertNotIn('83.5%', texto)

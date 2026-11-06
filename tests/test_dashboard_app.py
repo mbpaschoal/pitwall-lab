@@ -10,13 +10,6 @@ from pathlib import Path
 from unittest.mock import patch
 
 RAIZ = Path(__file__).resolve().parents[1]
-# O terminal do agente injeta um site-packages Python 3.14 antes do .venv 3.9.
-# AppTest deve usar a cópia compatível de click instalada no ambiente do projeto.
-sys.path[:] = [p for p in sys.path if '/.hermes/installs/' not in p]
-SITE_LOCAL = str(RAIZ / '.venv/lib/python3.9/site-packages')
-if SITE_LOCAL in sys.path:
-    sys.path.remove(SITE_LOCAL)
-sys.path.insert(0, SITE_LOCAL)
 sys.path.insert(0, str(RAIZ))
 
 from streamlit.testing.v1 import AppTest
@@ -382,7 +375,6 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('CC BY-SA 4.0', texto)
         self.assertIn('Programação do fim de semana', texto)
         self.assertNotIn('Campeonato de pilotos', texto)
-        self.assertNotIn('Campeonato de construtores', texto)
         self.assertNotIn('Campeonato de construtores', texto)
         self.assertNotIn('Estado dos dados', texto)
         self.assertIn('Resultado observado', texto)

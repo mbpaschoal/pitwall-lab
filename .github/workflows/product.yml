@@ -85,6 +85,7 @@ jobs:
           python -B -m unittest tests.test_prospective_automation tests.test_supervision -v
           python -B -m unittest tests.test_complementary_sources tests.test_identity_revision
           python -B -m unittest tests.test_review_readers tests.test_standings_publication tests.test_contexto_editorial tests.test_catalogo_visual tests.test_capturar_fontes_pendencias tests.test_visual_collection
+          python -B -m unittest tests.test_coletar_resultados tests.test_regressoes_astra tests.test_calibracao_svg
           python -B -m unittest tests.test_post_qualifying tests.test_github_maintenance tests.test_weekend_readiness tests.test_automatic_publication tests.test_final_results tests.test_posterior_binding tests.test_mexico_evaluation_ui tests.test_pneus_apresentacao
           python -B -m unittest tests.test_operacao_2026_fluxo tests.test_operacao_2026_integracao tests.test_registro_emissoes
           python -B -m unittest tests.test_interface_link_context tests.test_public_navigation

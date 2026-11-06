@@ -2,13 +2,15 @@
 
 ## 0.12.6 — 2026-11-06
 
-Local completion of the maintained-codebase review using an adapted Ponytail procedure. JSON readers reject malformed structures with domain errors; search, championship and score views retain valid data with an availability notice. Standings publication keeps same-event snapshots and discloses cutoff, source and capture metadata during refresh failures.
+Maintained-codebase review using an adapted Ponytail procedure. JSON readers reject malformed structures with domain errors; search, championship and score views retain valid data with an availability notice. Standings publication keeps same-event snapshots and discloses cutoff, source and capture metadata during refresh failures.
 
 Capture resumption honours persisted `Retry-After`. Image collection preserves divergent files and verifies cached bytes. The experimental B1 collector requires explicit timezones, handles negative offsets and rejects occupied destinations. Audits write schema-valid empty tables; research evaluation separates unscorable folds and rejects duplicate identities even when a prediction is unavailable.
 
 Projection no longer records nonexistent optional-source paths. Circuit summaries preserve missing data; the favourite component is readable and declares its language. The devcontainer uses pinned dependencies and default protections; CI includes the new regressions and synthetic research tests. The legacy collection countercheck uses preserved responses and a temporary destination.
 
-Frozen model v1, inputs, probabilities, emissions, captures and P1 protocol remain preserved. This version identifies a locally verifiable candidate; remote CI, publishing and public-host acceptance are separate stages.
+Presentation tests use the invoking interpreter environment. Research oracles compare equivalent batches without confusing BLAS rounding; the cooldown fixture also works on 29 February.
+
+Frozen model v1, inputs, probabilities, emissions, captures and P1 protocol remain preserved. Local acceptance, remote CI and publication retain separate receipts.
 
 ## 0.12.5 — 2026-11-06
 

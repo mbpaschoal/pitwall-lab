@@ -2,13 +2,15 @@
 
 ## 0.12.6 — 2026-11-06
 
-Conclusão local da revisão da base mantida, com roteiro adaptado do Ponytail. Leitores JSON recusam estruturas inválidas com erros de domínio; busca, campeonato e acertos conservam dados válidos com aviso de indisponibilidade. A publicação de campeonatos preserva snapshots do mesmo evento e explicita corte, fonte e captura, inclusive durante falhas de atualização.
+Revisão da base mantida, com roteiro adaptado do Ponytail. Leitores JSON recusam estruturas inválidas com erros de domínio; busca, campeonato e acertos conservam dados válidos com aviso de indisponibilidade. A publicação de campeonatos preserva snapshots do mesmo evento e explicita corte, fonte e captura, inclusive durante falhas de atualização.
 
 Retomadas de captura respeitam o `Retry-After` persistido. Coletores de imagens preservam arquivos divergentes e conferem o cache. A coleta experimental B1 exige fuso explícito, interpreta offsets negativos e recusa destinos ocupados. Auditorias aceitam tabelas vazias com esquema; a avaliação de pesquisa separa folds sem cobertura e rejeita identidades duplicadas mesmo sem previsão disponível.
 
 A projeção não registra caminhos inexistentes para fontes opcionais. O resumo de circuito mantém ausências explícitas; o favorito tem código legível e idioma declarado. O devcontainer usa dependências fixadas e proteções padrão; o CI passa a incluir as novas regressões e os testes sintéticos de pesquisa. A contraprova legada de coleta usa respostas preservadas e destino temporário.
 
-Modelo v1, suas entradas, probabilidades, emissões, capturas e protocolo P1 permanecem preservados. A versão identifica um candidato local validável; CI remoto, publicação e aceite do host público são etapas separadas.
+Testes de apresentação usam o ambiente do próprio executor. Oráculos de pesquisa comparam lotes equivalentes sem confundir arredondamento BLAS; a fixture de espera também funciona em 29 de fevereiro.
+
+Modelo v1, suas entradas, probabilidades, emissões, capturas e protocolo P1 permanecem preservados. Aceite local, CI remoto e publicação possuem comprovantes próprios.
 
 ## 0.12.5 — 2026-11-06
 

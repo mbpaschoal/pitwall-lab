@@ -413,21 +413,6 @@ def _adicionar(arquivos, caminho, conteudo, modo, fonte=None, sha_origem=None, n
     }
 
 
-def _teste_app_portavel(conteudo):
-    texto = conteudo.decode('utf-8')
-    workaround = """# O terminal do agente injeta um site-packages Python 3.14 antes do .venv 3.9.
-# AppTest deve usar a cópia compatível de click instalada no ambiente do projeto.
-sys.path[:] = [p for p in sys.path if '/.hermes/installs/' not in p]
-SITE_LOCAL = str(RAIZ / '.venv/lib/python3.9/site-packages')
-if SITE_LOCAL in sys.path:
-    sys.path.remove(SITE_LOCAL)
-sys.path.insert(0, SITE_LOCAL)
-"""
-    if texto.count(workaround) != 1:
-        raise ValueError('workaround Python 3.9/Hermes esperado não encontrado no teste')
-    return texto.replace(workaround, '', 1).encode('utf-8')
-
-
 def _relatorio_2024_publico(conteudo):
     texto = conteudo.decode('utf-8')
     substituicoes = {
@@ -488,10 +473,6 @@ def _montar_arquivos(raiz, conteudos, commit):
             conteudo = conteudo.replace(b'(../../reports/modelo_v1/relatorio.md)', b'(../relatorio_2024.md)')
             modo = 'adaptado_documentacao'
             nota = 'link PT resolvido dentro do pacote portatil'
-        elif relativo == 'tests/test_dashboard_app.py':
-            conteudo = _teste_app_portavel(conteudo)
-            modo = 'gerado'
-            nota = 'cópia com remoção exclusiva do workaround Python 3.9/Hermes'
         else:
             modo = 'copia'
             nota = None

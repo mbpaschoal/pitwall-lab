@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "ea7291cd5fc57adcc0fac5bd7b8ee5eea73e0f093a2d780d0353cc7b17b496f4",
+  "apresentacao_build_sha256": "13319c6cce346290fe3e7877e05125822f43be0fc138d7ee5e897c539e03a2e8",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "f27a53f0248fa843b67e6de25ba7cbdd95aea4a697d87ece03939fa4858e241f",
-      "sha256_origem": "24412ec831f8a2f1fde2ad182bd15aa27c2f15799028c44fbb8dfd8e3560939f"
+      "sha256_destino": "9557bd0ed45fb5b185ac08936284fa8d32fa08886cf2f340eb2a9804e0a4beab",
+      "sha256_origem": "2fff2baff4111f884a843905b5945993853b6bb985733300830584db097d8b2c"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "87ffb1357fdf29db85a21eb630fa35f096ef56745f3e7ec62091b09ec789ee68",
-      "sha256_origem": "2a7545d7be41979bab8bab224413bb11e22297c40cc64f70a68e3a75266825c0"
+      "sha256_destino": "65428bac9b4afc131330777ba7d35fe813627244f55d63c1d73de192d3dcce0f",
+      "sha256_origem": "04e4040ea0f183996a488b1b34ddb5c871aac56982722ad0eff3a6328db3a5db"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -3298,10 +3298,9 @@
     {
       "caminho": "tests/test_dashboard_app.py",
       "fonte": "tests/test_dashboard_app.py",
-      "modo": "gerado",
-      "nota": "cópia com remoção exclusiva do workaround Python 3.9/Hermes",
-      "sha256_destino": "a63f5c728231ce8b4b989294fbccb247c32461065ef85468e39e521515a28e6a",
-      "sha256_origem": "294982fb5e7d1739923604421a636d287bc783d1899244e5effc18a947d5c686"
+      "modo": "copia",
+      "sha256_destino": "fbf33e471bc76c596de1b900454afa1275516fd3229805bdc3533fe27ca86410",
+      "sha256_origem": "fbf33e471bc76c596de1b900454afa1275516fd3229805bdc3533fe27ca86410"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -3428,7 +3427,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "dee294b744814d9bb85d50c95f8f86d95ff12b14fdb182811560c7aae7bd6667"
+      "sha256": "5f01467ff0b0cd8d1b642e3c98b3ba5570df7d24019bdb32d0770c5939aefa02"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",

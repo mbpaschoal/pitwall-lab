@@ -70,11 +70,15 @@ import tempfile
 
 raiz, testes = sys.argv[1:]
 sys.path[:0] = [testes, raiz]
+executor_path = '/controlled/.hermes/installs/import-preservation'
+sys.path.append(executor_path)
 antes = (tempfile.tempdir, os.environ.get('TMPDIR'))
 importlib.import_module('test_coletar_historico')
 importlib.import_module('test_preparar_historico')
 depois = (tempfile.tempdir, os.environ.get('TMPDIR'))
 assert depois == antes, (antes, depois)
+importlib.import_module('test_dashboard_app')
+assert executor_path in sys.path, 'Test import removed an unrelated executor path'
 with tempfile.TemporaryDirectory() as temporario:
     assert Path(temporario).parent == Path(os.environ['TMPDIR']), temporario
 '''
