@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.12.7 — 2026-11-06
+
+Explicitly pins Click 8.5.0, the transitive dependency already installed and validated in the review's CI and local environment. The seven existing pins remain identical. The dependency-manifest change requests a fresh Streamlit Community Cloud runtime build: deployment 0.12.6 displayed its new version, but public acceptance found the earlier championship block without the provenance verified in the accepted local package. The manifest header now identifies the dashboard's separate environment. Frozen science, data, probabilities and recorded emissions are preserved. Acceptance requires a fresh public-host check of the build, provenance and downloads, separately from CI and the release asset.
+
 ## 0.12.6 — 2026-11-06
 
 Maintained-codebase review using an adapted Ponytail procedure. JSON readers reject malformed structures with domain errors; search, championship and score views retain valid data with an availability notice. Standings publication keeps same-event snapshots and discloses cutoff, source and capture metadata during refresh failures.

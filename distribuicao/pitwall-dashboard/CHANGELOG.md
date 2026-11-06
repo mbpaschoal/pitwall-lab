@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.12.7 — 2026-11-06
+
+Fixa explicitamente Click 8.5.0, dependência transitiva já instalada e validada no CI e no ambiente local da revisão. Os sete pins anteriores permanecem iguais. A alteração do manifesto solicita reconstrução do runtime no Streamlit Community Cloud: a publicação 0.12.6 mostrou a nova versão, mas o aceite público encontrou o bloco anterior do campeonato, sem a procedência validada no pacote local. Atualiza também o cabeçalho do manifesto para indicar o ambiente separado do dashboard. O ambiente científico congelado, os dados, as probabilidades e as emissões são preservados. A aceitação exige nova conferência do build, da procedência e dos downloads no domínio público, separada do CI e da release.
+
 ## 0.12.6 — 2026-11-06
 
 Revisão da base mantida, com roteiro adaptado do Ponytail. Leitores JSON recusam estruturas inválidas com erros de domínio; busca, campeonato e acertos conservam dados válidos com aviso de indisponibilidade. A publicação de campeonatos preserva snapshots do mesmo evento e explicita corte, fonte e captura, inclusive durante falhas de atualização.

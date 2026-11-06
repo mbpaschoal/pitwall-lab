@@ -332,6 +332,7 @@ class TestExportacaoDashboard(unittest.TestCase):
                       if line.strip() and not line.lstrip().startswith('#')]
         self.assertEqual(requisitos, [
             'streamlit==1.66.1',
+            'click==8.5.0',
             'plotly==6.3.1',
             'pandas==2.2.3',
             'pyarrow==23.0.1',
