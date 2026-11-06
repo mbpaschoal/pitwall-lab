@@ -1,5 +1,5 @@
 """Contraprovas do coletor complementar, sem rede e sem dados científicos reais."""
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
 from hashlib import sha256
 import io
@@ -100,7 +100,7 @@ class TestAcervoColeta(unittest.TestCase):
 
     def test_retomada_respeita_retry_after_futuro_sem_rede_ou_espera(self):
         args = ('openf1', 'laps', 'raw/laps.json', 'https://example.test/data')
-        future = datetime.now(timezone.utc).replace(year=2099)
+        future = datetime.now(timezone.utc) + timedelta(days=1)
 
         def limited(request, timeout):
             raise HTTPError(request.full_url, 429, 'Too Many Requests',

@@ -325,13 +325,15 @@ class TrainingDesignOracleTest(unittest.TestCase):
         test = [row for row in rows if row["temporada"] == 2022]
         fit = experiment.fit_design(train, REDUCED, reduce=True)
         before = copy.deepcopy(fit)
-        expected = experiment.predict_design(fit, test[:1])
+        # Compare equal-sized batches: BLAS may round a single-row dot product
+        # differently. Only the other rows change in this isolation oracle.
+        expected = experiment.predict_design(fit, test)
         changed = copy.deepcopy(test)
         for i, row in enumerate(changed[1:]):
             row["media_pontos_equipe_5"] = None if i % 2 else 1e12
             row["media_posicao_final_5"] = None if i % 2 else -1e12
         observed = experiment.predict_design(fit, changed)
-        self.assertEqual(observed[:1], expected)
+        self.assertEqual(observed[:1], expected[:1])
         self.assertEqual(fit, before)
 
 
