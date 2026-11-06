@@ -18,6 +18,8 @@ async function reveal(app,lang){
   const back=card.locator('[data-tarot-reveal]');if(await back.isVisible())await back.click();
  }
  await app.waitForFunction(()=>document.querySelectorAll('.pw-revealed-face:not([hidden]) [data-tarot-hide]').length===3);
+ await app.waitForFunction(()=>[...document.querySelectorAll('.pw-revealed-face')].every(e=>e.getAnimations().every(a=>a.playState==='finished')));
+ await app.locator('.pw-revealed-face img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
  await app.locator('.st-key-forecast-details').waitFor({state:'visible'});
 }
 module.exports={choose,reveal};
