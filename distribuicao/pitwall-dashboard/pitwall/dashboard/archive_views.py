@@ -324,7 +324,7 @@ def renderizar_estrategias(gp):
         )
         st.plotly_chart(
             figura,
-            use_container_width=True,
+            width="stretch",
             config={"displayModeBar": False},
             key=_chave(gp, "pneus_grafico"),
         )
@@ -484,7 +484,7 @@ def renderizar_clima(gp):
         )
         st.plotly_chart(
             temperatura,
-            use_container_width=True,
+            width="stretch",
             config={"displayModeBar": False},
             key=_chave(gp, "temperatura"),
         )
@@ -502,7 +502,7 @@ def renderizar_clima(gp):
         )
         st.plotly_chart(
             chuva,
-            use_container_width=True,
+            width="stretch",
             config={"displayModeBar": False},
             key=_chave(gp, "precipitacao"),
         )
@@ -604,7 +604,7 @@ def renderizar_observado(gp):
         figura.update_layout(xaxis_title="Volta", yaxis_title="Tempo observado (s)")
         st.plotly_chart(
             figura,
-            use_container_width=True,
+            width="stretch",
             config={"displayModeBar": False},
             key=_chave(gp, "voltas_grafico"),
         )
@@ -690,7 +690,7 @@ def renderizar_historico(gp):
         hovertemplate="%{x}: %{y}<extra></extra>"))
     _figura_base(chart, 240)
     chart.update_yaxes(autorange="reversed", title_text="Posição final", dtick=1)
-    st.plotly_chart(chart, use_container_width=True, config={"displayModeBar": False})
+    st.plotly_chart(chart, width="stretch", config={"displayModeBar": False})
     _tabela(
         [
             {
@@ -731,7 +731,7 @@ def renderizar_equipes(gp):
         chart = go.Figure(go.Bar(x=[e["pontos"] for e in visual], y=[e["equipe"] for e in visual], orientation="h", marker_color="#102b50", hovertemplate="%{y}: %{x}<extra></extra>"))
         _figura_base(chart, 350)
         chart.update_xaxes(title_text="Pontos observados", rangemode="tozero")
-        st.plotly_chart(chart, use_container_width=True, config={"displayModeBar": False})
+        st.plotly_chart(chart, width="stretch", config={"displayModeBar": False})
     _tabela(
         [
             {

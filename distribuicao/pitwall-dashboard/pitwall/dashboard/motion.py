@@ -10,6 +10,7 @@ def render():
 
 
 def install():
-    import streamlit.components.v1 as components
+    from pitwall.i18n.streamlit import st
     script = (Path(__file__).resolve().parents[2]/'frontend_assets/motion.js').read_text()
-    components.html('<script>'+script+'</script>',height=0,tab_index=-1)
+    with st.container(key='pw-motion-bridge'):
+        st.iframe('<script>'+script+'</script>',height=1,tab_index=-1)

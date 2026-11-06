@@ -124,9 +124,10 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
             # This also verifies that the currently published catalogue still agrees.
             catalog = client.capture('openf1', 'sessions', 'sessions.json',
                 'https://api.openf1.org/v1/sessions?' + urlencode(dict(year=event['temporada'], country_name=event['country_name'])))
-            if catalog is None and client.manifest['fontes'][-1].get('status') in (401,403):
-                raise ProviderAccessUnavailable(client.manifest['fontes'][-1]['status'])
             if not isinstance(catalog, list):
+                sources = client.manifest['fontes']
+                if catalog is None and sources and sources[-1].get('status') in (401,403):
+                    raise ProviderAccessUnavailable(sources[-1]['status'])
                 raise ValueError('Session catalogue unavailable')
             for session in event['sessions']:
                 matches = [s for s in catalog if s['session_key'] == session['session_key']]
@@ -193,12 +194,12 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
             if deadline:
                 state['retry_after_utc'] = deadline.isoformat()
             save_checkpoint(run/'estado.json', state)
-            # On failure keep the last usable state; store cooldown independently.
-            if len(state['sessoes']) == len(event['sessions']):
-                save_checkpoint(base/'estado.json',state)
-            elif deadline:
-                previous['retry_after_utc'] = deadline.isoformat()
-                save_checkpoint(base/'estado.json',previous)
+            # Preserve the previous usable state even after a late failure.
+            # Rate limits still survive restarts independently of this attempt.
+            if deadline:
+                save_checkpoint(base/'estado.json',dict(previous, retry_after_utc=deadline.isoformat()))
+        # Only a normally completed collection can become the next checkpoint.
+        save_checkpoint(base/'estado.json',state)
         return state
 
 

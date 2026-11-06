@@ -63,3 +63,9 @@ Each case allows two attempts within a six-minute overall deadline. Integrity fa
 Complete CI also runs on `codex/**` branches, validating a change before updating main. Core adds `aceite_resiliencia.cjs`: blocked Radio/Button modules, all six destinations, PT/EN, keyboard, context, touch targets and late recovery without losing focus. All previous 12 checks remain.
 
 Public verifier v2 records the usable control mode (native/link/mixed), clicks alternatives and switches language while checking outer/iframe URLs. It retains event identity, decoded photographs/hashes, build, no overflow and rejection of unrecovered visible errors. Limits: two attempts per case, 120 seconds per attempt and eight minutes overall; the step has ten minutes. Evidence retention remains 30 days. This checks a data publication rather than providing continuous uptime monitoring or establishing the cause of hosting failure.
+
+## Forecast-projection recovery — 0.12.5
+
+The new registration must be visible to the projection reader, but must not remain confirmed when projection fails. The orchestrator retains the previous registry bytes, generates the asset in a unique `projection-*` folder alongside the retained attempt and requires a readable JSON object before replacing `frontend_assets/race_weekend.json` by rename.
+
+On failure, the previous asset remains available and the registry returns to its exact previous bytes; without an earlier registry, only the one created by this attempt is removed. Partial projection output remains as persisted evidence. Recovery reuses the retained emission and reruns presentation without fresh collection or probability calculation. Source, population and deadline validation remain mandatory.

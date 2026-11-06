@@ -25,10 +25,10 @@ def validate(asset):
     if asset.get("conteudo_sha256") != content_hash(payload):
         raise DriverConditionsError("Driver-condition content hash does not match")
     quality = asset.get("qualidade", {})
-    if quality.get("gate_pilotos") is not True or quality.get("pendencias_obrigatorias_sem_tratamento") != 0:
+    if not isinstance(quality, dict) or quality.get("gate_pilotos") is not True or quality.get("pendencias_obrigatorias_sem_tratamento") != 0:
         raise DriverConditionsError("Driver data gate is not satisfied")
     gps = asset.get("gps", {})
-    if not gps or len(gps) != quality["corridas"]:
+    if not isinstance(gps, dict) or not gps or len(gps) != quality["corridas"]:
         raise DriverConditionsError("Missing main-race coverage")
     for key, gp in gps.items():
         if key != "{}:{}".format(gp["temporada"], gp["rodada"]) or gp["session_name"] != "Race":

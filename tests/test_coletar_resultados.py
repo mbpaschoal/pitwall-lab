@@ -1,8 +1,9 @@
-"""Testes da coleta. A primeira execução usa a API real; depois usa o cache."""
+"""Testes offline da coleta, com respostas preservadas e destino temporário."""
 import csv
 import json
+import io
+from contextlib import redirect_stdout
 from pathlib import Path
-import subprocess
 import sys
 import unittest
 from unittest.mock import patch
@@ -45,33 +46,45 @@ class TestLimiteAPI(unittest.TestCase):
 
 
 class TestColeta(unittest.TestCase):
-    def test_coleta_real_completa(self):
-        processo = subprocess.run(
-            [sys.executable, str(RAIZ / 'coletar_resultados.py')],
-            capture_output=True, text=True, timeout=90,
-        )
-        self.assertEqual(processo.returncode, 0, processo.stdout + processo.stderr)
-        bruto = json.loads((RAIZ / 'data/raw/resultados_sao_paulo_2024.json').read_text())
-        corrida = bruto['MRData']['RaceTable']['Races'][0]
-        with (RAIZ / 'data/resultados_sao_paulo_2024.csv').open(newline='', encoding='utf-8') as arquivo:
-            leitor = csv.DictReader(arquivo)
-            self.assertEqual(leitor.fieldnames, [
-                'piloto', 'equipe', 'posicao_largada', 'posicao_final', 'status',
-            ])
-            linhas = list(leitor)
-        resultados = sorted(corrida['Results'], key=lambda item: int(item['position']))
-        self.assertGreater(len(linhas), 0)
-        self.assertEqual(len(linhas), int(bruto['MRData']['total']))
-        self.assertEqual(len({linha['piloto'] for linha in linhas}), len(linhas))
-        for linha, resultado in zip(linhas, resultados):
-            self.assertEqual(linha, {
-                'piloto': resultado['Driver']['givenName'] + ' ' + resultado['Driver']['familyName'],
-                'equipe': resultado['Constructor']['name'],
-                'posicao_largada': resultado['grid'],
-                'posicao_final': resultado['position'],
-                'status': resultado['status'],
-            })
-        self.assertIn('Identificador descoberto', processo.stdout)
+    def test_coleta_completa_offline_em_destino_vazio(self):
+        import coletar_resultados as coleta
+        originals = {
+            name: (RAIZ / 'data/raw' / name).read_bytes()
+            for name in ('calendario_2024.json', 'resultados_sao_paulo_2024.json')
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            output = io.StringIO()
+            responses = [io.BytesIO(raw) for raw in originals.values()]
+            with patch.object(coleta, 'RAIZ', root), \
+                    patch.object(coleta, 'ULTIMA_REQUISICAO', None), \
+                    patch.object(coleta.time, 'sleep'), \
+                    patch.object(coleta, 'urlopen', side_effect=responses) as request, \
+                    redirect_stdout(output):
+                coleta.coletar()
+            self.assertEqual(request.call_count, 2)
+            for name, raw in originals.items():
+                self.assertEqual((root / 'data/raw' / name).read_bytes(), raw)
+                self.assertEqual((RAIZ / 'data/raw' / name).read_bytes(), raw)
+            bruto = json.loads(originals['resultados_sao_paulo_2024.json'])
+            corrida = bruto['MRData']['RaceTable']['Races'][0]
+            with (root / 'data/resultados_sao_paulo_2024.csv').open(newline='', encoding='utf-8') as arquivo:
+                leitor = csv.DictReader(arquivo)
+                self.assertEqual(leitor.fieldnames, coleta.COLUNAS)
+                linhas = list(leitor)
+            resultados = sorted(corrida['Results'], key=lambda item: int(item['position']))
+            self.assertGreater(len(linhas), 0)
+            self.assertEqual(len(linhas), int(bruto['MRData']['total']))
+            self.assertEqual(len({linha['piloto'] for linha in linhas}), len(linhas))
+            for linha, resultado in zip(linhas, resultados):
+                self.assertEqual(linha, {
+                    'piloto': resultado['Driver']['givenName'] + ' ' + resultado['Driver']['familyName'],
+                    'equipe': resultado['Constructor']['name'],
+                    'posicao_largada': resultado['grid'],
+                    'posicao_final': resultado['position'],
+                    'status': resultado['status'],
+                })
+            self.assertIn('Identificador descoberto', output.getvalue())
 
 
 if __name__ == '__main__':

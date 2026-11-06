@@ -6,12 +6,32 @@ import pandas as pd
 from pitwall.i18n.streamlit import st
 STATES = {'aguardando_sessao': 'Sessão ainda não encerrada', 'aguardando_publicacao': 'Aguardando publicação da fonte', 'encerramento_ou_resultado_pendente': 'Encerramento ou resultado ainda não confirmado', 'parcial': 'Dados parciais; nova consulta necessária', 'dados_recebidos': 'Dados recebidos após a sessão'}
 
+
+def _read_status_asset(root):
+    """Check the event envelope before any reader follows archived identities."""
+    path = Path(root) / 'frontend_assets/operacao_fim_semana.json'
+    if not path.is_file():
+        return None
+    if path.stat().st_size > 10 * 1024 ** 2:
+        raise ValueError('Weekend asset too large')
+    state = json.loads(path.read_text())
+    required = ('temporada', 'rodada', 'circuito_id', 'sessoes', 'atualizado_em_utc')
+    if not isinstance(state, dict) or state.get('schema') != 'pitwall-weekend-public-v1' or any(k not in state for k in required):
+        raise ValueError('Unknown weekend schema')
+    archive = state.get('arquivo_eventos', [])
+    if not isinstance(archive, list) or any(
+        not isinstance(event, dict) or any(k not in event for k in required)
+        for event in archive
+    ):
+        raise ValueError('Invalid archived event list')
+    return state
+
+
 def observed_rounds(root, year):
     """Observed results are context, not automatic admission to model scoring."""
-    path=Path(root)/'frontend_assets/operacao_fim_semana.json'
-    if not path.is_file():
+    raw = _read_status_asset(root)
+    if raw is None:
         return set()
-    raw=json.loads(path.read_text())
     rounds=set()
     for record in [raw]+raw.get('arquivo_eventos',[]):
         if record.get('temporada')!=year:
@@ -24,14 +44,9 @@ def observed_rounds(root, year):
 
 
 def load_status(root, year, round_, circuit):
-    path = Path(root) / 'frontend_assets/operacao_fim_semana.json'
-    if not path.is_file():
+    state = _read_status_asset(root)
+    if state is None:
         return None
-    if path.stat().st_size > 10 * 1024 ** 2:
-        raise ValueError('Weekend asset too large')
-    state = json.loads(path.read_text())
-    if not isinstance(state, dict) or any((k not in state for k in ('temporada', 'rodada', 'circuito_id', 'sessoes', 'atualizado_em_utc'))) or state.get('schema') != 'pitwall-weekend-public-v1':
-        raise ValueError('Unknown weekend schema')
     if (state['temporada'], state['rodada'], state['circuito_id']) != (year, round_, circuit):
         matches = [s for s in state.get('arquivo_eventos', []) if (s.get('temporada'),s.get('rodada'),s.get('circuito_id')) == (year,round_,circuit)]
         if not matches:
@@ -44,9 +59,10 @@ def load_status(root, year, round_, circuit):
     if len({s['session_key'] for s in state['sessoes']}) != len(state['sessoes']):
         raise ValueError('Duplicate session')
     for s in state['sessoes']:
-        if s['estado'] not in STATES:
+        if s.get('estado') not in STATES:
             raise ValueError('Unknown session state')
-    return state
+    from pitwall.data.standings_state import admit_weekend_standings
+    return admit_weekend_standings(state)
 
 def render_status(state):
     if not state:

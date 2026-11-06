@@ -102,10 +102,8 @@ def _display(pid, name):
     )
 
 
-def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
-    root = Path(raiz)
-    source = Path(acervo) if acervo is not None else root / ACERVO
-    target = Path(destino) if destino is not None else root / ASSET
+def _carregar_fontes(source):
+    """Lê manifestos e confere cada fonte antes de projetar qualquer tabela."""
     local = _json(source / "local/inventario_local.json")
     normalized = _json(source / "normalizado/manifesto.json")
     manifests = {
@@ -119,13 +117,11 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
                 raise ValueError(
                     "Fonte do acervo divergente: {}/{}".format(layer, name)
                 )
+    return normalized, manifests
 
-    def rows(layer, name):
-        if name not in manifests[layer]:
-            raise ValueError("Tabela ausente do manifesto: " + name)
-        with (source / layer / name).open(encoding="utf-8", newline="") as handle:
-            yield from csv.DictReader(handle)
 
+def _iniciar_gps(source):
+    """Cria o recorte por identidade canônica, recusando GPs duplicados."""
     events = _json(source / "local/eventos.json")
     gps = {}
     for event in events:
@@ -155,18 +151,13 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
             "historico": {"resultados": [], "voltas_por_piloto": [], "resumo": {}},
             "aviso": "Acervo descritivo. Estes dados não alteram as probabilidades publicadas.",
         }
+    return gps
 
-    def gp_for(row):
-        key = _key(row)
-        gp = gps.get(key)
-        if gp is None or gp["identidade"]["circuito_id"] != row["circuito_id"]:
-            raise ValueError("Tabela ligada ao GP/circuito incorreto.")
-        return gp
 
+def _projetar_resultados(rows, gp_for):
+    """Preserva resultados e rótulos dos pilotos por GP e temporada."""
     people = {}
     names_by_year = {}
-    team_labels = {}
-    native = {}
     for row in rows("local", "resultados.csv"):
         gp = gp_for(row)
         key = _key(row)
@@ -187,29 +178,24 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
                 "tempo": row["tempo_original"] or None,
             }
         )
+    return people, names_by_year
+
+
+def _catalogar_pilotos_sessoes(rows, gp_for):
+    """Associa número e sessão nativos aos rótulos disponíveis nas fontes."""
+    native = {}
+    team_labels = {}
     for row in rows("normalizado", "pilotos_sessoes.csv"):
         gp_for(row)
         key = _key(row)
         native[(int(row["session_key"]), int(row["driver_number"]))] = row
         if row["equipe_id"] and row["team_name_openf1"]:
             team_labels[(key, row["equipe_id"])] = row["team_name_openf1"]
+    return native, team_labels
 
-    def person(row):
-        key = _key(row)
-        skey = int(row["session_key"])
-        number = int(row["driver_number"])
-        registry = native.get((skey, number), {})
-        return {
-            "piloto_id": row.get("piloto_id") or None,
-            "numero": number,
-            "piloto": people.get((key, row.get("piloto_id")))
-            or registry.get("full_name")
-            or "#{}".format(number),
-            "equipe": registry.get("team_name_openf1")
-            or team_labels.get((key, row.get("equipe_id")))
-            or None,
-        }
 
+def _projetar_sessoes(rows, gp_for):
+    """Registra sessões sem permitir sua reutilização entre GPs."""
     sessions = {}
     for row in rows("normalizado", "sessoes.csv"):
         gp = gp_for(row)
@@ -229,6 +215,11 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
         }
         sessions[skey] = (gp, session)
         gp["sessoes"].append(session)
+    return sessions
+
+
+def _projetar_tempos(rows, gp_for, person, sessions):
+    """Mantém as fases de classificação e seus valores originais separados."""
     for row in rows("normalizado", "tempos_sessoes.csv"):
         gp = gp_for(row)
         skey = int(row["session_key"])
@@ -255,6 +246,10 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
             q3=_time(phases[2]) if len(phases) > 2 else None,
         )
         sessions[skey][1]["tempos"].append(item)
+
+
+def _projetar_voltas(rows, gp_for, person, sessions, gps):
+    """Conta voltas por sessão e resume somente as voltas da corrida."""
     lap_groups = defaultdict(list)
     for row in rows("normalizado", "laps_sessoes.csv"):
         gp = gp_for(row)
@@ -285,6 +280,9 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
             )
         )
 
+
+def _projetar_clima(rows, gp_for, gps, sessions):
+    """Separa atmosfera em grade das medições por sessão na pista."""
     for row in rows("normalizado", "clima_open_meteo.csv"):
         gp = gp_for(row)
         gp["clima"]["horas"].append(
@@ -340,6 +338,10 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
                 "vento_max_ms": max(wind) if wind else None,
             }
         )
+
+
+def _projetar_pneus(rows, gp_for, person):
+    """Preserva compostos, limites observados e qualidade dos stints."""
     for row in rows("normalizado", "estrategias_pneus.csv"):
         gp = gp_for(row)
         item = person(row)
@@ -360,6 +362,10 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
             comparavel=_bool(row["limites_voltas_comparaveis"]),
         )
         gp["estrategias"].append(item)
+
+
+def _projetar_paradas(rows, gp_for, people, team_labels):
+    """Apresenta a duração publicada sem inferir tempo de troca de pneus."""
     for row in rows("local", "pit_stops.csv"):
         gp = gp_for(row)
         key = _key(row)
@@ -379,6 +385,10 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
                 "medida": "duração publicada da passagem/parada; não equivale automaticamente a tempo de troca",
             }
         )
+
+
+def _projetar_equipes(rows, gp_for, people, team_labels):
+    """Conserva denominadores e a indicação de pontos completos."""
     for row in rows("normalizado", "comparativo_equipes.csv"):
         gp = gp_for(row)
         key = _key(row)
@@ -398,6 +408,10 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
                 "pilotos": [people.get((key, pid), pid) for pid in ids],
             }
         )
+
+
+def _projetar_campeonatos(rows, gp_for, names_by_year, team_labels):
+    """Agrupa classificações e metadados sem inventar data de captura."""
     standings = defaultdict(list)
     standings_meta = defaultdict(list)
     for kind in ("pilotos", "equipes"):
@@ -436,11 +450,11 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
                     "obtido_em_utc": row["obtido_em_utc"],
                 }
             )
-    for row in rows("normalizado", "cobertura.csv"):
-        gp = gp_for(row)
-        gp["cobertura"].append(
-            {k: row[k] for k in ("tipo", "provider", "estado", "motivo")}
-        )
+    return standings, standings_meta
+
+
+def _finalizar_gps(gps, standings, standings_meta, team_labels):
+    """Ordena a apresentação e calcula os resumos com ausências preservadas."""
     for key, gp in gps.items():
         gp["sessoes"].sort(key=lambda x: x["inicio_utc"])
         for session in gp["sessoes"]:
@@ -500,6 +514,10 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
             ),
             "n_pilotos_com_voltas": len(gp["historico"]["voltas_por_piloto"]),
         }
+
+
+def _projetar_historico(root, gps):
+    """Liga somente edições anteriores da pista às fontes locais verificadas."""
     # O acervo portátil inclui edições anteriores da pista, nunca o próprio GP.
     from pitwall.data.circuit_history import construir_historico
     from coletar_historico import carregar_temporada
@@ -656,6 +674,11 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
         gp["historico_circuito"] = construir_historico(
             dict(gp["identidade"], data_corrida=gp["data_corrida"]), provas
         )
+    return fontes_historico, prova_archive
+
+
+def _aplicar_complementos(root, gps):
+    """Aplica adjudicações documentais e registra suas fontes separadamente."""
     complemento = root / "data/acervo_historico/resolucao-20261029"
     fontes_complementares = []
     campos = {
@@ -737,7 +760,12 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
                 c[
                     "motivo"
                 ] += "; complemento FIA separado: 223 durações e 20 horários de referência"
-    asset = {
+    return fontes_complementares
+
+
+def _montar_asset(source, normalized, gps, sessions, prova_archive, fontes_historico, fontes_complementares):
+    """Monta o contrato portátil com cobertura e proveniência explícitas."""
+    return {
         "schema": SCHEMA,
         "versao": VERSAO,
         "acervo_origem": source.name,
@@ -790,6 +818,84 @@ def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
         "gps": gps,
         "conteudo_sha256": conteudo_sha256(gps),
     }
+
+
+def preparar(raiz=RAIZ, acervo=None, destino=None, complemento_fontes=None):
+    """Orquestra as projeções offline e grava apenas um destino novo ou idêntico."""
+    root = Path(raiz)
+    source = Path(acervo) if acervo is not None else root / ACERVO
+    target = Path(destino) if destino is not None else root / ASSET
+    normalized, manifests = _carregar_fontes(source)
+
+    def rows(layer, name):
+        if name not in manifests[layer]:
+            raise ValueError("Tabela ausente do manifesto: " + name)
+        with (source / layer / name).open(encoding="utf-8", newline="") as handle:
+            yield from csv.DictReader(handle)
+
+    gps = _iniciar_gps(source)
+
+    def gp_for(row):
+        key = _key(row)
+        gp = gps.get(key)
+        if gp is None or gp["identidade"]["circuito_id"] != row["circuito_id"]:
+            raise ValueError("Tabela ligada ao GP/circuito incorreto.")
+        return gp
+
+    people, names_by_year = _projetar_resultados(rows, gp_for)
+
+    native, team_labels = _catalogar_pilotos_sessoes(rows, gp_for)
+
+    def person(row):
+        key = _key(row)
+        skey = int(row["session_key"])
+        number = int(row["driver_number"])
+        registry = native.get((skey, number), {})
+        return {
+            "piloto_id": row.get("piloto_id") or None,
+            "numero": number,
+            "piloto": people.get((key, row.get("piloto_id")))
+            or registry.get("full_name")
+            or "#{}".format(number),
+            "equipe": registry.get("team_name_openf1")
+            or team_labels.get((key, row.get("equipe_id")))
+            or None,
+        }
+
+    sessions = _projetar_sessoes(rows, gp_for)
+
+    _projetar_tempos(rows, gp_for, person, sessions)
+
+    _projetar_voltas(rows, gp_for, person, sessions, gps)
+
+    _projetar_clima(rows, gp_for, gps, sessions)
+
+    _projetar_pneus(rows, gp_for, person)
+
+    _projetar_paradas(rows, gp_for, people, team_labels)
+
+    _projetar_equipes(rows, gp_for, people, team_labels)
+
+    standings, standings_meta = _projetar_campeonatos(
+        rows, gp_for, names_by_year, team_labels
+    )
+
+    for row in rows("normalizado", "cobertura.csv"):
+        gp = gp_for(row)
+        gp["cobertura"].append(
+            {k: row[k] for k in ("tipo", "provider", "estado", "motivo")}
+        )
+    _finalizar_gps(gps, standings, standings_meta, team_labels)
+
+    fontes_historico, prova_archive = _projetar_historico(root, gps)
+
+    fontes_complementares = _aplicar_complementos(root, gps)
+
+    asset = _montar_asset(
+        source, normalized, gps, sessions, prova_archive,
+        fontes_historico, fontes_complementares,
+    )
+
     if complemento_fontes is not None:
         from pitwall.data.complementary_sources import project
         asset = project(asset, _json(Path(complemento_fontes)))

@@ -116,6 +116,7 @@ class Operacao2026R2Test(unittest.TestCase):
 
     def _args(self, snapshot, emission_id):
         return ['emitir', '--snapshot', snapshot, '--id', emission_id,
+                '--temporada', '2026', '--rodada', '18', '--circuito', 'americas',
                 '--sessao-encerrada-em', '2026-10-24T22:00:00Z',
                 '--fonte-encerramento', 'https://fixture.invalid/q-finished',
                 '--corte', '2026-10-24T22:30:00Z']
@@ -230,6 +231,7 @@ class Operacao2026R2Test(unittest.TestCase):
              patch.object(preparar, '_fontes_snapshot', side_effect=lambda root, nome='base-paginada': fontes_snapshot_original(root, 'base-paginada' if nome == preparar.SNAPSHOT_2026 else nome)), \
              patch.object(preparar, 'carregar_temporada', return_value={'previsoes': []}), \
              patch.object(preparar, '_campeonato_pilotos_2026', return_value=({'disponivel': False, 'motivo': 'fixture', 'classificacao': []}, [])), \
+             patch('pitwall.data.post_race_evaluation.apply_posterior'), \
              patch.object(registro_emissoes, 'DECLARACOES', declaracao):
             asset = preparar.gerar(self.root, asset_path)
         carregado = race_weekend_dados.carregar_asset(self.root)

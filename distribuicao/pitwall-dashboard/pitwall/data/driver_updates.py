@@ -19,7 +19,7 @@ def seal(value):
 
 def merge(base, updates):
     validate(base)
-    if (updates.get('schema') != SCHEMA
+    if (not isinstance(updates, dict) or updates.get('schema') != SCHEMA
             or updates.get('base_conteudo_sha256') != base['conteudo_sha256']
             or updates.get('conteudo_sha256') != content_hash({k:v for k,v in updates.items() if k!='conteudo_sha256'})
             or not isinstance(updates.get('events'),dict) or not isinstance(updates.get('pending'),dict)):

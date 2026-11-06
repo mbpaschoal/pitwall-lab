@@ -5,12 +5,23 @@ import unittest
 from pathlib import Path
 
 import preparar_contexto_editorial as preparar
+import contexto_editorial
 
 
 RAIZ = Path(__file__).resolve().parents[1]
 
 
 class TestContextoEditorial(unittest.TestCase):
+    def test_wrong_json_root_is_a_context_unavailability_error(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'frontend_assets/contexto_editorial.json'
+            path.parent.mkdir()
+            for value in ([], None, 'invalid', 0):
+                with self.subTest(value=value):
+                    path.write_text(json.dumps(value))
+                    with self.assertRaises(contexto_editorial.ContextoEditorialErro):
+                        contexto_editorial.carregar(tmp)
+
     def test_gera_contexto_para_todos_os_gps_das_tres_temporadas(self):
         with tempfile.TemporaryDirectory() as tmp:
             destino = Path(tmp) / 'contexto_editorial.json'

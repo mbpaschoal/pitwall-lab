@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
-import shutil
 import csv
 import re
 import hashlib
@@ -91,12 +89,10 @@ def _tamanho(raiz):
 
 def validar_sessao_antes_do_corte(fim_utc, corte_utc):
     try:
-        fim = datetime.fromisoformat(str(fim_utc).replace("Z", "+00:00")).astimezone(
-            timezone.utc
-        )
-        corte = datetime.fromisoformat(
-            str(corte_utc).replace("Z", "+00:00")
-        ).astimezone(timezone.utc)
+        fim, corte = (datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+                      for value in (fim_utc, corte_utc))
+        if any(value.tzinfo is None or value.utcoffset() is None for value in (fim, corte)):
+            return False
     except ValueError:
         return False
     return fim <= corte
@@ -115,18 +111,17 @@ def normalizar_horarios_fastf1(info):
         segundos = offset.total_seconds() if hasattr(offset, "total_seconds") else None
         if segundos is None:
             texto = str(offset)
-            encontrado = re.search(
-                r"(?:(\d+)\s+days?\s+)?([+-]?\d+):(\d+):(\d+)", texto
+            encontrado = re.fullmatch(
+                r"(?:(-?\d+)\s+days?\s+)?([+-]?\d+):(\d{2}):(\d{2})", texto.strip()
             )
             if not encontrado:
                 return None, None
             dias, horas, minutos, segundos_texto = encontrado.groups()
-            segundos = (
-                (int(dias or 0) * 86400)
-                + (int(horas) * 3600)
-                + (int(minutos) * 60)
-                + int(segundos_texto)
-            )
+            if int(minutos) >= 60 or int(segundos_texto) >= 60:
+                return None, None
+            sinal = -1 if horas.startswith('-') else 1
+            segundos = int(dias or 0) * 86400 + sinal * (
+                abs(int(horas)) * 3600 + int(minutos) * 60 + int(segundos_texto))
 
         def converter(valor):
             if hasattr(valor, "to_pydatetime"):
@@ -255,9 +250,13 @@ def coletar(
     corte_fn=corte_evento,
 ):
     """Coleta uma sessão por vez; indisponibilidade é registrada, nunca substituída."""
+    destino = Path(destino)
+    if destino.is_symlink() or (destino.exists() and (
+        not destino.is_dir() or any(destino.iterdir())
+    )):
+        raise FileExistsError("Destino B1 existente foi preservado; use um diretório vazio ou novo.")
     if fastf1_module is None:
         import fastf1 as fastf1_module
-    destino = Path(destino)
     cache = destino / "cache_fastf1"
     cache.mkdir(parents=True, exist_ok=True)
     fastf1_module.Cache.enable_cache(str(cache))

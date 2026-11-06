@@ -240,15 +240,33 @@ def standings_table(snapshot, teams=False, season=None, round_=None):
 
 
 def campeonatos(paineis, temporada, rodada=None):
+    from pitwall.data.standings_state import resolve_standings, publication_message, capture_utc
+    paineis = resolve_standings(paineis)
     cards = []
     for teams, titulo, ancora in [
         (False, "Campeonato de pilotos", "campeonato-completo"),
         (True, "Campeonato de construtores", "equipes-completo"),
     ]:
         snapshot = paineis["constructor_standings" if teams else "driver_standings"]
+        message = publication_message(snapshot)
+        notice = '<p class="pw-empty-note pw-publication-state">{}</p>'.format(e(message)) if message else ""
+        metadata = ""
+        if snapshot.get("disponivel"):
+            source = snapshot.get("fonte")
+            if not source:
+                from urllib.parse import urlparse
+                urls = snapshot.get("fontes_url", []) + [snapshot.get("url", ""), snapshot.get("url_base", "")]
+                source = "Jolpica-F1" if any(urlparse(u).hostname == "api.jolpi.ca" for u in urls if isinstance(u, str)) else "Fonte não informada"
+            stamp = capture_utc(snapshot)
+            metadata = '<div class="pw-standings-provenance"><p>{}</p><p>{}</p><p>{}</p></div>'.format(
+                e("Fonte: {}".format(source)),
+                e("Referência: temporada {} · rodada {}".format(paineis["temporada"], snapshot["rodada_referencia"])),
+                e("Captura: {}".format(stamp) if stamp else "Captura UTC não informada"),
+            )
+        table = standings_table(snapshot, teams, temporada, round_=rodada) if snapshot.get("disponivel") else ""
         cards.append(
-            '<section class="painel-editorial" id="{}"><div class="pw-card-head"><h3>{} <span>{}</span></h3></div>{}</section>'.format(
-                ancora, e(titulo), temporada, standings_table(snapshot, teams, temporada, round_=rodada)
+            '<section class="painel-editorial" id="{}"><div class="pw-card-head"><h3>{} <span>{}</span></h3></div>{}{}{}</section>'.format(
+                ancora, e(titulo), temporada, notice, metadata, table
             )
         )
     return '<div class="pw-standings" aria-label="Campeonato · referência da rodada {}">{}</div>'.format(

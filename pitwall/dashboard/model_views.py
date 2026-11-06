@@ -129,7 +129,7 @@ def tabela_calibracao(calibracao):
     return pd.DataFrame(linhas)
 
 
-def tela_desempenho(pacote, show_title=True):
+def tela_desempenho(pacote, show_title=True, root=None):
     if pacote["temporada"] == 2026:
         if show_title: st.title("Acertos do Lab")
         from pitwall.research.prospective_evaluation import prospective_races
@@ -140,7 +140,16 @@ def tela_desempenho(pacote, show_title=True):
             return
         from pitwall.dashboard.weekend_views import observed_rounds
         from pitwall.paths import PROJECT_ROOT
-        st.markdown(performance_cards(rows,pacote['corridas'],2026,observed_rounds=observed_rounds(PROJECT_ROOT,2026)),unsafe_allow_html=True)
+        operation_available = True
+        try:
+            observed = observed_rounds(PROJECT_ROOT if root is None else root, 2026)
+        except (ValueError, OSError):
+            observed = set()
+            operation_available = False
+            st.warning("Não foi possível validar o estado da coleta deste GP.")
+        st.markdown(performance_cards(rows, pacote['corridas'], 2026,
+                    observed_rounds=observed, operation_available=operation_available),
+                    unsafe_allow_html=True)
         if not rows:
             return
         from urllib.parse import urlencode

@@ -1,9 +1,73 @@
-<!doctype html><html><head><meta charset="utf-8"><style>
-body{margin:0;color:#102b50;font:14px Arial,sans-serif}label{display:block;margin-bottom:7px}select{width:100%;padding:10px;border:1px solid #c6d4e3;border-radius:5px;background:white;color:#102b50}select:focus-visible{outline:2px solid #d3071d}
-</style></head><body><label for="favorite" id="label"></label><select id="favorite"></select><script>
-const field=document.getElementById('favorite');let currentNames={},last=null;
-function send(type,extra={}){parent.postMessage({isStreamlitMessage:true,type,...extra},'*')}
-function value(v){send('streamlit:setComponentValue',{value:v,dataType:'json'})}
-addEventListener('message',event=>{if(event.source!==parent||event.data.type!=='streamlit:render')return;const args=event.data.args;currentNames=args.names;document.getElementById('label').textContent=args.lang==='en'?'Your favourite driver · saved in this browser':'Seu piloto favorito · salvo neste navegador';let stored=null;try{stored=localStorage.getItem('pitwall.favorite.v1')}catch(e){}const selected=stored in currentNames?stored:args.initial in currentNames?args.initial:'';field.replaceChildren();const placeholder=document.createElement('option');placeholder.value='';placeholder.textContent=args.lang==='en'?'Choose a favourite':'Escolha um favorito';field.append(placeholder);Object.entries(currentNames).sort((a,b)=>a[1].localeCompare(b[1])).forEach(([id,name])=>{const o=document.createElement('option');o.value=id;o.textContent=name;field.append(o)});field.value=selected;send('streamlit:setFrameHeight',{height:82});if(selected&&last!==selected){last=selected;value(selected)}});
-field.addEventListener('change',()=>{const selected=field.value;try{if(selected)localStorage.setItem('pitwall.favorite.v1',selected);else localStorage.removeItem('pitwall.favorite.v1')}catch(e){}last=selected;value(selected||null)});send('streamlit:componentReady',{apiVersion:1});
-</script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { margin: 0; color: #102b50; font: 14px Arial, sans-serif; }
+    label { display: block; margin-bottom: 7px; }
+    select { width: 100%; padding: 10px; border: 1px solid #c6d4e3; border-radius: 5px; background: white; color: #102b50; }
+    select:focus-visible { outline: 2px solid #d3071d; }
+  </style>
+</head>
+<body>
+  <label for="favorite" id="label"></label>
+  <select id="favorite"></select>
+  <script>
+    const field = document.getElementById('favorite');
+    const storageKey = 'pitwall.favorite.v1';
+    let last = null;
+
+    function send(type, extra = {}) {
+      // Streamlit embeds the component on an independently assigned origin.
+      parent.postMessage({isStreamlitMessage: true, type, ...extra}, '*');
+    }
+
+    function publishValue(value) {
+      send('streamlit:setComponentValue', {value, dataType: 'json'});
+    }
+
+    addEventListener('message', event => {
+      if (event.source !== parent || event.data?.type !== 'streamlit:render') return;
+      const args = event.data.args;
+      const names = args.names;
+      const english = args.lang === 'en';
+      document.documentElement.lang = english ? 'en' : 'pt-BR';
+      document.getElementById('label').textContent = english
+        ? 'Your favourite driver · saved in this browser'
+        : 'Seu piloto favorito · salvo neste navegador';
+
+      let stored = null;
+      try { stored = localStorage.getItem(storageKey); } catch (error) { /* Storage may be disabled. */ }
+      const selected = stored in names ? stored : args.initial in names ? args.initial : '';
+      field.replaceChildren();
+      const placeholder = document.createElement('option');
+      placeholder.value = '';
+      placeholder.textContent = english ? 'Choose a favourite' : 'Escolha um favorito';
+      field.append(placeholder);
+      Object.entries(names).sort((a, b) => a[1].localeCompare(b[1])).forEach(([id, name]) => {
+        const option = document.createElement('option');
+        option.value = id;
+        option.textContent = name;
+        field.append(option);
+      });
+      field.value = selected;
+      send('streamlit:setFrameHeight', {height: 82});
+      if (selected && last !== selected) {
+        last = selected;
+        publishValue(selected);
+      }
+    });
+
+    field.addEventListener('change', () => {
+      const selected = field.value;
+      try {
+        if (selected) localStorage.setItem(storageKey, selected);
+        else localStorage.removeItem(storageKey);
+      } catch (error) { /* The selection still works without persistence. */ }
+      last = selected;
+      publishValue(selected || null);
+    });
+    send('streamlit:componentReady', {apiVersion: 1});
+  </script>
+</body>
+</html>

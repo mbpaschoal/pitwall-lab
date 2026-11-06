@@ -198,7 +198,9 @@ class Operacao2026R3Test(unittest.TestCase):
         })
         output = io.StringIO()
         with patch.object(cli, 'SNAPSHOTS', self.snapshots), redirect_stdout(output), redirect_stderr(output):
-            self.assertEqual(cli.main(['estado', '--snapshot', 'igual']), 1)
+            self.assertEqual(cli.main(['estado', '--snapshot', 'igual',
+                                       '--temporada', '2026', '--rodada', '18',
+                                       '--circuito', 'americas']), 1)
         self.assertIn('referência', output.getvalue())
 
         output = io.StringIO()

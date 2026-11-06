@@ -25,6 +25,8 @@ QUICK_CONDITIONS = (("rain", "☂ Chuva"), ("track_hot", "☀ Calor"),
 COMPARISON_CONDITIONS = ("rain", "no_rain", "track_hot", "ccw")
 CRITERION_DEFAULTS = {"pilot_years": [2024, 2025, 2026],
                       "pilot_metric": "win_rate", "pilot_minimum": 5}
+PILOT_QUERY_KEYS = ("piloto", "visao", "condicao", "anos", "metrica", "minimo",
+                    "faixas", "rival", "duelo_condicao")
 TEAM_NAMES = {
     "mercedes": "Mercedes", "ferrari": "Ferrari", "red_bull": "Red Bull",
     "red_bull_racing": "Red Bull", "mclaren": "McLaren",
@@ -148,7 +150,7 @@ def _figure(figure, height=350):
         paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Lato, Arial, sans-serif", color=INK),
         legend=dict(orientation="h", y=-.22), hovermode="closest", separators=",." if language() == "pt" else ".,")
-    st.plotly_chart(figure, use_container_width=True, config={"displayModeBar": False})
+    st.plotly_chart(figure, width="stretch", config={"displayModeBar": False})
 
 
 def _condition_values_html(comparisons, series, metric, minimum):
@@ -352,6 +354,56 @@ def coverage_label(asset):
     return label.format(gp=translate(latest['name']),date=date.fromisoformat(latest['date_utc']).strftime('%d/%m/%Y'))
 
 
+def _restore_navigation_state(query_params, state, names):
+    """Restore saved criteria, then apply a changed deep link before rendering.
+
+    Native widgets and browser components rerun independently. Saved criteria
+    stay authoritative on those reruns; an unchanged URL must not reset widgets.
+    Empty year/condition selections are intentional and remain empty.
+    """
+    for key, value in state.get("_pilot_filters", {}).items():
+        if key in CRITERION_DEFAULTS or key not in state:
+            state[key] = list(value) if isinstance(value, list) else value
+    query = tuple(query_params.get(key) for key in PILOT_QUERY_KEYS)
+    if query != state.get("_pilot_query"):
+        driver, view, condition, year_query, metric_query, minimum_query, bands, rival, _ = query
+        if bands is not None:
+            state["profile_conditions"] = [key for key in bands.split(",") if key in BY_KEY]
+        duel_condition = query_params.get("duelo_condicao", "all")
+        if duel_condition == "all" or duel_condition in BY_KEY:
+            state["duel_condition"] = duel_condition
+        if rival in names:
+            state["duel_right"] = rival
+        if year_query is not None:
+            try:
+                parsed_years = list(dict.fromkeys(int(value) for value in year_query.split(",")))
+            except ValueError:
+                parsed_years = []
+            if (parsed_years or year_query == "") and all(year in (2024, 2025, 2026) for year in parsed_years):
+                state["pilot_years"] = parsed_years
+        if metric_query in METRICS:
+            state["pilot_metric"] = metric_query
+        if minimum_query in ("1", "3", "5", "10", "15"):
+            state["pilot_minimum"] = int(minimum_query)
+        if driver in names:
+            state["pilot_driver"] = driver
+        if view in ("perfil", "geral", "duelo"):
+            state["pilot_view"] = {"perfil": "Perfil individual", "geral": "Visão geral", "duelo": "Duelo"}[view]
+        if condition in BY_KEY:
+            state["pilot_condition"] = condition
+        state["_pilot_query"] = query
+    state.setdefault("pilot_metric", "win_rate")
+    state.setdefault("pilot_minimum", 5)
+    state.setdefault("pilot_condition", "rain")
+    filters = dict(state.get("_pilot_filters", {}))
+    for key, default in CRITERION_DEFAULTS.items():
+        value = state.get(key, default)
+        filters[key] = list(value) if isinstance(value, list) else value
+    state["_pilot_filters"] = filters
+    if state["pilot_condition"] not in BY_KEY:
+        state["pilot_condition"] = "rain"
+
+
 def render(root):
     try:
         asset = load(root)
@@ -388,47 +440,7 @@ def render(root):
         st.markdown('<a href="?{}" target="_self">← {}</a>'.format(
             escape(urlencode(params), quote=True), escape(translate("Voltar à visão geral"))), unsafe_allow_html=True)
         return
-    for key, value in st.session_state.get("_pilot_filters", {}).items():
-        if key in CRITERION_DEFAULTS or key not in st.session_state:
-            st.session_state[key] = list(value) if isinstance(value, list) else value
-    query = tuple(st.query_params.get(x) for x in ("piloto", "visao", "condicao", "anos", "metrica", "minimo", "faixas", "rival", "duelo_condicao"))
-    if query != st.session_state.get("_pilot_query"):
-        driver, view, condition, year_query, metric_query, minimum_query, bands, rival, duel_query = query
-        if bands is not None:
-            st.session_state["profile_conditions"] = [x for x in bands.split(",") if x in BY_KEY]
-        duel_condition = st.query_params.get("duelo_condicao", "all")
-        if duel_condition == "all" or duel_condition in BY_KEY:
-            st.session_state["duel_condition"] = duel_condition
-        if rival in driver_names(asset):
-            st.session_state["duel_right"] = rival
-        if year_query is not None:
-            try:
-                parsed_years = list(dict.fromkeys(int(x) for x in year_query.split(",")))
-            except ValueError:
-                parsed_years = []
-            if (parsed_years or year_query == "") and all(x in (2024, 2025, 2026) for x in parsed_years):
-                st.session_state["pilot_years"] = parsed_years
-        if metric_query in METRICS:
-            st.session_state["pilot_metric"] = metric_query
-        if minimum_query in ("1", "3", "5", "10", "15"):
-            st.session_state["pilot_minimum"] = int(minimum_query)
-        if driver in driver_names(asset):
-            st.session_state["pilot_driver"] = driver
-        if view in ("perfil", "geral", "duelo"):
-            st.session_state["pilot_view"] = {"perfil": "Perfil individual", "geral": "Visão geral", "duelo": "Duelo"}[view]
-        if condition in BY_KEY:
-            st.session_state["pilot_condition"] = condition
-        st.session_state["_pilot_query"] = query
-    st.session_state.setdefault("pilot_metric", "win_rate")
-    st.session_state.setdefault("pilot_minimum", 5)
-    st.session_state.setdefault("pilot_condition", "rain")
-    filters = dict(st.session_state.get("_pilot_filters", {}))
-    for key, default in CRITERION_DEFAULTS.items():
-        value = st.session_state.get(key, default)
-        filters[key] = list(value) if isinstance(value, list) else value
-    st.session_state["_pilot_filters"] = filters
-    if st.session_state["pilot_condition"] not in BY_KEY:
-        st.session_state["pilot_condition"] = "rain"
+    _restore_navigation_state(st.query_params, st.session_state, names)
     with st.container(key="pilot-cover"):
         with st.container(key="pilot-view-navigation"):
             modes = ["Visão geral", "Perfil individual", "Duelo"]
@@ -625,7 +637,7 @@ def _share(asset, years, metric, minimum, view):
     filters.update({key: st.session_state[key] for key in ("pilot_condition", "pilot_driver", "pilot_view", "profile_conditions", "matrix_drivers", "duel_right", "duel_condition") if key in st.session_state})
     st.session_state["_pilot_filters"] = filters
     st.query_params.from_dict(params)
-    st.session_state["_pilot_query"] = tuple(st.query_params.get(x) for x in ("piloto", "visao", "condicao", "anos", "metrica", "minimo", "faixas", "rival", "duelo_condicao"))
+    st.session_state["_pilot_query"] = tuple(st.query_params.get(key) for key in PILOT_QUERY_KEYS)
     title = translate("Pilotos")
     selected = select_rows(asset, years)
     facts = []

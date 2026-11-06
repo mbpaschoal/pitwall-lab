@@ -503,7 +503,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-of
 .pilot-condition-values tbody th{font-weight:400}
 @media(max-width:600px){.pilot-condition-values{font-size:12px;table-layout:fixed}.pilot-condition-values th,.pilot-condition-values td{padding:7px 4px}.pilot-condition-values th:last-child{width:52px}}
 /* Accessibility plumbing must not add blank rows to the composition. */
-.st-key-pw-a11y-bridge,[data-testid="stLayoutWrapper"]:has(>.st-key-pw-a11y-bridge){display:none}
+.st-key-pw-a11y-bridge,.st-key-pw-motion-bridge,[data-testid="stLayoutWrapper"]:has(>.st-key-pw-a11y-bridge,>.st-key-pw-motion-bridge){display:none}
 .stElementContainer:has(.pw-skip-link){position:absolute;width:0;height:0;min-height:0}
 .fan-results-status{font:400 13px/1.4 LatoLocal;color:var(--pw-muted);margin:8px 0 0}
 

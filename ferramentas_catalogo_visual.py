@@ -85,12 +85,20 @@ def _api(titulo, miniatura):
 
 
 def _baixar(url, destino):
+    destino = Path(destino)
+    if destino.is_symlink():
+        raise ValueError('Destino visual não pode usar symlink: {}'.format(destino))
     req = Request(url, headers={'User-Agent': UA})
     with urlopen(req, timeout=90) as resposta:
         bruto = resposta.read()
     if not bruto:
         raise ValueError('Download vazio: {}'.format(url))
-    destino.write_bytes(bruto)
+    try:
+        with destino.open('xb') as arquivo:
+            arquivo.write(bruto)
+    except FileExistsError:
+        if destino.is_symlink() or not destino.is_file() or destino.read_bytes() != bruto:
+            raise FileExistsError('Ativo visual existente diverge e foi preservado: {}'.format(destino))
     return hashlib.sha256(bruto).hexdigest()
 
 
@@ -103,13 +111,16 @@ def gerar(raiz, pausa=1.0):
         catalogo = json.loads(destino.read_text(encoding='utf-8'))
     except (OSError, UnicodeDecodeError, json.JSONDecodeError):
         catalogo = {'versao': 1, 'fonte': 'Wikimedia Commons API', 'circuitos': {}}
-    if catalogo.get('versao') != 1 or not isinstance(catalogo.get('circuitos'), dict):
+    if not isinstance(catalogo, dict) or catalogo.get('versao') != 1 or not isinstance(catalogo.get('circuitos'), dict):
         raise ValueError('Catálogo visual local inválido; não sobrescreva sem revisão.')
     for indice, (circuito, (foto_titulo, mapa_titulo)) in enumerate(sorted(CANDIDATOS.items()), start=1):
         existente = catalogo['circuitos'].get(circuito)
         if isinstance(existente, dict):
             caminhos = [raiz / existente.get(tipo, {}).get('caminho', '') for tipo in ('foto', 'mapa')]
             if all(caminho.is_file() and caminho.stat().st_size > 0 for caminho in caminhos):
+                for tipo, caminho in zip(('foto', 'mapa'), caminhos):
+                    if caminho.is_symlink() or hashlib.sha256(caminho.read_bytes()).hexdigest() != existente[tipo].get('sha256'):
+                        raise ValueError('Ativo catalogado com hash divergente; preserve e revise: {}'.format(caminho))
                 print('{:02d}/{} {} (retomado)'.format(indice, len(CANDIDATOS), circuito), flush=True)
                 continue
         foto = _api(foto_titulo, 1600)

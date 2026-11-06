@@ -29,6 +29,12 @@ Documentos ingleses ficam em `docs/en/`; a seleção usa uma allowlist explícit
 
 ## Como alterar
 
+`fan_views.GP_CHAPTERS` conserva a ordem, os IDs canônicos e os rótulos dos seis capítulos do GP. Links e abas nativas usam essa mesma definição; a tradução ocorre na apresentação. As pontes locais de acessibilidade e movimento usam `st.iframe` em contêineres ocultos, com altura mínima válida de 1 px e `tab_index=-1`; gráficos Plotly usam `width="stretch"`, conforme o Streamlit fixado.
+
+O produtor offline `pitwall/data/dashboard_projection.py` organiza a projeção do acervo em funções por domínio. `preparar()` confere fontes, resolve identidades, coordena sessões/voltas/clima/pneus/campeonatos, aplica histórico e complementos e valida a gravação. A interface continua consumindo o JSON produzido; esse produtor não integra o runtime portátil. A ordem das etapas faz parte do comportamento preservado.
+
+Em Pilotos, `pilot_views._restore_navigation_state` aplica o estado salvo e os parâmetros de um link antes da composição visual. Um link já processado não restaura novamente os widgets; os critérios compartilhados preservam seu estado entre reruns de componentes. `PILOT_QUERY_KEYS` define a mesma ordem de parâmetros para ler e compartilhar a seleção.
+
 Comece pelo contrato de papel no blueprint. Mantenha funções pequenas, nomes descritivos, dependências explícitas e testes no comportamento. Evite copiar implementações entre pacote, raiz e distribuição: o pacote portátil é gerado. Registre nova versão para cada entrega e teste o pacote isolado e o idioma afetado. Não faça descoberta irrestrita de testes para uma alteração de apresentação: ela pode executar ciência.
 
 ## Entrega 0.3.0
@@ -39,3 +45,13 @@ Comece pelo contrato de papel no blueprint. Mantenha funções pequenas, nomes d
 
 
 Pilotos mantém a base original e incorpora GPs posteriores em complemento validado por `pitwall/data/driver_updates.py`. O produtor descritivo `operacao2026/driver_archive.py` participa da coleta agendada e publica por allowlist atômica. Pendências conservam dados validados e acionam o monitor. [Contrato e limites](PILOTOS_ATUALIZACAO.md).
+
+## Fronteiras verificadas na revisão 0.12.6
+
+`pitwall/data/standings_state.py` resolve a publicação do campeonato: evento selecionado, corte do snapshot e estado da atualização são informações diferentes. Uma falha de refresh conserva o snapshot válido do mesmo evento com aviso e procedência; outro evento ou uma tabela incompleta não fornecem pontuações. As telas tratam indisponibilidade do leitor operacional sem perder os dados já validados.
+
+Leitores JSON validam a raiz antes de acessar campos; erros de domínio orientam os consumidores. A busca reutiliza o leitor editorial. Fontes opcionais ausentes não viram caminhos de procedência. O cooldown de captura é persistido e verificado antes de qualquer nova consulta. Escritas de imagens são exclusivas e idempotentes por bytes; divergências preservam o arquivo anterior.
+
+Na pesquisa isolada, timestamps exigem fuso explícito, destinos existentes são recusados e tabelas vazias mantêm esquema. Folds sem alvos conhecidos têm cobertura insuficiente, sem zero artificial; identidades duplicadas são rejeitadas antes do filtro de previsões disponíveis. Esses contratos são testados com exemplos sintéticos, sem promover a pesquisa ao v1.
+
+Para revisar novamente: seguir um fluxo de entrada até saída, nomear o cenário de falha, demonstrá-lo num teste e corrigir a menor responsabilidade possível. A cobertura de leitura e a execução de testes são registros distintos. Inspeção sintática, teste local, CI, pacote e navegador público respondem a perguntas diferentes; nenhum substitui os demais. Os módulos de compatibilidade e a distribuição gerada não são candidatos a remoção só por parecerem duplicados.

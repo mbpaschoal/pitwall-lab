@@ -188,6 +188,7 @@ RUNTIME_WORKTREE = (
     'pitwall/data/dashboard.py',
     'pitwall/data/race_weekend.py',
     'pitwall/data/archive.py',
+    'pitwall/data/standings_state.py',
     'pitwall/data/tyre_age.py',
     'pitwall/dashboard/archive_views.py',
     'pitwall/dashboard/pilot_views.py',
@@ -254,6 +255,7 @@ TEMPLATES = (
     'publicacao/templates/test_complemento_idade_publico.py',
     'publicacao/templates/test_pneus_apresentacao.py',
     'publicacao/templates/test_avaliacao_posterior_publico.py',
+    'publicacao/templates/test_standings_publication.py',
 )
 
 
@@ -314,6 +316,8 @@ def _ler_catalogo_visual(raiz):
         catalogo = json.loads(_ler_arquivo_regular(raiz, relativo).decode('utf-8'))
     except (UnicodeDecodeError, json.JSONDecodeError) as erro:
         raise ValueError('catálogo visual inválido') from erro
+    if not isinstance(catalogo, dict):
+        raise ValueError('catálogo visual inválido')
     circuitos = catalogo.get('circuitos')
     if catalogo.get('versao') != 1 or not isinstance(circuitos, dict) or len(circuitos) != 26:
         raise ValueError('catálogo visual sem a cobertura esperada de 26 circuitos')
@@ -524,6 +528,7 @@ def _montar_arquivos(raiz, conteudos, commit):
         ('publicacao/templates/test_complemento_idade_publico.py', 'tests/test_complemento_idade_publico.py'),
         ('publicacao/templates/test_pneus_apresentacao.py', 'tests/test_pneus_apresentacao.py'),
         ('publicacao/templates/test_avaliacao_posterior_publico.py', 'tests/test_avaliacao_posterior_publico.py'),
+        ('publicacao/templates/test_standings_publication.py', 'tests/test_standings_publication.py'),
         ('publicacao/templates/requirements.txt', 'requirements.txt'),
         ('publicacao/templates/.python-version', '.python-version'),
         ('publicacao/templates/.gitignore', '.gitignore'),

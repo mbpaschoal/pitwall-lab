@@ -9,6 +9,59 @@ from streamlit.testing.v1 import AppTest
 ROOT = Path(__file__).resolve().parents[1]
 
 
+class PilotNavigationStateTests(unittest.TestCase):
+    def restore(self, query, state):
+        from pitwall.dashboard.pilot_views import _restore_navigation_state
+        _restore_navigation_state(query, state, {"norris": "Norris", "max_verstappen": "Verstappen"})
+
+    def test_deep_link_restores_valid_filters_and_driver_pair(self):
+        state = {}
+        self.restore(dict(piloto="norris", rival="max_verstappen", visao="duelo",
+                          anos="2026,2025,2026", metrica="podium_rate", minimo="3",
+                          condicao="rain", faixas="rain,unknown", duelo_condicao="rain"), state)
+        self.assertEqual(state["pilot_years"], [2026, 2025])
+        self.assertEqual(state["pilot_driver"], "norris")
+        self.assertEqual(state["duel_right"], "max_verstappen")
+        self.assertEqual(state["pilot_view"], "Duelo")
+        self.assertEqual(state["pilot_metric"], "podium_rate")
+        self.assertEqual(state["pilot_minimum"], 3)
+        self.assertEqual(state["profile_conditions"], ["rain"])
+
+    def test_invalid_link_values_preserve_existing_choices(self):
+        for years in ("2027", "2026,bad", "2026,2027"):
+            with self.subTest(years=years):
+                state = dict(pilot_years=[2025], pilot_driver="norris",
+                             pilot_metric="wins", pilot_minimum=10, pilot_view="Duelo")
+                self.restore(dict(anos=years, piloto="unknown", metrica="unknown",
+                                  minimo="-1", visao="unknown"), state)
+                self.assertEqual(state["pilot_years"], [2025])
+                self.assertEqual(state["pilot_driver"], "norris")
+                self.assertEqual(state["pilot_metric"], "wins")
+                self.assertEqual(state["pilot_minimum"], 10)
+                self.assertEqual(state["pilot_view"], "Duelo")
+
+    def test_empty_selections_are_preserved_without_aliasing_saved_lists(self):
+        state = {}
+        self.restore(dict(anos="", faixas=""), state)
+        self.assertEqual(state["pilot_years"], [])
+        self.assertEqual(state["profile_conditions"], [])
+        state["pilot_years"].append(2026)
+        self.assertEqual(state["_pilot_filters"]["pilot_years"], [])
+
+    def test_unchanged_url_keeps_widget_selection_and_saved_comparison_scope(self):
+        query = dict(piloto="norris", anos="2026", metrica="podium_rate", minimo="3")
+        state = {}
+        self.restore(query, state)
+        state.update(pilot_driver="max_verstappen", pilot_years=[2024], pilot_metric="wins")
+        self.restore(query, state)
+        self.assertEqual(state["pilot_driver"], "max_verstappen")
+        self.assertEqual(state["pilot_years"], [2026])
+        self.assertEqual(state["pilot_metric"], "podium_rate")
+        self.restore(dict(query, piloto="norris", anos="2025"), state)
+        self.assertEqual(state["pilot_driver"], "norris")
+        self.assertEqual(state["pilot_years"], [2025])
+
+
 class PilotViewTests(unittest.TestCase):
     def test_overview_profile_and_language_preserve_the_selection(self):
         app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30).run()

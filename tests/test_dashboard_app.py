@@ -395,9 +395,10 @@ class TestDashboardApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         for rotulo in ('Foto do circuito', 'Sobre o circuito', 'Clima'):
             self.assertIn(rotulo, texto)
-        codigo = Path(app.__file__).read_text(encoding='utf-8')
-        for aba in ('Resumo', 'Sessões e voltas', 'Pneus e paradas', 'Clima', 'Nesta pista', 'Equipes'):
-            self.assertIn(aba, codigo)
+        self.assertEqual(
+            [tab.label for tab in self.at.tabs],
+            ['Resumo', 'Sessões e voltas', 'Pneus e paradas', 'Clima', 'Nesta pista', 'Equipes'],
+        )
         self.assertIn('Clima não disponível', texto)
         self.assertIn('Resultado observado', texto)
         self.assertNotIn('Andrea Kimi Antonelli · Mercedes · 83.5%', texto)

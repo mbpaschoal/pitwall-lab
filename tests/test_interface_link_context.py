@@ -98,10 +98,13 @@ class LinkContextTests(unittest.TestCase):
     def test_championship_profiles_keep_selected_gp_separate_from_snapshot_cutoff(self):
         from pitwall.dashboard.components import campeonatos
         snapshot=dict(disponivel=True,classificacao=[dict(posicao=1,piloto_id='max_verstappen',piloto='Max Verstappen',equipe='Red Bull Racing',equipe_id='red_bull',pontos=25)])
-        paineis=dict(driver_standings=snapshot,constructor_standings=dict(disponivel=False),rodada=18)
         for lang in ('pt','en'):
             set_language(lang)
             for year,round_ in ((2024,1),(2026,19)):
+                circuit = 'marina_bay' if year == 2024 else 'americas'
+                paineis=dict(temporada=year,rodada=18,circuito_id=circuit,
+                    driver_standings=dict(snapshot,temporada=year,rodada_referencia=18,circuito_id=circuit),
+                    constructor_standings=dict(disponivel=False))
                 html=campeonatos(paineis,year,rodada=round_)
                 link=params(html)
                 self.assertEqual(link['temporada'],[str(year)])

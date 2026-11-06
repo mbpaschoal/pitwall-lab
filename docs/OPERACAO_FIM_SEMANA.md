@@ -92,3 +92,9 @@ A média do asfalto agora usa 100 leituras válidas: 40,7 °C, 98,0% de cobertur
 
 
 Análises de Pilotos recebem os GPs concluídos pelo [fluxo automático com conferência](PILOTOS_ATUALIZACAO.md). Referência de circuito da edição é pré-requisito; uma lacuna mantém o último estado válido e aciona o monitor após seis horas.
+
+## Retomada após falha — 0.12.4
+
+O `estado.json` de cada tentativa conserva o diagnóstico parcial com suas capturas e recibos. O `estado.json` da pasta do GP é o ponto de retomada: só recebe o novo estado quando o fluxo termina normalmente, incluindo a validação das séries meteorológicas. Uma falha tardia preserva o estado anterior; sem estado anterior, não cria um ponto utilizável de retomada.
+
+HTTP 429 conserva a mesma regra e acrescenta `retry_after_utc` ao estado anterior, ou registra somente esse prazo se não houver estado anterior. A restrição sobrevive à reinicialização, sem promover uma tentativa incompleta. Calendário ou catálogo indisponível gera erro explícito de fonte; a falha original permanece no manifesto. Não há preenchimento de dados, repetição imediata de consultas ou alteração de previsões.

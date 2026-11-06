@@ -149,11 +149,15 @@ class FastF1ContextoTest(unittest.TestCase):
 
     def test_emissao_bloqueia_sem_classificacao_antes_de_carregar_modelo(self):
         estado = {'estado': 'aguardando_classificacao', 'registros': []}
-        with patch.object(cli, '_preparar_fluxo', return_value=({}, [], EVENTO_AUSTIN, estado, {}, None, None, None)), \
+        source = {'arquivo': 'raw/q.json', 'obtido_em_utc': '2026-10-24T22:00:00Z'}
+        index = {'fontes': [source]}
+        pages = {'classificacao': [(source, {})]}
+        with patch.object(cli, '_preparar_fluxo', return_value=(index, [], EVENTO_AUSTIN, estado, pages, None, None, None)), \
              patch('operacao2026.previsao.carregar_modelo', side_effect=AssertionError('modelo não deveria carregar')):
             with self.assertRaisesRegex(ValueError, 'Aguardando classificação'):
                 cli.cmd_emitir(argparse.Namespace(
-                    snapshot='jolpica', id='austin-prospectivo',
+                    snapshot='jolpica', id='austin-prospectivo', temporada='2026',
+                    rodada=18, circuito='americas', openf1_diretorio=None,
                     sessao_encerrada_em='2026-10-24T22:00:00Z',
                     fonte_encerramento='https://example.test/q', corte='2026-10-24T22:01:00Z',
                     versao_anterior=None, motivo_correcao=None, fastf1_snapshot=None,

@@ -1,9 +1,8 @@
 """Bounded, offline search across events, circuits, drivers and teams."""
-import json
-from pathlib import Path
 import unicodedata
 from urllib.parse import urlencode
 from pitwall.data.driver_conditions import load, DriverConditionsError
+from pitwall.data.editorial import carregar, ContextoEditorialErro
 
 
 def normalized(text):
@@ -18,8 +17,8 @@ def search(root, query, lang="pt", year=None, round_=None):
     context = (dict(temporada=year, gp=round_) if year in (2024, 2025, 2026)
                and type(round_) is int and 1 <= round_ <= 24 else {})
     try:
-        events = json.loads((Path(root) / "frontend_assets/contexto_editorial.json").read_text(encoding="utf-8"))["eventos"]
-    except (OSError, ValueError, KeyError):
+        events = carregar(root).values()
+    except ContextoEditorialErro:
         events = []
     for event in events:
         if query in normalized(" ".join(map(str, event.values()))):

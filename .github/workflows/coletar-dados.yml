@@ -101,7 +101,7 @@ jobs:
       - name: Validar antes de publicar / Validate before publishing
         if: steps.data.outputs.changed == 'true'
         run: |
-          python -B -m unittest tests.test_post_qualifying tests.test_driver_updates tests.test_automatic_publication tests.test_weekend_cloud tests.test_weekend_operation tests.test_weekend_reconciliation tests.test_final_results tests.test_weekend_official tests.test_weekend_ui tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_review_regressions tests.test_fan_exploration
+          python -B -m unittest tests.test_post_qualifying tests.test_driver_updates tests.test_automatic_publication tests.test_weekend_cloud tests.test_weekend_operation tests.test_weekend_reconciliation tests.test_final_results tests.test_weekend_official tests.test_weekend_ui tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_review_regressions tests.test_review_readers tests.test_standings_publication tests.test_fan_exploration
           python -B verificar_pacote.py --pacote distribuicao/pitwall-dashboard
           diff -qr --exclude=__pycache__ "$RUNNER_TEMP/generated/pitwall-dashboard" distribuicao/pitwall-dashboard
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6

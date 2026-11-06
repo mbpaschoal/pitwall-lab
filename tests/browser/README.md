@@ -42,7 +42,7 @@ Checks wait for the expected version, route, language and idle state. Streamlit 
 
 `verificar_publicacao.cjs VERSION COLLECTION_JSON [OUTPUT]` checks an already-published data delivery in four PT/EN desktop/mobile cases. It requires the event in both the package calendar and collected state, decoded photographs with matching hashes, ready controls and exact build. Two attempts per case, eight minutes total; JSON retains failures and screenshots. `PITWALL_SOURCE_ROOT` selects the expected package; `PITWALL_PUBLIC_BASE_URL` permits explicit local rehearsal. The workflow defaults to the public domain.
 
-`node --test tests/browser/test_verificar_publicacao.cjs` executa nove contraprovas, sete com navegador real / runs nine counterexamples, seven with real browsers: approved pixels, wrong SHA, broken photo, PT/EN readiness, foreign origin and package/event/version mismatch.
+`node --test tests/browser/test_verificar_publicacao.cjs` executa dez contraprovas, oito com navegador real / runs ten counterexamples, eight with real browsers: approved pixels, wrong SHA, broken photo, PT/EN readiness, native/link controls, foreign origin and package/event/version mismatch.
 
 
 `aceite_resiliencia.cjs BASE_URL OUTPUT` bloqueia os módulos nativos Radio/Button e exige links por teclado nos seis destinos, troca de idioma, contexto de GP, alvos de 44 px e ausência de transbordamento em PT/EN e 390/1440 px. Os 12 aceites anteriores continuam no CI. O modo normal mantém os mesmos controles; os links alternativos ficam ocultos e fora da navegação por teclado quando os controles nativos estão disponíveis.
