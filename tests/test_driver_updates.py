@@ -22,6 +22,21 @@ NOW=datetime(2026,11,3,21,tzinfo=timezone.utc)
 
 
 class DriverUpdateTests(unittest.TestCase):
+    def test_wrong_update_root_is_a_domain_error_without_changing_base(self):
+        original=deepcopy(self.base)
+        for value in ([], None, 'invalid', 0):
+            with self.subTest(value=value):
+                with self.assertRaises(DriverConditionsError):merge(self.base,value)
+                self.assertEqual(self.base,original)
+
+    def test_non_object_quality_or_gp_blocks_are_domain_errors(self):
+        from pitwall.data.driver_conditions import content_hash
+        for field in ('qualidade','gps'):
+            value=deepcopy(self.base)
+            value[field]=[{}]*len(value['gps']) if field=='gps' else []
+            value['conteudo_sha256']=content_hash({k:v for k,v in value.items() if k!='conteudo_sha256'})
+            with self.subTest(field=field),self.assertRaises(DriverConditionsError):validate(value)
+
     def setUp(self):
         self.event=weekend.load_event(ROOT/'operacao2026/eventos/mexico2026.json')
         self.base=validate(json.loads((ROOT/BASE).read_text()))

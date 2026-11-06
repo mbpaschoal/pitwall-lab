@@ -1,0 +1,7 @@
+# Research-only environment; do not install into the frozen v1 environment.
+# Ambiente exclusivo da pesquisa; preservar .venv e a distribuição do dashboard.
+-r requirements_modelo_v1.txt
+pandas==2.2.3
+statsmodels==0.14.6
+patsy==1.0.2
+matplotlib==3.9.4

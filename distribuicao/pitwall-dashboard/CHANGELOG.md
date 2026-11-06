@@ -1,5 +1,47 @@
 # Evolução do Pitwall Lab
 
+## 0.12.6 — 2026-11-06
+
+Revisão da base mantida, com roteiro adaptado do Ponytail. Leitores JSON recusam estruturas inválidas com erros de domínio; busca, campeonato e acertos conservam dados válidos com aviso de indisponibilidade. A publicação de campeonatos preserva snapshots do mesmo evento e explicita corte, fonte e captura, inclusive durante falhas de atualização.
+
+Retomadas de captura respeitam o `Retry-After` persistido. Coletores de imagens preservam arquivos divergentes e conferem o cache. A coleta experimental B1 exige fuso explícito, interpreta offsets negativos e recusa destinos ocupados. Auditorias aceitam tabelas vazias com esquema; a avaliação de pesquisa separa folds sem cobertura e rejeita identidades duplicadas mesmo sem previsão disponível.
+
+A projeção não registra caminhos inexistentes para fontes opcionais. O resumo de circuito mantém ausências explícitas; o favorito tem código legível e idioma declarado. O devcontainer usa dependências fixadas e proteções padrão; o CI passa a incluir as novas regressões e os testes sintéticos de pesquisa. A contraprova legada de coleta usa respostas preservadas e destino temporário.
+
+Testes de apresentação usam o ambiente do próprio executor. Oráculos de pesquisa comparam lotes equivalentes sem confundir arredondamento BLAS; a fixture de espera também funciona em 29 de fevereiro.
+
+Modelo v1, suas entradas, probabilidades, emissões, capturas e protocolo P1 permanecem preservados. Aceite local, CI remoto e publicação possuem comprovantes próprios.
+
+## 0.12.5 — 2026-11-06
+
+Quinto lote local da revisão: protege o registro e a projeção de uma emissão contra falhas de apresentação. A projeção é preparada em destino separado, precisa produzir um objeto JSON legível e só então substitui o asset por renomeação. Em caso de erro, restaura exatamente o registro anterior ou retira somente o registro novo, preservando a projeção parcial junto à tentativa.
+
+A recuperação reutiliza os mesmos bytes da emissão retida, sem nova captura ou recálculo de probabilidades. Cinco regressões cobrem falha com e sem estado anterior, reprojeção de emissão registrada, saída ausente/inválida e retomada após erro. Gates científicos e temporais, política de eventos, modelo v1, probabilidades e protocolo P1 permanecem intactos. Candidato local; nenhuma automação ativa ou publicação externa é alterada.
+
+## 0.12.4 — 2026-11-06
+
+Quarto lote local da revisão: separa o registro de cada tentativa do estado utilizável para retomada da coleta. Uma falha tardia, inclusive na validação do clima, conserva o estado anterior; HTTP 429 mantém apenas o prazo de espera junto dele. Uma tentativa inicial falha não cria um estado utilizável. Brutos, manifestos e diagnósticos da tentativa permanecem disponíveis.
+
+Indisponibilidade do calendário ou catálogo de sessões passa a produzir erro explícito de fonte, preservando o recibo da falha, em vez de erro incidental de índice/tipo. Seis regressões com o cliente de captura real e respostas simuladas demonstram os defeitos anteriores. Não altera dados publicados, limites de consulta, critérios temporais, modelo ou probabilidades. Candidato local; nenhuma coleta externa ou publicação é executada por esta revisão.
+
+## 0.12.3 — 2026-11-05
+
+Terceiro lote local da revisão de clareza: os links e as abas nativas de Corridas compartilham uma única lista ordenada de IDs e rótulos. A seleção por URL, os seis destinos e as traduções mantêm seus contratos.
+
+As pontes locais de acessibilidade e movimento usam `st.iframe`; sete gráficos passam a declarar `width="stretch"`. São as APIs suportadas pelo Streamlit 1.66.1 já fixado, sem atualização de dependências. Contêineres ocultos preservam a ausência de espaço visual; os iframes usam altura válida e permanecem fora da ordem de tabulação. Validação do candidato e do pacote local é distinta de CI e publicação pública.
+
+## 0.12.2 — 2026-11-05
+
+Segundo lote local da revisão de clareza: organiza a projeção offline do acervo em etapas de validação de fontes, identidades, sessões, tempos, voltas, clima, pneus, paradas, equipes, campeonatos, histórico e complementos documentais. A função principal passa a coordenar essas responsabilidades, mantendo o contrato e a ordem das transformações.
+
+A reprodução com os insumos preservados de 66 GPs e 330 sessões gera os mesmos bytes antes/depois, com e sem complemento documental. Testes de fronteira verificam identidade de sessão/GP, fases ausentes, zeros, hashes e rejeição de symlinks; a suíte é incluída no CI. Não altera dados publicados, modelo, probabilidades, interface ou operação. Candidato local; nenhum pacote público ou deploy novo é alegado.
+
+## 0.12.1 — 2026-11-05
+
+Primeiro lote local da revisão de clareza: separa a restauração dos filtros e a interpretação de links da composição visual de Pilotos. Uma lista compartilhada de parâmetros mantém leitura e compartilhamento sincronizados. A ordem de precedência entre URL, critérios salvos e widgets permanece explícita, incluindo seleções vazias, parâmetros inválidos e reruns de componentes.
+
+Testes de estado e jornadas existentes verificam preservação de pilotos, rival, filtros e idioma. Não altera textos, layout, dados, cálculos históricos, modelo v1 ou probabilidades. Esta entrada descreve um candidato local; pacote, CI e publicação pública precisam de evidências próprias.
+
 ## 0.12.0 — 2026-11-05
 
 Acrescenta supervisão local gratuita com n8n Community: acompanhamento público de workflows e recibos P1, fila de revisão, resumos descritivos PT/EN, arquivamento por SHA-256 na pasta Dropbox existente e monitoramento diário de dois documentos oficiais. Avisos locais somente em mudanças relevantes; erros de fonte ficam indeterminados. Sucesso de workflow não equivale a previsão publicada ou aceita no host.

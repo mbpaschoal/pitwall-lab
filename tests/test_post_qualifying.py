@@ -53,6 +53,125 @@ class PostQualifyingTests(unittest.TestCase):
             directories=['data/operacao_2026/snapshots/auto-interlagos-test',
                          'reports/operacao_2026/emissoes/auto-prospectivo-interlagos-test'])
 
+    def test_projection_failure_preserves_registry_and_previous_public_asset(self):
+        registry = self.root/pq.REGISTRY
+        original_registry = b' [ ]\n'
+        registry.write_bytes(original_registry)
+        asset = self.root/'frontend_assets/race_weekend.json'
+        asset.parent.mkdir()
+        original_asset = b'{"previous":"published"}\n'
+        asset.write_bytes(original_asset)
+        output = []
+        def rejected(root, args):
+            destination = root/args[args.index('--saida')+1]
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(b'{"incomplete":')
+            output.append(destination)
+            raise RuntimeError('Synthetic projection failure')
+        with patch('registro_emissoes.validar_declaracoes') as validate:
+            with self.assertRaisesRegex(RuntimeError, 'Synthetic projection failure'):
+                pq.register_and_project(self.root, self.prepared(), rejected)
+        validate.assert_called_once()
+        self.assertEqual(registry.read_bytes(), original_registry)
+        self.assertEqual(asset.read_bytes(), original_asset)
+        self.assertNotEqual(output[0], asset)
+        self.assertEqual(output[0].read_bytes(), b'{"incomplete":')
+
+    def test_failed_first_projection_creates_no_registry_or_public_asset(self):
+        output = []
+        def rejected(root, args):
+            destination = root/args[args.index('--saida')+1]
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(b'{"incomplete":')
+            output.append(destination)
+            raise RuntimeError('Synthetic projection failure')
+        with patch('registro_emissoes.validar_declaracoes'):
+            with self.assertRaisesRegex(RuntimeError, 'Synthetic projection failure'):
+                pq.register_and_project(self.root, self.prepared(), rejected)
+        self.assertFalse((self.root/pq.REGISTRY).exists())
+        self.assertFalse((self.root/'frontend_assets/race_weekend.json').exists())
+        self.assertEqual(output[0].read_bytes(), b'{"incomplete":')
+
+    def test_registered_emission_reprojection_is_staged_and_keeps_registry_bytes(self):
+        item = self.prepared()
+        registry = self.root/pq.REGISTRY
+        registry.write_text(' '+json.dumps([item['declaration']])+'\n')
+        original = registry.read_bytes()
+        asset = self.root/'frontend_assets/race_weekend.json'
+        asset.parent.mkdir();asset.write_bytes(b'{"previous":true}\n')
+        projected = b'{"next":"complete"}\n'
+        def project(root, args):
+            destination = root/args[args.index('--saida')+1]
+            self.assertNotEqual(destination, asset)
+            self.assertEqual(asset.read_bytes(), b'{"previous":true}\n')
+            destination.write_bytes(projected)
+        with patch('registro_emissoes.validar_declaracoes') as validate:
+            pq.register_and_project(self.root, item, project)
+        validate.assert_not_called()
+        self.assertEqual(registry.read_bytes(), original)
+        self.assertEqual(asset.read_bytes(), projected)
+
+    def test_empty_or_invalid_projection_cannot_commit_a_registration(self):
+        for payload in (None, b'{"incomplete":', b'[]'):
+            with self.subTest(payload=payload):
+                def incomplete(root, args):
+                    if payload is not None:
+                        destination = root/args[args.index('--saida')+1]
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        destination.write_bytes(payload)
+                with patch('registro_emissoes.validar_declaracoes'):
+                    with self.assertRaises((FileNotFoundError, ValueError)):
+                        pq.register_and_project(self.root, self.prepared(), incomplete)
+                self.assertFalse((self.root/pq.REGISTRY).exists())
+                self.assertFalse((self.root/'frontend_assets/race_weekend.json').exists())
+
+    def test_projection_failure_recovers_retained_forecast_without_new_emission(self):
+        self.observed();calls=[];projection_attempts=[]
+        def snapshot(root, snapshot_id, **kwargs):
+            path = root/snapshot_id/'indice.json'
+            path.parent.mkdir(parents=True);path.write_text('{}')
+        def run(root, args):
+            calls.append(args)
+            if args[0] == 'preparar_dashboard_race_weekend.py':
+                destination = root/args[args.index('--saida')+1]
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                projection_attempts.append(destination)
+                if len(projection_attempts) == 1:
+                    destination.write_bytes(b'{"incomplete":')
+                    raise RuntimeError('Synthetic projection failure')
+                destination.write_bytes(b'{"recovered":true}\n')
+            elif args[1] == 'estado':
+                return json.dumps(dict(estado='pronto', registros_classificacao=22))
+            else:
+                emission = args[args.index('--id')+1]
+                path = root/'reports/operacao_2026/emissoes'/emission/'manifesto.json'
+                path.parent.mkdir(parents=True);path.write_bytes(b'immutable synthetic emission')
+                shutil.copyfile(self.probabilities()/'probabilidades.csv', path.parent/'probabilidades.csv')
+            return ''
+        def registered(root):
+            path = root/pq.REGISTRY
+            return {cloud.identity(d): d for d in json.loads(path.read_text())} if path.exists() else {}
+        with patch('registro_emissoes.carregar', side_effect=registered), \
+             patch('registro_emissoes.validar_declaracoes'), \
+             patch.object(pq, 'source_control', return_value={}), \
+             patch.object(pq.fontes, 'coletar_snapshot', side_effect=snapshot) as capture, \
+             patch.object(pq, 'utc_now', return_value=self.now), \
+             patch.object(pq, 'review_forecast_roster', return_value={'status':'fixture'}):
+            with self.assertRaisesRegex(RuntimeError, 'Synthetic projection failure'):
+                pq.prepare(self.root, self.config, self.state, self.now, run)
+            self.assertFalse((self.root/pq.REGISTRY).exists())
+            prepared = json.loads((self.base/'prepared.json').read_text())
+            before = {name: hashlib.sha256((self.root/name).read_bytes()).hexdigest()
+                      for name in prepared['files']}
+            recovered = pq.prepare(self.root, self.config, self.state, self.now+timedelta(minutes=10), run)
+            capture.assert_called_once()
+        self.assertEqual(recovered['status'], 'prepared')
+        self.assertEqual(sum(len(args)>1 and args[1]=='emitir' for args in calls), 1)
+        self.assertEqual(before, {name: hashlib.sha256((self.root/name).read_bytes()).hexdigest()
+                                 for name in prepared['files']})
+        self.assertEqual((self.root/'frontend_assets/race_weekend.json').read_bytes(), b'{"recovered":true}\n')
+        self.assertEqual(projection_attempts[0].read_bytes(), b'{"incomplete":')
+
     def test_future_q_performs_no_collection_or_inference(self):
         with patch.object(pq.fontes, 'coletar_snapshot', side_effect=AssertionError('No future HTTP')):
             result = pq.prepare(self.root, self.config, self.state, datetime(2026,11,3,tzinfo=timezone.utc))

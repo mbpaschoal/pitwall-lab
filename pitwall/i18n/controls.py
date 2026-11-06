@@ -43,8 +43,6 @@ def _browser_accessibility(st, selected):
     Only the validated locale is interpolated. The iframe has same-origin access
     to its immediate app parent, including inside the Cloud hosting iframe.
     """
-    import streamlit.components.v1 as components
-
     script = r'''<script>
     (() => {
       const doc = window.parent.document, host = window.parent;
@@ -72,7 +70,7 @@ def _browser_accessibility(st, selected):
     })();
     </script>'''.replace('LOCALE', selected)
     with st.container(key='pw-a11y-bridge'):
-        components.html(script, height=0, tab_index=-1)
+        st.iframe(script, height=1, tab_index=-1)
 
 
 def initialize(st):

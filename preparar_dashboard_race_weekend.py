@@ -366,7 +366,7 @@ def _campeonato_pilotos_2026(root):
             'disponivel': False,
             'motivo': 'Classificação de pilotos Jolpica indisponível: {}. Probabilidades por GP permanecem separadas.'.format(erro),
             'classificacao': [],
-        }, [indice_path]
+        }, [indice_path] if indice_path.is_file() else []
 
 
 def _dados_2026(root, snapshot=None):

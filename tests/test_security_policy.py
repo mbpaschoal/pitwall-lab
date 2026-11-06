@@ -1,5 +1,6 @@
 """Counterexamples for token, checkout and workflow trust boundaries."""
 import copy
+import json
 from pathlib import Path
 import unittest
 
@@ -13,6 +14,18 @@ SHA = 'a' * 40
 
 
 class SecurityPolicyTests(unittest.TestCase):
+    def test_devcontainer_uses_pinned_requirements_and_default_server_protections(self):
+        text = (ROOT / '.devcontainer/devcontainer.json').read_text()
+        config = json.loads('\n'.join(line for line in text.splitlines()
+                                      if not line.lstrip().startswith('//')))
+        setup = config['updateContentCommand']
+        self.assertIn('publicacao/templates/requirements.txt', setup)
+        self.assertNotIn('apt upgrade', setup)
+        start = config['postAttachCommand']['server']
+        self.assertNotIn('--server.enableXsrfProtection false', start)
+        self.assertNotIn('--server.enableCORS false', start)
+        self.assertIn('distribuicao/pitwall-dashboard/app.py', start)
+
     def workflow(self):
         return {'on': {'pull_request': None}, 'permissions': {'contents': 'read'},
                 'jobs': {'test': {'steps': [{'uses': 'actions/checkout@' + SHA,

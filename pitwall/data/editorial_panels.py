@@ -171,7 +171,7 @@ def _normalizar_linha(linha, tipo):
 
 
 def _validar_classificacao(linhas, tipo, total):
-    if not isinstance(linhas, list) or len(linhas) != total or not linhas:
+    if not isinstance(linhas, list) or len(linhas) != total or not linhas or any(not isinstance(linha, dict) for linha in linhas):
         raise PaineisDadosErro("Campeonato incompleto.")
     campo = "piloto_id" if tipo == "driver_standings" else "equipe_id"
     ids = [_texto(linha.get(campo)) for linha in linhas]

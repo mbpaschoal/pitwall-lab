@@ -39,6 +39,20 @@ jobs:
           path: |
             ${{ runner.temp }}/n8n-audit.json
             ${{ runner.temp }}/n8n-policy.json
+  research-tests:
+    name: Oráculos sintéticos de pesquisa / Synthetic research oracles
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements_statsmodels_audit.txt
+      - name: Validar fixtures sem executar experimentos reais / Validate fixtures without real experiments
+        run: python -B -m unittest tests.test_calibration_v2 tests.test_statsmodels_audit tests.test_qualifying_gaps tests.test_qualifying_gaps_miami tests.test_robust_qualifying tests.test_metodologia_v2 tests.test_diagnosticos_v2
   validate:
     runs-on: ubuntu-latest
     steps:
@@ -66,9 +80,12 @@ jobs:
       - name: Testes PT e EN / PT and EN tests
         # Post-race admission is checked separately from frozen scientific tests.
         run: |
+          python -B -m unittest tests.test_acervo_dashboard_dados -v
           python -B -m unittest discover -s reports/prospectivo_p1_20261105 -p 'test_*.py' -v
           python -B -m unittest tests.test_prospective_automation tests.test_supervision -v
           python -B -m unittest tests.test_complementary_sources tests.test_identity_revision
+          python -B -m unittest tests.test_review_readers tests.test_standings_publication tests.test_contexto_editorial tests.test_catalogo_visual tests.test_capturar_fontes_pendencias tests.test_visual_collection
+          python -B -m unittest tests.test_coletar_resultados tests.test_regressoes_astra tests.test_calibracao_svg
           python -B -m unittest tests.test_post_qualifying tests.test_github_maintenance tests.test_weekend_readiness tests.test_automatic_publication tests.test_final_results tests.test_posterior_binding tests.test_mexico_evaluation_ui tests.test_pneus_apresentacao
           python -B -m unittest tests.test_operacao_2026_fluxo tests.test_operacao_2026_integracao tests.test_registro_emissoes
           python -B -m unittest tests.test_interface_link_context tests.test_public_navigation
@@ -153,7 +170,7 @@ jobs:
             ${{ runner.temp }}/streamlit.log
   release:
     if: startsWith(github.ref, 'refs/tags/v')
-    needs: [validate, browser, security, n8n-audit]
+    needs: [validate, browser, security, n8n-audit, research-tests]
     runs-on: ubuntu-latest
     permissions:
       contents: write

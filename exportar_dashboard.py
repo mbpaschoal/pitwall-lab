@@ -188,6 +188,7 @@ RUNTIME_WORKTREE = (
     'pitwall/data/dashboard.py',
     'pitwall/data/race_weekend.py',
     'pitwall/data/archive.py',
+    'pitwall/data/standings_state.py',
     'pitwall/data/tyre_age.py',
     'pitwall/dashboard/archive_views.py',
     'pitwall/dashboard/pilot_views.py',
@@ -254,6 +255,7 @@ TEMPLATES = (
     'publicacao/templates/test_complemento_idade_publico.py',
     'publicacao/templates/test_pneus_apresentacao.py',
     'publicacao/templates/test_avaliacao_posterior_publico.py',
+    'publicacao/templates/test_standings_publication.py',
 )
 
 
@@ -314,6 +316,8 @@ def _ler_catalogo_visual(raiz):
         catalogo = json.loads(_ler_arquivo_regular(raiz, relativo).decode('utf-8'))
     except (UnicodeDecodeError, json.JSONDecodeError) as erro:
         raise ValueError('catálogo visual inválido') from erro
+    if not isinstance(catalogo, dict):
+        raise ValueError('catálogo visual inválido')
     circuitos = catalogo.get('circuitos')
     if catalogo.get('versao') != 1 or not isinstance(circuitos, dict) or len(circuitos) != 26:
         raise ValueError('catálogo visual sem a cobertura esperada de 26 circuitos')
@@ -409,21 +413,6 @@ def _adicionar(arquivos, caminho, conteudo, modo, fonte=None, sha_origem=None, n
     }
 
 
-def _teste_app_portavel(conteudo):
-    texto = conteudo.decode('utf-8')
-    workaround = """# O terminal do agente injeta um site-packages Python 3.14 antes do .venv 3.9.
-# AppTest deve usar a cópia compatível de click instalada no ambiente do projeto.
-sys.path[:] = [p for p in sys.path if '/.hermes/installs/' not in p]
-SITE_LOCAL = str(RAIZ / '.venv/lib/python3.9/site-packages')
-if SITE_LOCAL in sys.path:
-    sys.path.remove(SITE_LOCAL)
-sys.path.insert(0, SITE_LOCAL)
-"""
-    if texto.count(workaround) != 1:
-        raise ValueError('workaround Python 3.9/Hermes esperado não encontrado no teste')
-    return texto.replace(workaround, '', 1).encode('utf-8')
-
-
 def _relatorio_2024_publico(conteudo):
     texto = conteudo.decode('utf-8')
     substituicoes = {
@@ -484,10 +473,6 @@ def _montar_arquivos(raiz, conteudos, commit):
             conteudo = conteudo.replace(b'(../../reports/modelo_v1/relatorio.md)', b'(../relatorio_2024.md)')
             modo = 'adaptado_documentacao'
             nota = 'link PT resolvido dentro do pacote portatil'
-        elif relativo == 'tests/test_dashboard_app.py':
-            conteudo = _teste_app_portavel(conteudo)
-            modo = 'gerado'
-            nota = 'cópia com remoção exclusiva do workaround Python 3.9/Hermes'
         else:
             modo = 'copia'
             nota = None
@@ -524,6 +509,7 @@ def _montar_arquivos(raiz, conteudos, commit):
         ('publicacao/templates/test_complemento_idade_publico.py', 'tests/test_complemento_idade_publico.py'),
         ('publicacao/templates/test_pneus_apresentacao.py', 'tests/test_pneus_apresentacao.py'),
         ('publicacao/templates/test_avaliacao_posterior_publico.py', 'tests/test_avaliacao_posterior_publico.py'),
+        ('publicacao/templates/test_standings_publication.py', 'tests/test_standings_publication.py'),
         ('publicacao/templates/requirements.txt', 'requirements.txt'),
         ('publicacao/templates/.python-version', '.python-version'),
         ('publicacao/templates/.gitignore', '.gitignore'),

@@ -92,3 +92,9 @@ The track mean now uses 100 valid readings: 40.7 °C, 98.0% coverage, without in
 
 
 Completed GPs enter Drivers analysis through the [automatic review workflow](DRIVER_UPDATES.md). An edition-specific circuit reference is required; missing prerequisites retain the last valid state and trigger the monitor after six hours.
+
+## Resuming after failure — 0.12.4
+
+Each attempt's `estado.json` retains partial diagnostics with its raw captures and receipts. The GP directory's `estado.json` is the resume checkpoint: it receives a new state only after normal completion, including weather-series validation. A late failure retains the previous state; without one, it does not create a usable resume checkpoint.
+
+HTTP 429 follows the same rule and adds `retry_after_utc` to the previous state, or records only that deadline when there is no previous state. The restriction survives restarts without promoting an incomplete attempt. An unavailable calendar or catalogue raises an explicit source error; the original failure remains in the manifest. There is no data filling, immediate retry or change to forecasts.

@@ -19,9 +19,9 @@ def _hash(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
-def _csv(path, linhas):
+def _csv(path, linhas, campos):
     with path.open("w", encoding="utf8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(linhas[0]))
+        w = csv.DictWriter(f, fieldnames=campos)
         w.writeheader()
         w.writerows(linhas)
 
@@ -69,7 +69,8 @@ def executar(destino):
                 "motivo": "",
             }
         )
-    _csv(destino / "mapa_identidades_v2.csv", mapa)
+    _csv(destino / "mapa_identidades_v2.csv", mapa,
+         ("tipo", "archive_id", "canonico_id", "metodo", "status", "motivo"))
     qualifying = _ler("qualifying.csv")
     archive_q = {}
     for x in qualifying:
@@ -111,7 +112,9 @@ def executar(destino):
                     "evidencia_id": "archive-qualifying-v1",
                 }
             )
-    _csv(destino / "conflitos_campos_v2.csv", conflitos)
+    _csv(destino / "conflitos_campos_v2.csv", conflitos,
+         ("temporada", "rodada", "piloto_id", "campo", "valor_canonico", "fonte_canonica",
+          "valor_alternativo", "fonte_alternativa", "status_decisao", "justificativa", "evidencia_id"))
     manifest = []
     for p in sorted(ARCHIVE.glob("*.csv")):
         with p.open(encoding="utf8", newline="") as f:

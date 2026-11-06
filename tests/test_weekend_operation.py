@@ -1,15 +1,42 @@
 """Synthetic operational checks; no network, fitting or frozen-data edits."""
 from copy import deepcopy
 from datetime import datetime, timezone
+from io import BytesIO
 import hashlib
 import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
+from urllib.error import HTTPError, URLError
 from operacao2026 import weekend
 from operacao2026.openf1_qualificacao import carregar, MAPEAMENTO_2026
+from pitwall.data.archive_collection import CaptureClient
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / 'operacao2026/eventos/mexico2026.json'
+
+
+def captured_responses(*responses):
+    """Exercise the real capture/receipt client with ordered, offline responses."""
+    pending = iter(responses)
+
+    def opener(request, timeout):
+        payload = next(pending)
+        if isinstance(payload, Exception):
+            raise payload
+
+        class Response(BytesIO):
+            status = 200
+
+            def geturl(self):
+                return request.full_url
+
+        return Response(json.dumps(payload).encode())
+
+    return lambda destination, interval: CaptureClient(
+        destination, interval, opener=opener, sleeper=lambda seconds: None,
+        clock=lambda: 0,
+    )
 
 class FakeClient:
     calls = []
@@ -29,6 +56,90 @@ class FakeClient:
         return payload
 
 class WeekendTests(unittest.TestCase):
+    def test_invalid_forecast_retains_previous_checkpoint_and_attempt_receipts(self):
+        event = weekend.load_event(CONFIG)
+        malformed = {'hourly': {'time': ['2026-10-30T04:00'],
+                               'temperature_2m': [], 'precipitation': [],
+                               'wind_speed_10m': []}}
+        for has_previous in (True, False):
+            with self.subTest(has_previous=has_previous), tempfile.TemporaryDirectory() as tmp:
+                base = Path(tmp) / 'data/operacao_2026/fins_de_semana/rodriguez-2026'
+                base.mkdir(parents=True)
+                checkpoint = base / 'estado.json'
+                original = b'{"previous":"usable","sessoes":[]}\n'
+                if has_previous:
+                    checkpoint.write_bytes(original)
+                with self.assertRaisesRegex(ValueError, 'different lengths'):
+                    weekend.collect(CONFIG, tmp, datetime(2026,10,30,4,tzinfo=timezone.utc),
+                                    captured_responses(event['sessions'], malformed))
+                if has_previous:
+                    self.assertEqual(checkpoint.read_bytes(), original)
+                else:
+                    self.assertFalse(checkpoint.exists())
+                attempts = list(base.glob('*/estado.json'))
+                self.assertEqual(len(attempts), 1)
+                self.assertEqual(len(json.loads(attempts[0].read_text())['sessoes']), len(event['sessions']))
+                capture = attempts[0].parent
+                self.assertEqual(json.loads((capture/'forecast.json').read_text()), malformed)
+                manifest = json.loads((capture/'coleta_online.json').read_text())
+                for source in manifest['fontes']:
+                    self.assertEqual(hashlib.sha256((capture/source['arquivo']).read_bytes()).hexdigest(), source['sha256'])
+
+    def test_late_rate_limit_retains_previous_state_and_only_adds_cooldown(self):
+        event = weekend.load_event(CONFIG)
+        limited = HTTPError('https://api.open-meteo.com/v1/forecast', 429, 'Limited',
+                            {'Retry-After': '7200'}, BytesIO(b'{"error":"limited"}'))
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp) / 'data/operacao_2026/fins_de_semana/rodriguez-2026'
+            base.mkdir(parents=True)
+            previous = dict(previous='usable', sessoes=[], previsao_meteorologica={'disponivel': False})
+            checkpoint = base/'estado.json'
+            checkpoint.write_text(json.dumps(previous))
+            with patch('pitwall.data.archive_collection.utc_now', return_value='2026-10-30T04:00:00Z'):
+                with self.assertRaisesRegex(RuntimeError, 'HTTP 429'):
+                    weekend.collect(CONFIG, tmp, datetime(2026,10,30,4,tzinfo=timezone.utc),
+                                    captured_responses(event['sessions'], limited))
+            self.assertEqual(json.loads(checkpoint.read_text()),
+                             dict(previous, retry_after_utc='2026-10-30T06:00:00+00:00'))
+            attempt = next(base.glob('*/estado.json'))
+            self.assertEqual(len(json.loads(attempt.read_text())['sessoes']), len(event['sessions']))
+            self.assertEqual((attempt.parent/'forecast.json').read_bytes(), b'{"error":"limited"}')
+
+    def test_successful_retry_commits_only_after_forecast_validation(self):
+        event = weekend.load_event(CONFIG)
+        empty = {'hourly': {'time': [], 'temperature_2m': [], 'precipitation': [], 'wind_speed_10m': []}}
+        malformed = {'hourly': {'time': ['2026-10-30T04:00'], 'temperature_2m': []}}
+        with tempfile.TemporaryDirectory() as tmp:
+            first = weekend.collect(CONFIG, tmp, datetime(2026,10,30,4,tzinfo=timezone.utc),
+                                    captured_responses(event['sessions'], empty))
+            base = Path(tmp)/'data/operacao_2026/fins_de_semana/rodriguez-2026'
+            checkpoint = base/'estado.json'
+            original = checkpoint.read_bytes()
+            self.assertEqual(json.loads(original), first)
+            with self.assertRaisesRegex(ValueError, 'different lengths'):
+                weekend.collect(CONFIG, tmp, datetime(2026,10,30,4,1,tzinfo=timezone.utc),
+                                captured_responses(event['sessions'], malformed))
+            self.assertEqual(checkpoint.read_bytes(), original)
+            last = weekend.collect(CONFIG, tmp, datetime(2026,10,30,4,2,tzinfo=timezone.utc),
+                                   captured_responses(event['sessions'], empty))
+            self.assertEqual(json.loads(checkpoint.read_text()), last)
+            self.assertEqual(len(list(base.glob('*/coleta_online.json'))), 3)
+
+    def test_catalogue_network_failure_has_a_clear_error_and_preserves_receipt(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp)/'data/operacao_2026/fins_de_semana/rodriguez-2026'
+            base.mkdir(parents=True)
+            checkpoint = base/'estado.json'
+            checkpoint.write_bytes(b'{"previous":true}\n')
+            with self.assertRaisesRegex(ValueError, 'Session catalogue unavailable'):
+                weekend.collect(CONFIG, tmp, datetime(2026,10,30,4,tzinfo=timezone.utc),
+                                captured_responses(URLError('offline synthetic failure')))
+            self.assertEqual(checkpoint.read_bytes(), b'{"previous":true}\n')
+            receipt = json.loads(next(base.glob('*/coleta_online.json')).read_text())
+            self.assertEqual(receipt['fontes'], [])
+            self.assertEqual(len(receipt['falhas']), 1)
+            self.assertEqual(receipt['falhas'][0]['endpoint'], 'sessions')
+
     def test_isolated_track_zero_is_retained_but_its_mean_is_withheld(self):
         from tests.test_race_weather import event, observation
         data=dict(race_control=[event('10:00:00','SESSION STARTED'),event('10:04:00','SESSION FINISHED')],

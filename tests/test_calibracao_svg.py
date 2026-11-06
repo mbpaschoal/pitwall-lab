@@ -28,7 +28,7 @@ def linhas_calibracao_simuladas():
             contagem, media, frequencia = valores[metodo].get(indice, (0, None, None))
             linhas.append({
                 'metodo': metodo,
-                'faixa': '[{:.1f},{:.1f}{})'.format(
+                'faixa': '[{:.1f},{:.1f}{}'.format(
                     limite_inferior, limite_superior, ']' if indice == 9 else ')'),
                 'limite_inferior': limite_inferior,
                 'limite_superior': limite_superior,

@@ -151,7 +151,7 @@ def carregar_asset(raiz):
         raise RaceWeekendDadosErro(
             "Asset Race Weekend indisponível: {}".format(caminho)
         ) from erro
-    if asset.get("versao") != 2 or asset.get("temporadas") != [2024, 2025, 2026]:
+    if not isinstance(asset, dict) or asset.get("versao") != 2 or asset.get("temporadas") != [2024, 2025, 2026]:
         raise RaceWeekendDadosErro(
             "Asset Race Weekend inválido; gere-o novamente offline."
         )

@@ -93,6 +93,8 @@ def discover(root, now, client_factory=CaptureClient):
         client = client_factory(run, 8)
         try:
             calendar = client.capture('jolpica', 'calendar', 'calendar.json', 'https://api.jolpi.ca/ergast/f1/2026/?limit=100&offset=0')
+            if not isinstance(calendar, dict):
+                raise ValueError('Calendar unavailable')
             meta = calendar['MRData']
             races = meta['RaceTable']['Races']
             if int(meta['offset']) != 0 or int(meta['total']) != len(races) or meta['RaceTable']['season'] != '2026':
@@ -105,6 +107,8 @@ def discover(root, now, client_factory=CaptureClient):
                 raise ValueError('Ambiguous weekend in calendar')
             race = candidates[0]
             catalog = client.capture('openf1', 'sessions', 'sessions.json', 'https://api.openf1.org/v1/sessions?year=2026')
+            if not isinstance(catalog, list):
+                raise ValueError('Session catalogue unavailable')
             circuit = race['Circuit']
             source_event = dict(temporada=2026, rodada=int(race['round']), circuito_id=circuit['circuitId'], data_corrida=race['date'], localidade=circuit['Location']['locality'])
             if not re.fullmatch(r'[a-zA-Z0-9_-]+', source_event['circuito_id']) or not 1 <= source_event['rodada'] <= 24:

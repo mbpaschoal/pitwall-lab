@@ -16,7 +16,7 @@ def carregar(raiz):
         raise ContextoEditorialErro(
             "Contexto editorial indisponível: {}.".format(caminho)
         ) from erro
-    if dados.get("versao") != 1 or dados.get("temporadas") != [2024, 2025, 2026]:
+    if not isinstance(dados, dict) or dados.get("versao") != 1 or dados.get("temporadas") != [2024, 2025, 2026]:
         raise ContextoEditorialErro(
             "Contexto editorial com versão ou temporadas inválidas."
         )

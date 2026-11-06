@@ -63,3 +63,9 @@ Cada caso admite duas tentativas, com prazo total de seis minutos para o conjunt
 O CI completo também roda nas branches `codex/**`, permitindo validar a correção antes de atualizar main. O grupo core acrescenta `aceite_resiliencia.cjs`: bloqueio dos módulos Radio/Button, seis destinos, PT/EN, teclado, contexto, alvos de toque e recuperação tardia sem perda de foco. Os 12 aceites anteriores permanecem.
 
 O verificador público v2 registra o controle realmente utilizável (nativo/link/misto), clica alternativas e troca o idioma, conferindo URL externa e iframe. Mantém identidade, fotos decodificadas/hashes, build, ausência de transbordamento e erros visíveis não recuperados. Limites: duas tentativas por caso, 120 segundos por tentativa e oito minutos no conjunto; o step tem dez minutos. A evidência permanece por 30 dias. Esse aceite é posterior à publicação de dados, não monitoramento contínuo ou prova da causa de uma falha da hospedagem.
+
+## Recuperação da projeção de previsões — 0.12.5
+
+O registro novo precisa estar disponível para o leitor da projeção, mas não deve permanecer confirmado quando essa projeção falha. O orquestrador conserva os bytes anteriores do registro, gera o novo asset em uma pasta exclusiva `projection-*` junto à tentativa retida e exige um objeto JSON legível antes de substituir `frontend_assets/race_weekend.json` por renomeação.
+
+Se a etapa falhar, o asset anterior permanece disponível e o registro retorna aos mesmos bytes anteriores; sem registro anterior, apenas o registro criado nessa tentativa é retirado. A saída parcial da projeção permanece como evidência no estado persistido. A retomada usa a emissão já retida e reexecuta a apresentação, sem nova coleta ou cálculo de probabilidades. As validações de fontes, população e prazo continuam obrigatórias.

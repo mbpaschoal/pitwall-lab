@@ -1,7 +1,7 @@
 """Captura serial, limitada e retomável de documentos públicos para adjudicação."""
 
 import argparse
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import hashlib
 import json
 from pathlib import Path
@@ -9,6 +9,26 @@ import time
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
+
+from operacao2026.fontes import _retry_after
+
+
+def _check_cooldown(receipts):
+    """A resumed plan still obeys the provider's previously recorded limit."""
+    for receipt in receipts:
+        if receipt.get('status') != 429:
+            continue
+        try:
+            acquired = datetime.fromisoformat(receipt['obtido_em_utc'].replace('Z', '+00:00'))
+            if acquired.tzinfo is None:
+                raise ValueError('Capture timestamp has no timezone')
+        except (KeyError, TypeError, ValueError, AttributeError) as error:
+            raise RuntimeError('Retry-After sem UTC de captura válido; conferir recibo.') from error
+        headers = {key.lower(): value for key, value in receipt.get('headers', {}).items()}
+        delay = _retry_after({'Retry-After': headers.get('retry-after')}, acquired)
+        deadline = acquired + timedelta(seconds=3600 if delay is None else delay)
+        if datetime.now(timezone.utc) < deadline:
+            raise RuntimeError('Retry-After ainda ativo; retomar após {}.'.format(deadline.isoformat()))
 
 
 def capturar(plano, destino):
@@ -39,6 +59,7 @@ def capturar(plano, destino):
             raise ValueError("Origem não admitida")
         if url in urls:
             continue
+        _check_cooldown(registros)
         if registros:
             time.sleep(8)
         nome = item["id"] + ".bin"

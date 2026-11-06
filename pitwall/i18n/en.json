@@ -1,6 +1,7 @@
 {
   "2026 — snapshots locais, cobertura parcial": "2026 — local snapshots, partial coverage",
   "Resultado registrado": "Recorded result",
+  "Estado do resultado indisponível": "Result status unavailable",
   "2024 — validação já explorada": "2024 — previously explored validation",
   "2025 — avaliação final retrospectiva já realizada": "2025 — completed retrospective final evaluation",
   "Equipe indisponível": "Team unavailable",
@@ -1055,5 +1056,15 @@
   "Amostra abaixo do mínimo escolhido.": "Sample below the selected minimum.",
   "Empate nesta métrica.": "Tied on this metric.",
   "pontos percentuais": "percentage points",
-  "{} tem {} a mais nesta métrica.": "{} has {} more on this metric."
+  "{} tem {} a mais nesta métrica.": "{} has {} more on this metric.",
+  "Não há snapshot local do campeonato para esta rodada.": "No local standings snapshot is available for this round.",
+  "Ainda aguardamos a classificação desta rodada na fonte consultada.": "We are awaiting this round's standings from the consulted source.",
+  "Não foi possível obter a classificação da fonte na consulta registrada.": "The recorded check could not retrieve standings from the source.",
+  "Os dados desta consulta estão incompletos; não há uma classificação completa validada.": "This check returned incomplete data; no complete validated standings are available.",
+  "Esta captura pertence a outro evento e não pode representar o GP selecionado.": "This snapshot belongs to another event and cannot represent the selected Grand Prix.",
+  "Mostrando o snapshot registrado desta rodada. A atualização mais recente não foi concluída.": "Showing this round's recorded snapshot. The latest refresh did not complete.",
+  "Fonte não informada": "Source not reported",
+  "Referência: temporada {} · rodada {}": "Reference: season {} · round {}",
+  "Captura: {}": "Captured: {}",
+  "Captura UTC não informada": "UTC capture time not reported"
 }

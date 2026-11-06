@@ -6,6 +6,8 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
+from collections import defaultdict
+from hashlib import sha256
 
 from acervo_dashboard_dados import (
     ASSET, SCHEMA, VERSAO, AcervoDashboardErro, carregar, conteudo_sha256, para_gp,
@@ -143,6 +145,111 @@ class TestAcervoDashboardDados(unittest.TestCase):
         self.assertNotIn('/Users/', (root / ASSET).read_text())
         self.assertNotIn('probabilidade_modelo', (root / ASSET).read_text())
         self.assertEqual(len(para_gp(asset, 2026, 18, 'americas')['sessoes']), 5)
+
+
+class TestProjecaoAcervo(unittest.TestCase):
+    """Offline producer boundaries, independent of the real acquisition folder."""
+
+    def create_gps(self, folder):
+        from pitwall.data.dashboard_projection import _iniciar_gps
+        directory = Path(folder) / 'local'
+        directory.mkdir()
+        events = [{'temporada': 2025, 'rodada': 1, 'circuito_id': 'albert_park',
+                   'corrida': 'GP de teste', 'data_corrida': '2025-03-16'}]
+        (directory / 'eventos.json').write_text(json.dumps(events))
+        return _iniciar_gps(Path(folder))
+
+    def race_session(self):
+        return dict(session_key='1001', session_name='Race', session_type='Race',
+                    date_start='2025-03-16T04:00:00Z', date_end='2025-03-16T06:00:00Z',
+                    metodo_mapeamento='identidade', data_corrida_calendario='2025-03-16')
+
+    def test_duplicate_session_is_rejected_before_it_can_overwrite_the_first(self):
+        from pitwall.data.dashboard_projection import _projetar_sessoes
+        with tempfile.TemporaryDirectory() as folder:
+            gp = self.create_gps(folder)['2025:1']
+            row = self.race_session()
+            with self.assertRaisesRegex(ValueError, 'Sessão duplicada'):
+                _projetar_sessoes(lambda layer, name: [row, dict(row)], lambda row: gp)
+            self.assertEqual(len(gp['sessoes']), 1)
+            self.assertEqual(gp['sessoes'][0]['session_key'], 1001)
+
+    def test_times_cannot_be_attached_to_another_gp_object(self):
+        from pitwall.data.dashboard_projection import _projetar_tempos
+        recorded, selected = {}, {}
+        with self.assertRaisesRegex(ValueError, 'sessão/GP incorreto'):
+            _projetar_tempos(lambda layer, name: [dict(session_key='1001')],
+                            lambda row: selected, lambda row: {},
+                            {1001: (recorded, {})})
+
+    def test_qualifying_keeps_missing_phases_and_zero_laps(self):
+        from pitwall.data.dashboard_projection import _projetar_tempos
+        gp, session = {}, {'tempos': []}
+        row = dict(session_key='1001', duration_original_json='[90.0, null, null]',
+                   gap_to_leader_original_json='[0.0, null, null]',
+                   position='1', number_of_laps='0')
+        _projetar_tempos(lambda layer, name: [row], lambda row: gp,
+                        lambda row: {'numero': 1}, {1001: (gp, session)})
+        shown = session['tempos'][0]
+        self.assertEqual(shown['duracao'], '1:30.000')
+        self.assertEqual(shown['q1'], '1:30.000')
+        self.assertIsNone(shown['q2'])
+        self.assertIsNone(shown['q3'])
+        self.assertEqual(shown['voltas'], 0)
+        self.assertEqual(shown['duracao_original'], [90.0, None, None])
+
+    def test_weather_keeps_zero_missingness_and_source_semantics(self):
+        from pitwall.data.dashboard_projection import (
+            _projetar_clima, _finalizar_gps, _projetar_sessoes,
+        )
+        with tempfile.TemporaryDirectory() as folder:
+            gps = self.create_gps(folder)
+            gp = gps['2025:1']
+            sessions = _projetar_sessoes(lambda layer, name: [self.race_session()], lambda row: gp)
+            tables = {
+                'clima_open_meteo.csv': [dict(date_utc='2025-03-16T04:00:00Z',
+                    temperature_2m='0', relative_humidity_2m='', precipitation='0',
+                    wind_speed_10m='0', surface_pressure='', model='ecmwf_ifs',
+                    origin='archived_forecast')],
+                'clima_pista.csv': [dict(temporada='2025', rodada='1', session_key='1001',
+                    air_temperature='0', track_temperature='', humidity='',
+                    wind_speed='0', rainfall='0')],
+            }
+            _projetar_clima(lambda layer, name: tables[name], lambda row: gp, gps, sessions)
+            _finalizar_gps(gps, defaultdict(list), defaultdict(list), {})
+            self.assertEqual(gp['clima']['resumo']['temperatura_media_c'], 0)
+            self.assertEqual(gp['clima']['resumo']['precipitacao_total_mm'], 0)
+            track = gp['clima']['pista_sessoes'][0]
+            self.assertEqual(track['temperatura_ar_min_c'], 0)
+            self.assertIsNone(track['temperatura_pista_min_c'])
+            self.assertIsNone(track['umidade_media'])
+            self.assertIs(track['chuva_observada'], False)
+            self.assertIn('não é medição', gp['clima']['origem'])
+            self.assertEqual(gp['campeonato_pilotos']['obtido_em_utc'], 'desconhecida')
+            self.assertIs(gp['campeonato_pilotos']['disponivel'], False)
+
+    def test_source_hash_and_symlink_checks_are_retained(self):
+        from pitwall.data.dashboard_projection import _carregar_fontes
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'local').mkdir()
+            (root / 'normalizado').mkdir()
+            source = root / 'local/sample.csv'
+            source.write_bytes(b'original\n')
+            manifest = {'arquivos_sha256': {'sample.csv': sha256(source.read_bytes()).hexdigest()}}
+            (root / 'local/inventario_local.json').write_text(json.dumps(manifest))
+            (root / 'normalizado/manifesto.json').write_text(json.dumps({'arquivos': {}}))
+            _carregar_fontes(root)
+            source.write_bytes(b'changed\n')
+            with self.assertRaisesRegex(ValueError, 'Fonte do acervo divergente'):
+                _carregar_fontes(root)
+            source.unlink()
+            preserved = root / 'preserved.csv'
+            preserved.write_bytes(b'original\n')
+            source.symlink_to(preserved)
+            with self.assertRaisesRegex(ValueError, 'Fonte do acervo divergente'):
+                _carregar_fontes(root)
+            self.assertEqual(preserved.read_bytes(), b'original\n')
 
 
 if __name__ == '__main__':

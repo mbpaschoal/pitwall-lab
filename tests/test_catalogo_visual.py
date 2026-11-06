@@ -8,6 +8,16 @@ import catalogo_visual
 
 
 class TestCatalogoVisual(unittest.TestCase):
+    def test_wrong_json_root_is_a_catalogue_unavailability_error(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'dashboard_assets/circuit/catalogo_visual.json'
+            path.parent.mkdir(parents=True)
+            for value in ([], None, 'invalid', 0):
+                with self.subTest(value=value):
+                    path.write_text(json.dumps(value))
+                    with self.assertRaises(catalogo_visual.CatalogoVisualErro):
+                        catalogo_visual.carregar(tmp)
+
     def test_recusa_caminho_fora_da_raiz(self):
         with tempfile.TemporaryDirectory() as tmp:
             raiz = Path(tmp)

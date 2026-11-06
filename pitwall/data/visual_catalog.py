@@ -50,7 +50,7 @@ def carregar(raiz):
         )
     except (OSError, UnicodeDecodeError, json.JSONDecodeError) as erro:
         raise CatalogoVisualErro("Catálogo visual indisponível.") from erro
-    if dados.get("versao") != 1 or not isinstance(dados.get("circuitos"), dict):
+    if not isinstance(dados, dict) or dados.get("versao") != 1 or not isinstance(dados.get("circuitos"), dict):
         raise CatalogoVisualErro("Catálogo visual inválido.")
     saida = {}
     for circuito, ativos in dados["circuitos"].items():

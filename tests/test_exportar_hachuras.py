@@ -13,7 +13,7 @@ class TestComposicaoCompartilhada(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=str(Path(tempfile.gettempdir()).resolve())) as tmp:
             destino = Path(tmp) / 'pacote'
             exportar(ROOT, destino)
-            for nome in ['app.py', 'documentacao_local.py']:
+            for nome in ['app.py', 'documentacao_local.py', 'tests/test_dashboard_app.py']:
                 self.assertEqual((destino / nome).read_bytes(), (ROOT / nome).read_bytes())
             from verificar_pacote import validar_pacote
             validar_pacote(destino)

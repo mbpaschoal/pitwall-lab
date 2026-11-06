@@ -79,6 +79,16 @@ class FanCompositionTests(unittest.TestCase):
         self.assertIn('27,1 °C',rendered)
         self.assertIn('Ar durante a corrida · OpenF1',rendered)
 
+    def test_missing_circuit_length_has_an_explicit_unknown_state(self):
+        for lang, label in [('pt', 'Não documentado'), ('en', 'Not documented')]:
+            with self.subTest(lang=lang):
+                set_language(lang)
+                for info in ({}, {'comprimento_km': None}):
+                    rendered = circuit_details(info)
+                    self.assertIn(label, rendered)
+                    self.assertNotIn('None km', rendered)
+                    self.assertNotIn('— km', rendered)
+
     def test_results_use_country_cues_without_inventing_a_known_country(self):
         self.assertEqual(race_identity('Bahrain Grand Prix in Malaysia'),('🇲🇾', 'Malásia · Sepang'))
         self.assertEqual(race_identity('Bahrain Grand Prix in Malaysia','en'),('🇲🇾', 'Malaysia · Sepang'))

@@ -1,5 +1,47 @@
 # Pitwall Lab evolution
 
+## 0.12.6 — 2026-11-06
+
+Maintained-codebase review using an adapted Ponytail procedure. JSON readers reject malformed structures with domain errors; search, championship and score views retain valid data with an availability notice. Standings publication keeps same-event snapshots and discloses cutoff, source and capture metadata during refresh failures.
+
+Capture resumption honours persisted `Retry-After`. Image collection preserves divergent files and verifies cached bytes. The experimental B1 collector requires explicit timezones, handles negative offsets and rejects occupied destinations. Audits write schema-valid empty tables; research evaluation separates unscorable folds and rejects duplicate identities even when a prediction is unavailable.
+
+Projection no longer records nonexistent optional-source paths. Circuit summaries preserve missing data; the favourite component is readable and declares its language. The devcontainer uses pinned dependencies and default protections; CI includes the new regressions and synthetic research tests. The legacy collection countercheck uses preserved responses and a temporary destination.
+
+Presentation tests use the invoking interpreter environment. Research oracles compare equivalent batches without confusing BLAS rounding; the cooldown fixture also works on 29 February.
+
+Frozen model v1, inputs, probabilities, emissions, captures and P1 protocol remain preserved. Local acceptance, remote CI and publication retain separate receipts.
+
+## 0.12.5 — 2026-11-06
+
+Fifth local review batch: protects emission registration and projection from presentation failures. Projection is prepared in a separate destination, must produce a readable JSON object and only then replaces the asset by rename. On error, the exact previous registry is restored or only the newly created registry is removed; partial projection evidence stays with the attempt.
+
+Recovery reuses the retained emission bytes without new capture or probability recomputation. Five regressions cover failure with/without prior state, reprojection of a registered emission, missing/invalid output and recovery after failure. Scientific/temporal gates, event policy, frozen v1, probabilities and P1 protocol remain unchanged. Local candidate; active automation and external publication are not changed.
+
+## 0.12.4 — 2026-11-06
+
+Fourth local review batch: separates each attempt's evidence from the usable collection-resume checkpoint. Late failure, including weather validation, retains the previous state; HTTP 429 only adds the retry deadline to it. A failed first attempt does not create a usable state. Raw captures, manifests and attempt diagnostics remain available.
+
+Unavailable calendars/session catalogues produce explicit source errors while retaining the failure receipt, replacing incidental index/type errors. Six regressions using the real capture client and simulated responses demonstrate the original defects. Published data, request limits, temporal criteria, model and probabilities are unchanged. Local candidate; this review performs no external collection or publication.
+
+## 0.12.3 — 2026-11-05
+
+Third local readability-review batch: race links and native tabs share one ordered list of IDs and labels. URL selection, all six destinations and translations retain their contracts.
+
+Local accessibility and motion bridges use `st.iframe`; seven charts declare `width="stretch"`. These APIs are supported by the already pinned Streamlit 1.66.1 without dependency upgrades. Hidden containers preserve the absence of visual space; bridge iframes use a valid height and remain outside the tab order. Candidate and local-package validation are separate from CI and public deployment.
+
+## 0.12.2 — 2026-11-05
+
+Second local readability-review batch: organises offline archive projection into source validation, identities, sessions, times, laps, weather, tyres, stops, teams, standings, history and documentary supplements. The main function coordinates those responsibilities while retaining the contract and transformation order.
+
+Reproduction from preserved inputs covering 66 GPs and 330 sessions produces identical before/after bytes, with and without the documentary supplement. Boundary tests check session/GP identity, missing phases, zeros, hashes and symlink rejection; this suite is added to CI. Published data, model, probabilities, interface and operations are unchanged. Local candidate; no new public package or deployment is claimed.
+
+## 0.12.1 — 2026-11-05
+
+First local readability-review batch: separates saved-filter restoration and deep-link interpretation from the Pilots view composition. One shared parameter list keeps parsing and sharing aligned. URL, saved-criteria and widget precedence remains explicit, including empty selections, invalid parameters and component reruns.
+
+State tests and existing journeys check preservation of drivers, rivals, filters and language. Text, layout, data, historical calculations, frozen v1 and probabilities are unchanged. This entry describes a local candidate; package, CI and public deployment require their own evidence.
+
 ## 0.12.0 — 2026-11-05
 
 Adds free local n8n Community supervision: public workflow/P1-receipt monitoring, a review queue, descriptive PT/EN summaries, SHA-256 evidence archiving in the existing Dropbox folder and daily watching of two official documents. Native Mac alerts occur only on meaningful changes; source failures remain indeterminate. Workflow success is separate from forecast publication and host acceptance.

@@ -5,7 +5,7 @@ Os testes leem o dashboard e clicam como um usuário. Não coletam dados nem alt
 The checks read the dashboard and click through user flows. They do not collect racing data or change probabilities. Playwright and a running server are required. Use fresh browser contexts and an expected version when validating a deployment.
 
 ```sh
-PITWALL_EXPECTED_VERSION=0.8.16 node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 /tmp/context-evidence
+PITWALL_EXPECTED_VERSION="$(cat VERSION)" node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 /tmp/context-evidence
 ```
 
 `aceite_contexto.cjs` executa quatro fluxos em PT/EN e larguras 390/1440: marca/pódio, campeonato→perfil, busca curta com contexto da equipe, e filtro→idioma→chips→limpar. Deve ser o smoke de CI. Falhas de clique produzem captura e `interactions.json`; não há clique forçado.
@@ -42,7 +42,7 @@ Checks wait for the expected version, route, language and idle state. Streamlit 
 
 `verificar_publicacao.cjs VERSION COLLECTION_JSON [OUTPUT]` checks an already-published data delivery in four PT/EN desktop/mobile cases. It requires the event in both the package calendar and collected state, decoded photographs with matching hashes, ready controls and exact build. Two attempts per case, eight minutes total; JSON retains failures and screenshots. `PITWALL_SOURCE_ROOT` selects the expected package; `PITWALL_PUBLIC_BASE_URL` permits explicit local rehearsal. The workflow defaults to the public domain.
 
-`node --test tests/browser/test_verificar_publicacao.cjs` executa nove contraprovas, sete com navegador real / runs nine counterexamples, seven with real browsers: approved pixels, wrong SHA, broken photo, PT/EN readiness, foreign origin and package/event/version mismatch.
+`node --test tests/browser/test_verificar_publicacao.cjs` executa dez contraprovas, oito com navegador real / runs ten counterexamples, eight with real browsers: approved pixels, wrong SHA, broken photo, PT/EN readiness, native/link controls, foreign origin and package/event/version mismatch.
 
 
 `aceite_resiliencia.cjs BASE_URL OUTPUT` bloqueia os módulos nativos Radio/Button e exige links por teclado nos seis destinos, troca de idioma, contexto de GP, alvos de 44 px e ausência de transbordamento em PT/EN e 390/1440 px. Os 12 aceites anteriores continuam no CI. O modo normal mantém os mesmos controles; os links alternativos ficam ocultos e fora da navegação por teclado quando os controles nativos estão disponíveis.
@@ -58,3 +58,11 @@ Public receipt v2 records native/link/mixed controls. An alternative counts only
 `node tests/browser/aceite_editorial.cjs URL OUTPUT` cobre PT/EN em 390/1440 px, retratos na mesma linha, diferença conferida por contagem independente dos resultados-fonte, troca real de condição/métrica, mínimo de amostra, ausência de largadas em comum, idioma e redução manual/pelo sistema. `PLAYWRIGHT_BROWSER=webkit` seleciona o segundo motor. Respeita `PITWALL_SOURCE_ROOT`, `PLAYWRIGHT_MODULE` e `PLAYWRIGHT_CHANNEL`. Cada falha gera captura e recibo explícito.
 
 The runner checks PT/EN desktop/mobile portraits, independently counted metric differences, real condition/metric changes, minimum samples, no shared starts, language preservation and manual/system reduced motion. Failures produce screenshots and explicit receipts.
+
+## Roteiros históricos / Historical runners
+
+`aceite_dashboard.cjs` e `aceite_idiomas.cjs` conservam os seletores da interface anterior à navegação atual. São referências históricas e não compõem o CI ou o aceite de uma nova publicação. Use os roteiros atuais descritos acima; um resultado desses dois arquivos não comprova a entrega atual.
+
+`aceite_dashboard.cjs` and `aceite_idiomas.cjs` retain selectors from the earlier interface. They are historical references, excluded from CI and new-release acceptance. Use the current runners above; results from these two files do not prove delivery of the current product.
+
+Os recibos de fim de semana só indicam `passed` após os quatro casos PT/EN e desktop/mobile; uma execução parcial indica `in_progress` e conserva falhas. / Weekend receipts indicate `passed` only after all four PT/EN desktop/mobile cases; partial runs remain `in_progress` and retain failures.

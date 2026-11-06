@@ -427,6 +427,7 @@ pitwall/data/editorial_panels.py
 pitwall/data/identity_revision.py
 pitwall/data/post_race_evaluation.py
 pitwall/data/race_weekend.py
+pitwall/data/standings_state.py
 pitwall/data/tyre_age.py
 pitwall/data/visual_catalog.py
 pitwall/i18n/__init__.py
@@ -481,5 +482,6 @@ tests/test_interface_editorial.py
 tests/test_pilot_views.py
 tests/test_pneus_apresentacao.py
 tests/test_review_regressions.py
+tests/test_standings_publication.py
 tests/test_tarot_catalog.py
 tests/test_weekend_ui.py

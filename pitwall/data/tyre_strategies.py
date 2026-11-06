@@ -466,7 +466,8 @@ def carregar_estrategia(root, temporada, rodada, circuito_id):
             raise EstrategiasDadosErro("Circuito não corresponde ao GP selecionado.")
         dados = json.loads(_ler(root, ASSET))
         if (
-            dados.get("versao") != 1
+            not isinstance(dados, dict)
+            or dados.get("versao") != 1
             or dados.get("uso") != "contexto_descritivo_pos_corrida"
             or not isinstance(dados.get("gps"), list)
         ):

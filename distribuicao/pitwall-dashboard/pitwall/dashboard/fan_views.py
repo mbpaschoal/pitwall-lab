@@ -11,6 +11,15 @@ from pitwall.dashboard.hero_assets import HERO_IMAGES, PORTRAIT_OVERRIDES, portr
 from pitwall.dashboard.journey import race_identity
 from pitwall.dashboard.media import responsive_attributes
 
+GP_CHAPTERS = (
+    ("Visão geral", "Resumo"),
+    ("Tempos", "Sessões e voltas"),
+    ("Estratégias", "Pneus e paradas"),
+    ("Clima", "Clima"),
+    ("Histórico", "Nesta pista"),
+    ("Comparativo de equipes", "Equipes"),
+)
+
 
 def text(value):
     return escape(translate(str(value)))
@@ -106,9 +115,8 @@ def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, a
 
 
 def gp_chapters(year, round_, active='Visão geral'):
-    chapters=[('Visão geral','Resumo'),('Tempos','Sessões e voltas'),('Estratégias','Pneus e paradas'),('Clima','Clima'),('Histórico','Nesta pista'),('Comparativo de equipes','Equipes')]
     links=[]
-    for key,label in chapters:
+    for key,label in GP_CHAPTERS:
         url=href('Corridas',temporada=year,gp=round_,aba=key)
         links.append('<a href="{}" target="_self"{}>{}</a>'.format(escape(url,quote=True),' aria-current="page"' if key==active else '',text(label)))
     return '<nav class="fan-gp-tabs" aria-label="{}">{}</nav>'.format(text('Explorar este GP'),''.join(links))
@@ -155,7 +163,9 @@ def forecast_rows(rows, year, origin_round=None):
 def circuit_details(info, climate=None, weather_href=None):
     def rows(values):
         return ''.join('<div><dt>{}</dt><dd>{}</dd></div>'.format(text(k),text(v if v is not None else 'Não documentado')) for k,v in values)
-    length=str(info.get('comprimento_km','—')).replace('.',',' if language()=='pt' else '.')+' km'
+    length = info.get('comprimento_km')
+    if length is not None:
+        length = str(length).replace('.', ',' if language() == 'pt' else '.') + ' km'
     primary=rows([('Comprimento',length),('Curvas',info.get('curvas')),('Voltas',info.get('voltas')),
                   ('Distância da corrida',str(info.get('distancia_corrida_km','—')).replace('.',',' if language()=='pt' else '.')+' km' if info.get('distancia_corrida_km') is not None else 'Não documentado')])
     secondary=rows([('Primeiro GP',info.get('primeiro_gp')),('Sentido',info.get('sentido')),
@@ -245,7 +255,7 @@ def evaluation_reason(codes):
     return detail or 'Critérios de avaliação não atendidos.'
 
 
-def performance_cards(rows, races, year, observed_rounds=None):
+def performance_cards(rows, races, year, observed_rounds=None, operation_available=True):
     if not rows and not (year==2026 and has_validated_exclusions(races)):
         return '<p class="fan-awaiting">{}</p>'.format(text('Ainda não há previsão registrada com resultado validado para avaliar em 2026.' if year==2026 else 'Nenhuma corrida avaliável neste recorte.'))
     by_round={r['rodada']:r for r in rows}
@@ -269,7 +279,9 @@ def performance_cards(rows, races, year, observed_rounds=None):
             elif _validated_exclusion(race):
                 content='<p>{}</p><small class="fan-evaluation-reason">{}</small>'.format(text('Fora da avaliação'),text(evaluation_reason(race.get('motivos_nao_avaliavel'))))
             else:
-                pending=('Resultado em conferência' if race['rodada'] in (observed_rounds or set()) else 'Corrida aguardada')
+                pending = ('Estado do resultado indisponível' if not operation_available else
+                           'Resultado em conferência' if race['rodada'] in (observed_rounds or set()) else
+                           'Corrida aguardada')
                 content='<p>{}</p>'.format(text(pending if race.get('estado_previsao')=='previsao_registrada' else 'Sem previsão registrada'))
         cards.append('<a class="fan-gp-result" data-evaluated="{}" href="{}" title="{}" target="_self"><strong><span aria-hidden="true">{}</span>{}</strong>{}</a>'.format('true' if row else 'false',escape(href('Previsões',temporada=year,gp=race['rodada']),quote=True),escape(race['corrida'],quote=True),flag,escape(label),content))
     wins=sum(r['modelo']>r['classificacao'] for r in rows)

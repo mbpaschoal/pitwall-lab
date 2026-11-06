@@ -284,8 +284,9 @@ def renderizar_campeonato_pilotos(pacote):
         )
         return
     if not campeonato["disponivel"]:
+        from pitwall.data.standings_state import publication_message
         st.info("Classificação de pilotos indisponível.")
-        st.caption(campeonato.get("motivo") or "Snapshot DriverStandings incompleto.")
+        st.caption(publication_message(campeonato))
         return
     campos = (
         "snapshot_id",
@@ -967,7 +968,7 @@ def tela_explorar(pacote, rodada, foco, topbar_slot=None):
         display_status='Resultado publicado pela OpenF1'
     from pitwall.dashboard.fan_views import hero
     if foco == "Corridas":
-        from pitwall.dashboard.fan_views import gp_chapters
+        from pitwall.dashboard.fan_views import GP_CHAPTERS, gp_chapters
         renderizar_contexto_circuito(pacote,corrida,acervo_gp,mode='hero',weekend=weekend)
     else:
         metadata='Temporada {} · {}, {} · {}'.format(pacote['temporada'],corrida.get('cidade',''),corrida.get('pais',''),corrida.get('data',''))
@@ -984,17 +985,12 @@ def tela_explorar(pacote, rodada, foco, topbar_slot=None):
             render_status(weekend)
     if foco == "Corridas":
         st.markdown(gp_chapters(pacote['temporada'],rodada,st.query_params.get("aba","Visão geral")),unsafe_allow_html=True)
-        abas = (
-            "Visão geral",
-            "Tempos",
-            "Estratégias",
-            "Clima",
-            "Histórico",
-            "Comparativo de equipes",
-        )
-        aba = st.query_params.get("aba")
+        chapter_labels = dict(GP_CHAPTERS)
         visao_geral, tempos, estrategias, clima, historico, comparativo_equipes = (
-            st.tabs([{"Visão geral": "Resumo", "Tempos": "Sessões e voltas", "Estratégias": "Pneus e paradas", "Histórico": "Nesta pista", "Comparativo de equipes": "Equipes"}.get(a, a) for a in abas], default={"Visão geral": "Resumo", "Tempos": "Sessões e voltas", "Estratégias": "Pneus e paradas", "Histórico": "Nesta pista", "Comparativo de equipes": "Equipes"}.get(aba, aba) if aba in abas else "Resumo")
+            st.tabs(
+                list(chapter_labels.values()),
+                default=chapter_labels.get(st.query_params.get("aba"), "Resumo"),
+            )
         )
         with visao_geral:
             with st.container(key='race-summary'):
@@ -1326,11 +1322,13 @@ def executar_app():
         except AcervoDashboardErro:
             pass
         from pitwall.dashboard.weekend_views import load_status
-        weekend=load_status(raiz_artefatos(),temporada,rodada,corrida["circuito_id"])
-        if weekend:
-            for field,snapshot in (weekend.get('campeonatos') or {}).items():
-                if snapshot.get('disponivel'):
-                    paineis[field]=snapshot
+        try:
+            weekend = load_status(raiz_artefatos(), temporada, rodada, corrida["circuito_id"])
+        except (ValueError, OSError):
+            weekend = None
+            st.warning("Não foi possível validar o estado da coleta deste GP.")
+        from pitwall.data.standings_state import resolve_standings
+        paineis = resolve_standings(paineis, weekend)
         from pitwall.dashboard.fan_views import hero
         st.markdown(hero("Campeonato de pilotos {}".format(temporada),"Acompanhe a classificação completa da temporada.",image="championship"),unsafe_allow_html=True)
         st.markdown(pitwall_ui.campeonatos(paineis, temporada, rodada=rodada), unsafe_allow_html=True)
@@ -1338,7 +1336,7 @@ def executar_app():
         renderizar_topo(pacote, slot=tool_control)
         from pitwall.dashboard.fan_views import hero
         st.markdown(hero("Acertos do Lab","Nossas previsões buscam identificar quem tem mais chance de pódio. Veja a comparação com a classificação.",image="performance"),unsafe_allow_html=True)
-        tela_desempenho(pacote,show_title=False)
+        tela_desempenho(pacote,show_title=False,root=raiz_artefatos())
     else:
         renderizar_topo(pacote, slot=tool_control)
         tela_como_funciona()

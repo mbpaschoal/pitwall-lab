@@ -13,6 +13,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 
 from operacao2026 import cloud, fontes, weekend
 from pitwall.data.archive_collection import instant, save_checkpoint
@@ -111,9 +112,15 @@ def finish_evidence(root, entry, q, now):
 
 
 def register_and_project(root, prepared, run=command):
+    """Stage presentation and undo a new registration if projection fails.
+
+    Failed projection bytes stay with the retained attempt. Recovery can reuse
+    the immutable emission instead of treating it as already fully registered.
+    """
     declaration = prepared['declaration']
     path = root/REGISTRY
-    previous = json.loads(path.read_text()) if path.exists() else []
+    previous_raw = path.read_bytes() if path.exists() else None
+    previous = json.loads(previous_raw) if previous_raw is not None else []
     matches = [d for d in previous if cloud.identity(d) == cloud.identity(declaration)]
     if matches and matches != [declaration]:
         raise ValueError('Another forecast is already registered for this event')
@@ -121,9 +128,28 @@ def register_and_project(root, prepared, run=command):
         # Validate first; a rejected declaration never replaces the registry.
         from registro_emissoes import DECLARACOES, validar_declaracoes
         validar_declaracoes(root, (*DECLARACOES, *previous, declaration))
-        save_checkpoint(path, previous + [declaration])
-    run(root, ['preparar_dashboard_race_weekend.py', '--root', str(root),
-               '--snapshot', declaration['snapshot'], '--saida', 'frontend_assets/race_weekend.json'])
+    base = root/cloud.STATE/'forecasts'/'{}-{}'.format(declaration['temporada'], declaration['circuito_id'])
+    base.mkdir(parents=True, exist_ok=True)
+    projection = Path(tempfile.mkdtemp(prefix='projection-', dir=base))/'race_weekend.json'
+    try:
+        if not matches:
+            save_checkpoint(path, previous + [declaration])
+        run(root, ['preparar_dashboard_race_weekend.py', '--root', str(root),
+                   '--snapshot', declaration['snapshot'], '--saida', str(projection)])
+        if not isinstance(json.loads(projection.read_text()), dict):
+            raise ValueError('Forecast projection must be a JSON object')
+        asset = root/'frontend_assets/race_weekend.json'
+        asset.parent.mkdir(parents=True, exist_ok=True)
+        projection.replace(asset)
+    except Exception:
+        if not matches:
+            if previous_raw is None:
+                path.unlink(missing_ok=True)
+            else:
+                temporary = path.with_suffix(path.suffix+'.tmp')
+                temporary.write_bytes(previous_raw)
+                temporary.replace(path)
+        raise
 
 
 def retain(root, base, prepared):

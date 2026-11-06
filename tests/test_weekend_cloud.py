@@ -7,6 +7,7 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
+from urllib.error import URLError
 
 from operacao2026 import cloud, weekend
 
@@ -15,6 +16,50 @@ CONFIG = ROOT/'operacao2026/eventos/mexico2026.json'
 
 
 class CloudTests(unittest.TestCase):
+    def test_calendar_network_failure_keeps_discovery_pending_with_original_error(self):
+        def unavailable(request, timeout):
+            raise URLError('offline synthetic failure')
+        def factory(directory, interval):
+            return cloud.CaptureClient(directory, interval, opener=unavailable)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            with self.assertRaisesRegex(ValueError, 'Calendar unavailable'):
+                cloud.discover(root, datetime(2026,11,6,tzinfo=timezone.utc), factory)
+            base = root/cloud.STATE/'descoberta'
+            self.assertFalse((base/'ultima_consulta.json').exists())
+            receipt = json.loads(next(base.glob('*/coleta_online.json')).read_text())
+            self.assertEqual(receipt['fontes'], [])
+            self.assertEqual(receipt['falhas'][0]['endpoint'], 'calendar')
+
+    def test_session_catalogue_network_failure_does_not_cache_a_discovery(self):
+        calendar = {'MRData': dict(total='1', offset='0', RaceTable=dict(season='2026', Races=[
+            dict(round='20', date='2026-11-08', raceName='São Paulo Grand Prix',
+                 Circuit=dict(circuitId='interlagos', Location=dict(locality='São Paulo', lat='-23.7', long='-46.7')))
+        ]))}
+        class Response(io.BytesIO):
+            status = 200
+            def geturl(self):
+                return 'https://api.jolpi.ca/ergast/f1/2026/?limit=100&offset=0'
+        def opener(request, timeout):
+            if request.full_url.startswith('https://api.jolpi.ca/'):
+                return Response(json.dumps(calendar).encode())
+            raise URLError('offline synthetic failure')
+        def factory(directory, interval):
+            return cloud.CaptureClient(directory, interval, opener=opener,
+                                       sleeper=lambda seconds: None, clock=lambda: 0)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            with self.assertRaisesRegex(ValueError, 'Session catalogue unavailable'):
+                cloud.discover(root, datetime(2026,11,6,tzinfo=timezone.utc), factory)
+            base = root/cloud.STATE/'descoberta'
+            self.assertFalse((base/'ultima_consulta.json').exists())
+            self.assertFalse((root/cloud.STATE/'configuracoes').exists())
+            capture = next(base.glob('*/coleta_online.json'))
+            receipt = json.loads(capture.read_text())
+            self.assertEqual(receipt['fontes'][0]['endpoint'], 'calendar')
+            self.assertEqual(json.loads((capture.parent/'calendar.json').read_text()), calendar)
+            self.assertEqual(receipt['falhas'][0]['endpoint'], 'sessions')
+
     def test_forecast_validates_new_receipts_against_a_post_collection_clock(self):
         start=datetime(2026,11,1,23,31,tzinfo=timezone.utc);end=start+timedelta(minutes=2)
         with tempfile.TemporaryDirectory() as tmp:
