@@ -394,6 +394,7 @@ frontend_assets/pilotos_condicoes_operacao.json
 frontend_assets/pitwall.css
 frontend_assets/race_weekend.json
 frontend_assets/revisao_identidade_pilotos_v1.json
+frontend_assets/sidebar.css
 historico_circuito.py
 pitwall/__init__.py
 pitwall/dashboard/__init__.py
@@ -408,7 +409,9 @@ pitwall/dashboard/journey.py
 pitwall/dashboard/media.py
 pitwall/dashboard/model_views.py
 pitwall/dashboard/motion.py
+pitwall/dashboard/navigation.py
 pitwall/dashboard/pilot_views.py
+pitwall/dashboard/postcards.py
 pitwall/dashboard/search.py
 pitwall/dashboard/share_cards.py
 pitwall/dashboard/tarot.py
@@ -484,6 +487,7 @@ tests/test_interface_editorial.py
 tests/test_pilot_views.py
 tests/test_pneus_apresentacao.py
 tests/test_review_regressions.py
+tests/test_sidebar_editorial.py
 tests/test_standings_publication.py
 tests/test_tarot_catalog.py
 tests/test_weekend_ui.py

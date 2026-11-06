@@ -178,7 +178,7 @@ def reescrever_links(texto, temporada=None, rodada=None):
         titulo = _MAPA_CAMINHOS.get(normalizado) or _MAPA_RELATIVOS.get(normalizado)
         if titulo:
             return (
-                '<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(
+                '<a href="{}" target="_self">{}</a>'.format(
                     escape(
                         url_documento(
                             _IDS_POR_TITULO[titulo],
@@ -192,7 +192,7 @@ def reescrever_links(texto, temporada=None, rodada=None):
             )
         if normalizado.endswith("previsoes_validacao.csv"):
             return (
-                '<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(
+                '<a href="{}" target="_self">{}</a>'.format(
                     escape(url_documento("relatorio-2024", download=True, temporada=temporada, rodada=rodada), quote=True),
                     escape(rotulo),
                 )
@@ -231,7 +231,7 @@ def _renderizar_indice_documentos(st):
     st.caption("Versão da interface: {}".format(versao_interface()))
     por_id = {item["id"]: item["titulo"] for item in documentos_disponiveis()}
     links = [
-        '<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(
+        '<a href="{}" target="_self">{}</a>'.format(
             escape(url_documento(identificador, temporada=st.query_params.get("temporada"), rodada=st.query_params.get("gp")), quote=True),
             escape(_rotulo_documento(identificador, titulo))
         )

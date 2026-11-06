@@ -5,7 +5,7 @@ function integrity(ok,message){if(!ok){const e=Error(message);e.code='integrity'
 async function bounded(promise,ms,label){let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error(label+' timed out')),ms);})]);}finally{clearTimeout(timer);}}
 
 async function verifyImage(page,app,expected){
- const image=app.locator('.fan-hero-image');await image.waitFor({timeout:20000});
+ const image=app.locator('.fan-hero-image,.pw-circuit-media img').first();await image.waitFor({state:'attached',timeout:20000});
  const actual=await image.evaluate(async e=>{
   let timer;try{await Promise.race([e.decode(),new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Photo decoding timed out')),20000);})]);}finally{clearTimeout(timer);}
   return{source:e.currentSrc,width:e.naturalWidth,height:e.naturalHeight};
@@ -38,10 +38,20 @@ function inspectControls(_element,lang){
  const flagLinks=[...document.querySelectorAll('.pw-language-fallback')].filter(visible);
  const validFlags=flagLinks.every(e=>{try{const u=new URL(e.href);return ['pt','en'].includes(e.dataset.language)&&u.origin===location.origin&&u.searchParams.get('lang')===e.dataset.language;}catch{return false;}});
  const codes=flags.map(e=>e.closest('[class*=st-key-pw_language_button_]').className.match(/_(pt|en)(?:\s|$)/)?.[1]).concat(flagLinks.map(e=>e.dataset.language));
- const navigation=native.length===6&&links.length===0?'native':native.length===0&&validLinks?'links':null;
+ let navigation=native.length===6&&links.length===0?'native':native.length===0&&validLinks?'links':null;
+ const sidebar=document.querySelector('.st-key-pw-sidebar-menu');
+ let sidebarNative=[],sidebarLinks=[];
+ if(sidebar){
+  // A collapsed native details remains keyboard reachable through its summary.
+  const all=[...sidebar.querySelectorAll('.pw-nav-fallback')];
+  sidebarNative=[...sidebar.querySelectorAll('button')];
+  sidebarLinks=all.filter(visible);
+  const valid=all.length===15&&new Set(all.map(e=>e.dataset.pwRoute)).size===15&&all.every(e=>{try{const u=new URL(e.href);return screens.includes(e.dataset.screen)&&u.origin===location.origin&&u.pathname===location.pathname&&u.searchParams.get('tela')===e.dataset.screen&&u.searchParams.get('lang')===lang;}catch{return false;}});
+  navigation=sidebarNative.length===15&&sidebarLinks.length===0?'native':valid&&sidebarNative.length===0?'links':sidebarNative.length===15&&sidebarLinks.some(e=>e===document.activeElement)?'links':null;
+ }
  const languageControl=codes.length===2&&new Set(codes).size===2&&codes.includes('pt')&&codes.includes('en')&&validFlags?(flags.length===2?'native':flags.length?'mixed':'links'):null;
  return{ready:document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&!!navigation&&!!languageControl&&document.querySelectorAll('.st-key-journey-context-row [data-testid=stSelectbox]').length===2,
-  navigation,language_control:languageControl,native_navigation:native.length,visible_navigation_links:links.length,native_flags:flags.length,visible_language_links:flagLinks.length,
+  navigation,language_control:languageControl,native_navigation:sidebar?sidebarNative.length:native.length,visible_navigation_links:sidebar?sidebarLinks.length:links.length,native_flags:flags.length,visible_language_links:flagLinks.length,
   hidden_native_error_elements:[...document.querySelectorAll('.st-key-tela [data-testid=stAlertContentError],[class*=st-key-pw_language_button_] [data-testid=stAlertContentError]')].filter(e=>!visible(e)).length};
 }
 
@@ -106,7 +116,7 @@ async function verifyDeployment(version,resultPath,output){
       let previousApp;
       for(const route of ['Corridas','Metodologia']){
        const query=new URLSearchParams({tela:route,temporada:String(identity[0]),gp:String(identity[1]),lang});
-       if(route==='Metodologia'&&receipt.Corridas?.controls.navigation==='links')await previousApp.locator('.journey-navigation-fallback>a[data-screen="Metodologia"]').click();
+       if(route==='Metodologia'&&receipt.Corridas?.controls.navigation==='links')await require('./sidebar_navigation.cjs').choose(previousApp,'method');
        else await page.goto(base+'/?'+query,{waitUntil:'domcontentloaded',timeout:45000});
        const app=['127.0.0.1','localhost'].includes(baseURL.hostname)?page:page.frameLocator('iframe[src*="/~/+/"]').first();
        const controls=await ready(app,version,lang);previousApp=app;
@@ -114,7 +124,7 @@ async function verifyDeployment(version,resultPath,output){
        integrity(await app.locator('body').evaluate((_element,{route,round})=>new URL(location.href).searchParams.get('tela')===route&&new URL(location.href).searchParams.get('gp')===String(round),{route,round:identity[1]}),'Served route or GP differs');
        receipt[route]=await verifyImage(page,app,route==='Corridas'?expected.race:expected.method);
        receipt[route].controls=controls;
-       if(route==='Corridas')await app.getByText(lang==='pt'?'Acompanhar chegada dos dados':'Track incoming data',{exact:true}).waitFor({timeout:15000});
+       if(route==='Corridas'){await app.locator('summary').filter({hasText:lang==='pt'?'Atualização e cobertura':'Updates and coverage'}).click();await app.getByText(lang==='pt'?'Acompanhar chegada dos dados':'Track incoming data',{exact:true}).waitFor({timeout:15000});await app.locator('summary').filter({hasText:lang==='pt'?'Atualização e cobertura':'Updates and coverage'}).click();}
        else{
         const details=app.locator('[data-testid=stExpander] summary').filter({hasText:lang==='pt'?'Para quem quer ir além':'For a closer look'});
         await details.click();await app.getByText(expected.build,{exact:false}).first().waitFor({timeout:15000});receipt.observed_build=expected.build;await details.click();

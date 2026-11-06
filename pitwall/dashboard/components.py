@@ -107,7 +107,8 @@ def stylesheet(root):
     return "<style>{}{}</style>".format(
         "".join(fontes),
         (PROJECT_ROOT / "frontend_assets/pitwall.css").read_text(encoding="utf-8")
-        + (PROJECT_ROOT / "frontend_assets/journey.css").read_text(encoding="utf-8"),
+        + (PROJECT_ROOT / "frontend_assets/journey.css").read_text(encoding="utf-8")
+        + (PROJECT_ROOT / "frontend_assets/sidebar.css").read_text(encoding="utf-8"),
     )
 
 
@@ -239,7 +240,7 @@ def standings_table(snapshot, teams=False, season=None, round_=None):
     )
 
 
-def campeonatos(paineis, temporada, rodada=None):
+def campeonatos(paineis, temporada, rodada=None, painel=None):
     from pitwall.data.standings_state import resolve_standings, publication_message, capture_utc
     paineis = resolve_standings(paineis)
     cards = []
@@ -247,6 +248,8 @@ def campeonatos(paineis, temporada, rodada=None):
         (False, "Campeonato de pilotos", "campeonato-completo"),
         (True, "Campeonato de construtores", "equipes-completo"),
     ]:
+        if painel in ('pilotos', 'equipes') and teams != (painel == 'equipes'):
+            continue
         snapshot = paineis["constructor_standings" if teams else "driver_standings"]
         message = publication_message(snapshot)
         notice = '<p class="pw-empty-note pw-publication-state">{}</p>'.format(e(message)) if message else ""
@@ -362,7 +365,7 @@ def visao_geral(
     ):
         temperatura = "{:.1f} °C".format(media).replace(".", ",")
         nota_clima = "Ar durante a corrida · OpenF1" if actual else "Fim de semana · Open-Meteo"
-    return '<section class="pw-overview" aria-label="Visão geral do circuito"><div class="pw-track"><figure class="hero-circuito">{}<figcaption class="hero-sobreposicao"><p class="circuito-rotulo">Circuito</p><h2>{}</h2><div class="pw-track-metrics">{}</div></figcaption></figure><section class="mapa-circuito" aria-label="Mapa do circuito"><div class="mapa-meta"><strong>Traçado do circuito</strong></div>{}</section></div><div class="coluna-circuito"><section class="painel-editorial"><h3><a href="{}" target="_blank" rel="noopener noreferrer">Clima e medições</a></h3><div class="pw-weather"><span class="pw-weather-icon" aria-hidden="true">thermostat</span><div><strong>{}</strong><p>{}</p></div></div></section><section class="painel-editorial"><h3>Informações do circuito</h3><dl class="pw-circuit-info">{}</dl></section></div></section>'.format(
+    return '<section class="pw-overview" aria-label="Visão geral do circuito"><div class="pw-track"><figure class="hero-circuito">{}<figcaption class="hero-sobreposicao"><p class="circuito-rotulo">Circuito</p><h2>{}</h2><div class="pw-track-metrics">{}</div></figcaption></figure><section class="mapa-circuito" aria-label="Mapa do circuito"><div class="mapa-meta"><strong>Traçado do circuito</strong></div>{}</section></div><div class="coluna-circuito"><section class="painel-editorial"><h3><a href="{}" target="_self">Clima e medições</a></h3><div class="pw-weather"><span class="pw-weather-icon" aria-hidden="true">thermostat</span><div><strong>{}</strong><p>{}</p></div></div></section><section class="painel-editorial"><h3>Informações do circuito</h3><dl class="pw-circuit-info">{}</dl></section></div></section>'.format(
         photo_html,
         e(corrida["circuito_nome"]),
         metric_html,

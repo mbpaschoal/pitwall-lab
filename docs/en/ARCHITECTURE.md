@@ -55,3 +55,9 @@ JSON readers validate the root before accessing fields and expose domain errors 
 In isolated research, timestamps require explicit timezones, existing destinations are refused and empty tables retain their schema. Folds without known targets have insufficient coverage rather than artificial zero scores; duplicate identities are rejected before filtering available predictions. Synthetic tests check these contracts without promoting research into v1.
 
 For the next review, trace an input-to-output flow, name a concrete failure, demonstrate it in a test and change the smallest responsible unit. Reading coverage and test execution are separate records. Syntax inspection, local tests, CI, packaging and public-browser acceptance answer different questions. Compatibility modules and generated distribution files must not be removed merely because they look duplicated.
+
+## Editorial navigation 0.13.0
+
+`dashboard/navigation.py` defines the fifteen sidebar and search destinations. Native buttons update session parameters; equivalent links remain available while controls load. `postcards.py` contains presentation themes only. Races render the selected chapter alone. `tarot.py` builds faces from existing favourites without inference. `motion.js` reveals each card and retains a sessionStorage mask scoped to event, emission and probabilities. Escaped face HTML is held in a template attribute because the Markdown renderer does not retain template children. Faces only enter the accessibility tree after a click.
+
+The sidebar/card bridge installs independently of the earlier motion singleton, so an already-open tab can receive the new features without a document reload or duplicated motion handlers.

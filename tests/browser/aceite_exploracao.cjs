@@ -1,3 +1,4 @@
+const {choose,reveal}=require('./sidebar_navigation.cjs');
 /* PT: Aceite das jornadas de fãs. EN: Fan journey acceptance. */
 const fs = require('node:fs');
 const path = require('node:path');
@@ -44,7 +45,7 @@ fs.mkdirSync(output, {recursive:true});
   if(route==='Pilotos'&&q.get('visao')==='perfil') title='Lando Norris';
   if(route==='Pilotos'&&q.get('visao')==='duelo') title=en?'Head to head':'Duelo';
 
-  try{await p.getByRole('heading', {level:1, name:title, exact:true}).waitFor({timeout:45000});}catch(error){await p.screenshot({path:path.join(output,'failure.png')});throw Error(JSON.stringify({expected:title,url:p.url(),headings:await p.locator('h1').allTextContents(),exceptions:await p.locator('[data-testid=stException]').allTextContents(),frontendErrors}));}
+  try{await (route==='Corridas'||route==='Previsões'?p.locator('.pw-postcard h1'):p.getByRole('heading', {level:1, name:title, exact:true})).waitFor({timeout:45000});}catch(error){await p.screenshot({path:path.join(output,'failure.png')});throw Error(JSON.stringify({expected:title,url:p.url(),headings:await p.locator('h1').allTextContents(),exceptions:await p.locator('[data-testid=stException]').allTextContents(),frontendErrors}));}
   await p.waitForFunction(() => document.querySelector('.stApp')?.getAttribute('data-test-script-state') === 'notRunning');
   await stableIdle(p);
   await p.evaluate(async()=>{
@@ -55,11 +56,11 @@ fs.mkdirSync(output, {recursive:true});
   check(frontendErrors.length===0,'Frontend rendering error: '+frontendErrors.join('; '));
   check(await p.locator('[data-testid="stException"]').count() === 0, 'Application exception');
   const hero=await p.locator('.fan-hero').boundingBox();
-  const preceding=await p.locator(route==='Pilotos'?'.st-key-pilot-view-navigation':'.journey-calendar').boundingBox();
-  check(hero&&preceding&&hero.y>=preceding.y+preceding.height-1&&hero.y<preceding.y+preceding.height+24,'Cover overlaps or detaches from preceding navigation');
+  const preceding=await p.locator(route==='Pilotos'?'.st-key-pilot-view-navigation':'.pw-location').boundingBox();
+  check(hero&&preceding&&hero.y>=preceding.y+preceding.height-1&&hero.y<preceding.y+preceding.height+70,'Cover overlaps or detaches from preceding navigation');
   check(await p.evaluate(()=>{
    const main=document.querySelector('.stMain').getBoundingClientRect(),dock=document.querySelector('.st-key-journey-navigation').getBoundingClientRect();
-   return main.bottom<=dock.top-4;
+   return main.bottom<=innerHeight+1;
   }),'Main scrollport extends behind navigation');
   if(route==='Pilotos') {
    const scope=await p.locator('.fan-pilot-toolbar').boundingBox();
@@ -80,10 +81,10 @@ fs.mkdirSync(output, {recursive:true});
    }),'Scrolled driver filter is covered or clipped');
    await p.locator('.stMain').evaluate(main=>main.scrollTo({top:0,behavior:'instant'}));
   }
-  await p.locator('.fan-hero-image').evaluate(img=>img.decode());
+  if(!['Corridas','Previsões'].includes(route))await p.locator('.fan-hero-image').evaluate(img=>img.decode());
   await stableIdle(p);
-  await p.waitForFunction(()=>document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"] label').length===6,null,{timeout:15000});
-  check(await p.locator('.st-key-journey-navigation [role="radiogroup"] label').count()===6,'Composition C: six destinations required');
+  await p.waitForFunction(()=>document.querySelectorAll('.st-key-pw-sidebar-menu button').length===15,null,{timeout:15000});
+  check(await p.locator('.st-key-pw-sidebar-menu button').count()===15,'Sidebar: fifteen destinations required');
 
   return p;
  }
@@ -145,8 +146,8 @@ fs.mkdirSync(output, {recursive:true});
  await p.getByText('Overview',{exact:true}).click();
  await p.getByRole('heading',{level:1,name:'Who stands out in the rain?',exact:true}).waitFor();
  await stableIdle(p);
- if(!await p.getByText('Head to head',{exact:true}).isVisible()) await driverMenu().click();
- await p.getByText('Head to head',{exact:true}).click();
+ if(!await p.locator('[data-testid=stPopoverBody]').getByText('Head to head',{exact:true}).isVisible()) await driverMenu().click();
+ await p.locator('[data-testid=stPopoverBody]').getByText('Head to head',{exact:true}).click();
  await p.getByRole('heading',{level:1,name:'Head to head',exact:true}).waitFor();
  await stableIdle(p);
  check(new URL(p.url()).searchParams.get('visao')==='duelo','Driver menu did not preserve its mode');
@@ -166,48 +167,44 @@ fs.mkdirSync(output, {recursive:true});
  await p.screenshot({path:path.join(output,'resumo-desktop.png')});
  report.push({journey:'circuit-first-desktop',imageBottom:desktopImage.y+desktopImage.height,podiumTop:desktopPodium.y});
  p = await open(clean,'tela=Corridas&temporada=2026&gp=19&lang=en','Mexico City Grand Prix');
- await p.getByText('Track incoming data',{exact:true}).waitFor();
- await p.locator('.fan-gp-tabs').getByRole('link',{name:'Weather',exact:true}).click();
+ await p.locator('summary').filter({hasText:'Updates and coverage'}).click();await p.getByText('Track incoming data',{exact:true}).waitFor();
+ await choose(p,'weather');await p.locator('.pw-chapter h1').waitFor();
  check(await p.locator('[data-testid="stException"]').count()===0,'Mexico runtime error');
  await p.screenshot({path:path.join(output,'mexico-weather-en.png')});
  report.push({journey:'mexico-pending-en'});
  await clean.close();
  const journey=await browser.newContext({viewport:{width:1440,height:1100}});
  p=await open(journey,'tela=Corridas&temporada=2026&gp=18&lang=pt','United States Grand Prix');
- const dock=p.locator('.st-key-journey-navigation');
- check(await dock.locator('[role="radiogroup"] label').count()===6,'Missing journey destinations');
- await dock.getByText('Campeonato',{exact:true}).filter({visible:true}).click();
+ const dock=p.locator('.st-key-pw-sidebar-menu');
+ check(await dock.locator('button').count()===15,'Missing sidebar destinations');
+ await choose(p,'drivers-standing');
  await p.getByRole('heading',{name:'Campeonato de pilotos 2026',level:1,exact:true}).waitFor();
- check(new URL(p.url()).searchParams.get('gp')==='18','Dock lost GP');
+ check(new URL(p.url()).searchParams.get('gp')==='18','Sidebar lost GP');
  await p.screenshot({path:path.join(output,'journey-championship.png')});
  p=await open(journey,'tela=Previsões&temporada=2026&gp=19&lang=pt','Mexico City Grand Prix');
- await p.getByRole('button',{name:'Abrir as cartas do GP',exact:true}).click();
- const dialog=p.getByRole('dialog');await dialog.waitFor();
- await dialog.getByRole('img',{name:'Max Verstappen · Red Bull',exact:true}).waitFor();
- check(!/%/.test(await dialog.innerText()),'Percentages must stay outside cards');
- check(await dialog.locator('.tarot-card img').count()===3,'Missing approved portraits');
- check(await dialog.locator('.tarot-card').count()===3,'Incorrect card count');
+ await reveal(p,'pt');
+ check(await p.locator('.pw-tarot-prob').count()===3,'Missing recorded probabilities');
  await p.screenshot({path:path.join(output,'journey-cards.png')});
- await p.keyboard.press('Escape');await dialog.waitFor({state:'hidden'});
- await p.waitForFunction(()=>new URL(location.href).searchParams.get('cartas')!=='1');
- report.push({journey:'dock-and-cards',cards:3,gp:19});
+ report.push({journey:'sidebar-and-cards',cards:3,gp:19});
  await journey.close();
- const mobile = await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+ const mobile = await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'no-preference'});
  p = await open(mobile,'tela=Corridas&temporada=2026&gp=18','United States Grand Prix');
  const close = p.locator('[data-testid="stSidebarCollapseButton"] button');
  if(await close.isVisible()) await close.tap();
  await p.waitForTimeout(300);
- for(const tab of await p.locator('.fan-gp-tabs a').all()) { const r=await tab.boundingBox();check(r && r.x>=0 && r.x+r.width<=390,'Tab clipped'); }
+ check(await p.locator('.journey-calendar:visible,.fan-gp-tabs:visible').count()===0,'Redundant GP navigation remains');
+ check(await p.locator('.st-key-pw-sidebar-menu summary').isVisible(),'Mobile explorer must be reachable');
  check(!(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth)),'Mobile overflow');
  const imageTop=await p.locator('.fan-hero').first().boundingBox();
  const podiumTop=await p.getByRole('heading',{name:'Pódio da corrida',exact:true}).boundingBox();
  check(imageTop && podiumTop && podiumTop.y>=imageTop.y+imageTop.height-40 && podiumTop.y>imageTop.y+imageTop.height*.75,'Circuit image must precede podium');
  await p.screenshot({path:path.join(output,'corrida-mobile.png')});
- report.push({journey:'mobile',tabs:await p.locator('.fan-gp-tabs a').allTextContents()});
- const mobileDock=p.locator('.st-key-journey-navigation');
- for(const label of await mobileDock.locator('[role="radiogroup"] label').all()){
-  const box=await label.boundingBox();check(box&&box.width>=44&&box.height>=44&&box.x>=0&&box.x+box.width<=390,'Dock target clipped or too small');
+ report.push({journey:'mobile',sidebar_destinations:await p.locator('.st-key-pw-sidebar-menu button').count()});
+ const mobileMenu=p.locator('.st-key-pw-sidebar-menu details');await mobileMenu.locator('summary').click();
+ for(const button of await p.locator('.st-key-pw-sidebar-menu button').all()){
+  const box=await button.boundingBox();check(box&&box.width>=44&&box.height>=44&&box.x>=0&&box.x+box.width<=390,'Sidebar target clipped or too small');
  }
+ await mobileMenu.locator('summary').click();
  for(const [route,title] of [['Pilotos','Pilotos'],['Campeonato','Campeonato'],['Previsões','United States Grand Prix'],['Desempenho','Acertos do Lab'],['Metodologia','Como funciona']]){
   p=await open(mobile,'tela='+encodeURIComponent(route)+'&temporada=2026&gp=18&lang=pt',title);
   check(!(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth)),'Page overflow: '+route);
@@ -220,10 +217,10 @@ fs.mkdirSync(output, {recursive:true});
   report.push({journey:'mobile-long-condition-title',lang,condition:'ccw'});
  }
  p=await open(mobile,'tela=Previsões&temporada=2026&gp=19&lang=en','Mexico City Grand Prix');
- await p.getByRole('button',{name:'Open the GP cards',exact:true}).click();
- await p.getByRole('dialog').getByRole('img',{name:'Max Verstappen · Red Bull',exact:true}).waitFor();
- check(!/%/.test(await p.getByRole('dialog').innerText()),'Percentages in mobile cards');
- check(!(await p.getByRole('dialog').evaluate(el=>el.scrollWidth>el.clientWidth)),'Mobile dialog overflow');
+ await reveal(p,'en');
+ const deckGeometry=await p.locator('.pw-sealed-deck').evaluate(el=>({width:el.clientWidth,scrollWidth:el.scrollWidth,cards:[...el.querySelectorAll('.pw-revealed-face')].map(card=>({width:card.clientWidth,scrollWidth:card.scrollWidth,animations:card.getAnimations().map(a=>a.playState)}))}));
+ fs.writeFileSync(path.join(output,'mobile-deck-geometry.json'),JSON.stringify(deckGeometry,null,2));
+ check(deckGeometry.scrollWidth<=deckGeometry.width,'Mobile deck overflow: '+JSON.stringify(deckGeometry));
  await p.screenshot({path:path.join(output,'journey-mobile-cards-en.png')});
  report.push({journey:'mobile-all-pages-and-cards'});
  fs.writeFileSync(path.join(output,'evidence.json'),JSON.stringify(report,null,2));

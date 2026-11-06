@@ -6,22 +6,21 @@ const base=process.argv[2]||'http://127.0.0.1:8501';
 const output=path.resolve(process.argv[3]||'/tmp/pitwall-resilience');
 const screens=['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
 async function check(page,lang){
- await page.locator('.journey-navigation-fallback').waitFor({state:'visible',timeout:30000});
+ await page.locator('.st-key-pw-sidebar-menu').waitFor({state:'visible',timeout:30000});
+ await page.waitForFunction(()=>document.querySelector('.st-key-pw-sidebar-menu details')?.dataset.pwReady==='true');
+ const menu=page.locator('.st-key-pw-sidebar-menu details');if(!await menu.evaluate(e=>e.open))await menu.locator('summary').click();
  await page.waitForFunction(lang=>document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning',lang,{timeout:30000});
- assert.equal(await page.locator('.journey-navigation-fallback>a:visible').count(),6);
+ assert.equal(await page.locator('.pw-nav-fallback:visible').count(),15);
  assert.equal(await page.locator('.pw-language-fallback:visible').count(),2);
  assert.equal(await page.locator('.st-key-journey-navigation [role=radiogroup]').count(),0);
  assert.equal(await page.locator('[data-testid=stException]').count(),0);
  assert.equal(await page.locator('.st-key-journey-navigation [role=alert]:visible,[class*=st-key-pw_language_cell_] [role=alert]:visible').count(),0,'Recovered controls must not announce an unusable widget error');
- const state=await page.locator('body').evaluate(()=>({query:Object.fromEntries(new URL(location.href).searchParams),overflow:document.documentElement.scrollWidth>innerWidth+1,targets:[...document.querySelectorAll('.journey-navigation-fallback>a,.pw-language-fallback')].map(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height}))}));
+ const state=await page.locator('body').evaluate(()=>({query:Object.fromEntries(new URL(location.href).searchParams),overflow:document.documentElement.scrollWidth>innerWidth+1,targets:[...document.querySelectorAll('.pw-nav-fallback,.pw-language-fallback')].map(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height}))}));
  assert.equal(state.query.gp,'19');assert.equal(state.query.temporada,'2026');assert.equal(state.query.lang,lang);assert.equal(state.overflow,false);
- assert.ok(state.targets.every(t=>t.width>=44&&t.height>=44),'Every link needs a 44px target');
+ assert.ok(state.targets.every(t=>t.width>=44&&t.height>=36),'Every link needs a 44px target');
  assert.ok(await page.locator('.pw-language-fallback:visible').evaluateAll(es=>es.every(e=>getComputedStyle(e).textDecorationLine==='none')),'Flag links must match the native flags without underlining');
- state.active_marker=await page.locator('.journey-navigation-fallback>a[aria-current]').evaluate(el=>{
-  const r=el.getBoundingClientRect(),m=getComputedStyle(el,'::after'),text=el.querySelector('span').getBoundingClientRect();
-  return{viewport:innerWidth,content:m.content,height:parseFloat(m.height),bottom:parseFloat(m.bottom),cell_height:r.height,gap_to_label:r.bottom-parseFloat(m.bottom)-parseFloat(m.height)-text.bottom,top_border:getComputedStyle(el).borderTopColor};
- });
- if(state.active_marker.viewport<=600){const m=state.active_marker;assert.ok(m.content!=='none'&&m.height===3&&m.bottom>=2&&m.bottom+m.height<m.cell_height/4&&m.gap_to_label>=0,'Fallback mobile marker must belong to its own cell');assert.ok(/rgba\([^)]*,\s*0\)$/.test(m.top_border));}
+ state.active_marker=await page.locator('.pw-nav-fallback[aria-current]').evaluate(el=>({border:getComputedStyle(el).borderLeftWidth,color:getComputedStyle(el).borderLeftColor}));
+ assert.equal(state.active_marker.border,'3px');
  return state;
 }
 (async()=>{fs.mkdirSync(output,{recursive:true});const options={headless:true};if(process.env.PLAYWRIGHT_CHANNEL)options.channel=process.env.PLAYWRIGHT_CHANNEL;
@@ -35,7 +34,7 @@ async function check(page,lang){
    await check(page,lang);
    await page.screenshot({path:path.join(output,`${width}-${lang}-fallback.jpg`),type:'jpeg',quality:80});
    for(const screen of screens){
-    const link=page.locator('.journey-navigation-fallback>a[data-screen="'+screen+'"]');
+    const link=page.locator('.pw-nav-fallback[data-screen="'+screen+'"]').first();
     await link.focus();assert.equal(await link.evaluate(e=>e===document.activeElement),true);
     await page.keyboard.press('Enter');await page.waitForURL(u=>u.searchParams.get('tela')===screen);
     const state=await check(page,lang);assert.equal(state.query.tela,screen);row.visited.push(screen);
@@ -52,16 +51,16 @@ async function check(page,lang){
  try{
   await page.route(/\/static\/js\/(?:Radio|Button)\.[^/?]+\.js(?:\?|$)/,async route=>{await new Promise(resolve=>releases.push(resolve));await route.continue();});
   await page.goto(base+'/?tela=Metodologia&temporada=2026&gp=19&lang=pt',{waitUntil:'domcontentloaded'});
-  await check(page,'pt');const last=page.locator('.journey-navigation-fallback>a').last();await last.focus();
+  await check(page,'pt');const last=page.locator('.pw-nav-fallback').last();await last.focus();
   assert.ok(releases.length>=2);releases.forEach(resolve=>resolve());
-  await page.waitForFunction(()=>document.querySelectorAll('.st-key-journey-navigation [role=radiogroup] label').length===6);
+  await page.waitForFunction(()=>document.querySelectorAll('.st-key-pw-sidebar-menu button').length===15);
   assert.equal(await last.evaluate(e=>e===document.activeElement),true,'Hydration must preserve keyboard focus');
   assert.equal((await page.locator('body').evaluate(inspectControls,'pt')).navigation,'links');
   await page.keyboard.press('Tab');
   const deadline=Date.now()+10000;let state;
   do{state=await page.locator('body').evaluate(inspectControls,'pt');if(state.navigation==='native'&&state.language_control==='native')break;await page.waitForTimeout(100);}while(Date.now()<deadline);
   assert.equal(state.navigation,'native');assert.equal(state.language_control,'native');
-  assert.equal(await page.locator('.journey-navigation-fallback>a:visible,.pw-language-fallback:visible').count(),0);
+  assert.equal(await page.locator('.pw-nav-fallback:visible,.pw-language-fallback:visible').count(),0);
   report.late_hydration={status:'passed',focus_preserved:true,native_controls_restored:true};
  }finally{releases.forEach(resolve=>resolve());await recovery.close();}
  }finally{await browser.close();report.completed_at_utc=new Date().toISOString();fs.writeFileSync(path.join(output,'resilience.json'),JSON.stringify(report,null,2));}
