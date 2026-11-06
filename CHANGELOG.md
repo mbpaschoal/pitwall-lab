@@ -2,7 +2,7 @@
 
 ## 0.12.7 — 2026-11-06
 
-Atualiza o cabeçalho do manifesto de dependências do dashboard para solicitar uma reconstrução do runtime no Streamlit Community Cloud após a revisão da base. A publicação 0.12.6 mostrou a nova versão, mas o aceite público encontrou o bloco anterior do campeonato, sem a procedência validada no pacote local. Todos os sete pacotes e suas versões permanecem iguais. O ambiente científico congelado, os dados, as probabilidades e as emissões são preservados. A aceitação exige nova conferência do build, da procedência e dos downloads no domínio público, separada do CI e da release.
+Fixa explicitamente Click 8.5.0, dependência transitiva já instalada e validada no CI e no ambiente local da revisão. Os sete pins anteriores permanecem iguais. A alteração do manifesto solicita reconstrução do runtime no Streamlit Community Cloud: a publicação 0.12.6 mostrou a nova versão, mas o aceite público encontrou o bloco anterior do campeonato, sem a procedência validada no pacote local. Atualiza também o cabeçalho do manifesto para indicar o ambiente separado do dashboard. O ambiente científico congelado, os dados, as probabilidades e as emissões são preservados. A aceitação exige nova conferência do build, da procedência e dos downloads no domínio público, separada do CI e da release.
 
 ## 0.12.6 — 2026-11-06
 

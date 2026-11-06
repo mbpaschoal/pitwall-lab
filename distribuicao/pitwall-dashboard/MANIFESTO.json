@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "bb2188f55126a7175cfb269e20451fe26b75769510b5e5f5d0a1f3650901f7ee",
+  "apresentacao_build_sha256": "9a33c1adf24418b3c66cb7ed085d8aade880a1521b48b1bfd1ca2d0185f32556",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "670408f5e36665c85aad4718d08c558ff5769ad8f9b86d971288f3ff14e16fef",
-      "sha256_origem": "0989aa6fd835a5e0724f7633cc308529706633d7be3e66bd9c666b9a27b553cc"
+      "sha256_destino": "82e5f04c1e3782f296dc3e8c12176f36015362ec53dedf04d33a345d532fc241",
+      "sha256_origem": "32d9791f1dde03271d685c821e3679f2fdb59970ddd651b4e009bc4a428273d6"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "3b649c2639f07becfb5a7b0f229a90705ca0f84fcb7c064f4f4b39af77fd52e3",
-      "sha256_origem": "93b77d7a087953d63e490be654c7cce16f08a893c04ee5a4ccab5474fd22b9f1"
+      "sha256_destino": "960c85d2bd8ec33e393be25d8cea036b7c80f9405f0319837989ff273b386f1e",
+      "sha256_origem": "712c99b45023ed530b9548102fc7f11f31e22ad99b453a8f168c8c526f0d45ae"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -3243,8 +3243,8 @@
       "caminho": "requirements.txt",
       "fonte": "publicacao/templates/requirements.txt",
       "modo": "gerado",
-      "sha256_destino": "56e583d4828dd245a1ecc16ba69463b8b74488e7974cd085cc8234f0e3523c02",
-      "sha256_origem": "56e583d4828dd245a1ecc16ba69463b8b74488e7974cd085cc8234f0e3523c02"
+      "sha256_destino": "fae2ae892c13355a94724bb0cf59445e572968198becf7f59fb65b43cc710b69",
+      "sha256_origem": "fae2ae892c13355a94724bb0cf59445e572968198becf7f59fb65b43cc710b69"
     },
     {
       "caminho": "static/pitwall-media/catalog.json",
@@ -3455,7 +3455,7 @@
     },
     {
       "caminho": "publicacao/templates/requirements.txt",
-      "sha256": "56e583d4828dd245a1ecc16ba69463b8b74488e7974cd085cc8234f0e3523c02"
+      "sha256": "fae2ae892c13355a94724bb0cf59445e572968198becf7f59fb65b43cc710b69"
     },
     {
       "caminho": "publicacao/templates/.python-version",
