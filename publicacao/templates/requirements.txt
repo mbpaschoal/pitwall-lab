@@ -1,4 +1,4 @@
-# Pitwall Lab 0.12.0: free local supervision; presentation dependencies unchanged.
+# Dashboard runtime pins; scientific v1 uses its separate frozen environment.
 streamlit==1.66.1
 plotly==6.3.1
 pandas==2.2.3
