@@ -44,7 +44,7 @@ async function ready(page, lang, expected = {}) {
       document.querySelector('.st-key-journey-header')?.innerText.includes('v' + version) &&
       Object.entries(expected).every(([key, value]) => q.get(key) === String(value));
   }, {lang, version, expected}, {timeout: 90000});
-  await app.waitForFunction(() => document.querySelectorAll('.st-key-journey-navigation [role=radiogroup] label').length === 6, null, {timeout: 30000});
+  await app.waitForFunction(() => document.querySelectorAll('.st-key-pw-sidebar-menu button').length === 15, null, {timeout: 30000});
   await app.locator('.fan-hero-image').evaluate(img => img.decode());
   const favorite = app.frameLocator('iframe[src*="pitwall_favorite"]');
   await favorite.locator('option[value="max_verstappen"]').waitFor({state: 'attached', timeout: 30000});

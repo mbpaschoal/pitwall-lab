@@ -16,7 +16,7 @@ TESTES_PORTATEIS = ('test_distribuicao.py', 'test_acervo_publico.py', 'test_comp
                     'test_dashboard_app.py', 'test_archive_cache.py', 'test_dashboard_dados.py', 'test_interface_editorial.py',
                     'test_driver_conditions.py', 'test_driver_projection.py', 'test_pilot_views.py',
                     'test_fan_exploration.py', 'test_review_regressions.py',
-                    'test_fan_journey.py', 'test_fan_composition.py',
+                    'test_sidebar_editorial.py', 'test_fan_journey.py', 'test_fan_composition.py',
                     'test_tarot_catalog.py', 'test_high_resolution_assets.py')
 
 

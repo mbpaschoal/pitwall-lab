@@ -55,3 +55,9 @@ Leitores JSON validam a raiz antes de acessar campos; erros de domínio orientam
 Na pesquisa isolada, timestamps exigem fuso explícito, destinos existentes são recusados e tabelas vazias mantêm esquema. Folds sem alvos conhecidos têm cobertura insuficiente, sem zero artificial; identidades duplicadas são rejeitadas antes do filtro de previsões disponíveis. Esses contratos são testados com exemplos sintéticos, sem promover a pesquisa ao v1.
 
 Para revisar novamente: seguir um fluxo de entrada até saída, nomear o cenário de falha, demonstrá-lo num teste e corrigir a menor responsabilidade possível. A cobertura de leitura e a execução de testes são registros distintos. Inspeção sintática, teste local, CI, pacote e navegador público respondem a perguntas diferentes; nenhum substitui os demais. Os módulos de compatibilidade e a distribuição gerada não são candidatos a remoção só por parecerem duplicados.
+
+## Navegação editorial 0.13.0
+
+`dashboard/navigation.py` define os quinze destinos do menu e da busca. Os botões nativos atualizam os parâmetros da sessão; links alternativos mantêm acesso enquanto os controles carregam. `postcards.py` contém apenas temas de apresentação. Corridas compõe somente o capítulo selecionado. `tarot.py` monta faces a partir dos favoritos existentes, sem inferência; `motion.js` revela uma por vez e conserva a máscara em sessionStorage, identificada por evento, emissão e probabilidades. O HTML escapado da face fica em um atributo de template: o renderizador Markdown não conserva filhos de template. As faces só entram na árvore acessível após o clique.
+
+A ponte de cartas e menu instala-se independentemente do singleton de movimento das versões anteriores. Assim, uma aba que já tinha a ponte antiga recebe os controles novos sem recarregar o documento ou duplicar os manipuladores de movimento.

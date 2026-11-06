@@ -1,3 +1,4 @@
+const {choose,reveal}=require('./sidebar_navigation.cjs');
 /* PT/EN: documentary compound provenance and session isolation, with real CSVs. */
 const fs=require('node:fs'),path=require('node:path');
 const {selectComboboxOption}=require('./select_combobox.cjs');
@@ -31,7 +32,7 @@ fs.mkdirSync(output,{recursive:true});
    }
    const idle=async()=>app.waitForFunction(()=>document.querySelector('.stApp')?.getAttribute('data-test-script-state')==='notRunning',null,{timeout:60000});
    await app.getByText('v'+version,{exact:true}).first().waitFor({timeout:90000});
-   await app.locator('.fan-gp-tabs').getByRole('link',{name:lang==='pt'?'Pneus e paradas':'Tyres and stops',exact:true}).click();
+   await choose(app,'strategy');
    const select=app.locator('.st-key-acervo_2026_19_prova_pneus');
    await select.getByRole('combobox').waitFor({timeout:60000});await idle();
    check(await select.getByRole('combobox').inputValue()===(lang==='pt'?'Corrida':'Race'),'Race is not the default tyre session');

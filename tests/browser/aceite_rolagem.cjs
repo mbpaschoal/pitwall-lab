@@ -47,22 +47,22 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
     // Server idle can precede Streamlit's lazy native-widget hydration.
     // Geometry and hit tests require the real controls, not their skeletons.
     await surface.waitForFunction(expected=>{
-     const labels=Array.from(document.querySelectorAll('.st-key-journey-navigation [role="radiogroup"] label'));
+     const labels=Array.from(document.querySelectorAll('.st-key-pw-sidebar-menu button'));
      const selects=document.querySelectorAll('.st-key-journey-context-row [data-testid="stSelectbox"]');
-     return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===6&&labels.every(el=>el.getClientRects().length)&&selects.length===2;
+     return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===15&&selects.length===2;
     },lang,{timeout:90000});
     await surface.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});await page.waitForTimeout(650);
   for(const fraction of [0,.25,.5,.75,1]){
    await surface.locator('.stMain').evaluate((main,f)=>main.scrollTo({top:f*(main.scrollHeight-main.clientHeight),behavior:'instant'}),fraction);await page.waitForTimeout(250);
    const result=await surface.evaluate(({fraction,expectedLang,expectedVersion})=>{
-    const issues=[],box=n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height}},main=document.querySelector('.stMain'),dock=document.querySelector('.st-key-journey-navigation');
+    const issues=[],box=n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height}},main=document.querySelector('.stMain'),dock=document.querySelector('.st-key-pw-sidebar-menu');
     if(!main||!dock)return{fraction,issues:[{kind:'missing_shell'}]};
     const m=box(main),d=box(dock),clip={x:Math.max(0,m.x),y:Math.max(0,m.y),right:Math.min(innerWidth,m.right),bottom:Math.min(innerHeight,m.bottom)};
     const rectsOverlap=(a,b)=>Math.min(a.right,b.right)-Math.max(a.x,b.x)>2&&Math.min(a.bottom,b.bottom)-Math.max(a.y,b.y)>2;
     const fullyVisible=r=>r.width>1&&r.height>1&&r.x>=clip.x+1&&r.right<=clip.right-1&&r.y>=clip.y+1&&r.bottom<=clip.bottom-1;
     const visible=n=>n&&n.getClientRects().length&&getComputedStyle(n).visibility!=='hidden'&&getComputedStyle(n).display!=='none';
     const painted=(r,node)=>{for(let p=node;p&&p!==main;p=p.parentElement){const c=getComputedStyle(p);if(c.opacity==='0'||c.visibility==='hidden'||c.display==='none'||c.contentVisibility==='hidden'||c.clipPath!=='none')return false;if(p.tagName==='DETAILS'&&!p.open&&!p.querySelector(':scope>summary')?.contains(node))return false;const pr=box(p);if(/hidden|clip|auto|scroll/.test(c.overflowX)&&(r.x<pr.x-.5||r.right>pr.right+.5))return false;if(/hidden|clip|auto|scroll/.test(c.overflowY)&&(r.y<pr.y-.5||r.bottom>pr.bottom+.5))return false}return true};
-    if(m.bottom>d.y-4+.5)issues.push({kind:'scrollport_under_navigation',main:m,dock:d});
+    if(m.bottom>innerHeight+1)issues.push({kind:'scrollport_outside_viewport',main:m});
     if(document.querySelectorAll('h1').length!==1)issues.push({kind:'main_title_count',count:document.querySelectorAll('h1').length});
     for(const block of main.querySelectorAll('.st-key-race-summary,.stTabs:has(.fan-circuit-details),.fan-pilot-ranking,.st-key-fan-prediction-intro,.fan-results,.fan-process,.st-key-pilot-view-navigation,.fan-pilot-toolbar,.fan-condition-chips,.fan-photo-credits')){const c=getComputedStyle(block);if(visible(block)&&(parseFloat(c.marginTop)<0||parseFloat(c.marginBottom)<0||['fixed','absolute'].includes(c.position)))issues.push({kind:'content_leaves_normal_flow',className:block.className,marginTop:c.marginTop,marginBottom:c.marginBottom,position:c.position});}
     if(document.documentElement.scrollWidth>innerWidth+1)issues.push({kind:'page_horizontal_overflow',width:innerWidth,scrollWidth:document.documentElement.scrollWidth});
@@ -94,11 +94,6 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
      const hit=document.elementFromPoint((r.x+r.right)/2,(r.y+r.bottom)/2);
      if(hit&&hit!==el&&!el.contains(hit)&&issues.filter(v=>v.kind==='occluded_control').length<10)issues.push({kind:'occluded_control',label:(el.innerText||el.getAttribute('aria-label')||el.tagName).slice(0,90),rect:r,by:hit.tagName+'.'+hit.className});
     }
-    for(const label of dock.querySelectorAll('[role="radiogroup"] label')){
-     const r=box(label),hit=document.elementFromPoint((r.x+r.right)/2,(r.y+r.bottom)/2);
-     if(r.width<44||r.height<44||r.x<0||r.right>innerWidth+1||r.y<0||r.bottom>innerHeight+1)issues.push({kind:'navigation_target_clipped_or_small',label:label.innerText,rect:r});
-     if(hit&&hit!==label&&!label.contains(hit))issues.push({kind:'navigation_target_occluded',label:label.innerText,by:hit.tagName+'.'+hit.className});
-    }
     if(document.querySelector('[data-testid="stException"]'))issues.push({kind:'streamlit_exception',text:document.querySelector('[data-testid="stException"]').innerText});
     return{fraction,version,main:m,dock:d,clip,scrollTop:main.scrollTop,scrollHeight:main.scrollHeight,visibleTextFragments:textBoxes.length,issues};
    },{fraction,expectedLang:lang,expectedVersion});
@@ -117,7 +112,7 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
     const result=await controls.nth(i).evaluate(el=>{
      const box=n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height};};
      const main=box(document.querySelector('.stMain')),dock=box(document.querySelector('.st-key-journey-navigation')),control=box(el),value=el.querySelector('div[value],input[role=combobox]'),issues=[];
-     if(main.bottom>dock.y-4+.5)issues.push({kind:'scrollport_under_navigation',main,dock});
+     if(main.bottom>innerHeight+1)issues.push({kind:'scrollport_outside_viewport',main});
      if(!value)return{issues:[...issues,{kind:'selected_value_missing'}],main,dock,control};
      const selected=box(value),nativeInput=value instanceof HTMLInputElement,text=nativeInput?value.value:value.innerText;
      // React Aria exposes the complete selection in an editable, horizontally
@@ -139,7 +134,7 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
    await page.screenshot({path:path.join(output,`${id}-text2x.jpg`),type:'jpeg',quality:65,scale:'css'});
    if(mobile)for(const height of [400,700,560]){
     await page.setViewportSize({width:viewport.width,height});await page.waitForTimeout(300);
-    const resize=await surface.evaluate(()=>{const rect=n=>{const r=n.getBoundingClientRect();return{y:r.y,bottom:r.bottom,height:r.height};},main=rect(document.querySelector('.stMain')),dock=rect(document.querySelector('.st-key-journey-navigation'));return{main,dock,viewport:[innerWidth,innerHeight],issues:main.bottom<=dock.y-4+.5?[]:[{kind:'scrollport_under_navigation_after_resize',main,dock}]};});
+    const resize=await surface.evaluate(()=>{const rect=n=>{const r=n.getBoundingClientRect();return{y:r.y,bottom:r.bottom,height:r.height};},main=rect(document.querySelector('.stMain')),dock=rect(document.querySelector('.st-key-journey-navigation'));return{main,dock,viewport:[innerWidth,innerHeight],issues:main.bottom<=innerHeight+1?[]:[{kind:'scrollport_under_navigation_after_resize',main,dock}]};});
     audit.stress.push({route,lang,type:'text2x_mobile_resize',...resize});save();
    }
   }
@@ -159,7 +154,7 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
     const rect=box(button),main=box(document.querySelector('.stMain')),dock=box(document.querySelector('.st-key-journey-navigation')),icon=button.querySelector('[data-testid="stIconMaterial"]'),label=button.querySelector('p'),issues=[];
     const inside=(a,b)=>a.x>=b.x-1&&a.right<=b.right+1&&a.y>=b.y-1&&a.bottom<=b.bottom+1,overlap=(a,b)=>Math.min(a.right,b.right)-Math.max(a.x,b.x)>1&&Math.min(a.bottom,b.bottom)-Math.max(a.y,b.y)>1;
     const hit=document.elementFromPoint((rect.x+rect.right)/2,(rect.y+rect.bottom)/2);
-    if(main.bottom>dock.y-4+.5||!inside(rect,main)||!hit||(hit!==button&&!button.contains(hit)))issues.push({kind:'pilot_control_inaccessible_text2x',rect,main,dock});
+    if(main.bottom>innerHeight+1||!inside(rect,main)||!hit||(hit!==button&&!button.contains(hit)))issues.push({kind:'pilot_control_inaccessible_text2x',rect,main,dock});
     if(!icon||!label)return{issues:[...issues,{kind:'pilot_control_parts_missing'}]};
     const slot=box(icon),glyph=rangeBox(icon),text=rangeBox(label),c=getComputedStyle(icon),labelFontSize=parseFloat(getComputedStyle(label).fontSize),fontLoaded=document.fonts.check(c.fontSize+' '+c.fontFamily,icon.textContent);
     if(!fontLoaded)issues.push({kind:'pilot_control_icon_font_unavailable',font:c.fontFamily});

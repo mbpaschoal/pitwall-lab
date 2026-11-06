@@ -30,17 +30,20 @@ class JourneyTests(unittest.TestCase):
         self.assertIn('&lt;driver&gt;',html)
         self.assertNotIn('src="http',html)
 
-    def test_mexico_cards_show_art_without_percentages_or_emission_changes(self):
+    def test_mexico_sealed_cards_keep_the_recorded_faces_and_probabilities(self):
         path=ROOT/'frontend_assets/race_weekend.json'
         before=hashlib.sha256(path.read_bytes()).hexdigest()
         app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=40)
         app.query_params.update(tela='Previsões',temporada='2026',gp='19',cartas='1')
         app.run()
         self.assertFalse(app.exception)
-        html='\n'.join(x.value for x in app.markdown if '<div class="tarot-cards">' in x.value)
+        html='\n'.join(x.value for x in app.markdown if 'class="pw-tarot-reading"' in x.value)
         self.assertIn('Max Verstappen',html)
-        self.assertNotIn('%',html)
-        self.assertEqual(html.count('<img '),3)
+        self.assertEqual(html.count('<template'),3)
+        self.assertEqual(html.count('data-tarot-reveal'),3)
+        self.assertIn('%',html)
+        self.assertEqual(html.count('data-pw-face='),3)
+        self.assertEqual(html.count('&lt;img '),3)
         self.assertIn('Lewis Hamilton',html)
         self.assertIn('George Russell',html)
         self.assertEqual(before,hashlib.sha256(path.read_bytes()).hexdigest())

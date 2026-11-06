@@ -2,26 +2,33 @@
 
 [English](en/FAN_JOURNEY.md)
 
-A composição C aprovada, refinada na revisão C3, orienta o produto inteiro: Corridas, Pilotos, Campeonato, Chances de pódio, Acertos do Lab e Como funciona. A paleta azul/branco/marinho/vermelho e as fontes Abril Fatface/Lato permanecem. A implementação usa dados existentes, não os números ilustrativos da prancha de estudo.
+A interface 0.13.0 usa o menu lateral aprovado pelos usuários. Mantém Abril Fatface/Lato, o azul do Pitwall e a linguagem editorial. As capas dos GPs usam ilustrações abstratas originais, cores e formas associadas ao destino, com cidade, circuito e data identificados. México, Japão e São Paulo têm composições próprias. Eventos no mesmo país conservam sua identidade.
 
 ## Navegar
 
-As bandeiras têm área clicável de 44 × 50 CSS px, com o símbolo no tamanho original. No celular, o marcador vermelho fica abaixo do rótulo e dentro da célula ativa, nas duas linhas do menu; o ícone selecionado continua vermelho. Teclado, links alternativos e contexto do GP seguem disponíveis.
+O menu reúne quinze destinos: Previsões deste GP e Acertos do Lab; Resultado da corrida, Sessões e voltas, Pneus e paradas, Clima, Histórico desta pista e Equipes neste GP; Perfis de pilotos e Duelo de pilotos; Campeonato de pilotos e Campeonato de equipes; Como funciona, Fontes e limites e Termos da F1. No celular, abre por “Explorar o Pitwall” e fecha após a seleção. A seção ativa tem faixa vermelha e nome visível.
 
-Os seis destinos ficam no rodapé, com ícone, rótulo e seleção visível. O controle nativo é acessível por teclado e tem links equivalentes enquanto seu módulo não carrega. As bandeiras também oferecem links nessa situação; os seis destinos e o contexto permanecem iguais. Quando o controle nativo fica disponível, os links alternativos são ocultados, sem duplicar o menu. A área final da página reserva espaço para o menu; ele não elimina conteúdo. Logo, temporada, GP e busca compartilham um único cabeçalho nas seis telas. As bandeiras de idioma permanecem no canto superior direito. O seletor inclui o calendário inteiro; a faixa visual mostra etapas próximas, com a selecionada identificada. No celular, destaca o GP e seus vizinhos.
+Há um único seletor de Grande Prêmio, com temporada e rótulos explícitos. A faixa de bandeiras de etapas e o menu de rodapé foram retirados. Os seletores irrelevantes ficam ocultos em Pilotos e Sobre o Lab, conservando o contexto para o retorno. A busca encontra páginas por tarefas como “voltas”, “cartas” e “pneus”, além de pilotos, equipes e corridas. Links internos usam a mesma aba; o menu usa botões nativos e links alternativos enquanto esses controles carregam. A troca preserva GP e idioma. Somente o capítulo selecionado de Corridas é renderizado.
 
-Corridas mantém os seis capítulos acessíveis nas abas: Resumo, Sessões e voltas, Pneus e paradas, Clima, Nesta pista e Equipes. Foto e traçado aparecem antes do pódio. As abas preservam as rotas antigas e evitam uma página com todas as tabelas abertas de uma vez. Pilotos mantém destaques, perfil e duelos, com seus recortes próprios. Campeonato mantém todas as linhas publicadas de pilotos e equipes, agora em sequência. As outras áreas continuam com as fontes, limites e documentos acessíveis.
+Resultado da corrida mantém pódio observado em ordem visual 2–1–3 e contexto do circuito. Foto e mapa ficam em “Foto e mapa do circuito”, com fonte e licença. “Atualização e cobertura” separa o estado operacional do conteúdo principal. Ausência de dados permanece explícita. Campeonato permite acessar diretamente cada tabela completa; links antigos sem painel continuam exibindo as duas.
 
-## Composição C nas seis telas
+## Abrir as cartas
 
-1. **Corridas:** título e data sobre a foto, traçado à direita; pódio observado com retratos em ordem visual 2–1–3, ao lado dos dados do circuito e do clima. As posições vêm exclusivamente dos resultados oficiais disponíveis.
-2. **Pilotos:** fotografia identificada de Daniel Ricciardo com capacete no cockpit, em um painel à direita, e fundo com Oscar Piastri na pista molhada. São fotografias distintas: Ricciardo em Miami em maio/2024 e Piastri em Silverstone em julho/2024; a composição não representa a mesma pessoa, evento ou condição climática. Pergunta direta, atalhos por condição e ranking com retratos completam a tela. Cada líder tem quatro barras: chuva, sem chuva registrada, calor e sentido anti-horário. Todos os líderes empatados aparecem identificados; ranking completo, critérios, perfis e duelos continuam acessíveis. Período, métrica e mínimo de corridas ficam no controle compacto de filtros.
-3. **Campeonato:** fotografia de Lewis Hamilton no cockpit, uma faixa canônica de GPs e classificação completa com retratos e marcas de equipes. Todas as linhas da fonte são preservadas; as equipes também são consultáveis na linha móvel de cada piloto.
-4. **Chances de pódio:** fotografia histórica de Sergio Pérez em Miami e linha antes/depois, com o estado temporal da emissão destacado. A etapa anterior concentra as chances individuais em barras; a posterior reserva mais espaço ao pódio observado, quando disponível. As cartas continuam opcionais e a imagem histórica não representa o GP da previsão.
-5. **Acertos do Lab:** fotografia de Max Verstappen em Silverstone, cartões por GP com acertos do Lab e da classificação e dois destaques. Corrida sem emissão não recebe nota zero; corrida ainda não disputada não recebe resultado. Uma corrida avaliada não vira uma amostra de seis corridas para reproduzir a prancha.
-6. **Como funciona:** fotografia identificada de Andrea Kimi Antonelli no cockpit, três passos ilustrados e dois links para documentos. Os passos separam entradas do v1, probabilidades e contexto descritivo. Um documento selecionado abre diretamente na área de leitura, com retorno à explicação e índice de outras referências.
+Previsões mostra a capa, a condição temporal da leitura e **Ver as cartas deste GP**. Favoritos, chances e comparação posterior ficam fora da leitura inicial, inclusive da árvore de acessibilidade. O botão abre versos iguais, sem nomes. Cada clique revela uma carta com arte, piloto, equipe daquele GP, probabilidade individual registrada e explicação. É possível virar uma carta para baixo. Não há botão de revelar todas.
 
-As fotografias dos 26 circuitos e dos cinco cabeçalhos usam fontes com largura natural de pelo menos 2488 pixels. Os 29 retratos superam o mínimo de 512 pixels por eixo; 28 têm largura de 1336 pixels. A aplicação usa essas fontes originais: ampliar os antigos retratos de 93 × 93 pixels não criaria detalhe. Retratos não estabelecem uniforme ou equipe de temporadas anteriores. Fontes e direitos estão em [créditos das imagens](../dashboard_assets/fan/ATTRIBUTION.md) e nos [testes de resolução](../tests/test_high_resolution_assets.py). A prancha orienta hierarquia, composição e navegação; os números exibidos vêm dos artefatos reais, sem copiar valores fictícios do estudo visual. Sem chuva registrada não comprova pista seca; as amostras das quatro condições podem se sobrepor.
+A máscara de revelação fica na sessão do navegador, identificada por temporada, GP, emissão e probabilidades. Navegar para outra seção e voltar conserva as cartas; trocar o idioma também. Outro GP ou outra emissão tem estado independente. `cartas=1` abre os versos, sem revelar faces novas. Após revelar todas as cartas disponíveis, a comparação, a distribuição completa, a cobertura e os detalhes ficam acessíveis. Sem emissão não há cartas inventadas. Estudos retrospectivos continuam identificados como retrospectivos.
+
+As cartas ilustram os favoritos existentes, inclusive empates; não há sorteio, inferência ou P1/P2/P3. A equipe corresponde ao registro daquele GP. Os originais e o catálogo de arte são preservados. Uma imagem indisponível tem aviso, sem emprestar outro piloto. As probabilidades individuais não indicam ordem de chegada. No celular, as cartas ficam em coluna. Teclado, foco visível, contador de revelação e preferência de movimento reduzido são respeitados.
+
+A [galeria HTML das cartas](galeria-cartas.html) permite conferir as variantes fora do aplicativo. Créditos: [arte das cartas](../dashboard_assets/tarot/ATTRIBUTION.md). Fotografias e retratos mantêm seus originais e [créditos](../dashboard_assets/fan/ATTRIBUTION.md).
+
+## Validação
+
+Os testes percorrem os quinze destinos, PT/EN e larguras de computador e celular, revelação individual, conteúdo acessível, retorno, mudança de idioma, foco, links alternativos, rolagem e downloads. O modelo v1 e as probabilidades são preservados. Aceite local, CI, pacote e domínio público são etapas distintas. Larguras emuladas e texto ampliado por simulação não constituem teste em aparelho físico ou zoom nativo.
+
+## Histórico da composição
+
+As notas abaixo descrevem entregas anteriores. Na 0.13.0, o menu lateral e as cartas fechadas substituem o rodapé, a faixa de etapas e o diálogo de cartas então usados.
 
 ## Continuidade e acesso — 0.8.4
 
@@ -46,16 +53,6 @@ O [relatório de aceite local](../reports/ui_ux_pro_max_20261101/implementacao/r
 A composição mantém a paleta e a tipografia aprovadas, com contornos discretos, títulos equilibrados, números tabulares e acompanhamento de fontes agrupado. As respostas de abas, condições e expansores são curtas e respeitam a preferência de movimento reduzido.
 
 No Duelo, retratos e métricas ficam lado a lado quando há espaço, inclusive no celular. Em largura muito estreita ou com texto ampliado, os painéis passam a uma coluna para preservar a leitura. A faixa de diferença acompanha a métrica, o período e a condição selecionados: taxas são comparadas em pontos percentuais; contagens, em números inteiros. Empate e amostra abaixo do mínimo permanecem explícitos. O placar de posições continua independente dessa diferença. Largadas em comum, resultados comparáveis e evidências ficam disponíveis, sem alteração nos dados ou nas probabilidades registradas.
-
-## Abrir as cartas
-
-Em Chances de pódio, **Abrir as cartas do GP** abre um diálogo opcional. O link direto pode usar `?tela=Previsões&temporada=2026&gp=19&cartas=1&lang=pt`. O usuário fecha pelo X, Escape ou pelo link para a tabela; o estado da abertura é removido ao fechar ou mudar de GP. Nada abre automaticamente na navegação normal.
-
-Os pilotos vêm dos favoritos da emissão do GP selecionado, inclusive empates. As cartas exibem somente arte, nome e equipe; os percentuais permanecem na tabela de previsões. Não há sorteio, recálculo ou P1/P2/P3. A equipe vem do registro daquele GP; suas cores aparecem na própria ilustração — macacão, capacete e ornamentos — além da moldura. Hamilton em Mercedes/2024 não recebe a carta Ferrari de um período posterior. Ausência de emissão não gera cartas. Para estudos retrospectivos, o diálogo identifica essa condição. Falta de uma imagem válida permanece explícita, sem emprestar outro piloto ou um capacete genérico. No celular, as cartas são empilhadas e o diálogo permite rolagem.
-
-O catálogo de equipe reúne 126 ilustrações geradas por IA: três poses para cada uma das 42 combinações de piloto/equipe reconhecidas no acervo, cobrindo 29 pilotos. As poses mostram capacete sob o braço, braços cruzados com capacete apoiado ao lado e capacete nas duas mãos à frente. Cada trio usa três poses distintas; favoritos adicionais por empate continuam incluídos, sem mudar seu ranking. A seleção é determinística pelo contexto do GP. As três cartas originais aprovadas de Verstappen, Hamilton e Russell permanecem preservadas, com prioridade quando a equipe corresponde. As 87 bases neutras são um arquivo histórico separado; não substituem arte colorida ausente. Falta de equipe reconhecida, imagem, hash válido ou compatibilidade de período mantém a ausência explícita.
-
-A [galeria HTML das cartas](galeria-cartas.html) permite conferir as variantes por piloto e equipe, fora do aplicativo. Os caminhos são relativos; abra a galeria junto da pasta de imagens do repositório ou pacote exportado. O dashboard carrega somente as cartas dos favoritos solicitados. As ilustrações são decorativas e não representam fotografias, endosso ou resultados. Créditos: [arte das cartas](../dashboard_assets/tarot/ATTRIBUTION.md). As probabilidades continuam individuais e não indicam ordem de chegada.
 
 ## Filtros e amostras
 

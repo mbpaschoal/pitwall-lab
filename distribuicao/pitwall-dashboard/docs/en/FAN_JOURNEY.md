@@ -1,31 +1,34 @@
-# Fan Journey
+# Fan journey
 
 [Português](../JORNADA_DO_FA.md)
 
-Approved composition C, refined in revision C3, guides the entire product: Races, Drivers, Championship, Podium chances, Lab score and How it works. The blue/white/navy/red palette and Abril Fatface/Lato fonts remain. Implementation uses existing data, not the illustrative numbers in the concept board.
-
-## Composition C across all six screens
-
-The logo, season, GP and search share one compact header. Language flags remain at the top right. A nearby-race ribbon and six-item bottom navigation follow the approved composition.
-
-1. **Races:** title and date over the circuit image, map on the right, observed portrait podium in visual 2–1–3 order next to circuit facts and weather.
-2. **Drivers:** an identified Daniel Ricciardo helmet-and-cockpit photograph in a right-side panel, with Oscar Piastri on a wet track in the backdrop. These are separate photographs: Ricciardo at Miami in May/2024 and Piastri at Silverstone in July/2024; they do not represent the same person, event or weather. A direct question, condition shortcuts and portrait rankings complete the screen. Each leader has four bars: rain, no recorded rain, heat and anticlockwise circuits. Every tied leader remains visible; complete rankings, criteria, profiles and duels stay accessible. Period, metric and minimum starts live in compact filter controls.
-3. **Championship:** Lewis Hamilton cockpit photograph, one canonical GP ribbon and complete standings with portraits and team identifiers. No source rows are removed; driver-team relations also appear within each mobile driver row.
-4. **Podium chances:** a historical Sergio Pérez at Miami photograph and before/after timeline with explicit emission-time context. The earlier stage contains individual probability bars; the later stage gives more space to the observed podium when available. Cards remain optional, and the historical photograph does not depict the forecast's GP.
-5. **Lab results:** Max Verstappen at Silverstone photograph, per-GP visual comparisons with qualifying and two insight cards. Missing forecasts are not scored zero and future races have no observed result. One evaluated race is never presented as six evaluated races to imitate the mockup.
-6. **How it works:** identified Andrea Kimi Antonelli cockpit photograph, three illustrated steps and two document links. Steps distinguish v1 inputs, probabilities and descriptive context. A selected document opens directly in the reading area, with a return link and an index of other references.
-
-All 26 circuit photographs and five hero photographs are naturally at least 2488 pixels wide. The 29 portraits exceed the minimum of 512 pixels on each axis; 28 are 1336 pixels wide. The app uses these original sources: enlarging the former 93 × 93 portraits would not add detail. Portraits do not establish a driver's historical uniform or team. [Image credits](../../dashboard_assets/fan/ATTRIBUTION.md) and [resolution checks](../../tests/test_high_resolution_assets.py) record sources and dimensions. The mockup guides composition and navigation; displayed figures come from real artifacts, without copying its fictional values. No recorded rain does not prove a dry track, and the four condition samples can overlap.
+Version 0.13.0 uses the sidebar selected by users. Abril Fatface/Lato, Pitwall blue and the editorial identity remain. Original abstract destination covers use local colours and forms, with city, circuit and date identified. Mexico, Japan and São Paulo have distinct compositions; events in the same country retain their own identity.
 
 ## Navigation
 
-Language flags have a 44 × 50 CSS pixel hit area, retaining their original symbol size. On mobile, the red marker sits below the label inside the active cell in either menu row; the selected icon remains red. Keyboard access, alternative links and GP context remain available.
+Fifteen direct destinations cover predictions and accuracy; race result, sessions and laps, tyres and stops, weather, circuit history and teams at this GP; driver profiles and duels; driver and constructor standings; method, sources and F1 terms. Mobile uses the “Explore Pitwall” disclosure and closes it after a selection. A red left border identifies the current destination.
 
-Native navigation and language flags have equivalent keyboard-accessible links while their modules are unavailable. They preserve all six destinations and context. Links are hidden once native controls become available, avoiding duplicate menus.
+One labelled GP dropdown replaces the redundant event ribbon, and the bottom menu is removed. Irrelevant context selectors are hidden on Drivers and About the Lab while retaining their values for return. Search recognises task words as well as drivers, teams and races. Internal links use the same tab; native sidebar buttons have equivalent keyboard links while loading. GP and language are retained. Only the selected race chapter renders.
 
-Six destinations appear in the bottom navigation, with icons, labels and visible selection. The native control supports keyboard interaction. The page reserves bottom space so the menu does not remove content. Season and GP selectors appear at the top of context-dependent areas. The selector includes every event; the visual ribbon shows nearby events and identifies the selected one. Mobile emphasizes the selected GP and its neighbors.
+Race result keeps the observed podium in visual order 2–1–3. “Circuit photo and map” retains original media, sources and licences. Operational state is grouped under “Updates and coverage”. Missing data remain explicit. Each full standings table is directly accessible; older links without a panel still show both.
 
-Races retains six chapters through tabs: Summary, Sessions and laps, Tyres and pit stops, Weather, At this track and Teams. The image and outline precede the podium. Tabs preserve existing routes and avoid opening every table in a single long page. Drivers retains highlights, profiles and duels with independent filters. Championship retains every published driver and constructor row, now in sequence. Sources, limitations and documents remain accessible throughout the product.
+## Cards
+
+Predictions initially shows the cover, temporal status and **See the cards for this GP**. Favourites, percentages and observed comparison remain outside the initial reading and accessibility tree. The button opens identical backs. Each click reveals one face with artwork, driver, team at that GP, recorded individual podium probability and explanation. Cards can be turned down; there is no reveal-all control.
+
+Reveal state is stored in this browser session, scoped to season, event, emission and probabilities. Leaving and returning, or changing language, preserves it. Another GP or emission has independent state. `cartas=1` opens backs without revealing new faces. After all available cards are revealed, comparison, distribution, coverage and technical details become accessible. Missing emissions create no cards. Retrospective studies remain identified.
+
+Cards illustrate existing favourites, including ties, without random draws, inference or P1/P2/P3. Team identity belongs to that GP. Original artwork and catalogue remain preserved, with explicit unavailability when necessary. Individual probabilities do not establish finishing order. Mobile stacks the cards. Keyboard operation, visible focus, a reveal counter and reduced motion are supported.
+
+The [HTML gallery](../galeria-cartas.html) and [art credits](../../dashboard_assets/tarot/ATTRIBUTION.md) remain available. Photographs, portraits, originals and licences are preserved.
+
+## Validation
+
+Acceptance covers all fifteen destinations, both languages, desktop/mobile widths, individual reveal, accessible content, return, language changes, keyboard alternatives, scrolling and downloads. The v1 model and recorded probabilities remain preserved. Local checks, CI, package and public-domain acceptance are separate. Emulated sizes and simulated enlarged text are not physical-device or native-zoom evidence.
+
+## Composition history
+
+The notes below describe earlier deliveries. In 0.13.0 the sidebar and sealed cards replace the bottom navigation, event ribbon and former card dialog.
 
 ## Continuity and access — 0.8.4
 
@@ -44,16 +47,6 @@ Small blue text uses its own higher-contrast token, while bars retain their deco
 On desktop, available width and text size determine the leader-card layout; larger text may move cards into a single column. Percentages retain space for their complete value.
 
 The [local acceptance report](../../reports/ui_ux_pro_max_20261101/implementacao/relatorio.md) distinguishes automated tests, browser measurements and limitations. Simulated larger text and a 320 CSS px viewport are not presented as native browser zoom or full accessibility certification.
-
-## Optional cards
-
-In Podium chances, **Open the GP cards** opens an optional dialog. Direct links can use `?tela=Previsões&temporada=2026&gp=19&cartas=1&lang=en`. Close with X, Escape or the table link. Closing or changing GP clears the opening state. Normal navigation never opens the dialog automatically.
-
-Drivers come from the selected GP's stored favorites, including ties. Cards show only artwork, name and team; percentages remain in the forecast table. There is no random draw, recalculation or P1/P2/P3 prediction. The GP record determines the team; its colours appear inside the illustration — on the racing suit, helmet and ornaments — as well as on the frame. Hamilton in Mercedes/2024 never receives Ferrari artwork from a later period. Missing forecasts do not produce cards. Retrospective studies are labeled accordingly. Missing verified artwork remains explicitly unavailable, without borrowing another driver or a generic helmet. Mobile stacks cards in a scrollable dialog.
-
-The team catalogue contains 126 AI-generated illustrations: three poses for each of the 42 recognised driver/team combinations in the archive, covering 29 drivers. Poses show a helmet under one arm, crossed arms with a helmet resting alongside, and a helmet held in both hands in front. Each trio receives three distinct poses. Additional tied favourites remain included without changing their ranking. Selection is deterministic for the GP context. The three approved original Verstappen, Hamilton and Russell cards remain byte-identical and take priority when the team matches. The 87 neutral bases are a separate historical archive and never substitute for missing coloured artwork. An unrecognised team, missing image, invalid hash or incompatible period remains explicitly unavailable.
-
-The [HTML card gallery](../galeria-cartas.html) displays variants by driver and team outside the app. Paths are relative: open it alongside the image directory from the repository or exported package. The dashboard loads only the requested favourites' cards. Illustrations are decorative, not photographs, endorsements or outcomes. Credits: [card artwork](../../dashboard_assets/tarot/ATTRIBUTION.md). Probabilities remain individual and never predict finishing order.
 
 ## Filters and samples
 

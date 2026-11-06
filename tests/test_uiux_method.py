@@ -286,20 +286,20 @@ class ResultsMethodUXTests(unittest.TestCase):
         self.assertTrue(any("Protocolo histórico (etapa 3)" in event[1]
                             for event in recorder.events if event[0] == "markdown"))
 
-    def test_tarot_return_promises_only_the_selected_gp_and_dismisses_cards(self):
+    def test_inline_tarot_preserves_scope_and_has_no_dialog_or_reveal_all(self):
         rows = [dict(driver_id="norris", name="Lando Norris", team="McLaren", probability=.682)]
-        for lang, label in [("pt", "Voltar às chances deste GP"), ("en", "Back to this GP’s podium chances")]:
+        for lang, label in [("pt", "Revelar carta A"), ("en", "Reveal card A")]:
             with self.subTest(lang=lang):
                 set_language(lang)
                 recorder = RecordingStreamlit({"cartas":"1"})
-                with patch.object(tarot, "cards_html", return_value="<div>Cards</div>"):
-                    tarot.render(recorder, ROOT, rows, 2026, 18, True)
-                markup = recorder.events[-1][1]
+                tarot.render(recorder, ROOT, rows, 2026, 18, True, emission="stored-a")
+                markup = next(content for event, content in recorder.events if event == "markdown")
                 self.assertIn(label, markup)
-                query = parse_qs(urlsplit(Links(markup).links[0]["href"]).query)
-                self.assertEqual(query, {"tela":["Previsões"], "temporada":["2026"], "gp":["18"], "lang":[lang]})
-                self.assertNotIn("cartas", query)
-                self.assertNotIn("como calculamos", markup)
+                self.assertIn('<template', markup)
+                self.assertNotIn('reveal-all', markup)
+                self.assertNotIn('tarot-back', markup)
+                self.assertEqual(recorder.query_params, {"cartas":"1"})
+                self.assertEqual(rows[0]['probability'], .682)
 
 
 if __name__ == "__main__":

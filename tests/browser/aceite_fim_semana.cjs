@@ -1,3 +1,4 @@
+const {choose,reveal}=require('./sidebar_navigation.cjs');
 /* PT/EN: Observed weekend data must agree across summary, weather and standings. */
 const fs=require('node:fs'),path=require('node:path');
 const {selectComboboxOption}=require('./select_combobox.cjs');
@@ -46,7 +47,7 @@ fs.mkdirSync(output,{recursive:true});
    check(JSON.stringify(ids)===JSON.stringify(podiumExpected()),'Summary podium differs from observed positions');
    if(race.clima_observado?.campos.air_temperature.elegivel)check((await surface.locator('.fan-weather strong').innerText()).includes(temperature('air_temperature')),'Summary uses forecast instead of observed race air');
    await page.screenshot({path:path.join(output,key+'-summary.png')});
-   await surface.locator('.fan-gp-tabs').getByRole('link',{name:lang==='pt'?'Clima':'Weather',exact:true}).click();
+   await choose(surface,'weather');
    await surface.getByRole('heading',{name:lang==='pt'?'Clima observado durante a corrida':'Observed race weather',exact:true}).waitFor({timeout:60000});
    await surface.locator('[data-testid="stMetricValue"]').first().waitFor({timeout:60000});
    await surface.waitForFunction(()=>document.querySelector('.stApp')?.getAttribute('data-test-script-state')==='notRunning',null,{timeout:60000});
@@ -58,7 +59,7 @@ fs.mkdirSync(output,{recursive:true});
    await page.screenshot({path:path.join(output,key+'-weather.png')});
    const qualifying=state.sessoes.find(s=>s.nome==='Qualifying');
    if(state.temporada===2026&&state.rodada===19&&qualifying?.revisao_fontes&&qualifying.tempos.some(r=>r.status==='DSQ')){
-    await surface.locator('.fan-gp-tabs').getByRole('link',{name:lang==='pt'?'Sessões e voltas':'Sessions and laps',exact:true}).click();
+    await choose(surface,'sessions');
     await surface.getByRole('heading',{name:lang==='pt'?'Tempos de sessão':'Session times',exact:true}).waitFor({timeout:60000});
     const select=surface.locator('.st-key-acervo_2026_19_sessao_tempos').getByRole('combobox');
     async function downloadSession(option,suffix){
@@ -98,9 +99,9 @@ fs.mkdirSync(output,{recursive:true});
      await page.screenshot({path:path.join(output,key+'-race-final.png')});
     }
    }
-   surface=await open('Previsões');
+   surface=await open('Previsões');await reveal(surface,lang);
    check(await surface.locator('.fan-podium-compact').count()===1,'Observed before/after comparison missing');
-   check((await surface.locator('.fan-probability-row').count())>=3,'Recorded forecast missing');
+   check(await surface.locator('.pw-tarot-prob').count()===3,'Recorded forecast missing');
    await page.screenshot({path:path.join(output,key+'-forecast.png')});
    surface=await open('Campeonato');
    const expected=Object.values(state.campeonatos||{}).filter(t=>t.disponivel).reduce((n,t)=>n+t.classificacao.length,0);

@@ -1,3 +1,97 @@
+/* Sidebar/card bridge also installs beside the pre-0.13 motion singleton. */
+(() => {
+  const w = window.parent, d = w.document;
+  if (w.__pitwallEditorial) { w.__pitwallEditorial.refresh(); return; }
+  const preference = w.matchMedia('(prefers-reduced-motion: reduce)');
+  const reduced = () => {
+    try { return preference.matches || w.sessionStorage.getItem('pitwall-motion-disabled') === 'true'; }
+    catch (_) { return preference.matches; }
+  };
+  const deckMemory = new Map();
+  function deckState(deck) {
+    const key = deck.dataset.deckKey, count = deck.querySelectorAll('.pw-sealed-card').length;
+    if (!deckMemory.has(key)) {
+      let saved;
+      try { saved = JSON.parse(w.sessionStorage.getItem('pitwall-deck-' + key)); } catch (_) {}
+      deckMemory.set(key, Array.isArray(saved) && saved.length === count && saved.every(v => typeof v === 'boolean') ? saved : Array(count).fill(false));
+    }
+    return deckMemory.get(key);
+  }
+  function refreshDeck(deck, focusIndex = null, animate = false) {
+    const states = deckState(deck), cards = [...deck.querySelectorAll('.pw-sealed-card')];
+    for (const [index, card] of cards.entries()) {
+      const shown = states[index], slot = card.querySelector('.pw-revealed-face');
+      // Streamlit may reuse the card node while replacing Markdown descendants.
+      // Restore a revealed face after that replacement as well as on a flip.
+      if (card.dataset.shown !== String(shown) || (shown && !slot.querySelector('[data-tarot-hide]'))) {
+        if (shown) {
+          const face = d.createElement('template');
+          // Only the escaped server-rendered face is accepted; never a URL or client input.
+          face.innerHTML = card.querySelector('template').dataset.pwFace;
+          slot.replaceChildren(face.content.cloneNode(true));
+        }
+        else slot.replaceChildren();
+        card.querySelector('[data-tarot-reveal]').hidden = shown;
+        slot.hidden = !shown;
+        card.dataset.shown = String(shown);
+        if (animate && index === focusIndex && !reduced())
+          (shown ? slot : card.querySelector('[data-tarot-reveal]')).animate(
+            [{transform:'rotateY(-90deg)'},{transform:'rotateY(0)'}], {duration:240,easing:'ease-out'});
+      }
+    }
+    const count = states.filter(Boolean).length, counter = deck.querySelector('.pw-reveal-count');
+    const label = `${count} / ${states.length} ${counter.dataset.label}`;
+    if (counter.textContent !== label) counter.textContent = label;
+    for (const details of d.querySelectorAll('.st-key-forecast-details,.st-key-forecast-audit'))
+      details.dataset.pwUnlocked = String(states.length > 0 && count === states.length);
+    if (focusIndex !== null) cards[focusIndex]?.querySelector(states[focusIndex] ? '[data-tarot-hide]' : '[data-tarot-reveal]')?.focus({preventScroll:true});
+  }
+  function refresh() {
+    for (const button of d.querySelectorAll('.st-key-pw-sidebar-menu button[kind]')) {
+      if (button.getAttribute('kind') === 'primary') button.setAttribute('aria-current','page');
+      else button.removeAttribute('aria-current');
+    }
+    for (const deck of d.querySelectorAll('[data-deck-key]')) refreshDeck(deck);
+    const explorer = d.querySelector('.st-key-pw-sidebar-menu details');
+    if (explorer &&
+        d.querySelectorAll('.pw-nav-fallback').length === 15 &&
+        d.querySelector('.stApp')?.dataset.testScriptState === 'notRunning') {
+      explorer.dataset.pwReady = 'true';
+      if (!w.matchMedia('(max-width:800px)').matches && !explorer.open)
+        explorer.querySelector('summary')?.click();
+    }
+  }
+  d.addEventListener('click', event => {
+    const tarot = event.target.closest('[data-tarot-reveal],[data-tarot-hide]');
+    if (tarot) {
+      const deck = tarot.closest('[data-deck-key]'), card = tarot.closest('.pw-sealed-card');
+      const states = deckState(deck), index = Number(card.dataset.cardIndex);
+      states[index] = !states[index];
+      try { w.sessionStorage.setItem('pitwall-deck-' + deck.dataset.deckKey, JSON.stringify(states)); } catch (_) {}
+      refreshDeck(deck, index, true);
+      return;
+    }
+    if (event.target.closest('.st-key-pw-sidebar-menu button') && w.matchMedia('(max-width:800px)').matches) {
+      const explorer = event.target.closest('details');
+      if (explorer?.open) w.setTimeout(() => {
+        if (explorer.isConnected && explorer.open) explorer.querySelector('summary')?.click();
+      }, 0);
+    }
+  });
+  d.addEventListener('toggle', event => {
+    if (event.target.matches('.st-key-pw-sidebar-menu details') &&
+        !event.target.open && !w.matchMedia('(max-width:800px)').matches) refresh();
+  }, true);
+  new w.MutationObserver(records => {
+    if (records.some(r => [...r.addedNodes,...r.removedNodes].some(n => n.nodeType === 1))) refresh();
+  }).observe(d.body,{childList:true,subtree:true});
+  const app = d.querySelector('.stApp');
+  if (app) new w.MutationObserver(refresh).observe(app,{attributes:true,attributeFilter:['data-test-script-state']});
+  w.addEventListener('resize',refresh);
+  w.__pitwallEditorial = {refresh};
+  refresh();
+})();
+
 /* Local adaptation of motion principles; no upstream engine or external calls. */
 (() => {
   const w = window.parent, d = w.document;
@@ -15,6 +109,10 @@
     w.requestAnimationFrame(() => {
       layoutPending = false;
       const main = d.querySelector('.stMain'), dock = d.querySelector('.st-key-journey-navigation');
+      if (d.querySelector('.st-key-pw-shell')) {
+        d.documentElement.style.removeProperty('--pw-content-max-height');
+        return;
+      }
       if (!main || !dock) return;
       for (const [next,old] of [[dock,observedDock],[main,observedMain]]) {
         if (next !== old) { if (old) resizeObserver.unobserve(old); resizeObserver.observe(next); }

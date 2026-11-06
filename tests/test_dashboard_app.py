@@ -44,9 +44,9 @@ def texto_renderizado(at):
     for tipo in ('markdown', 'text', 'caption', 'title', 'header', 'subheader', 'info', 'warning', 'error'):
         for elemento in at.get(tipo):
             valor = str(getattr(elemento, 'value', elemento))
-            if not valor.startswith('<style>'):
+            if not valor.startswith(('<style>', '<h2 class="pw-explorer-title"', '<h3 class="pw-nav-group"', '<a class="pw-nav-fallback"')):
                 partes.append(re.sub(r'data:[^;]+;base64,[A-Za-z0-9+/=]+', 'ativo-local', valor))
-    partes.extend(button.label for button in at.button)
+    partes.extend(button.label for button in at.button if not (button.key or '').startswith('pw_nav_'))
     return '\n'.join(partes)
 
 
@@ -133,9 +133,9 @@ class TestDashboardApp(unittest.TestCase):
     def test_corridas_compartilham_cabecalho_editorial_e_contexto_nas_tres_temporadas(self):
         self.executar()
         casos = (
-            (2024, '2024:1', 'Bahrain Grand Prix', 'Sakhir, Bahrain · 2024-03-02'),
-            (2025, '2025:1', 'Australian Grand Prix', 'Melbourne, Australia · 2025-03-16'),
-            (2026, '2026:18', 'United States Grand Prix', 'Austin, USA · 2026-10-25'),
+            (2024, '2024:1', 'Bahrain Grand Prix', 'Sakhir · 2024-03-02'),
+            (2025, '2025:1', 'Australian Grand Prix', 'Melbourne · 2025-03-16'),
+            (2026, '2026:18', 'United States Grand Prix', 'Austin · 2026-10-25'),
         )
         for temporada, gp, corrida, meta in casos:
             self.escolher('temporada', temporada)
@@ -143,7 +143,7 @@ class TestDashboardApp(unittest.TestCase):
             texto = texto_renderizado(self.at)
             self.assertIn(corrida, texto)
             self.assertIn(meta, texto)
-            for rotulo in ('Foto do circuito', 'Mapa do circuito', 'Sobre o circuito', 'fan-hero'):
+            for rotulo in ('Foto do circuito', 'Mapa do circuito', 'Sobre o circuito', 'pw-postcard'):
                 self.assertIn(rotulo, texto)
 
     def test_future_unissued_forecast_is_not_labelled_retrospective(self):
@@ -201,7 +201,7 @@ class TestDashboardApp(unittest.TestCase):
         self.executar()
         self.escolher('gp', '2025:9')
         texto = texto_renderizado(self.at)
-        self.assertIn('Temporada 2025', texto)
+        self.assertEqual(por_chave(self.at.selectbox, 'temporada').value, 2025)
         self.assertIn('Cobertura:', texto)
         self.assertIn('participantes preparados', texto)
         self.assertIn('elegíveis', texto)
@@ -276,19 +276,21 @@ class TestDashboardApp(unittest.TestCase):
     def test_historico_sem_acervo_nao_reutiliza_podio_da_corrida_atual(self):
         self.executar()
         self.escolher('temporada', 2026)
-        historico=next(tab for tab in self.at.tabs if tab.label=='Nesta pista')
-        texto=texto_renderizado(historico)
+        por_chave(self.at.button, 'pw_nav_history').click()
+        self.executar()
+        texto=texto_renderizado(self.at)
         self.assertIn('Não há corrida anterior nesta pista', texto)
         self.assertNotIn('Integrantes do pódio observado', texto)
-        tempos=next(tab for tab in self.at.tabs if tab.label=='Sessões e voltas')
-        self.assertIn('Integrantes do pódio observado', texto_renderizado(tempos))
+        por_chave(self.at.button, 'pw_nav_sessions').click()
+        self.executar()
+        self.assertIn('Integrantes do pódio observado', texto_renderizado(self.at))
 
     def test_2026_com_resultado_observado_nao_afirma_que_o_podio_esta_vazio(self):
         self.executar()
         self.escolher('temporada', 2026)
         texto = texto_renderizado(self.at)
         self.assertIn('Integrantes do pódio observado (sem ordem):', texto)
-        self.assertNotIn('Previsão registrada antes da corrida.', texto)
+        self.assertIn('Previsão registrada antes da corrida.', texto)
         self.assertNotIn('O campo de pódio por GP fica vazio nesta cobertura', texto)
 
     def test_2026_separa_campeonato_local_das_probabilidades_do_gp(self):
@@ -327,11 +329,13 @@ class TestDashboardApp(unittest.TestCase):
         self.escolher('gp', '2026:18')
         texto = texto_renderizado(self.at)
         self.assertIn('United States Grand Prix', texto)
-        self.assertIn('Austin, USA · 2026-10-25', texto)
+        self.assertIn('2026-10-25', texto)
         self.assertIn('Previsão registrada', texto)
         self.assertIn('Antes da corrida', texto)
         self.assertIn('Andrea Kimi Antonelli', texto)
-        self.assertIn('83,5%', texto)
+        self.assertTrue(any(button.key == 'open_tarot' for button in self.at.button))
+        self.assertNotIn('pw-sealed-deck', texto)
+        self.assertFalse(any('class="fan-probability-row' in e.value for e in self.at.markdown if not e.value.startswith('<style>')))
         self.assertIn('Previsão registrada antes da corrida.', texto)
         self.assertNotIn('Estudo retrospectivo com dados históricos.', texto)
         self.assertNotIn('Max Verstappen · Red Bull · 76.0%', texto)
@@ -369,12 +373,14 @@ class TestDashboardApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         self.assertEqual(list(por_chave(self.at.get('selectbox'), 'temporada').options), ['2024', '2025', '2026'])
         self.assertIn('United States Grand Prix', texto)
-        self.assertIn('Austin, USA · 2026-10-25', texto)
+        self.assertIn('Austin · 2026-10-25', texto)
         self.assertIn('Ver previsões deste GP', texto)
         self.assertIn('Mapa do circuito', texto)
-        self.assertIn('Mapa:', texto)
         self.assertIn('CC BY-SA 4.0', texto)
-        self.assertIn('Programação do fim de semana', texto)
+        self.assertNotIn('Programação do fim de semana', texto)
+        por_chave(self.at.button, 'pw_nav_sessions').click()
+        self.executar()
+        self.assertIn('Programação do fim de semana', texto_renderizado(self.at))
         self.assertNotIn('Campeonato de pilotos', texto)
         self.assertNotIn('Campeonato de construtores', texto)
         self.assertNotIn('Estado dos dados', texto)
@@ -388,14 +394,12 @@ class TestDashboardApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         for rotulo in ('Foto do circuito', 'Sobre o circuito', 'Clima'):
             self.assertIn(rotulo, texto)
-        self.assertEqual(
-            [tab.label for tab in self.at.tabs],
-            ['Resumo', 'Sessões e voltas', 'Pneus e paradas', 'Clima', 'Nesta pista', 'Equipes'],
-        )
-        self.assertIn('Clima não disponível', texto)
+        self.assertFalse(self.at.tabs)
+        for key in ('summary', 'sessions', 'strategy', 'weather', 'history', 'teams'):
+            self.assertTrue(any(button.key == 'pw_nav_' + key for button in self.at.button))
         self.assertIn('Resultado observado', texto)
         self.assertNotIn('Andrea Kimi Antonelli · Mercedes · 83.5%', texto)
-        self.assertNotIn('Previsão registrada antes da corrida.', texto)
+        self.assertIn('Previsão registrada antes da corrida.', texto)
         self.assertNotIn('Estudo retrospectivo com dados históricos.', texto)
 
         css = app.estilo_dashboard()
@@ -445,7 +449,10 @@ class TestDashboardApp(unittest.TestCase):
         self.escolher('temporada', 2026)
         self.escolher('gp', '2026:18')
         texto = texto_renderizado(self.at)
-        self.assertIn('Calendário 2026', texto)
+        self.assertNotIn('Calendário 2026', texto)
+        por_chave(self.at.button, 'pw_nav_history').click()
+        self.executar()
+        self.assertIn('Calendário 2026', texto_renderizado(self.at))
         calendario = app.tabela_calendario_2026(app.carregar(2026), 18)
         austin = calendario[calendario['Rodada'] == 18].iloc[0]
         self.assertEqual(austin['GP'], 'United States Grand Prix')

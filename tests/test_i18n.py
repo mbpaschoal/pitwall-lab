@@ -174,17 +174,12 @@ class TestEnglishApplication(unittest.TestCase):
         at.query_params.update({"lang": "en", "temporada": "2026", "gp": "18"})
         at.run(timeout=30)
         self.assertFalse(at.exception)
-        self.assertEqual(
-            [t.label for t in at.tabs],
-            [
-                "Overview",
-                "Sessions and laps",
-                "Tyres and stops",
-                "Weather",
-                "At this circuit",
-                "Teams",
-            ],
-        )
+        self.assertFalse(at.tabs)
+        for label in ('Sessions and laps', 'Tyres and stops', 'Circuit history'):
+            self.assertTrue(any(button.label == label for button in at.button))
+        next(button for button in at.button if button.key == 'pw_nav_history').click()
+        at.run(timeout=30)
+        self.assertFalse(at.exception)
         self.assertEqual(
             next(s for s in at.selectbox if s.key == "gp").value, "2026:18"
         )
@@ -205,7 +200,7 @@ class TestEnglishApplication(unittest.TestCase):
         self.assertEqual(
             next(s for s in at.selectbox if s.key == "gp").value, "2026:18"
         )
-        self.assertIn("Nesta pista", [t.label for t in at.tabs])
+        self.assertTrue(any(b.label == "Histórico desta pista" for b in at.button))
 
     def test_native_language_button_retains_methodology_and_session_filter(self):
         import json
@@ -254,7 +249,7 @@ class TestEnglishApplication(unittest.TestCase):
         at.run(timeout=30)
         self.assertFalse(at.exception)
         self.assertTrue(
-            any("Before the race" in s.value for s in at.markdown)
+            any("Before the race" in s.value for s in at.subheader)
         )
         for chart in at.get("plotly_chart"):
             self.assertNotIn("Probabilidade individual de pódio", str(chart.proto.spec))

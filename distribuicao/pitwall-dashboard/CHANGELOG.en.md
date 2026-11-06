@@ -1,5 +1,13 @@
 # Pitwall Lab evolution
 
+## 0.13.0 — 2026-11-06
+
+UI candidate: the sidebar gathers fifteen destinations into five groups, with direct access to predictions, sessions and laps, tyres and stops, profiles, standings, sources and terms. On mobile, the same menu opens through “Explore Pitwall”. One GP selector replaces the redundant event ribbon, and the bottom menu is removed. Race chapters render on demand while preserving event, season and language.
+
+Original editorial covers use local colours and abstract forms while keeping each city and circuit identifiable. Photographs, maps, credits and licences remain accessible. Predictions initially expose no favourites or percentages: “See the cards for this GP” opens their backs, and each click reveals one driver, recorded podium probability and explanation. Reveal state is scoped to the event and emission in this browser session; changing language keeps it. Details become available after revealing every card.
+
+Internal navigation stays in the same tab. Native menu controls have keyboard link alternatives. Presentation tests follow the approved structure. No dependencies, random draws or recalculation are introduced. The v1 model, data, snapshots, emissions and probabilities remain preserved. Local acceptance, package, CI and public deployment retain separate evidence.
+
 ## 0.12.9 — 2026-11-06
 
 Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 1/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
