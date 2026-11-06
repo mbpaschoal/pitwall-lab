@@ -8,14 +8,16 @@
     catch (_) { return preference.matches; }
   };
   const deckMemory = new Map();
-  function deckState(deck) {
-    const key = deck.dataset.deckKey, count = deck.querySelectorAll('.pw-sealed-card').length;
+  function savedDeckState(key, count) {
     if (!deckMemory.has(key)) {
       let saved;
       try { saved = JSON.parse(w.sessionStorage.getItem('pitwall-deck-' + key)); } catch (_) {}
       deckMemory.set(key, Array.isArray(saved) && saved.length === count && saved.every(v => typeof v === 'boolean') ? saved : Array(count).fill(false));
     }
     return deckMemory.get(key);
+  }
+  function deckState(deck) {
+    return savedDeckState(deck.dataset.deckKey, deck.querySelectorAll('.pw-sealed-card').length);
   }
   function refreshDeck(deck, focusIndex = null, animate = false) {
     const states = deckState(deck), cards = [...deck.querySelectorAll('.pw-sealed-card')];
@@ -39,9 +41,7 @@
             [{transform:'rotateY(-90deg)'},{transform:'rotateY(0)'}], {duration:240,easing:'ease-out'});
       }
     }
-    const count = states.filter(Boolean).length, counter = deck.querySelector('.pw-reveal-count');
-    const label = `${count} / ${states.length} ${counter.dataset.label}`;
-    if (counter.textContent !== label) counter.textContent = label;
+    const count = states.filter(Boolean).length;
     for (const details of d.querySelectorAll('.st-key-forecast-details,.st-key-forecast-audit'))
       details.dataset.pwUnlocked = String(states.length > 0 && count === states.length);
     if (focusIndex !== null) cards[focusIndex]?.querySelector(states[focusIndex] ? '[data-tarot-hide]' : '[data-tarot-reveal]')?.focus({preventScroll:true});
@@ -88,7 +88,29 @@
   const app = d.querySelector('.stApp');
   if (app) new w.MutationObserver(refresh).observe(app,{attributes:true,attributeFilter:['data-test-script-state']});
   w.addEventListener('resize',refresh);
-  w.__pitwallEditorial = {refresh};
+  w.__pitwallEditorial = {refresh, readDeckState:savedDeckState};
+  refresh();
+})();
+
+/* Install dialog state beside an editorial bridge already loaded in an older tab. */
+(() => {
+  const w = window.parent, d = w.document;
+  if (w.__pitwallTarotDialog) { w.__pitwallTarotDialog.refresh(); return; }
+  function refresh() {
+    for (const context of d.querySelectorAll('[data-pw-deck-context]')) {
+      const key = context.dataset.pwDeckContext, count = Number(context.dataset.deckSize);
+      let states;
+      if (w.__pitwallEditorial?.readDeckState) states = w.__pitwallEditorial.readDeckState(key, count);
+      else try { states = JSON.parse(w.sessionStorage.getItem('pitwall-deck-' + key)); } catch (_) {}
+      const unlocked = count > 0 && Array.isArray(states) && states.length === count && states.every(value => value === true);
+      for (const details of d.querySelectorAll('.st-key-forecast-details,.st-key-forecast-audit'))
+        details.dataset.pwUnlocked = String(unlocked);
+    }
+  }
+  new w.MutationObserver(records => {
+    if (records.some(r => [...r.addedNodes,...r.removedNodes].some(n => n.nodeType === 1))) refresh();
+  }).observe(d.body,{childList:true,subtree:true});
+  w.__pitwallTarotDialog = {refresh};
   refresh();
 })();
 

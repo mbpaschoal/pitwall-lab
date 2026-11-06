@@ -14,11 +14,11 @@ Resultado da corrida mantém pódio observado em ordem visual 2–1–3 e contex
 
 ## Abrir as cartas
 
-Previsões mostra a capa, a condição temporal da leitura e **Ver as cartas deste GP**. Favoritos, chances e comparação posterior ficam fora da leitura inicial, inclusive da árvore de acessibilidade. O botão abre versos iguais, sem nomes. Cada clique revela uma carta com arte, piloto, equipe daquele GP, probabilidade individual registrada e explicação. É possível virar uma carta para baixo. Não há botão de revelar todas.
+Previsões mostra a capa, a condição temporal da leitura e **Ver as cartas deste GP**. Favoritos, chances e comparação posterior ficam fora da leitura inicial, inclusive da árvore de acessibilidade. O botão abre um pop-up com versos iguais, sem nomes, números ou letras de identificação. Cada clique revela uma carta com arte, piloto, equipe daquele GP, probabilidade individual registrada e explicação. É possível virar uma carta para baixo. Não há botão de revelar todas.
 
-A máscara de revelação fica na sessão do navegador, identificada por temporada, GP, emissão e probabilidades. Navegar para outra seção e voltar conserva as cartas; trocar o idioma também. Outro GP ou outra emissão tem estado independente. `cartas=1` abre os versos, sem revelar faces novas. Após revelar todas as cartas disponíveis, a comparação, a distribuição completa, a cobertura e os detalhes ficam acessíveis. Sem emissão não há cartas inventadas. Estudos retrospectivos continuam identificados como retrospectivos.
+A máscara de revelação fica na sessão do navegador, identificada por temporada, GP, emissão e probabilidades. Fechar e reabrir o pop-up conserva a revelação. Navegar para outra seção e voltar também a conserva, assim como trocar o idioma. O pop-up pode ser fechado pelo X, por Escape ou por “Voltar às previsões”. Outro GP ou outra emissão tem estado independente. `cartas=1` abre os versos, sem revelar faces novas. Após revelar todas as cartas disponíveis, a comparação, a distribuição completa, a cobertura e os detalhes ficam acessíveis. Sem emissão não há cartas inventadas. Estudos retrospectivos continuam identificados como retrospectivos.
 
-As cartas ilustram os favoritos existentes, inclusive empates; não há sorteio, inferência ou P1/P2/P3. A equipe corresponde ao registro daquele GP. Os originais e o catálogo de arte são preservados. Uma imagem indisponível tem aviso, sem emprestar outro piloto. As probabilidades individuais não indicam ordem de chegada. No celular, as cartas ficam em coluna. Teclado, foco visível, contador de revelação e preferência de movimento reduzido são respeitados.
+As cartas ilustram os favoritos existentes, inclusive empates; não há sorteio, inferência ou P1/P2/P3. A equipe corresponde ao registro daquele GP. Os originais e o catálogo de arte são preservados. Uma imagem indisponível tem aviso, sem emprestar outro piloto. As probabilidades individuais não indicam ordem de chegada. No celular, as cartas ficam em coluna. Teclado, foco visível e preferência de movimento reduzido são respeitados.
 
 A [galeria HTML das cartas](galeria-cartas.html) permite conferir as variantes fora do aplicativo. Créditos: [arte das cartas](../dashboard_assets/tarot/ATTRIBUTION.md). Fotografias e retratos mantêm seus originais e [créditos](../dashboard_assets/fan/ATTRIBUTION.md).
 
@@ -28,7 +28,7 @@ Os testes percorrem os quinze destinos, PT/EN e larguras de computador e celular
 
 ## Histórico da composição
 
-As notas abaixo descrevem entregas anteriores. Na 0.13.0, o menu lateral e as cartas fechadas substituem o rodapé, a faixa de etapas e o diálogo de cartas então usados.
+As notas abaixo descrevem entregas anteriores. Na 0.13.0, o menu lateral e as cartas fechadas substituíram o rodapé, a faixa de etapas e o diálogo de cartas então usados. A 0.13.2 restaura o diálogo, mantendo a revelação individual.
 
 ## Continuidade e acesso — 0.8.4
 

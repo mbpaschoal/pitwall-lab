@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.13.2 — 2026-11-06
+
+Restaura o pop-up das cartas em Previsões. O botão abre as três cartas fechadas; cada clique revela uma delas, sem letras, números ou indicação de ordem. Fechar por X, Escape ou “Voltar às previsões” retorna à página. A revelação permanece ao reabrir, voltar à seção ou trocar de idioma. Detalhes continuam ocultos até revelar todas as cartas. Modelo v1, imagens, dados, emissões e probabilidades permanecem intactos.
+
 ## 0.13.1 — 2026-11-06
 
 Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 1/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.

@@ -65,37 +65,51 @@ def sealed_cards_html(rows, root, year, round_, emission=None, country=None):
     cards = []
     phrase = translate('Probabilidade individual de pódio neste GP; não indica uma posição de chegada.')
     for index, (row, face) in enumerate(zip(eligible, faces)):
-        label = chr(65 + index)
         probability = '{:.1%}'.format(row['probability'])
         if language() == 'pt':
             probability = probability.replace('.', ',')
         payload = '{}<p class="pw-tarot-prob">{} {}</p><p class="pw-tarot-phrase">{}</p><button type="button" data-tarot-hide>{}</button>'.format(face, probability, escape(translate('de chance de pódio')), escape(phrase), escape(translate('Virar para baixo')))
-        cards.append('<article class="pw-sealed-card" data-card-index="{i}"><button type="button" class="pw-card-back" data-tarot-reveal aria-label="{reveal}"><span>{card} {label}</span><b aria-hidden="true">PL</b><span>{tap}</span></button><template class="pw-tarot-face" data-pw-face="{payload}"></template><div class="pw-revealed-face" hidden></div></article>'.format(
-            i=index, label=label, reveal=escape(translate('Revelar carta') + ' ' + label, quote=True),
-            card=escape(translate('Carta')), tap=escape(translate('Toque para revelar')), payload=escape(payload, quote=True),
-            prob=probability, chance=escape(translate('de chance de pódio')), phrase=escape(phrase),
-            hide=escape(translate('Virar para baixo'))))
+        cards.append('<article class="pw-sealed-card" data-card-index="{i}"><button type="button" class="pw-card-back" data-tarot-reveal aria-label="{reveal}"><b aria-hidden="true">PL</b><span>{tap}</span></button><template class="pw-tarot-face" data-pw-face="{payload}"></template><div class="pw-revealed-face" hidden></div></article>'.format(
+            i=index, reveal=escape(translate('Revelar carta'), quote=True),
+            tap=escape(translate('Toque para revelar')), payload=escape(payload, quote=True)))
     key = deck_key(rows, year, round_, emission)
     back, ink = {'Brazil': ('#154a3f', '#f4cf58'), 'Japan': ('#243e6a', '#f4dfb3'),
                  'Mexico': ('#075744', '#f7d576')}.get(country, ('#192e39', '#dbc893'))
-    return '<section class="pw-tarot-reading" data-deck-key="{}" style="--deck-back:{};--deck-ink:{}"><p class="pw-reveal-count" aria-live="polite" data-total="{}" data-label="{}">0 / {}</p><div class="pw-sealed-deck">{}</div></section>'.format(
-        key, back, ink, len(cards), escape(translate('cartas reveladas'), quote=True), len(cards), ''.join(cards))
+    # An inert slot keeps a previously loaded 0.13.0 bridge compatible. No counter
+    # or positional label is displayed or announced to the user.
+    return '<section class="pw-tarot-reading" data-deck-key="{}" style="--deck-back:{};--deck-ink:{}"><span hidden aria-hidden="true" class="pw-reveal-count" data-label=""></span><div class="pw-sealed-deck">{}</div></section>'.format(
+        key, back, ink, ''.join(cards))
 
 
 def render(st, root, rows, year, round_, registered, emission=None, country=None):
     if not rows:
         return
     key = deck_key(rows, year, round_, emission)
-    opened = st.session_state.setdefault('_tarot_opened', {})
+    # The page carries only the identity needed to restore unlocked details.
+    # Artwork, names and probabilities are rendered inside the dialog alone.
+    count = sum(not isinstance(row.get('probability'), bool)
+                and isinstance(row.get('probability'), (int, float))
+                and math.isfinite(row['probability']) and 0 <= row['probability'] <= 1
+                for row in rows)
+    st.markdown('<span hidden data-pw-deck-context="{}" data-deck-size="{}"></span>'.format(key, count), unsafe_allow_html=True)
 
     def open_cards():
-        opened[key] = True
         st.query_params['cartas'] = '1'
 
-    if not opened.get(key) and st.query_params.get('cartas') != '1':
-        st.button('Ver as cartas deste GP', key='open_tarot', on_click=open_cards, type='primary')
+    def dismiss():
+        st.query_params.pop('cartas', None)
+
+    st.button('Ver as cartas deste GP', key='open_tarot', on_click=open_cards, type='primary')
+    if st.query_params.get('cartas') != '1':
         return
-    opened[key] = True
-    st.caption('Previsão registrada antes da corrida.' if registered else 'Estudo retrospectivo; não é previsão emitida antes da corrida.')
-    st.markdown(sealed_cards_html(rows, root, year, round_, emission, country), unsafe_allow_html=True)
-    st.caption('Arte gerada por IA. As cartas não indicam a ordem de chegada.')
+
+    @st.dialog(translate('As cartas do GP'), width='large', on_dismiss=dismiss)
+    def show():
+        st.caption('Previsão registrada antes da corrida.' if registered else 'Estudo retrospectivo; não é previsão emitida antes da corrida.')
+        st.markdown(sealed_cards_html(rows, root, year, round_, emission, country), unsafe_allow_html=True)
+        st.caption('Arte gerada por IA. As cartas não indicam a ordem de chegada.')
+        if st.button('Voltar às previsões', key='close_tarot'):
+            dismiss()
+            st.rerun()
+
+    show()

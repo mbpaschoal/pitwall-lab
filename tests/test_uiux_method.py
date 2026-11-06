@@ -65,6 +65,7 @@ class RecordingStreamlit:
         return False
 
     def dialog(self, *args, **kwargs):
+        self.events.append(("dialog", dict(title=args[0], **kwargs)))
         return lambda function: function
 
     @contextmanager
@@ -286,20 +287,37 @@ class ResultsMethodUXTests(unittest.TestCase):
         self.assertTrue(any("Protocolo histórico (etapa 3)" in event[1]
                             for event in recorder.events if event[0] == "markdown"))
 
-    def test_inline_tarot_preserves_scope_and_has_no_dialog_or_reveal_all(self):
+    def test_tarot_opens_only_in_dialog_without_order_labels_or_reveal_all(self):
         rows = [dict(driver_id="norris", name="Lando Norris", team="McLaren", probability=.682)]
-        for lang, label in [("pt", "Revelar carta A"), ("en", "Reveal card A")]:
+        original = copy.deepcopy(rows)
+        for lang, label, title in [("pt", "Revelar carta", "As cartas do GP"),
+                                   ("en", "Reveal card", "The GP cards")]:
             with self.subTest(lang=lang):
                 set_language(lang)
-                recorder = RecordingStreamlit({"cartas":"1"})
+                query = dict(tela="Previsões", temporada="2026", gp="18", lang=lang)
+                closed = RecordingStreamlit(query)
+                tarot.render(closed, ROOT, rows, 2026, 18, True, emission="stored-a")
+                closed_markup = ''.join(content for event, content in closed.events if event == "markdown")
+                self.assertNotIn('pw-sealed-deck', closed_markup)
+                self.assertNotIn('Lando Norris', closed_markup)
+                self.assertNotIn('68,2%', closed_markup)
+                self.assertFalse(any(event == "dialog" for event, _ in closed.events))
+                recorder = RecordingStreamlit(dict(query, cartas="1"))
                 tarot.render(recorder, ROOT, rows, 2026, 18, True, emission="stored-a")
-                markup = next(content for event, content in recorder.events if event == "markdown")
-                self.assertIn(label, markup)
+                dialog = next(content for event, content in recorder.events if event == "dialog")
+                self.assertEqual(dialog['title'], title)
+                self.assertEqual(dialog['width'], 'large')
+                markup = next(content for event, content in recorder.events
+                              if event == "markdown" and 'pw-sealed-deck' in content)
+                self.assertIn('aria-label="{}"'.format(label), markup)
+                self.assertNotIn(label + ' A', markup)
+                self.assertNotIn(label + ' 1', markup)
                 self.assertIn('<template', markup)
                 self.assertNotIn('reveal-all', markup)
-                self.assertNotIn('tarot-back', markup)
-                self.assertEqual(recorder.query_params, {"cartas":"1"})
-                self.assertEqual(rows[0]['probability'], .682)
+                self.assertEqual(recorder.query_params, dict(query, cartas="1"))
+                dialog['on_dismiss']()
+                self.assertEqual(recorder.query_params, query)
+                self.assertEqual(rows, original)
 
 
 if __name__ == "__main__":
