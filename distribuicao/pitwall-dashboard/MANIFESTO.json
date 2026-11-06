@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "1fb7a3499c42c7925a5ba2d9926561a02bd654e183f10a73903c77b0f90ca410",
+  "apresentacao_build_sha256": "47c5b1f32dbf819f42a42424fdfd7c86d6ef6ecdc734c4ca80346542591500ab",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "3db9ab880eafcf6d9d60aae6893ec0711924c0d19bb1ad2b0c26d3f1cf7eae3a",
-      "sha256_origem": "55d902fe6af695a28c26e7e0659fb0d09900e9998d96904f84c70836b101d543"
+      "sha256_destino": "a25e278cec085a32e749abecee9d44ca4e5d268ed47116c1a249a240725be96d",
+      "sha256_origem": "a1c528c7150fa4877d5f1c0fa31e1f15df8fbf529fb79064e3bb502807673bf9"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "46577ab93a500d2174fff58fad31c9d5654e422b523b1c3b3d8181486d7c2797",
-      "sha256_origem": "6ab14733fbed9038bf06bb66c55d28a90243a7bd65cbe0da6e70a3085c210349"
+      "sha256_destino": "8036975289d77eec53987e269e8353fc0d11589e1e4d5449f99aa4fdfbfd0ee7",
+      "sha256_origem": "c625a784d80b4409390a69906869ef0b51aae8e839f7c05c1246eaf59901cd5a"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "d84c9e596c7d6a94e5f74579ef8d8912a807b0d28582474900ad35dfb3edfcf4",
-      "sha256_origem": "d84c9e596c7d6a94e5f74579ef8d8912a807b0d28582474900ad35dfb3edfcf4"
+      "sha256_destino": "82526503d51e2bc1964b180753ad02a7465227ae94c41752649d369faa203eab",
+      "sha256_origem": "82526503d51e2bc1964b180753ad02a7465227ae94c41752649d369faa203eab"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2725,8 +2725,8 @@
       "caminho": "frontend_assets/operacao_fim_semana.json",
       "fonte": "frontend_assets/operacao_fim_semana.json",
       "modo": "copia",
-      "sha256_destino": "0a096e63aeef7d0861d191de259c8a0e0f65c6351e2a10d1c8d11fc2f3ff7faa",
-      "sha256_origem": "0a096e63aeef7d0861d191de259c8a0e0f65c6351e2a10d1c8d11fc2f3ff7faa"
+      "sha256_destino": "a95aedf9c2cfe0181aff3183ddc189d914ebe81ba397fc8561917dea1f1e9316",
+      "sha256_origem": "a95aedf9c2cfe0181aff3183ddc189d914ebe81ba397fc8561917dea1f1e9316"
     },
     {
       "caminho": "frontend_assets/paineis_editoriais.json",
@@ -3532,5 +3532,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.13.0"
+  "versao_produto": "0.13.1"
 }

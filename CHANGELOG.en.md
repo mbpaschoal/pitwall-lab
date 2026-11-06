@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.13.1 — 2026-11-06
+
+Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 1/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.13.0 — 2026-11-06
 
 UI candidate: the sidebar gathers fifteen destinations into five groups, with direct access to predictions, sessions and laps, tyres and stops, profiles, standings, sources and terms. On mobile, the same menu opens through “Explore Pitwall”. One GP selector replaces the redundant event ribbon, and the bottom menu is removed. Race chapters render on demand while preserving event, season and language.
