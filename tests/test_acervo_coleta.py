@@ -9,6 +9,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 from urllib.error import HTTPError
+from urllib.parse import urlsplit
 
 from coletar_acervo_historico import CaptureClient, collect_online, map_sessions, weather_coverage, weather_window, WEATHER_FIELDS
 
@@ -209,11 +210,12 @@ class TestAcervoColeta(unittest.TestCase):
 
         def opener(request, timeout):
             url = request.full_url
+            host = urlsplit(url).hostname
             if '/sessions?' in url:
                 value = [race]
-            elif 'open-meteo.com' in url:
+            elif host in {'archive-api.open-meteo.com', 'api.open-meteo.com'}:
                 value = json.loads(json.dumps(weather))
-                if 'archive-api' in url:
+                if host == 'archive-api.open-meteo.com':
                     value['hourly']['rain'][0] = None
             else:
                 value = []
