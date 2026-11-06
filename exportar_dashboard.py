@@ -184,6 +184,8 @@ RUNTIME_WORKTREE = (
     'docs/en/relatorio_2025.md',
 
     'pitwall/dashboard/app.py',
+    'pitwall/dashboard/archive_cache.py',
+    'tests/test_archive_cache.py',
     'pitwall/publishing/documentation.py',
     'pitwall/data/dashboard.py',
     'pitwall/data/race_weekend.py',

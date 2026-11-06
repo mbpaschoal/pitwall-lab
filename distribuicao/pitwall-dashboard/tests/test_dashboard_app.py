@@ -46,6 +46,7 @@ def texto_renderizado(at):
             valor = str(getattr(elemento, 'value', elemento))
             if not valor.startswith('<style>'):
                 partes.append(re.sub(r'data:[^;]+;base64,[A-Za-z0-9+/=]+', 'ativo-local', valor))
+    partes.extend(button.label for button in at.button)
     return '\n'.join(partes)
 
 

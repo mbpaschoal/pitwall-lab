@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.12.8 — 2026-11-06
+
+Os atalhos entre telas de um GP usam a sessão atual: “Ver previsões deste GP”, classificação completa e campeonato não abrem outra aba nem recarregam o documento. Temporada, GP e idioma são preservados.
+
+A apresentação reutiliza a projeção validada do acervo enquanto o SHA-256 de cada uma das quatro entradas permanece igual. Toda chamada confere caminhos, tamanho e conteúdo; mudanças ou remoções invalidam a chave, symlinks são recusados e cada consumidor recebe uma cópia independente. O leitor canônico, suas validações e o ambiente científico congelado permanecem iguais. Tempos de execução local são medidos separadamente do aceite público.
+
 ## 0.12.7 — 2026-11-06
 
 Fixa explicitamente Click 8.5.0, dependência transitiva já instalada e validada no CI e no ambiente local da revisão. Os sete pins anteriores permanecem iguais. A alteração do manifesto solicita reconstrução do runtime no Streamlit Community Cloud: a publicação 0.12.6 mostrou a nova versão, mas o aceite público encontrou o bloco anterior do campeonato, sem a procedência validada no pacote local. Atualiza também o cabeçalho do manifesto para indicar o ambiente separado do dashboard. O ambiente científico congelado, os dados, as probabilidades e as emissões são preservados. A aceitação exige nova conferência do build, da procedência e dos downloads no domínio público, separada do CI e da release.

@@ -90,11 +90,11 @@ class TestInterfaceEditorial(unittest.TestCase):
 
     def test_atalho_real_preserva_gp_e_separa_paineis(self):
         texto = self.run_app({'temporada': '2025', 'gp': '1'})
-        urls = re.findall(r'href="([^"]+)"', texto)
-        from html import unescape
-        url = next(unescape(u) for u in urls if 'tela=Previs' in u)
-        query = {k: v[0] for k, v in parse_qs(urlsplit(url).query).items()}
-        texto = self.run_app(query)
+        shortcut = next(button for button in self.at.button if button.label == 'Ver previsões deste GP')
+        shortcut.click()
+        self.at.run(timeout=30)
+        self.assertFalse(self.at.exception)
+        texto = texto_renderizado(self.at)
         self.assertEqual(por_chave(self.at.radio, 'tela').value, 'Previsões')
         self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2025:1')
         self.assertIn('Antes da corrida', texto)
@@ -109,6 +109,27 @@ class TestInterfaceEditorial(unittest.TestCase):
         self.at.run(timeout=30)
         pesquisa = next(df.value for df in self.at.dataframe if list(df.value.columns) == ['Piloto', 'Equipe'])
         self.assertEqual(pesquisa.iloc[0]['Piloto'], 'Max Verstappen')
+
+    def test_atalho_nativo_preserva_gp_e_idioma_nas_tres_temporadas(self):
+        for lang, label in [('pt', 'Ver previsões deste GP'), ('en', 'View predictions for this GP')]:
+            for year, round_ in [(2024, 1), (2025, 9), (2026, 19)]:
+                with self.subTest(lang=lang, year=year, round=round_):
+                    self.run_app({'tela':'Corridas', 'temporada':str(year), 'gp':str(round_), 'lang':lang})
+                    next(button for button in self.at.button if button.label == label).click()
+                    self.at.run(timeout=30)
+                    self.assertFalse(self.at.exception)
+                    self.assertEqual(por_chave(self.at.radio, 'tela').value, 'Previsões')
+                    self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '{}:{}'.format(year, round_))
+                    self.assertEqual(self.at.query_params['lang'], lang)
+
+    def test_atalho_classificacao_seleciona_sessoes_na_mesma_navegacao(self):
+        self.run_app({'tela':'Corridas', 'temporada':'2025', 'gp':'1', 'lang':'pt'})
+        next(button for button in self.at.button if button.label == 'Ver classificação completa da corrida').click()
+        self.at.run(timeout=30)
+        self.assertFalse(self.at.exception)
+        self.assertEqual(por_chave(self.at.radio, 'tela').value, 'Corridas')
+        self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2025:1')
+        self.assertEqual(self.at.query_params['aba'], 'Tempos')
 
     def test_creditos_removem_html_externo_e_link_de_clima_tem_destino(self):
         texto = self.run_app({'temporada': '2025', 'gp': '1', 'aba': 'Clima'})

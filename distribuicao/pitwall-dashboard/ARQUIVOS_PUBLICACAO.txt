@@ -398,6 +398,7 @@ historico_circuito.py
 pitwall/__init__.py
 pitwall/dashboard/__init__.py
 pitwall/dashboard/app.py
+pitwall/dashboard/archive_cache.py
 pitwall/dashboard/archive_views.py
 pitwall/dashboard/components.py
 pitwall/dashboard/fan_views.py
@@ -467,6 +468,7 @@ static/pitwall-media/method-9776d0597fe6-1200.webp
 static/pitwall-media/method-9776d0597fe6-2400.webp
 static/pitwall-media/method-9776d0597fe6-3600.webp
 tests/test_acervo_publico.py
+tests/test_archive_cache.py
 tests/test_avaliacao_posterior_publico.py
 tests/test_complemento_idade_publico.py
 tests/test_dashboard_app.py
