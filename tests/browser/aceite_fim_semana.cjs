@@ -21,6 +21,7 @@ fs.mkdirSync(output,{recursive:true});
  }
  const launch={headless:true};if(process.env.PLAYWRIGHT_CHANNEL)launch.channel=process.env.PLAYWRIGHT_CHANNEL;
  const browser=await chromium.launch(launch),cases=[];
+ const save=()=>fs.writeFileSync(path.join(output,'acceptance.json'),JSON.stringify({status:cases.some(c=>c.status==='failed')?'failed':cases.length===4?'passed':'in_progress',cases},null,2)+'\n');
  try{for(const mobile of [false,true])for(const lang of ['pt','en']){
   const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1100},isMobile:mobile,hasTouch:mobile});
   const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -106,8 +107,8 @@ fs.mkdirSync(output,{recursive:true});
    check(await surface.locator('.tabela-editorial tbody tr').count()===expected,'Round-specific standings truncated or stale');
    check(errors.length===0,errors.join('; '));
    cases.push({lang,mobile,status:'passed',season:state.temporada,round:state.rodada,podium:ids,standings:expected});
-   fs.writeFileSync(path.join(output,'acceptance.json'),JSON.stringify({status:'passed',cases},null,2));console.log(key+' passed');
-  }catch(error){await page.screenshot({path:path.join(output,key+'-failure.png')});throw error;}
+   save();console.log(key+' passed');
+  }catch(error){cases.push({lang,mobile,status:'failed',error:error.message});save();await page.screenshot({path:path.join(output,key+'-failure.png')}).catch(()=>{});throw error;}
   finally{await context.close();}
- }}finally{await browser.close();}
+ }}finally{await browser.close();save();}
 })().catch(e=>{console.error(e);process.exit(1);});

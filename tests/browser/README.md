@@ -5,7 +5,7 @@ Os testes leem o dashboard e clicam como um usuário. Não coletam dados nem alt
 The checks read the dashboard and click through user flows. They do not collect racing data or change probabilities. Playwright and a running server are required. Use fresh browser contexts and an expected version when validating a deployment.
 
 ```sh
-PITWALL_EXPECTED_VERSION=0.8.16 node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 /tmp/context-evidence
+PITWALL_EXPECTED_VERSION="$(cat VERSION)" node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 /tmp/context-evidence
 ```
 
 `aceite_contexto.cjs` executa quatro fluxos em PT/EN e larguras 390/1440: marca/pódio, campeonato→perfil, busca curta com contexto da equipe, e filtro→idioma→chips→limpar. Deve ser o smoke de CI. Falhas de clique produzem captura e `interactions.json`; não há clique forçado.
@@ -58,3 +58,11 @@ Public receipt v2 records native/link/mixed controls. An alternative counts only
 `node tests/browser/aceite_editorial.cjs URL OUTPUT` cobre PT/EN em 390/1440 px, retratos na mesma linha, diferença conferida por contagem independente dos resultados-fonte, troca real de condição/métrica, mínimo de amostra, ausência de largadas em comum, idioma e redução manual/pelo sistema. `PLAYWRIGHT_BROWSER=webkit` seleciona o segundo motor. Respeita `PITWALL_SOURCE_ROOT`, `PLAYWRIGHT_MODULE` e `PLAYWRIGHT_CHANNEL`. Cada falha gera captura e recibo explícito.
 
 The runner checks PT/EN desktop/mobile portraits, independently counted metric differences, real condition/metric changes, minimum samples, no shared starts, language preservation and manual/system reduced motion. Failures produce screenshots and explicit receipts.
+
+## Roteiros históricos / Historical runners
+
+`aceite_dashboard.cjs` e `aceite_idiomas.cjs` conservam os seletores da interface anterior à navegação atual. São referências históricas e não compõem o CI ou o aceite de uma nova publicação. Use os roteiros atuais descritos acima; um resultado desses dois arquivos não comprova a entrega atual.
+
+`aceite_dashboard.cjs` and `aceite_idiomas.cjs` retain selectors from the earlier interface. They are historical references, excluded from CI and new-release acceptance. Use the current runners above; results from these two files do not prove delivery of the current product.
+
+Os recibos de fim de semana só indicam `passed` após os quatro casos PT/EN e desktop/mobile; uma execução parcial indica `in_progress` e conserva falhas. / Weekend receipts indicate `passed` only after all four PT/EN desktop/mobile cases; partial runs remain `in_progress` and retain failures.
