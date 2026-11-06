@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.12.9 — 2026-11-06
+
+Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 1/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.12.8 — 2026-11-06
 
 Os atalhos entre telas de um GP usam a sessão atual: “Ver previsões deste GP”, classificação completa e campeonato não abrem outra aba nem recarregam o documento. Temporada, GP e idioma são preservados.

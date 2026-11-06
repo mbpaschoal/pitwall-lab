@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.12.9 — 2026-11-06
+
+Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 1/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.12.8 — 2026-11-06
 
 GP shortcuts use the current session: predictions, full race classification and championship shortcuts neither open another tab nor reload the document. Season, GP and language are preserved.
