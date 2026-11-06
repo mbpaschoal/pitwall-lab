@@ -333,6 +333,7 @@ class TestExportacaoDashboard(unittest.TestCase):
         self.assertEqual(requisitos, [
             'streamlit==1.66.1',
             'click==8.5.0',
+            'packaging==26.3',
             'plotly==6.3.1',
             'pandas==2.2.3',
             'pyarrow==23.0.1',

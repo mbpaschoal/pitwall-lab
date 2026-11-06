@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.12.9 — 2026-11-06
+
+Solicita a reconstrução do runtime do Streamlit Cloud após o diagnóstico público confirmar versão 0.12.8 com o módulo antigo de navegação ainda carregado. Fixa explicitamente packaging 26.3, versão já instalada e validada no CI aceito e no ambiente local. Os oito pins anteriores permanecem iguais; o manifesto também documenta a recarga da apresentação. Código Python, dados, imagens, probabilidades e emissões permanecem byte-idênticos à 0.12.8. O aceite exige observar o novo botão e o build no domínio público.
+
 ## 0.12.8 — 2026-11-06
 
 Os atalhos entre telas de um GP usam a sessão atual: “Ver previsões deste GP”, classificação completa e campeonato não abrem outra aba nem recarregam o documento. Temporada, GP e idioma são preservados.

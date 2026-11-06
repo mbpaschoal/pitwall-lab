@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.12.9 — 2026-11-06
+
+Requests a Streamlit Cloud runtime rebuild after public diagnostics confirmed version 0.12.8 with the old navigation module still loaded. Explicitly pins packaging 26.3, the version already installed and validated in accepted CI and the local environment. The previous eight pins remain unchanged; the manifest also documents presentation reloads. Python code, data, images, recorded probabilities and emissions remain byte-identical to 0.12.8. Public acceptance must observe the native button and exact build.
+
 ## 0.12.8 — 2026-11-06
 
 GP shortcuts use the current session: predictions, full race classification and championship shortcuts neither open another tab nor reload the document. Season, GP and language are preserved.
