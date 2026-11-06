@@ -1,5 +1,6 @@
 /* Shared actions for the current sidebar; assertions live in each domain suite. */
 async function choose(app,id){
+ await closeCards(app);
  const menu=app.locator('.st-key-pw-sidebar-menu details');
  await menu.waitFor({state:'attached'});
  await app.waitForFunction(()=>document.querySelector('.st-key-pw-sidebar-menu details')?.dataset.pwReady==='true');
@@ -13,7 +14,7 @@ async function choose(app,id){
 }
 async function reveal(app,lang){
  await app.getByRole('button',{name:lang==='pt'?'Ver as cartas deste GP':'See the cards for this GP',exact:true}).click();
- await app.locator('.pw-sealed-deck').waitFor();
+ await app.getByRole('dialog').locator('.pw-sealed-deck').waitFor();
  for(const card of await app.locator('.pw-sealed-card').all()){
   const back=card.locator('[data-tarot-reveal]');if(await back.isVisible())await back.click();
  }
@@ -22,4 +23,12 @@ async function reveal(app,lang){
  await app.locator('.pw-revealed-face img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
  await app.locator('.st-key-forecast-details').waitFor({state:'visible'});
 }
-module.exports={choose,reveal};
+async function closeCards(app){
+ const dialog=app.getByRole('dialog').filter({has:app.locator('.pw-tarot-reading')});
+ if(await dialog.isVisible()){
+  await dialog.locator('.st-key-close_tarot button').click();
+  await dialog.waitFor({state:'hidden'});
+  await app.waitForFunction(()=>!new URL(location.href).searchParams.has('cartas')&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning');
+ }
+}
+module.exports={choose,reveal,closeCards};

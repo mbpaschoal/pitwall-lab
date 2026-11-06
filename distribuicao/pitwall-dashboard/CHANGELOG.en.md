@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.13.2 — 2026-11-06
+
+Restores the card pop-up in Predictions. The button opens three face-down cards; each click reveals one, without letters, numbers or finishing-order labels. X, Escape or “Back to predictions” closes it. Reveals persist when reopening, returning to the section or switching language. Details remain hidden until every card is revealed. Model v1, artwork, data, emissions and probabilities remain unchanged.
+
 ## 0.13.1 — 2026-11-06
 
 Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 1/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.

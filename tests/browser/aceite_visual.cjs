@@ -1,4 +1,4 @@
-const {reveal}=require('./sidebar_navigation.cjs');
+const {reveal,closeCards}=require('./sidebar_navigation.cjs');
 /* PT/EN: Editorial geometry, scroll access, original images and vector covers. */
 const fs = require('node:fs');
 const path = require('node:path');
@@ -137,6 +137,7 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
      requireCheck(await surface.locator('.pw-tarot-prob').count()===3,'Recorded probabilities missing after reveal');
      requireCheck(m.compact&&m.after,'Missing observed comparison');
      requireCheck(!m.podiumHeading,'Duplicate podium heading in forecast');
+     await closeCards(surface);
     }
     if(route==='Desempenho'){
      requireCheck(m.resultsHeader&&m.legend,'Missing results legend');

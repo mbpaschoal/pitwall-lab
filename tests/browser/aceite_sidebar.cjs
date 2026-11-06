@@ -6,6 +6,7 @@ assert(base && output, 'Usage: aceite_sidebar.cjs URL OUTPUT');
 fs.mkdirSync(output, {recursive:true});
 const engine = process.env.PLAYWRIGHT_BROWSER || 'chromium';
 const touchPages = new WeakSet();
+const {closeCards}=require('./sidebar_navigation.cjs');
 const routes = {
  forecast:{tela:'Previsões'}, accuracy:{tela:'Desempenho'}, summary:{tela:'Corridas',aba:'Visão geral'},
  sessions:{tela:'Corridas',aba:'Tempos'}, strategy:{tela:'Corridas',aba:'Estratégias'},
@@ -39,6 +40,7 @@ async function ready(page, expected) {
  return app;
 }
 async function choose(page,id) {
+ await closeCards(await surface(page));
  const app=await surface(page), details=app.locator('.st-key-pw-sidebar-menu details');
  if (!await details.evaluate(e=>e.open)) {
   if(await details.locator('summary').isVisible())await activate(page,details.locator('summary'));
@@ -94,23 +96,37 @@ async function run() {
    const before=await app.locator('body').ariaSnapshot();
    assert(!/Lando Norris|Max Verstappen|George Russell/.test(before),'Unrevealed identities in accessibility tree');
    await activate(page,app.getByRole('button',{name:lang==='pt'?'Ver as cartas deste GP':'See the cards for this GP',exact:true}));
-   await app.locator('.pw-sealed-deck').waitFor();
+   await app.getByRole('dialog').locator('.pw-sealed-deck').waitFor();
    assert.equal(await app.locator('.pw-card-back:visible').count(),3);
+   const backs=await app.locator('.pw-card-back').allTextContents();
+   assert(backs.every(text=>!/\b(?:Carta|Card)\s+(?:[A-Z]|\d+)\b/.test(text)),'Cards must not have letter or number labels');
    assert.equal(await app.locator('.st-key-forecast-details:visible').count(),0);
    await app.locator('[data-tarot-reveal]').first().focus();await page.keyboard.press('Enter');
    await app.locator('.pw-revealed-face:visible').waitFor();
    assert.equal(await app.locator('.pw-card-back:visible').count(),2);
    assert.equal(await app.locator('.st-key-forecast-details:visible').count(),0);
    const deck=await app.locator('[data-deck-key]').getAttribute('data-deck-key');
+   await page.keyboard.press('Escape');
+   await app.getByRole('dialog').waitFor({state:'hidden'});
+   await app.waitForFunction(()=>!new URL(location.href).searchParams.has('cartas'));
+   assert.equal(await app.locator('.pw-sealed-card').count(),0,'Cards leaked into the page after dismissal');
+   await activate(page,app.locator('.st-key-open_tarot button'));
+   await app.getByRole('dialog').locator('.pw-revealed-face:visible').waitFor();
+   assert.equal(await app.locator('.pw-card-back:visible').count(),2,'Reopening forgot the revealed card');
    await choose(page,'sessions');app=await choose(page,'forecast');
+   assert.equal(await app.locator('.pw-sealed-card').count(),0);
+   await activate(page,app.locator('.st-key-open_tarot button'));
    await app.waitForFunction(()=>document.querySelectorAll('.pw-revealed-face:not([hidden])').length===1);
    assert.equal(await app.locator('[data-deck-key]').getAttribute('data-deck-key'),deck);
    for(const i of [1,2])await activate(page,app.locator('.pw-sealed-card').nth(i).locator('[data-tarot-reveal]'));
    await app.locator('.st-key-forecast-details').waitFor({state:'visible'});
    await app.waitForFunction(()=>[...document.querySelectorAll('.pw-revealed-face')].every(e=>!e.hidden&&e.getAnimations().every(a=>a.playState==='finished')));
    assert.equal(await app.locator('.pw-revealed-face:visible').count(),3);
+   await closeCards(app);
+   await app.locator('.st-key-forecast-details').waitFor({state:'visible'});
    const other=lang==='pt'?'en':'pt';await activate(page,app.getByRole('button',{name:other==='pt'?'🇧🇷 Português':'🇬🇧 English',exact:true}));
    app=await ready(page,{tela:'Previsões',temporada:2025,gp:1,lang:other});
+   await activate(page,app.locator('.st-key-open_tarot button'));
    await app.waitForFunction(()=>document.querySelectorAll('.pw-revealed-face:not([hidden])').length===3);
    await app.waitForFunction(()=>document.querySelectorAll('.pw-revealed-face:not([hidden]) [data-tarot-hide]').length===3 && [...document.querySelectorAll('.pw-revealed-face')].every(e=>e.getBoundingClientRect().height>100));
    assert.equal(await app.locator('[data-deck-key]').getAttribute('data-deck-key'),deck,'Language changed deck identity');
@@ -122,11 +138,11 @@ async function run() {
    await page.screenshot({path:path.join(output,engine+'-'+width+'-'+lang+'.png')});
    assert.equal(extraPages,0);assert.deepEqual(errors,[]);
    if(legacy)assert(await app.evaluate(()=>window.__pitwallMotion===window.legacyBridge&&!!window.__pitwallEditorial),'New features did not install beside the existing motion bridge');
-   row.status='passed';row.same_document=true;row.new_tabs=extraPages;row.individual_reveal=true;row.language_keeps_reveal=true;
+   row.status='passed';row.same_document=true;row.new_tabs=extraPages;row.individual_reveal=true;row.language_keeps_reveal=true;row.dialog_restored=true;row.unnumbered_cards=true;row.dismiss_and_reopen=true;
   } catch(error) {
    row.status='failed';row.error=error.stack;
    const app=await surface(page);
-   row.observed=await app.evaluate(()=>({url:location.href,idle:document.querySelector('.stApp')?.dataset.testScriptState,menu:document.querySelector('.st-key-pw-sidebar-menu details')?.open,selected:document.querySelector('.st-key-pw-sidebar-menu button[kind="primary"]')?.innerText,events:window.sidebarPointerEvents}));
+   row.observed=await app.evaluate(()=>({url:location.href,idle:document.querySelector('.stApp')?.dataset.testScriptState,menu:document.querySelector('.st-key-pw-sidebar-menu details')?.open,selected:document.querySelector('.st-key-pw-sidebar-menu button[kind="primary"]')?.innerText,buttons:document.querySelectorAll('.st-key-pw-sidebar-menu button').length,pwReady:document.querySelector('.st-key-pw-sidebar-menu details')?.dataset.pwReady,language:document.documentElement.lang,bridge:!!window.__pitwallEditorial,events:window.sidebarPointerEvents}));
    await page.screenshot({path:path.join(output,engine+'-'+width+'-'+lang+'-failed.png')});
   }
   finally {await context.close();fs.writeFileSync(path.join(output,'sidebar.json'),JSON.stringify(report,null,2));}

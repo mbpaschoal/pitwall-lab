@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "47c5b1f32dbf819f42a42424fdfd7c86d6ef6ecdc734c4ca80346542591500ab",
+  "apresentacao_build_sha256": "014fd380624ea7f48a05c27e7dc431da3cc23d452ff9a1c42f58f26de734a8f4",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a25e278cec085a32e749abecee9d44ca4e5d268ed47116c1a249a240725be96d",
-      "sha256_origem": "a1c528c7150fa4877d5f1c0fa31e1f15df8fbf529fb79064e3bb502807673bf9"
+      "sha256_destino": "7598a732839899bcb66c56600532e3e39882c3c4bab85b18c08a154e37ece542",
+      "sha256_origem": "156178280e1d723e695889438a56a52d7e36631b19f69a0dfade0a2a7d17b4b5"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "8036975289d77eec53987e269e8353fc0d11589e1e4d5449f99aa4fdfbfd0ee7",
-      "sha256_origem": "c625a784d80b4409390a69906869ef0b51aae8e839f7c05c1246eaf59901cd5a"
+      "sha256_destino": "15f84b346e3aefc70e3e18eaf4747ca7a288031f908dfdf1ef41e6d7960a7fba",
+      "sha256_origem": "f1ffd6d6e59597b95910f59f380da881eb1b0278f7b66416215c86afd94c1ac9"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "82526503d51e2bc1964b180753ad02a7465227ae94c41752649d369faa203eab",
-      "sha256_origem": "82526503d51e2bc1964b180753ad02a7465227ae94c41752649d369faa203eab"
+      "sha256_destino": "fc4170b0fc945e55b2febedfdbd0b0b41b3165181b0feda001d86a01bf748f76",
+      "sha256_origem": "fc4170b0fc945e55b2febedfdbd0b0b41b3165181b0feda001d86a01bf748f76"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2492,8 +2492,8 @@
       "caminho": "docs/JORNADA_DO_FA.md",
       "fonte": "docs/JORNADA_DO_FA.md",
       "modo": "copia",
-      "sha256_destino": "e0aa326f8e76776b5bf616228a44f599486ea0fe45fbb50e7cfe8a576a67acee",
-      "sha256_origem": "e0aa326f8e76776b5bf616228a44f599486ea0fe45fbb50e7cfe8a576a67acee"
+      "sha256_destino": "11aa10b13fc60205cf975fca11c3a3340bacf98fc6d0e2248b2b3b566b43fc71",
+      "sha256_origem": "11aa10b13fc60205cf975fca11c3a3340bacf98fc6d0e2248b2b3b566b43fc71"
     },
     {
       "caminho": "docs/OPERACAO_FIM_SEMANA.md",
@@ -2548,8 +2548,8 @@
       "caminho": "docs/en/FAN_JOURNEY.md",
       "fonte": "docs/en/FAN_JOURNEY.md",
       "modo": "copia",
-      "sha256_destino": "c8a1321019c6b988a826ccb4b51781cbaa089329b244cef51e03a265ee0b266b",
-      "sha256_origem": "c8a1321019c6b988a826ccb4b51781cbaa089329b244cef51e03a265ee0b266b"
+      "sha256_destino": "41addbb746118e1bffb48aa61f069636fb4f211e5c46954b666ed6ce5f6c2523",
+      "sha256_origem": "41addbb746118e1bffb48aa61f069636fb4f211e5c46954b666ed6ce5f6c2523"
     },
     {
       "caminho": "docs/en/REVIEW_030.md",
@@ -2718,8 +2718,8 @@
       "caminho": "frontend_assets/motion.js",
       "fonte": "frontend_assets/motion.js",
       "modo": "copia",
-      "sha256_destino": "e9a7f8c85e55a4ea068201c1b30b15c70cb90b08f625e5e2634746e184c0c3f3",
-      "sha256_origem": "e9a7f8c85e55a4ea068201c1b30b15c70cb90b08f625e5e2634746e184c0c3f3"
+      "sha256_destino": "35c63d9e35df4ae6389e52c8cea75e92918ec989b0a726fbd818a3191d7589e7",
+      "sha256_origem": "35c63d9e35df4ae6389e52c8cea75e92918ec989b0a726fbd818a3191d7589e7"
     },
     {
       "caminho": "frontend_assets/operacao_fim_semana.json",
@@ -2774,8 +2774,8 @@
       "caminho": "frontend_assets/sidebar.css",
       "fonte": "frontend_assets/sidebar.css",
       "modo": "copia",
-      "sha256_destino": "044aa2d9c2f684c2b265aff1c2a0662256cdbc7f82a48af2812c81414c7f43e6",
-      "sha256_origem": "044aa2d9c2f684c2b265aff1c2a0662256cdbc7f82a48af2812c81414c7f43e6"
+      "sha256_destino": "55ce8fd3b5a4359344900bbeef1da899d39a7d249f6341d8a2a41435f5126a1a",
+      "sha256_origem": "55ce8fd3b5a4359344900bbeef1da899d39a7d249f6341d8a2a41435f5126a1a"
     },
     {
       "caminho": "historico_circuito.py",
@@ -2914,8 +2914,8 @@
       "caminho": "pitwall/dashboard/tarot.py",
       "fonte": "pitwall/dashboard/tarot.py",
       "modo": "copia",
-      "sha256_destino": "1c92d09505a5ceea75c1bd13fd035a786b7a38aaf020460702bde6d8163c5613",
-      "sha256_origem": "1c92d09505a5ceea75c1bd13fd035a786b7a38aaf020460702bde6d8163c5613"
+      "sha256_destino": "e6fc1413dfcdb8b1ccd1d5b88463147461e38ca0461b132b1fe6dda8f1da9a20",
+      "sha256_origem": "e6fc1413dfcdb8b1ccd1d5b88463147461e38ca0461b132b1fe6dda8f1da9a20"
     },
     {
       "caminho": "pitwall/dashboard/tarot_catalog.py",
@@ -3068,8 +3068,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "2576dba90b7a98668ce0e1e1dfb7cb56e2b65ef90dbc6c64a883e02e10637f5e",
-      "sha256_origem": "2576dba90b7a98668ce0e1e1dfb7cb56e2b65ef90dbc6c64a883e02e10637f5e"
+      "sha256_destino": "195cbf43bd6cc946904e56f860c79a5a7310619173727257480d78d2bab4ec4a",
+      "sha256_origem": "195cbf43bd6cc946904e56f860c79a5a7310619173727257480d78d2bab4ec4a"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -3425,8 +3425,8 @@
       "caminho": "tests/test_sidebar_editorial.py",
       "fonte": "tests/test_sidebar_editorial.py",
       "modo": "copia",
-      "sha256_destino": "01e5cad7b385c5ed287dd9aa31d99c5a1e192aa2b5a438ae33f5012cc7f93c1c",
-      "sha256_origem": "01e5cad7b385c5ed287dd9aa31d99c5a1e192aa2b5a438ae33f5012cc7f93c1c"
+      "sha256_destino": "d65f6946f78b147897b1a92b93f7ead482e71a753be559731775a4e3fea40cd3",
+      "sha256_origem": "d65f6946f78b147897b1a92b93f7ead482e71a753be559731775a4e3fea40cd3"
     },
     {
       "caminho": "tests/test_standings_publication.py",
@@ -3532,5 +3532,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.13.1"
+  "versao_produto": "0.13.2"
 }
