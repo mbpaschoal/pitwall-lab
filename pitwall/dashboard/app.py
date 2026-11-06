@@ -42,9 +42,9 @@ from pitwall.data.visual_catalog import (
 from pitwall.data.editorial_panels import carregar_paineis, complementar_paineis
 from pitwall.data.archive import (
     AcervoDashboardErro,
-    carregar as carregar_acervo_dashboard,
     para_gp as acervo_para_gp,
 )
+from pitwall.dashboard.archive_cache import carregar as carregar_acervo_dashboard
 import pitwall.dashboard.archive_views as acervo_dashboard_ui
 from pitwall.data.circuit_history import para_corrida_planejada
 import pitwall.dashboard.components as pitwall_ui
@@ -568,14 +568,12 @@ def renderizar_fontes_circuito(pacote, corrida, acervo_gp):
 
 
 def atalho_gp(pacote, corrida, tela, rotulo, aba=None):
-    url = pitwall_ui.link_interno(
-        pacote["temporada"], corrida["rodada"], tela=tela, aba=aba
-    )
-    st.markdown(
-        '<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(
-            escape(url, quote=True), escape(rotulo)
-        ),
-        unsafe_allow_html=True,
+    st.button(
+        rotulo,
+        key="atalho_gp_{}_{}_{}_{}".format(pacote["temporada"], corrida["rodada"], tela, aba or "geral"),
+        type="tertiary",
+        on_click=selecionar_destino_gp,
+        args=(pacote["temporada"], corrida["rodada"], tela, aba),
     )
 
 
@@ -886,6 +884,17 @@ def sincronizar_navegacao():
         params.update(temporada=gp.split(':')[0],gp=gp.split(':')[1])
     st.query_params.update(params)
     st.session_state["_query_aplicada"] = tuple(st.query_params.get(key) for key in ("temporada", "gp", "painel", "tela", "aba", "documento", "lang"))
+
+
+def selecionar_destino_gp(temporada, rodada, tela, aba=None):
+    """Follow a GP shortcut through the existing session, without a new document."""
+    gp = "{}:{}".format(temporada, rodada)
+    st.session_state.update(tela=tela, temporada=temporada, gp=gp, _gp_context=gp)
+    if aba:
+        st.query_params["aba"] = aba
+    else:
+        st.query_params.pop("aba", None)
+    sincronizar_navegacao()
 
 
 def selecionar_gp_busca(valor):
