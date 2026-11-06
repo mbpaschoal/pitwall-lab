@@ -1,5 +1,5 @@
 /* Approved editorial sidebar. One menu, one event selector, no floating dock. */
-.stMain{max-height:100dvh!important;align-self:stretch;scroll-padding-top:16px}
+.stMain{max-height:100dvh!important;align-self:stretch;scroll-padding-top:16px;scroll-behavior:auto!important}
 .st-key-journey-navigation{display:none!important}
 .st-key-pw-shell>[data-testid="stHorizontalBlock"]{display:grid;grid-template-columns:218px minmax(0,1fr);gap:28px;align-items:start}
 .st-key-pw-shell>[data-testid="stHorizontalBlock"]>[data-testid="stColumn"]{width:100%!important;min-width:0!important}

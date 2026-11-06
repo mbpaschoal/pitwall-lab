@@ -8,6 +8,8 @@ Original editorial covers use local colours and abstract forms while keeping eac
 
 Internal navigation stays in the same tab. Native menu controls have keyboard link alternatives. Presentation tests follow the approved structure. No dependencies, random draws or recalculation are introduced. The v1 model, data, snapshots, emissions and probabilities remain preserved. Local acceptance, package, CI and public deployment retain separate evidence.
 
+Automatic focus and selection scrolling responds immediately, keeping targets stable during a click. Explicit page anchors retain optional smooth motion.
+
 ## 0.12.9 — 2026-11-06
 
 Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 1/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.

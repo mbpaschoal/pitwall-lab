@@ -5,6 +5,7 @@ const [base, output] = process.argv.slice(2);
 assert(base && output, 'Usage: aceite_sidebar.cjs URL OUTPUT');
 fs.mkdirSync(output, {recursive:true});
 const engine = process.env.PLAYWRIGHT_BROWSER || 'chromium';
+const touchPages = new WeakSet();
 const routes = {
  forecast:{tela:'Previsões'}, accuracy:{tela:'Desempenho'}, summary:{tela:'Corridas',aba:'Visão geral'},
  sessions:{tela:'Corridas',aba:'Tempos'}, strategy:{tela:'Corridas',aba:'Estratégias'},
@@ -49,7 +50,7 @@ async function choose(page,id) {
 }
 async function activate(page,control) {
  // Emulated touch contexts must use touch events, rather than mouse clicks.
- if(await page.evaluate(()=>navigator.maxTouchPoints>0))await control.tap();
+ if(touchPages.has(page))await control.tap();
  else await control.click();
 }
 async function run() {
@@ -58,6 +59,7 @@ async function run() {
  try { for(const width of [1440,390])for(const lang of ['pt','en']) {
   const context=await browser.newContext({viewport:{width,height:1000},isMobile:width===390,hasTouch:width===390,reducedMotion:'no-preference'});
   const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+  if(width===390)touchPages.add(page);
   const legacy=width===1440&&lang==='pt';
   if(legacy)await page.addInitScript(()=>{
    window.legacyBridge={refresh:()=>{window.legacyRefreshCount=(window.legacyRefreshCount||0)+1;}};
@@ -69,9 +71,9 @@ async function run() {
    let app=await ready(page,{temporada:2025,gp:1,tela:'Corridas',lang});
    await app.evaluate(()=>{
     window.sidebarPointerEvents=[];
-    for(const type of ['pointerdown','click'])document.addEventListener(type,event=>{
+    for(const type of ['pointerdown','pointerup','click'])document.addEventListener(type,event=>{
      const target=event.target.closest('.st-key-pw-sidebar-menu button,.st-key-pw-sidebar-menu summary');
-     if(target){window.sidebarPointerEvents.push({type,pointer:event.pointerType,label:target.innerText,query:location.search});window.sidebarPointerEvents=window.sidebarPointerEvents.slice(-100);}
+     if(target){window.sidebarPointerEvents.push({type,pointer:event.pointerType,label:target.innerText,query:location.search,scrollTop:document.querySelector('.stMain')?.scrollTop});window.sidebarPointerEvents=window.sidebarPointerEvents.slice(-100);}
     },true);
    });
    const marker=await app.evaluate(()=>window.sidebarAcceptanceMarker=crypto.randomUUID());

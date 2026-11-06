@@ -8,6 +8,8 @@ Capas editoriais originais usam cores e formas locais dos países, mantendo a id
 
 A navegação interna usa a mesma aba; o menu usa controles nativos e links alternativos por teclado. Os testes de apresentação foram adaptados à estrutura aprovada. Não há novas dependências, sorteio ou recálculo. Modelo v1, dados, snapshots, emissões e probabilidades são preservados. Aceite local, pacote, CI e publicação pública têm evidências separadas.
 
+A rolagem automática de foco e seleção responde imediatamente, evitando deslocar o alvo durante o clique; os atalhos explícitos da página conservam o movimento suave opcional.
+
 ## 0.12.9 — 2026-11-06
 
 Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 1/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
