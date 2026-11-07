@@ -675,7 +675,7 @@ html:not([data-pw-reduced-motion="true"]) .fan-duel-difference{animation:pw-duel
 .st-key-race-summary .fan-circuit-more{padding-top:5px}
 .st-key-race-summary-actions{margin-top:0}
 .st-key-race-summary-actions button{min-height:44px;border:1px solid #9cb2c5;border-radius:6px;background:#ffffff80;font-weight:700}
-@media(max-width:600px){.st-key-race-summary .fan-podium-panel,.st-key-race-summary .fan-circuit-details{padding:14px 12px}.st-key-race-summary .fan-podium{gap:7px}.st-key-race-summary .fan-podium-place{min-height:0;padding:32px 5px 10px}.st-key-race-summary .fan-podium-place .fan-portrait{height:clamp(96px,32vw,140px)}.st-key-race-summary .fan-podium-place>b{font-size:36px;left:6px}.st-key-race-summary .fan-podium-place strong{font-size:12px}.st-key-race-summary .fan-podium-place small{font-size:11px}.st-key-race-summary-actions [data-testid="stHorizontalBlock"]{gap:8px}}
+@media(max-width:600px){.st-key-race-summary .fan-podium-panel,.st-key-race-summary .fan-circuit-details{padding:14px 12px}.st-key-race-summary .fan-podium{gap:7px}.st-key-race-summary .fan-podium-place{min-height:0;padding:56px 5px 10px}.st-key-race-summary .fan-podium-place .fan-portrait{height:clamp(96px,32vw,140px)}.st-key-race-summary .fan-podium-place>b{font-size:36px;left:6px}.st-key-race-summary .fan-podium-place strong{font-size:12px}.st-key-race-summary .fan-podium-place small{font-size:11px}.st-key-race-summary-actions [data-testid="stHorizontalBlock"]{gap:8px}}
 
 .st-key-pilot-cover .fan-hero-profile-editorial .pw-profile-photograph{width:100%;max-width:100%;min-width:0}.st-key-pilot-cover .fan-hero-profile-editorial .fan-hero-candid{max-width:100%!important;z-index:auto}
 
