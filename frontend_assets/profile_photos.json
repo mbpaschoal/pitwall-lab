@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "scope": "reviewed_editorial_profile_candidates",
+  "photos": {
+    "antonelli": {
+      "driver_id": "antonelli",
+      "path": "static/pitwall-profiles/antonelli-0fbf50af1114.jpg",
+      "sha256": "0fbf50af1114d0b7a81144d9606792b3ba19f4706c1b6f14e18dadab62c9deb1",
+      "width": 2160,
+      "height": 3240,
+      "name": "Andrea Kimi Antonelli",
+      "source": "https://commons.wikimedia.org/wiki/File:2026-08-23_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg",
+      "author": "Steffen Prößdorf",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": [
+        "Antonelli durante entrevista em Zandvoort, 2026.",
+        "Antonelli during an interview in Zandvoort, 2026."
+      ],
+      "object_position": "50% 0%",
+      "historical": true
+    },
+    "max_verstappen": {
+      "driver_id": "max_verstappen",
+      "path": "static/pitwall-profiles/max_verstappen-283d97dad8c9.jpg",
+      "sha256": "283d97dad8c94b3709b7f002e5df20349cdfd19a621b3f4a80d68f74fbc8ec72",
+      "width": 2160,
+      "height": 3240,
+      "name": "Max Verstappen",
+      "source": "https://commons.wikimedia.org/wiki/File:2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro.jpg",
+      "author": "Steffen Prößdorf",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": [
+        "Verstappen em Zandvoort, 2024.",
+        "Verstappen in Zandvoort, 2024."
+      ],
+      "object_position": "50% 0%",
+      "historical": true
+    }
+  }
+}

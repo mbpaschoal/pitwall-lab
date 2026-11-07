@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 
 from pitwall.paths import PROJECT_ROOT
 from pitwall.i18n import language, translate
-from pitwall.dashboard.hero_assets import HERO_IMAGES, PORTRAIT_OVERRIDES, portrait_asset
+from pitwall.dashboard.hero_assets import HERO_IMAGES, PORTRAIT_OVERRIDES, portrait_asset, profile_asset
 from pitwall.dashboard.journey import race_identity
 from pitwall.dashboard.media import responsive_attributes
 
@@ -81,6 +81,20 @@ def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, a
     backdrop_html=''
     responsive_attrs=None
     if person:
+        editorial = profile_asset(person['id'])
+        if editorial:
+            caption = editorial['caption'][language() == 'en']
+            return ('<section class="fan-hero fan-hero-profile-editorial" data-hero-kind="{}" data-driver-id="{}">'
+                    '<div class="fan-hero-copy"><h1>{}</h1><p>{}</p>{}</div>'
+                    '<figure class="pw-profile-photograph"><img class="fan-hero-image fan-hero-candid" src="{}" '
+                    'width="{}" height="{}" style="object-position:{}" alt="{}" decoding="async">'
+                    '<figcaption>{} <a href="{}" target="_blank" rel="noopener noreferrer">{}</a> · '
+                    '<a href="{}" target="_blank" rel="noopener noreferrer">{}</a></figcaption></figure></section>').format(
+                        'profile',escape(person['id'],quote=True),text(title),text(subtitle),extra,
+                        escape(editorial['src'],quote=True),editorial['width'],editorial['height'],
+                        escape(editorial['object_position'],quote=True),escape(caption,quote=True),escape(caption),
+                        escape(editorial['source'],quote=True),escape(editorial['author']),
+                        escape(editorial['license_url'],quote=True),escape(editorial['license']))
         spec=portrait_asset(person['id'],person['name'])
         if spec and not (PROJECT_ROOT/spec['path']).is_file():
             spec=None

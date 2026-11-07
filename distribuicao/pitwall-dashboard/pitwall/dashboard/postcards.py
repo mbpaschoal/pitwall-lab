@@ -41,22 +41,24 @@ def cover(race, year, forecast=False, note='', assets=None, root=PROJECT_ROOT):
     heading = translate('Previsões') if forecast else place
     subtitle = place if forecast else race.get('circuito_nome', '')
     art = illustration(root, circuit_id)
+    copy = '<div class="pc-copy fan-hero-copy"><h1>{}</h1><p class="pc-intro">{}</p></div>'.format(
+        escape(heading), escape(subtitle))
     if art:
-        scene = ('<figure class="pc-scene"><img class="pc-illustration" src="{}" alt="{}" '
-                 'width="{}" height="{}" decoding="async" fetchpriority="high">'
-                 '<figcaption>{}</figcaption></figure>').format(
+        scene = ('<figure class="pc-scene"><div class="pc-image-frame">'
+                 '<img class="pc-illustration" src="{}" alt="{}" width="{}" height="{}" '
+                 'decoding="async" fetchpriority="high">{}'
+                 '</div><figcaption>{}</figcaption></figure>').format(
             escape(art['src'], quote=True), escape(art['alt'][language() == 'en'], quote=True),
-            art['width'], art['height'], escape(translate('Ilustração editorial')))
+            art['width'], art['height'], copy, escape(translate('Ilustração editorial')))
     else:
-        scene = '<div class="pc-scene pc-art-unavailable"><p>{}</p></div>'.format(
-            escape(translate('Ilustração indisponível')))
+        scene = '<div class="pc-art-unavailable">{}<p>{}</p></div>'.format(
+            copy, escape(translate('Ilustração indisponível')))
     description = '<p class="pc-note">{}</p>'.format(escape(translate(note))) if note else ''
     date = str(race.get('data') or '')
     date_label = translate(data_editorial(date)) if date else ''
     return (
-        '<section class="pw-postcard fan-hero" data-place="{}" data-hero-kind="{}" aria-label="{}">'
-        '<div class="pc-copy fan-hero-copy"><h1>{}</h1><p class="pc-intro">{}</p>{}</div>{}'
-        '<footer class="pc-footer"><time datetime="{}">{}</time>{}</footer></section>'
+        '<section class="pw-postcard fan-hero" data-place="{}" data-hero-kind="{}" aria-label="{}">{}'
+        '<footer class="pc-footer"><div class="pc-event-meta"><time datetime="{}">{}</time>{}</div>{}</footer></section>'
     ).format(escape(circuit_id, quote=True), 'forecast' if forecast else 'race',
-             escape(race['corrida'], quote=True), escape(heading), escape(subtitle), description,
-             scene, escape(date, quote=True), escape(date_label), _credits(art, destination))
+             escape(race['corrida'], quote=True), scene, escape(date, quote=True),
+             escape(date_label), description, _credits(art, destination))

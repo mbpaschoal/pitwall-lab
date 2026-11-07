@@ -404,13 +404,14 @@ def _restore_navigation_state(query_params, state, names):
         state["pilot_condition"] = "rain"
 
 
-def render(root):
+def render(root, search_renderer=None):
     try:
         asset = load(root)
     except DriverConditionsError as error:
+        if search_renderer:
+            search_renderer(st.container())
         st.error(str(error))
         return
-    st.caption(coverage_label(asset))
     pending=asset.get('atualizacao_operacional',{}).get('pendencias',{})
     if pending:
         st.info(translate('Há {n} GP(s) em conferência. As comparações mantêm os últimos dados validados.').format(n=len(pending)))
@@ -420,6 +421,13 @@ def render(root):
                      else [st.query_params.get("piloto")])
     requested = next((pid for pid in requested_ids if pid and pid not in names), None)
     if requested and st.query_params.get("visao") in ("perfil", "duelo"):
+        with st.container(key="pilot-heading-toolbar"):
+            coverage, search = st.columns([1, 0.2], vertical_alignment="center")
+            with coverage:
+                st.caption(coverage_label(asset))
+            if search_renderer:
+                with search:
+                    search_renderer(st.container())
         # Never silently replace an uncovered/unknown identity with another driver.
         name = None
         try:
@@ -441,14 +449,24 @@ def render(root):
             escape(urlencode(params), quote=True), escape(translate("Voltar à visão geral"))), unsafe_allow_html=True)
         return
     _restore_navigation_state(st.query_params, st.session_state, names)
+    with st.container(key="pilot-heading-toolbar"):
+        if search_renderer:
+            coverage, search, navigation = st.columns([1, 0.14, 0.25], gap="small", vertical_alignment="center")
+            with search:
+                search_renderer(st.container())
+        else:
+            coverage, navigation = st.columns([1, 0.25], gap="small", vertical_alignment="center")
+        with coverage:
+            st.caption(coverage_label(asset))
+        with navigation:
+            with st.container(key="pilot-view-navigation"):
+                modes = ["Visão geral", "Perfil individual", "Duelo"]
+                selected_mode = st.session_state.get("pilot_view", modes[0])
+                with st.popover("Explorar pilotos", icon=":material/person_search:"):
+                    view = st.radio("Visualização de pilotos", modes,
+                        index=modes.index(selected_mode) if selected_mode in modes else 0,
+                        key="pilot_view", label_visibility="collapsed")
     with st.container(key="pilot-cover"):
-        with st.container(key="pilot-view-navigation"):
-            modes = ["Visão geral", "Perfil individual", "Duelo"]
-            selected_mode = st.session_state.get("pilot_view", modes[0])
-            with st.popover("Explorar pilotos", icon=":material/person_search:"):
-                view = st.radio("Visualização de pilotos", modes,
-                    index=modes.index(selected_mode) if selected_mode in modes else 0,
-                    key="pilot_view", label_visibility="collapsed")
         years = st.session_state.get("pilot_years", [2024, 2025, 2026])
         metric = st.session_state["pilot_metric"]
         minimum = st.session_state["pilot_minimum"]

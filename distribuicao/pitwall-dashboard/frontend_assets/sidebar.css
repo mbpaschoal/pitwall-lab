@@ -236,7 +236,7 @@
   color: #fff;
 }
 .stApp .st-key-open_tarot button:hover { background: #a40d20; border-color: #a40d20; }
-.stApp .st-key-open_tarot button p { font-weight: 700; }
+.stApp .st-key-open_tarot button p { font-weight: 700; margin: 0 !important; }
 
 @media (min-width:801px) {
   :is(.st-key-pw-shell,.st-key-pw-shell>[data-testid="stLayoutWrapper"])>[data-testid="stHorizontalBlock"]>[data-testid="stColumn"]:first-child {
