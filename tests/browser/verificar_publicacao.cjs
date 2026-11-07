@@ -63,10 +63,16 @@ async function ready(app,version,lang,route=null){
   integrity(kind,'Unsupported publication route');
   // The URL changes before Streamlit replaces the previous route's Markdown.
   // Do not classify that previous, valid photograph as the new route's pixels.
-  await app.waitForFunction(({route,kind})=>{
+  const routeDeadline=Date.now()+30000;let matched=false;
+  while(Date.now()<routeDeadline){
+   matched=await app.locator('body').evaluate((_element,{route,kind})=>{
    const heroes=document.querySelectorAll('.fan-hero');
    return new URL(location.href).searchParams.get('tela')===route&&heroes.length===1&&heroes[0].dataset.heroKind===kind&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning';
-  },{route,kind},{timeout:30000});
+   },{route,kind});
+   if(matched)break;
+   await new Promise(resolve=>setTimeout(resolve,100));
+  }
+  if(!matched)throw Error('Requested route did not finish loading');
  }
  const deadline=Date.now()+30000;let state;
  while(Date.now()<deadline){state=await app.locator('body').evaluate(inspectControls,lang);if(state.ready)break;await new Promise(r=>setTimeout(r,200));}
