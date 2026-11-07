@@ -1,6 +1,7 @@
 /* PT/EN: live driver coverage, official positions, original JPEG and real exports. */
-const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const fs=require('node:fs'),path=require('node:path');
 const {chromium,devices}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const {verifyImage}=require('./verificar_publicacao.cjs');
 const [baseArg,output]=process.argv.slice(2),base=(baseArg||'').replace(/\/+$/,'');
 if(!base||!output)throw Error('Usage: aceite_pilotos_atualizacao.cjs URL OUTPUT');
 const root=process.env.PITWALL_SOURCE_ROOT||path.join(__dirname,'../..');
@@ -15,7 +16,7 @@ const maxStarts=rows.filter(x=>x.driver_id==='max_verstappen'&&x.started).length
 const left=new Map(rows.filter(x=>x.started&&x.driver_id==='max_verstappen'&&gps[x.race_id].temporada===2026).map(x=>[x.race_id,x]));
 const common=rows.filter(x=>x.started&&x.driver_id==='alonso'&&gps[x.race_id].temporada===2026&&left.has(x.race_id));
 const comparable=common.filter(x=>x.position!==null&&!x.disqualified&&left.get(x.race_id).position!==null&&!left.get(x.race_id).disqualified).length;
-const source=JSON.parse(fs.readFileSync(path.join(root,'dashboard_assets/fan/sources.json'))).find(x=>x.driver_id==='ryo_hirakawa');
+const source=JSON.parse(fs.readFileSync(path.join(root,'frontend_assets/profile_photos.json'))).photos.ryo_hirakawa;
 const check=(ok,msg)=>{if(!ok)throw Error(msg);};fs.mkdirSync(output,{recursive:true});
 // BackMsg protobuf field 11 is rerun_script. Ignore heartbeat/ack traffic.
 function requestsRerun(payload){
@@ -71,11 +72,15 @@ function requestsRerun(payload){
    await page.screenshot({path:path.join(output,key+'-max.png')});
    app=await open({visao:'perfil',piloto:'ryo_hirakawa',anos:'2026'});
    check((await app.locator('.fan-hero h1').innerText()).includes('Hirakawa'),'Driver identity replaced');
-   const picture=app.locator('.fan-hero-image');await picture.evaluate(img=>img.decode());
-   const image=await picture.evaluate(img=>({src:img.currentSrc,width:img.naturalWidth,height:img.naturalHeight}));
+   const profilePhoto='.fan-hero-profile-editorial[data-driver-id="ryo_hirakawa"] .fan-hero-candid';
+   check(await app.locator(profilePhoto).count()===1,'Hirakawa profile must have exactly one editorial photograph');
+   const image=await verifyImage(page,app,{selector:profilePhoto,
+    sha256:source.sha256,static_path:source.path});
    check(image.width===source.width&&image.height===source.height,'Wrong original portrait resolution');
-   check(crypto.createHash('sha256').update(Buffer.from(image.src.split(',')[1],'base64')).digest('hex')===source.sha256,'Wrong Hirakawa portrait');
-   check(await app.locator('a.fan-art-label[href*="haasf1team.com"]').count()===1,'Incorrect portrait attribution');
+   check(image.delivery==='static_original','Hirakawa profile must use its separate immutable original');
+   const credit=app.locator('.fan-hero-profile-editorial[data-driver-id="ryo_hirakawa"] figcaption');
+   check(await credit.getByRole('link',{name:source.author,exact:true}).getAttribute('href')===source.source,'Incorrect profile attribution');
+   check(await credit.getByRole('link',{name:source.license,exact:true}).getAttribute('href')===source.license_url,'Incorrect profile license');
    await page.screenshot({path:path.join(output,key+'-hirakawa.png')});
    app=await open({visao:'duelo',piloto:'max_verstappen',rival:'alonso',anos:'2026'});
    check(await app.locator('[data-testid="stException"]').count()===0,'Duel exception');
