@@ -33,15 +33,17 @@
 .st-key-journey-header,
 .st-key-journey-brand-row { margin: 0; padding: 0; }
 :is(.st-key-journey-brand-row,.st-key-journey-brand-row>[data-testid="stLayoutWrapper"])>[data-testid="stHorizontalBlock"] {
-  display: grid;
-  grid-template-columns: minmax(0,1fr) max-content;
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   align-items: center;
 }
 :is(.st-key-journey-brand-row,.st-key-journey-brand-row>[data-testid="stLayoutWrapper"])>[data-testid="stHorizontalBlock"]>[data-testid="stColumn"] {
-  min-width: 0 !important;
+  min-width: min-content !important;
   width: auto !important;
+  flex: 1 1 0 !important;
 }
+:is(.st-key-journey-brand-row,.st-key-journey-brand-row>[data-testid="stLayoutWrapper"])>[data-testid="stHorizontalBlock"]>[data-testid="stColumn"]:last-child { flex: 0 0 auto !important; }
 .journey-masthead { margin: 0; padding: 0; min-height: 0; }
 .journey-masthead a {
   display: inline-block;
