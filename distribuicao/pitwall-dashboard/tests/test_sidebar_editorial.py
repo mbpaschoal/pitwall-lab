@@ -6,7 +6,8 @@ from pathlib import Path
 import unittest
 
 from pitwall.dashboard.navigation import ROUTES, route_params, selected_route, search
-from pitwall.dashboard.postcards import THEMES, cover
+from pitwall.dashboard.postcards import cover
+from pitwall.dashboard.destination_art import DESTINATIONS
 from pitwall.dashboard.tarot import deck_key, sealed_cards_html
 from pitwall.i18n import set_language
 
@@ -88,7 +89,7 @@ class SidebarEditorialTests(unittest.TestCase):
 
     def test_all_current_destinations_have_local_themes_and_keep_identity(self):
         events = json.loads((ROOT / 'frontend_assets/contexto_editorial.json').read_text())['eventos']
-        self.assertFalse({row['pais'] for row in events} - THEMES.keys())
+        self.assertFalse({row['circuito_id'] for row in events} - DESTINATIONS.keys())
         for event in events:
             before = copy.deepcopy(event)
             html = cover(event, event['temporada'])

@@ -91,7 +91,7 @@ def _figura_base(figura, altura=340):
         margin={"l": 8, "r": 8, "t": 22, "b": 30},
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
-        font={"color": "#061226"},
+        font={"family": "LatoLocal, Lato, Arial, sans-serif", "color": "#08172d", "size": 13},
         hovermode="closest",
     )
     return figura
@@ -201,7 +201,7 @@ def renderizar_tempos(gp):
 
 
 def renderizar_estrategias(gp):
-    st.subheader("Pneus e paradas observados")
+    st.subheader("Uso dos pneus")
     st.caption(
         "As barras mostram limites de volta publicados, não a idade do pneu. Trechos sem limites válidos aparecem somente na tabela."
     )
@@ -711,7 +711,7 @@ def renderizar_historico(gp):
 
 
 def renderizar_equipes(gp):
-    st.subheader("Comparativo de equipes no GP")
+    st.subheader("Resultados por equipe")
     equipes = gp.get("equipes") or []
     modalidades = list(dict.fromkeys(e.get("modalidade", "Race") for e in equipes))
     if not modalidades:

@@ -14,13 +14,9 @@ Race result keeps the observed podium in visual order 2–1–3. “Circuit phot
 
 ## Cards
 
-Predictions initially shows the cover, temporal status and **See the cards for this GP**. Favourites, percentages and observed comparison remain outside the initial reading and accessibility tree. The button opens a pop-up with identical backs, without names, numbers or letter labels. Each click reveals one face with artwork, driver, team at that GP, recorded individual podium probability and explanation. Cards can be turned down; there is no reveal-all control.
+Predictions initially shows the cover, temporal status and **See the cards for this GP**. Favourites, percentages and observed comparison remain outside the initial reading and accessibility tree. The 0.14.0 interface keeps the user-approved sidebar, Abril Fatface/Lato and Pitwall blue. A compact sticky header keeps language controls available while scrolling. Analytical pages start with their title and content, without an extra location label or a repeated GP subtitle.
 
-Reveal state is stored in this browser session, scoped to season, event, emission and probabilities. Closing and reopening the pop-up, leaving and returning, or changing language preserves it. Close with X, Escape or “Back to predictions”. Another GP or emission has independent state. `cartas=1` opens backs without revealing new faces. After all available cards are revealed, comparison, distribution, coverage and technical details become accessible. Missing emissions create no cards. Retrospective studies remain identified.
-
-Cards illustrate existing favourites, including ties, without random draws, inference or P1/P2/P3. Team identity belongs to that GP. Original artwork and catalogue remain preserved, with explicit unavailability when necessary. Individual probabilities do not establish finishing order. Mobile stacks the cards. Keyboard operation, visible focus, and reduced motion are supported.
-
-The [HTML gallery](../galeria-cartas.html) and [art credits](../../dashboard_assets/tarot/ATTRIBUTION.md) remain available. Photographs, portraits, originals and licences are preserved.
+Race result and Predictions covers combine documented photographs with original editorial drawings for all 26 circuits: Miami Art Deco, Suzuka’s Ferris wheel, Mexico’s stadium and Interlagos bends, among other local references. Photos are visibly illustrative and have expandable credits, separate from the GP date. Artwork is decorative interpretation, not a map or scientific input. Immutable static copies keep the original photo bytes, with SHA-256-derived names, avoiding repeated photo payloads during navigation. The single GP selector uses short localized names; search and selectors share a common height and axis. Narrow-menu expansion settles immediately to keep native click targets stable.
 
 ## Validation
 

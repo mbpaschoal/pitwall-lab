@@ -2,13 +2,15 @@
 
 [English](en/FAN_JOURNEY.md)
 
-A interface 0.13.0 usa o menu lateral aprovado pelos usuários. Mantém Abril Fatface/Lato, o azul do Pitwall e a linguagem editorial. As capas dos GPs usam ilustrações abstratas originais, cores e formas associadas ao destino, com cidade, circuito e data identificados. México, Japão e São Paulo têm composições próprias. Eventos no mesmo país conservam sua identidade.
+A interface 0.14.0 mantém o menu lateral aprovado pelos usuários, Abril Fatface/Lato e o azul do Pitwall. Um cabeçalho compacto acompanha a rolagem com os idiomas. As páginas analíticas começam pelo título e conteúdo, sem repetir a seção numa legenda ou o GP no subtítulo.
+
+As capas de Resultado da corrida e Previsões combinam fotografias já documentadas com desenhos editoriais próprios dos 26 circuitos: arquitetura Art Déco em Miami, roda-gigante de Suzuka, estádio do México e curvas de Interlagos, entre outras referências locais. A fotografia tem aviso ilustrativo e créditos expansíveis, separados da data do GP. A arte é uma interpretação decorativa, não um mapa ou dado científico. Cópias estáticas com nome derivado de SHA-256 conservam os mesmos bytes dos originais e evitam repetir a foto no payload da navegação.
 
 ## Navegar
 
 O menu reúne quinze destinos: Previsões deste GP e Acertos do Lab; Resultado da corrida, Sessões e voltas, Pneus e paradas, Clima, Histórico desta pista e Equipes neste GP; Perfis de pilotos e Duelo de pilotos; Campeonato de pilotos e Campeonato de equipes; Como funciona, Fontes e limites e Termos da F1. No celular, abre por “Explorar o Pitwall” e fecha após a seleção. A seção ativa tem faixa vermelha e nome visível.
 
-Há um único seletor de Grande Prêmio, com temporada e rótulos explícitos. A faixa de bandeiras de etapas e o menu de rodapé foram retirados. Os seletores irrelevantes ficam ocultos em Pilotos e Sobre o Lab, conservando o contexto para o retorno. A busca encontra páginas por tarefas como “voltas”, “cartas” e “pneus”, além de pilotos, equipes e corridas. Links internos usam a mesma aba; o menu usa botões nativos e links alternativos enquanto esses controles carregam. A troca preserva GP e idioma. Somente o capítulo selecionado de Corridas é renderizado.
+Há um único seletor de Grande Prêmio, com temporada e nomes curtos localizados. Busca e seletores compartilham altura e eixo. O menu estreito termina sua expansão imediatamente para manter o alvo durante o clique. A faixa de bandeiras de etapas e o menu de rodapé foram retirados. Os seletores irrelevantes ficam ocultos em Pilotos e Sobre o Lab, conservando o contexto para o retorno. A busca encontra páginas por tarefas como “voltas”, “cartas” e “pneus”, além de pilotos, equipes e corridas. Links internos usam a mesma aba; o menu usa botões nativos e links alternativos enquanto esses controles carregam. A troca preserva GP e idioma. Somente o capítulo selecionado de Corridas é renderizado.
 
 Resultado da corrida mantém pódio observado em ordem visual 2–1–3 e contexto do circuito. Foto e mapa ficam em “Foto e mapa do circuito”, com fonte e licença. “Atualização e cobertura” separa o estado operacional do conteúdo principal. Ausência de dados permanece explícita. Campeonato permite acessar diretamente cada tabela completa; links antigos sem painel continuam exibindo as duas.
 

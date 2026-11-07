@@ -5,7 +5,7 @@ function integrity(ok,message){if(!ok){const e=Error(message);e.code='integrity'
 async function bounded(promise,ms,label){let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error(label+' timed out')),ms);})]);}finally{clearTimeout(timer);}}
 
 async function verifyImage(page,app,expected){
- const image=app.locator('.fan-hero-image,.pw-circuit-media img').first();await image.waitFor({state:'attached',timeout:20000});
+ const image=app.locator('.pc-photo,.fan-hero-image,.pw-circuit-media img').first();await image.waitFor({state:'attached',timeout:20000});
  const actual=await image.evaluate(async e=>{
   let timer;try{await Promise.race([e.decode(),new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Photo decoding timed out')),20000);})]);}finally{clearTimeout(timer);}
   return{source:e.currentSrc,width:e.naturalWidth,height:e.naturalHeight};
@@ -18,12 +18,12 @@ async function verifyImage(page,app,expected){
   const url=new URL(actual.source),appURL=new URL(await app.locator('body').evaluate(()=>location.href));
   integrity(url.origin===appURL.origin,'Photo origin differs from the served app');
   variant=expected.variants?.find(v=>url.pathname.endsWith('/app/'+v.path));
-  integrity(variant,'Photo is outside the approved variants');
+  integrity(variant||expected.static_path&&url.pathname.endsWith('/app/'+expected.static_path),'Photo is outside the approved variants or immutable original');
   const response=await page.request.get(url.href,{timeout:20000});mime=response.headers()['content-type']||'';
   integrity(response.ok()&&mime.startsWith('image/'),'Photo response is not an image');bytes=await response.body();
  }
  const digest=sha256(bytes);integrity(digest===(variant?variant.sha256:expected.sha256),'Photo bytes differ from the documented source');
- return{decoded:true,width:actual.width,height:actual.height,sha256:digest,delivery:variant?'static_variant':'inline_original',variant:variant?.path,mime};
+ return{decoded:true,width:actual.width,height:actual.height,sha256:digest,delivery:variant?'static_variant':actual.source.startsWith('data:')?'inline_original':'static_original',variant:variant?.path,mime};
 }
 
 function inspectControls(_element,lang){
@@ -88,7 +88,7 @@ function expectations(root,version,identity){
  const race=read('dashboard_assets/circuit/catalogo_visual.json').circuitos[identity[2]];
  integrity(race?.foto?.sha256,'Published circuit photograph is absent');
  const method=read('static/pitwall-media/catalog.json').method;
- return{build:manifest.apresentacao_build_sha256,race:{sha256:race.foto.sha256},method:{sha256:method.source_sha256,variants:method.variants}};
+ return{build:manifest.apresentacao_build_sha256,race:{sha256:race.foto.sha256,static_path:'static/pitwall-circuits/'+identity[2]+'-'+race.foto.sha256.slice(0,12)+path.extname(race.foto.caminho).toLowerCase()},method:{sha256:method.source_sha256,variants:method.variants}};
 }
 
 async function verifyDeployment(version,resultPath,output){

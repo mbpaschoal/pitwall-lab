@@ -92,6 +92,59 @@
   refresh();
 })();
 
+/* Shell behavior installs independently in tabs that loaded an earlier bridge. */
+(() => {
+  const w = window.parent, d = w.document;
+  if (w.__pitwallShell) { w.__pitwallShell.refresh(); return; }
+  const menuSelector = '.st-key-pw-sidebar-menu details';
+  let observedHeader = null, pending = false;
+
+  function settleMenu(menu) {
+    if (!menu?.matches(menuSelector)) return;
+    // Streamlit animates the expander's height for 500 ms. A clipped menu can
+    // scroll between pointerdown and pointerup and cancel a native button click.
+    for (const animation of menu.getAnimations())
+      if (animation.playState !== 'finished' && animation.playState !== 'idle') animation.finish();
+  }
+
+  function refresh() {
+    pending = false;
+    const header = d.querySelector('.st-key-journey-header')?.parentElement;
+    if (header !== observedHeader) {
+      if (observedHeader) resize.unobserve(observedHeader);
+      if (header) resize.observe(header);
+      observedHeader = header;
+    }
+    if (header) {
+      const height = Math.ceil(header.getBoundingClientRect().height) + 'px';
+      if (d.documentElement.style.getPropertyValue('--pw-header-height') !== height)
+        d.documentElement.style.setProperty('--pw-header-height', height);
+    }
+    const navigation = d.querySelector('.st-key-pw-sidebar-menu');
+    if (navigation) {
+      navigation.setAttribute('role', 'navigation');
+      navigation.setAttribute('aria-label', d.documentElement.lang === 'en' ? 'Explore Pitwall' : 'Explorar o Pitwall');
+    }
+    settleMenu(d.querySelector(menuSelector));
+  }
+
+  function schedule() {
+    if (!pending) { pending = true; w.requestAnimationFrame(refresh); }
+  }
+  const resize = new w.ResizeObserver(schedule);
+  d.addEventListener('toggle', event => settleMenu(event.target), true);
+  d.addEventListener('click', event => {
+    const summary = event.target.closest('.st-key-pw-sidebar-menu summary');
+    if (summary) settleMenu(summary.closest('details'));
+  });
+  new w.MutationObserver(records => {
+    if (records.some(record => [...record.addedNodes, ...record.removedNodes].some(node => node.nodeType === 1))) schedule();
+  }).observe(d.body, {childList: true, subtree: true});
+  new w.MutationObserver(schedule).observe(d.documentElement, {attributes: true, attributeFilter: ['lang']});
+  w.__pitwallShell = {refresh};
+  refresh();
+})();
+
 /* Install dialog state beside an editorial bridge already loaded in an older tab. */
 (() => {
   const w = window.parent, d = w.document;

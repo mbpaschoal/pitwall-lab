@@ -1,5 +1,13 @@
 # Evolução do Pitwall Lab
 
+## 0.14.0 — 2026-11-06
+
+Revisão editorial da interface: retira a legenda que repetia o título, elimina o subtítulo redundante de GP nas páginas analíticas e alinha busca e seletores em controles de 44 px. O cabeçalho compacto acompanha a rolagem com os idiomas. A navegação lateral mantém seus quinze destinos; a expansão no celular termina imediatamente para conservar o alvo do clique. A bandeira de chegada passa a ter quadrados preenchidos alternadamente.
+
+As capas de Resultado da corrida e Previsões recebem desenhos originais específicos dos 26 circuitos, combinados às fotografias documentadas. Imagem ilustrativa, data e créditos ficam explícitos. Cópias estáticas verificadas por SHA-256 conservam os bytes originais e reduzem a repetição de imagens no payload. O botão principal fica próximo da leitura inicial; as cartas continuam fechadas num pop-up, com revelação individual, sem letras ou números e com estado preservado.
+
+A verificação inclui identidade e integridade de imagens, fallback seguro, cobertura dos circuitos, cinco larguras, PT/EN, busca por teclado, rolagem e navegação nativa em Chromium/WebKit. A revisão visual de telas completas é separada das medições automáticas; emulação não constitui teste em aparelho físico. CI, pacote e publicação pública exigem comprovantes próprios. Dados, modelo v1, fotografias e cartas originais, snapshots, emissões e probabilidades permanecem preservados.
+
 ## 0.13.2 — 2026-11-06
 
 Restaura o pop-up das cartas em Previsões. O botão abre as três cartas fechadas; cada clique revela uma delas, sem letras, números ou indicação de ordem. Fechar por X, Escape ou “Voltar às previsões” retorna à página. A revelação permanece ao reabrir, voltar à seção ou trocar de idioma. Detalhes continuam ocultos até revelar todas as cartas. Modelo v1, imagens, dados, emissões e probabilidades permanecem intactos.
