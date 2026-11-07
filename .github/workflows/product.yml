@@ -167,6 +167,8 @@ jobs:
             ${{ runner.temp }}/resilience-evidence
             ${{ runner.temp }}/driver-updates-evidence
             ${{ runner.temp }}/visual-evidence
+            ${{ runner.temp }}/finish-evidence
+            ${{ runner.temp }}/finish-webkit-mouse-evidence
             ${{ runner.temp }}/controls-evidence
             ${{ runner.temp }}/controls-webkit-evidence
             ${{ runner.temp }}/shortcut-evidence
