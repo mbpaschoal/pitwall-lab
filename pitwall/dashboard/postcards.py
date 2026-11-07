@@ -43,8 +43,9 @@ def cover(race, year, forecast=False, note='', assets=None, root=PROJECT_ROOT):
     _, event_name = race_identity(race['corrida'], language())
     place = destination.name[language() == 'en'] if destination else race.get('cidade') or event_name
     heading = translate('Previsões') if forecast else place
-    subtitle = (translate('A leitura de {} começa com três cartas fechadas.').format(place)
-                if forecast else race.get('circuito_nome', ''))
+    # The cover identifies the place. Card availability and count belong to the
+    # recorded reading below; a pending GP must not promise cards that do not exist.
+    subtitle = place if forecast else race.get('circuito_nome', '')
     palette = destination.palette if destination else ('#e7f3fc','#08172d','#c11b27','#b8cbd9')
     paper, ink, accent, second = palette
     frame = destination.frame if destination else 'plain'
