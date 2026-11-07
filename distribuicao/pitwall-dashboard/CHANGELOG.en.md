@@ -1,5 +1,13 @@
 # Pitwall Lab evolution
 
+## 0.14.2 — 2026-11-07
+
+GP covers now span the full content width, with the title over the painting. All 26 approved illustrations retain their original bytes, aspect ratio, complete cars, rounded corners and subtle shadow. Race results bring the podium, circuit facts and adjacent actions together, without adding driver profiles to that page. Podium portraits gain position graphics and a more compact mobile composition.
+
+Search and Explore drivers share the coverage row and align to the right edge; Filters no longer overlaps the comparison period on mobile. Antonelli and Verstappen profiles use candid photographs separate from podium portraits, with source, attribution and licence. Antonelli's photo is a sharp original from an interview in Zandvoort; other drivers retain their existing portraits while curation continues. Data, frozen model v1, recorded forecasts, probabilities and tarot artwork are preserved.
+
+The card action sits immediately below the selectors, before the cover, so it remains accessible in the first viewport. Individual reveal stays in the pop-up, without exposing names or probabilities beforehand.
+
 ## 0.14.1 — 2026-11-07
 
 Replaces split covers with 26 complete editorial gouache scenes, featuring circuit-specific references and whole cars. Artwork retains its original aspect ratio, rounded corners and a subtle shadow, with text outside the image. Credits distinguish AI-generated illustration from documentary photography. Delivery uses immutable circuit paths and SHA-256; integrity failures never display another GP’s artwork.

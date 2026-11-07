@@ -86,7 +86,7 @@
 .fan-condition-chips a[aria-current]{color:white;background:var(--pw-red)}
 .st-key-pilot-cover{position:relative}
 .st-key-pilot-cover>[data-testid="stLayoutWrapper"]:has(>.st-key-pilot-view-navigation){position:absolute;top:62px;bottom:auto;right:24px;width:190px;z-index:5}
-.st-key-pilot-cover .fan-hero[data-hero-kind]{min-height:408px}
+.st-key-pilot-cover .fan-hero[data-hero-kind]:not(.fan-hero-profile-editorial){min-height:408px}
 .st-key-pilot-cover .fan-hero .fan-hero-copy{padding-top:64px!important}
 .st-key-pilot-cover .fan-hero h1{font-size:58px}
 .st-key-pilot-cover>[data-testid="stLayoutWrapper"]:has(>.st-key-pilot-comparison-toolbar){position:absolute;top:16px;left:28px;right:24px;width:auto!important;z-index:4}
@@ -349,7 +349,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-of
  .fan-condition-chips a{font-size:10px;min-height:34px;padding:8px 11px}
  .st-key-pilot-cover>[data-testid="stLayoutWrapper"]:has(>.st-key-pilot-view-navigation){position:static;width:100%;z-index:auto}
  .st-key-pilot-cover{gap:8px}
- .st-key-pilot-cover .fan-hero[data-hero-kind]{min-height:260px}
+ .st-key-pilot-cover .fan-hero[data-hero-kind]:not(.fan-hero-profile-editorial){min-height:260px}
  .st-key-pilot-cover .fan-hero .fan-hero-copy{padding-top:58px!important}
  .st-key-pilot-cover .fan-hero h1{font-size:32px}
  .st-key-pilot-cover .fan-hero[data-hero-kind="forecast"] h1{font-size:26px}
@@ -618,3 +618,69 @@ html:not([data-pw-reduced-motion="true"]) .fan-duel-difference{animation:pw-duel
  .fan-duel-difference>strong{font-size:.875rem}
 }
 @media(prefers-reduced-motion:reduce){.fan-duel-difference{animation:none!important}.fan-gp-tabs a,.fan-condition-chips a,[data-testid="stExpander"] summary,.st-key-duel-controls [role="combobox"]{transition:none!important}}
+
+/* The pilot view control shares the coverage row and the content's right edge. */
+.st-key-pilot-heading-toolbar [data-testid="stHorizontalBlock"]{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:center;gap:12px}
+.st-key-pilot-heading-toolbar [data-testid="stHorizontalBlock"]:has(>.stColumn:nth-child(3)){grid-template-columns:minmax(0,1fr) 88px max-content}
+.st-key-pilot-heading-toolbar [data-testid="stColumn"]{min-width:0!important;width:auto!important}
+.st-key-pilot-heading-toolbar [data-testid="stColumn"]:last-child{justify-self:end}
+.st-key-pilot-heading-toolbar .st-key-pilot-view-navigation{width:max-content!important;margin:0 0 0 auto}
+.st-key-pilot-heading-toolbar [data-testid="stCaptionContainer"] p{margin:0}
+.st-key-pilot-heading-toolbar button{min-height:44px}
+@media(max-width:600px){
+ .st-key-pilot-heading-toolbar [data-testid="stHorizontalBlock"]{grid-template-columns:minmax(0,1fr);gap:8px}
+ .st-key-pilot-heading-toolbar [data-testid="stHorizontalBlock"]:has(>.stColumn:nth-child(3)){grid-template-columns:minmax(0,1fr) 76px max-content}
+ .st-key-pilot-heading-toolbar [data-testid="stColumn"]:first-child{grid-column:1/-1}
+ .st-key-pilot-heading-toolbar [data-testid="stHorizontalBlock"]:has(>.stColumn:nth-child(3))>[data-testid="stColumn"]:nth-child(2){grid-column:2}
+ .st-key-pilot-heading-toolbar [data-testid="stColumn"]:last-child{justify-self:end}
+}
+.st-key-journey-context-row:has(.st-key-pw-context-drivers){display:none}
+
+/* The individual profile uses a documentary photograph, never a podium cutout. */
+.st-key-pilot-cover .fan-hero-profile-editorial{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:26px;background:transparent;min-height:0;padding:0;overflow:visible}
+.st-key-pilot-cover .fan-hero-profile-editorial::before{display:none}
+.st-key-pilot-cover .fan-hero-profile-editorial .fan-hero-copy{position:static;max-width:none;padding:8px 0!important;color:#08172d}
+.st-key-pilot-cover .fan-hero-profile-editorial h1{font-size:clamp(36px,4.2vw,56px);line-height:1.05;max-width:none;color:#08172d;margin-bottom:14px;text-wrap:balance}
+.st-key-pilot-cover .fan-hero-profile-editorial .fan-hero-copy>p{max-width:42ch;font-size:16px;line-height:1.5;color:#3d566d}
+.st-key-pilot-cover .fan-hero-profile-editorial .fan-condition-chips{margin-top:20px;gap:7px}
+.pw-profile-photograph{min-width:0;margin:0}
+.st-key-pilot-cover .fan-hero-profile-editorial .fan-hero-candid{position:static;inset:auto;width:100%!important;height:330px!important;max-height:none;display:block;object-fit:cover;opacity:1;filter:none;transform:none;border-radius:10px}
+.pw-profile-photograph figcaption{font:400 12px/1.5 LatoLocal,Arial,sans-serif;color:#486078;margin-top:8px}
+.pw-profile-photograph figcaption a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:600px){.st-key-pilot-cover .fan-hero-profile-editorial{grid-template-columns:minmax(0,1fr);gap:14px}.st-key-pilot-cover .fan-hero-profile-editorial h1{font-size:34px}.st-key-pilot-cover .fan-hero-profile-editorial .fan-hero-candid{height:270px!important}.st-key-pilot-cover .fan-hero-profile-editorial .fan-hero-copy{padding:0!important}}
+
+/* One result section: photographic podium, compact facts and adjacent actions. */
+.st-key-race-summary{margin-top:0}
+.st-key-race-summary [data-testid="stHorizontalBlock"]{align-items:stretch}
+.st-key-race-summary [data-testid="stColumn"]>[data-testid="stVerticalBlock"]{height:100%}
+.st-key-race-summary [data-testid="stElementContainer"]:has(.fan-podium-panel,.fan-circuit-details),
+.st-key-race-summary [data-testid="stMarkdown"]:has(.fan-podium-panel,.fan-circuit-details),
+.st-key-race-summary [data-testid="stMarkdown"]:has(.fan-podium-panel,.fan-circuit-details)>div,
+.st-key-race-summary [data-testid="stMarkdownContainer"]:has(>.fan-podium-panel,>.fan-circuit-details){display:flex;flex:1 1 auto;align-items:stretch;min-width:0}
+.st-key-race-summary .fan-podium-panel,.st-key-race-summary .fan-circuit-details{min-height:0;height:auto;width:100%;padding:16px 18px;box-shadow:none}
+.st-key-race-summary .fan-podium{gap:10px;min-height:0;align-items:stretch}
+.st-key-race-summary .fan-podium-place{position:relative;isolation:isolate;min-height:260px;padding:12px 8px 10px;justify-content:end;background:#e5eff6;border-radius:6px;border-bottom:3px solid #879eb2}
+.st-key-race-summary .fan-podium-place::before{content:"";position:absolute;right:-12px;top:28px;width:80%;height:50%;z-index:-1;opacity:.12;background:repeating-linear-gradient(125deg,transparent 0 18px,#486078 18px 20px)}
+.st-key-race-summary .fan-podium-place>b{position:absolute;left:10px;top:6px;font:400 54px/1 AbrilFatfaceLocal,Georgia,serif;color:#7794a9;z-index:-1}
+.st-key-race-summary .fan-place-1{background:#f7edcf;border-color:#b38a39}
+.st-key-race-summary .fan-place-1>b{color:#b38a39}
+.st-key-race-summary .fan-podium-place .fan-portrait{display:block;width:100%;height:196px;object-fit:contain;object-position:center bottom!important;margin:0 0 6px}
+.st-key-race-summary .fan-podium-place strong{font-size:14px;line-height:1.25;margin:0 0 4px}
+.st-key-race-summary .fan-podium-place small{font-size:12px}
+.st-key-race-summary .fan-circuit-details dl>div{padding:6px 0;font-size:15px}
+.st-key-race-summary .fan-weather{gap:8px;margin-top:8px;padding-top:8px}
+.st-key-race-summary .fan-weather>span{display:none}
+.st-key-race-summary .fan-weather strong{font-size:24px}
+.st-key-race-summary .fan-weather small{font-size:11px}
+.st-key-race-summary .fan-circuit-more{padding-top:5px}
+.st-key-race-summary-actions{margin-top:0}
+.st-key-race-summary-actions button{min-height:44px;border:1px solid #9cb2c5;border-radius:6px;background:#ffffff80;font-weight:700}
+@media(max-width:600px){.st-key-race-summary .fan-podium-panel,.st-key-race-summary .fan-circuit-details{padding:14px 12px}.st-key-race-summary .fan-podium{gap:7px}.st-key-race-summary .fan-podium-place{min-height:0;padding:56px 5px 10px}.st-key-race-summary .fan-podium-place .fan-portrait{height:clamp(96px,32vw,140px)}.st-key-race-summary .fan-podium-place>b{font-size:36px;left:6px}.st-key-race-summary .fan-podium-place strong{font-size:12px}.st-key-race-summary .fan-podium-place small{font-size:11px}.st-key-race-summary-actions [data-testid="stHorizontalBlock"]{gap:8px}}
+
+.st-key-pilot-cover .fan-hero-profile-editorial .pw-profile-photograph{width:100%;max-width:100%;min-width:0}.st-key-pilot-cover .fan-hero-profile-editorial .fan-hero-candid{max-width:100%!important;z-index:auto}
+
+.st-key-pilot-heading-toolbar [data-testid="stCaptionContainer"]{margin:0!important;padding:0!important}.st-key-pilot-view-navigation button p,.st-key-pilot-comparison-toolbar button p{margin:0!important}
+.st-key-pilot-comparison-toolbar [data-testid="stMarkdownContainer"]{margin:0!important}
+.st-key-pilot-comparison-toolbar button{min-height:44px}
+.st-key-pilot-comparison-toolbar button p{display:block;line-height:18px}
+@media(max-width:600px){.st-key-pilot-comparison-toolbar [data-testid="stHorizontalBlock"]{gap:8px}}

@@ -37,3 +37,29 @@ def portrait_asset(driver, name=None):
         credit=label+' · '+(item.get('author') or item.get('source') or 'Formula 1'),
         source=item.get('source_page') or 'https://www.formula1.com/en/drivers',
         position=item.get('object_position') or override.get('position','center top'))
+
+
+def profile_asset(driver):
+    """A separate editorial photograph for this profile; never a podium image."""
+    import hashlib
+    import re
+    if not isinstance(driver, str) or not re.fullmatch(r'[a-z0-9_]+', driver):
+        return None
+    try:
+        catalogue = PROJECT_ROOT / 'frontend_assets/profile_photos.json'
+        if catalogue.is_symlink():
+            return None
+        data = json.loads(catalogue.read_text(encoding='utf-8'))
+        spec = data['photos'][driver]
+        digest = spec['sha256']
+        expected = 'static/pitwall-profiles/{}-{}.jpg'.format(driver, digest[:12])
+        if spec['driver_id'] != driver or not re.fullmatch(r'[a-f0-9]{64}', digest) or spec['path'] != expected:
+            return None
+        path = PROJECT_ROOT / expected
+        if path.is_symlink() or path.parent.is_symlink() or (PROJECT_ROOT/'static').is_symlink():
+            return None
+        if hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+            return None
+        return dict(spec, src='app/'+expected)
+    except (OSError, ValueError, KeyError, TypeError):
+        return None

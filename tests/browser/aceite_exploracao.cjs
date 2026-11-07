@@ -56,7 +56,9 @@ fs.mkdirSync(output, {recursive:true});
   check(frontendErrors.length===0,'Frontend rendering error: '+frontendErrors.join('; '));
   check(await p.locator('[data-testid="stException"]').count() === 0, 'Application exception');
   const hero=await p.locator('.fan-hero').boundingBox();
-  const preceding=await p.locator(route==='Pilotos'?'.st-key-pilot-view-navigation':'.st-key-journey-context-row').boundingBox();
+  const precedingSelector=route==='Pilotos'?'.st-key-pilot-view-navigation':
+   route==='Previsões'&&await p.locator('.st-key-open_tarot').count()?'.st-key-open_tarot':'.st-key-journey-context-row';
+  const preceding=await p.locator(precedingSelector).boundingBox();
   check(hero&&preceding&&hero.y>=preceding.y+preceding.height-1&&hero.y<preceding.y+preceding.height+70,'Cover overlaps or detaches from preceding navigation');
   check(await p.evaluate(()=>{
    const main=document.querySelector('.stMain').getBoundingClientRect(),dock=document.querySelector('.st-key-journey-navigation').getBoundingClientRect();

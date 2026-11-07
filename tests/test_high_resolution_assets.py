@@ -7,7 +7,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from pitwall.dashboard.hero_assets import HERO_IMAGES, hero_asset, portrait_asset
+from pitwall.dashboard.hero_assets import HERO_IMAGES, hero_asset, portrait_asset, profile_asset
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -44,6 +44,20 @@ class TestHighResolutionAssets(unittest.TestCase):
                 self.assertTrue(portrait['url'].startswith('https://'))
                 self.assertTrue(portrait['retrieved'])
                 self.assertEqual(portrait['kind'], 'photograph')
+
+    def test_editorial_profiles_use_separate_high_resolution_originals(self):
+        catalog = json.loads((ROOT / 'frontend_assets/profile_photos.json').read_text())
+        self.assertTrue(catalog['photos'])
+        for driver, photo in catalog['photos'].items():
+            with self.subTest(driver=driver):
+                self.assert_original(ROOT / photo['path'], photo, 1600, 1600)
+                self.assertEqual(profile_asset(driver)['driver_id'], driver)
+                self.assertNotEqual(photo['path'], portrait_asset(driver)['path'])
+                self.assertEqual(len(photo['caption']), 2)
+                self.assertTrue(all(photo['caption']))
+                self.assertTrue(photo['author'])
+                self.assertTrue(photo['source'].startswith('https://'))
+                self.assertTrue(photo['license_url'].startswith('https://'))
 
     def test_five_distinct_historical_heroes_have_sources_and_resolution(self):
         canonical = ['drivers', 'championship', 'forecast', 'performance', 'method']

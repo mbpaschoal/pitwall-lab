@@ -1,5 +1,13 @@
 # Evolução do Pitwall Lab
 
+## 0.14.2 — 2026-11-07
+
+As capas dos GPs passam a ocupar toda a largura do conteúdo, com o título sobre a pintura. As 26 ilustrações aprovadas conservam seus bytes, proporção original, carros inteiros, cantos arredondados e sombra discreta. O resultado reúne pódio, ficha do circuito e ações próximas, sem inserir perfis de pilotos nessa página. Os retratos do pódio recebem grafismos de posição e uma composição mais compacta no celular.
+
+Busca e Explorar pilotos compartilham a faixa de cobertura, com alinhamento à borda direita; Filtros deixa de sobrepor o período no celular. Os perfis de Antonelli e Verstappen recebem fotografias espontâneas separadas do pódio, com fonte, crédito e licença. A foto de Antonelli usa o original nítido de uma entrevista em Zandvoort; os demais pilotos mantêm seus retratos enquanto a curadoria continua. Dados, modelo v1, previsões registradas, probabilidades e cartas permanecem preservados.
+
+O botão de ver as cartas fica imediatamente abaixo dos seletores, antes da capa, para continuar acessível na primeira tela. A revelação individual permanece no pop-up, sem antecipar nomes ou probabilidades.
+
 ## 0.14.1 — 2026-11-07
 
 Substitui as capas divididas por 26 cenas completas em guache editorial, com referências próprias de cada circuito e carros inteiros. A arte mantém a proporção original, cantos arredondados e sombra discreta, com texto fora da imagem. Créditos distinguem ilustração gerada com IA de fotografia documental. A entrega usa arquivos imutáveis por circuito e SHA-256; falhas de integridade não exibem arte de outro GP.
