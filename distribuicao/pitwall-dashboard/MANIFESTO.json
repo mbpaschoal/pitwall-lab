@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "0ccdd03e8083e1f2d71e4359643b448f58ac5d59c20cc950474948fd8e35acc1",
+  "apresentacao_build_sha256": "254dc97aae763fdabd6c83d0157503f6f75d457db60e0303ffb9dd9be972e34b",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "3fe42253bc44a59c45d304b25abea381c80aeaf430ef2f1dcda17798a2bf55e6",
+      "sha256_destino": "da2e212dd56e21f72e976e339bf4bc4e03b3f5b40aee5b92ea0a8d1b0ddb5e53",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "0e73298b499b2a1e87ff6775c9fb379d0aa2ae3f5e98d76f9bf96664375696f6",
-      "sha256_origem": "5e0d762b5abfa495ae7b219bf47e95fbb1552720f7530ef2c810376b02a724e6"
+      "sha256_destino": "0ca59ea375f1fc071f44c37eb51916c6262b95f1dfd85ed10a995e92fff3e9aa",
+      "sha256_origem": "c8de66519f41a62af2b10a0c4eef7a6908ebdd05089ca74eb33356aa9525ec4d"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "b5a8188b6a5028774ea3eef16e345bef94ae19076bfea5d318f9ca4fd2f72ff3",
-      "sha256_origem": "f304243c2f0ddf00d10106200d3f0af7ce81a529cdc85d35f78dc7ec46f58e1d"
+      "sha256_destino": "3ad0771e9cedc00ee37b2ddaa31504916e363ba2472db65027e648c89f67e854",
+      "sha256_origem": "22a09e5ed3679e97a3f6b073d11ed20a9e90523d88c2f6025b5ad1fb0d866d01"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "065582655aacd6fc83ff742a5715c04bb4a57395bf3ee4559798fa42c2ce4589",
-      "sha256_origem": "065582655aacd6fc83ff742a5715c04bb4a57395bf3ee4559798fa42c2ce4589"
+      "sha256_destino": "c6fb87657a4ee72e2b549cdd39c12854fdbecbdfef033c04f523d4bfcb02aa4c",
+      "sha256_origem": "c6fb87657a4ee72e2b549cdd39c12854fdbecbdfef033c04f523d4bfcb02aa4c"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2489,6 +2489,13 @@
       "sha256_origem": "182fefbc19de287a18f9103dc0d0e73d8ec370a99bf0e868f71664fa7edcc8cf"
     },
     {
+      "caminho": "docs/ILUSTRACOES_GP.md",
+      "fonte": "docs/ILUSTRACOES_GP.md",
+      "modo": "copia",
+      "sha256_destino": "d4ae7c43f7abd25bf4689b93b34dcdddde0346c14d798b4a42f42bbe6ff997d1",
+      "sha256_origem": "d4ae7c43f7abd25bf4689b93b34dcdddde0346c14d798b4a42f42bbe6ff997d1"
+    },
+    {
       "caminho": "docs/JORNADA_DO_FA.md",
       "fonte": "docs/JORNADA_DO_FA.md",
       "modo": "copia",
@@ -2550,6 +2557,13 @@
       "modo": "copia",
       "sha256_destino": "41023769e872a5bd05cbadb4f96bdc61c2a15e75aa03e8836136345e428fc7c0",
       "sha256_origem": "41023769e872a5bd05cbadb4f96bdc61c2a15e75aa03e8836136345e428fc7c0"
+    },
+    {
+      "caminho": "docs/en/GP_ILLUSTRATIONS.md",
+      "fonte": "docs/en/GP_ILLUSTRATIONS.md",
+      "modo": "copia",
+      "sha256_destino": "2d3e0539abfcf41752bf193a9c0eb849c77293890d0f6f9ecd71d730efbb240b",
+      "sha256_origem": "2d3e0539abfcf41752bf193a9c0eb849c77293890d0f6f9ecd71d730efbb240b"
     },
     {
       "caminho": "docs/en/REVIEW_030.md",
@@ -2701,11 +2715,18 @@
       "sha256_origem": "c98896b54bdf86dfc9a993854167e8d3bbe109eda201a9f9a826b704f4d2f3ae"
     },
     {
+      "caminho": "frontend_assets/destination_illustrations.json",
+      "fonte": "frontend_assets/destination_illustrations.json",
+      "modo": "copia",
+      "sha256_destino": "aefaf8c8c3c8c38c1527bfdf2a1cb527cb0896c7120ffa6c1e917374c11dbfe7",
+      "sha256_origem": "aefaf8c8c3c8c38c1527bfdf2a1cb527cb0896c7120ffa6c1e917374c11dbfe7"
+    },
+    {
       "caminho": "frontend_assets/destinations.css",
       "fonte": "frontend_assets/destinations.css",
       "modo": "copia",
-      "sha256_destino": "18825fd621d7057ae65dbae93b5acb7e8317750962b03b30a24712a390ea5368",
-      "sha256_origem": "18825fd621d7057ae65dbae93b5acb7e8317750962b03b30a24712a390ea5368"
+      "sha256_destino": "cc09480592c4b131f5bd9685d607a218ae07cf729d3ffa529210da33c422ba6e",
+      "sha256_origem": "cc09480592c4b131f5bd9685d607a218ae07cf729d3ffa529210da33c422ba6e"
     },
     {
       "caminho": "frontend_assets/favorite/index.html",
@@ -2844,8 +2865,8 @@
       "caminho": "pitwall/dashboard/destination_art.py",
       "fonte": "pitwall/dashboard/destination_art.py",
       "modo": "copia",
-      "sha256_destino": "71dfe835f8b65ba10d95b908b005e3bbfdb83bf5d96df4be377f48ef52aa0e6b",
-      "sha256_origem": "71dfe835f8b65ba10d95b908b005e3bbfdb83bf5d96df4be377f48ef52aa0e6b"
+      "sha256_destino": "3c2bbffc4ab7f1eb626ed83f51b1ed69e86cedd0b99de5abbb945c3c075e9445",
+      "sha256_origem": "3c2bbffc4ab7f1eb626ed83f51b1ed69e86cedd0b99de5abbb945c3c075e9445"
     },
     {
       "caminho": "pitwall/dashboard/fan_views.py",
@@ -2867,6 +2888,13 @@
       "modo": "copia",
       "sha256_destino": "b47222f1620a29321728db289db732a4c05ab6f34a345c1d39133319b7c204b3",
       "sha256_origem": "b47222f1620a29321728db289db732a4c05ab6f34a345c1d39133319b7c204b3"
+    },
+    {
+      "caminho": "pitwall/dashboard/illustrations.py",
+      "fonte": "pitwall/dashboard/illustrations.py",
+      "modo": "copia",
+      "sha256_destino": "e41a44c6a29820cc646b0e3e5ad04162d482ca929a377e8bbf9cb97ad32fbade",
+      "sha256_origem": "e41a44c6a29820cc646b0e3e5ad04162d482ca929a377e8bbf9cb97ad32fbade"
     },
     {
       "caminho": "pitwall/dashboard/journey.py",
@@ -2914,8 +2942,8 @@
       "caminho": "pitwall/dashboard/postcards.py",
       "fonte": "pitwall/dashboard/postcards.py",
       "modo": "copia",
-      "sha256_destino": "d66afbf5568fce00cd6acf757a56cdcea670958db053d2837503665223bf71e3",
-      "sha256_origem": "d66afbf5568fce00cd6acf757a56cdcea670958db053d2837503665223bf71e3"
+      "sha256_destino": "b56de778b9e2c832cac70c28b93e846b0c413e9ac1c759f83d3bda49a148e184",
+      "sha256_origem": "b56de778b9e2c832cac70c28b93e846b0c413e9ac1c759f83d3bda49a148e184"
     },
     {
       "caminho": "pitwall/dashboard/search.py",
@@ -3089,8 +3117,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "fb7af586228d793953c17293a2b036a85dd4f8feb8fb66f0c41fffce270c6085",
-      "sha256_origem": "fb7af586228d793953c17293a2b036a85dd4f8feb8fb66f0c41fffce270c6085"
+      "sha256_destino": "315b703d9544c3e7c46900a8c687a8f64f1a59062db3b2c7c5e03709fec75643",
+      "sha256_origem": "315b703d9544c3e7c46900a8c687a8f64f1a59062db3b2c7c5e03709fec75643"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -3294,6 +3322,188 @@
       "modo": "gerado",
       "sha256_destino": "fae2ae892c13355a94724bb0cf59445e572968198becf7f59fb65b43cc710b69",
       "sha256_origem": "fae2ae892c13355a94724bb0cf59445e572968198becf7f59fb65b43cc710b69"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/albert_park-53d9911e82e0.png",
+      "fonte": "static/pitwall-art/gouache/albert_park-53d9911e82e0.png",
+      "modo": "copia",
+      "sha256_destino": "53d9911e82e060efb40f2c16f6442ff7ecfd5a2a7f924bbe7119b9546b44537e",
+      "sha256_origem": "53d9911e82e060efb40f2c16f6442ff7ecfd5a2a7f924bbe7119b9546b44537e"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/americas-95d276bca1cc.png",
+      "fonte": "static/pitwall-art/gouache/americas-95d276bca1cc.png",
+      "modo": "copia",
+      "sha256_destino": "95d276bca1cc026c784bb4cbea9ea7bc0120df173b7431ad0dca3f4065f4a7b6",
+      "sha256_origem": "95d276bca1cc026c784bb4cbea9ea7bc0120df173b7431ad0dca3f4065f4a7b6"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/bahrain-73a0dce3849e.png",
+      "fonte": "static/pitwall-art/gouache/bahrain-73a0dce3849e.png",
+      "modo": "copia",
+      "sha256_destino": "73a0dce3849ed80455114e97edcee01b30f30eb83b3538e6771605330e732ce0",
+      "sha256_origem": "73a0dce3849ed80455114e97edcee01b30f30eb83b3538e6771605330e732ce0"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/baku-fc7bf33c0941.png",
+      "fonte": "static/pitwall-art/gouache/baku-fc7bf33c0941.png",
+      "modo": "copia",
+      "sha256_destino": "fc7bf33c09410666fdc1966fcd6822680487cb8aafa0136b0c1bd48900894d9b",
+      "sha256_origem": "fc7bf33c09410666fdc1966fcd6822680487cb8aafa0136b0c1bd48900894d9b"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/catalunya-b1b4715afa3b.png",
+      "fonte": "static/pitwall-art/gouache/catalunya-b1b4715afa3b.png",
+      "modo": "copia",
+      "sha256_destino": "b1b4715afa3b80ba0d31f7ee491231818a22ad13bde4c85c8ad2bbf0a68e080d",
+      "sha256_origem": "b1b4715afa3b80ba0d31f7ee491231818a22ad13bde4c85c8ad2bbf0a68e080d"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/hungaroring-4894e0994c4a.png",
+      "fonte": "static/pitwall-art/gouache/hungaroring-4894e0994c4a.png",
+      "modo": "copia",
+      "sha256_destino": "4894e0994c4a173fe88bd43b0588f4e94f4953ed990f41a61fccecb6f0be34f7",
+      "sha256_origem": "4894e0994c4a173fe88bd43b0588f4e94f4953ed990f41a61fccecb6f0be34f7"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/imola-3fe848a1ed9c.png",
+      "fonte": "static/pitwall-art/gouache/imola-3fe848a1ed9c.png",
+      "modo": "copia",
+      "sha256_destino": "3fe848a1ed9c4e311710af295059263064880b31d815f5d521ff15ee27937f66",
+      "sha256_origem": "3fe848a1ed9c4e311710af295059263064880b31d815f5d521ff15ee27937f66"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/interlagos-236d2c7cb14b.png",
+      "fonte": "static/pitwall-art/gouache/interlagos-236d2c7cb14b.png",
+      "modo": "copia",
+      "sha256_destino": "236d2c7cb14ba8ae70dc1913d5e34c3f0b4c139629b52488ea2977c195359d7f",
+      "sha256_origem": "236d2c7cb14ba8ae70dc1913d5e34c3f0b4c139629b52488ea2977c195359d7f"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/jeddah-c8bf1afc4b64.png",
+      "fonte": "static/pitwall-art/gouache/jeddah-c8bf1afc4b64.png",
+      "modo": "copia",
+      "sha256_destino": "c8bf1afc4b64bdf1e8a2fb88038153cd290dc37c921d54f92e5e78d0e683ce72",
+      "sha256_origem": "c8bf1afc4b64bdf1e8a2fb88038153cd290dc37c921d54f92e5e78d0e683ce72"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/losail-41559e422357.png",
+      "fonte": "static/pitwall-art/gouache/losail-41559e422357.png",
+      "modo": "copia",
+      "sha256_destino": "41559e4223579f24e8e534447967ef8e47a45d4e8de72a15d5a5e0d75e67b91a",
+      "sha256_origem": "41559e4223579f24e8e534447967ef8e47a45d4e8de72a15d5a5e0d75e67b91a"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/madring-cf51d0d5a2fd.png",
+      "fonte": "static/pitwall-art/gouache/madring-cf51d0d5a2fd.png",
+      "modo": "copia",
+      "sha256_destino": "cf51d0d5a2fd9dd2e824a23f0ed9c84c28bd51697800c41053cb85fd13c603b9",
+      "sha256_origem": "cf51d0d5a2fd9dd2e824a23f0ed9c84c28bd51697800c41053cb85fd13c603b9"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/marina_bay-39f01dcbb115.png",
+      "fonte": "static/pitwall-art/gouache/marina_bay-39f01dcbb115.png",
+      "modo": "copia",
+      "sha256_destino": "39f01dcbb115f4041cd582654a1edfadf032bc725eabf3fcb98a60d47910d8bf",
+      "sha256_origem": "39f01dcbb115f4041cd582654a1edfadf032bc725eabf3fcb98a60d47910d8bf"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/miami-3feffbe0ce06.png",
+      "fonte": "static/pitwall-art/gouache/miami-3feffbe0ce06.png",
+      "modo": "copia",
+      "sha256_destino": "3feffbe0ce060233ca1c7d25a1369738223010949e8cbbc4adcd1686a8ac437f",
+      "sha256_origem": "3feffbe0ce060233ca1c7d25a1369738223010949e8cbbc4adcd1686a8ac437f"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/monaco-3069c86abc94.png",
+      "fonte": "static/pitwall-art/gouache/monaco-3069c86abc94.png",
+      "modo": "copia",
+      "sha256_destino": "3069c86abc9417df19cee252a24daa95547b81044c7b4bd341f52d27c8d78ae5",
+      "sha256_origem": "3069c86abc9417df19cee252a24daa95547b81044c7b4bd341f52d27c8d78ae5"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/monza-94957692b212.png",
+      "fonte": "static/pitwall-art/gouache/monza-94957692b212.png",
+      "modo": "copia",
+      "sha256_destino": "94957692b2120222d18aca02eec3507fb424d813df669507f61be27c6ec7f4e5",
+      "sha256_origem": "94957692b2120222d18aca02eec3507fb424d813df669507f61be27c6ec7f4e5"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/red_bull_ring-f412dfe2d125.png",
+      "fonte": "static/pitwall-art/gouache/red_bull_ring-f412dfe2d125.png",
+      "modo": "copia",
+      "sha256_destino": "f412dfe2d125171879f0ec81cbf65a98a68fd903b32d1f5106c8729f53f91551",
+      "sha256_origem": "f412dfe2d125171879f0ec81cbf65a98a68fd903b32d1f5106c8729f53f91551"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/rodriguez-a38702c8fba2.png",
+      "fonte": "static/pitwall-art/gouache/rodriguez-a38702c8fba2.png",
+      "modo": "copia",
+      "sha256_destino": "a38702c8fba244648c8a0e4542a19c8d396c285011066fd24229e0b7f8db384d",
+      "sha256_origem": "a38702c8fba244648c8a0e4542a19c8d396c285011066fd24229e0b7f8db384d"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/sepang-26ab89260193.png",
+      "fonte": "static/pitwall-art/gouache/sepang-26ab89260193.png",
+      "modo": "copia",
+      "sha256_destino": "26ab89260193f8bd34e29f2e796e8fe352341505d20bdb878e6da1e599821d07",
+      "sha256_origem": "26ab89260193f8bd34e29f2e796e8fe352341505d20bdb878e6da1e599821d07"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/shanghai-4cb730c04f91.png",
+      "fonte": "static/pitwall-art/gouache/shanghai-4cb730c04f91.png",
+      "modo": "copia",
+      "sha256_destino": "4cb730c04f913c6c9c88d99de0d8f8e777ebdfd4dbf9e8449b8984089b49c4f5",
+      "sha256_origem": "4cb730c04f913c6c9c88d99de0d8f8e777ebdfd4dbf9e8449b8984089b49c4f5"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/silverstone-9781ec1cb77d.png",
+      "fonte": "static/pitwall-art/gouache/silverstone-9781ec1cb77d.png",
+      "modo": "copia",
+      "sha256_destino": "9781ec1cb77daacfd6eb3ae4600819343190ff91611ad992b613b6cc16bb812f",
+      "sha256_origem": "9781ec1cb77daacfd6eb3ae4600819343190ff91611ad992b613b6cc16bb812f"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/spa-5ffb022befa9.png",
+      "fonte": "static/pitwall-art/gouache/spa-5ffb022befa9.png",
+      "modo": "copia",
+      "sha256_destino": "5ffb022befa97bc3b2f1432286b8d0845b8bfed8689662accb1b8e6165a22af1",
+      "sha256_origem": "5ffb022befa97bc3b2f1432286b8d0845b8bfed8689662accb1b8e6165a22af1"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/suzuka-1bdcdca4a46c.png",
+      "fonte": "static/pitwall-art/gouache/suzuka-1bdcdca4a46c.png",
+      "modo": "copia",
+      "sha256_destino": "1bdcdca4a46c3966f2ae84c21185ed3b80c66c0980033323068962fd0679321e",
+      "sha256_origem": "1bdcdca4a46c3966f2ae84c21185ed3b80c66c0980033323068962fd0679321e"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/vegas-dca2f857324b.png",
+      "fonte": "static/pitwall-art/gouache/vegas-dca2f857324b.png",
+      "modo": "copia",
+      "sha256_destino": "dca2f857324b3e330fea9dd21ef8e0ae7f3a4e8ac653f3d516832c60f79a8eec",
+      "sha256_origem": "dca2f857324b3e330fea9dd21ef8e0ae7f3a4e8ac653f3d516832c60f79a8eec"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/villeneuve-087954544447.png",
+      "fonte": "static/pitwall-art/gouache/villeneuve-087954544447.png",
+      "modo": "copia",
+      "sha256_destino": "08795454444734c6cc741b446d546febfff4c9f9f7c940cba9f94b1bd8b6abe4",
+      "sha256_origem": "08795454444734c6cc741b446d546febfff4c9f9f7c940cba9f94b1bd8b6abe4"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/yas_marina-10ff4e194f9c.png",
+      "fonte": "static/pitwall-art/gouache/yas_marina-10ff4e194f9c.png",
+      "modo": "copia",
+      "sha256_destino": "10ff4e194f9cf95469709938c88bbe63d87ff6ad0d5a96164e3dd250e393f958",
+      "sha256_origem": "10ff4e194f9cf95469709938c88bbe63d87ff6ad0d5a96164e3dd250e393f958"
+    },
+    {
+      "caminho": "static/pitwall-art/gouache/zandvoort-d6ead35600c0.png",
+      "fonte": "static/pitwall-art/gouache/zandvoort-d6ead35600c0.png",
+      "modo": "copia",
+      "sha256_destino": "d6ead35600c0b7016f47b28270de140c9930ccad5b2d335abfde894558a93bff",
+      "sha256_origem": "d6ead35600c0b7016f47b28270de140c9930ccad5b2d335abfde894558a93bff"
     },
     {
       "caminho": "static/pitwall-circuits/albert_park-7169a68f01dd.webp",
@@ -3551,8 +3761,8 @@
       "caminho": "tests/test_destination_media.py",
       "fonte": "tests/test_destination_media.py",
       "modo": "copia",
-      "sha256_destino": "f2111b0efa6cda2df4db7fb4aace4c353d26b2ab38141c2e9c08e09844496575",
-      "sha256_origem": "f2111b0efa6cda2df4db7fb4aace4c353d26b2ab38141c2e9c08e09844496575"
+      "sha256_destino": "60a2c357fc7b118f377e4eedadfe1cd026e481d35fd052201e1cd3c7c81e7eea",
+      "sha256_origem": "60a2c357fc7b118f377e4eedadfe1cd026e481d35fd052201e1cd3c7c81e7eea"
     },
     {
       "caminho": "tests/test_distribuicao.py",
@@ -3679,7 +3889,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "909023f01170e26cdd5290ddc1bdfc7a717574bc6ac85e963ea3315627006a67"
+      "sha256": "813009e5f4828627d27f081751974fc71c50e2486f8ad88901414120d1583768"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
@@ -3742,5 +3952,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.14.0"
+  "versao_produto": "0.14.1"
 }

@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.14.1 — 2026-11-07
+
+Replaces split covers with 26 complete editorial gouache scenes, featuring circuit-specific references and whole cars. Artwork retains its original aspect ratio, rounded corners and a subtle shadow, with text outside the image. Credits distinguish AI-generated illustration from documentary photography. Delivery uses immutable circuit paths and SHA-256; integrity failures never display another GP’s artwork.
+
+Verification covers framing, identity, bytes and mobile layout. Data, frozen model v1, recorded forecasts, original photographs, portraits and cards are preserved. Further editorial layouts and candid profile photography will be presented as separate proposals.
+
 ## 0.14.0 — 2026-11-06
 
 Editorial interface revision: removes the extra location label and redundant GP subtitles on analytical pages, and aligns search and selectors in 44 px controls. A compact sticky header keeps language controls available while scrolling. The sidebar retains its fifteen destinations; narrow-menu expansion settles immediately to keep native click targets stable. The finish flag now uses alternating filled squares.

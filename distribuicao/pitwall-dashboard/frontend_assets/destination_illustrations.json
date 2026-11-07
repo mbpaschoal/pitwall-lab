@@ -1,0 +1,685 @@
+{
+  "schema": 1,
+  "style": "gouache-editorial",
+  "style_reference_sha256": "26ab89260193f8bd34e29f2e796e8fe352341505d20bdb878e6da1e599821d07",
+  "complete": true,
+  "circuits": {
+    "albert_park": {
+      "circuit_id": "albert_park",
+      "name": [
+        "Melbourne",
+        "Melbourne"
+      ],
+      "country": [
+        "Austrália",
+        "Australia"
+      ],
+      "motif": [
+        "Lago, eucaliptos e horizonte de Melbourne",
+        "Albert Park lake, eucalyptus and Melbourne skyline"
+      ],
+      "reference_urls": [
+        "https://www.formula1.com/en/latest/article/gallery-the-best-images-from-australia.6vjVuD4gMASdZx9sKQqMob"
+      ],
+      "alt": [
+        "Ilustração em guache de Melbourne, com lago, eucaliptos e horizonte de Melbourne e um carro de corrida inteiro.",
+        "Gouache illustration of Melbourne, with albert Park lake, eucalyptus and Melbourne skyline and a complete racing car."
+      ],
+      "sha256": "53d9911e82e060efb40f2c16f6442ff7ecfd5a2a7f924bbe7119b9546b44537e",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/albert_park-53d9911e82e0.png"
+    },
+    "americas": {
+      "circuit_id": "americas",
+      "name": [
+        "Austin",
+        "Austin"
+      ],
+      "country": [
+        "Estados Unidos",
+        "United States"
+      ],
+      "motif": [
+        "Torre de observação e paisagem do Texas",
+        "COTA observation tower and Texas landscape"
+      ],
+      "reference_urls": [
+        "https://www.mirorivera.com/observation-tower"
+      ],
+      "alt": [
+        "Ilustração em guache de Austin, com torre de observação e paisagem do Texas e um carro de corrida inteiro.",
+        "Gouache illustration of Austin, with cOTA observation tower and Texas landscape and a complete racing car."
+      ],
+      "sha256": "95d276bca1cc026c784bb4cbea9ea7bc0120df173b7431ad0dca3f4065f4a7b6",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/americas-95d276bca1cc.png"
+    },
+    "bahrain": {
+      "circuit_id": "bahrain",
+      "name": [
+        "Sakhir",
+        "Sakhir"
+      ],
+      "country": [
+        "Bahrein",
+        "Bahrain"
+      ],
+      "motif": [
+        "Torre circular de Sakhir e luz do deserto",
+        "Sakhir circular tower and desert light"
+      ],
+      "reference_urls": [
+        "https://www.bahraingp.com/blog/news/f1-fans-first-to-witness-bahrains-iconic-bic-tower-in-a-whole-new-light/"
+      ],
+      "alt": [
+        "Ilustração em guache de Sakhir, com torre circular de Sakhir e luz do deserto e um carro de corrida inteiro.",
+        "Gouache illustration of Sakhir, with sakhir circular tower and desert light and a complete racing car."
+      ],
+      "sha256": "73a0dce3849ed80455114e97edcee01b30f30eb83b3538e6771605330e732ce0",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/bahrain-73a0dce3849e.png"
+    },
+    "baku": {
+      "circuit_id": "baku",
+      "name": [
+        "Baku",
+        "Baku"
+      ],
+      "country": [
+        "Azerbaijão",
+        "Azerbaijan"
+      ],
+      "motif": [
+        "Muralhas e ruas da cidade antiga de Baku",
+        "Baku old-city walls and streets"
+      ],
+      "reference_urls": [
+        "https://www.mercedesamgf1.com/news/in-pictures-the-best-images-from-baku"
+      ],
+      "alt": [
+        "Ilustração em guache de Baku, com muralhas e ruas da cidade antiga de Baku e um carro de corrida inteiro.",
+        "Gouache illustration of Baku, with baku old-city walls and streets and a complete racing car."
+      ],
+      "sha256": "fc7bf33c09410666fdc1966fcd6822680487cb8aafa0136b0c1bd48900894d9b",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/baku-fc7bf33c0941.png"
+    },
+    "catalunya": {
+      "circuit_id": "catalunya",
+      "name": [
+        "Barcelona",
+        "Barcelona"
+      ],
+      "country": [
+        "Espanha",
+        "Spain"
+      ],
+      "motif": [
+        "Arquibancadas e paisagem mediterrânea da Catalunha",
+        "Catalan grandstands and Mediterranean landscape"
+      ],
+      "reference_urls": [
+        "https://www.circuitcat.com/en/"
+      ],
+      "alt": [
+        "Ilustração em guache de Barcelona, com arquibancadas e paisagem mediterrânea da Catalunha e um carro de corrida inteiro.",
+        "Gouache illustration of Barcelona, with catalan grandstands and Mediterranean landscape and a complete racing car."
+      ],
+      "sha256": "b1b4715afa3b80ba0d31f7ee491231818a22ad13bde4c85c8ad2bbf0a68e080d",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/catalunya-b1b4715afa3b.png"
+    },
+    "hungaroring": {
+      "circuit_id": "hungaroring",
+      "name": [
+        "Budapeste",
+        "Budapest"
+      ],
+      "country": [
+        "Hungria",
+        "Hungary"
+      ],
+      "motif": [
+        "Curvas e colinas de Mogyoród",
+        "Mogyoród bends and hills"
+      ],
+      "reference_urls": [
+        "https://hungaroring.hu/site/en/media/news/hungaroring-the-future-has-begun"
+      ],
+      "alt": [
+        "Ilustração em guache de Budapeste, com curvas e colinas de Mogyoród e um carro de corrida inteiro.",
+        "Gouache illustration of Budapest, with mogyoród bends and hills and a complete racing car."
+      ],
+      "sha256": "4894e0994c4a173fe88bd43b0588f4e94f4953ed990f41a61fccecb6f0be34f7",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/hungaroring-4894e0994c4a.png"
+    },
+    "imola": {
+      "circuit_id": "imola",
+      "name": [
+        "Imola",
+        "Imola"
+      ],
+      "country": [
+        "Itália",
+        "Italy"
+      ],
+      "motif": [
+        "Parque, álamos e curvas de Imola",
+        "Imola park, poplars and bends"
+      ],
+      "reference_urls": [
+        "https://www.autodromoimola.it/en/history/"
+      ],
+      "alt": [
+        "Ilustração em guache de Imola, com parque, álamos e curvas de Imola e um carro de corrida inteiro.",
+        "Gouache illustration of Imola, with imola park, poplars and bends and a complete racing car."
+      ],
+      "sha256": "3fe848a1ed9c4e311710af295059263064880b31d815f5d521ff15ee27937f66",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/imola-3fe848a1ed9c.png"
+    },
+    "interlagos": {
+      "circuit_id": "interlagos",
+      "name": [
+        "São Paulo",
+        "São Paulo"
+      ],
+      "country": [
+        "Brasil",
+        "Brazil"
+      ],
+      "motif": [
+        "Curvas, zebras e horizonte de São Paulo",
+        "Interlagos bends, kerbs and São Paulo skyline"
+      ],
+      "reference_urls": [
+        "https://autodromodeinterlagos.prefeitura.sp.gov.br/w/nova-identidade-visual-do-autodromo-de-interlagos"
+      ],
+      "alt": [
+        "Ilustração em guache de São Paulo, com curvas, zebras e horizonte de São Paulo e um carro de corrida inteiro.",
+        "Gouache illustration of São Paulo, with interlagos bends, kerbs and São Paulo skyline and a complete racing car."
+      ],
+      "sha256": "236d2c7cb14ba8ae70dc1913d5e34c3f0b4c139629b52488ea2977c195359d7f",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/interlagos-236d2c7cb14b.png"
+    },
+    "jeddah": {
+      "circuit_id": "jeddah",
+      "name": [
+        "Jeddah",
+        "Jeddah"
+      ],
+      "country": [
+        "Arábia Saudita",
+        "Saudi Arabia"
+      ],
+      "motif": [
+        "Corniche, Mar Vermelho e luz de Jeddah",
+        "Jeddah Corniche, Red Sea and light"
+      ],
+      "reference_urls": [
+        "https://jeddahcircuit.com/en"
+      ],
+      "alt": [
+        "Ilustração em guache de Jeddah, com corniche, Mar Vermelho e luz de Jeddah e um carro de corrida inteiro.",
+        "Gouache illustration of Jeddah, with jeddah Corniche, Red Sea and light and a complete racing car."
+      ],
+      "sha256": "c8bf1afc4b64bdf1e8a2fb88038153cd290dc37c921d54f92e5e78d0e683ce72",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/jeddah-c8bf1afc4b64.png"
+    },
+    "losail": {
+      "circuit_id": "losail",
+      "name": [
+        "Lusail",
+        "Lusail"
+      ],
+      "country": [
+        "Catar",
+        "Qatar"
+      ],
+      "motif": [
+        "Refletores e pista noturna de Lusail",
+        "Lusail floodlights and night track"
+      ],
+      "reference_urls": [
+        "https://www.formula1.com/en/latest/article/speed-desert-and-doha-the-ultimate-fan-guide-to-the-qatar-grand-prix.7pVRowHi0gVBHEROf7d9B0"
+      ],
+      "alt": [
+        "Ilustração em guache de Lusail, com refletores e pista noturna de Lusail e um carro de corrida inteiro.",
+        "Gouache illustration of Lusail, with lusail floodlights and night track and a complete racing car."
+      ],
+      "sha256": "41559e4223579f24e8e534447967ef8e47a45d4e8de72a15d5a5e0d75e67b91a",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/losail-41559e422357.png"
+    },
+    "madring": {
+      "circuit_id": "madring",
+      "name": [
+        "Madrid",
+        "Madrid"
+      ],
+      "country": [
+        "Espanha",
+        "Spain"
+      ],
+      "motif": [
+        "Curva inclinada e ambiente de Madrid",
+        "Madrid banked bend and surroundings"
+      ],
+      "reference_urls": [
+        "https://www.madring.com/en/circuit"
+      ],
+      "alt": [
+        "Ilustração em guache de Madrid, com curva inclinada e ambiente de Madrid e um carro de corrida inteiro.",
+        "Gouache illustration of Madrid, with madrid banked bend and surroundings and a complete racing car."
+      ],
+      "sha256": "cf51d0d5a2fd9dd2e824a23f0ed9c84c28bd51697800c41053cb85fd13c603b9",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/madring-cf51d0d5a2fd.png"
+    },
+    "marina_bay": {
+      "circuit_id": "marina_bay",
+      "name": [
+        "Marina Bay",
+        "Marina Bay"
+      ],
+      "country": [
+        "Singapura",
+        "Singapore"
+      ],
+      "motif": [
+        "Luzes da pista e arquitetura de Marina Bay",
+        "Marina Bay track lights and architecture"
+      ],
+      "reference_urls": [
+        "https://www.astonmartinf1.com/en-GB/news/gallery/the-best-pictures-from-magnificent-marina-bay"
+      ],
+      "alt": [
+        "Ilustração em guache de Marina Bay, com luzes da pista e arquitetura de Marina Bay e um carro de corrida inteiro.",
+        "Gouache illustration of Marina Bay, with marina Bay track lights and architecture and a complete racing car."
+      ],
+      "sha256": "39f01dcbb115f4041cd582654a1edfadf032bc725eabf3fcb98a60d47910d8bf",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/marina_bay-39f01dcbb115.png"
+    },
+    "miami": {
+      "circuit_id": "miami",
+      "name": [
+        "Miami",
+        "Miami"
+      ],
+      "country": [
+        "Estados Unidos",
+        "United States"
+      ],
+      "motif": [
+        "Estádio, palmeiras e cores de Miami",
+        "Miami stadium, palms and colours"
+      ],
+      "reference_urls": [
+        "https://tpddesignhouse.com/projects/formula-1-miami-paddock-club/"
+      ],
+      "alt": [
+        "Ilustração em guache de Miami, com estádio, palmeiras e cores de Miami e um carro de corrida inteiro.",
+        "Gouache illustration of Miami, with miami stadium, palms and colours and a complete racing car."
+      ],
+      "sha256": "3feffbe0ce060233ca1c7d25a1369738223010949e8cbbc4adcd1686a8ac437f",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/miami-3feffbe0ce06.png"
+    },
+    "monaco": {
+      "circuit_id": "monaco",
+      "name": [
+        "Monte Carlo",
+        "Monte Carlo"
+      ],
+      "country": [
+        "Mônaco",
+        "Monaco"
+      ],
+      "motif": [
+        "Porto, iates e fachadas de Monte Carlo",
+        "Monte Carlo harbour, yachts and facades"
+      ],
+      "reference_urls": [
+        "https://www.formula1.com/en/racing/2026/monaco"
+      ],
+      "alt": [
+        "Ilustração em guache de Monte Carlo, com porto, iates e fachadas de Monte Carlo e um carro de corrida inteiro.",
+        "Gouache illustration of Monte Carlo, with monte Carlo harbour, yachts and facades and a complete racing car."
+      ],
+      "sha256": "3069c86abc9417df19cee252a24daa95547b81044c7b4bd341f52d27c8d78ae5",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/monaco-3069c86abc94.png"
+    },
+    "monza": {
+      "circuit_id": "monza",
+      "name": [
+        "Monza",
+        "Monza"
+      ],
+      "country": [
+        "Itália",
+        "Italy"
+      ],
+      "motif": [
+        "Parque e concreto do oval histórico de Monza",
+        "Monza park and historic concrete banking"
+      ],
+      "reference_urls": [
+        "https://www.monzanet.it/en/"
+      ],
+      "alt": [
+        "Ilustração em guache de Monza, com parque e concreto do oval histórico de Monza e um carro de corrida inteiro.",
+        "Gouache illustration of Monza, with monza park and historic concrete banking and a complete racing car."
+      ],
+      "sha256": "94957692b2120222d18aca02eec3507fb424d813df669507f61be27c6ec7f4e5",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/monza-94957692b212.png"
+    },
+    "red_bull_ring": {
+      "circuit_id": "red_bull_ring",
+      "name": [
+        "Spielberg",
+        "Spielberg"
+      ],
+      "country": [
+        "Áustria",
+        "Austria"
+      ],
+      "motif": [
+        "Colinas da Estíria e escultura de aço",
+        "Styrian hills and steel sculpture"
+      ],
+      "reference_urls": [
+        "https://www.redbullring.com/en/business/"
+      ],
+      "alt": [
+        "Ilustração em guache de Spielberg, com colinas da Estíria e escultura de aço e um carro de corrida inteiro.",
+        "Gouache illustration of Spielberg, with styrian hills and steel sculpture and a complete racing car."
+      ],
+      "sha256": "f412dfe2d125171879f0ec81cbf65a98a68fd903b32d1f5106c8729f53f91551",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/red_bull_ring-f412dfe2d125.png"
+    },
+    "rodriguez": {
+      "circuit_id": "rodriguez",
+      "name": [
+        "Cidade do México",
+        "Mexico City"
+      ],
+      "country": [
+        "México",
+        "Mexico"
+      ],
+      "motif": [
+        "Arquibancadas do estádio na Cidade do México",
+        "Mexico City stadium grandstands"
+      ],
+      "reference_urls": [
+        "https://pinchemoreno.myportfolio.com/ocesa-2015-formula-1-mexican-grand-prix"
+      ],
+      "alt": [
+        "Ilustração em guache de Cidade do México, com arquibancadas do estádio na Cidade do México e um carro de corrida inteiro.",
+        "Gouache illustration of Mexico City, with mexico City stadium grandstands and a complete racing car."
+      ],
+      "sha256": "a38702c8fba244648c8a0e4542a19c8d396c285011066fd24229e0b7f8db384d",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/rodriguez-a38702c8fba2.png"
+    },
+    "sepang": {
+      "circuit_id": "sepang",
+      "name": [
+        "Sepang",
+        "Sepang"
+      ],
+      "country": [
+        "Malásia",
+        "Malaysia"
+      ],
+      "motif": [
+        "Coberturas das arquibancadas, palmeiras e pista de Sepang",
+        "Sepang grandstand canopies, palms and track"
+      ],
+      "reference_urls": [
+        "https://www.sepangcircuit.com/architecture",
+        "https://jpkkl.com/?p=2495"
+      ],
+      "alt": [
+        "Ilustração em guache de Sepang, com as coberturas das arquibancadas, palmeiras e um carro de corrida inteiro.",
+        "Gouache illustration of Sepang, with grandstand canopies, palms and a complete racing car."
+      ],
+      "sha256": "26ab89260193f8bd34e29f2e796e8fe352341505d20bdb878e6da1e599821d07",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/sepang-26ab89260193.png"
+    },
+    "shanghai": {
+      "circuit_id": "shanghai",
+      "name": [
+        "Shanghai",
+        "Shanghai"
+      ],
+      "country": [
+        "China",
+        "China"
+      ],
+      "motif": [
+        "Arquitetura monumental e formas de lótus de Shanghai",
+        "Shanghai monumental architecture and lotus forms"
+      ],
+      "reference_urls": [
+        "https://tilke.de/portfolio/shanghai-international-circuit/"
+      ],
+      "alt": [
+        "Ilustração em guache de Shanghai, com arquitetura monumental e formas de lótus de Shanghai e um carro de corrida inteiro.",
+        "Gouache illustration of Shanghai, with shanghai monumental architecture and lotus forms and a complete racing car."
+      ],
+      "sha256": "4cb730c04f913c6c9c88d99de0d8f8e777ebdfd4dbf9e8449b8984089b49c4f5",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/shanghai-4cb730c04f91.png"
+    },
+    "silverstone": {
+      "circuit_id": "silverstone",
+      "name": [
+        "Silverstone",
+        "Silverstone"
+      ],
+      "country": [
+        "Reino Unido",
+        "United Kingdom"
+      ],
+      "motif": [
+        "A cobertura do Wing e o céu de Silverstone",
+        "The Wing roofline and Silverstone sky"
+      ],
+      "reference_urls": [
+        "https://populous.com/showcases/silverstone-circuit"
+      ],
+      "alt": [
+        "Ilustração em guache de Silverstone, com a cobertura do Wing e o céu de Silverstone e um carro de corrida inteiro.",
+        "Gouache illustration of Silverstone, with the Wing roofline and Silverstone sky and a complete racing car."
+      ],
+      "sha256": "9781ec1cb77daacfd6eb3ae4600819343190ff91611ad992b613b6cc16bb812f",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/silverstone-9781ec1cb77d.png"
+    },
+    "spa": {
+      "circuit_id": "spa",
+      "name": [
+        "Spa-Francorchamps",
+        "Spa-Francorchamps"
+      ],
+      "country": [
+        "Bélgica",
+        "Belgium"
+      ],
+      "motif": [
+        "A subida de Raidillon na floresta das Ardenas",
+        "Raidillon climbing through the Ardennes forest"
+      ],
+      "reference_urls": [
+        "https://www.spa-francorchamps.be/en/the-circuit"
+      ],
+      "alt": [
+        "Ilustração em guache de Spa-Francorchamps, com a subida de Raidillon na floresta das Ardenas e um carro de corrida inteiro.",
+        "Gouache illustration of Spa-Francorchamps, with raidillon climbing through the Ardennes forest and a complete racing car."
+      ],
+      "sha256": "5ffb022befa97bc3b2f1432286b8d0845b8bfed8689662accb1b8e6165a22af1",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/spa-5ffb022befa9.png"
+    },
+    "suzuka": {
+      "circuit_id": "suzuka",
+      "name": [
+        "Suzuka",
+        "Suzuka"
+      ],
+      "country": [
+        "Japão",
+        "Japan"
+      ],
+      "motif": [
+        "Roda-gigante e curvas de Suzuka",
+        "Suzuka Ferris wheel and bends"
+      ],
+      "reference_urls": [
+        "https://www.alpinef1.com/news/behind-the-design-japanese-gp-race-poster"
+      ],
+      "alt": [
+        "Ilustração em guache de Suzuka, com roda-gigante e curvas de Suzuka e um carro de corrida inteiro.",
+        "Gouache illustration of Suzuka, with suzuka Ferris wheel and bends and a complete racing car."
+      ],
+      "sha256": "1bdcdca4a46c3966f2ae84c21185ed3b80c66c0980033323068962fd0679321e",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/suzuka-1bdcdca4a46c.png"
+    },
+    "vegas": {
+      "circuit_id": "vegas",
+      "name": [
+        "Las Vegas",
+        "Las Vegas"
+      ],
+      "country": [
+        "Estados Unidos",
+        "United States"
+      ],
+      "motif": [
+        "Esfera, luzes e cenário noturno de Las Vegas",
+        "Las Vegas sphere, lights and night scene"
+      ],
+      "reference_urls": [
+        "https://www.mercedesamgf1.com/news/in-pictures-the-best-images-from-las-vegas-2025"
+      ],
+      "alt": [
+        "Ilustração em guache de Las Vegas, com esfera, luzes e cenário noturno de Las Vegas e um carro de corrida inteiro.",
+        "Gouache illustration of Las Vegas, with las Vegas sphere, lights and night scene and a complete racing car."
+      ],
+      "sha256": "dca2f857324b3e330fea9dd21ef8e0ae7f3a4e8ac653f3d516832c60f79a8eec",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/vegas-dca2f857324b.png"
+    },
+    "villeneuve": {
+      "circuit_id": "villeneuve",
+      "name": [
+        "Montreal",
+        "Montreal"
+      ],
+      "country": [
+        "Canadá",
+        "Canada"
+      ],
+      "motif": [
+        "Parque de Montreal e a Biosphère ao fundo",
+        "Montreal park and the distant Biosphère"
+      ],
+      "reference_urls": [
+        "https://www.parcjeandrapeau.com/en/the-dome-biosphere-history/"
+      ],
+      "alt": [
+        "Ilustração em guache de Montreal, com parque de Montreal e a Biosphère ao fundo e um carro de corrida inteiro.",
+        "Gouache illustration of Montreal, with montreal park and the distant Biosphère and a complete racing car."
+      ],
+      "sha256": "08795454444734c6cc741b446d546febfff4c9f9f7c940cba9f94b1bd8b6abe4",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/villeneuve-087954544447.png"
+    },
+    "yas_marina": {
+      "circuit_id": "yas_marina",
+      "name": [
+        "Abu Dhabi",
+        "Abu Dhabi"
+      ],
+      "country": [
+        "Emirados Árabes Unidos",
+        "United Arab Emirates"
+      ],
+      "motif": [
+        "Malha iluminada do hotel e marina de Yas",
+        "Yas hotel illuminated lattice and marina"
+      ],
+      "reference_urls": [
+        "https://www.marriott.com/en-us/hotels/auhwh-w-abu-dhabi-yas-island/photos/"
+      ],
+      "alt": [
+        "Ilustração em guache de Abu Dhabi, com malha iluminada do hotel e marina de Yas e um carro de corrida inteiro.",
+        "Gouache illustration of Abu Dhabi, with yas hotel illuminated lattice and marina and a complete racing car."
+      ],
+      "sha256": "10ff4e194f9cf95469709938c88bbe63d87ff6ad0d5a96164e3dd250e393f958",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/yas_marina-10ff4e194f9c.png"
+    },
+    "zandvoort": {
+      "circuit_id": "zandvoort",
+      "name": [
+        "Zandvoort",
+        "Zandvoort"
+      ],
+      "country": [
+        "Países Baixos",
+        "Netherlands"
+      ],
+      "motif": [
+        "Curva inclinada e dunas de Zandvoort",
+        "Zandvoort banking and coastal dunes"
+      ],
+      "reference_urls": [
+        "https://www.circuitzandvoort.nl/en/presentation/"
+      ],
+      "alt": [
+        "Ilustração em guache de Zandvoort, com curva inclinada e dunas de Zandvoort e um carro de corrida inteiro.",
+        "Gouache illustration of Zandvoort, with zandvoort banking and coastal dunes and a complete racing car."
+      ],
+      "sha256": "d6ead35600c0b7016f47b28270de140c9930ccad5b2d335abfde894558a93bff",
+      "width": 1536,
+      "height": 1024,
+      "path": "static/pitwall-art/gouache/zandvoort-d6ead35600c0.png"
+    }
+  }
+}

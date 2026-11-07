@@ -12,9 +12,9 @@ const version = fs.readFileSync(path.join(__dirname,'../../VERSION'),'utf8').tri
 const expectedCSS=fs.readFileSync(path.join(__dirname,'../../frontend_assets/journey.css'),'utf8');
 const cssHash=crypto.createHash('sha256').update(expectedCSS).digest('hex');
 const heroCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../dashboard_assets/fan/hero_catalog.json'),'utf8')).heroes;
-const circuitCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../dashboard_assets/circuit/catalogo_visual.json'),'utf8')).circuitos;
+const artCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../frontend_assets/destination_illustrations.json'),'utf8')).circuits;
 const mediaCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../static/pitwall-media/catalog.json'),'utf8')).method;
-const expectedHeroes={Corridas:circuitCatalog.americas.foto.sha256,Pilotos:heroCatalog.drivers.sha256,Campeonato:heroCatalog.championship.sha256,'Previsões':circuitCatalog.americas.foto.sha256,Desempenho:heroCatalog.performance.sha256,Metodologia:heroCatalog.method.sha256};
+const expectedHeroes={Corridas:artCatalog.americas.sha256,Pilotos:heroCatalog.drivers.sha256,Campeonato:heroCatalog.championship.sha256,'Previsões':artCatalog.americas.sha256,Desempenho:heroCatalog.performance.sha256,Metodologia:heroCatalog.method.sha256};
 const routes = ['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
 const launch = {headless:true};
 if (browserName==='chromium' && process.env.PLAYWRIGHT_CHANNEL) launch.channel=process.env.PLAYWRIGHT_CHANNEL;
@@ -44,15 +44,14 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     }
     await surface.locator('.fan-hero h1').waitFor({timeout:90000});
     await surface.waitForFunction(()=>document.querySelector('.stApp')?.getAttribute('data-test-script-state')==='notRunning',null,{timeout:90000});
-    const image=surface.locator(['Corridas','Previsões'].includes(route)?'.pc-photo':'.fan-hero-image').first();
+    const image=surface.locator(['Corridas','Previsões'].includes(route)?'.pc-illustration':'.fan-hero-image').first();
     await image.evaluate(img=>img.decode());
     const photoSource=await image.evaluate(img=>img.currentSrc);
     let photoBytes,variant;
     if(photoSource.startsWith('data:'))photoBytes=Buffer.from(photoSource.split(',')[1],'base64');
     else {
      variant=mediaCatalog.variants.find(v=>new URL(photoSource).pathname.endsWith('/app/'+v.path));
-     const circuitPhoto=circuitCatalog.americas.foto;
-     const originalPath='/app/static/pitwall-circuits/americas-'+circuitPhoto.sha256.slice(0,12)+path.extname(circuitPhoto.caminho).toLowerCase();
+     const originalPath='/app/'+artCatalog.americas.path;
      const immutable=['Corridas','Previsões'].includes(route)&&new URL(photoSource).pathname.endsWith(originalPath);
      requireCheck(immutable||variant&&mediaCatalog.source_sha256===expectedHeroes[route],'Photo is not the approved immutable original or responsive variant');
      requireCheck(new URL(photoSource).origin===new URL(surface.url()).origin,'Photo origin differs');

@@ -13,7 +13,7 @@ async function ready(app){
  },null,{timeout:90000});
  await app.evaluate(()=>document.fonts.ready);
  await app.waitForFunction(()=>![...document.querySelectorAll('[data-testid=stSkeleton]')].some(e=>{const r=e.getBoundingClientRect();return r.width&&r.height&&r.top<innerHeight&&r.bottom>0}),null,{timeout:30000});
- await app.locator('.pc-photo').evaluateAll(xs=>Promise.all(xs.map(x=>x.decode())));
+ await app.locator('.pc-illustration').evaluateAll(xs=>Promise.all(xs.map(x=>x.decode())));
  await app.waitForTimeout(200);
 }
 (async()=>{
@@ -74,7 +74,7 @@ async function ready(app){
    const o=await opener.boundingBox();assert(o&&o.y+o.height<=1000,'Primary card action falls below first viewport');
    assert.equal(await app.locator('.pw-sealed-deck:visible').count(),0,'Cards must open in the dialog');
    const credit=app.locator('.pc-credits summary');await credit.click();assert(await app.locator('.pc-credits[open]').isVisible());
-   assert((await app.locator('.pc-credits').innerText()).includes(lang==='pt'?'Arte editorial original':'Original Pitwall Lab'));await credit.click();
+   assert((await app.locator('.pc-credits').innerText()).includes(lang==='pt'?'Ilustração em guache gerada com IA':'Gouache illustration generated with AI'));await credit.click();
    await app.locator('.stMain').evaluate(e=>e.scrollTo({top:0,behavior:'instant'}));
    await page.screenshot({path:path.join(output,width+'-'+lang+'-forecast.png')});
    if(pointerMouse&&width<801){

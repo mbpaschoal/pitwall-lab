@@ -139,6 +139,7 @@ jobs:
             node tests/browser/aceite_pilotos_atualizacao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/driver-updates-evidence"
             node tests/browser/aceite_visual.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/visual-evidence"
             node tests/browser/aceite_acabamento.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/finish-evidence"
+            node tests/browser/aceite_guaches.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/gouache-evidence"
             node tests/browser/aceite_fim_semana.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/weekend-evidence"
             node tests/browser/aceite_pneus_lawson.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/lawson-tyres-evidence"
             node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-evidence"
@@ -168,6 +169,7 @@ jobs:
             ${{ runner.temp }}/driver-updates-evidence
             ${{ runner.temp }}/visual-evidence
             ${{ runner.temp }}/finish-evidence
+            ${{ runner.temp }}/gouache-evidence
             ${{ runner.temp }}/finish-webkit-mouse-evidence
             ${{ runner.temp }}/controls-evidence
             ${{ runner.temp }}/controls-webkit-evidence

@@ -5,9 +5,9 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-import xml.etree.ElementTree as ET
 
-from pitwall.dashboard.destination_art import DESTINATIONS, artwork_svg
+from pitwall.dashboard.destination_art import DESTINATIONS
+from pitwall.dashboard.illustrations import illustration, CATALOG, STYLE
 from pitwall.dashboard.media import circuit_photo_source, circuit_static_path
 from pitwall.dashboard.postcards import cover
 from pitwall.i18n import set_language
@@ -40,11 +40,17 @@ class DestinationMediaTests(unittest.TestCase):
     def test_all_approved_circuits_have_distinct_safe_art_and_exact_static_bytes(self):
         catalog = json.loads((ROOT / 'dashboard_assets/circuit/catalogo_visual.json').read_text())['circuitos']
         self.assertEqual(set(DESTINATIONS), set(catalog))
-        self.assertEqual(len({d.artwork for d in DESTINATIONS.values()}), len(catalog))
+        gouaches = json.loads((ROOT / CATALOG).read_text())
+        self.assertEqual(gouaches['style'], STYLE)
+        self.assertTrue(gouaches['complete'])
+        self.assertEqual(set(gouaches['circuits']), set(catalog))
+        self.assertEqual(len({a['sha256'] for a in gouaches['circuits'].values()}), len(catalog))
         for cid, assets in catalog.items():
-            svg = ET.fromstring(artwork_svg(cid))
-            self.assertEqual(svg.attrib['aria-hidden'], 'true')
-            self.assertFalse(any(el.tag.split('}')[-1] in ('script', 'image', 'foreignObject') for el in svg.iter()))
+            art = illustration(ROOT, cid)
+            self.assertIsNotNone(art, cid)
+            self.assertIn(art['path'], DELIVERY_ALLOWLIST)
+            self.assertEqual((art['width'], art['height']), (1536, 1024))
+            self.assertTrue(art['reference_urls'])
             photo = assets['foto']
             static = circuit_static_path(cid, photo)
             self.assertIn(static, DELIVERY_ALLOWLIST)
@@ -85,6 +91,79 @@ class DestinationMediaTests(unittest.TestCase):
             self.assertNotIn('href="javascript:',html)
             self.assertNotIn('%',html.split('class="pc-copy')[1].split('</div>')[0])
         self.assertEqual((race,assets),before)
+
+
+class GouacheIdentityTests(unittest.TestCase):
+    def setUp(self):
+        self.addCleanup(set_language, 'pt')
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        source = json.loads((ROOT / CATALOG).read_text())['circuits']['sepang']
+        self.raw = (ROOT / source['path']).read_bytes()
+        digest = hashlib.sha256(self.raw).hexdigest()
+        self.spec = dict(source, circuit_id='test', path='static/pitwall-art/gouache/test-'+digest[:12]+'.png')
+        self.path = self.root / self.spec['path']
+        self.path.parent.mkdir(parents=True)
+        self.path.write_bytes(self.raw)
+        self.catalogue = self.root / CATALOG
+        self.catalogue.parent.mkdir()
+        self.write()
+
+    def write(self, spec=None, **updates):
+        self.catalogue.write_text(json.dumps(dict(schema=1, style=STYLE, circuits={'test':spec or self.spec}, **updates)))
+
+    def test_only_the_matching_circuit_original_is_admitted(self):
+        art = illustration(self.root, 'test')
+        self.assertEqual(art['src'], 'app/'+self.spec['path'])
+        self.assertIsNone(illustration(self.root, 'other'))
+        self.write(dict(self.spec, circuit_id='other'))
+        self.assertIsNone(illustration(self.root, 'test'))
+
+    def test_tampered_missing_or_wrong_dimension_art_has_no_photo_substitute(self):
+        self.path.write_bytes(self.raw[:-1]+bytes([self.raw[-1]^1]))
+        self.assertIsNone(illustration(self.root, 'test'))
+        self.path.write_bytes(self.raw)
+        self.write(dict(self.spec, width=self.spec['width']+2))
+        self.assertIsNone(illustration(self.root, 'test'))
+        self.write()
+        self.path.unlink()
+        self.assertIsNone(illustration(self.root, 'test'))
+
+    def test_path_escape_remote_url_and_symlinks_are_rejected(self):
+        self.assertIsNone(illustration(self.root, '../test'))
+        for path in ['../outside.png', 'https://example.invalid/photo.png', self.spec['path'].replace('test-', 'other-')]:
+            self.write(dict(self.spec, path=path))
+            self.assertIsNone(illustration(self.root, 'test'))
+        self.write()
+        self.path.unlink()
+        source = self.root / 'original.png'; source.write_bytes(self.raw)
+        self.path.symlink_to(source)
+        self.assertIsNone(illustration(self.root, 'test'))
+
+    def test_malformed_catalogue_and_metadata_fail_closed(self):
+        for value in [[], {}, {'schema':True,'style':STYLE,'circuits':{'test':self.spec}}]:
+            self.catalogue.write_text(json.dumps(value))
+            self.assertIsNone(illustration(self.root, 'test'))
+        for updates in [dict(alt='xx'),dict(alt=['one']),dict(reference_urls=None),dict(sha256='bad')]:
+            self.write(dict(self.spec, **updates))
+            self.assertIsNone(illustration(self.root, 'test'))
+
+    def test_full_scene_cover_escapes_text_and_leaves_forecasts_sealed(self):
+        before=copy.deepcopy(self.spec)
+        self.write(dict(self.spec, alt=['<script>bad</script>','<bad>'],reference_urls=['javascript:bad']))
+        race=dict(corrida='Test Grand Prix',circuito_id='test',circuito_nome='Test Circuit',data='2026-11-01')
+        for lang, heading in [('pt','Previsões'),('en','Predictions')]:
+            set_language(lang)
+            html=cover(race,2026,forecast=True,root=self.root)
+            self.assertIn('<h1>'+heading+'</h1>',html)
+            self.assertIn('class="pc-illustration"',html)
+            self.assertNotIn('pc-photo',html)
+            self.assertNotIn('<script>',html)
+            self.assertNotIn('href="javascript:',html)
+            self.assertNotIn('%',html)
+        set_language('pt')
+        self.assertEqual(self.spec,before)
 
 
 if __name__ == '__main__':
