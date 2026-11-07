@@ -255,7 +255,7 @@
   .st-key-pw-sidebar-menu [data-testid="stExpander"] summary { display: flex; min-height: 44px; }
   .st-key-pw-sidebar-menu [data-testid="stExpanderDetails"] { padding: 8px 16px 16px !important; }
   .st-key-pw-sidebar-menu .pw-explorer-title { display: none; }
-  .stApp .st-key-pw-sidebar-menu button,
+  .stApp .st-key-pw-sidebar-menu [class*="st-key-pw-nav-item-"] button,
   .pw-nav-fallback { min-height: 44px; }
 }
 @media (max-width:600px) {

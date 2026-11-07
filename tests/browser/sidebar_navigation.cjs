@@ -1,13 +1,22 @@
 /* Shared actions for the current sidebar; assertions live in each domain suite. */
-async function choose(app,id){
- await closeCards(app);
+async function openMenu(app){
  const menu=app.locator('.st-key-pw-sidebar-menu details');
  await menu.waitFor({state:'attached'});
  await app.waitForFunction(()=>document.querySelector('.st-key-pw-sidebar-menu details')?.dataset.pwReady==='true');
+ // Streamlit can replace styles and expander descendants between renders.
+ // Hidden for one frame does not mean this is a desktop-only disclosure.
+ await app.waitForFunction(()=>{
+  const menu=document.querySelector('.st-key-pw-sidebar-menu details'),summary=menu?.querySelector('summary');
+  return menu?.open||summary&&summary.getClientRects().length>0&&getComputedStyle(summary).visibility!=='hidden';
+ });
  if(!await menu.evaluate(e=>e.open)){
-  if(await menu.locator('summary').isVisible())await menu.locator('summary').click();
-  else await app.waitForFunction(()=>document.querySelector('.st-key-pw-sidebar-menu details')?.open===true);
+  await menu.locator('summary').click();
  }
+ return menu;
+}
+async function choose(app,id){
+ await closeCards(app);
+ await openMenu(app);
  const button=app.locator('.st-key-pw_nav_'+id+' button');
  if(await button.count())await button.click();
  else await app.locator('.pw-nav-fallback[data-pw-route="'+id+'"]').click();
@@ -31,4 +40,4 @@ async function closeCards(app){
   await app.waitForFunction(()=>!new URL(location.href).searchParams.has('cartas')&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning');
  }
 }
-module.exports={choose,reveal,closeCards};
+module.exports={choose,reveal,closeCards,openMenu};

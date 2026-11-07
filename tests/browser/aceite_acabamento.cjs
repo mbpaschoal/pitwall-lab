@@ -35,6 +35,12 @@ async function ready(app){
    const g=row.geometry;assert.equal(g.h1.length,1);assert.equal(g.duplicate,false);assert.equal(g.overflow,false);
    assert(g.fields.length===2&&g.fields.every(r=>r.height>=44)&&g.search.height>=44);
    const centers=[...g.fields,g.search].map(r=>r.y+r.height/2);assert(Math.max(...centers)-Math.min(...centers)<=1,'Context axes differ');
+   if(width<801){
+    const menu=await require('./sidebar_navigation.cjs').openMenu(app);
+    const targets=await app.locator('.st-key-pw-sidebar-menu button').evaluateAll(xs=>xs.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,right:r.right,width:r.width,height:r.height}}));
+    assert.equal(targets.length,15);assert(targets.every(r=>r.height>=44&&r.width>=44&&r.x>=0&&r.right<=width+1),'Narrow navigation target is clipped or smaller than 44 px');
+    await menu.locator('summary').click();
+   }
    await app.locator('.stMain').evaluate(e=>e.scrollTo({top:650,behavior:'instant'}));
    const scrolled=await app.locator('[class*=st-key-pw_language_switch_]').boundingBox();assert(Math.abs(scrolled.y-g.language.y)<=1,'Language does not follow scroll');
    await app.locator('.stMain').evaluate(e=>e.scrollTo({top:0,behavior:'instant'}));
@@ -76,6 +82,7 @@ async function ready(app){
     for(let repeat=0;repeat<3;repeat++)for(const [id,key,value] of [['sessions','aba','Tempos'],['strategy','aba','Estratégias'],['forecast','tela','Previsões'],['sources','secao','fontes']]){
      await require('./sidebar_navigation.cjs').choose(app,id);
      await app.waitForFunction(({key,value})=>new URL(location.href).searchParams.get(key)===value&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning',{key,value},{timeout:15000});
+     await ready(app);
      assert.equal(new URL(await app.locator('body').evaluate(()=>location.href)).searchParams.get('gp'),'19');
      transitions++;
     }
