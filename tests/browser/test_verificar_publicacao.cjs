@@ -47,6 +47,30 @@ test('a changed URL cannot admit the previous route photograph',async()=>withPag
  await page.locator('.fan-hero').evaluate(e=>e.dataset.heroKind='method');
  assert.equal((await pending).ready,true);
 }));
+test('Cloud frame locators retain the requested route readiness guard',async()=>withPage(async page=>{
+ await page.route('https://fixture.invalid/~/+/**',route=>route.fulfill({status:200,contentType:'text/html',body:linkFixture('pt')}));
+ await page.setContent('<iframe width="1200" height="700" src="https://fixture.invalid/~/+/?tela=Metodologia&lang=pt"></iframe>');
+ const app=page.frameLocator('iframe');
+ await app.locator('.fan-hero').evaluate(e=>e.dataset.heroKind='race');
+ const pending=ready(app,'0.8.27','pt','Metodologia');
+ assert.equal(await Promise.race([pending.then(()=> 'admitted'),page.waitForTimeout(250).then(()=> 'waiting')]),'waiting');
+ await app.locator('.fan-hero').evaluate(e=>e.dataset.heroKind='method');
+ assert.equal((await pending).ready,true);
+}));
+test('Cloud surface waits for frame navigation after iframe.src is assigned',async()=>withPage(async page=>{
+ let release;const gate=new Promise(resolve=>release=resolve);
+ await page.route('https://fixture.streamlit.app/~/+/**',async route=>{
+  await gate;await route.fulfill({status:200,contentType:'text/html',body:'<h1>Loaded app</h1>'});
+ });
+ await page.setContent('<iframe src="https://fixture.streamlit.app/~/+/"></iframe>',{waitUntil:'domcontentloaded'});
+ const pending=require('./app_surface.cjs').surface(page,'https://fixture.streamlit.app');
+ try{
+  assert.equal(await Promise.race([pending.then(()=> 'admitted'),page.waitForTimeout(250).then(()=> 'waiting')]),'waiting');
+ }finally{release();}
+ const app=await pending;
+ assert.equal(await app.locator('h1').innerText(),'Loaded app');
+ assert.equal(await require('./app_surface.cjs').surface(page,'http://127.0.0.1:8540'),page);
+}));
 test('wrapped React Aria radio controls remain native and usable',async()=>withPage(async page=>{
  await page.setContent('<html lang="pt"><body><div class="stApp" data-test-script-state="notRunning">v0.8.27</div><section class="fan-hero"><h1>Fixture</h1></section><div class="st-key-journey-navigation"><div role="radiogroup">'+Array(6).fill('<div><label>Fixture</label></div>').join('')+'</div></div><div class="st-key-journey-context-row"><div data-testid="stSelectbox"></div><div data-testid="stSelectbox"></div></div><div class="st-key-pw_language_button_page_pt"><button>PT</button></div><div class="st-key-pw_language_button_page_en"><button>EN</button></div></body></html>');
  const state=await ready(page,'0.8.27','pt');assert.equal(state.navigation,'native');

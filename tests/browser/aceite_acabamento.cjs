@@ -25,7 +25,7 @@ async function ready(app){
   const page=await context.newPage(),errors=[],row={width,lang};page.on('pageerror',e=>errors.push(e.message));report.cases.push(row);
   try{
    await page.goto(base+'/?'+new URLSearchParams({tela:'Corridas',aba:'Tempos',temporada:2026,gp:4,lang}));
-   const app=base.includes('streamlit.app')?await(async()=>{await page.waitForFunction(()=>[...document.querySelectorAll('iframe')].some(f=>f.src.includes('/~/+/')),null,{timeout:60000});return page.frames().find(f=>f.url().includes('/~/+/'))})():page;
+   const app=await require('./app_surface.cjs').surface(page,base);
    await ready(app);
    row.geometry=await app.evaluate(()=>{
     const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom}};

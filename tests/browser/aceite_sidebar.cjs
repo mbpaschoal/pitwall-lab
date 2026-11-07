@@ -17,9 +17,7 @@ const routes = {
  sources:{tela:'Metodologia',secao:'fontes'}, terms:{tela:'Metodologia',secao:'termos'}
 };
 async function surface(page) {
- if (!base.includes('streamlit.app')) return page;
- for (let n=0;n<120;n++) { const frame=page.frames().find(f=>f.url().includes('/~/+/'));if(frame)return frame;await page.waitForTimeout(250); }
- throw Error('Missing app frame');
+ return require('./app_surface.cjs').surface(page,base);
 }
 async function ready(page, expected) {
  const app=await surface(page);
