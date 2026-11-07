@@ -78,12 +78,12 @@
   color: #40566c;
   white-space: nowrap;
 }
-[class*="st-key-pw_language_cell_"] { min-height: 44px; }
+[class*="st-key-pw_language_cell_"] { min-height: 50px; }
 [class*="st-key-pw_language_button_"] button {
   box-sizing: border-box;
   width: 44px;
   min-width: 44px;
-  min-height: 44px;
+  min-height: 50px;
   padding: 0;
   background: #f9fcff;
   border: 1px solid #b8cbd9;
@@ -93,7 +93,7 @@
 .stApp [class*="st-key-pw_language_button_"] button p { font-size: 18px; line-height: 1; }
 [class*="st-key-pw_language_button_"] button * { pointer-events: none; }
 [class*="st-key-pw_language_button_"] button[kind="primary"] { border: 2px solid #c11b27; }
-.stApp a.pw-language-fallback { min-height: 44px; border-radius: 6px; }
+.stApp a.pw-language-fallback { min-height: 50px; border-radius: 6px; }
 
 :is(.st-key-pw-shell,.st-key-pw-shell>[data-testid="stLayoutWrapper"])>[data-testid="stHorizontalBlock"] {
   display: grid;
