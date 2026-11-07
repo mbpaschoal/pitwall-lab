@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.14.3 — 2026-11-07
+
+Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 2/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.14.2 — 2026-11-07
 
 GP covers now span the full content width, with the title over the painting. All 26 approved illustrations retain their original bytes, aspect ratio, complete cars, rounded corners and subtle shadow. Race results bring the podium, circuit facts and adjacent actions together, without adding driver profiles to that page. Podium portraits gain position graphics and a more compact mobile composition.

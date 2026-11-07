@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.14.3 — 2026-11-07
+
+Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 2/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.14.2 — 2026-11-07
 
 As capas dos GPs passam a ocupar toda a largura do conteúdo, com o título sobre a pintura. As 26 ilustrações aprovadas conservam seus bytes, proporção original, carros inteiros, cantos arredondados e sombra discreta. O resultado reúne pódio, ficha do circuito e ações próximas, sem inserir perfis de pilotos nessa página. Os retratos do pódio recebem grafismos de posição e uma composição mais compacta no celular.
