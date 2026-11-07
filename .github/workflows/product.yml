@@ -88,7 +88,7 @@ jobs:
           python -B -m unittest tests.test_coletar_resultados tests.test_regressoes_astra tests.test_calibracao_svg
           python -B -m unittest tests.test_post_qualifying tests.test_github_maintenance tests.test_weekend_readiness tests.test_automatic_publication tests.test_final_results tests.test_posterior_binding tests.test_mexico_evaluation_ui tests.test_pneus_apresentacao
           python -B -m unittest tests.test_operacao_2026_fluxo tests.test_operacao_2026_integracao tests.test_registro_emissoes
-          python -B -m unittest tests.test_sidebar_editorial tests.test_interface_link_context tests.test_public_navigation
+          python -B -m unittest tests.test_sidebar_editorial tests.test_destination_media tests.test_interface_link_context tests.test_public_navigation
           python -B -m unittest tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_archive_cache tests.test_dashboard_acervo_app tests.test_interface_editorial tests.test_driver_conditions tests.test_driver_updates tests.test_driver_projection tests.test_pilot_views tests.test_race_weather tests.test_tyre_reconciliation tests.test_tyre_age tests.test_driver_source_audit tests.test_review_regressions tests.test_fan_exploration tests.test_weekend_operation tests.test_weekend_reconciliation tests.test_weekend_official tests.test_weekend_ui tests.test_weekend_cloud tests.test_fan_journey tests.test_fan_composition tests.test_tarot_catalog tests.test_high_resolution_assets tests.test_exportar_catalogo tests.test_verificar_pacote tests.test_uiux_profiles tests.test_uiux_races tests.test_uiux_method tests.test_uiux_media
       - name: Integridade do pacote publicado / Published package integrity
         run: |
@@ -138,6 +138,7 @@ jobs:
             node tests/browser/aceite_exploracao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/browser-evidence"
             node tests/browser/aceite_pilotos_atualizacao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/driver-updates-evidence"
             node tests/browser/aceite_visual.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/visual-evidence"
+            node tests/browser/aceite_acabamento.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/finish-evidence"
             node tests/browser/aceite_fim_semana.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/weekend-evidence"
             node tests/browser/aceite_pneus_lawson.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/lawson-tyres-evidence"
             node tests/browser/aceite_controles.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/controls-evidence"
@@ -145,6 +146,7 @@ jobs:
             node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-evidence"
           else
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_sidebar.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/sidebar-webkit-evidence"
+            PLAYWRIGHT_BROWSER=webkit PITWALL_FINISH_WIDTHS=390,768 PITWALL_FINISH_POINTER=mouse node tests/browser/aceite_acabamento.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/finish-webkit-mouse-evidence"
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_editorial.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/editorial-webkit-evidence"
             node tests/browser/aceite_contexto.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/context-evidence"
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-webkit-evidence"
@@ -165,6 +167,8 @@ jobs:
             ${{ runner.temp }}/resilience-evidence
             ${{ runner.temp }}/driver-updates-evidence
             ${{ runner.temp }}/visual-evidence
+            ${{ runner.temp }}/finish-evidence
+            ${{ runner.temp }}/finish-webkit-mouse-evidence
             ${{ runner.temp }}/controls-evidence
             ${{ runner.temp }}/controls-webkit-evidence
             ${{ runner.temp }}/shortcut-evidence

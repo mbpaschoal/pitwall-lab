@@ -1,0 +1,123 @@
+/* The publication keeps one typographic system; each circuit owns its scene. */
+.pw-postcard.fan-hero {
+  display: grid;
+  grid-template-columns: minmax(240px,.9fr) minmax(0,1.4fr);
+  min-height: 0;
+  margin: 16px 0 8px;
+  border: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--pc-paper);
+  color: var(--pc-ink);
+}
+.pw-postcard.fan-hero::before { display: none; }
+.pw-postcard .pc-copy {
+  position: static;
+  z-index: 1;
+  align-self: center;
+  max-width: none;
+  padding: 26px 22px 24px 26px;
+}
+.pw-postcard .pc-copy h1 {
+  margin: 0 0 16px;
+  padding: 0;
+  font: 400 clamp(36px,3.2vw,46px)/1.08 AbrilFatfaceLocal, Georgia, serif;
+  letter-spacing: -.8px;
+  color: var(--pc-ink);
+  overflow-wrap: anywhere;
+}
+.pw-postcard .pc-copy .pc-intro {
+  margin: 0;
+  max-width: 36ch;
+  font: 400 16px/1.45 LatoLocal, Arial, sans-serif;
+  color: var(--pc-ink);
+}
+.pw-postcard .pc-copy .pc-note {
+  margin: 14px 0 0;
+  max-width: 44ch;
+  font: 400 13px/1.45 LatoLocal, Arial, sans-serif;
+  color: var(--pc-ink);
+}
+.pc-scene { position: relative; min-width: 0; min-height: 250px; overflow: hidden; }
+.pw-postcard .pc-photo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 0;
+}
+.pc-art-plane {
+  position: absolute;
+  inset: 0;
+  background: var(--pc-paper);
+  clip-path: polygon(0 0,53% 0,43% 100%,0 100%);
+}
+.pc-destination-art {
+  position: absolute;
+  inset: 0 auto 0 0;
+  display: block;
+  width: 53%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.pc-steps .pc-art-plane { clip-path: polygon(0 0,45% 0,45% 16%,52% 16%,52% 42%,46% 42%,46% 70%,53% 70%,53% 100%,0 100%); }
+.pc-orbit .pc-art-plane { clip-path: ellipse(57% 84% at 0 50%); }
+.pc-stadium .pc-art-plane { clip-path: polygon(0 0,55% 0,43% 45%,58% 100%,0 100%); }
+.pc-curb .pc-art-plane { clip-path: polygon(0 0,46% 0,57% 100%,0 100%); }
+.pc-frame .pc-art-plane { clip-path: polygon(0 0,100% 0,100% 6%,51% 6%,51% 94%,100% 94%,100% 100%,0 100%); }
+.pc-sweep .pc-art-plane { clip-path: polygon(0 0,43% 0,51% 27%,45% 66%,56% 100%,0 100%); }
+.pc-harbour .pc-art-plane { clip-path: polygon(0 0,47% 0,54% 30%,44% 68%,54% 100%,0 100%); }
+.pc-slope .pc-art-plane { clip-path: polygon(0 0,61% 0,41% 100%,0 100%); }
+.pc-photo-note {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  max-width: 46%;
+  padding: 4px 6px;
+  background: #08172d;
+  color: #fff;
+  font: 400 12px/1.35 LatoLocal, Arial, sans-serif;
+}
+.pc-footer {
+  grid-column: 1/-1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 16px;
+  padding: 0 18px;
+  border-top: 1px solid color-mix(in srgb,var(--pc-ink) 20%,transparent);
+  font: 400 12px/1.5 LatoLocal, Arial, sans-serif;
+  color: var(--pc-ink);
+}
+.pc-footer time { padding-block: 8px; }
+.pc-credits { max-width: 100%; }
+.pc-credits summary { box-sizing: border-box; min-height: 44px; padding-block: 12px; cursor: pointer; }
+.pc-credits[open] { flex-basis: 100%; }
+.pc-credits>div { padding: 0 0 12px; max-width: 80ch; overflow-wrap: anywhere; }
+.pw-postcard .pc-footer p { margin: 6px 0; font: inherit; color: var(--pc-ink); }
+.stApp .pw-postcard .pc-footer a { color: var(--pc-ink); text-decoration: underline; text-underline-offset: 3px; }
+.pc-credits summary:focus-visible,
+.pc-credits a:focus-visible { outline: 2px solid var(--pc-ink); outline-offset: 3px; }
+
+@media(max-width:1000px) and (min-width:801px) {
+  .pw-postcard.fan-hero { grid-template-columns: minmax(210px,1fr) minmax(0,1.1fr); }
+  .pw-postcard .pc-copy { padding: 24px 16px; }
+  .pw-postcard .pc-copy h1 { font-size: 36px; }
+}
+@media(max-width:600px) {
+  .pw-postcard.fan-hero { grid-template-columns: minmax(0,1fr); margin-top: 12px; }
+  .pw-postcard .pc-copy { padding: 20px 20px 16px; }
+  .pw-postcard .pc-copy h1 { font-size: 34px; margin-bottom: 10px; }
+  .pw-postcard .pc-copy .pc-intro { font-size: 15px; }
+  .pw-postcard .pc-copy .pc-note { margin-top: 10px; font-size: 12px; }
+  .pc-scene { min-height: 136px; }
+  .pc-destination-art { width: 50%; }
+  .pc-photo-note { font-size: 12px; max-width: 48%; }
+  .pc-footer { padding-inline: 14px; }
+}

@@ -46,7 +46,7 @@ class TestDashboardAcervoApp(unittest.TestCase):
             textos.append(texto_renderizado(self.at))
         texto = '\n'.join(textos)
         for trecho in ('Clima do fim de semana', 'Open-Meteo.com', 'Modelo atmosférico histórico próximo ao circuito',
-                       'Pneus e paradas observados', 'Comparativo de equipes no GP',
+                       'Uso dos pneus', 'Resultados por equipe',
                        'Desempenho dos pilotos nesta pista', '2026-10-29-acervo-2'):
             self.assertIn(trecho, texto)
         self.assertNotIn('Clima não disponível', texto)
@@ -103,7 +103,7 @@ class TestDashboardAcervoApp(unittest.TestCase):
         self.executar(2026, 18)
         texto = texto_renderizado(self.at)
         self.assertIn('Previsão registrada antes da corrida.', texto)
-        for key, label in [('weather','Clima do fim de semana'),('strategy','Pneus e paradas observados')]:
+        for key, label in [('weather','Clima do fim de semana'),('strategy','Uso dos pneus')]:
             por_chave(self.at.button, 'pw_nav_' + key).click()
             self.at.run(timeout=30)
             self.assertFalse(self.at.exception)
@@ -123,7 +123,7 @@ class TestDashboardAcervoApp(unittest.TestCase):
         self.assertNotIn('Favoritos por ranking publicado', texto)
         self.assertIn('Estratégias indisponíveis no pacote local.', texto)
         self.assertNotIn('Clima do fim de semana', texto)
-        self.assertNotIn('Pneus e paradas observados', texto)
+        self.assertNotIn('Uso dos pneus', texto)
         self.assertNotIn('Favoritos por ranking publicado', texto)
         por_chave(self.at.radio, 'tela').set_value('Previsões')
         self.at.run(timeout=30)

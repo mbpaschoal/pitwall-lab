@@ -99,7 +99,7 @@ def render(st, root, rows, year, round_, registered, emission=None, country=None
     def dismiss():
         st.query_params.pop('cartas', None)
 
-    st.button('Ver as cartas deste GP', key='open_tarot', on_click=open_cards, type='primary')
+    st.button('Ver as cartas deste GP', key='open_tarot', on_click=open_cards, type='primary', width='stretch')
     if st.query_params.get('cartas') != '1':
         return
 

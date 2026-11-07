@@ -1,5 +1,13 @@
 # Pitwall Lab evolution
 
+## 0.14.0 — 2026-11-06
+
+Editorial interface revision: removes the extra location label and redundant GP subtitles on analytical pages, and aligns search and selectors in 44 px controls. A compact sticky header keeps language controls available while scrolling. The sidebar retains its fifteen destinations; narrow-menu expansion settles immediately to keep native click targets stable. The finish flag now uses alternating filled squares.
+
+Race result and Predictions covers gain original drawings specific to all 26 circuits, combined with documented photographs. Illustrative status, date and credits remain explicit. SHA-256-verified static copies preserve original bytes and avoid repeated photo payloads. The primary card action sits closer to the initial reading; cards remain face down in a dialog, individually revealed without letters or numbers, with state preserved.
+
+Verification covers image identity and integrity, safe fallback, circuit coverage, five viewport widths, PT/EN, keyboard search, scrolling and native Chromium/WebKit navigation. Full-page visual critique is separate from automated geometry; emulation is not physical-device testing. CI, package and public deployment require separate receipts. Data, model v1, original photos and tarot art, snapshots, emissions and recorded probabilities remain preserved.
+
 ## 0.13.2 — 2026-11-06
 
 Restores the card pop-up in Predictions. The button opens three face-down cards; each click reveals one, without letters, numbers or finishing-order labels. X, Escape or “Back to predictions” closes it. Reveals persist when reopening, returning to the section or switching language. Details remain hidden until every card is revealed. Model v1, artwork, data, emissions and probabilities remain unchanged.

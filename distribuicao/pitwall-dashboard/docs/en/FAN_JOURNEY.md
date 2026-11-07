@@ -2,13 +2,15 @@
 
 [Português](../JORNADA_DO_FA.md)
 
-Version 0.13.0 uses the sidebar selected by users. Abril Fatface/Lato, Pitwall blue and the editorial identity remain. Original abstract destination covers use local colours and forms, with city, circuit and date identified. Mexico, Japan and São Paulo have distinct compositions; events in the same country retain their own identity.
+Version 0.14.0 keeps the sidebar selected by users, Abril Fatface/Lato, Pitwall blue and the editorial identity. A compact sticky header keeps language controls available while scrolling. Analytical pages start with their title and content, without an extra location label or a repeated GP subtitle.
+
+Race result and Predictions covers combine documented photographs with original editorial drawings for all 26 circuits: Miami Art Deco, Suzuka’s Ferris wheel, Mexico’s stadium and Interlagos bends, among other local references. Photos are visibly illustrative and have expandable credits, separate from the GP date. Artwork is decorative interpretation, not a map or scientific input. Immutable static copies keep the original photo bytes, with SHA-256-derived names, avoiding repeated photo payloads during navigation.
 
 ## Navigation
 
 Fifteen direct destinations cover predictions and accuracy; race result, sessions and laps, tyres and stops, weather, circuit history and teams at this GP; driver profiles and duels; driver and constructor standings; method, sources and F1 terms. Mobile uses the “Explore Pitwall” disclosure and closes it after a selection. A red left border identifies the current destination.
 
-One labelled GP dropdown replaces the redundant event ribbon, and the bottom menu is removed. Irrelevant context selectors are hidden on Drivers and About the Lab while retaining their values for return. Search recognises task words as well as drivers, teams and races. Internal links use the same tab; native sidebar buttons have equivalent keyboard links while loading. GP and language are retained. Only the selected race chapter renders.
+One labelled GP dropdown uses short localized names and replaces the redundant event ribbon; the bottom menu is removed. Search and selectors share a common height and axis. Narrow-menu expansion settles immediately to keep native click targets stable. Irrelevant context selectors are hidden on Drivers and About the Lab while retaining their values for return. Search recognises task words as well as drivers, teams and races. Internal links use the same tab; native sidebar buttons have equivalent keyboard links while loading. GP and language are retained. Only the selected race chapter renders.
 
 Race result keeps the observed podium in visual order 2–1–3. “Circuit photo and map” retains original media, sources and licences. Operational state is grouped under “Updates and coverage”. Missing data remain explicit. Each full standings table is directly accessible; older links without a panel still show both.
 

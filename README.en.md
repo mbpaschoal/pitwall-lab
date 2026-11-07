@@ -17,7 +17,7 @@ Mexico 2026: observed results, laps, tyres, stops and round-19 standings are ava
 Collection is now scheduled through GitHub Actions, independent of the personal computer: new sessions are validated, versioned and published automatically. [Track runs](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml).
 
 
-The interface uses **Fan Journey**: bottom navigation, GP context at the top, a prominent circuit view and optional cards for exploring recorded probabilities. [Usage and accessibility](docs/en/FAN_JOURNEY.md).
+The interface uses **Fan Journey**: task-based sidebar navigation, one GP context, circuit-specific covers and face-down cards in a dialog for exploring recorded probabilities. [Usage and accessibility](docs/en/FAN_JOURNEY.md).
 
 São Paulo now has a hosted post-Q preparation and emission routine with temporal gates and bounded attempts. [Automation inventory and review limits](docs/en/AUTOMATION.md).
 

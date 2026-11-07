@@ -5,7 +5,7 @@ function integrity(ok,message){if(!ok){const e=Error(message);e.code='integrity'
 async function bounded(promise,ms,label){let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error(label+' timed out')),ms);})]);}finally{clearTimeout(timer);}}
 
 async function verifyImage(page,app,expected){
- const image=app.locator('.fan-hero-image,.pw-circuit-media img').first();await image.waitFor({state:'attached',timeout:20000});
+ const image=app.locator('.pc-photo,.fan-hero-image,.pw-circuit-media img').first();await image.waitFor({state:'attached',timeout:20000});
  const actual=await image.evaluate(async e=>{
   let timer;try{await Promise.race([e.decode(),new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Photo decoding timed out')),20000);})]);}finally{clearTimeout(timer);}
   return{source:e.currentSrc,width:e.naturalWidth,height:e.naturalHeight};
@@ -18,12 +18,12 @@ async function verifyImage(page,app,expected){
   const url=new URL(actual.source),appURL=new URL(await app.locator('body').evaluate(()=>location.href));
   integrity(url.origin===appURL.origin,'Photo origin differs from the served app');
   variant=expected.variants?.find(v=>url.pathname.endsWith('/app/'+v.path));
-  integrity(variant,'Photo is outside the approved variants');
+  integrity(variant||expected.static_path&&url.pathname.endsWith('/app/'+expected.static_path),'Photo is outside the approved variants or immutable original');
   const response=await page.request.get(url.href,{timeout:20000});mime=response.headers()['content-type']||'';
   integrity(response.ok()&&mime.startsWith('image/'),'Photo response is not an image');bytes=await response.body();
  }
  const digest=sha256(bytes);integrity(digest===(variant?variant.sha256:expected.sha256),'Photo bytes differ from the documented source');
- return{decoded:true,width:actual.width,height:actual.height,sha256:digest,delivery:variant?'static_variant':'inline_original',variant:variant?.path,mime};
+ return{decoded:true,width:actual.width,height:actual.height,sha256:digest,delivery:variant?'static_variant':actual.source.startsWith('data:')?'inline_original':'static_original',variant:variant?.path,mime};
 }
 
 function inspectControls(_element,lang){
@@ -55,9 +55,19 @@ function inspectControls(_element,lang){
   hidden_native_error_elements:[...document.querySelectorAll('.st-key-tela [data-testid=stAlertContentError],[class*=st-key-pw_language_button_] [data-testid=stAlertContentError]')].filter(e=>!visible(e)).length};
 }
 
-async function ready(app,version,lang){
+async function ready(app,version,lang,route=null){
  await app.getByText('v'+version,{exact:true}).first().waitFor({timeout:45000});
  await app.locator('.fan-hero h1').waitFor({timeout:20000});
+ if(route!==null){
+  const kind={Corridas:'race',Metodologia:'method'}[route];
+  integrity(kind,'Unsupported publication route');
+  // The URL changes before Streamlit replaces the previous route's Markdown.
+  // Do not classify that previous, valid photograph as the new route's pixels.
+  await app.waitForFunction(({route,kind})=>{
+   const heroes=document.querySelectorAll('.fan-hero');
+   return new URL(location.href).searchParams.get('tela')===route&&heroes.length===1&&heroes[0].dataset.heroKind===kind&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning';
+  },{route,kind},{timeout:30000});
+ }
  const deadline=Date.now()+30000;let state;
  while(Date.now()<deadline){state=await app.locator('body').evaluate(inspectControls,lang);if(state.ready)break;await new Promise(r=>setTimeout(r,200));}
  if(!state?.ready)throw Error('Language or usable controls did not finish loading');
@@ -88,7 +98,7 @@ function expectations(root,version,identity){
  const race=read('dashboard_assets/circuit/catalogo_visual.json').circuitos[identity[2]];
  integrity(race?.foto?.sha256,'Published circuit photograph is absent');
  const method=read('static/pitwall-media/catalog.json').method;
- return{build:manifest.apresentacao_build_sha256,race:{sha256:race.foto.sha256},method:{sha256:method.source_sha256,variants:method.variants}};
+ return{build:manifest.apresentacao_build_sha256,race:{sha256:race.foto.sha256,static_path:'static/pitwall-circuits/'+identity[2]+'-'+race.foto.sha256.slice(0,12)+path.extname(race.foto.caminho).toLowerCase()},method:{sha256:method.source_sha256,variants:method.variants}};
 }
 
 async function verifyDeployment(version,resultPath,output){
@@ -119,7 +129,7 @@ async function verifyDeployment(version,resultPath,output){
        if(route==='Metodologia'&&receipt.Corridas?.controls.navigation==='links')await require('./sidebar_navigation.cjs').choose(previousApp,'method');
        else await page.goto(base+'/?'+query,{waitUntil:'domcontentloaded',timeout:45000});
        const app=['127.0.0.1','localhost'].includes(baseURL.hostname)?page:page.frameLocator('iframe[src*="/~/+/"]').first();
-       const controls=await ready(app,version,lang);previousApp=app;
+       const controls=await ready(app,version,lang,route);previousApp=app;
        await page.waitForURL(u=>u.searchParams.get('tela')===route&&u.searchParams.get('gp')===String(identity[1])&&u.searchParams.get('lang')===lang,{timeout:15000});
        integrity(await app.locator('body').evaluate((_element,{route,round})=>new URL(location.href).searchParams.get('tela')===route&&new URL(location.href).searchParams.get('gp')===String(round),{route,round:identity[1]}),'Served route or GP differs');
        receipt[route]=await verifyImage(page,app,route==='Corridas'?expected.race:expected.method);
@@ -135,7 +145,7 @@ async function verifyDeployment(version,resultPath,output){
       const other=lang==='pt'?'en':'pt',link=previousApp.locator('.pw-language-fallback[data-language="'+other+'"]');
       const usedLink=await link.isVisible();
       await (usedLink?link:previousApp.getByRole('button',{name:other==='pt'?/🇧🇷/:/🇬🇧/})).click();
-      const switched=await ready(previousApp,version,other);
+      const switched=await ready(previousApp,version,other,'Metodologia');
       await page.waitForURL(u=>u.searchParams.get('tela')==='Metodologia'&&u.searchParams.get('gp')===String(identity[1])&&u.searchParams.get('lang')===other,{timeout:15000});
       integrity(await previousApp.locator('body').evaluate((_element,{other,round})=>{const u=new URL(location.href);return u.searchParams.get('lang')===other&&u.searchParams.get('gp')===String(round)&&u.searchParams.get('tela')==='Metodologia';},{other,round:identity[1]}),'Language switch lost event or route');
       await previousApp.locator('.fan-hero h1').filter({hasText:other==='en'?'How it works':'Como funciona'}).waitFor({timeout:15000});

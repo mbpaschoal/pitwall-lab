@@ -108,7 +108,9 @@ def stylesheet(root):
         "".join(fontes),
         (PROJECT_ROOT / "frontend_assets/pitwall.css").read_text(encoding="utf-8")
         + (PROJECT_ROOT / "frontend_assets/journey.css").read_text(encoding="utf-8")
-        + (PROJECT_ROOT / "frontend_assets/sidebar.css").read_text(encoding="utf-8"),
+        + (PROJECT_ROOT / "frontend_assets/sidebar.css").read_text(encoding="utf-8")
+        + (PROJECT_ROOT / "frontend_assets/destinations.css").read_text(encoding="utf-8")
+        + (PROJECT_ROOT / "frontend_assets/tarot.css").read_text(encoding="utf-8"),
     )
 
 

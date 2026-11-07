@@ -37,6 +37,16 @@ function linkFixture(lang){
  const screens=['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
  return '<html lang="'+lang+'"><head><meta charset="utf-8"></head><body><div class="stApp" data-test-script-state="notRunning">v0.8.27</div><section class="fan-hero"><h1>Fixture</h1></section><nav class="journey-navigation-fallback">'+screens.map(s=>'<a data-screen="'+s+'" href="?tela='+encodeURIComponent(s)+'&lang='+lang+'">'+s+'</a>').join('')+'</nav><div class="st-key-journey-context-row"><div data-testid="stSelectbox"></div><div data-testid="stSelectbox"></div></div>'+['pt','en'].map(l=>'<a class="pw-language-fallback" data-language="'+l+'" href="?lang='+l+'">'+l+'</a>').join('')+'</body></html>';
 }
+test('a changed URL cannot admit the previous route photograph',async()=>withPage(async page=>{
+ await page.route('https://fixture.invalid/**',route=>route.fulfill({status:200,contentType:'text/html',body:linkFixture('pt')}));
+ await page.goto('https://fixture.invalid/?tela=Metodologia&lang=pt');
+ await page.locator('.fan-hero').evaluate(e=>e.dataset.heroKind='race');
+ await ready(page,'0.8.27','pt');
+ const pending=ready(page,'0.8.27','pt','Metodologia');
+ assert.equal(await Promise.race([pending.then(()=> 'admitted'),page.waitForTimeout(250).then(()=> 'waiting')]),'waiting');
+ await page.locator('.fan-hero').evaluate(e=>e.dataset.heroKind='method');
+ assert.equal((await pending).ready,true);
+}));
 test('wrapped React Aria radio controls remain native and usable',async()=>withPage(async page=>{
  await page.setContent('<html lang="pt"><body><div class="stApp" data-test-script-state="notRunning">v0.8.27</div><section class="fan-hero"><h1>Fixture</h1></section><div class="st-key-journey-navigation"><div role="radiogroup">'+Array(6).fill('<div><label>Fixture</label></div>').join('')+'</div></div><div class="st-key-journey-context-row"><div data-testid="stSelectbox"></div><div data-testid="stSelectbox"></div></div><div class="st-key-pw_language_button_page_pt"><button>PT</button></div><div class="st-key-pw_language_button_page_en"><button>EN</button></div></body></html>');
  const state=await ready(page,'0.8.27','pt');assert.equal(state.navigation,'native');

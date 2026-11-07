@@ -17,7 +17,7 @@ México 2026: resultado observado, voltas, pneus, paradas e campeonato da rodada
 A coleta agora é agendada no GitHub Actions, sem depender do computador pessoal: novas sessões são validadas, versionadas e publicadas automaticamente. [Acompanhar execuções](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml).
 
 
-A interface usa a **Jornada do fã**: navegação inferior, contexto de GP no topo, pista em destaque e cartas opcionais para explorar as probabilidades registradas. [Uso e acessibilidade](docs/JORNADA_DO_FA.md).
+A interface usa a **Jornada do fã**: menu lateral por tarefa, um único contexto de GP, capas próprias de cada circuito e cartas fechadas em um pop-up para explorar as probabilidades registradas. [Uso e acessibilidade](docs/JORNADA_DO_FA.md).
 
 A preparação e emissão pós-Q de São Paulo agora têm rotina hospedada com bloqueios temporais e tentativas limitadas. [O que está automatizado e o que exige revisão](docs/AUTOMACAO.md).
 

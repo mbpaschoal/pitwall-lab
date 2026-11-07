@@ -5,15 +5,8 @@
 [data-testid="stMainBlockContainer"]{max-width:1300px;margin:0 auto;padding:8px 28px 24px}
 [data-testid="stMainBlockContainer"]>[data-testid="stVerticalBlock"]{gap:5px;position:relative}
 .stElementContainer:has([data-testid="stMarkdownContainer"]>style:only-child){display:none}
-[data-testid="stLayoutWrapper"]:has(>.st-key-journey-navigation),[data-testid="stLayoutWrapper"]:has(>[class*="st-key-pw_language_switch_"]){display:contents}
+[data-testid="stLayoutWrapper"]:has(>.st-key-journey-navigation){display:contents}
 /* Header and GP ribbon form one compact navigation area. */
-.journey-masthead{padding:0;margin:0;white-space:nowrap;min-height:0}
-.journey-masthead a{font:400 50px/1 AbrilFatfaceLocal,Georgia,serif;color:var(--fan-ink);letter-spacing:-1px;text-decoration:none}
-.journey-masthead p{display:none}
-[class*="st-key-pw_language_switch_"]{top:8px;right:max(18px,calc((100vw - 1244px)/2));box-shadow:none;padding:2px 6px!important}
-.st-key-journey-header .st-key-topbar,.st-key-journey-header .st-key-topbar [data-testid="stPopover"]{height:44px!important;min-height:44px!important;margin:0;padding:0}
-.st-key-journey-header .st-key-topbar button{height:44px!important;width:44px!important;min-height:44px!important;min-width:44px!important;border:0;background:transparent;padding:6px!important;overflow:hidden}
-.st-key-journey-header .st-key-topbar button p{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .journey-calendar,.fan-season-progress{display:flex;align-items:center;gap:4px;padding:1px 0 5px;margin:0;border-bottom:1px solid var(--fan-line)}
 .journey-calendar a,.fan-season-progress a{position:relative;flex:1;display:flex;align-items:center;justify-content:center;gap:7px;min-width:0;padding:7px 4px 9px;color:var(--pw-muted);font:400 12px/1.2 LatoLocal,Arial,sans-serif;text-decoration:none;white-space:nowrap}
 .journey-calendar a span{font-size:15px}
@@ -263,8 +256,6 @@
 .st-key-journey-navigation:has(.journey-navigation-fallback:focus-within) .st-key-tela{visibility:hidden}
 .st-key-journey-navigation:has(.journey-navigation-fallback):not(:has(:is([role="radiogroup"]>label:nth-child(6),[role="radiogroup"]>div:nth-child(6)>label))) .st-key-tela [role="alert"]{display:none}
 [class*="st-key-pw_language_cell_"]{position:relative;gap:0;min-height:50px}
-.st-key-journey-header [class*="st-key-pw_language_button_"] button{box-sizing:border-box;width:44px;min-width:44px;min-height:50px;padding-inline:0;touch-action:manipulation}
-.st-key-journey-header [class*="st-key-pw_language_button_"] button *{pointer-events:none}
 .stElementContainer:has(.pw-language-fallback) [data-testid="stMarkdownContainer"] p{margin:0}
 .stApp a.pw-language-fallback{display:flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:50px;width:44px;border:1px solid var(--pw-line);border-radius:8px;background:white;color:var(--fan-ink);font:400 20px/1 LatoLocal,Arial,sans-serif;text-decoration:none}
 .stApp a.pw-language-fallback[aria-current]{border:2px solid var(--pw-red)}
@@ -305,7 +296,6 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-of
 .fan-condition-row,.fan-gp-result,.fan-document-links>a{scroll-margin-block:16px calc(var(--journey-dock-height) + 90px)}
 .fan-portrait[data-driver-id="arvid_lindblad"]{object-fit:cover!important;object-position:center top!important}
 @media(max-width:1000px) and (min-width:601px){
- .journey-masthead a{font-size:28px}
  .fan-condition-leader{grid-template-columns:30px 75px minmax(80px,1fr);min-height:165px}
  .fan-mini-comparisons{grid-column:2/-1;margin-top:2px}
  .fan-condition-leader .fan-portrait{width:75px;height:90px}
@@ -317,8 +307,6 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-of
  :root{--journey-dock-height:160px}
  [data-testid="stMainBlockContainer"]{padding:8px 12px 24px}
  [data-testid="stMainBlockContainer"]>[data-testid="stVerticalBlock"]{gap:8px}
- .journey-masthead a{font-size:28px}
- [class*="st-key-pw_language_switch_"]{top:7px;right:12px;width:122px!important;padding:2px 5px!important}
  .journey-calendar{padding:0;margin:0;gap:0}
  .journey-calendar a{font-size:11px;gap:4px;padding:5px 2px 8px;white-space:normal;text-align:center}
  .journey-calendar a:not([data-distance="-1"]):not([data-distance="0"]):not([data-distance="1"]),.fan-season-progress a:not([data-distance="-1"]):not([data-distance="0"]):not([data-distance="1"]){display:none}
@@ -479,7 +467,6 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--pw-red);outline-of
 .st-key-journey-navigation .st-key-tela :is([role="radiogroup"]>label:nth-child(6),[role="radiogroup"]>div:nth-child(6)>label)::before,.journey-navigation-fallback>a:nth-child(6)::before{mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M12%2022a10%2010%200%201%200%200-20%2010%2010%200%200%200%200%2020m-3-15a3%203%200%201%201%205%203c-2%201-2%202-2%204m0%203v1%22/%3E%3C/svg%3E")}
 
 /* UI/UX review: preserve the header, and keep it clear of scrolled content. */
-[class*="st-key-pw_language_switch_"]{will-change:transform}
 .pw-skip-link{position:fixed;top:8px;left:8px;z-index:1000000;padding:10px 16px;background:white;border:2px solid var(--pw-red);border-radius:4px;color:var(--fan-ink);transform:translateY(-160%)}
 .pw-skip-link:focus{transform:none}
 #pw-main-content{display:block;scroll-margin-top:12px}
@@ -533,35 +520,10 @@ html[data-pw-reduced-motion="true"] .stMain{scroll-behavior:auto}
 .fan-condition-row .fan-portrait{max-width:100%;min-width:0}
 
 /* Header participates in layout and wraps instead of covering enlarged text. */
-.st-key-journey-header{height:auto;padding:0;margin:0}
-.st-key-journey-brand-row>[data-testid="stHorizontalBlock"]{display:flex;flex-wrap:wrap!important;gap:8px;align-items:center}
-.st-key-journey-brand-row>[data-testid="stHorizontalBlock"]>[data-testid="stColumn"]{flex:1 1 150px!important;min-width:0!important;width:auto!important}
-.st-key-journey-brand-row>[data-testid="stHorizontalBlock"]>[data-testid="stColumn"]:last-child{flex:0 1 auto!important;min-width:max-content!important}
-.journey-masthead{white-space:normal;overflow-wrap:anywhere}
-.st-key-journey-context-row [data-testid="stHorizontalBlock"]{display:grid;grid-template-columns:96px minmax(0,1fr) 44px;gap:8px}
-.st-key-journey-context-row [data-testid="stColumn"]{width:100%!important;min-width:0!important}
-[class*="st-key-pw_language_switch_"]{position:static!important;transform:none!important;top:auto;right:auto;z-index:auto;width:auto!important;padding:2px!important;max-width:100%;box-shadow:none}
-[class*="st-key-pw_language_switch_"] [data-testid="stHorizontalBlock"]{display:grid;grid-template-columns:max-content 44px 44px;gap:8px;align-items:center}
-[class*="st-key-pw_language_switch_"] [data-testid="stColumn"]{min-width:0!important;width:auto!important}
-[class*="st-key-pw_language_switch_"] [data-testid="stCaptionContainer"]{white-space:nowrap}
 .fan-ranking-identity strong,.fan-condition-row em{overflow-wrap:anywhere}
 @media(min-width:601px) and (max-width:1000px){
  .fan-pilot-ranking[data-leaders="1"] .fan-condition-leader{grid-template-columns:42px 90px minmax(0,1fr) minmax(0,1fr)}
  .fan-pilot-ranking[data-leaders="1"] .fan-condition-leader .fan-portrait{width:90px;height:130px}
-}
-
-/* Context selectors grow with their text; selected values never lose lines. */
-[class*="st-key-pw_language_switch_"]{width:max-content!important;margin-left:auto}
-.st-key-journey-context-row [data-testid="stHorizontalBlock"]{grid-template-columns:minmax(7em,max-content) minmax(0,1fr) 44px}
-.st-key-journey-context-row [data-baseweb="select"]>div{height:auto!important;min-height:44px}
-.st-key-journey-context-row [data-baseweb="select"]>div>div:first-child{height:auto!important;padding-block:8px}
-.st-key-journey-context-row [data-baseweb="select"] div[value]{height:auto!important;line-height:1.4;white-space:normal;overflow:visible;overflow-wrap:anywhere}
-.st-key-journey-context-row [aria-label="Clear value"]{display:none}
-@media(max-width:600px){
- .st-key-journey-context-row [data-testid="stHorizontalBlock"]{grid-template-columns:minmax(0,1fr) 44px}
- .st-key-journey-context-row [data-testid="stColumn"]:nth-child(1){grid-column:1;grid-row:1}
- .st-key-journey-context-row [data-testid="stColumn"]:nth-child(2){grid-column:1/-1;grid-row:2}
- .st-key-journey-context-row [data-testid="stColumn"]:nth-child(3){grid-column:2;grid-row:1}
 }
 
 /* Pilot controls and photo credits reserve space instead of floating over links. */
@@ -580,6 +542,14 @@ html[data-pw-reduced-motion="true"] .stMain{scroll-behavior:auto}
 @media(max-width:600px){
  .st-key-pilot-cover .st-key-pilot-comparison-toolbar [data-testid="stHorizontalBlock"]{grid-template-columns:minmax(0,1fr)}
  .st-key-pilot-cover .st-key-pilot-comparison-toolbar [data-testid="stColumn"]:last-child{justify-self:end;width:auto!important}
+ /* A real portrait gets its own column; long names cannot cross the face. */
+ .st-key-pilot-cover .fan-hero-portrait{display:grid;grid-template-columns:minmax(0,1fr) 34%;gap:12px;padding:20px 16px 12px;min-height:0}
+ .st-key-pilot-cover .fan-hero-portrait .fan-hero-copy{display:contents}
+ .st-key-pilot-cover .fan-hero-portrait .fan-hero-real-portrait{position:static;grid-column:2;grid-row:1/3;align-self:center;z-index:0;width:100%!important;height:160px!important;max-height:none}
+ .st-key-pilot-cover .fan-hero-portrait h1{grid-column:1;grid-row:1;align-self:end;font-size:clamp(28px,8vw,32px);max-width:none;margin:0;padding:0;overflow-wrap:anywhere}
+ .st-key-pilot-cover .fan-hero-portrait .fan-hero-copy>p{grid-column:1;grid-row:2;font-size:14px;line-height:1.4;max-width:none}
+ .st-key-pilot-cover .fan-hero-portrait .fan-condition-chips{grid-column:1/-1;margin:4px 0 0}
+ .st-key-pilot-cover .fan-hero-portrait>.fan-art-label{grid-column:1/-1;max-width:100%!important;margin:4px 0 0 auto}
 }
 
 /* Expander labels share the arrow baseline, including wrapped titles. */
@@ -592,8 +562,6 @@ html[data-pw-reduced-motion="true"] .stMain{scroll-behavior:auto}
 .st-key-journey-navigation [data-testid="stRadioOption"]>div>div:first-child,.st-key-pilot-view-navigation [data-testid="stRadioOption"]>div>div:first-child{display:none}
 .stTabs:has(.fan-circuit-details) [role="tablist"]{display:none}
 .stTabs:has(.fan-circuit-details) [role="tabpanel"]{padding-top:0}
-.st-key-journey-context-row [data-testid="stSelectbox"] [role="group"]{height:auto!important;min-height:44px}
-.st-key-journey-context-row [data-testid="stSelectbox"] [role="combobox"]{min-height:44px;height:auto!important;line-height:1.4}
 
 /* Editorial finish: keep the fan palette, photographs and type families. */
 :root{--pw-response-duration:160ms;--pw-panel-radius:10px}

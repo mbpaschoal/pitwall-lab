@@ -142,7 +142,9 @@ class TestDashboardApp(unittest.TestCase):
             self.escolher('gp', gp)
             texto = texto_renderizado(self.at)
             self.assertIn(corrida, texto)
-            self.assertIn(meta, texto)
+            city, date = meta.split(' · ')
+            self.assertIn('<h1>{}</h1>'.format(city), texto)
+            self.assertIn('<time datetime="{}">'.format(date), texto)
             for rotulo in ('Foto do circuito', 'Mapa do circuito', 'Sobre o circuito', 'pw-postcard'):
                 self.assertIn(rotulo, texto)
 
@@ -373,7 +375,8 @@ class TestDashboardApp(unittest.TestCase):
         texto = texto_renderizado(self.at)
         self.assertEqual(list(por_chave(self.at.get('selectbox'), 'temporada').options), ['2024', '2025', '2026'])
         self.assertIn('United States Grand Prix', texto)
-        self.assertIn('Austin · 2026-10-25', texto)
+        self.assertIn('<h1>Austin</h1>', texto)
+        self.assertIn('<time datetime="2026-10-25">', texto)
         self.assertIn('Ver previsões deste GP', texto)
         self.assertIn('Mapa do circuito', texto)
         self.assertIn('CC BY-SA 4.0', texto)

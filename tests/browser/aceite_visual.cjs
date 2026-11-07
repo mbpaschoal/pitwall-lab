@@ -14,7 +14,7 @@ const cssHash=crypto.createHash('sha256').update(expectedCSS).digest('hex');
 const heroCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../dashboard_assets/fan/hero_catalog.json'),'utf8')).heroes;
 const circuitCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../dashboard_assets/circuit/catalogo_visual.json'),'utf8')).circuitos;
 const mediaCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../static/pitwall-media/catalog.json'),'utf8')).method;
-const expectedHeroes={Corridas:circuitCatalog.americas.foto.sha256,Pilotos:heroCatalog.drivers.sha256,Campeonato:heroCatalog.championship.sha256,'Previsões':heroCatalog.forecast.sha256,Desempenho:heroCatalog.performance.sha256,Metodologia:heroCatalog.method.sha256};
+const expectedHeroes={Corridas:circuitCatalog.americas.foto.sha256,Pilotos:heroCatalog.drivers.sha256,Campeonato:heroCatalog.championship.sha256,'Previsões':circuitCatalog.americas.foto.sha256,Desempenho:heroCatalog.performance.sha256,Metodologia:heroCatalog.method.sha256};
 const routes = ['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
 const launch = {headless:true};
 if (browserName==='chromium' && process.env.PLAYWRIGHT_CHANNEL) launch.channel=process.env.PLAYWRIGHT_CHANNEL;
@@ -44,19 +44,22 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     }
     await surface.locator('.fan-hero h1').waitFor({timeout:90000});
     await surface.waitForFunction(()=>document.querySelector('.stApp')?.getAttribute('data-test-script-state')==='notRunning',null,{timeout:90000});
-    const image=surface.locator(route==='Corridas'?'.pw-circuit-media img':'.fan-hero-image').first();
-    if(route!=='Previsões')await image.evaluate(img=>img.decode());
-    const photoSource=route==='Previsões'?'':await image.evaluate(img=>img.currentSrc);
+    const image=surface.locator(['Corridas','Previsões'].includes(route)?'.pc-photo':'.fan-hero-image').first();
+    await image.evaluate(img=>img.decode());
+    const photoSource=await image.evaluate(img=>img.currentSrc);
     let photoBytes,variant;
-    if(!photoSource)photoBytes=Buffer.from('original-editorial-vector');
-    else if(photoSource.startsWith('data:'))photoBytes=Buffer.from(photoSource.split(',')[1],'base64');
+    if(photoSource.startsWith('data:'))photoBytes=Buffer.from(photoSource.split(',')[1],'base64');
     else {
      variant=mediaCatalog.variants.find(v=>new URL(photoSource).pathname.endsWith('/app/'+v.path));
-     requireCheck(variant&&mediaCatalog.source_sha256===expectedHeroes[route],'Responsive photo is not derived from the expected original');
+     const circuitPhoto=circuitCatalog.americas.foto;
+     const originalPath='/app/static/pitwall-circuits/americas-'+circuitPhoto.sha256.slice(0,12)+path.extname(circuitPhoto.caminho).toLowerCase();
+     const immutable=['Corridas','Previsões'].includes(route)&&new URL(photoSource).pathname.endsWith(originalPath);
+     requireCheck(immutable||variant&&mediaCatalog.source_sha256===expectedHeroes[route],'Photo is not the approved immutable original or responsive variant');
+     requireCheck(new URL(photoSource).origin===new URL(surface.url()).origin,'Photo origin differs');
      const response=await page.request.get(photoSource);requireCheck(response.ok(),'Responsive image did not load');photoBytes=await response.body();
     }
     const photoHash=crypto.createHash('sha256').update(photoBytes).digest('hex');
-    requireCheck(route==='Previsões'||photoHash===(variant?variant.sha256:expectedHeroes[route]),'Served photograph differs from its documented source or variant');
+    requireCheck(photoHash===(variant?variant.sha256:expectedHeroes[route]),'Served photograph differs from its documented source or variant');
     await surface.evaluate(async()=>{
      await document.fonts.ready;
      // Streamlit can introduce Material Symbols after the first fonts.ready.
@@ -110,7 +113,7 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     requireCheck(m.h1Count===1,'One main title required');
     requireCheck(m.main.bottom<=m.viewport[1]+1,'Main scrollport extends beyond viewport');
     requireCheck(m.normalBlocks.every(b=>b.marginTop>=0&&b.marginBottom>=0&&!['absolute','fixed'].includes(b.position)),'Content section leaves normal flow or uses a negative margin');
-    const beforeCover=route==='Pilotos'?m.pilotNavigation:await surface.locator('.pw-location').boundingBox().then(r=>({...r,bottom:r.y+r.height}));
+    const beforeCover=route==='Pilotos'?m.pilotNavigation:await surface.locator('.st-key-journey-context-row').boundingBox().then(r=>({...r,bottom:r.y+r.height}));
     requireCheck(beforeCover&&m.hero.y>=beforeCover.bottom-1&&m.hero.y<beforeCover.bottom+70,'Cover overlaps or detaches from its preceding navigation');
     requireCheck(m.heading.y>=m.hero.y&&m.heading.bottom<=m.hero.bottom,'Title clipped by cover');
     requireCheck(m.targets.length===15,'Sidebar destinations missing');

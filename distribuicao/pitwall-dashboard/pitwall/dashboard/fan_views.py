@@ -16,13 +16,19 @@ GP_CHAPTERS = (
     ("Tempos", "Sessões e voltas"),
     ("Estratégias", "Pneus e paradas"),
     ("Clima", "Clima"),
-    ("Histórico", "Nesta pista"),
-    ("Comparativo de equipes", "Equipes"),
+    ("Histórico", "Histórico desta pista"),
+    ("Comparativo de equipes", "Equipes neste GP"),
 )
 
 
 def text(value):
     return escape(translate(str(value)))
+
+
+def chapter_header(title, description=''):
+    """A single page title; a subtitle is useful only when it adds information."""
+    subtitle = '<p>{}</p>'.format(text(description)) if description else ''
+    return '<header class="pw-chapter"><h1>{}</h1>{}</header>'.format(text(title), subtitle)
 
 
 def href(screen, **params):
@@ -180,7 +186,7 @@ def circuit_details(info, climate=None, weather_href=None):
     return '<aside class="fan-circuit-details"><h2>{}</h2><dl>{}</dl><div class="fan-weather"><span aria-hidden="true">🌡</span><div><h3>{}</h3><strong>{}</strong><small>{}</small></div></div><details class="fan-circuit-more"><summary>{}</summary><dl>{}</dl></details></aside>'.format(text('Sobre o circuito'),primary,weather_title,temperature,text(note),text('Mais sobre a pista'),secondary)
 
 
-ICONS = {'database': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6c0-4 18-4 18 0s-18 4-18 0m0 0v12c0 4 18 4 18 0V6M3 12c0 4 18 4 18 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'settings': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M9 2h6v4l4 2 3 4-3 4-4 2v4H9v-4l-4-2-3-4 3-4 4-2V2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'bar_chart': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12h4v8m3 0V4h4v16m3 0V8h4v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'description': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5V2m10 0v6h5M8 12h9M8 16h9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'sports_score': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3m0 1c5-4 9 4 16 0v10c-7 4-11-4-16 0M9 3v10m4-9v10m4-10v10M5 8h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'}
+ICONS = {'database': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6c0-4 18-4 18 0s-18 4-18 0m0 0v12c0 4 18 4 18 0V6M3 12c0 4 18 4 18 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'settings': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M9 2h6v4l4 2 3 4-3 4-4 2v4H9v-4l-4-2-3-4 3-4 4-2V2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'bar_chart': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12h4v8m3 0V4h4v16m3 0V8h4v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'description': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5V2m10 0v6h5M8 12h9M8 16h9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>', 'sports_score': '<svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M4 26V3" stroke="#08172d" stroke-width="2"/><path d="M5 3h18v15H5z" fill="#fff" stroke="#08172d" stroke-width="1.4"/><path d="M5 3h6v5H5zm12 0h6v5h-6zm-6 5h6v5h-6zm-6 5h6v5H5zm12 0h6v5h-6z" fill="#08172d"/></svg>'}
 
 def process_steps(year=None, round_=None):
     steps=[('database','Entradas do modelo v1','Classificação, histórico recente de pilotos e equipes e indicadores de ausência.'),('settings','Probabilidades de pódio','O v1 congelado estima chances individuais de integrar o pódio; não prevê a ordem de chegada.'),('bar_chart','Contexto do dashboard','Tempos, clima e características do circuito ajudam a explorar os dados; não alteram as entradas ou previsões registradas.')]

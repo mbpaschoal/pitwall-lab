@@ -59,7 +59,12 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
     if(!main||!dock)return{fraction,issues:[{kind:'missing_shell'}]};
     const m=box(main),d=box(dock),clip={x:Math.max(0,m.x),y:Math.max(0,m.y),right:Math.min(innerWidth,m.right),bottom:Math.min(innerHeight,m.bottom)};
     const rectsOverlap=(a,b)=>Math.min(a.right,b.right)-Math.max(a.x,b.x)>2&&Math.min(a.bottom,b.bottom)-Math.max(a.y,b.y)>2;
-    const fullyVisible=r=>r.width>1&&r.height>1&&r.x>=clip.x+1&&r.right<=clip.right-1&&r.y>=clip.y+1&&r.bottom<=clip.bottom-1;
+    // A sticky header defines the content viewport's upper edge. Text that has
+    // scrolled underneath it is outside that viewport; header controls themselves
+    // still use the full main rectangle and remain subject to the hit tests.
+    const header=document.querySelector('.st-key-journey-header')?.parentElement;
+    const contentClip={...clip,y:Math.max(clip.y,header?.getBoundingClientRect().bottom||0)};
+    const fullyVisible=(r,node)=>{const c=header?.contains(node)?clip:contentClip;return r.width>1&&r.height>1&&r.x>=c.x+1&&r.right<=c.right-1&&r.y>=c.y+1&&r.bottom<=c.bottom-1;};
     const visible=n=>n&&n.getClientRects().length&&getComputedStyle(n).visibility!=='hidden'&&getComputedStyle(n).display!=='none';
     const painted=(r,node)=>{for(let p=node;p&&p!==main;p=p.parentElement){const c=getComputedStyle(p);if(c.opacity==='0'||c.visibility==='hidden'||c.display==='none'||c.contentVisibility==='hidden'||c.clipPath!=='none')return false;if(p.tagName==='DETAILS'&&!p.open&&!p.querySelector(':scope>summary')?.contains(node))return false;const pr=box(p);if(/hidden|clip|auto|scroll/.test(c.overflowX)&&(r.x<pr.x-.5||r.right>pr.right+.5))return false;if(/hidden|clip|auto|scroll/.test(c.overflowY)&&(r.y<pr.y-.5||r.bottom>pr.bottom+.5))return false}return true};
     if(m.bottom>innerHeight+1)issues.push({kind:'scrollport_outside_viewport',main:m});
@@ -77,7 +82,7 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
      const el=n.parentElement;if(!n.textContent.trim()||!el||el.closest(excluded)||!visible(el))continue;
      const range=document.createRange();range.selectNodeContents(n);
      for(const rect of range.getClientRects()){
-      const r={x:rect.x,y:rect.y,right:rect.right,bottom:rect.bottom,width:rect.width,height:rect.height};if(!fullyVisible(r)||!painted(r,el))continue;
+      const r={x:rect.x,y:rect.y,right:rect.right,bottom:rect.bottom,width:rect.width,height:rect.height};if(!fullyVisible(r,el)||!painted(r,el))continue;
       const x=(r.x+r.right)/2,y=(r.y+r.bottom)/2,hit=document.elementFromPoint(x,y);textBoxes.push({node:el,rect:r,text:n.textContent.trim().slice(0,90)});
       if(hit&&hit!==el&&!el.contains(hit)&&!hit.contains(el)&&issues.filter(v=>v.kind==='occluded_text').length<12)issues.push({kind:'occluded_text',text:n.textContent.trim().slice(0,90),rect:r,by:hit.tagName+'.'+hit.className});
      }
@@ -85,17 +90,17 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
     // Foreground portraits must not cover sibling text. Hero/background photos
     // are deliberately omitted; their title overlays are part of the identity.
     for(const image of main.querySelectorAll('img.fan-portrait')){
-     if(!visible(image))continue;const ir=box(image);if(!fullyVisible(ir))continue;
+     if(!visible(image))continue;const ir=box(image);if(!fullyVisible(ir,image))continue;
      const card=image.closest('.fan-podium-place,.fan-condition-row,.fan-probability-row,.pilot-card,td,th');if(!card)continue;
      for(const text of textBoxes)if(card.contains(text.node)&&!text.node.contains(image)&&rectsOverlap(ir,text.rect)&&issues.filter(v=>v.kind==='portrait_over_text').length<8)issues.push({kind:'portrait_over_text',text:text.text,image:ir,textRect:text.rect});
     }
     for(const el of main.querySelectorAll('a,button,summary,select,[role="tab"]')){
-     if(el.closest(excluded)||!visible(el)||el.disabled)continue;const rs=[...el.getClientRects()].map(v=>({x:v.x,y:v.y,right:v.right,bottom:v.bottom,width:v.width,height:v.height})).filter(v=>fullyVisible(v)&&painted(v,el));const r=rs.sort((a,b)=>b.width*b.height-a.width*a.height)[0];if(!r||r.width<8||r.height<8)continue;
+     if(el.closest(excluded)||!visible(el)||el.disabled)continue;const rs=[...el.getClientRects()].map(v=>({x:v.x,y:v.y,right:v.right,bottom:v.bottom,width:v.width,height:v.height})).filter(v=>fullyVisible(v,el)&&painted(v,el));const r=rs.sort((a,b)=>b.width*b.height-a.width*a.height)[0];if(!r||r.width<8||r.height<8)continue;
      const hit=document.elementFromPoint((r.x+r.right)/2,(r.y+r.bottom)/2);
      if(hit&&hit!==el&&!el.contains(hit)&&issues.filter(v=>v.kind==='occluded_control').length<10)issues.push({kind:'occluded_control',label:(el.innerText||el.getAttribute('aria-label')||el.tagName).slice(0,90),rect:r,by:hit.tagName+'.'+hit.className});
     }
     if(document.querySelector('[data-testid="stException"]'))issues.push({kind:'streamlit_exception',text:document.querySelector('[data-testid="stException"]').innerText});
-    return{fraction,version,main:m,dock:d,clip,scrollTop:main.scrollTop,scrollHeight:main.scrollHeight,visibleTextFragments:textBoxes.length,issues};
+    return{fraction,version,main:m,dock:d,clip,contentClip,scrollTop:main.scrollTop,scrollHeight:main.scrollHeight,visibleTextFragments:textBoxes.length,issues};
    },{fraction,expectedLang:lang,expectedVersion});
    result.route=route;result.lang=lang;result.viewport=viewport;result.frontendErrors=[...errors];if(errors.length)result.issues.push({kind:'frontend_exception',errors:[...errors]});audit.samples.push(result);save();
    if(result.issues.length||fraction===1)await page.screenshot({path:path.join(output,`${id}-${fraction}.jpg`),type:'jpeg',quality:65,scale:'css'});
