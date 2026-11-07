@@ -6,7 +6,11 @@ const engine=process.env.PLAYWRIGHT_BROWSER||'chromium';
 const widths=process.env.PITWALL_FINISH_WIDTHS?process.env.PITWALL_FINISH_WIDTHS.split(',').map(Number):[1440,1024,768,390,320];
 const pointerMouse=process.env.PITWALL_FINISH_POINTER==='mouse';
 async function ready(app){
- await app.waitForFunction(()=>document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.querySelector('.st-key-pw-sidebar-menu details')?.dataset.pwReady==='true',null,{timeout:90000});
+ await app.evaluate(()=>window.pwFinishIdle=0);
+ await app.waitForFunction(()=>{
+  if(document.querySelector('.stApp')?.dataset.testScriptState!=='notRunning'||document.querySelector('.st-key-pw-sidebar-menu details')?.dataset.pwReady!=='true'){window.pwFinishIdle=0;return false}
+  window.pwFinishIdle ||= performance.now();return performance.now()-window.pwFinishIdle>=500;
+ },null,{timeout:90000});
  await app.evaluate(()=>document.fonts.ready);
  await app.waitForFunction(()=>![...document.querySelectorAll('[data-testid=stSkeleton]')].some(e=>{const r=e.getBoundingClientRect();return r.width&&r.height&&r.top<innerHeight&&r.bottom>0}),null,{timeout:30000});
  await app.locator('.pc-photo').evaluateAll(xs=>Promise.all(xs.map(x=>x.decode())));
@@ -37,7 +41,8 @@ async function ready(app){
    const search=app.locator('.st-key-global-search').getByRole('button',{name:lang==='pt'?'Buscar':'Search',exact:true});
    await search.focus();await page.keyboard.press('Enter');
    const input=app.getByRole('textbox',{name:lang==='pt'?'Buscar no Pitwall Lab':'Search Pitwall Lab',exact:true});await input.waitFor();await input.fill(lang==='pt'?'voltas':'laps');await input.press('Enter');
-   await app.locator('[data-testid=stPopoverBody]').getByText(lang==='pt'?'Sessões e voltas':'Sessions and laps',{exact:true}).waitFor();await page.keyboard.press('Escape');
+   await app.locator('[data-testid=stPopoverBody]').getByText(lang==='pt'?'Sessões e voltas':'Sessions and laps',{exact:true}).waitFor();await ready(app);await page.keyboard.press('Escape');
+   await app.locator('[data-testid=stPopoverBody]').waitFor({state:'hidden'});
    await app.locator('.stMain').evaluate(e=>e.scrollTo({top:0,behavior:'instant'}));
    await page.screenshot({path:path.join(output,width+'-'+lang+'-sessions.png')});
    if(width===390){
@@ -52,11 +57,13 @@ async function ready(app){
     await page.screenshot({path:path.join(output,width+'-'+lang+'-enlarged.png')});
     await app.evaluate(()=>document.documentElement.style.removeProperty('font-size'));
    }
-   await require('./sidebar_navigation.cjs').choose(app,'forecast');await ready(app);
+   await require('./sidebar_navigation.cjs').choose(app,'forecast');
+   await app.waitForFunction(()=>new URL(location.href).searchParams.get('tela')==='Previsões',null,{timeout:15000});await ready(app);
    // Switch within the native GP selector; a current event without an emission
    // must not acquire the recorded Mexico prediction by retaining widget state.
    await app.locator('.st-key-journey-context-row [role=combobox]').nth(1).click();
-   await app.getByRole('option',{name:lang==='pt'?'19 — México':'19 — Mexico',exact:true}).click();await ready(app);
+   await app.getByRole('option',{name:lang==='pt'?'19 — México':'19 — Mexico',exact:true}).click();
+   await app.waitForFunction(()=>new URL(location.href).searchParams.get('gp')==='19',null,{timeout:15000});await ready(app);
    const opener=app.getByRole('button',{name:lang==='pt'?'Ver as cartas deste GP':'See the cards for this GP',exact:true});
    const o=await opener.boundingBox();assert(o&&o.y+o.height<=1000,'Primary card action falls below first viewport');
    assert.equal(await app.locator('.pw-sealed-deck:visible').count(),0,'Cards must open in the dialog');
