@@ -55,9 +55,19 @@ function inspectControls(_element,lang){
   hidden_native_error_elements:[...document.querySelectorAll('.st-key-tela [data-testid=stAlertContentError],[class*=st-key-pw_language_button_] [data-testid=stAlertContentError]')].filter(e=>!visible(e)).length};
 }
 
-async function ready(app,version,lang){
+async function ready(app,version,lang,route=null){
  await app.getByText('v'+version,{exact:true}).first().waitFor({timeout:45000});
  await app.locator('.fan-hero h1').waitFor({timeout:20000});
+ if(route!==null){
+  const kind={Corridas:'race',Metodologia:'method'}[route];
+  integrity(kind,'Unsupported publication route');
+  // The URL changes before Streamlit replaces the previous route's Markdown.
+  // Do not classify that previous, valid photograph as the new route's pixels.
+  await app.waitForFunction(({route,kind})=>{
+   const heroes=document.querySelectorAll('.fan-hero');
+   return new URL(location.href).searchParams.get('tela')===route&&heroes.length===1&&heroes[0].dataset.heroKind===kind&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning';
+  },{route,kind},{timeout:30000});
+ }
  const deadline=Date.now()+30000;let state;
  while(Date.now()<deadline){state=await app.locator('body').evaluate(inspectControls,lang);if(state.ready)break;await new Promise(r=>setTimeout(r,200));}
  if(!state?.ready)throw Error('Language or usable controls did not finish loading');
@@ -119,7 +129,7 @@ async function verifyDeployment(version,resultPath,output){
        if(route==='Metodologia'&&receipt.Corridas?.controls.navigation==='links')await require('./sidebar_navigation.cjs').choose(previousApp,'method');
        else await page.goto(base+'/?'+query,{waitUntil:'domcontentloaded',timeout:45000});
        const app=['127.0.0.1','localhost'].includes(baseURL.hostname)?page:page.frameLocator('iframe[src*="/~/+/"]').first();
-       const controls=await ready(app,version,lang);previousApp=app;
+       const controls=await ready(app,version,lang,route);previousApp=app;
        await page.waitForURL(u=>u.searchParams.get('tela')===route&&u.searchParams.get('gp')===String(identity[1])&&u.searchParams.get('lang')===lang,{timeout:15000});
        integrity(await app.locator('body').evaluate((_element,{route,round})=>new URL(location.href).searchParams.get('tela')===route&&new URL(location.href).searchParams.get('gp')===String(round),{route,round:identity[1]}),'Served route or GP differs');
        receipt[route]=await verifyImage(page,app,route==='Corridas'?expected.race:expected.method);
@@ -135,7 +145,7 @@ async function verifyDeployment(version,resultPath,output){
       const other=lang==='pt'?'en':'pt',link=previousApp.locator('.pw-language-fallback[data-language="'+other+'"]');
       const usedLink=await link.isVisible();
       await (usedLink?link:previousApp.getByRole('button',{name:other==='pt'?/🇧🇷/:/🇬🇧/})).click();
-      const switched=await ready(previousApp,version,other);
+      const switched=await ready(previousApp,version,other,'Metodologia');
       await page.waitForURL(u=>u.searchParams.get('tela')==='Metodologia'&&u.searchParams.get('gp')===String(identity[1])&&u.searchParams.get('lang')===other,{timeout:15000});
       integrity(await previousApp.locator('body').evaluate((_element,{other,round})=>{const u=new URL(location.href);return u.searchParams.get('lang')===other&&u.searchParams.get('gp')===String(round)&&u.searchParams.get('tela')==='Metodologia';},{other,round:identity[1]}),'Language switch lost event or route');
       await previousApp.locator('.fan-hero h1').filter({hasText:other==='en'?'How it works':'Como funciona'}).waitFor({timeout:15000});
