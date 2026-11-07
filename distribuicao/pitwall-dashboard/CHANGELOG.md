@@ -4,7 +4,7 @@
 
 Os perfis de mais 26 pilotos recebem fotografias espontâneas em alta resolução, diferentes das imagens usadas no pódio. Com Antonelli e Verstappen, cujos originais aprovados permanecem iguais, são 28 perfis com fotografia editorial própria. Cada imagem conserva os bytes originais, fonte, autoria, licença e legenda em português e inglês, com o ano e o contexto histórico explícitos.
 
-O enquadramento de Russell usa uma janela com pelo menos 1600 pixels nativos em cada eixo; Sainz conserva a orientação EXIF do JPEG sem conversão. Conferências no navegador verificam o original servido, densidade2, identidade, créditos, proporção e ausência de transbordamento em computador e celular. Revisão visual e testes automáticos possuem registros separados.
+O enquadramento de Russell usa uma janela com pelo menos 1600 pixels nativos em cada eixo; Sainz conserva a orientação EXIF do JPEG sem conversão. Conferências no navegador verificam o original servido, densidade 2, identidade, créditos, proporção e ausência de transbordamento em computador e celular. Revisão visual e testes automáticos possuem registros separados.
 
 Doohan permanece temporariamente com o retrato atual, por decisão editorial explícita: ainda falta uma foto espontânea adequada com licença de reutilização. A pendência é registrada separadamente no catálogo; não reduz a resolução exigida das 28 fotografias selecionadas nem permite omitir outros pilotos. A curadoria de Doohan continua. Retratos do pódio, ilustrações dos GPs, dados, modelo v1, probabilidades e previsões registradas permanecem preservados. CI, pacote de release e aceite do site público exigem comprovantes próprios.
 
