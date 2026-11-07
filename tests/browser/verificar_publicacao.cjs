@@ -5,12 +5,19 @@ function integrity(ok,message){if(!ok){const e=Error(message);e.code='integrity'
 async function bounded(promise,ms,label){let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error(label+' timed out')),ms);})]);}finally{clearTimeout(timer);}}
 
 async function verifyImage(page,app,expected){
- const image=app.locator('.pc-photo,.fan-hero-image,.pw-circuit-media img').first();await image.waitFor({state:'attached',timeout:20000});
+ const image=app.locator(expected.selector||'.pc-illustration,.pc-photo,.fan-hero-image,.pw-circuit-media img').first();await image.waitFor({state:'visible',timeout:20000});
  const actual=await image.evaluate(async e=>{
   let timer;try{await Promise.race([e.decode(),new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Photo decoding timed out')),20000);})]);}finally{clearTimeout(timer);}
-  return{source:e.currentSrc,width:e.naturalWidth,height:e.naturalHeight};
+  const r=e.getBoundingClientRect(),s=getComputedStyle(e);
+  return{source:e.currentSrc,width:e.naturalWidth,height:e.naturalHeight,frame:{width:r.width,height:r.height,fit:s.objectFit,radius:s.borderRadius,shadow:s.boxShadow,clip:s.clipPath,mask:s.maskImage||s.webkitMaskImage||'none'}};
  });
  integrity(actual.width>0&&actual.height>0,'Photo has no decoded pixels');
+ if(expected.kind==='gouache'){
+  integrity(actual.width===expected.width&&actual.height===expected.height,'Gouache dimensions differ');
+  integrity(actual.frame.fit==='contain'&&Math.abs(actual.frame.width/actual.frame.height-actual.width/actual.height)<.01&&actual.frame.clip==='none'&&actual.frame.mask==='none','Gouache frame crops or masks the illustration');
+  integrity(parseFloat(actual.frame.radius)>=10&&actual.frame.shadow!=='none','Gouache rounded frame or floating shadow is missing');
+  integrity(!actual.source.startsWith('data:'),'Gouache must use its immutable same-origin delivery path');
+ }
  let bytes,variant,mime;
  if(actual.source.startsWith('data:image/')){
   integrity(actual.source.includes(';base64,'),'Unexpected photo encoding');bytes=Buffer.from(actual.source.split(',')[1],'base64');
@@ -23,7 +30,7 @@ async function verifyImage(page,app,expected){
   integrity(response.ok()&&mime.startsWith('image/'),'Photo response is not an image');bytes=await response.body();
  }
  const digest=sha256(bytes);integrity(digest===(variant?variant.sha256:expected.sha256),'Photo bytes differ from the documented source');
- return{decoded:true,width:actual.width,height:actual.height,sha256:digest,delivery:variant?'static_variant':actual.source.startsWith('data:')?'inline_original':'static_original',variant:variant?.path,mime};
+ return{decoded:true,width:actual.width,height:actual.height,sha256:digest,delivery:expected.kind==='gouache'?'static_gouache':variant?'static_variant':actual.source.startsWith('data:')?'inline_original':'static_original',variant:variant?.path,mime,...(expected.kind==='gouache'?{frame:actual.frame}:{})};
 }
 
 function inspectControls(_element,lang){
@@ -101,10 +108,13 @@ function expectations(root,version,identity){
  integrity(calendar.filter(r=>r.temporada===identity[0]&&r.rodada===identity[1]&&r.circuito_id===identity[2]).length===1,'Publication event differs from the package calendar');
  const state=read('frontend_assets/operacao_fim_semana.json');
  integrity([state,...(state.arquivo_eventos||[])].filter(r=>r.temporada===identity[0]&&r.rodada===identity[1]&&r.circuito_id===identity[2]).length===1,'Publication event has no matching collected state');
- const race=read('dashboard_assets/circuit/catalogo_visual.json').circuitos[identity[2]];
- integrity(race?.foto?.sha256,'Published circuit photograph is absent');
+ const art=read('frontend_assets/destination_illustrations.json');
+ integrity(art.schema===1&&art.style==='gouache-editorial'&&art.complete===true,'Gouache collection is incomplete or has another style');
+ const race=art.circuits[identity[2]];
+ integrity(race?.circuit_id===identity[2]&&/^[a-f0-9]{64}$/.test(race.sha256),'Published circuit illustration is absent or misidentified');
+ integrity(race.path==='static/pitwall-art/gouache/'+identity[2]+'-'+race.sha256.slice(0,12)+'.png','Gouache immutable path differs');
  const method=read('static/pitwall-media/catalog.json').method;
- return{build:manifest.apresentacao_build_sha256,race:{sha256:race.foto.sha256,static_path:'static/pitwall-circuits/'+identity[2]+'-'+race.foto.sha256.slice(0,12)+path.extname(race.foto.caminho).toLowerCase()},method:{sha256:method.source_sha256,variants:method.variants}};
+ return{build:manifest.apresentacao_build_sha256,race:{kind:'gouache',sha256:race.sha256,static_path:race.path,width:race.width,height:race.height,selector:'.pw-postcard[data-place="'+identity[2]+'"] .pc-illustration'},method:{sha256:method.source_sha256,variants:method.variants}};
 }
 
 async function verifyDeployment(version,resultPath,output){

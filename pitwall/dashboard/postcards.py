@@ -1,13 +1,12 @@
-"""Place-specific covers composed from original linework and approved photos."""
+"""Complete gouache scenes, readable copy and explicit image provenance."""
 from html import escape
-from pathlib import Path
 from urllib.parse import urlsplit
 
 from pitwall.paths import PROJECT_ROOT
 from pitwall.i18n import language, translate
-from pitwall.dashboard.destination_art import DESTINATIONS, artwork_svg
+from pitwall.dashboard.destination_art import DESTINATIONS
+from pitwall.dashboard.illustrations import illustration
 from pitwall.dashboard.journey import race_identity
-from pitwall.dashboard.media import circuit_photo_source
 
 
 def _link(label, url):
@@ -17,25 +16,22 @@ def _link(label, url):
         escape(url, quote=True), escape(str(label)))
 
 
-def _credits(photo, destination, has_photo):
-    parts = []
-    if has_photo:
-        author = photo.get('autor') or photo.get('credito') or translate('Fonte')
-        parts.append('<p>{}: {}. {}</p>'.format(
-            escape(translate('Imagem')), _link(author, photo.get('pagina')),
-            _link(photo.get('licenca', translate('Fonte')), photo.get('url_licenca') or photo.get('pagina'))))
-        parts.append('<p>{}</p>'.format(escape(translate('Imagem ilustrativa; não documenta o GP selecionado.'))))
+def _credits(art, destination):
+    parts = ['<p>{}</p>'.format(escape(translate('Ilustração em guache gerada com IA para o Pitwall Lab.'))),
+             '<p>{}</p>'.format(escape(translate('Interpretação artística; não documenta o GP selecionado.')))]
     if destination:
-        motif = destination.motif[language() == 'en']
-        parts.append('<p>{}: {}.</p>'.format(escape(translate('Arte editorial original do Pitwall Lab')), escape(motif)))
-        if destination.reference:
-            parts.append('<p>{}</p>'.format(_link(translate('Referência visual'), destination.reference)))
+        parts.append('<p>{}.</p>'.format(escape(destination.motif[language() == 'en'])))
+    references = art.get('reference_urls', []) if art else []
+    links = [_link(urlsplit(url).netloc.removeprefix('www.'), url) for url in references
+             if isinstance(url, str) and urlsplit(url).scheme in ('http', 'https')]
+    if links:
+        parts.append('<p>{}: {}.</p>'.format(escape(translate('Referências visuais')), ', '.join(links)))
     return '<details class="pc-credits"><summary>{}</summary><div>{}</div></details>'.format(
         escape(translate('Imagem e referências')), ''.join(parts))
 
 
 def cover(race, year, forecast=False, note='', assets=None, root=PROJECT_ROOT):
-    """Render an identified place without changing any event or forecast record."""
+    """Artwork is separate from event data, original photos and sealed cards."""
     from pitwall.dashboard.components import data_editorial
 
     circuit_id = race.get('circuito_id', '')
@@ -43,37 +39,24 @@ def cover(race, year, forecast=False, note='', assets=None, root=PROJECT_ROOT):
     _, event_name = race_identity(race['corrida'], language())
     place = destination.name[language() == 'en'] if destination else race.get('cidade') or event_name
     heading = translate('Previsões') if forecast else place
-    # The cover identifies the place. Card availability and count belong to the
-    # recorded reading below; a pending GP must not promise cards that do not exist.
     subtitle = place if forecast else race.get('circuito_nome', '')
-    palette = destination.palette if destination else ('#e7f3fc','#08172d','#c11b27','#b8cbd9')
-    paper, ink, accent, second = palette
-    frame = destination.frame if destination else 'plain'
-    position = destination.photo_position if destination else 'center'
-    photo = (assets or {}).get('foto') or {}
-    source = circuit_photo_source(Path(root), circuit_id, photo) if photo else ''
-
-    # A circuit illustration does not identify one of the sealed predictions.
-    # Full photo provenance remains in the explicit credit disclosure.
-    alt = translate('Imagem ilustrativa do circuito de {}.').format(place)
-    if not forecast:
-        original_alt = (photo.get('alt_en') if language() == 'en' else (assets or {}).get('alt_foto'))
-        alt = original_alt or alt
-    image = ('<img class="pc-photo" src="{}" alt="{}" style="object-position:{}" decoding="async">'.format(
-        escape(source, quote=True), escape(alt, quote=True), escape(position, quote=True))) if source else ''
-    image_note = translate('Imagem ilustrativa do circuito' if source else 'Imagem indisponível')
-    style = '--pc-paper:{};--pc-ink:{};--pc-accent:{};--pc-second:{}'.format(paper, ink, accent, second)
+    art = illustration(root, circuit_id)
+    if art:
+        scene = ('<figure class="pc-scene"><img class="pc-illustration" src="{}" alt="{}" '
+                 'width="{}" height="{}" decoding="async" fetchpriority="high">'
+                 '<figcaption>{}</figcaption></figure>').format(
+            escape(art['src'], quote=True), escape(art['alt'][language() == 'en'], quote=True),
+            art['width'], art['height'], escape(translate('Ilustração editorial')))
+    else:
+        scene = '<div class="pc-scene pc-art-unavailable"><p>{}</p></div>'.format(
+            escape(translate('Ilustração indisponível')))
+    description = '<p class="pc-note">{}</p>'.format(escape(translate(note))) if note else ''
     date = str(race.get('data') or '')
     date_label = translate(data_editorial(date)) if date else ''
-    description = '<p class="pc-note">{}</p>'.format(escape(translate(note))) if note else ''
     return (
-        '<section class="pw-postcard fan-hero pc-{}" data-place="{}" data-hero-kind="{}" style="{}" aria-label="{}">'
-        '<div class="pc-copy fan-hero-copy"><h1>{}</h1><p class="pc-intro">{}</p>{}</div>'
-        '<div class="pc-scene">{}<div class="pc-art-plane" aria-hidden="true"></div>{}'
-        '<span class="pc-photo-note">{}</span></div>'
+        '<section class="pw-postcard fan-hero" data-place="{}" data-hero-kind="{}" aria-label="{}">'
+        '<div class="pc-copy fan-hero-copy"><h1>{}</h1><p class="pc-intro">{}</p>{}</div>{}'
         '<footer class="pc-footer"><time datetime="{}">{}</time>{}</footer></section>'
-    ).format(
-        frame, escape(circuit_id, quote=True), 'forecast' if forecast else 'race', style,
-        escape(race['corrida'], quote=True), escape(heading), escape(subtitle), description,
-        image, artwork_svg(circuit_id), escape(image_note), escape(date, quote=True), escape(date_label),
-        _credits(photo, destination, bool(source)))
+    ).format(escape(circuit_id, quote=True), 'forecast' if forecast else 'race',
+             escape(race['corrida'], quote=True), escape(heading), escape(subtitle), description,
+             scene, escape(date, quote=True), escape(date_label), _credits(art, destination))

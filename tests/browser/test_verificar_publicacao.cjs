@@ -7,10 +7,34 @@ const root=path.resolve(__dirname,'../../distribuicao/pitwall-dashboard');
 const catalog=JSON.parse(fs.readFileSync(path.join(root,'static/pitwall-media/catalog.json'))).method;
 const variant=catalog.variants[0],raw=fs.readFileSync(path.join(root,variant.path));
 const digest=crypto.createHash('sha256').update(raw).digest('hex');
-let browser;
-test.before(async()=>{const options={headless:true};if(process.env.PLAYWRIGHT_CHANNEL)options.channel=process.env.PLAYWRIGHT_CHANNEL;browser=await chromium.launch(options);});
-test.after(async()=>{await browser?.close();});
+const gouache=JSON.parse(fs.readFileSync(path.join(root,'frontend_assets/destination_illustrations.json'))).circuits.sepang;
+const artRaw=fs.readFileSync(path.join(root,gouache.path));
+const expectedArt={...gouache,kind:'gouache',static_path:gouache.path,selector:'.pc-illustration'};
+let browser,artServer,artOrigin;
+test.before(async()=>{
+ const options={headless:true};if(process.env.PLAYWRIGHT_CHANNEL)options.channel=process.env.PLAYWRIGHT_CHANNEL;browser=await chromium.launch(options);
+ artServer=require('node:http').createServer((req,res)=>{res.writeHead(200,{'Content-Type':'image/png'});res.end(artRaw);});
+ await new Promise(resolve=>artServer.listen(0,'127.0.0.1',resolve));artOrigin='http://127.0.0.1:'+artServer.address().port;
+});
+test.after(async()=>{await browser?.close();await new Promise(resolve=>artServer?.close(resolve));});
 async function withPage(action){const context=await browser.newContext();try{await action(await context.newPage());}finally{await context.close();}}
+
+async function artFixture(page,style=''){
+ await page.route(artOrigin+'/**',route=>route.request().url().endsWith('.png')
+  ?route.fulfill({status:200,contentType:'image/png',body:artRaw})
+  :route.fulfill({status:200,contentType:'text/html',body:'<img class="pc-illustration" style="width:600px;height:auto;object-fit:contain;border-radius:12px;box-shadow:0 4px 12px #0003;'+style+'" src="/app/'+gouache.path+'">'}));
+ await page.goto(artOrigin+'/');
+}
+test('complete gouache retains its original bytes and floating frame',async()=>withPage(async page=>{
+ await artFixture(page);const result=await verifyImage(page,page,expectedArt);
+ assert.equal(result.delivery,'static_gouache');assert.equal(result.sha256,gouache.sha256);assert.equal(result.frame.fit,'contain');
+}));
+for(const [label,style] of [['crop','height:180px;object-fit:cover'],['mask','mask-image:linear-gradient(black,transparent)'],['clip','clip-path:inset(10%)'],['square corners','border-radius:0'],['missing shadow','box-shadow:none']]){
+ test('gouache rejects '+label,async()=>withPage(async page=>{await artFixture(page,style);await assert.rejects(verifyImage(page,page,expectedArt),{code:'integrity'});}));
+}
+test('another circuit path cannot deliver the approved gouache',async()=>withPage(async page=>{
+ await artFixture(page);await assert.rejects(verifyImage(page,page,{...expectedArt,static_path:gouache.path.replace('sepang-','suzuka-')}),{code:'integrity'});
+}));
 
 test('an approved photograph must decode and retain its SHA',async()=>withPage(async page=>{
  await page.setContent('<img class="fan-hero-image" src="data:image/webp;base64,'+raw.toString('base64')+'">');

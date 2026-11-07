@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.14.1 — 2026-11-07
+
+Substitui as capas divididas por 26 cenas completas em guache editorial, com referências próprias de cada circuito e carros inteiros. A arte mantém a proporção original, cantos arredondados e sombra discreta, com texto fora da imagem. Créditos distinguem ilustração gerada com IA de fotografia documental. A entrega usa arquivos imutáveis por circuito e SHA-256; falhas de integridade não exibem arte de outro GP.
+
+A verificação cobre enquadramento, identidade, bytes e adaptação ao celular. Dados, modelo v1, previsões registradas, fotografias originais, retratos e cartas permanecem preservados. A próxima diagramação editorial e as fotos espontâneas dos perfis serão apresentadas em propostas separadas.
+
 ## 0.14.0 — 2026-11-06
 
 Revisão editorial da interface: retira a legenda que repetia o título, elimina o subtítulo redundante de GP nas páginas analíticas e alinha busca e seletores em controles de 44 px. O cabeçalho compacto acompanha a rolagem com os idiomas. A navegação lateral mantém seus quinze destinos; a expansão no celular termina imediatamente para conservar o alvo do clique. A bandeira de chegada passa a ter quadrados preenchidos alternadamente.
