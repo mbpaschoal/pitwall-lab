@@ -104,7 +104,7 @@ jobs:
           python -B -m unittest tests.test_post_qualifying tests.test_driver_updates tests.test_automatic_publication tests.test_weekend_cloud tests.test_weekend_operation tests.test_weekend_reconciliation tests.test_final_results tests.test_weekend_official tests.test_weekend_ui tests.test_i18n tests.test_releases tests.test_dashboard_app tests.test_review_regressions tests.test_review_readers tests.test_standings_publication tests.test_fan_exploration
           python -B verificar_pacote.py --pacote distribuicao/pitwall-dashboard
           diff -qr --exclude=__pycache__ "$RUNNER_TEMP/generated/pitwall-dashboard" distribuicao/pitwall-dashboard
-      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         if: steps.data.outputs.changed == 'true'
         with:
           node-version: '22'
@@ -235,7 +235,7 @@ jobs:
           with open(sys.argv[2],'a') as output:
               output.write('host_pending='+str(any(Path(sys.argv[1]).rglob('host-input.json'))).lower()+'\n')
           PY
-      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         if: steps.pair.outputs.host_pending == 'true'
         with:
           node-version: '22'
