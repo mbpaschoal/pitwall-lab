@@ -11,6 +11,7 @@ import unittest
 from unittest.mock import patch
 
 from operacao2026 import post_qualifying as pq, weekend, cloud
+from pitwall.operations import prospective
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -476,6 +477,185 @@ class PostQualifyingTests(unittest.TestCase):
             receipt=reference[field]
             raw=(ROOT/'reports/automacao_saopaulo_20261103/sources'/receipt['arquivo']).read_bytes()
             self.assertEqual(hashlib.sha256(raw).hexdigest(),receipt['sha256'])
+
+
+IDENTITY = (2026, 21, 'vegas')
+NOW = datetime(2026, 11, 21, 8, tzinfo=timezone.utc)
+
+
+class VegasForecastTests(unittest.TestCase):
+    def setUp(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.root = Path(tmp.name)
+        self.config = self.root / 'operacao2026/eventos/vegas2026.json'
+        self.config.parent.mkdir(parents=True)
+        shutil.copyfile(ROOT / self.config.relative_to(self.root), self.config)
+        shutil.copyfile(ROOT / pq.POLICY, self.root / pq.POLICY)
+        self.event = weekend.load_event(self.config)
+        self.state = dict(temporada=2026, rodada=21, circuito_id='vegas', sessoes=[])
+
+    def add_review(self):
+        path = self.root / 'entry.pdf'
+        raw = b'%PDF-1.4 synthetic roster test'
+        path.write_bytes(raw)
+        source = dict(file='entry.pdf', sha256=hashlib.sha256(raw).hexdigest(),
+                      url='https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_entry_list.pdf',
+                      document_type='entry_list', obtido_em_utc='2026-11-19T16:00:00Z')
+        q = [dict(number=str(i), Driver=dict(driverId=f'driver{i}', givenName='Driver', familyName=f'Name{i}'),
+                  Constructor=dict(constructorId=f'team{(i+1)//2}')) for i in range(1, 23)]
+        entries = [dict(car_number=int(r['number']),
+                        literal_names=[[r['Driver']['givenName'], r['Driver']['familyName']]],
+                        team_id=r['Constructor']['constructorId']) for r in q]
+        rule = pq.policy(self.root)
+        rule['roster_reviews'].append(dict(identity=list(IDENTITY), source=source, required_entries=entries,
+                                           absent_driver_ids=[]))
+        (self.root / pq.POLICY).write_text(json.dumps(rule))
+        return q, rule
+
+    def qual_pages(self, rows):
+        race = dict(season='2026', round='21', date='2026-11-22',
+                    Circuit=dict(circuitId='vegas'), QualifyingResults=rows)
+        return {}, {'classificacao': [({}, {'MRData': {'RaceTable': {'Races': [race]}}})]}
+
+    def test_offline_readiness_and_p1_scope(self):
+        with patch('registro_emissoes.carregar', return_value={}), \
+                patch.object(pq.fontes, 'coletar_snapshot') as fetch:
+            result = pq.prepare(self.root, self.config, self.state, NOW)
+            self.assertEqual(result['status'], 'waiting_for_observed_qualifying')
+            fetch.assert_not_called()
+        interlagos = self.config.with_name('saopaulo2026.json')
+        shutil.copyfile(ROOT / interlagos.relative_to(self.root), interlagos)
+        with patch('registro_emissoes.carregar', return_value={}), \
+                patch.object(prospective, 'now', return_value=datetime(2026, 11, 1, tzinfo=timezone.utc)):
+            results = prospective.run(self.root, self.root / 'p1')
+        self.assertEqual([r['identity'] for r in results], [[2026, 20, 'interlagos']])
+
+    def observe_q(self):
+        q_raw = json.dumps([dict(session_key=11416, meeting_key=1300, qualifying_phase=3,
+                                 message='SESSION FINISHED', date='2026-11-21T05:01:00Z')]).encode()
+        (self.root / 'q-control.json').write_bytes(q_raw)
+        self.state['sessoes'] = [dict(session_key=11416, estado='dados_recebidos',
+            encerramento_observado_utc='2026-11-21T05:01:00Z',
+            fontes=[dict(endpoint='race_control', status=200, arquivo_local='q-control.json',
+                sha256=hashlib.sha256(q_raw).hexdigest(), obtido_em_utc='2026-11-21T05:45:00Z',
+                url='https://api.openf1.org/v1/race_control?session_key=11416')])]
+
+    def test_observed_q_without_roster_review_does_not_collect_or_infer(self):
+        self.observe_q()
+        with patch('registro_emissoes.carregar', return_value={}), \
+                patch.object(pq.fontes, 'coletar_snapshot') as fetch, patch.object(pq, 'command') as infer:
+            result = pq.prepare(self.root, self.config, self.state, NOW, infer)
+        self.assertEqual(result['status'], 'waiting_for_roster_review')
+        fetch.assert_not_called()
+        infer.assert_not_called()
+        self.assertFalse((self.root / cloud.STATE / 'forecasts').exists())
+
+    def test_exact_roster_passes_and_stale_number_or_team_fails(self):
+        rows, _ = self.add_review()
+        with patch.object(pq.fontes, 'ler_snapshot', return_value=self.qual_pages(rows)):
+            r = pq.review_forecast_roster(self.root, self.event, 'fixture', now=NOW)
+            self.assertEqual(r['status'], 'verified')
+            self.assertEqual(len(r['admitted_entries']), 22)
+            self.assertEqual(r['admitted_entries'][0]['driver_id'], 'driver1')
+            rows[0]['number'] = '23'
+            with self.assertRaisesRegex(ValueError, 'absent or ambiguous'):
+                pq.review_forecast_roster(self.root, self.event, 'fixture', now=NOW)
+            rows[0]['number'] = '1'
+            rows[0]['Constructor']['constructorId'] = 'foreign'
+            with self.assertRaisesRegex(ValueError, 'absent or ambiguous'):
+                pq.review_forecast_roster(self.root, self.event, 'fixture', now=NOW)
+
+    def test_openf1_uses_the_canonical_car_number(self):
+        rows, _ = self.add_review()
+        for r in rows:
+            r['openf1_driver_number'] = int(r.pop('number'))
+        with patch('operacao2026.openf1_qualificacao.carregar', return_value={'registros': rows}):
+            review = pq.review_forecast_roster(self.root, self.event, 'fixture', self.root / 'q', now=NOW)
+        self.assertEqual(len(review['admitted_entries']), 22)
+
+    def test_wrong_entry_list_or_changed_bytes_are_rejected(self):
+        _, rule = self.add_review()
+        source = rule['roster_reviews'][-1]['source']
+        pq.verify_full_roster_source(self.root, self.event, source, NOW)
+        with self.assertRaisesRegex(ValueError, 'Official entry list'):
+            pq.verify_full_roster_source(self.root, self.event,
+                {**source, 'url': source['url'].replace('las_vegas', 'sao_paulo')}, NOW)
+        (self.root / source['file']).write_bytes(b'%PDF-edited')
+        with self.assertRaisesRegex(ValueError, 'Official entry list'):
+            pq.verify_full_roster_source(self.root, self.event, source, NOW)
+
+    def test_publication_rechecks_review_and_race_time(self):
+        rows, _ = self.add_review()
+        forecast = dict(status='prepared', identity=list(IDENTITY), race_start_utc=self.event['largada_utc'],
+            declaration=dict(temporada=2026, rodada=21, circuito_id='vegas', snapshot='auto-vegas-test',
+                diretorio='reports/operacao_2026/emissoes/auto-prospectivo-vegas-test'))
+        p = self.root / forecast['declaration']['diretorio'] / 'manifesto.json'
+        p.parent.mkdir(parents=True)
+        m = dict(evento=dict(temporada='2026', rodada='21', circuito_id='vegas'),
+                 corte_temporal=dict(corrida_programada_em_utc=self.event['largada_utc'],
+                                     qualificacao_inicio_utc='2026-11-21T04:00:00Z'))
+        p.write_text(json.dumps(m))
+        with patch.object(pq.fontes, 'ler_snapshot', return_value=self.qual_pages(rows)):
+            forecast['roster_review'] = pq.review_forecast_roster(self.root, self.event, 'fixture', now=NOW)
+            pq.publication_guard(self.root, forecast, NOW)
+            m['corte_temporal']['corrida_programada_em_utc'] = '2026-11-22T03:30:00Z'
+            p.write_text(json.dumps(m))
+            with self.assertRaisesRegex(ValueError, 'Emission schedule'):
+                pq.publication_guard(self.root, forecast, NOW)
+
+    def test_full_review_prepares_then_restores_without_new_inference(self):
+        self.observe_q()
+        rows, _ = self.add_review()
+        _, pages = self.qual_pages(rows)
+        calendar = dict(season='2026', round='21', date='2026-11-22', time='04:00:00Z',
+                        Circuit=dict(circuitId='vegas'),
+                        Qualifying=dict(date='2026-11-21', time='04:00:00Z'))
+        pages['calendario'] = [({}, {'MRData': {'RaceTable': {'Races': [calendar]}}})]
+
+        def capture(root, snapshot_id, **kwargs):
+            folder = root / snapshot_id
+            folder.mkdir(parents=True)
+            (folder / 'indice.json').write_text('{}')
+
+        calls = []
+        def run(root, args):
+            calls.append(args[1])
+            if args[1] == 'estado':
+                return json.dumps(dict(estado='pronto', registros_classificacao=22))
+            folder = root / 'reports/operacao_2026/emissoes' / args[args.index('--id') + 1]
+            folder.mkdir(parents=True)
+            manifest = dict(evento=dict(temporada='2026', rodada='21', circuito_id='vegas'),
+                            corte_temporal=dict(corrida_programada_em_utc=self.event['largada_utc'],
+                                                qualificacao_inicio_utc='2026-11-21T04:00:00Z'))
+            (folder / 'manifesto.json').write_text(json.dumps(manifest))
+            return ''
+
+        with patch('registro_emissoes.carregar', return_value={}), \
+                patch.object(pq.fontes, 'coletar_snapshot', side_effect=capture) as capture_mock, \
+                patch.object(pq.fontes, 'ler_snapshot', return_value=({}, pages)), \
+                patch.object(pq, 'source_control', return_value={}), \
+                patch.object(pq, 'verify_cards', return_value={'status': 'complete'}), \
+                patch.object(pq, 'register_and_project'), patch.object(pq, 'utc_now', return_value=NOW):
+            result = pq.prepare(self.root, self.config, self.state, NOW, run)
+            self.assertEqual(result['status'], 'prepared')
+            for directory in result['directories']:
+                shutil.rmtree(self.root / directory)
+            again = pq.prepare(self.root, self.config, self.state, NOW, run)
+        self.assertEqual(result['declaration'], again['declaration'])
+        self.assertEqual(calls, ['estado', 'emitir'])
+        capture_mock.assert_called_once()
+
+    def test_snapshot_reschedule_blocks_the_old_configuration(self):
+        race = dict(season='2026', round='21', date='2026-11-22', time='03:30:00Z',
+                    Circuit=dict(circuitId='vegas'), Qualifying=dict(date='2026-11-21', time='04:00:00Z'))
+        pages = {'calendario': [({}, {'MRData': {'RaceTable': {'Races': [race]}}})]}
+        with patch.object(pq.fontes, 'ler_snapshot', return_value=({}, pages)):
+            with self.assertRaisesRegex(ValueError, 'Current calendar differs'):
+                pq.validate_schedule_snapshot(self.root, self.event, 'fixture')
+            race['time'] = '04:00:00Z'
+            pq.validate_schedule_snapshot(self.root, self.event, 'fixture')
+
 
 
 if __name__=='__main__':unittest.main()

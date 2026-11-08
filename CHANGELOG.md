@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.16.2 — 2026-11-08
+
+Las Vegas entra no fluxo de previsão pós-classificação. A emissão v1 fica pendente até que a lista oficial da FIA tenha sido revisada e os 22 carros do evento coincidam com o elenco observado. O modelo v1, as emissões anteriores e o escopo do P1 permanecem preservados.
+
 ## 0.16.1 — 2026-11-08
 
 Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 4/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.

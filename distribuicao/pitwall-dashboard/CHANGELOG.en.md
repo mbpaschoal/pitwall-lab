@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.16.2 — 2026-11-08
+
+Las Vegas joins the post-qualifying forecast workflow. The v1 forecast remains pending until the official FIA entry list has been reviewed and its 22 cars match the observed roster. The frozen v1 model, prior forecasts and P1 scope are preserved.
+
 ## 0.16.1 — 2026-11-08
 
 Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 4/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.

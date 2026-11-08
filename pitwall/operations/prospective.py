@@ -434,7 +434,8 @@ def run(root, output):
     output.mkdir(parents=True,exist_ok=False)
     registry = carregar(root)
     results = []
-    admitted = policy(root)['events']
+    rule = policy(root)
+    admitted = rule.get('p1_events', rule['events'])
     for path in sorted((root/'operacao2026/eventos').glob('*.json')):
         event = json.loads(path.read_text())
         if not isinstance(event,dict) or event.get('schema') != 'pitwall-weekend-event-v1':
