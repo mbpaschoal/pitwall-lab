@@ -1,17 +1,140 @@
 /* Sealed reading and revealed faces, inside the native dialog. */
-.st-key-forecast-details,.st-key-forecast-audit{display:none}
-.st-key-forecast-details[data-pw-unlocked="true"],.st-key-forecast-audit[data-pw-unlocked="true"]{display:block}
-.pw-sealed-deck{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
-.pw-sealed-card{min-width:0;perspective:1000px}
-.pw-sealed-card>[hidden]{display:none!important}
-.pw-card-back{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;width:100%;aspect-ratio:2/3;min-height:260px;padding:24px 14px;border:1px solid #c7b47b;border-radius:4px;background:repeating-linear-gradient(45deg,transparent 0 26px,#e0cf8e15 27px 28px),var(--deck-back,#192e39);color:var(--deck-ink,#dbc893);font:400 14px/1.4 LatoLocal,Arial,sans-serif}
-.pw-card-back b{display:grid;place-content:center;width:85px;height:85px;border:1px solid currentColor;border-radius:50%;font:400 38px AbrilFatfaceLocal,Georgia,serif}
-.pw-card-back:focus-visible,.pw-revealed-face button:focus-visible{outline:3px solid var(--pw-red);outline-offset:4px}
-.pw-revealed-face{background:#fcfaf5;border:1px solid #c7b47b;border-radius:4px;overflow:hidden;padding-bottom:16px}
-.pw-revealed-face .tarot-card figure{border:0;border-radius:0}
-.pw-tarot-prob{font:700 16px/1.4 LatoLocal,Arial,sans-serif;color:#a40d20!important;padding:12px 16px 0;margin:0!important}
-.pw-tarot-phrase{font:400 13px/1.5 LatoLocal,Arial,sans-serif;color:#53646d;padding:8px 16px;margin:0!important}
-.pw-revealed-face button{font:400 13px LatoLocal,Arial,sans-serif;background:none;border:0;border-bottom:1px solid #9eafba;padding:10px 0;margin:0 16px;min-height:44px;color:#18252b}
-.pw-reveal-count{font-size:13px;color:#53646d}
+.st-key-forecast-details,
+.st-key-forecast-audit {display:none;}
+.st-key-forecast-details[data-pw-unlocked="true"],
+.st-key-forecast-audit[data-pw-unlocked="true"] {display:block;}
 
-@media(max-width:600px){.pw-sealed-deck{grid-template-columns:1fr;max-width:300px;margin:auto;gap:24px}}
+/* Constrain the wrapper that also carries the native close button. */
+html[data-pw-card-opening="true"] [data-testid="stDialog"] {visibility:hidden;}
+[data-testid="stDialog"]>div:has(>[role="dialog"] .pw-tarot-reading) {
+  width:min(calc(100% - 32px),1000px)!important;
+}
+[role="dialog"]:has(.pw-tarot-reading) {
+  width:100%!important;
+  max-height:calc(100dvh - 80px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+  border-radius:12px;
+}
+[role="dialog"] .pw-reading-rule {
+  font:400 1rem/1.5 LatoLocal,Arial,sans-serif;
+  color:#40566c;
+  max-width:65ch;
+  margin:0 0 20px!important;
+  text-wrap:pretty;
+}
+.pw-sealed-deck {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+  align-items:start;
+}
+.pw-sealed-card {min-width:0;perspective:1000px;}
+.pw-sealed-card>[hidden] {display:none!important;}
+.pw-card-back {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  width:100%;
+  aspect-ratio:2/3;
+  min-height:260px;
+  max-height:440px;
+  padding:24px 14px;
+  border:1px solid #c7b47b;
+  border-radius:12px;
+  background:var(--deck-back,#192e39);
+  color:var(--deck-ink,#dbc893);
+  font:400 1rem/1.5 LatoLocal,Arial,sans-serif;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+.pw-card-back b {
+  display:grid;
+  place-content:center;
+  width:85px;
+  height:85px;
+  border:1px solid currentColor;
+  border-radius:50%;
+  font:400 38px AbrilFatfaceLocal,Georgia,serif;
+}
+.pw-card-back:focus-visible,
+.pw-revealed-face button:focus-visible {
+  outline:3px solid var(--pw-red);
+  outline-offset:3px;
+}
+.pw-revealed-face {
+  background:#fcfaf5;
+  border:1px solid #c7b47b;
+  border-radius:12px;
+  overflow:hidden;
+  padding-bottom:12px;
+}
+.pw-revealed-face .tarot-card figure {border:0;border-radius:0;}
+.pw-revealed-face .tarot-card img {
+  height:min(36dvh,330px);
+  width:100%;
+  object-fit:contain;
+  background:#f5ecd9;
+}
+[role="dialog"] .pw-revealed-face .tarot-card-label {padding:12px 8px;}
+[role="dialog"] .pw-revealed-face .tarot-team-mclaren .tarot-card-label {color:var(--pw-ink);}
+[role="dialog"] .pw-revealed-face .tarot-card-label h3 {
+  font:400 1.25rem/1.2 AbrilFatfaceLocal,Georgia,serif;
+  text-wrap:balance;
+  overflow-wrap:break-word;
+}
+[role="dialog"] .pw-revealed-face .tarot-card-label span {
+  display:block;
+  margin-top:4px;
+  font:400 .875rem/1.4 LatoLocal,Arial,sans-serif;
+}
+[role="dialog"] .pw-tarot-prob {
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  padding:16px 16px 12px;
+  margin:0!important;
+  color:#a40d20;
+  text-align:center;
+  font-variant-numeric:tabular-nums;
+}
+[role="dialog"] .pw-tarot-prob strong {
+  font:700 2.25rem/1.15 LatoLocal,Arial,sans-serif;
+  color:inherit;
+  font-variant-numeric:inherit;
+}
+[role="dialog"] .pw-tarot-prob span {
+  font:400 .875rem/1.4 LatoLocal,Arial,sans-serif;
+  color:#40566c;
+}
+.pw-revealed-face button {
+  font:400 .875rem/1.4 LatoLocal,Arial,sans-serif;
+  background:none;
+  border:0;
+  border-bottom:1px solid #9eafba;
+  padding:10px 0;
+  margin:0 16px;
+  min-height:44px;
+  color:#18252b;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+.pw-tarot-reading ::selection {background:#c7b47b;color:#061226;}
+.pw-reveal-count {font-size:.875rem;color:#53646d;}
+@media(hover:hover) {
+  .pw-card-back:hover {border-color:var(--deck-ink,#dbc893);}
+  .pw-revealed-face button:hover {border-bottom-color:var(--pw-red);color:#a40d20;}
+}
+@media(prefers-reduced-motion:no-preference) and (hover:hover) {
+  html:not([data-pw-reduced-motion="true"]) .pw-card-back {
+    transition:border-color 150ms ease-out;
+  }
+}
+@media(max-width:600px) {
+  .pw-sealed-deck {grid-template-columns:minmax(0,1fr);max-width:320px;margin:auto;}
+  .pw-card-back {min-height:240px;max-height:360px;}
+  .pw-revealed-face .tarot-card img {height:min(40dvh,300px);}
+}

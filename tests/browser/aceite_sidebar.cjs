@@ -95,6 +95,8 @@ async function run() {
    assert(!/Lando Norris|Max Verstappen|George Russell/.test(before),'Unrevealed identities in accessibility tree');
    await activate(page,app.getByRole('button',{name:lang==='pt'?'Ver as cartas deste GP':'See the cards for this GP',exact:true}));
    await app.getByRole('dialog').locator('.pw-sealed-deck').waitFor();
+   await app.waitForFunction(()=>document.querySelector('[data-testid="stDialog"]')?.contains(document.activeElement)
+     && document.querySelector('.stApp')?.dataset.testScriptState==='notRunning');
    assert.equal(await app.locator('.pw-card-back:visible').count(),3);
    const backs=await app.locator('.pw-card-back').allTextContents();
    assert(backs.every(text=>!/\b(?:Carta|Card)\s+(?:[A-Z]|\d+)\b/.test(text)),'Cards must not have letter or number labels');
@@ -107,10 +109,16 @@ async function run() {
    await page.keyboard.press('Escape');
    await app.getByRole('dialog').waitFor({state:'hidden'});
    await app.waitForFunction(()=>!new URL(location.href).searchParams.has('cartas'));
+   await app.waitForFunction(()=>document.activeElement === document.querySelector('.st-key-open_tarot button'));
    assert.equal(await app.locator('.pw-sealed-card').count(),0,'Cards leaked into the page after dismissal');
    await activate(page,app.locator('.st-key-open_tarot button'));
-   await app.getByRole('dialog').locator('.pw-revealed-face:visible').waitFor();
-   assert.equal(await app.locator('.pw-card-back:visible').count(),2,'Reopening forgot the revealed card');
+   await app.waitForFunction(()=>{
+    const dialog=document.querySelector('[role="dialog"]');
+    return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning' &&
+     document.documentElement.dataset.pwCardOpening!=='true' &&
+     dialog?.querySelectorAll('.pw-revealed-face:not([hidden])').length===1 &&
+     dialog?.querySelectorAll('.pw-card-back:not([hidden])').length===2;
+   });
    await choose(page,'sessions');app=await choose(page,'forecast');
    assert.equal(await app.locator('.pw-sealed-card').count(),0);
    await activate(page,app.locator('.st-key-open_tarot button'));

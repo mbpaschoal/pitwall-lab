@@ -37,7 +37,7 @@ class JourneyTests(unittest.TestCase):
         app.query_params.update(tela='Previsões',temporada='2026',gp='19',cartas='1')
         app.run()
         self.assertFalse(app.exception)
-        html='\n'.join(x.value for x in app.markdown if 'class="pw-tarot-reading"' in x.value)
+        html='\n'.join(x.proto.body for x in app.get('html') if 'class="pw-tarot-reading"' in x.proto.body)
         self.assertIn('Max Verstappen',html)
         self.assertEqual(html.count('<template'),3)
         self.assertEqual(html.count('data-tarot-reveal'),3)
@@ -46,6 +46,7 @@ class JourneyTests(unittest.TestCase):
         self.assertEqual(html.count('&lt;img '),3)
         self.assertIn('Lewis Hamilton',html)
         self.assertIn('George Russell',html)
+        self.assertEqual(html.count('não indica uma posição de chegada.'), 1)
         self.assertEqual(before,hashlib.sha256(path.read_bytes()).hexdigest())
 
     def test_historical_team_cannot_show_later_team_artwork(self):
@@ -67,8 +68,36 @@ class JourneyTests(unittest.TestCase):
         app.query_params.update(tela='Previsões',temporada='2026',gp=str(missing[0]),cartas='1')
         app.run()
         self.assertFalse(app.exception)
-        self.assertFalse(any('<div class="tarot-cards">' in x.value for x in app.markdown))
+        self.assertFalse(any('class="pw-tarot-reading"' in x.proto.body for x in app.get('html')))
         self.assertFalse(any(x.key=='open_tarot' for x in app.button))
+
+    def test_unissued_forecast_explains_state_before_art_and_opens_its_sessions(self):
+        app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=40)
+        app.query_params.update(tela='Previsões',temporada='2026',gp='20',lang='en')
+        app.run()
+        self.assertFalse(app.exception)
+        markup=[x.value for x in app.markdown]
+        state=next(i for i,x in enumerate(markup) if 'data-forecast-state="unavailable"' in x)
+        art=next(i for i,x in enumerate(markup) if x.startswith('<section class="pw-postcard') and 'data-hero-kind="forecast"' in x)
+        self.assertLess(state,art)
+        self.assertIn('No recorded forecast for this GP.',markup[state])
+        self.assertNotIn('%',markup[state])
+        action=next(x for x in app.button if x.label=='View sessions and laps')
+        action.click().run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.query_params['gp'],'20')
+        self.assertEqual(app.query_params['lang'],'en')
+        self.assertEqual(app.query_params['aba'],'Tempos')
+
+    def test_forecast_guidance_preserves_recorded_and_retrospective_distinction(self):
+        from pitwall.dashboard.fan_views import forecast_context
+        set_language('pt')
+        recorded=forecast_context({'estado_previsao':'previsao_registrada'},2026)
+        historical=forecast_context({'estado_previsao':'ensaio_retrospectivo'},2025)
+        self.assertIn('registrada antes da corrida',recorded)
+        self.assertNotIn('Estudo retrospectivo',recorded)
+        self.assertIn('não é previsão emitida antes da corrida',historical)
+        self.assertNotIn('data-forecast-state="recorded"',historical)
 
 
 if __name__=='__main__':unittest.main()

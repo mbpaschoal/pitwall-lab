@@ -9,7 +9,7 @@ GROUPS = (
     ("Previsões", (("forecast", "Previsões deste GP", "Previsões", {}),
                    ("accuracy", "Acertos do Lab", "Desempenho", {}))),
     ("Corridas", (
-        ("summary", "Resultado da corrida", "Corridas", {"aba": "Visão geral"}),
+        ("summary", "Visão geral do GP", "Corridas", {"aba": "Visão geral"}),
         ("sessions", "Sessões e voltas", "Corridas", {"aba": "Tempos"}),
         ("strategy", "Pneus e paradas", "Corridas", {"aba": "Estratégias"}),
         ("weather", "Clima", "Corridas", {"aba": "Clima"}),
@@ -25,6 +25,7 @@ GROUPS = (
 )
 ROUTES = {route[0]: route for _, routes in GROUPS for route in routes}
 SYNONYMS = {
+    "summary": "resultado resultados corrida visão geral overview result race",
     "forecast": "previsão previsões cartas tarot tarô chances pódio probabilidade palpites prediction forecast cards podium",
     "strategy": "estratégia estratégias pneus paradas stints pit stops tyres tires strategy",
     "sessions": "sessões voltas treinos horários classificação qualifying laps sessions times schedule",
@@ -60,7 +61,8 @@ def render(st, slot, year, round_, screen, lang, params, choose):
     selected = selected_route(screen, params)
     with slot.container():
         with st.container(key="pw-sidebar-menu"):
-            with st.expander("Explorar o Pitwall", expanded=False):
+            menu_label = '{} · {}'.format(translate('Explorar o Pitwall'), translate(ROUTES[selected][1]))
+            with st.expander(menu_label, expanded=False):
                 st.markdown('<h2 class="pw-explorer-title">{}</h2>'.format(escape(translate("Explorar"))), unsafe_allow_html=True)
                 for title, routes in GROUPS:
                     st.markdown('<h3 class="pw-nav-group">{}</h3>'.format(escape(translate(title))), unsafe_allow_html=True)

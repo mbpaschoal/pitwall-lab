@@ -4,10 +4,84 @@
   if (w.__pitwallEditorial) { w.__pitwallEditorial.refresh(); return; }
   const preference = w.matchMedia('(prefers-reduced-motion: reduce)');
   const reduced = () => {
-    try { return preference.matches || w.sessionStorage.getItem('pitwall-motion-disabled') === 'true'; }
-    catch (_) { return preference.matches; }
+    if (preference.matches || d.documentElement.dataset.pwReducedMotion === 'true') return true;
+    try { return w.sessionStorage.getItem('pitwall-motion-disabled') === 'true'; }
+    catch (_) { return false; }
   };
   const deckMemory = new Map();
+  const cardMotion = new Set();
+  let opening = null, openingTimer = 0, activeDeck = null, returnFocusKey = null;
+
+  function clearCardOpening() {
+    opening = null;
+    w.clearTimeout(openingTimer);
+    delete d.documentElement.dataset.pwCardOpening;
+  }
+
+  function cancelCardMotion() {
+    for (const animation of cardMotion) animation.cancel();
+    cardMotion.clear();
+  }
+
+  function playCardMotion(node, frames, duration) {
+    if (reduced() || !node.isConnected || typeof node.animate !== 'function') return;
+    for (const animation of cardMotion) {
+      if (animation.effect?.target === node) animation.cancel();
+    }
+    const animation = node.animate(frames, {duration, easing:'cubic-bezier(.16,1,.3,1)'});
+    cardMotion.add(animation);
+    animation.onfinish = animation.oncancel = () => cardMotion.delete(animation);
+  }
+
+  function focusCardDialog(dialog) {
+    const modal = dialog.closest('[data-testid="stDialog"]') || dialog;
+    if (modal.contains(d.activeElement)) return;
+    dialog.tabIndex = -1;
+    dialog.focus({preventScroll:true});
+  }
+
+  function syncCardDialog(deck) {
+    if (activeDeck === deck) return;
+    cancelCardMotion();
+    returnFocusKey = deck ? null : activeDeck.dataset.deckKey;
+    activeDeck = deck;
+    if (!deck) {
+      clearCardOpening();
+      return;
+    }
+    const origin = opening;
+    const dialog = deck.closest('[role="dialog"]');
+    const panel = dialog.parentElement.parentElement?.dataset.testid === 'stDialog'
+      ? dialog.parentElement : dialog;
+    // Capture the settled native panel after the card payload mounts.
+    w.requestAnimationFrame(() => {
+      if (!panel.isConnected || activeDeck !== deck) return;
+      if (!reduced() && origin && opening === origin && origin.key === deck.dataset.deckKey) {
+        const end = panel.getBoundingClientRect();
+        if (end.width && end.height) {
+          const x = origin.rect.x - end.x, y = origin.rect.y - end.y;
+          const width = origin.rect.width / end.width, height = origin.rect.height / end.height;
+          playCardMotion(panel, [
+            {transformOrigin:'top left', transform:`translate(${x}px,${y}px) scale(${width},${height})`, borderRadius:'6px'},
+            {transformOrigin:'top left', transform:'none', borderRadius:'12px'}
+          ], 360);
+        }
+      }
+      clearCardOpening();
+      focusCardDialog(dialog);
+    });
+  }
+
+  function restoreCardFocus() {
+    if (!returnFocusKey || new URLSearchParams(w.location.search).has('cartas') ||
+        app?.dataset.testScriptState !== 'notRunning') return;
+    const context = d.querySelector('[data-pw-deck-context]');
+    const focusLost = d.activeElement === d.body || d.activeElement?.matches('main.stMain');
+    if (context?.dataset.pwDeckContext === returnFocusKey && focusLost) {
+      d.querySelector('.st-key-open_tarot button')?.focus({preventScroll:true});
+    }
+    returnFocusKey = null;
+  }
   function savedDeckState(key, count) {
     if (!deckMemory.has(key)) {
       let saved;
@@ -23,7 +97,7 @@
     const states = deckState(deck), cards = [...deck.querySelectorAll('.pw-sealed-card')];
     for (const [index, card] of cards.entries()) {
       const shown = states[index], slot = card.querySelector('.pw-revealed-face');
-      // Streamlit may reuse the card node while replacing Markdown descendants.
+      // Streamlit may reuse the card node while replacing HTML descendants.
       // Restore a revealed face after that replacement as well as on a flip.
       if (card.dataset.shown !== String(shown) || (shown && !slot.querySelector('[data-tarot-hide]'))) {
         if (shown) {
@@ -36,9 +110,15 @@
         card.querySelector('[data-tarot-reveal]').hidden = shown;
         slot.hidden = !shown;
         card.dataset.shown = String(shown);
-        if (animate && index === focusIndex && !reduced())
-          (shown ? slot : card.querySelector('[data-tarot-reveal]')).animate(
-            [{transform:'rotateY(-90deg)'},{transform:'rotateY(0)'}], {duration:240,easing:'ease-out'});
+        if (animate && index === focusIndex) {
+          const face = shown ? slot : card.querySelector('[data-tarot-reveal]');
+          const direction = shown ? -1 : 1;
+          playCardMotion(face, [
+            {transform:`rotateY(${direction * 72}deg) scale(.97)`},
+            {transform:`rotateY(${-direction * 3}deg)`, offset:.75},
+            {transform:'none'}
+          ], 330);
+        }
       }
     }
     const count = states.filter(Boolean).length;
@@ -51,7 +131,13 @@
       if (button.getAttribute('kind') === 'primary') button.setAttribute('aria-current','page');
       else button.removeAttribute('aria-current');
     }
-    for (const deck of d.querySelectorAll('[data-deck-key]')) refreshDeck(deck);
+    const deck = d.querySelector('[role="dialog"] .pw-tarot-reading');
+    if (deck) refreshDeck(deck);
+    syncCardDialog(deck);
+    if (!deck) restoreCardFocus();
+    else if (!opening && app?.dataset.testScriptState === 'notRunning') {
+      focusCardDialog(deck.closest('[role="dialog"]'));
+    }
     const explorer = d.querySelector('.st-key-pw-sidebar-menu details');
     if (explorer &&
         d.querySelectorAll('.pw-nav-fallback').length === 15 &&
@@ -61,6 +147,19 @@
         explorer.querySelector('summary')?.click();
     }
   }
+  d.addEventListener('click', event => {
+    const trigger = event.target.closest('.st-key-open_tarot button');
+    const context = trigger && d.querySelector('[data-pw-deck-context]');
+    if (!context) return;
+    // Some touch browsers do not focus a pressed button before opening a dialog.
+    trigger.focus({preventScroll:true});
+    if (reduced() || typeof trigger.animate !== 'function') return;
+    clearCardOpening();
+    opening = {key:context.dataset.pwDeckContext, rect:trigger.getBoundingClientRect()};
+    // Wait for the real deck rather than showing the empty native shell first.
+    d.documentElement.dataset.pwCardOpening = 'true';
+    openingTimer = w.setTimeout(clearCardOpening, 1800);
+  }, true);
   d.addEventListener('click', event => {
     const tarot = event.target.closest('[data-tarot-reveal],[data-tarot-hide]');
     if (tarot) {
@@ -82,11 +181,31 @@
     if (event.target.matches('.st-key-pw-sidebar-menu details') &&
         !event.target.open && !w.matchMedia('(max-width:800px)').matches) refresh();
   }, true);
+  d.addEventListener('focusout', event => {
+    const dialog = activeDeck?.closest('[role="dialog"]');
+    const modal = dialog?.closest('[data-testid="stDialog"]');
+    if (!modal?.contains(event.target) || modal.contains(event.relatedTarget)) return;
+    // Native focus can briefly fall back to the page during a Streamlit rerender.
+    w.requestAnimationFrame(() => {
+      if (dialog.isConnected && dialog.contains(activeDeck) && !opening &&
+          new URLSearchParams(w.location.search).has('cartas')) focusCardDialog(dialog);
+    });
+  }, true);
   new w.MutationObserver(records => {
     if (records.some(r => [...r.addedNodes,...r.removedNodes].some(n => n.nodeType === 1))) refresh();
   }).observe(d.body,{childList:true,subtree:true});
   const app = d.querySelector('.stApp');
   if (app) new w.MutationObserver(refresh).observe(app,{attributes:true,attributeFilter:['data-test-script-state']});
+  function stopReducedMotion() {
+    if (!reduced()) return;
+    clearCardOpening();
+    cancelCardMotion();
+  }
+  preference.addEventListener('change', stopReducedMotion);
+  new w.MutationObserver(stopReducedMotion).observe(d.documentElement, {
+    attributes:true, attributeFilter:['data-pw-reduced-motion']
+  });
+  w.addEventListener('pagehide', cancelCardMotion);
   w.addEventListener('resize',refresh);
   w.__pitwallEditorial = {refresh, readDeckState:savedDeckState};
   refresh();

@@ -86,7 +86,8 @@ class TestInterfaceEditorial(unittest.TestCase):
         self.assertEqual(texto.count('aria-label="Campeonato de pilotos"'), 1)
         self.assertEqual(texto.count('aria-label="Campeonato de construtores"'), 1)
         self.assertIn('Sergio Pérez', texto)
-        self.assertFalse(any('campeonato' in e.label.lower() for e in self.at.expander))
+        self.assertFalse(any('campeonato' in e.label.lower() for e in self.at.expander
+                             if not e.label.startswith('Explorar o Pitwall')))
 
     def test_atalho_real_preserva_gp_e_separa_paineis(self):
         texto = self.run_app({'temporada': '2025', 'gp': '1'})
