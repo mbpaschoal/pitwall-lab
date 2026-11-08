@@ -16,7 +16,7 @@
 .pc-event-meta{display:flex;align-items:center;flex-wrap:wrap;gap:3px 18px;padding:8px 0;max-width:75%}
 .pw-postcard .pc-footer .pc-note{margin:0;font:inherit;color:#40566d}
 .pc-credits{max-width:100%}
-.pc-credits summary{box-sizing:border-box;min-height:44px;padding-block:12px;cursor:pointer}
+.pc-credits summary{box-sizing:border-box;min-height:var(--pw-control-height);padding-block:12px;cursor:pointer}
 .pc-credits[open]{flex-basis:100%}
 .pc-credits>div{padding:0 0 12px;max-width:80ch;overflow-wrap:anywhere}
 .pw-postcard .pc-footer p{margin:6px 0;font:inherit;color:#40566d}
