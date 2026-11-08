@@ -17,6 +17,7 @@ from pitwall.dashboard.tarot_catalog import (
 from pitwall.i18n import set_language
 
 ROOT = Path(__file__).resolve().parents[1]
+LAST_BASELINE_EVENT = (2026, 19)
 ORIGINALS = {
     "verstappen.png": "893f1206e878a4bd30751df4f7d83a0a779a6d6d5445e5dd6e0e77b602d8a3a9",
     "hamilton.png": "509138de884b2ce4bb64c1f2ef898fb6661f456467b9f2af64821a32a67e894d",
@@ -265,8 +266,12 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(len(ids), 29)
         self.assertEqual(len(actual["cards"]), 87)
         race_weekend = json.loads((ROOT / "frontend_assets/race_weekend.json").read_text())
-        local_ids = {key.split(":", 2)[2] for key in race_weekend["identidades"]}
-        self.assertEqual(ids, local_ids)
+        baseline_identities = []
+        for key, identity in race_weekend["identidades"].items():
+            year, round_, driver = key.split(":", 2)
+            if (int(year), int(round_)) <= LAST_BASELINE_EVENT:
+                baseline_identities.append((int(year), driver, identity))
+        self.assertEqual(ids, {driver for _, driver, _ in baseline_identities})
         for driver in ids:
             self.assertEqual({entry["pose_id"] for entry in actual["cards"]
                               if entry["driver_id"] == driver}, {0, 1, 2})
@@ -285,11 +290,10 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(audit["neutral_archive"]["ready"], 87)
         self.assertEqual(audit["approved_originals"]["ready"], 3)
         known_pairs = {}
-        for identity_key, identity in race_weekend["identidades"].items():
+        for year, driver, identity in baseline_identities:
             team = team_id(dict(team=identity["equipe"]))
             if team:
-                year, _, driver = identity_key.split(":", 2)
-                known_pairs.setdefault((driver, team), set()).add(int(year))
+                known_pairs.setdefault((driver, team), set()).add(year)
         actual_pairs = {(entry["driver_id"], entry["team_id"]) for entry in actual["team_cards"]}
         self.assertEqual(actual_pairs, set(known_pairs))
         for entry in actual["team_cards"]:
@@ -334,7 +338,7 @@ class CatalogTests(unittest.TestCase):
                     self.assertFalse(card["entry"]["team_neutral"])
                     self.assertEqual(hashlib.sha256(card["content"]).hexdigest(), ORIGINALS[filename])
 
-    def test_all_67_existing_gp_favorite_groups_have_three_poses_and_correct_historical_teams(self):
+    def test_gp_favorite_groups_have_three_poses_and_correct_historical_teams(self):
         asset = json.loads((ROOT / "frontend_assets/race_weekend.json").read_text())
         catalog = load_catalog(ROOT)
         groups = {}
@@ -348,7 +352,7 @@ class CatalogTests(unittest.TestCase):
         for row in asset["dados_2026"]["previsoes"]:
             if row.get("ranking_modelo") in (1, 2, 3):
                 groups.setdefault((2026, row["rodada"]), []).append(row)
-        self.assertEqual(len(groups), 67)
+        self.assertEqual(sum(event <= LAST_BASELINE_EVENT for event in groups), 67)
         saw_hamilton_mercedes = False
         for (year, round_), favorites in sorted(groups.items()):
             with self.subTest(year=year, round=round_):
@@ -363,6 +367,12 @@ class CatalogTests(unittest.TestCase):
                 self.assertEqual([card["row"] for card in selected], rows)
                 self.assertEqual({card["pose_id"] for card in selected[:3]}, {0, 1, 2})
                 for card in selected:
+                    if ((year, round_) > LAST_BASELINE_EVENT
+                            and artwork_for(catalog, card["row"], card["pose_id"], year) is None):
+                        # A new driver or team can enter an emission before its artwork exists.
+                        self.assertIsNone(card["entry"])
+                        self.assertIsNone(card["content"])
+                        continue
                     self.assertIsNotNone(card["content"])
                     self.assertEqual(card["entry"]["driver_id"], card["row"]["driver_id"])
                     if not card["entry"]["team_neutral"]:

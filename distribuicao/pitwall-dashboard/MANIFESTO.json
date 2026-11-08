@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "7edc91b33139b071b9c1a35cec49a3175b641a06d84d683a5981e12a822ea1f3",
+  "apresentacao_build_sha256": "9d91b01493934c904d69ea44c1ee37930c705d990985895414e31ac61d55cbaf",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "e61adcee7f3928e92a38070f7928ec48a9e462736917f011b615b59f932da7e9",
-      "sha256_origem": "9a8a664718cda0bf1ae3aac369d6cdde5bf8e70fc3f6f027b70396cfb71e96f1"
+      "sha256_destino": "6396b6598887fc75c81665255a6e158bf554d6043023afe443007e16e6ecd33b",
+      "sha256_origem": "212867bdfcbea3aad9ab9402d32540d4e7a538141f9e6500a5689a48270727dc"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "d5810cd853da6a411d573741eba8ab1f6663a1d04f268e9d84574442d4ab0d53",
-      "sha256_origem": "d3b6d11c9a0c511d5c71d40e2e69c877840b6bd1051caf5e6b2f6a13aed7c855"
+      "sha256_destino": "5f227bfbb71d10404b82a617e85b5c32e83d56ea63ddf106f913da73c69586dc",
+      "sha256_origem": "e91b2764ed8609e07fd7eb5af2ea85457d0318f1ecf9d8498865895597920069"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "44abf66b02260179b3a509b0f10b5f26f431f316ef4ca50f18764c9e4b8cfd4a",
-      "sha256_origem": "44abf66b02260179b3a509b0f10b5f26f431f316ef4ca50f18764c9e4b8cfd4a"
+      "sha256_destino": "fad958a3c5fecd33c2b2bc667b8ad8661fce304517d3167543e93761fd155599",
+      "sha256_origem": "fad958a3c5fecd33c2b2bc667b8ad8661fce304517d3167543e93761fd155599"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2795,8 +2795,8 @@
       "caminho": "frontend_assets/race_weekend.json",
       "fonte": "frontend_assets/race_weekend.json",
       "modo": "copia",
-      "sha256_destino": "15d53034b7d8cf16145f29bb5ae50cfa1c1bdaa2cf14e0a7054e69e9f75c9e5b",
-      "sha256_origem": "15d53034b7d8cf16145f29bb5ae50cfa1c1bdaa2cf14e0a7054e69e9f75c9e5b"
+      "sha256_destino": "1edbb2b19e84f2787b7882ccd3fde5727bd18659c2c0d6427787db63ce6dcdbc",
+      "sha256_origem": "1edbb2b19e84f2787b7882ccd3fde5727bd18659c2c0d6427787db63ce6dcdbc"
     },
     {
       "caminho": "frontend_assets/revisao_identidade_pilotos_v1.json",
@@ -4006,8 +4006,8 @@
       "caminho": "tests/test_fan_journey.py",
       "fonte": "tests/test_fan_journey.py",
       "modo": "copia",
-      "sha256_destino": "f386464d8010d22d8d057aed195ad7c7a420b7cef729c1b05a9c79145dc266a4",
-      "sha256_origem": "f386464d8010d22d8d057aed195ad7c7a420b7cef729c1b05a9c79145dc266a4"
+      "sha256_destino": "366ad2b7da36eb80af831ab6a5e51fc42769299e06dd9fbc5677cb8e8efa33b9",
+      "sha256_origem": "366ad2b7da36eb80af831ab6a5e51fc42769299e06dd9fbc5677cb8e8efa33b9"
     },
     {
       "caminho": "tests/test_high_resolution_assets.py",
@@ -4062,8 +4062,8 @@
       "caminho": "tests/test_tarot_catalog.py",
       "fonte": "tests/test_tarot_catalog.py",
       "modo": "copia",
-      "sha256_destino": "7de44c6dc4a94a27ba07897fc3b85dcccb83897b73e7ce1c189b3866ac756dfd",
-      "sha256_origem": "7de44c6dc4a94a27ba07897fc3b85dcccb83897b73e7ce1c189b3866ac756dfd"
+      "sha256_destino": "3b868580bab06f0d6a4695611e89ffa7d38381cc3d644dd573d5c7c1b8e6122f",
+      "sha256_origem": "3b868580bab06f0d6a4695611e89ffa7d38381cc3d644dd573d5c7c1b8e6122f"
     },
     {
       "caminho": "tests/test_weekend_ui.py",
@@ -4155,5 +4155,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.15.1"
+  "versao_produto": "0.15.3"
 }

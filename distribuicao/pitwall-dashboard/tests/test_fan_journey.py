@@ -1,5 +1,6 @@
 """Fan journey keeps canonical routes, probabilities and absent states intact."""
 import hashlib
+import json
 from pathlib import Path
 import unittest
 
@@ -60,7 +61,6 @@ class JourneyTests(unittest.TestCase):
 
     def test_gp_without_emission_does_not_open_cards(self):
         app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=40)
-        import json
         data=json.loads((ROOT/'frontend_assets/race_weekend.json').read_text())['dados_2026']
         issued={p['rodada'] for p in data['previsoes']}
         missing=[r['rodada'] for r in data['corridas'] if r['rodada'] not in issued]
@@ -72,8 +72,12 @@ class JourneyTests(unittest.TestCase):
         self.assertFalse(any(x.key=='open_tarot' for x in app.button))
 
     def test_unissued_forecast_explains_state_before_art_and_opens_its_sessions(self):
+        data=json.loads((ROOT/'frontend_assets/race_weekend.json').read_text())['dados_2026']
+        pending=next((row for row in data['corridas'] if row.get('estado_previsao')=='indisponivel'),None)
+        if pending is None:self.skipTest('No unissued GP in the current public artifact.')
+        gp=str(pending['rodada'])
         app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=40)
-        app.query_params.update(tela='Previsões',temporada='2026',gp='20',lang='en')
+        app.query_params.update(tela='Previsões',temporada='2026',gp=gp,lang='en')
         app.run()
         self.assertFalse(app.exception)
         markup=[x.value for x in app.markdown]
@@ -85,7 +89,7 @@ class JourneyTests(unittest.TestCase):
         action=next(x for x in app.button if x.label=='View sessions and laps')
         action.click().run()
         self.assertFalse(app.exception)
-        self.assertEqual(app.query_params['gp'],'20')
+        self.assertEqual(app.query_params['gp'],gp)
         self.assertEqual(app.query_params['lang'],'en')
         self.assertEqual(app.query_params['aba'],'Tempos')
 

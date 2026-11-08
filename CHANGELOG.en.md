@@ -1,12 +1,20 @@
 # Pitwall Lab evolution
 
-## 0.15.1 — 2026-11-08
+## 0.15.3 — 2026-11-08
 
 The Predictions page groups the forecast status with the action that opens the GP cards. When a forecast is pending, the page explains why and links to sessions for the same GP.
 
 Each card shows the driver's podium chance above the illustration. The dialog expands from its button and opens directly with reduced motion. Revealed cards retain their state when reopened, and Escape returns focus to the button. Compact podium ranks have a minimum contrast ratio of 5.50:1.
 
 Local validation covers Chromium and WebKit in Portuguese and English, on desktop and emulated mobile. Recorded probabilities and the frozen v1 model were preserved.
+
+## 0.15.2 — 2026-11-08
+
+Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 3/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged. New prospective v1 emission registered after Q, with its snapshot and sources retained; no prior emission was replaced.
+
+## 0.15.1 — 2026-11-08
+
+Tarot catalogue validation retains the 67 races and artwork from the original collection as its reference. New emissions are checked for driver, team and pose. Missing artwork for a future entry follows the catalogue fallback while its probabilities remain eligible for registration.
 
 ## 0.15.0 — 2026-11-07
 
