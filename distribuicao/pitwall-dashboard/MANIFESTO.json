@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "2e74046ada080cc6967989c6311d1e2bbfdeb1b15029872c27de01d426413ff0",
+  "apresentacao_build_sha256": "03d8fc4687be774a838b8cb524a7f9254699cad80677058daf50d401a5698de4",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "9fb54cb22acbac0a08739b69c3c5e1f9552b64b81528bd9c1b8665b86387dd12",
+      "sha256_destino": "28c956f04f6845a49328638fe4bc7179cf9f04b038317f46d929892e0252a186",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a3f5ffc8ecd41506aad8096fe391a7df5f20d29d840e18d0bf5e8a5547b829bc",
-      "sha256_origem": "f9f85aa4c57516c840722f21929377aebdb92d8e6cc29fa1bb33ac8536ad1fcd"
+      "sha256_destino": "2013a837f636e49d35f8b9c4a8ee604ed4204d4948ac010f9377e2f13183a729",
+      "sha256_origem": "b1834ff2b4bfa3c720b231496956b32d66bc3b6c56f9a547e2ea6d6007703c9f"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "6b248ee5710c48280290d71e866432b526a51308d2036758cbc0cf5b2fc5c409",
-      "sha256_origem": "60cf6d5381afaf9b3f6ce00cca75c70d078fef90e47599abd82badfd902f45ad"
+      "sha256_destino": "8461d4cb813d632f9c6552ca889a334928a4307e7d3222ca26443456c3b1ca87",
+      "sha256_origem": "f4dcc86a624626b17107f296854b06a4aa7ed6896ec8b8469ebc529785c51a35"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "c78c310b641231eb31cf7f005d8defa7d36327d421e9b20903fec67a0de982bc",
-      "sha256_origem": "c78c310b641231eb31cf7f005d8defa7d36327d421e9b20903fec67a0de982bc"
+      "sha256_destino": "f8405a7330c287028d470c3ee3506f878f1ad85ed79c1d1adc19df2ff7398915",
+      "sha256_origem": "f8405a7330c287028d470c3ee3506f878f1ad85ed79c1d1adc19df2ff7398915"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2739,8 +2739,8 @@
       "caminho": "frontend_assets/journey.css",
       "fonte": "frontend_assets/journey.css",
       "modo": "copia",
-      "sha256_destino": "007ab44a566ce448b1523d1cc313e00cb1ce833e58510393e6b0ceff8fc138e4",
-      "sha256_origem": "007ab44a566ce448b1523d1cc313e00cb1ce833e58510393e6b0ceff8fc138e4"
+      "sha256_destino": "d8eebf513cdc8dc082e13d7771eaa245ec9fdb1166278afa0f3a802144e05f66",
+      "sha256_origem": "d8eebf513cdc8dc082e13d7771eaa245ec9fdb1166278afa0f3a802144e05f66"
     },
     {
       "caminho": "frontend_assets/motion.js",
@@ -2788,8 +2788,8 @@
       "caminho": "frontend_assets/profile_photos.json",
       "fonte": "frontend_assets/profile_photos.json",
       "modo": "copia",
-      "sha256_destino": "b923e762e1ed38e32d16a7102b35b31f4c5fca15e93d108d71bd84153d238122",
-      "sha256_origem": "b923e762e1ed38e32d16a7102b35b31f4c5fca15e93d108d71bd84153d238122"
+      "sha256_destino": "cdffb3684ac000c29ad80380b736116182ac1bc46e0d0fef76d568f7e714ee06",
+      "sha256_origem": "cdffb3684ac000c29ad80380b736116182ac1bc46e0d0fef76d568f7e714ee06"
     },
     {
       "caminho": "frontend_assets/race_weekend.json",
@@ -2879,8 +2879,8 @@
       "caminho": "pitwall/dashboard/fan_views.py",
       "fonte": "pitwall/dashboard/fan_views.py",
       "modo": "copia",
-      "sha256_destino": "2f8d041a0ebf4953a8e41e62c0e1a0eb7abf601480fbf81cbd293447dae5b59a",
-      "sha256_origem": "2f8d041a0ebf4953a8e41e62c0e1a0eb7abf601480fbf81cbd293447dae5b59a"
+      "sha256_destino": "4d6e9d37f2a6df7db8c00187078cc39dceb25e1f26b3bf2009134b99abd46519",
+      "sha256_origem": "4d6e9d37f2a6df7db8c00187078cc39dceb25e1f26b3bf2009134b99abd46519"
     },
     {
       "caminho": "pitwall/dashboard/favorites.py",
@@ -2893,8 +2893,8 @@
       "caminho": "pitwall/dashboard/hero_assets.py",
       "fonte": "pitwall/dashboard/hero_assets.py",
       "modo": "copia",
-      "sha256_destino": "d2d7c30f4265ca659552af63784319dff9c47e4b36f7dbd4a59e257dbdffcb4d",
-      "sha256_origem": "d2d7c30f4265ca659552af63784319dff9c47e4b36f7dbd4a59e257dbdffcb4d"
+      "sha256_destino": "4698616aed2620a91639d417c9ca90f249c4058a620929c1788ea215e64397f3",
+      "sha256_origem": "4698616aed2620a91639d417c9ca90f249c4058a620929c1788ea215e64397f3"
     },
     {
       "caminho": "pitwall/dashboard/illustrations.py",
@@ -3723,6 +3723,20 @@
       "sha256_origem": "a1596b9cc5304a9888fa42365ba2b822d20fb8ee43c7e89c3c2805cbe4863baa"
     },
     {
+      "caminho": "static/pitwall-profiles/albon-8a2197b2e6b9.jpg",
+      "fonte": "static/pitwall-profiles/albon-8a2197b2e6b9.jpg",
+      "modo": "copia",
+      "sha256_destino": "8a2197b2e6b9815e2f5a769f1b7c36405e452b136fb6b5e0196d5c2b861c750e",
+      "sha256_origem": "8a2197b2e6b9815e2f5a769f1b7c36405e452b136fb6b5e0196d5c2b861c750e"
+    },
+    {
+      "caminho": "static/pitwall-profiles/alonso-6b924382bccb.jpg",
+      "fonte": "static/pitwall-profiles/alonso-6b924382bccb.jpg",
+      "modo": "copia",
+      "sha256_destino": "6b924382bccb2e24cb59b1e5331e76f42c9209d941fd8d90713e5d08df491032",
+      "sha256_origem": "6b924382bccb2e24cb59b1e5331e76f42c9209d941fd8d90713e5d08df491032"
+    },
+    {
       "caminho": "static/pitwall-profiles/antonelli-0fbf50af1114.jpg",
       "fonte": "static/pitwall-profiles/antonelli-0fbf50af1114.jpg",
       "modo": "copia",
@@ -3730,11 +3744,179 @@
       "sha256_origem": "0fbf50af1114d0b7a81144d9606792b3ba19f4706c1b6f14e18dadab62c9deb1"
     },
     {
+      "caminho": "static/pitwall-profiles/arvid_lindblad-2f064f190674.jpg",
+      "fonte": "static/pitwall-profiles/arvid_lindblad-2f064f190674.jpg",
+      "modo": "copia",
+      "sha256_destino": "2f064f19067493e0929915fb0158e691a97489073ed24895afdec65c650026bf",
+      "sha256_origem": "2f064f19067493e0929915fb0158e691a97489073ed24895afdec65c650026bf"
+    },
+    {
+      "caminho": "static/pitwall-profiles/bearman-5187e75ac33c.jpg",
+      "fonte": "static/pitwall-profiles/bearman-5187e75ac33c.jpg",
+      "modo": "copia",
+      "sha256_destino": "5187e75ac33c4307151cea341e3ba7eb7bc24781858ec4adc1fdd98ef69f48e9",
+      "sha256_origem": "5187e75ac33c4307151cea341e3ba7eb7bc24781858ec4adc1fdd98ef69f48e9"
+    },
+    {
+      "caminho": "static/pitwall-profiles/bortoleto-04186f8773e7.jpg",
+      "fonte": "static/pitwall-profiles/bortoleto-04186f8773e7.jpg",
+      "modo": "copia",
+      "sha256_destino": "04186f8773e7f068badfd4ce7f3b03f36bcb6fa4990e6f1cdf03f4872ff1c205",
+      "sha256_origem": "04186f8773e7f068badfd4ce7f3b03f36bcb6fa4990e6f1cdf03f4872ff1c205"
+    },
+    {
+      "caminho": "static/pitwall-profiles/bottas-8479060c1482.jpg",
+      "fonte": "static/pitwall-profiles/bottas-8479060c1482.jpg",
+      "modo": "copia",
+      "sha256_destino": "8479060c1482d8df1ac5bb4ea049d07bd933272ac8b3d8c4e843158fb98dc66a",
+      "sha256_origem": "8479060c1482d8df1ac5bb4ea049d07bd933272ac8b3d8c4e843158fb98dc66a"
+    },
+    {
+      "caminho": "static/pitwall-profiles/colapinto-263fb440e412.jpg",
+      "fonte": "static/pitwall-profiles/colapinto-263fb440e412.jpg",
+      "modo": "copia",
+      "sha256_destino": "263fb440e41293a024790df47da9df71ff6d015b0b8417dc03739ae61ddeec93",
+      "sha256_origem": "263fb440e41293a024790df47da9df71ff6d015b0b8417dc03739ae61ddeec93"
+    },
+    {
+      "caminho": "static/pitwall-profiles/gasly-83ba9c454239.jpg",
+      "fonte": "static/pitwall-profiles/gasly-83ba9c454239.jpg",
+      "modo": "copia",
+      "sha256_destino": "83ba9c4542392bd6377620391f5dfc516bb1043930a5b58d084cf99a68da7ad8",
+      "sha256_origem": "83ba9c4542392bd6377620391f5dfc516bb1043930a5b58d084cf99a68da7ad8"
+    },
+    {
+      "caminho": "static/pitwall-profiles/hadjar-a2d18c4cf089.jpg",
+      "fonte": "static/pitwall-profiles/hadjar-a2d18c4cf089.jpg",
+      "modo": "copia",
+      "sha256_destino": "a2d18c4cf08945b1a8dfa7ac83b86777c74b53ae59c196537b416817a73cd16c",
+      "sha256_origem": "a2d18c4cf08945b1a8dfa7ac83b86777c74b53ae59c196537b416817a73cd16c"
+    },
+    {
+      "caminho": "static/pitwall-profiles/hamilton-4b963d4712eb.jpg",
+      "fonte": "static/pitwall-profiles/hamilton-4b963d4712eb.jpg",
+      "modo": "copia",
+      "sha256_destino": "4b963d4712eb20af4d3240df9dd531ff64cf97ab9d81111c418ee30ccc5b4f7f",
+      "sha256_origem": "4b963d4712eb20af4d3240df9dd531ff64cf97ab9d81111c418ee30ccc5b4f7f"
+    },
+    {
+      "caminho": "static/pitwall-profiles/hulkenberg-b4e818773d37.jpg",
+      "fonte": "static/pitwall-profiles/hulkenberg-b4e818773d37.jpg",
+      "modo": "copia",
+      "sha256_destino": "b4e818773d377cfe48d1fb035063a14be7b8e14b7584d0aa4eddca03c5f7198d",
+      "sha256_origem": "b4e818773d377cfe48d1fb035063a14be7b8e14b7584d0aa4eddca03c5f7198d"
+    },
+    {
+      "caminho": "static/pitwall-profiles/kevin_magnussen-7cffc606389c.jpg",
+      "fonte": "static/pitwall-profiles/kevin_magnussen-7cffc606389c.jpg",
+      "modo": "copia",
+      "sha256_destino": "7cffc606389ce7e771c57cc33cafdffe1243c2294217257e3d2f0584b8871285",
+      "sha256_origem": "7cffc606389ce7e771c57cc33cafdffe1243c2294217257e3d2f0584b8871285"
+    },
+    {
+      "caminho": "static/pitwall-profiles/lawson-d385d0d4d51e.jpg",
+      "fonte": "static/pitwall-profiles/lawson-d385d0d4d51e.jpg",
+      "modo": "copia",
+      "sha256_destino": "d385d0d4d51e7f0aed1a6fcbc1dd365c0b4194de73908ad102ec1d394228bb42",
+      "sha256_origem": "d385d0d4d51e7f0aed1a6fcbc1dd365c0b4194de73908ad102ec1d394228bb42"
+    },
+    {
+      "caminho": "static/pitwall-profiles/leclerc-6e7309ebd969.jpg",
+      "fonte": "static/pitwall-profiles/leclerc-6e7309ebd969.jpg",
+      "modo": "copia",
+      "sha256_destino": "6e7309ebd969b4f423d5dac34b2f670e9139c4e97f03dbd05a26c2b3219551ac",
+      "sha256_origem": "6e7309ebd969b4f423d5dac34b2f670e9139c4e97f03dbd05a26c2b3219551ac"
+    },
+    {
       "caminho": "static/pitwall-profiles/max_verstappen-283d97dad8c9.jpg",
       "fonte": "static/pitwall-profiles/max_verstappen-283d97dad8c9.jpg",
       "modo": "copia",
       "sha256_destino": "283d97dad8c94b3709b7f002e5df20349cdfd19a621b3f4a80d68f74fbc8ec72",
       "sha256_origem": "283d97dad8c94b3709b7f002e5df20349cdfd19a621b3f4a80d68f74fbc8ec72"
+    },
+    {
+      "caminho": "static/pitwall-profiles/norris-ee49583fc237.jpg",
+      "fonte": "static/pitwall-profiles/norris-ee49583fc237.jpg",
+      "modo": "copia",
+      "sha256_destino": "ee49583fc237eb5aa9cd81be0036ea8d554ac704d6b724d23f2b24dfe540d4aa",
+      "sha256_origem": "ee49583fc237eb5aa9cd81be0036ea8d554ac704d6b724d23f2b24dfe540d4aa"
+    },
+    {
+      "caminho": "static/pitwall-profiles/ocon-92092997f1a8.jpg",
+      "fonte": "static/pitwall-profiles/ocon-92092997f1a8.jpg",
+      "modo": "copia",
+      "sha256_destino": "92092997f1a88285e3faf397eb9b0861721c26d2a40989dc847666a6b9bf8089",
+      "sha256_origem": "92092997f1a88285e3faf397eb9b0861721c26d2a40989dc847666a6b9bf8089"
+    },
+    {
+      "caminho": "static/pitwall-profiles/perez-1bf93388b706.jpg",
+      "fonte": "static/pitwall-profiles/perez-1bf93388b706.jpg",
+      "modo": "copia",
+      "sha256_destino": "1bf93388b70690c60fd6132efce2c276e8613600201aeb6134f32dfcf6145231",
+      "sha256_origem": "1bf93388b70690c60fd6132efce2c276e8613600201aeb6134f32dfcf6145231"
+    },
+    {
+      "caminho": "static/pitwall-profiles/piastri-23127882587e.jpg",
+      "fonte": "static/pitwall-profiles/piastri-23127882587e.jpg",
+      "modo": "copia",
+      "sha256_destino": "23127882587e5699de5181ff9d99cdd747f0985d60bfc1f6e37b849fd41ceba3",
+      "sha256_origem": "23127882587e5699de5181ff9d99cdd747f0985d60bfc1f6e37b849fd41ceba3"
+    },
+    {
+      "caminho": "static/pitwall-profiles/ricciardo-e240548bac97.jpg",
+      "fonte": "static/pitwall-profiles/ricciardo-e240548bac97.jpg",
+      "modo": "copia",
+      "sha256_destino": "e240548bac97ff84927424c86485afe0a07bb8c7a0dc0482f0ab1f3a690f93fe",
+      "sha256_origem": "e240548bac97ff84927424c86485afe0a07bb8c7a0dc0482f0ab1f3a690f93fe"
+    },
+    {
+      "caminho": "static/pitwall-profiles/russell-db6ebac75c71.jpg",
+      "fonte": "static/pitwall-profiles/russell-db6ebac75c71.jpg",
+      "modo": "copia",
+      "sha256_destino": "db6ebac75c71ec8ec6dcd9772db35d7d36f5efea3fefe341ab377c67ac483ff0",
+      "sha256_origem": "db6ebac75c71ec8ec6dcd9772db35d7d36f5efea3fefe341ab377c67ac483ff0"
+    },
+    {
+      "caminho": "static/pitwall-profiles/ryo_hirakawa-311ad51e262a.jpg",
+      "fonte": "static/pitwall-profiles/ryo_hirakawa-311ad51e262a.jpg",
+      "modo": "copia",
+      "sha256_destino": "311ad51e262a96e2112b67c670db98aee36a497ec4571fd76800a0d520888262",
+      "sha256_origem": "311ad51e262a96e2112b67c670db98aee36a497ec4571fd76800a0d520888262"
+    },
+    {
+      "caminho": "static/pitwall-profiles/sainz-26836111f84e.jpg",
+      "fonte": "static/pitwall-profiles/sainz-26836111f84e.jpg",
+      "modo": "copia",
+      "sha256_destino": "26836111f84ebb0cc4cc125196bb3dbdfbe48ad3ba0969dfca17ab26ffa41063",
+      "sha256_origem": "26836111f84ebb0cc4cc125196bb3dbdfbe48ad3ba0969dfca17ab26ffa41063"
+    },
+    {
+      "caminho": "static/pitwall-profiles/sargeant-e5a79ef7479c.jpg",
+      "fonte": "static/pitwall-profiles/sargeant-e5a79ef7479c.jpg",
+      "modo": "copia",
+      "sha256_destino": "e5a79ef7479cb332591f07428f1622da5638b72e01a0848016b34ba04ecef406",
+      "sha256_origem": "e5a79ef7479cb332591f07428f1622da5638b72e01a0848016b34ba04ecef406"
+    },
+    {
+      "caminho": "static/pitwall-profiles/stroll-2d75182aa617.jpg",
+      "fonte": "static/pitwall-profiles/stroll-2d75182aa617.jpg",
+      "modo": "copia",
+      "sha256_destino": "2d75182aa617a0ce5f1027c0e2484d58bb48f95fd10659cc1f8b5c2f9d02f4a9",
+      "sha256_origem": "2d75182aa617a0ce5f1027c0e2484d58bb48f95fd10659cc1f8b5c2f9d02f4a9"
+    },
+    {
+      "caminho": "static/pitwall-profiles/tsunoda-26914d38e485.jpg",
+      "fonte": "static/pitwall-profiles/tsunoda-26914d38e485.jpg",
+      "modo": "copia",
+      "sha256_destino": "26914d38e485e7bbd69e413218e6ff2f645282fd7fcfc074038be052bde1b335",
+      "sha256_origem": "26914d38e485e7bbd69e413218e6ff2f645282fd7fcfc074038be052bde1b335"
+    },
+    {
+      "caminho": "static/pitwall-profiles/zhou-375bac8a6ce6.jpg",
+      "fonte": "static/pitwall-profiles/zhou-375bac8a6ce6.jpg",
+      "modo": "copia",
+      "sha256_destino": "375bac8a6ce6b8a408c2d90e7f0d435150a3a314cf31630ddc8afed0fb6ea72c",
+      "sha256_origem": "375bac8a6ce6b8a408c2d90e7f0d435150a3a314cf31630ddc8afed0fb6ea72c"
     },
     {
       "caminho": "tests/test_acervo_publico.py",
@@ -3768,8 +3950,8 @@
       "caminho": "tests/test_dashboard_app.py",
       "fonte": "tests/test_dashboard_app.py",
       "modo": "copia",
-      "sha256_destino": "1e6e262e1ba9aa5b743d9be8a3507135c16e093e6e7403def8688dd1aaad9b33",
-      "sha256_origem": "1e6e262e1ba9aa5b743d9be8a3507135c16e093e6e7403def8688dd1aaad9b33"
+      "sha256_destino": "af4bc43312290a5077350065ab5be09448672f1595f78219c4de7d40c27dbc23",
+      "sha256_origem": "af4bc43312290a5077350065ab5be09448672f1595f78219c4de7d40c27dbc23"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
@@ -3831,8 +4013,8 @@
       "caminho": "tests/test_high_resolution_assets.py",
       "fonte": "tests/test_high_resolution_assets.py",
       "modo": "copia",
-      "sha256_destino": "b7e2dc2641ad89e2d8da10aefe8570e1d774b13b9374daa9cb39dfcc0ea87723",
-      "sha256_origem": "b7e2dc2641ad89e2d8da10aefe8570e1d774b13b9374daa9cb39dfcc0ea87723"
+      "sha256_destino": "2373315eadd062cead7e756a0fb45d19d4e65c361dbf401aea161bafcad01b44",
+      "sha256_origem": "2373315eadd062cead7e756a0fb45d19d4e65c361dbf401aea161bafcad01b44"
     },
     {
       "caminho": "tests/test_interface_editorial.py",
@@ -3910,7 +4092,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "da52543c5867b4c90c24c21f0359110b32b13e4befbf531fa440d1c12d3e63d9"
+      "sha256": "ebdf7adbf8f9a3a9c9713b4ece0087f06e2a116267e856d7c736c7f62abf2a1f"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
@@ -3973,5 +4155,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.14.4"
+  "versao_produto": "0.15.0"
 }

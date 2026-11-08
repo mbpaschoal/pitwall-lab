@@ -3,6 +3,7 @@ from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 
 from operacao2026 import readiness, weekend, cloud
 
@@ -41,7 +42,15 @@ class ReadinessTests(unittest.TestCase):
                          'janela_prospectiva_encerrada')
 
     def test_offline_inventory_is_honest_and_uses_three_different_team_cards(self):
-        result=readiness.inspect(CONFIG,ROOT,datetime(2026,11,3,18,tzinfo=timezone.utc))
+        read_text = Path.read_text
+
+        def read_before_qualifying(path, *args, **kwargs):
+            if path == ROOT / cloud.PUBLIC:
+                return '{}'
+            return read_text(path, *args, **kwargs)
+
+        with patch.object(Path, 'read_text', read_before_qualifying):
+            result=readiness.inspect(CONFIG,ROOT,datetime(2026,11,3,18,tzinfo=timezone.utc))
         self.assertEqual(result['identity'],[2026,20,'interlagos'])
         self.assertEqual(result['qualification_status'],'aguardando_classificacao')
         self.assertFalse(result['forecast_emission_attempted']);self.assertFalse(result['forecast_emitted_by_this_check'])

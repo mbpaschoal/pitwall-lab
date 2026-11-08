@@ -1,5 +1,15 @@
 # Evolução do Pitwall Lab
 
+## 0.15.0 — 2026-11-07
+
+Os perfis de mais 26 pilotos recebem fotografias espontâneas em alta resolução, diferentes das imagens usadas no pódio. Com Antonelli e Verstappen, cujos originais aprovados permanecem iguais, são 28 perfis com fotografia editorial própria. Cada imagem conserva os bytes originais, fonte, autoria, licença e legenda em português e inglês, com o ano e o contexto histórico explícitos.
+
+O enquadramento de Russell usa uma janela com pelo menos 1600 pixels nativos em cada eixo; Sainz conserva a orientação EXIF do JPEG sem conversão. Conferências no navegador verificam o original servido, densidade 2, identidade, créditos, proporção e ausência de transbordamento em computador e celular. Revisão visual e testes automáticos possuem registros separados.
+
+Doohan permanece temporariamente com o retrato atual, por decisão editorial explícita: ainda falta uma foto espontânea adequada com licença de reutilização. A pendência é registrada separadamente no catálogo; não reduz a resolução exigida das 28 fotografias selecionadas nem permite omitir outros pilotos. A curadoria de Doohan continua. Retratos do pódio, ilustrações dos GPs, dados, modelo v1, probabilidades e previsões registradas permanecem preservados. CI, pacote de release e aceite do site público exigem comprovantes próprios.
+
+A coleta pós-classificação conserva a tabela de pilotos já publicada quando o executor só encontra um snapshot mais antigo. Os testes de previsão ausente e de classificação de pilotos usam entradas controladas para que uma nova emissão válida possa passar pela validação.
+
 ## 0.14.4 — 2026-11-07
 
 Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 3/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.

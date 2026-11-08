@@ -136,9 +136,17 @@ def register_and_project(root, prepared, run=command):
             save_checkpoint(path, previous + [declaration])
         run(root, ['preparar_dashboard_race_weekend.py', '--root', str(root),
                    '--snapshot', declaration['snapshot'], '--saida', str(projection)])
-        if not isinstance(json.loads(projection.read_text()), dict):
+        projected = json.loads(projection.read_text())
+        if not isinstance(projected, dict):
             raise ValueError('Forecast projection must be a JSON object')
         asset = root/'frontend_assets/race_weekend.json'
+        if asset.is_file():
+            previous_asset = json.loads(asset.read_text())
+            if preserve_newer_standings(previous_asset, projected):
+                projection.write_text(
+                    json.dumps(projected, ensure_ascii=False, indent=2, sort_keys=True) + '\n',
+                    encoding='utf-8',
+                )
         asset.parent.mkdir(parents=True, exist_ok=True)
         projection.replace(asset)
     except Exception:
@@ -150,6 +158,24 @@ def register_and_project(root, prepared, run=command):
                 temporary.write_bytes(previous_raw)
                 temporary.replace(path)
         raise
+
+
+def preserve_newer_standings(previous, projected):
+    """Keep the published standings if the forecast runner has an older capture."""
+    previous_table = previous.get('dados_2026', {}).get('campeonato_pilotos', {})
+    if previous_table.get('disponivel') is not True:
+        return False
+    new_data = projected['dados_2026']
+    new_table = new_data['campeonato_pilotos']
+    if (new_table.get('disponivel') is True
+            and new_table['rodada_referencia'] >= previous_table['rodada_referencia']):
+        return False
+    new_data['campeonato_pilotos'] = previous_table
+    # The published projection retains hashes even when raw inputs are offline.
+    old_sources = previous['proveniencia']['fontes_sha256']
+    new_sources = projected['proveniencia']['fontes_sha256']
+    projected['proveniencia']['fontes_sha256'] = {**old_sources, **new_sources}
+    return True
 
 
 def retain(root, base, prepared):
