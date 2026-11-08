@@ -303,6 +303,7 @@ RUNTIME_WORKTREE = (
     'pitwall/research/driver_conditions.py',
     'frontend_assets/pilotos_condicoes.json',
     'frontend_assets/pilotos_condicoes_operacao.json',
+    'pitwall/data/position_balance.py', 'frontend_assets/pilot_position_balance.json',
     'reports/pilotos_condicoes_20261029/README.md',
     'reports/pilotos_condicoes_20261029/README.en.md',
     'reports/pilotos_condicoes_20261029/circuitos_revisados.csv',

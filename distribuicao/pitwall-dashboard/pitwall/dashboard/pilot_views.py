@@ -1,6 +1,7 @@
 """Historical driver views. No collection, training or prediction occurs here."""
 
 from datetime import date
+from decimal import Decimal, ROUND_HALF_UP
 from html import escape
 from urllib.parse import urlencode
 
@@ -8,6 +9,7 @@ import pandas as pd
 import plotly.graph_objects as go
 
 from pitwall.data.driver_conditions import DriverConditionsError, load
+from pitwall.data.position_balance import load as load_position_balance, observations
 from pitwall.i18n import language, translate
 from pitwall.i18n.streamlit import dataframe, st
 from pitwall.research.driver_conditions import (
@@ -260,7 +262,7 @@ def _overview(asset, years, metric, minimum):
         _evidence(asset, select_rows(asset, years, condition), "condicao")
 
 
-def _individual(asset, years, metric, minimum):
+def _individual(root, asset, years, metric, minimum):
     names = driver_names(asset)
     ids = sorted(names, key=names.get)
     if st.session_state.get("pilot_driver") not in names:
@@ -277,6 +279,7 @@ def _individual(asset, years, metric, minimum):
     if not details["races"]:
         st.info("Nenhuma corrida neste recorte.")
         return
+    _position_balance(root, asset, driver, years)
     left, right = st.columns([1.3, 1])
     with left:
         st.subheader("Desempenho por condição")
@@ -340,6 +343,57 @@ def _individual(asset, years, metric, minimum):
                 for x in mate["evidence"]]), hide_index=True, width="stretch")
 
 
+
+def _balance_number(value, places=0, signed=False):
+    precision = Decimal(1).scaleb(-places)
+    value = Decimal(value).quantize(precision, rounding=ROUND_HALF_UP)
+    prefix = "+" if signed and value > 0 else ""
+    formatted = prefix + format(value if value else abs(value), f".{places}f")
+    return formatted.replace(".", ",") if language() == "pt" else formatted
+
+def _position_balance(root, asset, driver, years):
+    with st.container(key="pilot-position-balance"):
+        st.subheader("Saldo de posições")
+        try:
+            snapshot = load_position_balance(root, asset)
+        except DriverConditionsError as error:
+            st.info(str(error))
+            return
+        st.caption("Posição de largada menos posição de chegada. Entram corridas concluídas com largada numerada no grid.")
+        position = st.selectbox("Posição de largada", range(23),
+                                format_func=lambda p: f"P{p}" if p else "Todas as posições",
+                                key="pilot_balance_grid", width=280)
+        rows = observations(snapshot, asset, driver, years, position or None)
+        if not rows:
+            st.info("Nenhuma chegada comparável neste recorte. Escolha outra posição ou temporada.")
+        else:
+            n = len(rows)
+            total = sum(row[3] for row in rows)
+            gains = sum(row[3] > 0 for row in rows)
+            items = (
+                ("Saldo médio", _balance_number(Decimal(total) / n, 2, signed=True)),
+                ("Corridas", str(n)),
+                ("Taxa de ganho", _balance_number(Decimal(100 * gains) / n, 1) + "%"),
+            )
+            st.markdown('<dl class="pilot-balance-summary">' + "".join(
+                f"<div><dt>{escape(translate(label))}</dt><dd>{escape(value)}</dd></div>"
+                for label, value in items) + "</dl>", unsafe_allow_html=True)
+            if n < 3:
+                st.caption("Amostra pequena. Cada corrida pesa bastante nesta média.")
+            with st.expander("Ver corridas do saldo"):
+                headings = "".join(f'<th scope="col">{escape(translate(h))}</th>'
+                                   for h in ("GP", "Largada", "Chegada", "Saldo"))
+                body = "".join(
+                    f'<tr><th scope="row">{escape(translate(event["name"]))} · {event["temporada"]}</th>'
+                    f"<td>P{grid}</td><td>P{finish}</td><td>{_balance_number(delta, signed=True)}</td></tr>"
+                    for event, grid, finish, delta in rows)
+                st.markdown(f'<table class="pilot-balance-races"><thead><tr>{headings}</tr></thead>'
+                            f"<tbody>{body}</tbody></table>", unsafe_allow_html=True)
+                st.caption("A taxa de ganho é a proporção de corridas com saldo positivo.")
+                st.markdown("[F1DB v2026.19.0](https://github.com/f1db/f1db/releases/tag/v2026.19.0) · CC BY 4.0")
+        st.caption("Temporadas do perfil, em todas as condições de pista.")
+        st.caption(coverage_label(asset, snapshot["through"]))
+
 def _remember_criterion(key):
     """Only an explicit criteria change commits a widget value to the scope."""
     filters = dict(st.session_state.get("_pilot_filters", {}))
@@ -348,8 +402,9 @@ def _remember_criterion(key):
     st.session_state["_pilot_filters"] = filters
 
 
-def coverage_label(asset):
-    latest=max(asset['gps'].values(),key=lambda gp:(gp['date_utc'],gp['temporada'],gp['rodada']))
+def coverage_label(asset, through=None):
+    latest = asset['gps'][through] if through else max(
+        asset['gps'].values(), key=lambda gp: (gp['date_utc'], gp['temporada'], gp['rodada']))
     label=translate('Dados até {gp} · {date}')
     return label.format(gp=translate(latest['name']),date=date.fromisoformat(latest['date_utc']).strftime('%d/%m/%Y'))
 
@@ -528,7 +583,7 @@ def render(root, search_renderer=None):
     if years and view == "Visão geral":
         _overview(asset, years, metric, minimum)
     elif years and view == "Perfil individual":
-        _individual(asset, years, metric, minimum)
+        _individual(root, asset, years, metric, minimum)
     elif years:
         _duel(asset, years, metric, minimum)
     if years:

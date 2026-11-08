@@ -1,5 +1,13 @@
 # Evolução do Pitwall Lab
 
+## 0.16.0 — 2026-11-08
+
+O perfil individual passa a mostrar o saldo entre a posição de largada e a chegada. O seletor filtra a posição exata dentro das temporadas do perfil. O painel informa saldo médio, número de corridas e taxa de ganho, com as chegadas disponíveis para conferência.
+
+O recorte reúne 1.129 chegadas comparáveis em 67 GPs até o México de 2026. Entram corridas concluídas com largada numerada. Posições sem amostra têm uma mensagem própria. O saldo é descritivo e permanece fora do modelo de pódio.
+
+A validação local incluiu 325 testes da suíte de interface e oito cenários em português e inglês, no desktop e no celular emulado, em Chromium e WebKit. O modelo v1 e a emissão registrada de São Paulo foram preservados.
+
 ## 0.15.3 — 2026-11-08
 
 A tela de Previsões reúne o estado da emissão e a ação para abrir as Cartas do GP. Quando a previsão está pendente, a página explica o motivo e oferece acesso às sessões do mesmo GP.
