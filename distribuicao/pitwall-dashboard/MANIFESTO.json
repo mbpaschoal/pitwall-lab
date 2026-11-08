@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "9d91b01493934c904d69ea44c1ee37930c705d990985895414e31ac61d55cbaf",
+  "apresentacao_build_sha256": "4684f2f27bc411c0b560e18d1c5c8d5e95530085cf53f264037262c1540ef1d8",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "28c956f04f6845a49328638fe4bc7179cf9f04b038317f46d929892e0252a186",
+      "sha256_destino": "04baf6f55e191b50d80f0187f42f4b12052043ac1de83cad99810a650e0222b7",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "6396b6598887fc75c81665255a6e158bf554d6043023afe443007e16e6ecd33b",
-      "sha256_origem": "212867bdfcbea3aad9ab9402d32540d4e7a538141f9e6500a5689a48270727dc"
+      "sha256_destino": "858043ef28860331f9fe7fca0ac6a07734ee796c78ecb21c182803f24df61185",
+      "sha256_origem": "ed42be98e3a31d488cf3ab197323248172e3fa1bccba5d0dd0a8f26e2e16db98"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "5f227bfbb71d10404b82a617e85b5c32e83d56ea63ddf106f913da73c69586dc",
-      "sha256_origem": "e91b2764ed8609e07fd7eb5af2ea85457d0318f1ecf9d8498865895597920069"
+      "sha256_destino": "10762e80e0f0c8eef3954786b47bd91b8d4532e03e57423b1ca9c59105177c0d",
+      "sha256_origem": "3dfcbffd2898e42e4fdc536c94f40432d4dc022b93d7ef6cfd3544b65187dcd7"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "fad958a3c5fecd33c2b2bc667b8ad8661fce304517d3167543e93761fd155599",
-      "sha256_origem": "fad958a3c5fecd33c2b2bc667b8ad8661fce304517d3167543e93761fd155599"
+      "sha256_destino": "aa037454b5e8320521a32b278a3f4aff05fc79009ab5503f5d4a1b9a33b38c47",
+      "sha256_origem": "aa037454b5e8320521a32b278a3f4aff05fc79009ab5503f5d4a1b9a33b38c47"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2764,6 +2764,13 @@
       "sha256_origem": "c42548cdf463929cbff04804ea75df0d8ffc04837bbdc1cbdcb126f225b79d20"
     },
     {
+      "caminho": "frontend_assets/pilot_position_balance.json",
+      "fonte": "frontend_assets/pilot_position_balance.json",
+      "modo": "copia",
+      "sha256_destino": "dd9218bd9905cafcdec100e1f966e4329e6c030eba4e82df60e13e9dc1b6eae1",
+      "sha256_origem": "dd9218bd9905cafcdec100e1f966e4329e6c030eba4e82df60e13e9dc1b6eae1"
+    },
+    {
       "caminho": "frontend_assets/pilotos_condicoes.json",
       "fonte": "frontend_assets/pilotos_condicoes.json",
       "modo": "copia",
@@ -2781,8 +2788,8 @@
       "caminho": "frontend_assets/pitwall.css",
       "fonte": "frontend_assets/pitwall.css",
       "modo": "copia",
-      "sha256_destino": "4bbfcb6ffca5ff0b70449ab85c7c1dfb3cb67937cb5453a98aea6166ec7a2ecf",
-      "sha256_origem": "4bbfcb6ffca5ff0b70449ab85c7c1dfb3cb67937cb5453a98aea6166ec7a2ecf"
+      "sha256_destino": "d29ec5cb335cfbbea9d21578798e5803985e3a42d9804abda674848b1d6a0050",
+      "sha256_origem": "d29ec5cb335cfbbea9d21578798e5803985e3a42d9804abda674848b1d6a0050"
     },
     {
       "caminho": "frontend_assets/profile_photos.json",
@@ -2942,8 +2949,8 @@
       "caminho": "pitwall/dashboard/pilot_views.py",
       "fonte": "pitwall/dashboard/pilot_views.py",
       "modo": "copia",
-      "sha256_destino": "3740fbfa8c605e8707017b178def0e6f33fb156fcb65b377a8f1c5f353777c82",
-      "sha256_origem": "3740fbfa8c605e8707017b178def0e6f33fb156fcb65b377a8f1c5f353777c82"
+      "sha256_destino": "e5c79d028e51e0c48f02649d9722e93e5991887a37359d1d167f9d20d2a2861f",
+      "sha256_origem": "e5c79d028e51e0c48f02649d9722e93e5991887a37359d1d167f9d20d2a2861f"
     },
     {
       "caminho": "pitwall/dashboard/postcards.py",
@@ -3072,6 +3079,13 @@
       "sha256_origem": "23b7dc3e94700f2463a7d5e099739572f2f7b6509f067fc45ffcd5398aeca90a"
     },
     {
+      "caminho": "pitwall/data/position_balance.py",
+      "fonte": "pitwall/data/position_balance.py",
+      "modo": "copia",
+      "sha256_destino": "54d1144160b1aedf913a6839bfbb6fbd468b4ce36d9941f639adadd4e263bfaa",
+      "sha256_origem": "54d1144160b1aedf913a6839bfbb6fbd468b4ce36d9941f639adadd4e263bfaa"
+    },
+    {
       "caminho": "pitwall/data/post_race_evaluation.py",
       "fonte": "pitwall/data/post_race_evaluation.py",
       "modo": "copia",
@@ -3124,8 +3138,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "d76892d0bd1ef3fe45432c1b81c375900beb2799f68b5caa414d24d3c94589c9",
-      "sha256_origem": "d76892d0bd1ef3fe45432c1b81c375900beb2799f68b5caa414d24d3c94589c9"
+      "sha256_destino": "c247317cd4ab1bfb8d12d5ed37cf7cc3e16e935d5e9ec604f9d7c8ecba341c88",
+      "sha256_origem": "c247317cd4ab1bfb8d12d5ed37cf7cc3e16e935d5e9ec604f9d7c8ecba341c88"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -4027,8 +4041,8 @@
       "caminho": "tests/test_pilot_views.py",
       "fonte": "tests/test_pilot_views.py",
       "modo": "copia",
-      "sha256_destino": "10ce85455964c740e48d61e2f3ea0037efd97b94eba238156f1905f0da139c5e",
-      "sha256_origem": "10ce85455964c740e48d61e2f3ea0037efd97b94eba238156f1905f0da139c5e"
+      "sha256_destino": "e759d38ae9394fea55fde1f7a2dc3806f0d67a25e8c1554d07adb4e70ba6c25b",
+      "sha256_origem": "e759d38ae9394fea55fde1f7a2dc3806f0d67a25e8c1554d07adb4e70ba6c25b"
     },
     {
       "caminho": "tests/test_pneus_apresentacao.py",
@@ -4092,7 +4106,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "ebdf7adbf8f9a3a9c9713b4ece0087f06e2a116267e856d7c736c7f62abf2a1f"
+      "sha256": "9fd27fd0b3fa140a46a77094be28fe3c9dabf61f91288328790af1ef2e533a1c"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
@@ -4155,5 +4169,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.15.3"
+  "versao_produto": "0.16.0"
 }

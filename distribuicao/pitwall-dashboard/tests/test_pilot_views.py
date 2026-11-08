@@ -175,5 +175,43 @@ class PilotViewTests(unittest.TestCase):
         self.assertGreaterEqual(int(at.metric[0].value), 18)
 
 
+class TestPositionBalance(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from pitwall.data.driver_conditions import load as load_archive
+        from pitwall.data.position_balance import load
+
+        cls.archive = load_archive(ROOT)
+        cls.snapshot = load(ROOT, cls.archive)
+
+    def test_russell_from_sixth_includes_gains_and_losses(self):
+        from pitwall.data.position_balance import observations
+
+        rows = observations(self.snapshot, self.archive, "russell", [2024, 2025, 2026], 6)
+        self.assertEqual(len(rows), 8)
+        self.assertEqual(sum(row[3] for row in rows), -5)
+        self.assertEqual(sum(row[3] > 0 for row in rows), 4)
+        self.assertEqual(observations(self.snapshot, self.archive, "russell", [2024], 22), [])
+
+    def test_uses_actual_slot_and_excludes_pit_lane(self):
+        from pitwall.data.position_balance import observations
+
+        perez = observations(self.snapshot, self.archive, "perez", [2026], 16)
+        self.assertTrue(any((event["rodada"], finish, delta) == (6, 15, 1)
+                            for event, _, finish, delta in perez))
+        verstappen = observations(self.snapshot, self.archive, "max_verstappen", [2025])
+        self.assertFalse(any(event["rodada"] == 21 for event, *_ in verstappen))
+
+    def test_missing_snapshot_has_explicit_error(self):
+        import tempfile
+
+        from pitwall.data.driver_conditions import DriverConditionsError
+        from pitwall.data.position_balance import load
+
+        with tempfile.TemporaryDirectory() as empty:
+            with self.assertRaises(DriverConditionsError):
+                load(empty, self.archive)
+
+
 if __name__ == "__main__":
     unittest.main()

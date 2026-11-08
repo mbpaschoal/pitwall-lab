@@ -1,5 +1,13 @@
 # Pitwall Lab evolution
 
+## 0.16.0 — 2026-11-08
+
+Individual driver profiles now show the change between starting and finishing position. The selector filters by exact grid position within the profile seasons. The panel shows average change, race count, and gain rate, with individual finishes available for review.
+
+The snapshot covers 1,129 comparable finishes in 67 Grands Prix through Mexico 2026. It includes completed races with a numbered grid start. Positions without a sample have their own message. The measure is descriptive and stays outside the podium model.
+
+Local validation included 325 interface-suite tests and eight Portuguese and English desktop and emulated mobile scenarios in Chromium and WebKit. The v1 model and the recorded São Paulo forecast were preserved.
+
 ## 0.15.3 — 2026-11-08
 
 The Predictions page groups the forecast status with the action that opens the GP cards. When a forecast is pending, the page explains why and links to sessions for the same GP.
