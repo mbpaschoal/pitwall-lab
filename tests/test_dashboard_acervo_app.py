@@ -127,7 +127,10 @@ class TestDashboardAcervoApp(unittest.TestCase):
         self.assertNotIn('Favoritos por ranking publicado', texto)
         por_chave(self.at.radio, 'tela').set_value('Previsões')
         self.at.run(timeout=30)
-        self.assertIn('Sem probabilidades publicadas', texto_renderizado(self.at))
+        texto = texto_renderizado(self.at)
+        self.assertFalse(self.at.exception)
+        self.assertIn('Sem previsão registrada para este GP.', texto)
+        self.assertNotIn('fan-probability-row', texto)
 
 
 if __name__ == '__main__':

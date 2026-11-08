@@ -112,9 +112,16 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     requireCheck(m.h1Count===1,'One main title required');
     requireCheck(m.main.bottom<=m.viewport[1]+1,'Main scrollport extends beyond viewport');
     requireCheck(m.normalBlocks.every(b=>b.marginTop>=0&&b.marginBottom>=0&&!['absolute','fixed'].includes(b.position)),'Content section leaves normal flow or uses a negative margin');
-    const precedingSelector=route==='Previsões'&&await surface.locator('.st-key-open_tarot').count()?'.st-key-open_tarot':'.st-key-journey-context-row';
+    const precedingSelector=route==='Previsões'?'.st-key-forecast-context':'.st-key-journey-context-row';
     const beforeCover=route==='Pilotos'?m.pilotNavigation:await surface.locator(precedingSelector).boundingBox().then(r=>({...r,bottom:r.y+r.height}));
     requireCheck(beforeCover&&m.hero.y>=beforeCover.bottom-1&&m.hero.y<beforeCover.bottom+70,'Cover overlaps or detaches from its preceding navigation');
+    if(route==='Previsões'){
+     const cardsButton=surface.locator('.st-key-open_tarot button');
+     if(await cardsButton.count()){
+      const r=await cardsButton.boundingBox();
+      requireCheck(r&&r.y>=beforeCover.y&&r.y+r.height<=beforeCover.bottom+1,'Cards button leaves its forecast context');
+     }
+    }
     requireCheck(m.heading.y>=m.hero.y&&m.heading.bottom<=m.hero.bottom,'Title clipped by cover');
     requireCheck(m.targets.length===15,'Sidebar destinations missing');
     requireCheck(await surface.locator('.st-key-journey-navigation:visible,.journey-calendar:visible').count()===0,'Redundant navigation visible');

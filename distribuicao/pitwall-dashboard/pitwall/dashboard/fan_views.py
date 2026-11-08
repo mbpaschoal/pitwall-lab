@@ -169,10 +169,33 @@ def podium(rows, year, title='Pódio da corrida', compact=False, round_=None):
         display_name = row['name'].rsplit(' ',1)[-1] if compact else row['name']
         cards.append('<a class="fan-podium-place fan-place-{}" href="{}" target="_self"><b>{}º</b>{}<strong title="{}">{}</strong><small>{}</small></a>'.format(pos,escape(url or '#',quote=True),pos,portrait(row.get('id') or '',row['name']),escape(row['name'],quote=True),escape(display_name),escape(row.get('team') or '—')))
     cards=[c.replace('<a ','<article ').replace(' href="#"','').replace('</a>','</article>') if 'href="#"' in c else c for c in cards]
-    body = '<div class="fan-podium">{}</div>'.format(''.join(cards)) if cards else '<div class="fan-awaiting">{}</div>'.format(text('Resultado ainda indisponível para este GP.'))
+    body = '<div class="fan-podium">{}</div>'.format(''.join(cards)) if cards else '<div class="fan-awaiting"><p>{}</p>{}</div>'.format(
+        text('Resultado ainda indisponível para este GP.'),
+        '<a class="fan-context-link" href="{}" target="_self">{}</a>'.format(
+            escape(href('Corridas', temporada=year, gp=round_, aba='Tempos'), quote=True),
+            text('Consultar sessões e voltas')) if round_ is not None else '')
     heading = '' if compact else '<h2>{}</h2>'.format(text(title))
     return '<section class="fan-podium-panel{}" aria-label="{}">{}{}</section>'.format(
         ' fan-podium-compact' if compact else '', text(title), heading, body)
+
+
+def forecast_context(race, year):
+    """Explain the stored prediction state without deriving any racing data."""
+    state = race.get('estado_previsao')
+    unavailable = year == 2026 and state == 'indisponivel'
+    if unavailable:
+        title = 'Sem previsão registrada para este GP.'
+        description = 'As chances de pódio dependem da classificação concluída e de uma emissão prospectiva registrada.'
+    elif state == 'previsao_registrada':
+        title = 'Previsão registrada antes da corrida.'
+        description = 'Probabilidade individual de pódio neste GP; não indica uma posição de chegada.'
+    else:
+        title = 'Estudo retrospectivo com dados históricos.'
+        description = 'Estudo retrospectivo; não é previsão emitida antes da corrida.'
+    return ('<section class="fan-forecast-context" data-forecast-state="{}" aria-label="{}">'
+            '<h2>{}</h2><div class="forecast-reading-note"><p>{}</p></div></section>').format(
+                'unavailable' if unavailable else 'recorded' if state == 'previsao_registrada' else 'retrospective',
+                text('Probabilidades de pódio'), text(title), text(description))
 
 
 def forecast_rows(rows, year, origin_round=None):

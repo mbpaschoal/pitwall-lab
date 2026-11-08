@@ -16,7 +16,7 @@
 .pc-event-meta{display:flex;align-items:center;flex-wrap:wrap;gap:3px 18px;padding:8px 0;max-width:75%}
 .pw-postcard .pc-footer .pc-note{margin:0;font:inherit;color:#40566d}
 .pc-credits{max-width:100%}
-.pc-credits summary{box-sizing:border-box;min-height:44px;padding-block:12px;cursor:pointer}
+.pc-credits summary{box-sizing:border-box;min-height:var(--pw-control-height);padding-block:12px;cursor:pointer}
 .pc-credits[open]{flex-basis:100%}
 .pc-credits>div{padding:0 0 12px;max-width:80ch;overflow-wrap:anywhere}
 .pw-postcard .pc-footer p{margin:6px 0;font:inherit;color:#40566d}
@@ -26,6 +26,6 @@
 .pw-postcard.fan-hero{margin-top:0}
 .pw-postcard .pc-copy{left:16px;top:14px;right:16px;max-width:none}
 .pw-postcard .pc-copy h1{font-size:clamp(26px,7.5vw,34px);margin-bottom:5px}
-.pw-postcard .pc-copy .pc-intro{font-size:12px;line-height:1.35}
+.pw-postcard .pc-copy .pc-intro{font-size:14px;line-height:1.4}
 .pc-event-meta{max-width:100%;padding-bottom:0;gap:3px 12px}
 }

@@ -68,7 +68,11 @@ def sealed_cards_html(rows, root, year, round_, emission=None, country=None):
         probability = '{:.1%}'.format(row['probability'])
         if language() == 'pt':
             probability = probability.replace('.', ',')
-        payload = '{}<p class="pw-tarot-prob">{} {}</p><p class="pw-tarot-phrase">{}</p><button type="button" data-tarot-hide>{}</button>'.format(face, probability, escape(translate('de chance de pódio')), escape(phrase), escape(translate('Virar para baixo')))
+        payload = (
+            '<p class="pw-tarot-prob"><strong>{}</strong> <span>{}</span></p>'
+            '{}<button type="button" data-tarot-hide>{}</button>'
+        ).format(probability, escape(translate('de chance de pódio')), face,
+                 escape(translate('Virar para baixo')))
         cards.append('<article class="pw-sealed-card" data-card-index="{i}"><button type="button" class="pw-card-back" data-tarot-reveal aria-label="{reveal}"><b aria-hidden="true">PL</b><span>{tap}</span></button><template class="pw-tarot-face" data-pw-face="{payload}"></template><div class="pw-revealed-face" hidden></div></article>'.format(
             i=index, reveal=escape(translate('Revelar carta'), quote=True),
             tap=escape(translate('Toque para revelar')), payload=escape(payload, quote=True)))
@@ -77,8 +81,13 @@ def sealed_cards_html(rows, root, year, round_, emission=None, country=None):
                  'Mexico': ('#075744', '#f7d576')}.get(country, ('#192e39', '#dbc893'))
     # An inert slot keeps a previously loaded 0.13.0 bridge compatible. No counter
     # or positional label is displayed or announced to the user.
-    return '<section class="pw-tarot-reading" data-deck-key="{}" style="--deck-back:{};--deck-ink:{}"><span hidden aria-hidden="true" class="pw-reveal-count" data-label=""></span><div class="pw-sealed-deck">{}</div></section>'.format(
-        key, back, ink, ''.join(cards))
+    return (
+        '<section class="pw-tarot-reading" data-deck-key="{}" aria-describedby="pw-reading-rule" '
+        'style="--deck-back:{};--deck-ink:{}">'
+        '<p class="pw-reading-rule" id="pw-reading-rule">{}</p>'
+        '<span hidden aria-hidden="true" class="pw-reveal-count" data-label=""></span>'
+        '<div class="pw-sealed-deck">{}</div></section>'
+    ).format(key, back, ink, escape(phrase), ''.join(cards))
 
 
 def render(st, root, rows, year, round_, registered, emission=None, country=None):
@@ -106,8 +115,9 @@ def render(st, root, rows, year, round_, registered, emission=None, country=None
     @st.dialog(translate('As cartas do GP'), width='large', on_dismiss=dismiss)
     def show():
         st.caption('Previsão registrada antes da corrida.' if registered else 'Estudo retrospectivo; não é previsão emitida antes da corrida.')
-        st.markdown(sealed_cards_html(rows, root, year, round_, emission, country), unsafe_allow_html=True)
-        st.caption('Arte gerada por IA. As cartas não indicam a ordem de chegada.')
+        # Render the verified image payloads directly as HTML with scripts disabled.
+        st.html(sealed_cards_html(rows, root, year, round_, emission, country))
+        st.caption('Arte gerada por IA.')
         if st.button('Voltar às previsões', key='close_tarot'):
             dismiss()
             st.rerun()

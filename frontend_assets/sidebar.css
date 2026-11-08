@@ -2,7 +2,6 @@
 :root {
   --pw-header-height: 64px;
   --journey-dock-height: 0px;
-  --pw-control-height: 44px;
 }
 
 .stMain {
@@ -78,6 +77,10 @@
   color: #40566c;
   white-space: nowrap;
 }
+[class*="st-key-pw_language_switch_"] [data-testid="stCaptionContainer"] {
+  color: #40566c;
+  opacity: 1;
+}
 [class*="st-key-pw_language_cell_"] { min-height: 50px; }
 [class*="st-key-pw_language_button_"] button {
   box-sizing: border-box;
@@ -123,7 +126,7 @@
 [class*="st-key-pw-nav-item-"] { gap: 0 !important; }
 [class*="st-key-pw-nav-item-"] .stElementContainer { margin: 0 !important; }
 .stApp .st-key-pw-sidebar-menu [class*="st-key-pw-nav-item-"] button {
-  min-height: 40px;
+  min-height: var(--pw-control-height);
   width: 100%;
   padding: 8px 8px 8px 11px !important;
   text-align: left;
@@ -154,7 +157,7 @@
 .pw-nav-fallback {
   display: block;
   box-sizing: border-box;
-  min-height: 40px;
+  min-height: var(--pw-control-height);
   padding: 8px 8px 8px 11px;
   border-left: 3px solid transparent;
   font: 400 14px/1.4 LatoLocal, Arial, sans-serif;

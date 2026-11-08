@@ -51,6 +51,9 @@ class RecordingStreamlit:
     def markdown(self, content, **kwargs):
         self.events.append(("markdown", content))
 
+    def html(self, content):
+        self.events.append(("html", content))
+
     def caption(self, content):
         self.events.append(("caption", content))
 
@@ -297,7 +300,7 @@ class ResultsMethodUXTests(unittest.TestCase):
                 query = dict(tela="Previsões", temporada="2026", gp="18", lang=lang)
                 closed = RecordingStreamlit(query)
                 tarot.render(closed, ROOT, rows, 2026, 18, True, emission="stored-a")
-                closed_markup = ''.join(content for event, content in closed.events if event == "markdown")
+                closed_markup = ''.join(content for event, content in closed.events if event in {"markdown", "html"})
                 self.assertNotIn('pw-sealed-deck', closed_markup)
                 self.assertNotIn('Lando Norris', closed_markup)
                 self.assertNotIn('68,2%', closed_markup)
@@ -308,7 +311,7 @@ class ResultsMethodUXTests(unittest.TestCase):
                 self.assertEqual(dialog['title'], title)
                 self.assertEqual(dialog['width'], 'large')
                 markup = next(content for event, content in recorder.events
-                              if event == "markdown" and 'pw-sealed-deck' in content)
+                              if event == "html" and 'pw-sealed-deck' in content)
                 self.assertIn('aria-label="{}"'.format(label), markup)
                 self.assertNotIn(label + ' A', markup)
                 self.assertNotIn(label + ' 1', markup)

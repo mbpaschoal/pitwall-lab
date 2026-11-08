@@ -1,5 +1,13 @@
 # Evolução do Pitwall Lab
 
+## 0.15.3 — 2026-11-08
+
+A tela de Previsões reúne o estado da emissão e a ação para abrir as Cartas do GP. Quando a previsão está pendente, a página explica o motivo e oferece acesso às sessões do mesmo GP.
+
+As cartas mostram a chance individual de pódio antes da ilustração. A abertura parte do botão, com alternativa direta para movimento reduzido. A revelação individual preserva seu estado ao reabrir e Escape devolve o foco ao botão. As posições do pódio compacto têm contraste mínimo de 5,50:1.
+
+A validação local cobre Chromium e WebKit em português e inglês, no desktop e no celular emulado. As probabilidades registradas e o modelo v1 foram preservados.
+
 ## 0.15.2 — 2026-11-08
 
 Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 3/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados. Nova emissão prospectiva v1 registrada após Q, com snapshot e fontes preservados; nenhuma emissão anterior foi substituída.
