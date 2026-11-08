@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "03d8fc4687be774a838b8cb524a7f9254699cad80677058daf50d401a5698de4",
+  "apresentacao_build_sha256": "ae825bf2f31c0fd0fb1328768482b8cc8f03e5d15c9658420452b6c1740424bb",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "2013a837f636e49d35f8b9c4a8ee604ed4204d4948ac010f9377e2f13183a729",
-      "sha256_origem": "b1834ff2b4bfa3c720b231496956b32d66bc3b6c56f9a547e2ea6d6007703c9f"
+      "sha256_destino": "451765fcc3bbc0a8aa65626d3d3a8f1b27d054ca34a94d6aee66a46ac10cb908",
+      "sha256_origem": "dc313bf2f07e0d47c594c23ab587c52853d713eaffe5188cf0567b28afb03abb"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "8461d4cb813d632f9c6552ca889a334928a4307e7d3222ca26443456c3b1ca87",
-      "sha256_origem": "f4dcc86a624626b17107f296854b06a4aa7ed6896ec8b8469ebc529785c51a35"
+      "sha256_destino": "eac979d1e59a23478953764843f7d5efb98cb977feb8a91662ab2a25c544a307",
+      "sha256_origem": "74916792e7789bcf5463d5a6042ce666a7664df70ba26437755c3ed348b6d9b0"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "f8405a7330c287028d470c3ee3506f878f1ad85ed79c1d1adc19df2ff7398915",
-      "sha256_origem": "f8405a7330c287028d470c3ee3506f878f1ad85ed79c1d1adc19df2ff7398915"
+      "sha256_destino": "44abf66b02260179b3a509b0f10b5f26f431f316ef4ca50f18764c9e4b8cfd4a",
+      "sha256_origem": "44abf66b02260179b3a509b0f10b5f26f431f316ef4ca50f18764c9e4b8cfd4a"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -4062,8 +4062,8 @@
       "caminho": "tests/test_tarot_catalog.py",
       "fonte": "tests/test_tarot_catalog.py",
       "modo": "copia",
-      "sha256_destino": "7de44c6dc4a94a27ba07897fc3b85dcccb83897b73e7ce1c189b3866ac756dfd",
-      "sha256_origem": "7de44c6dc4a94a27ba07897fc3b85dcccb83897b73e7ce1c189b3866ac756dfd"
+      "sha256_destino": "3b868580bab06f0d6a4695611e89ffa7d38381cc3d644dd573d5c7c1b8e6122f",
+      "sha256_origem": "3b868580bab06f0d6a4695611e89ffa7d38381cc3d644dd573d5c7c1b8e6122f"
     },
     {
       "caminho": "tests/test_weekend_ui.py",
@@ -4155,5 +4155,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.15.0"
+  "versao_produto": "0.15.1"
 }

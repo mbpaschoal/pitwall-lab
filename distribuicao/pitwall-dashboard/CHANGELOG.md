@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.15.1 — 2026-11-08
+
+A validação do catálogo de tarô mantém os 67 GPs e as ilustrações da coleção original como referência. Novas emissões são conferidas por piloto, equipe e pose. A ausência de uma ilustração futura recebe o tratamento previsto no catálogo e não impede o registro das probabilidades.
+
 ## 0.15.0 — 2026-11-07
 
 Os perfis de mais 26 pilotos recebem fotografias espontâneas em alta resolução, diferentes das imagens usadas no pódio. Com Antonelli e Verstappen, cujos originais aprovados permanecem iguais, são 28 perfis com fotografia editorial própria. Cada imagem conserva os bytes originais, fonte, autoria, licença e legenda em português e inglês, com o ano e o contexto histórico explícitos.
