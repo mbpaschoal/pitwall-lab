@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "1ee2414a2802fa2b41f3898be64ff564eb2210b0ef1efeab6d08675c68f41e67",
+  "apresentacao_build_sha256": "03d8fc4687be774a838b8cb524a7f9254699cad80677058daf50d401a5698de4",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "b6cbaaa803b36616c7bd117d1ce44106d65d649dc196b109322e6f12bb557915",
-      "sha256_origem": "60547ba8e7a936735fe2552c5b8ea16f49196a9804895d4f5235f3cd3bcf9e98"
+      "sha256_destino": "2013a837f636e49d35f8b9c4a8ee604ed4204d4948ac010f9377e2f13183a729",
+      "sha256_origem": "b1834ff2b4bfa3c720b231496956b32d66bc3b6c56f9a547e2ea6d6007703c9f"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "0b7e5cf2f5edafcdd5eb754e751af6c0c7962553caeea568d1ca0c916942279c",
-      "sha256_origem": "9cc25d8349ca3bd5e0f1abb3097ffac2a1014321fa91cc3be1d02a129758b6a1"
+      "sha256_destino": "8461d4cb813d632f9c6552ca889a334928a4307e7d3222ca26443456c3b1ca87",
+      "sha256_origem": "f4dcc86a624626b17107f296854b06a4aa7ed6896ec8b8469ebc529785c51a35"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2753,8 +2753,8 @@
       "caminho": "frontend_assets/operacao_fim_semana.json",
       "fonte": "frontend_assets/operacao_fim_semana.json",
       "modo": "copia",
-      "sha256_destino": "4ffb054db2f35c3bc551aa89402d313a9b693129f798ce99cde1b70f0fe954cc",
-      "sha256_origem": "4ffb054db2f35c3bc551aa89402d313a9b693129f798ce99cde1b70f0fe954cc"
+      "sha256_destino": "0ed65ade0b483abe67bfa08b5e1da15b85be58227d74b896b8238594bbd267ee",
+      "sha256_origem": "0ed65ade0b483abe67bfa08b5e1da15b85be58227d74b896b8238594bbd267ee"
     },
     {
       "caminho": "frontend_assets/paineis_editoriais.json",
@@ -3950,8 +3950,8 @@
       "caminho": "tests/test_dashboard_app.py",
       "fonte": "tests/test_dashboard_app.py",
       "modo": "copia",
-      "sha256_destino": "1e6e262e1ba9aa5b743d9be8a3507135c16e093e6e7403def8688dd1aaad9b33",
-      "sha256_origem": "1e6e262e1ba9aa5b743d9be8a3507135c16e093e6e7403def8688dd1aaad9b33"
+      "sha256_destino": "af4bc43312290a5077350065ab5be09448672f1595f78219c4de7d40c27dbc23",
+      "sha256_origem": "af4bc43312290a5077350065ab5be09448672f1595f78219c4de7d40c27dbc23"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",

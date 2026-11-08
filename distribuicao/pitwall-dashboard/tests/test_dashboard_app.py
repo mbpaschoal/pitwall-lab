@@ -1,4 +1,5 @@
 """AppTest da etapa 6: usa uma cópia temporária de reports/, sem data/ ou modelos."""
+import json
 import os
 import re
 import shutil
@@ -149,6 +150,15 @@ class TestDashboardApp(unittest.TestCase):
                 self.assertIn(rotulo, texto)
 
     def test_future_unissued_forecast_is_not_labelled_retrospective(self):
+        path = self.raiz / 'frontend_assets/race_weekend.json'
+        asset = json.loads(path.read_text(encoding='utf-8'))
+        data = asset['dados_2026']
+        event = next(row for row in data['corridas'] if row['rodada'] == 20)
+        event.update(estado_previsao='indisponivel', estado_resultado='indisponivel',
+                     estado_qualificacao='indisponivel', estado_operacao='aguardando_dados',
+                     resultado_posterior_validado=False)
+        data['previsoes'] = [row for row in data['previsoes'] if row['rodada'] != 20]
+        path.write_text(json.dumps(asset), encoding='utf-8')
         self.at.query_params.update({'tela':'Previsões','temporada':'2026','gp':'20'})
         self.executar()
         rendered=texto_renderizado(self.at)
@@ -308,8 +318,19 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('Vitórias', app.tabela_campeonato_pilotos(campeonato).columns)
         self.assertIn('Max Verstappen', texto)
 
-    def test_renderizar_campeonato_driverstandings_mostra_max_em_p4_sem_probabilidades(self):
-        campeonato = app.carregar(2026)['campeonato_pilotos']
+    def test_renderizar_campeonato_driverstandings_mostra_pontos_sem_probabilidades(self):
+        campeonato = {
+            'disponivel': True,
+            'snapshot_id': 'snapshot-teste',
+            'rodada_referencia': 18,
+            'obtido_em_utc': '2026-10-26T11:14:06Z',
+            'paginas_validadas': 1,
+            'escopo': 'Classificação para o teste de apresentação.',
+            'classificacao': [{
+                'piloto': 'Max Verstappen', 'equipe': 'Red Bull',
+                'posicao': 4, 'pontos': 236.0, 'vitorias': 2,
+            }],
+        }
         with patch.object(app, 'st') as st_local:
             app.renderizar_campeonato_pilotos({'campeonato_pilotos': campeonato})
         tabela = st_local.dataframe.call_args.args[0]

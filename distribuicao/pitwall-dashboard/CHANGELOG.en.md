@@ -8,6 +8,12 @@ Russell's focal viewport retains at least 1600 native pixels on each axis; Sainz
 
 Doohan temporarily retains his current portrait by explicit editorial decision: a suitable candid photograph with a reuse license is still missing. This deferral is recorded separately in the catalogue; it does not lower the resolution requirement for the 28 selected photographs or permit other drivers to be omitted. Doohan's curation continues. Podium portraits, GP illustrations, data, model v1, probabilities and recorded forecasts remain preserved. CI, release package and public-site acceptance require their own evidence.
 
+Post-qualifying collection retains the published drivers’ standings when the runner only has an older snapshot. Tests for an unissued forecast and for the standings table use controlled inputs so a valid new emission can pass validation.
+
+## 0.14.4 — 2026-11-07
+
+Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 3/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.14.3 — 2026-11-07
 
 Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 2/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.

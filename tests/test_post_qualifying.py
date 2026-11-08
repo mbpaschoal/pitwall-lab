@@ -111,6 +111,32 @@ class PostQualifyingTests(unittest.TestCase):
         self.assertEqual(registry.read_bytes(), original)
         self.assertEqual(asset.read_bytes(), projected)
 
+    def test_projection_keeps_newer_published_standings_and_source_hashes(self):
+        asset = self.root/'frontend_assets/race_weekend.json'
+        asset.parent.mkdir()
+        current = dict(disponivel=True, rodada_referencia=18, classificacao=[dict(pontos=236)])
+        old = dict(disponivel=True, rodada_referencia=17, classificacao=[dict(pontos=221)])
+        asset.write_text(json.dumps({
+            'dados_2026': {'campeonato_pilotos': current},
+            'proveniencia': {'fontes_sha256': {'published-standings': 'a'*64}},
+        }))
+
+        def project(root, args):
+            destination = root/args[args.index('--saida')+1]
+            destination.write_text(json.dumps({
+                'dados_2026': {'campeonato_pilotos': old, 'previsoes': ['new forecast']},
+                'proveniencia': {'fontes_sha256': {'new-forecast': 'b'*64}},
+            }))
+
+        with patch('registro_emissoes.validar_declaracoes'):
+            pq.register_and_project(self.root, self.prepared(), project)
+        projected = json.loads(asset.read_text())
+        self.assertEqual(projected['dados_2026']['campeonato_pilotos'], current)
+        self.assertEqual(projected['dados_2026']['previsoes'], ['new forecast'])
+        self.assertEqual(projected['proveniencia']['fontes_sha256'], {
+            'published-standings': 'a'*64, 'new-forecast': 'b'*64,
+        })
+
     def test_empty_or_invalid_projection_cannot_commit_a_registration(self):
         for payload in (None, b'{"incomplete":', b'[]'):
             with self.subTest(payload=payload):
