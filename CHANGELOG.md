@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.15.2 — 2026-11-08
+
+Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 3/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados. Nova emissão prospectiva v1 registrada após Q, com snapshot e fontes preservados; nenhuma emissão anterior foi substituída.
+
 ## 0.15.1 — 2026-11-08
 
 A validação do catálogo de tarô mantém os 67 GPs e as ilustrações da coleção original como referência. Novas emissões são conferidas por piloto, equipe e pose. A ausência de uma ilustração futura recebe o tratamento previsto no catálogo e não impede o registro das probabilidades.

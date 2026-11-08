@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.15.2 — 2026-11-08
+
+Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 3/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged. New prospective v1 emission registered after Q, with its snapshot and sources retained; no prior emission was replaced.
+
 ## 0.15.1 — 2026-11-08
 
 Tarot catalogue validation retains the 67 races and artwork from the original collection as its reference. New emissions are checked for driver, team and pose. Missing artwork for a future entry follows the catalogue fallback while its probabilities remain eligible for registration.
