@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "1147f2670e37d15eca05335634d51908115def36099dca739919e2b541150761",
+  "apresentacao_build_sha256": "5b11ff32cba4cf3abe33d4ecd18249ccf47c83c5e4b4b7f90a4f2b817a51399a",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "c3c592bfb89ae5efcc3164ccb78fc58af7a35d696a0c7ba9208c5069ba282f14",
-      "sha256_origem": "f7a9e68379e558e927a30f6240754dca7ae4503f19c9035f736c88b9e0ff4a3c"
+      "sha256_destino": "3509671aeee7c3228cd011c9bf98e791c4d707f6934617f34e655e56caf2cef7",
+      "sha256_origem": "12806ef7e8df2f3a036d9ff666723c2165d59293ee28c27c7b2fd5a26e957037"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "7f8d6cb3db1617b74b79a8709933cf8c64473490cec1fbd303793c695a01c717",
-      "sha256_origem": "cfc5cf2b7f7706d6388f0568c6bbf461c9f34525346321b87515d614e0db87b2"
+      "sha256_destino": "113a342c74d052f1e1bea84de1b6a57f005737f32aa8b7592d740bcbd0c28ff2",
+      "sha256_origem": "988ccad41efb37323bffd14aa24bac056b19aad5f13024875a83fe5ee9206a99"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "e5450fc0d13e2cf93045cd5bce133d536637a2e7f2bb202d30b39eca8036e313",
-      "sha256_origem": "e5450fc0d13e2cf93045cd5bce133d536637a2e7f2bb202d30b39eca8036e313"
+      "sha256_destino": "0d2f4b8beffd0ba7cc705047c5e18ace93d071c55254b38da6ba39ad66e3f201",
+      "sha256_origem": "0d2f4b8beffd0ba7cc705047c5e18ace93d071c55254b38da6ba39ad66e3f201"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -4169,5 +4169,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.16.1"
+  "versao_produto": "0.16.2"
 }
