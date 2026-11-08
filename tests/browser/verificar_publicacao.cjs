@@ -26,7 +26,7 @@ async function verifyImage(page,app,expected){
   integrity(url.origin===appURL.origin,'Photo origin differs from the served app');
   variant=expected.variants?.find(v=>url.pathname.endsWith('/app/'+v.path));
   integrity(variant||expected.static_path&&url.pathname.endsWith('/app/'+expected.static_path),'Photo is outside the approved variants or immutable original');
-  const response=await page.request.get(url.href,{timeout:20000});mime=response.headers()['content-type']||'';
+  const response=await page.request.get(url.href,{timeout:20000,maxRetries:2});mime=response.headers()['content-type']||'';
   integrity(response.ok()&&mime.startsWith('image/'),'Photo response is not an image');bytes=await response.body();
  }
  const digest=sha256(bytes);integrity(digest===(variant?variant.sha256:expected.sha256),'Photo bytes differ from the documented source');
