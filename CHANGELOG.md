@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.16.1 — 2026-11-08
+
+Atualização automática de dados de Brazilian Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 4/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.16.0 — 2026-11-08
 
 O perfil individual passa a mostrar o saldo entre a posição de largada e a chegada. O seletor filtra a posição exata dentro das temporadas do perfil. O painel informa saldo médio, número de corridas e taxa de ganho, com as chegadas disponíveis para conferência.

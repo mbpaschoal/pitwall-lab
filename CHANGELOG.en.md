@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.16.1 — 2026-11-08
+
+Automatic Brazilian Grand Prix data update through GitHub Actions. Sessions with received data: 4/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.16.0 — 2026-11-08
 
 Individual driver profiles now show the change between starting and finishing position. The selector filters by exact grid position within the profile seasons. The panel shows average change, race count, and gain rate, with individual finishes available for review.

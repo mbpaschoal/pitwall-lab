@@ -633,6 +633,12 @@
       }
     }
   },
-  "pending": {},
-  "conteudo_sha256": "e09e420aaa99bba8db561dc7ebc43aab411eebf1b915feaa74b80f0641a430ab"
+  "pending": {
+    "2026:20": {
+      "code": "race_weather_not_verified",
+      "race_finish_utc": "2026-11-08T18:38:45.626000+00:00",
+      "event": "Brazilian Grand Prix"
+    }
+  },
+  "conteudo_sha256": "5c8ea7442721d74a4d919b98fb8a6af84f798617def05ad2f461a7cad4a5c173"
 }
