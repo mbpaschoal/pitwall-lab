@@ -183,7 +183,7 @@ def forecast_context(race, year):
         title = 'Estudo retrospectivo com dados históricos.'
         description = 'Estudo retrospectivo; não é previsão emitida antes da corrida.'
     return ('<section class="fan-forecast-context" data-forecast-state="{}" aria-label="{}">'
-            '<div><h2>{}</h2><p>{}</p></div></section>').format(
+            '<h2>{}</h2><div class="forecast-reading-note"><p>{}</p></div></section>').format(
                 'unavailable' if unavailable else 'recorded' if state == 'previsao_registrada' else 'retrospective',
                 text('Probabilidades de pódio'), text(title), text(description))
 

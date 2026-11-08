@@ -700,12 +700,14 @@ html:not([data-pw-reduced-motion="true"]) .fan-duel-difference{animation:pw-duel
   margin-block:8px 24px;
 }
 .stApp .fan-forecast-context {
+  display:grid;
+  gap:8px;
   padding:8px 0;
   min-width:0;
   color:var(--pw-ink);
 }
 .stApp .fan-forecast-context h2 {
-  margin:0 0 8px;
+  margin:0;
   padding:0;
   max-width:32ch;
   font:400 1.75rem/1.2 AbrilFatfaceLocal,Georgia,serif;
@@ -720,6 +722,11 @@ html:not([data-pw-reduced-motion="true"]) .fan-duel-difference{animation:pw-duel
   font:400 1rem/1.5 LatoLocal,Arial,sans-serif;
   color:var(--pw-muted);
   text-wrap:pretty;
+}
+.stApp .forecast-reading-note {
+  padding:8px 12px;
+  background:#fff;
+  border-radius:6px;
 }
 .st-key-forecast-context .st-key-open_tarot {max-width:none;}
 .stApp .st-key-forecast-details h2{font:400 24px/1.25 AbrilFatfaceLocal,Georgia,serif;text-wrap:balance}
