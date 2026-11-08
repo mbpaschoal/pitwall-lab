@@ -684,6 +684,10 @@ html:not([data-pw-reduced-motion="true"]) .fan-duel-difference{animation:pw-duel
 
 .st-key-pilot-cover .fan-hero-profile-editorial .pw-profile-photograph{width:100%;max-width:100%;min-width:0}.st-key-pilot-cover .fan-hero-profile-editorial .fan-hero-candid{max-width:100%!important;z-index:auto}
 
+/* A source-pixel focal crop preserves the original photograph in both engines. */
+.st-key-pilot-cover .fan-hero-profile-editorial .pw-profile-image-window--crop{position:relative;display:block;overflow:hidden;width:100%;height:auto;aspect-ratio:var(--pw-profile-crop-ratio);border-radius:10px}
+.st-key-pilot-cover .fan-hero-profile-editorial .pw-profile-image-window--crop>.fan-hero-candid{position:absolute;inset:auto;left:var(--pw-profile-crop-left);top:var(--pw-profile-crop-top);width:var(--pw-profile-crop-width)!important;height:auto!important;max-width:none!important;border-radius:0;transform:none}
+
 .st-key-pilot-heading-toolbar [data-testid="stCaptionContainer"]{margin:0!important;padding:0!important}.st-key-pilot-view-navigation button p,.st-key-pilot-comparison-toolbar button p{margin:0!important}
 .st-key-pilot-comparison-toolbar [data-testid="stMarkdownContainer"]{margin:0!important}
 .st-key-pilot-comparison-toolbar button{min-height:44px}

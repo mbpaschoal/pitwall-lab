@@ -1,12 +1,22 @@
 # Evolução do Pitwall Lab
 
-## 0.14.5 — 2026-11-08
+## 0.15.1 — 2026-11-08
 
 A tela de Previsões reúne o estado da emissão e a ação para abrir as Cartas do GP. Quando a previsão está pendente, a página explica o motivo e oferece acesso às sessões do mesmo GP.
 
 As cartas mostram a chance individual de pódio antes da ilustração. A abertura parte do botão, com alternativa direta para movimento reduzido. A revelação individual preserva seu estado ao reabrir e Escape devolve o foco ao botão. As posições do pódio compacto têm contraste mínimo de 5,50:1.
 
 A validação local cobre Chromium e WebKit em português e inglês, no desktop e no celular emulado. As probabilidades registradas e o modelo v1 foram preservados.
+
+## 0.15.0 — 2026-11-07
+
+Os perfis de mais 26 pilotos recebem fotografias espontâneas em alta resolução, diferentes das imagens usadas no pódio. Com Antonelli e Verstappen, cujos originais aprovados permanecem iguais, são 28 perfis com fotografia editorial própria. Cada imagem conserva os bytes originais, fonte, autoria, licença e legenda em português e inglês, com o ano e o contexto histórico explícitos.
+
+O enquadramento de Russell usa uma janela com pelo menos 1600 pixels nativos em cada eixo; Sainz conserva a orientação EXIF do JPEG sem conversão. Conferências no navegador verificam o original servido, densidade 2, identidade, créditos, proporção e ausência de transbordamento em computador e celular. Revisão visual e testes automáticos possuem registros separados.
+
+Doohan permanece temporariamente com o retrato atual, por decisão editorial explícita: ainda falta uma foto espontânea adequada com licença de reutilização. A pendência é registrada separadamente no catálogo; não reduz a resolução exigida das 28 fotografias selecionadas nem permite omitir outros pilotos. A curadoria de Doohan continua. Retratos do pódio, ilustrações dos GPs, dados, modelo v1, probabilidades e previsões registradas permanecem preservados. CI, pacote de release e aceite do site público exigem comprovantes próprios.
+
+A coleta pós-classificação conserva a tabela de pilotos já publicada quando o executor só encontra um snapshot mais antigo. Os testes de previsão ausente e de classificação de pilotos usam entradas controladas para que uma nova emissão válida possa passar pela validação.
 
 ## 0.14.4 — 2026-11-07
 

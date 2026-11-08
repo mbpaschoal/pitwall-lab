@@ -1,7 +1,43 @@
 {
   "schema": 1,
-  "scope": "reviewed_editorial_profile_candidates",
+  "scope": "reviewed_editorial_profile_photographs",
   "photos": {
+    "albon": {
+      "driver_id": "albon",
+      "sha256": "8a2197b2e6b9815e2f5a769f1b7c36405e452b136fb6b5e0196d5c2b861c750e",
+      "width": 2188,
+      "height": 2644,
+      "name": "Alexander Albon",
+      "source": "https://commons.wikimedia.org/wiki/File:Alex_Albon_(cropped).jpg",
+      "author": "JazzyJoeyD",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Albon conversando com a imprensa em Nova York, 2024.",
+        "Albon speaking to the media in New York, 2024."
+      ],
+      "object_position": "50% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/albon-8a2197b2e6b9.jpg"
+    },
+    "alonso": {
+      "driver_id": "alonso",
+      "sha256": "6b924382bccb2e24cb59b1e5331e76f42c9209d941fd8d90713e5d08df491032",
+      "width": 2498,
+      "height": 2619,
+      "name": "Fernando Alonso",
+      "source": "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_2017_Indianapolis_500_press_conference_(cropped).jpg",
+      "author": "Zach Catanzareti Photo",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "caption": [
+        "Alonso durante coletiva das 500 Milhas de Indianápolis, 2017.",
+        "Alonso during an Indianapolis 500 press conference, 2017."
+      ],
+      "object_position": "50% 50%",
+      "historical": true,
+      "path": "static/pitwall-profiles/alonso-6b924382bccb.jpg"
+    },
     "antonelli": {
       "driver_id": "antonelli",
       "path": "static/pitwall-profiles/antonelli-0fbf50af1114.jpg",
@@ -16,6 +52,222 @@
       "caption": [
         "Antonelli durante entrevista em Zandvoort, 2026.",
         "Antonelli during an interview in Zandvoort, 2026."
+      ],
+      "object_position": "50% 0%",
+      "historical": true
+    },
+    "arvid_lindblad": {
+      "driver_id": "arvid_lindblad",
+      "sha256": "2f064f19067493e0929915fb0158e691a97489073ed24895afdec65c650026bf",
+      "width": 6960,
+      "height": 4640,
+      "name": "Arvid Lindblad",
+      "source": "https://commons.wikimedia.org/wiki/File:Arvid_Lindblad_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A8657).jpg",
+      "author": "Yu Chu Chin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Lindblad no Melbourne Walk do GP da Austrália, 2026.",
+        "Lindblad at the Melbourne Walk during the Australian Grand Prix, 2026."
+      ],
+      "object_position": "65% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/arvid_lindblad-2f064f190674.jpg"
+    },
+    "bearman": {
+      "driver_id": "bearman",
+      "sha256": "5187e75ac33c4307151cea341e3ba7eb7bc24781858ec4adc1fdd98ef69f48e9",
+      "width": 2347,
+      "height": 3521,
+      "name": "Oliver Bearman",
+      "source": "https://commons.wikimedia.org/wiki/File:Oliver_Bearman_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A7963).jpg",
+      "author": "Yu Chu Chin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Bearman no Melbourne Walk do GP da Austrália, 2026.",
+        "Bearman at the Melbourne Walk during the Australian Grand Prix, 2026."
+      ],
+      "object_position": "50% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/bearman-5187e75ac33c.jpg"
+    },
+    "bortoleto": {
+      "driver_id": "bortoleto",
+      "sha256": "04186f8773e7f068badfd4ce7f3b03f36bcb6fa4990e6f1cdf03f4872ff1c205",
+      "width": 6297,
+      "height": 4198,
+      "name": "Gabriel Bortoleto",
+      "source": "https://commons.wikimedia.org/wiki/File:Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A8581).jpg",
+      "author": "Yu Chu Chin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Bortoleto no Melbourne Walk do GP da Austrália, 2026.",
+        "Bortoleto at the Melbourne Walk during the Australian Grand Prix, 2026."
+      ],
+      "object_position": "100% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/bortoleto-04186f8773e7.jpg"
+    },
+    "bottas": {
+      "driver_id": "bottas",
+      "sha256": "8479060c1482d8df1ac5bb4ea049d07bd933272ac8b3d8c4e843158fb98dc66a",
+      "width": 3898,
+      "height": 5847,
+      "name": "Valtteri Bottas",
+      "source": "https://commons.wikimedia.org/wiki/File:Valtteri_Bottas_at_the_2026_Adelaide_Motorsport_Festival_(028A7591).jpg",
+      "author": "Yu Chu Chin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Bottas no Adelaide Motorsport Festival, 2026.",
+        "Bottas at the Adelaide Motorsport Festival, 2026."
+      ],
+      "object_position": "50% 10%",
+      "historical": true,
+      "path": "static/pitwall-profiles/bottas-8479060c1482.jpg"
+    },
+    "colapinto": {
+      "driver_id": "colapinto",
+      "sha256": "263fb440e41293a024790df47da9df71ff6d015b0b8417dc03739ae61ddeec93",
+      "width": 6960,
+      "height": 4640,
+      "name": "Franco Colapinto",
+      "source": "https://commons.wikimedia.org/wiki/File:Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A8694).jpg",
+      "author": "Yu Chu Chin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Colapinto no Melbourne Walk do GP da Austrália, 2026.",
+        "Colapinto at the Melbourne Walk during the Australian Grand Prix, 2026."
+      ],
+      "object_position": "40% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/colapinto-263fb440e412.jpg"
+    },
+    "gasly": {
+      "driver_id": "gasly",
+      "sha256": "83ba9c4542392bd6377620391f5dfc516bb1043930a5b58d084cf99a68da7ad8",
+      "width": 1654,
+      "height": 2320,
+      "name": "Pierre Gasly",
+      "source": "https://commons.wikimedia.org/wiki/File:2019_Formula_One_tests_Barcelona,_Gasly_(47200027932).jpg",
+      "author": "Marc Alvarado",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "caption": [
+        "Gasly durante os testes de pré-temporada em Barcelona, 2019.",
+        "Gasly during pre-season testing in Barcelona, 2019."
+      ],
+      "object_position": "50% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/gasly-83ba9c454239.jpg"
+    },
+    "hadjar": {
+      "driver_id": "hadjar",
+      "path": "static/pitwall-profiles/hadjar-a2d18c4cf089.jpg",
+      "sha256": "a2d18c4cf08945b1a8dfa7ac83b86777c74b53ae59c196537b416817a73cd16c",
+      "width": 6960,
+      "height": 4640,
+      "name": "Isack Hadjar",
+      "source": "https://commons.wikimedia.org/wiki/File:Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A8753).jpg",
+      "author": "Yu Chu Chin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Hadjar no Melbourne Walk durante o GP da Austrália, 2026.",
+        "Hadjar at the Melbourne Walk during the Australian GP, 2026."
+      ],
+      "object_position": "50% 0%",
+      "historical": true
+    },
+    "hamilton": {
+      "driver_id": "hamilton",
+      "path": "static/pitwall-profiles/hamilton-4b963d4712eb.jpg",
+      "sha256": "4b963d4712eb20af4d3240df9dd531ff64cf97ab9d81111c418ee30ccc5b4f7f",
+      "width": 4864,
+      "height": 3648,
+      "name": "Lewis Hamilton",
+      "source": "https://commons.wikimedia.org/wiki/File:Lewis_Hamilton_cidad%C3%A3o_honor%C3%A1rio_2022.jpg",
+      "author": "Marina Ramos/ Câmara dos Deputados",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "caption": [
+        "Hamilton recebe a cidadania honorária brasileira em Brasília, 2022.",
+        "Hamilton receives honorary Brazilian citizenship in Brasília, 2022."
+      ],
+      "object_position": "50% 0%",
+      "historical": true
+    },
+    "hulkenberg": {
+      "driver_id": "hulkenberg",
+      "path": "static/pitwall-profiles/hulkenberg-b4e818773d37.jpg",
+      "sha256": "b4e818773d377cfe48d1fb035063a14be7b8e14b7584d0aa4eddca03c5f7198d",
+      "width": 5000,
+      "height": 4000,
+      "name": "Nico Hülkenberg",
+      "source": "https://commons.wikimedia.org/wiki/File:2017_United_States_Grand_Prix_-_Nico_H%C3%BClkenberg_01.jpg",
+      "author": "Steve",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "caption": [
+        "Hülkenberg, à direita, durante entrevista em Austin, 2017.",
+        "Hülkenberg, on the right, during an interview in Austin, 2017."
+      ],
+      "object_position": "50% 0%",
+      "historical": true
+    },
+    "kevin_magnussen": {
+      "driver_id": "kevin_magnussen",
+      "path": "static/pitwall-profiles/kevin_magnussen-7cffc606389c.jpg",
+      "sha256": "7cffc606389ce7e771c57cc33cafdffe1243c2294217257e3d2f0584b8871285",
+      "width": 3127,
+      "height": 4690,
+      "name": "Kevin Magnussen",
+      "source": "https://commons.wikimedia.org/wiki/File:2017_United_States_Grand_Prix_Magnussen_(24128155318).jpg",
+      "author": "https://www.flickr.com/photos/mrlaugh",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "caption": [
+        "Magnussen durante entrevista em Austin, 2017.",
+        "Magnussen during an interview in Austin, 2017."
+      ],
+      "object_position": "50% 20%",
+      "historical": true
+    },
+    "lawson": {
+      "driver_id": "lawson",
+      "path": "static/pitwall-profiles/lawson-d385d0d4d51e.jpg",
+      "sha256": "d385d0d4d51e7f0aed1a6fcbc1dd365c0b4194de73908ad102ec1d394228bb42",
+      "width": 4079,
+      "height": 6125,
+      "name": "Liam Lawson",
+      "source": "https://commons.wikimedia.org/wiki/File:Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk,_Melbourne_(028A7733).jpg",
+      "author": "Yu Chu Chin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Lawson no Fan Zone da Red Bull em Melbourne, 2026.",
+        "Lawson at Red Bull's Fan Zone in Melbourne, 2026."
+      ],
+      "object_position": "50% 3%",
+      "historical": true
+    },
+    "leclerc": {
+      "driver_id": "leclerc",
+      "path": "static/pitwall-profiles/leclerc-6e7309ebd969.jpg",
+      "sha256": "6e7309ebd969b4f423d5dac34b2f670e9139c4e97f03dbd05a26c2b3219551ac",
+      "width": 2160,
+      "height": 3240,
+      "name": "Charles Leclerc",
+      "source": "https://commons.wikimedia.org/wiki/File:2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro.jpg",
+      "author": "Steffen Prößdorf",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Leclerc após a corrida em Zandvoort, 2024.",
+        "Leclerc after the race in Zandvoort, 2024."
       ],
       "object_position": "50% 0%",
       "historical": true
@@ -37,6 +289,245 @@
       ],
       "object_position": "50% 0%",
       "historical": true
+    },
+    "norris": {
+      "driver_id": "norris",
+      "path": "static/pitwall-profiles/norris-ee49583fc237.jpg",
+      "sha256": "ee49583fc237eb5aa9cd81be0036ea8d554ac704d6b724d23f2b24dfe540d4aa",
+      "width": 3240,
+      "height": 2160,
+      "name": "Lando Norris",
+      "source": "https://commons.wikimedia.org/wiki/File:2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3968_by_Stepro.jpg",
+      "author": "Steffen Prößdorf",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Norris celebra a vitória em Zandvoort, 2024.",
+        "Norris celebrates victory in Zandvoort, 2024."
+      ],
+      "object_position": "50% 0%",
+      "historical": true
+    },
+    "ocon": {
+      "driver_id": "ocon",
+      "path": "static/pitwall-profiles/ocon-92092997f1a8.jpg",
+      "sha256": "92092997f1a88285e3faf397eb9b0861721c26d2a40989dc847666a6b9bf8089",
+      "width": 5184,
+      "height": 2920,
+      "name": "Esteban Ocon",
+      "source": "https://commons.wikimedia.org/wiki/File:Esteban_Ocon_2024_Suzuka.jpg",
+      "author": "Rrtb505050",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "caption": [
+        "Ocon no pit lane durante o GP do Japão, Suzuka, 2024.",
+        "Ocon in the pit lane during the Japanese GP, Suzuka, 2024."
+      ],
+      "object_position": "50% 0%",
+      "historical": true
+    },
+    "perez": {
+      "driver_id": "perez",
+      "path": "static/pitwall-profiles/perez-1bf93388b706.jpg",
+      "sha256": "1bf93388b70690c60fd6132efce2c276e8613600201aeb6134f32dfcf6145231",
+      "width": 3240,
+      "height": 2160,
+      "name": "Sergio Pérez",
+      "source": "https://commons.wikimedia.org/wiki/File:2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3762_by_Stepro.jpg",
+      "author": "Steffen Prößdorf",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Pérez se prepara para a largada em Zandvoort, 2024.",
+        "Pérez prepares for the start in Zandvoort, 2024."
+      ],
+      "object_position": "50% 0%",
+      "historical": true
+    },
+    "piastri": {
+      "driver_id": "piastri",
+      "sha256": "23127882587e5699de5181ff9d99cdd747f0985d60bfc1f6e37b849fd41ceba3",
+      "width": 6960,
+      "height": 4640,
+      "name": "Oscar Piastri",
+      "source": "https://commons.wikimedia.org/wiki/File:Oscar_Piastri_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A8608).jpg",
+      "author": "Yu Chu Chin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Piastri no Melbourne Walk, durante o GP da Austrália de 2026.",
+        "Piastri on the Melbourne Walk during the 2026 Australian Grand Prix."
+      ],
+      "object_position": "50% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/piastri-23127882587e.jpg"
+    },
+    "ricciardo": {
+      "driver_id": "ricciardo",
+      "sha256": "e240548bac97ff84927424c86485afe0a07bb8c7a0dc0482f0ab1f3a690f93fe",
+      "width": 4000,
+      "height": 4000,
+      "name": "Daniel Ricciardo",
+      "source": "https://commons.wikimedia.org/wiki/File:Daniel_Ricciardo_(37949013322).jpg",
+      "author": "Steve from Austin, TX, USA",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "caption": [
+        "Ricciardo durante um evento em Austin, 2017.",
+        "Ricciardo during an event in Austin, 2017."
+      ],
+      "object_position": "65% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/ricciardo-e240548bac97.jpg"
+    },
+    "russell": {
+      "driver_id": "russell",
+      "sha256": "db6ebac75c71ec8ec6dcd9772db35d7d36f5efea3fefe341ab377c67ac483ff0",
+      "width": 5969,
+      "height": 3356,
+      "name": "George Russell",
+      "source": "https://commons.wikimedia.org/wiki/File:KingsLeonSilverstne040724_(28_of_112)_(53838006028).jpg",
+      "author": "Raph_PH",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "caption": [
+        "Russell em evento em Silverstone, 2024.",
+        "Russell at an event in Silverstone, 2024."
+      ],
+      "object_position": "50% 0%",
+      "historical": true,
+      "focal_crop": {
+        "top": 0,
+        "right": 26.86645242845611,
+        "bottom": 50,
+        "left": 35.82137406905375
+      },
+      "path": "static/pitwall-profiles/russell-db6ebac75c71.jpg"
+    },
+    "ryo_hirakawa": {
+      "driver_id": "ryo_hirakawa",
+      "sha256": "311ad51e262a96e2112b67c670db98aee36a497ec4571fd76800a0d520888262",
+      "width": 4929,
+      "height": 2540,
+      "name": "Ryo Hirakawa",
+      "source": "https://commons.wikimedia.org/wiki/File:Ryo_Hirakawa,_Brendon_Hartley_%26_Sebastien_Buemi_(Toyota_-8)_at_the_autograph_session_at_the_2022_Le_Mans_(54279836035).jpg",
+      "author": "Martin Lee from London, UK",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "caption": [
+        "Hirakawa, à esquerda, durante sessão de autógrafos em Le Mans, 2022.",
+        "Hirakawa, left, during an autograph session at Le Mans, 2022."
+      ],
+      "object_position": "0% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/ryo_hirakawa-311ad51e262a.jpg"
+    },
+    "sainz": {
+      "driver_id": "sainz",
+      "sha256": "26836111f84ebb0cc4cc125196bb3dbdfbe48ad3ba0969dfca17ab26ffa41063",
+      "width": 3456,
+      "height": 5184,
+      "name": "Carlos Sainz",
+      "source": "https://commons.wikimedia.org/wiki/File:Formel12021-SchlossGabelhofen(15).jpg",
+      "author": "XaviYuahanda",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Sainz na Áustria, 2021.",
+        "Sainz in Austria, 2021."
+      ],
+      "object_position": "50% 20%",
+      "historical": true,
+      "path": "static/pitwall-profiles/sainz-26836111f84e.jpg",
+      "encoded_width": 5184,
+      "encoded_height": 3456,
+      "exif_orientation": 8
+    },
+    "sargeant": {
+      "driver_id": "sargeant",
+      "sha256": "e5a79ef7479cb332591f07428f1622da5638b72e01a0848016b34ba04ecef406",
+      "width": 5472,
+      "height": 3080,
+      "name": "Logan Sargeant",
+      "source": "https://commons.wikimedia.org/wiki/File:Logan_Sargeant_NYC.jpg",
+      "author": "JazzyJoeyD",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Sargeant durante encontro com a imprensa em Nova York, 2024.",
+        "Sargeant speaking with the media in New York, 2024."
+      ],
+      "object_position": "65% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/sargeant-e5a79ef7479c.jpg"
+    },
+    "stroll": {
+      "driver_id": "stroll",
+      "sha256": "2d75182aa617a0ce5f1027c0e2484d58bb48f95fd10659cc1f8b5c2f9d02f4a9",
+      "width": 4482,
+      "height": 2889,
+      "name": "Lance Stroll",
+      "source": "https://www.flickr.com/photos/60179301@N00/35054348014/",
+      "author": "Ben Sutherland",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "caption": [
+        "Stroll, à esquerda, com Fernando Alonso, 2017.",
+        "Stroll, on the left, with Fernando Alonso, 2017."
+      ],
+      "object_position": "0% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/stroll-2d75182aa617.jpg"
+    },
+    "tsunoda": {
+      "driver_id": "tsunoda",
+      "sha256": "26914d38e485e7bbd69e413218e6ff2f645282fd7fcfc074038be052bde1b335",
+      "width": 2564,
+      "height": 3846,
+      "name": "Yuki Tsunoda",
+      "source": "https://commons.wikimedia.org/wiki/File:Yuki_Tsunoda_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A8672).jpg",
+      "author": "Yu Chu Chin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Tsunoda no Melbourne Walk, durante o GP da Austrália de 2026.",
+        "Tsunoda on the Melbourne Walk during the 2026 Australian Grand Prix."
+      ],
+      "object_position": "50% 10%",
+      "historical": true,
+      "path": "static/pitwall-profiles/tsunoda-26914d38e485.jpg"
+    },
+    "zhou": {
+      "driver_id": "zhou",
+      "sha256": "375bac8a6ce6b8a408c2d90e7f0d435150a3a314cf31630ddc8afed0fb6ea72c",
+      "width": 3941,
+      "height": 5912,
+      "name": "Guanyu Zhou",
+      "source": "https://commons.wikimedia.org/wiki/File:Zhou_Guanyu_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A8408).jpg",
+      "author": "Yu Chu Chin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": [
+        "Zhou no Melbourne Walk, durante o GP da Austrália de 2026.",
+        "Zhou on the Melbourne Walk during the 2026 Australian Grand Prix."
+      ],
+      "object_position": "50% 0%",
+      "historical": true,
+      "path": "static/pitwall-profiles/zhou-375bac8a6ce6.jpg"
+    }
+  },
+  "deferred_profiles": {
+    "doohan": {
+      "driver_id": "doohan",
+      "status": "awaiting_suitable_original",
+      "reason": [
+        "Foto espontânea em alta resolução com licença de uso ainda não localizada.",
+        "A suitable high-resolution candid photograph with a reuse license has not yet been located."
+      ],
+      "publication_decision": "retain_existing_portrait_temporarily",
+      "reviewed_on": "2026-11-07",
+      "fallback_path": "dashboard_assets/fan/portraits/doohan.png",
+      "fallback_sha256": "a179429c570782c8b14129b3b9489515b3a718e63955a79afd588c7677108a11"
     }
   }
 }

@@ -1,12 +1,22 @@
 # Pitwall Lab evolution
 
-## 0.14.5 — 2026-11-08
+## 0.15.1 — 2026-11-08
 
 The Predictions page groups the forecast status with the action that opens the GP cards. When a forecast is pending, the page explains why and links to sessions for the same GP.
 
 Each card shows the driver's podium chance above the illustration. The dialog expands from its button and opens directly with reduced motion. Revealed cards retain their state when reopened, and Escape returns focus to the button. Compact podium ranks have a minimum contrast ratio of 5.50:1.
 
 Local validation covers Chromium and WebKit in Portuguese and English, on desktop and emulated mobile. Recorded probabilities and the frozen v1 model were preserved.
+
+## 0.15.0 — 2026-11-07
+
+Profiles for 26 additional drivers receive high-resolution candid photographs, separate from podium imagery. Including Antonelli and Verstappen, whose approved originals remain unchanged, 28 profiles now have their own editorial photograph. Every image retains its original bytes, source, author, license and Portuguese/English caption, with the year and historical context stated explicitly.
+
+Russell's focal viewport retains at least 1600 native pixels on each axis; Sainz keeps the JPEG's EXIF orientation without conversion. Browser checks verify the delivered original, pixel density 2, identity, credits, aspect ratio and absence of overflow on desktop and mobile. Visual review and automated assertions have separate records.
+
+Doohan temporarily retains his current portrait by explicit editorial decision: a suitable candid photograph with a reuse license is still missing. This deferral is recorded separately in the catalogue; it does not lower the resolution requirement for the 28 selected photographs or permit other drivers to be omitted. Doohan's curation continues. Podium portraits, GP illustrations, data, model v1, probabilities and recorded forecasts remain preserved. CI, release package and public-site acceptance require their own evidence.
+
+Post-qualifying collection retains the published drivers’ standings when the runner only has an older snapshot. Tests for an unissued forecast and for the standings table use controlled inputs so a valid new emission can pass validation.
 
 ## 0.14.4 — 2026-11-07
 

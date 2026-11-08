@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 
 from pitwall.paths import PROJECT_ROOT
 from pitwall.i18n import language, translate
-from pitwall.dashboard.hero_assets import HERO_IMAGES, PORTRAIT_OVERRIDES, portrait_asset, profile_asset
+from pitwall.dashboard.hero_assets import HERO_IMAGES, PORTRAIT_OVERRIDES, portrait_asset, profile_asset, profile_crop_geometry
 from pitwall.dashboard.journey import race_identity
 from pitwall.dashboard.media import responsive_attributes
 
@@ -84,15 +84,25 @@ def hero(title, subtitle='', image='method', extra='', dark=False, photo=None, a
         editorial = profile_asset(person['id'])
         if editorial:
             caption = editorial['caption'][language() == 'en']
+            photograph = ('<img class="fan-hero-image fan-hero-candid" src="{}" '
+                          'width="{}" height="{}" style="object-position:{}" alt="{}" decoding="async">').format(
+                escape(editorial['src'],quote=True),editorial['width'],editorial['height'],
+                escape(editorial['object_position'],quote=True),escape(caption,quote=True))
+            crop = profile_crop_geometry(editorial)
+            if crop:
+                crop_style = ('--pw-profile-crop-ratio:{aspect_ratio:.12g};'
+                              '--pw-profile-crop-width:{width_percent:.12g}%;'
+                              '--pw-profile-crop-left:{left_percent:.12g}%;'
+                              '--pw-profile-crop-top:{top_percent:.12g}%').format(**crop)
+                photograph = '<span class="pw-profile-image-window--crop" style="{}">{}</span>'.format(
+                    crop_style, photograph)
             return ('<section class="fan-hero fan-hero-profile-editorial" data-hero-kind="{}" data-driver-id="{}">'
                     '<div class="fan-hero-copy"><h1>{}</h1><p>{}</p>{}</div>'
-                    '<figure class="pw-profile-photograph"><img class="fan-hero-image fan-hero-candid" src="{}" '
-                    'width="{}" height="{}" style="object-position:{}" alt="{}" decoding="async">'
+                    '<figure class="pw-profile-photograph">{}'
                     '<figcaption>{} <a href="{}" target="_blank" rel="noopener noreferrer">{}</a> · '
                     '<a href="{}" target="_blank" rel="noopener noreferrer">{}</a></figcaption></figure></section>').format(
                         'profile',escape(person['id'],quote=True),text(title),text(subtitle),extra,
-                        escape(editorial['src'],quote=True),editorial['width'],editorial['height'],
-                        escape(editorial['object_position'],quote=True),escape(caption,quote=True),escape(caption),
+                        photograph,escape(caption),
                         escape(editorial['source'],quote=True),escape(editorial['author']),
                         escape(editorial['license_url'],quote=True),escape(editorial['license']))
         spec=portrait_asset(person['id'],person['name'])

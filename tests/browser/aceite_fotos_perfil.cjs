@@ -62,9 +62,11 @@ async function inspect(hero) {
   return hero.evaluate(hero => {
     const rect = element => {const r = element.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,
       bottom:r.bottom,width:r.width,height:r.height};};
-    const img = hero.querySelector('.fan-hero-candid'), r = img.getBoundingClientRect(), style = getComputedStyle(img);
+    const img = hero.querySelector('.fan-hero-candid'), imageRect = img.getBoundingClientRect(), style = getComputedStyle(img);
+    const crop = img.closest('.pw-profile-image-window--crop'), visible = crop || img;
+    const r = visible.getBoundingClientRect();
     const clips = [];
-    for (let node = img.parentElement; node; node = node.parentElement) {
+    for (let node = visible.parentElement; node; node = node.parentElement) {
       const css = getComputedStyle(node);
       if (['hidden','clip','auto','scroll'].includes(css.overflowX)) {
         const b = node.getBoundingClientRect(), left = b.left + node.clientLeft;
@@ -72,10 +74,19 @@ async function inspect(hero) {
           left, right:left + node.clientWidth, clipped:r.left < left - 1 || r.right > left + node.clientWidth + 1});
       }
     }
-    return {natural:[img.naturalWidth,img.naturalHeight], display:rect(img), hero:rect(hero),
+    const sourceView = crop ? {
+      left:100 * (r.left-imageRect.left) / imageRect.width,
+      top:100 * (r.top-imageRect.top) / imageRect.height,
+      right:100 * (imageRect.right-r.right) / imageRect.width,
+      bottom:100 * (imageRect.bottom-r.bottom) / imageRect.height,
+      width:img.naturalWidth * r.width / imageRect.width,
+      height:img.naturalHeight * r.height / imageRect.height,
+    } : null;
+    return {natural:[img.naturalWidth,img.naturalHeight], display:rect(visible), rendered_image:rect(img),
+      crop_window:crop && rect(crop), source_view:sourceView, transform:style.transform, hero:rect(hero),
       figure:rect(img.closest('figure')), dpr:devicePixelRatio, fit:style.objectFit,
       mask:style.maskImage || style.webkitMaskImage || 'none', clip:style.clipPath,
-      capacity:Math.min(img.naturalWidth / r.width, img.naturalHeight / r.height),
+      capacity:Math.min(img.naturalWidth / imageRect.width, img.naturalHeight / imageRect.height),
       overflow:document.documentElement.scrollWidth > innerWidth + 1,
       viewport:innerWidth, clipping_ancestors:clips, source_path:new URL(img.currentSrc).pathname,
       alt:img.alt};
@@ -93,13 +104,21 @@ async function run() {
     const raw = fs.readFileSync(path.join(root, 'frontend_assets/profile_photos.json'));
     const catalogue = JSON.parse(raw);
     assert.equal(catalogue.schema, 1, 'Unexpected profile photo catalogue schema');
-    const photos = Object.entries(catalogue.photos);
-    assert(photos.length && photos.some(([id]) => id === 'antonelli') &&
-      photos.some(([id]) => id === 'max_verstappen'), 'Approved profile identities are missing');
+    const allPhotos = Object.entries(catalogue.photos);
+    report.deferred_driver_ids = Object.keys(catalogue.deferred_profiles || {});
+    assert(allPhotos.length && allPhotos.some(([id]) => id === 'antonelli') &&
+      allPhotos.some(([id]) => id === 'max_verstappen'), 'Approved profile identities are missing');
+    const selected = process.env.PITWALL_PROFILE_IDS?.split(',');
+    const photos = selected ? selected.map(id => {
+      const photo = allPhotos.find(([driver]) => driver === id);
+      assert(photo, 'Requested review identity is missing: ' + id);return photo;
+    }) : allPhotos;
+    if (selected) assert.equal(new Set(selected).size, selected.length, 'Duplicate review identity');
+    report.selected_driver_ids = selected || null;
     report.version = version;report.catalogue_sha256 = digest(raw);
     report.verifier_sha256 = digest(fs.readFileSync(__filename));
     report.expected_cases = photos.length * 4;
-    for (const [driver, photo] of photos) {
+    for (const [driver, photo] of allPhotos) {
       assert(/^[a-z0-9_]+$/.test(driver) && photo.driver_id === driver, 'Invalid photo identity');
       assert(/^[a-f0-9]{64}$/.test(photo.sha256), 'Invalid photo digest');
       assert.equal(photo.path, `static/pitwall-profiles/${driver}-${photo.sha256.slice(0,12)}.jpg`, 'Unexpected immutable photo path');
@@ -128,7 +147,7 @@ async function run() {
       const stem = `${engine}-${driver}-${lang}-${width}-2x`;
       try {
         await page.goto(base.replace(/\/$/, '') + '/?' + new URLSearchParams({tela:'Pilotos',visao:'perfil',
-          piloto:driver,anos:'2026',temporada:'2026',gp:'18',lang}), {waitUntil:'domcontentloaded',timeout:90000});
+          piloto:driver,anos:'2024,2025,2026',temporada:'2026',gp:'18',lang}), {waitUntil:'domcontentloaded',timeout:90000});
         const app = await surface(page,base), hero = await ready(app,driver,photo,lang,version);
         const selector = `.fan-hero-profile-editorial[data-driver-id="${driver}"] .fan-hero-candid`;
         row.served_image = await verifyImage(page,app,{selector,static_path:photo.path,sha256:photo.sha256});
@@ -145,6 +164,18 @@ async function run() {
         assert(!m.clipping_ancestors.some(c => c.clipped), 'An ancestor clips the photo horizontally');
         assert.equal(m.clip, 'none', 'Unexpected photo clip path');
         assert.equal(m.mask, 'none', 'Unexpected photo mask');
+        assert.equal(Boolean(m.crop_window), Boolean(photo.focal_crop), 'Unexpected focal crop window');
+        if (photo.focal_crop) {
+          assert.equal(m.transform, 'none', 'Focal framing must retain the source pixel mapping');
+          assert(Math.abs(m.rendered_image.width / m.rendered_image.height - photo.width / photo.height) < .001,
+            'Focal photograph is stretched');
+          for (const side of ['top','right','bottom','left']) {
+            assert(Math.abs(m.source_view[side] - photo.focal_crop[side]) < .01, 'Focal source edge differs: ' + side);
+          }
+          assert(m.source_view.width >= 1600 && m.source_view.height >= 1600, 'Focal window discards too many native pixels');
+          assert(Math.min(m.source_view.width / m.display.width, m.source_view.height / m.display.height) >= 2,
+            'Visible source pixels cannot support DPR2');
+        }
         assert.equal(m.alt, photo.caption[lang === 'en' ? 1 : 0], 'Photo alt text differs from expected identity/context');
         const caption = hero.locator('figcaption');
         row.caption = normalise(await caption.innerText());
@@ -153,7 +184,8 @@ async function run() {
         assert.equal(await caption.getByRole('link',{name:photo.license,exact:true}).getAttribute('href'), photo.license_url, 'License link differs');
         row.screenshots={page:stem + '-page.png',photo:stem + '-photo.png'};
         await page.screenshot({path:path.join(output,row.screenshots.page)});
-        await hero.locator('.fan-hero-candid').screenshot({path:path.join(output,row.screenshots.photo)});
+        await hero.locator(photo.focal_crop ? '.pw-profile-image-window--crop' : '.fan-hero-candid')
+          .screenshot({path:path.join(output,row.screenshots.photo)});
         assert.equal(row.pageerrors.length, 0, 'Unfiltered browser pageerror');
         row.status='passed';save();
         console.log(JSON.stringify({engine,driver,width,lang,status:row.status}));
