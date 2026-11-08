@@ -1,8 +1,11 @@
 """A future calendar or a different GP must never unlock forecast preparation."""
 from copy import deepcopy
 from datetime import datetime, timezone
+import json
 from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
 from operacao2026 import readiness, weekend, cloud
 
@@ -41,7 +44,11 @@ class ReadinessTests(unittest.TestCase):
                          'janela_prospectiva_encerrada')
 
     def test_offline_inventory_is_honest_and_uses_three_different_team_cards(self):
-        result=readiness.inspect(CONFIG,ROOT,datetime(2026,11,3,18,tzinfo=timezone.utc))
+        with TemporaryDirectory() as temporary:
+            pre_qualifying = Path(temporary) / 'public.json'
+            pre_qualifying.write_text(json.dumps(dict(self.public, sessoes=[])), encoding='utf-8')
+            with patch.object(cloud, 'PUBLIC', pre_qualifying):
+                result = readiness.inspect(CONFIG, ROOT, datetime(2026, 11, 3, 18, tzinfo=timezone.utc))
         self.assertEqual(result['identity'],[2026,20,'interlagos'])
         self.assertEqual(result['qualification_status'],'aguardando_classificacao')
         self.assertFalse(result['forecast_emission_attempted']);self.assertFalse(result['forecast_emitted_by_this_check'])
