@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.15.1 — 2026-11-08
+
+Tarot catalogue validation retains the 67 races and artwork from the original collection as its reference. New emissions are checked for driver, team and pose. Missing artwork for a future entry follows the catalogue fallback while its probabilities remain eligible for registration.
+
 ## 0.15.0 — 2026-11-07
 
 Profiles for 26 additional drivers receive high-resolution candid photographs, separate from podium imagery. Including Antonelli and Verstappen, whose approved originals remain unchanged, 28 profiles now have their own editorial photograph. Every image retains its original bytes, source, author, license and Portuguese/English caption, with the year and historical context stated explicitly.
