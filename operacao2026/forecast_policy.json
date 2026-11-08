@@ -5,6 +5,11 @@
       2026,
       20,
       "interlagos"
+    ],
+    [
+      2026,
+      21,
+      "vegas"
     ]
   ],
   "max_attempts": 4,
@@ -44,5 +49,19 @@
       "canonical_id": "Use the unchanged driverId from validated qualifying; not available at preparation time.",
       "openf1_fallback": "Requires reviewed literal mapping; no number or ID is inferred from the announcement."
     }
+  ],
+  "p1_events": [
+    [
+      2026,
+      20,
+      "interlagos"
+    ]
+  ],
+  "full_roster_required": [
+    [
+      2026,
+      21,
+      "vegas"
+    ]
   ]
 }

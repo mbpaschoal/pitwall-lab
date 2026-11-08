@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from urllib.parse import unquote, urlsplit
 
 from operacao2026 import cloud, fontes, weekend
 from pitwall.data.archive_collection import instant, save_checkpoint
@@ -50,10 +51,21 @@ def policy(root):
             or not 1 <= value['max_attempts'] <= 4
             or value['retry_hours'] < 2 or value['publication_margin_minutes'] < 60):
         raise ValueError('Invalid automatic forecast policy')
+    if any(event not in value['events'] for event in value.get('p1_events', [])):
+        raise ValueError('P1 event is outside the native policy')
+    if any(event not in value['events'] for event in value.get('full_roster_required', [])):
+        raise ValueError('Full-roster gate is outside the native policy')
     return value
 
 
-def publication_guard(root, forecast, now=None):
+def roster_rule(rule, identity):
+    matches = [r for r in rule.get('roster_reviews', []) if r['identity'] == identity]
+    if len(matches) > 1:
+        raise ValueError('Ambiguous event roster review')
+    return matches[0] if matches else None
+
+
+def publication_guard(root, forecast, now=None, *, check_evidence=True):
     """Recheck immediately before Git publication, including conflict recovery."""
     if not forecast or forecast.get('status') != 'prepared':
         return
@@ -78,6 +90,15 @@ def publication_guard(root, forecast, now=None):
     margin = timedelta(minutes=rule['publication_margin_minutes'])
     if now >= instant(forecast['race_start_utc']) - margin:
         raise ValueError('Forecast publication window closed; preserve the unpublished emission')
+    if check_evidence and identity in rule.get('full_roster_required', []):
+        config = matches[0]
+        manifest = json.loads(relative_file(root, declaration['diretorio'] + '/manifesto.json').read_text())
+        validate_manifest_schedule(config, manifest)
+        bundle = forecast.get('qualifying_bundle')
+        current_review = review_forecast_roster(root, config, declaration['snapshot'],
+                                                relative_file(root, bundle) if bundle else None, now=now)
+        if current_review != forecast.get('roster_review'):
+            raise ValueError('Reviewed roster changed since the forecast was prepared')
 
 
 def relative_file(root, name):
@@ -247,7 +268,47 @@ def verify_cards(root, directory, year):
     return result
 
 
-def review_forecast_roster(root, config, snapshot, bundle=None):
+def verify_full_roster_source(root, config, source, now):
+    raw = relative_file(root, source['file']).read_bytes()
+    url = urlsplit(source['url'])
+    path = re.sub(r'[^a-z0-9]+', ' ', unquote(url.path).lower())
+    event_name = re.sub(r'[^a-z0-9]+', ' ', config['nome'].lower())
+    if (url.scheme != 'https' or url.netloc not in ('www.fia.com', 'api.fia.com')
+            or 'entry list' not in path or event_name not in path
+            or str(config['temporada']) not in path.split()
+            or not url.path.lower().endswith('.pdf') or not raw.startswith(b'%PDF-')
+            or source.get('document_type') != 'entry_list'
+            or instant(source['obtido_em_utc']) > now
+            or hashlib.sha256(raw).hexdigest() != source['sha256']):
+        raise ValueError('Official entry list is not verified for this event')
+
+
+def validate_schedule_snapshot(root, config, snapshot):
+    _, pages = fontes.ler_snapshot(root/'data/operacao_2026/snapshots', snapshot,
+                                   endpoints={'calendario'})
+    entries = [r for _, payload in pages.get('calendario', [])
+               for r in payload['MRData']['RaceTable']['Races']
+               if r.get('season') == str(config['temporada']) and r.get('round') == str(config['rodada'])]
+    if len(entries) != 1 or entries[0]['Circuit']['circuitId'] != config['circuito_id']:
+        raise ValueError('Canonical forecast calendar belongs to another event')
+    race = entries[0]
+    q = next(s for s in config['sessions'] if s['session_name'] == 'Qualifying')
+    if (instant(race['date'] + 'T' + race['time']) != instant(config['largada_utc'])
+            or instant(race['Qualifying']['date'] + 'T' + race['Qualifying']['time']) != instant(q['date_start'])):
+        raise ValueError('Current calendar differs from the reviewed event schedule')
+
+
+def validate_manifest_schedule(config, manifest):
+    clock = manifest['corte_temporal']
+    q = next(s for s in config['sessions'] if s['session_name'] == 'Qualifying')
+    ano, rodada, circuito = cloud.identity(manifest['evento'])
+    if ((int(ano), int(rodada), circuito) != cloud.identity(config)
+            or instant(clock['corrida_programada_em_utc']) != instant(config['largada_utc'])
+            or instant(clock['qualificacao_inicio_utc']) != instant(q['date_start'])):
+        raise ValueError('Emission schedule differs from the reviewed event')
+
+
+def review_forecast_roster(root, config, snapshot, bundle=None, now=None):
     """Validate explicit announcements against Q; never manufacture driver IDs.
 
     Literal name variants are assertions on canonical records, not an ID join.
@@ -255,14 +316,21 @@ def review_forecast_roster(root, config, snapshot, bundle=None):
     prevents an old 22-driver population from silently passing the count gate.
     """
     identity = list(cloud.identity(config))
-    reviews = [r for r in policy(root).get('roster_reviews', []) if r['identity'] == identity]
-    if not reviews:
+    rule = policy(root)
+    review = roster_rule(rule, identity)
+    full = identity in rule.get('full_roster_required', [])
+    if not review:
+        if full:
+            raise ValueError('Official full roster review required')
         return dict(status='no_event_review', identity=identity)
-    if len(reviews) != 1:
-        raise ValueError('Ambiguous event roster review')
-    review = reviews[0]
     source = review['source']
-    if hashlib.sha256(relative_file(root, source['file']).read_bytes()).hexdigest() != source['sha256']:
+    if full:
+        verify_full_roster_source(root, config, source, now or utc_now())
+        numbers = [r.get('car_number') for r in review['required_entries']]
+        if (len(numbers) != 22 or any(type(n) is not int or not 1 <= n <= 999 for n in numbers)
+                or len(set(numbers)) != len(numbers)):
+            raise ValueError('Full roster review requires 22 distinct car numbers')
+    elif hashlib.sha256(relative_file(root, source['file']).read_bytes()).hexdigest() != source['sha256']:
         raise ValueError('Roster announcement source changed')
     if bundle is not None:
         from operacao2026.openf1_qualificacao import carregar, MAPEAMENTO_2026
@@ -290,11 +358,14 @@ def review_forecast_roster(root, config, snapshot, bundle=None):
     for expected in review['required_entries']:
         matches = [r for r in records
             if [r['Driver'].get('givenName'), r['Driver'].get('familyName')] in expected['literal_names']
-            and r['Constructor']['constructorId'] == expected['team_id']]
+            and r['Constructor']['constructorId'] == expected['team_id']
+            and (not full or str(r.get('openf1_driver_number' if bundle else 'number')) == str(expected['car_number']))]
         if len(matches) != 1:
             raise ValueError('Announced driver/team is absent or ambiguous in qualifying')
         admitted.append(dict(driver_id=matches[0]['Driver']['driverId'],
                              team_id=expected['team_id']))
+    if full and {r['driver_id'] for r in admitted} != set(ids):
+        raise ValueError('Full roster review does not cover the exact qualifying population')
     return dict(status='verified', identity=identity, source=source,
                 admitted_entries=admitted, id_origin='unchanged_qualifying_record')
 
@@ -320,14 +391,21 @@ def prepare(root, event_path, state, now=None, run=command):
             or now <= instant(q['date_end'])+timedelta(minutes=30)):
         return dict(status='waiting_for_observed_qualifying')
     end, evidence_url = finish_evidence(root, entry, q, now)
+    full = identity in rule.get('full_roster_required', [])
+    if full:
+        review = roster_rule(rule, identity)
+        if not review:
+            return dict(status='waiting_for_roster_review')
+        verify_full_roster_source(root, config, review['source'], now)
     base = root/cloud.STATE/'forecasts'/('{}-{}'.format(config['temporada'], config['circuito_id']))
     base.mkdir(parents=True, exist_ok=True)
     if (base/'prepared.json').exists():
         prepared = json.loads((base/'prepared.json').read_text())
         if prepared['identity'] != identity or prepared['race_start_utc'] != config['largada_utc']:
             raise ValueError('Retained forecast has a different event')
-        publication_guard(root, prepared, now)
+        publication_guard(root, prepared, now, check_evidence=False)
         restore(root, base, prepared)
+        publication_guard(root, prepared, now)
         bundle = prepared.get('qualifying_bundle')
         prepared['roster_review'] = review_forecast_roster(root, config,
             prepared['declaration']['snapshot'], root/bundle if bundle else None)
@@ -351,6 +429,8 @@ def prepare(root, event_path, state, now=None, run=command):
         source = source_control(root, event_path)
         fontes.coletar_snapshot(root/'data/operacao_2026/snapshots', snapshot_id=snapshot,
                                 circuitos=(config['circuito_id'],), agora=now)
+        if full:
+            validate_schedule_snapshot(root, config, snapshot)
         common = ['--snapshot', snapshot, '--temporada', str(config['temporada']),
                   '--rodada', str(config['rodada']), '--circuito', config['circuito_id']]
         readiness = json.loads(run(root, ['operar_2026.py', 'estado', *common]))
@@ -365,7 +445,7 @@ def prepare(root, event_path, state, now=None, run=command):
                 raise ValueError('Neither canonical nor admitted OpenF1 Q is available')
             alternative = ['--openf1-diretorio', str(bundle), '--openf1-evento', str(event_path)]
             directories.append(str(bundle.relative_to(root)))
-        roster = review_forecast_roster(root, config, snapshot, bundle)
+        roster = review_forecast_roster(root, config, snapshot, bundle, now=now)
         cutoff = utc_now().isoformat()
         run(root, ['operar_2026.py', 'emitir', *common, '--id', emission,
                    '--sessao-encerrada-em', end, '--fonte-encerramento', evidence_url,
