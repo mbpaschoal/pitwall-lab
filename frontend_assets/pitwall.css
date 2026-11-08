@@ -189,3 +189,35 @@ nav[aria-label="Documentação"] { line-height:1.9; padding:4px 0 12px; }
  .pw-drivers-table th:nth-child(3), .pw-drivers-table td:nth-child(3) { display:none; }
  .pw-drivers-table th:nth-child(2), .pw-drivers-table td:nth-child(2) { width:58%; padding-left:0; }
 }
+
+.st-key-pilot-position-balance {
+  border-top: 1px solid var(--pw-border, #b8cbd9);
+  padding-block-start: 1rem;
+}
+.st-key-pilot-position-balance h3 {
+  font-family: AbrilFatfaceLocal, Georgia, serif;
+  font-weight: 400;
+}
+.st-key-pilot-position-balance [data-testid="stSelectbox"] [role="combobox"] { min-height: 44px; }
+.pilot-balance-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+  margin: 0;
+  padding-block: .7rem;
+  border-block: 1px solid var(--pw-border, #b8cbd9);
+}
+.pilot-balance-summary dt { color: var(--pw-muted); font-size: .875rem; }
+.pilot-balance-summary dd { margin: .125rem 0 0; font-size: 1.5rem; font-weight: 700; }
+.pilot-balance-summary dd, .pilot-balance-races td { font-variant-numeric: tabular-nums; }
+.pilot-balance-races { width: 100%; table-layout: fixed; border-collapse: collapse; }
+.pilot-balance-races th, .pilot-balance-races td {
+  border-bottom: 1px solid var(--pw-border, #b8cbd9);
+  padding: .45rem .25rem;
+}
+.pilot-balance-races th:first-child { text-align: left; overflow-wrap: anywhere; }
+.pilot-balance-races th:not(:first-child), .pilot-balance-races td { width: 5rem; text-align: right; }
+.pilot-balance-races thead th:not(:first-child) { font-size: .875rem; white-space: nowrap; }
+@media (max-width: 480px) {
+  .pilot-balance-races th:not(:first-child), .pilot-balance-races td { width: 3.7rem; }
+}
