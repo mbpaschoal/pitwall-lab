@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.16.4 — 2026-11-09
+
+Teams at this GP shows race points, drivers and positions when the operational results match the verified GP, session and roster. São Paulo has 11 teams and 22 results. The GP overview links to the complete race classification and Circuit history can filter by drivers in the selected GP. Outside an active race weekend, the 2026 season opens on the latest observed result.
+
+Sessions and laps shows published laps from the selected practice or qualifying session. Weather shows recorded rain and validated mean humidity, pressure and wind speed alongside observed temperatures. Driver profiles moves the driver selector above the photograph and removes the favourite control from that view.
+
 ## 0.16.3 — 2026-11-09
 
 São Paulo has five reviewed sessions, revised results after penalties and round 20 standings. FP2 retains the 21 cars classified by the FIA. Mean track temperature excludes one anomalous reading, retaining the original capture, 95 valid readings and 98.95% coverage. Drivers now covers 68 GPs. Model v1 and recorded probabilities were preserved.

@@ -122,7 +122,7 @@ class AccessibleProfileValuesTests(unittest.TestCase):
 
 
 class ProfileInteractionTests(unittest.TestCase):
-    def test_forecast_origin_survives_favourite_filters_and_a_fresh_shared_link(self):
+    def test_forecast_origin_survives_driver_selection_and_a_fresh_shared_link(self):
         app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=40)
         origin = dict(temporada="2026", gp="18", origem_tela="Previsões",
                       origem_temporada="2026", origem_gp="18")
@@ -130,9 +130,7 @@ class ProfileInteractionTests(unittest.TestCase):
                                 metrica="podium_rate", minimo="3", lang="pt", **origin)
         app.run()
         app.multiselect(key="pilot_years").set_value([2025]).run()
-        app.session_state["browser_favorite"] = "hamilton"
-        app.run()
-        next(b for b in app.button if b.label == "Ver meu favorito").click().run()
+        app.selectbox(key="pilot_driver").select("hamilton").run()
         self.assertFalse(app.exception)
         self.assertEqual(app.multiselect(key="pilot_years").value, [2025])
         for key, value in origin.items():
@@ -158,7 +156,7 @@ class ProfileInteractionTests(unittest.TestCase):
                        {"temporada": "2023", "origem_temporada": "2023"}):
             self.assertEqual(pilot_views._forecast_origin_params(dict(valid, **change)), {})
 
-    def test_opening_saved_favourite_retains_shared_criteria(self):
+    def test_selecting_a_driver_in_the_profile_retains_shared_criteria(self):
         app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=40)
         app.query_params.update(tela="Pilotos", visao="perfil", piloto="norris", anos="2026",
                                 metrica="podium_rate", minimo="3", lang="pt")
@@ -166,7 +164,8 @@ class ProfileInteractionTests(unittest.TestCase):
         app.session_state["browser_favorite"] = "hamilton"
         app.run()
         self.assertEqual(app.selectbox(key="pilot_driver").value, "norris")
-        next(b for b in app.button if b.label == "Ver meu favorito").click().run()
+        self.assertFalse(any(b.label == "Ver meu favorito" for b in app.button))
+        app.selectbox(key="pilot_driver").select("hamilton").run()
         self.assertFalse(app.exception)
         self.assertEqual(app.selectbox(key="pilot_driver").value, "hamilton")
         self.assertEqual(app.multiselect(key="pilot_years").value, [2026])

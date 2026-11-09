@@ -10,6 +10,24 @@ O acervo é descritivo e separado das entradas v1: 66 GPs/330 sessões de 2024�
 
 As cinco sessões têm dados recebidos. O TL2 conserva os 21 carros classificados pela FIA. Na corrida, a média do asfalto foi de 24,6 °C com 95 leituras válidas e cobertura de 98,95%. O zero isolado foi excluído da média, com o valor original preservado. A coleta também recebeu a classificação revisada com as penalidades de Antonelli e Leclerc e o campeonato da rodada 20. A previsão registrada de São Paulo continua disponível. A comparação científica P1 permanece inadmissível, pois faltou o recibo do dashboard antes da largada. [Recibo da revisão](../operacao2026/adjudicacoes/2026-20-interlagos.json) · [Classificação final FIA](https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_final_race_classification.pdf) · [Cobertura P1](https://github.com/mbpaschoal/pitwall-lab/releases/tag/p1-2026-20-interlagos)
 
+### Cobertura por aba em São Paulo
+
+| Abas | Cobertura e lacunas |
+| --- | --- |
+| Previsões deste GP · Acertos do Lab | A emissão pré-corrida está disponível. São Paulo ainda aguarda admissão do resultado no placar de avaliação da previsão. A classificação já aparece em Corridas. |
+| Visão geral do GP · Sessões e voltas | Pódio, ficha do circuito e atalho para a classificação completa. As cinco sessões têm tempos publicados. As voltas disponíveis podem ser consultadas por piloto e sessão. |
+| Pneus e paradas · Clima | Stints e paradas publicados por sessão, com lacunas da fonte identificadas. Clima observado inclui chuva, temperaturas, umidade, pressão e vento. A previsão meteorológica arquivada tem seção própria. |
+| Histórico desta pista · Equipes neste GP | Cinco edições anteriores, de 2021 a 2025, com filtro pelo elenco atual. A tabela de equipes reúne os 22 resultados da corrida em 11 equipes. |
+| Perfis de pilotos · Duelo de pilotos | Acervo descritivo de 68 GPs. O saldo de posições no perfil tem recorte próprio, até o México de 2026. |
+| Campeonato de pilotos · Campeonato de equipes | 25 pilotos e 11 equipes na rodada 20. |
+| Como funciona · Fontes e limites · Termos da F1 | Método, referências, escopo e glossário. Essas páginas documentam o produto e as fontes. |
+
+A conferência do calendário abrangeu as 71 opções disponíveis. Os 68 GPs disputados têm resultados, tempos de sessão, pneus, paradas, contexto meteorológico, equipes e as duas tabelas de campeonato. Essa contagem confirma a presença dos conjuntos por GP. A cobertura de cada campo é informada nas tabelas e recibos.
+
+- O GP da Espanha de 2026 é o único GP disputado sem edição anterior da mesma pista no acervo.
+- Las Vegas, Catar e Abu Dhabi de 2026 têm histórico de pista. Os resultados, os dados de sessão, o clima observado, o campeonato da rodada e as previsões registradas estão pendentes.
+- Na avaliação retrospectiva, 2024 cobre 24 de 24 GPs e 2025 cobre 22 de 24. Espanha e São Paulo ficaram fora do ranking de 2025. Em 2026, há 17 ensaios retrospectivos e três emissões registradas. Austin e México têm avaliação admitida. São Paulo aguarda a avaliação posterior.
+
 ## México — composto inicial recuperado em 02/11/2026
 
 As cinco sessões operacionais do México têm dados recebidos após conferência. O primeiro trecho de Lawson no TL3 foi recuperado como **MEDIUM nas voltas 1–8**: o GP Tempo observa o composto nas voltas 2–8, e a FIA confirma um trecho inicial contínuo de oito voltas. A atribuição à volta 1 é reconstrução documental por continuidade, identificada na interface e no CSV. Seu tempo ausente e a idade inicial do jogo permanecem ausentes.

@@ -262,12 +262,7 @@ def _overview(asset, years, metric, minimum):
         _evidence(asset, select_rows(asset, years, condition), "condicao")
 
 
-def _individual(root, asset, years, metric, minimum):
-    names = driver_names(asset)
-    ids = sorted(names, key=names.get)
-    if st.session_state.get("pilot_driver") not in names:
-        st.session_state["pilot_driver"] = ids[0]
-    driver = st.selectbox("Piloto", ids, index=ids.index(st.session_state["pilot_driver"]), format_func=names.get, key="pilot_driver")
+def _individual(root, asset, years, metric, minimum, driver, names):
     conditions = st.multiselect("Condições para explorar", list(BY_KEY), default=st.session_state.get("profile_conditions", list(HIGHLIGHTS)), format_func=lambda x: BY_KEY[x].label, key="profile_conditions")
     details = profile(asset, driver, years, conditions=conditions)
     back = _link(driver, st.session_state.get("pilot_condition", "rain")).replace("visao=perfil", "visao=geral")
@@ -483,6 +478,13 @@ def render(root, search_renderer=None):
             if search_renderer:
                 with search:
                     search_renderer(st.container())
+        if st.query_params.get("visao") == "perfil":
+            with st.container(key="pilot-profile-selector"):
+                selected = st.selectbox("Piloto", sorted(names, key=names.get), index=None,
+                    format_func=names.get, key="profile_recovery_driver", width=380)
+            if selected:
+                st.query_params["piloto"] = selected
+                st.rerun()
         # Never silently replace an uncovered/unknown identity with another driver.
         name = None
         try:
@@ -521,6 +523,13 @@ def render(root, search_renderer=None):
                     view = st.radio("Visualização de pilotos", modes,
                         index=modes.index(selected_mode) if selected_mode in modes else 0,
                         key="pilot_view", label_visibility="collapsed")
+    driver = None
+    if view == "Perfil individual":
+        ids = sorted(names, key=names.get)
+        selected = st.session_state.get("pilot_driver")
+        with st.container(key="pilot-profile-selector"):
+            driver = st.selectbox("Piloto", ids, index=ids.index(selected) if selected in names else 0,
+                format_func=names.get, key="pilot_driver", width=380)
     with st.container(key="pilot-cover"):
         years = st.session_state.get("pilot_years", [2024, 2025, 2026])
         metric = st.session_state["pilot_metric"]
@@ -534,13 +543,8 @@ def render(root, search_renderer=None):
         }.get(condition, "Quem se destaca em cada condição?") if view == "Visão geral" else "Pilotos"
         # Dry Miami photograph for heat; the wet scene belongs to rain only.
         image = "drivers" if condition == "rain" and view == "Visão geral" else "forecast"
-        names = driver_names(asset)
         person = None
-        if view == "Perfil individual" and names:
-            driver = st.session_state.get("pilot_driver")
-            if driver not in names:
-                driver = sorted(names, key=names.get)[0]
-                st.session_state["pilot_driver"] = driver
+        if driver:
             person = {"id": driver, "name": names[driver]}
             title = names[driver]
             image = "method"
@@ -567,24 +571,27 @@ def render(root, search_renderer=None):
                     st.selectbox("Corridas mínimas por condição", [5, 3, 10, 15, 1],
                         index=[5, 3, 10, 15, 1].index(minimum), key="pilot_minimum",
                         on_change=_remember_criterion, args=("pilot_minimum",))
-    from pitwall.dashboard.favorites import render as favorite_control
-    favorite = st.session_state.get("browser_favorite", st.session_state.get("favorite_driver"))
-    favorite = favorite if isinstance(favorite, str) and favorite in names else None
-    st.session_state["favorite_driver"] = favorite
-    def show_favorite():
-        st.session_state["pilot_view"] = "Perfil individual"
-        st.session_state["pilot_driver"] = favorite
-    with st.container(key="pilot-favorite-control"):
-        favorite_control(names, favorite)
-    if favorite:
-        st.button("Ver meu favorito", on_click=show_favorite)
+    if view != "Perfil individual":
+        from pitwall.dashboard.favorites import render as favorite_control
+        favorite = st.session_state.get("browser_favorite", st.session_state.get("favorite_driver"))
+        favorite = favorite if isinstance(favorite, str) and favorite in names else None
+        st.session_state["favorite_driver"] = favorite
+
+        def show_favorite():
+            st.session_state["pilot_view"] = "Perfil individual"
+            st.session_state["pilot_driver"] = favorite
+
+        with st.container(key="pilot-favorite-control"):
+            favorite_control(names, favorite)
+        if favorite:
+            st.button("Ver meu favorito", on_click=show_favorite)
     if not years:
         st.info("Selecione pelo menos uma temporada.")
     if years and view == "Visão geral":
         _overview(asset, years, metric, minimum)
-    elif years and view == "Perfil individual":
-        _individual(root, asset, years, metric, minimum)
-    elif years:
+    elif years and driver:
+        _individual(root, asset, years, metric, minimum, driver, names)
+    elif years and view == "Duelo":
         _duel(asset, years, metric, minimum)
     if years:
         _share(asset, years, metric, minimum, view)

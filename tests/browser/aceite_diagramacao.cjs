@@ -16,8 +16,11 @@ async function ready(app, selector, lang) {
     !!document.querySelector(selector) && document.querySelectorAll('.st-key-pw-sidebar-menu button').length === 15,
   {selector,lang,version}, {timeout: 90000});
   if (selector === '.fan-hero-profile-editorial') {
-    // The native profile can finish before its favourite component hydrates.
-    await app.frameLocator('iframe[src*="pitwall_favorite"]').locator('option[value="max_verstappen"]').waitFor({state:'attached',timeout:30000});
+    const driver = app.locator('.st-key-pilot-profile-selector').getByRole('combobox');
+    await driver.waitFor();
+    assert.equal(await app.locator('iframe[src*="pitwall_favorite"]').count(), 0);
+    assert(await driver.evaluate(control => control.getBoundingClientRect().bottom <=
+      document.querySelector('.fan-hero-profile-editorial').getBoundingClientRect().top), 'Driver selector must precede the profile cover');
   }
   await app.evaluate(() => document.fonts.ready);
   await app.locator(selector + ' img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));

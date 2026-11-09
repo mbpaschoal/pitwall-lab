@@ -1000,7 +1000,10 @@ def tela_explorar(pacote, rodada, foco, topbar_slot=None):
         except AcervoDashboardErro as erro:
             st.warning("O acervo complementar não pôde ser exibido: {}.".format(erro))
     renderizar_topo(pacote, corrida, participantes, slot=topbar_slot)
-    from pitwall.dashboard.weekend_views import load_status, render_status, render_times, render_weather, render_strategies, render_podium
+    from pitwall.dashboard.weekend_views import (
+        load_status, operational_race_results, render_status, render_strategies,
+        render_teams, render_times, render_weather,
+    )
     try:
         weekend = load_status(raiz_artefatos(), pacote["temporada"], rodada, corrida["circuito_id"])
     except (ValueError, OSError):
@@ -1056,8 +1059,9 @@ def tela_explorar(pacote, rodada, foco, topbar_slot=None):
                 with context_column:
                     renderizar_contexto_circuito(pacote,corrida,acervo_gp,mode='details',weekend=weekend,include_media=False)
             with st.container(key="race-summary-actions"):
-                actions = st.columns(2 if acervo_gp else 1, gap="small")
-                if acervo_gp:
+                has_results = bool(acervo_gp or (observed_race.get('encerramento_observado_utc') and observed_race.get('tempos')))
+                actions = st.columns(2 if has_results else 1, gap="small")
+                if has_results:
                     with actions[0]:
                         atalho_gp(pacote, corrida, "Corridas", "Ver classificação completa da corrida", aba="Tempos", full_width=True)
                 with actions[-1]:
@@ -1067,7 +1071,7 @@ def tela_explorar(pacote, rodada, foco, topbar_slot=None):
             renderizar_programacao(corrida)
             if acervo_gp:
                 acervo_dashboard_ui.renderizar_tempos(acervo_gp)
-            elif not render_times(weekend):
+            elif not render_times(weekend, operational_race_results(raiz_artefatos(), weekend)):
                 renderizar_tempos_sessoes(bloco)
                 renderizar_podio(pacote, corrida, participantes)
         elif chapter == 'Estratégias':
@@ -1091,16 +1095,16 @@ def tela_explorar(pacote, rodada, foco, topbar_slot=None):
                     corrida["circuito_id"],
                     corrida["data"],
                 )
+                passado['historico']['resultados'] = operational_race_results(raiz_artefatos(), weekend)
                 acervo_dashboard_ui.renderizar_historico(passado)
             if pacote["temporada"] == 2026:
                 with st.expander("Calendário 2026"):
                     renderizar_calendario_2026(pacote, rodada)
         elif chapter == 'Comparativo de equipes':
-            if acervo_gp:
+            if (acervo_gp or {}).get('equipes'):
                 acervo_dashboard_ui.renderizar_equipes(acervo_gp)
-            else:
+            elif not render_teams(weekend, operational_race_results(raiz_artefatos(), weekend)):
                 renderizar_desempenho_equipes_indisponivel()
-            if not acervo_gp or not acervo_gp.get('equipes'):
                 atalho_gp(pacote, corrida, "Campeonato", "Ver campeonato completo")
         if chapter != 'Visão geral':
             atalho_gp(pacote, corrida, "Previsões", "Ver previsões deste GP")
@@ -1316,15 +1320,19 @@ def executar_app():
         valores = [item["valor"] for item in opcoes]
         if anterior != temporada:
             if temporada == 2026:
+                from pitwall.dashboard.weekend_views import current_gp, observed_rounds
+                root = raiz_artefatos()
+                try:
+                    operation_rounds = observed_rounds(root, temporada)
+                except (ValueError, OSError, KeyError, TypeError):
+                    operation_rounds = set()
                 observadas = [
                     item["valor"]
                     for item in opcoes
-                    if dados_do_gp_2026(pacote, item["rodada"])["corrida"][
-                        "alvos_conhecidos"
-                    ]
+                    if item["rodada"] in operation_rounds
+                    or dados_do_gp_2026(pacote, item["rodada"])["corrida"]["alvos_conhecidos"]
                 ]
-                from pitwall.dashboard.weekend_views import current_gp
-                active = current_gp(raiz_artefatos())
+                active = current_gp(root)
                 st.session_state["gp"] = active if active in valores else (observadas[-1] if observadas else valores[0])
             else:
                 st.session_state.pop("gp", None)

@@ -196,6 +196,9 @@ def renderizar_tempos(gp):
             _chave(gp, "csv_voltas_fia"),
             "voltas_classificacao_fia",
         )
+    if nome != "Race" and sessao.get("voltas_por_piloto"):
+        with st.expander("Voltas da sessão selecionada"):
+            _renderizar_voltas(gp, sessao["voltas_por_piloto"], suffix=f"_{selecionada}")
     with st.expander("Resultados e voltas da corrida selecionada"):
         renderizar_observado(gp)
 
@@ -579,12 +582,16 @@ def renderizar_observado(gp):
     if not pilotos:
         st.info("Voltas da corrida principal ainda não disponíveis neste acervo.")
         return
+    _renderizar_voltas(gp, pilotos)
+
+
+def _renderizar_voltas(gp, pilotos, suffix=""):
     por_id = {str(p.get("piloto_id") or i): p for i, p in enumerate(pilotos)}
     selecionado = st.selectbox(
         "Piloto para consultar as voltas",
         list(por_id),
         format_func=lambda pid: por_id[pid].get("piloto") or pid,
-        key=_chave(gp, "piloto_voltas"),
+        key=_chave(gp, "piloto_voltas" + suffix),
     )
     piloto = por_id[selecionado]
     voltas = piloto.get("voltas") or []
@@ -606,7 +613,7 @@ def renderizar_observado(gp):
             figura,
             width="stretch",
             config={"displayModeBar": False},
-            key=_chave(gp, "voltas_grafico"),
+            key=_chave(gp, "voltas_grafico" + suffix),
         )
         st.caption(
             "Voltas de entrada/saída dos boxes, neutralizações e tráfego podem afetar estes tempos. O gráfico não isola ritmo ou degradação."
@@ -615,7 +622,7 @@ def renderizar_observado(gp):
         if any(len(v) > 2 and v[2] is not None for v in voltas):
             for linha, volta in zip(linhas, voltas):
                 linha["Posição publicada"] = volta[2]
-        _tabela(linhas, _chave(gp, "csv_voltas"), "voltas_{}".format(selecionado))
+        _tabela(linhas, _chave(gp, "csv_voltas" + suffix), "voltas_{}{}".format(selecionado, suffix))
 
 
 def renderizar_historico(gp):

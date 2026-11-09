@@ -285,6 +285,17 @@ class TestDashboardApp(unittest.TestCase):
         self.assertIn('Integrantes do pódio observado', texto)
         self.assertNotIn('Max Verstappen (max_verstappen)', texto)
 
+    def test_2026_default_includes_observed_races_awaiting_forecast_scoring(self):
+        from pitwall.dashboard.weekend_views import observed_rounds
+
+        self.executar()
+        shutil.copy2(RAIZ / 'frontend_assets/operacao_fim_semana.json', self.raiz / 'frontend_assets')
+        eligible = {race['rodada'] for race in app.carregar(2026)['corridas'] if race['alvos_conhecidos']}
+        expected = max(eligible | observed_rounds(self.raiz, 2026))
+        with patch('pitwall.dashboard.weekend_views.current_gp', return_value=None):
+            self.escolher('temporada', 2026)
+        self.assertEqual(por_chave(self.at.selectbox, 'gp').value, f'2026:{expected}')
+
     def test_historico_sem_acervo_nao_reutiliza_podio_da_corrida_atual(self):
         self.executar()
         self.escolher('temporada', 2026)

@@ -10,6 +10,24 @@ The descriptive archive is separate from v1 inputs: 66 GPs/330 sessions in 2024�
 
 All five sessions have received-data status. FP2 retains the 21 cars classified by the FIA. Mean track temperature during the race was 24.6 °C from 95 valid readings with 98.95% coverage. The isolated zero was excluded from the mean and preserved in the original capture. The collector also received the revised classification with penalties for Antonelli and Leclerc, plus round 20 standings. The recorded São Paulo forecast remains available. The P1 research comparison remains inadmissible because the dashboard receipt was missing before the start. [Review receipt](../../operacao2026/adjudicacoes/2026-20-interlagos.json) · [FIA final classification](https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_final_race_classification.pdf) · [P1 coverage](https://github.com/mbpaschoal/pitwall-lab/releases/tag/p1-2026-20-interlagos)
 
+### São Paulo coverage by tab
+
+| Tabs | Coverage and gaps |
+| --- | --- |
+| Predictions for this GP · How the Lab did | The pre-race forecast is available. São Paulo's result still awaits admission to the forecast scorecard. The classification is already available in Races. |
+| GP overview · Sessions and laps | Podium, circuit facts and a shortcut to the full classification. All five sessions have published times. Available laps can be explored by driver and session. |
+| Tyres and stops · Weather | Published stints and stops by session, with source gaps marked. Observed weather includes rain, temperatures, humidity, pressure and wind speed. The archived forecast has a separate section. |
+| Circuit history · Teams at this GP | Five prior editions from 2021 to 2025, with a filter for the current roster. The teams table groups 22 race results into 11 teams. |
+| Driver profiles · Head to head | Descriptive archive of 68 GPs. The profile's position-change panel has its own cutoff through Mexico 2026. |
+| Drivers' championship · Teams' championship | 25 drivers and 11 teams at round 20. |
+| How it works · Sources and limits · F1 terms | Method, references, scope and glossary. These pages document the product and its sources. |
+
+The calendar review covered all 71 selectable events. The 68 completed GPs have results, session times, tyres, stops, weather context, team results and both standings tables. This count verifies the presence of each dataset by GP. Individual field coverage is documented in the tables and receipts.
+
+- The 2026 Spanish GP is the only completed event with no earlier edition at the same circuit in the archive.
+- Las Vegas, Qatar and Abu Dhabi 2026 have circuit history. Results, session data, observed weather, round standings and recorded forecasts are pending.
+- The retrospective assessment covers 24 of 24 GPs in 2024 and 22 of 24 in 2025. Spain and São Paulo were excluded from the 2025 rankings. The 2026 season has 17 retrospective trials and three recorded forecasts. Austin and Mexico have admitted evaluations. São Paulo awaits post-race evaluation.
+
 ## Mexico — opening compound recovered on 2 November 2026
 
 All five operational Mexico sessions have received-data status after review. Lawson's opening FP3 run is recovered as **MEDIUM on laps 1–8**: GP Tempo directly identifies the compound on laps 2–8, while FIA confirms an uninterrupted opening eight-lap run. Lap 1 is explicitly identified as documentary reconstruction by continuity in the interface and CSV. Its missing lap time and initial tyre age remain unknown.
