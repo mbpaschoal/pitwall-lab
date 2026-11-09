@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.16.5 — 2026-11-09
+
+The calendar audit covers all 15 Pitwall Lab pages across the 71 available Grands Prix, including future rounds. At 18 Sprint weekends, Tyres and pit stops now opens on the main race, which has published stops. Sprint remains selectable and each session displays its own records.
+
+Weather exposes validated humidity, pressure and wind readings from the archive. Sessions and laps identifies historical sessions with aggregate times and states the source of the detailed laps. The [round-by-round audit](docs/en/CURRENT_DATA.md#full-calendar-audit) distinguishes data coverage, source gaps and pending forecasts.
+
 ## 0.16.4 — 2026-11-09
 
 Teams at this GP shows race points, drivers and positions when the operational results match the verified GP, session and roster. São Paulo has 11 teams and 22 results. The GP overview links to the complete race classification and Circuit history can filter by drivers in the selected GP. Outside an active race weekend, the 2026 season opens on the latest observed result.

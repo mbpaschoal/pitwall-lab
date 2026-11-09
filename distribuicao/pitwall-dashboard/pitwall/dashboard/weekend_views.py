@@ -220,6 +220,12 @@ def render_weather(state):
             with st.expander('Mais medições da corrida'):
                 for column, (field, unit, label) in zip(st.columns(3), measurements):
                     column.metric(label, format_field(field, unit))
+                direction = observed['campos'].get('wind_direction', {})
+                angle = direction.get('media_circular_graus')
+                if direction.get('elegivel') and angle is not None:
+                    from pitwall.dashboard.archive_views import _valor
+                    from pitwall.i18n import translate
+                    st.caption("{} {}".format(translate("Direção média do vento"), _valor(round(angle, 1) % 360, "°")))
         if observed['campos']['track_temperature'].get('qualidade', {}).get('codigo') == 'zero_isolado_em_conferencia':
             st.caption('Temperatura do asfalto em conferência: leitura isolada de 0 °C entre medições acima de 20 °C. Média retida, sem substituir o registro original.')
         quality = observed['campos']['track_temperature'].get('qualidade', {})

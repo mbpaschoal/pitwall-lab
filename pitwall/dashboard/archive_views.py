@@ -199,6 +199,8 @@ def renderizar_tempos(gp):
     if nome != "Race" and sessao.get("voltas_por_piloto"):
         with st.expander("Voltas da sessão selecionada"):
             _renderizar_voltas(gp, sessao["voltas_por_piloto"], suffix=f"_{selecionada}")
+    elif nome != "Race" and sessao.get("n_voltas") and not alternativas:
+        st.caption("O acervo portátil inclui os tempos agregados desta sessão. As voltas individuais disponíveis abaixo são da corrida principal.")
     with st.expander("Resultados e voltas da corrida selecionada"):
         renderizar_observado(gp)
 
@@ -209,12 +211,14 @@ def renderizar_estrategias(gp):
         "As barras mostram limites de volta publicados, não a idade do pneu. Trechos sem limites válidos aparecem somente na tabela."
     )
     estrategias = gp.get("estrategias", [])
+    paradas = gp.get("paradas", [])
     modalidade = None
-    modalidades = list(dict.fromkeys(e.get("modalidade", "Race") for e in estrategias))
+    modalidades = list(dict.fromkeys(e.get("modalidade", "Race") for e in estrategias + paradas))
     if modalidades:
         modalidade = st.selectbox(
             "Sessão para analisar os pneus",
             modalidades,
+            index=modalidades.index("Race") if "Race" in modalidades else 0,
             format_func=lambda x: ROTULOS_SESSAO.get(x, x),
             key=_chave(gp, "prova_pneus"),
         )
@@ -363,7 +367,7 @@ def renderizar_estrategias(gp):
                 "stints_{}".format(_chave(gp, "pneus")),
             )
     st.subheader("Pit stops da corrida principal" if modalidade in (None, 'Race') else "Passagens pelos boxes nesta sessão")
-    paradas = [p for p in gp.get("paradas", []) if modalidade is None or p.get('modalidade', 'Race') == modalidade]
+    paradas = [p for p in paradas if p.get("modalidade", "Race") == modalidade]
     if paradas:
         st.caption(
             "Duração conforme a fonte de paradas. Não equivale automaticamente ao tempo parado para trocar pneus."
@@ -424,10 +428,20 @@ def renderizar_clima(gp):
     if actual:
         st.subheader("Durante a corrida")
         columns = st.columns(3)
-        columns[0].metric("Temperatura média do ar", "{:.1f} °C".format(actual["air_temperature"]).replace(".", ","))
-        columns[1].metric("Temperatura média da pista", "{:.1f} °C".format(actual["track_temperature"]).replace(".", ","))
+        columns[0].metric("Temperatura média do ar", _valor(round(actual["air_temperature"], 1), " °C"))
+        columns[1].metric("Temperatura média da pista", _valor(round(actual["track_temperature"], 1), " °C"))
         columns[2].metric("Chuva registrada", "Sim" if actual["rain_condition"] == "recorded" else "Não")
         st.caption("Sensores OpenF1 nos intervalos ativos da corrida; pausas por bandeira vermelha são excluídas. Ausência de chuva registrada não comprova pista seca.")
+        with st.expander("Mais medições da corrida"):
+            for column, (field, label, unit) in zip(st.columns(3), (
+                ("humidity", "Umidade média", " %"),
+                ("pressure", "Pressão média", " hPa"),
+                ("wind_speed", "Velocidade média do vento", " m/s"),
+            )):
+                value = actual.get(field)
+                column.metric(label, _valor(round(value, 1), unit) if value is not None else "—")
+            if actual.get("wind_direction") is not None:
+                st.caption("{} {}".format(translate("Direção média do vento"), _valor(round(actual["wind_direction"], 1) % 360, "°")))
         with st.expander("Janela efetiva e contexto atmosférico"):
             st.dataframe(pd.DataFrame(actual["active_intervals_utc"], columns=["Início (UTC)", "Fim (UTC)"]), hide_index=True, width="stretch")
             st.caption("Open-Meteo: reconstrução em grade, com amostras horárias dentro desses intervalos; não representa observação contínua na pista.")
