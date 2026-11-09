@@ -214,11 +214,12 @@ def render_weather(state):
         rain = {'com_chuva_registrada': 'Chuva registrada durante a corrida',
                 'sem_chuva_registrada': 'Sem chuva registrada durante a corrida'}
         st.caption(rain.get(observed.get('condicao_chuva'), 'Registro de chuva inconclusivo'))
-        with st.expander('Mais medições da corrida'):
-            for column, (field, unit, label) in zip(st.columns(3), (
-                    ('humidity', '%', 'Umidade média'), ('pressure', 'hPa', 'Pressão média'),
-                    ('wind_speed', 'm/s', 'Velocidade média do vento'))):
-                column.metric(label, format_field(field, unit))
+        measurements = (('humidity', '%', 'Umidade média'), ('pressure', 'hPa', 'Pressão média'),
+                        ('wind_speed', 'm/s', 'Velocidade média do vento'))
+        if any(field in observed['campos'] for field, _, _ in measurements):
+            with st.expander('Mais medições da corrida'):
+                for column, (field, unit, label) in zip(st.columns(3), measurements):
+                    column.metric(label, format_field(field, unit))
         if observed['campos']['track_temperature'].get('qualidade', {}).get('codigo') == 'zero_isolado_em_conferencia':
             st.caption('Temperatura do asfalto em conferência: leitura isolada de 0 °C entre medições acima de 20 °C. Média retida, sem substituir o registro original.')
         quality = observed['campos']['track_temperature'].get('qualidade', {})
