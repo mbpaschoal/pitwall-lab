@@ -2,7 +2,7 @@
   "temporada": 2026,
   "rodada": 20,
   "circuito_id": "interlagos",
-  "atualizado_em_utc": "2026-11-08T19:42:50.799524Z",
+  "atualizado_em_utc": "2026-11-09T16:59:42.327224Z",
   "previsao_meteorologica": {
     "natureza": "previsao_arquivada",
     "disponivel": true,
@@ -408,37 +408,37 @@
         "hora_utc": "2026-11-08T18:00Z",
         "temperature_2m": 16.4,
         "precipitation": 0.2,
-        "wind_speed_10m": 3.82
+        "wind_speed_10m": 3.33
       },
       {
         "hora_utc": "2026-11-08T19:00Z",
-        "temperature_2m": 16.0,
+        "temperature_2m": 16.2,
         "precipitation": 0.1,
-        "wind_speed_10m": 4.25
+        "wind_speed_10m": 3.44
       },
       {
         "hora_utc": "2026-11-08T20:00Z",
-        "temperature_2m": 16.0,
-        "precipitation": 0.1,
-        "wind_speed_10m": 4.34
+        "temperature_2m": 15.6,
+        "precipitation": 0.2,
+        "wind_speed_10m": 3.81
       },
       {
         "hora_utc": "2026-11-08T21:00Z",
-        "temperature_2m": 15.3,
+        "temperature_2m": 15.6,
         "precipitation": 0.1,
-        "wind_speed_10m": 4.19
+        "wind_speed_10m": 3.83
       },
       {
         "hora_utc": "2026-11-08T22:00Z",
-        "temperature_2m": 15.2,
-        "precipitation": 0.2,
-        "wind_speed_10m": 4.31
+        "temperature_2m": 15.1,
+        "precipitation": 0.1,
+        "wind_speed_10m": 3.51
       },
       {
         "hora_utc": "2026-11-08T23:00Z",
-        "temperature_2m": 14.9,
+        "temperature_2m": 15.1,
         "precipitation": 0.2,
-        "wind_speed_10m": 4.23
+        "wind_speed_10m": 4.3
       }
     ]
   },
@@ -496,7 +496,7 @@
         },
         {
           "posicao": 5,
-          "pontos": 251.0,
+          "pontos": 249.0,
           "vitorias": 1,
           "piloto_id": "leclerc",
           "piloto": "Charles Leclerc",
@@ -544,7 +544,7 @@
         },
         {
           "posicao": 9,
-          "pontos": 87.0,
+          "pontos": 89.0,
           "vitorias": 0,
           "piloto_id": "lawson",
           "piloto": "Liam Lawson",
@@ -751,7 +751,7 @@
       "rodada_referencia": 20,
       "escopo": "Campeonato oficial da rodada",
       "fonte": "Jolpica-F1",
-      "obtido_em_utc": "2026-11-08T19:42:35.208730Z",
+      "obtido_em_utc": "2026-11-09T16:59:26.363598Z",
       "url": "https://api.jolpi.ca/ergast/f1/2026/20/driverstandings/?limit=100&offset=0"
     },
     "constructor_standings": {
@@ -766,7 +766,7 @@
         },
         {
           "posicao": 2,
-          "pontos": 512.0,
+          "pontos": 510.0,
           "vitorias": 2,
           "equipe_id": "ferrari",
           "equipe": "Ferrari"
@@ -787,7 +787,7 @@
         },
         {
           "posicao": 5,
-          "pontos": 112.0,
+          "pontos": 114.0,
           "vitorias": 0,
           "equipe_id": "rb",
           "equipe": "RB F1 Team"
@@ -838,7 +838,7 @@
       "rodada_referencia": 20,
       "escopo": "Campeonato oficial da rodada",
       "fonte": "Jolpica-F1",
-      "obtido_em_utc": "2026-11-08T19:42:43.092797Z",
+      "obtido_em_utc": "2026-11-09T16:59:34.309257Z",
       "url": "https://api.jolpi.ca/ergast/f1/2026/20/constructorstandings/?limit=100&offset=0"
     }
   },
@@ -5122,7 +5122,7 @@
           "endpoint": "sessions",
           "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Brazil",
           "status": 200,
-          "obtido_em_utc": "2026-11-06T17:45:29.003400Z",
+          "obtido_em_utc": "2026-11-09T16:54:38.070745Z",
           "sha256": "d6ce1580630182903442140ac5b58a316d34ea9161274b07039bad1baf9b7bc2"
         },
         {
@@ -5130,7 +5130,7 @@
           "endpoint": "race_control",
           "url": "https://api.openf1.org/v1/race_control?session_key=11405",
           "status": 200,
-          "obtido_em_utc": "2026-11-06T17:45:37.120023Z",
+          "obtido_em_utc": "2026-11-09T16:54:46.241450Z",
           "sha256": "36360bc70777f9f72cf2c613d39ca20386be9dd40e2e68414bb7d02f30beee70"
         },
         {
@@ -5138,7 +5138,7 @@
           "endpoint": "drivers",
           "url": "https://api.openf1.org/v1/drivers?session_key=11405",
           "status": 200,
-          "obtido_em_utc": "2026-11-06T17:45:44.981434Z",
+          "obtido_em_utc": "2026-11-09T16:54:54.040689Z",
           "sha256": "781fdcdec737733918085c7377e1ce2e6fd599af6d71f912f1bd3ac200825972"
         },
         {
@@ -5146,7 +5146,7 @@
           "endpoint": "session_result",
           "url": "https://api.openf1.org/v1/session_result?session_key=11405",
           "status": 200,
-          "obtido_em_utc": "2026-11-06T17:45:52.977684Z",
+          "obtido_em_utc": "2026-11-09T16:55:02.075921Z",
           "sha256": "6899cf2820f4c3fff55fa9bef6a315b4220566b1ef5045f85be6fc0f2ea97001"
         },
         {
@@ -5154,7 +5154,7 @@
           "endpoint": "weather",
           "url": "https://api.openf1.org/v1/weather?session_key=11405",
           "status": 200,
-          "obtido_em_utc": "2026-11-06T17:46:01.235757Z",
+          "obtido_em_utc": "2026-11-09T16:55:13.293525Z",
           "sha256": "11462c0885a158ad00a663b3631cd31414344d91318d71bb3134e1404330f913"
         },
         {
@@ -5162,7 +5162,7 @@
           "endpoint": "laps",
           "url": "https://api.openf1.org/v1/laps?session_key=11405",
           "status": 200,
-          "obtido_em_utc": "2026-11-06T17:46:09.510684Z",
+          "obtido_em_utc": "2026-11-09T16:55:19.021880Z",
           "sha256": "e709f1461efd4d477df6404691ce493be831d1bb0a81be5b651d63309174d49a"
         },
         {
@@ -5170,7 +5170,7 @@
           "endpoint": "stints",
           "url": "https://api.openf1.org/v1/stints?session_key=11405",
           "status": 200,
-          "obtido_em_utc": "2026-11-06T17:46:17.051603Z",
+          "obtido_em_utc": "2026-11-09T16:55:26.238296Z",
           "sha256": "f8d3ddd03fe028d80e43962982bda3aec7583104ebea1b35524c5df4a588f82a"
         },
         {
@@ -5178,7 +5178,7 @@
           "endpoint": "pit",
           "url": "https://api.openf1.org/v1/pit?session_key=11405",
           "status": 200,
-          "obtido_em_utc": "2026-11-06T17:46:25.117563Z",
+          "obtido_em_utc": "2026-11-09T16:55:34.276588Z",
           "sha256": "dee22ab2845335a15801b8142251cc61dabb29fc119cb4e273089c6c80f20d27"
         }
       ]
@@ -5188,7 +5188,7 @@
       "nome": "Practice 2",
       "inicio_utc": "2026-11-06T19:00:00+00:00",
       "fim_programado_utc": "2026-11-06T20:00:00+00:00",
-      "estado": "parcial",
+      "estado": "dados_recebidos",
       "cobertura": {
         "race_control": 17,
         "drivers": 22,
@@ -5199,6 +5199,57 @@
         "pit": 91
       },
       "encerramento_observado_utc": "2026-11-06T20:00:00.134000+00:00",
+      "revisao_fontes": {
+        "id": "interlagos-2026-fia-openf1-20261109",
+        "sha256": "e5df3cbd746abb25994f0e9f3d25f8f96e34da7c72ddf966f80708e7b12ca586",
+        "acoes": [
+          {
+            "tipo": "classificacao_treino_oficial",
+            "carros_classificados": [
+              12,
+              1,
+              3,
+              63,
+              81,
+              44,
+              16,
+              5,
+              6,
+              87,
+              43,
+              41,
+              30,
+              10,
+              14,
+              51,
+              55,
+              18,
+              23,
+              11,
+              77
+            ],
+            "fontes": [
+              {
+                "provider": "fia",
+                "endpoint": "fp2_classification",
+                "url": "https://www.fia.com/sites/default/files/2026_20_bra_f1_p2_timing_secondpracticesessionclassification_v01.pdf",
+                "status": 200,
+                "obtido_em_utc": "2026-11-09T16:52:07Z",
+                "sha256": "edf7fa6a2d54a7759576f4cd6ae045de17d053e6a2d5703e62a4e941b792c572"
+              }
+            ]
+          }
+        ]
+      },
+      "cobertura_validada": {
+        "race_control": 17,
+        "drivers": 22,
+        "session_result": 21,
+        "weather": 80,
+        "laps": 702,
+        "stints": 91,
+        "pit": 91
+      },
       "tempos": [
         {
           "numero": 12,
@@ -9864,7 +9915,7 @@
           "endpoint": "sessions",
           "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Brazil",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:40:35.067874Z",
+          "obtido_em_utc": "2026-11-09T16:54:38.070745Z",
           "sha256": "d6ce1580630182903442140ac5b58a316d34ea9161274b07039bad1baf9b7bc2"
         },
         {
@@ -9872,7 +9923,7 @@
           "endpoint": "race_control",
           "url": "https://api.openf1.org/v1/race_control?session_key=11406",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:40:43.139465Z",
+          "obtido_em_utc": "2026-11-09T16:55:42.076050Z",
           "sha256": "eedfcf99357f409d9aa80c5bb146106b34037c54ee8907eea0e8a906f7671b05"
         },
         {
@@ -9880,7 +9931,7 @@
           "endpoint": "drivers",
           "url": "https://api.openf1.org/v1/drivers?session_key=11406",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:40:51.276087Z",
+          "obtido_em_utc": "2026-11-09T16:55:50.133198Z",
           "sha256": "a6468304cd16a3306e28ca91b710645e5e7592a5d38d8ee434818b1c0c183e78"
         },
         {
@@ -9888,7 +9939,7 @@
           "endpoint": "session_result",
           "url": "https://api.openf1.org/v1/session_result?session_key=11406",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:40:59.088265Z",
+          "obtido_em_utc": "2026-11-09T16:55:58.088054Z",
           "sha256": "9dae5acc068b6fca406c136704029e221ba9524e0441fa512d5a1ce840bc267c"
         },
         {
@@ -9896,7 +9947,7 @@
           "endpoint": "weather",
           "url": "https://api.openf1.org/v1/weather?session_key=11406",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:41:11.477782Z",
+          "obtido_em_utc": "2026-11-09T16:56:06.286950Z",
           "sha256": "59545761fafa7b6049d9ff8a3513d527a29d70948119f02573c8abf323162d11"
         },
         {
@@ -9904,7 +9955,7 @@
           "endpoint": "laps",
           "url": "https://api.openf1.org/v1/laps?session_key=11406",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:41:15.791877Z",
+          "obtido_em_utc": "2026-11-09T16:56:15.011813Z",
           "sha256": "b24e26902fe985c4cbf535644a22697aebf1b68754d1884f3b3811453814aa41"
         },
         {
@@ -9912,7 +9963,7 @@
           "endpoint": "stints",
           "url": "https://api.openf1.org/v1/stints?session_key=11406",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:41:23.174590Z",
+          "obtido_em_utc": "2026-11-09T16:56:22.315752Z",
           "sha256": "4204e935f239ca505eb67ab3e46fbcb8381825f4280d5dd81f6620eab679414a"
         },
         {
@@ -9920,7 +9971,7 @@
           "endpoint": "pit",
           "url": "https://api.openf1.org/v1/pit?session_key=11406",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:41:31.114506Z",
+          "obtido_em_utc": "2026-11-09T16:56:30.416293Z",
           "sha256": "598dd6591051b1b39ebdcb013712fd65c42aa50da6e71efb491209b3081598d6"
         }
       ]
@@ -14031,7 +14082,7 @@
           "endpoint": "sessions",
           "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Brazil",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T16:10:19.943783Z",
+          "obtido_em_utc": "2026-11-09T16:54:38.070745Z",
           "sha256": "d6ce1580630182903442140ac5b58a316d34ea9161274b07039bad1baf9b7bc2"
         },
         {
@@ -14039,7 +14090,7 @@
           "endpoint": "race_control",
           "url": "https://api.openf1.org/v1/race_control?session_key=11407",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T16:11:23.967456Z",
+          "obtido_em_utc": "2026-11-09T16:56:38.215183Z",
           "sha256": "29a6cbfcf59cf6d59a10d4fa9068f92c6bebb9b6238c2e3b240de4e65710e62e"
         },
         {
@@ -14047,7 +14098,7 @@
           "endpoint": "drivers",
           "url": "https://api.openf1.org/v1/drivers?session_key=11407",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T16:11:31.837070Z",
+          "obtido_em_utc": "2026-11-09T16:56:46.190534Z",
           "sha256": "a3138a644830631412542f27f13a2e748b3ba7033428ad86682036a2c280eec4"
         },
         {
@@ -14055,7 +14106,7 @@
           "endpoint": "session_result",
           "url": "https://api.openf1.org/v1/session_result?session_key=11407",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T16:11:39.848341Z",
+          "obtido_em_utc": "2026-11-09T16:56:54.168739Z",
           "sha256": "d4b04a4012ac5e2984041b3929c49ee8c195836736e6f0cb776595cf0da52e34"
         },
         {
@@ -14063,7 +14114,7 @@
           "endpoint": "weather",
           "url": "https://api.openf1.org/v1/weather?session_key=11407",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T16:11:47.912691Z",
+          "obtido_em_utc": "2026-11-09T16:57:02.294361Z",
           "sha256": "d6b50ade78f554b6c36028deef11d99f7a75d7ea77bd4b7a3389ea21e61432fb"
         },
         {
@@ -14071,7 +14122,7 @@
           "endpoint": "laps",
           "url": "https://api.openf1.org/v1/laps?session_key=11407",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T16:11:56.332301Z",
+          "obtido_em_utc": "2026-11-09T16:57:10.970080Z",
           "sha256": "77a07aef63d60cbeff4925c6f50a3a74bb9dfd2b109b619b580e49cc19691211"
         },
         {
@@ -14079,7 +14130,7 @@
           "endpoint": "stints",
           "url": "https://api.openf1.org/v1/stints?session_key=11407",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T16:12:04.117187Z",
+          "obtido_em_utc": "2026-11-09T16:57:18.299558Z",
           "sha256": "9a3d5966bae0b7a4aac8650e29e00edc711f2591992230da38d26b6d6f018ab2"
         },
         {
@@ -14087,7 +14138,7 @@
           "endpoint": "pit",
           "url": "https://api.openf1.org/v1/pit?session_key=11407",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T16:12:11.917346Z",
+          "obtido_em_utc": "2026-11-09T16:57:26.374517Z",
           "sha256": "f6980d98a74529018ba7e44c86671537beee5634bf0e28425f3edc900eefdaf1"
         }
       ]
@@ -17672,7 +17723,7 @@
           "endpoint": "sessions",
           "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Brazil",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T22:08:28.459335Z",
+          "obtido_em_utc": "2026-11-09T16:54:38.070745Z",
           "sha256": "d6ce1580630182903442140ac5b58a316d34ea9161274b07039bad1baf9b7bc2"
         },
         {
@@ -17680,7 +17731,7 @@
           "endpoint": "race_control",
           "url": "https://api.openf1.org/v1/race_control?session_key=11408",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T22:09:32.381285Z",
+          "obtido_em_utc": "2026-11-09T16:57:34.394237Z",
           "sha256": "d31dc36d9aa461668688612889ee94b64bf034fa95de4c6d47679abf3dd758a2"
         },
         {
@@ -17688,7 +17739,7 @@
           "endpoint": "drivers",
           "url": "https://api.openf1.org/v1/drivers?session_key=11408",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T22:09:40.309908Z",
+          "obtido_em_utc": "2026-11-09T16:57:42.119462Z",
           "sha256": "57af2baa7b115acd556a51ac46b95ab793421c57d9e9374efa08bc51b10698bd"
         },
         {
@@ -17696,7 +17747,7 @@
           "endpoint": "session_result",
           "url": "https://api.openf1.org/v1/session_result?session_key=11408",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T22:09:48.297096Z",
+          "obtido_em_utc": "2026-11-09T16:57:50.290029Z",
           "sha256": "487c7a1b57f2f709a311e1a26f3f6475fa02c336cb7545e83a700315b149b2f0"
         },
         {
@@ -17704,7 +17755,7 @@
           "endpoint": "weather",
           "url": "https://api.openf1.org/v1/weather?session_key=11408",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T22:09:56.355270Z",
+          "obtido_em_utc": "2026-11-09T16:57:58.359840Z",
           "sha256": "a5b932d4fc85c166286fc58fec1ba1067f7ccbd791b1d82d5e21d84fe9ea46b2"
         },
         {
@@ -17712,7 +17763,7 @@
           "endpoint": "laps",
           "url": "https://api.openf1.org/v1/laps?session_key=11408",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T22:10:04.918109Z",
+          "obtido_em_utc": "2026-11-09T16:58:06.689793Z",
           "sha256": "90a0660e4551e35c0fd24fdb4f554705e591c8711e9d99141d6671ba43c150a6"
         },
         {
@@ -17720,7 +17771,7 @@
           "endpoint": "stints",
           "url": "https://api.openf1.org/v1/stints?session_key=11408",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T22:10:12.238923Z",
+          "obtido_em_utc": "2026-11-09T16:58:14.257175Z",
           "sha256": "fbba808c4beea6992f8b040febce1b713e5e9a29a970081ce912c5cb40e9142d"
         },
         {
@@ -17728,7 +17779,7 @@
           "endpoint": "pit",
           "url": "https://api.openf1.org/v1/pit?session_key=11408",
           "status": 200,
-          "obtido_em_utc": "2026-11-07T22:10:20.432391Z",
+          "obtido_em_utc": "2026-11-09T16:58:22.323648Z",
           "sha256": "c8ace9e52125264c2e9008d196154071d3913b54dba95f2308687cf9caff5b34"
         }
       ]
@@ -17744,11 +17795,25 @@
         "drivers": 22,
         "session_result": 22,
         "weather": 160,
-        "laps": 1438,
+        "laps": 1437,
         "stints": 80,
         "pit": 58
       },
       "encerramento_observado_utc": "2026-11-08T18:38:45.626000+00:00",
+      "revisao_fontes": {
+        "id": "interlagos-2026-fia-openf1-20261109",
+        "sha256": "e5df3cbd746abb25994f0e9f3d25f8f96e34da7c72ddf966f80708e7b12ca586",
+        "acoes": []
+      },
+      "cobertura_validada": {
+        "race_control": 212,
+        "drivers": 22,
+        "session_result": 22,
+        "weather": 160,
+        "laps": 1437,
+        "stints": 80,
+        "pit": 58
+      },
       "tempos": [
         {
           "numero": 1,
@@ -17796,8 +17861,8 @@
           "piloto": "Kimi ANTONELLI",
           "equipe": "Mercedes",
           "posicao": 5,
-          "duracao": 5759.521,
-          "gap": 36.017,
+          "duracao": 5764.521,
+          "gap": 41.017,
           "voltas": 71
         },
         {
@@ -17811,23 +17876,23 @@
           "voltas": 71
         },
         {
-          "numero": 16,
-          "piloto_id": "leclerc",
-          "piloto": "Charles LECLERC",
-          "equipe": "Ferrari",
-          "posicao": 7,
-          "duracao": 5797.09,
-          "gap": 73.586,
-          "voltas": 71
-        },
-        {
           "numero": 30,
           "piloto_id": "lawson",
           "piloto": "Liam LAWSON",
           "equipe": "Racing Bulls",
-          "posicao": 8,
+          "posicao": 7,
           "duracao": 5798.906,
           "gap": 75.402,
+          "voltas": 71
+        },
+        {
+          "numero": 16,
+          "piloto_id": "leclerc",
+          "piloto": "Charles LECLERC",
+          "equipe": "Ferrari",
+          "posicao": 8,
+          "duracao": 5802.09,
+          "gap": 78.586,
           "voltas": 71
         },
         {
@@ -18850,10 +18915,6 @@
               [
                 71,
                 87.621
-              ],
-              [
-                72,
-                null
               ]
             ]
           },
@@ -24588,7 +24649,7 @@
             "piloto": "Lewis HAMILTON",
             "equipe": "Ferrari",
             "volta": 14,
-            "duracao_s": 24.3,
+            "duracao_s": 24.394,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24596,7 +24657,7 @@
             "piloto": "Carlos SAINZ",
             "equipe": "Williams",
             "volta": 14,
-            "duracao_s": 25.0,
+            "duracao_s": 25.067,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24604,7 +24665,7 @@
             "piloto": "Alexander ALBON",
             "equipe": "Williams",
             "volta": 15,
-            "duracao_s": 24.4,
+            "duracao_s": 24.448,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24612,7 +24673,7 @@
             "piloto": "Rafael CAMARA",
             "equipe": "Haas F1 Team",
             "volta": 15,
-            "duracao_s": 25.0,
+            "duracao_s": 25.007,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24620,7 +24681,7 @@
             "piloto": "Sergio PEREZ",
             "equipe": "Cadillac",
             "volta": 15,
-            "duracao_s": 32.1,
+            "duracao_s": 32.163,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24628,7 +24689,7 @@
             "piloto": "Lando NORRIS",
             "equipe": "McLaren",
             "volta": 16,
-            "duracao_s": 23.9,
+            "duracao_s": 23.995,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24636,7 +24697,7 @@
             "piloto": "George RUSSELL",
             "equipe": "Mercedes",
             "volta": 16,
-            "duracao_s": 24.9,
+            "duracao_s": 24.99,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24652,7 +24713,7 @@
             "piloto": "Liam LAWSON",
             "equipe": "Racing Bulls",
             "volta": 16,
-            "duracao_s": 23.7,
+            "duracao_s": 23.74,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24660,7 +24721,7 @@
             "piloto": "Oscar PIASTRI",
             "equipe": "McLaren",
             "volta": 16,
-            "duracao_s": 25.6,
+            "duracao_s": 25.63,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24676,7 +24737,7 @@
             "piloto": "Arvid LINDBLAD",
             "equipe": "Racing Bulls",
             "volta": 16,
-            "duracao_s": 23.9,
+            "duracao_s": 23.919,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24684,7 +24745,7 @@
             "piloto": "Charles LECLERC",
             "equipe": "Ferrari",
             "volta": 16,
-            "duracao_s": 24.8,
+            "duracao_s": 24.818,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24692,7 +24753,7 @@
             "piloto": "Lance STROLL",
             "equipe": "Aston Martin",
             "volta": 16,
-            "duracao_s": 24.1,
+            "duracao_s": 24.145,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24700,7 +24761,7 @@
             "piloto": "Oliver BEARMAN",
             "equipe": "Haas F1 Team",
             "volta": 16,
-            "duracao_s": 39.7,
+            "duracao_s": 39.773,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24708,7 +24769,7 @@
             "piloto": "Gabriel BORTOLETO",
             "equipe": "Audi",
             "volta": 16,
-            "duracao_s": 24.3,
+            "duracao_s": 24.365,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24716,7 +24777,7 @@
             "piloto": "Kimi ANTONELLI",
             "equipe": "Mercedes",
             "volta": 17,
-            "duracao_s": 24.4,
+            "duracao_s": 24.458,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24724,7 +24785,7 @@
             "piloto": "Max VERSTAPPEN",
             "equipe": "Red Bull Racing",
             "volta": 17,
-            "duracao_s": 23.7,
+            "duracao_s": 23.745,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24740,7 +24801,7 @@
             "piloto": "Pierre GASLY",
             "equipe": "Alpine",
             "volta": 17,
-            "duracao_s": 24.6,
+            "duracao_s": 24.684,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24748,7 +24809,7 @@
             "piloto": "Franco COLAPINTO",
             "equipe": "Alpine",
             "volta": 17,
-            "duracao_s": 25.6,
+            "duracao_s": 25.68,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24756,7 +24817,7 @@
             "piloto": "Gabriel BORTOLETO",
             "equipe": "Audi",
             "volta": 32,
-            "duracao_s": 23.3,
+            "duracao_s": 23.352,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24764,7 +24825,7 @@
             "piloto": "Pierre GASLY",
             "equipe": "Alpine",
             "volta": 37,
-            "duracao_s": 24.1,
+            "duracao_s": 24.193,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24772,7 +24833,7 @@
             "piloto": "Lewis HAMILTON",
             "equipe": "Ferrari",
             "volta": 38,
-            "duracao_s": 24.5,
+            "duracao_s": 24.581,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24780,7 +24841,7 @@
             "piloto": "Alexander ALBON",
             "equipe": "Williams",
             "volta": 42,
-            "duracao_s": 30.7,
+            "duracao_s": 30.721,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24788,7 +24849,7 @@
             "piloto": "Nico HULKENBERG",
             "equipe": "Audi",
             "volta": 44,
-            "duracao_s": 24.7,
+            "duracao_s": 24.706,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24796,7 +24857,7 @@
             "piloto": "Max VERSTAPPEN",
             "equipe": "Red Bull Racing",
             "volta": 45,
-            "duracao_s": 23.3,
+            "duracao_s": 23.346,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24804,7 +24865,7 @@
             "piloto": "Arvid LINDBLAD",
             "equipe": "Racing Bulls",
             "volta": 45,
-            "duracao_s": 24.7,
+            "duracao_s": 24.795,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24812,7 +24873,7 @@
             "piloto": "Carlos SAINZ",
             "equipe": "Williams",
             "volta": 45,
-            "duracao_s": 23.7,
+            "duracao_s": 23.784,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24820,7 +24881,7 @@
             "piloto": "Fernando ALONSO",
             "equipe": "Aston Martin",
             "volta": 46,
-            "duracao_s": 24.3,
+            "duracao_s": 24.351,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24828,7 +24889,7 @@
             "piloto": "Liam LAWSON",
             "equipe": "Racing Bulls",
             "volta": 48,
-            "duracao_s": 23.7,
+            "duracao_s": 23.755,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24836,7 +24897,7 @@
             "piloto": "Lando NORRIS",
             "equipe": "McLaren",
             "volta": 49,
-            "duracao_s": 23.9,
+            "duracao_s": 23.957,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24844,7 +24905,7 @@
             "piloto": "Oliver BEARMAN",
             "equipe": "Haas F1 Team",
             "volta": 48,
-            "duracao_s": 27.5,
+            "duracao_s": 27.554,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24852,7 +24913,7 @@
             "piloto": "Isack HADJAR",
             "equipe": "Red Bull Racing",
             "volta": 50,
-            "duracao_s": 23.8,
+            "duracao_s": 23.809,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24860,7 +24921,7 @@
             "piloto": "Rafael CAMARA",
             "equipe": "Haas F1 Team",
             "volta": 49,
-            "duracao_s": 24.4,
+            "duracao_s": 24.409,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24868,7 +24929,7 @@
             "piloto": "Oscar PIASTRI",
             "equipe": "McLaren",
             "volta": 51,
-            "duracao_s": 23.9,
+            "duracao_s": 23.938,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24876,7 +24937,7 @@
             "piloto": "Kimi ANTONELLI",
             "equipe": "Mercedes",
             "volta": 53,
-            "duracao_s": 23.6,
+            "duracao_s": 23.628,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24884,7 +24945,7 @@
             "piloto": "Franco COLAPINTO",
             "equipe": "Alpine",
             "volta": 53,
-            "duracao_s": 23.6,
+            "duracao_s": 23.652,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24892,7 +24953,7 @@
             "piloto": "Sergio PEREZ",
             "equipe": "Cadillac",
             "volta": 59,
-            "duracao_s": 25.8,
+            "duracao_s": 25.87,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24900,7 +24961,7 @@
             "piloto": "Rafael CAMARA",
             "equipe": "Haas F1 Team",
             "volta": 59,
-            "duracao_s": 25.3,
+            "duracao_s": 25.332,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24908,7 +24969,7 @@
             "piloto": "Fernando ALONSO",
             "equipe": "Aston Martin",
             "volta": 60,
-            "duracao_s": 23.8,
+            "duracao_s": 23.892,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24916,7 +24977,7 @@
             "piloto": "George RUSSELL",
             "equipe": "Mercedes",
             "volta": 61,
-            "duracao_s": 24.0,
+            "duracao_s": 24.097,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24924,7 +24985,7 @@
             "piloto": "Alexander ALBON",
             "equipe": "Williams",
             "volta": 60,
-            "duracao_s": 24.2,
+            "duracao_s": 24.294,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24932,7 +24993,7 @@
             "piloto": "Liam LAWSON",
             "equipe": "Racing Bulls",
             "volta": 61,
-            "duracao_s": 24.7,
+            "duracao_s": 24.739,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24940,7 +25001,7 @@
             "piloto": "Gabriel BORTOLETO",
             "equipe": "Audi",
             "volta": 60,
-            "duracao_s": 24.1,
+            "duracao_s": 24.183,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24948,7 +25009,7 @@
             "piloto": "Oliver BEARMAN",
             "equipe": "Haas F1 Team",
             "volta": 60,
-            "duracao_s": 25.3,
+            "duracao_s": 25.357,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24956,7 +25017,7 @@
             "piloto": "Charles LECLERC",
             "equipe": "Ferrari",
             "volta": 61,
-            "duracao_s": 24.8,
+            "duracao_s": 24.894,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24964,7 +25025,7 @@
             "piloto": "Lando NORRIS",
             "equipe": "McLaren",
             "volta": 62,
-            "duracao_s": 24.9,
+            "duracao_s": 24.917,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24972,7 +25033,7 @@
             "piloto": "Arvid LINDBLAD",
             "equipe": "Racing Bulls",
             "volta": 61,
-            "duracao_s": 24.5,
+            "duracao_s": 24.585,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24980,7 +25041,7 @@
             "piloto": "Nico HULKENBERG",
             "equipe": "Audi",
             "volta": 61,
-            "duracao_s": 35.2,
+            "duracao_s": 35.299,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -24988,7 +25049,7 @@
             "piloto": "Max VERSTAPPEN",
             "equipe": "Red Bull Racing",
             "volta": 62,
-            "duracao_s": 23.8,
+            "duracao_s": 23.888,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -25004,7 +25065,7 @@
             "piloto": "Kimi ANTONELLI",
             "equipe": "Mercedes",
             "volta": 62,
-            "duracao_s": 24.8,
+            "duracao_s": 24.823,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -25012,7 +25073,7 @@
             "piloto": "Franco COLAPINTO",
             "equipe": "Alpine",
             "volta": 61,
-            "duracao_s": 26.6,
+            "duracao_s": 26.632,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -25020,7 +25081,7 @@
             "piloto": "Pierre GASLY",
             "equipe": "Alpine",
             "volta": 61,
-            "duracao_s": 31.1,
+            "duracao_s": 31.118,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -25028,7 +25089,7 @@
             "piloto": "Oscar PIASTRI",
             "equipe": "McLaren",
             "volta": 62,
-            "duracao_s": 24.6,
+            "duracao_s": 24.695,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -25036,7 +25097,7 @@
             "piloto": "Lewis HAMILTON",
             "equipe": "Ferrari",
             "volta": 62,
-            "duracao_s": 25.5,
+            "duracao_s": 25.519,
             "fonte": "https://openf1.org/docs/#pit"
           },
           {
@@ -25044,7 +25105,7 @@
             "piloto": "Carlos SAINZ",
             "equipe": "Williams",
             "volta": 61,
-            "duracao_s": 24.4,
+            "duracao_s": 24.463,
             "fonte": "https://openf1.org/docs/#pit"
           }
         ]
@@ -25123,15 +25184,15 @@
             "media_amostras": 16.2375
           },
           "track_temperature": {
-            "n_medicoes_validas": 96,
-            "cobertura_bins_60s": 1.0,
-            "maior_intervalo_sem_medicao_s": 60.043,
-            "elegivel": false,
-            "min": 0.0,
+            "n_medicoes_validas": 95,
+            "cobertura_bins_60s": 0.9895180705842644,
+            "maior_intervalo_sem_medicao_s": 120.026,
+            "elegivel": true,
+            "min": 20.5,
             "max": 30.3,
-            "media_amostras": 24.344791666666666,
+            "media_amostras": 24.60105263157895,
             "qualidade": {
-              "codigo": "zero_isolado_em_conferencia",
+              "codigo": "zero_isolado_excluido",
               "registros": [
                 {
                   "indice_fonte": 75,
@@ -25141,7 +25202,40 @@
                   "posterior": 26.2
                 }
               ],
-              "uso_media": "Diagnóstico bruto; não publicar como temperatura representativa."
+              "n_excluidos": 1,
+              "diagnostico_bruto": {
+                "n_medicoes_validas": 96,
+                "cobertura_bins_60s": 1.0,
+                "maior_intervalo_sem_medicao_s": 60.043,
+                "elegivel": false,
+                "min": 0.0,
+                "max": 30.3,
+                "media_amostras": 24.344791666666666,
+                "qualidade": {
+                  "codigo": "zero_isolado_em_conferencia",
+                  "registros": [
+                    {
+                      "indice_fonte": 75,
+                      "data": "2026-11-08T17:25:32.969000+00:00",
+                      "valor": 0,
+                      "anterior": 23.8,
+                      "posterior": 26.2
+                    }
+                  ],
+                  "uso_media": "Diagnóstico bruto; não publicar como temperatura representativa."
+                }
+              },
+              "fontes": [
+                {
+                  "provider": "fia",
+                  "endpoint": "race_weather",
+                  "url": "https://www.fia.com/sites/default/files/2026_20_bra_f1_r0_timing_raceweatherreport_v01.pdf",
+                  "status": 200,
+                  "obtido_em_utc": "2026-11-09T16:52:07Z",
+                  "sha256": "a8ee30d4d5a026ac358d30d0f9094fcf3591db564055a8086dbc9af9b114332c"
+                }
+              ],
+              "metodo": "Excluir apenas a célula adjudicada; sem interpolar. Cobertura e intervalo máximo recalculados."
             }
           },
           "humidity": {
@@ -25197,7 +25291,7 @@
           "endpoint": "sessions",
           "url": "https://api.openf1.org/v1/sessions?year=2026&country_name=Brazil",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:40:35.067874Z",
+          "obtido_em_utc": "2026-11-09T16:54:38.070745Z",
           "sha256": "d6ce1580630182903442140ac5b58a316d34ea9161274b07039bad1baf9b7bc2"
         },
         {
@@ -25205,7 +25299,7 @@
           "endpoint": "race_control",
           "url": "https://api.openf1.org/v1/race_control?session_key=11412",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:41:39.235492Z",
+          "obtido_em_utc": "2026-11-09T16:58:30.510103Z",
           "sha256": "2b9ef1acbd2127e045078307baa0ecde7078eb41e9075bc64b8dc916892b82c7"
         },
         {
@@ -25213,7 +25307,7 @@
           "endpoint": "drivers",
           "url": "https://api.openf1.org/v1/drivers?session_key=11412",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:41:47.045254Z",
+          "obtido_em_utc": "2026-11-09T16:58:38.137312Z",
           "sha256": "f754bbae17f26557568e80eac534e2ad35807658a5eac9bd26577bd33df6742e"
         },
         {
@@ -25221,15 +25315,15 @@
           "endpoint": "session_result",
           "url": "https://api.openf1.org/v1/session_result?session_key=11412",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:41:55.079233Z",
-          "sha256": "4ea4c0ae1257e86a0025083a5c08a50bc45f3f45bfb4cb53a6691cb2d39e7592"
+          "obtido_em_utc": "2026-11-09T16:58:46.177586Z",
+          "sha256": "84a03f0d8a784d65ef139210c102d2ae209a5a8069131f6bea5fa46c6bd21a94"
         },
         {
           "provider": "openf1",
           "endpoint": "weather",
           "url": "https://api.openf1.org/v1/weather?session_key=11412",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:42:03.127977Z",
+          "obtido_em_utc": "2026-11-09T16:58:54.403312Z",
           "sha256": "df1ef310919eba12a32512309978200d0168c06cf68b071f3ee190c22e998eac"
         },
         {
@@ -25237,15 +25331,15 @@
           "endpoint": "laps",
           "url": "https://api.openf1.org/v1/laps?session_key=11412",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:42:12.009759Z",
-          "sha256": "3b3cebbf9b11eb9ab4f632637158693b3f4774f3993e5d142b990378a0c5f311"
+          "obtido_em_utc": "2026-11-09T16:59:03.241545Z",
+          "sha256": "ca423cc4fb7a3b9daf5724324b590bbcd0163ca6a0503780349de36f29f45fff"
         },
         {
           "provider": "openf1",
           "endpoint": "stints",
           "url": "https://api.openf1.org/v1/stints?session_key=11412",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:42:19.022405Z",
+          "obtido_em_utc": "2026-11-09T16:59:10.177779Z",
           "sha256": "45859230aede424ab44fbb3969a59821ee7e5bec69a345c939da65a7e6fc8520"
         },
         {
@@ -25253,8 +25347,8 @@
           "endpoint": "pit",
           "url": "https://api.openf1.org/v1/pit?session_key=11412",
           "status": 200,
-          "obtido_em_utc": "2026-11-08T19:42:27.021624Z",
-          "sha256": "5a54d742d76c012cafe564cd6fb6adfd58b5732789b8a35564e6d3a30380e3fb"
+          "obtido_em_utc": "2026-11-09T16:59:18.202909Z",
+          "sha256": "07fa624a6f276ecdc6d7d7669cd621a23dfee885eff58c2a6518751222e91e37"
         }
       ]
     }

@@ -27,7 +27,7 @@ A política continua admitindo somente **2026/20/interlagos**. Novos GPs/tempora
 
 Tentativas de preparação/publicação e de aceite do host têm contadores duráveis separados nos assets: no máximo quatro por fase, com intervalo mínimo de duas horas. Cada caso de navegador permite duas tentativas; o job inteiro tem 20 minutos. Requisições individuais têm timeout de 30 segundos; falhas de transporte não viram ausência de release. Respostas 403/429/5xx interrompem a execução. Uma falha entre upload e recibo é recuperada baixando os bytes públicos existentes e conferindo-os contra a emissão nativa. O código nunca usa `clobber`, DELETE ou force push.
 
-Se o par faltar quando fechar o prazo, publica um registro de falta de cobertura, sem probabilidades tardias. Se a prova do host faltar na largada, também registra ausência e não a preenche depois. O job falha visivelmente; a manutenção existente acompanha a conclusão do workflow e trata a ocorrência. As provas do par, do host e dos alvos posteriores permanecem separadas. Evidências de execução têm retenção de 90 dias; assets públicos são a evidência durável independente do cache.
+Se o par faltar quando fechar o prazo ou se a prova do host faltar na largada, a ocorrência fica registrada como cobertura definitivamente excluída. O workflow mostra um aviso e preserva o recibo. Falhas operacionais continuam interrompendo o job. As provas do par, do host e dos alvos posteriores permanecem separadas. Evidências de execução têm retenção de 90 dias. Os assets públicos são a evidência durável independente do cache.
 
 ## Limites do resultado
 

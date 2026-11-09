@@ -2,35 +2,39 @@
 
 **[Português](README.md) · English**
 
-A Formula 1 data-science portfolio by **MBPaschoal**. I am learning to build a complete product: collect data, recognise its limitations, evaluate a model and turn results into a clear interface. Corrections and inconclusive findings are part of that journey.
+A Formula 1 data-science portfolio by **MBPaschoal**. Pitwall Lab started with analyses in Python and grew into a bilingual dashboard that shows what happened on track, what the model estimated before the start, and how those estimates were evaluated.
 
 **[Open the dashboard](https://pitwall-lab.streamlit.app/) · [Learning journal](docs/en/LEARNING.md) · [Versions](CHANGELOG.en.md) · [Architecture](docs/en/ARCHITECTURE.md)**
 
-Who wins more often in the rain? How do two drivers compare at the same races? Who has done well at this circuit? Explore these questions using the filters; car and era also affect results.
+## Three-screen demo
+
+1. See the observed result of São Paulo 2026 and explore sessions, tyres and stops for the same GP. [Interlagos race result](https://pitwall-lab.streamlit.app/?tela=Corridas&temporada=2026&gp=20&lang=en)
+2. Open the GP Cards and reveal individual podium chances recorded after qualifying. The cards give each driver's probability of finishing in the top three. [Interlagos forecast](https://pitwall-lab.streamlit.app/?tela=Previs%C3%B5es&temporada=2026&gp=20&lang=en)
+3. Open a profile and select a grid position to see the change from start to finish, the sample size and the races behind it. [Max Verstappen's profile](https://pitwall-lab.streamlit.app/?tela=Pilotos&visao=perfil&piloto=max_verstappen&temporada=2026&gp=20&lang=en)
 
 ![Drivers: historical comparisons by condition](docs/images/pitwall-pilotos-en.png)
 
+## How the project evolved
 
-Mexico 2026: observed results, laps, tyres, stops and round-19 standings are available; FP3 times are recovered, the qualifying DSQ is documented and track weather is consolidated with an audited anomalous-reading exclusion. Automatic collection runs every 30 minutes, respecting free-tier availability. [Data and limits](docs/en/CURRENT_DATA.md) · [Operation](docs/en/WEEKEND_OPERATION.md).
-
-
-Collection is now scheduled through GitHub Actions, independent of the personal computer: new sessions are validated, versioned and published automatically. [Track runs](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml).
-
-
-The interface uses **Fan Journey**: task-based sidebar navigation, one GP context, circuit-specific covers and face-down cards in a dialog for exploring recorded probabilities. [Usage and accessibility](docs/en/FAN_JOURNEY.md).
-
-São Paulo now has a hosted post-Q preparation and emission routine with temporal gates and bounded attempts. [Automation inventory and review limits](docs/en/AUTOMATION.md).
+| Stage | What changed |
+| --- | --- |
+| Collection and analysis | Season analyses became a reproducible archive with source, retrieval time, coverage and identity checks. [Sources and data](docs/en/CURRENT_DATA.md) |
+| Modelling and evaluation | The v1 logistic regression gained a temporal cutoff, a qualifying baseline and evaluation with Brier score, log loss and calibration. Later candidates stayed in research. [Method](docs/en/experimento_modelo_v1.md) · [Temporal protocol](docs/en/protocolo_temporal.md) |
+| Bilingual product | Races, Drivers, Championship and Forecasts gained task-based navigation with GP context, editorial artwork and browser tests in Chromium and WebKit. [Fan Journey](docs/en/FAN_JOURNEY.md) · [PR #32](https://github.com/mbpaschoal/pitwall-lab/pull/32) |
+| Operations and publication | GitHub Actions collects sessions, validates them and publishes changes. The package, data and served version have separate checks. A prospective forecast requires evidence from before lights out. [Automation](docs/en/AUTOMATION.md) · [Workflow runs](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml) |
+| Grid-position comparisons | Driver profiles now show the change from start to finish by starting position, with sample size and underlying races. [PR #34](https://github.com/mbpaschoal/pitwall-lab/pull/34) |
+| Next GP | Las Vegas entered the post-qualifying workflow. A forecast requires observed Q3 and a review of the official 22-car entry list. [PR #35](https://github.com/mbpaschoal/pitwall-lab/pull/35) |
 
 ## The product today
 
 - **Drivers:** condition leaders, profiles, shared-race duels, a browser-local favourite and shareable cards, with explicit sample sizes and ties. [Data audit](reports/pilotos_condicoes_20261029/README.en.md).
 - **Races:** results, circuit profile, session times, weather, tyres/stops, teams and driver performance in up to five previous editions at the same circuit.
 - **Championship:** full driver and constructor standings at the selected round.
-- **Podium chances:** individual podium probabilities and subsequent comparison. Austin 2026's prospective recorded prediction remains separate from the retrospective study.
+- **Podium chances:** individual probabilities and subsequent comparison. The 2026 Austin and São Paulo forecasts have their own records, separate from the retrospective study.
 - **How the Lab did:** log loss, Brier, calibration, ranking and coverage with explicit denominators.
 - **How it works:** offline documents and reports. The 🇧🇷 and 🇬🇧 flags in the upper-right corner select Portuguese or English and retain the current navigation.
 
-The descriptive archive covers **66 GPs and 330 sessions in 2024–2026 through Austin**. In release 0.8.25, Drivers also includes Mexico: 67 GPs, 1,376 results and 1,362 starts. It uses sensors within actual racing intervals and edition-specific FIA maps. The current coverage appears on screen. [Updates and validation](docs/en/DRIVER_UPDATES.md). The audit records 295 checks; 17 practice/qualifying compounds remain missing and do not enter these rankings. History compares earlier editions at the same circuit. [Corrections and limits](docs/en/CURRENT_DATA.md).
+The descriptive baseline covers **66 GPs and 330 sessions in 2024–2026 through Austin**. With the Mexico and São Paulo supplements, Drivers covers **68 GPs, 1,398 results and 1,383 starts**. Analyses use sensors within actual racing intervals and edition-specific FIA maps. The interface shows the period covered by each view. [Corrections, coverage and limits](docs/en/CURRENT_DATA.md)
 
 ## What I learned from mistakes
 

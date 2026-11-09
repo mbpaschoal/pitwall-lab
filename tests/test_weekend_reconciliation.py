@@ -204,8 +204,30 @@ class ReconciliationTests(unittest.TestCase):
                 corrected=next(s for s in state['sessoes'] if s['nome']=='Race')
                 self.assertEqual(corrected['clima_observado']['campos']['track_temperature']['qualidade']['codigo'],'zero_isolado_excluido')
                 with patch.object(weekend,'project_received',side_effect=AssertionError('Current review must be reused')):
-                    again=weekend.collect(ROOT/'operacao2026/eventos/mexico2026.json',root,clock+timedelta(seconds=2),Client)
+                    again=weekend.collect(ROOT/'operacao2026/eventos/mexico2026.json',root,
+                                          clock+timedelta(seconds=2),Client,recheck_since=clock)
                 self.assertEqual(next(s for s in again['sessoes'] if s['nome']=='Race'),corrected)
+
+    def test_reviewed_practice_can_be_complete_with_fewer_results_than_drivers(self):
+        event = weekend.load_event(ROOT/'operacao2026/eventos/saopaulo2026.json')
+        review = load_review(ROOT, event)
+        session = next(item for item in event['sessions'] if item['session_name'] == 'Practice 2')
+        expected = session_review(review, session)['classificacao_treino']['carros_classificados']
+        raw = dict(race_control=[], pit=[], laps=[], stints=[], weather=[{}],
+                   drivers=[dict(driver_number=n, full_name=f'Driver {n}') for n in [*expected, 27]],
+                   session_result=[dict(driver_number=n, position=pos) for pos, n in enumerate(expected, 1)])
+        original = deepcopy(raw)
+        entry = {}
+        weekend.project_received(entry, raw, session, review)
+        self.assertEqual(entry['estado'], 'dados_recebidos')
+        self.assertEqual([row['numero'] for row in entry['tempos']], expected)
+        self.assertEqual(entry['revisao_fontes']['acoes'][0]['tipo'], 'classificacao_treino_oficial')
+        self.assertEqual(raw, original)
+
+        raw['session_result'][-1]['driver_number'] = 27
+        weekend.project_received(entry, raw, session, review)
+        self.assertEqual(entry['estado'], 'parcial')
+        self.assertEqual(entry['revisao_fontes']['acoes'], [])
 
 
 if __name__=='__main__':

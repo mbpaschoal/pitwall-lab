@@ -77,3 +77,9 @@ A coleta do México revelou três causas distintas: HTTP 401 durante a janela ao
 ## 03/11/2026 — Coletar não basta para atualizar as comparações
 
 O México já aparecia no painel do GP, mas Pilotos ainda terminava em Austin. Aprendi a conferir cada consumidor dos dados: agora existe um complemento rastreável e uma atualização própria, inclusive quando o painel do GP não muda. O teste de um estreante revelou ainda que dados válidos não deveriam depender de um retrato disponível. Ausência de posição oficial e ausência de foto têm tratamentos explícitos. [Fluxo e limites](PILOTOS_ATUALIZACAO.md).
+
+## 09/11/2026 — Uma sessão completa pode ter menos classificados que inscritos
+
+No TL2 de São Paulo, a OpenF1 listava 22 pilotos e 21 resultados. A contagem sozinha tratava a sessão como parcial. A classificação da FIA contém os mesmos 21 carros, na mesma ordem. A coleta passa a registrar essa conferência e reutiliza sessões concluídas depois da revisão tardia enquanto reconsulta as demais.
+
+O sensor de asfalto marcou 0 °C entre duas leituras acima de 20 °C. O gráfico da FIA mostra o mesmo mergulho isolado. A revisão preserva a medição original e recalcula a média com as 95 leituras válidas, com cobertura de 98,95% dos minutos ativos. Essa correção é descritiva. [Recibo das fontes](../operacao2026/adjudicacoes/2026-20-interlagos.json) · [Ocorrência da coleta](https://github.com/mbpaschoal/pitwall-lab/issues/31)

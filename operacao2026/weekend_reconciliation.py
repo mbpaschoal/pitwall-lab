@@ -133,6 +133,20 @@ def reconcile(data, session, review):
     return output, audit
 
 
+def reviewed_practice_classification(data, session, review):
+    item = (session_review(review, session) or {}).get('classificacao_treino')
+    if not item or session['session_name'] not in ('Practice 1', 'Practice 2', 'Practice 3'):
+        return None
+    expected = item['carros_classificados']
+    results = sorted(data.get('session_result', []), key=lambda row: row['position'] or 0)
+    if [row['position'] for row in results] != list(range(1, len(expected) + 1)):
+        return None
+    if [row['driver_number'] for row in results] != expected:
+        return None
+    return dict(tipo='classificacao_treino_oficial', carros_classificados=expected,
+                fontes=sources(review, [item['fonte']]))
+
+
 def mark_tyre_gaps(entry, session, review):
     """Receiving stint rows does not establish coverage of every observed lap."""
     item = session_review(review,session) or {}

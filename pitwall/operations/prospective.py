@@ -455,7 +455,9 @@ def run(root, output):
                             error_type=type(error).__name__,error=str(error))
         (folder/'status.json').write_bytes(json_bytes(result));results.append(result)
     (output/'status.json').write_bytes(json_bytes({'events':results,'checked_at_utc':now().isoformat()}))
-    if any(r['status'] in ('blocked','missing_pair_deadline_closed','missing_host_before_race','retry_deferred','host_retry_deferred') for r in results):
+    # An expired deadline is a final coverage outcome. It remains inadmissible
+    # and reported on every run, while recoverable and unexpected failures fail CI.
+    if any(r['status'] in ('blocked','retry_deferred','host_retry_deferred') for r in results):
         raise RuntimeError('P1 needs attention; coverage/retry state retained without backfilling')
     return results
 

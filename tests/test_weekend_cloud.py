@@ -153,6 +153,10 @@ class CloudTests(unittest.TestCase):
             output=root/'captures.tar.gz';cloud.archive_captures(root,output)
             with tarfile.open(output) as archive:
                 self.assertEqual(archive.extractfile(str(raw.relative_to(root))).read(),raw.read_bytes())
+            self.assertEqual(cloud.collection_files(root), ([raw], len(raw.read_bytes())))
+            with patch.object(cloud, 'MAX_STATE_MIB', 0):
+                with self.assertRaisesRegex(ValueError, 'exceeds 0 MiB'):
+                    cloud.archive_captures(root,output)
             (raw.parent/'link').symlink_to(raw)
             with self.assertRaises(ValueError):cloud.archive_captures(root,output)
     def state(self,round_=19):

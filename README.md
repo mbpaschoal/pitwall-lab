@@ -2,35 +2,39 @@
 
 **Português · [English](README.en.md)**
 
-Portfólio de ciência de dados sobre Fórmula 1, criado por **MBPaschoal**. Estou aprendendo a construir um produto completo: coletar dados, reconhecer suas limitações, avaliar um modelo e transformar os resultados numa interface compreensível. As correções e os resultados inconclusivos fazem parte desse percurso.
+Portfólio de ciência de dados sobre Fórmula 1, criado por **MBPaschoal**. O Pitwall Lab começou com análises em Python e evoluiu para um painel bilíngue que reúne o que aconteceu na pista, o que o modelo estimou antes da largada e como essas estimativas foram avaliadas.
 
 **[Abrir o dashboard](https://pitwall-lab.streamlit.app/) · [Evolução e aprendizados](docs/APRENDIZADOS.md) · [Versões](CHANGELOG.md) · [Arquitetura](docs/ARQUITETURA.md)**
 
-Quem ganha mais na chuva? Como dois pilotos se saem nos mesmos GPs? Quem já foi bem nesta pista? Explore essas perguntas nos filtros; carro e época também influenciam os resultados.
+## Demonstração em três telas
+
+1. Veja o resultado observado de São Paulo 2026 e abra as sessões, os pneus e as paradas do mesmo GP. [Resultado em Interlagos](https://pitwall-lab.streamlit.app/?tela=Corridas&temporada=2026&gp=20&lang=pt)
+2. Abra as Cartas do GP e revele as chances individuais de pódio registradas após a classificação. As cartas mostram probabilidades de terminar entre os três primeiros. [Previsão de Interlagos](https://pitwall-lab.streamlit.app/?tela=Previs%C3%B5es&temporada=2026&gp=20&lang=pt)
+3. Abra um perfil e escolha uma posição de largada para ver o saldo até a chegada, o tamanho da amostra e as corridas que sustentam o recorte. [Perfil de Max Verstappen](https://pitwall-lab.streamlit.app/?tela=Pilotos&visao=perfil&piloto=max_verstappen&temporada=2026&gp=20&lang=pt)
 
 ![Pilotos: comparações históricas por condição](docs/images/pitwall-pilotos.png)
 
+## Como o projeto evoluiu
 
-México 2026: resultado observado, voltas, pneus, paradas e campeonato da rodada 19 disponíveis; tempos do TL3 recuperados, DSQ confirmado na classificação e clima do asfalto consolidado com exclusão auditada de uma leitura anômala. Coleta automática a cada 30 minutos, respeitando a disponibilidade gratuita da fonte. [Dados e limites](docs/DADOS_ATUAIS.md) · [Operação](docs/OPERACAO_FIM_SEMANA.md).
-
-
-A coleta agora é agendada no GitHub Actions, sem depender do computador pessoal: novas sessões são validadas, versionadas e publicadas automaticamente. [Acompanhar execuções](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml).
-
-
-A interface usa a **Jornada do fã**: menu lateral por tarefa, um único contexto de GP, capas próprias de cada circuito e cartas fechadas em um pop-up para explorar as probabilidades registradas. [Uso e acessibilidade](docs/JORNADA_DO_FA.md).
-
-A preparação e emissão pós-Q de São Paulo agora têm rotina hospedada com bloqueios temporais e tentativas limitadas. [O que está automatizado e o que exige revisão](docs/AUTOMACAO.md).
+| Etapa | O que mudou |
+| --- | --- |
+| Coleta e análise | As análises da temporada deram lugar a um acervo reproduzível com origem, horário, cobertura e conferência de identidade. [Fontes e dados](docs/DADOS_ATUAIS.md) |
+| Modelo e avaliação | A regressão logística v1 ganhou corte temporal, comparação com a classificação e avaliação por Brier, log loss e calibração. Candidatos posteriores ficaram em pesquisa. [Método](docs/experimento_modelo_v1.md) · [Protocolo temporal](docs/protocolo_temporal.md) |
+| Produto bilíngue | Corridas, Pilotos, Campeonato e Previsões ganharam rotas próprias com contexto de GP, visual editorial e testes de navegação em Chromium e WebKit. [Jornada do fã](docs/JORNADA_DO_FA.md) · [PR #32](https://github.com/mbpaschoal/pitwall-lab/pull/32) |
+| Operação e publicação | O GitHub Actions coleta novas sessões, valida e publica mudanças. Pacote, dados e versão servida são conferidos separadamente. A previsão prospectiva exige evidência anterior à largada. [Automação](docs/AUTOMACAO.md) · [Execuções](https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-dados.yml) |
+| Comparação por largada | O perfil passou a detalhar a diferença entre largada e chegada, com recorte por posição, amostra e corridas consultáveis. [PR #34](https://github.com/mbpaschoal/pitwall-lab/pull/34) |
+| Próximo GP | Las Vegas entrou no fluxo de previsão pós-classificação. A emissão depende do Q3 observado e da revisão da lista oficial dos 22 inscritos. [PR #35](https://github.com/mbpaschoal/pitwall-lab/pull/35) |
 
 ## O produto hoje
 
 - **Pilotos:** destaques por condição, perfil, duelos, favorito no navegador e cartões para compartilhar. Filtros, amostras e empates ficam explícitos. [Auditoria dos dados](reports/pilotos_condicoes_20261029/README.md).
 - **Corridas:** resultado, ficha do circuito, tempos, clima, pneus/paradas, equipes e desempenho dos pilotos em até cinco edições anteriores na mesma pista.
 - **Campeonato:** classificação completa de pilotos e equipes na rodada selecionada.
-- **Chances de pódio:** probabilidades individuais de pódio e comparação posterior. A emissão prospectiva de Austin 2026 permanece separada do estudo retrospectivo.
+- **Chances de pódio:** probabilidades individuais e comparação posterior. As emissões de Austin e São Paulo de 2026 têm registros próprios, separados do estudo retrospectivo.
 - **Acertos do Lab:** log loss, Brier, calibração, ranking e cobertura, com denominadores explícitos.
 - **Como funciona:** documentos e relatórios offline. As bandeiras 🇧🇷 e 🇬🇧 no canto superior direito selecionam português ou inglês e acompanham a navegação.
 
-O acervo descritivo cobre **66 GPs e 330 sessões de 2024–2026 até Austin**. Na entrega 0.8.25, Pilotos incorpora também o México: 67 GPs, 1.376 resultados e 1.362 largadas. Usa sensores nos intervalos efetivos e mapas FIA de cada edição. O período atualizado aparece na tela. [Atualização e validação](docs/PILOTOS_ATUALIZACAO.md). A auditoria registra 295 verificações; 17 compostos de treinos/classificação continuam ausentes e não entram nesses rankings. O Histórico compara edições anteriores da mesma pista. [Correções e limites](docs/DADOS_ATUAIS.md).
+O acervo descritivo parte de **66 GPs e 330 sessões de 2024–2026 até Austin**. Com os complementos de México e São Paulo, Pilotos cobre **68 GPs, 1.398 resultados e 1.383 largadas**. As análises usam sensores nos intervalos efetivos e mapas FIA de cada edição. A tela informa o período de cada recorte. [Correções, cobertura e limites](docs/DADOS_ATUAIS.md)
 
 ## O que aprendi com os erros
 

@@ -75,12 +75,7 @@ jobs:
       - name: Limitar estado persistido / Bound persisted state
         id: storage
         if: always()
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          size=sum(p.stat().st_size for p in Path('data/operacao_2026/fins_de_semana').rglob('*') if p.is_file())
-          if size>128*1024*1024:raise SystemExit('Collection state exceeds 128 MiB; preserve and review before increasing storage.')
-          PY
+        run: python -B -m operacao2026.cloud check-storage
       - name: Conferir acesso da fonte / Check provider access
         run: python -B -m operacao2026.github_maintenance check-source --result "$RUNNER_TEMP/collection.json"
       - name: Preservar capturas mesmo em falha / Preserve captures even on failure
@@ -270,9 +265,14 @@ jobs:
         if: always()
         run: |
           python - "$RUNNER_TEMP/p1/status.json" "$GITHUB_STEP_SUMMARY" <<'PY'
+          import json
           from pathlib import Path
           import sys
           source=Path(sys.argv[1])
+          if source.exists():
+              for event in json.loads(source.read_text())['events']:
+                  if event['status'] in ('missing_pair_deadline_closed','missing_host_before_race'):
+                      print('::warning title=P1 coverage excluded::' + event['status'])
           with open(sys.argv[2],'a') as output:
               output.write(source.read_text() if source.exists() else 'P1 bloqueado; consultar logs / P1 blocked; inspect logs.\n')
               for receipt in sorted(source.parent.rglob('finish-host-result.json')):

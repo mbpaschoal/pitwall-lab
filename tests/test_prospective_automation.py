@@ -264,6 +264,20 @@ class ActualRuntimeTests(unittest.TestCase):
             result=auto.run(ROOT,Path(tmp)/'new')
         self.assertEqual([r['status'] for r in result],['waiting_for_observed_qualifying'])
 
+    def test_final_coverage_gap_is_reported_without_failing_the_workflow(self):
+        clock = auto.utc('2026-11-09T12:00:00Z')
+        for status in ('missing_pair_deadline_closed', 'missing_host_before_race', 'blocked'):
+            with self.subTest(status=status), tempfile.TemporaryDirectory() as tmp:
+                output = Path(tmp) / 'p1'
+                event = dict(status=status, identity=[2026, 20, 'interlagos'], admissible=False)
+                with patch.object(auto, 'now', return_value=clock), patch.object(auto, 'run_event', return_value=event):
+                    if status == 'blocked':
+                        with self.assertRaisesRegex(RuntimeError, 'P1 needs attention'):
+                            auto.run(ROOT, output)
+                    else:
+                        self.assertEqual(auto.run(ROOT, output), [event])
+                self.assertEqual(json.loads((output / 'status.json').read_text())['events'], [event])
+
     def test_frozen_public_manifest_is_verified(self):
         self.assertEqual(auto.frozen(ROOT)['Q_SHA'],comparison.Q_SHA)
 

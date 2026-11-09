@@ -2,9 +2,13 @@
 
 Português · [English](en/CURRENT_DATA.md)
 
-Pilotos acrescenta o México 2026 por complemento separado: **67 GPs, 1.376 resultados e 1.362 largadas** nesta entrega. Cinco registros NC mantêm posição ausente; contam como largada, mas não entram no placar de posições do duelo. O mapa FIA 2026 e o clima efetivo estão conferidos. O acervo-base de 66 GPs/330 sessões permanece preservado. [Fluxo, fontes e pendências automáticas](PILOTOS_ATUALIZACAO.md).
+Pilotos incorpora México e São Paulo 2026 por complementos rastreáveis. A cobertura chega a **68 GPs, 1.398 resultados e 1.383 largadas**. Registros NC preservam a posição ausente e entram nas contagens de largadas quando a partida foi verificada. O acervo-base continua com 66 GPs e 330 sessões. [Fluxo, fontes e pendências automáticas](PILOTOS_ATUALIZACAO.md).
 
 O acervo é descritivo e separado das entradas v1: 66 GPs/330 sessões de 2024–2026 até Austin. A aquisição complementar de 29/10 foi serial e cacheada. Os nove artefatos científicos e as emissões anteriores foram preservados.
+
+## São Paulo — revisão de 09/11/2026
+
+As cinco sessões têm dados recebidos. O TL2 conserva os 21 carros classificados pela FIA. Na corrida, a média do asfalto foi de 24,6 °C com 95 leituras válidas e cobertura de 98,95%. O zero isolado foi excluído da média, com o valor original preservado. A coleta também recebeu a classificação revisada com as penalidades de Antonelli e Leclerc e o campeonato da rodada 20. A previsão registrada de São Paulo continua disponível. A comparação científica P1 permanece inadmissível, pois faltou o recibo do dashboard antes da largada. [Recibo da revisão](../operacao2026/adjudicacoes/2026-20-interlagos.json) · [Classificação final FIA](https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_final_race_classification.pdf) · [Cobertura P1](https://github.com/mbpaschoal/pitwall-lab/releases/tag/p1-2026-20-interlagos)
 
 ## México — composto inicial recuperado em 02/11/2026
 
