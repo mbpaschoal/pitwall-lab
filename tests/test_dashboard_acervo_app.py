@@ -87,6 +87,19 @@ class TestDashboardAcervoApp(unittest.TestCase):
         self.assertEqual(len(tabela), 20)
         self.assertTrue(tabela['Q1'].notna().any())
 
+    def test_fim_de_semana_sprint_abre_nos_pneus_e_paradas_da_corrida(self):
+        self.at.query_params['aba'] = 'Estratégias'
+        self.executar(2024, 5)
+        seletor = por_chave(self.at.selectbox, 'acervo_2024_5_prova_pneus')
+        self.assertEqual(seletor.value, 'Race')
+        paradas = next(e.value for e in self.at.dataframe if 'Parada' in e.value.columns)
+        self.assertEqual(len(paradas), len(self.asset['gps']['2024:5']['paradas']))
+        seletor.set_value('Sprint')
+        self.at.run(timeout=30)
+        self.assertFalse(self.at.exception)
+        self.assertTrue(any('Stint' in e.value.columns for e in self.at.dataframe))
+        self.assertFalse(any('Parada' in e.value.columns for e in self.at.dataframe))
+
     def test_corrida_mostra_semantica_de_tempo_total(self):
         self.at.query_params['aba'] = 'Tempos'
         self.executar()

@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.16.5 — 2026-11-09
+
+A revisão cruza as 15 abas do Pitwall Lab com os 71 GPs disponíveis, incluindo as corridas futuras. Em 18 fins de semana com Sprint, Pneus e paradas agora abre na corrida principal, onde há paradas publicadas. A Sprint continua disponível e cada sessão mostra somente seus próprios registros.
+
+Clima expõe as medições de umidade, pressão e vento já validadas no acervo. Sessões e voltas identifica as sessões históricas com tempos agregados e informa a origem das voltas detalhadas. A [auditoria por GP](docs/DADOS_ATUAIS.md#revisão-completa-do-calendário) distingue cobertura, lacunas de fonte e previsão ainda pendente.
+
 ## 0.16.4 — 2026-11-09
 
 Equipes neste GP passa a mostrar os pontos, os pilotos e as posições da corrida quando os resultados operacionais têm o mesmo GP, sessão e elenco conferidos. Em São Paulo, são 11 equipes e 22 resultados. A classificação completa volta a ter um atalho na visão geral e o Histórico permite filtrar pelos pilotos do GP. Fora de um fim de semana ativo, a temporada 2026 abre no último resultado observado.

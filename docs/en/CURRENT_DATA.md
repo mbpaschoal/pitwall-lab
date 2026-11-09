@@ -6,6 +6,23 @@ Drivers includes 2026 Mexico and São Paulo through traceable supplements. Cover
 
 The descriptive archive is separate from v1 inputs: 66 GPs/330 sessions in 2024–2026 through Austin. Supplementary acquisition on 29 October was serial and cached. The nine scientific artefacts and previous recorded predictions were preserved.
 
+## Full calendar audit
+
+The 9 November 2026 audit covers all 15 pages across 71 selectable rounds for 1,065 combinations. The calendar has 24 rounds in 2024, 24 in 2025 and 23 in 2026. The [inventory by round and session](../evidence/auditoria-calendario-20261109.json) records coverage and missing fields in the distributed files.
+
+| Pages | Coverage and gaps |
+| --- | --- |
+| Predictions for this GP · How the Lab did | 68 GPs have probabilities, including 65 retrospective studies and three pre-race forecasts. Spain and São Paulo 2025 were excluded from the retrospective rankings. São Paulo 2026 still awaits admission to the post-race assessment. |
+| GP overview · Sessions and laps | All 68 races have results, and 340 sessions have aggregate timing. Individual laps cover all 68 main races and eight other sessions at 2026 Mexico and São Paulo. Baku 2025 qualifying has a separate FIA supplement. The other 263 sessions have aggregate times in the package. Of the distributed individual lap records, 527 have no duration. |
+| Tyres and pit stops | All 68 completed GPs have tyres and main-race stops. At 18 Sprint weekends the selector now opens on the main race. Sprint has tyre stints and no pit-stop records in this archive. Nine of 2,492 main-race stops have no duration, all at Mexico 2026. |
+| Weather | 68 races have observed temperatures, rainfall records and mean humidity, pressure and wind readings. Atmospheric context and archived forecasts are shown separately where available. |
+| Circuit history · Teams at this GP | 70 GPs have earlier editions at the same circuit. Madrid made its debut in 2026. The 68 completed GPs have team results. |
+| Driver profiles · Head to head | Both use the descriptive archive of 68 GPs. The position-change panel has its own 67-GP window through Mexico 2026. |
+| Drivers' championship · Teams' championship | Both standings tables are available for all 68 completed rounds. |
+| How it works · Sources and limits · F1 terms | Method, references and glossary use the same content across all GPs. |
+
+Las Vegas, Qatar and Abu Dhabi 2026 are the three upcoming rounds at the audit cutoff. Circuit facts and track history are available. Recorded forecasts, results, timing, tyres, stops, observed weather and round standings still await data. Inventory gaps refer to the distributed archive.
+
 ## São Paulo — 9 November 2026 review
 
 All five sessions have received-data status. FP2 retains the 21 cars classified by the FIA. Mean track temperature during the race was 24.6 °C from 95 valid readings with 98.95% coverage. The isolated zero was excluded from the mean and preserved in the original capture. The collector also received the revised classification with penalties for Antonelli and Leclerc, plus round 20 standings. The recorded São Paulo forecast remains available. The P1 research comparison remains inadmissible because the dashboard receipt was missing before the start. [Review receipt](../../operacao2026/adjudicacoes/2026-20-interlagos.json) · [FIA final classification](https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_final_race_classification.pdf) · [P1 coverage](https://github.com/mbpaschoal/pitwall-lab/releases/tag/p1-2026-20-interlagos)
@@ -21,12 +38,6 @@ All five sessions have received-data status. FP2 retains the 21 cars classified 
 | Driver profiles · Head to head | Descriptive archive of 68 GPs. The profile's position-change panel has its own cutoff through Mexico 2026. |
 | Drivers' championship · Teams' championship | 25 drivers and 11 teams at round 20. |
 | How it works · Sources and limits · F1 terms | Method, references, scope and glossary. These pages document the product and its sources. |
-
-The calendar review covered all 71 selectable events. The 68 completed GPs have results, session times, tyres, stops, weather context, team results and both standings tables. This count verifies the presence of each dataset by GP. Individual field coverage is documented in the tables and receipts.
-
-- The 2026 Spanish GP is the only completed event with no earlier edition at the same circuit in the archive.
-- Las Vegas, Qatar and Abu Dhabi 2026 have circuit history. Results, session data, observed weather, round standings and recorded forecasts are pending.
-- The retrospective assessment covers 24 of 24 GPs in 2024 and 22 of 24 in 2025. Spain and São Paulo were excluded from the 2025 rankings. The 2026 season has 17 retrospective trials and three recorded forecasts. Austin and Mexico have admitted evaluations. São Paulo awaits post-race evaluation.
 
 ## Mexico — opening compound recovered on 2 November 2026
 
