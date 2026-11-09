@@ -1,5 +1,13 @@
 # Pitwall Lab evolution
 
+## 0.16.3 — 2026-11-09
+
+São Paulo has five reviewed sessions, revised results after penalties and round 20 standings. FP2 retains the 21 cars classified by the FIA. Mean track temperature excludes one anomalous reading, retaining the original capture, 95 valid readings and 98.95% coverage. Drivers now covers 68 GPs. Model v1 and recorded probabilities were preserved.
+
+Collection reuses sessions and standings already verified after the late review cutoff. Persisted state is capped at 256 MiB, with a separate 32 MiB compressed archive limit. Closed P1 deadlines produce a warning and preserve the exclusion receipt. São Paulo remains outside the P1 comparison because the pre-race host receipt was missing.
+
+The bilingual README brings together a three-screen demo and the project's main technical milestones.
+
 ## 0.16.2 — 2026-11-08
 
 Las Vegas joins the post-qualifying forecast workflow. The v1 forecast remains pending until the official FIA entry list has been reviewed and its 22 cars match the observed roster. The frozen v1 model, prior forecasts and P1 scope are preserved.

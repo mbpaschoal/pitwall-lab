@@ -2,9 +2,13 @@
 
 [Português](../DADOS_ATUAIS.md) · English
 
-Drivers adds Mexico 2026 through a separate supplement: **67 GPs, 1,376 results and 1,362 starts** in this delivery. Five NC records keep a missing position; they count as starts but not in duel position scores. The FIA 2026 map and actual race weather are reviewed. The 66-GP/330-session baseline remains preserved. [Workflow, sources and automatic pending states](DRIVER_UPDATES.md).
+Drivers includes 2026 Mexico and São Paulo through traceable supplements. Coverage reaches **68 GPs, 1,398 results and 1,383 starts**. NC records retain a missing position and contribute to start counts when a start was verified. The baseline still covers 66 GPs and 330 sessions. [Workflow, sources and automatic pending states](DRIVER_UPDATES.md).
 
 The descriptive archive is separate from v1 inputs: 66 GPs/330 sessions in 2024–2026 through Austin. Supplementary acquisition on 29 October was serial and cached. The nine scientific artefacts and previous recorded predictions were preserved.
+
+## São Paulo — 9 November 2026 review
+
+All five sessions have received-data status. FP2 retains the 21 cars classified by the FIA. Mean track temperature during the race was 24.6 °C from 95 valid readings with 98.95% coverage. The isolated zero was excluded from the mean and preserved in the original capture. The collector also received the revised classification with penalties for Antonelli and Leclerc, plus round 20 standings. The recorded São Paulo forecast remains available. The P1 research comparison remains inadmissible because the dashboard receipt was missing before the start. [Review receipt](../../operacao2026/adjudicacoes/2026-20-interlagos.json) · [FIA final classification](https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_final_race_classification.pdf) · [P1 coverage](https://github.com/mbpaschoal/pitwall-lab/releases/tag/p1-2026-20-interlagos)
 
 ## Mexico — opening compound recovered on 2 November 2026
 

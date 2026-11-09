@@ -1,5 +1,13 @@
 # Evolução do Pitwall Lab
 
+## 0.16.3 — 2026-11-09
+
+São Paulo tem as cinco sessões conferidas, resultados revisados após as penalidades e campeonato da rodada 20. O TL2 conserva os 21 classificados pela FIA. A média do asfalto exclui uma leitura anômala, com 95 amostras válidas, 98,95% de cobertura e preservação do original. Pilotos passa a cobrir 68 GPs. O modelo v1 e as probabilidades registradas foram preservados.
+
+A coleta reutiliza sessões e classificações já verificadas após o corte da revisão tardia. O limite de estado persistido passa a 256 MiB, com o limite de 32 MiB no arquivo comprimido. Prazos encerrados no P1 geram aviso e evidência de exclusão. São Paulo permanece fora da comparação P1 por falta do recibo anterior à largada.
+
+O README bilíngue reúne um roteiro em três telas e os principais marcos técnicos do projeto.
+
 ## 0.16.2 — 2026-11-08
 
 Las Vegas entra no fluxo de previsão pós-classificação. A emissão v1 fica pendente até que a lista oficial da FIA tenha sido revisada e os 22 carros do evento coincidam com o elenco observado. O modelo v1, as emissões anteriores e o escopo do P1 permanecem preservados.

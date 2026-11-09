@@ -20,6 +20,8 @@ WORKFLOW = 'https://github.com/mbpaschoal/pitwall-lab/actions/workflows/coletar-
 AUTOMATION = dict(modo='github_actions', intervalo_minutos=30, workflow=WORKFLOW)
 STATE = Path('data/operacao_2026/fins_de_semana')
 PUBLIC = Path('frontend_assets/operacao_fim_semana.json')
+MAX_STATE_MIB = 256
+MAX_ARCHIVE_MIB = 32
 
 
 def identity(value):
@@ -180,12 +182,13 @@ def collect(root=PROJECT_ROOT, now=None):
     old = json.loads(old_path.read_text()) if old_path.exists() else {}
     marker = root/STATE/'{}-{}'.format(event['circuito_id'],event['temporada'])/'conferencia_final.json'
     race = next(s for s in event['sessions'] if s['session_name']=='Race')
-    recheck = now >= instant(race['date_end'])+timedelta(hours=16) and not marker.exists()
+    final_review_after = instant(race['date_end']) + timedelta(hours=16)
+    recheck_since = final_review_after if now >= final_review_after and not marker.exists() else None
     try:
-        state = weekend.collect(path,root,now,recheck_completed=recheck)
+        state = weekend.collect(path,root,now,recheck_since=recheck_since)
     except weekend.ProviderAccessUnavailable as error:
         return dict(changed=False,reason='provider_access_restricted',http_status=error.status)
-    if recheck and all(s['estado']=='dados_recebidos' for s in state['sessoes']) and all(state.get('campeonatos',{}).get(key,{}).get('disponivel') for key in ('driver_standings','constructor_standings')):
+    if recheck_since and all(s['estado']=='dados_recebidos' for s in state['sessoes']) and all(state.get('campeonatos',{}).get(key,{}).get('disponivel') for key in ('driver_standings','constructor_standings')):
         save_checkpoint(marker,{'utc':now.isoformat()})
     new = dict(weekend.public_status(state),automacao=AUTOMATION)
     drivers=dict(changed=False,status='not_configured')
@@ -244,26 +247,39 @@ def prepare_release(result, root=PROJECT_ROOT, now=None):
     return version
 
 
+def collection_files(root):
+    paths = sorted((Path(root) / STATE).rglob('*'))
+    if any(path.is_symlink() for path in paths):
+        raise ValueError('Symlink in capture archive')
+    files = [path for path in paths if path.is_file()]
+    size = sum(path.stat().st_size for path in files)
+    if size > MAX_STATE_MIB * 1024 * 1024:
+        raise ValueError(f'Collection state is {size} bytes and exceeds {MAX_STATE_MIB} MiB')
+    return files, size
+
+
 def archive_captures(root, destination):
     """Durable release asset independent of GitHub's evictable execution cache."""
     root, destination = Path(root), Path(destination)
-    files = sorted((root/STATE).rglob('*'))
-    if any(p.is_symlink() for p in files):
-        raise ValueError('Symlink in capture archive')
-    if sum(p.stat().st_size for p in files if p.is_file()) > 128*1024*1024:
-        raise ValueError('Capture archive exceeds storage limit')
+    files, _ = collection_files(root)
     with tarfile.open(destination,'w:gz') as archive:
         for path in files:
-            if path.is_file():archive.add(path,arcname=path.relative_to(root),recursive=False)
-    if destination.stat().st_size > 32*1024*1024:
-        raise ValueError('Compressed capture archive exceeds 32 MiB')
+            archive.add(path,arcname=path.relative_to(root),recursive=False)
+    if destination.stat().st_size > MAX_ARCHIVE_MIB * 1024 * 1024:
+        raise ValueError(f'Compressed capture archive exceeds {MAX_ARCHIVE_MIB} MiB')
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action',choices=('collect','prepare-release'))
-    parser.add_argument('--result',type=Path,required=True)
+    parser.add_argument('action',choices=('collect','prepare-release','check-storage'))
+    parser.add_argument('--result',type=Path)
     args=parser.parse_args()
+    if args.action=='check-storage':
+        files, size = collection_files(PROJECT_ROOT)
+        print(json.dumps(dict(files=len(files), bytes=size, limit_mib=MAX_STATE_MIB)))
+        return
+    if args.result is None:
+        parser.error('--result is required for this action')
     if args.action=='collect':
         result=collect()
         save_checkpoint(args.result,result)

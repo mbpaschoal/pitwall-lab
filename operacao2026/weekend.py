@@ -100,7 +100,8 @@ def retry_deadline(manifest):
     return max(deadlines, default=None)
 
 
-def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClient, recheck_completed=False):
+def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClient,
+            recheck_completed=False, *, recheck_since=None):
     root = Path(root)
     event = load_event(event_path)
     from operacao2026.weekend_reconciliation import load_review, session_review
@@ -136,7 +137,11 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
                 old = next((s for s in previous.get('sessoes', []) if s['session_key'] == session['session_key']), {})
                 entry = dict(session_key=session['session_key'], nome=session['session_name'],
                              inicio_utc=session['date_start'], fim_programado_utc=session['date_end'], estado='aguardando_sessao')
-                if not recheck_completed and cached_session(old, root):
+                needs_refresh = recheck_completed or (recheck_since is not None and not any(
+                    source['endpoint'] == 'session_result' and source['status'] == 200
+                    and instant(source['obtido_em_utc']) >= recheck_since
+                    for source in old.get('fontes', [])))
+                if not needs_refresh and cached_session(old, root):
                     if session_review(review,session) and old.get('revisao_fontes',{}).get('sha256') != review['sha256']:
                         old = dict(old)
                         cached = {source['endpoint']:json.loads((root/source['arquivo_local']).read_text())
@@ -176,7 +181,9 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
                 state['campeonatos']={}
                 for field, teams in (('driver_standings',False),('constructor_standings',True)):
                     old=previous.get('campeonatos',{}).get(field,{})
-                    state['campeonatos'][field]=old if old.get('disponivel') and not recheck_completed else standings(client,event,teams)
+                    fresh = old.get('disponivel') and (recheck_since is None or
+                        instant(old['obtido_em_utc']) >= recheck_since)
+                    state['campeonatos'][field]=old if fresh and not recheck_completed else standings(client,event,teams)
             meteo = client.capture('open-meteo','forecast','forecast.json', 'https://api.open-meteo.com/v1/forecast?' + urlencode(dict(
                 latitude=event['latitude'], longitude=event['longitude'], hourly='temperature_2m,precipitation,weather_code,wind_speed_10m',
                 start_date=event['sessions'][0]['date_start'][:10], end_date=event['data'], timezone='UTC', wind_speed_unit='ms')))
@@ -204,13 +211,16 @@ def collect(event_path, root=PROJECT_ROOT, now=None, client_factory=CaptureClien
 
 
 def project_received(entry, data, session, review=None):
-    from operacao2026.weekend_reconciliation import reconcile, mark_tyre_gaps
+    from operacao2026.weekend_reconciliation import reconcile, mark_tyre_gaps, reviewed_practice_classification
     from pitwall.data.race_weather import RaceWeatherError
     normalized, audit = reconcile(data,session,review)
+    classification = reviewed_practice_classification(normalized, session, review)
     entry['estado'] = ('dados_recebidos' if all(key in normalized for key in ENDPOINTS)
                       and bool(normalized.get('weather'))
-                      and len(normalized['session_result']) == len(normalized['drivers']) else 'parcial')
+                      and (classification or len(normalized['session_result']) == len(normalized['drivers'])) else 'parcial')
     if audit:
+        if classification:
+            audit['acoes'].append(classification)
         entry['revisao_fontes']=audit
         entry['cobertura_validada']={key:len(normalized.get(key,[])) for key in ENDPOINTS}
     for key in ('lacunas_documentadas','qualidade_clima'):

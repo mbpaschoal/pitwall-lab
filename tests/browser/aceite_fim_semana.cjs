@@ -104,10 +104,14 @@ fs.mkdirSync(output,{recursive:true});
    check(await surface.locator('.pw-tarot-prob').count()===3,'Recorded forecast missing');
    await page.screenshot({path:path.join(output,key+'-forecast.png')});
    surface=await open('Campeonato');
-   const expected=Object.values(state.campeonatos||{}).filter(t=>t.disponivel).reduce((n,t)=>n+t.classificacao.length,0);
-   check(await surface.locator('.tabela-editorial tbody tr').count()===expected,'Round-specific standings truncated or stale');
+   const expected=Object.fromEntries([['.pw-drivers-table','driver_standings'],['.pw-team-table','constructor_standings']]
+     .map(([selector,field])=>[selector,state.campeonatos?.[field]?.disponivel?state.campeonatos[field].classificacao.length:0]));
+   await surface.waitForFunction(tables=>document.querySelector('.pw-standings')&&
+     Object.entries(tables).every(([selector,rows])=>document.querySelectorAll(selector+' tbody tr').length===rows),
+     expected,{timeout:30000});
    check(errors.length===0,errors.join('; '));
-   cases.push({lang,mobile,status:'passed',season:state.temporada,round:state.rodada,podium:ids,standings:expected});
+   cases.push({lang,mobile,status:'passed',season:state.temporada,round:state.rodada,podium:ids,
+    standings:Object.values(expected).reduce((total,rows)=>total+rows,0)});
    save();console.log(key+' passed');
   }catch(error){cases.push({lang,mobile,status:'failed',error:error.message});save();await page.screenshot({path:path.join(output,key+'-failure.png')}).catch(()=>{});throw error;}
   finally{await context.close();}

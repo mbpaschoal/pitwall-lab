@@ -77,3 +77,9 @@ Mexico collection exposed three distinct causes: HTTP 401 during the free tier's
 ## 3 November 2026 — Collecting data does not update every comparison
 
 Mexico was already shown on the GP panel, while Drivers stopped at Austin. I learned to check each data consumer: a traceable supplement now updates independently, even when the GP panel is unchanged. A debutant profile test also showed that valid data must not depend on an available portrait. Missing official positions and photographs have explicit treatment. [Workflow and limits](DRIVER_UPDATES.md).
+
+## 9 November 2026 — A complete session can classify fewer cars than it lists
+
+São Paulo FP2 had 22 driver records and 21 results in OpenF1. Counting alone marked it as partial. The FIA classification contains the same 21 cars in the same order. Collection now records that check and reuses sessions completed after the late review cutoff while retrying the others.
+
+The track sensor logged 0 °C between two readings above 20 °C. The FIA chart shows the same isolated drop. The review preserves the original reading and recalculates the mean from the 95 valid readings, covering 98.95% of active minutes. This is a descriptive correction. [Source receipt](../../operacao2026/adjudicacoes/2026-20-interlagos.json) · [Collection incident](https://github.com/mbpaschoal/pitwall-lab/issues/31)
