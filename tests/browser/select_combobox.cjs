@@ -1,5 +1,5 @@
 /* Wait for smooth viewport movement before opening a React Aria listbox. */
-async function selectComboboxOption(surface, input, name) {
+async function selectComboboxOption(surface, input, name, {filter = false} = {}) {
  await input.scrollIntoViewIfNeeded();
  await input.evaluate(element=>new Promise((resolve,reject)=>{
   const started=performance.now();let previous='',stableSince=started;
@@ -14,6 +14,7 @@ async function selectComboboxOption(surface, input, name) {
   requestAnimationFrame(sample);
  }));
  if(await input.getAttribute('aria-expanded')!=='true')await input.click();
+ if(filter)await input.fill(name);
  await surface.getByRole('option',{name,exact:true}).click();
 }
 module.exports={selectComboboxOption};

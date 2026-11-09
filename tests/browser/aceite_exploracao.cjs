@@ -1,4 +1,5 @@
 const {choose,reveal}=require('./sidebar_navigation.cjs');
+const {selectComboboxOption}=require('./select_combobox.cjs');
 /* PT: Aceite das jornadas de fãs. EN: Fan journey acceptance. */
 const fs = require('node:fs');
 const path = require('node:path');
@@ -56,7 +57,7 @@ fs.mkdirSync(output, {recursive:true});
   check(frontendErrors.length===0,'Frontend rendering error: '+frontendErrors.join('; '));
   check(await p.locator('[data-testid="stException"]').count() === 0, 'Application exception');
   const hero=await p.locator('.fan-hero').boundingBox();
-  const precedingSelector=route==='Pilotos'?'.st-key-pilot-view-navigation':
+  const precedingSelector=q.get('visao')==='perfil'?'.st-key-pilot-profile-selector':route==='Pilotos'?'.st-key-pilot-view-navigation':
    route==='Previsões'&&await p.locator('.st-key-open_tarot').count()?'.st-key-open_tarot':'.st-key-journey-context-row';
   const preceding=await p.locator(precedingSelector).boundingBox();
   check(hero&&preceding&&hero.y>=preceding.y+preceding.height-1&&hero.y<preceding.y+preceding.height+70,'Cover overlaps or detaches from preceding navigation');
@@ -106,7 +107,7 @@ fs.mkdirSync(output, {recursive:true});
  // A persisted favourite must not overwrite a shared driver or period.
  p = await open(context, 'tela=Pilotos&visao=perfil&piloto=norris&anos=2026&lang=en', 'Drivers');
  await p.locator('.pilot-profile h2').filter({hasText:'Lando Norris'}).waitFor();
- await p.getByRole('button',{name:'View my favourite',exact:true}).waitFor();
+ check(await p.locator('iframe[src*="pitwall_favorite"]').count()===0,'Favourite control returned in the profile');
  await stableIdle(p);
  await p.waitForURL(url=>url.searchParams.get('anos')==='2026',{timeout:15000});
  await p.screenshot({path:path.join(output,`perfil-en-${attempt}.png`)});
@@ -115,7 +116,10 @@ fs.mkdirSync(output, {recursive:true});
  check(scopeHistory.length>0 && scopeHistory.every(text=>(text.match(/\b20\d{2}\b/g)||[]).join(',')==='2026'),'Favourite temporarily replaced shared period: '+scopeHistory.join('; '));
  check(await p.locator('.pilot-profile h2').innerText()==='Lando Norris','Favourite rerun replaced shared driver');
  check(frontendErrorsByPage.get(p).length===0,'Late favourite rendering error: '+frontendErrorsByPage.get(p).join('; '));
- report.push({journey:'persisted-favourite-profile',attempt,driver:'norris',period:'2026',scopeHistory});
+ await selectComboboxOption(p,p.locator('.st-key-pilot-profile-selector').getByRole('combobox'),'Lewis Hamilton',{filter:true});
+ await p.locator('.fan-hero h1').filter({hasText:'Lewis Hamilton'}).waitFor();
+ await p.waitForURL(url=>url.searchParams.get('piloto')==='hamilton'&&url.searchParams.get('anos')==='2026');
+ report.push({journey:'profile-selector-retains-scope',attempt,driver:'hamilton',period:'2026',scopeHistory});
  await context.close();
  }
  // A DeltaGenerator must never be shared between concurrent ScriptRunners.

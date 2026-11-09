@@ -36,10 +36,8 @@ async function ready(app, driver, photo, lang, version) {
   }, {driver,lang}, {timeout:90000});
   const hero = app.locator('.fan-hero-profile-editorial[data-driver-id="' + driver + '"]');
   assert.equal(normalise(await hero.locator('h1').innerText()), photo.name, 'Profile heading has another identity');
-  const favourite = app.frameLocator('iframe[src*="pitwall_favorite"]');
-  await favourite.locator('option[value="max_verstappen"]').waitFor({state:'attached',timeout:30000});
-  await favourite.getByText(lang === 'pt' ? 'Seu piloto favorito · salvo neste navegador' :
-    'Your favourite driver · saved in this browser', {exact:true}).waitFor({timeout:30000});
+  await app.locator('.st-key-pilot-profile-selector').getByRole('combobox').waitFor();
+  assert.equal(await app.locator('iframe[src*="pitwall_favorite"]').count(), 0, 'Favourite control is visible in the profile');
   await app.evaluate(() => {window.pwProfilePhotoIdle = 0;});
   await app.waitForFunction(() => {
     if (document.querySelector('.stApp')?.dataset.testScriptState !== 'notRunning') {

@@ -6,6 +6,21 @@ from streamlit.testing.v1 import AppTest
 
 
 class WeekendUITests(unittest.TestCase):
+    def test_sao_paulo_teams_show_race_points_and_ties(self):
+        root = Path(__file__).resolve().parents[1]
+        for lang, team, points in [('pt', 'Equipe', 'Pontos observados'), ('en', 'Team', 'Observed points')]:
+            with self.subTest(language=lang):
+                app = AppTest.from_file(str(root / 'app.py'), default_timeout=40)
+                app.query_params.update(tela='Corridas', temporada='2026', gp='20',
+                                        aba='Comparativo de equipes', lang=lang)
+                app.run()
+                self.assertFalse(app.exception)
+                table = next(item.value for item in app.dataframe if points in item.value.columns)
+                scores = dict(zip(table[team], table[points]))
+                self.assertEqual(len(scores), 11)
+                self.assertEqual(sum(scores.values()), 101)
+                self.assertEqual((scores['McLaren'], scores['Red Bull Racing'], scores['Mercedes']), (33, 33, 22))
+
     def test_practice_tyres_are_separate_from_race_and_review_is_bilingual(self):
         for lang,origin,age in [('pt','Origem do composto','Idade inicial do pneu'),('en','Compound provenance','Initial tyre age')]:
             with self.subTest(language=lang):

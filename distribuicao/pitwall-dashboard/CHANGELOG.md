@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.16.4 — 2026-11-09
+
+Equipes neste GP passa a mostrar os pontos, os pilotos e as posições da corrida quando os resultados operacionais têm o mesmo GP, sessão e elenco conferidos. Em São Paulo, são 11 equipes e 22 resultados. A classificação completa volta a ter um atalho na visão geral e o Histórico permite filtrar pelos pilotos do GP.
+
+Sessões e voltas passa a mostrar as voltas publicadas do treino ou da classificação selecionados. Clima exibe o registro de chuva e as médias válidas de umidade, pressão e velocidade do vento, junto às temperaturas observadas. Perfis de pilotos coloca o seletor antes da foto e retira o controle de favorito dessa tela.
+
 ## 0.16.3 — 2026-11-09
 
 São Paulo tem as cinco sessões conferidas, resultados revisados após as penalidades e campeonato da rodada 20. O TL2 conserva os 21 classificados pela FIA. A média do asfalto exclui uma leitura anômala, com 95 amostras válidas, 98,95% de cobertura e preservação do original. Pilotos passa a cobrir 68 GPs. O modelo v1 e as probabilidades registradas foram preservados.

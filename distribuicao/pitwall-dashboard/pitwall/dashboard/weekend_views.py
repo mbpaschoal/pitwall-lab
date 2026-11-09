@@ -1,5 +1,6 @@
 """Read-only view of post-session collection; never calls data providers."""
 import json
+from collections import defaultdict
 from pathlib import Path
 from datetime import datetime
 import pandas as pd
@@ -75,7 +76,65 @@ def render_status(state):
         st.dataframe(pd.DataFrame([{'Sessão': {'Practice 1':'Treino livre 1','Practice 2':'Treino livre 2','Practice 3':'Treino livre 3','Qualifying':'Classificação','Race':'Corrida'}.get(s['nome'],s['nome']), 'Situação': STATES[s['estado']], 'Detalhes': s.get('motivo_parcial', '—')} for s in state['sessoes']]), hide_index=True, width='stretch')
         st.caption('A previsão meteorológica é uma estimativa arquivada. O clima observado da corrida só será consolidado depois da prova.')
 
-def render_times(state):
+def operational_race_results(root, state):
+    """Join the observed main race to its verified, event-specific results."""
+    from pitwall.data.driver_conditions import DriverConditionsError, load
+
+    race = next((session for session in (state or {}).get('sessoes', []) if session['nome'] == 'Race'), {})
+    if not race.get('encerramento_observado_utc') or not race.get('tempos'):
+        return []
+    key = '{}:{}'.format(state['temporada'], state['rodada'])
+    try:
+        asset = load(root)
+    except DriverConditionsError:
+        return []
+    event = asset['gps'].get(key, {})
+    if (key not in asset['atualizacao_operacional']['eventos']
+            or (event.get('circuito_id'), event.get('session_key')) != (state['circuito_id'], race['session_key'])):
+        return []
+    rows = [row for row in asset['resultados'] if row['race_id'] == key]
+    timing = {row['numero']: row for row in race['tempos']}
+    if (len(timing) != len(race['tempos']) or len(rows) != len(timing)
+            or {row['number'] for row in rows} != timing.keys()):
+        return []
+    if any(timing[row['number']].get('piloto_id') not in (None, row['driver_id'])
+           or timing[row['number']].get('posicao') != row['position'] for row in rows):
+        return []
+    from pitwall.dashboard.archive_views import _tempo
+
+    return [dict(piloto_id=row['driver_id'], piloto=row['driver_name'], equipe_id=row['team_id'],
+                 equipe=timing[row['number']].get('equipe') or row['team_id'],
+                 posicao=row['position'], pontos=row['points'], voltas=row['completed_laps'],
+                 status=row['canonical_status'], tempo=_tempo(timing[row['number']].get('duracao')))
+            for row in rows]
+
+
+def render_teams(state, results):
+    if not results:
+        return False
+    from pitwall.dashboard.archive_views import renderizar_equipes
+
+    groups = defaultdict(list)
+    for row in results:
+        groups[row['equipe_id']].append(row)
+    teams = []
+    for team_id, rows in groups.items():
+        positions = [row['posicao'] for row in rows if row['posicao'] is not None]
+        points = [row['pontos'] for row in rows if row['pontos'] is not None]
+        teams.append(dict(equipe_id=team_id, equipe=rows[0]['equipe'], modalidade='Race',
+                          n_resultados=len(rows), pontos=sum(points) if points else None,
+                          pontos_completos=len(points) == len(rows),
+                          posicao_media=sum(positions) / len(positions) if positions else None,
+                          melhor_posicao=min(positions, default=None),
+                          pilotos=[row['piloto'] for row in rows]))
+    teams.sort(key=lambda team: (not team['pontos_completos'], -(team['pontos'] or 0), team['equipe']))
+    identity = {key: state[key] for key in ('temporada', 'rodada', 'circuito_id')}
+    renderizar_equipes(dict(identidade=identity, equipes=teams))
+    st.caption('Resultado da corrida conferido entre OpenF1 e Jolpica-F1.')
+    return True
+
+
+def render_times(state, results=()):
     if not state:
         return False
     sessions = [s for s in state['sessoes'] if s.get('tempos')]
@@ -84,9 +143,14 @@ def render_times(state):
         return True
     from pitwall.dashboard.archive_views import renderizar_tempos
     identity = {k: state[k] for k in ('temporada', 'rodada', 'circuito_id')}
-    gp = dict(identidade=identity, sessoes=[dict(s, n_voltas=s.get('cobertura', {}).get('laps')) for s in sessions])
+    gp = dict(identidade=identity, sessoes=[dict(s, n_voltas=s.get('cobertura', {}).get('laps'),
+        voltas_por_piloto=s.get('dados_descritivos', {}).get('voltas_por_piloto', [])) for s in sessions])
     race = next((s for s in sessions if s['nome'] == 'Race'), {})
-    gp['historico'] = {'voltas_por_piloto': race.get('dados_descritivos', {}).get('voltas_por_piloto', [])}
+    laps = race.get('dados_descritivos', {}).get('voltas_por_piloto', [])
+    gp['historico'] = {'resultados': results, 'voltas_por_piloto': laps, 'resumo': {
+        'n_resultados': len(results),
+        'n_voltas': sum(lap[1] is not None for pilot in laps for lap in pilot.get('voltas', [])),
+        'n_pilotos_com_voltas': len(laps)}}
     renderizar_tempos(gp)
     st.caption('Tempos OpenF1 com conferências documentais identificadas quando disponíveis. Não alteram a previsão registrada.')
     final_sources = {row.get('fonte_validacao') for row in race.get('tempos', [])}
@@ -132,14 +196,29 @@ def render_weather(state):
     race = next((s for s in state['sessoes'] if s['nome'] == 'Race'), {})
     observed = race.get('clima_observado')
     if observed:
+        from pitwall.i18n import language
+
+        def format_field(field, unit):
+            data = observed['campos'].get(field, {})
+            value = data.get('media_amostras')
+            if not data.get('elegivel') or value is None:
+                return '—'
+            formatted = '{:.1f} {}'.format(value, unit)
+            return formatted.replace('.', ',') if language() == 'pt' else formatted
+
         st.subheader('Clima observado durante a corrida')
         cols = st.columns(2)
         for (column, field, label) in ((cols[0], 'air_temperature', 'Temperatura do ar'), (cols[1], 'track_temperature', 'Temperatura da pista')):
-            value = observed['campos'][field]
-            from pitwall.i18n import language
-            formatted = '{:.1f} °C'.format(value['media_amostras']) if value['elegivel'] else '—'
-            column.metric(label, formatted.replace('.', ',') if language() == 'pt' else formatted)
+            column.metric(label, format_field(field, '°C'))
         st.caption('Medições OpenF1 nos intervalos ativos da corrida. Pausas por bandeira vermelha são excluídas.')
+        rain = {'com_chuva_registrada': 'Chuva registrada durante a corrida',
+                'sem_chuva_registrada': 'Sem chuva registrada durante a corrida'}
+        st.caption(rain.get(observed.get('condicao_chuva'), 'Registro de chuva inconclusivo'))
+        with st.expander('Mais medições da corrida'):
+            for column, (field, unit, label) in zip(st.columns(3), (
+                    ('humidity', '%', 'Umidade média'), ('pressure', 'hPa', 'Pressão média'),
+                    ('wind_speed', 'm/s', 'Velocidade média do vento'))):
+                column.metric(label, format_field(field, unit))
         if observed['campos']['track_temperature'].get('qualidade', {}).get('codigo') == 'zero_isolado_em_conferencia':
             st.caption('Temperatura do asfalto em conferência: leitura isolada de 0 °C entre medições acima de 20 °C. Média retida, sem substituir o registro original.')
         quality = observed['campos']['track_temperature'].get('qualidade', {})
