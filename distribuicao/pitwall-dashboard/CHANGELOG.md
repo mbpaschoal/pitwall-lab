@@ -2,7 +2,7 @@
 
 ## 0.16.4 — 2026-11-09
 
-Equipes neste GP passa a mostrar os pontos, os pilotos e as posições da corrida quando os resultados operacionais têm o mesmo GP, sessão e elenco conferidos. Em São Paulo, são 11 equipes e 22 resultados. A classificação completa volta a ter um atalho na visão geral e o Histórico permite filtrar pelos pilotos do GP.
+Equipes neste GP passa a mostrar os pontos, os pilotos e as posições da corrida quando os resultados operacionais têm o mesmo GP, sessão e elenco conferidos. Em São Paulo, são 11 equipes e 22 resultados. A classificação completa volta a ter um atalho na visão geral e o Histórico permite filtrar pelos pilotos do GP. Fora de um fim de semana ativo, a temporada 2026 abre no último resultado observado.
 
 Sessões e voltas passa a mostrar as voltas publicadas do treino ou da classificação selecionados. Clima exibe o registro de chuva e as médias válidas de umidade, pressão e velocidade do vento, junto às temperaturas observadas. Perfis de pilotos coloca o seletor antes da foto e retira o controle de favorito dessa tela.
 

@@ -1320,15 +1320,19 @@ def executar_app():
         valores = [item["valor"] for item in opcoes]
         if anterior != temporada:
             if temporada == 2026:
+                from pitwall.dashboard.weekend_views import current_gp, observed_rounds
+                root = raiz_artefatos()
+                try:
+                    operation_rounds = observed_rounds(root, temporada)
+                except (ValueError, OSError, KeyError, TypeError):
+                    operation_rounds = set()
                 observadas = [
                     item["valor"]
                     for item in opcoes
-                    if dados_do_gp_2026(pacote, item["rodada"])["corrida"][
-                        "alvos_conhecidos"
-                    ]
+                    if item["rodada"] in operation_rounds
+                    or dados_do_gp_2026(pacote, item["rodada"])["corrida"]["alvos_conhecidos"]
                 ]
-                from pitwall.dashboard.weekend_views import current_gp
-                active = current_gp(raiz_artefatos())
+                active = current_gp(root)
                 st.session_state["gp"] = active if active in valores else (observadas[-1] if observadas else valores[0])
             else:
                 st.session_state.pop("gp", None)

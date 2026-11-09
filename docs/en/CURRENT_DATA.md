@@ -22,6 +22,12 @@ All five sessions have received-data status. FP2 retains the 21 cars classified 
 | Drivers' championship · Teams' championship | 25 drivers and 11 teams at round 20. |
 | How it works · Sources and limits · F1 terms | Method, references, scope and glossary. These pages document the product and its sources. |
 
+The calendar review covered all 71 selectable events. The 68 completed GPs have results, session times, tyres, stops, weather context, team results and both standings tables. This count verifies the presence of each dataset by GP. Individual field coverage is documented in the tables and receipts.
+
+- The 2026 Spanish GP is the only completed event with no earlier edition at the same circuit in the archive.
+- Las Vegas, Qatar and Abu Dhabi 2026 have circuit history. Results, session data, observed weather, round standings and recorded forecasts are pending.
+- The retrospective assessment covers 24 of 24 GPs in 2024 and 22 of 24 in 2025. Spain and São Paulo were excluded from the 2025 rankings. The 2026 season has 17 retrospective trials and three recorded forecasts. Austin and Mexico have admitted evaluations. São Paulo awaits post-race evaluation.
+
 ## Mexico — opening compound recovered on 2 November 2026
 
 All five operational Mexico sessions have received-data status after review. Lawson's opening FP3 run is recovered as **MEDIUM on laps 1–8**: GP Tempo directly identifies the compound on laps 2–8, while FIA confirms an uninterrupted opening eight-lap run. Lap 1 is explicitly identified as documentary reconstruction by continuity in the interface and CSV. Its missing lap time and initial tyre age remain unknown.

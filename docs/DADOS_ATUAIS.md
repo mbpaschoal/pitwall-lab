@@ -22,6 +22,12 @@ As cinco sessões têm dados recebidos. O TL2 conserva os 21 carros classificado
 | Campeonato de pilotos · Campeonato de equipes | 25 pilotos e 11 equipes na rodada 20. |
 | Como funciona · Fontes e limites · Termos da F1 | Método, referências, escopo e glossário. Essas páginas documentam o produto e as fontes. |
 
+A conferência do calendário abrangeu as 71 opções disponíveis. Os 68 GPs disputados têm resultados, tempos de sessão, pneus, paradas, contexto meteorológico, equipes e as duas tabelas de campeonato. Essa contagem confirma a presença dos conjuntos por GP. A cobertura de cada campo é informada nas tabelas e recibos.
+
+- O GP da Espanha de 2026 é o único GP disputado sem edição anterior da mesma pista no acervo.
+- Las Vegas, Catar e Abu Dhabi de 2026 têm histórico de pista. Os resultados, os dados de sessão, o clima observado, o campeonato da rodada e as previsões registradas estão pendentes.
+- Na avaliação retrospectiva, 2024 cobre 24 de 24 GPs e 2025 cobre 22 de 24. Espanha e São Paulo ficaram fora do ranking de 2025. Em 2026, há 17 ensaios retrospectivos e três emissões registradas. Austin e México têm avaliação admitida. São Paulo aguarda a avaliação posterior.
+
 ## México — composto inicial recuperado em 02/11/2026
 
 As cinco sessões operacionais do México têm dados recebidos após conferência. O primeiro trecho de Lawson no TL3 foi recuperado como **MEDIUM nas voltas 1–8**: o GP Tempo observa o composto nas voltas 2–8, e a FIA confirma um trecho inicial contínuo de oito voltas. A atribuição à volta 1 é reconstrução documental por continuidade, identificada na interface e no CSV. Seu tempo ausente e a idade inicial do jogo permanecem ausentes.

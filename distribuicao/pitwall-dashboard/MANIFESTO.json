@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "006bc1b7feb4aca49fb6873284aafa60db38ec30d6a4ab373a9fe88df3e06827",
+  "apresentacao_build_sha256": "1b802364fcf709e8c00f1ccb9c9686f7a0ea4ac6a293f04c3ebdbd9bafe4dec7",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "9b9b6d2dfa3cd8d09829611ba1d64da1299421aada9b35e1227c407c421e6d8a",
-      "sha256_origem": "c3e7b06c87a2500ce4c913aacffd0919df0f7ed1f4a200e5dd8eea4cebe012de"
+      "sha256_destino": "beac1930e1e4b2f68ebd88361e6e9258e3d598dd4a737115c597c4ba2fbce38d",
+      "sha256_origem": "2b47b9dd9bbcb0f94a5ca91bbf7e48b230941c7b1b6e88d9ab327b005be6062d"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "749db894cfaaba1a968a32e6a5c1743f1177120cde8d7ba3fe3bbed5e417fa82",
-      "sha256_origem": "edee760e1583ed0d7a66f88a63ddead14e62621f78496ba7c72c723c6ba35c44"
+      "sha256_destino": "ec25aeb1ba71827590bfae6ebfacc278dbcb115f32cb79691e9e1c85a050d617",
+      "sha256_origem": "fcfec9b27513224f784ba24e27d0d9bbd3221453b99fd5aadc9efe597658a131"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2851,8 +2851,8 @@
       "caminho": "pitwall/dashboard/app.py",
       "fonte": "pitwall/dashboard/app.py",
       "modo": "copia",
-      "sha256_destino": "b96161b06db88470e398cdb40d0493b8f212afa711d865b74c26e1999a04954b",
-      "sha256_origem": "b96161b06db88470e398cdb40d0493b8f212afa711d865b74c26e1999a04954b"
+      "sha256_destino": "707b8bfed0e62e9376f27396df3b8a9396b8715232c19a758b838da129a8097b",
+      "sha256_origem": "707b8bfed0e62e9376f27396df3b8a9396b8715232c19a758b838da129a8097b"
     },
     {
       "caminho": "pitwall/dashboard/archive_cache.py",
@@ -3964,8 +3964,8 @@
       "caminho": "tests/test_dashboard_app.py",
       "fonte": "tests/test_dashboard_app.py",
       "modo": "copia",
-      "sha256_destino": "af4bc43312290a5077350065ab5be09448672f1595f78219c4de7d40c27dbc23",
-      "sha256_origem": "af4bc43312290a5077350065ab5be09448672f1595f78219c4de7d40c27dbc23"
+      "sha256_destino": "287107f968d0eedff8493f7edefd5b00801478a956782f07ed2720d049974367",
+      "sha256_origem": "287107f968d0eedff8493f7edefd5b00801478a956782f07ed2720d049974367"
     },
     {
       "caminho": "tests/test_dashboard_dados.py",
