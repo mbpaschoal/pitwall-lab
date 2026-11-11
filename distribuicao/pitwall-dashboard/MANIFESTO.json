@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "031857ddb2a4680360f97807ecc4291355d375fe95783d2e3c079fc1c41a5496",
+  "apresentacao_build_sha256": "7e1c5cde5acf830955e06e007383e91ae8771896a5872b6fd8b9b672109ce1a9",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "258e5085bf27e8129453c04aca34b5a0d257ff1bc60c34d9c92d88b124ea09fc",
+      "sha256_destino": "78adb4fab2fa93d74ca0fe25f8b23614cb6aa80c0b64525c8a3be9d44f81fbe7",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "1f10b038f77e84c2957d020645282ce465d06995765b1e74f9cc1ae00981797b",
-      "sha256_origem": "30e5285c585dc5f4fc09c45be8a32c7341737dc0f2d3f451e8fc89daad96ba1d"
+      "sha256_destino": "a75fb19a21c88bbd2c1991bbb1a955d9f0437d2cc85a5aaf398046b2d19094fe",
+      "sha256_origem": "8c97bb01e693304afc50169f519c99045392b2bcb77efe586108636b89307e58"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "61d5d0b66e2d35c3a19d3e9283c93f7f871ec18889c066747d3ee6c64bb2d727",
-      "sha256_origem": "abf8a427451f325747d925250bbb8aaa81f18e17a458d5380c7899711368c9c4"
+      "sha256_destino": "56eb93850dd4aa48fea40a6068db0805ecb73d089f62a2399e88e673834fbd0a",
+      "sha256_origem": "68b440805e4abea5b5ae2c5ef72fa43d46fd7183318151638fb3baa7e72dc101"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "70604bbc9141b74b0893422f0328bf9cecdab89e63a05913d3d04c33396c590b",
-      "sha256_origem": "70604bbc9141b74b0893422f0328bf9cecdab89e63a05913d3d04c33396c590b"
+      "sha256_destino": "d2d1abb12dc6a40e87f44772328ac3ef59587ed31e1deaef182540cbccc9a323",
+      "sha256_origem": "d2d1abb12dc6a40e87f44772328ac3ef59587ed31e1deaef182540cbccc9a323"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4624,6 +4624,20 @@
       "modo": "copia",
       "sha256_destino": "8edc5502eb992089226aba0db2634ada92d34aede4b148f9964b6281c4ff094f",
       "sha256_origem": "8edc5502eb992089226aba0db2634ada92d34aede4b148f9964b6281c4ff094f"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2002b-brookline-3250720a8299-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2002b-brookline-3250720a8299-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9eeb6d41fd3577be27af584742154edb5d266805b9ed7a253a23963014e290b7",
+      "sha256_origem": "9eeb6d41fd3577be27af584742154edb5d266805b9ed7a253a23963014e290b7"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2002b-brookline-3250720a8299-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2002b-brookline-3250720a8299-960.webp",
+      "modo": "copia",
+      "sha256_destino": "117429f18e8b76f773f6911bb6c84548f48df27ba7abf4636440c65289530f57",
+      "sha256_origem": "117429f18e8b76f773f6911bb6c84548f48df27ba7abf4636440c65289530f57"
     },
     {
       "caminho": "static/pitwall-archive/ferrari-f2003-ga-essen-2023-c0f77cb6fc04-2400.webp",
