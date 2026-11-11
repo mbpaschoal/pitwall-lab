@@ -85,7 +85,6 @@
     "brabham-bt52": "Brabham BT52",
     "brabham-bt52b": "Brabham BT52B",
     "brawn-bgp-001": "Brawn BGP 001",
-    "brm-p48-57": "BRM P48/57",
     "brm-p57": "BRM P57",
     "cooper-t45": "Cooper T45",
     "cooper-t51": "Cooper T51",
@@ -105,7 +104,6 @@
     "ferrari-312t4": "Ferrari 312T4",
     "ferrari-312t4b": "Ferrari 312T4B",
     "ferrari-500": "Ferrari 500",
-    "ferrari-555": "Ferrari 555",
     "ferrari-d50": "Ferrari D50",
     "ferrari-f1-2000": "Ferrari F1-2000",
     "ferrari-f2001": "Ferrari F2001",
@@ -130,7 +128,6 @@
     "lotus-78": "Lotus 78",
     "lotus-79": "Lotus 79",
     "maserati-250f": "Maserati 250F",
-    "maserati-a6gcm": "Maserati A6GCM",
     "matra-ms10": "Matra MS10",
     "matra-ms80": "Matra MS80",
     "matra-ms84": "Matra MS84",
@@ -260,9 +257,18 @@
       ],
       "construtores": false,
       "modelos_candidatos": [
-        "maserati-250f",
-        "maserati-a6gcm"
-      ]
+        "maserati-250f"
+      ],
+      "modelos_sem_contribuicao": {
+        "maserati-a6gcm": {
+          "nome": "Maserati A6GCM",
+          "motivo": {
+            "pt": "Fangio venceu as duas corridas que disputou pela Maserati com o 250F.",
+            "en": "Fangio won both of his championship races for Maserati in the 250F."
+          },
+          "fonte": "https://www.museofangio.com/es/juan-manuel-fangio/autos/6/"
+        }
+      }
     },
     {
       "ano": 1954,
@@ -294,13 +300,22 @@
       ],
       "construtores": false,
       "modelos_candidatos": [
-        "ferrari-555",
         "ferrari-d50"
       ],
       "modelos_documentados": {
         "ferrari-d50": {
           "nome": "Ferrari D50",
           "fonte": "https://www.ferrari.com/content/dam/ferrari-fcom/old/pdf/pr_90_years_eng_fin.pdf"
+        }
+      },
+      "modelos_sem_contribuicao": {
+        "ferrari-555": {
+          "nome": "Ferrari 555",
+          "motivo": {
+            "pt": "Gendebien correu com o 555 na Argentina. Fangio venceu em um Lancia-Ferrari D50 compartilhado com Musso.",
+            "en": "Gendebien raced the 555 in Argentina. Fangio won in a Lancia-Ferrari D50 shared with Musso."
+          },
+          "fonte": "https://www.oldracingcars.com/results/result.php?RaceID=RA56"
         }
       }
     },
@@ -379,9 +394,18 @@
       ],
       "construtores": true,
       "modelos_candidatos": [
-        "brm-p48-57",
         "brm-p57"
-      ]
+      ],
+      "modelos_sem_contribuicao": {
+        "brm-p48-57": {
+          "nome": "BRM P48/57",
+          "motivo": {
+            "pt": "Ginther abandonou as duas provas que disputou com o P48/57, nos Países Baixos e em Mônaco.",
+            "en": "Ginther retired from both of his races in the P48/57, in the Netherlands and Monaco."
+          },
+          "fonte": "https://www.statsf1.com/en/richie-ginther/grand-prix.aspx"
+        }
+      }
     },
     {
       "ano": 1963,

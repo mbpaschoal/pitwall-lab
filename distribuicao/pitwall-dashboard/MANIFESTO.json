@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "463552fa2e145d6da096759b8ac4ea30625db5230b4766c5e92fe904436263d6",
+  "apresentacao_build_sha256": "b6a68cda8804415c35b9afd27eb1991968842ab01ba07bd2d09445ec92fcc235",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "a5aee70cfb05d9564ca49ed02c69c1a13a77ff9dfa0a9a66852446a1dbf49170",
+      "sha256_destino": "be69ccd0176e9951f962049773184bb10b3233fcdda0278e1417e6de8369648c",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "525640967a7adbf829914b9a68c031594d358873793c6733ac3049b3410b15cb",
-      "sha256_origem": "525640967a7adbf829914b9a68c031594d358873793c6733ac3049b3410b15cb"
+      "sha256_destino": "768c9cf9d33ebffff72aa01aeaed70a2a2a0c2c65f1421f26c36f331bde18073",
+      "sha256_origem": "768c9cf9d33ebffff72aa01aeaed70a2a2a0c2c65f1421f26c36f331bde18073"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -2753,8 +2753,8 @@
       "caminho": "frontend_assets/inventario_campeoes.json",
       "fonte": "frontend_assets/inventario_campeoes.json",
       "modo": "copia",
-      "sha256_destino": "ffcc3774a950d89c25eee454754b8ce7ead1992d64ff98cab76066a58769ad18",
-      "sha256_origem": "ffcc3774a950d89c25eee454754b8ce7ead1992d64ff98cab76066a58769ad18"
+      "sha256_destino": "62f9e7ac16ff0cc49453ec83e9bb75469727b2a5433664db429549c91e8780be",
+      "sha256_origem": "62f9e7ac16ff0cc49453ec83e9bb75469727b2a5433664db429549c91e8780be"
     },
     {
       "caminho": "frontend_assets/journey.css",
@@ -2984,8 +2984,8 @@
       "caminho": "pitwall/dashboard/photo_archive.py",
       "fonte": "pitwall/dashboard/photo_archive.py",
       "modo": "copia",
-      "sha256_destino": "564fda0f34b33988831d8d07d60dcc3681ad6ec67ebccdba4661820068e7590d",
-      "sha256_origem": "564fda0f34b33988831d8d07d60dcc3681ad6ec67ebccdba4661820068e7590d"
+      "sha256_destino": "88369e46b78d3c8c1cff477fe6e203ee813453b93d004c09bde9d3afac676ac7",
+      "sha256_origem": "88369e46b78d3c8c1cff477fe6e203ee813453b93d004c09bde9d3afac676ac7"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
@@ -3660,6 +3660,34 @@
       "sha256_origem": "08bc400c6ac11823c7e355b10234218716c28e6f0492defff8d4ad2acdebf157"
     },
     {
+      "caminho": "static/pitwall-archive/benetton-brawn-1994-246afa1622c7-2400.webp",
+      "fonte": "static/pitwall-archive/benetton-brawn-1994-246afa1622c7-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "4d920ad5463fe1545881375644d90d99f4fa3e8cba7a874840bfad23f409901a",
+      "sha256_origem": "4d920ad5463fe1545881375644d90d99f4fa3e8cba7a874840bfad23f409901a"
+    },
+    {
+      "caminho": "static/pitwall-archive/benetton-brawn-1994-246afa1622c7-960.webp",
+      "fonte": "static/pitwall-archive/benetton-brawn-1994-246afa1622c7-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b37aa713f8192217a82239f39f5f11b569a28ca4fbb13543aaff1fa8974bd002",
+      "sha256_origem": "b37aa713f8192217a82239f39f5f11b569a28ca4fbb13543aaff1fa8974bd002"
+    },
+    {
+      "caminho": "static/pitwall-archive/benetton-enstone-1994-4268b489601f-2400.webp",
+      "fonte": "static/pitwall-archive/benetton-enstone-1994-4268b489601f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "44ed11cb8d7c689ac839b952022c16e65e1633d689297ed89e2a7c3b4f87da61",
+      "sha256_origem": "44ed11cb8d7c689ac839b952022c16e65e1633d689297ed89e2a7c3b4f87da61"
+    },
+    {
+      "caminho": "static/pitwall-archive/benetton-enstone-1994-4268b489601f-960.webp",
+      "fonte": "static/pitwall-archive/benetton-enstone-1994-4268b489601f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4482e2e6cb43e8973c9e3583dd2eca08fb95076c45c58240724224db67525635",
+      "sha256_origem": "4482e2e6cb43e8973c9e3583dd2eca08fb95076c45c58240724224db67525635"
+    },
+    {
       "caminho": "static/pitwall-archive/brabham-bt11-d5dce245f643-2400.webp",
       "fonte": "static/pitwall-archive/brabham-bt11-d5dce245f643-2400.webp",
       "modo": "copia",
@@ -3744,6 +3772,48 @@
       "sha256_origem": "7ab809fe45d318ca14134e7baa709e1f4e47df392229cae38f48bdd8e3c67ea9"
     },
     {
+      "caminho": "static/pitwall-archive/brabham-zandvoort-podio-1966-6812246ab5ca-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-zandvoort-podio-1966-6812246ab5ca-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9d0cb449d4ee01c20e6f2d3237232729dd115cd4281c5cc00e1162b60e4a8fb6",
+      "sha256_origem": "9d0cb449d4ee01c20e6f2d3237232729dd115cd4281c5cc00e1162b60e4a8fb6"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-zandvoort-podio-1966-6812246ab5ca-960.webp",
+      "fonte": "static/pitwall-archive/brabham-zandvoort-podio-1966-6812246ab5ca-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9e02276f328aa9aa1efb6e8e7d681a61c0505e324ea443a1ddb012c339011464",
+      "sha256_origem": "9e02276f328aa9aa1efb6e8e7d681a61c0505e324ea443a1ddb012c339011464"
+    },
+    {
+      "caminho": "static/pitwall-archive/brawn-button-pitstop-2009-12500d690ef7-2048.webp",
+      "fonte": "static/pitwall-archive/brawn-button-pitstop-2009-12500d690ef7-2048.webp",
+      "modo": "copia",
+      "sha256_destino": "a419aecff293b7a6393e7ba0b4d981c51dcbbc29b8a873ca1f908838df8239d2",
+      "sha256_origem": "a419aecff293b7a6393e7ba0b4d981c51dcbbc29b8a873ca1f908838df8239d2"
+    },
+    {
+      "caminho": "static/pitwall-archive/brawn-button-pitstop-2009-12500d690ef7-960.webp",
+      "fonte": "static/pitwall-archive/brawn-button-pitstop-2009-12500d690ef7-960.webp",
+      "modo": "copia",
+      "sha256_destino": "252f0b1ef981df7966ae3f2c43678c2ebc767c35213abcac2df2794243fddc39",
+      "sha256_origem": "252f0b1ef981df7966ae3f2c43678c2ebc767c35213abcac2df2794243fddc39"
+    },
+    {
+      "caminho": "static/pitwall-archive/brm-ginther-zandvoort-1962-d79f45b13c73-2400.webp",
+      "fonte": "static/pitwall-archive/brm-ginther-zandvoort-1962-d79f45b13c73-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "49677f97ee8a581ee3ccf4474cd7b92526b2d69b82f2d33b0fea5384b8ba6850",
+      "sha256_origem": "49677f97ee8a581ee3ccf4474cd7b92526b2d69b82f2d33b0fea5384b8ba6850"
+    },
+    {
+      "caminho": "static/pitwall-archive/brm-ginther-zandvoort-1962-d79f45b13c73-960.webp",
+      "fonte": "static/pitwall-archive/brm-ginther-zandvoort-1962-d79f45b13c73-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a818553dfdc9670742ca8a19d77ebbb4a93a13b338097bb7c69b3cf4eba1e60d",
+      "sha256_origem": "a818553dfdc9670742ca8a19d77ebbb4a93a13b338097bb7c69b3cf4eba1e60d"
+    },
+    {
       "caminho": "static/pitwall-archive/brm-p57-2a98ce3b3a69-2400.webp",
       "fonte": "static/pitwall-archive/brm-p57-2a98ce3b3a69-2400.webp",
       "modo": "copia",
@@ -3798,6 +3868,20 @@
       "modo": "copia",
       "sha256_destino": "d4563cab91ba0394b32f127504894070a8fd43683757258ecef932611a6dd363",
       "sha256_origem": "d4563cab91ba0394b32f127504894070a8fd43683757258ecef932611a6dd363"
+    },
+    {
+      "caminho": "static/pitwall-archive/cooper-moss-zandvoort-1959-f7631f667681-2400.webp",
+      "fonte": "static/pitwall-archive/cooper-moss-zandvoort-1959-f7631f667681-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "f6dbd45d85471264cd52d09ec835da0221d21c52648d31ce7238db41e9880f5a",
+      "sha256_origem": "f6dbd45d85471264cd52d09ec835da0221d21c52648d31ce7238db41e9880f5a"
+    },
+    {
+      "caminho": "static/pitwall-archive/cooper-moss-zandvoort-1959-f7631f667681-960.webp",
+      "fonte": "static/pitwall-archive/cooper-moss-zandvoort-1959-f7631f667681-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bde92ea109eae43225826c26fa55e9a605c7cc45ab4c9b0359acaca2fc4fcdd4",
+      "sha256_origem": "bde92ea109eae43225826c26fa55e9a605c7cc45ab4c9b0359acaca2fc4fcdd4"
     },
     {
       "caminho": "static/pitwall-archive/cooper-t45-44859a34b809-2400.webp",
@@ -4864,6 +4948,20 @@
       "sha256_origem": "b05eec260be3e0c01c483ae05052310350b819820fdf7ba5bb9e7e0cdc9eb47f"
     },
     {
+      "caminho": "static/pitwall-archive/matra-stewart-zandvoort-1969-56936a9df258-2400.webp",
+      "fonte": "static/pitwall-archive/matra-stewart-zandvoort-1969-56936a9df258-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "272824fa856a07c62b213b6bde9249fc1d495590ff1c1722d1626e15cd258cb7",
+      "sha256_origem": "272824fa856a07c62b213b6bde9249fc1d495590ff1c1722d1626e15cd258cb7"
+    },
+    {
+      "caminho": "static/pitwall-archive/matra-stewart-zandvoort-1969-56936a9df258-960.webp",
+      "fonte": "static/pitwall-archive/matra-stewart-zandvoort-1969-56936a9df258-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3ce2f1f4cc58afc0ff3f2341e299defc7a3e2cc0372747f86e239334a9599b7f",
+      "sha256_origem": "3ce2f1f4cc58afc0ff3f2341e299defc7a3e2cc0372747f86e239334a9599b7f"
+    },
+    {
       "caminho": "static/pitwall-archive/max-verstappen-retrato-c2ad68b9aeab-2400.webp",
       "fonte": "static/pitwall-archive/max-verstappen-retrato-c2ad68b9aeab-2400.webp",
       "modo": "copia",
@@ -5382,6 +5480,20 @@
       "sha256_origem": "1caecd855fecc6500c5c7cf624f0e860542409b30f5a5c3c59f290d057a33cad"
     },
     {
+      "caminho": "static/pitwall-archive/norris-zandvoort-retrato-ee49583fc237-2400.webp",
+      "fonte": "static/pitwall-archive/norris-zandvoort-retrato-ee49583fc237-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8e2be87d3800619be39fbede77c33f34af17692666fcf2e2ea4e31dbbff7f704",
+      "sha256_origem": "8e2be87d3800619be39fbede77c33f34af17692666fcf2e2ea4e31dbbff7f704"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-zandvoort-retrato-ee49583fc237-960.webp",
+      "fonte": "static/pitwall-archive/norris-zandvoort-retrato-ee49583fc237-960.webp",
+      "modo": "copia",
+      "sha256_destino": "655eccec6a162919582b20376cf15666b4dc0eb24e3d3a489375b64f5283b44d",
+      "sha256_origem": "655eccec6a162919582b20376cf15666b4dc0eb24e3d3a489375b64f5283b44d"
+    },
+    {
       "caminho": "static/pitwall-archive/nurburgring-1965-0adfca73e694-2126.webp",
       "fonte": "static/pitwall-archive/nurburgring-1965-0adfca73e694-2126.webp",
       "modo": "copia",
@@ -5410,18 +5522,18 @@
       "sha256_origem": "afb531faa899b5cf0e6cdc0c53e14f0011c71a9e3c2045c7826fb1306513feb2"
     },
     {
-      "caminho": "static/pitwall-archive/phil-hill-zandvoort-a53e7ebda523-2400.webp",
-      "fonte": "static/pitwall-archive/phil-hill-zandvoort-a53e7ebda523-2400.webp",
+      "caminho": "static/pitwall-archive/piastri-melbourne-2025-18dca8666e47-2400.webp",
+      "fonte": "static/pitwall-archive/piastri-melbourne-2025-18dca8666e47-2400.webp",
       "modo": "copia",
-      "sha256_destino": "10ec3a75fda8fbf943698a22dff22031aeca5b5595e87d4aa011901f7638741b",
-      "sha256_origem": "10ec3a75fda8fbf943698a22dff22031aeca5b5595e87d4aa011901f7638741b"
+      "sha256_destino": "9a612a6a902f54382521dc89393f3dd675cda945ffff538eba224e59d1cd3b89",
+      "sha256_origem": "9a612a6a902f54382521dc89393f3dd675cda945ffff538eba224e59d1cd3b89"
     },
     {
-      "caminho": "static/pitwall-archive/phil-hill-zandvoort-a53e7ebda523-960.webp",
-      "fonte": "static/pitwall-archive/phil-hill-zandvoort-a53e7ebda523-960.webp",
+      "caminho": "static/pitwall-archive/piastri-melbourne-2025-18dca8666e47-960.webp",
+      "fonte": "static/pitwall-archive/piastri-melbourne-2025-18dca8666e47-960.webp",
       "modo": "copia",
-      "sha256_destino": "1ce43b04145c9e4adc2f5866cfc20e04d756e72c7ae74415b588532e5ff53c0f",
-      "sha256_origem": "1ce43b04145c9e4adc2f5866cfc20e04d756e72c7ae74415b588532e5ff53c0f"
+      "sha256_destino": "91a4db31aa56066ec36b2c9c32f863e9d90766276adede670b8b7e095530770e",
+      "sha256_origem": "91a4db31aa56066ec36b2c9c32f863e9d90766276adede670b8b7e095530770e"
     },
     {
       "caminho": "static/pitwall-archive/prost-brands-hatch-1985-584e27e05d95-2400.webp",
@@ -5662,6 +5774,20 @@
       "sha256_origem": "65c0e286d8b5bbcb21bfbe367dc60c7e3cb19e8e06c223edfac02d378c66619f"
     },
     {
+      "caminho": "static/pitwall-archive/schumacher-interlagos-2006-3f166adda558-1652.webp",
+      "fonte": "static/pitwall-archive/schumacher-interlagos-2006-3f166adda558-1652.webp",
+      "modo": "copia",
+      "sha256_destino": "6531907edea35d57c2d0cda6bf59a03418fddd927d0bf3fd7d8fddee8496d83f",
+      "sha256_origem": "6531907edea35d57c2d0cda6bf59a03418fddd927d0bf3fd7d8fddee8496d83f"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-interlagos-2006-3f166adda558-960.webp",
+      "fonte": "static/pitwall-archive/schumacher-interlagos-2006-3f166adda558-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6a417b153d46867f009394996ede2d9c7bec6a433e80862836e1488a0241252c",
+      "sha256_origem": "6a417b153d46867f009394996ede2d9c7bec6a433e80862836e1488a0241252c"
+    },
+    {
       "caminho": "static/pitwall-archive/schumacher-trofeu-estoril-1993-a274b8fce444-2400.webp",
       "fonte": "static/pitwall-archive/schumacher-trofeu-estoril-1993-a274b8fce444-2400.webp",
       "modo": "copia",
@@ -5716,6 +5842,20 @@
       "modo": "copia",
       "sha256_destino": "89a5c8dc5c047e4f4e5bb38bb5afa39d3ff6587ebe6b58a4a90d2a954d2d1d2b",
       "sha256_origem": "89a5c8dc5c047e4f4e5bb38bb5afa39d3ff6587ebe6b58a4a90d2a954d2d1d2b"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-estoril-lotus-97t2-417e30759761-2400.webp",
+      "fonte": "static/pitwall-archive/senna-estoril-lotus-97t2-417e30759761-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ed59e77ab725c7e74b6eb60b8b0b6c289be88526384c0ccd03f873d67a2ae72d",
+      "sha256_origem": "ed59e77ab725c7e74b6eb60b8b0b6c289be88526384c0ccd03f873d67a2ae72d"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-estoril-lotus-97t2-417e30759761-960.webp",
+      "fonte": "static/pitwall-archive/senna-estoril-lotus-97t2-417e30759761-960.webp",
+      "modo": "copia",
+      "sha256_destino": "873763c2e7e0e86e35bb2d97f2d4c035cf5dc5687ee43b7e4efb30b5c48b3ce8",
+      "sha256_origem": "873763c2e7e0e86e35bb2d97f2d4c035cf5dc5687ee43b7e4efb30b5c48b3ce8"
     },
     {
       "caminho": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-2400.webp",
@@ -5886,6 +6026,34 @@
       "sha256_origem": "03be366f004257c73e1a0603884e3c852009e183771f0e92aa6c4a0f5a907aad"
     },
     {
+      "caminho": "static/pitwall-archive/tyrrell-stewart-silverstone-1975-4a436e285448-2400.webp",
+      "fonte": "static/pitwall-archive/tyrrell-stewart-silverstone-1975-4a436e285448-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "09c5d9a2c070bc92d69941105b8431d502f448a2fa9de55a89a1dbe506a3cf8d",
+      "sha256_origem": "09c5d9a2c070bc92d69941105b8431d502f448a2fa9de55a89a1dbe506a3cf8d"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-stewart-silverstone-1975-4a436e285448-960.webp",
+      "fonte": "static/pitwall-archive/tyrrell-stewart-silverstone-1975-4a436e285448-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6a06910f0514f41118a0f26b33b9b488c20afed4d397c2be623837ff6e9c4885",
+      "sha256_origem": "6a06910f0514f41118a0f26b33b9b488c20afed4d397c2be623837ff6e9c4885"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-zolder-1973-43ff0ca5aafa-2400.webp",
+      "fonte": "static/pitwall-archive/tyrrell-zolder-1973-43ff0ca5aafa-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "02b30a808f6390818264c6ecab7c75a8f27a7744778255d276d60373cbf5f67a",
+      "sha256_origem": "02b30a808f6390818264c6ecab7c75a8f27a7744778255d276d60373cbf5f67a"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-zolder-1973-43ff0ca5aafa-960.webp",
+      "fonte": "static/pitwall-archive/tyrrell-zolder-1973-43ff0ca5aafa-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d7e8dc64629431c19942ca5a7ce92b9c6ccd622544d8a43c9cd81d189edf6b9c",
+      "sha256_origem": "d7e8dc64629431c19942ca5a7ce92b9c6ccd622544d8a43c9cd81d189edf6b9c"
+    },
+    {
       "caminho": "static/pitwall-archive/vanwall-vw-5-bcd542a2c842-2400.webp",
       "fonte": "static/pitwall-archive/vanwall-vw-5-bcd542a2c842-2400.webp",
       "modo": "copia",
@@ -5912,6 +6080,20 @@
       "modo": "copia",
       "sha256_destino": "a2f21b2cfd6aad0917efa49cdf83007cb00773123800752c5b41d5b7d37b0552",
       "sha256_origem": "a2f21b2cfd6aad0917efa49cdf83007cb00773123800752c5b41d5b7d37b0552"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-zandvoort-retrato-3b99f41b0fc2-1800.webp",
+      "fonte": "static/pitwall-archive/verstappen-zandvoort-retrato-3b99f41b0fc2-1800.webp",
+      "modo": "copia",
+      "sha256_destino": "1d8a5881de6ec9c336ef6dc12aa686236c245fc05a6600d0bc91c30534b45736",
+      "sha256_origem": "1d8a5881de6ec9c336ef6dc12aa686236c245fc05a6600d0bc91c30534b45736"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-zandvoort-retrato-3b99f41b0fc2-960.webp",
+      "fonte": "static/pitwall-archive/verstappen-zandvoort-retrato-3b99f41b0fc2-960.webp",
+      "modo": "copia",
+      "sha256_destino": "20d68c42c61f27a5825bc5b8302d0e0ec69eb58778713daba7361c5849f1cfe0",
+      "sha256_origem": "20d68c42c61f27a5825bc5b8302d0e0ec69eb58778713daba7361c5849f1cfe0"
     },
     {
       "caminho": "static/pitwall-archive/vettel-abu-dhabi-2010-9a753f4bc6b0-2400.webp",

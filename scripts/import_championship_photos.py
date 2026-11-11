@@ -72,13 +72,14 @@ def import_photo(key, entry, info):
     license_name = meta.get("LicenseShortName", "")
     if not re.fullmatch(r"(?:CC BY(?:-SA)? [234]\.[05](?: [a-zA-Z]+)?|CC0|Public domain)", license_name):
         raise ValueError(f"Unreviewed license for {key}: {license_name}")
-    if meta.get("Restrictions"):
+    restrictions = meta.get("Restrictions")
+    if restrictions and not (restrictions == "personality" and entry.get("uso_editorial") is True):
         raise ValueError(f"Photo requires individual rights review: {key}")
     license_url = meta.get("LicenseUrl")
     if not license_url and license_name == "Public domain":
         license_url = "https://creativecommons.org/publicdomain/mark/1.0/"
     license_url = normalize_url(license_url or "", {"creativecommons.org", "www.creativecommons.org"})
-    author = meta.get("Artist")
+    author = entry.get("autor") or meta.get("Artist")
     if not author:
         raise ValueError(f"Missing author for {key}")
     original = normalize_url(info["url"], {"upload.wikimedia.org"})

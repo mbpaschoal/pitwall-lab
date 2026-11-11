@@ -33,6 +33,27 @@ CHASSIS_WITHOUT_TITLE_CONTRIBUTION = {
             "https://www.motorsportmagazine.com/archive/article/october-1953/11/the-italian-grand/",
         ),
     },
+    (1954, "maserati"): {
+        "maserati-a6gcm": (
+            "Fangio venceu as duas corridas que disputou pela Maserati com o 250F.",
+            "Fangio won both of his championship races for Maserati in the 250F.",
+            "https://www.museofangio.com/es/juan-manuel-fangio/autos/6/",
+        ),
+    },
+    (1956, "ferrari"): {
+        "ferrari-555": (
+            "Gendebien correu com o 555 na Argentina. Fangio venceu em um Lancia-Ferrari D50 compartilhado com Musso.",
+            "Gendebien raced the 555 in Argentina. Fangio won in a Lancia-Ferrari D50 shared with Musso.",
+            "https://www.oldracingcars.com/results/result.php?RaceID=RA56",
+        ),
+    },
+    (1962, "brm"): {
+        "brm-p48-57": (
+            "Ginther abandonou as duas provas que disputou com o P48/57, nos Países Baixos e em Mônaco.",
+            "Ginther retired from both of his races in the P48/57, in the Netherlands and Monaco.",
+            "https://www.statsf1.com/en/richie-ginther/grand-prix.aspx",
+        ),
+    },
     (1969, "matra"): {
         "matra-ms7": (
             "O MS7 disputou a classe de Fórmula 2 no GP da Alemanha, sem pontuar no Mundial de F1.",

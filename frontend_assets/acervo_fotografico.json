@@ -1275,6 +1275,70 @@
         }
       ]
     },
+    "benetton-enstone-1994": {
+      "arquivo_commons": "File:Michael Schumacher Jos Verstappen JJ Lehto Benetton 1994.jpg",
+      "legenda": {
+        "pt": "Michael Schumacher, Jos Verstappen e JJ Lehto na apresentação do Benetton B194, em Enstone, em janeiro de 1994.",
+        "en": "Michael Schumacher, Jos Verstappen and JJ Lehto at the Benetton B194 launch in Enstone in January 1994."
+      },
+      "equipes": [
+        "benetton"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Jos_Verstappen_JJ_Lehto_Benetton_1994.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Michael_Schumacher_Jos_Verstappen_JJ_Lehto_Benetton_1994.jpg",
+      "autor": "Carlo Marzetti",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "4268b489601f598616e3c34691f436626b00236df9ba299de8d1238ab8dcce7d",
+      "largura": 5728,
+      "altura": 3824,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/benetton-enstone-1994-4268b489601f-960.webp",
+          "largura": 960,
+          "altura": 641,
+          "sha256": "4482e2e6cb43e8973c9e3583dd2eca08fb95076c45c58240724224db67525635"
+        },
+        {
+          "arquivo": "static/pitwall-archive/benetton-enstone-1994-4268b489601f-2400.webp",
+          "largura": 2400,
+          "altura": 1602,
+          "sha256": "44ed11cb8d7c689ac839b952022c16e65e1633d689297ed89e2a7c3b4f87da61"
+        }
+      ]
+    },
+    "benetton-brawn-1994": {
+      "arquivo_commons": "File:Designer Ross Brawn 1994 Benetton Formula 1 team.jpg",
+      "legenda": {
+        "pt": "Ross Brawn no escritório de engenharia da Benetton em Enstone em 1994.",
+        "en": "Ross Brawn in Benetton’s engineering office at Enstone in 1994."
+      },
+      "equipes": [
+        "benetton"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Designer_Ross_Brawn_1994_Benetton_Formula_1_team.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Designer_Ross_Brawn_1994_Benetton_Formula_1_team.jpg",
+      "autor": "Carlomarzetti",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "246afa1622c7d28b233a6655082162c1a9aa475f368c19afae5ac6ed2e99dd6f",
+      "largura": 5728,
+      "altura": 3824,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/benetton-brawn-1994-246afa1622c7-960.webp",
+          "largura": 960,
+          "altura": 641,
+          "sha256": "b37aa713f8192217a82239f39f5f11b569a28ca4fbb13543aaff1fa8974bd002"
+        },
+        {
+          "arquivo": "static/pitwall-archive/benetton-brawn-1994-246afa1622c7-2400.webp",
+          "largura": 2400,
+          "altura": 1602,
+          "sha256": "4d920ad5463fe1545881375644d90d99f4fa3e8cba7a874840bfad23f409901a"
+        }
+      ]
+    },
     "benetton-b194": {
       "arquivo_commons": "File:1994 Benetton B194 F1 car at Grand Basel 2018 (Ank Kumar, Infosys) 01.jpg",
       "legenda": {
@@ -2583,8 +2647,8 @@
     "ferrari-156": {
       "arquivo_commons": "File:Von Trips and P. Hill at 1961 Dutch Grand Prix.jpg",
       "legenda": {
-        "pt": "Wolfgang von Trips e Phil Hill nos Ferrari 156 no GP dos Países Baixos de 1961.",
-        "en": "Wolfgang von Trips and Phil Hill in the Ferrari 156 at the 1961 Dutch Grand Prix."
+        "pt": "Wolfgang von Trips (nº 3) à frente de Phil Hill (nº 1) no GP dos Países Baixos de 1961. Os dois corriam com a Ferrari 156.",
+        "en": "Wolfgang von Trips (No. 3) leads Phil Hill (No. 1) at the 1961 Dutch Grand Prix. Both drove the Ferrari 156."
       },
       "modelo": "ferrari-156",
       "temporadas": [
@@ -2612,13 +2676,16 @@
           "altura": 1599,
           "sha256": "10ec3a75fda8fbf943698a22dff22031aeca5b5595e87d4aa011901f7638741b"
         }
+      ],
+      "pilotos": [
+        "phil-hill"
       ]
     },
     "lotus-49b": {
       "arquivo_commons": "File:G. Hill at 1968 Dutch Grand Prix (3).jpg",
       "legenda": {
-        "pt": "Graham Hill com o Lotus 49B em Zandvoort, na temporada de 1968.",
-        "en": "Graham Hill in the Lotus 49B at Zandvoort during the 1968 season."
+        "pt": "Graham Hill com o Lotus 49B/R5 em Zandvoort em 1968. Renumerado R10, o mesmo chassi foi usado por Emerson Fittipaldi em sua estreia, em Brands Hatch, em 1970.",
+        "en": "Graham Hill in the Lotus 49B/R5 at Zandvoort in 1968. Renumbered R10, this chassis was later driven by Emerson Fittipaldi in his Formula One debut at Brands Hatch in 1970."
       },
       "modelo": "lotus-49b",
       "temporadas": [
@@ -2646,6 +2713,9 @@
           "altura": 1594,
           "sha256": "9ee2b5a536e53c4b60c723e2fc0a24ab62d80bab8f68b6d3135c65a70f7273e7"
         }
+      ],
+      "artefatos_gps": [
+        "1970:7"
       ]
     },
     "lotus-72c": {
@@ -4258,6 +4328,39 @@
         }
       ]
     },
+    "verstappen-zandvoort-retrato": {
+      "arquivo_commons": "File:2024-08-25 Motorsport, Formel 1, Großer Preis der Niederlande 2024 STP 3757 by Stepro (Max Verstappen).jpg",
+      "legenda": {
+        "pt": "Max Verstappen durante o GP dos Países Baixos de 2024, em Zandvoort.",
+        "en": "Max Verstappen at the 2024 Dutch Grand Prix in Zandvoort."
+      },
+      "pilotos": [
+        "max-verstappen"
+      ],
+      "uso_editorial": true,
+      "fonte": "https://commons.wikimedia.org/wiki/File:2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3757_by_Stepro_(Max_Verstappen).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/6e/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3757_by_Stepro_%28Max_Verstappen%29.jpg",
+      "autor": "Steffen Prößdorf",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "3b99f41b0fc26df3235a1599718c64bea8b22ef0abb548624d06104229a4d225",
+      "largura": 1350,
+      "altura": 1800,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/verstappen-zandvoort-retrato-3b99f41b0fc2-960.webp",
+          "largura": 720,
+          "altura": 960,
+          "sha256": "20d68c42c61f27a5825bc5b8302d0e0ec69eb58778713daba7361c5849f1cfe0"
+        },
+        {
+          "arquivo": "static/pitwall-archive/verstappen-zandvoort-retrato-3b99f41b0fc2-1800.webp",
+          "largura": 1350,
+          "altura": 1800,
+          "sha256": "1d8a5881de6ec9c336ef6dc12aa686236c245fc05a6600d0bc91c30534b45736"
+        }
+      ]
+    },
     "max-verstappen-retrato": {
       "arquivo_commons": "File:Max Verstappen Belgium 2015.jpg",
       "legenda": {
@@ -4287,6 +4390,39 @@
           "largura": 2400,
           "altura": 1800,
           "sha256": "6520ebe18baffe1ceb04fa8f2460fbaf200c4c7eaf6fd65ed7f87d3d10e5b796"
+        }
+      ]
+    },
+    "norris-zandvoort-retrato": {
+      "arquivo_commons": "File:2024-08-25 Motorsport, Formel 1, Großer Preis der Niederlande 2024 STP 3968 by Stepro.jpg",
+      "legenda": {
+        "pt": "Lando Norris após a vitória no GP dos Países Baixos de 2024, em Zandvoort.",
+        "en": "Lando Norris after winning the 2024 Dutch Grand Prix at Zandvoort."
+      },
+      "pilotos": [
+        "lando-norris"
+      ],
+      "uso_editorial": true,
+      "fonte": "https://commons.wikimedia.org/wiki/File:2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3968_by_Stepro.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/81/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3968_by_Stepro.jpg",
+      "autor": "Steffen Prößdorf",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "ee49583fc237eb5aa9cd81be0036ea8d554ac704d6b724d23f2b24dfe540d4aa",
+      "largura": 3240,
+      "altura": 2160,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/norris-zandvoort-retrato-ee49583fc237-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "655eccec6a162919582b20376cf15666b4dc0eb24e3d3a489375b64f5283b44d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/norris-zandvoort-retrato-ee49583fc237-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "8e2be87d3800619be39fbede77c33f34af17692666fcf2e2ea4e31dbbff7f704"
         }
       ]
     },
@@ -4899,38 +5035,6 @@
           "largura": 1679,
           "altura": 1096,
           "sha256": "8cbb03cbf476c0c593c387b704c4152d0e321e84088e7398b03e570d98662b2e"
-        }
-      ]
-    },
-    "phil-hill-zandvoort": {
-      "arquivo_commons": "File:Von Trips and P. Hill at 1961 Dutch Grand Prix.jpg",
-      "legenda": {
-        "pt": "Wolfgang von Trips (nº 3) à frente de Phil Hill (nº 1) no GP dos Países Baixos de 1961. Os dois corriam com a Ferrari 156.",
-        "en": "Wolfgang von Trips (No. 3) leads Phil Hill (No. 1) at the 1961 Dutch Grand Prix. Both drove the Ferrari 156."
-      },
-      "pilotos": [
-        "phil-hill"
-      ],
-      "fonte": "https://commons.wikimedia.org/wiki/File:Von_Trips_and_P._Hill_at_1961_Dutch_Grand_Prix.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/4/47/Von_Trips_and_P._Hill_at_1961_Dutch_Grand_Prix.jpg",
-      "autor": "Harry Pot",
-      "licenca": "CC BY-SA 3.0 nl",
-      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
-      "sha256": "a53e7ebda523b18a5eeaae135e02a55d20e3891ca0aa6b1a0dab74a09650b5b4",
-      "largura": 3702,
-      "altura": 2466,
-      "variantes": [
-        {
-          "arquivo": "static/pitwall-archive/phil-hill-zandvoort-a53e7ebda523-960.webp",
-          "largura": 960,
-          "altura": 639,
-          "sha256": "1ce43b04145c9e4adc2f5866cfc20e04d756e72c7ae74415b588532e5ff53c0f"
-        },
-        {
-          "arquivo": "static/pitwall-archive/phil-hill-zandvoort-a53e7ebda523-2400.webp",
-          "largura": 2400,
-          "altura": 1599,
-          "sha256": "10ec3a75fda8fbf943698a22dff22031aeca5b5595e87d4aa011901f7638741b"
         }
       ]
     },
@@ -6676,6 +6780,336 @@
           "largura": 1800,
           "altura": 2400,
           "sha256": "fc14911ef09a9b881d0cfb42346fc918abb33b0df79f1f4de4ea761e2be1dead"
+        }
+      ]
+    },
+    "senna-estoril-lotus-97t2": {
+      "arquivo_commons": "File:Lotus 97T - Ayrton Senna (27959078341).jpg",
+      "legenda": {
+        "pt": "O Lotus 97T/2 em Goodwood, em 2016. Ayrton Senna conquistou sua primeira vitória na Fórmula 1 com este chassi no Estoril, em 1985.",
+        "en": "The Lotus 97T/2 at Goodwood in 2016. Ayrton Senna took his first Formula One win in this chassis at Estoril in 1985."
+      },
+      "artefatos_gps": [
+        "1985:2"
+      ],
+      "equipes": [
+        "lotus"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lotus_97T_-_Ayrton_Senna_(27959078341).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Lotus_97T_-_Ayrton_Senna_%2827959078341%29.jpg",
+      "autor": "Neil",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "417e30759761c40d15f308ccd4a47e25b79a35c97427510a9eed402b4121b698",
+      "largura": 4703,
+      "altura": 2837,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/senna-estoril-lotus-97t2-417e30759761-960.webp",
+          "largura": 960,
+          "altura": 579,
+          "sha256": "873763c2e7e0e86e35bb2d97f2d4c035cf5dc5687ee43b7e4efb30b5c48b3ce8"
+        },
+        {
+          "arquivo": "static/pitwall-archive/senna-estoril-lotus-97t2-417e30759761-2400.webp",
+          "largura": 2400,
+          "altura": 1448,
+          "sha256": "ed59e77ab725c7e74b6eb60b8b0b6c289be88526384c0ccd03f873d67a2ae72d"
+        }
+      ]
+    },
+    "piastri-melbourne-2025": {
+      "arquivo_commons": "File:Oscar Piastri 2025.jpg",
+      "legenda": {
+        "pt": "Oscar Piastri com fãs em Melbourne, no GP da Austrália de 2025. Kimi Antonelli estreou na Fórmula 1 nesta prova.",
+        "en": "Oscar Piastri with fans in Melbourne at the 2025 Australian Grand Prix, where Kimi Antonelli made his Formula One debut."
+      },
+      "gps": [
+        "2025:1"
+      ],
+      "equipes": [
+        "mclaren"
+      ],
+      "uso_editorial": true,
+      "autor": "Parkasity",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Oscar_Piastri_2025.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Oscar_Piastri_2025.jpg",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "18dca8666e4777f244ee7bcaefc9858cf60a455b87628cb86c6b9c3ea5b0b297",
+      "largura": 3024,
+      "altura": 4032,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/piastri-melbourne-2025-18dca8666e47-960.webp",
+          "largura": 720,
+          "altura": 960,
+          "sha256": "91a4db31aa56066ec36b2c9c32f863e9d90766276adede670b8b7e095530770e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/piastri-melbourne-2025-18dca8666e47-2400.webp",
+          "largura": 1800,
+          "altura": 2400,
+          "sha256": "9a612a6a902f54382521dc89393f3dd675cda945ffff538eba224e59d1cd3b89"
+        }
+      ]
+    },
+    "brm-ginther-zandvoort-1962": {
+      "arquivo_commons": "File:Trainingsritten op Circuit van Zandvoort ( Ricardo Rodriguez ), Bestanddeelnr 913-9365.jpg",
+      "legenda": {
+        "pt": "Richie Ginther no BRM P48/57 durante os treinos em Zandvoort em 1962. Graham Hill venceu a prova pela BRM com o P57.",
+        "en": "Richie Ginther in the BRM P48/57 during practice at Zandvoort in 1962. Graham Hill won the race for BRM in the P57."
+      },
+      "gps": [
+        "1962:1"
+      ],
+      "equipes": [
+        "brm"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Trainingsritten_op_Circuit_van_Zandvoort_(_Ricardo_Rodriguez_),_Bestanddeelnr_913-9365.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Trainingsritten_op_Circuit_van_Zandvoort_%28_Ricardo_Rodriguez_%29%2C_Bestanddeelnr_913-9365.jpg",
+      "autor": "Joop van Bilsen for Anefo",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "d79f45b13c73d77bd87ee75be7537bf26919ed5b9a851eb4b22843614218722a",
+      "largura": 3648,
+      "altura": 2358,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/brm-ginther-zandvoort-1962-d79f45b13c73-960.webp",
+          "largura": 960,
+          "altura": 621,
+          "sha256": "a818553dfdc9670742ca8a19d77ebbb4a93a13b338097bb7c69b3cf4eba1e60d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/brm-ginther-zandvoort-1962-d79f45b13c73-2400.webp",
+          "largura": 2400,
+          "altura": 1551,
+          "sha256": "49677f97ee8a581ee3ccf4474cd7b92526b2d69b82f2d33b0fea5384b8ba6850"
+        }
+      ]
+    },
+    "schumacher-interlagos-2006": {
+      "arquivo_commons": "File:Michael Schumacher 2006 Brazil after the end of race zoom.jpg",
+      "legenda": {
+        "pt": "Michael Schumacher após o GP do Brasil de 2006, sua última corrida pela Ferrari. Fernando Alonso conquistou o bicampeonato naquele dia.",
+        "en": "Michael Schumacher after the 2006 Brazilian Grand Prix, his final race for Ferrari. Fernando Alonso clinched his second title that day."
+      },
+      "gps": [
+        "2006:18"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_2006_Brazil_after_the_end_of_race_zoom.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Michael_Schumacher_2006_Brazil_after_the_end_of_race_zoom.jpg",
+      "autor": "Morio",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "3f166adda55880a268746b7218597573d8d323f6f1d9db9bcf9252a595510ba4",
+      "largura": 1637,
+      "altura": 1652,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/schumacher-interlagos-2006-3f166adda558-960.webp",
+          "largura": 951,
+          "altura": 960,
+          "sha256": "6a417b153d46867f009394996ede2d9c7bec6a433e80862836e1488a0241252c"
+        },
+        {
+          "arquivo": "static/pitwall-archive/schumacher-interlagos-2006-3f166adda558-1652.webp",
+          "largura": 1637,
+          "altura": 1652,
+          "sha256": "6531907edea35d57c2d0cda6bf59a03418fddd927d0bf3fd7d8fddee8496d83f"
+        }
+      ]
+    },
+    "tyrrell-stewart-silverstone-1975": {
+      "arquivo_commons": "File:Jackie Stewart Elf Tyrrell 1975.jpg",
+      "legenda": {
+        "pt": "Jackie Stewart conversa com a equipe Tyrrell no paddock de Silverstone em 1975, após se aposentar da Fórmula 1.",
+        "en": "Jackie Stewart talks with the Tyrrell team in the Silverstone paddock in 1975, after retiring from Formula One."
+      },
+      "equipes": [
+        "tyrrell"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Jackie_Stewart_Elf_Tyrrell_1975.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Jackie_Stewart_Elf_Tyrrell_1975.jpg",
+      "autor": "Gillfoto",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "4a436e285448404b83a14cff035251150a981b0e11084d49038b1cc52210663a",
+      "largura": 2752,
+      "altura": 3306,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/tyrrell-stewart-silverstone-1975-4a436e285448-960.webp",
+          "largura": 799,
+          "altura": 960,
+          "sha256": "6a06910f0514f41118a0f26b33b9b488c20afed4d397c2be623837ff6e9c4885"
+        },
+        {
+          "arquivo": "static/pitwall-archive/tyrrell-stewart-silverstone-1975-4a436e285448-2400.webp",
+          "largura": 1998,
+          "altura": 2400,
+          "sha256": "09c5d9a2c070bc92d69941105b8431d502f448a2fa9de55a89a1dbe506a3cf8d"
+        }
+      ]
+    },
+    "tyrrell-zolder-1973": {
+      "arquivo_commons": "File:Ken Tyrrell Pitlane DAG.jpg",
+      "legenda": {
+        "pt": "Ken Tyrrell no pit lane em Zolder, no GP da Bélgica de 1973, temporada do terceiro título de Jackie Stewart.",
+        "en": "Ken Tyrrell in the pit lane at Zolder during the 1973 Belgian Grand Prix, the season Jackie Stewart won his third title."
+      },
+      "equipes": [
+        "tyrrell"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Ken_Tyrrell_Pitlane_DAG.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/29/Ken_Tyrrell_Pitlane_DAG.jpg",
+      "autor": "50DAG2026",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "43ff0ca5aafab5085249c68dbf384f7580387247a57cedeb87758a035d9b1f4f",
+      "largura": 2400,
+      "altura": 1528,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/tyrrell-zolder-1973-43ff0ca5aafa-960.webp",
+          "largura": 960,
+          "altura": 611,
+          "sha256": "d7e8dc64629431c19942ca5a7ce92b9c6ccd622544d8a43c9cd81d189edf6b9c"
+        },
+        {
+          "arquivo": "static/pitwall-archive/tyrrell-zolder-1973-43ff0ca5aafa-2400.webp",
+          "largura": 2400,
+          "altura": 1528,
+          "sha256": "02b30a808f6390818264c6ecab7c75a8f27a7744778255d276d60373cbf5f67a"
+        }
+      ]
+    },
+    "brawn-button-pitstop-2009": {
+      "arquivo_commons": "File:Button pit-stop Spain 2009.jpg",
+      "legenda": {
+        "pt": "A equipe Brawn GP atende Jenson Button nos boxes durante o GP da Espanha de 2009.",
+        "en": "The Brawn GP crew services Jenson Button during a pit stop at the 2009 Spanish Grand Prix."
+      },
+      "equipes": [
+        "brawn"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Button_pit-stop_Spain_2009.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/44/Button_pit-stop_Spain_2009.jpg",
+      "autor": "Salva Mendez",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "12500d690ef76c118d42c46fadb2ef522655cdee45ef8f0dbc96687f2a6e9fda",
+      "largura": 2048,
+      "altura": 1371,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/brawn-button-pitstop-2009-12500d690ef7-960.webp",
+          "largura": 960,
+          "altura": 643,
+          "sha256": "252f0b1ef981df7966ae3f2c43678c2ebc767c35213abcac2df2794243fddc39"
+        },
+        {
+          "arquivo": "static/pitwall-archive/brawn-button-pitstop-2009-12500d690ef7-2048.webp",
+          "largura": 2048,
+          "altura": 1371,
+          "sha256": "a419aecff293b7a6393e7ba0b4d981c51dcbbc29b8a873ca1f908838df8239d2"
+        }
+      ]
+    },
+    "cooper-moss-zandvoort-1959": {
+      "arquivo_commons": "File:Training op het Circuit Van Zandvoort van de Grand Prix, Stirling Moss start voo, Bestanddeelnr 910-4072.jpg",
+      "legenda": {
+        "pt": "Stirling Moss nos treinos em Zandvoort em 1959. Ele corria com um Cooper inscrito pela equipe Rob Walker.",
+        "en": "Stirling Moss in practice at Zandvoort in 1959. He was driving a Cooper entered by Rob Walker’s team."
+      },
+      "equipes": [
+        "cooper"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Training_op_het_Circuit_Van_Zandvoort_van_de_Grand_Prix,_Stirling_Moss_start_voo,_Bestanddeelnr_910-4072.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Training_op_het_Circuit_Van_Zandvoort_van_de_Grand_Prix%2C_Stirling_Moss_start_voo%2C_Bestanddeelnr_910-4072.jpg",
+      "autor": "Harry Pot / Anefo",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "f7631f6676817d3cea1b19826d78a2bd0f8e4ca4b949bff87b61beead5f92a6d",
+      "largura": 4172,
+      "altura": 3198,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/cooper-moss-zandvoort-1959-f7631f667681-960.webp",
+          "largura": 960,
+          "altura": 736,
+          "sha256": "bde92ea109eae43225826c26fa55e9a605c7cc45ab4c9b0359acaca2fc4fcdd4"
+        },
+        {
+          "arquivo": "static/pitwall-archive/cooper-moss-zandvoort-1959-f7631f667681-2400.webp",
+          "largura": 2400,
+          "altura": 1840,
+          "sha256": "f6dbd45d85471264cd52d09ec835da0221d21c52648d31ce7238db41e9880f5a"
+        }
+      ]
+    },
+    "brabham-zandvoort-podio-1966": {
+      "arquivo_commons": "File:Grand Prix te Zandvoort, winnaar Jack Brabham op podium met krans, Bestanddeelnr 919-3867.jpg",
+      "legenda": {
+        "pt": "Jack Brabham no pódio em Zandvoort em 1966. Ele venceu a corrida com um carro da equipe que fundou com Ron Tauranac.",
+        "en": "Jack Brabham on the podium at Zandvoort in 1966. He won the race in a car from the team he founded with Ron Tauranac."
+      },
+      "equipes": [
+        "brabham"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Grand_Prix_te_Zandvoort,_winnaar_Jack_Brabham_op_podium_met_krans,_Bestanddeelnr_919-3867.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/79/Grand_Prix_te_Zandvoort%2C_winnaar_Jack_Brabham_op_podium_met_krans%2C_Bestanddeelnr_919-3867.jpg",
+      "autor": "Eric Koch for Anefo",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "6812246ab5ca01d5c79426ebcd871bebd5a10709df1401cda3b114793e4b3a2e",
+      "largura": 3648,
+      "altura": 2406,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/brabham-zandvoort-podio-1966-6812246ab5ca-960.webp",
+          "largura": 960,
+          "altura": 633,
+          "sha256": "9e02276f328aa9aa1efb6e8e7d681a61c0505e324ea443a1ddb012c339011464"
+        },
+        {
+          "arquivo": "static/pitwall-archive/brabham-zandvoort-podio-1966-6812246ab5ca-2400.webp",
+          "largura": 2400,
+          "altura": 1583,
+          "sha256": "9d0cb449d4ee01c20e6f2d3237232729dd115cd4281c5cc00e1162b60e4a8fb6"
+        }
+      ]
+    },
+    "matra-stewart-zandvoort-1969": {
+      "arquivo_commons": "File:Jackie Stewart en echtgenote met de krans, Bestanddeelnr 922-5528.jpg",
+      "legenda": {
+        "pt": "Jackie Stewart comemora com a esposa Helen após vencer em Zandvoort pela Matra em 1969.",
+        "en": "Jackie Stewart celebrates with his wife Helen after winning at Zandvoort for Matra in 1969."
+      },
+      "equipes": [
+        "matra"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Jackie_Stewart_en_echtgenote_met_de_krans,_Bestanddeelnr_922-5528.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/68/Jackie_Stewart_en_echtgenote_met_de_krans%2C_Bestanddeelnr_922-5528.jpg",
+      "autor": "Anefo",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "56936a9df258deca92100eb8785bd0a50eebaf4784acdb53ef0da033a38ea253",
+      "largura": 3694,
+      "altura": 2441,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/matra-stewart-zandvoort-1969-56936a9df258-960.webp",
+          "largura": 960,
+          "altura": 634,
+          "sha256": "3ce2f1f4cc58afc0ff3f2341e299defc7a3e2cc0372747f86e239334a9599b7f"
+        },
+        {
+          "arquivo": "static/pitwall-archive/matra-stewart-zandvoort-1969-56936a9df258-2400.webp",
+          "largura": 2400,
+          "altura": 1586,
+          "sha256": "272824fa856a07c62b213b6bde9249fc1d495590ff1c1722d1626e15cd258cb7"
         }
       ]
     }

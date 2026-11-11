@@ -73,7 +73,8 @@ def driver_photos(root, driver, profile):
     race_ids = {"{}:{}".format(event["ano"], event["rodada"]) for event in events}
     cars = [
         (key, photo) for key, photo in photos
-        if any((season, photo.get("construtor")) in titles for season in photo.get("temporadas", []))
+        if driver not in photo.get("pilotos", [])
+        and any((season, photo.get("construtor")) in titles for season in photo.get("temporadas", []))
     ]
     portraits = [(key, photo) for key, photo in photos if driver in photo.get("pilotos", [])]
     if not portraits and cars:

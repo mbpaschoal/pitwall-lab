@@ -284,6 +284,7 @@ class LinkContextTests(unittest.TestCase):
         photographed_teams = {team for photo in photos.values() for team in photo.get("equipes", [])}
         self.assertTrue(set(inventory["equipes_atuais"]).issubset(photographed_teams))
         historic_gps = {f'{event["ano"]}:{event["rodada"]}' for event in inventory["momentos"]}
+        self.assertEqual(len({photo["sha256"] for photo in photos.values()}), len(photos))
         for photo in photos.values():
             artifact_gps = set(photo.get("artefatos_gps", []))
             self.assertTrue(artifact_gps.issubset(historic_gps))
