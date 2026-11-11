@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "d4c8c332d87705c12a160465986e13aaa3555ce14982e1b7207b2c389b7fc54c",
+  "apresentacao_build_sha256": "92260b4a436a008d9de1252a73dc3a9c0d6afd705267cec9862f998433046585",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "368671f8ead929bb34b1b0520934e37c8c88fbc064041e78cb610e8ac88dff2d",
+      "sha256_destino": "843054bd3c4037f3fd77f73402a16a88a2156574264b05eba4830ebafd2bc2a2",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "db3db5203c36a984decee2e88aaa20da1209729085aa0ee39c949ab9419a0c57",
-      "sha256_origem": "bbc029a27932e1d58778d7d861e01c77a1cecf591f64106f8d2b91e3a9d9f89c"
+      "sha256_destino": "4a3bc9ec6c080f3bcaf051cc3ce34143fb975d9c51a78858acf037fae094642f",
+      "sha256_origem": "300f9a017f1c7eb01c2ce5d81ce067291f6e45e51a19d29de302808e34a4f484"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "449f1c35ca9f48e47549350b49d67c11dedb93eabcc5992793e27d2d05c0ea86",
-      "sha256_origem": "f4dd761bafc7089c2e4bc9a6cd1481c1b2d538e650226f23fe58720d069a5489"
+      "sha256_destino": "1faae91b29daf4485b55e7f5a7fabb398e677104ed24f3e80c4f500d29085e7a",
+      "sha256_origem": "f60d33a4bd9499d0f127d0ee2f9703474a8b2e05b3308e9a3204eef39e64d4d1"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "48d8a39381938c11c73917b68143f0e0c2de102c77f76b4c2475214e23ed9cb6",
-      "sha256_origem": "48d8a39381938c11c73917b68143f0e0c2de102c77f76b4c2475214e23ed9cb6"
+      "sha256_destino": "cfb93f3fd4402918de2a2de638f939513a9728c1f8691835ce79bf279a03f944",
+      "sha256_origem": "cfb93f3fd4402918de2a2de638f939513a9728c1f8691835ce79bf279a03f944"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3520,6 +3520,20 @@
       "sha256_origem": "d82132d21628835d457989abfacd1180a064deb99d77bd45f62630078487af4c"
     },
     {
+      "caminho": "static/pitwall-archive/andretti-chapman-zandvoort-1978-99cbd6fbc69d-2400.webp",
+      "fonte": "static/pitwall-archive/andretti-chapman-zandvoort-1978-99cbd6fbc69d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "33e9dfe6e0c828f200ab2108d503e2ee8dd15d788edfa6a71170c0a621c6ec33",
+      "sha256_origem": "33e9dfe6e0c828f200ab2108d503e2ee8dd15d788edfa6a71170c0a621c6ec33"
+    },
+    {
+      "caminho": "static/pitwall-archive/andretti-chapman-zandvoort-1978-99cbd6fbc69d-960.webp",
+      "fonte": "static/pitwall-archive/andretti-chapman-zandvoort-1978-99cbd6fbc69d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "7fa58efd12b008f28b48b7fe78031a7abd4fea29d7c13c8339b570022aee29eb",
+      "sha256_origem": "7fa58efd12b008f28b48b7fe78031a7abd4fea29d7c13c8339b570022aee29eb"
+    },
+    {
       "caminho": "static/pitwall-archive/andretti-ferrari-312b-kyalami-1971-aa899411264f-2400.webp",
       "fonte": "static/pitwall-archive/andretti-ferrari-312b-kyalami-1971-aa899411264f-2400.webp",
       "modo": "copia",
@@ -3630,6 +3644,20 @@
       "modo": "copia",
       "sha256_destino": "9ad4081c51135ff4d9161845ad27062bb499f304201a281a453f1f4f5c652cdf",
       "sha256_origem": "9ad4081c51135ff4d9161845ad27062bb499f304201a281a453f1f4f5c652cdf"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-podio-zandvoort-1953-990903924d45-2400.webp",
+      "fonte": "static/pitwall-archive/ascari-podio-zandvoort-1953-990903924d45-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e1caae1b5605c90b91643f15d3f8153cca2e584fe68df4bc69436ca4e780de17",
+      "sha256_origem": "e1caae1b5605c90b91643f15d3f8153cca2e584fe68df4bc69436ca4e780de17"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-podio-zandvoort-1953-990903924d45-960.webp",
+      "fonte": "static/pitwall-archive/ascari-podio-zandvoort-1953-990903924d45-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c0ef1d002ccd94cb1f9765dc0b8a9de8c15c8acb3d317510289c9c517e88f1b3",
+      "sha256_origem": "c0ef1d002ccd94cb1f9765dc0b8a9de8c15c8acb3d317510289c9c517e88f1b3"
     },
     {
       "caminho": "static/pitwall-archive/aston-martin-suzuka-19a0e4fd4269-2400.webp",
@@ -4178,6 +4206,20 @@
       "sha256_origem": "25d1d7c0ee3c1b19b57d9bea66cf47245a1ab5c47e48340d52c0099676a14134"
     },
     {
+      "caminho": "static/pitwall-archive/farina-ascari-zandvoort-1952-d4acacb7b7fd-2400.webp",
+      "fonte": "static/pitwall-archive/farina-ascari-zandvoort-1952-d4acacb7b7fd-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "129eb366a63d680269a110cfb8bc1002d331228b777ba1b56f477addd0641032",
+      "sha256_origem": "129eb366a63d680269a110cfb8bc1002d331228b777ba1b56f477addd0641032"
+    },
+    {
+      "caminho": "static/pitwall-archive/farina-ascari-zandvoort-1952-d4acacb7b7fd-960.webp",
+      "fonte": "static/pitwall-archive/farina-ascari-zandvoort-1952-d4acacb7b7fd-960.webp",
+      "modo": "copia",
+      "sha256_destino": "61a76e05ffa87963ac2f536bb87bccfd42364a940f735ca1a4d047356684d1f6",
+      "sha256_origem": "61a76e05ffa87963ac2f536bb87bccfd42364a940f735ca1a4d047356684d1f6"
+    },
+    {
       "caminho": "static/pitwall-archive/fernando-alonso-foto-3ace56b87a66-2400.webp",
       "fonte": "static/pitwall-archive/fernando-alonso-foto-3ace56b87a66-2400.webp",
       "modo": "copia",
@@ -4570,6 +4612,20 @@
       "sha256_origem": "c2a8c0c9adb142554660f1538baaa9d52bec703de86b4aee05516243417063a2"
     },
     {
+      "caminho": "static/pitwall-archive/graham-hill-lotus-12-monaco-1958-21fecd8db888-2400.webp",
+      "fonte": "static/pitwall-archive/graham-hill-lotus-12-monaco-1958-21fecd8db888-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b00a89cf272ee2afa8922dd95890e0a2a3fdf2fbbc1c749ffdacf8ad693f55bb",
+      "sha256_origem": "b00a89cf272ee2afa8922dd95890e0a2a3fdf2fbbc1c749ffdacf8ad693f55bb"
+    },
+    {
+      "caminho": "static/pitwall-archive/graham-hill-lotus-12-monaco-1958-21fecd8db888-960.webp",
+      "fonte": "static/pitwall-archive/graham-hill-lotus-12-monaco-1958-21fecd8db888-960.webp",
+      "modo": "copia",
+      "sha256_destino": "863c01c16caa5c5d74e62bc10ffb8611cd062a2e41953cc177cf79ac67a8146f",
+      "sha256_origem": "863c01c16caa5c5d74e62bc10ffb8611cd062a2e41953cc177cf79ac67a8146f"
+    },
+    {
       "caminho": "static/pitwall-archive/graham-hill-retrato-ad764d234068-2400.webp",
       "fonte": "static/pitwall-archive/graham-hill-retrato-ad764d234068-2400.webp",
       "modo": "copia",
@@ -4820,6 +4876,20 @@
       "modo": "copia",
       "sha256_destino": "4902b1e9f9460ec8c6ebd770ea2d025193695aedc1e077fa81d93d543bf6d586",
       "sha256_origem": "4902b1e9f9460ec8c6ebd770ea2d025193695aedc1e077fa81d93d543bf6d586"
+    },
+    {
+      "caminho": "static/pitwall-archive/hunt-podio-zandvoort-1976-ab54bcb79755-2400.webp",
+      "fonte": "static/pitwall-archive/hunt-podio-zandvoort-1976-ab54bcb79755-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5823db8310de0f5d16d536366076b341d691f26955bda7b180d971d435737291",
+      "sha256_origem": "5823db8310de0f5d16d536366076b341d691f26955bda7b180d971d435737291"
+    },
+    {
+      "caminho": "static/pitwall-archive/hunt-podio-zandvoort-1976-ab54bcb79755-960.webp",
+      "fonte": "static/pitwall-archive/hunt-podio-zandvoort-1976-ab54bcb79755-960.webp",
+      "modo": "copia",
+      "sha256_destino": "acaf2b2bca5daf5a718ee0386e295d2f4f50efde7d1c1550479fdd07247723ab",
+      "sha256_origem": "acaf2b2bca5daf5a718ee0386e295d2f4f50efde7d1c1550479fdd07247723ab"
     },
     {
       "caminho": "static/pitwall-archive/hunt-zandvoort-1975-8e7d42876cd1-2400.webp",
@@ -6334,6 +6404,20 @@
       "sha256_origem": "3b9d38d4a0add998d281a8eb8620d31fb23be5ca7177788ee8e405a310db17ac"
     },
     {
+      "caminho": "static/pitwall-archive/scheckter-podio-zandvoort-1977-15d1a9225652-2400.webp",
+      "fonte": "static/pitwall-archive/scheckter-podio-zandvoort-1977-15d1a9225652-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "75b3b9457e32d762ee2405bc70554237e95ef36f56b9769552a75bcbc1c29f18",
+      "sha256_origem": "75b3b9457e32d762ee2405bc70554237e95ef36f56b9769552a75bcbc1c29f18"
+    },
+    {
+      "caminho": "static/pitwall-archive/scheckter-podio-zandvoort-1977-15d1a9225652-960.webp",
+      "fonte": "static/pitwall-archive/scheckter-podio-zandvoort-1977-15d1a9225652-960.webp",
+      "modo": "copia",
+      "sha256_destino": "13b01e16bb9332a0d2acfc7a3418b718171e35bf8e96334c2438bc38678de804",
+      "sha256_origem": "13b01e16bb9332a0d2acfc7a3418b718171e35bf8e96334c2438bc38678de804"
+    },
+    {
       "caminho": "static/pitwall-archive/scheckter-tyrrell-007-brands-hatch-1974-f8efaee92320-2104.webp",
       "fonte": "static/pitwall-archive/scheckter-tyrrell-007-brands-hatch-1974-f8efaee92320-2104.webp",
       "modo": "copia",
@@ -6402,6 +6486,20 @@
       "modo": "copia",
       "sha256_destino": "6a417b153d46867f009394996ede2d9c7bec6a433e80862836e1488a0241252c",
       "sha256_origem": "6a417b153d46867f009394996ede2d9c7bec6a433e80862836e1488a0241252c"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-monza-2012-retrato-1c48ab73f5f4-2400.webp",
+      "fonte": "static/pitwall-archive/schumacher-monza-2012-retrato-1c48ab73f5f4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8e55cdfce45b46e0b3ea553a0eeaa9cf28db320625d2553fb2a2517186774a5e",
+      "sha256_origem": "8e55cdfce45b46e0b3ea553a0eeaa9cf28db320625d2553fb2a2517186774a5e"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-monza-2012-retrato-1c48ab73f5f4-960.webp",
+      "fonte": "static/pitwall-archive/schumacher-monza-2012-retrato-1c48ab73f5f4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "be2ea5745dcdbf83097f2ca2cee55e2efe9fdbd99815b44c0ab55ddfba73714e",
+      "sha256_origem": "be2ea5745dcdbf83097f2ca2cee55e2efe9fdbd99815b44c0ab55ddfba73714e"
     },
     {
       "caminho": "static/pitwall-archive/schumacher-trofeu-estoril-1993-a274b8fce444-2400.webp",

@@ -1541,8 +1541,8 @@
     "vanwall-vw-5": {
       "arquivo_commons": "File:Vanwall VW5 Donington.jpg",
       "legenda": {
-        "pt": "O Vanwall VW5 fotografado em Donington em 2007. Tony Brooks venceu em Monza e Stirling Moss em Casablanca com esse chassi na campanha de 1958. No Marrocos, Mike Hawthorn levou o título de pilotos.",
-        "en": "The Vanwall VW5 pictured at Donington in 2007. Tony Brooks won at Monza and Stirling Moss at Casablanca in this chassis in 1958. Mike Hawthorn won the drivers’ title at the Moroccan Grand Prix."
+        "pt": "O Vanwall VW5 em Donington, em 2007. Tony Brooks correu com esse chassi em Reims, na estreia de Phil Hill, e venceu em Monza. Stirling Moss venceu em Casablanca com o mesmo carro, na prova em que Mike Hawthorn conquistou o título de pilotos.",
+        "en": "Vanwall VW5 at Donington in 2007. Tony Brooks raced this chassis at Reims, where Phil Hill made his debut, and won at Monza. Stirling Moss won in the same car at Casablanca, where Mike Hawthorn clinched the drivers’ title."
       },
       "modelo": "vanwall-vw-5",
       "temporadas": [
@@ -1572,6 +1572,7 @@
         }
       ],
       "artefatos_gps": [
+        "1958:6",
         "1958:10",
         "1958:11"
       ],
@@ -3704,6 +3705,41 @@
         }
       ]
     },
+    "ascari-podio-zandvoort-1953": {
+      "arquivo_commons": "File:Autoraces Dutch Grand Prix Zandvoort. Winnaar Alberto Ascari met prins Bernhard, Bestanddeelnr 905-7658.jpg",
+      "legenda": {
+        "pt": "Alberto Ascari, de óculos de corrida, recebe o príncipe Bernhard após vencer o GP dos Países Baixos de 1953.",
+        "en": "Alberto Ascari, wearing racing goggles, meets Prince Bernhard after winning the 1953 Dutch Grand Prix."
+      },
+      "pilotos": [
+        "alberto-ascari"
+      ],
+      "gps": [
+        "1953:3"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Autoraces_Dutch_Grand_Prix_Zandvoort._Winnaar_Alberto_Ascari_met_prins_Bernhard,_Bestanddeelnr_905-7658.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/56/Autoraces_Dutch_Grand_Prix_Zandvoort._Winnaar_Alberto_Ascari_met_prins_Bernhard%2C_Bestanddeelnr_905-7658.jpg",
+      "autor": "Harry Pot / Anefo",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "990903924d45396614baf0f0f6652c0be1f68c6803ba0950ff6d17c46e76b6b7",
+      "largura": 3395,
+      "altura": 2771,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ascari-podio-zandvoort-1953-990903924d45-960.webp",
+          "largura": 960,
+          "altura": 784,
+          "sha256": "c0ef1d002ccd94cb1f9765dc0b8a9de8c15c8acb3d317510289c9c517e88f1b3"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ascari-podio-zandvoort-1953-990903924d45-2400.webp",
+          "largura": 2400,
+          "altura": 1959,
+          "sha256": "e1caae1b5605c90b91643f15d3f8153cca2e584fe68df4bc69436ca4e780de17"
+        }
+      ]
+    },
     "alberto-ascari-retrato": {
       "arquivo_commons": "File:Alberto Ascari - El Gráfico 1747.jpg",
       "legenda": {
@@ -4027,6 +4063,41 @@
         }
       ]
     },
+    "hunt-podio-zandvoort-1976": {
+      "arquivo_commons": "File:James Hunt - Dutch GP 1976.jpg",
+      "legenda": {
+        "pt": "James Hunt ergue o troféu da vitória em Zandvoort, em 1976, no ano em que conquistou o Mundial.",
+        "en": "James Hunt raises the winner’s trophy at Zandvoort in 1976, the year he clinched the World Championship."
+      },
+      "pilotos": [
+        "james-hunt"
+      ],
+      "gps": [
+        "1976:12"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:James_Hunt_-_Dutch_GP_1976.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/35/James_Hunt_-_Dutch_GP_1976.jpg",
+      "autor": "Anefo / Croes, R.C",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "ab54bcb797550d5b7ad353f2bb59d7ef8baadc8d93ecd5e02406d0fa7f578959",
+      "largura": 2450,
+      "altura": 3627,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hunt-podio-zandvoort-1976-ab54bcb79755-960.webp",
+          "largura": 648,
+          "altura": 960,
+          "sha256": "acaf2b2bca5daf5a718ee0386e295d2f4f50efde7d1c1550479fdd07247723ab"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hunt-podio-zandvoort-1976-ab54bcb79755-2400.webp",
+          "largura": 1621,
+          "altura": 2400,
+          "sha256": "5823db8310de0f5d16d536366076b341d691f26955bda7b180d971d435737291"
+        }
+      ]
+    },
     "james-hunt-retrato": {
       "arquivo_commons": "File:James Hunt 1978.jpg",
       "legenda": {
@@ -4059,6 +4130,41 @@
         }
       ]
     },
+    "andretti-chapman-zandvoort-1978": {
+      "arquivo_commons": "File:Training Grand Prix Zandvoort lotusteam-manager Colin Chapmann (l) en Mario And, Bestanddeelnr 929-8724.jpg",
+      "legenda": {
+        "pt": "Mario Andretti, à direita, ao lado de Colin Chapman durante os treinos em Zandvoort, em 1978. A Lotus conquistou o Mundial de Construtores naquele fim de semana.",
+        "en": "Mario Andretti, right, with Colin Chapman during practice at Zandvoort in 1978. Lotus clinched the Constructors’ Championship that weekend."
+      },
+      "pilotos": [
+        "mario-andretti"
+      ],
+      "gps": [
+        "1978:13"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Training_Grand_Prix_Zandvoort_lotusteam-manager_Colin_Chapmann_(l)_en_Mario_And,_Bestanddeelnr_929-8724.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/49/Training_Grand_Prix_Zandvoort_lotusteam-manager_Colin_Chapmann_%28l%29_en_Mario_And%2C_Bestanddeelnr_929-8724.jpg",
+      "autor": "Koen Suyk / Anefo",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "99cbd6fbc69d65c70207ea2dad020e139abe64f58877ce1e126ef66173b1e3ee",
+      "largura": 3688,
+      "altura": 2445,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/andretti-chapman-zandvoort-1978-99cbd6fbc69d-960.webp",
+          "largura": 960,
+          "altura": 636,
+          "sha256": "7fa58efd12b008f28b48b7fe78031a7abd4fea29d7c13c8339b570022aee29eb"
+        },
+        {
+          "arquivo": "static/pitwall-archive/andretti-chapman-zandvoort-1978-99cbd6fbc69d-2400.webp",
+          "largura": 2400,
+          "altura": 1591,
+          "sha256": "33e9dfe6e0c828f200ab2108d503e2ee8dd15d788edfa6a71170c0a621c6ec33"
+        }
+      ]
+    },
     "mario-andretti-retrato": {
       "arquivo_commons": "File:Mario Andretti 1979 Monaco 4.jpg",
       "legenda": {
@@ -4088,6 +4194,41 @@
           "largura": 2391,
           "altura": 1480,
           "sha256": "52b2a28e02189f7a7f85cc06ba7eb8cbb999add6fd925896637d4459e04ecfe0"
+        }
+      ]
+    },
+    "scheckter-podio-zandvoort-1977": {
+      "arquivo_commons": "File:Podium at 1977 Dutch Grand Prix.jpg",
+      "legenda": {
+        "pt": "Jody Scheckter, à direita, no pódio de Zandvoort em 1977 com o vencedor Niki Lauda e Jacques Laffite. Scheckter terminou em terceiro pela Wolf.",
+        "en": "Jody Scheckter, right, on the 1977 Zandvoort podium with winner Niki Lauda and Jacques Laffite. Scheckter finished third for Wolf."
+      },
+      "pilotos": [
+        "jody-scheckter"
+      ],
+      "gps": [
+        "1977:13"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Podium_at_1977_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Podium_at_1977_Dutch_Grand_Prix.jpg",
+      "autor": "Suyk, Koen / Anefo / neg. stroken, 1945-1989, 2.24.01.05, item number 929-3240",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "15d1a9225652323275c0721bebdf4185ac8ee254adfecf5a6646914c346bca2f",
+      "largura": 3682,
+      "altura": 2397,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/scheckter-podio-zandvoort-1977-15d1a9225652-960.webp",
+          "largura": 960,
+          "altura": 625,
+          "sha256": "13b01e16bb9332a0d2acfc7a3418b718171e35bf8e96334c2438bc38678de804"
+        },
+        {
+          "arquivo": "static/pitwall-archive/scheckter-podio-zandvoort-1977-15d1a9225652-2400.webp",
+          "largura": 2400,
+          "altura": 1562,
+          "sha256": "75b3b9457e32d762ee2405bc70554237e95ef36f56b9769552a75bcbc1c29f18"
         }
       ]
     },
@@ -5161,6 +5302,41 @@
         }
       ]
     },
+    "farina-ascari-zandvoort-1952": {
+      "arquivo_commons": "File:Grote Prijs Nederlandse autoraces Zandvoort. Winnaar Askari en Z. K. M. de Prins, Bestanddeelnr 905-2690.jpg",
+      "legenda": {
+        "pt": "Nino Farina e Alberto Ascari com o príncipe Bernhard em Zandvoort, em 1952. Os dois dividiram o pódio com Luigi Villoresi em um 1–2–3 da Ferrari.",
+        "en": "Nino Farina and Alberto Ascari with Prince Bernhard at Zandvoort in 1952. They shared the podium with Luigi Villoresi in a Ferrari one-two-three."
+      },
+      "pilotos": [
+        "nino-farina"
+      ],
+      "gps": [
+        "1952:7"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Grote_Prijs_Nederlandse_autoraces_Zandvoort._Winnaar_Askari_en_Z._K._M._de_Prins,_Bestanddeelnr_905-2690.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Grote_Prijs_Nederlandse_autoraces_Zandvoort._Winnaar_Askari_en_Z._K._M._de_Prins%2C_Bestanddeelnr_905-2690.jpg",
+      "autor": "Joop van Bilsen / Anefo",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "d4acacb7b7fda8279ca7e5a082b4279119f086775bae4a1df5e5444a793fe260",
+      "largura": 3323,
+      "altura": 2550,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/farina-ascari-zandvoort-1952-d4acacb7b7fd-960.webp",
+          "largura": 960,
+          "altura": 737,
+          "sha256": "61a76e05ffa87963ac2f536bb87bccfd42364a940f735ca1a4d047356684d1f6"
+        },
+        {
+          "arquivo": "static/pitwall-archive/farina-ascari-zandvoort-1952-d4acacb7b7fd-2400.webp",
+          "largura": 2400,
+          "altura": 1842,
+          "sha256": "129eb366a63d680269a110cfb8bc1002d331228b777ba1b56f477addd0641032"
+        }
+      ]
+    },
     "nino-farina-foto": {
       "arquivo_commons": "File:Giuseppe Farina - El Gráfico 1750.jpg",
       "legenda": {
@@ -5321,6 +5497,41 @@
           "largura": 1527,
           "altura": 1910,
           "sha256": "e3eae38bb4d68c1890f37f0e18492035626858fe7266a99a898c10972429221b"
+        }
+      ]
+    },
+    "schumacher-monza-2012-retrato": {
+      "arquivo_commons": "File:2012 Italian GP - Michael.jpg",
+      "legenda": {
+        "pt": "Michael Schumacher no GP da Itália de 2012, em sua última temporada na Fórmula 1, pela Mercedes.",
+        "en": "Michael Schumacher at the 2012 Italian Grand Prix, in his final Formula One season, with Mercedes."
+      },
+      "pilotos": [
+        "michael-schumacher"
+      ],
+      "gps": [
+        "2012:13"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:2012_Italian_GP_-_Michael.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/d7/2012_Italian_GP_-_Michael.jpg",
+      "autor": "Francesco Crippa",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "1c48ab73f5f44c054075255c870719beb29ffdfe9c27b30320cbd17ad129e719",
+      "largura": 2848,
+      "altura": 4288,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/schumacher-monza-2012-retrato-1c48ab73f5f4-960.webp",
+          "largura": 638,
+          "altura": 960,
+          "sha256": "be2ea5745dcdbf83097f2ca2cee55e2efe9fdbd99815b44c0ab55ddfba73714e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/schumacher-monza-2012-retrato-1c48ab73f5f4-2400.webp",
+          "largura": 1594,
+          "altura": 2400,
+          "sha256": "8e55cdfce45b46e0b3ea553a0eeaa9cf28db320625d2553fb2a2517186774a5e"
         }
       ]
     },
@@ -9381,6 +9592,41 @@
           "largura": 2400,
           "altura": 1420,
           "sha256": "017829f65a9ce73273241759f9cbe12b176849c588524437038cc70579162279"
+        }
+      ]
+    },
+    "graham-hill-lotus-12-monaco-1958": {
+      "arquivo_commons": "File:Lotus 12 Chassis No 353 of 1958.JPG",
+      "legenda": {
+        "pt": "O Lotus 12 de chassi 353 em uma exposição na Austrália em 2013. Graham Hill estreou no Mundial de Fórmula 1 com esse carro no GP de Mônaco de 1958.",
+        "en": "Lotus 12 chassis 353 at a show in Australia in 2013. Graham Hill made his Formula One World Championship debut in this car at the 1958 Monaco Grand Prix."
+      },
+      "equipes": [
+        "lotus"
+      ],
+      "artefatos_gps": [
+        "1958:2"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lotus_12_Chassis_No_353_of_1958.JPG",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Lotus_12_Chassis_No_353_of_1958.JPG",
+      "autor": "GTHO",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sha256": "21fecd8db8886c79e35aeef89b92bd1421b2cb5366ae029ecd2b67a0f449494d",
+      "largura": 3264,
+      "altura": 2448,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/graham-hill-lotus-12-monaco-1958-21fecd8db888-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "863c01c16caa5c5d74e62bc10ffb8611cd062a2e41953cc177cf79ac67a8146f"
+        },
+        {
+          "arquivo": "static/pitwall-archive/graham-hill-lotus-12-monaco-1958-21fecd8db888-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "b00a89cf272ee2afa8922dd95890e0a2a3fdf2fbbc1c749ffdacf8ad693f55bb"
         }
       ]
     }
