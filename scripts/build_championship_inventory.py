@@ -33,6 +33,13 @@ CHASSIS_WITHOUT_TITLE_CONTRIBUTION = {
             "https://www.motorsportmagazine.com/archive/article/october-1953/11/the-italian-grand/",
         ),
     },
+    (1969, "matra"): {
+        "matra-ms7": (
+            "O MS7 disputou a classe de Fórmula 2 no GP da Alemanha, sem pontuar no Mundial de F1.",
+            "The MS7 ran in the Formula 2 class at the German Grand Prix and scored no F1 World Championship points.",
+            "https://www.motorsportmagazine.com/database/races/1969-german-grand-prix-f2-class/",
+        ),
+    },
     (1976, "mclaren"): {
         "mclaren-m26": (
             "Jochen Mass estreou o M26 em Zandvoort. James Hunt disputou o título com o M23.",

@@ -78,7 +78,9 @@ def driver_photos(root, driver, profile):
     portraits = [(key, photo) for key, photo in photos if driver in photo.get("pilotos", [])]
     if not portraits and cars:
         portraits, cars = cars[:1], cars[1:]
-    return portraits, cars, [(key, photo) for key, photo in photos if race_ids.intersection(photo.get("gps", []))]
+    moments = [(key, photo) for key, photo in photos if race_ids.intersection(photo.get("gps", []))]
+    artifacts = [(key, photo) for key, photo in photos if race_ids.intersection(photo.get("artefatos_gps", []))]
+    return portraits, cars, moments, artifacts
 
 
 def team_photos(root, team):
@@ -103,6 +105,7 @@ def render(root, year, round_):
         return
     inventory = json.loads((Path(root) / INVENTORY).read_text(encoding="utf-8"))
     mode = st.radio("Coleção", ARCHIVE_MODES, horizontal=True, key="archive_mode")
+    artifacts = []
     if mode == "Carros campeões":
         seasons = sorted({row["ano"] for row in inventory["campanhas"]}, reverse=True)
         season = st.selectbox("Temporada do acervo", seasons, key="archive_season")
@@ -119,9 +122,14 @@ def render(root, year, round_):
         seasons = sorted({event["ano"] for event in inventory["momentos"]}, reverse=True)
         season = st.selectbox("Temporada do acervo", [None, *seasons], key="archive_event_season",
                               format_func=lambda value: str(value) if value else translate("Todas as temporadas"))
+        race_ids = {f'{event["ano"]}:{event["rodada"]}' for event in inventory["momentos"]
+                    if season is None or event["ano"] == season}
         selected = [
             (key, photo) for key, photo in photos
             if any(season is None or gp.split(":", 1)[0] == str(season) for gp in photo.get("gps", []))
         ]
-    if not gallery(selected):
+        artifacts = [(key, photo) for key, photo in photos if race_ids.intersection(photo.get("artefatos_gps", []))]
+    has_photos = gallery(selected)
+    has_artifacts = gallery(artifacts, "Peças de acervo")
+    if not has_photos and not has_artifacts:
         st.info("Fotografias desta seleção em pesquisa.")

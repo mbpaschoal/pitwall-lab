@@ -117,7 +117,7 @@ def _titles(profile, year, round_):
 
 
 def _profile(root, driver, profile, year, round_, cutoff):
-    covers, cars, moments = photo_archive.driver_photos(root, driver, profile)
+    covers, cars, moments, artifacts = photo_archive.driver_photos(root, driver, profile)
     if covers:
         intro, photograph = st.columns([1.1, 1], vertical_alignment="center")
     else:
@@ -127,7 +127,7 @@ def _profile(root, driver, profile, year, round_, cutoff):
         st.caption("{} · {}".format(profile["pais"][language()], "–".join(map(str, profile["anos_atividade"]))))
     if covers:
         with photograph:
-            photo_archive.gallery(covers, cover=True)
+            photo_archive.gallery(covers[:1], cover=True)
     stats = [
         ("Títulos mundiais", len(profile["titulos"])), ("Largadas", profile["largadas"]),
         ("Vitórias", profile["vitorias"]), ("Pódios", profile["podios"]), ("Poles", profile["poles"]),
@@ -146,6 +146,8 @@ def _profile(root, driver, profile, year, round_, cutoff):
                     text("Primeira vitória"), _race_link(profile["primeira_vitoria"]),
                 ), unsafe_allow_html=True)
     photo_archive.gallery(moments, "Momentos históricos")
+    photo_archive.gallery(artifacts, "Peças de acervo")
+    photo_archive.gallery(covers[1:], "Mais fotos do piloto")
     if profile.get("perfil_pitwall"):
         url = href("Pilotos", visao="perfil", piloto=profile["perfil_pitwall"], temporada=year, gp=round_)
         st.markdown(_link(translate("Ver análise por condições no Pitwall Lab"), url), unsafe_allow_html=True)

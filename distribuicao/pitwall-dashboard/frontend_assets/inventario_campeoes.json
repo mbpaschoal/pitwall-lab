@@ -132,7 +132,6 @@
     "maserati-250f": "Maserati 250F",
     "maserati-a6gcm": "Maserati A6GCM",
     "matra-ms10": "Matra MS10",
-    "matra-ms7": "Matra MS7",
     "matra-ms80": "Matra MS80",
     "matra-ms84": "Matra MS84",
     "mclaren-m23b": "McLaren M23B",
@@ -469,10 +468,19 @@
       "construtores": true,
       "modelos_candidatos": [
         "matra-ms10",
-        "matra-ms7",
         "matra-ms80",
         "matra-ms84"
-      ]
+      ],
+      "modelos_sem_contribuicao": {
+        "matra-ms7": {
+          "nome": "Matra MS7",
+          "motivo": {
+            "pt": "O MS7 disputou a classe de Fórmula 2 no GP da Alemanha, sem pontuar no Mundial de F1.",
+            "en": "The MS7 ran in the Formula 2 class at the German Grand Prix and scored no F1 World Championship points."
+          },
+          "fonte": "https://www.motorsportmagazine.com/database/races/1969-german-grand-prix-f2-class/"
+        }
+      }
     },
     {
       "ano": 1970,

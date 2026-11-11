@@ -260,6 +260,11 @@ class LinkContextTests(unittest.TestCase):
         self.assertFalse(app.exception)
         event = next(item.value for item in app.markdown if 'data-archive-photo="fangio-nurburgring-1957"' in item.value)
         self.assertNotIn('data-archive-photo="hamilton-interlagos-2008"', event)
+        app.selectbox(key="archive_event_season").set_value(1988).run()
+        self.assertFalse(app.exception)
+        self.assertIn("Objects from the collection", [item.value for item in app.subheader])
+        self.assertTrue(any('data-archive-photo="mclaren-trofeu-suzuka-1988"' in item.value for item in app.markdown))
+        self.assertFalse(app.info)
 
     def test_photo_archive_has_a_car_for_each_title_campaign_and_each_current_team(self):
         from pitwall.dashboard.photo_archive import INVENTORY, load
@@ -278,6 +283,11 @@ class LinkContextTests(unittest.TestCase):
         self.assertIn("ferrari.com", campaigns[1956, "ferrari"]["modelos_documentados"]["ferrari-d50"]["fonte"])
         photographed_teams = {team for photo in photos.values() for team in photo.get("equipes", [])}
         self.assertTrue(set(inventory["equipes_atuais"]).issubset(photographed_teams))
+        historic_gps = {f'{event["ano"]}:{event["rodada"]}' for event in inventory["momentos"]}
+        for photo in photos.values():
+            artifact_gps = set(photo.get("artefatos_gps", []))
+            self.assertTrue(artifact_gps.issubset(historic_gps))
+            self.assertTrue(artifact_gps.isdisjoint(photo.get("gps", [])))
 
     def test_document_return_preserves_hosted_frame_without_nesting_wrapper(self):
         for lang in ('pt','en'):

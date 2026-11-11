@@ -16,7 +16,7 @@ As campanhas locais mostram a posição e os pontos acumulados do construtor a c
 
 ## Hall da Fama dos pilotos
 
-O Acervo fotográfico usa originais de arquivo com licença indicada por fotografia. O catálogo registra autoria, origem, dimensões e hashes das versões locais. O inventário cruza os títulos do F1DB com os chassis inscritos e incorpora a documentação da Ferrari sobre o D50 de Fangio em 1956. A cobertura por campanha exige pelo menos um carro fotografado. A associação de cada variante e a cobertura dos GPs históricos são conferidas individualmente. [Catálogo fotográfico](../frontend_assets/acervo_fotografico.json) · [Inventário](../frontend_assets/inventario_campeoes.json)
+O Acervo fotográfico usa originais de arquivo com licença indicada por fotografia. O catálogo registra autoria, origem, dimensões e hashes das versões locais. O inventário cruza os títulos do F1DB com os chassis inscritos e incorpora a documentação da Ferrari sobre o D50 de Fangio em 1956. A cobertura por campanha exige pelo menos um carro fotografado. A associação de cada variante e a cobertura dos GPs históricos são conferidas individualmente. Troféus e capacetes fotografados depois da prova aparecem em **Peças de acervo**. [Catálogo fotográfico](../frontend_assets/acervo_fotografico.json) · [Inventário](../frontend_assets/inventario_campeoes.json)
 
 O Duelo de Campeões calcula a idade entre a data de nascimento e o dia do GP decisivo registrados no F1DB. A contagem inclui a temporada do primeiro título e cada temporada anterior em que o piloto largou em pelo menos um GP.
 
