@@ -11307,6 +11307,79 @@
           "sha256": "b616b0df1e82a71b0f6d61c19808696d09c0d3e7daeeed003425e8c8031f3d90"
         }
       ]
+    },
+    "schumacher-f1-2000-loh-2024": {
+      "arquivo_commons": "File:Ferrari F1-2000, Michael Schumacher (The Loh Collection) 1.jpg",
+      "legenda": {
+        "pt": "O Ferrari F1-2000 de chassi 205 na coleção Loh, na Alemanha, em 2024. Michael Schumacher venceu com esse carro em Suzuka, onde conquistou seu primeiro título pela Ferrari, e em Sepang, onde a equipe garantiu o Mundial de Construtores de 2000.",
+        "en": "Ferrari F1-2000 chassis 205 in Germany’s Loh Collection in 2024. Michael Schumacher won in this car at Suzuka, where he clinched his first title with Ferrari, and at Sepang, where the team secured the 2000 constructors’ championship."
+      },
+      "modelo": "ferrari-f1-2000",
+      "temporadas": [
+        2000
+      ],
+      "artefatos_gps": [
+        "2000:16",
+        "2000:17"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Ferrari_F1-2000,_Michael_Schumacher_(The_Loh_Collection)_1.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Ferrari_F1-2000%2C_Michael_Schumacher_%28The_Loh_Collection%29_1.jpg",
+      "autor": "MarcelBuehner",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "b1c9335be3c43eecfe28851a1b3a5d34ca938992bffe93a3276d24eadccb9885",
+      "largura": 2950,
+      "altura": 1598,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/schumacher-f1-2000-loh-2024-b1c9335be3c4-960.webp",
+          "largura": 960,
+          "altura": 520,
+          "sha256": "2d39f1ecbd1c61d390054f4a77b13652a281e7712daf807dcf80f97f322cc935"
+        },
+        {
+          "arquivo": "static/pitwall-archive/schumacher-f1-2000-loh-2024-b1c9335be3c4-2400.webp",
+          "largura": 2400,
+          "altura": 1300,
+          "sha256": "9e60963207c1a3da544df3d8522b578ee1314f2873fda4f1482ef06af1346a2a"
+        }
+      ]
+    },
+    "ralf-fw25-indianapolis-2003": {
+      "arquivo_commons": "File:Ralf Schumacher Indianapolis 2003.jpg",
+      "legenda": {
+        "pt": "Ralf Schumacher no Williams FW25 de chassi 07 em Indianápolis, em 2003. Duas semanas depois, fez a volta mais rápida em Suzuka com o mesmo carro, na etapa em que Michael Schumacher e a Ferrari confirmaram os títulos.",
+        "en": "Ralf Schumacher in Williams FW25 chassis 07 at Indianapolis in 2003. Two weeks later he set the fastest lap at Suzuka in the same car, at the race where Michael Schumacher and Ferrari clinched their titles."
+      },
+      "gps": [
+        "2003:15"
+      ],
+      "artefatos_gps": [
+        "2003:16"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Ralf_Schumacher_Indianapolis_2003.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/87/Ralf_Schumacher_Indianapolis_2003.jpg",
+      "autor": "Rick Dikeman",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "320d93b972527ce0752c03f4087e7b947ea583e8b2b4354863b794a808533b73",
+      "largura": 2970,
+      "altura": 2048,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ralf-fw25-indianapolis-2003-320d93b97252-960.webp",
+          "largura": 960,
+          "altura": 662,
+          "sha256": "2262ea5b3f17c9b51df7375960c33025406fba4ad95f3600077851c36e5b153e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ralf-fw25-indianapolis-2003-320d93b97252-2400.webp",
+          "largura": 2400,
+          "altura": 1655,
+          "sha256": "66355b38f34d9baa48dd8e930a2fdb4d01212196a68d1eb3bc670697589decab"
+        }
+      ]
     }
   },
   "referencias_fotograficas": {

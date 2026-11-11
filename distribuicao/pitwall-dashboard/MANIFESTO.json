@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "4d66a27a2e9af9faf129e084b1b58674854a6d5d10b4e4f563db7b8f944bab59",
+  "apresentacao_build_sha256": "db55f9a4e4e72b4a1f185b94bdbee55f83c99d6e2cdac4e9433f2f9055ac2a99",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "c099dc46a8c211beb140d5d9fe5ed39f53cc89dcfdcdc388040fd05e5c24f659",
+      "sha256_destino": "2ee2dbf95809e6f70f990e8cb897d57011a2da42a6baf9241f04f20644c37ccf",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a837aa782b2a06fd82e6b46b816df11d5b3ba1c541a3d5d3cf0d4614ced7ecb3",
-      "sha256_origem": "dc02d936c08c06d45e591701b176663b4863b61b09994cda52c89cb4f16e1bc9"
+      "sha256_destino": "36224798259449d37fb5baeb65ba2ed5c03a87730490b55167e17a1d62b1bbc7",
+      "sha256_origem": "fc40502d93646e919525b30918d261f12efde330fd2970572661408ab459a8d1"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "c7a0215ec59035047cfbfdbb918b01318908637f5278993300df518652e4e64c",
-      "sha256_origem": "5f9f8e3e499af5f521dfb23108330b19018fd0e947d7b12f1d559203c0f88825"
+      "sha256_destino": "91be14a4a80fa58b88199351c81a32c04222f547a35e008e3f33439c072a15dd",
+      "sha256_origem": "c19dda1a81f13d169dd2ec0dd314634bcd4c5fad487d10e9715fc6270c0197e5"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "5fde320b64bdd1dc203695dcbfbcf377ecbc6a4df113bcb76c1bfe74fe2016c4",
-      "sha256_origem": "5fde320b64bdd1dc203695dcbfbcf377ecbc6a4df113bcb76c1bfe74fe2016c4"
+      "sha256_destino": "8beb875b9e3664140e3764c88d4af9bb8b15b314c2f2a4174677b9bbed949a83",
+      "sha256_origem": "8beb875b9e3664140e3764c88d4af9bb8b15b314c2f2a4174677b9bbed949a83"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6614,6 +6614,20 @@
       "sha256_origem": "68d5e64731bdba7d5f4167277f32f03b66fa21a25ad4e13bd58606d4f35eccae"
     },
     {
+      "caminho": "static/pitwall-archive/ralf-fw25-indianapolis-2003-320d93b97252-2400.webp",
+      "fonte": "static/pitwall-archive/ralf-fw25-indianapolis-2003-320d93b97252-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "66355b38f34d9baa48dd8e930a2fdb4d01212196a68d1eb3bc670697589decab",
+      "sha256_origem": "66355b38f34d9baa48dd8e930a2fdb4d01212196a68d1eb3bc670697589decab"
+    },
+    {
+      "caminho": "static/pitwall-archive/ralf-fw25-indianapolis-2003-320d93b97252-960.webp",
+      "fonte": "static/pitwall-archive/ralf-fw25-indianapolis-2003-320d93b97252-960.webp",
+      "modo": "copia",
+      "sha256_destino": "2262ea5b3f17c9b51df7375960c33025406fba4ad95f3600077851c36e5b153e",
+      "sha256_origem": "2262ea5b3f17c9b51df7375960c33025406fba4ad95f3600077851c36e5b153e"
+    },
+    {
       "caminho": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-2400.webp",
       "fonte": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-2400.webp",
       "modo": "copia",
@@ -6948,6 +6962,20 @@
       "modo": "copia",
       "sha256_destino": "f9868e04a9e591601e31b1dfc7213dad6cab9cd7ae5dff9a39de8552321959fa",
       "sha256_origem": "f9868e04a9e591601e31b1dfc7213dad6cab9cd7ae5dff9a39de8552321959fa"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-f1-2000-loh-2024-b1c9335be3c4-2400.webp",
+      "fonte": "static/pitwall-archive/schumacher-f1-2000-loh-2024-b1c9335be3c4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9e60963207c1a3da544df3d8522b578ee1314f2873fda4f1482ef06af1346a2a",
+      "sha256_origem": "9e60963207c1a3da544df3d8522b578ee1314f2873fda4f1482ef06af1346a2a"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-f1-2000-loh-2024-b1c9335be3c4-960.webp",
+      "fonte": "static/pitwall-archive/schumacher-f1-2000-loh-2024-b1c9335be3c4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "2d39f1ecbd1c61d390054f4a77b13652a281e7712daf807dcf80f97f322cc935",
+      "sha256_origem": "2d39f1ecbd1c61d390054f4a77b13652a281e7712daf807dcf80f97f322cc935"
     },
     {
       "caminho": "static/pitwall-archive/schumacher-f2001-melbourne-2001-7be428b138fc-2400.webp",
