@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "75c3db5165c43f094edbce19139d84e8d4dbaa6947e4a2ece9a93549f12802e3",
+  "apresentacao_build_sha256": "6ddb81c27e0cb48ad103c39a013e74899488c19964db8de79b2e99469225bea1",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "3e460e49b7fe599f7cd7e407f7f563d2704c5fcf70132394e4a49b01e9d0b20a",
+      "sha256_destino": "f83188dd72fb4763d45d46db07aa8cfe92668634c40172e51ee26639647e9245",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "f60d4a07c7bc001c885698ffb0c31d78b8ce4027a41e5df8fa906f06a98776b7",
-      "sha256_origem": "f60d4a07c7bc001c885698ffb0c31d78b8ce4027a41e5df8fa906f06a98776b7"
+      "sha256_destino": "0d183ddde4dbf103f55301365e43312ba890b655cbdeac4e8c47cd668b093b66",
+      "sha256_origem": "0d183ddde4dbf103f55301365e43312ba890b655cbdeac4e8c47cd668b093b66"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4584,6 +4584,20 @@
       "sha256_origem": "cb646700fd33423f763f16c568eb479953f403b6aa882862203981196c890248"
     },
     {
+      "caminho": "static/pitwall-archive/hunt-m23d-zandvoort-fuji-1976-a93c6f190b31-2400.webp",
+      "fonte": "static/pitwall-archive/hunt-m23d-zandvoort-fuji-1976-a93c6f190b31-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "852c7025ae8ef38859d38e7a5ac4d114f680ecc666aa0359c2a23e551ec6fa3b",
+      "sha256_origem": "852c7025ae8ef38859d38e7a5ac4d114f680ecc666aa0359c2a23e551ec6fa3b"
+    },
+    {
+      "caminho": "static/pitwall-archive/hunt-m23d-zandvoort-fuji-1976-a93c6f190b31-960.webp",
+      "fonte": "static/pitwall-archive/hunt-m23d-zandvoort-fuji-1976-a93c6f190b31-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a35aa4436fc098384fa2de87e8e6e571611803d7b2ac97eabbd6d5073195cf42",
+      "sha256_origem": "a35aa4436fc098384fa2de87e8e6e571611803d7b2ac97eabbd6d5073195cf42"
+    },
+    {
       "caminho": "static/pitwall-archive/hunt-zandvoort-1975-8e7d42876cd1-2400.webp",
       "fonte": "static/pitwall-archive/hunt-zandvoort-1975-8e7d42876cd1-2400.webp",
       "modo": "copia",
@@ -4820,6 +4834,20 @@
       "modo": "copia",
       "sha256_destino": "9744be866200336983159b9b7b5276bff50e357ce999a542fa77561961f2e10b",
       "sha256_origem": "9744be866200336983159b9b7b5276bff50e357ce999a542fa77561961f2e10b"
+    },
+    {
+      "caminho": "static/pitwall-archive/lauda-mp4-2-estoril-1984-d03b3ef572fb-2400.webp",
+      "fonte": "static/pitwall-archive/lauda-mp4-2-estoril-1984-d03b3ef572fb-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ed47df6ef852a11f19b64c4688275c7298ad4e81a97d51db88758ad3bb92883d",
+      "sha256_origem": "ed47df6ef852a11f19b64c4688275c7298ad4e81a97d51db88758ad3bb92883d"
+    },
+    {
+      "caminho": "static/pitwall-archive/lauda-mp4-2-estoril-1984-d03b3ef572fb-960.webp",
+      "fonte": "static/pitwall-archive/lauda-mp4-2-estoril-1984-d03b3ef572fb-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cc9e78b67a17834f3ad67e96b9789336a89f3f683e3a012a948389f9217ce33e",
+      "sha256_origem": "cc9e78b67a17834f3ad67e96b9789336a89f3f683e3a012a948389f9217ce33e"
     },
     {
       "caminho": "static/pitwall-archive/lotus-24-f5b9a4c7ecdc-2400.webp",
@@ -5746,6 +5774,20 @@
       "sha256_origem": "625499695f7e766811d8122b7c901761758688a97d006817f437bc3046afe6e1"
     },
     {
+      "caminho": "static/pitwall-archive/prost-mp4-2c-adelaide-1986-4054488851de-2400.webp",
+      "fonte": "static/pitwall-archive/prost-mp4-2c-adelaide-1986-4054488851de-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b6b34e1f680dbc9068ab6b33cdbfd4f42b3a1db62f6acf2037b83203d0d76ff9",
+      "sha256_origem": "b6b34e1f680dbc9068ab6b33cdbfd4f42b3a1db62f6acf2037b83203d0d76ff9"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-mp4-2c-adelaide-1986-4054488851de-960.webp",
+      "fonte": "static/pitwall-archive/prost-mp4-2c-adelaide-1986-4054488851de-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e66db770727b0608ba8e1482baf6409915bb6e8c091a502c3a46bf8e8701b21a",
+      "sha256_origem": "e66db770727b0608ba8e1482baf6409915bb6e8c091a502c3a46bf8e8701b21a"
+    },
+    {
       "caminho": "static/pitwall-archive/prost-mp4-5-53e9fa01248e-2400.webp",
       "fonte": "static/pitwall-archive/prost-mp4-5-53e9fa01248e-2400.webp",
       "modo": "copia",
@@ -6080,6 +6122,34 @@
       "modo": "copia",
       "sha256_destino": "b2b3b0400544195ba8b388ae5382844801ab18fafc73ea2e4e881f75b9cbcef6",
       "sha256_origem": "b2b3b0400544195ba8b388ae5382844801ab18fafc73ea2e4e881f75b9cbcef6"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mp4-4-spa-1988-8de068efd282-2400.webp",
+      "fonte": "static/pitwall-archive/senna-mp4-4-spa-1988-8de068efd282-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "54caad9bdd6dbf8a7b674f18731ba51d95e27762680f3ad96e024c8083f9e4c6",
+      "sha256_origem": "54caad9bdd6dbf8a7b674f18731ba51d95e27762680f3ad96e024c8083f9e4c6"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mp4-4-spa-1988-8de068efd282-960.webp",
+      "fonte": "static/pitwall-archive/senna-mp4-4-spa-1988-8de068efd282-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d72963a551d2d6de870f3324e38d0b76beeece610a87eee29dc34f70bd7bd20b",
+      "sha256_origem": "d72963a551d2d6de870f3324e38d0b76beeece610a87eee29dc34f70bd7bd20b"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mp4-5-suzuka-1989-3bad7de2f1c5-2400.webp",
+      "fonte": "static/pitwall-archive/senna-mp4-5-suzuka-1989-3bad7de2f1c5-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b6467a47923e6a1ff1e8add90a48adf6ceda017e894f07b83ec523965df16377",
+      "sha256_origem": "b6467a47923e6a1ff1e8add90a48adf6ceda017e894f07b83ec523965df16377"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mp4-5-suzuka-1989-3bad7de2f1c5-960.webp",
+      "fonte": "static/pitwall-archive/senna-mp4-5-suzuka-1989-3bad7de2f1c5-960.webp",
+      "modo": "copia",
+      "sha256_destino": "46c865bfbb6b27bb83bdeeb578b6e6427a1d83b8c40361192b4b99c4b5b384de",
+      "sha256_origem": "46c865bfbb6b27bb83bdeeb578b6e6427a1d83b8c40361192b4b99c4b5b384de"
     },
     {
       "caminho": "static/pitwall-archive/senna-mp4-5b-2241955f6ebb-2400.webp",
