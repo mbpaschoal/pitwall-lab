@@ -6175,8 +6175,8 @@
     "indianapolis-2007": {
       "arquivo_commons": "File:Felipe Massa 2007 USA 2.jpg",
       "legenda": {
-        "pt": "Felipe Massa em Indianápolis, no GP dos Estados Unidos de 2007 em que Sebastian Vettel estreou.",
-        "en": "Felipe Massa at Indianapolis in 2007, the United States Grand Prix where Sebastian Vettel debuted."
+        "pt": "Felipe Massa no Ferrari F2007 de chassi 260 em Indianápolis, na estreia de Sebastian Vettel em 2007. Massa foi sexto com o mesmo carro em Melbourne, onde Lewis Hamilton estreou na F1 com um terceiro lugar.",
+        "en": "Felipe Massa in Ferrari F2007 chassis 260 at Indianapolis in 2007, when Sebastian Vettel made his debut. Massa finished sixth in the same car at Melbourne, where Lewis Hamilton finished third on his F1 debut."
       },
       "gps": [
         "2007:7"
@@ -6202,6 +6202,17 @@
           "altura": 1600,
           "sha256": "a507611c2b14fdd51dcc26415bffd804ca313658c5b187d84cc5b7340aa848f6"
         }
+      ],
+      "modelo": "ferrari-f2007",
+      "temporadas": [
+        2007
+      ],
+      "equipes": [
+        "ferrari"
+      ],
+      "construtor": "ferrari",
+      "artefatos_gps": [
+        "2007:1"
       ]
     },
     "interlagos-2009": {
@@ -9713,6 +9724,256 @@
           "largura": 2192,
           "altura": 2400,
           "sha256": "1dadb52491f106dca591d18660a99c557fdbaf06358fe36aecf2577d2d764764"
+        }
+      ]
+    },
+    "hamilton-w05-austin-2014": {
+      "arquivo_commons": "File:Lewis Hamilton comes out of T2 COTA 2014 United States Grand Prix (15684925211).jpg",
+      "legenda": {
+        "pt": "Lewis Hamilton sai da curva 2 em Austin no Mercedes W05 Hybrid de chassi 05, em 2014. Com esse carro venceu em Sóchi, onde a Mercedes conquistou seu primeiro Mundial de Construtores, e em Abu Dhabi, onde garantiu seu segundo título de pilotos.",
+        "en": "Lewis Hamilton exits Turn 2 at Austin in Mercedes W05 Hybrid chassis 05 in 2014. He won in this car at Sochi, where Mercedes claimed its first constructors’ championship, and at Abu Dhabi, where he clinched his second drivers’ title."
+      },
+      "modelo": "mercedes-f1-w05",
+      "temporadas": [
+        2014
+      ],
+      "equipes": [
+        "mercedes"
+      ],
+      "gps": [
+        "2014:17"
+      ],
+      "artefatos_gps": [
+        "2014:16",
+        "2014:19"
+      ],
+      "construtor": "mercedes",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lewis_Hamilton_comes_out_of_T2_COTA_2014_United_States_Grand_Prix_(15684925211).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/48/Lewis_Hamilton_comes_out_of_T2_COTA_2014_United_States_Grand_Prix_%2815684925211%29.jpg",
+      "autor": "John Champion",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "14abfbccfadcbf845212a72be9c28b1da1928ba89d8bc41518fbcdd4e599701c",
+      "largura": 4490,
+      "altura": 1672,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-w05-austin-2014-14abfbccfadc-960.webp",
+          "largura": 960,
+          "altura": 357,
+          "sha256": "e4ae4aae962125b912db5c1f8c949055d43005b8ca25c3f31f5c8214e1bea76c"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-w05-austin-2014-14abfbccfadc-2400.webp",
+          "largura": 2400,
+          "altura": 894,
+          "sha256": "300716e948a720a702790f65cde67c0db1780e7c2a3560ce667087e2fd66bd47"
+        }
+      ]
+    },
+    "hamilton-w11-mugello-2020": {
+      "arquivo_commons": "File:Lewis Hamilton 2020 Tuscan Grand Prix - race day (cropped).jpg",
+      "legenda": {
+        "pt": "Lewis Hamilton no Mercedes W11 de chassi 01 durante sua vitória em Mugello, em 2020. Ele também venceu com esse carro em Ímola, quando a Mercedes conquistou o título de construtores, e em Istambul, quando conquistou seu sétimo Mundial de Pilotos.",
+        "en": "Lewis Hamilton in Mercedes W11 chassis 01 during his 2020 win at Mugello. He also won in this car at Imola, where Mercedes clinched the constructors’ title, and at Istanbul, where he secured his seventh drivers’ championship."
+      },
+      "modelo": "mercedes-f1-w11",
+      "temporadas": [
+        2020
+      ],
+      "equipes": [
+        "mercedes"
+      ],
+      "gps": [
+        "2020:9"
+      ],
+      "artefatos_gps": [
+        "2020:13",
+        "2020:14"
+      ],
+      "autor": "Eustace Bagge (recorte / crop: Danyele)",
+      "construtor": "mercedes",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lewis_Hamilton_2020_Tuscan_Grand_Prix_-_race_day_(cropped).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/31/Lewis_Hamilton_2020_Tuscan_Grand_Prix_-_race_day_%28cropped%29.jpg",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "96b167d1bb9b55717ec4b97221da68ad7bf22ca600a2d8235a2face952ab906e",
+      "largura": 3885,
+      "altura": 1585,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-w11-mugello-2020-96b167d1bb9b-960.webp",
+          "largura": 960,
+          "altura": 392,
+          "sha256": "79c4194de7cf48db3852366eacadbfaac130ea637d9b35d80fb34ec84265ebed"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-w11-mugello-2020-96b167d1bb9b-2400.webp",
+          "largura": 2400,
+          "altura": 979,
+          "sha256": "644a26ffa7d41bf6e36d8cc9c38fcbe44dda09936026da77209345ee72d7fb22"
+        }
+      ]
+    },
+    "red-bull-exposicao-austin-2022": {
+      "arquivo_commons": "File:2002 US F1 Grand Prix - Circuit of the Americas, Austin, TX (54917351063).jpg",
+      "legenda": {
+        "pt": "Carro de exposição da Red Bull no Circuito das Américas, no sábado do GP dos Estados Unidos de 2022. No domingo, Max Verstappen venceu e a equipe confirmou o título de construtores.",
+        "en": "A Red Bull display car at the Circuit of the Americas on the Saturday of the 2022 United States Grand Prix. Max Verstappen won on Sunday and the team clinched the constructors’ championship."
+      },
+      "equipes": [
+        "red_bull"
+      ],
+      "gps": [
+        "2022:19"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:2002_US_F1_Grand_Prix_-_Circuit_of_the_Americas,_Austin,_TX_(54917351063).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9f/2002_US_F1_Grand_Prix_-_Circuit_of_the_Americas%2C_Austin%2C_TX_%2854917351063%29.jpg",
+      "autor": "Alan LaRue",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "36fba10eea7410c0d8d2a392f84c3b20478054f0b29a60a5ed315e06b0b1c1a2",
+      "largura": 4032,
+      "altura": 3024,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/red-bull-exposicao-austin-2022-36fba10eea74-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "c09f5df8ff45daa90385b09c40cb30ae863ff46252b87cda1b75f3f6b18c9e31"
+        },
+        {
+          "arquivo": "static/pitwall-archive/red-bull-exposicao-austin-2022-36fba10eea74-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "7818c33701665f011c3a9f7e85696af963f9465775f89d39e839a1944c4bc140"
+        }
+      ]
+    },
+    "hamilton-w07-silverstone-2016": {
+      "arquivo_commons": "File:Lewis Hamilton 2016 British Grand Prix (2).jpg",
+      "legenda": {
+        "pt": "Lewis Hamilton no Mercedes W07 Hybrid de chassi 04 em Silverstone, em 2016. Venceu com esse mesmo carro em Abu Dhabi, onde Nico Rosberg terminou em segundo e conquistou o Mundial de Pilotos.",
+        "en": "Lewis Hamilton in Mercedes W07 Hybrid chassis 04 at Silverstone in 2016. He won in the same car at Abu Dhabi, where Nico Rosberg finished second to secure the drivers’ championship."
+      },
+      "modelo": "mercedes-f1-w07",
+      "temporadas": [
+        2016
+      ],
+      "equipes": [
+        "mercedes"
+      ],
+      "gps": [
+        "2016:10"
+      ],
+      "artefatos_gps": [
+        "2016:21"
+      ],
+      "construtor": "mercedes",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lewis_Hamilton_2016_British_Grand_Prix_(2).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Lewis_Hamilton_2016_British_Grand_Prix_%282%29.jpg",
+      "autor": "Andrew & Alan Frost",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "4d4ab6ba895301d509e7a6902853bac474122343fc8634d8346fe855fc9af4ed",
+      "largura": 5472,
+      "altura": 3648,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-w07-silverstone-2016-4d4ab6ba8953-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "18eaa736e18c10ef9ed8c96b0c39dfd512521d1339ad5141f5e8a1d5f928216d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-w07-silverstone-2016-4d4ab6ba8953-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "3b0e6b0260aa9da248f3eb0fcb83aaf3d238f4b3d158612726b2dc6cfa5a0525"
+        }
+      ]
+    },
+    "schumacher-f2001-melbourne-2001": {
+      "arquivo_commons": "File:Goodwood edited-077 (53863490649).jpg",
+      "legenda": {
+        "pt": "O Ferrari F2001 de chassi 208 em Goodwood, em 2024. Michael Schumacher venceu com esse carro em Melbourne em 2001, no GP de estreia de Fernando Alonso e Kimi Räikkönen.",
+        "en": "Ferrari F2001 chassis 208 at Goodwood in 2024. Michael Schumacher won in this car at Melbourne in 2001, where Fernando Alonso and Kimi Räikkönen made their Formula One debuts."
+      },
+      "modelo": "ferrari-f2001",
+      "temporadas": [
+        2001
+      ],
+      "equipes": [
+        "ferrari"
+      ],
+      "artefatos_gps": [
+        "2001:1"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Goodwood_edited-077_(53863490649).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Goodwood_edited-077_%2853863490649%29.jpg",
+      "autor": "Michele Borioli",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "7be428b138fc6596c2c931947d8ece70ed24f926306b840c0d983e01075dfbdc",
+      "largura": 4096,
+      "altura": 2731,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/schumacher-f2001-melbourne-2001-7be428b138fc-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "33d6128df692c25921861d1988b5f16a55a6d4cd0b4c449e5d7880f1671656d5"
+        },
+        {
+          "arquivo": "static/pitwall-archive/schumacher-f2001-melbourne-2001-7be428b138fc-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "e80bdb680c00dab2d571cf92247ecebb4118fa5a0904d04d358993678060e595"
+        }
+      ]
+    },
+    "vettel-rb6-suzuka-2010": {
+      "arquivo_commons": "File:RB6inSuzuka.jpg",
+      "legenda": {
+        "pt": "Sebastian Vettel no Red Bull RB6 de chassi 5 em Suzuka, em 2010. Com esse carro, venceu em Interlagos, onde a Red Bull conquistou seu primeiro Mundial de Construtores, e em Abu Dhabi, onde garantiu seu primeiro título de pilotos.",
+        "en": "Sebastian Vettel in Red Bull RB6 chassis 5 at Suzuka in 2010. He won in this car at Interlagos, where Red Bull clinched its first constructors’ championship, and at Abu Dhabi, where he secured his first drivers’ title."
+      },
+      "modelo": "red-bull-rb6",
+      "temporadas": [
+        2010
+      ],
+      "equipes": [
+        "red_bull"
+      ],
+      "gps": [
+        "2010:16"
+      ],
+      "artefatos_gps": [
+        "2010:18",
+        "2010:19"
+      ],
+      "construtor": "red-bull",
+      "fonte": "https://commons.wikimedia.org/wiki/File:RB6inSuzuka.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/51/RB6inSuzuka.jpg",
+      "autor": "takenet",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sha256": "abd9ab46b29eb07a8a94bf20e955cecb0384bda47a5763ccdc16e1394f70da38",
+      "largura": 3840,
+      "altura": 2400,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/vettel-rb6-suzuka-2010-abd9ab46b29e-960.webp",
+          "largura": 960,
+          "altura": 600,
+          "sha256": "dd48e9fa432d34a257dd7fc1e46fa994b0e59b5f08d7da4ca2f8765674212784"
+        },
+        {
+          "arquivo": "static/pitwall-archive/vettel-rb6-suzuka-2010-abd9ab46b29e-2400.webp",
+          "largura": 2400,
+          "altura": 1500,
+          "sha256": "d3e9dbbee5f01388e4bc0835a09b0c3e83d1bf8e3b1c5f7c1ebcd578a0cd6fa1"
         }
       ]
     }
