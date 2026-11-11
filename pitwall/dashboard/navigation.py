@@ -53,7 +53,7 @@ def route_params(key, year, round_, lang, params=None):
     _, _, screen, values = ROUTES[key]
     context = {k: (params.get_all(k) if hasattr(params, 'get_all') else v)
                for k, v in (params or {}).items()
-               if k not in ('documento', 'painel', 'cartas', 'aba', 'visao', 'secao')}
+               if k not in ('documento', 'painel', 'cartas', 'aba', 'visao', 'secao', 'equipe', 'campanha')}
     return dict(context, temporada=year, gp=round_, tela=screen, lang=lang, **values)
 
 

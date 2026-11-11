@@ -202,6 +202,11 @@ def standings_table(snapshot, teams=False, season=None, round_=None):
                 FLAGS.get(item.get("nacionalidade"), ""), e(item["piloto"])
             )
         )
+        if teams:
+            from pitwall.dashboard.team_views import profile_url
+            url = profile_url(item.get("equipe_id"), season, round_)
+            if url:
+                label = '<a href="{}" target="_self">{}</a>'.format(e(url), label)
         if not teams:
             from pitwall.dashboard.fan_views import portrait
             label=(portrait(item.get('piloto_id',''),item['piloto'])

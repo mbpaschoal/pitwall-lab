@@ -746,6 +746,8 @@ def renderizar_equipes(gp):
     )
     selecionadas = [e for e in equipes if e.get("modalidade", "Race") == modalidade]
     st.caption("Pontos nesta prova. A classificação da temporada está no menu Campeonato.")
+    from pitwall.dashboard.team_views import render_links
+    render_links(selecionadas, gp["identidade"])
     visual = [e for e in selecionadas if e.get("pontos") is not None and e.get("pontos_completos")]
     if visual:
         visual = sorted(visual, key=lambda e: e["pontos"])

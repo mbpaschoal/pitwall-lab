@@ -761,3 +761,80 @@ html:not([data-pw-reduced-motion="true"]) .fan-duel-difference{animation:pw-duel
 /* Missing race data remains a compact reading state, with a useful way out. */
 .st-key-race-summary .fan-podium-panel:has(.fan-awaiting){flex:initial;align-self:flex-start}
 .st-key-race-summary .fan-podium-panel:has(.fan-awaiting) .fan-awaiting{padding:0;font-size:16px}
+
+/* Constructor profiles use the same links and editorial hierarchy as race views. */
+.pw-team-profile-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.pw-team-profile-head h1 {
+  margin: 0;
+}
+.pw-team-profile-head .fan-team-mark {
+  width: 3rem;
+  height: 2.5rem;
+  object-fit: contain;
+}
+.pw-team-links > div,
+.pw-team-title-years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .95rem;
+}
+.pw-team-links a,
+.pw-team-title-years a,
+.pw-team-timeline a {
+  display: inline-block;
+  padding: .2rem 0;
+}
+.pw-team-title-years {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: 0;
+}
+.pw-team-championships {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .55rem 1.5rem;
+}
+.pw-team-championships h3 {
+  font-size: 1.1rem;
+  padding: 0;
+  margin: 0 0 .35rem;
+}
+.pw-team-campaign th,
+.pw-team-campaign td {
+  padding-inline: .35rem;
+}
+@media (max-width: 640px) {
+  .pw-team-championships {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.pw-team-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
+  gap: .8rem 1.2rem;
+  margin: 0 0 1rem;
+}
+.pw-team-facts dd {
+  font-weight: 650;
+  margin: 0;
+}
+.pw-team-timeline {
+  max-width: 68ch;
+  padding: 0;
+  list-style: none;
+}
+.pw-team-timeline li {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: .5rem;
+  padding: .5rem 0;
+  border-bottom: 1px solid rgba(16, 43, 80, .16);
+}
+.pw-team-timeline p {
+  margin: 0;
+}

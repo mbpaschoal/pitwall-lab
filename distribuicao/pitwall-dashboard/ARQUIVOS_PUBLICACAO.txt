@@ -393,6 +393,7 @@ frontend_assets/journey.css
 frontend_assets/motion.js
 frontend_assets/operacao_fim_semana.json
 frontend_assets/paineis_editoriais.json
+frontend_assets/perfis_equipes.json
 frontend_assets/pilot_position_balance.json
 frontend_assets/pilotos_condicoes.json
 frontend_assets/pilotos_condicoes_operacao.json
@@ -425,6 +426,7 @@ pitwall/dashboard/search.py
 pitwall/dashboard/share_cards.py
 pitwall/dashboard/tarot.py
 pitwall/dashboard/tarot_catalog.py
+pitwall/dashboard/team_views.py
 pitwall/dashboard/tokens.py
 pitwall/dashboard/weekend_views.py
 pitwall/data/__init__.py

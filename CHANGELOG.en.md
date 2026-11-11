@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.17.0 — 2026-11-11
+
+Teams at this GP and Team championship link to profiles for all 11 teams on the 2026 grid. Each profile covers team history, base, power unit, technical leadership and championship seasons. Constructors' and drivers' titles have separate lists, and titles from previous identities keep their original credit.
+
+Titles covered by the local archive open round-by-round campaigns with links to races and standings. Older seasons link to the Formula 1 archive. The 2026 titles confirmed by the FIA show the round in which they were clinched.
+
 ## 0.16.5 — 2026-11-09
 
 The calendar audit covers all 15 Pitwall Lab pages across the 71 available Grands Prix, including future rounds. At 18 Sprint weekends, Tyres and pit stops now opens on the main race, which has published stops. Sprint remains selectable and each session displays its own records.

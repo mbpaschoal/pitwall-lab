@@ -123,6 +123,49 @@ class LinkContextTests(unittest.TestCase):
                 self.assertEqual(parse_qs(target.query)['temporada'],['2024'])
                 self.assertEqual(parse_qs(target.query)['gp'],['1'])
 
+    def test_constructor_profile_preserves_context_and_keeps_title_credits_separate(self):
+        from pitwall.dashboard.components import standings_table
+        from pitwall.dashboard.team_views import load
+
+        teams = load(ROOT)["equipes"]
+        self.assertEqual(len(teams), 11)
+        self.assertEqual(len(teams["mercedes"]["titulos_construtores"]), 9)
+        self.assertEqual(teams["mercedes"]["titulos_construtores"][-1]["rodada"], 20)
+        self.assertEqual(teams["mercedes"]["titulos_pilotos"][-1]["rodada"], 19)
+        self.assertEqual(teams["alpine"]["titulos_construtores"], [])
+        self.assertEqual([r["construtor"] for r in teams["alpine"]["titulos_anteriores"]],
+                         ["Benetton", "Renault", "Renault"])
+        snapshot = dict(disponivel=True, classificacao=[
+            dict(posicao=10, equipe_id="sauber", equipe="Kick Sauber", pontos=0),
+        ])
+        html = standings_table(snapshot, teams=True, season=2024, round_=21)
+        self.assertIn("Kick Sauber", html)
+        self.assertEqual(params(html), dict(tela=["Campeonato"], lang=["pt"], painel=["equipes"],
+                                            equipe=["audi"], temporada=["2024"], gp=["21"]))
+
+    def test_constructor_campaign_uses_title_round_and_survives_language_change(self):
+        app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=45)
+        app.query_params.update(tela="Campeonato", painel="equipes", equipe="mercedes",
+                                campanha="2026-construtores", temporada="2025", gp="6", lang="en")
+        app.run()
+        self.assertFalse(app.exception)
+        html = next(m.value for m in app.markdown if 'aria-label="Mercedes · 2026"' in m.value)
+        links = [parse_qs(urlsplit(a["href"]).query) for a in Links(html).links]
+        self.assertEqual(links[0]["gp"], ["20"])
+        self.assertEqual(links[0]["painel"], ["equipes"])
+        self.assertEqual([int(q["gp"][0]) for q in links[1:]], list(range(1, 21)))
+        self.assertIn("652", html)
+        self.assertEqual(app.selectbox(key="team_profile").value, "mercedes")
+        language_button = next(b for b in app.button if b.key and b.key.startswith("pw_language_button_") and b.key.endswith("_pt"))
+        language_button.click().run()
+        self.assertFalse(app.exception)
+        for name, value in (("equipe", "mercedes"), ("campanha", "2026-construtores"), ("gp", "6"), ("lang", "pt")):
+            self.assertEqual(app.query_params.get(name), value)
+        app.selectbox(key="team_profile").set_value("alpine").run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.query_params.get("equipe"), "alpine")
+        self.assertNotIn("campanha", app.query_params)
+
     def test_document_return_preserves_hosted_frame_without_nesting_wrapper(self):
         for lang in ('pt','en'):
             app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=45)

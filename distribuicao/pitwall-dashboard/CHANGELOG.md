@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.17.0 — 2026-11-11
+
+Equipes neste GP e Campeonato de equipes abrem perfis das 11 equipes do grid de 2026. Cada ficha reúne história, base, unidade de potência, liderança técnica e títulos por temporada. Títulos de construtores e de pilotos têm listas próprias, e as conquistas de identidades anteriores aparecem com o crédito original.
+
+Os títulos com cobertura local abrem a campanha rodada por rodada, com links para os GPs e a classificação. As temporadas anteriores apontam para o arquivo da Fórmula 1. Os títulos de 2026 confirmados pela FIA têm a rodada de confirmação indicada.
+
 ## 0.16.5 — 2026-11-09
 
 A revisão cruza as 15 abas do Pitwall Lab com os 71 GPs disponíveis, incluindo as corridas futuras. Em 18 fins de semana com Sprint, Pneus e paradas agora abre na corrida principal, onde há paradas publicadas. A Sprint continua disponível e cada sessão mostra somente seus próprios registros.
