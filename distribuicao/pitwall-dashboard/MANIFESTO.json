@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "78ded1ba6aafc88672f9a8f86bc5801276a1383fbc711a24870a2be1686f5f76",
+  "apresentacao_build_sha256": "4d7293be2d347ed029660bb8887168ec8d5df77d72650d4a4418e85abcb5a250",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "25f1587f851625c99eb6138bca683a8a9a1834acb22f5059ae278b52b2cf4410",
+      "sha256_destino": "e909fa50afe363c95f405fd29c7b3b38bf5798fc3d6e3f29bdcc5eec2434a655",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "cae162d1b9f10c729d2e83bae0869f3e9df4575b73ab480bd5f8fcedbdc2e783",
-      "sha256_origem": "98a06bfcb1d08eba1eb311684135fedf41dce98ed5cd9fde639934c2d6e65c4e"
+      "sha256_destino": "3a2b2e90ec0754728fac66fafc32411d9d2b43d32d7b8ae1533cc324fda8c47d",
+      "sha256_origem": "c97673f6a4c6b78d7014e1976fe212a345f44c84fddae50e8ec188764623eeb5"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "10b2a6979eab92c5e2a2cc0e2e0d38a65f91e1d246acf16cdb47b1cf09656b80",
-      "sha256_origem": "a4b363f659e7c2536f95c6185a694e53f1aa177c92a36c5ebe985f8bfcbbb8ac"
+      "sha256_destino": "c515c4603e684533c9ce4385979db33c7c887d60820843b845df60b21e9b8fd7",
+      "sha256_origem": "28b0982268cc252eef58f45bbb485bf771743b09b01b6d2f0bf45281908a4ad5"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "2453bcda8b87b7344e5c494fbb1b1ab41b4a26e2881964556ce576f585c89754",
-      "sha256_origem": "2453bcda8b87b7344e5c494fbb1b1ab41b4a26e2881964556ce576f585c89754"
+      "sha256_destino": "4b13d223c0eee38d6fd22c13a50e35a933d959183797b6ad38a1db709933a7a6",
+      "sha256_origem": "4b13d223c0eee38d6fd22c13a50e35a933d959183797b6ad38a1db709933a7a6"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3912,6 +3912,20 @@
       "sha256_origem": "993c9a09d9b16655966b2240639686ab7f99aecd94b1ef7808adc2e495da00ab"
     },
     {
+      "caminho": "static/pitwall-archive/brabham-bt3-east-london-1962-e8724aea78d2-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-bt3-east-london-1962-e8724aea78d2-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "bccf93f4817e7249c70f7ebb5b46bb8d13d428bde3857bee526f32be91945561",
+      "sha256_origem": "bccf93f4817e7249c70f7ebb5b46bb8d13d428bde3857bee526f32be91945561"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt3-east-london-1962-e8724aea78d2-960.webp",
+      "fonte": "static/pitwall-archive/brabham-bt3-east-london-1962-e8724aea78d2-960.webp",
+      "modo": "copia",
+      "sha256_destino": "112b04bcb687a463e440088f085b94345265469fdfbc3c5b7d57f791b087b2ff",
+      "sha256_origem": "112b04bcb687a463e440088f085b94345265469fdfbc3c5b7d57f791b087b2ff"
+    },
+    {
       "caminho": "static/pitwall-archive/brabham-bt49c-1ff963122e2a-2400.webp",
       "fonte": "static/pitwall-archive/brabham-bt49c-1ff963122e2a-2400.webp",
       "modo": "copia",
@@ -4724,6 +4738,20 @@
       "sha256_origem": "3f0f2b0ae4bf117829af293c40d853c297708911b6bb248685e18dfc5eb77a2d"
     },
     {
+      "caminho": "static/pitwall-archive/godin-porsche-718-zandvoort-1962-15276a6b5a99-2400.webp",
+      "fonte": "static/pitwall-archive/godin-porsche-718-zandvoort-1962-15276a6b5a99-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "0c64c5541d39b7f5dd27265d7bbeb9eb62cfa615b596be4bd446af1d98ae43d7",
+      "sha256_origem": "0c64c5541d39b7f5dd27265d7bbeb9eb62cfa615b596be4bd446af1d98ae43d7"
+    },
+    {
+      "caminho": "static/pitwall-archive/godin-porsche-718-zandvoort-1962-15276a6b5a99-960.webp",
+      "fonte": "static/pitwall-archive/godin-porsche-718-zandvoort-1962-15276a6b5a99-960.webp",
+      "modo": "copia",
+      "sha256_destino": "349cc5caf6fa9dafaa0a7e927c99fdc961289027c0e0c303a0ef4e1135c1ac32",
+      "sha256_origem": "349cc5caf6fa9dafaa0a7e927c99fdc961289027c0e0c303a0ef4e1135c1ac32"
+    },
+    {
       "caminho": "static/pitwall-archive/graham-hill-lotus-12-monaco-1958-21fecd8db888-2400.webp",
       "fonte": "static/pitwall-archive/graham-hill-lotus-12-monaco-1958-21fecd8db888-2400.webp",
       "modo": "copia",
@@ -4766,18 +4794,32 @@
       "sha256_origem": "4b2755129918a89773b2047123fbd929df7ce5600b80a77541ad04c60d6e764e"
     },
     {
-      "caminho": "static/pitwall-archive/hakkinen-mp4-13-suzuka-1998-263146432992-2124.webp",
-      "fonte": "static/pitwall-archive/hakkinen-mp4-13-suzuka-1998-263146432992-2124.webp",
+      "caminho": "static/pitwall-archive/hakkinen-mp4-13-suzuka-2018-original-754207ac39e0-2400.webp",
+      "fonte": "static/pitwall-archive/hakkinen-mp4-13-suzuka-2018-original-754207ac39e0-2400.webp",
       "modo": "copia",
-      "sha256_destino": "97bc351ac653c512581f6675f311a8096c52c2794a1cd7cd7a3e9bf9d2ac2bd1",
-      "sha256_origem": "97bc351ac653c512581f6675f311a8096c52c2794a1cd7cd7a3e9bf9d2ac2bd1"
+      "sha256_destino": "2ac2304765126b41c6f293ff126eadbbffe188ae9f8eebfc1b82d7580d670f9b",
+      "sha256_origem": "2ac2304765126b41c6f293ff126eadbbffe188ae9f8eebfc1b82d7580d670f9b"
     },
     {
-      "caminho": "static/pitwall-archive/hakkinen-mp4-13-suzuka-1998-263146432992-960.webp",
-      "fonte": "static/pitwall-archive/hakkinen-mp4-13-suzuka-1998-263146432992-960.webp",
+      "caminho": "static/pitwall-archive/hakkinen-mp4-13-suzuka-2018-original-754207ac39e0-960.webp",
+      "fonte": "static/pitwall-archive/hakkinen-mp4-13-suzuka-2018-original-754207ac39e0-960.webp",
       "modo": "copia",
-      "sha256_destino": "ee5ca539cde003888415af5d3fb5df09fdd0a855db6753d0576b899109ca8762",
-      "sha256_origem": "ee5ca539cde003888415af5d3fb5df09fdd0a855db6753d0576b899109ca8762"
+      "sha256_destino": "2df6053cb212e57a37cbe446d8217b239bf469add410bd2415bb6496537cbc4f",
+      "sha256_origem": "2df6053cb212e57a37cbe446d8217b239bf469add410bd2415bb6496537cbc4f"
+    },
+    {
+      "caminho": "static/pitwall-archive/hakkinen-mp4-14-goodwood-2023-bb777c761b60-2400.webp",
+      "fonte": "static/pitwall-archive/hakkinen-mp4-14-goodwood-2023-bb777c761b60-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "48d0885aa44635bb27c002ff4afc65d049ddba1519ce1c47fb51818e046c95b2",
+      "sha256_origem": "48d0885aa44635bb27c002ff4afc65d049ddba1519ce1c47fb51818e046c95b2"
+    },
+    {
+      "caminho": "static/pitwall-archive/hakkinen-mp4-14-goodwood-2023-bb777c761b60-960.webp",
+      "fonte": "static/pitwall-archive/hakkinen-mp4-14-goodwood-2023-bb777c761b60-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d1bedbd2f9412b80026e746214be99d074b81c4c08328789fd269a7480e72daa",
+      "sha256_origem": "d1bedbd2f9412b80026e746214be99d074b81c4c08328789fd269a7480e72daa"
     },
     {
       "caminho": "static/pitwall-archive/hakkinen-mp4-14-suzuka-1999-01b3304f7053-2272.webp",
@@ -6598,6 +6640,20 @@
       "modo": "copia",
       "sha256_destino": "bfae399e0dcf931bb0c2b4af713ab91f8c21e6867c0cf3c48b9278c3a3dfb858",
       "sha256_origem": "bfae399e0dcf931bb0c2b4af713ab91f8c21e6867c0cf3c48b9278c3a3dfb858"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb8-austin-2012-corrida-3e436f5a8b7d-2400.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb8-austin-2012-corrida-3e436f5a8b7d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6f61eb73670e2f72440d68ba3916bbfdc335e6b7496d92b27f2a714cb29ddf4b",
+      "sha256_origem": "6f61eb73670e2f72440d68ba3916bbfdc335e6b7496d92b27f2a714cb29ddf4b"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb8-austin-2012-corrida-3e436f5a8b7d-960.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb8-austin-2012-corrida-3e436f5a8b7d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "f527cde6eca846d04ade5dcbebb4d6ae3a9796464282650f9ac720c238c55428",
+      "sha256_origem": "f527cde6eca846d04ade5dcbebb4d6ae3a9796464282650f9ac720c238c55428"
     },
     {
       "caminho": "static/pitwall-archive/red-bull-rb9-91b37e011a23-2400.webp",

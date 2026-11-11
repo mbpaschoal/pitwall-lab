@@ -5923,8 +5923,8 @@
     "zandvoort-1960": {
       "arquivo_commons": "File:Autoraces op het circuit van Zandvoort. Jack Brabham uit Australie onderaan de H, Bestanddeelnr 911-3161 restored.jpg",
       "legenda": {
-        "pt": "Jack Brabham à frente de Stirling Moss em Zandvoort, na corrida de estreia de Jim Clark em 1960.",
-        "en": "Jack Brabham ahead of Stirling Moss at Zandvoort in 1960, the race where Jim Clark made his debut."
+        "pt": "Jack Brabham à frente de Stirling Moss em Zandvoort, na corrida de estreia de Jim Clark em 1960. O Cooper T53 de chassi F2-8-60 de Brabham também correu na estreia de John Surtees em Mônaco e venceu em Silverstone e na Boavista.",
+        "en": "Jack Brabham ahead of Stirling Moss at Zandvoort in 1960, the race where Jim Clark made his debut. Brabham’s Cooper T53, chassis F2-8-60, also raced on John Surtees’s debut in Monaco and won at Silverstone and Boavista."
       },
       "gps": [
         "1960:4"
@@ -5950,6 +5950,16 @@
           "altura": 1583,
           "sha256": "3d39f5b05573e6a37d12561107de75c6d71729bfe7c50d02c34c954a79744d53"
         }
+      ],
+      "modelo": "cooper-t53",
+      "temporadas": [
+        1960
+      ],
+      "construtor": "cooper",
+      "artefatos_gps": [
+        "1960:2",
+        "1960:7",
+        "1960:8"
       ]
     },
     "monza-1966": {
@@ -7524,8 +7534,8 @@
     "cooper-moss-zandvoort-1959": {
       "arquivo_commons": "File:Training op het Circuit Van Zandvoort van de Grand Prix, Stirling Moss start voo, Bestanddeelnr 910-4072.jpg",
       "legenda": {
-        "pt": "Stirling Moss nos treinos em Zandvoort em 1959. Ele corria com um Cooper inscrito pela equipe Rob Walker.",
-        "en": "Stirling Moss in practice at Zandvoort in 1959. He was driving a Cooper entered by Rob Walker’s team."
+        "pt": "Stirling Moss nos treinos em Zandvoort em 1959, no Cooper T45 de chassi F2-9-58 da equipe Rob Walker. Com o mesmo carro, Moss largou da pole e liderou em Mônaco, onde Jack Brabham conquistou sua primeira vitória no Mundial.",
+        "en": "Stirling Moss in practice at Zandvoort in 1959 in Rob Walker’s Cooper T45, chassis F2-9-58. In the same car, Moss took pole and led at Monaco, where Jack Brabham scored his first World Championship win."
       },
       "equipes": [
         "cooper"
@@ -7551,6 +7561,12 @@
           "altura": 1840,
           "sha256": "f6dbd45d85471264cd52d09ec835da0221d21c52648d31ce7238db41e9880f5a"
         }
+      ],
+      "gps": [
+        "1959:3"
+      ],
+      "artefatos_gps": [
+        "1959:1"
       ]
     },
     "brabham-zandvoort-podio-1966": {
@@ -8194,46 +8210,6 @@
         }
       ]
     },
-    "hakkinen-mp4-13-suzuka-1998": {
-      "arquivo_commons": "File:Mika Häkkinen McLaren MP4 13 2018 Japanese Grand Prix (43814922580) (cropped).jpg",
-      "legenda": {
-        "pt": "Mika Häkkinen volta a Suzuka em 2018 para pilotar o mesmo McLaren MP4/13 com que venceu a prova e conquistou seu primeiro título em 1998.",
-        "en": "Mika Häkkinen returns to Suzuka in 2018 in the same McLaren MP4/13 in which he won the race and his first title in 1998."
-      },
-      "modelo": "mclaren-mp4-13",
-      "temporadas": [
-        1998
-      ],
-      "equipes": [
-        "mclaren"
-      ],
-      "artefatos_gps": [
-        "1998:16"
-      ],
-      "construtor": "mclaren",
-      "fonte": "https://commons.wikimedia.org/wiki/File:Mika_H%C3%A4kkinen_McLaren_MP4_13_2018_Japanese_Grand_Prix_(43814922580)_(cropped).jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Mika_H%C3%A4kkinen_McLaren_MP4_13_2018_Japanese_Grand_Prix_%2843814922580%29_%28cropped%29.jpg",
-      "autor": "https://www.flickr.com/photos/78475089@N02/",
-      "licenca": "CC BY-SA 2.0",
-      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
-      "sha256": "26314643299258d95ebd7198c6fb28001636c40e3a6358490517707ec9da0b0b",
-      "largura": 2124,
-      "altura": 1241,
-      "variantes": [
-        {
-          "arquivo": "static/pitwall-archive/hakkinen-mp4-13-suzuka-1998-263146432992-960.webp",
-          "largura": 960,
-          "altura": 561,
-          "sha256": "ee5ca539cde003888415af5d3fb5df09fdd0a855db6753d0576b899109ca8762"
-        },
-        {
-          "arquivo": "static/pitwall-archive/hakkinen-mp4-13-suzuka-1998-263146432992-2124.webp",
-          "largura": 2124,
-          "altura": 1241,
-          "sha256": "97bc351ac653c512581f6675f311a8096c52c2794a1cd7cd7a3e9bf9d2ac2bd1"
-        }
-      ]
-    },
     "hakkinen-mp4-14-suzuka-1999": {
       "arquivo_commons": "File:Mclaren MP4 14A chassis 4.jpg",
       "legenda": {
@@ -8711,8 +8687,8 @@
     "clark-lotus-25-monza-1963": {
       "arquivo_commons": "File:1963 Lotus 25 R4 (54833107267).jpg",
       "legenda": {
-        "pt": "O Lotus 25 de chassi R4 em exposição em Silverstone em 2025. Com esse carro, Jim Clark venceu em Monza e garantiu os títulos de pilotos e de construtores da Lotus em 1963.",
-        "en": "Lotus 25 chassis R4 on display at Silverstone in 2025. Jim Clark won at Monza in this car to secure the 1963 drivers’ and constructors’ titles for Lotus."
+        "pt": "O Lotus 25 de chassi R4 em exposição em Silverstone em 2025. Com esse carro, Jim Clark venceu em Monza e garantiu os títulos de pilotos e de construtores da Lotus em 1963. Com o mesmo chassi, Clark terminou em segundo no Nürburgring, na primeira vitória de John Surtees.",
+        "en": "Lotus 25 chassis R4 on display at Silverstone in 2025. Jim Clark won at Monza in this car to secure the 1963 drivers’ and constructors’ titles for Lotus. In the same chassis, Clark finished second at the Nürburgring in John Surtees’s first win."
       },
       "modelo": "lotus-25",
       "temporadas": [
@@ -8722,7 +8698,8 @@
         "lotus"
       ],
       "artefatos_gps": [
-        "1963:7"
+        "1963:7",
+        "1963:6"
       ],
       "construtor": "lotus",
       "fonte": "https://commons.wikimedia.org/wiki/File:1963_Lotus_25_R4_(54833107267).jpg",
@@ -10707,6 +10684,186 @@
           "largura": 2400,
           "altura": 1600,
           "sha256": "01e3cde85ad312d27826c02b288ed86b384d1b02bfdef53734d4737048f3e20f"
+        }
+      ]
+    },
+    "godin-porsche-718-zandvoort-1962": {
+      "arquivo_commons": "File:N. 13 at 1962 Dutch Grand Prix (2).jpg",
+      "legenda": {
+        "pt": "Carel Godin de Beaufort no Porsche 718/2 de chassi 201 durante os treinos em Zandvoort, em 1962. Com esse carro, correu em Aintree e Monza nas decisões de 1961 e terminou em sétimo em Spa na primeira vitória de Jim Clark, em 1962.",
+        "en": "Carel Godin de Beaufort in Porsche 718/2 chassis 201 during practice at Zandvoort in 1962. He raced this car in the 1961 title deciders at Aintree and Monza and finished seventh at Spa in Jim Clark’s first win in 1962."
+      },
+      "gps": [
+        "1962:1"
+      ],
+      "artefatos_gps": [
+        "1961:5",
+        "1961:7",
+        "1962:3"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:N._13_at_1962_Dutch_Grand_Prix_(2).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/2e/N._13_at_1962_Dutch_Grand_Prix_%282%29.jpg",
+      "autor": "Bilsen, Joop van / Anefo / neg. stroken, 1945-1989, 2.24.01.05, item number 913-9366",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "15276a6b5a990199241e814d6938bbd04d83bec7756ebad2e4bb2e0963b73091",
+      "largura": 3648,
+      "altura": 2358,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/godin-porsche-718-zandvoort-1962-15276a6b5a99-960.webp",
+          "largura": 960,
+          "altura": 621,
+          "sha256": "349cc5caf6fa9dafaa0a7e927c99fdc961289027c0e0c303a0ef4e1135c1ac32"
+        },
+        {
+          "arquivo": "static/pitwall-archive/godin-porsche-718-zandvoort-1962-15276a6b5a99-2400.webp",
+          "largura": 2400,
+          "altura": 1551,
+          "sha256": "0c64c5541d39b7f5dd27265d7bbeb9eb62cfa615b596be4bd446af1d98ae43d7"
+        }
+      ]
+    },
+    "brabham-bt3-east-london-1962": {
+      "arquivo_commons": "File:Brabham BT3.jpg",
+      "legenda": {
+        "pt": "O Brabham BT3 de chassi F1-1-62 na coleção de Donington, em 2007. Jack Brabham terminou em quarto com ele em East London em 1962, na corrida em que Graham Hill e a BRM garantiram os dois títulos.",
+        "en": "Brabham BT3 chassis F1-1-62 in the Donington collection in 2007. Jack Brabham finished fourth in this car at East London in 1962, the race in which Graham Hill and BRM secured both titles."
+      },
+      "artefatos_gps": [
+        "1962:9"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Brabham_BT3.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/87/Brabham_BT3.jpg",
+      "autor": "John Chapman ( Pyrope )",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sha256": "e8724aea78d200c68dda1b635fb5a282d7a1e9964870c90ac52794eb071f2f83",
+      "largura": 2848,
+      "altura": 2136,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/brabham-bt3-east-london-1962-e8724aea78d2-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "112b04bcb687a463e440088f085b94345265469fdfbc3c5b7d57f791b087b2ff"
+        },
+        {
+          "arquivo": "static/pitwall-archive/brabham-bt3-east-london-1962-e8724aea78d2-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "bccf93f4817e7249c70f7ebb5b46bb8d13d428bde3857bee526f32be91945561"
+        }
+      ]
+    },
+    "hakkinen-mp4-13-suzuka-2018-original": {
+      "arquivo_commons": "File:Mika Häkkinen McLaren MP4 13 2018 Japanese Grand Prix (43814922580).jpg",
+      "legenda": {
+        "pt": "Mika Häkkinen volta a Suzuka em 2018 para pilotar o mesmo McLaren MP4/13 com que venceu a prova e conquistou seu primeiro título em 1998.",
+        "en": "Mika Häkkinen returns to Suzuka in 2018 in the same McLaren MP4/13 in which he won the race and his first title in 1998."
+      },
+      "modelo": "mclaren-mp4-13",
+      "temporadas": [
+        1998
+      ],
+      "artefatos_gps": [
+        "1998:16"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Mika_H%C3%A4kkinen_McLaren_MP4_13_2018_Japanese_Grand_Prix_(43814922580).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Mika_H%C3%A4kkinen_McLaren_MP4_13_2018_Japanese_Grand_Prix_%2843814922580%29.jpg",
+      "autor": "https://www.flickr.com/photos/78475089@N02/",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "754207ac39e09e2f6651f4456508ebc7ecac489ad40185fa358d90e0b05e76a5",
+      "largura": 3000,
+      "altura": 2000,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hakkinen-mp4-13-suzuka-2018-original-754207ac39e0-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "2df6053cb212e57a37cbe446d8217b239bf469add410bd2415bb6496537cbc4f"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hakkinen-mp4-13-suzuka-2018-original-754207ac39e0-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "2ac2304765126b41c6f293ff126eadbbffe188ae9f8eebfc1b82d7580d670f9b"
+        }
+      ]
+    },
+    "hakkinen-mp4-14-goodwood-2023": {
+      "arquivo_commons": "File:McLaren MP4 14A.jpg",
+      "legenda": {
+        "pt": "O McLaren MP4/14 com que Mika Häkkinen venceu em Suzuka e conquistou o bicampeonato em 1999. O piloto voltou ao volante desse carro no Festival de Velocidade de Goodwood de 2023.",
+        "en": "The McLaren MP4/14 in which Mika Häkkinen won at Suzuka and took his second title in 1999. He drove this car again at the 2023 Goodwood Festival of Speed."
+      },
+      "modelo": "mclaren-mp4-14",
+      "temporadas": [
+        1999
+      ],
+      "artefatos_gps": [
+        "1999:16"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:McLaren_MP4_14A.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/3c/McLaren_MP4_14A.jpg",
+      "autor": "Calreyn88",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "bb777c761b60dabfbe91ef38f6dafa96a510da83f664865df51caf99d2ae72b1",
+      "largura": 3291,
+      "altura": 2626,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hakkinen-mp4-14-goodwood-2023-bb777c761b60-960.webp",
+          "largura": 960,
+          "altura": 766,
+          "sha256": "d1bedbd2f9412b80026e746214be99d074b81c4c08328789fd269a7480e72daa"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hakkinen-mp4-14-goodwood-2023-bb777c761b60-2400.webp",
+          "largura": 2400,
+          "altura": 1915,
+          "sha256": "48d0885aa44635bb27c002ff4afc65d049ddba1519ce1c47fb51818e046c95b2"
+        }
+      ]
+    },
+    "red-bull-rb8-austin-2012-corrida": {
+      "arquivo_commons": "File:United States Grand Prix - Race Day (8197205121).jpg",
+      "legenda": {
+        "pt": "Dois Red Bull RB8 na corrida de Austin em 2012. Sebastian Vettel terminou em segundo e a Red Bull conquistou seu terceiro Mundial de Construtores.",
+        "en": "Two Red Bull RB8s racing at Austin in 2012. Sebastian Vettel finished second and Red Bull secured its third constructors’ title."
+      },
+      "modelo": "red-bull-rb8",
+      "temporadas": [
+        2012
+      ],
+      "gps": [
+        "2012:19"
+      ],
+      "construtor": "red-bull",
+      "fonte": "https://commons.wikimedia.org/wiki/File:United_States_Grand_Prix_-_Race_Day_(8197205121).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/3f/United_States_Grand_Prix_-_Race_Day_%288197205121%29.jpg",
+      "autor": "Josh Hallett from Winter Haven, FL, USA",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "3e436f5a8b7d892ba3a9129239eac1278320d06358d6cbb4ef42b65fe2228c72",
+      "largura": 2815,
+      "altura": 1873,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/red-bull-rb8-austin-2012-corrida-3e436f5a8b7d-960.webp",
+          "largura": 960,
+          "altura": 639,
+          "sha256": "f527cde6eca846d04ade5dcbebb4d6ae3a9796464282650f9ac720c238c55428"
+        },
+        {
+          "arquivo": "static/pitwall-archive/red-bull-rb8-austin-2012-corrida-3e436f5a8b7d-2400.webp",
+          "largura": 2400,
+          "altura": 1597,
+          "sha256": "6f61eb73670e2f72440d68ba3916bbfdc335e6b7496d92b27f2a714cb29ddf4b"
         }
       ]
     }
