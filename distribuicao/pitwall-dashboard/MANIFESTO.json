@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "92260b4a436a008d9de1252a73dc3a9c0d6afd705267cec9862f998433046585",
+  "apresentacao_build_sha256": "8d3572957ce0759cfbd277ac633650475ae16dd1a913155c09176f321f039289",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "843054bd3c4037f3fd77f73402a16a88a2156574264b05eba4830ebafd2bc2a2",
+      "sha256_destino": "077d4809c82888c1e8f2d9d19fd4fc0cfaca9d0b6fa5bdc7ac8d5af7bae982c4",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "4a3bc9ec6c080f3bcaf051cc3ce34143fb975d9c51a78858acf037fae094642f",
-      "sha256_origem": "300f9a017f1c7eb01c2ce5d81ce067291f6e45e51a19d29de302808e34a4f484"
+      "sha256_destino": "42d11c3f35b02568a0187bc8182ebc04c23de6dffa970a9a0783c88f775802de",
+      "sha256_origem": "91184fa2835726b88f24450fcbcf0895eab4b5753c0152a46245ab93f93d5fd3"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "1faae91b29daf4485b55e7f5a7fabb398e677104ed24f3e80c4f500d29085e7a",
-      "sha256_origem": "f60d33a4bd9499d0f127d0ee2f9703474a8b2e05b3308e9a3204eef39e64d4d1"
+      "sha256_destino": "e2de48ee2ed699c7a0bab4db229511f36163bb47c53539cf8ee2d53e34855c69",
+      "sha256_origem": "6372bb4d14cc87141c93103d9a626f651abcee5f64ec6e2038c52f2d903db2bc"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "cfb93f3fd4402918de2a2de638f939513a9728c1f8691835ce79bf279a03f944",
-      "sha256_origem": "cfb93f3fd4402918de2a2de638f939513a9728c1f8691835ce79bf279a03f944"
+      "sha256_destino": "9fa6281d150863fa56ac2d6d61c6c18dc38092647368a43799e7b2c3c64d7890",
+      "sha256_origem": "9fa6281d150863fa56ac2d6d61c6c18dc38092647368a43799e7b2c3c64d7890"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3784,6 +3784,20 @@
       "modo": "copia",
       "sha256_destino": "4482e2e6cb43e8973c9e3583dd2eca08fb95076c45c58240724224db67525635",
       "sha256_origem": "4482e2e6cb43e8973c9e3583dd2eca08fb95076c45c58240724224db67525635"
+    },
+    {
+      "caminho": "static/pitwall-archive/berger-ferrari-412t1b-adelaide-1994-d1c56d9a9a57-2400.webp",
+      "fonte": "static/pitwall-archive/berger-ferrari-412t1b-adelaide-1994-d1c56d9a9a57-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c80ad80ade39eb09d28627430d3ecd0cd26727a9c279f9e1f89105de702b51c3",
+      "sha256_origem": "c80ad80ade39eb09d28627430d3ecd0cd26727a9c279f9e1f89105de702b51c3"
+    },
+    {
+      "caminho": "static/pitwall-archive/berger-ferrari-412t1b-adelaide-1994-d1c56d9a9a57-960.webp",
+      "fonte": "static/pitwall-archive/berger-ferrari-412t1b-adelaide-1994-d1c56d9a9a57-960.webp",
+      "modo": "copia",
+      "sha256_destino": "97f186f89c5f0a19c551a0f09e9fa2288312335656d6320e3e129ef3d98f0870",
+      "sha256_origem": "97f186f89c5f0a19c551a0f09e9fa2288312335656d6320e3e129ef3d98f0870"
     },
     {
       "caminho": "static/pitwall-archive/berger-mp4-6-suzuka-1991-1f1d41590f9b-2400.webp",
@@ -7074,6 +7088,20 @@
       "modo": "copia",
       "sha256_destino": "5a0007733b1bd75996cc02ef111e84151cf022a575feea9160f3ef57750f83b6",
       "sha256_origem": "5a0007733b1bd75996cc02ef111e84151cf022a575feea9160f3ef57750f83b6"
+    },
+    {
+      "caminho": "static/pitwall-archive/villeneuve-williams-fw19-silverstone-2025-b2f918306ea1-2400.webp",
+      "fonte": "static/pitwall-archive/villeneuve-williams-fw19-silverstone-2025-b2f918306ea1-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1dadb52491f106dca591d18660a99c557fdbaf06358fe36aecf2577d2d764764",
+      "sha256_origem": "1dadb52491f106dca591d18660a99c557fdbaf06358fe36aecf2577d2d764764"
+    },
+    {
+      "caminho": "static/pitwall-archive/villeneuve-williams-fw19-silverstone-2025-b2f918306ea1-960.webp",
+      "fonte": "static/pitwall-archive/villeneuve-williams-fw19-silverstone-2025-b2f918306ea1-960.webp",
+      "modo": "copia",
+      "sha256_destino": "aba685545e238f12d54da6167fb29d746a996bc643a4a21e33f410b96118a27c",
+      "sha256_origem": "aba685545e238f12d54da6167fb29d746a996bc643a4a21e33f410b96118a27c"
     },
     {
       "caminho": "static/pitwall-archive/williams-fw07-f19229cad817-2400.webp",
