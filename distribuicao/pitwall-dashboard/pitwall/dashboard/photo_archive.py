@@ -14,6 +14,7 @@ CATALOG = "frontend_assets/acervo_fotografico.json"
 INVENTORY = "frontend_assets/inventario_campeoes.json"
 PHOTO_PATH = re.compile(r"static/pitwall-archive/[a-z0-9-]+-[a-f0-9]{12}-[0-9]+\.webp")
 ARCHIVE_MODES = ("Carros campeões", "Equipes", "Momentos históricos")
+EVENT_GROUPS = {None: "Todos os marcos", "pilotos": "Marcos de pilotos", "equipes": "Títulos de construtores"}
 
 
 def archive_url(year, round_):
@@ -149,15 +150,21 @@ def render(root, year, round_):
                     if team in {name.replace("-", "_") for name in photo.get("equipes", [])}
                     or photo.get("construtor") == team.replace("_", "-")]
     else:
-        seasons = sorted({event["ano"] for event in inventory["momentos"]}, reverse=True)
-        season = st.selectbox("Temporada do acervo", [None, *seasons], key="archive_event_season",
-                              format_func=lambda value: str(value) if value else translate("Todas as temporadas"))
-        race_ids = {f'{event["ano"]}:{event["rodada"]}' for event in inventory["momentos"]
+        group_column, season_column = st.columns(2)
+        with group_column:
+            group = st.selectbox("Tipo de marco", tuple(EVENT_GROUPS), key="archive_event_group",
+                                 format_func=lambda value: translate(EVENT_GROUPS[value]))
+        events = [event for event in inventory["momentos"] if group is None or event.get(group)]
+        seasons = sorted({event["ano"] for event in events}, reverse=True)
+        with season_column:
+            season = st.selectbox("Temporada do acervo", [None, *seasons], key="archive_event_season",
+                                  format_func=lambda value: str(value) if value else translate("Todas as temporadas"))
+        race_ids = {f'{event["ano"]}:{event["rodada"]}' for event in events
                     if season is None or event["ano"] == season}
-        selected = [
-            (key, photo) for key, photo in photos
-            if any(season is None or gp.split(":", 1)[0] == str(season) for gp in photo.get("gps", []))
-        ]
+        if group is None:
+            race_ids.update(gp for _, photo in photos for gp in photo.get("gps", [])
+                            if season is None or gp.split(":", 1)[0] == str(season))
+        selected = [(key, photo) for key, photo in photos if race_ids.intersection(photo.get("gps", []))]
         artifacts = [(key, photo) for key, photo in photos if race_ids.intersection(photo.get("artefatos_gps", []))]
         references = _references(catalog, "gps", race_ids)
     has_photos = gallery(selected)

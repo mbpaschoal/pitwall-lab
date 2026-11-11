@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "327ba93fee679517d1f9d93eed15042d4785a9917cf18a49773fdc9c216cef9c",
+  "apresentacao_build_sha256": "3571f1a7da0365f7f6eb23b72a90e1f89f7837ff57faf755761d6bb914848c9b",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "7f403f2b9a973654f927bc043abbcd517a28f2221a59f45795c31ed435c9eb19",
+      "sha256_destino": "f33734c423206ed11b5e4d217c72708f77e51aa4d01d6efb2700f8ddb47438bb",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "8ff08e8e6e7e813528bce7540a6b67111c9dcdcddeb0a242122fcde0b2189987",
-      "sha256_origem": "8ff08e8e6e7e813528bce7540a6b67111c9dcdcddeb0a242122fcde0b2189987"
+      "sha256_destino": "7ef779e2c8a36a5eb6e069478ebff54272b820749f32ca26f2edc54ccc928ac0",
+      "sha256_origem": "7ef779e2c8a36a5eb6e069478ebff54272b820749f32ca26f2edc54ccc928ac0"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -2753,8 +2753,8 @@
       "caminho": "frontend_assets/inventario_campeoes.json",
       "fonte": "frontend_assets/inventario_campeoes.json",
       "modo": "copia",
-      "sha256_destino": "62f9e7ac16ff0cc49453ec83e9bb75469727b2a5433664db429549c91e8780be",
-      "sha256_origem": "62f9e7ac16ff0cc49453ec83e9bb75469727b2a5433664db429549c91e8780be"
+      "sha256_destino": "9940e45aa4e0cdddf27702081967d73dc2244be3634687f79d32d33d50ff7d9b",
+      "sha256_origem": "9940e45aa4e0cdddf27702081967d73dc2244be3634687f79d32d33d50ff7d9b"
     },
     {
       "caminho": "frontend_assets/journey.css",
@@ -2984,8 +2984,8 @@
       "caminho": "pitwall/dashboard/photo_archive.py",
       "fonte": "pitwall/dashboard/photo_archive.py",
       "modo": "copia",
-      "sha256_destino": "f3da7563c7e7216e3f28cb46e83adcb0087a61163980ab2c93915a1b4a13b2b2",
-      "sha256_origem": "f3da7563c7e7216e3f28cb46e83adcb0087a61163980ab2c93915a1b4a13b2b2"
+      "sha256_destino": "2cda25cc44c99d7575559dae56d15bbb1702476c7925625752e6d3241a98c249",
+      "sha256_origem": "2cda25cc44c99d7575559dae56d15bbb1702476c7925625752e6d3241a98c249"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
@@ -3187,8 +3187,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "03e4bb03660ef7de17a3c6ccab29b0eea0f7ae2fdabc7cf783974b41df2b46b1",
-      "sha256_origem": "03e4bb03660ef7de17a3c6ccab29b0eea0f7ae2fdabc7cf783974b41df2b46b1"
+      "sha256_destino": "a24b9c51c7f5d9a5636777128d16d5f8876e817331a1b06df61927aca6ae46be",
+      "sha256_origem": "a24b9c51c7f5d9a5636777128d16d5f8876e817331a1b06df61927aca6ae46be"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -3506,6 +3506,20 @@
       "sha256_origem": "d82132d21628835d457989abfacd1180a064deb99d77bd45f62630078487af4c"
     },
     {
+      "caminho": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-2400.webp",
+      "fonte": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b173d803314f399e88966d8a6dd3e2708b460db35fb83d40f08c3a3aba852fca",
+      "sha256_origem": "b173d803314f399e88966d8a6dd3e2708b460db35fb83d40f08c3a3aba852fca"
+    },
+    {
+      "caminho": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-960.webp",
+      "fonte": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8070e662c24b9525d18469c9943f8fe6f565062c1e6a01c79c1aac16e264a481",
+      "sha256_origem": "8070e662c24b9525d18469c9943f8fe6f565062c1e6a01c79c1aac16e264a481"
+    },
+    {
       "caminho": "static/pitwall-archive/antonelli-portrait-9553c5edcb71-2400.webp",
       "fonte": "static/pitwall-archive/antonelli-portrait-9553c5edcb71-2400.webp",
       "modo": "copia",
@@ -3700,6 +3714,20 @@
       "modo": "copia",
       "sha256_destino": "4482e2e6cb43e8973c9e3583dd2eca08fb95076c45c58240724224db67525635",
       "sha256_origem": "4482e2e6cb43e8973c9e3583dd2eca08fb95076c45c58240724224db67525635"
+    },
+    {
+      "caminho": "static/pitwall-archive/bottas-suzuka-2019-acaaaea761e3-2400.webp",
+      "fonte": "static/pitwall-archive/bottas-suzuka-2019-acaaaea761e3-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2c3a647208c0179cd4655377317be10f75d6d921922278dadf20fd7c78ea84ab",
+      "sha256_origem": "2c3a647208c0179cd4655377317be10f75d6d921922278dadf20fd7c78ea84ab"
+    },
+    {
+      "caminho": "static/pitwall-archive/bottas-suzuka-2019-acaaaea761e3-960.webp",
+      "fonte": "static/pitwall-archive/bottas-suzuka-2019-acaaaea761e3-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6cd3a6759ae18243b30153d87fc750d27090cd394503430860f51762906638e0",
+      "sha256_origem": "6cd3a6759ae18243b30153d87fc750d27090cd394503430860f51762906638e0"
     },
     {
       "caminho": "static/pitwall-archive/brabham-bt11-d5dce245f643-2400.webp",
@@ -4430,6 +4458,20 @@
       "sha256_origem": "4b2755129918a89773b2047123fbd929df7ce5600b80a77541ad04c60d6e764e"
     },
     {
+      "caminho": "static/pitwall-archive/hamilton-austin-2017-23f0ba721ce4-2400.webp",
+      "fonte": "static/pitwall-archive/hamilton-austin-2017-23f0ba721ce4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7d23971b4ecbde4799ce9213420c24b5235122eac8b8651cf04ec50bedcfc6a6",
+      "sha256_origem": "7d23971b4ecbde4799ce9213420c24b5235122eac8b8651cf04ec50bedcfc6a6"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-austin-2017-23f0ba721ce4-960.webp",
+      "fonte": "static/pitwall-archive/hamilton-austin-2017-23f0ba721ce4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "2a691016a3b2568aa27136249ff794ed41e6023c61bed370d073d202f30a3237",
+      "sha256_origem": "2a691016a3b2568aa27136249ff794ed41e6023c61bed370d073d202f30a3237"
+    },
+    {
       "caminho": "static/pitwall-archive/hamilton-interlagos-2008-417d8897e6a4-2400.webp",
       "fonte": "static/pitwall-archive/hamilton-interlagos-2008-417d8897e6a4-2400.webp",
       "modo": "copia",
@@ -4456,6 +4498,34 @@
       "modo": "copia",
       "sha256_destino": "b5cb5de4a9c20ca4fee7db77b9ed0c0f03f5ddc69311284ee0c74446df0f119d",
       "sha256_origem": "b5cb5de4a9c20ca4fee7db77b9ed0c0f03f5ddc69311284ee0c74446df0f119d"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-sochi-2015-d6b0d1ba2c6d-2400.webp",
+      "fonte": "static/pitwall-archive/hamilton-sochi-2015-d6b0d1ba2c6d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a3346c925095838d8a6a1bdf2708395f4517103d5d38ce88a13e446d50d4d17c",
+      "sha256_origem": "a3346c925095838d8a6a1bdf2708395f4517103d5d38ce88a13e446d50d4d17c"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-sochi-2015-d6b0d1ba2c6d-960.webp",
+      "fonte": "static/pitwall-archive/hamilton-sochi-2015-d6b0d1ba2c6d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6818ecf323ee82e7f5a36c171f948da56e9711b2bc234b9c97ac5f0811eea134",
+      "sha256_origem": "6818ecf323ee82e7f5a36c171f948da56e9711b2bc234b9c97ac5f0811eea134"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-verstappen-suzuka-2016-fc118bafbee8-2400.webp",
+      "fonte": "static/pitwall-archive/hamilton-verstappen-suzuka-2016-fc118bafbee8-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "14f0606d3d585000058d87763bb71a0a53b24c695523549d8d8b8569f63e39bd",
+      "sha256_origem": "14f0606d3d585000058d87763bb71a0a53b24c695523549d8d8b8569f63e39bd"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-verstappen-suzuka-2016-fc118bafbee8-960.webp",
+      "fonte": "static/pitwall-archive/hamilton-verstappen-suzuka-2016-fc118bafbee8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "73195b5be4eb53304670e667545c962ad87390157d0a5dc83f1825e3758f45eb",
+      "sha256_origem": "73195b5be4eb53304670e667545c962ad87390157d0a5dc83f1825e3758f45eb"
     },
     {
       "caminho": "static/pitwall-archive/hill-silverstone-1992-42c5d0354c90-2400.webp",
@@ -4890,6 +4960,34 @@
       "modo": "copia",
       "sha256_destino": "c6e7749bb3a6736068dce89c7e46ec60a1f96a598bc2cbb56e131cbbc6b0c6c1",
       "sha256_origem": "c6e7749bb3a6736068dce89c7e46ec60a1f96a598bc2cbb56e131cbbc6b0c6c1"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-chapman-andretti-zandvoort-1978-12834a3312ff-2400.webp",
+      "fonte": "static/pitwall-archive/lotus-chapman-andretti-zandvoort-1978-12834a3312ff-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "f150029973418da7bd8c96f6511b5e58dc2efa77e26f90fb74b104ed303b10e9",
+      "sha256_origem": "f150029973418da7bd8c96f6511b5e58dc2efa77e26f90fb74b104ed303b10e9"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-chapman-andretti-zandvoort-1978-12834a3312ff-960.webp",
+      "fonte": "static/pitwall-archive/lotus-chapman-andretti-zandvoort-1978-12834a3312ff-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c623be89f2f3a7eb4a8c04ac78126a571efab0fc5a7ec9aae2419c5725d229f8",
+      "sha256_origem": "c623be89f2f3a7eb4a8c04ac78126a571efab0fc5a7ec9aae2419c5725d229f8"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-dobradinha-zandvoort-1978-99d9634824bb-2400.webp",
+      "fonte": "static/pitwall-archive/lotus-dobradinha-zandvoort-1978-99d9634824bb-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2e430cec8a26dca453a9a6825a01cd9583a4f6546f042948dd381dcf308576ee",
+      "sha256_origem": "2e430cec8a26dca453a9a6825a01cd9583a4f6546f042948dd381dcf308576ee"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-dobradinha-zandvoort-1978-99d9634824bb-960.webp",
+      "fonte": "static/pitwall-archive/lotus-dobradinha-zandvoort-1978-99d9634824bb-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d574f20339b2c7e151208699bf22b14ddd9ae2700264b01d4108e21263c34791",
+      "sha256_origem": "d574f20339b2c7e151208699bf22b14ddd9ae2700264b01d4108e21263c34791"
     },
     {
       "caminho": "static/pitwall-archive/mario-andretti-retrato-0fd227f5a67a-2391.webp",
@@ -5494,6 +5592,20 @@
       "sha256_origem": "1caecd855fecc6500c5c7cf624f0e860542409b30f5a5c3c59f290d057a33cad"
     },
     {
+      "caminho": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-2400.webp",
+      "fonte": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c89f8408826c97f97ccb415cfcc1d628168f891a73e7ff5aab8dc1e658459d7e",
+      "sha256_origem": "c89f8408826c97f97ccb415cfcc1d628168f891a73e7ff5aab8dc1e658459d7e"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-960.webp",
+      "fonte": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3285d7f691617eda2f65f244d4371f02531c47ee2861abc93820d75d6476c6e2",
+      "sha256_origem": "3285d7f691617eda2f65f244d4371f02531c47ee2861abc93820d75d6476c6e2"
+    },
+    {
       "caminho": "static/pitwall-archive/norris-zandvoort-retrato-ee49583fc237-2400.webp",
       "fonte": "static/pitwall-archive/norris-zandvoort-retrato-ee49583fc237-2400.webp",
       "modo": "copia",
@@ -5618,6 +5730,20 @@
       "modo": "copia",
       "sha256_destino": "a95140d1deaabafba7e913026069e8cfc0ff1d634d88d7bd3b7ffc3180ddebc3",
       "sha256_origem": "a95140d1deaabafba7e913026069e8cfc0ff1d634d88d7bd3b7ffc3180ddebc3"
+    },
+    {
+      "caminho": "static/pitwall-archive/raikkonen-spa-2007-32ec255bf716-2400.webp",
+      "fonte": "static/pitwall-archive/raikkonen-spa-2007-32ec255bf716-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a1e15d3f6d08adcc152d1bd24dc9e9463f3639fc5a9958f0274596484d1e3853",
+      "sha256_origem": "a1e15d3f6d08adcc152d1bd24dc9e9463f3639fc5a9958f0274596484d1e3853"
+    },
+    {
+      "caminho": "static/pitwall-archive/raikkonen-spa-2007-32ec255bf716-960.webp",
+      "fonte": "static/pitwall-archive/raikkonen-spa-2007-32ec255bf716-960.webp",
+      "modo": "copia",
+      "sha256_destino": "68d5e64731bdba7d5f4167277f32f03b66fa21a25ad4e13bd58606d4f35eccae",
+      "sha256_origem": "68d5e64731bdba7d5f4167277f32f03b66fa21a25ad4e13bd58606d4f35eccae"
     },
     {
       "caminho": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-2400.webp",
@@ -5828,6 +5954,20 @@
       "modo": "copia",
       "sha256_destino": "096a6da54749204a204930dbee843d9083f60fa644e895f4faedefcfc8d575cd",
       "sha256_origem": "096a6da54749204a204930dbee843d9083f60fa644e895f4faedefcfc8d575cd"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-trofeu-suzuka-1997-d7ce0be35765-2400.webp",
+      "fonte": "static/pitwall-archive/schumacher-trofeu-suzuka-1997-d7ce0be35765-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5f8bb0626ca4cc723c243dbd139085766a22f8160b82b4915d228e7365e64913",
+      "sha256_origem": "5f8bb0626ca4cc723c243dbd139085766a22f8160b82b4915d228e7365e64913"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-trofeu-suzuka-1997-d7ce0be35765-960.webp",
+      "fonte": "static/pitwall-archive/schumacher-trofeu-suzuka-1997-d7ce0be35765-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5c9c2bdd6f03de1a8987014608a86748bdcb4da0490c05033bf35a15fd06434b",
+      "sha256_origem": "5c9c2bdd6f03de1a8987014608a86748bdcb4da0490c05033bf35a15fd06434b"
     },
     {
       "caminho": "static/pitwall-archive/schumacher-trofeu-suzuka-2000-f8f613575668-2400.webp",
@@ -6136,6 +6276,20 @@
       "modo": "copia",
       "sha256_destino": "4f3662a8e8b49f150aaef12b8cabb6b2739758159ae88f5db53bd186cb663816",
       "sha256_origem": "4f3662a8e8b49f150aaef12b8cabb6b2739758159ae88f5db53bd186cb663816"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-austin-2012-67bf8aba9275-2017.webp",
+      "fonte": "static/pitwall-archive/vettel-austin-2012-67bf8aba9275-2017.webp",
+      "modo": "copia",
+      "sha256_destino": "192082425de79b0444a5cc889fbd871fb3f81cda9e78bed386da80f2eec6af19",
+      "sha256_origem": "192082425de79b0444a5cc889fbd871fb3f81cda9e78bed386da80f2eec6af19"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-austin-2012-67bf8aba9275-960.webp",
+      "fonte": "static/pitwall-archive/vettel-austin-2012-67bf8aba9275-960.webp",
+      "modo": "copia",
+      "sha256_destino": "891090a1deb6cea321774b237a94bdb6da70f28563287da6a254e00cbb2b5c37",
+      "sha256_origem": "891090a1deb6cea321774b237a94bdb6da70f28563287da6a254e00cbb2b5c37"
     },
     {
       "caminho": "static/pitwall-archive/vettel-india-2013-b224795fd281-1722.webp",

@@ -89,6 +89,8 @@ def build(archive, hall, teams):
             return json.loads(source.read(f"f1db-{name}.json"))
 
         constructors = {row["id"]: row["name"] for row in read("constructors")}
+        grands_prix = {row["id"]: row["fullName"] for row in read("grands-prix")}
+        races = read("races")
         cars = {row["id"]: row for row in read("chassis")}
         driver_titles = read("seasons-driver-standings")
         constructor_titles = read("seasons-constructor-standings")
@@ -99,7 +101,7 @@ def build(archive, hall, teams):
 
     campaigns = defaultdict(lambda: {"pilotos": [], "construtores": False})
     hall_titles = {}
-    moments = defaultdict(set)
+    moments = {}
     for key, driver in hall["pilotos"].items():
         events = [driver["estreia"], driver["primeira_vitoria"]]
         for title in driver["titulos"]:
@@ -109,13 +111,26 @@ def build(archive, hall, teams):
             for constructor in title["construtores"]:
                 campaigns[season, constructor["id"]]["pilotos"].append(key)
         for event in events:
-            moments[event["ano"], event["rodada"], event["gp"]].add(key)
+            year, round_ = event["ano"], event["rodada"]
+            moment = moments.setdefault((year, round_), {
+                "ano": year, "rodada": round_, "gp": event["gp"], "pilotos": set(),
+            })
+            moment["pilotos"].add(key)
     expected_titles = {row["year"]: row["driverId"] for row in driver_titles if row["championshipWon"]}
     if hall_titles != expected_titles:
         raise ValueError("Driver titles in the Hall of Fame differ from F1DB")
-    for row in constructor_titles:
-        if row["championshipWon"]:
-            campaigns[row["year"], row["constructorId"]]["construtores"] = True
+    team_champions = {row["year"]: row["constructorId"] for row in constructor_titles if row["championshipWon"]}
+    deciders = [race for race in races if race["constructorsChampionshipDecider"]]
+    if sorted(race["year"] for race in deciders) != sorted(team_champions):
+        raise ValueError("Expected one constructors' championship decider per completed championship")
+    for race in deciders:
+        year, round_ = race["year"], race["round"]
+        team = team_champions[year]
+        campaigns[year, team]["construtores"] = True
+        moment = moments.setdefault((year, round_), {
+            "ano": year, "rodada": round_, "gp": grands_prix[race["grandPrixId"]], "pilotos": set(),
+        })
+        moment["equipes"] = [team]
 
     entered_cars = defaultdict(set)
     for row in season_cars:
@@ -181,8 +196,8 @@ def build(archive, hall, teams):
         "modelos": {key: documented_cars[key] if key in documented_cars else cars[key]["fullName"]
                     for key in sorted(used_cars)},
         "campanhas": output,
-        "momentos": [{"ano": year, "rodada": round_, "gp": gp, "pilotos": sorted(keys)}
-                     for (year, round_, gp), keys in sorted(moments.items())],
+        "momentos": [{**moment, "pilotos": sorted(moment["pilotos"])}
+                     for _, moment in sorted(moments.items())],
     }
 
 

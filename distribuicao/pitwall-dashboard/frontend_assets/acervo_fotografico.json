@@ -837,8 +837,8 @@
     "alonso-r25": {
       "arquivo_commons": "File:Fernando Alonso 2005 China.jpg",
       "legenda": {
-        "pt": "Fernando Alonso no Renault R25 no GP da China de 2005.",
-        "en": "Fernando Alonso in the Renault R25 at the 2005 Chinese Grand Prix."
+        "pt": "Fernando Alonso no Renault R25 no GP da China de 2005. Alonso venceu a corrida e a Renault garantiu seu primeiro título de construtores.",
+        "en": "Fernando Alonso in the Renault R25 at the 2005 Chinese Grand Prix. Alonso won the race and Renault secured its first constructors' title."
       },
       "modelo": "renault-r25",
       "temporadas": [
@@ -869,6 +869,9 @@
           "altura": 1596,
           "sha256": "47635eea6d9c89b5b58a8fa928e293462a1876d38b71abbfed4230c64478e0e1"
         }
+      ],
+      "gps": [
+        "2005:19"
       ]
     },
     "alonso-r26": {
@@ -4493,8 +4496,8 @@
     "fittipaldi-watkins-glen-1974": {
       "arquivo_commons": "File:Niki Lauda and Emerson Fittipaldi 1974 Watkins Glen.jpg",
       "legenda": {
-        "pt": "Niki Lauda e Emerson Fittipaldi em Watkins Glen em 1974, no fim de semana em que Emerson garantiu seu segundo título.",
-        "en": "Niki Lauda and Emerson Fittipaldi at Watkins Glen in 1974, the weekend Emerson clinched his second title."
+        "pt": "Niki Lauda e Emerson Fittipaldi em Watkins Glen em 1974. Fittipaldi confirmou seu segundo título e a McLaren conquistou seu primeiro Mundial de Construtores naquele fim de semana.",
+        "en": "Niki Lauda and Emerson Fittipaldi at Watkins Glen in 1974. Fittipaldi sealed his second title and McLaren secured its first Constructors' Championship that weekend."
       },
       "gps": [
         "1974:15"
@@ -4520,6 +4523,9 @@
           "altura": 1200,
           "sha256": "8042da05b6f07c7c2a227b23500677604f6ddec5184b97b72167a5aa120b20df"
         }
+      ],
+      "equipes": [
+        "mclaren"
       ]
     },
     "hunt-zandvoort-1975": {
@@ -7186,6 +7192,418 @@
           "sha256": "7e8770e22ff39c93deda1fdb1b94481df1f7a3131384fe10e87c7fdb8a33cee9"
         }
       ]
+    },
+    "lotus-chapman-andretti-zandvoort-1978": {
+      "arquivo_commons": "File:Chapman and Andretti at 1978 Dutch Grand Prix.jpg",
+      "legenda": {
+        "pt": "Colin Chapman e Mario Andretti nos treinos em Zandvoort. A Lotus garantiu o Mundial de Construtores no domingo.",
+        "en": "Colin Chapman and Mario Andretti during practice at Zandvoort. Lotus secured the Constructors' Championship on Sunday."
+      },
+      "gps": [
+        "1978:13"
+      ],
+      "equipes": [
+        "lotus"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Chapman_and_Andretti_at_1978_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Chapman_and_Andretti_at_1978_Dutch_Grand_Prix.jpg",
+      "autor": "Suyk, Koen / Anefo / neg. stroken, 1945-1989, 2.24.01.05, item number 929-8724",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "12834a3312ff9a9c018a35aa1ffd302e40ff7e31fdfe66ac34ecf9e11a3a5ebf",
+      "largura": 3688,
+      "altura": 2445,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/lotus-chapman-andretti-zandvoort-1978-12834a3312ff-960.webp",
+          "largura": 960,
+          "altura": 636,
+          "sha256": "c623be89f2f3a7eb4a8c04ac78126a571efab0fc5a7ec9aae2419c5725d229f8"
+        },
+        {
+          "arquivo": "static/pitwall-archive/lotus-chapman-andretti-zandvoort-1978-12834a3312ff-2400.webp",
+          "largura": 2400,
+          "altura": 1591,
+          "sha256": "f150029973418da7bd8c96f6511b5e58dc2efa77e26f90fb74b104ed303b10e9"
+        }
+      ]
+    },
+    "andretti-podio-zandvoort-1978": {
+      "arquivo_commons": "File:Andretti celebrating at 1978 Dutch Grand Prix.jpg",
+      "legenda": {
+        "pt": "Mario Andretti comemora a vitória em Zandvoort, onde a dobradinha com Ronnie Peterson garantiu o título da Lotus em 1978.",
+        "en": "Mario Andretti celebrates victory at Zandvoort, where his one-two with Ronnie Peterson secured the 1978 title for Lotus."
+      },
+      "gps": [
+        "1978:13"
+      ],
+      "equipes": [
+        "lotus"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Andretti_celebrating_at_1978_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/75/Andretti_celebrating_at_1978_Dutch_Grand_Prix.jpg",
+      "autor": "Suyk, Koen / Anefo / neg. stroken, 1945-1989, 2.24.01.05, item number 929-8745",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "06bfda0a1519ec16275e5bc69869358a653a19db4c98d48c688f1b2e7c0b4e71",
+      "largura": 3688,
+      "altura": 2445,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-960.webp",
+          "largura": 960,
+          "altura": 636,
+          "sha256": "8070e662c24b9525d18469c9943f8fe6f565062c1e6a01c79c1aac16e264a481"
+        },
+        {
+          "arquivo": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-2400.webp",
+          "largura": 2400,
+          "altura": 1591,
+          "sha256": "b173d803314f399e88966d8a6dd3e2708b460db35fb83d40f08c3a3aba852fca"
+        }
+      ]
+    },
+    "lotus-dobradinha-zandvoort-1978": {
+      "arquivo_commons": "File:Grand Prix Zandvoort Mario Andretti op kop met daar achter Ronnie Petterson, Bestanddeelnr 929-8743.jpg",
+      "legenda": {
+        "pt": "Mario Andretti à frente de Ronnie Peterson, ambos no Lotus 79, na dobradinha que decidiu o Mundial de Construtores em Zandvoort, 1978.",
+        "en": "Mario Andretti leads Ronnie Peterson in the Lotus 79 one-two that clinched the Constructors' Championship at Zandvoort in 1978."
+      },
+      "modelo": "lotus-79",
+      "temporadas": [
+        1978
+      ],
+      "gps": [
+        "1978:13"
+      ],
+      "equipes": [
+        "lotus"
+      ],
+      "construtor": "lotus",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Grand_Prix_Zandvoort_Mario_Andretti_op_kop_met_daar_achter_Ronnie_Petterson,_Bestanddeelnr_929-8743.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/31/Grand_Prix_Zandvoort_Mario_Andretti_op_kop_met_daar_achter_Ronnie_Petterson%2C_Bestanddeelnr_929-8743.jpg",
+      "autor": "Koen Suyk / Anefo",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "99d9634824bb423ab00f5083a40d7b257d06e2f23aa3eb79c01737f12d1a5a92",
+      "largura": 3688,
+      "altura": 2445,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/lotus-dobradinha-zandvoort-1978-99d9634824bb-960.webp",
+          "largura": 960,
+          "altura": 636,
+          "sha256": "d574f20339b2c7e151208699bf22b14ddd9ae2700264b01d4108e21263c34791"
+        },
+        {
+          "arquivo": "static/pitwall-archive/lotus-dobradinha-zandvoort-1978-99d9634824bb-2400.webp",
+          "largura": 2400,
+          "altura": 1591,
+          "sha256": "2e430cec8a26dca453a9a6825a01cd9583a4f6546f042948dd381dcf308576ee"
+        }
+      ]
+    },
+    "raikkonen-spa-2007": {
+      "arquivo_commons": "File:Kimi Raikkonen 2007 Belgium.jpg",
+      "legenda": {
+        "pt": "Kimi Räikkönen com a Ferrari F2007 em Spa. Ele venceu a corrida e Felipe Massa completou a dobradinha no fim de semana do título de construtores.",
+        "en": "Kimi Räikkönen in the Ferrari F2007 at Spa. He won the race and Felipe Massa completed the one-two on the weekend Ferrari secured the constructors' title."
+      },
+      "modelo": "ferrari-f2007",
+      "temporadas": [
+        2007
+      ],
+      "gps": [
+        "2007:14"
+      ],
+      "equipes": [
+        "ferrari"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_2007_Belgium.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Kimi_Raikkonen_2007_Belgium.jpg",
+      "autor": "Thom May",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "32ec255bf716265d6c23a640ab27b897c531dda30267dd2cb30478598c8bbd6e",
+      "largura": 3028,
+      "altura": 2002,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/raikkonen-spa-2007-32ec255bf716-960.webp",
+          "largura": 960,
+          "altura": 635,
+          "sha256": "68d5e64731bdba7d5f4167277f32f03b66fa21a25ad4e13bd58606d4f35eccae"
+        },
+        {
+          "arquivo": "static/pitwall-archive/raikkonen-spa-2007-32ec255bf716-2400.webp",
+          "largura": 2400,
+          "altura": 1587,
+          "sha256": "a1e15d3f6d08adcc152d1bd24dc9e9463f3639fc5a9958f0274596484d1e3853"
+        }
+      ]
+    },
+    "vettel-austin-2012": {
+      "arquivo_commons": "File:United States Grand Prix - Race Day (8198293948).jpg",
+      "legenda": {
+        "pt": "Sebastian Vettel com o Red Bull RB8 na corrida de Austin em 2012. O segundo lugar confirmou o terceiro título de construtores da equipe.",
+        "en": "Sebastian Vettel in the Red Bull RB8 during the 2012 race in Austin. Second place secured the team's third constructors' title."
+      },
+      "modelo": "red-bull-rb8",
+      "temporadas": [
+        2012
+      ],
+      "gps": [
+        "2012:19"
+      ],
+      "equipes": [
+        "red_bull"
+      ],
+      "construtor": "red-bull",
+      "fonte": "https://commons.wikimedia.org/wiki/File:United_States_Grand_Prix_-_Race_Day_(8198293948).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/67/United_States_Grand_Prix_-_Race_Day_%288198293948%29.jpg",
+      "autor": "Josh Hallett from Winter Haven, FL, USA",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "67bf8aba92756d6ab2b0ed42ee48aa05d22164c7dc39fe850a08bbdc1f3865e2",
+      "largura": 2017,
+      "altura": 1342,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/vettel-austin-2012-67bf8aba9275-960.webp",
+          "largura": 960,
+          "altura": 639,
+          "sha256": "891090a1deb6cea321774b237a94bdb6da70f28563287da6a254e00cbb2b5c37"
+        },
+        {
+          "arquivo": "static/pitwall-archive/vettel-austin-2012-67bf8aba9275-2017.webp",
+          "largura": 2017,
+          "altura": 1342,
+          "sha256": "192082425de79b0444a5cc889fbd871fb3f81cda9e78bed386da80f2eec6af19"
+        }
+      ]
+    },
+    "hamilton-sochi-2015": {
+      "arquivo_commons": "File:Lewis Hamilton at the 2015 F1 Russian Grand Prix.JPG",
+      "legenda": {
+        "pt": "Lewis Hamilton no paddock de Sochi, na quinta-feira do GP da Rússia de 2015. Ele venceu a corrida de domingo, quando a Mercedes garantiu o título de construtores.",
+        "en": "Lewis Hamilton in the Sochi paddock on Thursday of the 2015 Russian Grand Prix. He won Sunday's race, when Mercedes secured the constructors' title."
+      },
+      "gps": [
+        "2015:15"
+      ],
+      "equipes": [
+        "mercedes"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lewis_Hamilton_at_the_2015_F1_Russian_Grand_Prix.JPG",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/52/Lewis_Hamilton_at_the_2015_F1_Russian_Grand_Prix.JPG",
+      "autor": "SKas",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "d6b0d1ba2c6df38a7be3decc8dbbd1235c331c2dfe0bb3be5943b7ac804d7ed6",
+      "largura": 1710,
+      "altura": 2433,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-sochi-2015-d6b0d1ba2c6d-960.webp",
+          "largura": 675,
+          "altura": 960,
+          "sha256": "6818ecf323ee82e7f5a36c171f948da56e9711b2bc234b9c97ac5f0811eea134"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-sochi-2015-d6b0d1ba2c6d-2400.webp",
+          "largura": 1687,
+          "altura": 2400,
+          "sha256": "a3346c925095838d8a6a1bdf2708395f4517103d5d38ce88a13e446d50d4d17c"
+        }
+      ]
+    },
+    "hamilton-verstappen-suzuka-2016": {
+      "arquivo_commons": "File:Vermappen and Lewis Hamilton in the final stages of the 2016 Japanese Grand Prix.jpg",
+      "legenda": {
+        "pt": "Lewis Hamilton persegue Max Verstappen no fim do GP do Japão de 2016. Hamilton foi terceiro e Nico Rosberg venceu, garantindo o título da Mercedes.",
+        "en": "Lewis Hamilton chases Max Verstappen late in the 2016 Japanese Grand Prix. Hamilton finished third and Nico Rosberg won, securing the title for Mercedes."
+      },
+      "gps": [
+        "2016:17"
+      ],
+      "equipes": [
+        "mercedes"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Vermappen_and_Lewis_Hamilton_in_the_final_stages_of_the_2016_Japanese_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/65/Vermappen_and_Lewis_Hamilton_in_the_final_stages_of_the_2016_Japanese_Grand_Prix.jpg",
+      "autor": "Yoshi17",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "fc118bafbee851385622001589c7c33b83a947ea9124f6efe1514f7538f2222d",
+      "largura": 2432,
+      "altura": 1824,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-verstappen-suzuka-2016-fc118bafbee8-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "73195b5be4eb53304670e667545c962ad87390157d0a5dc83f1825e3758f45eb"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-verstappen-suzuka-2016-fc118bafbee8-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "14f0606d3d585000058d87763bb71a0a53b24c695523549d8d8b8569f63e39bd"
+        }
+      ]
+    },
+    "hamilton-austin-2017": {
+      "arquivo_commons": "File:Winner! (37907300222).jpg",
+      "legenda": {
+        "pt": "Lewis Hamilton acena após vencer em Austin em 2017, resultado que confirmou o quarto título consecutivo de construtores da Mercedes.",
+        "en": "Lewis Hamilton waves after winning at Austin in 2017, a result that secured Mercedes' fourth consecutive constructors' title."
+      },
+      "modelo": "mercedes-f1-w08",
+      "temporadas": [
+        2017
+      ],
+      "gps": [
+        "2017:17"
+      ],
+      "equipes": [
+        "mercedes"
+      ],
+      "construtor": "mercedes",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Winner!_(37907300222).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/87/Winner%21_%2837907300222%29.jpg",
+      "autor": "Steve from Austin, TX, USA",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "23f0ba721ce4177e2130d481ffb7f7b28f385edd12f11f06cfb001d603720360",
+      "largura": 6000,
+      "altura": 3375,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-austin-2017-23f0ba721ce4-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "2a691016a3b2568aa27136249ff794ed41e6023c61bed370d073d202f30a3237"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-austin-2017-23f0ba721ce4-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "7d23971b4ecbde4799ce9213420c24b5235122eac8b8651cf04ec50bedcfc6a6"
+        }
+      ]
+    },
+    "bottas-suzuka-2019": {
+      "arquivo_commons": "File:2019 Japanese Grand Prix Valtteri Bottas (49054225468).jpg",
+      "legenda": {
+        "pt": "Valtteri Bottas no Mercedes W10 na corrida que venceu em Suzuka, garantindo à equipe o sexto título consecutivo de construtores em 2019.",
+        "en": "Valtteri Bottas in the Mercedes W10 during his winning drive at Suzuka, which secured the team's sixth consecutive constructors' title in 2019."
+      },
+      "modelo": "mercedes-f1-w10",
+      "temporadas": [
+        2019
+      ],
+      "gps": [
+        "2019:17"
+      ],
+      "equipes": [
+        "mercedes"
+      ],
+      "construtor": "mercedes",
+      "fonte": "https://commons.wikimedia.org/wiki/File:2019_Japanese_Grand_Prix_Valtteri_Bottas_(49054225468).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b6/2019_Japanese_Grand_Prix_Valtteri_Bottas_%2849054225468%29.jpg",
+      "autor": "Takayuki Suzuki",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "acaaaea761e3fda95c9d68831228ab0bb2806693293fd44aa4387252e70fc035",
+      "largura": 3000,
+      "altura": 2000,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/bottas-suzuka-2019-acaaaea761e3-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "6cd3a6759ae18243b30153d87fc750d27090cd394503430860f51762906638e0"
+        },
+        {
+          "arquivo": "static/pitwall-archive/bottas-suzuka-2019-acaaaea761e3-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "2c3a647208c0179cd4655377317be10f75d6d921922278dadf20fd7c78ea84ab"
+        }
+      ]
+    },
+    "norris-singapura-2025": {
+      "arquivo_commons": "File:2025 Singapore GP - McLaren - Lando Norris - FP2.jpg",
+      "legenda": {
+        "pt": "Lando Norris no segundo treino livre em Singapura. O terceiro lugar de Norris e o quarto de Oscar Piastri na corrida garantiram o décimo título de construtores da McLaren em 2025.",
+        "en": "Lando Norris during second practice in Singapore. Norris's third place and Oscar Piastri's fourth in the race secured McLaren's tenth constructors' title in 2025."
+      },
+      "modelo": "mclaren-mcl39",
+      "temporadas": [
+        2025
+      ],
+      "gps": [
+        "2025:18"
+      ],
+      "equipes": [
+        "mclaren"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:2025_Singapore_GP_-_McLaren_-_Lando_Norris_-_FP2.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/1c/2025_Singapore_GP_-_McLaren_-_Lando_Norris_-_FP2.jpg",
+      "autor": "Liauzh",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "3394769b7d1a731608d743da7d9e27354c380e60395c1c4ac44ebcbafd4c1ed7",
+      "largura": 4641,
+      "altura": 2611,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "3285d7f691617eda2f65f244d4371f02531c47ee2861abc93820d75d6476c6e2"
+        },
+        {
+          "arquivo": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "c89f8408826c97f97ccb415cfcc1d628168f891a73e7ff5aab8dc1e658459d7e"
+        }
+      ]
+    },
+    "schumacher-trofeu-suzuka-1997": {
+      "arquivo_commons": "File:Japanese GP 1997 winner's trophy 2019 Michael Schumacher Private Collection.jpg",
+      "legenda": {
+        "pt": "Troféu da vitória de Michael Schumacher em Suzuka em 1997, fotografado em 2019. A Williams garantiu o título de construtores naquela etapa.",
+        "en": "Michael Schumacher's trophy for winning at Suzuka in 1997, photographed in 2019. Williams secured the constructors' title at that round."
+      },
+      "artefatos_gps": [
+        "1997:16"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Japanese_GP_1997_winner%27s_trophy_2019_Michael_Schumacher_Private_Collection.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Japanese_GP_1997_winner%27s_trophy_2019_Michael_Schumacher_Private_Collection.jpg",
+      "autor": "Morio",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "d7ce0be35765478658f3c2d591cbbe8566d00646eb4bdd4d83c139e3a5d76985",
+      "largura": 2560,
+      "altura": 2560,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/schumacher-trofeu-suzuka-1997-d7ce0be35765-960.webp",
+          "largura": 960,
+          "altura": 960,
+          "sha256": "5c9c2bdd6f03de1a8987014608a86748bdcb4da0490c05033bf35a15fd06434b"
+        },
+        {
+          "arquivo": "static/pitwall-archive/schumacher-trofeu-suzuka-1997-d7ce0be35765-2400.webp",
+          "largura": 2400,
+          "altura": 2400,
+          "sha256": "5f8bb0626ca4cc723c243dbd139085766a22f8160b82b4915d228e7365e64913"
+        }
+      ]
     }
   },
   "referencias_fotograficas": {
@@ -7648,12 +8066,36 @@
           "en": "Max Verstappen and Red Bull at the Abu Dhabi title decider, 2021"
         }
       },
+      "2023:16": {
+        "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-japan-2023.MZtqCGgE58pKeyYDaOAJq",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Verstappen comemora a vitória na corrida que decidiu o título da Red Bull em Suzuka, 2023",
+          "en": "Verstappen celebrates winning the race that clinched Red Bull’s title at Suzuka in 2023"
+        }
+      },
       "2023:17": {
         "url": "https://www.flickr.com/photos/jaffapix/53294434322/",
         "acervo": "JaffaPix",
         "legenda": {
           "pt": "Max Verstappen com o RB19 em Lusail, 2023",
           "en": "Max Verstappen in the RB19 at Lusail, 2023"
+        }
+      },
+      "2024:24": {
+        "url": "https://www.mclaren.com/racing/formula-1/2024/abu-dhabi-grand-prix/how-we-handled-the-pressure-of-abu-dhabis-title-decider/",
+        "acervo": "McLaren Racing",
+        "legenda": {
+          "pt": "A comemoração do título de construtores da McLaren em Abu Dhabi, 2024",
+          "en": "McLaren celebrates its constructors’ title in Abu Dhabi in 2024"
+        }
+      },
+      "2025:18": {
+        "url": "https://www.mclaren.com/racing/heritage/formula-1/2025-championship/",
+        "acervo": "McLaren Racing",
+        "legenda": {
+          "pt": "McLaren comemora o décimo título de construtores em Singapura, 2025",
+          "en": "McLaren celebrates its tenth constructors’ title in Singapore in 2025"
         }
       },
       "2025:24": {
@@ -7670,6 +8112,14 @@
         "legenda": {
           "pt": "Kimi Antonelli comemora o primeiro título na Cidade do México, 2026",
           "en": "Kimi Antonelli celebrates his first title in Mexico City, 2026"
+        }
+      },
+      "2026:20": {
+        "url": "https://www.formula1.com/en/latest/article/rivals-congratulate-mercedes-on-2026-constructors-championship-after-sao-paulo-gp.5mQ3BkVs5HLP8LE8PduoWY",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Mercedes comemora o nono título de construtores em Interlagos, 2026",
+          "en": "Mercedes celebrates its ninth constructors’ title at Interlagos in 2026"
         }
       }
     }

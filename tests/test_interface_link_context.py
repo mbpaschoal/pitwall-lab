@@ -269,6 +269,14 @@ class LinkContextTests(unittest.TestCase):
         references = next(item for item in app.expander if item.label == "Photographs in source archives")
         self.assertIn("Suzuka, 1988", references.markdown[0].value)
         self.assertNotIn("Reims, 1953", references.markdown[0].value)
+        app.selectbox(key="archive_event_group").set_value("equipes").run()
+        app.selectbox(key="archive_event_season").set_value(1978).run()
+        self.assertFalse(app.exception)
+        event = next(item.value for item in app.markdown if 'data-archive-photo="lotus-dobradinha-zandvoort-1978"' in item.value)
+        self.assertNotIn('data-archive-photo="lotus-79"', event)
+        app.selectbox(key="archive_event_group").set_value("pilotos").run()
+        self.assertFalse(app.exception)
+        self.assertFalse(any('data-archive-photo="lotus-dobradinha-zandvoort-1978"' in item.value for item in app.markdown))
 
     def test_photo_archive_has_a_car_for_each_title_campaign_and_each_current_team(self):
         from pitwall.dashboard.photo_archive import CATALOG, INVENTORY, load
@@ -288,6 +296,8 @@ class LinkContextTests(unittest.TestCase):
         photographed_teams = {team for photo in photos.values() for team in photo.get("equipes", [])}
         self.assertTrue(set(inventory["equipes_atuais"]).issubset(photographed_teams))
         historic_gps = {f'{event["ano"]}:{event["rodada"]}' for event in inventory["momentos"]}
+        team_deciders = [(event["ano"], team) for event in inventory["momentos"] for team in event.get("equipes", [])]
+        self.assertCountEqual(team_deciders, [key for key, entry in campaigns.items() if entry["construtores"]])
         source_links = json.loads((ROOT / CATALOG).read_text(encoding="utf-8"))["referencias_fotograficas"]
         self.assertTrue(set(source_links["gps"]).issubset(historic_gps))
         self.assertTrue(set(source_links["modelos"]).issubset(inventory["modelos"]))
