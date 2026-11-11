@@ -16,7 +16,7 @@ Local campaigns show each constructor's accumulated points and position by round
 
 ## Drivers' Hall of Fame
 
-The Photo Archive uses originals with a license for each photograph. The catalog records credits, sources, dimensions and hashes of the local variants. The inventory cross-references F1DB championship results with chassis entries and includes Ferrari’s documentation of Fangio’s 1956 D50. Campaign coverage requires at least one car photograph. Chassis variants and historic Grands Prix are verified individually. Trophies and helmets photographed after the race appear under **Objects from the collection**. [Photo catalog](../../frontend_assets/acervo_fotografico.json) · [Inventory](../../frontend_assets/inventario_campeoes.json)
+The Photo Archive uses originals with a license for each photograph. The catalog records credits, sources, dimensions and hashes of the local variants. The inventory cross-references F1DB championship results with chassis entries and includes Ferrari’s documentation of Fangio’s 1956 D50. Campaign coverage requires at least one car photograph. Chassis variants and historic Grands Prix are verified individually. Trophies and helmets photographed after the race appear under **Objects from the collection**. **Enlarge photo** opens the largest local version. **Photographs in source archives** links to records that can be viewed in other collections. [Photo catalog](../../frontend_assets/acervo_fotografico.json) · [Inventory](../../frontend_assets/inventario_campeoes.json)
 
 Champions Duel calculates age from the birth date and the date of the deciding Grand Prix recorded in F1DB. The count includes the first title season and every earlier season in which the driver started at least one Grand Prix.
 

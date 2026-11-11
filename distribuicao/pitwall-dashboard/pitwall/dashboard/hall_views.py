@@ -117,7 +117,7 @@ def _titles(profile, year, round_):
 
 
 def _profile(root, driver, profile, year, round_, cutoff):
-    covers, cars, moments, artifacts = photo_archive.driver_photos(root, driver, profile)
+    covers, cars, moments, artifacts, photo_references = photo_archive.driver_photos(root, driver, profile)
     if covers:
         intro, photograph = st.columns([1.1, 1], vertical_alignment="center")
     else:
@@ -147,6 +147,7 @@ def _profile(root, driver, profile, year, round_, cutoff):
                 ), unsafe_allow_html=True)
     photo_archive.gallery(moments, "Momentos históricos")
     photo_archive.gallery(artifacts, "Peças de acervo")
+    photo_archive.reference_links(photo_references, expanded=not (moments or artifacts))
     photo_archive.gallery(covers[1:], "Mais fotos do piloto")
     if profile.get("perfil_pitwall"):
         url = href("Pilotos", visao="perfil", piloto=profile["perfil_pitwall"], temporada=year, gp=round_)

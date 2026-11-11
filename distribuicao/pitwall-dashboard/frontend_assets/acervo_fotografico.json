@@ -7112,6 +7112,489 @@
           "sha256": "272824fa856a07c62b213b6bde9249fc1d495590ff1c1722d1626e15cd258cb7"
         }
       ]
+    },
+    "ascari-ferrari-500-005": {
+      "arquivo_commons": "File:Rétromobile 2017 - Ferrari Tipo 500 - 1952 - 001.jpg",
+      "legenda": {
+        "pt": "Ferrari 500 F2, chassi 005, no salão Rétromobile em 2017. Alberto Ascari venceu com este carro no Nürburgring em 1952, quando assegurou seu primeiro título.",
+        "en": "The Ferrari 500 F2, chassis 005, at Rétromobile in 2017. Alberto Ascari won in this car at the Nürburgring in 1952, clinching his first title."
+      },
+      "modelo": "ferrari-500",
+      "temporadas": [
+        1952
+      ],
+      "artefatos_gps": [
+        "1952:6"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://commons.wikimedia.org/wiki/File:R%C3%A9tromobile_2017_-_Ferrari_Tipo_500_-_1952_-_001.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/a5/R%C3%A9tromobile_2017_-_Ferrari_Tipo_500_-_1952_-_001.jpg",
+      "autor": "Thesupermat",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "08067969ee7f26cc78a5ebb37338eb15ab2cf64dd225b18891a730aa35b7e683",
+      "largura": 5472,
+      "altura": 3648,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ascari-ferrari-500-005-08067969ee7f-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "2bce9ac630ae8e3ff40c27430f326350edad945275ab7f3ef433bf35d05d3d03"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ascari-ferrari-500-005-08067969ee7f-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "d8ae72515635963f132d2b78f9ae2526dc54e5c84657a0bd9724c8f9c11835cc"
+        }
+      ]
+    }
+  },
+  "referencias_fotograficas": {
+    "modelos": {
+      "brabham-bt52b": {
+        "url": "https://www.tomhartleyjnr.com/car/previously-sold/1983/brabham/bt52b/brabham-bt52b-2/",
+        "acervo": "Tom Hartley Jnr",
+        "legenda": {
+          "pt": "Brabham BT52B · chassi 5 de Nelson Piquet",
+          "en": "Brabham BT52B · Nelson Piquet’s chassis 5"
+        }
+      },
+      "ferrari-312t4b": {
+        "url": "https://www.gettyimages.co.uk/detail/news-photo/race-winner-and-world-champion-jody-scheckter-ferrari-312t4-news-photo/2164474769",
+        "acervo": "Motorsport Images / Getty Images",
+        "legenda": {
+          "pt": "Ferrari 312 T4B de Gilles Villeneuve em Monza, 1979",
+          "en": "Gilles Villeneuve’s Ferrari 312 T4B at Monza, 1979"
+        }
+      },
+      "ferrari-f2001b": {
+        "url": "https://rmsothebys.com/auctions/fb23/",
+        "acervo": "RM Sotheby’s",
+        "legenda": {
+          "pt": "Ferrari F2001B · chassi 215 de Michael Schumacher",
+          "en": "Ferrari F2001B · Michael Schumacher’s chassis 215"
+        }
+      },
+      "ferrari-f2002b": {
+        "url": "https://artsandculture.google.com/asset/ferrari-f2002/7QFkPDov85HwXA",
+        "acervo": "Owls Head Transportation Museum",
+        "legenda": {
+          "pt": "Ferrari F2002B · chassi 225",
+          "en": "Ferrari F2002B · chassis 225"
+        }
+      }
+    },
+    "gps": {
+      "1950:1": {
+        "url": "https://www.fondazionepirelli.org/archivio-storico/fotografie/detail/IT-PIRELLI-FT0001-0000000375/gran-premio-gran-bretagna-del-1950.html?lang=en",
+        "acervo": "Fondazione Pirelli",
+        "legenda": {
+          "pt": "Farina, Fangio e Fagioli com Jorge VI em Silverstone, 1950",
+          "en": "Farina, Fangio and Fagioli with George VI at Silverstone, 1950"
+        }
+      },
+      "1950:2": {
+        "url": "https://www.gettyimages.co.uk/detail/news-photo/monaco-grand-prix-monte-carlo-monaco-18th-21st-may-1950-news-photo/2231230621",
+        "acervo": "LAT Images / Getty Images",
+        "legenda": {
+          "pt": "Fangio na primeira vitória no Mundial, em Mônaco, 1950",
+          "en": "Fangio at his first championship win in Monaco, 1950"
+        }
+      },
+      "1951:6": {
+        "url": "https://library.revsinstitute.org/german-grand-prix/329389",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Ascari no Nürburgring, 1951",
+          "en": "Ascari at the Nürburgring, 1951"
+        }
+      },
+      "1951:8": {
+        "url": "https://library.revsinstitute.org/spanish-grand-prix/326227",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Fangio no Alfa Romeo 159 em Pedralbes, 1951",
+          "en": "Fangio in the Alfa Romeo 159 at Pedralbes, 1951"
+        }
+      },
+      "1953:5": {
+        "url": "https://library.revsinstitute.org/french-grand-prix/377644",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Hawthorn e Fangio depois da chegada em Reims, 1953",
+          "en": "Hawthorn and Fangio after the finish at Reims, 1953"
+        }
+      },
+      "1953:8": {
+        "url": "https://library.revsinstitute.org/swiss-grand-prix/351594",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Ascari e Farina com as Ferrari 500 em Bremgarten, 1953",
+          "en": "Ascari and Farina in their Ferrari 500s at Bremgarten, 1953"
+        }
+      },
+      "1954:7": {
+        "url": "https://library.revsinstitute.org/swiss-grand-prix/215631",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Fangio com a Mercedes W196 em Bremgarten, 1954",
+          "en": "Fangio in the Mercedes W196 at Bremgarten, 1954"
+        }
+      },
+      "1955:6": {
+        "url": "https://library.revsinstitute.org/british-grand-prix-aintree/454583",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Jack Brabham na estreia em Aintree, 1955",
+          "en": "Jack Brabham on his debut at Aintree, 1955"
+        }
+      },
+      "1958:2": {
+        "url": "https://library.revsinstitute.org/monaco-grand-prix/393131",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Graham Hill com o Lotus 12 em Mônaco, 1958",
+          "en": "Graham Hill in the Lotus 12 at Monaco, 1958"
+        }
+      },
+      "1958:6": {
+        "url": "https://library.revsinstitute.org/french-grand-prix/197643",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Maserati de Phil Hill na estreia em Reims, 1958",
+          "en": "Phil Hill’s Maserati on his debut at Reims, 1958"
+        }
+      },
+      "1958:11": {
+        "url": "https://library.revsinstitute.org/moroccan-grand-prix-casablanca/451619",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Stirling Moss com a Vanwall no GP decisivo em Ain-Diab, 1958",
+          "en": "Stirling Moss in the Vanwall at the title decider at Ain-Diab, 1958"
+        }
+      },
+      "1959:9": {
+        "url": "https://library.revsinstitute.org/united-states-grand-prix/470427",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Brabham e um mecânico trabalham no Cooper em Sebring, 1959",
+          "en": "Brabham and a mechanic work on the Cooper at Sebring, 1959"
+        }
+      },
+      "1960:8": {
+        "url": "https://library.revsinstitute.org/portuguese-grand-prix/399001",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Brabham com o Cooper T53 na Boavista, 1960",
+          "en": "Brabham in the Cooper T53 at Boavista, 1960"
+        }
+      },
+      "1961:7": {
+        "url": "https://library.revsinstitute.org/italian-grand-prix/1978",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Phil Hill no GP decisivo em Monza, 1961",
+          "en": "Phil Hill at the title decider at Monza, 1961"
+        }
+      },
+      "1962:3": {
+        "url": "https://library.revsinstitute.org/spa-belgian-grand-prix/421659",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Jim Clark com o Lotus 25 na primeira vitória, em Spa, 1962",
+          "en": "Jim Clark in the Lotus 25 at his first win in Spa, 1962"
+        }
+      },
+      "1963:6": {
+        "url": "https://library.revsinstitute.org/german-grand-prix/2560",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "John Surtees no pódio da primeira vitória, no Nürburgring, 1963",
+          "en": "John Surtees on the podium after his first win at the Nürburgring, 1963"
+        }
+      },
+      "1963:7": {
+        "url": "https://library.revsinstitute.org/italian-grand-prix/443",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Jim Clark com o Lotus 25 em Monza, 1963",
+          "en": "Jim Clark in the Lotus 25 at Monza, 1963"
+        }
+      },
+      "1964:10": {
+        "url": "https://www.formula1.com/en/latest/article/f1-do-you-remember-when-ferrari-raced-in-blue-in-mexico.14FuRhcbuDife3z4ceo7hv.14FuRhcbuDife3z4ceo7hv",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "John Surtees e a Ferrari da decisão no México, 1964",
+          "en": "John Surtees and Ferrari at the title decider in Mexico, 1964"
+        }
+      },
+      "1965:8": {
+        "url": "https://library.revsinstitute.org/italian-grand-prix/238762",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Jackie Stewart comemora a primeira vitória em Monza, 1965",
+          "en": "Jackie Stewart celebrates his first win at Monza, 1965"
+        }
+      },
+      "1967:2": {
+        "url": "https://library.revsinstitute.org/monaco-grand-prix/261131",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Denny Hulme recebe o troféu da primeira vitória em Mônaco, 1967",
+          "en": "Denny Hulme receives the trophy for his first win at Monaco, 1967"
+        }
+      },
+      "1968:11": {
+        "url": "https://library.revsinstitute.org/united-states-grand-prix-watkins-glen/179165",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Mario Andretti com Dee Ann ao lado do Lotus da estreia em Watkins Glen, 1968",
+          "en": "Mario Andretti with Dee Ann next to the Lotus from his debut at Watkins Glen, 1968"
+        }
+      },
+      "1969:8": {
+        "url": "https://library.revsinstitute.org/italian-grand-prix/30621",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Jackie Stewart com o Matra MS80 em Monza, 1969",
+          "en": "Jackie Stewart in the Matra MS80 at Monza, 1969"
+        }
+      },
+      "1969:10": {
+        "url": "https://library.revsinstitute.org/united-states-grand-prix/134216",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Jochen Rindt a caminho da primeira vitória em Watkins Glen, 1969",
+          "en": "Jochen Rindt on his way to his first win at Watkins Glen, 1969"
+        }
+      },
+      "1970:7": {
+        "url": "https://classicteamlotus.co.uk/en/news/posts/2021/emerson-mario-at-festival-of-speed/",
+        "acervo": "Classic Team Lotus",
+        "legenda": {
+          "pt": "Emerson Fittipaldi na estreia em Brands Hatch, 1970",
+          "en": "Emerson Fittipaldi on his debut at Brands Hatch, 1970"
+        }
+      },
+      "1974:4": {
+        "url": "https://library.revsinstitute.org/spanish-grand-prix/42449",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Niki Lauda com a Ferrari da primeira vitória em Jarama, 1974",
+          "en": "Niki Lauda in the Ferrari from his first win at Jarama, 1974"
+        }
+      },
+      "1974:7": {
+        "url": "https://library.revsinstitute.org/swedish-grand-prix/40161",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Jody Scheckter no pódio da primeira vitória, em Anderstorp, 1974",
+          "en": "Jody Scheckter on the podium after his first win at Anderstorp, 1974"
+        }
+      },
+      "1976:16": {
+        "url": "https://www.formula1.com/en/latest/article/moments-in-time-the-japanese-grand-prix.5M4HpgAHNmMjn15iW7nAXO",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "James Hunt com a McLaren em Fuji, 1976",
+          "en": "James Hunt in the McLaren at Fuji, 1976"
+        }
+      },
+      "1977:15": {
+        "url": "https://library.revsinstitute.org/united-states-grand-prix/286519",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Niki Lauda com a Ferrari 312 T2 em Watkins Glen, 1977",
+          "en": "Niki Lauda in the Ferrari 312 T2 at Watkins Glen, 1977"
+        }
+      },
+      "1979:13": {
+        "url": "https://www.gettyimages.co.uk/detail/news-photo/race-winner-and-world-champion-jody-scheckter-ferrari-312t4-news-photo/2164474769",
+        "acervo": "Motorsport Images / Getty Images",
+        "legenda": {
+          "pt": "Jody Scheckter à frente de Gilles Villeneuve no GP decisivo de Monza, 1979",
+          "en": "Jody Scheckter leads Gilles Villeneuve at the Monza title decider, 1979"
+        }
+      },
+      "1980:1": {
+        "url": "https://library.revsinstitute.org/argentine-grand-prix/494827",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Alain Prost com a McLaren M29 na estreia em Buenos Aires, 1980",
+          "en": "Alain Prost in the McLaren M29 on his debut in Buenos Aires, 1980"
+        }
+      },
+      "1980:4": {
+        "url": "https://library.revsinstitute.org/united-states-grand-prix-west/494129",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Nelson Piquet com o Brabham BT49 em Long Beach, 1980",
+          "en": "Nelson Piquet in the Brabham BT49 at Long Beach, 1980"
+        }
+      },
+      "1980:10": {
+        "url": "https://library.revsinstitute.org/austrian-grand-prix/505159",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Nigel Mansell com o Lotus 81 na estreia na Áustria, 1980",
+          "en": "Nigel Mansell in the Lotus 81 on his debut in Austria, 1980"
+        }
+      },
+      "1980:13": {
+        "url": "https://library.revsinstitute.org/canadian-grand-prix/502303",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Alan Jones e Nelson Piquet em Montreal, 1980",
+          "en": "Alan Jones and Nelson Piquet at Montreal, 1980"
+        }
+      },
+      "1981:8": {
+        "url": "https://library.revsinstitute.org/french-grand-prix/498766",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Alain Prost celebra a primeira vitória em Dijon, 1981",
+          "en": "Alain Prost celebrates his first win at Dijon, 1981"
+        }
+      },
+      "1981:15": {
+        "url": "https://library.revsinstitute.org/caesars-palace-grand-prix/505786",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Nelson Piquet nos boxes de Las Vegas, 1981",
+          "en": "Nelson Piquet in the Las Vegas pit lane, 1981"
+        }
+      },
+      "1982:14": {
+        "url": "https://library.revsinstitute.org/swiss-grand-prix/511524",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Keke Rosberg no Williams FW08 em Dijon, 1982",
+          "en": "Keke Rosberg in the Williams FW08 at Dijon, 1982"
+        }
+      },
+      "1982:16": {
+        "url": "https://library.revsinstitute.org/caesars-palace-grand-prix/511249",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Keke Rosberg com o Williams FW08 no GP decisivo em Las Vegas, 1982",
+          "en": "Keke Rosberg in the Williams FW08 at the title decider in Las Vegas, 1982"
+        }
+      },
+      "1983:15": {
+        "url": "https://www.motorsportmagazine.com/archive/article/february-2025/82/1983-brabham-bt52b/",
+        "acervo": "Motor Sport",
+        "legenda": {
+          "pt": "Nelson Piquet com o Brabham BT52B em Kyalami, 1983",
+          "en": "Nelson Piquet in the Brabham BT52B at Kyalami, 1983"
+        }
+      },
+      "1984:16": {
+        "url": "https://library.revsinstitute.org/portuguese-grand-prix/526485",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Prost, Lauda e Senna no Estoril, 1984",
+          "en": "Prost, Lauda and Senna at Estoril, 1984"
+        }
+      },
+      "1985:2": {
+        "url": "https://classicteamlotus.co.uk/en/news/posts/2025/marking-the-40-year-anniversary-of-ayrton-senna%E2%80%99s-first-gp-victory/",
+        "acervo": "Classic Team Lotus",
+        "legenda": {
+          "pt": "Ayrton Senna e a Lotus na primeira vitória no Estoril, 1985",
+          "en": "Ayrton Senna and Lotus at his first win at Estoril, 1985"
+        }
+      },
+      "1986:16": {
+        "url": "https://library.revsinstitute.org/nelson-piquet-alain-prost-and-nigel-mansell/648393",
+        "acervo": "Revs Digital Library",
+        "legenda": {
+          "pt": "Nelson Piquet, Alain Prost e Nigel Mansell em Adelaide, 1986",
+          "en": "Nelson Piquet, Alain Prost and Nigel Mansell at Adelaide, 1986"
+        }
+      },
+      "1988:15": {
+        "url": "https://www.formula1.com/en/latest/article/moments-in-time-the-japanese-grand-prix.5M4HpgAHNmMjn15iW7nAXO",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Ayrton Senna no GP do primeiro título em Suzuka, 1988",
+          "en": "Ayrton Senna at the race that secured his first title at Suzuka, 1988"
+        }
+      },
+      "1989:15": {
+        "url": "https://www.formula1.com/en/latest/article/moments-in-time-ayrton-senna.5hUILgBi61MBdBR0btxAPe.5hUILgBi61MBdBR0btxAPe",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Ayrton Senna e Alain Prost na decisão de Suzuka, 1989",
+          "en": "Ayrton Senna and Alain Prost at the title decider at Suzuka, 1989"
+        }
+      },
+      "1992:12": {
+        "url": "https://www.gettyimages.co.uk/detail/news-photo/michael-schumacher-from-germany-driver-of-the-camel-news-photo/2245979034",
+        "acervo": "Pascal Rondeau / Getty Images",
+        "legenda": {
+          "pt": "Michael Schumacher no pódio da primeira vitória em Spa, 1992",
+          "en": "Michael Schumacher on the podium after his first win at Spa, 1992"
+        }
+      },
+      "1998:16": {
+        "url": "https://www.formula1.com/en/latest/article/moments-in-time-the-japanese-grand-prix.5M4HpgAHNmMjn15iW7nAXO",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Mika Häkkinen na decisão em Suzuka, 1998",
+          "en": "Mika Häkkinen at the title decider at Suzuka, 1998"
+        }
+      },
+      "2000:16": {
+        "url": "https://www.formula1.com/en/latest/article/moments-in-time-the-japanese-grand-prix.5M4HpgAHNmMjn15iW7nAXO",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Michael Schumacher na decisão em Suzuka, 2000",
+          "en": "Michael Schumacher at the title decider at Suzuka, 2000"
+        }
+      },
+      "2020:14": {
+        "url": "https://www.aa.com.tr/en/pg/photo-gallery/lewis-hamilton-wins-7th-formula-1-title",
+        "acervo": "Anadolu",
+        "legenda": {
+          "pt": "Lewis Hamilton na conquista do sétimo título em Istambul, 2020",
+          "en": "Lewis Hamilton clinches his seventh title in Istanbul, 2020"
+        }
+      },
+      "2021:22": {
+        "url": "https://www.thenationalnews.com/sport/f1/2021/12/12/the-best-photos-from-abu-dhabi-grand-prix-weekend-shot-by-the-national-in-pictures/",
+        "acervo": "The National",
+        "legenda": {
+          "pt": "Max Verstappen e a Red Bull na decisão em Abu Dhabi, 2021",
+          "en": "Max Verstappen and Red Bull at the Abu Dhabi title decider, 2021"
+        }
+      },
+      "2023:17": {
+        "url": "https://www.flickr.com/photos/jaffapix/53294434322/",
+        "acervo": "JaffaPix",
+        "legenda": {
+          "pt": "Max Verstappen com o RB19 em Lusail, 2023",
+          "en": "Max Verstappen in the RB19 at Lusail, 2023"
+        }
+      },
+      "2025:24": {
+        "url": "https://www.formula1.com/en/latest/article/gallery-donuts-champagne-and-emotional-scenes-norris-celebrates-his-first-f1.5Ytibxt2W17GxksM6LIpd1",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Lando Norris comemora o primeiro título em Abu Dhabi, 2025",
+          "en": "Lando Norris celebrates his first title at Abu Dhabi, 2025"
+        }
+      },
+      "2026:19": {
+        "url": "https://www.formula1.com/en/latest/article/gallery-the-best-images-from-antonellis-title-celebrations.3c1keK7GIQDiP4ylcXr6Ox",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Kimi Antonelli comemora o primeiro título na Cidade do México, 2026",
+          "en": "Kimi Antonelli celebrates his first title in Mexico City, 2026"
+        }
+      }
     }
   }
 }

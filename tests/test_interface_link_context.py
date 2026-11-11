@@ -253,6 +253,7 @@ class LinkContextTests(unittest.TestCase):
         links = [anchor["href"] for anchor in Links(photo).links]
         self.assertTrue(any(link.startswith("https://creativecommons.org/") for link in links))
         self.assertIn(photos["senna-mp4-4"]["fonte"], links)
+        self.assertIn("app/" + photos["senna-mp4-4"]["variantes"][-1]["arquivo"], links)
         self.assertNotIn('data-archive-photo="prost-mp4-5"', photo)
         app.radio(key="archive_mode").set_value("Momentos históricos").run()
         self.assertFalse(app.exception)
@@ -265,9 +266,12 @@ class LinkContextTests(unittest.TestCase):
         self.assertIn("Objects from the collection", [item.value for item in app.subheader])
         self.assertTrue(any('data-archive-photo="mclaren-trofeu-suzuka-1988"' in item.value for item in app.markdown))
         self.assertFalse(app.info)
+        references = next(item for item in app.expander if item.label == "Photographs in source archives")
+        self.assertIn("Suzuka, 1988", references.markdown[0].value)
+        self.assertNotIn("Reims, 1953", references.markdown[0].value)
 
     def test_photo_archive_has_a_car_for_each_title_campaign_and_each_current_team(self):
-        from pitwall.dashboard.photo_archive import INVENTORY, load
+        from pitwall.dashboard.photo_archive import CATALOG, INVENTORY, load
 
         inventory = json.loads((ROOT / INVENTORY).read_text(encoding="utf-8"))
         photos = load(ROOT)
@@ -284,6 +288,9 @@ class LinkContextTests(unittest.TestCase):
         photographed_teams = {team for photo in photos.values() for team in photo.get("equipes", [])}
         self.assertTrue(set(inventory["equipes_atuais"]).issubset(photographed_teams))
         historic_gps = {f'{event["ano"]}:{event["rodada"]}' for event in inventory["momentos"]}
+        source_links = json.loads((ROOT / CATALOG).read_text(encoding="utf-8"))["referencias_fotograficas"]
+        self.assertTrue(set(source_links["gps"]).issubset(historic_gps))
+        self.assertTrue(set(source_links["modelos"]).issubset(inventory["modelos"]))
         self.assertEqual(len({photo["sha256"] for photo in photos.values()}), len(photos))
         for photo in photos.values():
             artifact_gps = set(photo.get("artefatos_gps", []))

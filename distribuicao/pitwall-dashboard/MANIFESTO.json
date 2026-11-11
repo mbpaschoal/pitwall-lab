@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "b6a68cda8804415c35b9afd27eb1991968842ab01ba07bd2d09445ec92fcc235",
+  "apresentacao_build_sha256": "bc6249a87a83596af9d389acca24e64a98208827f26798a033425ec0440065ee",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "be69ccd0176e9951f962049773184bb10b3233fcdda0278e1417e6de8369648c",
+      "sha256_destino": "62747ea6ad520c95d122fa61926fd7a0e827518dc137e2d2bca5a6b31e74c606",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "768c9cf9d33ebffff72aa01aeaed70a2a2a0c2c65f1421f26c36f331bde18073",
-      "sha256_origem": "768c9cf9d33ebffff72aa01aeaed70a2a2a0c2c65f1421f26c36f331bde18073"
+      "sha256_destino": "83c9ffc645e6fd2643b1432834bfe43c22758a776b0ab99ec023d2b7bd4b50ab",
+      "sha256_origem": "83c9ffc645e6fd2643b1432834bfe43c22758a776b0ab99ec023d2b7bd4b50ab"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -2928,8 +2928,8 @@
       "caminho": "pitwall/dashboard/hall_views.py",
       "fonte": "pitwall/dashboard/hall_views.py",
       "modo": "copia",
-      "sha256_destino": "b770adf73e552de3d32d9d24359e35758ddbe97479796bceace7153899701505",
-      "sha256_origem": "b770adf73e552de3d32d9d24359e35758ddbe97479796bceace7153899701505"
+      "sha256_destino": "ec12b3f504489f5246850fedb2a61ba3e5b0de7151aee36272004727aa87d5b4",
+      "sha256_origem": "ec12b3f504489f5246850fedb2a61ba3e5b0de7151aee36272004727aa87d5b4"
     },
     {
       "caminho": "pitwall/dashboard/hero_assets.py",
@@ -2984,8 +2984,8 @@
       "caminho": "pitwall/dashboard/photo_archive.py",
       "fonte": "pitwall/dashboard/photo_archive.py",
       "modo": "copia",
-      "sha256_destino": "88369e46b78d3c8c1cff477fe6e203ee813453b93d004c09bde9d3afac676ac7",
-      "sha256_origem": "88369e46b78d3c8c1cff477fe6e203ee813453b93d004c09bde9d3afac676ac7"
+      "sha256_destino": "f3da7563c7e7216e3f28cb46e83adcb0087a61163980ab2c93915a1b4a13b2b2",
+      "sha256_origem": "f3da7563c7e7216e3f28cb46e83adcb0087a61163980ab2c93915a1b4a13b2b2"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
@@ -3187,8 +3187,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "d2460ac0f1935dc9752b9112fec7ae77aadd96e8d25c2e0daad7bc11dea5122d",
-      "sha256_origem": "d2460ac0f1935dc9752b9112fec7ae77aadd96e8d25c2e0daad7bc11dea5122d"
+      "sha256_destino": "03e4bb03660ef7de17a3c6ccab29b0eea0f7ae2fdabc7cf783974b41df2b46b1",
+      "sha256_origem": "03e4bb03660ef7de17a3c6ccab29b0eea0f7ae2fdabc7cf783974b41df2b46b1"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -3546,6 +3546,20 @@
       "modo": "copia",
       "sha256_destino": "17cb7decd10b66bdc7f12d25a6d3c5415a485c52c58b42b434b68879dea80ebf",
       "sha256_origem": "17cb7decd10b66bdc7f12d25a6d3c5415a485c52c58b42b434b68879dea80ebf"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-ferrari-500-005-08067969ee7f-2400.webp",
+      "fonte": "static/pitwall-archive/ascari-ferrari-500-005-08067969ee7f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d8ae72515635963f132d2b78f9ae2526dc54e5c84657a0bd9724c8f9c11835cc",
+      "sha256_origem": "d8ae72515635963f132d2b78f9ae2526dc54e5c84657a0bd9724c8f9c11835cc"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-ferrari-500-005-08067969ee7f-960.webp",
+      "fonte": "static/pitwall-archive/ascari-ferrari-500-005-08067969ee7f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "2bce9ac630ae8e3ff40c27430f326350edad945275ab7f3ef433bf35d05d3d03",
+      "sha256_origem": "2bce9ac630ae8e3ff40c27430f326350edad945275ab7f3ef433bf35d05d3d03"
     },
     {
       "caminho": "static/pitwall-archive/ascari-ferrari-500-736c124bbd8d-2400.webp",
