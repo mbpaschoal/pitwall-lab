@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "3571f1a7da0365f7f6eb23b72a90e1f89f7837ff57faf755761d6bb914848c9b",
+  "apresentacao_build_sha256": "75c3db5165c43f094edbce19139d84e8d4dbaa6947e4a2ece9a93549f12802e3",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "f33734c423206ed11b5e4d217c72708f77e51aa4d01d6efb2700f8ddb47438bb",
+      "sha256_destino": "3e460e49b7fe599f7cd7e407f7f563d2704c5fcf70132394e4a49b01e9d0b20a",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "7ef779e2c8a36a5eb6e069478ebff54272b820749f32ca26f2edc54ccc928ac0",
-      "sha256_origem": "7ef779e2c8a36a5eb6e069478ebff54272b820749f32ca26f2edc54ccc928ac0"
+      "sha256_destino": "f60d4a07c7bc001c885698ffb0c31d78b8ce4027a41e5df8fa906f06a98776b7",
+      "sha256_origem": "f60d4a07c7bc001c885698ffb0c31d78b8ce4027a41e5df8fa906f06a98776b7"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4458,6 +4458,34 @@
       "sha256_origem": "4b2755129918a89773b2047123fbd929df7ce5600b80a77541ad04c60d6e764e"
     },
     {
+      "caminho": "static/pitwall-archive/hakkinen-mp4-13-suzuka-1998-263146432992-2124.webp",
+      "fonte": "static/pitwall-archive/hakkinen-mp4-13-suzuka-1998-263146432992-2124.webp",
+      "modo": "copia",
+      "sha256_destino": "97bc351ac653c512581f6675f311a8096c52c2794a1cd7cd7a3e9bf9d2ac2bd1",
+      "sha256_origem": "97bc351ac653c512581f6675f311a8096c52c2794a1cd7cd7a3e9bf9d2ac2bd1"
+    },
+    {
+      "caminho": "static/pitwall-archive/hakkinen-mp4-13-suzuka-1998-263146432992-960.webp",
+      "fonte": "static/pitwall-archive/hakkinen-mp4-13-suzuka-1998-263146432992-960.webp",
+      "modo": "copia",
+      "sha256_destino": "ee5ca539cde003888415af5d3fb5df09fdd0a855db6753d0576b899109ca8762",
+      "sha256_origem": "ee5ca539cde003888415af5d3fb5df09fdd0a855db6753d0576b899109ca8762"
+    },
+    {
+      "caminho": "static/pitwall-archive/hakkinen-mp4-14-suzuka-1999-01b3304f7053-2272.webp",
+      "fonte": "static/pitwall-archive/hakkinen-mp4-14-suzuka-1999-01b3304f7053-2272.webp",
+      "modo": "copia",
+      "sha256_destino": "014bccf00fd0fedaf293442ca4739f8c6719d4eb83d24bcede999fee1537230a",
+      "sha256_origem": "014bccf00fd0fedaf293442ca4739f8c6719d4eb83d24bcede999fee1537230a"
+    },
+    {
+      "caminho": "static/pitwall-archive/hakkinen-mp4-14-suzuka-1999-01b3304f7053-960.webp",
+      "fonte": "static/pitwall-archive/hakkinen-mp4-14-suzuka-1999-01b3304f7053-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8a0773919e9e74e4967a5ab55857ad053cc6e8977a0e2b30e55d0397db9ce932",
+      "sha256_origem": "8a0773919e9e74e4967a5ab55857ad053cc6e8977a0e2b30e55d0397db9ce932"
+    },
+    {
       "caminho": "static/pitwall-archive/hamilton-austin-2017-23f0ba721ce4-2400.webp",
       "fonte": "static/pitwall-archive/hamilton-austin-2017-23f0ba721ce4-2400.webp",
       "modo": "copia",
@@ -5662,6 +5690,34 @@
       "sha256_origem": "91a4db31aa56066ec36b2c9c32f863e9d90766276adede670b8b7e095530770e"
     },
     {
+      "caminho": "static/pitwall-archive/piquet-bt52b-zandvoort-1983-5d65bbaee820-2400.webp",
+      "fonte": "static/pitwall-archive/piquet-bt52b-zandvoort-1983-5d65bbaee820-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "01360a7f0472526f29a1c7401a13a9a4c85a103afb1e61860f8b98a42c9beb13",
+      "sha256_origem": "01360a7f0472526f29a1c7401a13a9a4c85a103afb1e61860f8b98a42c9beb13"
+    },
+    {
+      "caminho": "static/pitwall-archive/piquet-bt52b-zandvoort-1983-5d65bbaee820-960.webp",
+      "fonte": "static/pitwall-archive/piquet-bt52b-zandvoort-1983-5d65bbaee820-960.webp",
+      "modo": "copia",
+      "sha256_destino": "936375294b963ea6056ca14d90f84a2d5bed5716f20165f57ee8ead2ae0e0f1e",
+      "sha256_origem": "936375294b963ea6056ca14d90f84a2d5bed5716f20165f57ee8ead2ae0e0f1e"
+    },
+    {
+      "caminho": "static/pitwall-archive/piquet-prost-zandvoort-1983-0a2a0732146b-2400.webp",
+      "fonte": "static/pitwall-archive/piquet-prost-zandvoort-1983-0a2a0732146b-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1baa3f24ce8d660f238beca3a658066887aa75ec7349d27f5c08db52f2134512",
+      "sha256_origem": "1baa3f24ce8d660f238beca3a658066887aa75ec7349d27f5c08db52f2134512"
+    },
+    {
+      "caminho": "static/pitwall-archive/piquet-prost-zandvoort-1983-0a2a0732146b-960.webp",
+      "fonte": "static/pitwall-archive/piquet-prost-zandvoort-1983-0a2a0732146b-960.webp",
+      "modo": "copia",
+      "sha256_destino": "126a2d916bdf63f44b852ef7ccb98ce2aabce0f07694f3fc4527ada507d02a31",
+      "sha256_origem": "126a2d916bdf63f44b852ef7ccb98ce2aabce0f07694f3fc4527ada507d02a31"
+    },
+    {
       "caminho": "static/pitwall-archive/prost-brands-hatch-1985-584e27e05d95-2400.webp",
       "fonte": "static/pitwall-archive/prost-brands-hatch-1985-584e27e05d95-2400.webp",
       "modo": "copia",
@@ -6248,6 +6304,20 @@
       "modo": "copia",
       "sha256_destino": "a2f21b2cfd6aad0917efa49cdf83007cb00773123800752c5b41d5b7d37b0552",
       "sha256_origem": "a2f21b2cfd6aad0917efa49cdf83007cb00773123800752c5b41d5b7d37b0552"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-rb16b-abu-dhabi-2021-bb38bbacd1ee-2400.webp",
+      "fonte": "static/pitwall-archive/verstappen-rb16b-abu-dhabi-2021-bb38bbacd1ee-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8a4cdb72862fc5480406cc92fa354ed6e24215333869014bc822d76bbb31a4eb",
+      "sha256_origem": "8a4cdb72862fc5480406cc92fa354ed6e24215333869014bc822d76bbb31a4eb"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-rb16b-abu-dhabi-2021-bb38bbacd1ee-960.webp",
+      "fonte": "static/pitwall-archive/verstappen-rb16b-abu-dhabi-2021-bb38bbacd1ee-960.webp",
+      "modo": "copia",
+      "sha256_destino": "2a4ee3e8db220ea1e401117f8e48eb230d250dc4dfb015099873108a9c3fad29",
+      "sha256_origem": "2a4ee3e8db220ea1e401117f8e48eb230d250dc4dfb015099873108a9c3fad29"
     },
     {
       "caminho": "static/pitwall-archive/verstappen-zandvoort-retrato-3b99f41b0fc2-1800.webp",
