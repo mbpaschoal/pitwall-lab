@@ -234,6 +234,27 @@ class LinkContextTests(unittest.TestCase):
         comparison = next(m.value for m in app.markdown if 'aria-label="Champion comparison"' in m.value)
         self.assertIn("<td>4</td><td>6</td>", comparison)
 
+    def test_championship_photo_archive_preserves_model_and_credit(self):
+        from pitwall.dashboard.photo_archive import load
+
+        photos = load(ROOT)
+        self.assertEqual(photos["senna-mp4-4"]["modelo"], "mclaren-mp4-4")
+        self.assertEqual(photos["senna-mp4-4"]["temporadas"], [1988])
+        self.assertEqual(photos["fangio-nurburgring-1957"]["gps"], ["1957:6"])
+        app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=45)
+        app.query_params.update(tela="Pilotos", visao="acervo", temporada="2026", gp="20", lang="en")
+        app.run()
+        self.assertFalse(app.exception)
+        app.selectbox(key="archive_season").set_value(1988).run()
+        self.assertFalse(app.exception)
+        photo = next(item.value for item in app.markdown if 'data-archive-photo="senna-mp4-4"' in item.value)
+        self.assertIn("Tony Hisgett", photo)
+        self.assertIn("Resized version", photo)
+        links = [anchor["href"] for anchor in Links(photo).links]
+        self.assertTrue(any(link.startswith("https://creativecommons.org/") for link in links))
+        self.assertIn(photos["senna-mp4-4"]["fonte"], links)
+        self.assertNotIn('data-archive-photo="prost-mp4-5"', photo)
+
     def test_document_return_preserves_hosted_frame_without_nesting_wrapper(self):
         for lang in ('pt','en'):
             app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=45)

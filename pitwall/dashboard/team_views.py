@@ -4,6 +4,7 @@ import json
 from html import escape
 from pathlib import Path
 
+from pitwall.dashboard import photo_archive
 from pitwall.dashboard.components import data_editorial
 from pitwall.dashboard.fan_views import href, team_mark, text
 from pitwall.dashboard.journey import race_identity
@@ -189,6 +190,7 @@ def render(root, year, round_):
     st.markdown('<header class="pw-chapter pw-team-profile-head"><div aria-hidden="true">{}</div><h1>{}</h1></header>'.format(
         team_mark(team, profile["nome"]), escape(profile["nome"]),
     ), unsafe_allow_html=True)
+    photo_archive.team_photos(root, team)
 
     _render_campaign(profile, st.query_params.get("campanha"))
 

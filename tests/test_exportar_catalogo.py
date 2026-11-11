@@ -31,6 +31,11 @@ class TestExportarCatalogo(unittest.TestCase):
         for ativos in catalogo['circuitos'].values():
             self.assertIn(ativos['foto']['caminho'], arquivos)
             self.assertIn(ativos['mapa']['caminho'], arquivos)
+        acervo = json.loads((RAIZ / 'frontend_assets/acervo_fotografico.json').read_text())
+        self.assertEqual(
+            {path for path in arquivos if path.startswith('static/pitwall-archive/')},
+            {variant['arquivo'] for photo in acervo['fotos'].values() for variant in photo['variantes']},
+        )
 
     def test_cartas_neutras_sao_87_caminhos_explicitos_sem_inferir_arquivos_privados(self):
         exportador = modulo()
@@ -92,12 +97,16 @@ class TestExportarCatalogo(unittest.TestCase):
                 'dashboard_assets/tarot/teams/mercedes/norris/pose-0.png',
                 'dashboard_assets/tarot/teams/unlisted_team/norris/pose-0.png',
                 'reports/tarot_variantes_20261101/generation/hamilton-pose-0.json',
+                'static/pitwall-archive/private-reference.webp',
                 'notes/private.md', '.env',
             )
             for relative in private_paths:
                 target = root / relative
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes(b'private synthetic probe')
+            archive = root / 'frontend_assets/acervo_fotografico.json'
+            archive.parent.mkdir()
+            archive.write_text('{"schema": 1, "fotos": {}}')
             with patch.object(exportador, '_ler_catalogo_visual', return_value={'circuitos': {}}):
                 arquivos = set(exportador.runtime_worktree(root))
             self.assertTrue(set(private_paths).isdisjoint(arquivos))

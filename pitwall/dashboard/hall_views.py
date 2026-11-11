@@ -7,6 +7,7 @@ from pathlib import Path
 
 from dateutil.relativedelta import relativedelta
 
+from pitwall.dashboard import photo_archive
 from pitwall.dashboard.components import data_editorial
 from pitwall.dashboard.fan_views import chapter_header, href, text
 from pitwall.dashboard.journey import race_identity
@@ -115,9 +116,18 @@ def _titles(profile, year, round_):
                         unsafe_allow_html=True)
 
 
-def _profile(profile, year, round_, cutoff):
-    st.markdown(chapter_header(profile["nome"], profile["bio"][language()]), unsafe_allow_html=True)
-    st.caption("{} · {}".format(profile["pais"][language()], "–".join(map(str, profile["anos_atividade"]))))
+def _profile(root, driver, profile, year, round_, cutoff):
+    covers, cars, moments = photo_archive.driver_photos(root, driver, profile)
+    if covers:
+        intro, photograph = st.columns([1.1, 1], vertical_alignment="center")
+    else:
+        intro = st.container()
+    with intro:
+        st.markdown(chapter_header(profile["nome"], profile["bio"][language()]), unsafe_allow_html=True)
+        st.caption("{} · {}".format(profile["pais"][language()], "–".join(map(str, profile["anos_atividade"]))))
+    if covers:
+        with photograph:
+            photo_archive.gallery(covers, cover=True)
     stats = [
         ("Títulos mundiais", len(profile["titulos"])), ("Largadas", profile["largadas"]),
         ("Vitórias", profile["vitorias"]), ("Pódios", profile["podios"]), ("Poles", profile["poles"]),
@@ -128,12 +138,14 @@ def _profile(profile, year, round_, cutoff):
     st.caption(translate("Estatísticas do Mundial até {}.").format(data_editorial(cutoff)))
     st.subheader("Títulos mundiais de pilotos")
     _titles(profile, year, round_)
+    photo_archive.gallery(cars, "Carros campeões")
     st.subheader("Marcos da carreira")
     st.markdown('<dl class="pw-hall-milestones"><div><dt>{}</dt><dd>{}</dd></div>'
                 '<div><dt>{}</dt><dd>{}</dd></div></dl>'.format(
                     text("Estreia no Mundial"), _race_link(profile["estreia"]),
                     text("Primeira vitória"), _race_link(profile["primeira_vitoria"]),
                 ), unsafe_allow_html=True)
+    photo_archive.gallery(moments, "Momentos históricos")
     if profile.get("perfil_pitwall"):
         url = href("Pilotos", visao="perfil", piloto=profile["perfil_pitwall"], temporada=year, gp=round_)
         st.markdown(_link(translate("Ver análise por condições no Pitwall Lab"), url), unsafe_allow_html=True)
@@ -241,6 +253,7 @@ def render(root, year, round_, duel=False):
         links.insert(0, _link(translate("Todos os campeões"), hall_url(year, round_)))
     if not duel:
         links.append(_link(translate("Duelo de Campeões"), duel_url(year, round_, requested if champion else None)))
+    links.append(_link(translate("Acervo fotográfico"), photo_archive.archive_url(year, round_)))
     st.markdown('<nav class="pw-hall-links" aria-label="{}">{}</nav>'.format(
         text("Navegação do Hall da Fama"), "".join(links),
     ), unsafe_allow_html=True)
@@ -256,7 +269,7 @@ def render(root, year, round_, duel=False):
         st.selectbox("Buscar um campeão", options, index=options.index(requested) if champion else None,
                      format_func=lambda key: champions[key]["nome"], key="hall_champion", on_change=choose, width=380)
         if champion:
-            _profile(champion, year, round_, snapshot["corte"])
+            _profile(root, requested, champion, year, round_, snapshot["corte"])
         else:
             _directory(champions, year, round_)
 

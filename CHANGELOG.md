@@ -4,6 +4,8 @@
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
 
+O Acervo fotográfico reúne fotografias de campeões, carros, equipes e corridas. As fichas trazem legendas bilíngues, autoria, licença e acesso aos originais. A galeria usa versões WebP locais e permite consultar os carros por temporada.
+
 ## 0.18.0 — 2026-11-11
 
 Pilotos ganha um Hall da Fama com os 36 campeões mundiais de Fórmula 1 de 1950 a 2026. A lista permite buscar e ordenar os campeões. Cada perfil reúne resumo biográfico, estreia, primeira vitória, estatísticas e os GPs decisivos dos títulos.

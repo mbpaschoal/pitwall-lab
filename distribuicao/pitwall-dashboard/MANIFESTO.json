@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "4ccc3b83991dd65973bd62ffdeb6b994b3b8bae259b2a4da6a2ade6b1eec5506",
+  "apresentacao_build_sha256": "984f5b3162274a7ff4567e9bd0dd9880cdc1c6cbf3f02d4f9a207da2943e2544",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "163af39f437f68226e2435987e686ef5e8e771eb69723c0a538b676a88b02fb5",
+      "sha256_destino": "bc79636fb82fd59241bb2c341f9b28aa4a1b691429c094b467661eab1a8ce126",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "e9156a4e6142267e1783d3483a652b6994a9263782dfee4045bdaed006c1d394",
-      "sha256_origem": "58daf77fb0f75278d0be7870a4c62ca3e6f05e0f6e6debb9b9f624c7064014f8"
+      "sha256_destino": "a83604253c121d785de23a3bda259ed12e2114695e622d3a4a77c412aeb7ea59",
+      "sha256_origem": "742f21d1b8281705dbeeeaeea72c9ac41f7a3e63571d68b4717d4f80feecdc97"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "1ea6437520bcd251d0230f1e9cac3591acc873fe859a40b54573acc5fc380bae",
-      "sha256_origem": "9050f35f6792e48580c30f85729cd59e832beb733f02675dbfdca77528d2619b"
+      "sha256_destino": "e7a65d29245da8d29d04081e0db9a055721432b396437bb11a0dfca5a3c00da7",
+      "sha256_origem": "bdcf746a4bbb6f88d0dc126804fe7a552acca2b6c3ca9bd2c1d7721dc8b9d926"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2687,6 +2687,13 @@
       "sha256_origem": "6c7c3b4cf82a346ec626135444001ec5e156481545ba0889d2ec30b715948dfb"
     },
     {
+      "caminho": "frontend_assets/acervo_fotografico.json",
+      "fonte": "frontend_assets/acervo_fotografico.json",
+      "modo": "copia",
+      "sha256_destino": "1700cfa82944e09faff967c61ea99fe4d02b81db8f8f37bd3eba80de0ba176fe",
+      "sha256_origem": "1700cfa82944e09faff967c61ea99fe4d02b81db8f8f37bd3eba80de0ba176fe"
+    },
+    {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
       "fonte": "frontend_assets/avaliacao_posterior_mexico_2026.json",
       "modo": "copia",
@@ -2743,11 +2750,18 @@
       "sha256_origem": "66f74b2556d9c260c774e1103e4d8b346e42ac23c5d063e8e9a4d8d71f8b6585"
     },
     {
+      "caminho": "frontend_assets/inventario_campeoes.json",
+      "fonte": "frontend_assets/inventario_campeoes.json",
+      "modo": "copia",
+      "sha256_destino": "12c200444ed4c34f818b7b80c0d6f364515e31819e238208300443168fecb0b7",
+      "sha256_origem": "12c200444ed4c34f818b7b80c0d6f364515e31819e238208300443168fecb0b7"
+    },
+    {
       "caminho": "frontend_assets/journey.css",
       "fonte": "frontend_assets/journey.css",
       "modo": "copia",
-      "sha256_destino": "9a3de36c608d2171d56f6ef175a40208f6095fbfcc46ef9ddc6a367afb293533",
-      "sha256_origem": "9a3de36c608d2171d56f6ef175a40208f6095fbfcc46ef9ddc6a367afb293533"
+      "sha256_destino": "9164d53c26e4dfb0b2673382bce33f92c8f14060d21a3f6c5771c08c9894abe8",
+      "sha256_origem": "9164d53c26e4dfb0b2673382bce33f92c8f14060d21a3f6c5771c08c9894abe8"
     },
     {
       "caminho": "frontend_assets/motion.js",
@@ -2865,8 +2879,8 @@
       "caminho": "pitwall/dashboard/app.py",
       "fonte": "pitwall/dashboard/app.py",
       "modo": "copia",
-      "sha256_destino": "a5f2fbcb63dd00c2915e673e474b984e29dc2b4711237ad5b6a97750de8bd841",
-      "sha256_origem": "a5f2fbcb63dd00c2915e673e474b984e29dc2b4711237ad5b6a97750de8bd841"
+      "sha256_destino": "bf397bb64a87ab10dacc361292fa0e9cb31b29c41590bc84a5a58988b8835749",
+      "sha256_origem": "bf397bb64a87ab10dacc361292fa0e9cb31b29c41590bc84a5a58988b8835749"
     },
     {
       "caminho": "pitwall/dashboard/archive_cache.py",
@@ -2914,8 +2928,8 @@
       "caminho": "pitwall/dashboard/hall_views.py",
       "fonte": "pitwall/dashboard/hall_views.py",
       "modo": "copia",
-      "sha256_destino": "b8c44f5f18a0d63534e1e895d9543e1ed41ea3a53062d393f3747124d4a3eae6",
-      "sha256_origem": "b8c44f5f18a0d63534e1e895d9543e1ed41ea3a53062d393f3747124d4a3eae6"
+      "sha256_destino": "089cd2cee614b700a2767f7d7cd0dc1b105a4a5c95dbfa3ef25866a6d7f0058e",
+      "sha256_origem": "089cd2cee614b700a2767f7d7cd0dc1b105a4a5c95dbfa3ef25866a6d7f0058e"
     },
     {
       "caminho": "pitwall/dashboard/hero_assets.py",
@@ -2967,6 +2981,13 @@
       "sha256_origem": "ad80076035c636441f444ac28d9c09c6c54b2d524ec2246dc960664784427632"
     },
     {
+      "caminho": "pitwall/dashboard/photo_archive.py",
+      "fonte": "pitwall/dashboard/photo_archive.py",
+      "modo": "copia",
+      "sha256_destino": "a2df559ac19d760e17c5602af9d90930213220cf9f4f38336970952fa5a3b778",
+      "sha256_origem": "a2df559ac19d760e17c5602af9d90930213220cf9f4f38336970952fa5a3b778"
+    },
+    {
       "caminho": "pitwall/dashboard/pilot_views.py",
       "fonte": "pitwall/dashboard/pilot_views.py",
       "modo": "copia",
@@ -3012,8 +3033,8 @@
       "caminho": "pitwall/dashboard/team_views.py",
       "fonte": "pitwall/dashboard/team_views.py",
       "modo": "copia",
-      "sha256_destino": "ef05d36b7fc340067773a4a662fd51942e6b3531d08c565ecd6d4e3a71ee4da8",
-      "sha256_origem": "ef05d36b7fc340067773a4a662fd51942e6b3531d08c565ecd6d4e3a71ee4da8"
+      "sha256_destino": "41ed4a77bc458d0798dc7f5ded49ddc179a14fe928e2aa32661e751b12a5a16f",
+      "sha256_origem": "41ed4a77bc458d0798dc7f5ded49ddc179a14fe928e2aa32661e751b12a5a16f"
     },
     {
       "caminho": "pitwall/dashboard/tokens.py",
@@ -3166,8 +3187,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "9424d0fa0be10b8705623b3ccab2ee000fbbe6a695af02e15507d7c9e870f3c8",
-      "sha256_origem": "9424d0fa0be10b8705623b3ccab2ee000fbbe6a695af02e15507d7c9e870f3c8"
+      "sha256_destino": "a89decbc1126c58acb7f89e88054f4c649f3403958ca1d7c11ce6034de64e45e",
+      "sha256_origem": "a89decbc1126c58acb7f89e88054f4c649f3403958ca1d7c11ce6034de64e45e"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -3371,6 +3392,580 @@
       "modo": "gerado",
       "sha256_destino": "fae2ae892c13355a94724bb0cf59445e572968198becf7f59fb65b43cc710b69",
       "sha256_origem": "fae2ae892c13355a94724bb0cf59445e572968198becf7f59fb65b43cc710b69"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-r25-5d5bc4051bfa-2400.webp",
+      "fonte": "static/pitwall-archive/alonso-r25-5d5bc4051bfa-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "47635eea6d9c89b5b58a8fa928e293462a1876d38b71abbfed4230c64478e0e1",
+      "sha256_origem": "47635eea6d9c89b5b58a8fa928e293462a1876d38b71abbfed4230c64478e0e1"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-r25-5d5bc4051bfa-960.webp",
+      "fonte": "static/pitwall-archive/alonso-r25-5d5bc4051bfa-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b4da66a24731b2c94018ab5b06ea69edb1c2e308c39e136c39c69cfbf09dafe2",
+      "sha256_origem": "b4da66a24731b2c94018ab5b06ea69edb1c2e308c39e136c39c69cfbf09dafe2"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-r26-c4b945d0e90d-2048.webp",
+      "fonte": "static/pitwall-archive/alonso-r26-c4b945d0e90d-2048.webp",
+      "modo": "copia",
+      "sha256_destino": "d4826a1c47f125bbe310b0a7c0d6d8251905610ec415df5bc79a26483a473cea",
+      "sha256_origem": "d4826a1c47f125bbe310b0a7c0d6d8251905610ec415df5bc79a26483a473cea"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-r26-c4b945d0e90d-960.webp",
+      "fonte": "static/pitwall-archive/alonso-r26-c4b945d0e90d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cdfc1d9317e96da3cc1444101587f248edebcb1605f72ea4e1e28900791db728",
+      "sha256_origem": "cdfc1d9317e96da3cc1444101587f248edebcb1605f72ea4e1e28900791db728"
+    },
+    {
+      "caminho": "static/pitwall-archive/antonelli-portrait-9553c5edcb71-2400.webp",
+      "fonte": "static/pitwall-archive/antonelli-portrait-9553c5edcb71-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "79332c5dc8db1d0b61486cddbdd6d9f71ce1e8acf407d6a9bab2a6f726c1ae9c",
+      "sha256_origem": "79332c5dc8db1d0b61486cddbdd6d9f71ce1e8acf407d6a9bab2a6f726c1ae9c"
+    },
+    {
+      "caminho": "static/pitwall-archive/antonelli-portrait-9553c5edcb71-960.webp",
+      "fonte": "static/pitwall-archive/antonelli-portrait-9553c5edcb71-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4fb536a5b11e08887e0812a80e227c7b93852f6681e1f6c118db199d543189bc",
+      "sha256_origem": "4fb536a5b11e08887e0812a80e227c7b93852f6681e1f6c118db199d543189bc"
+    },
+    {
+      "caminho": "static/pitwall-archive/antonelli-w17-08b1d6bdc5d1-2400.webp",
+      "fonte": "static/pitwall-archive/antonelli-w17-08b1d6bdc5d1-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "66f6f620502a3ba447f85e8fcbb118eee97201e6dd86613ecba445ea4e55c09a",
+      "sha256_origem": "66f6f620502a3ba447f85e8fcbb118eee97201e6dd86613ecba445ea4e55c09a"
+    },
+    {
+      "caminho": "static/pitwall-archive/antonelli-w17-08b1d6bdc5d1-960.webp",
+      "fonte": "static/pitwall-archive/antonelli-w17-08b1d6bdc5d1-960.webp",
+      "modo": "copia",
+      "sha256_destino": "06be4ae1dcceba8b51c2d8c9de0daec16c18d0b19103a46f29019b8abb2fc5c6",
+      "sha256_origem": "06be4ae1dcceba8b51c2d8c9de0daec16c18d0b19103a46f29019b8abb2fc5c6"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-ferrari-500-736c124bbd8d-2400.webp",
+      "fonte": "static/pitwall-archive/ascari-ferrari-500-736c124bbd8d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "21954982892e1f13c78baa1901c180f1f51efd6708de534b75514ba0abe2d292",
+      "sha256_origem": "21954982892e1f13c78baa1901c180f1f51efd6708de534b75514ba0abe2d292"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-ferrari-500-736c124bbd8d-960.webp",
+      "fonte": "static/pitwall-archive/ascari-ferrari-500-736c124bbd8d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9ad4081c51135ff4d9161845ad27062bb499f304201a281a453f1f4f5c652cdf",
+      "sha256_origem": "9ad4081c51135ff4d9161845ad27062bb499f304201a281a453f1f4f5c652cdf"
+    },
+    {
+      "caminho": "static/pitwall-archive/benetton-b194-97849f00c1e6-2400.webp",
+      "fonte": "static/pitwall-archive/benetton-b194-97849f00c1e6-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e6da97251d7153a5bb6f5e9cd427d5311f0739a605a4311f84a6c31a4839333c",
+      "sha256_origem": "e6da97251d7153a5bb6f5e9cd427d5311f0739a605a4311f84a6c31a4839333c"
+    },
+    {
+      "caminho": "static/pitwall-archive/benetton-b194-97849f00c1e6-960.webp",
+      "fonte": "static/pitwall-archive/benetton-b194-97849f00c1e6-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c01c389f28fb7ffeb85d1a7ab2de62b782f7bff8e0af6ae38e6ecdf91afe370e",
+      "sha256_origem": "c01c389f28fb7ffeb85d1a7ab2de62b782f7bff8e0af6ae38e6ecdf91afe370e"
+    },
+    {
+      "caminho": "static/pitwall-archive/benetton-b195-f0a287ce3665-2218.webp",
+      "fonte": "static/pitwall-archive/benetton-b195-f0a287ce3665-2218.webp",
+      "modo": "copia",
+      "sha256_destino": "cc208e2528ef870711fb30eb3b83aabea86f9c208f9ebd528519cf83ca701e2c",
+      "sha256_origem": "cc208e2528ef870711fb30eb3b83aabea86f9c208f9ebd528519cf83ca701e2c"
+    },
+    {
+      "caminho": "static/pitwall-archive/benetton-b195-f0a287ce3665-960.webp",
+      "fonte": "static/pitwall-archive/benetton-b195-f0a287ce3665-960.webp",
+      "modo": "copia",
+      "sha256_destino": "08bc400c6ac11823c7e355b10234218716c28e6f0492defff8d4ad2acdebf157",
+      "sha256_origem": "08bc400c6ac11823c7e355b10234218716c28e6f0492defff8d4ad2acdebf157"
+    },
+    {
+      "caminho": "static/pitwall-archive/button-bgp-001-727c3354cf96-2400.webp",
+      "fonte": "static/pitwall-archive/button-bgp-001-727c3354cf96-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "585f0104b0efaf8d873983f20e60a5fdb23c1c7ee5f9c8b6de451cef784987b3",
+      "sha256_origem": "585f0104b0efaf8d873983f20e60a5fdb23c1c7ee5f9c8b6de451cef784987b3"
+    },
+    {
+      "caminho": "static/pitwall-archive/button-bgp-001-727c3354cf96-960.webp",
+      "fonte": "static/pitwall-archive/button-bgp-001-727c3354cf96-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3e3f0ffd60cf662cba41b68a69f13d5898f507758279a91c35c1ca8a91277e96",
+      "sha256_origem": "3e3f0ffd60cf662cba41b68a69f13d5898f507758279a91c35c1ca8a91277e96"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-alfa-159-b1eac18f4324-2400.webp",
+      "fonte": "static/pitwall-archive/fangio-alfa-159-b1eac18f4324-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "f6d25cf744c460d85202d66d059947967b66707add91a8fbdf6bfacd7d56f742",
+      "sha256_origem": "f6d25cf744c460d85202d66d059947967b66707add91a8fbdf6bfacd7d56f742"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-alfa-159-b1eac18f4324-960.webp",
+      "fonte": "static/pitwall-archive/fangio-alfa-159-b1eac18f4324-960.webp",
+      "modo": "copia",
+      "sha256_destino": "ffe57ce0df601a1e4274752a2aad37a9cb74bfc5c956814da1b7258288229263",
+      "sha256_origem": "ffe57ce0df601a1e4274752a2aad37a9cb74bfc5c956814da1b7258288229263"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-maserati-560df092411f-2400.webp",
+      "fonte": "static/pitwall-archive/fangio-maserati-560df092411f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2e39cacd421bf241c4fa65b746a4e1266535cb0f59bc202a79f8fb4c7cb2f7ba",
+      "sha256_origem": "2e39cacd421bf241c4fa65b746a4e1266535cb0f59bc202a79f8fb4c7cb2f7ba"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-maserati-560df092411f-960.webp",
+      "fonte": "static/pitwall-archive/fangio-maserati-560df092411f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "2804a1d319943c68b91b4dd4a71c51710e3855dc27790f02b12143ebb6702652",
+      "sha256_origem": "2804a1d319943c68b91b4dd4a71c51710e3855dc27790f02b12143ebb6702652"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-nurburgring-1954-020463d3cf44-2400.webp",
+      "fonte": "static/pitwall-archive/fangio-nurburgring-1954-020463d3cf44-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c73ce85db262b23547ba91617fff2edc9ac01773e9b509adb46396a4c920940c",
+      "sha256_origem": "c73ce85db262b23547ba91617fff2edc9ac01773e9b509adb46396a4c920940c"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-nurburgring-1954-020463d3cf44-960.webp",
+      "fonte": "static/pitwall-archive/fangio-nurburgring-1954-020463d3cf44-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b2942f0ec036341714edc38e65ca5620b4d60272802fc05189285481f74229e5",
+      "sha256_origem": "b2942f0ec036341714edc38e65ca5620b4d60272802fc05189285481f74229e5"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-nurburgring-1957-9faf177dd1b5-1682.webp",
+      "fonte": "static/pitwall-archive/fangio-nurburgring-1957-9faf177dd1b5-1682.webp",
+      "modo": "copia",
+      "sha256_destino": "8e9246d4a3888217c3c95af0c9f10e049923acf7d1f3d52e69cb2ed3b7fe624a",
+      "sha256_origem": "8e9246d4a3888217c3c95af0c9f10e049923acf7d1f3d52e69cb2ed3b7fe624a"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-nurburgring-1957-9faf177dd1b5-960.webp",
+      "fonte": "static/pitwall-archive/fangio-nurburgring-1957-9faf177dd1b5-960.webp",
+      "modo": "copia",
+      "sha256_destino": "af84eebc126c5347005f880093c5bbb2edbedecb79090ca729a52a4949255ddc",
+      "sha256_origem": "af84eebc126c5347005f880093c5bbb2edbedecb79090ca729a52a4949255ddc"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-portrait-199f1c8e85a8-2400.webp",
+      "fonte": "static/pitwall-archive/fangio-portrait-199f1c8e85a8-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "74cdd3aff849dcb06e353805e0bceba4b65f2ff3e80119ee310ea927677bad99",
+      "sha256_origem": "74cdd3aff849dcb06e353805e0bceba4b65f2ff3e80119ee310ea927677bad99"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-portrait-199f1c8e85a8-960.webp",
+      "fonte": "static/pitwall-archive/fangio-portrait-199f1c8e85a8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "ef22a0316bc59c8a6ea09b61dba9e731815004dbed6eb21d28f5c6508eae054f",
+      "sha256_origem": "ef22a0316bc59c8a6ea09b61dba9e731815004dbed6eb21d28f5c6508eae054f"
+    },
+    {
+      "caminho": "static/pitwall-archive/farina-alfetta-d98c6a7138f7-2400.webp",
+      "fonte": "static/pitwall-archive/farina-alfetta-d98c6a7138f7-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e4f34192877fc72d32f137278265b9b7a2c42d49ec373ffbfc33e3eac172e89d",
+      "sha256_origem": "e4f34192877fc72d32f137278265b9b7a2c42d49ec373ffbfc33e3eac172e89d"
+    },
+    {
+      "caminho": "static/pitwall-archive/farina-alfetta-d98c6a7138f7-960.webp",
+      "fonte": "static/pitwall-archive/farina-alfetta-d98c6a7138f7-960.webp",
+      "modo": "copia",
+      "sha256_destino": "25d1d7c0ee3c1b19b57d9bea66cf47245a1ab5c47e48340d52c0099676a14134",
+      "sha256_origem": "25d1d7c0ee3c1b19b57d9bea66cf47245a1ab5c47e48340d52c0099676a14134"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-maranello-731838b2aa71-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-maranello-731838b2aa71-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7ef5783461b8342c6c3f0a872b4e75cce48199541f56dc9f4c48f863a71a82d1",
+      "sha256_origem": "7ef5783461b8342c6c3f0a872b4e75cce48199541f56dc9f4c48f863a71a82d1"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-maranello-731838b2aa71-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-maranello-731838b2aa71-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9a4cdce36e689346f034a908b2df37dd6c8cbfbe605f8c34efefbc4071552fe5",
+      "sha256_origem": "9a4cdce36e689346f034a908b2df37dd6c8cbfbe605f8c34efefbc4071552fe5"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-monza-pit-e438963305e1-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-monza-pit-e438963305e1-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7e61a303c872bd59c02c82859b93187ae55b3bcef519bd824c7e0a54d6c886b0",
+      "sha256_origem": "7e61a303c872bd59c02c82859b93187ae55b3bcef519bd824c7e0a54d6c886b0"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-monza-pit-e438963305e1-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-monza-pit-e438963305e1-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c80f519068037a6764d30e4639b31eb58c8694ad154976ca0200fb6460a376d0",
+      "sha256_origem": "c80f519068037a6764d30e4639b31eb58c8694ad154976ca0200fb6460a376d0"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-interlagos-2008-417d8897e6a4-2400.webp",
+      "fonte": "static/pitwall-archive/hamilton-interlagos-2008-417d8897e6a4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e186f86c94dd1323885a42022059e0c445aa9ddb4135999a3e8b949a1464853b",
+      "sha256_origem": "e186f86c94dd1323885a42022059e0c445aa9ddb4135999a3e8b949a1464853b"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-interlagos-2008-417d8897e6a4-960.webp",
+      "fonte": "static/pitwall-archive/hamilton-interlagos-2008-417d8897e6a4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b9afe05ac8ed6b9b156d0cff4bb07e3c94dc03baba1a0279852588be15154d34",
+      "sha256_origem": "b9afe05ac8ed6b9b156d0cff4bb07e3c94dc03baba1a0279852588be15154d34"
+    },
+    {
+      "caminho": "static/pitwall-archive/massa-interlagos-2008-2107c6b0f3a0-2400.webp",
+      "fonte": "static/pitwall-archive/massa-interlagos-2008-2107c6b0f3a0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7c47e2a7c0afcc640413ceb43bb7ce9578dc01bc52e21e74f03fd8ca5768676c",
+      "sha256_origem": "7c47e2a7c0afcc640413ceb43bb7ce9578dc01bc52e21e74f03fd8ca5768676c"
+    },
+    {
+      "caminho": "static/pitwall-archive/massa-interlagos-2008-2107c6b0f3a0-960.webp",
+      "fonte": "static/pitwall-archive/massa-interlagos-2008-2107c6b0f3a0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "80e210242883b9ebe4ca23ea90bbe0afd759d4bbaa8266838d3996588bcfad41",
+      "sha256_origem": "80e210242883b9ebe4ca23ea90bbe0afd759d4bbaa8266838d3996588bcfad41"
+    },
+    {
+      "caminho": "static/pitwall-archive/mcl38-suzuka-4a4042c68643-2400.webp",
+      "fonte": "static/pitwall-archive/mcl38-suzuka-4a4042c68643-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b782947388ad7eae93bd01633b73879719b4188a223b1454ca72d8914966505e",
+      "sha256_origem": "b782947388ad7eae93bd01633b73879719b4188a223b1454ca72d8914966505e"
+    },
+    {
+      "caminho": "static/pitwall-archive/mcl38-suzuka-4a4042c68643-960.webp",
+      "fonte": "static/pitwall-archive/mcl38-suzuka-4a4042c68643-960.webp",
+      "modo": "copia",
+      "sha256_destino": "2536689d610f6d49a4f2ce2ea9c0a4b029190abd4149e17a66ace01ab0b028d0",
+      "sha256_origem": "2536689d610f6d49a4f2ce2ea9c0a4b029190abd4149e17a66ace01ab0b028d0"
+    },
+    {
+      "caminho": "static/pitwall-archive/mcl39-suzuka-8fe89191321e-2400.webp",
+      "fonte": "static/pitwall-archive/mcl39-suzuka-8fe89191321e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "30d397008536566f24b6d5ab60cb0142e10997bbdc47c4e1deceeb85d5edd79a",
+      "sha256_origem": "30d397008536566f24b6d5ab60cb0142e10997bbdc47c4e1deceeb85d5edd79a"
+    },
+    {
+      "caminho": "static/pitwall-archive/mcl39-suzuka-8fe89191321e-960.webp",
+      "fonte": "static/pitwall-archive/mcl39-suzuka-8fe89191321e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "eae516cb0b64750b0e007e82c49bb4771c932f9f5b9fa8f3e044d44b596e5230",
+      "sha256_origem": "eae516cb0b64750b0e007e82c49bb4771c932f9f5b9fa8f3e044d44b596e5230"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-crew-2010-a716384ffcf0-2400.webp",
+      "fonte": "static/pitwall-archive/mclaren-crew-2010-a716384ffcf0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c3c8d31c178b66f3b557fb253a43b308f6f223dfe347f583fc80ec5164738a5c",
+      "sha256_origem": "c3c8d31c178b66f3b557fb253a43b308f6f223dfe347f583fc80ec5164738a5c"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-crew-2010-a716384ffcf0-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-crew-2010-a716384ffcf0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b2aadc905791b4d29c9f5ec7bcc85217c8f4f16cdcf404aa34a0761f46cf1d00",
+      "sha256_origem": "b2aadc905791b4d29c9f5ec7bcc85217c8f4f16cdcf404aa34a0761f46cf1d00"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-w10-43935052d55b-2400.webp",
+      "fonte": "static/pitwall-archive/mercedes-w10-43935052d55b-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c7311b880680e973c964d8896720866256e56d529279aa01e653d9d4971f370b",
+      "sha256_origem": "c7311b880680e973c964d8896720866256e56d529279aa01e653d9d4971f370b"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-w10-43935052d55b-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-w10-43935052d55b-960.webp",
+      "modo": "copia",
+      "sha256_destino": "175d0bcbd1c92d9af048149e4a2f3e1b775e69a5c04341f7c6a2ad10211ba411",
+      "sha256_origem": "175d0bcbd1c92d9af048149e4a2f3e1b775e69a5c04341f7c6a2ad10211ba411"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-w11-009ad2f4a76a-2400.webp",
+      "fonte": "static/pitwall-archive/mercedes-w11-009ad2f4a76a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "952d87c3b6ba9b70a017fca96f589b77c955492596a463aeba14dabd3caf35b5",
+      "sha256_origem": "952d87c3b6ba9b70a017fca96f589b77c955492596a463aeba14dabd3caf35b5"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-w11-009ad2f4a76a-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-w11-009ad2f4a76a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "78c46a861a21d3127a1b35426af2952d93e766f8699cc80a8cef5f1662e15fdd",
+      "sha256_origem": "78c46a861a21d3127a1b35426af2952d93e766f8699cc80a8cef5f1662e15fdd"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-brands-hatch-1985-584e27e05d95-2400.webp",
+      "fonte": "static/pitwall-archive/prost-brands-hatch-1985-584e27e05d95-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "70c2f1f13ecb5ca8687d71b851624b2fcfd8cb5f0ca77ee70f0f86ca9a0ab1bc",
+      "sha256_origem": "70c2f1f13ecb5ca8687d71b851624b2fcfd8cb5f0ca77ee70f0f86ca9a0ab1bc"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-brands-hatch-1985-584e27e05d95-960.webp",
+      "fonte": "static/pitwall-archive/prost-brands-hatch-1985-584e27e05d95-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cbd8266ddfcf6119c99e2d99385e2d734bbdecf258b658747cadc53c01201615",
+      "sha256_origem": "cbd8266ddfcf6119c99e2d99385e2d734bbdecf258b658747cadc53c01201615"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-fw15c-19356d77a0bf-2400.webp",
+      "fonte": "static/pitwall-archive/prost-fw15c-19356d77a0bf-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5a65839c8f11896398cae716e01b94ea46f9884d5b5e1d9d78a3a1a238a8c173",
+      "sha256_origem": "5a65839c8f11896398cae716e01b94ea46f9884d5b5e1d9d78a3a1a238a8c173"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-fw15c-19356d77a0bf-960.webp",
+      "fonte": "static/pitwall-archive/prost-fw15c-19356d77a0bf-960.webp",
+      "modo": "copia",
+      "sha256_destino": "625499695f7e766811d8122b7c901761758688a97d006817f437bc3046afe6e1",
+      "sha256_origem": "625499695f7e766811d8122b7c901761758688a97d006817f437bc3046afe6e1"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-mp4-5-53e9fa01248e-2400.webp",
+      "fonte": "static/pitwall-archive/prost-mp4-5-53e9fa01248e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a151dfa0d2ada6b26975724d46703991405e8143cd742ce0a71f4c86276039b8",
+      "sha256_origem": "a151dfa0d2ada6b26975724d46703991405e8143cd742ce0a71f4c86276039b8"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-mp4-5-53e9fa01248e-960.webp",
+      "fonte": "static/pitwall-archive/prost-mp4-5-53e9fa01248e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "fcc2788be1e6b4f31a26246a565e1bdbb5a451b08e9a73c9bbd8aff7d2d0774e",
+      "sha256_origem": "fcc2788be1e6b4f31a26246a565e1bdbb5a451b08e9a73c9bbd8aff7d2d0774e"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-portrait-d1f241f1c19c-2400.webp",
+      "fonte": "static/pitwall-archive/prost-portrait-d1f241f1c19c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ac7a638ae650dde542ec8f4d5ed6e3dca13e18812da767581b65e9cdf530179f",
+      "sha256_origem": "ac7a638ae650dde542ec8f4d5ed6e3dca13e18812da767581b65e9cdf530179f"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-portrait-d1f241f1c19c-960.webp",
+      "fonte": "static/pitwall-archive/prost-portrait-d1f241f1c19c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "56de72dfe04797ed4d395ce93a466aed1def3de30732dade90e27b1a12aa8d47",
+      "sha256_origem": "56de72dfe04797ed4d395ce93a466aed1def3de30732dade90e27b1a12aa8d47"
+    },
+    {
+      "caminho": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-2400.webp",
+      "fonte": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ce08d9e6d410c3163704c04dca925b64ba9db0843184d3465152879af54c18d2",
+      "sha256_origem": "ce08d9e6d410c3163704c04dca925b64ba9db0843184d3465152879af54c18d2"
+    },
+    {
+      "caminho": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-960.webp",
+      "fonte": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e0c5d30367f1111dfc7aaf8852869f9e434f412a6eae1a0b3cc5633536f30f8d",
+      "sha256_origem": "e0c5d30367f1111dfc7aaf8852869f9e434f412a6eae1a0b3cc5633536f30f8d"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-f2004-2c60e8b962ca-2400.webp",
+      "fonte": "static/pitwall-archive/schumacher-f2004-2c60e8b962ca-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "4e1dd2e4f2fbbbe13173a2da649cb6b333dde6320c82d99aaf78703110c36e84",
+      "sha256_origem": "4e1dd2e4f2fbbbe13173a2da649cb6b333dde6320c82d99aaf78703110c36e84"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-f2004-2c60e8b962ca-960.webp",
+      "fonte": "static/pitwall-archive/schumacher-f2004-2c60e8b962ca-960.webp",
+      "modo": "copia",
+      "sha256_destino": "65c0e286d8b5bbcb21bfbe367dc60c7e3cb19e8e06c223edfac02d378c66619f",
+      "sha256_origem": "65c0e286d8b5bbcb21bfbe367dc60c7e3cb19e8e06c223edfac02d378c66619f"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-2400.webp",
+      "fonte": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7cd903a82d4a63012672d16982d9a13bc6ad89f1071510d77905ebc87a653412",
+      "sha256_origem": "7cd903a82d4a63012672d16982d9a13bc6ad89f1071510d77905ebc87a653412"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-960.webp",
+      "fonte": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b2b3b0400544195ba8b388ae5382844801ab18fafc73ea2e4e881f75b9cbcef6",
+      "sha256_origem": "b2b3b0400544195ba8b388ae5382844801ab18fafc73ea2e4e881f75b9cbcef6"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mp4-5b-2241955f6ebb-2400.webp",
+      "fonte": "static/pitwall-archive/senna-mp4-5b-2241955f6ebb-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a73aff586ce43816680ac7bd2f39384c44e093866172286162aee74dd4a83161",
+      "sha256_origem": "a73aff586ce43816680ac7bd2f39384c44e093866172286162aee74dd4a83161"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mp4-5b-2241955f6ebb-960.webp",
+      "fonte": "static/pitwall-archive/senna-mp4-5b-2241955f6ebb-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b97ae33ad938b6eb5c00f9cc64711aaa4b7d177e8848851ef7b1fd64c3f645e1",
+      "sha256_origem": "b97ae33ad938b6eb5c00f9cc64711aaa4b7d177e8848851ef7b1fd64c3f645e1"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-phoenix-1991-ef19fe8abc06-2400.webp",
+      "fonte": "static/pitwall-archive/senna-phoenix-1991-ef19fe8abc06-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "f1f2917562fbfd1dfc72a7099fc7032f20deb2b37407bb4d35859c1befa6d5e8",
+      "sha256_origem": "f1f2917562fbfd1dfc72a7099fc7032f20deb2b37407bb4d35859c1befa6d5e8"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-phoenix-1991-ef19fe8abc06-960.webp",
+      "fonte": "static/pitwall-archive/senna-phoenix-1991-ef19fe8abc06-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3023cdfc254872df2916be3f1cfd523249773535dfdfdef2ed4cdedc04bad54e",
+      "sha256_origem": "3023cdfc254872df2916be3f1cfd523249773535dfdfdef2ed4cdedc04bad54e"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-portrait-06bda35004a8-1868.webp",
+      "fonte": "static/pitwall-archive/senna-portrait-06bda35004a8-1868.webp",
+      "modo": "copia",
+      "sha256_destino": "5d40d7cc3552af9fc2e1a920b3f824ce4d5e3db770d2a4cac9f3ff81e14e6ff3",
+      "sha256_origem": "5d40d7cc3552af9fc2e1a920b3f824ce4d5e3db770d2a4cac9f3ff81e14e6ff3"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-portrait-06bda35004a8-960.webp",
+      "fonte": "static/pitwall-archive/senna-portrait-06bda35004a8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "febb0cad5d2349391cab0cd024a454cce8fec5134fa4db8f7f1cd6e8cac3e7c5",
+      "sha256_origem": "febb0cad5d2349391cab0cd024a454cce8fec5134fa4db8f7f1cd6e8cac3e7c5"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw11-ddae8144685d-2400.webp",
+      "fonte": "static/pitwall-archive/williams-fw11-ddae8144685d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "4063605cf89a9e5366d1d7c345820b05081ce14f4fa182df048d468245ab8d78",
+      "sha256_origem": "4063605cf89a9e5366d1d7c345820b05081ce14f4fa182df048d468245ab8d78"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw11-ddae8144685d-960.webp",
+      "fonte": "static/pitwall-archive/williams-fw11-ddae8144685d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5c41f7b428a3bfb3ed9163a45bbc262c49213d215da84aeffb3d26a2c27a56cb",
+      "sha256_origem": "5c41f7b428a3bfb3ed9163a45bbc262c49213d215da84aeffb3d26a2c27a56cb"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw11b-27332bcd9798-2400.webp",
+      "fonte": "static/pitwall-archive/williams-fw11b-27332bcd9798-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "078f4918ed83a18cb7c3c49586c77f4e1e93a6c6fa6988b1f283e97f76d9412f",
+      "sha256_origem": "078f4918ed83a18cb7c3c49586c77f4e1e93a6c6fa6988b1f283e97f76d9412f"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw11b-27332bcd9798-960.webp",
+      "fonte": "static/pitwall-archive/williams-fw11b-27332bcd9798-960.webp",
+      "modo": "copia",
+      "sha256_destino": "048e93c08458b0d3bf03882e148faa4d8dde6bf370e6c4f02d2f036a4f9cab8e",
+      "sha256_origem": "048e93c08458b0d3bf03882e148faa4d8dde6bf370e6c4f02d2f036a4f9cab8e"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw14b-5f8084ebd9ca-2400.webp",
+      "fonte": "static/pitwall-archive/williams-fw14b-5f8084ebd9ca-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "f4ba102465405ac41b3c2fc1422436622b0497f41c06e7701c8cf30ddedd47d2",
+      "sha256_origem": "f4ba102465405ac41b3c2fc1422436622b0497f41c06e7701c8cf30ddedd47d2"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw14b-5f8084ebd9ca-960.webp",
+      "fonte": "static/pitwall-archive/williams-fw14b-5f8084ebd9ca-960.webp",
+      "modo": "copia",
+      "sha256_destino": "15552a3ec5215b56742068a162dc4daa2a16ab593fe2a2740da14a7b21f4daef",
+      "sha256_origem": "15552a3ec5215b56742068a162dc4daa2a16ab593fe2a2740da14a7b21f4daef"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw16b-276ae352352c-2400.webp",
+      "fonte": "static/pitwall-archive/williams-fw16b-276ae352352c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "4a898a41653b78594cf42573f1553ba03cd7219963aaa883e4ef89d7f0bca41e",
+      "sha256_origem": "4a898a41653b78594cf42573f1553ba03cd7219963aaa883e4ef89d7f0bca41e"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw16b-276ae352352c-960.webp",
+      "fonte": "static/pitwall-archive/williams-fw16b-276ae352352c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "64c0f582db8790788ab4774ee51f9b7e8ce8feef8d2916a8703bb6835ee67ec7",
+      "sha256_origem": "64c0f582db8790788ab4774ee51f9b7e8ce8feef8d2916a8703bb6835ee67ec7"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw18-92599c9cb865-2400.webp",
+      "fonte": "static/pitwall-archive/williams-fw18-92599c9cb865-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "133d9572675ce503fd123423df50537c6994d4e4e1bba641602ee6c630f664c9",
+      "sha256_origem": "133d9572675ce503fd123423df50537c6994d4e4e1bba641602ee6c630f664c9"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw18-92599c9cb865-960.webp",
+      "fonte": "static/pitwall-archive/williams-fw18-92599c9cb865-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d6cda7779bc2b9c12a0b5a2ff7ab5626600937bc8e2baf2290889b23f051ab00",
+      "sha256_origem": "d6cda7779bc2b9c12a0b5a2ff7ab5626600937bc8e2baf2290889b23f051ab00"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw19-a6b874ea01fc-1732.webp",
+      "fonte": "static/pitwall-archive/williams-fw19-a6b874ea01fc-1732.webp",
+      "modo": "copia",
+      "sha256_destino": "8f945c15d879545c5b1824bd78111575e3a41380db05954b679bc42a4973ae3b",
+      "sha256_origem": "8f945c15d879545c5b1824bd78111575e3a41380db05954b679bc42a4973ae3b"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw19-a6b874ea01fc-960.webp",
+      "fonte": "static/pitwall-archive/williams-fw19-a6b874ea01fc-960.webp",
+      "modo": "copia",
+      "sha256_destino": "25f129f9a7ab2059a73a8c077639802e4bd15446ad531f4be1bde2b87e151626",
+      "sha256_origem": "25f129f9a7ab2059a73a8c077639802e4bd15446ad531f4be1bde2b87e151626"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-garage-1993-512168cfc31e-2387.webp",
+      "fonte": "static/pitwall-archive/williams-garage-1993-512168cfc31e-2387.webp",
+      "modo": "copia",
+      "sha256_destino": "05f23a663d2e8979c2379f889d01414ce12c39a0e0da422d88b3781e5e52a1e1",
+      "sha256_origem": "05f23a663d2e8979c2379f889d01414ce12c39a0e0da422d88b3781e5e52a1e1"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-garage-1993-512168cfc31e-960.webp",
+      "fonte": "static/pitwall-archive/williams-garage-1993-512168cfc31e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "45c1ac9673b2e3781956d3662add2d0b6b04c15d745f81d1c0878c6e05203ad6",
+      "sha256_origem": "45c1ac9673b2e3781956d3662add2d0b6b04c15d745f81d1c0878c6e05203ad6"
+    },
+    {
+      "caminho": "static/pitwall-archive/zandvoort-1985-5ac350b9c23a-2400.webp",
+      "fonte": "static/pitwall-archive/zandvoort-1985-5ac350b9c23a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1b10a24f242746f4497f1fd7f2ef7529a96d00d85770020e6082661fc4e31831",
+      "sha256_origem": "1b10a24f242746f4497f1fd7f2ef7529a96d00d85770020e6082661fc4e31831"
+    },
+    {
+      "caminho": "static/pitwall-archive/zandvoort-1985-5ac350b9c23a-960.webp",
+      "fonte": "static/pitwall-archive/zandvoort-1985-5ac350b9c23a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "84d3f71106e62632fa3e0b8486a42023ff2e1929336eee42ffbfe07a5e9e00be",
+      "sha256_origem": "84d3f71106e62632fa3e0b8486a42023ff2e1929336eee42ffbfe07a5e9e00be"
     },
     {
       "caminho": "static/pitwall-art/gouache/albert_park-53d9911e82e0.png",
@@ -4134,7 +4729,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "f2b419864a6cc572f08171d163bc621c1f174edc1900440c7f1e75aa0fc2b574"
+      "sha256": "f87e95c805d33fd1a87cf97a50012af30bac3d3fcba4f6c08b7631c53963d6a5"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",

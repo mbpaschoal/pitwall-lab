@@ -1,0 +1,2332 @@
+{
+  "schema": 1,
+  "fonte": "https://github.com/f1db/f1db/releases/tag/v2026.20.0",
+  "sha256": "d646ef0dd92dff39b8b91e6b750669f5a85999a04180ade79e3f0dba2fdcc902",
+  "pilotos": {
+    "nino-farina": "Nino Farina",
+    "juan-manuel-fangio": "Juan Manuel Fangio",
+    "alberto-ascari": "Alberto Ascari",
+    "mike-hawthorn": "Mike Hawthorn",
+    "jack-brabham": "Jack Brabham",
+    "phil-hill": "Phil Hill",
+    "graham-hill": "Graham Hill",
+    "jim-clark": "Jim Clark",
+    "john-surtees": "John Surtees",
+    "denny-hulme": "Denny Hulme",
+    "jackie-stewart": "Jackie Stewart",
+    "jochen-rindt": "Jochen Rindt",
+    "emerson-fittipaldi": "Emerson Fittipaldi",
+    "niki-lauda": "Niki Lauda",
+    "james-hunt": "James Hunt",
+    "mario-andretti": "Mario Andretti",
+    "jody-scheckter": "Jody Scheckter",
+    "alan-jones": "Alan Jones",
+    "nelson-piquet": "Nelson Piquet",
+    "keke-rosberg": "Keke Rosberg",
+    "alain-prost": "Alain Prost",
+    "ayrton-senna": "Ayrton Senna",
+    "nigel-mansell": "Nigel Mansell",
+    "michael-schumacher": "Michael Schumacher",
+    "damon-hill": "Damon Hill",
+    "jacques-villeneuve": "Jacques Villeneuve",
+    "mika-hakkinen": "Mika Häkkinen",
+    "fernando-alonso": "Fernando Alonso",
+    "kimi-raikkonen": "Kimi Räikkönen",
+    "lewis-hamilton": "Lewis Hamilton",
+    "jenson-button": "Jenson Button",
+    "sebastian-vettel": "Sebastian Vettel",
+    "nico-rosberg": "Nico Rosberg",
+    "max-verstappen": "Max Verstappen",
+    "lando-norris": "Lando Norris",
+    "kimi-antonelli": "Kimi Antonelli"
+  },
+  "equipes_campeas": {
+    "alfa-romeo": "Alfa Romeo",
+    "benetton": "Benetton",
+    "brabham": "Brabham",
+    "brawn": "Brawn",
+    "brm": "BRM",
+    "cooper": "Cooper",
+    "ferrari": "Ferrari",
+    "lotus": "Lotus",
+    "maserati": "Maserati",
+    "matra": "Matra",
+    "mclaren": "McLaren",
+    "mercedes": "Mercedes",
+    "red-bull": "Red Bull",
+    "renault": "Renault",
+    "tyrrell": "Tyrrell",
+    "vanwall": "Vanwall",
+    "williams": "Williams"
+  },
+  "equipes_atuais": {
+    "alpine": "Alpine",
+    "aston_martin": "Aston Martin",
+    "audi": "Audi",
+    "cadillac": "Cadillac",
+    "ferrari": "Ferrari",
+    "haas": "Haas F1 Team",
+    "mclaren": "McLaren",
+    "mercedes": "Mercedes",
+    "rb": "Racing Bulls",
+    "red_bull": "Red Bull Racing",
+    "williams": "Williams"
+  },
+  "modelos": {
+    "alfa-romeo-158": "Alfa Romeo 158",
+    "alfa-romeo-159": "Alfa Romeo 159",
+    "benetton-b194": "Benetton B194",
+    "benetton-b195": "Benetton B195",
+    "brabham-bt11": "Brabham BT11",
+    "brabham-bt19": "Brabham BT19",
+    "brabham-bt20": "Brabham BT20",
+    "brabham-bt24": "Brabham BT24",
+    "brabham-bt49c": "Brabham BT49C",
+    "brabham-bt52": "Brabham BT52",
+    "brabham-bt52b": "Brabham BT52B",
+    "brawn-bgp-001": "Brawn BGP 001",
+    "brm-p48-57": "BRM P48/57",
+    "brm-p57": "BRM P57",
+    "cooper-t45": "Cooper T45",
+    "cooper-t51": "Cooper T51",
+    "cooper-t53": "Cooper T53",
+    "ferrari-126c2": "Ferrari 126C2",
+    "ferrari-126c2b": "Ferrari 126C2B",
+    "ferrari-126c3": "Ferrari 126C3",
+    "ferrari-1512": "Ferrari 1512",
+    "ferrari-156": "Ferrari 156",
+    "ferrari-158": "Ferrari 158",
+    "ferrari-246": "Ferrari 246",
+    "ferrari-312b3-74": "Ferrari 312B3-74",
+    "ferrari-312t": "Ferrari 312T",
+    "ferrari-312t2": "Ferrari 312T2",
+    "ferrari-312t2b": "Ferrari 312T2B",
+    "ferrari-312t3": "Ferrari 312T3",
+    "ferrari-312t4": "Ferrari 312T4",
+    "ferrari-312t4b": "Ferrari 312T4B",
+    "ferrari-375s": "Ferrari 375S",
+    "ferrari-500": "Ferrari 500",
+    "ferrari-553": "Ferrari 553",
+    "ferrari-555": "Ferrari 555",
+    "ferrari-f1-2000": "Ferrari F1-2000",
+    "ferrari-f2001": "Ferrari F2001",
+    "ferrari-f2001b": "Ferrari F2001B",
+    "ferrari-f2002": "Ferrari F2002",
+    "ferrari-f2002b": "Ferrari F2002B",
+    "ferrari-f2003-ga": "Ferrari F2003-GA",
+    "ferrari-f2004": "Ferrari F2004",
+    "ferrari-f2007": "Ferrari F2007",
+    "ferrari-f2008": "Ferrari F2008",
+    "ferrari-f399": "Ferrari F399",
+    "lotus-24": "Lotus 24",
+    "lotus-25": "Lotus 25",
+    "lotus-33": "Lotus 33",
+    "lotus-49": "Lotus 49",
+    "lotus-49b": "Lotus 49B",
+    "lotus-49c": "Lotus 49C",
+    "lotus-72b": "Lotus 72B",
+    "lotus-72c": "Lotus 72C",
+    "lotus-72d": "Lotus 72D",
+    "lotus-72e": "Lotus 72E",
+    "lotus-78": "Lotus 78",
+    "lotus-79": "Lotus 79",
+    "maserati-250f": "Maserati 250F",
+    "maserati-a6gcm": "Maserati A6GCM",
+    "matra-ms10": "Matra MS10",
+    "matra-ms7": "Matra MS7",
+    "matra-ms80": "Matra MS80",
+    "matra-ms84": "Matra MS84",
+    "mclaren-m23b": "McLaren M23B",
+    "mclaren-m23d": "McLaren M23D",
+    "mclaren-m26": "McLaren M26",
+    "mclaren-mcl38": "McLaren MCL38",
+    "mclaren-mcl39": "McLaren MCL39",
+    "mclaren-mp4-13": "McLaren MP4/13",
+    "mclaren-mp4-14": "McLaren MP4/14",
+    "mclaren-mp4-2": "McLaren MP4/2",
+    "mclaren-mp4-23": "McLaren MP4-23",
+    "mclaren-mp4-2b": "McLaren MP4/2B",
+    "mclaren-mp4-2c": "McLaren MP4/2C",
+    "mclaren-mp4-4": "McLaren MP4/4",
+    "mclaren-mp4-5": "McLaren MP4/5",
+    "mclaren-mp4-5b": "McLaren MP4/5B",
+    "mclaren-mp4-6": "McLaren MP4/6",
+    "mercedes-f1-w05": "Mercedes F1 W05 Hybrid",
+    "mercedes-f1-w06": "Mercedes F1 W06 Hybrid",
+    "mercedes-f1-w07": "Mercedes F1 W07 Hybrid",
+    "mercedes-f1-w08": "Mercedes F1 W08 EQ Power+",
+    "mercedes-f1-w09": "Mercedes F1 W09 EQ Power+",
+    "mercedes-f1-w10": "Mercedes F1 W10 EQ Power+",
+    "mercedes-f1-w11": "Mercedes F1 W11",
+    "mercedes-f1-w12": "Mercedes F1 W12",
+    "mercedes-f1-w17": "Mercedes F1 W17",
+    "mercedes-w196": "Mercedes W196",
+    "red-bull-rb16b": "Red Bull RB16B",
+    "red-bull-rb18": "Red Bull RB18",
+    "red-bull-rb19": "Red Bull RB19",
+    "red-bull-rb20": "Red Bull RB20",
+    "red-bull-rb6": "Red Bull RB6",
+    "red-bull-rb7": "Red Bull RB7",
+    "red-bull-rb8": "Red Bull RB8",
+    "red-bull-rb9": "Red Bull RB9",
+    "renault-r25": "Renault R25",
+    "renault-r26": "Renault R26",
+    "tyrrell-001": "Tyrrell 001",
+    "tyrrell-002": "Tyrrell 002",
+    "tyrrell-003": "Tyrrell 003",
+    "tyrrell-005": "Tyrrell 005",
+    "tyrrell-006": "Tyrrell 006",
+    "vanwall-vw-5": "Vanwall VW 5",
+    "williams-fw07": "Williams FW07",
+    "williams-fw07b": "Williams FW07B",
+    "williams-fw07c": "Williams FW07C",
+    "williams-fw07d": "Williams FW07D",
+    "williams-fw08": "Williams FW08",
+    "williams-fw11": "Williams FW11",
+    "williams-fw11b": "Williams FW11B",
+    "williams-fw14b": "Williams FW14B",
+    "williams-fw15c": "Williams FW15C",
+    "williams-fw16": "Williams FW16",
+    "williams-fw16b": "Williams FW16B",
+    "williams-fw18": "Williams FW18",
+    "williams-fw19": "Williams FW19"
+  },
+  "campanhas": [
+    {
+      "ano": 1950,
+      "equipe": "alfa-romeo",
+      "pilotos": [
+        "nino-farina"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "alfa-romeo-158"
+      ]
+    },
+    {
+      "ano": 1951,
+      "equipe": "alfa-romeo",
+      "pilotos": [
+        "juan-manuel-fangio"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "alfa-romeo-159"
+      ]
+    },
+    {
+      "ano": 1952,
+      "equipe": "ferrari",
+      "pilotos": [
+        "alberto-ascari"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "ferrari-375s",
+        "ferrari-500"
+      ]
+    },
+    {
+      "ano": 1953,
+      "equipe": "ferrari",
+      "pilotos": [
+        "alberto-ascari"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "ferrari-500",
+        "ferrari-553"
+      ]
+    },
+    {
+      "ano": 1954,
+      "equipe": "maserati",
+      "pilotos": [
+        "juan-manuel-fangio"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "maserati-250f",
+        "maserati-a6gcm"
+      ]
+    },
+    {
+      "ano": 1954,
+      "equipe": "mercedes",
+      "pilotos": [
+        "juan-manuel-fangio"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "mercedes-w196"
+      ]
+    },
+    {
+      "ano": 1955,
+      "equipe": "mercedes",
+      "pilotos": [
+        "juan-manuel-fangio"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "mercedes-w196"
+      ]
+    },
+    {
+      "ano": 1956,
+      "equipe": "ferrari",
+      "pilotos": [
+        "juan-manuel-fangio"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "ferrari-555"
+      ]
+    },
+    {
+      "ano": 1957,
+      "equipe": "maserati",
+      "pilotos": [
+        "juan-manuel-fangio"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "maserati-250f"
+      ]
+    },
+    {
+      "ano": 1958,
+      "equipe": "ferrari",
+      "pilotos": [
+        "mike-hawthorn"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "ferrari-156",
+        "ferrari-246"
+      ]
+    },
+    {
+      "ano": 1958,
+      "equipe": "vanwall",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "vanwall-vw-5"
+      ]
+    },
+    {
+      "ano": 1959,
+      "equipe": "cooper",
+      "pilotos": [
+        "jack-brabham"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "cooper-t51"
+      ]
+    },
+    {
+      "ano": 1960,
+      "equipe": "cooper",
+      "pilotos": [
+        "jack-brabham"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "cooper-t45",
+        "cooper-t51",
+        "cooper-t53"
+      ]
+    },
+    {
+      "ano": 1961,
+      "equipe": "ferrari",
+      "pilotos": [
+        "phil-hill"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-156"
+      ]
+    },
+    {
+      "ano": 1962,
+      "equipe": "brm",
+      "pilotos": [
+        "graham-hill"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "brm-p48-57",
+        "brm-p57"
+      ]
+    },
+    {
+      "ano": 1963,
+      "equipe": "lotus",
+      "pilotos": [
+        "jim-clark"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "lotus-24",
+        "lotus-25"
+      ]
+    },
+    {
+      "ano": 1964,
+      "equipe": "ferrari",
+      "pilotos": [
+        "john-surtees"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-1512",
+        "ferrari-156",
+        "ferrari-158"
+      ]
+    },
+    {
+      "ano": 1965,
+      "equipe": "lotus",
+      "pilotos": [
+        "jim-clark"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "lotus-25",
+        "lotus-33"
+      ]
+    },
+    {
+      "ano": 1966,
+      "equipe": "brabham",
+      "pilotos": [
+        "jack-brabham"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "brabham-bt11",
+        "brabham-bt19",
+        "brabham-bt20"
+      ]
+    },
+    {
+      "ano": 1967,
+      "equipe": "brabham",
+      "pilotos": [
+        "denny-hulme"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "brabham-bt11",
+        "brabham-bt19",
+        "brabham-bt20",
+        "brabham-bt24"
+      ]
+    },
+    {
+      "ano": 1968,
+      "equipe": "lotus",
+      "pilotos": [
+        "graham-hill"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "lotus-49",
+        "lotus-49b"
+      ]
+    },
+    {
+      "ano": 1969,
+      "equipe": "matra",
+      "pilotos": [
+        "jackie-stewart"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "matra-ms10",
+        "matra-ms7",
+        "matra-ms80",
+        "matra-ms84"
+      ]
+    },
+    {
+      "ano": 1970,
+      "equipe": "lotus",
+      "pilotos": [
+        "jochen-rindt"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "lotus-49c",
+        "lotus-72b",
+        "lotus-72c"
+      ]
+    },
+    {
+      "ano": 1971,
+      "equipe": "tyrrell",
+      "pilotos": [
+        "jackie-stewart"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "tyrrell-001",
+        "tyrrell-002",
+        "tyrrell-003"
+      ]
+    },
+    {
+      "ano": 1972,
+      "equipe": "lotus",
+      "pilotos": [
+        "emerson-fittipaldi"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "lotus-72d"
+      ]
+    },
+    {
+      "ano": 1973,
+      "equipe": "lotus",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "lotus-72d",
+        "lotus-72e"
+      ]
+    },
+    {
+      "ano": 1973,
+      "equipe": "tyrrell",
+      "pilotos": [
+        "jackie-stewart"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "tyrrell-005",
+        "tyrrell-006"
+      ]
+    },
+    {
+      "ano": 1974,
+      "equipe": "mclaren",
+      "pilotos": [
+        "emerson-fittipaldi"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mclaren-m23b"
+      ]
+    },
+    {
+      "ano": 1975,
+      "equipe": "ferrari",
+      "pilotos": [
+        "niki-lauda"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-312b3-74",
+        "ferrari-312t"
+      ]
+    },
+    {
+      "ano": 1976,
+      "equipe": "ferrari",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-312t",
+        "ferrari-312t2"
+      ]
+    },
+    {
+      "ano": 1976,
+      "equipe": "mclaren",
+      "pilotos": [
+        "james-hunt"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "mclaren-m23d",
+        "mclaren-m26"
+      ]
+    },
+    {
+      "ano": 1977,
+      "equipe": "ferrari",
+      "pilotos": [
+        "niki-lauda"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-312t2b"
+      ]
+    },
+    {
+      "ano": 1978,
+      "equipe": "lotus",
+      "pilotos": [
+        "mario-andretti"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "lotus-78",
+        "lotus-79"
+      ]
+    },
+    {
+      "ano": 1979,
+      "equipe": "ferrari",
+      "pilotos": [
+        "jody-scheckter"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-312t3",
+        "ferrari-312t4",
+        "ferrari-312t4b"
+      ]
+    },
+    {
+      "ano": 1980,
+      "equipe": "williams",
+      "pilotos": [
+        "alan-jones"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "williams-fw07",
+        "williams-fw07b"
+      ]
+    },
+    {
+      "ano": 1981,
+      "equipe": "brabham",
+      "pilotos": [
+        "nelson-piquet"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "brabham-bt49c"
+      ]
+    },
+    {
+      "ano": 1981,
+      "equipe": "williams",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "williams-fw07c"
+      ]
+    },
+    {
+      "ano": 1982,
+      "equipe": "ferrari",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-126c2"
+      ]
+    },
+    {
+      "ano": 1982,
+      "equipe": "williams",
+      "pilotos": [
+        "keke-rosberg"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "williams-fw07c",
+        "williams-fw07d",
+        "williams-fw08"
+      ]
+    },
+    {
+      "ano": 1983,
+      "equipe": "brabham",
+      "pilotos": [
+        "nelson-piquet"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "brabham-bt52",
+        "brabham-bt52b"
+      ]
+    },
+    {
+      "ano": 1983,
+      "equipe": "ferrari",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-126c2b",
+        "ferrari-126c3"
+      ]
+    },
+    {
+      "ano": 1984,
+      "equipe": "mclaren",
+      "pilotos": [
+        "niki-lauda"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mclaren-mp4-2"
+      ]
+    },
+    {
+      "ano": 1985,
+      "equipe": "mclaren",
+      "pilotos": [
+        "alain-prost"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mclaren-mp4-2b"
+      ]
+    },
+    {
+      "ano": 1986,
+      "equipe": "mclaren",
+      "pilotos": [
+        "alain-prost"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "mclaren-mp4-2c"
+      ]
+    },
+    {
+      "ano": 1986,
+      "equipe": "williams",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "williams-fw11"
+      ]
+    },
+    {
+      "ano": 1987,
+      "equipe": "williams",
+      "pilotos": [
+        "nelson-piquet"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "williams-fw11b"
+      ]
+    },
+    {
+      "ano": 1988,
+      "equipe": "mclaren",
+      "pilotos": [
+        "ayrton-senna"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mclaren-mp4-4"
+      ]
+    },
+    {
+      "ano": 1989,
+      "equipe": "mclaren",
+      "pilotos": [
+        "alain-prost"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mclaren-mp4-5"
+      ]
+    },
+    {
+      "ano": 1990,
+      "equipe": "mclaren",
+      "pilotos": [
+        "ayrton-senna"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mclaren-mp4-5b"
+      ]
+    },
+    {
+      "ano": 1991,
+      "equipe": "mclaren",
+      "pilotos": [
+        "ayrton-senna"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mclaren-mp4-6"
+      ]
+    },
+    {
+      "ano": 1992,
+      "equipe": "williams",
+      "pilotos": [
+        "nigel-mansell"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "williams-fw14b"
+      ]
+    },
+    {
+      "ano": 1993,
+      "equipe": "williams",
+      "pilotos": [
+        "alain-prost"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "williams-fw15c"
+      ]
+    },
+    {
+      "ano": 1994,
+      "equipe": "benetton",
+      "pilotos": [
+        "michael-schumacher"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "benetton-b194"
+      ]
+    },
+    {
+      "ano": 1994,
+      "equipe": "williams",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "williams-fw16",
+        "williams-fw16b"
+      ]
+    },
+    {
+      "ano": 1995,
+      "equipe": "benetton",
+      "pilotos": [
+        "michael-schumacher"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "benetton-b195"
+      ]
+    },
+    {
+      "ano": 1996,
+      "equipe": "williams",
+      "pilotos": [
+        "damon-hill"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "williams-fw18"
+      ]
+    },
+    {
+      "ano": 1997,
+      "equipe": "williams",
+      "pilotos": [
+        "jacques-villeneuve"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "williams-fw19"
+      ]
+    },
+    {
+      "ano": 1998,
+      "equipe": "mclaren",
+      "pilotos": [
+        "mika-hakkinen"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mclaren-mp4-13"
+      ]
+    },
+    {
+      "ano": 1999,
+      "equipe": "ferrari",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-f399"
+      ]
+    },
+    {
+      "ano": 1999,
+      "equipe": "mclaren",
+      "pilotos": [
+        "mika-hakkinen"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "mclaren-mp4-14"
+      ]
+    },
+    {
+      "ano": 2000,
+      "equipe": "ferrari",
+      "pilotos": [
+        "michael-schumacher"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-f1-2000"
+      ]
+    },
+    {
+      "ano": 2001,
+      "equipe": "ferrari",
+      "pilotos": [
+        "michael-schumacher"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-f2001"
+      ]
+    },
+    {
+      "ano": 2002,
+      "equipe": "ferrari",
+      "pilotos": [
+        "michael-schumacher"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-f2001b",
+        "ferrari-f2002"
+      ]
+    },
+    {
+      "ano": 2003,
+      "equipe": "ferrari",
+      "pilotos": [
+        "michael-schumacher"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-f2002b",
+        "ferrari-f2003-ga"
+      ]
+    },
+    {
+      "ano": 2004,
+      "equipe": "ferrari",
+      "pilotos": [
+        "michael-schumacher"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-f2004"
+      ]
+    },
+    {
+      "ano": 2005,
+      "equipe": "renault",
+      "pilotos": [
+        "fernando-alonso"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "renault-r25"
+      ]
+    },
+    {
+      "ano": 2006,
+      "equipe": "renault",
+      "pilotos": [
+        "fernando-alonso"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "renault-r26"
+      ]
+    },
+    {
+      "ano": 2007,
+      "equipe": "ferrari",
+      "pilotos": [
+        "kimi-raikkonen"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-f2007"
+      ]
+    },
+    {
+      "ano": 2008,
+      "equipe": "ferrari",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "ferrari-f2008"
+      ]
+    },
+    {
+      "ano": 2008,
+      "equipe": "mclaren",
+      "pilotos": [
+        "lewis-hamilton"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "mclaren-mp4-23"
+      ]
+    },
+    {
+      "ano": 2009,
+      "equipe": "brawn",
+      "pilotos": [
+        "jenson-button"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "brawn-bgp-001"
+      ]
+    },
+    {
+      "ano": 2010,
+      "equipe": "red-bull",
+      "pilotos": [
+        "sebastian-vettel"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "red-bull-rb6"
+      ]
+    },
+    {
+      "ano": 2011,
+      "equipe": "red-bull",
+      "pilotos": [
+        "sebastian-vettel"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "red-bull-rb7"
+      ]
+    },
+    {
+      "ano": 2012,
+      "equipe": "red-bull",
+      "pilotos": [
+        "sebastian-vettel"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "red-bull-rb8"
+      ]
+    },
+    {
+      "ano": 2013,
+      "equipe": "red-bull",
+      "pilotos": [
+        "sebastian-vettel"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "red-bull-rb9"
+      ]
+    },
+    {
+      "ano": 2014,
+      "equipe": "mercedes",
+      "pilotos": [
+        "lewis-hamilton"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mercedes-f1-w05"
+      ]
+    },
+    {
+      "ano": 2015,
+      "equipe": "mercedes",
+      "pilotos": [
+        "lewis-hamilton"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mercedes-f1-w06"
+      ]
+    },
+    {
+      "ano": 2016,
+      "equipe": "mercedes",
+      "pilotos": [
+        "nico-rosberg"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mercedes-f1-w07"
+      ]
+    },
+    {
+      "ano": 2017,
+      "equipe": "mercedes",
+      "pilotos": [
+        "lewis-hamilton"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mercedes-f1-w08"
+      ]
+    },
+    {
+      "ano": 2018,
+      "equipe": "mercedes",
+      "pilotos": [
+        "lewis-hamilton"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mercedes-f1-w09"
+      ]
+    },
+    {
+      "ano": 2019,
+      "equipe": "mercedes",
+      "pilotos": [
+        "lewis-hamilton"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mercedes-f1-w10"
+      ]
+    },
+    {
+      "ano": 2020,
+      "equipe": "mercedes",
+      "pilotos": [
+        "lewis-hamilton"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mercedes-f1-w11"
+      ]
+    },
+    {
+      "ano": 2021,
+      "equipe": "mercedes",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mercedes-f1-w12"
+      ]
+    },
+    {
+      "ano": 2021,
+      "equipe": "red-bull",
+      "pilotos": [
+        "max-verstappen"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "red-bull-rb16b"
+      ]
+    },
+    {
+      "ano": 2022,
+      "equipe": "red-bull",
+      "pilotos": [
+        "max-verstappen"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "red-bull-rb18"
+      ]
+    },
+    {
+      "ano": 2023,
+      "equipe": "red-bull",
+      "pilotos": [
+        "max-verstappen"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "red-bull-rb19"
+      ]
+    },
+    {
+      "ano": 2024,
+      "equipe": "mclaren",
+      "pilotos": [],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mclaren-mcl38"
+      ]
+    },
+    {
+      "ano": 2024,
+      "equipe": "red-bull",
+      "pilotos": [
+        "max-verstappen"
+      ],
+      "construtores": false,
+      "modelos_candidatos": [
+        "red-bull-rb20"
+      ]
+    },
+    {
+      "ano": 2025,
+      "equipe": "mclaren",
+      "pilotos": [
+        "lando-norris"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mclaren-mcl39"
+      ]
+    },
+    {
+      "ano": 2026,
+      "equipe": "mercedes",
+      "pilotos": [
+        "kimi-antonelli"
+      ],
+      "construtores": true,
+      "modelos_candidatos": [
+        "mercedes-f1-w17"
+      ]
+    }
+  ],
+  "momentos": [
+    {
+      "ano": 1950,
+      "rodada": 1,
+      "gp": "British Grand Prix",
+      "pilotos": [
+        "juan-manuel-fangio",
+        "nino-farina"
+      ]
+    },
+    {
+      "ano": 1950,
+      "rodada": 2,
+      "gp": "Monaco Grand Prix",
+      "pilotos": [
+        "alberto-ascari",
+        "juan-manuel-fangio"
+      ]
+    },
+    {
+      "ano": 1950,
+      "rodada": 7,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "nino-farina"
+      ]
+    },
+    {
+      "ano": 1951,
+      "rodada": 6,
+      "gp": "German Grand Prix",
+      "pilotos": [
+        "alberto-ascari"
+      ]
+    },
+    {
+      "ano": 1951,
+      "rodada": 8,
+      "gp": "Spanish Grand Prix",
+      "pilotos": [
+        "juan-manuel-fangio"
+      ]
+    },
+    {
+      "ano": 1952,
+      "rodada": 3,
+      "gp": "Belgian Grand Prix",
+      "pilotos": [
+        "mike-hawthorn"
+      ]
+    },
+    {
+      "ano": 1952,
+      "rodada": 6,
+      "gp": "German Grand Prix",
+      "pilotos": [
+        "alberto-ascari"
+      ]
+    },
+    {
+      "ano": 1953,
+      "rodada": 5,
+      "gp": "French Grand Prix",
+      "pilotos": [
+        "mike-hawthorn"
+      ]
+    },
+    {
+      "ano": 1953,
+      "rodada": 8,
+      "gp": "Swiss Grand Prix",
+      "pilotos": [
+        "alberto-ascari"
+      ]
+    },
+    {
+      "ano": 1954,
+      "rodada": 7,
+      "gp": "Swiss Grand Prix",
+      "pilotos": [
+        "juan-manuel-fangio"
+      ]
+    },
+    {
+      "ano": 1955,
+      "rodada": 6,
+      "gp": "British Grand Prix",
+      "pilotos": [
+        "jack-brabham",
+        "juan-manuel-fangio"
+      ]
+    },
+    {
+      "ano": 1956,
+      "rodada": 8,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "juan-manuel-fangio"
+      ]
+    },
+    {
+      "ano": 1957,
+      "rodada": 6,
+      "gp": "German Grand Prix",
+      "pilotos": [
+        "juan-manuel-fangio"
+      ]
+    },
+    {
+      "ano": 1958,
+      "rodada": 2,
+      "gp": "Monaco Grand Prix",
+      "pilotos": [
+        "graham-hill"
+      ]
+    },
+    {
+      "ano": 1958,
+      "rodada": 6,
+      "gp": "French Grand Prix",
+      "pilotos": [
+        "phil-hill"
+      ]
+    },
+    {
+      "ano": 1958,
+      "rodada": 11,
+      "gp": "Moroccan Grand Prix",
+      "pilotos": [
+        "mike-hawthorn"
+      ]
+    },
+    {
+      "ano": 1959,
+      "rodada": 1,
+      "gp": "Monaco Grand Prix",
+      "pilotos": [
+        "jack-brabham"
+      ]
+    },
+    {
+      "ano": 1959,
+      "rodada": 9,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "jack-brabham"
+      ]
+    },
+    {
+      "ano": 1960,
+      "rodada": 2,
+      "gp": "Monaco Grand Prix",
+      "pilotos": [
+        "john-surtees"
+      ]
+    },
+    {
+      "ano": 1960,
+      "rodada": 4,
+      "gp": "Dutch Grand Prix",
+      "pilotos": [
+        "jim-clark"
+      ]
+    },
+    {
+      "ano": 1960,
+      "rodada": 8,
+      "gp": "Portuguese Grand Prix",
+      "pilotos": [
+        "jack-brabham"
+      ]
+    },
+    {
+      "ano": 1960,
+      "rodada": 9,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "phil-hill"
+      ]
+    },
+    {
+      "ano": 1961,
+      "rodada": 7,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "phil-hill"
+      ]
+    },
+    {
+      "ano": 1962,
+      "rodada": 1,
+      "gp": "Dutch Grand Prix",
+      "pilotos": [
+        "graham-hill"
+      ]
+    },
+    {
+      "ano": 1962,
+      "rodada": 3,
+      "gp": "Belgian Grand Prix",
+      "pilotos": [
+        "jim-clark"
+      ]
+    },
+    {
+      "ano": 1962,
+      "rodada": 9,
+      "gp": "South African Grand Prix",
+      "pilotos": [
+        "graham-hill"
+      ]
+    },
+    {
+      "ano": 1963,
+      "rodada": 6,
+      "gp": "German Grand Prix",
+      "pilotos": [
+        "john-surtees"
+      ]
+    },
+    {
+      "ano": 1963,
+      "rodada": 7,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "jim-clark"
+      ]
+    },
+    {
+      "ano": 1964,
+      "rodada": 7,
+      "gp": "Austrian Grand Prix",
+      "pilotos": [
+        "jochen-rindt"
+      ]
+    },
+    {
+      "ano": 1964,
+      "rodada": 10,
+      "gp": "Mexican Grand Prix",
+      "pilotos": [
+        "john-surtees"
+      ]
+    },
+    {
+      "ano": 1965,
+      "rodada": 1,
+      "gp": "South African Grand Prix",
+      "pilotos": [
+        "jackie-stewart"
+      ]
+    },
+    {
+      "ano": 1965,
+      "rodada": 2,
+      "gp": "Monaco Grand Prix",
+      "pilotos": [
+        "denny-hulme"
+      ]
+    },
+    {
+      "ano": 1965,
+      "rodada": 7,
+      "gp": "German Grand Prix",
+      "pilotos": [
+        "jim-clark"
+      ]
+    },
+    {
+      "ano": 1965,
+      "rodada": 8,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "jackie-stewart"
+      ]
+    },
+    {
+      "ano": 1966,
+      "rodada": 7,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "jack-brabham"
+      ]
+    },
+    {
+      "ano": 1967,
+      "rodada": 2,
+      "gp": "Monaco Grand Prix",
+      "pilotos": [
+        "denny-hulme"
+      ]
+    },
+    {
+      "ano": 1967,
+      "rodada": 11,
+      "gp": "Mexican Grand Prix",
+      "pilotos": [
+        "denny-hulme"
+      ]
+    },
+    {
+      "ano": 1968,
+      "rodada": 11,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "mario-andretti"
+      ]
+    },
+    {
+      "ano": 1968,
+      "rodada": 12,
+      "gp": "Mexican Grand Prix",
+      "pilotos": [
+        "graham-hill"
+      ]
+    },
+    {
+      "ano": 1969,
+      "rodada": 8,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "jackie-stewart"
+      ]
+    },
+    {
+      "ano": 1969,
+      "rodada": 10,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "jochen-rindt"
+      ]
+    },
+    {
+      "ano": 1970,
+      "rodada": 7,
+      "gp": "British Grand Prix",
+      "pilotos": [
+        "emerson-fittipaldi"
+      ]
+    },
+    {
+      "ano": 1970,
+      "rodada": 12,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "emerson-fittipaldi",
+        "jochen-rindt"
+      ]
+    },
+    {
+      "ano": 1971,
+      "rodada": 1,
+      "gp": "South African Grand Prix",
+      "pilotos": [
+        "mario-andretti"
+      ]
+    },
+    {
+      "ano": 1971,
+      "rodada": 8,
+      "gp": "Austrian Grand Prix",
+      "pilotos": [
+        "jackie-stewart",
+        "niki-lauda"
+      ]
+    },
+    {
+      "ano": 1972,
+      "rodada": 10,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "emerson-fittipaldi"
+      ]
+    },
+    {
+      "ano": 1972,
+      "rodada": 12,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "jody-scheckter"
+      ]
+    },
+    {
+      "ano": 1973,
+      "rodada": 6,
+      "gp": "Monaco Grand Prix",
+      "pilotos": [
+        "james-hunt"
+      ]
+    },
+    {
+      "ano": 1973,
+      "rodada": 13,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "jackie-stewart"
+      ]
+    },
+    {
+      "ano": 1974,
+      "rodada": 4,
+      "gp": "Spanish Grand Prix",
+      "pilotos": [
+        "niki-lauda"
+      ]
+    },
+    {
+      "ano": 1974,
+      "rodada": 7,
+      "gp": "Swedish Grand Prix",
+      "pilotos": [
+        "jody-scheckter"
+      ]
+    },
+    {
+      "ano": 1974,
+      "rodada": 15,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "emerson-fittipaldi"
+      ]
+    },
+    {
+      "ano": 1975,
+      "rodada": 4,
+      "gp": "Spanish Grand Prix",
+      "pilotos": [
+        "alan-jones"
+      ]
+    },
+    {
+      "ano": 1975,
+      "rodada": 8,
+      "gp": "Dutch Grand Prix",
+      "pilotos": [
+        "james-hunt"
+      ]
+    },
+    {
+      "ano": 1975,
+      "rodada": 13,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "niki-lauda"
+      ]
+    },
+    {
+      "ano": 1976,
+      "rodada": 16,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "james-hunt"
+      ]
+    },
+    {
+      "ano": 1977,
+      "rodada": 12,
+      "gp": "Austrian Grand Prix",
+      "pilotos": [
+        "alan-jones"
+      ]
+    },
+    {
+      "ano": 1977,
+      "rodada": 15,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "niki-lauda"
+      ]
+    },
+    {
+      "ano": 1978,
+      "rodada": 3,
+      "gp": "South African Grand Prix",
+      "pilotos": [
+        "keke-rosberg"
+      ]
+    },
+    {
+      "ano": 1978,
+      "rodada": 11,
+      "gp": "German Grand Prix",
+      "pilotos": [
+        "nelson-piquet"
+      ]
+    },
+    {
+      "ano": 1978,
+      "rodada": 14,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "mario-andretti"
+      ]
+    },
+    {
+      "ano": 1979,
+      "rodada": 13,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "jody-scheckter"
+      ]
+    },
+    {
+      "ano": 1980,
+      "rodada": 1,
+      "gp": "Argentine Grand Prix",
+      "pilotos": [
+        "alain-prost"
+      ]
+    },
+    {
+      "ano": 1980,
+      "rodada": 4,
+      "gp": "United States Grand Prix West",
+      "pilotos": [
+        "nelson-piquet"
+      ]
+    },
+    {
+      "ano": 1980,
+      "rodada": 10,
+      "gp": "Austrian Grand Prix",
+      "pilotos": [
+        "nigel-mansell"
+      ]
+    },
+    {
+      "ano": 1980,
+      "rodada": 13,
+      "gp": "Canadian Grand Prix",
+      "pilotos": [
+        "alan-jones"
+      ]
+    },
+    {
+      "ano": 1981,
+      "rodada": 8,
+      "gp": "French Grand Prix",
+      "pilotos": [
+        "alain-prost"
+      ]
+    },
+    {
+      "ano": 1981,
+      "rodada": 15,
+      "gp": "Caesars Palace Grand Prix",
+      "pilotos": [
+        "nelson-piquet"
+      ]
+    },
+    {
+      "ano": 1982,
+      "rodada": 14,
+      "gp": "Swiss Grand Prix",
+      "pilotos": [
+        "keke-rosberg"
+      ]
+    },
+    {
+      "ano": 1982,
+      "rodada": 16,
+      "gp": "Caesars Palace Grand Prix",
+      "pilotos": [
+        "keke-rosberg"
+      ]
+    },
+    {
+      "ano": 1983,
+      "rodada": 15,
+      "gp": "South African Grand Prix",
+      "pilotos": [
+        "nelson-piquet"
+      ]
+    },
+    {
+      "ano": 1984,
+      "rodada": 1,
+      "gp": "Brazilian Grand Prix",
+      "pilotos": [
+        "ayrton-senna"
+      ]
+    },
+    {
+      "ano": 1984,
+      "rodada": 16,
+      "gp": "Portuguese Grand Prix",
+      "pilotos": [
+        "niki-lauda"
+      ]
+    },
+    {
+      "ano": 1985,
+      "rodada": 2,
+      "gp": "Portuguese Grand Prix",
+      "pilotos": [
+        "ayrton-senna"
+      ]
+    },
+    {
+      "ano": 1985,
+      "rodada": 14,
+      "gp": "European Grand Prix",
+      "pilotos": [
+        "alain-prost",
+        "nigel-mansell"
+      ]
+    },
+    {
+      "ano": 1986,
+      "rodada": 16,
+      "gp": "Australian Grand Prix",
+      "pilotos": [
+        "alain-prost"
+      ]
+    },
+    {
+      "ano": 1987,
+      "rodada": 15,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "nelson-piquet"
+      ]
+    },
+    {
+      "ano": 1988,
+      "rodada": 15,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "ayrton-senna"
+      ]
+    },
+    {
+      "ano": 1989,
+      "rodada": 15,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "alain-prost"
+      ]
+    },
+    {
+      "ano": 1990,
+      "rodada": 15,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "ayrton-senna"
+      ]
+    },
+    {
+      "ano": 1991,
+      "rodada": 1,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "mika-hakkinen"
+      ]
+    },
+    {
+      "ano": 1991,
+      "rodada": 11,
+      "gp": "Belgian Grand Prix",
+      "pilotos": [
+        "michael-schumacher"
+      ]
+    },
+    {
+      "ano": 1991,
+      "rodada": 15,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "ayrton-senna"
+      ]
+    },
+    {
+      "ano": 1992,
+      "rodada": 9,
+      "gp": "British Grand Prix",
+      "pilotos": [
+        "damon-hill"
+      ]
+    },
+    {
+      "ano": 1992,
+      "rodada": 11,
+      "gp": "Hungarian Grand Prix",
+      "pilotos": [
+        "nigel-mansell"
+      ]
+    },
+    {
+      "ano": 1992,
+      "rodada": 12,
+      "gp": "Belgian Grand Prix",
+      "pilotos": [
+        "michael-schumacher"
+      ]
+    },
+    {
+      "ano": 1993,
+      "rodada": 11,
+      "gp": "Hungarian Grand Prix",
+      "pilotos": [
+        "damon-hill"
+      ]
+    },
+    {
+      "ano": 1993,
+      "rodada": 14,
+      "gp": "Portuguese Grand Prix",
+      "pilotos": [
+        "alain-prost"
+      ]
+    },
+    {
+      "ano": 1994,
+      "rodada": 16,
+      "gp": "Australian Grand Prix",
+      "pilotos": [
+        "michael-schumacher"
+      ]
+    },
+    {
+      "ano": 1995,
+      "rodada": 15,
+      "gp": "Pacific Grand Prix",
+      "pilotos": [
+        "michael-schumacher"
+      ]
+    },
+    {
+      "ano": 1996,
+      "rodada": 1,
+      "gp": "Australian Grand Prix",
+      "pilotos": [
+        "jacques-villeneuve"
+      ]
+    },
+    {
+      "ano": 1996,
+      "rodada": 4,
+      "gp": "European Grand Prix",
+      "pilotos": [
+        "jacques-villeneuve"
+      ]
+    },
+    {
+      "ano": 1996,
+      "rodada": 16,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "damon-hill"
+      ]
+    },
+    {
+      "ano": 1997,
+      "rodada": 17,
+      "gp": "European Grand Prix",
+      "pilotos": [
+        "jacques-villeneuve",
+        "mika-hakkinen"
+      ]
+    },
+    {
+      "ano": 1998,
+      "rodada": 16,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "mika-hakkinen"
+      ]
+    },
+    {
+      "ano": 1999,
+      "rodada": 16,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "mika-hakkinen"
+      ]
+    },
+    {
+      "ano": 2000,
+      "rodada": 1,
+      "gp": "Australian Grand Prix",
+      "pilotos": [
+        "jenson-button"
+      ]
+    },
+    {
+      "ano": 2000,
+      "rodada": 16,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "michael-schumacher"
+      ]
+    },
+    {
+      "ano": 2001,
+      "rodada": 1,
+      "gp": "Australian Grand Prix",
+      "pilotos": [
+        "fernando-alonso",
+        "kimi-raikkonen"
+      ]
+    },
+    {
+      "ano": 2001,
+      "rodada": 13,
+      "gp": "Hungarian Grand Prix",
+      "pilotos": [
+        "michael-schumacher"
+      ]
+    },
+    {
+      "ano": 2002,
+      "rodada": 11,
+      "gp": "French Grand Prix",
+      "pilotos": [
+        "michael-schumacher"
+      ]
+    },
+    {
+      "ano": 2003,
+      "rodada": 2,
+      "gp": "Malaysian Grand Prix",
+      "pilotos": [
+        "kimi-raikkonen"
+      ]
+    },
+    {
+      "ano": 2003,
+      "rodada": 13,
+      "gp": "Hungarian Grand Prix",
+      "pilotos": [
+        "fernando-alonso"
+      ]
+    },
+    {
+      "ano": 2003,
+      "rodada": 16,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "michael-schumacher"
+      ]
+    },
+    {
+      "ano": 2004,
+      "rodada": 14,
+      "gp": "Belgian Grand Prix",
+      "pilotos": [
+        "michael-schumacher"
+      ]
+    },
+    {
+      "ano": 2005,
+      "rodada": 17,
+      "gp": "Brazilian Grand Prix",
+      "pilotos": [
+        "fernando-alonso"
+      ]
+    },
+    {
+      "ano": 2006,
+      "rodada": 1,
+      "gp": "Bahrain Grand Prix",
+      "pilotos": [
+        "nico-rosberg"
+      ]
+    },
+    {
+      "ano": 2006,
+      "rodada": 13,
+      "gp": "Hungarian Grand Prix",
+      "pilotos": [
+        "jenson-button"
+      ]
+    },
+    {
+      "ano": 2006,
+      "rodada": 18,
+      "gp": "Brazilian Grand Prix",
+      "pilotos": [
+        "fernando-alonso"
+      ]
+    },
+    {
+      "ano": 2007,
+      "rodada": 1,
+      "gp": "Australian Grand Prix",
+      "pilotos": [
+        "lewis-hamilton"
+      ]
+    },
+    {
+      "ano": 2007,
+      "rodada": 6,
+      "gp": "Canadian Grand Prix",
+      "pilotos": [
+        "lewis-hamilton"
+      ]
+    },
+    {
+      "ano": 2007,
+      "rodada": 7,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "sebastian-vettel"
+      ]
+    },
+    {
+      "ano": 2007,
+      "rodada": 17,
+      "gp": "Brazilian Grand Prix",
+      "pilotos": [
+        "kimi-raikkonen"
+      ]
+    },
+    {
+      "ano": 2008,
+      "rodada": 14,
+      "gp": "Italian Grand Prix",
+      "pilotos": [
+        "sebastian-vettel"
+      ]
+    },
+    {
+      "ano": 2008,
+      "rodada": 18,
+      "gp": "Brazilian Grand Prix",
+      "pilotos": [
+        "lewis-hamilton"
+      ]
+    },
+    {
+      "ano": 2009,
+      "rodada": 16,
+      "gp": "Brazilian Grand Prix",
+      "pilotos": [
+        "jenson-button"
+      ]
+    },
+    {
+      "ano": 2010,
+      "rodada": 19,
+      "gp": "Abu Dhabi Grand Prix",
+      "pilotos": [
+        "sebastian-vettel"
+      ]
+    },
+    {
+      "ano": 2011,
+      "rodada": 15,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "sebastian-vettel"
+      ]
+    },
+    {
+      "ano": 2012,
+      "rodada": 3,
+      "gp": "Chinese Grand Prix",
+      "pilotos": [
+        "nico-rosberg"
+      ]
+    },
+    {
+      "ano": 2012,
+      "rodada": 20,
+      "gp": "Brazilian Grand Prix",
+      "pilotos": [
+        "sebastian-vettel"
+      ]
+    },
+    {
+      "ano": 2013,
+      "rodada": 16,
+      "gp": "Indian Grand Prix",
+      "pilotos": [
+        "sebastian-vettel"
+      ]
+    },
+    {
+      "ano": 2014,
+      "rodada": 19,
+      "gp": "Abu Dhabi Grand Prix",
+      "pilotos": [
+        "lewis-hamilton"
+      ]
+    },
+    {
+      "ano": 2015,
+      "rodada": 1,
+      "gp": "Australian Grand Prix",
+      "pilotos": [
+        "max-verstappen"
+      ]
+    },
+    {
+      "ano": 2015,
+      "rodada": 16,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "lewis-hamilton"
+      ]
+    },
+    {
+      "ano": 2016,
+      "rodada": 5,
+      "gp": "Spanish Grand Prix",
+      "pilotos": [
+        "max-verstappen"
+      ]
+    },
+    {
+      "ano": 2016,
+      "rodada": 21,
+      "gp": "Abu Dhabi Grand Prix",
+      "pilotos": [
+        "nico-rosberg"
+      ]
+    },
+    {
+      "ano": 2017,
+      "rodada": 18,
+      "gp": "Mexican Grand Prix",
+      "pilotos": [
+        "lewis-hamilton"
+      ]
+    },
+    {
+      "ano": 2018,
+      "rodada": 19,
+      "gp": "Mexican Grand Prix",
+      "pilotos": [
+        "lewis-hamilton"
+      ]
+    },
+    {
+      "ano": 2019,
+      "rodada": 1,
+      "gp": "Australian Grand Prix",
+      "pilotos": [
+        "lando-norris"
+      ]
+    },
+    {
+      "ano": 2019,
+      "rodada": 19,
+      "gp": "United States Grand Prix",
+      "pilotos": [
+        "lewis-hamilton"
+      ]
+    },
+    {
+      "ano": 2020,
+      "rodada": 14,
+      "gp": "Turkish Grand Prix",
+      "pilotos": [
+        "lewis-hamilton"
+      ]
+    },
+    {
+      "ano": 2021,
+      "rodada": 22,
+      "gp": "Abu Dhabi Grand Prix",
+      "pilotos": [
+        "max-verstappen"
+      ]
+    },
+    {
+      "ano": 2022,
+      "rodada": 18,
+      "gp": "Japanese Grand Prix",
+      "pilotos": [
+        "max-verstappen"
+      ]
+    },
+    {
+      "ano": 2023,
+      "rodada": 17,
+      "gp": "Qatar Grand Prix",
+      "pilotos": [
+        "max-verstappen"
+      ]
+    },
+    {
+      "ano": 2024,
+      "rodada": 6,
+      "gp": "Miami Grand Prix",
+      "pilotos": [
+        "lando-norris"
+      ]
+    },
+    {
+      "ano": 2024,
+      "rodada": 22,
+      "gp": "Las Vegas Grand Prix",
+      "pilotos": [
+        "max-verstappen"
+      ]
+    },
+    {
+      "ano": 2025,
+      "rodada": 1,
+      "gp": "Australian Grand Prix",
+      "pilotos": [
+        "kimi-antonelli"
+      ]
+    },
+    {
+      "ano": 2025,
+      "rodada": 24,
+      "gp": "Abu Dhabi Grand Prix",
+      "pilotos": [
+        "lando-norris"
+      ]
+    },
+    {
+      "ano": 2026,
+      "rodada": 2,
+      "gp": "Chinese Grand Prix",
+      "pilotos": [
+        "kimi-antonelli"
+      ]
+    },
+    {
+      "ano": 2026,
+      "rodada": 19,
+      "gp": "Mexican Grand Prix",
+      "pilotos": [
+        "kimi-antonelli"
+      ]
+    }
+  ]
+}

@@ -1393,6 +1393,12 @@ def executar_app():
         if tela == "Pilotos":
             from pitwall.dashboard.hall_views import hall_url, render as render_hall
             pilot_view = st.query_params.get("visao")
+            if pilot_view == "acervo":
+                from pitwall.dashboard.photo_archive import render as render_archive
+                renderizar_topo(pacote, slot=tool_control)
+                render_archive(raiz_artefatos(), temporada, rodada)
+                render_motion()
+                return
             if pilot_view in ("hall", "duelo-campeoes"):
                 renderizar_topo(pacote, slot=tool_control)
                 render_hall(raiz_artefatos(), temporada, rodada, duel=pilot_view == "duelo-campeoes")
