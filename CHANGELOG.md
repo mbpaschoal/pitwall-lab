@@ -6,7 +6,9 @@ O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × P
 
 O Acervo fotográfico reúne imagens dos 36 campeões, das 11 equipes do grid de 2026 e de pelo menos um carro de cada campanha campeã desde 1950. As fichas trazem legendas bilíngues, autoria, licença e acesso aos originais. A galeria usa versões WebP locais e permite consultar carros e momentos históricos por temporada.
 
-O acervo inclui 331 fotografias. O Ferrari F2002 com que Barrichello venceu em Monza aparece em pista em Mugello, em uma foto de 5.184 × 3.456 px. O Ferrari F2001B de chassi 216 aparece na primeira fila do encontro de Nürburgring de 2003. O Ferrari F2002B de Brookline foi atribuído ao chassi 225 por comparação visual. As 36 capas do Hall da Fama têm originais com pelo menos 2.400 px no lado maior. A de Mike Hawthorn mostra o piloto no GP de Nápoles de 1957. Dos 184 momentos históricos catalogados, 176 têm pelo menos uma foto com original de 2.400 px ou mais no lado maior. As legendas identificam quando a imagem é do próprio GP e quando mostra um carro ou troféu original fotografado em outra ocasião.
+O acervo inclui 332 fotografias. O Ferrari F2002 com que Barrichello venceu em Monza aparece em pista em Mugello, em uma foto de 5.184 × 3.456 px. O Ferrari F2001B de chassi 216 aparece na primeira fila do encontro de Nürburgring de 2003. O Ferrari F2002B de Brookline foi atribuído ao chassi 225 por comparação visual. As 36 capas do Hall da Fama têm originais com pelo menos 2.400 px no lado maior. A de Mike Hawthorn mostra o piloto no GP de Nápoles de 1957. Dos 184 momentos históricos catalogados, 176 têm pelo menos uma foto com original de 2.400 px ou mais no lado maior. As legendas identificam quando a imagem é do próprio GP e quando mostra um carro ou troféu original fotografado em outra ocasião.
+
+A entrega do troféu de 2025 a Lando Norris em Tashkent acrescenta um registro de 1.920 × 1.280 px ao GP decisivo de Abu Dhabi. Com essa foto, 177 dos 184 marcos têm imagem no acervo.
 
 ## 0.18.0 — 2026-11-11
 

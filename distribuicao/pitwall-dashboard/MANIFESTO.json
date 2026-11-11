@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "eabd850af1d1da36c345487fae8751956d32f70d621b3550af7888a04776a0a8",
+  "apresentacao_build_sha256": "1e0c5f6c732a3aa47607651c6048f0358fd886d48b0c960e41530fde7b2dc905",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "b71a78be94b3cb07440c4a0c4845bad802f6fc843e8da76aa6938827fd764b23",
+      "sha256_destino": "46e1b63a215e57eeef1e07a14c8bba14e5c9579c27134bdb9da82e873e4cb1ae",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "982fe7f91873c68a79b7884e5131030bf9cfb8f07fb1c3897b9fec56cab90611",
-      "sha256_origem": "beca5b22e5db80f7986cf83f089e03dc1775881e5a2211bda08ccfbbebd8b679"
+      "sha256_destino": "a37ac8fa1d77dcb3d8144878d1aac170c4d2057a550eee1cbc2360cf19e7dbaa",
+      "sha256_origem": "f596ce0dcf804cf2990d039e5940e59af5a9e9b1da82e1075e69d32caf2d4a70"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "1f519e188810e71456af003b40b7bcd6e456cc9fdcbf7b7c53afabdf4afa6b6a",
-      "sha256_origem": "61d73a3c54e582330dc9a3c3b9db4ad7acfead309b55a640dece345e0beb7c19"
+      "sha256_destino": "54e60e4bb07190acece42bf11322b23c44cc13ea45d60348dfe6a5f3dedc4d21",
+      "sha256_origem": "8bf6af3627e9cc5a67d1030873ebd761563618240c0c23dc483dab7fd6c64740"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "d9ee5f9c910ae95c49b019dd1fb60206630754d2a386e6d7d34c72c7465fa167",
-      "sha256_origem": "d9ee5f9c910ae95c49b019dd1fb60206630754d2a386e6d7d34c72c7465fa167"
+      "sha256_destino": "bd835e3aafb22050119bdfed403cda657a5a7808f8d1e829c9c9abeaa9f7b5be",
+      "sha256_origem": "bd835e3aafb22050119bdfed403cda657a5a7808f8d1e829c9c9abeaa9f7b5be"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6458,6 +6458,20 @@
       "modo": "copia",
       "sha256_destino": "3285d7f691617eda2f65f244d4371f02531c47ee2861abc93820d75d6476c6e2",
       "sha256_origem": "3285d7f691617eda2f65f244d4371f02531c47ee2861abc93820d75d6476c6e2"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-trofeu-tashkent-2025-ede58f6d770d-1920.webp",
+      "fonte": "static/pitwall-archive/norris-trofeu-tashkent-2025-ede58f6d770d-1920.webp",
+      "modo": "copia",
+      "sha256_destino": "86868efebc10af928c922c5723052837ccfcf00437d1bd116cba754e0a5a7e8e",
+      "sha256_origem": "86868efebc10af928c922c5723052837ccfcf00437d1bd116cba754e0a5a7e8e"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-trofeu-tashkent-2025-ede58f6d770d-960.webp",
+      "fonte": "static/pitwall-archive/norris-trofeu-tashkent-2025-ede58f6d770d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b8e780b0f50fcf95abbe8d0140d8f8d556eb5c87e4437638488365cc0af213d0",
+      "sha256_origem": "b8e780b0f50fcf95abbe8d0140d8f8d556eb5c87e4437638488365cc0af213d0"
     },
     {
       "caminho": "static/pitwall-archive/norris-zandvoort-retrato-ee49583fc237-2400.webp",
