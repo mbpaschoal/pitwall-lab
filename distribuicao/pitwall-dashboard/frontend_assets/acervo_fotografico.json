@@ -4910,11 +4910,14 @@
     "hunt-zandvoort-1975": {
       "arquivo_commons": "File:Hunt and Lauda at 1975 Dutch Grand Prix.jpg",
       "legenda": {
-        "pt": "James Hunt e Niki Lauda no GP dos Países Baixos de 1975, vencido por Hunt.",
-        "en": "James Hunt and Niki Lauda at the 1975 Dutch Grand Prix, won by Hunt."
+        "pt": "James Hunt e Niki Lauda no GP dos Países Baixos de 1975, vencido por Hunt. Lauda aparece no Ferrari 312 T de chassi 022, com que fez a pole em Montjuïc na estreia de Alan Jones.",
+        "en": "James Hunt and Niki Lauda at the 1975 Dutch Grand Prix, won by Hunt. Lauda is driving Ferrari 312 T chassis 022, the car he put on pole at Montjuïc for Alan Jones’s debut."
       },
       "gps": [
         "1975:8"
+      ],
+      "artefatos_gps": [
+        "1975:4"
       ],
       "fonte": "https://commons.wikimedia.org/wiki/File:Hunt_and_Lauda_at_1975_Dutch_Grand_Prix.jpg",
       "original": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Hunt_and_Lauda_at_1975_Dutch_Grand_Prix.jpg",
@@ -8687,8 +8690,8 @@
     "clark-lotus-25-monza-1963": {
       "arquivo_commons": "File:1963 Lotus 25 R4 (54833107267).jpg",
       "legenda": {
-        "pt": "O Lotus 25 de chassi R4 em exposição em Silverstone em 2025. Com esse carro, Jim Clark venceu em Monza e garantiu os títulos de pilotos e de construtores da Lotus em 1963. Com o mesmo chassi, Clark terminou em segundo no Nürburgring, na primeira vitória de John Surtees.",
-        "en": "Lotus 25 chassis R4 on display at Silverstone in 2025. Jim Clark won at Monza in this car to secure the 1963 drivers’ and constructors’ titles for Lotus. In the same chassis, Clark finished second at the Nürburgring in John Surtees’s first win."
+        "pt": "O Lotus 25 de chassi R4 em exposição em Silverstone em 2025. Com esse carro, Jim Clark venceu em Monza e garantiu os títulos de pilotos e de construtores da Lotus em 1963. Com o mesmo chassi, Clark terminou em segundo no Nürburgring, na primeira vitória de John Surtees. Em 1964, Chris Amon correu com o chassi R4 na estreia de Jochen Rindt na Áustria e na decisão do título de Surtees no México.",
+        "en": "Lotus 25 chassis R4 on display at Silverstone in 2025. Jim Clark won at Monza in this car to secure the 1963 drivers’ and constructors’ titles for Lotus. In the same chassis, Clark finished second at the Nürburgring in John Surtees’s first win. In 1964, Chris Amon raced chassis R4 at Jochen Rindt’s debut in Austria and at the Mexican Grand Prix, where Surtees clinched the championship."
       },
       "modelo": "lotus-25",
       "temporadas": [
@@ -8699,7 +8702,9 @@
       ],
       "artefatos_gps": [
         "1963:7",
-        "1963:6"
+        "1963:6",
+        "1964:7",
+        "1964:10"
       ],
       "construtor": "lotus",
       "fonte": "https://commons.wikimedia.org/wiki/File:1963_Lotus_25_R4_(54833107267).jpg",
@@ -11103,6 +11108,103 @@
           "largura": 2400,
           "altura": 1600,
           "sha256": "ab888adac47c9bbcdb5ff3bb1f5af29f2cfa1b3ec88ced84e55967e3b78ab2cb"
+        }
+      ]
+    },
+    "tecmec-f415-nurburgring-2014": {
+      "arquivo_commons": "File:Maserati TecMec.jpg",
+      "legenda": {
+        "pt": "O Tec-Mec F415 no Nürburgring em 2014. O brasileiro Fritz d’Orey correu com essa única unidade em Sebring, no GP em que Jack Brabham garantiu seu primeiro Mundial, em 1959.",
+        "en": "The Tec-Mec F415 at the Nürburgring in 2014. Brazilian driver Fritz d’Orey raced the only example at Sebring in 1959, where Jack Brabham clinched his first world title."
+      },
+      "artefatos_gps": [
+        "1959:9"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Maserati_TecMec.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Maserati_TecMec.jpg",
+      "autor": "Kogo",
+      "licenca": "CC BY-SA 3.0 de",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "sha256": "c98f6faca5ea6f04316794887e7c215210db26909488ac674df402a6acd418bf",
+      "largura": 2400,
+      "altura": 1600,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/tecmec-f415-nurburgring-2014-c98f6faca5ea-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "5487faeeb729eb810d9661c7e0e6262538a7a813beab8e9d5abc524c737a98c2"
+        },
+        {
+          "arquivo": "static/pitwall-archive/tecmec-f415-nurburgring-2014-c98f6faca5ea-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "f92db26b5e0ec9d9be97b16d4ffc0ea2a920e2e837042e7c4b1c3b0fe5bad5e9"
+        }
+      ]
+    },
+    "hill-ferrari-246-goodwood-2019": {
+      "arquivo_commons": "File:1960 Ferrari 246 Dino (48954160311).jpg",
+      "legenda": {
+        "pt": "Tony Smith no Ferrari Dino 246 reconstruído a partir do chassi 0007 em Goodwood, em 2019. Dan Gurney foi quarto com o 0007 em Monza em 1959, quando a Cooper garantiu o Mundial de Construtores. Phil Hill venceu em Monza com esse chassi no ano seguinte, sua primeira vitória no Mundial.",
+        "en": "Tony Smith in the Ferrari Dino 246 rebuilt from chassis 0007 at Goodwood in 2019. Dan Gurney finished fourth in 0007 at Monza in 1959, where Cooper sealed the constructors’ title. Phil Hill won at Monza in the same chassis the following year, his first World Championship win."
+      },
+      "artefatos_gps": [
+        "1959:8",
+        "1960:9"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:1960_Ferrari_246_Dino_(48954160311).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/96/1960_Ferrari_246_Dino_%2848954160311%29.jpg",
+      "autor": "David Merrett from Daventry, England",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "39121f1d9ff3aecff3edb486ddaa70473f062a5dbc512c2b76dc3207f50c9624",
+      "largura": 5067,
+      "altura": 3369,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hill-ferrari-246-goodwood-2019-39121f1d9ff3-960.webp",
+          "largura": 960,
+          "altura": 638,
+          "sha256": "3de6a670c227c42a406a647f3ab627515f4d65a77e4185eb62cc11c3a6a2cc66"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hill-ferrari-246-goodwood-2019-39121f1d9ff3-2400.webp",
+          "largura": 2400,
+          "altura": 1596,
+          "sha256": "bc0524e645191b0172f2da7d5fbce919543fea2b97f19f5c72f373f52a0a7e24"
+        }
+      ]
+    },
+    "claes-connaught-a4-goodwood-2021": {
+      "arquivo_commons": "File:Connaught Type A in Ecurie Belge colours.jpg",
+      "legenda": {
+        "pt": "O Connaught de chassi A4 nas cores amarelas da Écurie Belge, em Goodwood em 2021. Johnny Claes terminou em 12º com esse chassi em Reims, na primeira vitória de Mike Hawthorn no Mundial, em 1953.",
+        "en": "Connaught chassis A4 in Écurie Belge’s yellow livery at Goodwood in 2021. Johnny Claes finished 12th in this chassis at Reims in 1953, where Mike Hawthorn scored his first World Championship win."
+      },
+      "artefatos_gps": [
+        "1953:5"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Connaught_Type_A_in_Ecurie_Belge_colours.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Connaught_Type_A_in_Ecurie_Belge_colours.jpg",
+      "autor": "In Vitrio",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "2efa6ce87f70b3b90b820abe164a5c1d5604c0081e1b701d345e92a8ccc24e76",
+      "largura": 4608,
+      "altura": 3456,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/claes-connaught-a4-goodwood-2021-2efa6ce87f70-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "85862012b3e6507287247fa459a0a252408f8be8c657b9e97a749e1b6386dc7b"
+        },
+        {
+          "arquivo": "static/pitwall-archive/claes-connaught-a4-goodwood-2021-2efa6ce87f70-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "17a1edc57e10f3b16413af09580a500f59d3f6dac7e0b1c14228e242e023b458"
         }
       ]
     }

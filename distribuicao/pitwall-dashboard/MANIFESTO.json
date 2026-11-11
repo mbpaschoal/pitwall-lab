@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "cdaa3c96a4b0a37ab26f78b5b4baeb5bc2951b599979cb9b658501264a9feb14",
+  "apresentacao_build_sha256": "757bd58550f52eb16a83310f8f89b76a53b55d4533ea1fce17bd0e5e0808ef90",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "cb23cb706f655950a4ad0041e6a5cb71db4322843e14dfad13f214514f9827a9",
+      "sha256_destino": "566efd3b15ffaf66ae20373de7cf2112c8a1e37046fcdb81016b072f97d4ce9b",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "4423b3eb36e5e864935944d4623417e129a954ab71378db1e9c019768f83eb2e",
-      "sha256_origem": "1681b60e34cc0c19d454fe623676ab76d5e6f6a16e8eff08375959921639cccb"
+      "sha256_destino": "5b48b1c78a73c312ba4604289f793406d1ee04e014673017da11da52407e491e",
+      "sha256_origem": "ea18674f399e54d8a1013446212054a9e23a0885caaaea2a1c7b7685f5d3e00f"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "056500f564eab94bbcd6f64aab7658ca7f1b636d684d702879ff1a16e46a7a57",
-      "sha256_origem": "4e61925b1ee3a9fa6d734f240e3e6a90389ae7d3b5b192f73c6df67d10b3e03f"
+      "sha256_destino": "fe1de4ae6fdef5b4c62cfcf878a722f6f6785e95f2a2b8002b71f8df967e47a9",
+      "sha256_origem": "8b85daa6e0db0d87ec535a72341cd4814970ae2881854296caef308031a82c21"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "5865845a4df0e28656c8d240d159d42393c93bb257f4812e76d482fb098b14c9",
-      "sha256_origem": "5865845a4df0e28656c8d240d159d42393c93bb257f4812e76d482fb098b14c9"
+      "sha256_destino": "aa7b03327ce7433f590cd0e302eaf20b3b0f910e92f103a29955f4f62aa2fe81",
+      "sha256_origem": "aa7b03327ce7433f590cd0e302eaf20b3b0f910e92f103a29955f4f62aa2fe81"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4080,6 +4080,20 @@
       "sha256_origem": "d4563cab91ba0394b32f127504894070a8fd43683757258ecef932611a6dd363"
     },
     {
+      "caminho": "static/pitwall-archive/claes-connaught-a4-goodwood-2021-2efa6ce87f70-2400.webp",
+      "fonte": "static/pitwall-archive/claes-connaught-a4-goodwood-2021-2efa6ce87f70-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "17a1edc57e10f3b16413af09580a500f59d3f6dac7e0b1c14228e242e023b458",
+      "sha256_origem": "17a1edc57e10f3b16413af09580a500f59d3f6dac7e0b1c14228e242e023b458"
+    },
+    {
+      "caminho": "static/pitwall-archive/claes-connaught-a4-goodwood-2021-2efa6ce87f70-960.webp",
+      "fonte": "static/pitwall-archive/claes-connaught-a4-goodwood-2021-2efa6ce87f70-960.webp",
+      "modo": "copia",
+      "sha256_destino": "85862012b3e6507287247fa459a0a252408f8be8c657b9e97a749e1b6386dc7b",
+      "sha256_origem": "85862012b3e6507287247fa459a0a252408f8be8c657b9e97a749e1b6386dc7b"
+    },
+    {
       "caminho": "static/pitwall-archive/clark-lotus-25-monza-1963-761bc9f8bdfa-2400.webp",
       "fonte": "static/pitwall-archive/clark-lotus-25-monza-1963-761bc9f8bdfa-2400.webp",
       "modo": "copia",
@@ -5030,6 +5044,20 @@
       "modo": "copia",
       "sha256_destino": "900d81062d5fe2eef1ab63f851b60a9db55cabf8760f2738ce9c03fb05799048",
       "sha256_origem": "900d81062d5fe2eef1ab63f851b60a9db55cabf8760f2738ce9c03fb05799048"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-ferrari-246-goodwood-2019-39121f1d9ff3-2400.webp",
+      "fonte": "static/pitwall-archive/hill-ferrari-246-goodwood-2019-39121f1d9ff3-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "bc0524e645191b0172f2da7d5fbce919543fea2b97f19f5c72f373f52a0a7e24",
+      "sha256_origem": "bc0524e645191b0172f2da7d5fbce919543fea2b97f19f5c72f373f52a0a7e24"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-ferrari-246-goodwood-2019-39121f1d9ff3-960.webp",
+      "fonte": "static/pitwall-archive/hill-ferrari-246-goodwood-2019-39121f1d9ff3-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3de6a670c227c42a406a647f3ab627515f4d65a77e4185eb62cc11c3a6a2cc66",
+      "sha256_origem": "3de6a670c227c42a406a647f3ab627515f4d65a77e4185eb62cc11c3a6a2cc66"
     },
     {
       "caminho": "static/pitwall-archive/hill-fw15c-hungria-spa-1993-864d55e2471a-2400.webp",
@@ -7270,6 +7298,20 @@
       "modo": "copia",
       "sha256_destino": "6aca5ed4181177d33586800a5b52e8536fbda7d6d5067a539fdad74e4c78d2d9",
       "sha256_origem": "6aca5ed4181177d33586800a5b52e8536fbda7d6d5067a539fdad74e4c78d2d9"
+    },
+    {
+      "caminho": "static/pitwall-archive/tecmec-f415-nurburgring-2014-c98f6faca5ea-2400.webp",
+      "fonte": "static/pitwall-archive/tecmec-f415-nurburgring-2014-c98f6faca5ea-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "f92db26b5e0ec9d9be97b16d4ffc0ea2a920e2e837042e7c4b1c3b0fe5bad5e9",
+      "sha256_origem": "f92db26b5e0ec9d9be97b16d4ffc0ea2a920e2e837042e7c4b1c3b0fe5bad5e9"
+    },
+    {
+      "caminho": "static/pitwall-archive/tecmec-f415-nurburgring-2014-c98f6faca5ea-960.webp",
+      "fonte": "static/pitwall-archive/tecmec-f415-nurburgring-2014-c98f6faca5ea-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5487faeeb729eb810d9661c7e0e6262538a7a813beab8e9d5abc524c737a98c2",
+      "sha256_origem": "5487faeeb729eb810d9661c7e0e6262538a7a813beab8e9d5abc524c737a98c2"
     },
     {
       "caminho": "static/pitwall-archive/tyrrell-001-5b29c167cc35-2400.webp",
