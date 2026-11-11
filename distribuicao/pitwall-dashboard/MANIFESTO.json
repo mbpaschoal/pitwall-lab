@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "1e0c5f6c732a3aa47607651c6048f0358fd886d48b0c960e41530fde7b2dc905",
+  "apresentacao_build_sha256": "f47084042b1573dd5300236f9afaf4e0f3aa2d1947851a38d72538d640ce362c",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "46e1b63a215e57eeef1e07a14c8bba14e5c9579c27134bdb9da82e873e4cb1ae",
+      "sha256_destino": "e42b72c501efc5b204357a8cb72953daa1460a05e304ddbef371a15530e2ac17",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a37ac8fa1d77dcb3d8144878d1aac170c4d2057a550eee1cbc2360cf19e7dbaa",
-      "sha256_origem": "f596ce0dcf804cf2990d039e5940e59af5a9e9b1da82e1075e69d32caf2d4a70"
+      "sha256_destino": "d517af34b9c00145552d1c923a012abc8ded531c3497b8aef7461c85d7b27498",
+      "sha256_origem": "9ea44f5d075a95217fda23d9bdf751ec08faffd5d9b4c5a48e0921a2b1c52a36"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "54e60e4bb07190acece42bf11322b23c44cc13ea45d60348dfe6a5f3dedc4d21",
-      "sha256_origem": "8bf6af3627e9cc5a67d1030873ebd761563618240c0c23dc483dab7fd6c64740"
+      "sha256_destino": "4b159c1c0ec79c0eeb68d30f1877332127ca33bec2cbdc4e9efea4e4c17051e2",
+      "sha256_origem": "6cd079909e0e76945d111a4d02df6d5abde13b9d9053cec95894da78f3ec8f76"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "bd835e3aafb22050119bdfed403cda657a5a7808f8d1e829c9c9abeaa9f7b5be",
-      "sha256_origem": "bd835e3aafb22050119bdfed403cda657a5a7808f8d1e829c9c9abeaa9f7b5be"
+      "sha256_destino": "b4716e36627a7f561acc82f85657f27b698c07b23791f59ce2811ec0e4a5143c",
+      "sha256_origem": "b4716e36627a7f561acc82f85657f27b698c07b23791f59ce2811ec0e4a5143c"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7186,6 +7186,20 @@
       "modo": "copia",
       "sha256_destino": "adf9aee7a77bfe20831148e30f1e8b3bb843af3616512287fd0cb0bcac777a68",
       "sha256_origem": "adf9aee7a77bfe20831148e30f1e8b3bb843af3616512287fd0cb0bcac777a68"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-ultrapassagem-magny-cours-2002-db555a45727b-480.webp",
+      "fonte": "static/pitwall-archive/schumacher-ultrapassagem-magny-cours-2002-db555a45727b-480.webp",
+      "modo": "copia",
+      "sha256_destino": "90bd22e02b8b1351fe6b57ba8b301ef5fd85ede27a0859b639bcaf902aee83f9",
+      "sha256_origem": "90bd22e02b8b1351fe6b57ba8b301ef5fd85ede27a0859b639bcaf902aee83f9"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-ultrapassagem-magny-cours-2002-db555a45727b-610.webp",
+      "fonte": "static/pitwall-archive/schumacher-ultrapassagem-magny-cours-2002-db555a45727b-610.webp",
+      "modo": "copia",
+      "sha256_destino": "923c28a729a6a988529fffcb419bf453a9a35cbe28469eb5b6b3321d4187939f",
+      "sha256_origem": "923c28a729a6a988529fffcb419bf453a9a35cbe28469eb5b6b3321d4187939f"
     },
     {
       "caminho": "static/pitwall-archive/sebastian-vettel-retrato-fd438148b9b2-1920.webp",
