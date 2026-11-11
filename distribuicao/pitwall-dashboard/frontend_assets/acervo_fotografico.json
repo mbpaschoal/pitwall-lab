@@ -8110,8 +8110,8 @@
     "piquet-bt52b-zandvoort-1983": {
       "arquivo_commons": "File:Piquet and Prost at 1983 Dutch Grand Prix (2).jpg",
       "legenda": {
-        "pt": "Nelson Piquet no Brabham BT52B em Zandvoort, em 28 de agosto de 1983. A versão B entrou em ação no GP da Grã-Bretanha, na campanha do bicampeonato de Piquet.",
-        "en": "Nelson Piquet in the Brabham BT52B at Zandvoort on 28 August 1983. The B version debuted at the British Grand Prix during Piquet's second title campaign."
+        "pt": "Nelson Piquet disputa o GP dos Países Baixos de 1983 em Zandvoort no Brabham BT52B de chassi 5. Foi com esse mesmo carro que conquistou seu segundo Mundial de Pilotos em Kyalami.",
+        "en": "Nelson Piquet races Brabham BT52B chassis 5 at Zandvoort in the 1983 Dutch Grand Prix. He clinched his second drivers’ championship in the same car at Kyalami."
       },
       "modelo": "brabham-bt52b",
       "temporadas": [
@@ -8145,6 +8145,9 @@
           "altura": 1595,
           "sha256": "01360a7f0472526f29a1c7401a13a9a4c85a103afb1e61860f8b98a42c9beb13"
         }
+      ],
+      "artefatos_gps": [
+        "1983:15"
       ]
     },
     "piquet-prost-zandvoort-1983": {
@@ -9974,6 +9977,442 @@
           "largura": 2400,
           "altura": 1500,
           "sha256": "d3e9dbbee5f01388e4bc0835a09b0c3e83d1bf8e3b1c5f7c1ebcd578a0cd6fa1"
+        }
+      ]
+    },
+    "lotus-33-stewart-goodwood-2013": {
+      "arquivo_commons": "File:Lotus 33 Climax Jackie Stewart at Goodwood Revival 2013 001.jpg",
+      "legenda": {
+        "pt": "Jackie Stewart pilota o Lotus 33 Climax no Goodwood Revival de 2013. Jim Clark correu com o modelo na campanha do bicampeonato de 1965.",
+        "en": "Jackie Stewart drives the Lotus 33 Climax at the 2013 Goodwood Revival. Jim Clark raced this model during his second title campaign in 1965."
+      },
+      "modelo": "lotus-33",
+      "temporadas": [
+        1965
+      ],
+      "construtor": "lotus",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lotus_33_Climax_Jackie_Stewart_at_Goodwood_Revival_2013_001.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/92/Lotus_33_Climax_Jackie_Stewart_at_Goodwood_Revival_2013_001.jpg",
+      "autor": "Iain A Wanless",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "ac93b820ed3c2815f74b40a40b472b0f6e18dc2360587d54a6bc9ef4e80eaf3e",
+      "largura": 4056,
+      "altura": 1685,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/lotus-33-stewart-goodwood-2013-ac93b820ed3c-960.webp",
+          "largura": 960,
+          "altura": 399,
+          "sha256": "a9945ef770bfc71010cfa58a222bd964dd3067d0e9735c66a2a15761c52731d8"
+        },
+        {
+          "arquivo": "static/pitwall-archive/lotus-33-stewart-goodwood-2013-ac93b820ed3c-2400.webp",
+          "largura": 2400,
+          "altura": 997,
+          "sha256": "50d61c2b02b67bd6d28af44cf90cd2b556fb09ca040e4162f1fa9b87a4a07044"
+        }
+      ]
+    },
+    "fittipaldi-lotus-72e-anderstorp-1973": {
+      "arquivo_commons": "File:Swedish Grand Prix 1973 (JOKAMAL3B08-18).tif",
+      "legenda": {
+        "pt": "O Lotus 72E de chassi R7 de Emerson Fittipaldi nos boxes em Anderstorp, no fim de semana do GP da Suécia de 1973. Fittipaldi terminou em sexto com esse carro em Watkins Glen, onde a Lotus conquistou o Mundial de Construtores.",
+        "en": "Emerson Fittipaldi’s Lotus 72E chassis R7 in the pits at Anderstorp during the 1973 Swedish Grand Prix weekend. Fittipaldi finished sixth in this car at Watkins Glen, where Lotus clinched the constructors’ championship."
+      },
+      "modelo": "lotus-72e",
+      "temporadas": [
+        1973
+      ],
+      "gps": [
+        "1973:7"
+      ],
+      "artefatos_gps": [
+        "1973:15"
+      ],
+      "construtor": "lotus",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Swedish_Grand_Prix_1973_(JOKAMAL3B08-18).tif",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/da/Swedish_Grand_Prix_1973_%28JOKAMAL3B08-18%29.tif",
+      "autor": "Markku Lepola",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "ddddc25d9060d72eafcd16fb1af0433351546505c8bb5c9bf856f95054f111f1",
+      "largura": 5283,
+      "altura": 3543,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/fittipaldi-lotus-72e-anderstorp-1973-ddddc25d9060-960.webp",
+          "largura": 960,
+          "altura": 644,
+          "sha256": "38eb57ae357cf77fb4b15644963372090ba9ad32d2c38fd88a36aee9c57c6753"
+        },
+        {
+          "arquivo": "static/pitwall-archive/fittipaldi-lotus-72e-anderstorp-1973-ddddc25d9060-2400.webp",
+          "largura": 2400,
+          "altura": 1610,
+          "sha256": "36809a23ad51cabd32b9920ebf0c9370aa5d3b33ea3484cf6c88c2a627f29552"
+        }
+      ]
+    },
+    "matra-ms84-museu-romorantin": {
+      "arquivo_commons": "File:Romorantin-Lanthenay (Loir-et-Cher) (52278099676).jpg",
+      "legenda": {
+        "pt": "Matra MS84 de tração integral no museu da marca em Romorantin. Johnny Servoz-Gavin pontuou com o modelo no GP do Canadá de 1969.",
+        "en": "The four-wheel-drive Matra MS84 at the Matra museum in Romorantin. Johnny Servoz-Gavin scored a point with this model at the 1969 Canadian Grand Prix."
+      },
+      "modelo": "matra-ms84",
+      "temporadas": [
+        1969
+      ],
+      "construtor": "matra",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Romorantin-Lanthenay_(Loir-et-Cher)_(52278099676).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Romorantin-Lanthenay_%28Loir-et-Cher%29_%2852278099676%29.jpg",
+      "autor": "Daniel Jolivet",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "5a087727bd964fa0f5e140868b321e488f6bc88741ee681a738967be2ece3d3b",
+      "largura": 4928,
+      "altura": 3264,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/matra-ms84-museu-romorantin-5a087727bd96-960.webp",
+          "largura": 960,
+          "altura": 636,
+          "sha256": "a28b5d0d729f8050eb3eb756114f954a53add30b55a3e966e4d44cff60fb3ba1"
+        },
+        {
+          "arquivo": "static/pitwall-archive/matra-ms84-museu-romorantin-5a087727bd96-2400.webp",
+          "largura": 2400,
+          "altura": 1590,
+          "sha256": "a13747d8dc585647c3de7ff73c1b9c8417dba35b6e46c82c9b794b6586815012"
+        }
+      ]
+    },
+    "stewart-matra-ms84-charade-1969": {
+      "arquivo_commons": "File:GP FRANCE 1969 040 (5097331236).jpg",
+      "legenda": {
+        "pt": "Jackie Stewart experimenta o Matra MS84 de tração integral no treino do GP da França de 1969, em Charade.",
+        "en": "Jackie Stewart tries the four-wheel-drive Matra MS84 in practice for the 1969 French Grand Prix at Charade."
+      },
+      "modelo": "matra-ms84",
+      "temporadas": [
+        1969
+      ],
+      "gps": [
+        "1969:5"
+      ],
+      "construtor": "matra",
+      "fonte": "https://commons.wikimedia.org/wiki/File:GP_FRANCE_1969_040_(5097331236).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/fd/GP_FRANCE_1969_040_%285097331236%29.jpg",
+      "autor": "ZANTAFIO56",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "0a3e92ab02914700146657eb7e98ad05c0432f6f2c3bc70239c8742891dc8907",
+      "largura": 3872,
+      "altura": 2592,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/stewart-matra-ms84-charade-1969-0a3e92ab0291-960.webp",
+          "largura": 960,
+          "altura": 643,
+          "sha256": "a2caa56acc636bff45bc644c161b07eb7a51784976ad67787148476ea2e5e9ae"
+        },
+        {
+          "arquivo": "static/pitwall-archive/stewart-matra-ms84-charade-1969-0a3e92ab0291-2400.webp",
+          "largura": 2400,
+          "altura": 1607,
+          "sha256": "ec5ff530089b89c4e8c5a37c26a4ed83b04a11394dc9c5f4e7df3b4147b15104"
+        }
+      ]
+    },
+    "alonso-renault-r26-museu-2017": {
+      "arquivo_commons": "File:Renault R26 front-left 2017 Museo Fernando Alonso.jpg",
+      "legenda": {
+        "pt": "Renault R26 da campanha de Fernando Alonso em 2006, fotografado no Museo y Circuito Fernando Alonso, nas Astúrias.",
+        "en": "A Renault R26 from Fernando Alonso’s 2006 campaign, photographed at the Museo y Circuito Fernando Alonso in Asturias."
+      },
+      "modelo": "renault-r26",
+      "temporadas": [
+        2006
+      ],
+      "construtor": "renault",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Renault_R26_front-left_2017_Museo_Fernando_Alonso.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Renault_R26_front-left_2017_Museo_Fernando_Alonso.jpg",
+      "autor": "Morio",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "f969b182edaf28d87887668fa8e5d2b85859f41a1ffa4e48fd2bece25b0aad0c",
+      "largura": 3840,
+      "altura": 2560,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/alonso-renault-r26-museu-2017-f969b182edaf-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "3aec5b5664c0204dbe0711cb059eaf32155a48b7cce86a23dc55108da2bf9b5e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/alonso-renault-r26-museu-2017-f969b182edaf-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "9aea072b0c9879fdab97cad6d1f3960c7d8acf8d2baef9d1670f6e195fd5cb04"
+        }
+      ]
+    },
+    "alonso-renault-r26-indianapolis-2006": {
+      "arquivo_commons": "File:Fernando Alonso 2006 Indianapolis.jpg",
+      "legenda": {
+        "pt": "Fernando Alonso no Renault R26 durante o GP dos Estados Unidos de 2006, em Indianápolis.",
+        "en": "Fernando Alonso in the Renault R26 during the 2006 United States Grand Prix at Indianapolis."
+      },
+      "modelo": "renault-r26",
+      "temporadas": [
+        2006
+      ],
+      "gps": [
+        "2006:10"
+      ],
+      "construtor": "renault",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_2006_Indianapolis.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/09/Fernando_Alonso_2006_Indianapolis.jpg",
+      "autor": "Ryosuke Yagi",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "b67a3def14b62e99591f82f67ae64f48a0eac9348091a0ca4655494b2b992e74",
+      "largura": 3264,
+      "altura": 2448,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/alonso-renault-r26-indianapolis-2006-b67a3def14b6-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "880cdb2fc14aea1acb10248dbc34a26bef7f0e0ea7ca360beaaae65636302853"
+        },
+        {
+          "arquivo": "static/pitwall-archive/alonso-renault-r26-indianapolis-2006-b67a3def14b6-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "80e5d2caa5a9eb169763a91cdb0dd04bdd6d0a768feb0095e657bc94e2d69ae8"
+        }
+      ]
+    },
+    "brabham-bt52-museu-bmw": {
+      "arquivo_commons": "File:Nelson Piquet Formula 1 car in BMW-Museum in Munich, Bayern.JPG",
+      "legenda": {
+        "pt": "O Brabham-BMW BT52 com a pintura de Nelson Piquet, fotografado no Museu BMW em Munique. Piquet venceu com a versão inicial do BT52 na abertura do Mundial de 1983, em Jacarepaguá.",
+        "en": "The Brabham-BMW BT52 in Nelson Piquet’s livery, photographed at the BMW Museum in Munich. Piquet won the 1983 season opener at Jacarepaguá in the original BT52 specification."
+      },
+      "modelo": "brabham-bt52",
+      "temporadas": [
+        1983
+      ],
+      "construtor": "brabham",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Nelson_Piquet_Formula_1_car_in_BMW-Museum_in_Munich,_Bayern.JPG",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Nelson_Piquet_Formula_1_car_in_BMW-Museum_in_Munich%2C_Bayern.JPG",
+      "autor": "Jiří Sedláček",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "1092ff9bf1bef221aa20a60ef4ced701a1b199a86eff9216dd3301b9eb3dfcd0",
+      "largura": 3888,
+      "altura": 2592,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/brabham-bt52-museu-bmw-1092ff9bf1be-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "89f8905856c0f922b0d9b5cbfe6641aea862241d438ed8e6a781b4e700f4dbac"
+        },
+        {
+          "arquivo": "static/pitwall-archive/brabham-bt52-museu-bmw-1092ff9bf1be-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "8e10dbe73d8906d59238b8bf6cd5e60ce77482ba519431a5863ddc038224000d"
+        }
+      ]
+    },
+    "herbert-benetton-b195-copse-1995": {
+      "arquivo_commons": "File:Johnny Herbert - Benetton B195 braking for Copse at the 1995 British Grand Prix, Silverstone (49721139892).jpg",
+      "legenda": {
+        "pt": "Johnny Herbert freia para Copse no Benetton B195 de chassi 5 durante o fim de semana do GP da Grã-Bretanha de 1995, sua primeira vitória na F1. Ele usou o mesmo carro em Suzuka, onde a Benetton conquistou o Mundial de Construtores.",
+        "en": "Johnny Herbert brakes for Copse in Benetton B195 chassis 5 during the weekend of the 1995 British Grand Prix, his first F1 win. He drove the same car at Suzuka, where Benetton clinched the constructors’ championship."
+      },
+      "modelo": "benetton-b195",
+      "temporadas": [
+        1995
+      ],
+      "gps": [
+        "1995:8"
+      ],
+      "artefatos_gps": [
+        "1995:16"
+      ],
+      "construtor": "benetton",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Johnny_Herbert_-_Benetton_B195_braking_for_Copse_at_the_1995_British_Grand_Prix,_Silverstone_(49721139892).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Johnny_Herbert_-_Benetton_B195_braking_for_Copse_at_the_1995_British_Grand_Prix%2C_Silverstone_%2849721139892%29.jpg",
+      "autor": "Martin Lee from London, UK",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "5a9570a987f1d7085ecd4999ff5bd0e21234f0429c9a89116640b8e212583f51",
+      "largura": 2553,
+      "altura": 1593,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/herbert-benetton-b195-copse-1995-5a9570a987f1-960.webp",
+          "largura": 960,
+          "altura": 599,
+          "sha256": "900d81062d5fe2eef1ab63f851b60a9db55cabf8760f2738ce9c03fb05799048"
+        },
+        {
+          "arquivo": "static/pitwall-archive/herbert-benetton-b195-copse-1995-5a9570a987f1-2400.webp",
+          "largura": 2400,
+          "altura": 1498,
+          "sha256": "0fff67bbb6679c75474a2b3d417c43ae1c3527a05a5c5f4a422828d7732c4929"
+        }
+      ]
+    },
+    "regazzoni-ferrari-312t-retromobile-2023": {
+      "arquivo_commons": "File:FERRARI 312T RETROMOBILE 2023 (52678287632).jpg",
+      "legenda": {
+        "pt": "Ferrari 312 T de chassi 024 fotografado no Rétromobile de 2023. Clay Regazzoni venceu com este carro em Monza em 1975, quando Niki Lauda e a Ferrari garantiram seus títulos.",
+        "en": "Ferrari 312 T chassis 024 photographed at Rétromobile in 2023. Clay Regazzoni won in this car at Monza in 1975, when Niki Lauda and Ferrari clinched their titles."
+      },
+      "modelo": "ferrari-312t",
+      "temporadas": [
+        1975,
+        1976
+      ],
+      "artefatos_gps": [
+        "1975:13"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://commons.wikimedia.org/wiki/File:FERRARI_312T_RETROMOBILE_2023_(52678287632).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/1a/FERRARI_312T_RETROMOBILE_2023_%2852678287632%29.jpg",
+      "autor": "ERIC SALARD from Paris, FRANCE",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "0c5a0d38921b371ff998e05dd7fb70cb0c92b858241235ebd2624ddbd7c9eb2a",
+      "largura": 4288,
+      "altura": 2848,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/regazzoni-ferrari-312t-retromobile-2023-0c5a0d38921b-960.webp",
+          "largura": 960,
+          "altura": 638,
+          "sha256": "8021b70b2d906ebd09decd50601a0c27c9dc2bfcfd054b373ce209e8100f1c8f"
+        },
+        {
+          "arquivo": "static/pitwall-archive/regazzoni-ferrari-312t-retromobile-2023-0c5a0d38921b-2400.webp",
+          "largura": 2400,
+          "altura": 1594,
+          "sha256": "aeb3a53a56ea804f4a0690fe0109618e373abb98551a3e040d5d96b9fb2a8b5a"
+        }
+      ]
+    },
+    "reutemann-ferrari-312t3-watkins-glen-1978": {
+      "arquivo_commons": "File:Carlos Reutemann Walkins Glen Ferrari 1978.jpg",
+      "legenda": {
+        "pt": "Carlos Reutemann no Ferrari 312 T3 a caminho da vitória em Watkins Glen, em 1978. A Ferrari ainda usou o modelo no início da campanha campeã de 1979.",
+        "en": "Carlos Reutemann on his way to victory at Watkins Glen in the Ferrari 312 T3 in 1978. Ferrari also ran this model at the start of its championship-winning 1979 campaign."
+      },
+      "modelo": "ferrari-312t3",
+      "temporadas": [
+        1979
+      ],
+      "gps": [
+        "1978:15"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Carlos_Reutemann_Walkins_Glen_Ferrari_1978.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/35/Carlos_Reutemann_Walkins_Glen_Ferrari_1978.jpg",
+      "autor": "Wjwalrus",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sha256": "b5e3b685aba53a02a8a28654aab8bef9fcc99323fbf781eb2ffe541fcb95c4ac",
+      "largura": 3600,
+      "altura": 2400,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/reutemann-ferrari-312t3-watkins-glen-1978-b5e3b685aba5-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "15e5b497ffcf4243f2df3adad034fda48c43f661959e8721d732ebefd075ef16"
+        },
+        {
+          "arquivo": "static/pitwall-archive/reutemann-ferrari-312t3-watkins-glen-1978-b5e3b685aba5-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "8f296278c12ccdc975e8e74a9bfb295e6e6732cb161eb5d5d4a232ea3d335f19"
+        }
+      ]
+    },
+    "ferrari-f2003-ga-essen-2023": {
+      "arquivo_commons": "File:Ferrari F2003-GA (2003) (52864606435).jpg",
+      "legenda": {
+        "pt": "Ferrari F2003-GA de chassi 226 exposto na Techno-Classica de Essen em 2023. Michael Schumacher e a Ferrari conquistaram os títulos de 2003 com o modelo.",
+        "en": "Ferrari F2003-GA chassis 226 on display at Techno-Classica Essen in 2023. Michael Schumacher and Ferrari won the 2003 championships with this model."
+      },
+      "modelo": "ferrari-f2003-ga",
+      "temporadas": [
+        2003
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Ferrari_F2003-GA_(2003)_(52864606435).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Ferrari_F2003-GA_%282003%29_%2852864606435%29.jpg",
+      "autor": "Charles from Port Chester, New York",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "c0f77cb6fc04a9b2ecfad4124cfbd04e58ed32e5e3ce6bb141d2d0a8e4477b50",
+      "largura": 5707,
+      "altura": 3805,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ferrari-f2003-ga-essen-2023-c0f77cb6fc04-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "57d69fd245d6438f5c230d8aae78e5d52e12e83661f9110f8889e5ea5bb7b12d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ferrari-f2003-ga-essen-2023-c0f77cb6fc04-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "9c6cea14659a20fc7c19aa44bb6df8db96dbb6e2658b8e4645100e878898846a"
+        }
+      ]
+    },
+    "hill-williams-fw16-silverstone-1994": {
+      "arquivo_commons": "File:Damon Hill - Williams FW16 at the 1994 British Grand Prix (32388913382).jpg",
+      "legenda": {
+        "pt": "Damon Hill no Williams FW16 no GP da Grã-Bretanha de 1994, que venceu diante da torcida de Silverstone.",
+        "en": "Damon Hill in the Williams FW16 at the 1994 British Grand Prix, which he won in front of the Silverstone crowd."
+      },
+      "modelo": "williams-fw16",
+      "temporadas": [
+        1994
+      ],
+      "gps": [
+        "1994:8"
+      ],
+      "construtor": "williams",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Damon_Hill_-_Williams_FW16_at_the_1994_British_Grand_Prix_(32388913382).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Damon_Hill_-_Williams_FW16_at_the_1994_British_Grand_Prix_%2832388913382%29.jpg",
+      "autor": "Martin Lee from London, UK",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "e54d59871169f0ac11acfdff92d9f04278122c04a53fdec46bc73075d7527e19",
+      "largura": 2544,
+      "altura": 1696,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hill-williams-fw16-silverstone-1994-e54d59871169-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "2bacca5f472ed89f8c4c99a5fc7a766283f3998792768b912c4cb1900a155f2f"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hill-williams-fw16-silverstone-1994-e54d59871169-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "0fba1adbe2430263add1b68060b2fb44bd9993e619af9d00d1433305b86cc9ee"
         }
       ]
     }

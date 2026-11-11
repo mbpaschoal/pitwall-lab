@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "4ef5bfa61604089d8953e50ed248f94b7f3dc3570ebd3c79ff542f8520a00f42",
+  "apresentacao_build_sha256": "1561d4ad74fc9b6b8e90c25f05f1b88cbdeab7242c8093dd482dcf574d455b4a",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "d80198883d34b8b8cb4266db0280d26e2cc47f5c37578aa8537fe0ee1afc804c",
+      "sha256_destino": "0fe59c8e27681c5c33fe351fce1372849f2868083e416f2cf9ddb273fc04278a",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "feeb2da308d7cf8cf253e323f7d098d5f968b4a3e351001ff5df2d5b2a537926",
-      "sha256_origem": "f97268f7d24b23b64619e789525524c6528b0229f6ef4624663efef30ff784ad"
+      "sha256_destino": "5943868e48acd2ed3d5e661c13452d44813cbbfa5a9c40ceac8ba5217ef86228",
+      "sha256_origem": "dc833fc34335c5b745c21c7dd865bee5d4cd5d8e6c6cd2642e03ea08f0338477"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "ca8f34bf9633625eacddf800f71dc720ef42d3e9e14970aefbc069662cb170d6",
-      "sha256_origem": "0affe299097f1171c41804ab3baaf2b02b626e6ceb056dafbb30d90faa67eb60"
+      "sha256_destino": "1bfd56ebc9287904701d354e777aac0f6d1a9798a29af3ccdf423edeb4af1d37",
+      "sha256_origem": "aa715fe896d53d6a149ba917aa19a3914b010ac123a6e91c13d29592a51d2286"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "3b8f3954bd8432472a33271d029239d522ec2cdc107effe699f945b89a899edb",
-      "sha256_origem": "3b8f3954bd8432472a33271d029239d522ec2cdc107effe699f945b89a899edb"
+      "sha256_destino": "4d315d698a494bc1d157847b0e35b761e8a8751a468fdd33d4e65fe03f531da2",
+      "sha256_origem": "4d315d698a494bc1d157847b0e35b761e8a8751a468fdd33d4e65fe03f531da2"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3478,6 +3478,34 @@
       "sha256_origem": "cdfc1d9317e96da3cc1444101587f248edebcb1605f72ea4e1e28900791db728"
     },
     {
+      "caminho": "static/pitwall-archive/alonso-renault-r26-indianapolis-2006-b67a3def14b6-2400.webp",
+      "fonte": "static/pitwall-archive/alonso-renault-r26-indianapolis-2006-b67a3def14b6-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "80e5d2caa5a9eb169763a91cdb0dd04bdd6d0a768feb0095e657bc94e2d69ae8",
+      "sha256_origem": "80e5d2caa5a9eb169763a91cdb0dd04bdd6d0a768feb0095e657bc94e2d69ae8"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-renault-r26-indianapolis-2006-b67a3def14b6-960.webp",
+      "fonte": "static/pitwall-archive/alonso-renault-r26-indianapolis-2006-b67a3def14b6-960.webp",
+      "modo": "copia",
+      "sha256_destino": "880cdb2fc14aea1acb10248dbc34a26bef7f0e0ea7ca360beaaae65636302853",
+      "sha256_origem": "880cdb2fc14aea1acb10248dbc34a26bef7f0e0ea7ca360beaaae65636302853"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-renault-r26-museu-2017-f969b182edaf-2400.webp",
+      "fonte": "static/pitwall-archive/alonso-renault-r26-museu-2017-f969b182edaf-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9aea072b0c9879fdab97cad6d1f3960c7d8acf8d2baef9d1670f6e195fd5cb04",
+      "sha256_origem": "9aea072b0c9879fdab97cad6d1f3960c7d8acf8d2baef9d1670f6e195fd5cb04"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-renault-r26-museu-2017-f969b182edaf-960.webp",
+      "fonte": "static/pitwall-archive/alonso-renault-r26-museu-2017-f969b182edaf-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3aec5b5664c0204dbe0711cb059eaf32155a48b7cce86a23dc55108da2bf9b5e",
+      "sha256_origem": "3aec5b5664c0204dbe0711cb059eaf32155a48b7cce86a23dc55108da2bf9b5e"
+    },
+    {
       "caminho": "static/pitwall-archive/alonso-trofeu-hungria-2003-a830f218e4da-2400.webp",
       "fonte": "static/pitwall-archive/alonso-trofeu-hungria-2003-a830f218e4da-2400.webp",
       "modo": "copia",
@@ -3910,6 +3938,20 @@
       "modo": "copia",
       "sha256_destino": "7ab809fe45d318ca14134e7baa709e1f4e47df392229cae38f48bdd8e3c67ea9",
       "sha256_origem": "7ab809fe45d318ca14134e7baa709e1f4e47df392229cae38f48bdd8e3c67ea9"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt52-museu-bmw-1092ff9bf1be-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-bt52-museu-bmw-1092ff9bf1be-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8e10dbe73d8906d59238b8bf6cd5e60ce77482ba519431a5863ddc038224000d",
+      "sha256_origem": "8e10dbe73d8906d59238b8bf6cd5e60ce77482ba519431a5863ddc038224000d"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt52-museu-bmw-1092ff9bf1be-960.webp",
+      "fonte": "static/pitwall-archive/brabham-bt52-museu-bmw-1092ff9bf1be-960.webp",
+      "modo": "copia",
+      "sha256_destino": "89f8905856c0f922b0d9b5cbfe6641aea862241d438ed8e6a781b4e700f4dbac",
+      "sha256_origem": "89f8905856c0f922b0d9b5cbfe6641aea862241d438ed8e6a781b4e700f4dbac"
     },
     {
       "caminho": "static/pitwall-archive/brabham-zandvoort-podio-1966-6812246ab5ca-2400.webp",
@@ -4500,6 +4542,20 @@
       "sha256_origem": "8edc5502eb992089226aba0db2634ada92d34aede4b148f9964b6281c4ff094f"
     },
     {
+      "caminho": "static/pitwall-archive/ferrari-f2003-ga-essen-2023-c0f77cb6fc04-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2003-ga-essen-2023-c0f77cb6fc04-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9c6cea14659a20fc7c19aa44bb6df8db96dbb6e2658b8e4645100e878898846a",
+      "sha256_origem": "9c6cea14659a20fc7c19aa44bb6df8db96dbb6e2658b8e4645100e878898846a"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2003-ga-essen-2023-c0f77cb6fc04-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2003-ga-essen-2023-c0f77cb6fc04-960.webp",
+      "modo": "copia",
+      "sha256_destino": "57d69fd245d6438f5c230d8aae78e5d52e12e83661f9110f8889e5ea5bb7b12d",
+      "sha256_origem": "57d69fd245d6438f5c230d8aae78e5d52e12e83661f9110f8889e5ea5bb7b12d"
+    },
+    {
       "caminho": "static/pitwall-archive/ferrari-f2003-ga-fa70eafd3d10-2203.webp",
       "fonte": "static/pitwall-archive/ferrari-f2003-ga-fa70eafd3d10-2203.webp",
       "modo": "copia",
@@ -4596,6 +4652,20 @@
       "modo": "copia",
       "sha256_destino": "cb15bc3d7ac4d326957953e4d21d01bd3adee7a4b851546f7f98665ca52460d2",
       "sha256_origem": "cb15bc3d7ac4d326957953e4d21d01bd3adee7a4b851546f7f98665ca52460d2"
+    },
+    {
+      "caminho": "static/pitwall-archive/fittipaldi-lotus-72e-anderstorp-1973-ddddc25d9060-2400.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-lotus-72e-anderstorp-1973-ddddc25d9060-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "36809a23ad51cabd32b9920ebf0c9370aa5d3b33ea3484cf6c88c2a627f29552",
+      "sha256_origem": "36809a23ad51cabd32b9920ebf0c9370aa5d3b33ea3484cf6c88c2a627f29552"
+    },
+    {
+      "caminho": "static/pitwall-archive/fittipaldi-lotus-72e-anderstorp-1973-ddddc25d9060-960.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-lotus-72e-anderstorp-1973-ddddc25d9060-960.webp",
+      "modo": "copia",
+      "sha256_destino": "38eb57ae357cf77fb4b15644963372090ba9ad32d2c38fd88a36aee9c57c6753",
+      "sha256_origem": "38eb57ae357cf77fb4b15644963372090ba9ad32d2c38fd88a36aee9c57c6753"
     },
     {
       "caminho": "static/pitwall-archive/fittipaldi-m23-brands-hatch-1974-58ddf9110b09-2400.webp",
@@ -4822,6 +4892,20 @@
       "sha256_origem": "8c7e16e22549f8b446ef5960b6fe9e42ba70ee0acc90c433e589530ece1a9afa"
     },
     {
+      "caminho": "static/pitwall-archive/herbert-benetton-b195-copse-1995-5a9570a987f1-2400.webp",
+      "fonte": "static/pitwall-archive/herbert-benetton-b195-copse-1995-5a9570a987f1-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "0fff67bbb6679c75474a2b3d417c43ae1c3527a05a5c5f4a422828d7732c4929",
+      "sha256_origem": "0fff67bbb6679c75474a2b3d417c43ae1c3527a05a5c5f4a422828d7732c4929"
+    },
+    {
+      "caminho": "static/pitwall-archive/herbert-benetton-b195-copse-1995-5a9570a987f1-960.webp",
+      "fonte": "static/pitwall-archive/herbert-benetton-b195-copse-1995-5a9570a987f1-960.webp",
+      "modo": "copia",
+      "sha256_destino": "900d81062d5fe2eef1ab63f851b60a9db55cabf8760f2738ce9c03fb05799048",
+      "sha256_origem": "900d81062d5fe2eef1ab63f851b60a9db55cabf8760f2738ce9c03fb05799048"
+    },
+    {
       "caminho": "static/pitwall-archive/hill-fw15c-hungria-spa-1993-864d55e2471a-2400.webp",
       "fonte": "static/pitwall-archive/hill-fw15c-hungria-spa-1993-864d55e2471a-2400.webp",
       "modo": "copia",
@@ -4876,6 +4960,20 @@
       "modo": "copia",
       "sha256_destino": "7030ecaa2b9ae29fd988fd36a8538786ac9bcc34040419e5d8db51d9b704b159",
       "sha256_origem": "7030ecaa2b9ae29fd988fd36a8538786ac9bcc34040419e5d8db51d9b704b159"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-williams-fw16-silverstone-1994-e54d59871169-2400.webp",
+      "fonte": "static/pitwall-archive/hill-williams-fw16-silverstone-1994-e54d59871169-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "0fba1adbe2430263add1b68060b2fb44bd9993e619af9d00d1433305b86cc9ee",
+      "sha256_origem": "0fba1adbe2430263add1b68060b2fb44bd9993e619af9d00d1433305b86cc9ee"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-williams-fw16-silverstone-1994-e54d59871169-960.webp",
+      "fonte": "static/pitwall-archive/hill-williams-fw16-silverstone-1994-e54d59871169-960.webp",
+      "modo": "copia",
+      "sha256_destino": "2bacca5f472ed89f8c4c99a5fc7a766283f3998792768b912c4cb1900a155f2f",
+      "sha256_origem": "2bacca5f472ed89f8c4c99a5fc7a766283f3998792768b912c4cb1900a155f2f"
     },
     {
       "caminho": "static/pitwall-archive/hill-zandvoort-1962-eb6e9eef877c-2400.webp",
@@ -5284,6 +5382,20 @@
       "sha256_origem": "9865cc9d292ffbf7cdb940668f629319c436d6026fabc2cd77a77315cc3460b3"
     },
     {
+      "caminho": "static/pitwall-archive/lotus-33-stewart-goodwood-2013-ac93b820ed3c-2400.webp",
+      "fonte": "static/pitwall-archive/lotus-33-stewart-goodwood-2013-ac93b820ed3c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "50d61c2b02b67bd6d28af44cf90cd2b556fb09ca040e4162f1fa9b87a4a07044",
+      "sha256_origem": "50d61c2b02b67bd6d28af44cf90cd2b556fb09ca040e4162f1fa9b87a4a07044"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-33-stewart-goodwood-2013-ac93b820ed3c-960.webp",
+      "fonte": "static/pitwall-archive/lotus-33-stewart-goodwood-2013-ac93b820ed3c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a9945ef770bfc71010cfa58a222bd964dd3067d0e9735c66a2a15761c52731d8",
+      "sha256_origem": "a9945ef770bfc71010cfa58a222bd964dd3067d0e9735c66a2a15761c52731d8"
+    },
+    {
       "caminho": "static/pitwall-archive/lotus-49-7833dfeff226-2400.webp",
       "fonte": "static/pitwall-archive/lotus-49-7833dfeff226-2400.webp",
       "modo": "copia",
@@ -5520,6 +5632,20 @@
       "modo": "copia",
       "sha256_destino": "b05eec260be3e0c01c483ae05052310350b819820fdf7ba5bb9e7e0cdc9eb47f",
       "sha256_origem": "b05eec260be3e0c01c483ae05052310350b819820fdf7ba5bb9e7e0cdc9eb47f"
+    },
+    {
+      "caminho": "static/pitwall-archive/matra-ms84-museu-romorantin-5a087727bd96-2400.webp",
+      "fonte": "static/pitwall-archive/matra-ms84-museu-romorantin-5a087727bd96-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a13747d8dc585647c3de7ff73c1b9c8417dba35b6e46c82c9b794b6586815012",
+      "sha256_origem": "a13747d8dc585647c3de7ff73c1b9c8417dba35b6e46c82c9b794b6586815012"
+    },
+    {
+      "caminho": "static/pitwall-archive/matra-ms84-museu-romorantin-5a087727bd96-960.webp",
+      "fonte": "static/pitwall-archive/matra-ms84-museu-romorantin-5a087727bd96-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a28b5d0d729f8050eb3eb756114f954a53add30b55a3e966e4d44cff60fb3ba1",
+      "sha256_origem": "a28b5d0d729f8050eb3eb756114f954a53add30b55a3e966e4d44cff60fb3ba1"
     },
     {
       "caminho": "static/pitwall-archive/matra-stewart-zandvoort-1969-56936a9df258-2400.webp",
@@ -6418,6 +6544,34 @@
       "sha256_origem": "5711e28524974244c43293c5a6b64549f6e31da8d89a228febaec341b822ea4a"
     },
     {
+      "caminho": "static/pitwall-archive/regazzoni-ferrari-312t-retromobile-2023-0c5a0d38921b-2400.webp",
+      "fonte": "static/pitwall-archive/regazzoni-ferrari-312t-retromobile-2023-0c5a0d38921b-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "aeb3a53a56ea804f4a0690fe0109618e373abb98551a3e040d5d96b9fb2a8b5a",
+      "sha256_origem": "aeb3a53a56ea804f4a0690fe0109618e373abb98551a3e040d5d96b9fb2a8b5a"
+    },
+    {
+      "caminho": "static/pitwall-archive/regazzoni-ferrari-312t-retromobile-2023-0c5a0d38921b-960.webp",
+      "fonte": "static/pitwall-archive/regazzoni-ferrari-312t-retromobile-2023-0c5a0d38921b-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8021b70b2d906ebd09decd50601a0c27c9dc2bfcfd054b373ce209e8100f1c8f",
+      "sha256_origem": "8021b70b2d906ebd09decd50601a0c27c9dc2bfcfd054b373ce209e8100f1c8f"
+    },
+    {
+      "caminho": "static/pitwall-archive/reutemann-ferrari-312t3-watkins-glen-1978-b5e3b685aba5-2400.webp",
+      "fonte": "static/pitwall-archive/reutemann-ferrari-312t3-watkins-glen-1978-b5e3b685aba5-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8f296278c12ccdc975e8e74a9bfb295e6e6732cb161eb5d5d4a232ea3d335f19",
+      "sha256_origem": "8f296278c12ccdc975e8e74a9bfb295e6e6732cb161eb5d5d4a232ea3d335f19"
+    },
+    {
+      "caminho": "static/pitwall-archive/reutemann-ferrari-312t3-watkins-glen-1978-b5e3b685aba5-960.webp",
+      "fonte": "static/pitwall-archive/reutemann-ferrari-312t3-watkins-glen-1978-b5e3b685aba5-960.webp",
+      "modo": "copia",
+      "sha256_destino": "15e5b497ffcf4243f2df3adad034fda48c43f661959e8721d732ebefd075ef16",
+      "sha256_origem": "15e5b497ffcf4243f2df3adad034fda48c43f661959e8721d732ebefd075ef16"
+    },
+    {
       "caminho": "static/pitwall-archive/rindt-zandvoort-vitoria-1970-ab10151f479e-2400.webp",
       "fonte": "static/pitwall-archive/rindt-zandvoort-vitoria-1970-ab10151f479e-2400.webp",
       "modo": "copia",
@@ -6836,6 +6990,20 @@
       "modo": "copia",
       "sha256_destino": "4198fe998a984f69484269d7d08da54c1d988c6f706be89641e976395d3607c1",
       "sha256_origem": "4198fe998a984f69484269d7d08da54c1d988c6f706be89641e976395d3607c1"
+    },
+    {
+      "caminho": "static/pitwall-archive/stewart-matra-ms84-charade-1969-0a3e92ab0291-2400.webp",
+      "fonte": "static/pitwall-archive/stewart-matra-ms84-charade-1969-0a3e92ab0291-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ec5ff530089b89c4e8c5a37c26a4ed83b04a11394dc9c5f4e7df3b4147b15104",
+      "sha256_origem": "ec5ff530089b89c4e8c5a37c26a4ed83b04a11394dc9c5f4e7df3b4147b15104"
+    },
+    {
+      "caminho": "static/pitwall-archive/stewart-matra-ms84-charade-1969-0a3e92ab0291-960.webp",
+      "fonte": "static/pitwall-archive/stewart-matra-ms84-charade-1969-0a3e92ab0291-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a2caa56acc636bff45bc644c161b07eb7a51784976ad67787148476ea2e5e9ae",
+      "sha256_origem": "a2caa56acc636bff45bc644c161b07eb7a51784976ad67787148476ea2e5e9ae"
     },
     {
       "caminho": "static/pitwall-archive/stewart-ms80-monza-1969-32e5fb472dda-2400.webp",
