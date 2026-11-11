@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "4d7293be2d347ed029660bb8887168ec8d5df77d72650d4a4418e85abcb5a250",
+  "apresentacao_build_sha256": "cdaa3c96a4b0a37ab26f78b5b4baeb5bc2951b599979cb9b658501264a9feb14",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "e909fa50afe363c95f405fd29c7b3b38bf5798fc3d6e3f29bdcc5eec2434a655",
+      "sha256_destino": "cb23cb706f655950a4ad0041e6a5cb71db4322843e14dfad13f214514f9827a9",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "3a2b2e90ec0754728fac66fafc32411d9d2b43d32d7b8ae1533cc324fda8c47d",
-      "sha256_origem": "c97673f6a4c6b78d7014e1976fe212a345f44c84fddae50e8ec188764623eeb5"
+      "sha256_destino": "4423b3eb36e5e864935944d4623417e129a954ab71378db1e9c019768f83eb2e",
+      "sha256_origem": "1681b60e34cc0c19d454fe623676ab76d5e6f6a16e8eff08375959921639cccb"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "c515c4603e684533c9ce4385979db33c7c887d60820843b845df60b21e9b8fd7",
-      "sha256_origem": "28b0982268cc252eef58f45bbb485bf771743b09b01b6d2f0bf45281908a4ad5"
+      "sha256_destino": "056500f564eab94bbcd6f64aab7658ca7f1b636d684d702879ff1a16e46a7a57",
+      "sha256_origem": "4e61925b1ee3a9fa6d734f240e3e6a90389ae7d3b5b192f73c6df67d10b3e03f"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "4b13d223c0eee38d6fd22c13a50e35a933d959183797b6ad38a1db709933a7a6",
-      "sha256_origem": "4b13d223c0eee38d6fd22c13a50e35a933d959183797b6ad38a1db709933a7a6"
+      "sha256_destino": "5865845a4df0e28656c8d240d159d42393c93bb257f4812e76d482fb098b14c9",
+      "sha256_origem": "5865845a4df0e28656c8d240d159d42393c93bb257f4812e76d482fb098b14c9"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4162,6 +4162,34 @@
       "modo": "copia",
       "sha256_destino": "6c55826f45a0014ca61e0347932844bce9bd63994977feb774473aca7613afb9",
       "sha256_origem": "6c55826f45a0014ca61e0347932844bce9bd63994977feb774473aca7613afb9"
+    },
+    {
+      "caminho": "static/pitwall-archive/de-angelis-lotus-87-nurburgring-2007-cf29cf84f6b1-2400.webp",
+      "fonte": "static/pitwall-archive/de-angelis-lotus-87-nurburgring-2007-cf29cf84f6b1-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ca94c510d4f5d1004adb8b5489528260025c6748c0fd357c80c95de1dc537444",
+      "sha256_origem": "ca94c510d4f5d1004adb8b5489528260025c6748c0fd357c80c95de1dc537444"
+    },
+    {
+      "caminho": "static/pitwall-archive/de-angelis-lotus-87-nurburgring-2007-cf29cf84f6b1-960.webp",
+      "fonte": "static/pitwall-archive/de-angelis-lotus-87-nurburgring-2007-cf29cf84f6b1-960.webp",
+      "modo": "copia",
+      "sha256_destino": "076209101c32043d100c31602c76650e98e0dae41d9b22ad3f87bb0988e9477d",
+      "sha256_origem": "076209101c32043d100c31602c76650e98e0dae41d9b22ad3f87bb0988e9477d"
+    },
+    {
+      "caminho": "static/pitwall-archive/de-angelis-lotus-91-laguna-seca-2022-4160131bbd3e-2400.webp",
+      "fonte": "static/pitwall-archive/de-angelis-lotus-91-laguna-seca-2022-4160131bbd3e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ab888adac47c9bbcdb5ff3bb1f5af29f2cfa1b3ec88ced84e55967e3b78ab2cb",
+      "sha256_origem": "ab888adac47c9bbcdb5ff3bb1f5af29f2cfa1b3ec88ced84e55967e3b78ab2cb"
+    },
+    {
+      "caminho": "static/pitwall-archive/de-angelis-lotus-91-laguna-seca-2022-4160131bbd3e-960.webp",
+      "fonte": "static/pitwall-archive/de-angelis-lotus-91-laguna-seca-2022-4160131bbd3e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1acf0eb7c6303b64f837d665255edb0903b04da0a1efbe072842eeff67eb02c3",
+      "sha256_origem": "1acf0eb7c6303b64f837d665255edb0903b04da0a1efbe072842eeff67eb02c3"
     },
     {
       "caminho": "static/pitwall-archive/denny-hulme-retrato-b936bc781049-2400.webp",
@@ -6544,6 +6572,20 @@
       "sha256_origem": "e0c5d30367f1111dfc7aaf8852869f9e434f412a6eae1a0b3cc5633536f30f8d"
     },
     {
+      "caminho": "static/pitwall-archive/rebaque-brabham-bt49-zandvoort-1980-22388344be7f-2400.webp",
+      "fonte": "static/pitwall-archive/rebaque-brabham-bt49-zandvoort-1980-22388344be7f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6652b2863fa920cc32c9814777872cf0f96b79ad040c911f2fec720e3700df6c",
+      "sha256_origem": "6652b2863fa920cc32c9814777872cf0f96b79ad040c911f2fec720e3700df6c"
+    },
+    {
+      "caminho": "static/pitwall-archive/rebaque-brabham-bt49-zandvoort-1980-22388344be7f-960.webp",
+      "fonte": "static/pitwall-archive/rebaque-brabham-bt49-zandvoort-1980-22388344be7f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "405e2f332b5d055c5d811e4928a4f570de3dfe84a47f9afb2a3249f1a46a6642",
+      "sha256_origem": "405e2f332b5d055c5d811e4928a4f570de3dfe84a47f9afb2a3249f1a46a6642"
+    },
+    {
       "caminho": "static/pitwall-archive/red-bull-exposicao-austin-2022-36fba10eea74-2400.webp",
       "fonte": "static/pitwall-archive/red-bull-exposicao-austin-2022-36fba10eea74-2400.webp",
       "modo": "copia",
@@ -6724,6 +6766,34 @@
       "modo": "copia",
       "sha256_destino": "9bf39882c0f51fd69dba14854cb9f0295d3cf2b709c23269650eb7969cf1ef74",
       "sha256_origem": "9bf39882c0f51fd69dba14854cb9f0295d3cf2b709c23269650eb7969cf1ef74"
+    },
+    {
+      "caminho": "static/pitwall-archive/rosier-talbot-t26c-da-zandvoort-1951-0c8432ae8684-2400.webp",
+      "fonte": "static/pitwall-archive/rosier-talbot-t26c-da-zandvoort-1951-0c8432ae8684-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "fe9ae08528fc9fbfeb5d11aedd9aee1c06e59f3e9909a7b229e0115c4d1b90ad",
+      "sha256_origem": "fe9ae08528fc9fbfeb5d11aedd9aee1c06e59f3e9909a7b229e0115c4d1b90ad"
+    },
+    {
+      "caminho": "static/pitwall-archive/rosier-talbot-t26c-da-zandvoort-1951-0c8432ae8684-960.webp",
+      "fonte": "static/pitwall-archive/rosier-talbot-t26c-da-zandvoort-1951-0c8432ae8684-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e743b67b88536818b7e4058cc886efd6cb01903125e5d1cfb5d3e3ff2662eb36",
+      "sha256_origem": "e743b67b88536818b7e4058cc886efd6cb01903125e5d1cfb5d3e3ff2662eb36"
+    },
+    {
+      "caminho": "static/pitwall-archive/rosier-talbot-t26c-monza-1950-34999f709a66-2400.webp",
+      "fonte": "static/pitwall-archive/rosier-talbot-t26c-monza-1950-34999f709a66-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "67712f5516d57a8d8f36ddea3b03f21c6962655f908fed2b2be5c686b52ad898",
+      "sha256_origem": "67712f5516d57a8d8f36ddea3b03f21c6962655f908fed2b2be5c686b52ad898"
+    },
+    {
+      "caminho": "static/pitwall-archive/rosier-talbot-t26c-monza-1950-34999f709a66-960.webp",
+      "fonte": "static/pitwall-archive/rosier-talbot-t26c-monza-1950-34999f709a66-960.webp",
+      "modo": "copia",
+      "sha256_destino": "49a0cfe974b224efd9ce7144f45cf0662ae17f858077bed660c1894258b9a813",
+      "sha256_origem": "49a0cfe974b224efd9ce7144f45cf0662ae17f858077bed660c1894258b9a813"
     },
     {
       "caminho": "static/pitwall-archive/scheckter-ferrari-312t4-monza-1979-174fcdd8c236-2400.webp",
@@ -7466,6 +7536,34 @@
       "modo": "copia",
       "sha256_destino": "8297664f77c55ebb4ef990ee4aa26e8c821ca728fb4a64068e56a894eb196f90",
       "sha256_origem": "8297664f77c55ebb4ef990ee4aa26e8c821ca728fb4a64068e56a894eb196f90"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-rb9-india-2013-pos-corrida-02c7c8fc93df-2400.webp",
+      "fonte": "static/pitwall-archive/vettel-rb9-india-2013-pos-corrida-02c7c8fc93df-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "54d6d32e19e7e5a092993352553da943489e69a66693b05b08aff7b3b0d26c4f",
+      "sha256_origem": "54d6d32e19e7e5a092993352553da943489e69a66693b05b08aff7b3b0d26c4f"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-rb9-india-2013-pos-corrida-02c7c8fc93df-960.webp",
+      "fonte": "static/pitwall-archive/vettel-rb9-india-2013-pos-corrida-02c7c8fc93df-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b99e8e030a9307066df2b36ff6f40ca91cada68fd2a7549cbf2c8e3d6dd85e3e",
+      "sha256_origem": "b99e8e030a9307066df2b36ff6f40ca91cada68fd2a7549cbf2c8e3d6dd85e3e"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-rb9-india-2013-reta-400bfd2cdf6e-2400.webp",
+      "fonte": "static/pitwall-archive/vettel-rb9-india-2013-reta-400bfd2cdf6e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "f240c855da37703eda82b8a8c1c0b545f6678058af51072c9be02e2102924e91",
+      "sha256_origem": "f240c855da37703eda82b8a8c1c0b545f6678058af51072c9be02e2102924e91"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-rb9-india-2013-reta-400bfd2cdf6e-960.webp",
+      "fonte": "static/pitwall-archive/vettel-rb9-india-2013-reta-400bfd2cdf6e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "f65f4207f3827c506c12396be6ae63f0e9edf35bf5d92247ed604a6ec63232a8",
+      "sha256_origem": "f65f4207f3827c506c12396be6ae63f0e9edf35bf5d92247ed604a6ec63232a8"
     },
     {
       "caminho": "static/pitwall-archive/vettel-suzuka-2011-737f7bcbee5e-1600.webp",
