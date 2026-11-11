@@ -189,8 +189,8 @@
     "fangio-maserati": {
       "arquivo_commons": "File:Maserati 250F (Juan Fangio).jpg",
       "legenda": {
-        "pt": "Maserati 250F. Fangio venceu com o modelo em 1954 e conquistou o título de 1957.",
-        "en": "Maserati 250F. Fangio won in this model in 1954 and claimed the 1957 title with it."
+        "pt": "O Maserati 250F de chassi 2529 no Salão de Frankfurt de 2007. Juan Manuel Fangio venceu no Nürburgring com esse carro em 1957, garantindo seu quinto Mundial de Pilotos.",
+        "en": "Maserati 250F chassis 2529 at the 2007 Frankfurt Motor Show. Juan Manuel Fangio won at the Nürburgring in this car in 1957 to secure his fifth drivers’ championship."
       },
       "modelo": "maserati-250f",
       "temporadas": [
@@ -219,7 +219,10 @@
           "sha256": "2e39cacd421bf241c4fa65b746a4e1266535cb0f59bc202a79f8fb4c7cb2f7ba"
         }
       ],
-      "construtor": "maserati"
+      "construtor": "maserati",
+      "artefatos_gps": [
+        "1957:6"
+      ]
     },
     "prost-brands-hatch-1985": {
       "arquivo_commons": "File:1985 European GP Prost.jpg",
@@ -437,8 +440,8 @@
     "hill-fw18-hungria-1996": {
       "arquivo_commons": "File:Damon Hill Williams FW18 at Goodwood 2014 001.jpg",
       "legenda": {
-        "pt": "Damon Hill em Goodwood em 2014 no Williams FW18 de chassi 4. Com esse carro, foi segundo no GP da Hungria de 1996, completando a dobradinha que garantiu o Mundial de Construtores à Williams. Hill também correu com esse chassi em Nürburgring, onde seu companheiro Jacques Villeneuve conquistou a primeira vitória na F1.",
-        "en": "Damon Hill at Goodwood in 2014 in Williams FW18 chassis 4. He finished second in this car at the 1996 Hungarian Grand Prix, completing the one-two that sealed the Constructors’ Championship for Williams. Hill also raced this chassis at the Nürburgring, where his teammate Jacques Villeneuve took his first F1 win."
+        "pt": "Damon Hill em Goodwood em 2014 no Williams FW18 de chassi 4. Com esse carro, foi segundo no GP da Hungria de 1996, completando a dobradinha que garantiu o Mundial de Construtores à Williams. Hill também correu com esse chassi em Nürburgring, onde seu companheiro Jacques Villeneuve conquistou a primeira vitória na F1. Em Suzuka, Villeneuve largou da pole com o chassi 4 e abandonou a corrida em que Hill confirmou o título.",
+        "en": "Damon Hill at Goodwood in 2014 in Williams FW18 chassis 4. He finished second in this car at the 1996 Hungarian Grand Prix, completing the one-two that sealed the Constructors’ Championship for Williams. Hill also raced this chassis at the Nürburgring, where his teammate Jacques Villeneuve took his first F1 win. At Suzuka, Villeneuve started from pole in chassis 4 and retired from the race in which Hill clinched the title."
       },
       "modelo": "williams-fw18",
       "temporadas": [
@@ -449,7 +452,8 @@
       ],
       "artefatos_gps": [
         "1996:12",
-        "1996:4"
+        "1996:4",
+        "1996:16"
       ],
       "construtor": "williams",
       "fonte": "https://commons.wikimedia.org/wiki/File:Damon_Hill_Williams_FW18_at_Goodwood_2014_001.jpg",
@@ -10413,6 +10417,296 @@
           "largura": 2400,
           "altura": 1600,
           "sha256": "0fba1adbe2430263add1b68060b2fb44bd9993e619af9d00d1433305b86cc9ee"
+        }
+      ]
+    },
+    "hulme-bt20-zandvoort-1967": {
+      "arquivo_commons": "File:Hulme at 1967 Dutch Grand Prix.jpg",
+      "legenda": {
+        "pt": "Denny Hulme no Brabham BT20 de chassi F1-2-66 durante o treino em Zandvoort em 1967. Na etapa anterior, em Mônaco, Hulme conquistou sua primeira vitória na Fórmula 1 com esse carro.",
+        "en": "Denny Hulme in Brabham BT20 chassis F1-2-66 during practice at Zandvoort in 1967. At the previous round in Monaco, Hulme scored his first Formula 1 win in this car."
+      },
+      "artefatos_gps": [
+        "1967:2"
+      ],
+      "modelo": "brabham-bt20",
+      "temporadas": [
+        1966,
+        1967
+      ],
+      "gps": [
+        "1967:3"
+      ],
+      "construtor": "brabham",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Hulme_at_1967_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/14/Hulme_at_1967_Dutch_Grand_Prix.jpg",
+      "autor": "Eric Koch for Anefo / neg. stroken, 1945-1989, 2.24.01.05, item number 920-3736",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "950e18bc505e279ffe9ccd9554cb59239c864834046119d3b52011709e7b1e44",
+      "largura": 3682,
+      "altura": 2428,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hulme-bt20-zandvoort-1967-950e18bc505e-960.webp",
+          "largura": 960,
+          "altura": 633,
+          "sha256": "e8baec086f9c7bfb2901b0b9957ddb16e7a01efcf9f3c63aee88802129172d22"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hulme-bt20-zandvoort-1967-950e18bc505e-2400.webp",
+          "largura": 2400,
+          "altura": 1583,
+          "sha256": "91639de14024f927bd0e28352193c5136a55c5376b483e7e7ac03eb648548f29"
+        }
+      ]
+    },
+    "scheckter-tyrrell-007-franschhoek": {
+      "arquivo_commons": "File:Franschhoek Motor Museum (30408146482).jpg",
+      "legenda": {
+        "pt": "Tyrrell 007 de chassi 1 no Franschhoek Motor Museum, na África do Sul. Jody Scheckter venceu sua primeira corrida de Fórmula 1 com esse carro no GP da Suécia de 1974.",
+        "en": "Tyrrell 007 chassis 1 at the Franschhoek Motor Museum in South Africa. Jody Scheckter won his first Formula 1 race in this car at the 1974 Swedish Grand Prix."
+      },
+      "artefatos_gps": [
+        "1974:7"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Franschhoek_Motor_Museum_(30408146482).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Franschhoek_Motor_Museum_%2830408146482%29.jpg",
+      "autor": "naeem mayet",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "ae61d1a7a5fa3c5237371e30544206dac2bffe508f9f0cf41a6a087ac8e803d4",
+      "largura": 3000,
+      "altura": 2000,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/scheckter-tyrrell-007-franschhoek-ae61d1a7a5fa-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "48780753c9be36e8543ac5e8614cf56f88edea469116c6af07efb73720094ff0"
+        },
+        {
+          "arquivo": "static/pitwall-archive/scheckter-tyrrell-007-franschhoek-ae61d1a7a5fa-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "1307cd1627299d9cbf2f80765d655913e9d4caa3bd6a7e2a55b3e48a814b05ca"
+        }
+      ]
+    },
+    "senna-toleman-tg183b-autosport-2012": {
+      "arquivo_commons": "File:Toleman TG183B left 2012 Autosport International.jpg",
+      "legenda": {
+        "pt": "O Toleman TG183B de chassi 05 na exposição Autosport International de 2012. Ayrton Senna estreou na Fórmula 1 com este carro em Jacarepaguá, no GP do Brasil de 1984.",
+        "en": "Toleman TG183B chassis 05 at Autosport International in 2012. Ayrton Senna made his Formula 1 debut in this car at Jacarepaguá in the 1984 Brazilian Grand Prix."
+      },
+      "artefatos_gps": [
+        "1984:1"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Toleman_TG183B_left_2012_Autosport_International.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/11/Toleman_TG183B_left_2012_Autosport_International.jpg",
+      "autor": "Tony Hisgett",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "1ef95a066d222810271ddf003e50811f046a9e3deaa943c6df7edcfbc7ccdbfa",
+      "largura": 5048,
+      "altura": 2868,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/senna-toleman-tg183b-autosport-2012-1ef95a066d22-960.webp",
+          "largura": 960,
+          "altura": 545,
+          "sha256": "7276da81c9df6db1e677bad86e3f6d414f350a8e75c1c14f687f0dee318f5ce3"
+        },
+        {
+          "arquivo": "static/pitwall-archive/senna-toleman-tg183b-autosport-2012-1ef95a066d22-2400.webp",
+          "largura": 2400,
+          "altura": 1364,
+          "sha256": "24d5be73338ac8661528eec9b43a304ee7474254496e91c290821a15960502b7"
+        }
+      ]
+    },
+    "button-honda-ra106-suzuka-2024": {
+      "arquivo_commons": "File:Honda RACING Gallery 2006 Honda RA106 Jenson Button.jpg",
+      "legenda": {
+        "pt": "Honda RA106 de Jenson Button na Honda Racing Gallery, em Suzuka, em 2024. Button conquistou sua primeira vitória na Fórmula 1 com este carro no GP da Hungria de 2006.",
+        "en": "Jenson Button’s Honda RA106 at the Honda Racing Gallery in Suzuka in 2024. Button took his first Formula 1 win in this car at the 2006 Hungarian Grand Prix."
+      },
+      "artefatos_gps": [
+        "2006:13"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Honda_RACING_Gallery_2006_Honda_RA106_Jenson_Button.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/18/Honda_RACING_Gallery_2006_Honda_RA106_Jenson_Button.jpg",
+      "autor": "BWard 1997",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "fca1b555c38f1d46ba2bcbee597ca54019081738c11621bd5d5885794f8fc65d",
+      "largura": 4032,
+      "altura": 3024,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/button-honda-ra106-suzuka-2024-fca1b555c38f-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "282678ca71cb422ec8d4b5db7cd849127af354dcfef5429e178174a2c5064367"
+        },
+        {
+          "arquivo": "static/pitwall-archive/button-honda-ra106-suzuka-2024-fca1b555c38f-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "e55821308b8f7c1e478a2bbaa9292260ea182a80b62c2bbb78d680c3ba9397b2"
+        }
+      ]
+    },
+    "vettel-rb7-monza-2011": {
+      "arquivo_commons": "File:2011 Italian GP - Vettel.jpg",
+      "legenda": {
+        "pt": "Sebastian Vettel passa pela primeira chicane de Monza no Red Bull RB7 de chassi 05 durante os treinos de 2011. Voltou a correr com esse carro em Suzuka, onde conquistou seu segundo Mundial de Pilotos.",
+        "en": "Sebastian Vettel takes the first chicane at Monza in Red Bull RB7 chassis 05 during practice in 2011. He raced the same car at Suzuka, where he secured his second drivers’ championship."
+      },
+      "artefatos_gps": [
+        "2011:15"
+      ],
+      "modelo": "red-bull-rb7",
+      "temporadas": [
+        2011
+      ],
+      "gps": [
+        "2011:13"
+      ],
+      "construtor": "red-bull",
+      "fonte": "https://commons.wikimedia.org/wiki/File:2011_Italian_GP_-_Vettel.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/ab/2011_Italian_GP_-_Vettel.jpg",
+      "autor": "Nic Redhead from Birmingham, UK",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "dff4e0b223f3344f4ab5394fc6ae5fda125eb6f63a23925bd7820dde948391f6",
+      "largura": 4000,
+      "altura": 1854,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/vettel-rb7-monza-2011-dff4e0b223f3-960.webp",
+          "largura": 960,
+          "altura": 445,
+          "sha256": "8297664f77c55ebb4ef990ee4aa26e8c821ca728fb4a64068e56a894eb196f90"
+        },
+        {
+          "arquivo": "static/pitwall-archive/vettel-rb7-monza-2011-dff4e0b223f3-2400.webp",
+          "largura": 2400,
+          "altura": 1112,
+          "sha256": "f8462f1275dd0d63bd21ab3a2239effe97ae2cf28327337594fdf407b27bbea6"
+        }
+      ]
+    },
+    "hamilton-w08-montreal-2017": {
+      "arquivo_commons": "File:First corner, GP of Canada 2017 (35203105871) (cropped).jpg",
+      "legenda": {
+        "pt": "Lewis Hamilton lidera a primeira curva em Montreal no Mercedes W08 de chassi 05, em 2017. Foi com esse mesmo carro que conquistou seu quarto Mundial de Pilotos no México.",
+        "en": "Lewis Hamilton leads through the first corner in Montreal in Mercedes W08 chassis 05 in 2017. He clinched his fourth drivers’ championship in the same car in Mexico."
+      },
+      "artefatos_gps": [
+        "2017:18"
+      ],
+      "modelo": "mercedes-f1-w08",
+      "temporadas": [
+        2017
+      ],
+      "gps": [
+        "2017:7"
+      ],
+      "construtor": "mercedes",
+      "fonte": "https://commons.wikimedia.org/wiki/File:First_corner,_GP_of_Canada_2017_(35203105871)_(cropped).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/3b/First_corner%2C_GP_of_Canada_2017_%2835203105871%29_%28cropped%29.jpg",
+      "autor": "pedrik",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "7eed0d195c5a42ea4099e119bc34c609b67aa106ff49aecadf94ce214c1da46d",
+      "largura": 2678,
+      "altura": 1227,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-w08-montreal-2017-7eed0d195c5a-960.webp",
+          "largura": 960,
+          "altura": 440,
+          "sha256": "1873cb0278a6707c8912525121248efd84985674df757e12d62f4a94fe8dacdb"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-w08-montreal-2017-7eed0d195c5a-2400.webp",
+          "largura": 2400,
+          "altura": 1100,
+          "sha256": "75bd976ae69607e5fe3cefd793e67c2712de0f5bee23cc644fd66e026bb306cd"
+        }
+      ]
+    },
+    "hamilton-w09-monza-2018": {
+      "arquivo_commons": "File:Lewis Hamilton Italian Grand Prix 2018 - FP2.jpg",
+      "legenda": {
+        "pt": "Lewis Hamilton contorna a Parabolica no Mercedes W09 de chassi 05 durante o segundo treino em Monza, em 2018. O mesmo carro o levou ao quinto título de pilotos no México e à vitória em Interlagos, onde a Mercedes conquistou o Mundial de Construtores.",
+        "en": "Lewis Hamilton rounds the Parabolica in Mercedes W09 chassis 05 during second practice at Monza in 2018. In the same car he secured his fifth drivers’ title in Mexico and won at Interlagos, where Mercedes clinched the constructors’ championship."
+      },
+      "artefatos_gps": [
+        "2018:19",
+        "2018:20"
+      ],
+      "modelo": "mercedes-f1-w09",
+      "temporadas": [
+        2018
+      ],
+      "gps": [
+        "2018:14"
+      ],
+      "construtor": "mercedes",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lewis_Hamilton_Italian_Grand_Prix_2018_-_FP2.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Lewis_Hamilton_Italian_Grand_Prix_2018_-_FP2.jpg",
+      "autor": "Eustace Bagge",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "78f9e0e56c05b9857961c2a687e232a135941e924ed22a4ce4f89a6971bff1c4",
+      "largura": 5184,
+      "altura": 3456,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-w09-monza-2018-78f9e0e56c05-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "c535d796e08d60556df8c0b836aca2e61bb031954f252e7cc55ba5f62b9016a9"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-w09-monza-2018-78f9e0e56c05-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "50ae4097b91505402fbb63f2bd9781af92c0009fbbfcb922750845bce5b2e888"
+        }
+      ]
+    },
+    "gerard-era-r4a-2014": {
+      "arquivo_commons": "File:ERA R4A.jpg",
+      "legenda": {
+        "pt": "ERA R4A fotografado em 2014. Bob Gerard terminou em sexto com este carro em Mônaco, no GP de 1950 em que Fangio venceu pela primeira vez no Mundial e Ascari estreou em segundo.",
+        "en": "ERA R4A photographed in 2014. Bob Gerard finished sixth in this car at Monaco in 1950, where Fangio took his first World Championship win and Ascari finished second on his debut."
+      },
+      "artefatos_gps": [
+        "1950:2"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:ERA_R4A.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/30/ERA_R4A.jpg",
+      "autor": "Kogo",
+      "licenca": "CC BY-SA 3.0 de",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "sha256": "01739e3a98580627d1e18bc6b110478f073bac8c987d698be20168c4c16dfcba",
+      "largura": 2400,
+      "altura": 1600,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/gerard-era-r4a-2014-01739e3a9858-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "3f0f2b0ae4bf117829af293c40d853c297708911b6bb248685e18dfc5eb77a2d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/gerard-era-r4a-2014-01739e3a9858-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "01e3cde85ad312d27826c02b288ed86b384d1b02bfdef53734d4737048f3e20f"
         }
       ]
     }
