@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "c7292a54a8dc84cd9578989afbb14495af5078c739c52b4afd52535fff382f82",
+  "apresentacao_build_sha256": "80e3eb4c2643c9886227ee187facbcd64db4bd03901081b810addc84d287739c",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "9c21e160318006276b08f4a5c1954a7a63a0cd74554c1369621a65907a54cb7a",
+      "sha256_destino": "3e2e9cc52784a6ba4366842a577e3b315928c375e2c64332785bc2198d70853f",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "7a8b59b50930531bab742380767871624bfba815a8ec403eb5e68713a6a52109",
-      "sha256_origem": "7a8b59b50930531bab742380767871624bfba815a8ec403eb5e68713a6a52109"
+      "sha256_destino": "a7e773740abb1c462bcff8356061a8b035ba257d3816cfcbd30c8156db9eb3cc",
+      "sha256_origem": "a7e773740abb1c462bcff8356061a8b035ba257d3816cfcbd30c8156db9eb3cc"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4486,6 +4486,20 @@
       "sha256_origem": "cb15bc3d7ac4d326957953e4d21d01bd3adee7a4b851546f7f98665ca52460d2"
     },
     {
+      "caminho": "static/pitwall-archive/fittipaldi-m23-brands-hatch-1974-58ddf9110b09-2400.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-m23-brands-hatch-1974-58ddf9110b09-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3247308102c7eb62b82fee4e420a9cec97d4b7aa163b43c06c74bcd1e80ac151",
+      "sha256_origem": "3247308102c7eb62b82fee4e420a9cec97d4b7aa163b43c06c74bcd1e80ac151"
+    },
+    {
+      "caminho": "static/pitwall-archive/fittipaldi-m23-brands-hatch-1974-58ddf9110b09-960.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-m23-brands-hatch-1974-58ddf9110b09-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c4bfd3b67475fa5028ce356bbdf6c25f7b8495780da07cfb33fcfd80203b07d7",
+      "sha256_origem": "c4bfd3b67475fa5028ce356bbdf6c25f7b8495780da07cfb33fcfd80203b07d7"
+    },
+    {
       "caminho": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-1788.webp",
       "fonte": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-1788.webp",
       "modo": "copia",
@@ -5858,6 +5872,34 @@
       "sha256_origem": "936375294b963ea6056ca14d90f84a2d5bed5716f20165f57ee8ead2ae0e0f1e"
     },
     {
+      "caminho": "static/pitwall-archive/piquet-fw11-hungaroring-estoril-1986-83684fe44ac9-2400.webp",
+      "fonte": "static/pitwall-archive/piquet-fw11-hungaroring-estoril-1986-83684fe44ac9-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "524aa699a1f2b10652bd91ac42185378d998587d444c4e73301708e6ebd9984b",
+      "sha256_origem": "524aa699a1f2b10652bd91ac42185378d998587d444c4e73301708e6ebd9984b"
+    },
+    {
+      "caminho": "static/pitwall-archive/piquet-fw11-hungaroring-estoril-1986-83684fe44ac9-960.webp",
+      "fonte": "static/pitwall-archive/piquet-fw11-hungaroring-estoril-1986-83684fe44ac9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "fff195a87b54cc2891f7eb5a7dd95deb9c910117567283f969809d29a26b570e",
+      "sha256_origem": "fff195a87b54cc2891f7eb5a7dd95deb9c910117567283f969809d29a26b570e"
+    },
+    {
+      "caminho": "static/pitwall-archive/piquet-hockenheim-retrato-1988-309c6b36d54b-2400.webp",
+      "fonte": "static/pitwall-archive/piquet-hockenheim-retrato-1988-309c6b36d54b-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ff8acb9bf5ac1efd2024a70d1eb3ee618aed09422c54a5b01fff148af692269a",
+      "sha256_origem": "ff8acb9bf5ac1efd2024a70d1eb3ee618aed09422c54a5b01fff148af692269a"
+    },
+    {
+      "caminho": "static/pitwall-archive/piquet-hockenheim-retrato-1988-309c6b36d54b-960.webp",
+      "fonte": "static/pitwall-archive/piquet-hockenheim-retrato-1988-309c6b36d54b-960.webp",
+      "modo": "copia",
+      "sha256_destino": "f0d622ad9437a4895968cff3f28e2c510094330f0b20dfc91c30349f32f2090c",
+      "sha256_origem": "f0d622ad9437a4895968cff3f28e2c510094330f0b20dfc91c30349f32f2090c"
+    },
+    {
       "caminho": "static/pitwall-archive/piquet-prost-zandvoort-1983-0a2a0732146b-2400.webp",
       "fonte": "static/pitwall-archive/piquet-prost-zandvoort-1983-0a2a0732146b-2400.webp",
       "modo": "copia",
@@ -6082,6 +6124,20 @@
       "sha256_origem": "5711e28524974244c43293c5a6b64549f6e31da8d89a228febaec341b822ea4a"
     },
     {
+      "caminho": "static/pitwall-archive/rindt-zandvoort-vitoria-1970-ab10151f479e-2400.webp",
+      "fonte": "static/pitwall-archive/rindt-zandvoort-vitoria-1970-ab10151f479e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a503e39d538942619583ff36ed5b9584a00dfa9db6e909a46f23244333791e28",
+      "sha256_origem": "a503e39d538942619583ff36ed5b9584a00dfa9db6e909a46f23244333791e28"
+    },
+    {
+      "caminho": "static/pitwall-archive/rindt-zandvoort-vitoria-1970-ab10151f479e-960.webp",
+      "fonte": "static/pitwall-archive/rindt-zandvoort-vitoria-1970-ab10151f479e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "ec7302fdbaa0c65475d5bcf13a4fd8042237c47ceeacd59af657f7785cd38ef5",
+      "sha256_origem": "ec7302fdbaa0c65475d5bcf13a4fd8042237c47ceeacd59af657f7785cd38ef5"
+    },
+    {
       "caminho": "static/pitwall-archive/rosberg-mainz-2016-532e839a8fba-2400.webp",
       "fonte": "static/pitwall-archive/rosberg-mainz-2016-532e839a8fba-2400.webp",
       "modo": "copia",
@@ -6094,6 +6150,34 @@
       "modo": "copia",
       "sha256_destino": "9bf39882c0f51fd69dba14854cb9f0295d3cf2b709c23269650eb7969cf1ef74",
       "sha256_origem": "9bf39882c0f51fd69dba14854cb9f0295d3cf2b709c23269650eb7969cf1ef74"
+    },
+    {
+      "caminho": "static/pitwall-archive/scheckter-ferrari-312t4-monza-1979-174fcdd8c236-2400.webp",
+      "fonte": "static/pitwall-archive/scheckter-ferrari-312t4-monza-1979-174fcdd8c236-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e4c385fbf895ec3bb85325372f3844456983eff953333116c88c8cdf2eabb8e7",
+      "sha256_origem": "e4c385fbf895ec3bb85325372f3844456983eff953333116c88c8cdf2eabb8e7"
+    },
+    {
+      "caminho": "static/pitwall-archive/scheckter-ferrari-312t4-monza-1979-174fcdd8c236-960.webp",
+      "fonte": "static/pitwall-archive/scheckter-ferrari-312t4-monza-1979-174fcdd8c236-960.webp",
+      "modo": "copia",
+      "sha256_destino": "11264edec67d7797c5267a9b3bcab5d34854c513b64a369be00d7f9e53c3f3b4",
+      "sha256_origem": "11264edec67d7797c5267a9b3bcab5d34854c513b64a369be00d7f9e53c3f3b4"
+    },
+    {
+      "caminho": "static/pitwall-archive/scheckter-tyrrell-007-brands-hatch-1974-f8efaee92320-2104.webp",
+      "fonte": "static/pitwall-archive/scheckter-tyrrell-007-brands-hatch-1974-f8efaee92320-2104.webp",
+      "modo": "copia",
+      "sha256_destino": "7f41524bf9c11bbbce41eb373248d288afa01ec12a8248117711f6a6d189f745",
+      "sha256_origem": "7f41524bf9c11bbbce41eb373248d288afa01ec12a8248117711f6a6d189f745"
+    },
+    {
+      "caminho": "static/pitwall-archive/scheckter-tyrrell-007-brands-hatch-1974-f8efaee92320-960.webp",
+      "fonte": "static/pitwall-archive/scheckter-tyrrell-007-brands-hatch-1974-f8efaee92320-960.webp",
+      "modo": "copia",
+      "sha256_destino": "776b6a4784669815603d8dcc0b51c4d8516a929b2f7451935e4b1d7119bf6278",
+      "sha256_origem": "776b6a4784669815603d8dcc0b51c4d8516a929b2f7451935e4b1d7119bf6278"
     },
     {
       "caminho": "static/pitwall-archive/schumacher-capacete-aida-1995-1b15c8ff4567-2400.webp",
@@ -6222,6 +6306,20 @@
       "sha256_origem": "89a5c8dc5c047e4f4e5bb38bb5afa39d3ff6587ebe6b58a4a90d2a954d2d1d2b"
     },
     {
+      "caminho": "static/pitwall-archive/senna-donington-1993-38d6860114f9-2400.webp",
+      "fonte": "static/pitwall-archive/senna-donington-1993-38d6860114f9-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c1c7a612e87ed4d124d9d456ba0413401fa304eb6a6dc5999007ee7f6a109283",
+      "sha256_origem": "c1c7a612e87ed4d124d9d456ba0413401fa304eb6a6dc5999007ee7f6a109283"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-donington-1993-38d6860114f9-960.webp",
+      "fonte": "static/pitwall-archive/senna-donington-1993-38d6860114f9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "03e0419f10635941b61f987a89afc74957e3d59907ba5d18abcb7cbe60607fa9",
+      "sha256_origem": "03e0419f10635941b61f987a89afc74957e3d59907ba5d18abcb7cbe60607fa9"
+    },
+    {
       "caminho": "static/pitwall-archive/senna-estoril-lotus-97t2-417e30759761-2400.webp",
       "fonte": "static/pitwall-archive/senna-estoril-lotus-97t2-417e30759761-2400.webp",
       "modo": "copia",
@@ -6234,6 +6332,20 @@
       "modo": "copia",
       "sha256_destino": "873763c2e7e0e86e35bb2d97f2d4c035cf5dc5687ee43b7e4efb30b5c48b3ce8",
       "sha256_origem": "873763c2e7e0e86e35bb2d97f2d4c035cf5dc5687ee43b7e4efb30b5c48b3ce8"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-hungaroring-1988-b82af465d2cf-2400.webp",
+      "fonte": "static/pitwall-archive/senna-hungaroring-1988-b82af465d2cf-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "699b1409212209fc9ed45f1c65b39018f6d62a9ac36ddfa51f95b89ddc4c1fcb",
+      "sha256_origem": "699b1409212209fc9ed45f1c65b39018f6d62a9ac36ddfa51f95b89ddc4c1fcb"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-hungaroring-1988-b82af465d2cf-960.webp",
+      "fonte": "static/pitwall-archive/senna-hungaroring-1988-b82af465d2cf-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a5e68428368e7c4b4ebf13547a183c10443e349b24d03554940c5f273e0ad74f",
+      "sha256_origem": "a5e68428368e7c4b4ebf13547a183c10443e349b24d03554940c5f273e0ad74f"
     },
     {
       "caminho": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-2400.webp",
@@ -6332,6 +6444,20 @@
       "modo": "copia",
       "sha256_destino": "febb0cad5d2349391cab0cd024a454cce8fec5134fa4db8f7f1cd6e8cac3e7c5",
       "sha256_origem": "febb0cad5d2349391cab0cd024a454cce8fec5134fa4db8f7f1cd6e8cac3e7c5"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-prost-hockenheim-1988-6b7c91c4c1da-2400.webp",
+      "fonte": "static/pitwall-archive/senna-prost-hockenheim-1988-6b7c91c4c1da-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ba9d7581e16956b63d5f7af65f8c47fb132defa278c2c029ada154c18458da74",
+      "sha256_origem": "ba9d7581e16956b63d5f7af65f8c47fb132defa278c2c029ada154c18458da74"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-prost-hockenheim-1988-6b7c91c4c1da-960.webp",
+      "fonte": "static/pitwall-archive/senna-prost-hockenheim-1988-6b7c91c4c1da-960.webp",
+      "modo": "copia",
+      "sha256_destino": "7a90c1ce0649697605e4b461f6269701a051dddf5c481d9bd13c1cb9f000333d",
+      "sha256_origem": "7a90c1ce0649697605e4b461f6269701a051dddf5c481d9bd13c1cb9f000333d"
     },
     {
       "caminho": "static/pitwall-archive/senna-spa-1991-6b49c2b35dac-2400.webp",
@@ -6530,6 +6656,20 @@
       "sha256_origem": "2a4ee3e8db220ea1e401117f8e48eb230d250dc4dfb015099873108a9c3fad29"
     },
     {
+      "caminho": "static/pitwall-archive/verstappen-zandvoort-podio-2024-283d97dad8c9-2400.webp",
+      "fonte": "static/pitwall-archive/verstappen-zandvoort-podio-2024-283d97dad8c9-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c82facbe1ddb896eeb08408803d317f0e47b8f293af7ade4bbc25a5ae70226ec",
+      "sha256_origem": "c82facbe1ddb896eeb08408803d317f0e47b8f293af7ade4bbc25a5ae70226ec"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-zandvoort-podio-2024-283d97dad8c9-960.webp",
+      "fonte": "static/pitwall-archive/verstappen-zandvoort-podio-2024-283d97dad8c9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "49e18f23efe647a134056fb57439e0c693a4da994bc07a8594541008c735d5a6",
+      "sha256_origem": "49e18f23efe647a134056fb57439e0c693a4da994bc07a8594541008c735d5a6"
+    },
+    {
       "caminho": "static/pitwall-archive/verstappen-zandvoort-retrato-3b99f41b0fc2-1800.webp",
       "fonte": "static/pitwall-archive/verstappen-zandvoort-retrato-3b99f41b0fc2-1800.webp",
       "modo": "copia",
@@ -6570,6 +6710,20 @@
       "modo": "copia",
       "sha256_destino": "891090a1deb6cea321774b237a94bdb6da70f28563287da6a254e00cbb2b5c37",
       "sha256_origem": "891090a1deb6cea321774b237a94bdb6da70f28563287da6a254e00cbb2b5c37"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-frankfurt-retrato-2022-caa4503be03c-2400.webp",
+      "fonte": "static/pitwall-archive/vettel-frankfurt-retrato-2022-caa4503be03c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "efccd5346ac899c1b82499f1da02d9075ef4068185b396da16c2d7219622f536",
+      "sha256_origem": "efccd5346ac899c1b82499f1da02d9075ef4068185b396da16c2d7219622f536"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-frankfurt-retrato-2022-caa4503be03c-960.webp",
+      "fonte": "static/pitwall-archive/vettel-frankfurt-retrato-2022-caa4503be03c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "34607e3878cc354178efc72aad7a41461c1dfb189bd616dc4622930e224d502d",
+      "sha256_origem": "34607e3878cc354178efc72aad7a41461c1dfb189bd616dc4622930e224d502d"
     },
     {
       "caminho": "static/pitwall-archive/vettel-india-2013-b224795fd281-1722.webp",

@@ -12,7 +12,7 @@ from urllib.error import HTTPError
 from urllib.parse import urlencode, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageMath, ImageOps
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -88,7 +88,11 @@ def import_photo(key, entry, info):
         raise ValueError(f"Source photo bytes differ from Wikimedia metadata: {key}")
     digest = hashlib.sha256(contents).hexdigest()
     with Image.open(io.BytesIO(contents)) as source:
-        image = ImageOps.exif_transpose(source).convert("RGB")
+        image = ImageOps.exif_transpose(source)
+        if image.mode.startswith("I;16"):
+            # Pillow's direct RGB conversion clips grayscale values above 255.
+            image = ImageMath.lambda_eval(lambda data: data["gray"] / 257, gray=image.convert("I"))
+        image = image.convert("RGB")
     width, height = image.size
     if min(width, height) < 1050 or max(width, height) < 1600:
         raise ValueError(f"Original is too small for the archive: {key} ({width} × {height})")

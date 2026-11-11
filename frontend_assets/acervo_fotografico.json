@@ -639,38 +639,6 @@
         }
       ]
     },
-    "senna-portrait": {
-      "arquivo_commons": "File:Ayrton Senna in the paddock before the 1993 British Grand Prix (33686752075).jpg",
-      "legenda": {
-        "pt": "Ayrton Senna no paddock de Silverstone em 1993.",
-        "en": "Ayrton Senna in the Silverstone paddock in 1993."
-      },
-      "pilotos": [
-        "ayrton-senna"
-      ],
-      "fonte": "https://commons.wikimedia.org/wiki/File:Ayrton_Senna_in_the_paddock_before_the_1993_British_Grand_Prix_(33686752075).jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Ayrton_Senna_in_the_paddock_before_the_1993_British_Grand_Prix_%2833686752075%29.jpg",
-      "autor": "Martin Lee from London, UK",
-      "licenca": "CC BY-SA 2.0",
-      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
-      "sha256": "06bda35004a834a92893126f272d296905e6cf247108c03c4acb3685b55c5373",
-      "largura": 1553,
-      "altura": 1868,
-      "variantes": [
-        {
-          "arquivo": "static/pitwall-archive/senna-portrait-06bda35004a8-960.webp",
-          "largura": 798,
-          "altura": 960,
-          "sha256": "febb0cad5d2349391cab0cd024a454cce8fec5134fa4db8f7f1cd6e8cac3e7c5"
-        },
-        {
-          "arquivo": "static/pitwall-archive/senna-portrait-06bda35004a8-1868.webp",
-          "largura": 1553,
-          "altura": 1868,
-          "sha256": "5d40d7cc3552af9fc2e1a920b3f824ce4d5e3db770d2a4cac9f3ff81e14e6ff3"
-        }
-      ]
-    },
     "prost-portrait": {
       "arquivo_commons": "File:Alain Prost, 1990 USA GP Phoenix.jpg",
       "legenda": {
@@ -700,6 +668,74 @@
           "largura": 2400,
           "altura": 1600,
           "sha256": "ac7a638ae650dde542ec8f4d5ed6e3dca13e18812da767581b65e9cdf530179f"
+        }
+      ]
+    },
+    "senna-prost-hockenheim-1988": {
+      "arquivo_commons": "File:The West German Formula One Grand Prix in Hockenheim in 1988 (JOKAMAA2G-2).tif",
+      "legenda": {
+        "pt": "Ayrton Senna e Alain Prost conversam em Hockenheim após o treino de 22 de julho de 1988. Senna venceu o GP da Alemanha naquele fim de semana.",
+        "en": "Ayrton Senna and Alain Prost talk at Hockenheim after practice on 22 July 1988. Senna won the German Grand Prix that weekend."
+      },
+      "pilotos": [
+        "ayrton-senna",
+        "alain-prost"
+      ],
+      "gps": [
+        "1988:9"
+      ],
+      "autor": "Mauritz Antin / Finnish Heritage Agency",
+      "fonte": "https://commons.wikimedia.org/wiki/File:The_West_German_Formula_One_Grand_Prix_in_Hockenheim_in_1988_(JOKAMAA2G-2).tif",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/fe/The_West_German_Formula_One_Grand_Prix_in_Hockenheim_in_1988_%28JOKAMAA2G-2%29.tif",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "6b7c91c4c1dab6b0cd2a38195fde8da5eefdcb15b9f2298d8f83c4ba7d9ace75",
+      "largura": 2924,
+      "altura": 2093,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/senna-prost-hockenheim-1988-6b7c91c4c1da-960.webp",
+          "largura": 960,
+          "altura": 687,
+          "sha256": "7a90c1ce0649697605e4b461f6269701a051dddf5c481d9bd13c1cb9f000333d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/senna-prost-hockenheim-1988-6b7c91c4c1da-2400.webp",
+          "largura": 2400,
+          "altura": 1718,
+          "sha256": "ba9d7581e16956b63d5f7af65f8c47fb132defa278c2c029ada154c18458da74"
+        }
+      ]
+    },
+    "senna-portrait": {
+      "arquivo_commons": "File:Ayrton Senna in the paddock before the 1993 British Grand Prix (33686752075).jpg",
+      "legenda": {
+        "pt": "Ayrton Senna no paddock de Silverstone em 1993.",
+        "en": "Ayrton Senna in the Silverstone paddock in 1993."
+      },
+      "pilotos": [
+        "ayrton-senna"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Ayrton_Senna_in_the_paddock_before_the_1993_British_Grand_Prix_(33686752075).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Ayrton_Senna_in_the_paddock_before_the_1993_British_Grand_Prix_%2833686752075%29.jpg",
+      "autor": "Martin Lee from London, UK",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "06bda35004a834a92893126f272d296905e6cf247108c03c4acb3685b55c5373",
+      "largura": 1553,
+      "altura": 1868,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/senna-portrait-06bda35004a8-960.webp",
+          "largura": 798,
+          "altura": 960,
+          "sha256": "febb0cad5d2349391cab0cd024a454cce8fec5134fa4db8f7f1cd6e8cac3e7c5"
+        },
+        {
+          "arquivo": "static/pitwall-archive/senna-portrait-06bda35004a8-1868.webp",
+          "largura": 1553,
+          "altura": 1868,
+          "sha256": "5d40d7cc3552af9fc2e1a920b3f824ce4d5e3db770d2a4cac9f3ff81e14e6ff3"
         }
       ]
     },
@@ -1531,6 +1567,9 @@
       "artefatos_gps": [
         "1958:10",
         "1958:11"
+      ],
+      "equipes": [
+        "vanwall"
       ]
     },
     "cooper-t51": {
@@ -3872,6 +3911,41 @@
         }
       ]
     },
+    "rindt-zandvoort-vitoria-1970": {
+      "arquivo_commons": "File:Rindt at 1970 Dutch Grand Prix (2).jpg",
+      "legenda": {
+        "pt": "Jochen Rindt com a coroa de vencedor em Zandvoort, no GP dos Países Baixos de 1970.",
+        "en": "Jochen Rindt wearing the winner’s wreath after the 1970 Dutch Grand Prix at Zandvoort."
+      },
+      "pilotos": [
+        "jochen-rindt"
+      ],
+      "gps": [
+        "1970:5"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Rindt_at_1970_Dutch_Grand_Prix_(2).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Rindt_at_1970_Dutch_Grand_Prix_%282%29.jpg",
+      "autor": "Evers, Joost / Anefo / neg. stroken, 1945-1989, 2.24.01.05, item number 923-6109",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "ab10151f479e87ef0a151b98626be3c073adf6e5d54cd752c1f926aec42e6d04",
+      "largura": 2446,
+      "altura": 3693,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/rindt-zandvoort-vitoria-1970-ab10151f479e-960.webp",
+          "largura": 636,
+          "altura": 960,
+          "sha256": "ec7302fdbaa0c65475d5bcf13a4fd8042237c47ceeacd59af657f7785cd38ef5"
+        },
+        {
+          "arquivo": "static/pitwall-archive/rindt-zandvoort-vitoria-1970-ab10151f479e-2400.webp",
+          "largura": 1590,
+          "altura": 2400,
+          "sha256": "a503e39d538942619583ff36ed5b9584a00dfa9db6e909a46f23244333791e28"
+        }
+      ]
+    },
     "jochen-rindt-retrato": {
       "arquivo_commons": "File:Jochen Rindt 1969 German GP.jpg",
       "legenda": {
@@ -4256,6 +4330,39 @@
         }
       ]
     },
+    "vettel-frankfurt-retrato-2022": {
+      "arquivo_commons": "File:Sebastian Vettel - 2022236190316 2022-08-24 Champions for Charity - Sven - 1D X MK II - 3662 - B70I5672.jpg",
+      "legenda": {
+        "pt": "Sebastian Vettel durante o evento beneficente Champions for Charity, em Frankfurt, em 2022.",
+        "en": "Sebastian Vettel at the Champions for Charity event in Frankfurt in 2022."
+      },
+      "pilotos": [
+        "sebastian-vettel"
+      ],
+      "uso_editorial": true,
+      "fonte": "https://commons.wikimedia.org/wiki/File:Sebastian_Vettel_-_2022236190316_2022-08-24_Champions_for_Charity_-_Sven_-_1D_X_MK_II_-_3662_-_B70I5672.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/80/Sebastian_Vettel_-_2022236190316_2022-08-24_Champions_for_Charity_-_Sven_-_1D_X_MK_II_-_3662_-_B70I5672.jpg",
+      "autor": "Sven Mandel",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "caa4503be03cb287835c20dcd0b60b51ef9e5baef210843ac61c7d9f9759d906",
+      "largura": 5472,
+      "altura": 3648,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/vettel-frankfurt-retrato-2022-caa4503be03c-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "34607e3878cc354178efc72aad7a41461c1dfb189bd616dc4622930e224d502d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/vettel-frankfurt-retrato-2022-caa4503be03c-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "efccd5346ac899c1b82499f1da02d9075ef4068185b396da16c2d7219622f536"
+        }
+      ]
+    },
     "sebastian-vettel-retrato": {
       "arquivo_commons": "File:Sebastian Vettel 2011 Sebastian Vettel in Yokohama Infiniti event.jpg",
       "legenda": {
@@ -4349,6 +4456,42 @@
           "largura": 2400,
           "altura": 1600,
           "sha256": "35f04d9297f1d4d2387c86ab01ce3c4b3ba6fb9f395af2e4a397ce44af3a4800"
+        }
+      ]
+    },
+    "verstappen-zandvoort-podio-2024": {
+      "arquivo_commons": "File:2024-08-25 Motorsport, Formel 1, Großer Preis der Niederlande 2024 STP 3973 by Stepro.jpg",
+      "legenda": {
+        "pt": "Max Verstappen no pódio do GP dos Países Baixos de 2024, após terminar em segundo em Zandvoort.",
+        "en": "Max Verstappen on the podium at the 2024 Dutch Grand Prix after finishing second at Zandvoort."
+      },
+      "pilotos": [
+        "max-verstappen"
+      ],
+      "gps": [
+        "2024:15"
+      ],
+      "uso_editorial": true,
+      "fonte": "https://commons.wikimedia.org/wiki/File:2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/e0/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro.jpg",
+      "autor": "Steffen Prößdorf",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "283d97dad8c94b3709b7f002e5df20349cdfd19a621b3f4a80d68f74fbc8ec72",
+      "largura": 2160,
+      "altura": 3240,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/verstappen-zandvoort-podio-2024-283d97dad8c9-960.webp",
+          "largura": 640,
+          "altura": 960,
+          "sha256": "49e18f23efe647a134056fb57439e0c693a4da994bc07a8594541008c735d5a6"
+        },
+        {
+          "arquivo": "static/pitwall-archive/verstappen-zandvoort-podio-2024-283d97dad8c9-2400.webp",
+          "largura": 1600,
+          "altura": 2400,
+          "sha256": "c82facbe1ddb896eeb08408803d317f0e47b8f293af7ade4bbc25a5ae70226ec"
         }
       ]
     },
@@ -5094,6 +5237,41 @@
           "largura": 2400,
           "altura": 1600,
           "sha256": "662e30b7bdc950cc9c728a6e4abddd6bc839b44ee383327380023a5999ceb602"
+        }
+      ]
+    },
+    "piquet-hockenheim-retrato-1988": {
+      "arquivo_commons": "File:The West German Formula One Grand Prix in Hockenheim in 1988 (JOKAMAA2G-3).tif",
+      "legenda": {
+        "pt": "Nelson Piquet nos boxes da Lotus durante os treinos do GP da Alemanha de 1988, em Hockenheim.",
+        "en": "Nelson Piquet in the Lotus pits during practice for the 1988 German Grand Prix at Hockenheim."
+      },
+      "pilotos": [
+        "nelson-piquet"
+      ],
+      "gps": [
+        "1988:9"
+      ],
+      "autor": "Mauritz Antin / Finnish Heritage Agency",
+      "fonte": "https://commons.wikimedia.org/wiki/File:The_West_German_Formula_One_Grand_Prix_in_Hockenheim_in_1988_(JOKAMAA2G-3).tif",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/89/The_West_German_Formula_One_Grand_Prix_in_Hockenheim_in_1988_%28JOKAMAA2G-3%29.tif",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "309c6b36d54b7e361324ef9761a0a71e709f779c754da529deb3794702e793c4",
+      "largura": 2972,
+      "altura": 2096,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/piquet-hockenheim-retrato-1988-309c6b36d54b-960.webp",
+          "largura": 960,
+          "altura": 677,
+          "sha256": "f0d622ad9437a4895968cff3f28e2c510094330f0b20dfc91c30349f32f2090c"
+        },
+        {
+          "arquivo": "static/pitwall-archive/piquet-hockenheim-retrato-1988-309c6b36d54b-2400.webp",
+          "largura": 2400,
+          "altura": 1693,
+          "sha256": "ff8acb9bf5ac1efd2024a70d1eb3ee618aed09422c54a5b01fff148af692269a"
         }
       ]
     },
@@ -8416,6 +8594,246 @@
           "largura": 2400,
           "altura": 1600,
           "sha256": "43893b52a0f4f2f609219ea3bed6afc31ff609fa486a4928b8e14c9decc61059"
+        }
+      ]
+    },
+    "senna-hungaroring-1988": {
+      "arquivo_commons": "File:The Hungarian Formula One Grand Prix in Budapest in 1988 (JOKAMAA2H-5).tif",
+      "legenda": {
+        "pt": "Ayrton Senna enxuga o suor durante o treino de sábado no Hungaroring em 1988. Largou da pole e venceu o GP da Hungria.",
+        "en": "Ayrton Senna wipes sweat from his eyes during Saturday practice at the Hungaroring in 1988. He started from pole and won the Hungarian Grand Prix."
+      },
+      "pilotos": [
+        "ayrton-senna"
+      ],
+      "gps": [
+        "1988:10"
+      ],
+      "autor": "Mauritz Antin / Finnish Heritage Agency",
+      "fonte": "https://commons.wikimedia.org/wiki/File:The_Hungarian_Formula_One_Grand_Prix_in_Budapest_in_1988_(JOKAMAA2H-5).tif",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/8a/The_Hungarian_Formula_One_Grand_Prix_in_Budapest_in_1988_%28JOKAMAA2H-5%29.tif",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "b82af465d2cf9a9ed43a0acf48bfee9c2750236008593df1ce250ac8e18207bd",
+      "largura": 2130,
+      "altura": 2972,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/senna-hungaroring-1988-b82af465d2cf-960.webp",
+          "largura": 688,
+          "altura": 960,
+          "sha256": "a5e68428368e7c4b4ebf13547a183c10443e349b24d03554940c5f273e0ad74f"
+        },
+        {
+          "arquivo": "static/pitwall-archive/senna-hungaroring-1988-b82af465d2cf-2400.webp",
+          "largura": 1720,
+          "altura": 2400,
+          "sha256": "699b1409212209fc9ed45f1c65b39018f6d62a9ac36ddfa51f95b89ddc4c1fcb"
+        }
+      ]
+    },
+    "senna-donington-1993": {
+      "arquivo_commons": "File:Senna 1993 European GP.jpg",
+      "legenda": {
+        "pt": "Ayrton Senna em seu McLaren MP4/8 no GP da Europa de 1993 em Donington Park. Ele largou em quarto, assumiu a liderança na primeira volta e venceu a corrida.",
+        "en": "Ayrton Senna in his McLaren MP4/8 at the 1993 European Grand Prix at Donington Park. He started fourth, took the lead on the opening lap and won the race."
+      },
+      "pilotos": [
+        "ayrton-senna"
+      ],
+      "gps": [
+        "1993:3"
+      ],
+      "equipes": [
+        "mclaren"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Senna_1993_European_GP.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/90/Senna_1993_European_GP.jpg",
+      "autor": "Martin Lee",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "38d6860114f994d46050cdda525f1df5a46afe8475b81be5cfe2d5508efaeb5e",
+      "largura": 2544,
+      "altura": 1696,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/senna-donington-1993-38d6860114f9-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "03e0419f10635941b61f987a89afc74957e3d59907ba5d18abcb7cbe60607fa9"
+        },
+        {
+          "arquivo": "static/pitwall-archive/senna-donington-1993-38d6860114f9-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "c1c7a612e87ed4d124d9d456ba0413401fa304eb6a6dc5999007ee7f6a109283"
+        }
+      ]
+    },
+    "piquet-fw11-hungaroring-estoril-1986": {
+      "arquivo_commons": "File:The Hungarian Formula One Grand Prix in 1986 (JOKAMAA2E-10).tif",
+      "legenda": {
+        "pt": "Nelson Piquet vence o primeiro GP da Hungria em 1986 no Williams FW11 de chassi 05. Com o mesmo carro, foi terceiro no Estoril na prova em que a Williams confirmou o título de construtores.",
+        "en": "Nelson Piquet wins the first Hungarian Grand Prix in 1986 in Williams FW11 chassis 05. He finished third at Estoril in the same car when Williams secured the constructors’ title."
+      },
+      "modelo": "williams-fw11",
+      "temporadas": [
+        1986
+      ],
+      "equipes": [
+        "williams"
+      ],
+      "pilotos": [
+        "nelson-piquet"
+      ],
+      "gps": [
+        "1986:11"
+      ],
+      "artefatos_gps": [
+        "1986:14"
+      ],
+      "autor": "Mauritz Antin / Finnish Heritage Agency",
+      "construtor": "williams",
+      "fonte": "https://commons.wikimedia.org/wiki/File:The_Hungarian_Formula_One_Grand_Prix_in_1986_(JOKAMAA2E-10).tif",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/51/The_Hungarian_Formula_One_Grand_Prix_in_1986_%28JOKAMAA2E-10%29.tif",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "83684fe44ac9163fffb0fbb5b4c30c5c77ee26503657868fcbde900368ad0b4d",
+      "largura": 2972,
+      "altura": 2087,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/piquet-fw11-hungaroring-estoril-1986-83684fe44ac9-960.webp",
+          "largura": 960,
+          "altura": 674,
+          "sha256": "fff195a87b54cc2891f7eb5a7dd95deb9c910117567283f969809d29a26b570e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/piquet-fw11-hungaroring-estoril-1986-83684fe44ac9-2400.webp",
+          "largura": 2400,
+          "altura": 1685,
+          "sha256": "524aa699a1f2b10652bd91ac42185378d998587d444c4e73301708e6ebd9984b"
+        }
+      ]
+    },
+    "scheckter-ferrari-312t4-monza-1979": {
+      "arquivo_commons": "File:Jody Scheckter 06-09-2019.jpg",
+      "legenda": {
+        "pt": "Jody Scheckter volta a Monza em 2019 com o Ferrari 312 T4 de chassi 040. Quarenta anos antes, venceu no mesmo carro e garantiu seu título de pilotos e o de construtores da Ferrari.",
+        "en": "Jody Scheckter returns to Monza in 2019 in Ferrari 312 T4 chassis 040. Forty years earlier, he won in the same car to secure his drivers’ title and Ferrari’s constructors’ crown."
+      },
+      "modelo": "ferrari-312t4",
+      "temporadas": [
+        1979
+      ],
+      "equipes": [
+        "ferrari"
+      ],
+      "artefatos_gps": [
+        "1979:13"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Jody_Scheckter_06-09-2019.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Jody_Scheckter_06-09-2019.jpg",
+      "autor": "Valdore",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "174fcdd8c236d57ea79a8d3f4b80d27484675afe2ffd7bd98aaa7f86b5a8640b",
+      "largura": 4478,
+      "altura": 3358,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/scheckter-ferrari-312t4-monza-1979-174fcdd8c236-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "11264edec67d7797c5267a9b3bcab5d34854c513b64a369be00d7f9e53c3f3b4"
+        },
+        {
+          "arquivo": "static/pitwall-archive/scheckter-ferrari-312t4-monza-1979-174fcdd8c236-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "e4c385fbf895ec3bb85325372f3844456983eff953333116c88c8cdf2eabb8e7"
+        }
+      ]
+    },
+    "scheckter-tyrrell-007-brands-hatch-1974": {
+      "arquivo_commons": "File:British GP74 Start WmC.jpg",
+      "legenda": {
+        "pt": "Niki Lauda, Ronnie Peterson e Jody Scheckter na primeira volta em Brands Hatch em 1974. Scheckter venceu com o Tyrrell 007 de chassi 1, o mesmo de sua primeira vitória no Mundial, em Anderstorp.",
+        "en": "Niki Lauda, Ronnie Peterson and Jody Scheckter on the opening lap at Brands Hatch in 1974. Scheckter won in Tyrrell 007 chassis 1, the same car in which he took his first World Championship win at Anderstorp."
+      },
+      "equipes": [
+        "tyrrell"
+      ],
+      "gps": [
+        "1974:10"
+      ],
+      "artefatos_gps": [
+        "1974:7"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:British_GP74_Start_WmC.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/42/British_GP74_Start_WmC.jpg",
+      "autor": "50DAG2026",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "f8efaee9232036634fd6d9c40bd1f8af594da71c0fa08342d7dd7955ea484361",
+      "largura": 2104,
+      "altura": 1052,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/scheckter-tyrrell-007-brands-hatch-1974-f8efaee92320-960.webp",
+          "largura": 960,
+          "altura": 480,
+          "sha256": "776b6a4784669815603d8dcc0b51c4d8516a929b2f7451935e4b1d7119bf6278"
+        },
+        {
+          "arquivo": "static/pitwall-archive/scheckter-tyrrell-007-brands-hatch-1974-f8efaee92320-2104.webp",
+          "largura": 2104,
+          "altura": 1052,
+          "sha256": "7f41524bf9c11bbbce41eb373248d288afa01ec12a8248117711f6a6d189f745"
+        }
+      ]
+    },
+    "fittipaldi-m23-brands-hatch-1974": {
+      "arquivo_commons": "File:McLaren Fittipaldi 0066.jpg",
+      "legenda": {
+        "pt": "Emerson Fittipaldi em Druids, no GP da Grã-Bretanha de 1974. Com esse McLaren M23 de chassi 8, terminou em quarto em Watkins Glen e garantiu o bicampeonato e o primeiro título de construtores da McLaren.",
+        "en": "Emerson Fittipaldi at Druids during the 1974 British Grand Prix. He finished fourth at Watkins Glen in this McLaren M23 chassis 8 to seal his second drivers’ title and McLaren’s first constructors’ crown."
+      },
+      "modelo": "mclaren-m23b",
+      "temporadas": [
+        1974
+      ],
+      "equipes": [
+        "mclaren"
+      ],
+      "gps": [
+        "1974:10"
+      ],
+      "artefatos_gps": [
+        "1974:15"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:McLaren_Fittipaldi_0066.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/7c/McLaren_Fittipaldi_0066.jpg",
+      "autor": "Gillfoto",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "58ddf9110b097a2af3fc11a9aa37a373fe82a43609f91475cd29a77aa72e93cd",
+      "largura": 2400,
+      "altura": 1565,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/fittipaldi-m23-brands-hatch-1974-58ddf9110b09-960.webp",
+          "largura": 960,
+          "altura": 626,
+          "sha256": "c4bfd3b67475fa5028ce356bbdf6c25f7b8495780da07cfb33fcfd80203b07d7"
+        },
+        {
+          "arquivo": "static/pitwall-archive/fittipaldi-m23-brands-hatch-1974-58ddf9110b09-2400.webp",
+          "largura": 2400,
+          "altura": 1565,
+          "sha256": "3247308102c7eb62b82fee4e420a9cec97d4b7aa163b43c06c74bcd1e80ac151"
         }
       ]
     }
