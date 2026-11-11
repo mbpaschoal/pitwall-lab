@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "d9b6200a974af8336b418a939a5f31f0685e6d88e9720858b0b51e33df2716a7",
+  "apresentacao_build_sha256": "7b2981182dfd445864b688697b11349b839e6001eee5592c7dcebc670c444949",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "58604c8fe1d2853b8bf323b465f02173a625e91d535f00dd6016653a316e3c80",
+      "sha256_destino": "cb88a1e4da74c54252717e3fdbc9ffc597baea764b63ca650a8a60f9f2d32ca0",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "4e47ee51a21e00f08e442a6adcf1334c62f5b728d92aaa3649332a0c3bf2de98",
-      "sha256_origem": "95c3f99995059671dd448fa5d09caad0451c682630a1c4af9a77c1cf898d1713"
+      "sha256_destino": "f9df159691da216b7131db61933a43b2dd012082590119dd94b8cfb47923381b",
+      "sha256_origem": "efafda710dc29d7dd81e2735678bbf8fab3451e2ef41716b5a6075a5bfd44978"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "f31e98e60c64c0dd538db2795ea8cce6186174120e5a5753307d5f5690510305",
-      "sha256_origem": "8a8cc336e29dbfcf0b5cc1e425dce634a85aad2cce4c31247ea66a63ae419330"
+      "sha256_destino": "284d51fdc2a260850df5ba694ee1b9b4703be6edc8a0fd9d51773fdfeb7ca436",
+      "sha256_origem": "4400361329643cf4d26e854e91d43623ee35f5eeab9e942ed87d81350445a0be"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "5429ba3963e0af9ed5e44fdf74b3b02e3faf5b89dc81d5f81d087088fb45b505",
-      "sha256_origem": "5429ba3963e0af9ed5e44fdf74b3b02e3faf5b89dc81d5f81d087088fb45b505"
+      "sha256_destino": "2c396bc06c29f57949bff2ca3aa5c1ff5fc98b4e2b4ac2bd041aff4bcb2d4c78",
+      "sha256_origem": "2c396bc06c29f57949bff2ca3aa5c1ff5fc98b4e2b4ac2bd041aff4bcb2d4c78"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4638,6 +4638,20 @@
       "modo": "copia",
       "sha256_destino": "afad5c54167e882263f0d4bcbe395029de7a16a99ef6efb7759ed2f8825f2cdb",
       "sha256_origem": "afad5c54167e882263f0d4bcbe395029de7a16a99ef6efb7759ed2f8825f2cdb"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2002-220-chegada-austria-2002-c185f7314e12-480.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2002-220-chegada-austria-2002-c185f7314e12-480.webp",
+      "modo": "copia",
+      "sha256_destino": "740acabd6993e0c739e23249308001f942d9b7a9b3dd81a285d49de251759440",
+      "sha256_origem": "740acabd6993e0c739e23249308001f942d9b7a9b3dd81a285d49de251759440"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2002-220-chegada-austria-2002-c185f7314e12-698.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2002-220-chegada-austria-2002-c185f7314e12-698.webp",
+      "modo": "copia",
+      "sha256_destino": "71e5bd4f92d82e30df927feea11a446e579800a931057031f39856bcf6fcafa4",
+      "sha256_origem": "71e5bd4f92d82e30df927feea11a446e579800a931057031f39856bcf6fcafa4"
     },
     {
       "caminho": "static/pitwall-archive/ferrari-f2002-b5a3764266bf-2400.webp",
