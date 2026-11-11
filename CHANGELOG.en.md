@@ -6,7 +6,7 @@ Champions Duel compares any two Hall of Fame drivers and opens with Senna and Pr
 
 The Photo Archive brings together photographs of all 36 champions, all 11 teams on the 2026 grid, and at least one car from each championship campaign since 1950. Profiles display bilingual captions, photographer credits, license details and links to the originals. The gallery serves local WebP variants and lets visitors browse cars and historic moments by season.
 
-The archive contains 320 photographs and covers 168 of the 184 catalogued historic moments. Captions identify photos taken at the Grand Prix itself and images of an original car or trophy photographed on another occasion.
+The archive contains 323 photographs and covers 172 of the 184 catalogued historic moments. Captions identify photos taken at the Grand Prix itself and images of an original car or trophy photographed on another occasion.
 
 ## 0.18.0 — 2026-11-11
 

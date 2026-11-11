@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "757bd58550f52eb16a83310f8f89b76a53b55d4533ea1fce17bd0e5e0808ef90",
+  "apresentacao_build_sha256": "4d66a27a2e9af9faf129e084b1b58674854a6d5d10b4e4f563db7b8f944bab59",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "566efd3b15ffaf66ae20373de7cf2112c8a1e37046fcdb81016b072f97d4ce9b",
+      "sha256_destino": "c099dc46a8c211beb140d5d9fe5ed39f53cc89dcfdcdc388040fd05e5c24f659",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "5b48b1c78a73c312ba4604289f793406d1ee04e014673017da11da52407e491e",
-      "sha256_origem": "ea18674f399e54d8a1013446212054a9e23a0885caaaea2a1c7b7685f5d3e00f"
+      "sha256_destino": "a837aa782b2a06fd82e6b46b816df11d5b3ba1c541a3d5d3cf0d4614ced7ecb3",
+      "sha256_origem": "dc02d936c08c06d45e591701b176663b4863b61b09994cda52c89cb4f16e1bc9"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "fe1de4ae6fdef5b4c62cfcf878a722f6f6785e95f2a2b8002b71f8df967e47a9",
-      "sha256_origem": "8b85daa6e0db0d87ec535a72341cd4814970ae2881854296caef308031a82c21"
+      "sha256_destino": "c7a0215ec59035047cfbfdbb918b01318908637f5278993300df518652e4e64c",
+      "sha256_origem": "5f9f8e3e499af5f521dfb23108330b19018fd0e947d7b12f1d559203c0f88825"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "aa7b03327ce7433f590cd0e302eaf20b3b0f910e92f103a29955f4f62aa2fe81",
-      "sha256_origem": "aa7b03327ce7433f590cd0e302eaf20b3b0f910e92f103a29955f4f62aa2fe81"
+      "sha256_destino": "5fde320b64bdd1dc203695dcbfbcf377ecbc6a4df113bcb76c1bfe74fe2016c4",
+      "sha256_origem": "5fde320b64bdd1dc203695dcbfbcf377ecbc6a4df113bcb76c1bfe74fe2016c4"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3826,6 +3826,20 @@
       "modo": "copia",
       "sha256_destino": "97f186f89c5f0a19c551a0f09e9fa2288312335656d6320e3e129ef3d98f0870",
       "sha256_origem": "97f186f89c5f0a19c551a0f09e9fa2288312335656d6320e3e129ef3d98f0870"
+    },
+    {
+      "caminho": "static/pitwall-archive/berger-ferrari-f1-87-retromobile-2025-44e0f7b5b6de-2400.webp",
+      "fonte": "static/pitwall-archive/berger-ferrari-f1-87-retromobile-2025-44e0f7b5b6de-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b616b0df1e82a71b0f6d61c19808696d09c0d3e7daeeed003425e8c8031f3d90",
+      "sha256_origem": "b616b0df1e82a71b0f6d61c19808696d09c0d3e7daeeed003425e8c8031f3d90"
+    },
+    {
+      "caminho": "static/pitwall-archive/berger-ferrari-f1-87-retromobile-2025-44e0f7b5b6de-960.webp",
+      "fonte": "static/pitwall-archive/berger-ferrari-f1-87-retromobile-2025-44e0f7b5b6de-960.webp",
+      "modo": "copia",
+      "sha256_destino": "02d934f21207f2c04ae87b5e30b31f7abfab263bbe05e9bf7a7e4fb9bfe09c7c",
+      "sha256_origem": "02d934f21207f2c04ae87b5e30b31f7abfab263bbe05e9bf7a7e4fb9bfe09c7c"
     },
     {
       "caminho": "static/pitwall-archive/berger-mp4-6-suzuka-1991-1f1d41590f9b-2400.webp",
@@ -5732,6 +5746,20 @@
       "sha256_origem": "979a8b1d2317fdb918d76d31fe252173f2977aa9fae7a3e5b08dc39d37afe097"
     },
     {
+      "caminho": "static/pitwall-archive/manzon-gordini-t32-mulhouse-2015-8d211db6737e-2400.webp",
+      "fonte": "static/pitwall-archive/manzon-gordini-t32-mulhouse-2015-8d211db6737e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "112f27adc8425f2ccb5fe8e280fb2965126fa3a1bcd512b79297102dfeac0100",
+      "sha256_origem": "112f27adc8425f2ccb5fe8e280fb2965126fa3a1bcd512b79297102dfeac0100"
+    },
+    {
+      "caminho": "static/pitwall-archive/manzon-gordini-t32-mulhouse-2015-8d211db6737e-960.webp",
+      "fonte": "static/pitwall-archive/manzon-gordini-t32-mulhouse-2015-8d211db6737e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cf6e107765996eea00dbda38a36df415ebd00c43f57aa81db3b2ec3586cb19c2",
+      "sha256_origem": "cf6e107765996eea00dbda38a36df415ebd00c43f57aa81db3b2ec3586cb19c2"
+    },
+    {
       "caminho": "static/pitwall-archive/mario-andretti-retrato-0fd227f5a67a-2391.webp",
       "fonte": "static/pitwall-archive/mario-andretti-retrato-0fd227f5a67a-2391.webp",
       "modo": "copia",
@@ -7088,6 +7116,20 @@
       "modo": "copia",
       "sha256_destino": "a5e68428368e7c4b4ebf13547a183c10443e349b24d03554940c5f273e0ad74f",
       "sha256_origem": "a5e68428368e7c4b4ebf13547a183c10443e349b24d03554940c5f273e0ad74f"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-lotus-97t-brands-hatch-1985-a663db0dec3c-2400.webp",
+      "fonte": "static/pitwall-archive/senna-lotus-97t-brands-hatch-1985-a663db0dec3c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7779a954746191eaa81e783734c0f50adb3c76d1ccb696919b2cd3cb029bf365",
+      "sha256_origem": "7779a954746191eaa81e783734c0f50adb3c76d1ccb696919b2cd3cb029bf365"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-lotus-97t-brands-hatch-1985-a663db0dec3c-960.webp",
+      "fonte": "static/pitwall-archive/senna-lotus-97t-brands-hatch-1985-a663db0dec3c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "018ddb507ca77617e78817e0374846f36c9cdf52b371ce84d665bf8d795c454b",
+      "sha256_origem": "018ddb507ca77617e78817e0374846f36c9cdf52b371ce84d665bf8d795c454b"
     },
     {
       "caminho": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-2400.webp",

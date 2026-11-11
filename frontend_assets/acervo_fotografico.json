@@ -8417,8 +8417,8 @@
     "senna-mp4-5-suzuka-1989": {
       "arquivo_commons": "File:McLaren MP4-5.jpg",
       "legenda": {
-        "pt": "O McLaren MP4/5 de chassi 7, usado por Ayrton Senna em Suzuka na decisão do título de Alain Prost em 1989, fotografado na coleção de Donington em 2007.",
-        "en": "McLaren MP4/5 chassis 7, driven by Ayrton Senna at Suzuka when Alain Prost secured the 1989 title, photographed at the Donington collection in 2007."
+        "pt": "O McLaren MP4/5 de chassi 7, usado por Ayrton Senna em Suzuka na decisão do título de Alain Prost em 1989, fotografado na coleção de Donington em 2007. Senna também largou da pole em Monza com esse chassi, na corrida vencida por Prost que deu à McLaren o título de construtores.",
+        "en": "McLaren MP4/5 chassis 7, driven by Ayrton Senna at Suzuka when Alain Prost secured the 1989 title, photographed at the Donington collection in 2007. Senna also started from pole at Monza in this chassis, where Prost won to secure the constructors’ title for McLaren."
       },
       "modelo": "mclaren-mp4-5",
       "temporadas": [
@@ -8428,7 +8428,8 @@
         "mclaren"
       ],
       "artefatos_gps": [
-        "1989:15"
+        "1989:15",
+        "1989:12"
       ],
       "construtor": "mclaren",
       "fonte": "https://commons.wikimedia.org/wiki/File:McLaren_MP4-5.jpg",
@@ -11205,6 +11206,105 @@
           "largura": 2400,
           "altura": 1800,
           "sha256": "17a1edc57e10f3b16413af09580a500f59d3f6dac7e0b1c14228e242e023b458"
+        }
+      ]
+    },
+    "manzon-gordini-t32-mulhouse-2015": {
+      "arquivo_commons": "File:Gordini Type 32 GP 1-Seater 1956 2474cc.JPG",
+      "legenda": {
+        "pt": "O Gordini T32 de chassi 41 na coleção Schlumpf, em Mulhouse. Robert Manzon disputou com esse chassi o GP da Itália de 1956, em que Juan Manuel Fangio conquistou seu quarto Mundial.",
+        "en": "Gordini T32 chassis 41 in the Schlumpf Collection in Mulhouse. Robert Manzon raced this chassis at the 1956 Italian Grand Prix, where Juan Manuel Fangio clinched his fourth world title."
+      },
+      "artefatos_gps": [
+        "1956:8"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Gordini_Type_32_GP_1-Seater_1956_2474cc.JPG",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Gordini_Type_32_GP_1-Seater_1956_2474cc.JPG",
+      "autor": "Charles01",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "8d211db6737eba69c60cee70e219bc89ab38bcc88350a1e24f038e7c57d3293a",
+      "largura": 2926,
+      "altura": 1756,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/manzon-gordini-t32-mulhouse-2015-8d211db6737e-960.webp",
+          "largura": 960,
+          "altura": 576,
+          "sha256": "cf6e107765996eea00dbda38a36df415ebd00c43f57aa81db3b2ec3586cb19c2"
+        },
+        {
+          "arquivo": "static/pitwall-archive/manzon-gordini-t32-mulhouse-2015-8d211db6737e-2400.webp",
+          "largura": 2400,
+          "altura": 1440,
+          "sha256": "112f27adc8425f2ccb5fe8e280fb2965126fa3a1bcd512b79297102dfeac0100"
+        }
+      ]
+    },
+    "senna-lotus-97t-brands-hatch-1985": {
+      "arquivo_commons": "File:1985 European GP Senna.jpg",
+      "legenda": {
+        "pt": "Ayrton Senna nos treinos de Brands Hatch em 1985 com o Lotus 97T de chassi 4. Com o mesmo carro, fez a pole em Adelaide, na prova em que a McLaren confirmou o Mundial de Construtores.",
+        "en": "Ayrton Senna in practice at Brands Hatch in 1985 in Lotus 97T chassis 4. In the same car he took pole at Adelaide, where McLaren clinched the constructors’ championship."
+      },
+      "gps": [
+        "1985:14"
+      ],
+      "artefatos_gps": [
+        "1985:16"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:1985_European_GP_Senna.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/c3/1985_European_GP_Senna.jpg",
+      "autor": "Jerry Lewis-Evans",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "a663db0dec3c9cf72c3603113e78d85b60136b713dccced8fdcec87395a0859d",
+      "largura": 3256,
+      "altura": 1968,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/senna-lotus-97t-brands-hatch-1985-a663db0dec3c-960.webp",
+          "largura": 960,
+          "altura": 580,
+          "sha256": "018ddb507ca77617e78817e0374846f36c9cdf52b371ce84d665bf8d795c454b"
+        },
+        {
+          "arquivo": "static/pitwall-archive/senna-lotus-97t-brands-hatch-1985-a663db0dec3c-2400.webp",
+          "largura": 2400,
+          "altura": 1451,
+          "sha256": "7779a954746191eaa81e783734c0f50adb3c76d1ccb696919b2cd3cb029bf365"
+        }
+      ]
+    },
+    "berger-ferrari-f1-87-retromobile-2025": {
+      "arquivo_commons": "File:Ferrari F1-87 (55037779696).jpg",
+      "legenda": {
+        "pt": "O Ferrari F1-87 de chassi 098 fotografado no Rétromobile, em Paris, em 2025. Gerhard Berger venceu em Suzuka com esse carro em 1987, na etapa em que Nelson Piquet assegurou seu terceiro título.",
+        "en": "Ferrari F1-87 chassis 098 photographed at Rétromobile in Paris in 2025. Gerhard Berger won in this car at Suzuka in 1987, where Nelson Piquet clinched his third world title."
+      },
+      "artefatos_gps": [
+        "1987:15"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Ferrari_F1-87_(55037779696).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Ferrari_F1-87_%2855037779696%29.jpg",
+      "autor": "Alexandre Prevot from Nancy, France",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "44e0f7b5b6de21374304f5e371cc9368f28c35362e78fcf1db5521bd8acbb82a",
+      "largura": 3500,
+      "altura": 2333,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/berger-ferrari-f1-87-retromobile-2025-44e0f7b5b6de-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "02d934f21207f2c04ae87b5e30b31f7abfab263bbe05e9bf7a7e4fb9bfe09c7c"
+        },
+        {
+          "arquivo": "static/pitwall-archive/berger-ferrari-f1-87-retromobile-2025-44e0f7b5b6de-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "b616b0df1e82a71b0f6d61c19808696d09c0d3e7daeeed003425e8c8031f3d90"
         }
       ]
     }
