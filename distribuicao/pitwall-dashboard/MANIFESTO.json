@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "aa5602047a1ab05be2e519f3c4e89eedda8a07feca8e8520fb95796cd2ee0161",
+  "apresentacao_build_sha256": "c7292a54a8dc84cd9578989afbb14495af5078c739c52b4afd52535fff382f82",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "833e7e24098804e909fc4257d6b4281461c6a9e03bd7bfa3ec6aafeb1056664a",
+      "sha256_destino": "9c21e160318006276b08f4a5c1954a7a63a0cd74554c1369621a65907a54cb7a",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "1577a879d8994f8a109f304e3367143c24cf525609bdb57901b8d0b107654c0b",
-      "sha256_origem": "1577a879d8994f8a109f304e3367143c24cf525609bdb57901b8d0b107654c0b"
+      "sha256_destino": "7a8b59b50930531bab742380767871624bfba815a8ec403eb5e68713a6a52109",
+      "sha256_origem": "7a8b59b50930531bab742380767871624bfba815a8ec403eb5e68713a6a52109"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3926,6 +3926,20 @@
       "sha256_origem": "d4563cab91ba0394b32f127504894070a8fd43683757258ecef932611a6dd363"
     },
     {
+      "caminho": "static/pitwall-archive/clark-lotus-25-monza-1963-761bc9f8bdfa-2400.webp",
+      "fonte": "static/pitwall-archive/clark-lotus-25-monza-1963-761bc9f8bdfa-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9c4c53a1e7d5b4de977b492652b0ffccf1dcbabcedd8a16b6dcee3d7f3b8b145",
+      "sha256_origem": "9c4c53a1e7d5b4de977b492652b0ffccf1dcbabcedd8a16b6dcee3d7f3b8b145"
+    },
+    {
+      "caminho": "static/pitwall-archive/clark-lotus-25-monza-1963-761bc9f8bdfa-960.webp",
+      "fonte": "static/pitwall-archive/clark-lotus-25-monza-1963-761bc9f8bdfa-960.webp",
+      "modo": "copia",
+      "sha256_destino": "57b4d53374263ce2b66629d47d07efc52beea6750333c54df7aa62ceff1ef5fe",
+      "sha256_origem": "57b4d53374263ce2b66629d47d07efc52beea6750333c54df7aa62ceff1ef5fe"
+    },
+    {
       "caminho": "static/pitwall-archive/cooper-moss-zandvoort-1959-f7631f667681-2400.webp",
       "fonte": "static/pitwall-archive/cooper-moss-zandvoort-1959-f7631f667681-2400.webp",
       "modo": "copia",
@@ -4092,6 +4106,20 @@
       "modo": "copia",
       "sha256_destino": "ef22a0316bc59c8a6ea09b61dba9e731815004dbed6eb21d28f5c6508eae054f",
       "sha256_origem": "ef22a0316bc59c8a6ea09b61dba9e731815004dbed6eb21d28f5c6508eae054f"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-w196-zandvoort-aintree-1955-3a02ef146368-2400.webp",
+      "fonte": "static/pitwall-archive/fangio-w196-zandvoort-aintree-1955-3a02ef146368-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e8cd9902c8e7cc43a561140529c5146522b0f590dab4c6a436dac34c23ca52f0",
+      "sha256_origem": "e8cd9902c8e7cc43a561140529c5146522b0f590dab4c6a436dac34c23ca52f0"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-w196-zandvoort-aintree-1955-3a02ef146368-960.webp",
+      "fonte": "static/pitwall-archive/fangio-w196-zandvoort-aintree-1955-3a02ef146368-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b4cd53393eef63c7fcc3f52a3e9e13b707a7f6fc496e6d2486762f3f261e8022",
+      "sha256_origem": "b4cd53393eef63c7fcc3f52a3e9e13b707a7f6fc496e6d2486762f3f261e8022"
     },
     {
       "caminho": "static/pitwall-archive/farina-alfetta-d98c6a7138f7-2400.webp",
@@ -4444,6 +4472,20 @@
       "sha256_origem": "c80f519068037a6764d30e4639b31eb58c8694ad154976ca0200fb6460a376d0"
     },
     {
+      "caminho": "static/pitwall-archive/fittipaldi-lotus-72-r5-watkins-glen-1970-62aa90319738-2400.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-lotus-72-r5-watkins-glen-1970-62aa90319738-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "43893b52a0f4f2f609219ea3bed6afc31ff609fa486a4928b8e14c9decc61059",
+      "sha256_origem": "43893b52a0f4f2f609219ea3bed6afc31ff609fa486a4928b8e14c9decc61059"
+    },
+    {
+      "caminho": "static/pitwall-archive/fittipaldi-lotus-72-r5-watkins-glen-1970-62aa90319738-960.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-lotus-72-r5-watkins-glen-1970-62aa90319738-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cb15bc3d7ac4d326957953e4d21d01bd3adee7a4b851546f7f98665ca52460d2",
+      "sha256_origem": "cb15bc3d7ac4d326957953e4d21d01bd3adee7a4b851546f7f98665ca52460d2"
+    },
+    {
       "caminho": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-1788.webp",
       "fonte": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-1788.webp",
       "modo": "copia",
@@ -4596,6 +4638,20 @@
       "modo": "copia",
       "sha256_destino": "bbdac6a0d9d84aed0b28a6d2dfb24e64bc83eabf917318a4cdee1f0d81a1867e",
       "sha256_origem": "bbdac6a0d9d84aed0b28a6d2dfb24e64bc83eabf917318a4cdee1f0d81a1867e"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-rindt-lotus-49-r6-2d2224cb3025-2400.webp",
+      "fonte": "static/pitwall-archive/hill-rindt-lotus-49-r6-2d2224cb3025-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8c894dc031781a3421cbb4d2bde95bf1bd60127d4b221951ed2481448fd9bb4a",
+      "sha256_origem": "8c894dc031781a3421cbb4d2bde95bf1bd60127d4b221951ed2481448fd9bb4a"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-rindt-lotus-49-r6-2d2224cb3025-960.webp",
+      "fonte": "static/pitwall-archive/hill-rindt-lotus-49-r6-2d2224cb3025-960.webp",
+      "modo": "copia",
+      "sha256_destino": "add898cb24f64dd8403c1894c6a5ddee31b149453c82d8152cd5e70937840737",
+      "sha256_origem": "add898cb24f64dd8403c1894c6a5ddee31b149453c82d8152cd5e70937840737"
     },
     {
       "caminho": "static/pitwall-archive/hill-silverstone-1992-42c5d0354c90-2400.webp",
@@ -6290,6 +6346,20 @@
       "modo": "copia",
       "sha256_destino": "4c0067f5bce5ea3574a0f721ae8ca7160e169811485c551b9103ea8543bbffe0",
       "sha256_origem": "4c0067f5bce5ea3574a0f721ae8ca7160e169811485c551b9103ea8543bbffe0"
+    },
+    {
+      "caminho": "static/pitwall-archive/stewart-ms80-monza-1969-32e5fb472dda-2400.webp",
+      "fonte": "static/pitwall-archive/stewart-ms80-monza-1969-32e5fb472dda-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5c807d3daee733b118a18b63501620f1c567f1f8add63e67619cdd7e7864f093",
+      "sha256_origem": "5c807d3daee733b118a18b63501620f1c567f1f8add63e67619cdd7e7864f093"
+    },
+    {
+      "caminho": "static/pitwall-archive/stewart-ms80-monza-1969-32e5fb472dda-960.webp",
+      "fonte": "static/pitwall-archive/stewart-ms80-monza-1969-32e5fb472dda-960.webp",
+      "modo": "copia",
+      "sha256_destino": "fe07e72eff22c2ce2274f2841f4963a319a9b0abf709c3743c3cc3b7e11c05b3",
+      "sha256_origem": "fe07e72eff22c2ce2274f2841f4963a319a9b0abf709c3743c3cc3b7e11c05b3"
     },
     {
       "caminho": "static/pitwall-archive/surtees-forghieri-1965-ab94ac5c30f1-2400.webp",

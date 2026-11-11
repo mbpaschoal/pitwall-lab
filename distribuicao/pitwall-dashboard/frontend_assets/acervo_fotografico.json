@@ -113,8 +113,8 @@
     "fangio-nurburgring-1954": {
       "arquivo_commons": "File:Großer Preis von Europa -1954 Nürburgring, Juan Manuel Fangio, Mercedes (3)x.JPG",
       "legenda": {
-        "pt": "Fangio no Mercedes W196 no Nürburgring em 1954.",
-        "en": "Fangio in the Mercedes W196 at the Nürburgring in 1954."
+        "pt": "Fangio no Nürburgring em 1954, no Mercedes W196 de chassi 00006/54. Ele venceu essa corrida e o GP da Suíça com o mesmo carro, garantindo o bicampeonato em Bremgarten.",
+        "en": "Fangio at the Nürburgring in 1954 in Mercedes W196 chassis 00006/54. He won both this race and the Swiss Grand Prix in this car, clinching his second title at Bremgarten."
       },
       "modelo": "mercedes-w196",
       "temporadas": [
@@ -143,7 +143,13 @@
           "sha256": "c73ce85db262b23547ba91617fff2edc9ac01773e9b509adb46396a4c920940c"
         }
       ],
-      "construtor": "mercedes"
+      "construtor": "mercedes",
+      "gps": [
+        "1954:6"
+      ],
+      "artefatos_gps": [
+        "1954:7"
+      ]
     },
     "fangio-nurburgring-1957": {
       "arquivo_commons": "File:Fangio pit stop Nurburgring 1957.jpg",
@@ -1492,8 +1498,8 @@
     "vanwall-vw-5": {
       "arquivo_commons": "File:Vanwall VW5 Donington.jpg",
       "legenda": {
-        "pt": "Vanwall VW5 em exposição na coleção de Donington.",
-        "en": "Vanwall VW5 on display in the Donington collection."
+        "pt": "O Vanwall VW5 fotografado em Donington em 2007. Tony Brooks venceu em Monza e Stirling Moss em Casablanca com esse chassi na campanha de 1958. No Marrocos, Mike Hawthorn levou o título de pilotos.",
+        "en": "The Vanwall VW5 pictured at Donington in 2007. Tony Brooks won at Monza and Stirling Moss at Casablanca in this chassis in 1958. Mike Hawthorn won the drivers’ title at the Moroccan Grand Prix."
       },
       "modelo": "vanwall-vw-5",
       "temporadas": [
@@ -1521,6 +1527,10 @@
           "altura": 1793,
           "sha256": "0bbac0d25d44675ec2f97eab11de0abe0240c1cf297e0512392837354170ff9d"
         }
+      ],
+      "artefatos_gps": [
+        "1958:10",
+        "1958:11"
       ]
     },
     "cooper-t51": {
@@ -2694,8 +2704,8 @@
     "lotus-49b": {
       "arquivo_commons": "File:G. Hill at 1968 Dutch Grand Prix (3).jpg",
       "legenda": {
-        "pt": "Graham Hill com o Lotus 49B/R5 em Zandvoort em 1968. Renumerado R10, o mesmo chassi foi usado por Emerson Fittipaldi em sua estreia, em Brands Hatch, em 1970.",
-        "en": "Graham Hill in the Lotus 49B/R5 at Zandvoort in 1968. Renumbered R10, this chassis was later driven by Emerson Fittipaldi in his Formula One debut at Brands Hatch in 1970."
+        "pt": "Graham Hill no Lotus 49B de chassi R5 em Zandvoort em 1968. Mario Andretti estreou no Mundial com a pole em Watkins Glen no mesmo chassi. Renumerado R10, o carro também foi usado na estreia de Emerson Fittipaldi em Brands Hatch em 1970.",
+        "en": "Graham Hill in Lotus 49B chassis R5 at Zandvoort in 1968. Mario Andretti took pole on his World Championship debut at Watkins Glen in the same chassis. Renumbered R10, it was also used by Emerson Fittipaldi on his debut at Brands Hatch in 1970."
       },
       "modelo": "lotus-49b",
       "temporadas": [
@@ -2725,7 +2735,11 @@
         }
       ],
       "artefatos_gps": [
+        "1968:11",
         "1970:7"
+      ],
+      "gps": [
+        "1968:5"
       ]
     },
     "lotus-72c": {
@@ -7129,15 +7143,17 @@
     "ascari-ferrari-500-005": {
       "arquivo_commons": "File:Rétromobile 2017 - Ferrari Tipo 500 - 1952 - 001.jpg",
       "legenda": {
-        "pt": "Ferrari 500 F2, chassi 005, no salão Rétromobile em 2017. Alberto Ascari venceu com este carro no Nürburgring em 1952, quando assegurou seu primeiro título.",
-        "en": "The Ferrari 500 F2, chassis 005, at Rétromobile in 2017. Alberto Ascari won in this car at the Nürburgring in 1952, clinching his first title."
+        "pt": "O Ferrari 500 F2 de chassi 005 no Rétromobile em 2017. Alberto Ascari venceu com esse carro na estreia de Mike Hawthorn em Spa em 1952 e nas corridas em que confirmou seus títulos, no Nürburgring em 1952 e em Bremgarten em 1953.",
+        "en": "Ferrari 500 F2 chassis 005 at Rétromobile in 2017. Alberto Ascari won Mike Hawthorn’s 1952 debut at Spa in this car and clinched his titles in it at the Nürburgring in 1952 and Bremgarten in 1953."
       },
       "modelo": "ferrari-500",
       "temporadas": [
         1952
       ],
       "artefatos_gps": [
-        "1952:6"
+        "1952:3",
+        "1952:6",
+        "1953:8"
       ],
       "construtor": "ferrari",
       "fonte": "https://commons.wikimedia.org/wiki/File:R%C3%A9tromobile_2017_-_Ferrari_Tipo_500_-_1952_-_001.jpg",
@@ -8201,6 +8217,205 @@
           "largura": 2400,
           "altura": 1502,
           "sha256": "c0704b62f9bacaae1a32e1f29bc4673afdc32df76aa2578a7b343d1fe4de5dfa"
+        }
+      ]
+    },
+    "fangio-w196-zandvoort-aintree-1955": {
+      "arquivo_commons": "File:Grote Prijs van Nederland Zandvoort. Vooraan J. M. Fangio in Mercedes (de latere, Bestanddeelnr 907-1903.jpg",
+      "legenda": {
+        "pt": "Juan Manuel Fangio lidera Stirling Moss em Zandvoort em 1955 no Mercedes W196 de chassi 00013/55. Com o mesmo carro, foi segundo em Aintree e assegurou seu terceiro título mundial.",
+        "en": "Juan Manuel Fangio leads Stirling Moss at Zandvoort in 1955 in Mercedes W196 chassis 00013/55. He finished second at Aintree in the same car to secure his third World Championship."
+      },
+      "modelo": "mercedes-w196",
+      "temporadas": [
+        1955
+      ],
+      "equipes": [
+        "mercedes"
+      ],
+      "gps": [
+        "1955:5"
+      ],
+      "artefatos_gps": [
+        "1955:6"
+      ],
+      "construtor": "mercedes",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Grote_Prijs_van_Nederland_Zandvoort._Vooraan_J._M._Fangio_in_Mercedes_(de_latere,_Bestanddeelnr_907-1903.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Grote_Prijs_van_Nederland_Zandvoort._Vooraan_J._M._Fangio_in_Mercedes_%28de_latere%2C_Bestanddeelnr_907-1903.jpg",
+      "autor": "Harry Pot for Anefo",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "3a02ef146368ba7f8004c77815bf093df80b217135872a98b5e8a93dd59886bc",
+      "largura": 4237,
+      "altura": 3304,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/fangio-w196-zandvoort-aintree-1955-3a02ef146368-960.webp",
+          "largura": 960,
+          "altura": 749,
+          "sha256": "b4cd53393eef63c7fcc3f52a3e9e13b707a7f6fc496e6d2486762f3f261e8022"
+        },
+        {
+          "arquivo": "static/pitwall-archive/fangio-w196-zandvoort-aintree-1955-3a02ef146368-2400.webp",
+          "largura": 2400,
+          "altura": 1872,
+          "sha256": "e8cd9902c8e7cc43a561140529c5146522b0f590dab4c6a436dac34c23ca52f0"
+        }
+      ]
+    },
+    "clark-lotus-25-monza-1963": {
+      "arquivo_commons": "File:1963 Lotus 25 R4 (54833107267).jpg",
+      "legenda": {
+        "pt": "O Lotus 25 de chassi R4 em exposição em Silverstone em 2025. Com esse carro, Jim Clark venceu em Monza e garantiu os títulos de pilotos e de construtores da Lotus em 1963.",
+        "en": "Lotus 25 chassis R4 on display at Silverstone in 2025. Jim Clark won at Monza in this car to secure the 1963 drivers’ and constructors’ titles for Lotus."
+      },
+      "modelo": "lotus-25",
+      "temporadas": [
+        1963
+      ],
+      "equipes": [
+        "lotus"
+      ],
+      "artefatos_gps": [
+        "1963:7"
+      ],
+      "construtor": "lotus",
+      "fonte": "https://commons.wikimedia.org/wiki/File:1963_Lotus_25_R4_(54833107267).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/14/1963_Lotus_25_R4_%2854833107267%29.jpg",
+      "autor": "David Merrett from Daventry, England",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "761bc9f8bdfae6d319b0fcb911df6985aaf2dc91303ce4ef2c350cf7ecfdc6ef",
+      "largura": 2737,
+      "altura": 3373,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/clark-lotus-25-monza-1963-761bc9f8bdfa-960.webp",
+          "largura": 779,
+          "altura": 960,
+          "sha256": "57b4d53374263ce2b66629d47d07efc52beea6750333c54df7aa62ceff1ef5fe"
+        },
+        {
+          "arquivo": "static/pitwall-archive/clark-lotus-25-monza-1963-761bc9f8bdfa-2400.webp",
+          "largura": 1947,
+          "altura": 2400,
+          "sha256": "9c4c53a1e7d5b4de977b492652b0ffccf1dcbabcedd8a16b6dcee3d7f3b8b145"
+        }
+      ]
+    },
+    "hill-rindt-lotus-49-r6": {
+      "arquivo_commons": "File:Lotus at Goodwood FOS 2012 (1).jpg",
+      "legenda": {
+        "pt": "Emerson Fittipaldi pilota o Lotus 49C de chassi R6-2 em Goodwood em 2012. Em configuração 49B, esse chassi deu a Graham Hill e à Lotus os títulos de 1968 no México. Jochen Rindt obteve sua primeira vitória com o mesmo carro em Watkins Glen em 1969.",
+        "en": "Emerson Fittipaldi drives Lotus 49C chassis R6-2 at Goodwood in 2012. In 49B specification, this chassis secured the 1968 titles for Graham Hill and Lotus in Mexico. Jochen Rindt took his first win in the same car at Watkins Glen in 1969."
+      },
+      "modelo": "lotus-49c",
+      "temporadas": [
+        1970
+      ],
+      "equipes": [
+        "lotus"
+      ],
+      "artefatos_gps": [
+        "1968:12",
+        "1969:10"
+      ],
+      "construtor": "lotus",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lotus_at_Goodwood_FOS_2012_(1).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/45/Lotus_at_Goodwood_FOS_2012_%281%29.jpg",
+      "autor": "Darren",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "2d2224cb3025fdf7112f3905c8b2d9d0d1a6c1cbe679a8fbccbe5b6ce6722f5b",
+      "largura": 4184,
+      "altura": 2789,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hill-rindt-lotus-49-r6-2d2224cb3025-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "add898cb24f64dd8403c1894c6a5ddee31b149453c82d8152cd5e70937840737"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hill-rindt-lotus-49-r6-2d2224cb3025-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "8c894dc031781a3421cbb4d2bde95bf1bd60127d4b221951ed2481448fd9bb4a"
+        }
+      ]
+    },
+    "stewart-ms80-monza-1969": {
+      "arquivo_commons": "File:Matra Cosworth MS80 1969 3.jpg",
+      "legenda": {
+        "pt": "Jackie Stewart volta ao volante do Matra MS80 de chassi 02 em Goodwood em 2009. Com esse carro, venceu em Monza e assegurou os títulos de pilotos e de construtores em 1969.",
+        "en": "Jackie Stewart is back at the wheel of Matra MS80 chassis 02 at Goodwood in 2009. He won at Monza in this car to secure the 1969 drivers’ and constructors’ titles."
+      },
+      "modelo": "matra-ms80",
+      "temporadas": [
+        1969
+      ],
+      "equipes": [
+        "matra"
+      ],
+      "artefatos_gps": [
+        "1969:8"
+      ],
+      "construtor": "matra",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Matra_Cosworth_MS80_1969_3.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Matra_Cosworth_MS80_1969_3.jpg",
+      "autor": "Brian Snelson from Hockley, Essex, England",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "32e5fb472ddaa0a12d6e41f16f246b7700472ed778f699d314c851fe6f8befe4",
+      "largura": 3888,
+      "altura": 2592,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/stewart-ms80-monza-1969-32e5fb472dda-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "fe07e72eff22c2ce2274f2841f4963a319a9b0abf709c3743c3cc3b7e11c05b3"
+        },
+        {
+          "arquivo": "static/pitwall-archive/stewart-ms80-monza-1969-32e5fb472dda-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "5c807d3daee733b118a18b63501620f1c567f1f8add63e67619cdd7e7864f093"
+        }
+      ]
+    },
+    "fittipaldi-lotus-72-r5-watkins-glen-1970": {
+      "arquivo_commons": "File:Lotus Type 72 (1970) (55082305443).jpg",
+      "legenda": {
+        "pt": "O Lotus 72 de chassi R5, fotografado em exposição em 2026 com a pintura preta e dourada de temporadas posteriores. Como 72C, o carro deu a Emerson Fittipaldi sua primeira vitória em Watkins Glen em 1970, na prova que confirmou o título póstumo de Jochen Rindt.",
+        "en": "Lotus 72 chassis R5 on display in 2026 in its later black-and-gold livery. As a 72C, it took Emerson Fittipaldi to his first win at Watkins Glen in 1970, the race that secured Jochen Rindt’s posthumous title."
+      },
+      "equipes": [
+        "lotus"
+      ],
+      "artefatos_gps": [
+        "1970:12"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lotus_Type_72_(1970)_(55082305443).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Lotus_Type_72_%281970%29_%2855082305443%29.jpg",
+      "autor": "Charles from Port Chester, New York",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "62aa90319738b5089ac419707cd2e94e6e799f9d4df37b2f3094f0b8558fc04a",
+      "largura": 5833,
+      "altura": 3888,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/fittipaldi-lotus-72-r5-watkins-glen-1970-62aa90319738-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "cb15bc3d7ac4d326957953e4d21d01bd3adee7a4b851546f7f98665ca52460d2"
+        },
+        {
+          "arquivo": "static/pitwall-archive/fittipaldi-lotus-72-r5-watkins-glen-1970-62aa90319738-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "43893b52a0f4f2f609219ea3bed6afc31ff609fa486a4928b8e14c9decc61059"
         }
       ]
     }
