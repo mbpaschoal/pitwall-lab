@@ -104,9 +104,7 @@
     "ferrari-312t3": "Ferrari 312T3",
     "ferrari-312t4": "Ferrari 312T4",
     "ferrari-312t4b": "Ferrari 312T4B",
-    "ferrari-375s": "Ferrari 375S",
     "ferrari-500": "Ferrari 500",
-    "ferrari-553": "Ferrari 553",
     "ferrari-555": "Ferrari 555",
     "ferrari-d50": "Ferrari D50",
     "ferrari-f1-2000": "Ferrari F1-2000",
@@ -139,7 +137,6 @@
     "matra-ms84": "Matra MS84",
     "mclaren-m23b": "McLaren M23B",
     "mclaren-m23d": "McLaren M23D",
-    "mclaren-m26": "McLaren M26",
     "mclaren-mcl38": "McLaren MCL38",
     "mclaren-mcl39": "McLaren MCL39",
     "mclaren-mp4-13": "McLaren MP4/13",
@@ -181,7 +178,6 @@
     "williams-fw07": "Williams FW07",
     "williams-fw07b": "Williams FW07B",
     "williams-fw07c": "Williams FW07C",
-    "williams-fw07d": "Williams FW07D",
     "williams-fw08": "Williams FW08",
     "williams-fw11": "Williams FW11",
     "williams-fw11b": "Williams FW11B",
@@ -223,9 +219,18 @@
       ],
       "construtores": false,
       "modelos_candidatos": [
-        "ferrari-375s",
         "ferrari-500"
-      ]
+      ],
+      "modelos_sem_contribuicao": {
+        "ferrari-375s": {
+          "nome": "Ferrari 375S",
+          "motivo": {
+            "pt": "Ascari abandonou em Indianápolis e não marcou pontos com o 375.",
+            "en": "Ascari retired at Indianapolis and scored no points in the 375."
+          },
+          "fonte": "https://www.formula1.com/en/results/1952/races/110/indianapolis-500/race-result"
+        }
+      }
     },
     {
       "ano": 1953,
@@ -235,9 +240,18 @@
       ],
       "construtores": false,
       "modelos_candidatos": [
-        "ferrari-500",
-        "ferrari-553"
-      ]
+        "ferrari-500"
+      ],
+      "modelos_sem_contribuicao": {
+        "ferrari-553": {
+          "nome": "Ferrari 553",
+          "motivo": {
+            "pt": "Maglioli e Carini disputaram Monza com o 553. Ascari correu com o Ferrari 500.",
+            "en": "Maglioli and Carini raced the 553 at Monza. Ascari drove the Ferrari 500."
+          },
+          "fonte": "https://www.motorsportmagazine.com/archive/article/october-1953/11/the-italian-grand/"
+        }
+      }
     },
     {
       "ano": 1954,
@@ -560,9 +574,18 @@
       ],
       "construtores": false,
       "modelos_candidatos": [
-        "mclaren-m23d",
-        "mclaren-m26"
-      ]
+        "mclaren-m23d"
+      ],
+      "modelos_sem_contribuicao": {
+        "mclaren-m26": {
+          "nome": "McLaren M26",
+          "motivo": {
+            "pt": "Jochen Mass estreou o M26 em Zandvoort. James Hunt disputou o título com o M23.",
+            "en": "Jochen Mass debuted the M26 at Zandvoort. James Hunt won the title in the M23."
+          },
+          "fonte": "https://www.mclaren.com/racing/heritage/formula-1/cars/1977-formula-1-mclaren-m26/overlooked-mclaren-m26/"
+        }
+      }
     },
     {
       "ano": 1977,
@@ -650,9 +673,18 @@
       "construtores": false,
       "modelos_candidatos": [
         "williams-fw07c",
-        "williams-fw07d",
         "williams-fw08"
-      ]
+      ],
+      "modelos_sem_contribuicao": {
+        "williams-fw07d": {
+          "nome": "Williams FW07D",
+          "motivo": {
+            "pt": "O FW07D de seis rodas foi um protótipo de testes.",
+            "en": "The six-wheeled FW07D was a test prototype."
+          },
+          "fonte": "https://www.williamsf1.com/articles/5c209d53-a930-4af2-b624-fc69190f1463/six-unbelievable-facts-you-might-not-have-known-about-williams"
+        }
+      }
     },
     {
       "ano": 1983,

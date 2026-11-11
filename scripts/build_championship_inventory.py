@@ -18,6 +18,36 @@ MANUFACTURER_DOCUMENTATION = {
         },
     },
 }
+CHASSIS_WITHOUT_TITLE_CONTRIBUTION = {
+    (1952, "ferrari"): {
+        "ferrari-375s": (
+            "Ascari abandonou em Indianápolis e não marcou pontos com o 375.",
+            "Ascari retired at Indianapolis and scored no points in the 375.",
+            "https://www.formula1.com/en/results/1952/races/110/indianapolis-500/race-result",
+        ),
+    },
+    (1953, "ferrari"): {
+        "ferrari-553": (
+            "Maglioli e Carini disputaram Monza com o 553. Ascari correu com o Ferrari 500.",
+            "Maglioli and Carini raced the 553 at Monza. Ascari drove the Ferrari 500.",
+            "https://www.motorsportmagazine.com/archive/article/october-1953/11/the-italian-grand/",
+        ),
+    },
+    (1976, "mclaren"): {
+        "mclaren-m26": (
+            "Jochen Mass estreou o M26 em Zandvoort. James Hunt disputou o título com o M23.",
+            "Jochen Mass debuted the M26 at Zandvoort. James Hunt won the title in the M23.",
+            "https://www.mclaren.com/racing/heritage/formula-1/cars/1977-formula-1-mclaren-m26/overlooked-mclaren-m26/",
+        ),
+    },
+    (1982, "williams"): {
+        "williams-fw07d": (
+            "O FW07D de seis rodas foi um protótipo de testes.",
+            "The six-wheeled FW07D was a test prototype.",
+            "https://www.williamsf1.com/articles/5c209d53-a930-4af2-b624-fc69190f1463/six-unbelievable-facts-you-might-not-have-known-about-williams",
+        ),
+    },
+}
 
 
 def build(archive, hall, teams):
@@ -96,10 +126,21 @@ def build(archive, hall, teams):
         documented = MANUFACTURER_DOCUMENTATION.get((year, constructor), {})
         documented_cars.update({key: entry["nome"] for key, entry in documented.items()})
         shortlist.update(documented)
+        excluded = CHASSIS_WITHOUT_TITLE_CONTRIBUTION.get((year, constructor), {})
+        if not set(excluded).issubset(shortlist):
+            raise ValueError(f"Historical chassis review differs from the source entries for {year} {constructor}")
+        shortlist.difference_update(excluded)
+        if not shortlist:
+            raise ValueError(f"No championship chassis candidates remain for {year} {constructor}")
         used_cars.update(shortlist)
         row = {"ano": year, "equipe": constructor, **campaign, "modelos_candidatos": sorted(shortlist)}
         if documented:
             row["modelos_documentados"] = documented
+        if excluded:
+            row["modelos_sem_contribuicao"] = {
+                key: {"nome": cars[key]["fullName"], "motivo": {"pt": pt, "en": en}, "fonte": source}
+                for key, (pt, en, source) in excluded.items()
+            }
         output.append(row)
 
     return {
