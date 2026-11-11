@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "1ff44e0512e3494d9af143ac1bac6d6b19d5fd469f9a87900a17d11d899fc4e8",
+  "apresentacao_build_sha256": "031857ddb2a4680360f97807ecc4291355d375fe95783d2e3c079fc1c41a5496",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "bacb791fd73ef8fd83d922d277f4fad824ce1e42143a73e04d180b252802a748",
+      "sha256_destino": "258e5085bf27e8129453c04aca34b5a0d257ff1bc60c34d9c92d88b124ea09fc",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "68740146cf2aaefb886c552cd9fd86df3cf745272ab43be074f8d36cb229487d",
-      "sha256_origem": "51e73ba9309ff6f3f291814e92eab5425865decdaa1d3259088ac164cf7bdcf5"
+      "sha256_destino": "1f10b038f77e84c2957d020645282ce465d06995765b1e74f9cc1ae00981797b",
+      "sha256_origem": "30e5285c585dc5f4fc09c45be8a32c7341737dc0f2d3f451e8fc89daad96ba1d"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "f374c973c9c7a6a660013950457a9fc1afd77d82a085d5cea5e6743d4c1fedc6",
-      "sha256_origem": "e2a8b29ac37958c8f6d6d41d4a04e58b2ac4ec65ab9c5e5800a6ab437ce9f9dd"
+      "sha256_destino": "61d5d0b66e2d35c3a19d3e9283c93f7f871ec18889c066747d3ee6c64bb2d727",
+      "sha256_origem": "abf8a427451f325747d925250bbb8aaa81f18e17a458d5380c7899711368c9c4"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "0ce425c599a069a49def2e2282ec4b6c28e3f965dc0fa06375bea421d5a134a0",
-      "sha256_origem": "0ce425c599a069a49def2e2282ec4b6c28e3f965dc0fa06375bea421d5a134a0"
+      "sha256_destino": "70604bbc9141b74b0893422f0328bf9cecdab89e63a05913d3d04c33396c590b",
+      "sha256_origem": "70604bbc9141b74b0893422f0328bf9cecdab89e63a05913d3d04c33396c590b"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6234,6 +6234,20 @@
       "modo": "copia",
       "sha256_destino": "1ea26ea0dc7709ec72d2cfaf32093773ddcce57d39257c2ec0347b06976c95ec",
       "sha256_origem": "1ea26ea0dc7709ec72d2cfaf32093773ddcce57d39257c2ec0347b06976c95ec"
+    },
+    {
+      "caminho": "static/pitwall-archive/mike-hawthorn-napoles-1957-879ffad2cffc-2400.webp",
+      "fonte": "static/pitwall-archive/mike-hawthorn-napoles-1957-879ffad2cffc-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1fea6a5535838019db350bfe5259b3c1f651f8f8420712b07f0f096eeae00d14",
+      "sha256_origem": "1fea6a5535838019db350bfe5259b3c1f651f8f8420712b07f0f096eeae00d14"
+    },
+    {
+      "caminho": "static/pitwall-archive/mike-hawthorn-napoles-1957-879ffad2cffc-960.webp",
+      "fonte": "static/pitwall-archive/mike-hawthorn-napoles-1957-879ffad2cffc-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9db0433f5be01bd6ac6567ab4ee84992ef9d891cc684c1ed7e1650e5afb0a88b",
+      "sha256_origem": "9db0433f5be01bd6ac6567ab4ee84992ef9d891cc684c1ed7e1650e5afb0a88b"
     },
     {
       "caminho": "static/pitwall-archive/mike-hawthorn-pista-e74947b1a71e-1679.webp",
