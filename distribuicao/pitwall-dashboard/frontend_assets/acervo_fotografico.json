@@ -1292,8 +1292,8 @@
     "schumacher-f2004": {
       "arquivo_commons": "File:Michael Schumacher Ferrari 2004.jpg",
       "legenda": {
-        "pt": "Michael Schumacher no Ferrari F2004 em Indianápolis, em 2004.",
-        "en": "Michael Schumacher in the Ferrari F2004 at Indianapolis in 2004."
+        "pt": "Michael Schumacher no Ferrari F2004 de chassi 239 em Indianápolis, em 2004. Com o mesmo carro, venceu na Hungria, onde a Ferrari assegurou o Mundial de Construtores, e foi segundo em Spa, onde conquistou seu sétimo título.",
+        "en": "Michael Schumacher in Ferrari F2004 chassis 239 at Indianapolis in 2004. He won in the same car in Hungary, where Ferrari sealed the constructors’ title, and finished second at Spa to clinch his seventh championship."
       },
       "modelo": "ferrari-f2004",
       "temporadas": [
@@ -1321,6 +1321,13 @@
           "altura": 1600,
           "sha256": "4e1dd2e4f2fbbbe13173a2da649cb6b333dde6320c82d99aaf78703110c36e84"
         }
+      ],
+      "gps": [
+        "2004:9"
+      ],
+      "artefatos_gps": [
+        "2004:13",
+        "2004:14"
       ]
     },
     "benetton-enstone-1994": {
@@ -1813,8 +1820,8 @@
     "brabham-bt20": {
       "arquivo_commons": "File:Brabham BT20 Donington.jpg",
       "legenda": {
-        "pt": "Brabham BT20 na coleção de Donington.",
-        "en": "Brabham BT20 in the Donington collection."
+        "pt": "O Brabham BT20 de chassi F1-1-66 em Donington em 2007. Jack Brabham fez a pole com esse carro em Watkins Glen, no GP dos Estados Unidos em que sua equipe assegurou o Mundial de Construtores de 1966.",
+        "en": "Brabham BT20 chassis F1-1-66 at Donington in 2007. Jack Brabham took pole in this car at Watkins Glen, where his team secured the 1966 constructors’ title."
       },
       "modelo": "brabham-bt20",
       "temporadas": [
@@ -1843,6 +1850,9 @@
           "altura": 1670,
           "sha256": "dec29dd820ff849864d0f75e404bc0f095c3c75b289f24cbf51345a756b788a7"
         }
+      ],
+      "artefatos_gps": [
+        "1966:8"
       ]
     },
     "brabham-bt24": {
@@ -3020,8 +3030,8 @@
     "williams-fw07c": {
       "arquivo_commons": "File:Reutemann at 1981 Dutch Grand Prix.jpg",
       "legenda": {
-        "pt": "Carlos Reutemann no Williams FW07C durante o GP dos Países Baixos de 1981.",
-        "en": "Carlos Reutemann in the Williams FW07C at the 1981 Dutch Grand Prix."
+        "pt": "Carlos Reutemann no Williams FW07C de chassi 17 em Zandvoort, em 1981. Ele levou o mesmo carro ao décimo lugar em Montreal, onde a Williams garantiu o título de construtores, e ao oitavo em Las Vegas, onde perdeu o título de pilotos para Nelson Piquet por um ponto.",
+        "en": "Carlos Reutemann in Williams FW07C chassis 17 at Zandvoort in 1981. He finished tenth in this car at Montreal, where Williams clinched the constructors’ title, and eighth at Las Vegas, where he lost the drivers’ title to Nelson Piquet by one point."
       },
       "modelo": "williams-fw07c",
       "temporadas": [
@@ -3049,6 +3059,13 @@
           "altura": 1596,
           "sha256": "194ccafa11d141a991142f9a001a07b291c3e0da668ed4ffb9078e7bae5fbc32"
         }
+      ],
+      "gps": [
+        "1981:12"
+      ],
+      "artefatos_gps": [
+        "1981:14",
+        "1981:15"
       ]
     },
     "ferrari-f399": {
@@ -7510,8 +7527,8 @@
     "raikkonen-spa-2007": {
       "arquivo_commons": "File:Kimi Raikkonen 2007 Belgium.jpg",
       "legenda": {
-        "pt": "Kimi Räikkönen com a Ferrari F2007 em Spa. Ele venceu a corrida e Felipe Massa completou a dobradinha no fim de semana do título de construtores.",
-        "en": "Kimi Räikkönen in the Ferrari F2007 at Spa. He won the race and Felipe Massa completed the one-two on the weekend Ferrari secured the constructors' title."
+        "pt": "Kimi Räikkönen com o Ferrari F2007 de chassi 262 em Spa, em 2007, onde venceu e Felipe Massa completou a dobradinha. Räikkönen voltou a vencer com esse chassi em Interlagos e conquistou o Mundial de Pilotos.",
+        "en": "Kimi Räikkönen in Ferrari F2007 chassis 262 at Spa in 2007, where he won and Felipe Massa completed the one-two. Räikkönen won again in this car at Interlagos to clinch the drivers’ title."
       },
       "modelo": "ferrari-f2007",
       "temporadas": [
@@ -7545,6 +7562,9 @@
           "altura": 1587,
           "sha256": "a1e15d3f6d08adcc152d1bd24dc9e9463f3639fc5a9958f0274596484d1e3853"
         }
+      ],
+      "artefatos_gps": [
+        "2007:17"
       ]
     },
     "vettel-austin-2012": {
@@ -8834,6 +8854,269 @@
           "largura": 2400,
           "altura": 1565,
           "sha256": "3247308102c7eb62b82fee4e420a9cec97d4b7aa163b43c06c74bcd1e80ac151"
+        }
+      ]
+    },
+    "jones-fw07b-1980-imola-montreal": {
+      "arquivo_commons": "File:Williams FW07B front-left 2017 Williams Conference Centre.jpg",
+      "legenda": {
+        "pt": "O Williams FW07B de chassi 9 no centro da equipe em Grove, em 2017. Alan Jones foi segundo na estreia de Nigel Mansell na Áustria e repetiu o resultado em Imola, no GP do primeiro título de construtores da Williams. Com o mesmo carro, venceu em Montreal e assegurou o Mundial de Pilotos de 1980.",
+        "en": "Williams FW07B chassis 9 at the team’s centre in Grove in 2017. Alan Jones finished second in Nigel Mansell’s Austrian debut and again at Imola, where Williams secured its first constructors’ crown. Jones won at Montreal in the same car to seal the 1980 drivers’ title."
+      },
+      "modelo": "williams-fw07b",
+      "temporadas": [
+        1980
+      ],
+      "equipes": [
+        "williams"
+      ],
+      "artefatos_gps": [
+        "1980:10",
+        "1980:12",
+        "1980:13"
+      ],
+      "construtor": "williams",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Williams_FW07B_front-left_2017_Williams_Conference_Centre.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Williams_FW07B_front-left_2017_Williams_Conference_Centre.jpg",
+      "autor": "Morio",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "c75ec2d387ccd67269831a62512ef66524080bcebff2c514a1996abda1b77c8c",
+      "largura": 3840,
+      "altura": 2560,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/jones-fw07b-1980-imola-montreal-c75ec2d387cc-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "3870a81dae45d7b6214c1a56b05a55dbff54eedecd4ef8734799080f97780517"
+        },
+        {
+          "arquivo": "static/pitwall-archive/jones-fw07b-1980-imola-montreal-c75ec2d387cc-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "5ee8334c1f8ea52fafe8e30b9f928a071b635ad3d25f426260e064ce7884ea38"
+        }
+      ]
+    },
+    "hill-fw15c-hungria-spa-1993": {
+      "arquivo_commons": "File:Damon Hill - Williams FW15C at the 1993 British Grand Prix (33557427941).jpg",
+      "legenda": {
+        "pt": "Damon Hill no Williams FW15C de chassi 02 em Silverstone, em 1993. Com o mesmo carro, venceu pela primeira vez no Mundial na Hungria e ganhou em Spa na corrida que garantiu o título de construtores à Williams.",
+        "en": "Damon Hill in Williams FW15C chassis 02 at Silverstone in 1993. He took his first World Championship win in this car in Hungary and won again at Spa to secure the constructors’ title for Williams."
+      },
+      "modelo": "williams-fw15c",
+      "temporadas": [
+        1993
+      ],
+      "equipes": [
+        "williams"
+      ],
+      "gps": [
+        "1993:9"
+      ],
+      "artefatos_gps": [
+        "1993:11",
+        "1993:12"
+      ],
+      "construtor": "williams",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Damon_Hill_-_Williams_FW15C_at_the_1993_British_Grand_Prix_(33557427941).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Damon_Hill_-_Williams_FW15C_at_the_1993_British_Grand_Prix_%2833557427941%29.jpg",
+      "autor": "Martin Lee from London, UK",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "864d55e2471af24dc8d491145c9796dcd57d8df78fff5494fe5bee902ab9ccd3",
+      "largura": 2528,
+      "altura": 1684,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hill-fw15c-hungria-spa-1993-864d55e2471a-960.webp",
+          "largura": 960,
+          "altura": 639,
+          "sha256": "13b39b38a34440a4f4ca93c845850f2857013ddd4b1f06b1def227068a14d65f"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hill-fw15c-hungria-spa-1993-864d55e2471a-2400.webp",
+          "largura": 2400,
+          "altura": 1599,
+          "sha256": "730d50bd9d464da4a3a4579bb5b73d1d2109d1814ecfdaec160a64176ace38aa"
+        }
+      ]
+    },
+    "villeneuve-fw18-estreia-1996": {
+      "arquivo_commons": "File:Williams FW18, Beaulieu Motor Museum, Hampshire - geograph.org.uk - 4086066 - Peter Trimming.jpg",
+      "legenda": {
+        "pt": "O Williams FW18 de chassi 02 no National Motor Museum, em Beaulieu, em 2014. Jacques Villeneuve estreou na Fórmula 1 com esse carro em Melbourne em 1996, largou da pole e terminou em segundo.",
+        "en": "Williams FW18 chassis 02 at the National Motor Museum in Beaulieu in 2014. Jacques Villeneuve made his Formula One debut in this car at Melbourne in 1996, taking pole and finishing second."
+      },
+      "modelo": "williams-fw18",
+      "temporadas": [
+        1996
+      ],
+      "equipes": [
+        "williams"
+      ],
+      "artefatos_gps": [
+        "1996:1"
+      ],
+      "construtor": "williams",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Williams_FW18,_Beaulieu_Motor_Museum,_Hampshire_-_geograph.org.uk_-_4086066_-_Peter_Trimming.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Williams_FW18%2C_Beaulieu_Motor_Museum%2C_Hampshire_-_geograph.org.uk_-_4086066_-_Peter_Trimming.jpg",
+      "autor": "Peter Trimming",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "aa158572571475244998e22f2a60b152671b57ae9162ada343bdddbc447f7153",
+      "largura": 6000,
+      "altura": 4000,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/villeneuve-fw18-estreia-1996-aa1585725714-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "b24589b3b534ad308a4c896db492080901734f511353910c1698bcd1e6071aa1"
+        },
+        {
+          "arquivo": "static/pitwall-archive/villeneuve-fw18-estreia-1996-aa1585725714-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "52e00e6227e5bd795b1783b6011b15bc7b2255c3f3d7fc38ca4e9e63b4798e23"
+        }
+      ]
+    },
+    "alonso-trofeu-hungria-2003": {
+      "arquivo_commons": "File:Trofeo Hungría(Fernando Alonso).jpg",
+      "legenda": {
+        "pt": "Troféu da primeira vitória de Fernando Alonso na Fórmula 1, no GP da Hungria de 2003 pela Renault. Fotografia de 2007.",
+        "en": "Trophy from Fernando Alonso’s first Formula One win, at the 2003 Hungarian Grand Prix for Renault. Photographed in 2007."
+      },
+      "equipes": [
+        "renault"
+      ],
+      "artefatos_gps": [
+        "2003:13"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Trofeo_Hungr%C3%ADa(Fernando_Alonso).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Trofeo_Hungr%C3%ADa%28Fernando_Alonso%29.jpg",
+      "autor": "Sitomon",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "a830f218e4da619c0fdbce68cb6363e48b204ecebb169acafed22e41e1b1ec7d",
+      "largura": 2448,
+      "altura": 3264,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/alonso-trofeu-hungria-2003-a830f218e4da-960.webp",
+          "largura": 720,
+          "altura": 960,
+          "sha256": "9af62df19656b7d473d428aa1a747d6ad2e3008dc883403b0effc30db2047f07"
+        },
+        {
+          "arquivo": "static/pitwall-archive/alonso-trofeu-hungria-2003-a830f218e4da-2400.webp",
+          "largura": 1800,
+          "altura": 2400,
+          "sha256": "0d84bbf76aecec70ef7e16119ff74f6bb2bb29f2301dedf9eaa81541f2dd2187"
+        }
+      ]
+    },
+    "hamilton-yeongam-2011": {
+      "arquivo_commons": "File:Lewis Hamilton 2011 Korean Grand Prix 001.jpg",
+      "legenda": {
+        "pt": "Lewis Hamilton em Yeongam, no GP da Coreia do Sul de 2011. Ele largou da pole e terminou em segundo, entre Sebastian Vettel e Mark Webber, na corrida em que a Red Bull confirmou o título de construtores.",
+        "en": "Lewis Hamilton at Yeongam during the 2011 Korean Grand Prix. He started from pole and finished second between Sebastian Vettel and Mark Webber in the race that sealed Red Bull’s constructors’ title."
+      },
+      "gps": [
+        "2011:16"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lewis_Hamilton_2011_Korean_Grand_Prix_001.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/27/Lewis_Hamilton_2011_Korean_Grand_Prix_001.jpg",
+      "autor": "LAT Photographic",
+      "licenca": "CC BY 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/3.0",
+      "sha256": "28ea480a23dad7b0844e9d09a004e0f6ef7a1ddff63b71fdffe8afc49febda42",
+      "largura": 5616,
+      "altura": 3744,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-yeongam-2011-28ea480a23da-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "8c7e16e22549f8b446ef5960b6fe9e42ba70ee0acc90c433e589530ece1a9afa"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-yeongam-2011-28ea480a23da-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "3b63cbd98cade75406479b646160e5afcb1b270d464994462bce15f6b6496bb3"
+        }
+      ]
+    },
+    "andretti-ferrari-312b-kyalami-1971": {
+      "arquivo_commons": "File:1970 Ferrari F1 312B driven by Mario Andretti, pic1.JPG",
+      "legenda": {
+        "pt": "O Ferrari 312 B de chassi 002 bis no Musée National de l’Automobile, em Mulhouse, em 2014. Mario Andretti conquistou sua primeira vitória na Fórmula 1 com esse carro, em Kyalami, em 1971.",
+        "en": "Ferrari 312 B chassis 002 bis at the Musée National de l’Automobile in Mulhouse in 2014. Mario Andretti took his first Formula One win in this car at Kyalami in 1971."
+      },
+      "equipes": [
+        "ferrari"
+      ],
+      "artefatos_gps": [
+        "1971:1"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:1970_Ferrari_F1_312B_driven_by_Mario_Andretti,_pic1.JPG",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/62/1970_Ferrari_F1_312B_driven_by_Mario_Andretti%2C_pic1.JPG",
+      "autor": "Alf van Beem",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "aa899411264fde426e827db80bbd1ddeca6300651063c90d4607296bb53cbc9e",
+      "largura": 4133,
+      "altura": 3105,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/andretti-ferrari-312b-kyalami-1971-aa899411264f-960.webp",
+          "largura": 960,
+          "altura": 721,
+          "sha256": "f331c1103308f4153259db923ee74d112b3810f165a2de373be545f9d8c94915"
+        },
+        {
+          "arquivo": "static/pitwall-archive/andretti-ferrari-312b-kyalami-1971-aa899411264f-2400.webp",
+          "largura": 2400,
+          "altura": 1803,
+          "sha256": "3070bfd55b62ec465c3aa09387854ec02c9fc4fe79ceab550f2124200a9f40b7"
+        }
+      ]
+    },
+    "hunt-march-731-monaco-1973": {
+      "arquivo_commons": "File:Hunt 27 Hesketh DutchGP73 dag.jpg",
+      "legenda": {
+        "pt": "James Hunt no March 731 da Hesketh em Zandvoort, em 1973. Ele conquistou seu primeiro pódio nessa prova com o mesmo chassi 721G/3, também chamado de 731/1, que usou na estreia em Mônaco.",
+        "en": "James Hunt in Hesketh’s March 731 at Zandvoort in 1973. He took his first podium there in chassis 721G/3, also known as 731/1, the car he drove on his debut in Monaco."
+      },
+      "gps": [
+        "1973:10"
+      ],
+      "artefatos_gps": [
+        "1973:6"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Hunt_27_Hesketh_DutchGP73_dag.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/64/Hunt_27_Hesketh_DutchGP73_dag.jpg",
+      "autor": "50DAG2026",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "589263ed41948fb50f4bad35c79f6e74ed05f8b7884e7065ed2d82bf0e7f42e0",
+      "largura": 2432,
+      "altura": 1581,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hunt-march-731-monaco-1973-589263ed4194-960.webp",
+          "largura": 960,
+          "altura": 624,
+          "sha256": "4902b1e9f9460ec8c6ebd770ea2d025193695aedc1e077fa81d93d543bf6d586"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hunt-march-731-monaco-1973-589263ed4194-2400.webp",
+          "largura": 2400,
+          "altura": 1560,
+          "sha256": "6a29a9e2ffd7058b6d9474f20d065e587755f1b106e8b0ec8d51c335f33abc09"
         }
       ]
     }

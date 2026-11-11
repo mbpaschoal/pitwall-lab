@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "80e3eb4c2643c9886227ee187facbcd64db4bd03901081b810addc84d287739c",
+  "apresentacao_build_sha256": "0f7c4e3998d11c04199b40ad957763c986cb3c8adb8566e6e490ccfb8c3cccd7",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "3e2e9cc52784a6ba4366842a577e3b315928c375e2c64332785bc2198d70853f",
+      "sha256_destino": "2c36075ceedddbaf6c5d69cc7ef800bd1b40c485e3c4f34588d928f3786e89f2",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "a7e773740abb1c462bcff8356061a8b035ba257d3816cfcbd30c8156db9eb3cc",
-      "sha256_origem": "a7e773740abb1c462bcff8356061a8b035ba257d3816cfcbd30c8156db9eb3cc"
+      "sha256_destino": "dc5a01355260e50ca8aab7f88119b8dbc383528b50f411f262a2a882afc98213",
+      "sha256_origem": "dc5a01355260e50ca8aab7f88119b8dbc383528b50f411f262a2a882afc98213"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3478,6 +3478,20 @@
       "sha256_origem": "cdfc1d9317e96da3cc1444101587f248edebcb1605f72ea4e1e28900791db728"
     },
     {
+      "caminho": "static/pitwall-archive/alonso-trofeu-hungria-2003-a830f218e4da-2400.webp",
+      "fonte": "static/pitwall-archive/alonso-trofeu-hungria-2003-a830f218e4da-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "0d84bbf76aecec70ef7e16119ff74f6bb2bb29f2301dedf9eaa81541f2dd2187",
+      "sha256_origem": "0d84bbf76aecec70ef7e16119ff74f6bb2bb29f2301dedf9eaa81541f2dd2187"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-trofeu-hungria-2003-a830f218e4da-960.webp",
+      "fonte": "static/pitwall-archive/alonso-trofeu-hungria-2003-a830f218e4da-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9af62df19656b7d473d428aa1a747d6ad2e3008dc883403b0effc30db2047f07",
+      "sha256_origem": "9af62df19656b7d473d428aa1a747d6ad2e3008dc883403b0effc30db2047f07"
+    },
+    {
       "caminho": "static/pitwall-archive/alonso-trofeu-sepang-2003-cb1a822167f8-2400.webp",
       "fonte": "static/pitwall-archive/alonso-trofeu-sepang-2003-cb1a822167f8-2400.webp",
       "modo": "copia",
@@ -3504,6 +3518,20 @@
       "modo": "copia",
       "sha256_destino": "d82132d21628835d457989abfacd1180a064deb99d77bd45f62630078487af4c",
       "sha256_origem": "d82132d21628835d457989abfacd1180a064deb99d77bd45f62630078487af4c"
+    },
+    {
+      "caminho": "static/pitwall-archive/andretti-ferrari-312b-kyalami-1971-aa899411264f-2400.webp",
+      "fonte": "static/pitwall-archive/andretti-ferrari-312b-kyalami-1971-aa899411264f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3070bfd55b62ec465c3aa09387854ec02c9fc4fe79ceab550f2124200a9f40b7",
+      "sha256_origem": "3070bfd55b62ec465c3aa09387854ec02c9fc4fe79ceab550f2124200a9f40b7"
+    },
+    {
+      "caminho": "static/pitwall-archive/andretti-ferrari-312b-kyalami-1971-aa899411264f-960.webp",
+      "fonte": "static/pitwall-archive/andretti-ferrari-312b-kyalami-1971-aa899411264f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "f331c1103308f4153259db923ee74d112b3810f165a2de373be545f9d8c94915",
+      "sha256_origem": "f331c1103308f4153259db923ee74d112b3810f165a2de373be545f9d8c94915"
     },
     {
       "caminho": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-2400.webp",
@@ -4640,6 +4668,34 @@
       "sha256_origem": "73195b5be4eb53304670e667545c962ad87390157d0a5dc83f1825e3758f45eb"
     },
     {
+      "caminho": "static/pitwall-archive/hamilton-yeongam-2011-28ea480a23da-2400.webp",
+      "fonte": "static/pitwall-archive/hamilton-yeongam-2011-28ea480a23da-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3b63cbd98cade75406479b646160e5afcb1b270d464994462bce15f6b6496bb3",
+      "sha256_origem": "3b63cbd98cade75406479b646160e5afcb1b270d464994462bce15f6b6496bb3"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-yeongam-2011-28ea480a23da-960.webp",
+      "fonte": "static/pitwall-archive/hamilton-yeongam-2011-28ea480a23da-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8c7e16e22549f8b446ef5960b6fe9e42ba70ee0acc90c433e589530ece1a9afa",
+      "sha256_origem": "8c7e16e22549f8b446ef5960b6fe9e42ba70ee0acc90c433e589530ece1a9afa"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-fw15c-hungria-spa-1993-864d55e2471a-2400.webp",
+      "fonte": "static/pitwall-archive/hill-fw15c-hungria-spa-1993-864d55e2471a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "730d50bd9d464da4a3a4579bb5b73d1d2109d1814ecfdaec160a64176ace38aa",
+      "sha256_origem": "730d50bd9d464da4a3a4579bb5b73d1d2109d1814ecfdaec160a64176ace38aa"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-fw15c-hungria-spa-1993-864d55e2471a-960.webp",
+      "fonte": "static/pitwall-archive/hill-fw15c-hungria-spa-1993-864d55e2471a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "13b39b38a34440a4f4ca93c845850f2857013ddd4b1f06b1def227068a14d65f",
+      "sha256_origem": "13b39b38a34440a4f4ca93c845850f2857013ddd4b1f06b1def227068a14d65f"
+    },
+    {
       "caminho": "static/pitwall-archive/hill-fw18-hungria-1996-aaaedcd9fc18-2400.webp",
       "fonte": "static/pitwall-archive/hill-fw18-hungria-1996-aaaedcd9fc18-2400.webp",
       "modo": "copia",
@@ -4722,6 +4778,20 @@
       "modo": "copia",
       "sha256_destino": "a35aa4436fc098384fa2de87e8e6e571611803d7b2ac97eabbd6d5073195cf42",
       "sha256_origem": "a35aa4436fc098384fa2de87e8e6e571611803d7b2ac97eabbd6d5073195cf42"
+    },
+    {
+      "caminho": "static/pitwall-archive/hunt-march-731-monaco-1973-589263ed4194-2400.webp",
+      "fonte": "static/pitwall-archive/hunt-march-731-monaco-1973-589263ed4194-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6a29a9e2ffd7058b6d9474f20d065e587755f1b106e8b0ec8d51c335f33abc09",
+      "sha256_origem": "6a29a9e2ffd7058b6d9474f20d065e587755f1b106e8b0ec8d51c335f33abc09"
+    },
+    {
+      "caminho": "static/pitwall-archive/hunt-march-731-monaco-1973-589263ed4194-960.webp",
+      "fonte": "static/pitwall-archive/hunt-march-731-monaco-1973-589263ed4194-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4902b1e9f9460ec8c6ebd770ea2d025193695aedc1e077fa81d93d543bf6d586",
+      "sha256_origem": "4902b1e9f9460ec8c6ebd770ea2d025193695aedc1e077fa81d93d543bf6d586"
     },
     {
       "caminho": "static/pitwall-archive/hunt-zandvoort-1975-8e7d42876cd1-2400.webp",
@@ -4904,6 +4974,20 @@
       "modo": "copia",
       "sha256_destino": "97d10beb98e7b275f54887836e812f5dd4d6da5b8e9a22fe60b85f03c5afff5a",
       "sha256_origem": "97d10beb98e7b275f54887836e812f5dd4d6da5b8e9a22fe60b85f03c5afff5a"
+    },
+    {
+      "caminho": "static/pitwall-archive/jones-fw07b-1980-imola-montreal-c75ec2d387cc-2400.webp",
+      "fonte": "static/pitwall-archive/jones-fw07b-1980-imola-montreal-c75ec2d387cc-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5ee8334c1f8ea52fafe8e30b9f928a071b635ad3d25f426260e064ce7884ea38",
+      "sha256_origem": "5ee8334c1f8ea52fafe8e30b9f928a071b635ad3d25f426260e064ce7884ea38"
+    },
+    {
+      "caminho": "static/pitwall-archive/jones-fw07b-1980-imola-montreal-c75ec2d387cc-960.webp",
+      "fonte": "static/pitwall-archive/jones-fw07b-1980-imola-montreal-c75ec2d387cc-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3870a81dae45d7b6214c1a56b05a55dbff54eedecd4ef8734799080f97780517",
+      "sha256_origem": "3870a81dae45d7b6214c1a56b05a55dbff54eedecd4ef8734799080f97780517"
     },
     {
       "caminho": "static/pitwall-archive/jones-trofeu-austria-1977-ed0185220dc2-2400.webp",
@@ -6766,6 +6850,20 @@
       "modo": "copia",
       "sha256_destino": "4bf435480107e9b28d663d107a28334010c9bd75e480b8bb746d6621532dbfef",
       "sha256_origem": "4bf435480107e9b28d663d107a28334010c9bd75e480b8bb746d6621532dbfef"
+    },
+    {
+      "caminho": "static/pitwall-archive/villeneuve-fw18-estreia-1996-aa1585725714-2400.webp",
+      "fonte": "static/pitwall-archive/villeneuve-fw18-estreia-1996-aa1585725714-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "52e00e6227e5bd795b1783b6011b15bc7b2255c3f3d7fc38ca4e9e63b4798e23",
+      "sha256_origem": "52e00e6227e5bd795b1783b6011b15bc7b2255c3f3d7fc38ca4e9e63b4798e23"
+    },
+    {
+      "caminho": "static/pitwall-archive/villeneuve-fw18-estreia-1996-aa1585725714-960.webp",
+      "fonte": "static/pitwall-archive/villeneuve-fw18-estreia-1996-aa1585725714-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b24589b3b534ad308a4c896db492080901734f511353910c1698bcd1e6071aa1",
+      "sha256_origem": "b24589b3b534ad308a4c896db492080901734f511353910c1698bcd1e6071aa1"
     },
     {
       "caminho": "static/pitwall-archive/villeneuve-retrato-22c9be80d440-2400.webp",
