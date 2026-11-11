@@ -166,6 +166,44 @@ class LinkContextTests(unittest.TestCase):
         self.assertEqual(app.query_params.get("equipe"), "alpine")
         self.assertNotIn("campanha", app.query_params)
 
+    def test_hall_covers_each_championship_and_preserves_historical_credits(self):
+        from pitwall.dashboard.hall_views import load
+
+        snapshot = load(ROOT)
+        champions = snapshot["pilotos"]
+        self.assertEqual(len(champions), 36)
+        seasons = [title["ano"] for driver in champions.values() for title in driver["titulos"]]
+        self.assertEqual(sorted(seasons), list(range(1950, 2027)))
+        self.assertEqual(len(champions["lewis-hamilton"]["titulos"]), 7)
+        self.assertEqual(len(champions["michael-schumacher"]["titulos"]), 7)
+        fangio = next(t for t in champions["juan-manuel-fangio"]["titulos"] if t["ano"] == 1954)
+        self.assertEqual([r["id"] for r in fangio["construtores"]], ["maserati", "mercedes"])
+        antonelli = champions["kimi-antonelli"]["titulos"][0]
+        self.assertEqual(antonelli["decisao"]["rodada"], 19)
+        self.assertEqual(snapshot["corte"], "2026-11-08")
+
+    def test_hall_directory_selection_and_language_preserve_gp_and_champion(self):
+        app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=45)
+        app.query_params.update(tela="Pilotos", visao="hall", temporada="2026", gp="20", lang="pt")
+        app.run()
+        self.assertFalse(app.exception)
+        table = next(m.value for m in app.markdown if 'aria-label="Campeões mundiais de Fórmula 1"' in m.value)
+        self.assertEqual(table.count("<tr>"), 37)
+        app.selectbox(key="hall_champion").set_value("kimi-antonelli").run()
+        self.assertFalse(app.exception)
+        title = next(m.value for m in app.markdown if 'aria-label="Títulos mundiais de pilotos"' in m.value)
+        for label, expected in (("Campeonato", "19"), ("Corridas", "19")):
+            self.assertTrue(any(parse_qs(urlsplit(a["href"]).query).get("tela") == [label]
+                                and parse_qs(urlsplit(a["href"]).query).get("gp") == [expected]
+                                for a in Links(title).links))
+        english = next(b for b in app.button if b.key and b.key.startswith("pw_language_button_") and b.key.endswith("_en"))
+        english.click().run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.query_params.get("campeao"), "kimi-antonelli")
+        self.assertEqual(app.query_params.get("gp"), "20")
+        self.assertEqual(app.query_params.get("lang"), "en")
+        self.assertTrue(any("Mexico City Grand Prix" in m.value for m in app.markdown))
+
     def test_document_return_preserves_hosted_frame_without_nesting_wrapper(self):
         for lang in ('pt','en'):
             app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=45)

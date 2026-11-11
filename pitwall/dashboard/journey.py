@@ -14,7 +14,7 @@ def navigation_links(params, selected, lang='pt'):
         ('Metodologia', 'Como funciona', 'How it works'),
     )
     context = {key: value for key, value in params.items()
-               if key not in ('documento', 'painel', 'cartas', 'equipe', 'campanha')}
+               if key not in ('documento', 'painel', 'cartas', 'equipe', 'campanha', 'campeao')}
     links = []
     for screen, pt, en in labels:
         query = urlencode(dict(context, tela=screen, lang=lang), doseq=True)

@@ -895,6 +895,7 @@ def sincronizar_navegacao():
     st.query_params.pop("cartas", None)
     st.query_params.pop("equipe", None)
     st.query_params.pop("campanha", None)
+    st.query_params.pop("campeao", None)
     params = dict(tela=st.session_state["tela"])
     gp = st.session_state.get("_gp_context",st.session_state.get("gp"))
     if isinstance(gp,str) and re.fullmatch(r"202[456]:[0-9]{1,2}",gp):
@@ -1389,6 +1390,12 @@ def executar_app():
             render_language(st,st.query_params.get("aba") or ("Visão geral" if tela == "Corridas" else None))
         st.markdown('<span id="pw-main-content" tabindex="-1" aria-label="{}"></span>'.format(escape(translate('Conteúdo principal'), quote=True)), unsafe_allow_html=True)
         if tela == "Pilotos":
+            from pitwall.dashboard.hall_views import hall_url, render as render_hall
+            if st.query_params.get("visao") == "hall":
+                renderizar_topo(pacote, slot=tool_control)
+                render_hall(raiz_artefatos(), temporada, rodada)
+                render_motion()
+                return
             from pitwall.dashboard.pilot_views import render
             if (st.query_params.get('origem_tela') == 'Previsões'
                     and st.query_params.get('origem_temporada') == str(temporada)
@@ -1398,6 +1405,9 @@ def executar_app():
                 st.markdown('<a class="fan-back-to-forecast" href="{}" target="_self">{}</a>'.format(
                     escape(retorno, quote=True), escape(translate('Voltar às chances de {} · {}').format(corrida_origem, temporada))
                 ), unsafe_allow_html=True)
+            st.markdown('<a class="pw-hall-entry" href="{}" target="_self">{}</a>'.format(
+                escape(hall_url(temporada, rodada), quote=True), escape(translate("Hall da Fama")),
+            ), unsafe_allow_html=True)
             render(raiz_artefatos(), search_renderer=lambda slot: renderizar_topo(
                 {"temporada": "2024–2026"}, slot=slot))
             render_motion()

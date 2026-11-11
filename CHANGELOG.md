@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.18.0 — 2026-11-11
+
+Pilotos ganha um Hall da Fama com os 36 campeões mundiais de Fórmula 1 de 1950 a 2026. A lista permite buscar e ordenar os campeões. Cada perfil reúne resumo biográfico, estreia, primeira vitória, estatísticas e os GPs decisivos dos títulos.
+
+O arquivo oficial e o F1DB sustentam as fichas. As temporadas de 2024 a 2026 abrem a classificação no Lab, e as anteriores levam ao arquivo oficial da Fórmula 1. As equipes cobertas têm links para os perfis de construtores.
+
 ## 0.17.0 — 2026-11-11
 
 Equipes neste GP e Campeonato de equipes abrem perfis das 11 equipes do grid de 2026. Cada ficha reúne história, base, unidade de potência, liderança técnica e títulos por temporada. Títulos de construtores e de pilotos têm listas próprias, e as conquistas de identidades anteriores aparecem com o crédito original.

@@ -389,6 +389,7 @@ frontend_assets/contexto_editorial.json
 frontend_assets/destination_illustrations.json
 frontend_assets/destinations.css
 frontend_assets/favorite/index.html
+frontend_assets/hall_da_fama.json
 frontend_assets/journey.css
 frontend_assets/motion.js
 frontend_assets/operacao_fim_semana.json
@@ -413,6 +414,7 @@ pitwall/dashboard/components.py
 pitwall/dashboard/destination_art.py
 pitwall/dashboard/fan_views.py
 pitwall/dashboard/favorites.py
+pitwall/dashboard/hall_views.py
 pitwall/dashboard/hero_assets.py
 pitwall/dashboard/illustrations.py
 pitwall/dashboard/journey.py

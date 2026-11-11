@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.18.0 — 2026-11-11
+
+Drivers adds a Hall of Fame with all 36 Formula 1 World Drivers' Champions from 1950 through 2026. Fans can search and sort the list. Each profile covers the driver's career, debut, first win, statistics and title-deciding Grands Prix.
+
+The Formula 1 archive and F1DB support the profiles. The 2024–2026 seasons open the Lab's standings, while earlier seasons link to the official Formula 1 archive. Covered teams link to their constructor profiles.
+
 ## 0.17.0 — 2026-11-11
 
 Teams at this GP and Team championship link to profiles for all 11 teams on the 2026 grid. Each profile covers team history, base, power unit, technical leadership and championship seasons. Constructors' and drivers' titles have separate lists, and titles from previous identities keep their original credit.
