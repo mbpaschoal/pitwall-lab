@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "868abd3dfa015ace53ac6dfcbb6ae8e82fa16a49d5951e24ef40d3a9efc91729",
+  "apresentacao_build_sha256": "fcdbfde297f55157de923459f3a1a8f10579f91002b1014e410ae5e9c0802b79",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "88b62b69e7a7a511a6a61197527313daede27d966adb4be3223280589376fe63",
+      "sha256_destino": "58a7ecf6ec1da0e512e7cf6833b1be5e83b908512ecff10a6a14e5508a488628",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "f7ef5a9a9e450f5255b6dc1d17a4439bfcdafab25819c9a90eba0a0ecb1dc390",
-      "sha256_origem": "8afe2c90f5898ee0a843d97fcbb3f26e77585612eb92e60832b0c5db3417f0e3"
+      "sha256_destino": "bd9b2e27152090aaf120d40fb587ea70a458a77aaeb564ce4ecd326727580366",
+      "sha256_origem": "3437891302384fd78841de118de353e04218d3cb88db47032c74086dbd22643a"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "1ee7ce557cbf20bf70aee7259ec25887c0650eef659a1137635f9cbad6c69dc6",
-      "sha256_origem": "5a0149bbca0c255a1843342ddfddcd0da1824afca6bcc110df988ca4320bc613"
+      "sha256_destino": "8f4f8a2f3db65bf97a140bbcfbeca65af6680b9405554be0ba47454f674a22f9",
+      "sha256_origem": "b469e54ca73fc07d5e4e1a5dc5c8f31f62843c9aa978bd254fb6c0d6fc9c1032"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "5cdc983b24d71ed7543c097242b03c1ac0be6b877c35325112f7c7bb2a3f1075",
-      "sha256_origem": "5cdc983b24d71ed7543c097242b03c1ac0be6b877c35325112f7c7bb2a3f1075"
+      "sha256_destino": "1b048423db237fabd78ed45f57cc3bd81bbeac3b94c221e32874aada7ce45db3",
+      "sha256_origem": "1b048423db237fabd78ed45f57cc3bd81bbeac3b94c221e32874aada7ce45db3"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6766,6 +6766,20 @@
       "modo": "copia",
       "sha256_destino": "3f6fc65fcfeefc4f1180c0f9c24c47896115c30f89335a2b7f5f6469562c4e26",
       "sha256_origem": "3f6fc65fcfeefc4f1180c0f9c24c47896115c30f89335a2b7f5f6469562c4e26"
+    },
+    {
+      "caminho": "static/pitwall-archive/rb19-exposicao-goodwood-2024-6a68985a4a67-2400.webp",
+      "fonte": "static/pitwall-archive/rb19-exposicao-goodwood-2024-6a68985a4a67-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a5b641f2eee26d002a6499b63723f0fa62a09abf94e28bee1b8f2b77b868dfff",
+      "sha256_origem": "a5b641f2eee26d002a6499b63723f0fa62a09abf94e28bee1b8f2b77b868dfff"
+    },
+    {
+      "caminho": "static/pitwall-archive/rb19-exposicao-goodwood-2024-6a68985a4a67-960.webp",
+      "fonte": "static/pitwall-archive/rb19-exposicao-goodwood-2024-6a68985a4a67-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bd6b03db537b4d8d1e4c2eaed406ab0e9951f41ff8771684fef7ebf967563716",
+      "sha256_origem": "bd6b03db537b4d8d1e4c2eaed406ab0e9951f41ff8771684fef7ebf967563716"
     },
     {
       "caminho": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-2400.webp",
