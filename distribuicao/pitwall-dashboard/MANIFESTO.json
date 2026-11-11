@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "507af5378548ef9abf06e355be61beaaf372a5850c674448fcdd9230cdc8a2cd",
+  "apresentacao_build_sha256": "1ff44e0512e3494d9af143ac1bac6d6b19d5fd469f9a87900a17d11d899fc4e8",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "f4e274ad6f3cb2ddb3ac60a92929cc9fbfd503de3ff65ea0191e888cf395e764",
+      "sha256_destino": "bacb791fd73ef8fd83d922d277f4fad824ce1e42143a73e04d180b252802a748",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "691572b637a2d49dea8e67e04fdcf1d03e5c87fd2d8f7983b1e662685eb60acc",
-      "sha256_origem": "8d94687177e4faed81d391dd532e95393f04ba5cf5b5ee3eadc49844896ed064"
+      "sha256_destino": "68740146cf2aaefb886c552cd9fd86df3cf745272ab43be074f8d36cb229487d",
+      "sha256_origem": "51e73ba9309ff6f3f291814e92eab5425865decdaa1d3259088ac164cf7bdcf5"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "89cbfb4d1c01f7eb5b8abf673ab43841009d8cdae2a06881c54cece1a5fac526",
-      "sha256_origem": "1abbc96ff662fdfa09bfa076a0c32131716d0d5c09adcfb839ae32d759f2d75e"
+      "sha256_destino": "f374c973c9c7a6a660013950457a9fc1afd77d82a085d5cea5e6743d4c1fedc6",
+      "sha256_origem": "e2a8b29ac37958c8f6d6d41d4a04e58b2ac4ec65ab9c5e5800a6ab437ce9f9dd"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "01fe6f11d8c19509ddef337cbdae266e6288a528b26d3567550d871dce85a783",
-      "sha256_origem": "01fe6f11d8c19509ddef337cbdae266e6288a528b26d3567550d871dce85a783"
+      "sha256_destino": "0ce425c599a069a49def2e2282ec4b6c28e3f965dc0fa06375bea421d5a134a0",
+      "sha256_origem": "0ce425c599a069a49def2e2282ec4b6c28e3f965dc0fa06375bea421d5a134a0"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6640,6 +6640,20 @@
       "modo": "copia",
       "sha256_destino": "2262ea5b3f17c9b51df7375960c33025406fba4ad95f3600077851c36e5b153e",
       "sha256_origem": "2262ea5b3f17c9b51df7375960c33025406fba4ad95f3600077851c36e5b153e"
+    },
+    {
+      "caminho": "static/pitwall-archive/ralf-williams-fw23-deutsches-museum-45076485010c-2400.webp",
+      "fonte": "static/pitwall-archive/ralf-williams-fw23-deutsches-museum-45076485010c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d00cd7833d5678ea00015a3b6138c8843184ac4aa17bda8584658e55d8d3c9fc",
+      "sha256_origem": "d00cd7833d5678ea00015a3b6138c8843184ac4aa17bda8584658e55d8d3c9fc"
+    },
+    {
+      "caminho": "static/pitwall-archive/ralf-williams-fw23-deutsches-museum-45076485010c-960.webp",
+      "fonte": "static/pitwall-archive/ralf-williams-fw23-deutsches-museum-45076485010c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3f6fc65fcfeefc4f1180c0f9c24c47896115c30f89335a2b7f5f6469562c4e26",
+      "sha256_origem": "3f6fc65fcfeefc4f1180c0f9c24c47896115c30f89335a2b7f5f6469562c4e26"
     },
     {
       "caminho": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-2400.webp",
