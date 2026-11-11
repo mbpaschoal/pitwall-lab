@@ -1013,8 +1013,8 @@
     "williams-fw11b": {
       "arquivo_commons": "File:Williams FW11B Honda Collection Hall.jpg",
       "legenda": {
-        "pt": "Williams FW11B na coleção Honda.",
-        "en": "Williams FW11B at Honda Collection Hall."
+        "pt": "O Williams FW11B de chassi 8 na coleção Honda, em 2011, com o número 6 de Nelson Piquet. Em 1987, Nigel Mansell venceu em Jerez com esse chassi, na corrida em que a Williams garantiu o título de construtores.",
+        "en": "Williams FW11B chassis 8 at the Honda Collection Hall in 2011, wearing Nelson Piquet’s number 6. Nigel Mansell drove this chassis to victory at Jerez in 1987, when Williams clinched the constructors’ title."
       },
       "modelo": "williams-fw11b",
       "temporadas": [
@@ -1042,6 +1042,9 @@
           "altura": 1706,
           "sha256": "078f4918ed83a18cb7c3c49586c77f4e1e93a6c6fa6988b1f283e97f76d9412f"
         }
+      ],
+      "artefatos_gps": [
+        "1987:13"
       ]
     },
     "williams-fw14b": {
@@ -1864,8 +1867,8 @@
     "tyrrell-003": {
       "arquivo_commons": "File:Tyrrell 003 Donington.jpg",
       "legenda": {
-        "pt": "Tyrrell 003 na coleção de Donington.",
-        "en": "Tyrrell 003 in the Donington collection."
+        "pt": "O Tyrrell 003 de Jackie Stewart, fotografado em Donington em 2007. Foi o carro que Stewart pilotou nas decisões de 1971, o título de pilotos na Áustria e o de construtores em Monza.",
+        "en": "Jackie Stewart’s Tyrrell 003, photographed at Donington in 2007. He drove it in the 1971 title deciders, the drivers’ championship in Austria and the constructors’ championship at Monza."
       },
       "modelo": "tyrrell-003",
       "temporadas": [
@@ -1893,6 +1896,10 @@
           "altura": 1799,
           "sha256": "732014cf4b56ad1ddea4e3e2d4217b016411e75bd5a9ebddbec82704574b4070"
         }
+      ],
+      "artefatos_gps": [
+        "1971:8",
+        "1971:9"
       ]
     },
     "tyrrell-006": {
@@ -7266,8 +7273,8 @@
     "lotus-dobradinha-zandvoort-1978": {
       "arquivo_commons": "File:Grand Prix Zandvoort Mario Andretti op kop met daar achter Ronnie Petterson, Bestanddeelnr 929-8743.jpg",
       "legenda": {
-        "pt": "Mario Andretti à frente de Ronnie Peterson, ambos no Lotus 79, na dobradinha que decidiu o Mundial de Construtores em Zandvoort, 1978.",
-        "en": "Mario Andretti leads Ronnie Peterson in the Lotus 79 one-two that clinched the Constructors' Championship at Zandvoort in 1978."
+        "pt": "Mario Andretti (Lotus 79, chassi 79/4) lidera Ronnie Peterson na dobradinha que deu à Lotus o título de construtores em Zandvoort em 1978. Andretti pilotou o mesmo chassi em Monza, onde confirmou o título de pilotos.",
+        "en": "Mario Andretti (Lotus 79, chassis 79/4) leads Ronnie Peterson in the one-two that secured the constructors’ title for Lotus at Zandvoort in 1978. Andretti drove the same chassis at Monza, where he clinched the drivers’ title."
       },
       "modelo": "lotus-79",
       "temporadas": [
@@ -7301,6 +7308,9 @@
           "altura": 1591,
           "sha256": "2e430cec8a26dca453a9a6825a01cd9583a4f6546f042948dd381dcf308576ee"
         }
+      ],
+      "artefatos_gps": [
+        "1978:14"
       ]
     },
     "raikkonen-spa-2007": {
@@ -7808,8 +7818,8 @@
     "lauda-mp4-2-estoril-1984": {
       "arquivo_commons": "File:Goodwood Festival of Speed 27th June 2014-106 (14459806490).jpg",
       "legenda": {
-        "pt": "O McLaren MP4/2 de chassi 1, com que Niki Lauda terminou em segundo no Estoril e conquistou seu terceiro título em 1984, em demonstração em Goodwood em 2014.",
-        "en": "McLaren MP4/2 chassis 1, in which Niki Lauda finished second at Estoril to secure his third title in 1984, on a demonstration run at Goodwood in 2014."
+        "pt": "O McLaren MP4/2 de chassi 1 em Goodwood em 2014. Em 1984, Niki Lauda completou a dobradinha do título de construtores em Zandvoort e conquistou o tricampeonato no Estoril com o mesmo carro.",
+        "en": "McLaren MP4/2 chassis 1 at Goodwood in 2014. Niki Lauda completed the one-two that sealed the 1984 constructors’ title at Zandvoort and clinched his third drivers’ title at Estoril in the same car."
       },
       "modelo": "mclaren-mp4-2",
       "temporadas": [
@@ -7819,6 +7829,7 @@
         "mclaren"
       ],
       "artefatos_gps": [
+        "1984:13",
         "1984:16"
       ],
       "construtor": "mclaren",
@@ -8005,6 +8016,191 @@
           "largura": 2400,
           "altura": 1594,
           "sha256": "852c7025ae8ef38859d38e7a5ac4d114f680ecc666aa0359c2a23e551ec6fa3b"
+        }
+      ]
+    },
+    "era-gp2-silverstone-1950": {
+      "arquivo_commons": "File:1939 ERA E-Type GP2 (49254926386).jpg",
+      "legenda": {
+        "pt": "O ERA E-Type GP2 com que Leslie Johnson largou no GP da Grã-Bretanha de 1950, a primeira corrida do Mundial. Fotografia do carro original no museu de Silverstone, em 2019.",
+        "en": "The ERA E-Type GP2 in which Leslie Johnson started the 1950 British Grand Prix, the first World Championship race. The original car is pictured at the Silverstone museum in 2019."
+      },
+      "artefatos_gps": [
+        "1950:1"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:1939_ERA_E-Type_GP2_(49254926386).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/a8/1939_ERA_E-Type_GP2_%2849254926386%29.jpg",
+      "autor": "David Merrett from Daventry, England",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "524557a7bfba1a750872dc1e40e3b26c09cb0a68b9066a8d55a3981070ceee48",
+      "largura": 5566,
+      "altura": 3589,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/era-gp2-silverstone-1950-524557a7bfba-960.webp",
+          "largura": 960,
+          "altura": 619,
+          "sha256": "8da21721ab1955c5a370af9690a90ee98696d4a1e8986aafdaaaf784bc602df6"
+        },
+        {
+          "arquivo": "static/pitwall-archive/era-gp2-silverstone-1950-524557a7bfba-2400.webp",
+          "largura": 2400,
+          "altura": 1548,
+          "sha256": "0ba76e1bfcd0812ec54436ddda15e2b0beda4add95ccb22469fb3c5be1c98370"
+        }
+      ]
+    },
+    "hulme-bt24-mosport-mexico-1967": {
+      "arquivo_commons": "File:Denny Hulme's 1967 Braham-Repco BT24 F1 car (14663090354).jpg",
+      "legenda": {
+        "pt": "O Brabham BT24 de chassi 2, fotografado em Donington em 2014. Denny Hulme foi segundo em Mosport, na corrida do título de construtores da Brabham, e terceiro no México, onde confirmou seu título de pilotos em 1967.",
+        "en": "Brabham BT24 chassis 2, photographed at Donington in 2014. Denny Hulme finished second at Mosport when Brabham clinched the constructors’ title, and third in Mexico to secure his own 1967 title."
+      },
+      "modelo": "brabham-bt24",
+      "temporadas": [
+        1967
+      ],
+      "equipes": [
+        "brabham"
+      ],
+      "artefatos_gps": [
+        "1967:8",
+        "1967:11"
+      ],
+      "construtor": "brabham",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Denny_Hulme%27s_1967_Braham-Repco_BT24_F1_car_(14663090354).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Denny_Hulme%27s_1967_Braham-Repco_BT24_F1_car_%2814663090354%29.jpg",
+      "autor": "Ben Sutherland from Crystal Palace, London, UK",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "350deb3724dbbc91db6dbdfff1cdbde47920b576a4a4775c3f23f9799fc8140b",
+      "largura": 4928,
+      "altura": 3264,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hulme-bt24-mosport-mexico-1967-350deb3724db-960.webp",
+          "largura": 960,
+          "altura": 636,
+          "sha256": "9958d7ed992035714543b64e864b6eb6c9c5f50f09f91b1dfe432a1989b51323"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hulme-bt24-mosport-mexico-1967-350deb3724db-2400.webp",
+          "largura": 2400,
+          "altura": 1590,
+          "sha256": "d412bbced16e510b0a445b7969dcf72bffbc496a760dc283dbd1259e9cf957a1"
+        }
+      ]
+    },
+    "jones-trofeu-austria-1977": {
+      "arquivo_commons": "File:Winners Trophy Austrian Grand Prix 1977.jpg",
+      "legenda": {
+        "pt": "Troféu do GP da Áustria de 1977, a primeira vitória de Alan Jones no Mundial, pela Shadow. Fotografia de 2023.",
+        "en": "Trophy from the 1977 Austrian Grand Prix, Alan Jones’s first World Championship victory, for Shadow. Photographed in 2023."
+      },
+      "artefatos_gps": [
+        "1977:12"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Winners_Trophy_Austrian_Grand_Prix_1977.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Winners_Trophy_Austrian_Grand_Prix_1977.jpg",
+      "autor": "Lukas Raich",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "ed0185220dc2250a35edbf6e06a928f78f656c648cee5fca336f6adb9e37564b",
+      "largura": 2021,
+      "altura": 3591,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/jones-trofeu-austria-1977-ed0185220dc2-960.webp",
+          "largura": 540,
+          "altura": 960,
+          "sha256": "2d5e82e9f5f8ad1253b333a6257ddd1c37c44cb121f718b6511deb4334e6a4cd"
+        },
+        {
+          "arquivo": "static/pitwall-archive/jones-trofeu-austria-1977-ed0185220dc2-2400.webp",
+          "largura": 1351,
+          "altura": 2400,
+          "sha256": "5d575e2e461a828fd5b5f730e3d6b80ab88db81f2fee03eb7d4bd979da31b93f"
+        }
+      ]
+    },
+    "berger-mp4-6-suzuka-1991": {
+      "arquivo_commons": "File:McLaren Honda MP4-6 (1991) (22277600986).jpg",
+      "legenda": {
+        "pt": "Gerhard Berger em Suzuka em 2015, no McLaren MP4/6 de chassi 9 com que venceu o GP do Japão de 1991. Naquela corrida, seu companheiro Ayrton Senna conquistou o tricampeonato.",
+        "en": "Gerhard Berger at Suzuka in 2015 in McLaren MP4/6 chassis 9, the car in which he won the 1991 Japanese Grand Prix as his teammate Ayrton Senna clinched his third title."
+      },
+      "modelo": "mclaren-mp4-6",
+      "temporadas": [
+        1991
+      ],
+      "equipes": [
+        "mclaren"
+      ],
+      "artefatos_gps": [
+        "1991:15"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:McLaren_Honda_MP4-6_(1991)_(22277600986).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/82/McLaren_Honda_MP4-6_%281991%29_%2822277600986%29.jpg",
+      "autor": "Takayuki Suzuki from Kanagawa, Japan",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "1f1d41590f9b77f54be1a7bff1fd4e0d5451632c5398c93155df425d1df763c2",
+      "largura": 3000,
+      "altura": 2000,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/berger-mp4-6-suzuka-1991-1f1d41590f9b-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "8b886ecc8baddb00b99c37dc56782b8b7d72e334837f39ed0dfd65761ef9d763"
+        },
+        {
+          "arquivo": "static/pitwall-archive/berger-mp4-6-suzuka-1991-1f1d41590f9b-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "e28209d3df91ac60687b1845faca4aaf694b1c381117bec71706ccfdabdfeea1"
+        }
+      ]
+    },
+    "hill-fw18-hungria-1996": {
+      "arquivo_commons": "File:Damon Hill Williams FW18 at Goodwood 2014 001.jpg",
+      "legenda": {
+        "pt": "Damon Hill em Goodwood em 2014 no Williams FW18 de chassi 4. Com esse carro, foi segundo no GP da Hungria de 1996, completando a dobradinha que garantiu o Mundial de Construtores à Williams.",
+        "en": "Damon Hill at Goodwood in 2014 in Williams FW18 chassis 4. He finished second in this car at the 1996 Hungarian Grand Prix, completing the one-two that sealed the Constructors’ Championship for Williams."
+      },
+      "modelo": "williams-fw18",
+      "temporadas": [
+        1996
+      ],
+      "equipes": [
+        "williams"
+      ],
+      "artefatos_gps": [
+        "1996:12"
+      ],
+      "construtor": "williams",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Damon_Hill_Williams_FW18_at_Goodwood_2014_001.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Damon_Hill_Williams_FW18_at_Goodwood_2014_001.jpg",
+      "autor": "Nic Redhead",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "aaaedcd9fc18d2bcb41bb094c27f2c11d061b9a253dc254e8888d6cca6f89504",
+      "largura": 4066,
+      "altura": 2544,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hill-fw18-hungria-1996-aaaedcd9fc18-960.webp",
+          "largura": 960,
+          "altura": 601,
+          "sha256": "bbdac6a0d9d84aed0b28a6d2dfb24e64bc83eabf917318a4cdee1f0d81a1867e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hill-fw18-hungria-1996-aaaedcd9fc18-2400.webp",
+          "largura": 2400,
+          "altura": 1502,
+          "sha256": "c0704b62f9bacaae1a32e1f29bc4673afdc32df76aa2578a7b343d1fe4de5dfa"
         }
       ]
     }

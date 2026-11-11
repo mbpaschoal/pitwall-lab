@@ -276,7 +276,12 @@ class LinkContextTests(unittest.TestCase):
         self.assertNotIn('data-archive-photo="lotus-79"', event)
         app.selectbox(key="archive_event_group").set_value("pilotos").run()
         self.assertFalse(app.exception)
-        self.assertFalse(any('data-archive-photo="lotus-dobradinha-zandvoort-1978"' in item.value for item in app.markdown))
+        lotus = 'data-archive-photo="lotus-dobradinha-zandvoort-1978"'
+        self.assertTrue(any(lotus in item.value for item in app.markdown))
+        self.assertIn("Objects from the collection", [item.value for item in app.subheader])
+        app.selectbox(key="archive_event_group").set_value(None).run()
+        self.assertFalse(app.exception)
+        self.assertEqual(sum(item.value.count(lotus) for item in app.markdown), 1)
 
     def test_photo_archive_has_a_car_for_each_title_campaign_and_each_current_team(self):
         from pitwall.dashboard.photo_archive import CATALOG, INVENTORY, load

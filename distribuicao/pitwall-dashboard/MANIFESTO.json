@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "6ddb81c27e0cb48ad103c39a013e74899488c19964db8de79b2e99469225bea1",
+  "apresentacao_build_sha256": "aa5602047a1ab05be2e519f3c4e89eedda8a07feca8e8520fb95796cd2ee0161",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "f83188dd72fb4763d45d46db07aa8cfe92668634c40172e51ee26639647e9245",
+      "sha256_destino": "833e7e24098804e909fc4257d6b4281461c6a9e03bd7bfa3ec6aafeb1056664a",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "0d183ddde4dbf103f55301365e43312ba890b655cbdeac4e8c47cd668b093b66",
-      "sha256_origem": "0d183ddde4dbf103f55301365e43312ba890b655cbdeac4e8c47cd668b093b66"
+      "sha256_destino": "1577a879d8994f8a109f304e3367143c24cf525609bdb57901b8d0b107654c0b",
+      "sha256_origem": "1577a879d8994f8a109f304e3367143c24cf525609bdb57901b8d0b107654c0b"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -2984,8 +2984,8 @@
       "caminho": "pitwall/dashboard/photo_archive.py",
       "fonte": "pitwall/dashboard/photo_archive.py",
       "modo": "copia",
-      "sha256_destino": "2cda25cc44c99d7575559dae56d15bbb1702476c7925625752e6d3241a98c249",
-      "sha256_origem": "2cda25cc44c99d7575559dae56d15bbb1702476c7925625752e6d3241a98c249"
+      "sha256_destino": "84872cce5bdf3362e51203f8dad411675ced310091d3d2c29ca5075994c52a18",
+      "sha256_origem": "84872cce5bdf3362e51203f8dad411675ced310091d3d2c29ca5075994c52a18"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
@@ -3716,6 +3716,20 @@
       "sha256_origem": "4482e2e6cb43e8973c9e3583dd2eca08fb95076c45c58240724224db67525635"
     },
     {
+      "caminho": "static/pitwall-archive/berger-mp4-6-suzuka-1991-1f1d41590f9b-2400.webp",
+      "fonte": "static/pitwall-archive/berger-mp4-6-suzuka-1991-1f1d41590f9b-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e28209d3df91ac60687b1845faca4aaf694b1c381117bec71706ccfdabdfeea1",
+      "sha256_origem": "e28209d3df91ac60687b1845faca4aaf694b1c381117bec71706ccfdabdfeea1"
+    },
+    {
+      "caminho": "static/pitwall-archive/berger-mp4-6-suzuka-1991-1f1d41590f9b-960.webp",
+      "fonte": "static/pitwall-archive/berger-mp4-6-suzuka-1991-1f1d41590f9b-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8b886ecc8baddb00b99c37dc56782b8b7d72e334837f39ed0dfd65761ef9d763",
+      "sha256_origem": "8b886ecc8baddb00b99c37dc56782b8b7d72e334837f39ed0dfd65761ef9d763"
+    },
+    {
       "caminho": "static/pitwall-archive/bottas-suzuka-2019-acaaaea761e3-2400.webp",
       "fonte": "static/pitwall-archive/bottas-suzuka-2019-acaaaea761e3-2400.webp",
       "modo": "copia",
@@ -3994,6 +4008,20 @@
       "modo": "copia",
       "sha256_destino": "c988185d0ba66c6df46d8f49344b401991129b8e19acd18e3e3eb627d8d2d0fa",
       "sha256_origem": "c988185d0ba66c6df46d8f49344b401991129b8e19acd18e3e3eb627d8d2d0fa"
+    },
+    {
+      "caminho": "static/pitwall-archive/era-gp2-silverstone-1950-524557a7bfba-2400.webp",
+      "fonte": "static/pitwall-archive/era-gp2-silverstone-1950-524557a7bfba-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "0ba76e1bfcd0812ec54436ddda15e2b0beda4add95ccb22469fb3c5be1c98370",
+      "sha256_origem": "0ba76e1bfcd0812ec54436ddda15e2b0beda4add95ccb22469fb3c5be1c98370"
+    },
+    {
+      "caminho": "static/pitwall-archive/era-gp2-silverstone-1950-524557a7bfba-960.webp",
+      "fonte": "static/pitwall-archive/era-gp2-silverstone-1950-524557a7bfba-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8da21721ab1955c5a370af9690a90ee98696d4a1e8986aafdaaaf784bc602df6",
+      "sha256_origem": "8da21721ab1955c5a370af9690a90ee98696d4a1e8986aafdaaaf784bc602df6"
     },
     {
       "caminho": "static/pitwall-archive/fangio-alfa-159-b1eac18f4324-2400.webp",
@@ -4556,6 +4584,20 @@
       "sha256_origem": "73195b5be4eb53304670e667545c962ad87390157d0a5dc83f1825e3758f45eb"
     },
     {
+      "caminho": "static/pitwall-archive/hill-fw18-hungria-1996-aaaedcd9fc18-2400.webp",
+      "fonte": "static/pitwall-archive/hill-fw18-hungria-1996-aaaedcd9fc18-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c0704b62f9bacaae1a32e1f29bc4673afdc32df76aa2578a7b343d1fe4de5dfa",
+      "sha256_origem": "c0704b62f9bacaae1a32e1f29bc4673afdc32df76aa2578a7b343d1fe4de5dfa"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-fw18-hungria-1996-aaaedcd9fc18-960.webp",
+      "fonte": "static/pitwall-archive/hill-fw18-hungria-1996-aaaedcd9fc18-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bbdac6a0d9d84aed0b28a6d2dfb24e64bc83eabf917318a4cdee1f0d81a1867e",
+      "sha256_origem": "bbdac6a0d9d84aed0b28a6d2dfb24e64bc83eabf917318a4cdee1f0d81a1867e"
+    },
+    {
       "caminho": "static/pitwall-archive/hill-silverstone-1992-42c5d0354c90-2400.webp",
       "fonte": "static/pitwall-archive/hill-silverstone-1992-42c5d0354c90-2400.webp",
       "modo": "copia",
@@ -4582,6 +4624,20 @@
       "modo": "copia",
       "sha256_destino": "cb646700fd33423f763f16c568eb479953f403b6aa882862203981196c890248",
       "sha256_origem": "cb646700fd33423f763f16c568eb479953f403b6aa882862203981196c890248"
+    },
+    {
+      "caminho": "static/pitwall-archive/hulme-bt24-mosport-mexico-1967-350deb3724db-2400.webp",
+      "fonte": "static/pitwall-archive/hulme-bt24-mosport-mexico-1967-350deb3724db-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d412bbced16e510b0a445b7969dcf72bffbc496a760dc283dbd1259e9cf957a1",
+      "sha256_origem": "d412bbced16e510b0a445b7969dcf72bffbc496a760dc283dbd1259e9cf957a1"
+    },
+    {
+      "caminho": "static/pitwall-archive/hulme-bt24-mosport-mexico-1967-350deb3724db-960.webp",
+      "fonte": "static/pitwall-archive/hulme-bt24-mosport-mexico-1967-350deb3724db-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9958d7ed992035714543b64e864b6eb6c9c5f50f09f91b1dfe432a1989b51323",
+      "sha256_origem": "9958d7ed992035714543b64e864b6eb6c9c5f50f09f91b1dfe432a1989b51323"
     },
     {
       "caminho": "static/pitwall-archive/hunt-m23d-zandvoort-fuji-1976-a93c6f190b31-2400.webp",
@@ -4778,6 +4834,20 @@
       "modo": "copia",
       "sha256_destino": "97d10beb98e7b275f54887836e812f5dd4d6da5b8e9a22fe60b85f03c5afff5a",
       "sha256_origem": "97d10beb98e7b275f54887836e812f5dd4d6da5b8e9a22fe60b85f03c5afff5a"
+    },
+    {
+      "caminho": "static/pitwall-archive/jones-trofeu-austria-1977-ed0185220dc2-2400.webp",
+      "fonte": "static/pitwall-archive/jones-trofeu-austria-1977-ed0185220dc2-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5d575e2e461a828fd5b5f730e3d6b80ab88db81f2fee03eb7d4bd979da31b93f",
+      "sha256_origem": "5d575e2e461a828fd5b5f730e3d6b80ab88db81f2fee03eb7d4bd979da31b93f"
+    },
+    {
+      "caminho": "static/pitwall-archive/jones-trofeu-austria-1977-ed0185220dc2-960.webp",
+      "fonte": "static/pitwall-archive/jones-trofeu-austria-1977-ed0185220dc2-960.webp",
+      "modo": "copia",
+      "sha256_destino": "2d5e82e9f5f8ad1253b333a6257ddd1c37c44cb121f718b6511deb4334e6a4cd",
+      "sha256_origem": "2d5e82e9f5f8ad1253b333a6257ddd1c37c44cb121f718b6511deb4334e6a4cd"
     },
     {
       "caminho": "static/pitwall-archive/keke-rosberg-retrato-9551af59e24f-2400.webp",

@@ -165,7 +165,9 @@ def render(root, year, round_):
             race_ids.update(gp for _, photo in photos for gp in photo.get("gps", [])
                             if season is None or gp.split(":", 1)[0] == str(season))
         selected = [(key, photo) for key, photo in photos if race_ids.intersection(photo.get("gps", []))]
-        artifacts = [(key, photo) for key, photo in photos if race_ids.intersection(photo.get("artefatos_gps", []))]
+        selected_ids = {key for key, _ in selected}
+        artifacts = [(key, photo) for key, photo in photos
+                     if key not in selected_ids and race_ids.intersection(photo.get("artefatos_gps", []))]
         references = _references(catalog, "gps", race_ids)
     has_photos = gallery(selected)
     has_artifacts = gallery(artifacts, "Peças de acervo")
