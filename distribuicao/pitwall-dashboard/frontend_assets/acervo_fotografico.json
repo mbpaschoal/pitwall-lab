@@ -1245,6 +1245,38 @@
         "1997:17"
       ]
     },
+    "benetton-enstone-1994": {
+      "arquivo_commons": "File:Michael Schumacher Jos Verstappen JJ Lehto Benetton 1994.jpg",
+      "legenda": {
+        "pt": "Michael Schumacher, Jos Verstappen e JJ Lehto na apresentação do Benetton B194, em Enstone, em janeiro de 1994.",
+        "en": "Michael Schumacher, Jos Verstappen and JJ Lehto at the Benetton B194 launch in Enstone in January 1994."
+      },
+      "equipes": [
+        "benetton"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Jos_Verstappen_JJ_Lehto_Benetton_1994.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Michael_Schumacher_Jos_Verstappen_JJ_Lehto_Benetton_1994.jpg",
+      "autor": "Carlo Marzetti",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "4268b489601f598616e3c34691f436626b00236df9ba299de8d1238ab8dcce7d",
+      "largura": 5728,
+      "altura": 3824,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/benetton-enstone-1994-4268b489601f-960.webp",
+          "largura": 960,
+          "altura": 641,
+          "sha256": "4482e2e6cb43e8973c9e3583dd2eca08fb95076c45c58240724224db67525635"
+        },
+        {
+          "arquivo": "static/pitwall-archive/benetton-enstone-1994-4268b489601f-2400.webp",
+          "largura": 2400,
+          "altura": 1602,
+          "sha256": "44ed11cb8d7c689ac839b952022c16e65e1633d689297ed89e2a7c3b4f87da61"
+        }
+      ]
+    },
     "benetton-b195": {
       "arquivo_commons": "File:Johnny Herbert - Benetton B195 at Silverstone, British GP 1995 (49684425471).jpg",
       "legenda": {
@@ -1388,38 +1420,6 @@
       "artefatos_gps": [
         "2004:13",
         "2004:14"
-      ]
-    },
-    "benetton-enstone-1994": {
-      "arquivo_commons": "File:Michael Schumacher Jos Verstappen JJ Lehto Benetton 1994.jpg",
-      "legenda": {
-        "pt": "Michael Schumacher, Jos Verstappen e JJ Lehto na apresentação do Benetton B194, em Enstone, em janeiro de 1994.",
-        "en": "Michael Schumacher, Jos Verstappen and JJ Lehto at the Benetton B194 launch in Enstone in January 1994."
-      },
-      "equipes": [
-        "benetton"
-      ],
-      "fonte": "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Jos_Verstappen_JJ_Lehto_Benetton_1994.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Michael_Schumacher_Jos_Verstappen_JJ_Lehto_Benetton_1994.jpg",
-      "autor": "Carlo Marzetti",
-      "licenca": "CC BY 4.0",
-      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
-      "sha256": "4268b489601f598616e3c34691f436626b00236df9ba299de8d1238ab8dcce7d",
-      "largura": 5728,
-      "altura": 3824,
-      "variantes": [
-        {
-          "arquivo": "static/pitwall-archive/benetton-enstone-1994-4268b489601f-960.webp",
-          "largura": 960,
-          "altura": 641,
-          "sha256": "4482e2e6cb43e8973c9e3583dd2eca08fb95076c45c58240724224db67525635"
-        },
-        {
-          "arquivo": "static/pitwall-archive/benetton-enstone-1994-4268b489601f-2400.webp",
-          "largura": 2400,
-          "altura": 1602,
-          "sha256": "44ed11cb8d7c689ac839b952022c16e65e1633d689297ed89e2a7c3b4f87da61"
-        }
       ]
     },
     "benetton-brawn-1994": {
@@ -11651,6 +11651,43 @@
           "largura": 610,
           "altura": 262,
           "sha256": "923c28a729a6a988529fffcb419bf453a9a35cbe28469eb5b6b3321d4187939f"
+        }
+      ]
+    },
+    "ferrari-f2002-219-spielberg-2024": {
+      "arquivo_commons": "Ferrari F2002 with Gerhard Berger (2024).jpg",
+      "legenda": {
+        "pt": "Gerhard Berger pilota o Ferrari F2002 de chassi 219 no ensaio da Legends Parade em Spielberg, em 29 de junho de 2024. Com esse carro, Michael Schumacher venceu na Áustria e em Magny-Cours em 2002, onde garantiu o quinto título mundial.",
+        "en": "Gerhard Berger drives Ferrari F2002 chassis 219 in the Legends Parade rehearsal at Spielberg on 29 June 2024. Michael Schumacher won in Austria and at Magny-Cours in this car in 2002, clinching his fifth world title in France."
+      },
+      "modelo": "ferrari-f2002",
+      "temporadas": [
+        2002
+      ],
+      "construtor": "ferrari",
+      "artefatos_gps": [
+        "2002:11"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Ferrari_F2002_with_Gerhard_Berger_(2024).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/03/Ferrari_F2002_with_Gerhard_Berger_%282024%29.jpg",
+      "autor": "Lukas Raich",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sha256": "09accd0dfcf51c80c4790c0dbd4b0c2328e789ca2ab287679cc514484fc55484",
+      "largura": 3772,
+      "altura": 2122,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ferrari-f2002-219-spielberg-2024-09accd0dfcf5-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "afad5c54167e882263f0d4bcbe395029de7a16a99ef6efb7759ed2f8825f2cdb"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ferrari-f2002-219-spielberg-2024-09accd0dfcf5-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "705a000ec0ef703c8e9ff8281fd8cc8ca1b582d3f54a75eb7c6b99d7eb36dcc7"
         }
       ]
     }

@@ -6,9 +6,11 @@ Champions Duel compares any two Hall of Fame drivers and opens with Senna and Pr
 
 The Photo Archive brings together photographs of all 36 champions, all 11 teams on the 2026 grid, and at least one car from each championship campaign since 1950. Profiles display bilingual captions, photographer credits, license details and links to the originals. The gallery serves local WebP variants and lets visitors browse cars and historic moments by season.
 
-The archive contains 333 photographs. The Ferrari F2002 that Barrichello drove to victory at Monza appears on track at Mugello in a 5,184 × 3,456 px photograph. Ferrari F2001B chassis 216 appears on the front row at the 2003 Nürburgring gathering. The Brookline Ferrari F2002B is attributed to chassis 225 by visual comparison. All 36 Hall of Fame cover photographs have originals with a long edge of at least 2,400 px. Mike Hawthorn’s cover shows him at the 1957 Naples Grand Prix. For 176 of the 184 catalogued historic moments, at least one original has a long edge of 2,400 px or more. Captions identify photos taken at the Grand Prix itself and images of an original car or trophy photographed on another occasion.
+The archive contains 334 photographs. The Ferrari F2002 that Barrichello drove to victory at Monza appears on track at Mugello in a 5,184 × 3,456 px photograph. Ferrari F2001B chassis 216 appears on the front row at the 2003 Nürburgring gathering. The Brookline Ferrari F2002B is attributed to chassis 225 by visual comparison. All 36 Hall of Fame cover photographs have originals with a long edge of at least 2,400 px. Mike Hawthorn’s cover shows him at the 1957 Naples Grand Prix. For 177 of the 184 catalogued historic moments, at least one original has a long edge of 2,400 px or more. Captions identify photos taken at the Grand Prix itself and images of an original car or trophy photographed on another occasion.
 
 Lando Norris receiving the 2025 trophy in Tashkent adds a 1,920 × 1,280 px photograph to the title-deciding Abu Dhabi Grand Prix. The period photograph of Schumacher passing Räikkönen at Magny-Cours in 2002 is included at the photographer’s published resolution of 610 × 262 px. The archive now illustrates 178 of the 184 historic moments.
+
+Ferrari F2002 chassis 219, which Schumacher drove to victory and his fifth world title at Magny-Cours, appears in a 3,772 × 2,122 px photograph from the 2024 Legends Parade rehearsal at Spielberg. The Benetton gallery opens with a 5,728 × 3,824 px photograph from the team’s Enstone launch.
 
 ## 0.18.0 — 2026-11-11
 
