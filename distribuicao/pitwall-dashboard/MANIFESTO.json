@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "14e4604fa7cd3c14d758c6b3ef4e249546b902ab9e0fece1669a24b50674e68b",
+  "apresentacao_build_sha256": "d9b6200a974af8336b418a939a5f31f0685e6d88e9720858b0b51e33df2716a7",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "be97a4ab89f7f4ab9db71cee04376c1505e021ac9a902ab9dea1aca0add1174e",
+      "sha256_destino": "58604c8fe1d2853b8bf323b465f02173a625e91d535f00dd6016653a316e3c80",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "e907b024170e1738261286e47812072de3f463f45c67a4ee739b15b44104d27b",
-      "sha256_origem": "161c87186bd7678e226dbc1054017856528abf71faf3841d0d918bf7c9890451"
+      "sha256_destino": "4e47ee51a21e00f08e442a6adcf1334c62f5b728d92aaa3649332a0c3bf2de98",
+      "sha256_origem": "95c3f99995059671dd448fa5d09caad0451c682630a1c4af9a77c1cf898d1713"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "268a51347db26a562aa143885539e8f9dbec22ab58e34037676cc7dbc44bb961",
-      "sha256_origem": "894d34e0f816c0750c8f83909c870e12aac517b50acaa71d3a52f61f3103baf6"
+      "sha256_destino": "f31e98e60c64c0dd538db2795ea8cce6186174120e5a5753307d5f5690510305",
+      "sha256_origem": "8a8cc336e29dbfcf0b5cc1e425dce634a85aad2cce4c31247ea66a63ae419330"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "da9947c48cd5ef673fc37965e668c86d99f5cfd7628e7804b1118c8d965265f4",
-      "sha256_origem": "da9947c48cd5ef673fc37965e668c86d99f5cfd7628e7804b1118c8d965265f4"
+      "sha256_destino": "5429ba3963e0af9ed5e44fdf74b3b02e3faf5b89dc81d5f81d087088fb45b505",
+      "sha256_origem": "5429ba3963e0af9ed5e44fdf74b3b02e3faf5b89dc81d5f81d087088fb45b505"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -5240,6 +5240,20 @@
       "modo": "copia",
       "sha256_destino": "9958d7ed992035714543b64e864b6eb6c9c5f50f09f91b1dfe432a1989b51323",
       "sha256_origem": "9958d7ed992035714543b64e864b6eb6c9c5f50f09f91b1dfe432a1989b51323"
+    },
+    {
+      "caminho": "static/pitwall-archive/hungaroring-podio-apos-cerimonia-2002-07f41f91ed55-1357.webp",
+      "fonte": "static/pitwall-archive/hungaroring-podio-apos-cerimonia-2002-07f41f91ed55-1357.webp",
+      "modo": "copia",
+      "sha256_destino": "474947b249d1e5a3c48b66a3fefd968a7e621cc7a030363f35e53d8ef4796432",
+      "sha256_origem": "474947b249d1e5a3c48b66a3fefd968a7e621cc7a030363f35e53d8ef4796432"
+    },
+    {
+      "caminho": "static/pitwall-archive/hungaroring-podio-apos-cerimonia-2002-07f41f91ed55-960.webp",
+      "fonte": "static/pitwall-archive/hungaroring-podio-apos-cerimonia-2002-07f41f91ed55-960.webp",
+      "modo": "copia",
+      "sha256_destino": "51543a4196f445108c9cc14f28482be9923e4c4f839d626dc50df55c8ae65514",
+      "sha256_origem": "51543a4196f445108c9cc14f28482be9923e4c4f839d626dc50df55c8ae65514"
     },
     {
       "caminho": "static/pitwall-archive/hunt-m23d-zandvoort-fuji-1976-a93c6f190b31-2400.webp",
