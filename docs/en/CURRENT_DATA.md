@@ -16,6 +16,8 @@ Local campaigns show each constructor's accumulated points and position by round
 
 ## Drivers' Hall of Fame
 
+Champions Duel calculates age from the birth date and the date of the deciding Grand Prix recorded in F1DB. The count includes the first title season and every earlier season in which the driver started at least one Grand Prix.
+
 The catalogue covers 36 champions and 77 titles from 1950 to 2026. The driver list matches the official Hall of Fame. F1DB v2026.20.0 supplies title seasons, constructors, deciding Grands Prix and statistics through the São Paulo race on 8 November 2026. The profiles link to the official biographies and the FIA's confirmation of Antonelli's title. The 1954 entry records Fangio's season with Maserati and Mercedes. [Catalogue](../../frontend_assets/hall_da_fama.json) · [Formula 1 Hall of Fame](https://www.formula1.com/en/drivers/hall-of-fame) · [F1DB v2026.20.0](https://github.com/f1db/f1db/releases/tag/v2026.20.0)
 
 ## Full calendar audit

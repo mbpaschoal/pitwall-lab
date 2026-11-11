@@ -204,6 +204,36 @@ class LinkContextTests(unittest.TestCase):
         self.assertEqual(app.query_params.get("lang"), "en")
         self.assertTrue(any("Mexico City Grand Prix" in m.value for m in app.markdown))
 
+    def test_champions_duel_counts_raced_seasons_and_preserves_pair(self):
+        app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=45)
+        app.query_params.update(tela="Pilotos", visao="duelo-campeoes", temporada="2026", gp="20", lang="pt")
+        app.run()
+        self.assertFalse(app.exception)
+        first = app.selectbox(key="hall_duel_first")
+        self.assertEqual(first.value, "ayrton-senna")
+        self.assertEqual(len(first.options), 36)
+        self.assertEqual(app.selectbox(key="hall_duel_second").value, "alain-prost")
+        comparison = next(m.value for m in app.markdown if 'aria-label="Comparação de campeões"' in m.value)
+        self.assertIn("28 anos e 223 dias", comparison)
+        self.assertIn("30 anos e 224 dias", comparison)
+        self.assertIn("<td>5</td><td>6</td>", comparison)
+        timeline = next(m.value for m in app.markdown if 'aria-label="Títulos do duelo"' in m.value)
+        years = [int(a["href"].split("/")[-2]) for a in Links(timeline).links if a["href"].endswith("/drivers")]
+        self.assertEqual(years, [1985, 1986, 1988, 1989, 1990, 1991, 1993])
+
+        first.set_value("alain-prost").run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.info[0].value, "Escolha dois campeões diferentes para comparar.")
+        app.selectbox(key="hall_duel_first").set_value("fernando-alonso").run()
+        english = next(b for b in app.button if b.key and b.key.startswith("pw_language_button_") and b.key.endswith("_en"))
+        english.click().run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.query_params.get("campeao"), "fernando-alonso")
+        self.assertEqual(app.query_params.get("rival_campeao"), "alain-prost")
+        self.assertEqual(app.query_params.get("gp"), "20")
+        comparison = next(m.value for m in app.markdown if 'aria-label="Champion comparison"' in m.value)
+        self.assertIn("<td>4</td><td>6</td>", comparison)
+
     def test_document_return_preserves_hosted_frame_without_nesting_wrapper(self):
         for lang in ('pt','en'):
             app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=45)

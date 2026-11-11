@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.19.0 — 2026-11-11
+
+Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
+
 ## 0.18.0 — 2026-11-11
 
 Drivers adds a Hall of Fame with all 36 Formula 1 World Drivers' Champions from 1950 through 2026. Fans can search and sort the list. Each profile covers the driver's career, debut, first win, statistics and title-deciding Grands Prix.

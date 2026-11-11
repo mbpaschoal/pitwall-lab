@@ -16,6 +16,8 @@ As campanhas locais mostram a posição e os pontos acumulados do construtor a c
 
 ## Hall da Fama dos pilotos
 
+O Duelo de Campeões calcula a idade entre a data de nascimento e o dia do GP decisivo registrados no F1DB. A contagem inclui a temporada do primeiro título e cada temporada anterior em que o piloto largou em pelo menos um GP.
+
 O catálogo contém os 36 campeões e os 77 títulos de 1950 a 2026. A lista de pilotos confere com o Hall da Fama oficial. A release F1DB v2026.20.0 fornece títulos por temporada, construtores, GPs decisivos e estatísticas até a corrida de São Paulo em 08/11/2026. As biografias oficiais e a confirmação do título de Antonelli pela FIA ficam nos perfis. A edição de 1954 conserva a passagem de Fangio por Maserati e Mercedes. [Catálogo](../frontend_assets/hall_da_fama.json) · [Hall da Fama da Fórmula 1](https://www.formula1.com/en/drivers/hall-of-fame) · [F1DB v2026.20.0](https://github.com/f1db/f1db/releases/tag/v2026.20.0)
 
 ## Revisão completa do calendário
