@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "886d8bedc2836fd63053bc85f3c16aac336ed55d58e63f2a6d8bc35f64be1789",
+  "apresentacao_build_sha256": "28223155b1a0c7d25f09a15693ea4243738e317d17463a7066780124a3a9946d",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "cb88a1e4da74c54252717e3fdbc9ffc597baea764b63ca650a8a60f9f2d32ca0",
+      "sha256_destino": "b4d2a58cc58ad49383251b78f1f884c11d72088bb08396c0078ad4dea3204ca9",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "f9df159691da216b7131db61933a43b2dd012082590119dd94b8cfb47923381b",
-      "sha256_origem": "efafda710dc29d7dd81e2735678bbf8fab3451e2ef41716b5a6075a5bfd44978"
+      "sha256_destino": "f42fd5fd0adab3cedfcf5131ca2e99b626aeb5d861eb9e60762ab0d538cda471",
+      "sha256_origem": "47a74d9132ea72e4cf464e3fcdedf552b635fb49b2467bc29857db9e9d6f8ce7"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "284d51fdc2a260850df5ba694ee1b9b4703be6edc8a0fd9d51773fdfeb7ca436",
-      "sha256_origem": "4400361329643cf4d26e854e91d43623ee35f5eeab9e942ed87d81350445a0be"
+      "sha256_destino": "444ad7b2c06417759ef01b3bf99910931d72aeb5046f2897e44b251e4fcbb23a",
+      "sha256_origem": "a1c873f6883c8852edb7a32787734384f188421bff6e2a2d68970ea6639d9ac8"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "57bc574f97b36ecef6fbd1e81771f52e9c62335467b8cc9251a2713f2b9bba05",
-      "sha256_origem": "57bc574f97b36ecef6fbd1e81771f52e9c62335467b8cc9251a2713f2b9bba05"
+      "sha256_destino": "658b484035c21e9f6747e33f1b4f46b14092f57d411f30b4fb651e4644167ff0",
+      "sha256_origem": "658b484035c21e9f6747e33f1b4f46b14092f57d411f30b4fb651e4644167ff0"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7844,6 +7844,20 @@
       "modo": "copia",
       "sha256_destino": "4bf435480107e9b28d663d107a28334010c9bd75e480b8bb746d6621532dbfef",
       "sha256_origem": "4bf435480107e9b28d663d107a28334010c9bd75e480b8bb746d6621532dbfef"
+    },
+    {
+      "caminho": "static/pitwall-archive/villeneuve-ferrari-312t4b-imola-1979-2e466c8a1315-1800.webp",
+      "fonte": "static/pitwall-archive/villeneuve-ferrari-312t4b-imola-1979-2e466c8a1315-1800.webp",
+      "modo": "copia",
+      "sha256_destino": "b5a14bdce88728d4d97795d32061d01250d99e8e701fe851eb1f886e70e99e0b",
+      "sha256_origem": "b5a14bdce88728d4d97795d32061d01250d99e8e701fe851eb1f886e70e99e0b"
+    },
+    {
+      "caminho": "static/pitwall-archive/villeneuve-ferrari-312t4b-imola-1979-2e466c8a1315-960.webp",
+      "fonte": "static/pitwall-archive/villeneuve-ferrari-312t4b-imola-1979-2e466c8a1315-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1413d94d43589ae735a1d6e9635e0af3f76167fb5036fe8cc3c66c2ae096a682",
+      "sha256_origem": "1413d94d43589ae735a1d6e9635e0af3f76167fb5036fe8cc3c66c2ae096a682"
     },
     {
       "caminho": "static/pitwall-archive/villeneuve-fw18-estreia-1996-aa1585725714-2400.webp",

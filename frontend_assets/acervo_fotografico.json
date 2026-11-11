@@ -151,41 +151,6 @@
         "1954:7"
       ]
     },
-    "fangio-nurburgring-1957": {
-      "arquivo_commons": "File:Fangio pit stop Nurburgring 1957.jpg",
-      "legenda": {
-        "pt": "Parada de Fangio no Nürburgring em 1957, na corrida em que conquistou o quinto título.",
-        "en": "Fangio’s pit stop at the Nürburgring in 1957, in the race where he sealed his fifth title."
-      },
-      "equipes": [
-        "maserati"
-      ],
-      "gps": [
-        "1957:6"
-      ],
-      "fonte": "https://commons.wikimedia.org/wiki/File:Fangio_pit_stop_Nurburgring_1957.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Fangio_pit_stop_Nurburgring_1957.jpg",
-      "autor": "Willy Pragher",
-      "licenca": "CC BY 3.0",
-      "licenca_url": "https://creativecommons.org/licenses/by/3.0",
-      "sha256": "9faf177dd1b506db339232ad5fd6575b0d3c6882828be9ff608273877ea24a6f",
-      "largura": 1682,
-      "altura": 1102,
-      "variantes": [
-        {
-          "arquivo": "static/pitwall-archive/fangio-nurburgring-1957-9faf177dd1b5-960.webp",
-          "largura": 960,
-          "altura": 629,
-          "sha256": "af84eebc126c5347005f880093c5bbb2edbedecb79090ca729a52a4949255ddc"
-        },
-        {
-          "arquivo": "static/pitwall-archive/fangio-nurburgring-1957-9faf177dd1b5-1682.webp",
-          "largura": 1682,
-          "altura": 1102,
-          "sha256": "8e9246d4a3888217c3c95af0c9f10e049923acf7d1f3d52e69cb2ed3b7fe624a"
-        }
-      ]
-    },
     "fangio-maserati": {
       "arquivo_commons": "File:Maserati 250F (Juan Fangio).jpg",
       "legenda": {
@@ -222,6 +187,41 @@
       "construtor": "maserati",
       "artefatos_gps": [
         "1957:6"
+      ]
+    },
+    "fangio-nurburgring-1957": {
+      "arquivo_commons": "File:Fangio pit stop Nurburgring 1957.jpg",
+      "legenda": {
+        "pt": "Parada de Fangio no Nürburgring em 1957, na corrida em que conquistou o quinto título.",
+        "en": "Fangio’s pit stop at the Nürburgring in 1957, in the race where he sealed his fifth title."
+      },
+      "equipes": [
+        "maserati"
+      ],
+      "gps": [
+        "1957:6"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Fangio_pit_stop_Nurburgring_1957.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Fangio_pit_stop_Nurburgring_1957.jpg",
+      "autor": "Willy Pragher",
+      "licenca": "CC BY 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/3.0",
+      "sha256": "9faf177dd1b506db339232ad5fd6575b0d3c6882828be9ff608273877ea24a6f",
+      "largura": 1682,
+      "altura": 1102,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/fangio-nurburgring-1957-9faf177dd1b5-960.webp",
+          "largura": 960,
+          "altura": 629,
+          "sha256": "af84eebc126c5347005f880093c5bbb2edbedecb79090ca729a52a4949255ddc"
+        },
+        {
+          "arquivo": "static/pitwall-archive/fangio-nurburgring-1957-9faf177dd1b5-1682.webp",
+          "largura": 1682,
+          "altura": 1102,
+          "sha256": "8e9246d4a3888217c3c95af0c9f10e049923acf7d1f3d52e69cb2ed3b7fe624a"
+        }
       ]
     },
     "prost-brands-hatch-1985": {
@@ -11759,6 +11759,43 @@
           "largura": 698,
           "altura": 514,
           "sha256": "71e5bd4f92d82e30df927feea11a446e579800a931057031f39856bcf6fcafa4"
+        }
+      ]
+    },
+    "villeneuve-ferrari-312t4b-imola-1979": {
+      "arquivo_commons": "File:Gilles Villeneuve imola 1979.jpg",
+      "legenda": {
+        "pt": "Gilles Villeneuve nos boxes de Ímola no GP Dino Ferrari de 1979, uma semana após terminar em segundo em Monza com o mesmo Ferrari 312 T4B, chassi 038.",
+        "en": "Gilles Villeneuve in the Imola pits at the 1979 Dino Ferrari Grand Prix, a week after finishing second at Monza in the same Ferrari 312 T4B, chassis 038."
+      },
+      "modelo": "ferrari-312t4b",
+      "temporadas": [
+        1979
+      ],
+      "artefatos_gps": [
+        "1979:13"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Gilles_Villeneuve_imola_1979.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Gilles_Villeneuve_imola_1979.jpg",
+      "autor": "ideogibs",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "2e466c8a131593a3130fd60a73d1c655dd1ad9605a4efa422dcb6449f6f541fe",
+      "largura": 1800,
+      "altura": 1211,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/villeneuve-ferrari-312t4b-imola-1979-2e466c8a1315-960.webp",
+          "largura": 960,
+          "altura": 646,
+          "sha256": "1413d94d43589ae735a1d6e9635e0af3f76167fb5036fe8cc3c66c2ae096a682"
+        },
+        {
+          "arquivo": "static/pitwall-archive/villeneuve-ferrari-312t4b-imola-1979-2e466c8a1315-1800.webp",
+          "largura": 1800,
+          "altura": 1211,
+          "sha256": "b5a14bdce88728d4d97795d32061d01250d99e8e701fe851eb1f886e70e99e0b"
         }
       ]
     }
