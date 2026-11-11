@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "28223155b1a0c7d25f09a15693ea4243738e317d17463a7066780124a3a9946d",
+  "apresentacao_build_sha256": "868abd3dfa015ace53ac6dfcbb6ae8e82fa16a49d5951e24ef40d3a9efc91729",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "b4d2a58cc58ad49383251b78f1f884c11d72088bb08396c0078ad4dea3204ca9",
+      "sha256_destino": "88b62b69e7a7a511a6a61197527313daede27d966adb4be3223280589376fe63",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "f42fd5fd0adab3cedfcf5131ca2e99b626aeb5d861eb9e60762ab0d538cda471",
-      "sha256_origem": "47a74d9132ea72e4cf464e3fcdedf552b635fb49b2467bc29857db9e9d6f8ce7"
+      "sha256_destino": "f7ef5a9a9e450f5255b6dc1d17a4439bfcdafab25819c9a90eba0a0ecb1dc390",
+      "sha256_origem": "8afe2c90f5898ee0a843d97fcbb3f26e77585612eb92e60832b0c5db3417f0e3"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "444ad7b2c06417759ef01b3bf99910931d72aeb5046f2897e44b251e4fcbb23a",
-      "sha256_origem": "a1c873f6883c8852edb7a32787734384f188421bff6e2a2d68970ea6639d9ac8"
+      "sha256_destino": "1ee7ce557cbf20bf70aee7259ec25887c0650eef659a1137635f9cbad6c69dc6",
+      "sha256_origem": "5a0149bbca0c255a1843342ddfddcd0da1824afca6bcc110df988ca4320bc613"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "658b484035c21e9f6747e33f1b4f46b14092f57d411f30b4fb651e4644167ff0",
-      "sha256_origem": "658b484035c21e9f6747e33f1b4f46b14092f57d411f30b4fb651e4644167ff0"
+      "sha256_destino": "5cdc983b24d71ed7543c097242b03c1ac0be6b877c35325112f7c7bb2a3f1075",
+      "sha256_origem": "5cdc983b24d71ed7543c097242b03c1ac0be6b877c35325112f7c7bb2a3f1075"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7536,6 +7536,20 @@
       "modo": "copia",
       "sha256_destino": "5487faeeb729eb810d9661c7e0e6262538a7a813beab8e9d5abc524c737a98c2",
       "sha256_origem": "5487faeeb729eb810d9661c7e0e6262538a7a813beab8e9d5abc524c737a98c2"
+    },
+    {
+      "caminho": "static/pitwall-archive/trofeu-verstappen-exposicao-londres-2025-84486c188f7a-2400.webp",
+      "fonte": "static/pitwall-archive/trofeu-verstappen-exposicao-londres-2025-84486c188f7a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "de3d4edff89fef6a34880c0d5a073ce23cd98c83f9012d0e8447d6ff6d918ea1",
+      "sha256_origem": "de3d4edff89fef6a34880c0d5a073ce23cd98c83f9012d0e8447d6ff6d918ea1"
+    },
+    {
+      "caminho": "static/pitwall-archive/trofeu-verstappen-exposicao-londres-2025-84486c188f7a-960.webp",
+      "fonte": "static/pitwall-archive/trofeu-verstappen-exposicao-londres-2025-84486c188f7a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a99bcf044e87e19ff3fa4be2b302c268399f87f07aca51666020300af4bb2393",
+      "sha256_origem": "a99bcf044e87e19ff3fa4be2b302c268399f87f07aca51666020300af4bb2393"
     },
     {
       "caminho": "static/pitwall-archive/tyrrell-001-5b29c167cc35-2400.webp",
