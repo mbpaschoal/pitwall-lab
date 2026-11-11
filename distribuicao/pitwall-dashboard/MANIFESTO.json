@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "db55f9a4e4e72b4a1f185b94bdbee55f83c99d6e2cdac4e9433f2f9055ac2a99",
+  "apresentacao_build_sha256": "ba241f55091920b5b30ecd82b1ce1b5194a8e260a36209cfeab5ea2ee6aaa6c2",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "2ee2dbf95809e6f70f990e8cb897d57011a2da42a6baf9241f04f20644c37ccf",
+      "sha256_destino": "f4e274ad6f3cb2ddb3ac60a92929cc9fbfd503de3ff65ea0191e888cf395e764",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "36224798259449d37fb5baeb65ba2ed5c03a87730490b55167e17a1d62b1bbc7",
-      "sha256_origem": "fc40502d93646e919525b30918d261f12efde330fd2970572661408ab459a8d1"
+      "sha256_destino": "0c38c06faeba5cd6b70a25d25ea45da5ddee79f0bccf5e8cb22057c8dcae67af",
+      "sha256_origem": "67915d3101522abe0ede8c98587840734904904cf335fa7286a341622fb2ab8b"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "91be14a4a80fa58b88199351c81a32c04222f547a35e008e3f33439c072a15dd",
-      "sha256_origem": "c19dda1a81f13d169dd2ec0dd314634bcd4c5fad487d10e9715fc6270c0197e5"
+      "sha256_destino": "943034e205a7159d1a3306b4bec3f0471e737aa0e270b96fdbc81542293a37c2",
+      "sha256_origem": "1fbd85f64f4b982da12ef225995ce4ba0f0787556b9916e1d039f917c5813a6e"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "8beb875b9e3664140e3764c88d4af9bb8b15b314c2f2a4174677b9bbed949a83",
-      "sha256_origem": "8beb875b9e3664140e3764c88d4af9bb8b15b314c2f2a4174677b9bbed949a83"
+      "sha256_destino": "0330d4054690cb039c3f2097d757430c9411273561d475efe0c393dbf2c13841",
+      "sha256_origem": "0330d4054690cb039c3f2097d757430c9411273561d475efe0c393dbf2c13841"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6374,6 +6374,20 @@
       "modo": "copia",
       "sha256_destino": "1caecd855fecc6500c5c7cf624f0e860542409b30f5a5c3c59f290d057a33cad",
       "sha256_origem": "1caecd855fecc6500c5c7cf624f0e860542409b30f5a5c3c59f290d057a33cad"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-mcl34-silverstone-2026-902e9217d1ab-2400.webp",
+      "fonte": "static/pitwall-archive/norris-mcl34-silverstone-2026-902e9217d1ab-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d5c2f8c54c255774a2bdfcd36927906f3083d4d7ecc4ccd47347de699a9a7887",
+      "sha256_origem": "d5c2f8c54c255774a2bdfcd36927906f3083d4d7ecc4ccd47347de699a9a7887"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-mcl34-silverstone-2026-902e9217d1ab-960.webp",
+      "fonte": "static/pitwall-archive/norris-mcl34-silverstone-2026-902e9217d1ab-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a47c30088988b92f1e95c15a341800543af990c104e2ae77bf6da810d1c0a284",
+      "sha256_origem": "a47c30088988b92f1e95c15a341800543af990c104e2ae77bf6da810d1c0a284"
     },
     {
       "caminho": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-2400.webp",
