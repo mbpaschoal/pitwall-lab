@@ -4,7 +4,7 @@
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
 
-O Acervo fotográfico reúne fotografias de campeões, carros, equipes e corridas. As fichas trazem legendas bilíngues, autoria, licença e acesso aos originais. A galeria usa versões WebP locais e permite consultar os carros por temporada.
+O Acervo fotográfico reúne imagens dos 36 campeões, das 11 equipes do grid de 2026 e de pelo menos um carro de cada campanha campeã desde 1950. As fichas trazem legendas bilíngues, autoria, licença e acesso aos originais. A galeria usa versões WebP locais e permite consultar carros e momentos históricos por temporada.
 
 ## 0.18.0 — 2026-11-11
 

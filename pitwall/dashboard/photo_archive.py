@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 
 from pitwall.dashboard.fan_views import chapter_header, href, text
-from pitwall.i18n import language
+from pitwall.i18n import language, translate
 from pitwall.i18n.streamlit import st
 
 
@@ -84,10 +84,11 @@ def driver_photos(root, driver, profile):
 def team_photos(root, team):
     constructor = team.replace("_", "-")
     photos = load(root)
-    gallery([(key, photo) for key, photo in photos.items() if team in photo.get("equipes", [])])
-    gallery([(key, photo) for key, photo in photos.items()
-             if photo.get("construtor") == constructor and team not in photo.get("equipes", [])],
-            "Carros campeões")
+    team_images = [(key, photo) for key, photo in photos.items() if team in photo.get("equipes", [])]
+    cars = [(key, photo) for key, photo in photos.items()
+            if photo.get("construtor") == constructor and team not in photo.get("equipes", [])]
+    gallery(team_images[:1])
+    return team_images[1:], cars
 
 
 def render(root, year, round_):
@@ -115,6 +116,12 @@ def render(root, year, round_):
                     if team in {name.replace("-", "_") for name in photo.get("equipes", [])}
                     or photo.get("construtor") == team.replace("_", "-")]
     else:
-        selected = [(key, photo) for key, photo in photos if photo.get("gps")]
+        seasons = sorted({event["ano"] for event in inventory["momentos"]}, reverse=True)
+        season = st.selectbox("Temporada do acervo", [None, *seasons], key="archive_event_season",
+                              format_func=lambda value: str(value) if value else translate("Todas as temporadas"))
+        selected = [
+            (key, photo) for key, photo in photos
+            if any(season is None or gp.split(":", 1)[0] == str(season) for gp in photo.get("gps", []))
+        ]
     if not gallery(selected):
         st.info("Fotografias desta seleção em pesquisa.")

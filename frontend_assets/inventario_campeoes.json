@@ -108,6 +108,7 @@
     "ferrari-500": "Ferrari 500",
     "ferrari-553": "Ferrari 553",
     "ferrari-555": "Ferrari 555",
+    "ferrari-d50": "Ferrari D50",
     "ferrari-f1-2000": "Ferrari F1-2000",
     "ferrari-f2001": "Ferrari F2001",
     "ferrari-f2001b": "Ferrari F2001B",
@@ -280,8 +281,15 @@
       ],
       "construtores": false,
       "modelos_candidatos": [
-        "ferrari-555"
-      ]
+        "ferrari-555",
+        "ferrari-d50"
+      ],
+      "modelos_documentados": {
+        "ferrari-d50": {
+          "nome": "Ferrari D50",
+          "fonte": "https://www.ferrari.com/content/dam/ferrari-fcom/old/pdf/pr_90_years_eng_fin.pdf"
+        }
+      }
     },
     {
       "ano": 1957,

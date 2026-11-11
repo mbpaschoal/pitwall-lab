@@ -4,7 +4,7 @@
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
 
-The Photo Archive brings together photographs of champions, cars, teams and races. Profiles display bilingual captions, photographer credits, license details and links to the originals. The gallery serves local WebP variants and lets visitors browse the cars by season.
+The Photo Archive brings together photographs of all 36 champions, all 11 teams on the 2026 grid, and at least one car from each championship campaign since 1950. Profiles display bilingual captions, photographer credits, license details and links to the originals. The gallery serves local WebP variants and lets visitors browse cars and historic moments by season.
 
 ## 0.18.0 — 2026-11-11
 

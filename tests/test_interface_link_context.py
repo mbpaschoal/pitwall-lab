@@ -254,6 +254,30 @@ class LinkContextTests(unittest.TestCase):
         self.assertTrue(any(link.startswith("https://creativecommons.org/") for link in links))
         self.assertIn(photos["senna-mp4-4"]["fonte"], links)
         self.assertNotIn('data-archive-photo="prost-mp4-5"', photo)
+        app.radio(key="archive_mode").set_value("Momentos históricos").run()
+        self.assertFalse(app.exception)
+        app.selectbox(key="archive_event_season").set_value(1957).run()
+        self.assertFalse(app.exception)
+        event = next(item.value for item in app.markdown if 'data-archive-photo="fangio-nurburgring-1957"' in item.value)
+        self.assertNotIn('data-archive-photo="hamilton-interlagos-2008"', event)
+
+    def test_photo_archive_has_a_car_for_each_title_campaign_and_each_current_team(self):
+        from pitwall.dashboard.photo_archive import INVENTORY, load
+
+        inventory = json.loads((ROOT / INVENTORY).read_text(encoding="utf-8"))
+        photos = load(ROOT)
+        campaigns = {(entry["ano"], entry["equipe"]): entry for entry in inventory["campanhas"]}
+        photographed = set()
+        for photo in photos.values():
+            for season in photo.get("temporadas", []):
+                campaign = season, photo["construtor"]
+                self.assertIn(photo["modelo"], campaigns[campaign]["modelos_candidatos"])
+                photographed.add(campaign)
+        self.assertEqual(photographed, set(campaigns))
+        self.assertEqual(photos["ferrari-d50"]["temporadas"], [1956])
+        self.assertIn("ferrari.com", campaigns[1956, "ferrari"]["modelos_documentados"]["ferrari-d50"]["fonte"])
+        photographed_teams = {team for photo in photos.values() for team in photo.get("equipes", [])}
+        self.assertTrue(set(inventory["equipes_atuais"]).issubset(photographed_teams))
 
     def test_document_return_preserves_hosted_frame_without_nesting_wrapper(self):
         for lang in ('pt','en'):

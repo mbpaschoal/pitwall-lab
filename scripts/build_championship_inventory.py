@@ -10,6 +10,14 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 EXCLUDED = {"DNS", "DNQ", "DNPQ", "DNP", "WD"}
+MANUFACTURER_DOCUMENTATION = {
+    (1956, "ferrari"): {
+        "ferrari-d50": {
+            "nome": "Ferrari D50",
+            "fonte": "https://www.ferrari.com/content/dam/ferrari-fcom/old/pdf/pr_90_years_eng_fin.pdf",
+        },
+    },
+}
 
 
 def build(archive, hall, teams):
@@ -67,6 +75,7 @@ def build(archive, hall, teams):
 
     output = []
     used_cars = set()
+    documented_cars = {}
     for (year, constructor), campaign in sorted(campaigns.items()):
         driver_entries = entries_by_driver[year, constructor]
         shortlist = set()
@@ -84,8 +93,14 @@ def build(archive, hall, teams):
                 shortlist.update(entered_cars[year, constructor, row["entrantId"], row["engineManufacturerId"]])
         if not shortlist:
             raise ValueError(f"No chassis entries for {year} {constructor}")
+        documented = MANUFACTURER_DOCUMENTATION.get((year, constructor), {})
+        documented_cars.update({key: entry["nome"] for key, entry in documented.items()})
+        shortlist.update(documented)
         used_cars.update(shortlist)
-        output.append({"ano": year, "equipe": constructor, **campaign, "modelos_candidatos": sorted(shortlist)})
+        row = {"ano": year, "equipe": constructor, **campaign, "modelos_candidatos": sorted(shortlist)}
+        if documented:
+            row["modelos_documentados"] = documented
+        output.append(row)
 
     return {
         "schema": 1,
@@ -94,7 +109,8 @@ def build(archive, hall, teams):
         "pilotos": {key: profile["nome"] for key, profile in hall["pilotos"].items()},
         "equipes_campeas": {key: constructors[key] for key in sorted({key for _, key in campaigns})},
         "equipes_atuais": {key: profile["nome"] for key, profile in teams["equipes"].items()},
-        "modelos": {key: cars[key]["fullName"] for key in sorted(used_cars)},
+        "modelos": {key: documented_cars[key] if key in documented_cars else cars[key]["fullName"]
+                    for key in sorted(used_cars)},
         "campanhas": output,
         "momentos": [{"ano": year, "rodada": round_, "gp": gp, "pilotos": sorted(keys)}
                      for (year, round_, gp), keys in sorted(moments.items())],

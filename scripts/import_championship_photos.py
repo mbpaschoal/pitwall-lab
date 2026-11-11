@@ -7,6 +7,8 @@ import io
 import json
 from pathlib import Path
 import re
+import time
+from urllib.error import HTTPError
 from urllib.parse import urlencode, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 
@@ -132,12 +134,19 @@ def main():
     for key, item in pending.items():
         try:
             catalog["fotos"][key] = import_photo(key, item, metadata[item["arquivo_commons"]])
+        except HTTPError as error:
+            if error.code == 429:
+                retry_after = error.headers.get("Retry-After", "unspecified")
+                parser.exit(75, f"Wikimedia rate limit at {key}. Retry-After: {retry_after}\n")
+            failures.append(key)
+            print(key, error, flush=True)
         except (KeyError, OSError, ValueError) as error:
             failures.append(key)
             print(key, error, flush=True)
-            continue
-        CATALOG.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print(key, "ok", flush=True)
+        else:
+            CATALOG.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            print(key, "ok", flush=True)
+        time.sleep(1)
     if failures:
         parser.exit(1, f"Review failed imports: {', '.join(failures)}\n")
 

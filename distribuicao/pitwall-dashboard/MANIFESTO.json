@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "984f5b3162274a7ff4567e9bd0dd9880cdc1c6cbf3f02d4f9a207da2943e2544",
+  "apresentacao_build_sha256": "34152eea1cdca7eb2f963021940bae049831aef2e01861d3201ee476f2e2f4c4",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "bc79636fb82fd59241bb2c341f9b28aa4a1b691429c094b467661eab1a8ce126",
+      "sha256_destino": "83b1648e182b1c21040de665e06ba2203b09d9a016c075ac5dd1ab697310c142",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a83604253c121d785de23a3bda259ed12e2114695e622d3a4a77c412aeb7ea59",
-      "sha256_origem": "742f21d1b8281705dbeeeaeea72c9ac41f7a3e63571d68b4717d4f80feecdc97"
+      "sha256_destino": "4431589a2bc643d7d739297d37b0e2b71d0898626675a6afbb663d9c9da302e7",
+      "sha256_origem": "d839f54c42426e3fd62c9445dc2e6386693c2b0cca07208f3f5ef3aef9e03d6a"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "e7a65d29245da8d29d04081e0db9a055721432b396437bb11a0dfca5a3c00da7",
-      "sha256_origem": "bdcf746a4bbb6f88d0dc126804fe7a552acca2b6c3ca9bd2c1d7721dc8b9d926"
+      "sha256_destino": "aef4a9e99229d1f6ed89676c2f539032921b70f78d6021b3dd5bd28ab28e480c",
+      "sha256_origem": "7ee821d9d4ae66baedf74fce6e0839a446e5d5a0dca9c6bc91388d261bde1327"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "1700cfa82944e09faff967c61ea99fe4d02b81db8f8f37bd3eba80de0ba176fe",
-      "sha256_origem": "1700cfa82944e09faff967c61ea99fe4d02b81db8f8f37bd3eba80de0ba176fe"
+      "sha256_destino": "7eac3edd6f305674114632ca20cb26641a170ee36cea94faea72a1ace532c092",
+      "sha256_origem": "7eac3edd6f305674114632ca20cb26641a170ee36cea94faea72a1ace532c092"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -2753,8 +2753,8 @@
       "caminho": "frontend_assets/inventario_campeoes.json",
       "fonte": "frontend_assets/inventario_campeoes.json",
       "modo": "copia",
-      "sha256_destino": "12c200444ed4c34f818b7b80c0d6f364515e31819e238208300443168fecb0b7",
-      "sha256_origem": "12c200444ed4c34f818b7b80c0d6f364515e31819e238208300443168fecb0b7"
+      "sha256_destino": "0260eeb0a96be0e294f0daa0351937a8391fd886258071d64354be8bca8ea8d0",
+      "sha256_origem": "0260eeb0a96be0e294f0daa0351937a8391fd886258071d64354be8bca8ea8d0"
     },
     {
       "caminho": "frontend_assets/journey.css",
@@ -2984,8 +2984,8 @@
       "caminho": "pitwall/dashboard/photo_archive.py",
       "fonte": "pitwall/dashboard/photo_archive.py",
       "modo": "copia",
-      "sha256_destino": "a2df559ac19d760e17c5602af9d90930213220cf9f4f38336970952fa5a3b778",
-      "sha256_origem": "a2df559ac19d760e17c5602af9d90930213220cf9f4f38336970952fa5a3b778"
+      "sha256_destino": "685873b260e1092a3c1d85e379d143a21306472e2dc9e1cd26389e380e868561",
+      "sha256_origem": "685873b260e1092a3c1d85e379d143a21306472e2dc9e1cd26389e380e868561"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
@@ -3033,8 +3033,8 @@
       "caminho": "pitwall/dashboard/team_views.py",
       "fonte": "pitwall/dashboard/team_views.py",
       "modo": "copia",
-      "sha256_destino": "41ed4a77bc458d0798dc7f5ded49ddc179a14fe928e2aa32661e751b12a5a16f",
-      "sha256_origem": "41ed4a77bc458d0798dc7f5ded49ddc179a14fe928e2aa32661e751b12a5a16f"
+      "sha256_destino": "bb748eeb90352aa300f6e3145f6bed4028272cf757d3ecf6b93609cdd121f11c",
+      "sha256_origem": "bb748eeb90352aa300f6e3145f6bed4028272cf757d3ecf6b93609cdd121f11c"
     },
     {
       "caminho": "pitwall/dashboard/tokens.py",
@@ -3187,8 +3187,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "a89decbc1126c58acb7f89e88054f4c649f3403958ca1d7c11ce6034de64e45e",
-      "sha256_origem": "a89decbc1126c58acb7f89e88054f4c649f3403958ca1d7c11ce6034de64e45e"
+      "sha256_destino": "79c9e70c7f493fec1dea3969cb7573499d2ad761516c080903f2c233dfc2991d",
+      "sha256_origem": "79c9e70c7f493fec1dea3969cb7573499d2ad761516c080903f2c233dfc2991d"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -3394,6 +3394,48 @@
       "sha256_origem": "fae2ae892c13355a94724bb0cf59445e572968198becf7f59fb65b43cc710b69"
     },
     {
+      "caminho": "static/pitwall-archive/alan-jones-retrato-321096064e77-2400.webp",
+      "fonte": "static/pitwall-archive/alan-jones-retrato-321096064e77-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9e86ea6c7914526d6926bff13e8ff8654416940f083cdd3a3ffdeb7da157df0d",
+      "sha256_origem": "9e86ea6c7914526d6926bff13e8ff8654416940f083cdd3a3ffdeb7da157df0d"
+    },
+    {
+      "caminho": "static/pitwall-archive/alan-jones-retrato-321096064e77-960.webp",
+      "fonte": "static/pitwall-archive/alan-jones-retrato-321096064e77-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3816a808f48c651e7ba4a3b289e55c2e2d7704b34209693c0bde33ee0f597ed0",
+      "sha256_origem": "3816a808f48c651e7ba4a3b289e55c2e2d7704b34209693c0bde33ee0f597ed0"
+    },
+    {
+      "caminho": "static/pitwall-archive/alberto-ascari-retrato-a54d342c8b97-2000.webp",
+      "fonte": "static/pitwall-archive/alberto-ascari-retrato-a54d342c8b97-2000.webp",
+      "modo": "copia",
+      "sha256_destino": "f8ef53d135ac31a741733be24c2a3a039bc980cfbedce477463723896cb57cfb",
+      "sha256_origem": "f8ef53d135ac31a741733be24c2a3a039bc980cfbedce477463723896cb57cfb"
+    },
+    {
+      "caminho": "static/pitwall-archive/alberto-ascari-retrato-a54d342c8b97-960.webp",
+      "fonte": "static/pitwall-archive/alberto-ascari-retrato-a54d342c8b97-960.webp",
+      "modo": "copia",
+      "sha256_destino": "48c452947eb045bc969a6b5f23a32b5f4fafd10583b3e6c10be3c6d00751455a",
+      "sha256_origem": "48c452947eb045bc969a6b5f23a32b5f4fafd10583b3e6c10be3c6d00751455a"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-interlagos-2005-d72c99cff7a6-2288.webp",
+      "fonte": "static/pitwall-archive/alonso-interlagos-2005-d72c99cff7a6-2288.webp",
+      "modo": "copia",
+      "sha256_destino": "d09f82f63b2b0f6f3eff4efca56e688d0cc5ba358f7bc83086d43e114b0e25d3",
+      "sha256_origem": "d09f82f63b2b0f6f3eff4efca56e688d0cc5ba358f7bc83086d43e114b0e25d3"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-interlagos-2005-d72c99cff7a6-960.webp",
+      "fonte": "static/pitwall-archive/alonso-interlagos-2005-d72c99cff7a6-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e6c3fe0f6f906a885744f85a228b3db0e6d2128f30a6afefce5bcf0718b41170",
+      "sha256_origem": "e6c3fe0f6f906a885744f85a228b3db0e6d2128f30a6afefce5bcf0718b41170"
+    },
+    {
       "caminho": "static/pitwall-archive/alonso-r25-5d5bc4051bfa-2400.webp",
       "fonte": "static/pitwall-archive/alonso-r25-5d5bc4051bfa-2400.webp",
       "modo": "copia",
@@ -3420,6 +3462,20 @@
       "modo": "copia",
       "sha256_destino": "cdfc1d9317e96da3cc1444101587f248edebcb1605f72ea4e1e28900791db728",
       "sha256_origem": "cdfc1d9317e96da3cc1444101587f248edebcb1605f72ea4e1e28900791db728"
+    },
+    {
+      "caminho": "static/pitwall-archive/alpine-imola-d623deb43e3b-2400.webp",
+      "fonte": "static/pitwall-archive/alpine-imola-d623deb43e3b-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "49e29f782f9a4e9f7d270fae56a5855e5b2de6eb94e5227a2b9430d4da181312",
+      "sha256_origem": "49e29f782f9a4e9f7d270fae56a5855e5b2de6eb94e5227a2b9430d4da181312"
+    },
+    {
+      "caminho": "static/pitwall-archive/alpine-imola-d623deb43e3b-960.webp",
+      "fonte": "static/pitwall-archive/alpine-imola-d623deb43e3b-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d82132d21628835d457989abfacd1180a064deb99d77bd45f62630078487af4c",
+      "sha256_origem": "d82132d21628835d457989abfacd1180a064deb99d77bd45f62630078487af4c"
     },
     {
       "caminho": "static/pitwall-archive/antonelli-portrait-9553c5edcb71-2400.webp",
@@ -3450,6 +3506,20 @@
       "sha256_origem": "06be4ae1dcceba8b51c2d8c9de0daec16c18d0b19103a46f29019b8abb2fc5c6"
     },
     {
+      "caminho": "static/pitwall-archive/antonelli-xangai-2026-9db3ef47746a-2400.webp",
+      "fonte": "static/pitwall-archive/antonelli-xangai-2026-9db3ef47746a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "80bb7492c426bf485fda7562e10911fb074c44d53a6b172049c447b4139c96c6",
+      "sha256_origem": "80bb7492c426bf485fda7562e10911fb074c44d53a6b172049c447b4139c96c6"
+    },
+    {
+      "caminho": "static/pitwall-archive/antonelli-xangai-2026-9db3ef47746a-960.webp",
+      "fonte": "static/pitwall-archive/antonelli-xangai-2026-9db3ef47746a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "17cb7decd10b66bdc7f12d25a6d3c5415a485c52c58b42b434b68879dea80ebf",
+      "sha256_origem": "17cb7decd10b66bdc7f12d25a6d3c5415a485c52c58b42b434b68879dea80ebf"
+    },
+    {
       "caminho": "static/pitwall-archive/ascari-ferrari-500-736c124bbd8d-2400.webp",
       "fonte": "static/pitwall-archive/ascari-ferrari-500-736c124bbd8d-2400.webp",
       "modo": "copia",
@@ -3462,6 +3532,34 @@
       "modo": "copia",
       "sha256_destino": "9ad4081c51135ff4d9161845ad27062bb499f304201a281a453f1f4f5c652cdf",
       "sha256_origem": "9ad4081c51135ff4d9161845ad27062bb499f304201a281a453f1f4f5c652cdf"
+    },
+    {
+      "caminho": "static/pitwall-archive/aston-martin-suzuka-19a0e4fd4269-2400.webp",
+      "fonte": "static/pitwall-archive/aston-martin-suzuka-19a0e4fd4269-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a15c8d9d3c4936b60ddab1755aafab472a9c2cc86c603ab82dcdeaf1382c0d37",
+      "sha256_origem": "a15c8d9d3c4936b60ddab1755aafab472a9c2cc86c603ab82dcdeaf1382c0d37"
+    },
+    {
+      "caminho": "static/pitwall-archive/aston-martin-suzuka-19a0e4fd4269-960.webp",
+      "fonte": "static/pitwall-archive/aston-martin-suzuka-19a0e4fd4269-960.webp",
+      "modo": "copia",
+      "sha256_destino": "437ef54bad65700c86b4ede974998b506bc9cb0bef8b919c24f6e0275de30145",
+      "sha256_origem": "437ef54bad65700c86b4ede974998b506bc9cb0bef8b919c24f6e0275de30145"
+    },
+    {
+      "caminho": "static/pitwall-archive/audi-spa-c1da357fbe43-2400.webp",
+      "fonte": "static/pitwall-archive/audi-spa-c1da357fbe43-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "dd7236c1d33e85d92dfb433cf319750fb47a46bf87c5470b4f489ea4dc6d94d4",
+      "sha256_origem": "dd7236c1d33e85d92dfb433cf319750fb47a46bf87c5470b4f489ea4dc6d94d4"
+    },
+    {
+      "caminho": "static/pitwall-archive/audi-spa-c1da357fbe43-960.webp",
+      "fonte": "static/pitwall-archive/audi-spa-c1da357fbe43-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e73b708f3a4881b6133b9354128949273ccf180337800b4d27f5610ce3d9ce51",
+      "sha256_origem": "e73b708f3a4881b6133b9354128949273ccf180337800b4d27f5610ce3d9ce51"
     },
     {
       "caminho": "static/pitwall-archive/benetton-b194-97849f00c1e6-2400.webp",
@@ -3492,6 +3590,90 @@
       "sha256_origem": "08bc400c6ac11823c7e355b10234218716c28e6f0492defff8d4ad2acdebf157"
     },
     {
+      "caminho": "static/pitwall-archive/brabham-bt19-5c052617d848-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-bt19-5c052617d848-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "effa4bd92ed98eb4e5d68c75993115dfef62e937f5b9d2664801b77bee6dc708",
+      "sha256_origem": "effa4bd92ed98eb4e5d68c75993115dfef62e937f5b9d2664801b77bee6dc708"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt19-5c052617d848-960.webp",
+      "fonte": "static/pitwall-archive/brabham-bt19-5c052617d848-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d413be70df472a4a0e1930c65e1c4e30f399749093cfc6a330602adc4e8808a7",
+      "sha256_origem": "d413be70df472a4a0e1930c65e1c4e30f399749093cfc6a330602adc4e8808a7"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt20-31b858ae8e9d-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-bt20-31b858ae8e9d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "dec29dd820ff849864d0f75e404bc0f095c3c75b289f24cbf51345a756b788a7",
+      "sha256_origem": "dec29dd820ff849864d0f75e404bc0f095c3c75b289f24cbf51345a756b788a7"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt20-31b858ae8e9d-960.webp",
+      "fonte": "static/pitwall-archive/brabham-bt20-31b858ae8e9d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "515b833b6fd5cc0ba7671dcb44ee5fe354fd922ae2ea4fda23a05415fafa1b20",
+      "sha256_origem": "515b833b6fd5cc0ba7671dcb44ee5fe354fd922ae2ea4fda23a05415fafa1b20"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt24-ed3663000ac0-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-bt24-ed3663000ac0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "19c25afc9c5c344e7601275ad866e59b70d2705fd28928b901e45198a81337d0",
+      "sha256_origem": "19c25afc9c5c344e7601275ad866e59b70d2705fd28928b901e45198a81337d0"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt24-ed3663000ac0-960.webp",
+      "fonte": "static/pitwall-archive/brabham-bt24-ed3663000ac0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "993c9a09d9b16655966b2240639686ab7f99aecd94b1ef7808adc2e495da00ab",
+      "sha256_origem": "993c9a09d9b16655966b2240639686ab7f99aecd94b1ef7808adc2e495da00ab"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt49c-1ff963122e2a-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-bt49c-1ff963122e2a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "caa4a281febd86d12b6854e7166ecd8140f2402c837ee0d4137e126fda930c5d",
+      "sha256_origem": "caa4a281febd86d12b6854e7166ecd8140f2402c837ee0d4137e126fda930c5d"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt49c-1ff963122e2a-960.webp",
+      "fonte": "static/pitwall-archive/brabham-bt49c-1ff963122e2a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9e88488fb40f0fbc19eb4dd3a70390417e62a841e9cdd889ab2cedd3852d0c7c",
+      "sha256_origem": "9e88488fb40f0fbc19eb4dd3a70390417e62a841e9cdd889ab2cedd3852d0c7c"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt52-8dd972609cf2-2297.webp",
+      "fonte": "static/pitwall-archive/brabham-bt52-8dd972609cf2-2297.webp",
+      "modo": "copia",
+      "sha256_destino": "c04d195b8387cf82ca89f2c95fbe3e33f33a9ce504fcaa7cecaa837b2638f58a",
+      "sha256_origem": "c04d195b8387cf82ca89f2c95fbe3e33f33a9ce504fcaa7cecaa837b2638f58a"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt52-8dd972609cf2-960.webp",
+      "fonte": "static/pitwall-archive/brabham-bt52-8dd972609cf2-960.webp",
+      "modo": "copia",
+      "sha256_destino": "7ab809fe45d318ca14134e7baa709e1f4e47df392229cae38f48bdd8e3c67ea9",
+      "sha256_origem": "7ab809fe45d318ca14134e7baa709e1f4e47df392229cae38f48bdd8e3c67ea9"
+    },
+    {
+      "caminho": "static/pitwall-archive/brm-p57-2a98ce3b3a69-2400.webp",
+      "fonte": "static/pitwall-archive/brm-p57-2a98ce3b3a69-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "f337955962d438af52abc3bf92d08cfc5a9f4e4abdec887c73463fbcb4e2b2b7",
+      "sha256_origem": "f337955962d438af52abc3bf92d08cfc5a9f4e4abdec887c73463fbcb4e2b2b7"
+    },
+    {
+      "caminho": "static/pitwall-archive/brm-p57-2a98ce3b3a69-960.webp",
+      "fonte": "static/pitwall-archive/brm-p57-2a98ce3b3a69-960.webp",
+      "modo": "copia",
+      "sha256_destino": "ab757d8c19a787103e6abafbfe4ab3c23a45f2a9e0703d39354ba82605681a27",
+      "sha256_origem": "ab757d8c19a787103e6abafbfe4ab3c23a45f2a9e0703d39354ba82605681a27"
+    },
+    {
       "caminho": "static/pitwall-archive/button-bgp-001-727c3354cf96-2400.webp",
       "fonte": "static/pitwall-archive/button-bgp-001-727c3354cf96-2400.webp",
       "modo": "copia",
@@ -3504,6 +3686,90 @@
       "modo": "copia",
       "sha256_destino": "3e3f0ffd60cf662cba41b68a69f13d5898f507758279a91c35c1ca8a91277e96",
       "sha256_origem": "3e3f0ffd60cf662cba41b68a69f13d5898f507758279a91c35c1ca8a91277e96"
+    },
+    {
+      "caminho": "static/pitwall-archive/button-hungaroring-2006-fb334e5b00fe-1600.webp",
+      "fonte": "static/pitwall-archive/button-hungaroring-2006-fb334e5b00fe-1600.webp",
+      "modo": "copia",
+      "sha256_destino": "bd6b7d1e0061947edb06a5a18a6673bbe59e57947f6c2f185808dc7428c51839",
+      "sha256_origem": "bd6b7d1e0061947edb06a5a18a6673bbe59e57947f6c2f185808dc7428c51839"
+    },
+    {
+      "caminho": "static/pitwall-archive/button-hungaroring-2006-fb334e5b00fe-960.webp",
+      "fonte": "static/pitwall-archive/button-hungaroring-2006-fb334e5b00fe-960.webp",
+      "modo": "copia",
+      "sha256_destino": "0a259ce8bde82bacd7e952e83383276ba43de2e4acc03aff4b4163afd4a7a045",
+      "sha256_origem": "0a259ce8bde82bacd7e952e83383276ba43de2e4acc03aff4b4163afd4a7a045"
+    },
+    {
+      "caminho": "static/pitwall-archive/cadillac-silverstone-27f1713144a5-2400.webp",
+      "fonte": "static/pitwall-archive/cadillac-silverstone-27f1713144a5-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "41d624e0b901e95a4a41aec053ab43c6ad3d5718ba47e6311136c386682654bc",
+      "sha256_origem": "41d624e0b901e95a4a41aec053ab43c6ad3d5718ba47e6311136c386682654bc"
+    },
+    {
+      "caminho": "static/pitwall-archive/cadillac-silverstone-27f1713144a5-960.webp",
+      "fonte": "static/pitwall-archive/cadillac-silverstone-27f1713144a5-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d4563cab91ba0394b32f127504894070a8fd43683757258ecef932611a6dd363",
+      "sha256_origem": "d4563cab91ba0394b32f127504894070a8fd43683757258ecef932611a6dd363"
+    },
+    {
+      "caminho": "static/pitwall-archive/cooper-t51-927e4876d8f8-2400.webp",
+      "fonte": "static/pitwall-archive/cooper-t51-927e4876d8f8-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "15d10f384ba097436c76fef08d6d8cbab9749da3be319992dcb23ee2051f6c0d",
+      "sha256_origem": "15d10f384ba097436c76fef08d6d8cbab9749da3be319992dcb23ee2051f6c0d"
+    },
+    {
+      "caminho": "static/pitwall-archive/cooper-t51-927e4876d8f8-960.webp",
+      "fonte": "static/pitwall-archive/cooper-t51-927e4876d8f8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a5071e995ae3ba907582cbec3585f4b770f69cc750e1c0652f2cf0c1ff5b8d7d",
+      "sha256_origem": "a5071e995ae3ba907582cbec3585f4b770f69cc750e1c0652f2cf0c1ff5b8d7d"
+    },
+    {
+      "caminho": "static/pitwall-archive/cooper-t53-546c307923fe-2400.webp",
+      "fonte": "static/pitwall-archive/cooper-t53-546c307923fe-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "0dc24c6bf30608f6f2c9c5c02a35d4608ce5dd73562105203015fdec8b6002a3",
+      "sha256_origem": "0dc24c6bf30608f6f2c9c5c02a35d4608ce5dd73562105203015fdec8b6002a3"
+    },
+    {
+      "caminho": "static/pitwall-archive/cooper-t53-546c307923fe-960.webp",
+      "fonte": "static/pitwall-archive/cooper-t53-546c307923fe-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5e9adabd4ef599d5fda343a86504558cdc64fa51af39b4776e878a2ff396e5ec",
+      "sha256_origem": "5e9adabd4ef599d5fda343a86504558cdc64fa51af39b4776e878a2ff396e5ec"
+    },
+    {
+      "caminho": "static/pitwall-archive/damon-hill-retrato-99042871cb88-2400.webp",
+      "fonte": "static/pitwall-archive/damon-hill-retrato-99042871cb88-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ab3f6b60c592471b5aef34ac1cab1edbbba27c268adcf2c66ec9a792d0040e09",
+      "sha256_origem": "ab3f6b60c592471b5aef34ac1cab1edbbba27c268adcf2c66ec9a792d0040e09"
+    },
+    {
+      "caminho": "static/pitwall-archive/damon-hill-retrato-99042871cb88-960.webp",
+      "fonte": "static/pitwall-archive/damon-hill-retrato-99042871cb88-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6c55826f45a0014ca61e0347932844bce9bd63994977feb774473aca7613afb9",
+      "sha256_origem": "6c55826f45a0014ca61e0347932844bce9bd63994977feb774473aca7613afb9"
+    },
+    {
+      "caminho": "static/pitwall-archive/denny-hulme-retrato-b936bc781049-2400.webp",
+      "fonte": "static/pitwall-archive/denny-hulme-retrato-b936bc781049-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6a8a3e09f8807dd58c801f1857c92dc218cd8c3d9b698f5b31c4bc91a6c2bfe6",
+      "sha256_origem": "6a8a3e09f8807dd58c801f1857c92dc218cd8c3d9b698f5b31c4bc91a6c2bfe6"
+    },
+    {
+      "caminho": "static/pitwall-archive/denny-hulme-retrato-b936bc781049-960.webp",
+      "fonte": "static/pitwall-archive/denny-hulme-retrato-b936bc781049-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c988185d0ba66c6df46d8f49344b401991129b8e19acd18e3e3eb627d8d2d0fa",
+      "sha256_origem": "c988185d0ba66c6df46d8f49344b401991129b8e19acd18e3e3eb627d8d2d0fa"
     },
     {
       "caminho": "static/pitwall-archive/fangio-alfa-159-b1eac18f4324-2400.webp",
@@ -3590,6 +3856,272 @@
       "sha256_origem": "25d1d7c0ee3c1b19b57d9bea66cf47245a1ab5c47e48340d52c0099676a14134"
     },
     {
+      "caminho": "static/pitwall-archive/fernando-alonso-foto-3ace56b87a66-2400.webp",
+      "fonte": "static/pitwall-archive/fernando-alonso-foto-3ace56b87a66-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8e071528065f061e7dcbf2b1528111f1d009f2835b413df514a0d3bec37e44a8",
+      "sha256_origem": "8e071528065f061e7dcbf2b1528111f1d009f2835b413df514a0d3bec37e44a8"
+    },
+    {
+      "caminho": "static/pitwall-archive/fernando-alonso-foto-3ace56b87a66-960.webp",
+      "fonte": "static/pitwall-archive/fernando-alonso-foto-3ace56b87a66-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cd1ebab588bea5322ac15f7b6df72233dfd12a8753dba8fd48e997cd0505ad30",
+      "sha256_origem": "cd1ebab588bea5322ac15f7b6df72233dfd12a8753dba8fd48e997cd0505ad30"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-126c2-292781e3bb11-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-126c2-292781e3bb11-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1d083f6d5219f97a2a8e605a21b7557f21ebf175aaff0bb51ff2ffac6758d4b5",
+      "sha256_origem": "1d083f6d5219f97a2a8e605a21b7557f21ebf175aaff0bb51ff2ffac6758d4b5"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-126c2-292781e3bb11-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-126c2-292781e3bb11-960.webp",
+      "modo": "copia",
+      "sha256_destino": "814471e4388201b3ba4e80a9c03c7138ee886fce5192c5d44640e658282ff625",
+      "sha256_origem": "814471e4388201b3ba4e80a9c03c7138ee886fce5192c5d44640e658282ff625"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-126c2b-ade16bfd642c-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-126c2b-ade16bfd642c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b29041df86a87e55c844ec2feba226a3fa45ab6091a2db263beb787889723c5c",
+      "sha256_origem": "b29041df86a87e55c844ec2feba226a3fa45ab6091a2db263beb787889723c5c"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-126c2b-ade16bfd642c-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-126c2b-ade16bfd642c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e2eb8c4847ef53afb05adeb2f00ca1bff054ce1df7ea66dceb17b504549eebb8",
+      "sha256_origem": "e2eb8c4847ef53afb05adeb2f00ca1bff054ce1df7ea66dceb17b504549eebb8"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-126c3-3abc3fb6cb30-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-126c3-3abc3fb6cb30-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d96d9c5876ffc2f011d95c480b7281a9a2db87ee2e2ac80948e20c7e05d2c8a9",
+      "sha256_origem": "d96d9c5876ffc2f011d95c480b7281a9a2db87ee2e2ac80948e20c7e05d2c8a9"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-126c3-3abc3fb6cb30-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-126c3-3abc3fb6cb30-960.webp",
+      "modo": "copia",
+      "sha256_destino": "82ca1e643ee7a29fe29a2574209fdeb6ddf00b620fd8d7bfdff1f3c69ff19890",
+      "sha256_origem": "82ca1e643ee7a29fe29a2574209fdeb6ddf00b620fd8d7bfdff1f3c69ff19890"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-156-a53e7ebda523-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-156-a53e7ebda523-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "10ec3a75fda8fbf943698a22dff22031aeca5b5595e87d4aa011901f7638741b",
+      "sha256_origem": "10ec3a75fda8fbf943698a22dff22031aeca5b5595e87d4aa011901f7638741b"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-156-a53e7ebda523-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-156-a53e7ebda523-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1ce43b04145c9e4adc2f5866cfc20e04d756e72c7ae74415b588532e5ff53c0f",
+      "sha256_origem": "1ce43b04145c9e4adc2f5866cfc20e04d756e72c7ae74415b588532e5ff53c0f"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-158-8ceb2a9265a1-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-158-8ceb2a9265a1-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8fad7454cfdb00a16a1949c8d8c4345211e85931902f2697da5a17898a0789a0",
+      "sha256_origem": "8fad7454cfdb00a16a1949c8d8c4345211e85931902f2697da5a17898a0789a0"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-158-8ceb2a9265a1-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-158-8ceb2a9265a1-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bb0e32214277ae7850c651232e4d1064e0c8ca338d7b36046828dd8af95909e1",
+      "sha256_origem": "bb0e32214277ae7850c651232e4d1064e0c8ca338d7b36046828dd8af95909e1"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-246-309796ab26db-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-246-309796ab26db-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "886aaea95d21fdf8112ca3175fc714c076cc6207541fb5cc3075fdb4e02fff2b",
+      "sha256_origem": "886aaea95d21fdf8112ca3175fc714c076cc6207541fb5cc3075fdb4e02fff2b"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-246-309796ab26db-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-246-309796ab26db-960.webp",
+      "modo": "copia",
+      "sha256_destino": "434e273e3a7b8d9c4308dc5597b6957ceeea9a7ba338c3f468e83d4ce07fdcdf",
+      "sha256_origem": "434e273e3a7b8d9c4308dc5597b6957ceeea9a7ba338c3f468e83d4ce07fdcdf"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t-6defc1793bca-2235.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t-6defc1793bca-2235.webp",
+      "modo": "copia",
+      "sha256_destino": "61001e944eab3fc36e3db11e57bbb7d35027ede80041b188285b7e6ee58a303a",
+      "sha256_origem": "61001e944eab3fc36e3db11e57bbb7d35027ede80041b188285b7e6ee58a303a"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t-6defc1793bca-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t-6defc1793bca-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d341900e2c35aa41f410f72a451db8b0de2681a38b5e75eaa83572ef6db9b00f",
+      "sha256_origem": "d341900e2c35aa41f410f72a451db8b0de2681a38b5e75eaa83572ef6db9b00f"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t2-268d725f8bbc-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t2-268d725f8bbc-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "784767c9c430d3dd62ae91f0bab4a78b747227d65a47bee9928c8973f9b87455",
+      "sha256_origem": "784767c9c430d3dd62ae91f0bab4a78b747227d65a47bee9928c8973f9b87455"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t2-268d725f8bbc-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t2-268d725f8bbc-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a2db7fdd2551409c2c4498d2c1ca1b88bb47e423edc2c9026f567ce5e1141a8c",
+      "sha256_origem": "a2db7fdd2551409c2c4498d2c1ca1b88bb47e423edc2c9026f567ce5e1141a8c"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t2b-f9b0e276ab6b-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t2b-f9b0e276ab6b-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "548d5eb8544b40a30be39cd21f55f99ef449de4d9878e1f3d7b4c0b1d2c4aeee",
+      "sha256_origem": "548d5eb8544b40a30be39cd21f55f99ef449de4d9878e1f3d7b4c0b1d2c4aeee"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t2b-f9b0e276ab6b-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t2b-f9b0e276ab6b-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a151b31e719b5cc91ac575884e4d050307b272c62135f5d9bd234cb98009884d",
+      "sha256_origem": "a151b31e719b5cc91ac575884e4d050307b272c62135f5d9bd234cb98009884d"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t4-92e4bce1b87f-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t4-92e4bce1b87f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8e818c08192d1b162af56b23c3bbd1a4cc429d3ead1623215223cafc4bfe80d0",
+      "sha256_origem": "8e818c08192d1b162af56b23c3bbd1a4cc429d3ead1623215223cafc4bfe80d0"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t4-92e4bce1b87f-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t4-92e4bce1b87f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "238356c4635c2755172c1dc7f8a4b437e9e496a0f3497bab5d810d9542906c9c",
+      "sha256_origem": "238356c4635c2755172c1dc7f8a4b437e9e496a0f3497bab5d810d9542906c9c"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-d50-df3f6d272728-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-d50-df3f6d272728-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "217e4b370b91e29e2395b56f60e26faeaffd8986fd9ef2569b6fb48150253fb9",
+      "sha256_origem": "217e4b370b91e29e2395b56f60e26faeaffd8986fd9ef2569b6fb48150253fb9"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-d50-df3f6d272728-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-d50-df3f6d272728-960.webp",
+      "modo": "copia",
+      "sha256_destino": "25edc2a812d53e386baae44cfad8177d20252caac0e033303c7feb3b43c57f79",
+      "sha256_origem": "25edc2a812d53e386baae44cfad8177d20252caac0e033303c7feb3b43c57f79"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f1-2000-7e9dbc0441e8-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-f1-2000-7e9dbc0441e8-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2b92ee764794e602ab91ac67d1e9cc449117bf4baa86f993bfec2d7f43866e15",
+      "sha256_origem": "2b92ee764794e602ab91ac67d1e9cc449117bf4baa86f993bfec2d7f43866e15"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f1-2000-7e9dbc0441e8-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-f1-2000-7e9dbc0441e8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4c2db4407c3a15b628043c8d72b8b47da41e6fc786533fb5091d5491428886ac",
+      "sha256_origem": "4c2db4407c3a15b628043c8d72b8b47da41e6fc786533fb5091d5491428886ac"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2001-eaef09eb9353-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2001-eaef09eb9353-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5aca70f7dd5954c1600f01ac2888bb99963d662eaf3349e4b4230cb4c720460a",
+      "sha256_origem": "5aca70f7dd5954c1600f01ac2888bb99963d662eaf3349e4b4230cb4c720460a"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2001-eaef09eb9353-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2001-eaef09eb9353-960.webp",
+      "modo": "copia",
+      "sha256_destino": "98bee92a1c8e3828225e6ca43d309b5713dd16606524912edbb8943fa42d84dd",
+      "sha256_origem": "98bee92a1c8e3828225e6ca43d309b5713dd16606524912edbb8943fa42d84dd"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2002-b5a3764266bf-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2002-b5a3764266bf-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "4968077779318cf30676caeafc709df8c3433a704c48ee5b586157f906d11590",
+      "sha256_origem": "4968077779318cf30676caeafc709df8c3433a704c48ee5b586157f906d11590"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2002-b5a3764266bf-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2002-b5a3764266bf-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8edc5502eb992089226aba0db2634ada92d34aede4b148f9964b6281c4ff094f",
+      "sha256_origem": "8edc5502eb992089226aba0db2634ada92d34aede4b148f9964b6281c4ff094f"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2003-ga-fa70eafd3d10-2203.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2003-ga-fa70eafd3d10-2203.webp",
+      "modo": "copia",
+      "sha256_destino": "154d1445e95ca60d72668bb391bca36c0d395e348af22dfbb63d896e1e86cc93",
+      "sha256_origem": "154d1445e95ca60d72668bb391bca36c0d395e348af22dfbb63d896e1e86cc93"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2003-ga-fa70eafd3d10-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2003-ga-fa70eafd3d10-960.webp",
+      "modo": "copia",
+      "sha256_destino": "857fa746073a925037c001d7d56d9a857e64c926d639963804ba52b38ce2f77c",
+      "sha256_origem": "857fa746073a925037c001d7d56d9a857e64c926d639963804ba52b38ce2f77c"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2007-afe7ac3e92c9-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2007-afe7ac3e92c9-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "0967e5b8762c759bdb5196bbf0b9a7c2b45c867ff9645824bb7044524e44d157",
+      "sha256_origem": "0967e5b8762c759bdb5196bbf0b9a7c2b45c867ff9645824bb7044524e44d157"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2007-afe7ac3e92c9-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2007-afe7ac3e92c9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8ac485f1861b2f00a5bcef9c38f97ae08271e4a000728a98c6b472c1eddb8625",
+      "sha256_origem": "8ac485f1861b2f00a5bcef9c38f97ae08271e4a000728a98c6b472c1eddb8625"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2008-f74a339954a4-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2008-f74a339954a4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3c2113a52eb11a98756ae7efea560e72f990ab9d080e63fd537bd8ecc7151a20",
+      "sha256_origem": "3c2113a52eb11a98756ae7efea560e72f990ab9d080e63fd537bd8ecc7151a20"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f2008-f74a339954a4-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-f2008-f74a339954a4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "310747ee70df2a72ac2a53135e13aceea218fa784d3ce4a4bae84c8c7e61ca2e",
+      "sha256_origem": "310747ee70df2a72ac2a53135e13aceea218fa784d3ce4a4bae84c8c7e61ca2e"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f399-6cdb892a8952-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-f399-6cdb892a8952-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "804b0c1e1bd0cc0f88f594217651672cf6d854d2cfa364541ca996f53c01eee9",
+      "sha256_origem": "804b0c1e1bd0cc0f88f594217651672cf6d854d2cfa364541ca996f53c01eee9"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-f399-6cdb892a8952-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-f399-6cdb892a8952-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bc90c56e7affafc8b22aed13c3d697bb403b9d07620d045b9ab2af1ab2fbb2cd",
+      "sha256_origem": "bc90c56e7affafc8b22aed13c3d697bb403b9d07620d045b9ab2af1ab2fbb2cd"
+    },
+    {
       "caminho": "static/pitwall-archive/ferrari-maranello-731838b2aa71-2400.webp",
       "fonte": "static/pitwall-archive/ferrari-maranello-731838b2aa71-2400.webp",
       "modo": "copia",
@@ -3618,6 +4150,48 @@
       "sha256_origem": "c80f519068037a6764d30e4639b31eb58c8694ad154976ca0200fb6460a376d0"
     },
     {
+      "caminho": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-1788.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-1788.webp",
+      "modo": "copia",
+      "sha256_destino": "8042da05b6f07c7c2a227b23500677604f6ddec5184b97b72167a5aa120b20df",
+      "sha256_origem": "8042da05b6f07c7c2a227b23500677604f6ddec5184b97b72167a5aa120b20df"
+    },
+    {
+      "caminho": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-960.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c2a8c0c9adb142554660f1538baaa9d52bec703de86b4aee05516243417063a2",
+      "sha256_origem": "c2a8c0c9adb142554660f1538baaa9d52bec703de86b4aee05516243417063a2"
+    },
+    {
+      "caminho": "static/pitwall-archive/graham-hill-retrato-ad764d234068-2400.webp",
+      "fonte": "static/pitwall-archive/graham-hill-retrato-ad764d234068-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7b074cb6d95695cbe2aa27ae558eda5f31614f3e45843168954cfab86e6cf7f0",
+      "sha256_origem": "7b074cb6d95695cbe2aa27ae558eda5f31614f3e45843168954cfab86e6cf7f0"
+    },
+    {
+      "caminho": "static/pitwall-archive/graham-hill-retrato-ad764d234068-960.webp",
+      "fonte": "static/pitwall-archive/graham-hill-retrato-ad764d234068-960.webp",
+      "modo": "copia",
+      "sha256_destino": "15847fdeca97e40cc8b15c3325aa92e6363667aec70195f387b4acd75859e878",
+      "sha256_origem": "15847fdeca97e40cc8b15c3325aa92e6363667aec70195f387b4acd75859e878"
+    },
+    {
+      "caminho": "static/pitwall-archive/haas-austin-cae13f5932f9-2400.webp",
+      "fonte": "static/pitwall-archive/haas-austin-cae13f5932f9-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7ebae9de9b898cacc91ac22cf928781ce6b4001a2586de0fb5b40f68dee8bb46",
+      "sha256_origem": "7ebae9de9b898cacc91ac22cf928781ce6b4001a2586de0fb5b40f68dee8bb46"
+    },
+    {
+      "caminho": "static/pitwall-archive/haas-austin-cae13f5932f9-960.webp",
+      "fonte": "static/pitwall-archive/haas-austin-cae13f5932f9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4b2755129918a89773b2047123fbd929df7ce5600b80a77541ad04c60d6e764e",
+      "sha256_origem": "4b2755129918a89773b2047123fbd929df7ce5600b80a77541ad04c60d6e764e"
+    },
+    {
       "caminho": "static/pitwall-archive/hamilton-interlagos-2008-417d8897e6a4-2400.webp",
       "fonte": "static/pitwall-archive/hamilton-interlagos-2008-417d8897e6a4-2400.webp",
       "modo": "copia",
@@ -3632,6 +4206,356 @@
       "sha256_origem": "b9afe05ac8ed6b9b156d0cff4bb07e3c94dc03baba1a0279852588be15154d34"
     },
     {
+      "caminho": "static/pitwall-archive/hamilton-montreal-2007-4ef77236a19f-2400.webp",
+      "fonte": "static/pitwall-archive/hamilton-montreal-2007-4ef77236a19f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a60a75d26425eb476300c1b8ed5ecc2eb387d20995b5283983c51525b2d2f3cf",
+      "sha256_origem": "a60a75d26425eb476300c1b8ed5ecc2eb387d20995b5283983c51525b2d2f3cf"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-montreal-2007-4ef77236a19f-960.webp",
+      "fonte": "static/pitwall-archive/hamilton-montreal-2007-4ef77236a19f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b5cb5de4a9c20ca4fee7db77b9ed0c0f03f5ddc69311284ee0c74446df0f119d",
+      "sha256_origem": "b5cb5de4a9c20ca4fee7db77b9ed0c0f03f5ddc69311284ee0c74446df0f119d"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-zandvoort-1962-eb6e9eef877c-2400.webp",
+      "fonte": "static/pitwall-archive/hill-zandvoort-1962-eb6e9eef877c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1c1bcf4dd52d638a591f80930c6b248897935bc4e4490ff5d1a5bd720966718b",
+      "sha256_origem": "1c1bcf4dd52d638a591f80930c6b248897935bc4e4490ff5d1a5bd720966718b"
+    },
+    {
+      "caminho": "static/pitwall-archive/hill-zandvoort-1962-eb6e9eef877c-960.webp",
+      "fonte": "static/pitwall-archive/hill-zandvoort-1962-eb6e9eef877c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cb646700fd33423f763f16c568eb479953f403b6aa882862203981196c890248",
+      "sha256_origem": "cb646700fd33423f763f16c568eb479953f403b6aa882862203981196c890248"
+    },
+    {
+      "caminho": "static/pitwall-archive/hunt-zandvoort-1975-8e7d42876cd1-2400.webp",
+      "fonte": "static/pitwall-archive/hunt-zandvoort-1975-8e7d42876cd1-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "32448838d16c5877ff0b643473f710a9e0d515785e63fa7205fac76a8eb6d2b3",
+      "sha256_origem": "32448838d16c5877ff0b643473f710a9e0d515785e63fa7205fac76a8eb6d2b3"
+    },
+    {
+      "caminho": "static/pitwall-archive/hunt-zandvoort-1975-8e7d42876cd1-960.webp",
+      "fonte": "static/pitwall-archive/hunt-zandvoort-1975-8e7d42876cd1-960.webp",
+      "modo": "copia",
+      "sha256_destino": "066b1a2567a0af077ad60d37cd1a54466cad7fcd0bb6fe5a66f775bfa4c8632f",
+      "sha256_origem": "066b1a2567a0af077ad60d37cd1a54466cad7fcd0bb6fe5a66f775bfa4c8632f"
+    },
+    {
+      "caminho": "static/pitwall-archive/jack-brabham-retrato-af442f2ccc81-2400.webp",
+      "fonte": "static/pitwall-archive/jack-brabham-retrato-af442f2ccc81-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b3cc88020d354ce2df7578b619e763920c6206b1a9ac45b5acc2d0245e7a8740",
+      "sha256_origem": "b3cc88020d354ce2df7578b619e763920c6206b1a9ac45b5acc2d0245e7a8740"
+    },
+    {
+      "caminho": "static/pitwall-archive/jack-brabham-retrato-af442f2ccc81-960.webp",
+      "fonte": "static/pitwall-archive/jack-brabham-retrato-af442f2ccc81-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c4c7ebd40cdba1b1c07afbb4ce585a922547b1f9f82866fd393a50679c66a48c",
+      "sha256_origem": "c4c7ebd40cdba1b1c07afbb4ce585a922547b1f9f82866fd393a50679c66a48c"
+    },
+    {
+      "caminho": "static/pitwall-archive/jackie-stewart-retrato-6eea440ca957-2400.webp",
+      "fonte": "static/pitwall-archive/jackie-stewart-retrato-6eea440ca957-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ab89c18f024b52b7b68a1237bdd43e379ac614c5d93e819982234931ae798cd4",
+      "sha256_origem": "ab89c18f024b52b7b68a1237bdd43e379ac614c5d93e819982234931ae798cd4"
+    },
+    {
+      "caminho": "static/pitwall-archive/jackie-stewart-retrato-6eea440ca957-960.webp",
+      "fonte": "static/pitwall-archive/jackie-stewart-retrato-6eea440ca957-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d96105cd65295a3806d9b0df91adcae286c479572de4f76b18878c4a1b6f8fda",
+      "sha256_origem": "d96105cd65295a3806d9b0df91adcae286c479572de4f76b18878c4a1b6f8fda"
+    },
+    {
+      "caminho": "static/pitwall-archive/jacques-villeneuve-pista-1f58e421c903-1620.webp",
+      "fonte": "static/pitwall-archive/jacques-villeneuve-pista-1f58e421c903-1620.webp",
+      "modo": "copia",
+      "sha256_destino": "084adea51045a5e5b57ea8f1c50c734d756f2b80cce1d6f071e20cfccbc2b8b2",
+      "sha256_origem": "084adea51045a5e5b57ea8f1c50c734d756f2b80cce1d6f071e20cfccbc2b8b2"
+    },
+    {
+      "caminho": "static/pitwall-archive/jacques-villeneuve-pista-1f58e421c903-960.webp",
+      "fonte": "static/pitwall-archive/jacques-villeneuve-pista-1f58e421c903-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e0e0899d6f5556728124b351b737445155c1b919b15930567cea69ef5e0da173",
+      "sha256_origem": "e0e0899d6f5556728124b351b737445155c1b919b15930567cea69ef5e0da173"
+    },
+    {
+      "caminho": "static/pitwall-archive/james-hunt-retrato-2dbd7e74461b-2048.webp",
+      "fonte": "static/pitwall-archive/james-hunt-retrato-2dbd7e74461b-2048.webp",
+      "modo": "copia",
+      "sha256_destino": "e96c92fb8300a46b7abb49088f8ea59534b49f6b5098dfc3cfa8495d7c015c67",
+      "sha256_origem": "e96c92fb8300a46b7abb49088f8ea59534b49f6b5098dfc3cfa8495d7c015c67"
+    },
+    {
+      "caminho": "static/pitwall-archive/james-hunt-retrato-2dbd7e74461b-960.webp",
+      "fonte": "static/pitwall-archive/james-hunt-retrato-2dbd7e74461b-960.webp",
+      "modo": "copia",
+      "sha256_destino": "955a2be02132a5f293db958d93c2fb7f4c247114ee5758a06b46e7ebc915c149",
+      "sha256_origem": "955a2be02132a5f293db958d93c2fb7f4c247114ee5758a06b46e7ebc915c149"
+    },
+    {
+      "caminho": "static/pitwall-archive/jenson-button-retrato-e78b6f20b234-2400.webp",
+      "fonte": "static/pitwall-archive/jenson-button-retrato-e78b6f20b234-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a3257e57e7996bcab5c5e32207a93fa25156dead8f75db6dbbaf92bc617eda14",
+      "sha256_origem": "a3257e57e7996bcab5c5e32207a93fa25156dead8f75db6dbbaf92bc617eda14"
+    },
+    {
+      "caminho": "static/pitwall-archive/jenson-button-retrato-e78b6f20b234-960.webp",
+      "fonte": "static/pitwall-archive/jenson-button-retrato-e78b6f20b234-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3a52a08058b34eeba07b056a25a5829479be83903ed67e2c68235f52bc1ee52f",
+      "sha256_origem": "3a52a08058b34eeba07b056a25a5829479be83903ed67e2c68235f52bc1ee52f"
+    },
+    {
+      "caminho": "static/pitwall-archive/jim-clark-retrato-9db75110ea26-2400.webp",
+      "fonte": "static/pitwall-archive/jim-clark-retrato-9db75110ea26-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "bc8b103698fd113b3d743615ed93c548d205eaa00ffb57abe3313fa631ca6c3d",
+      "sha256_origem": "bc8b103698fd113b3d743615ed93c548d205eaa00ffb57abe3313fa631ca6c3d"
+    },
+    {
+      "caminho": "static/pitwall-archive/jim-clark-retrato-9db75110ea26-960.webp",
+      "fonte": "static/pitwall-archive/jim-clark-retrato-9db75110ea26-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e9971c97befa713b442ca8edebc06471729e816b039326e2072445bf78b19574",
+      "sha256_origem": "e9971c97befa713b442ca8edebc06471729e816b039326e2072445bf78b19574"
+    },
+    {
+      "caminho": "static/pitwall-archive/jochen-rindt-retrato-b7a4c5109b48-1890.webp",
+      "fonte": "static/pitwall-archive/jochen-rindt-retrato-b7a4c5109b48-1890.webp",
+      "modo": "copia",
+      "sha256_destino": "726ccfbbdc6757b6df26417e44d15ab5aefbda10519d5b985863da129699cc0b",
+      "sha256_origem": "726ccfbbdc6757b6df26417e44d15ab5aefbda10519d5b985863da129699cc0b"
+    },
+    {
+      "caminho": "static/pitwall-archive/jochen-rindt-retrato-b7a4c5109b48-960.webp",
+      "fonte": "static/pitwall-archive/jochen-rindt-retrato-b7a4c5109b48-960.webp",
+      "modo": "copia",
+      "sha256_destino": "79430f93ad0a3da16f8a3526db331ff8d2dd273fabfcd6f26e4ba66a73f9032f",
+      "sha256_origem": "79430f93ad0a3da16f8a3526db331ff8d2dd273fabfcd6f26e4ba66a73f9032f"
+    },
+    {
+      "caminho": "static/pitwall-archive/jody-scheckter-retrato-b6ba8c58838f-1970.webp",
+      "fonte": "static/pitwall-archive/jody-scheckter-retrato-b6ba8c58838f-1970.webp",
+      "modo": "copia",
+      "sha256_destino": "78bc286e9bd25354fab07d158e71813d943443ee37a3c5b2e7416bed49c458b7",
+      "sha256_origem": "78bc286e9bd25354fab07d158e71813d943443ee37a3c5b2e7416bed49c458b7"
+    },
+    {
+      "caminho": "static/pitwall-archive/jody-scheckter-retrato-b6ba8c58838f-960.webp",
+      "fonte": "static/pitwall-archive/jody-scheckter-retrato-b6ba8c58838f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "16d819f5448ef713827c2d88bb7da01dc6f668bfec4adb8e0e50d966cb47fa45",
+      "sha256_origem": "16d819f5448ef713827c2d88bb7da01dc6f668bfec4adb8e0e50d966cb47fa45"
+    },
+    {
+      "caminho": "static/pitwall-archive/john-surtees-retrato-75bac402c4c4-2400.webp",
+      "fonte": "static/pitwall-archive/john-surtees-retrato-75bac402c4c4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "36e7e8ac153dd838c65b9a66ef891e1a93b2c7777de7988032eaa445e3b2a7b2",
+      "sha256_origem": "36e7e8ac153dd838c65b9a66ef891e1a93b2c7777de7988032eaa445e3b2a7b2"
+    },
+    {
+      "caminho": "static/pitwall-archive/john-surtees-retrato-75bac402c4c4-960.webp",
+      "fonte": "static/pitwall-archive/john-surtees-retrato-75bac402c4c4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "97d10beb98e7b275f54887836e812f5dd4d6da5b8e9a22fe60b85f03c5afff5a",
+      "sha256_origem": "97d10beb98e7b275f54887836e812f5dd4d6da5b8e9a22fe60b85f03c5afff5a"
+    },
+    {
+      "caminho": "static/pitwall-archive/keke-rosberg-retrato-9551af59e24f-2400.webp",
+      "fonte": "static/pitwall-archive/keke-rosberg-retrato-9551af59e24f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "50fd48a60bfe276a98830be85d3eeb38b0a37677894e8130be4831588ddf21b2",
+      "sha256_origem": "50fd48a60bfe276a98830be85d3eeb38b0a37677894e8130be4831588ddf21b2"
+    },
+    {
+      "caminho": "static/pitwall-archive/keke-rosberg-retrato-9551af59e24f-960.webp",
+      "fonte": "static/pitwall-archive/keke-rosberg-retrato-9551af59e24f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a9143508c33855b8f72999eb930420583487392eeae260363a9723b6a4834410",
+      "sha256_origem": "a9143508c33855b8f72999eb930420583487392eeae260363a9723b6a4834410"
+    },
+    {
+      "caminho": "static/pitwall-archive/kimi-raikkonen-retrato-54c1738cbc52-2400.webp",
+      "fonte": "static/pitwall-archive/kimi-raikkonen-retrato-54c1738cbc52-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "171d881fd3518bd38b96dbce5e74466fde6d3e063fcbbb1da535e2aa35ede345",
+      "sha256_origem": "171d881fd3518bd38b96dbce5e74466fde6d3e063fcbbb1da535e2aa35ede345"
+    },
+    {
+      "caminho": "static/pitwall-archive/kimi-raikkonen-retrato-54c1738cbc52-960.webp",
+      "fonte": "static/pitwall-archive/kimi-raikkonen-retrato-54c1738cbc52-960.webp",
+      "modo": "copia",
+      "sha256_destino": "deaf70be3f82ea342fc9fe9608872e52273689cff67b8da6109f18eb8843e69d",
+      "sha256_origem": "deaf70be3f82ea342fc9fe9608872e52273689cff67b8da6109f18eb8843e69d"
+    },
+    {
+      "caminho": "static/pitwall-archive/lando-norris-retrato-8c754eeb56cb-2400.webp",
+      "fonte": "static/pitwall-archive/lando-norris-retrato-8c754eeb56cb-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "620a7fc67b30284ba0a25057658ed878378306cb2228222d2c481b6363dfa69f",
+      "sha256_origem": "620a7fc67b30284ba0a25057658ed878378306cb2228222d2c481b6363dfa69f"
+    },
+    {
+      "caminho": "static/pitwall-archive/lando-norris-retrato-8c754eeb56cb-960.webp",
+      "fonte": "static/pitwall-archive/lando-norris-retrato-8c754eeb56cb-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8ff7840e1d6977e0b8462e90f574596bd345cbc295b2b04ca49c2d52628fc20e",
+      "sha256_origem": "8ff7840e1d6977e0b8462e90f574596bd345cbc295b2b04ca49c2d52628fc20e"
+    },
+    {
+      "caminho": "static/pitwall-archive/las-vegas-2024-e2219e21d4cd-2400.webp",
+      "fonte": "static/pitwall-archive/las-vegas-2024-e2219e21d4cd-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a244d0ad9f456df847c1479cb78987959e0dade8c85aaa38ae5117c334890474",
+      "sha256_origem": "a244d0ad9f456df847c1479cb78987959e0dade8c85aaa38ae5117c334890474"
+    },
+    {
+      "caminho": "static/pitwall-archive/las-vegas-2024-e2219e21d4cd-960.webp",
+      "fonte": "static/pitwall-archive/las-vegas-2024-e2219e21d4cd-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9744be866200336983159b9b7b5276bff50e357ce999a542fa77561961f2e10b",
+      "sha256_origem": "9744be866200336983159b9b7b5276bff50e357ce999a542fa77561961f2e10b"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-25-61a726ea33a9-2400.webp",
+      "fonte": "static/pitwall-archive/lotus-25-61a726ea33a9-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "84fb5022bbdeb3c19a0eac194ccdc83adced25bd2f8419252646c5a720d56b6a",
+      "sha256_origem": "84fb5022bbdeb3c19a0eac194ccdc83adced25bd2f8419252646c5a720d56b6a"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-25-61a726ea33a9-960.webp",
+      "fonte": "static/pitwall-archive/lotus-25-61a726ea33a9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "84d4b521ba644edce24194e39c98c82581dbc1152450d1d7623d5d3329c0cecb",
+      "sha256_origem": "84d4b521ba644edce24194e39c98c82581dbc1152450d1d7623d5d3329c0cecb"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-33-7f01e98228cf-2048.webp",
+      "fonte": "static/pitwall-archive/lotus-33-7f01e98228cf-2048.webp",
+      "modo": "copia",
+      "sha256_destino": "1357dd1325b40332f952ad81326d54362e04431e7aa7b26dde62861741f5664e",
+      "sha256_origem": "1357dd1325b40332f952ad81326d54362e04431e7aa7b26dde62861741f5664e"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-33-7f01e98228cf-960.webp",
+      "fonte": "static/pitwall-archive/lotus-33-7f01e98228cf-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9865cc9d292ffbf7cdb940668f629319c436d6026fabc2cd77a77315cc3460b3",
+      "sha256_origem": "9865cc9d292ffbf7cdb940668f629319c436d6026fabc2cd77a77315cc3460b3"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-49b-a8c31fdb1618-2400.webp",
+      "fonte": "static/pitwall-archive/lotus-49b-a8c31fdb1618-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9ee2b5a536e53c4b60c723e2fc0a24ab62d80bab8f68b6d3135c65a70f7273e7",
+      "sha256_origem": "9ee2b5a536e53c4b60c723e2fc0a24ab62d80bab8f68b6d3135c65a70f7273e7"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-49b-a8c31fdb1618-960.webp",
+      "fonte": "static/pitwall-archive/lotus-49b-a8c31fdb1618-960.webp",
+      "modo": "copia",
+      "sha256_destino": "2dbdee3458265f32d36227d96d96d9e06886229861d3517ab112dffe23999a9e",
+      "sha256_origem": "2dbdee3458265f32d36227d96d96d9e06886229861d3517ab112dffe23999a9e"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-72b-54b5140418c3-2400.webp",
+      "fonte": "static/pitwall-archive/lotus-72b-54b5140418c3-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e1209045b8e9caceb1933487df6a427847ea2d1c8557b10979c197ce97efb89f",
+      "sha256_origem": "e1209045b8e9caceb1933487df6a427847ea2d1c8557b10979c197ce97efb89f"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-72b-54b5140418c3-960.webp",
+      "fonte": "static/pitwall-archive/lotus-72b-54b5140418c3-960.webp",
+      "modo": "copia",
+      "sha256_destino": "ea6f3e3b783b888f283e4f803e8a3b2b3a337a2498abef22a55aa048db5a8318",
+      "sha256_origem": "ea6f3e3b783b888f283e4f803e8a3b2b3a337a2498abef22a55aa048db5a8318"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-72c-3ce2ea33ffa0-2400.webp",
+      "fonte": "static/pitwall-archive/lotus-72c-3ce2ea33ffa0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "53ae577fffcc01e0d7819796d0265c4ea6075e7e69c43f9b062e8d530a8400ab",
+      "sha256_origem": "53ae577fffcc01e0d7819796d0265c4ea6075e7e69c43f9b062e8d530a8400ab"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-72c-3ce2ea33ffa0-960.webp",
+      "fonte": "static/pitwall-archive/lotus-72c-3ce2ea33ffa0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3a0f765e5033f9eaff9300a336ea7347348556db59f872395c05cf15f7f8c2b6",
+      "sha256_origem": "3a0f765e5033f9eaff9300a336ea7347348556db59f872395c05cf15f7f8c2b6"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-72d-55ad6b835429-2400.webp",
+      "fonte": "static/pitwall-archive/lotus-72d-55ad6b835429-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7616214b0b3eee0ec2709bf4e911a726c2cabcb72f188db85bc5b4aa280a299e",
+      "sha256_origem": "7616214b0b3eee0ec2709bf4e911a726c2cabcb72f188db85bc5b4aa280a299e"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-72d-55ad6b835429-960.webp",
+      "fonte": "static/pitwall-archive/lotus-72d-55ad6b835429-960.webp",
+      "modo": "copia",
+      "sha256_destino": "13cb74b09bcea27257abf71f4a6b8af2668b35d177607574f3c5013cf49e48a6",
+      "sha256_origem": "13cb74b09bcea27257abf71f4a6b8af2668b35d177607574f3c5013cf49e48a6"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-72e-c5ba8c306525-2293.webp",
+      "fonte": "static/pitwall-archive/lotus-72e-c5ba8c306525-2293.webp",
+      "modo": "copia",
+      "sha256_destino": "0eec279c69459c8e6fb15dc1b5ca28739be6de8e6221e71c84ed25c7845970d9",
+      "sha256_origem": "0eec279c69459c8e6fb15dc1b5ca28739be6de8e6221e71c84ed25c7845970d9"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-72e-c5ba8c306525-960.webp",
+      "fonte": "static/pitwall-archive/lotus-72e-c5ba8c306525-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5380e536776fc5db12ff913bfa30bcf828f6b5a87c8d1f7034959d1744cae343",
+      "sha256_origem": "5380e536776fc5db12ff913bfa30bcf828f6b5a87c8d1f7034959d1744cae343"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-79-4d3d53fcc3a0-2400.webp",
+      "fonte": "static/pitwall-archive/lotus-79-4d3d53fcc3a0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8264c023f41e85ea0859ca0f71e646eea0aaf160fac6378fb24c9da876e1f149",
+      "sha256_origem": "8264c023f41e85ea0859ca0f71e646eea0aaf160fac6378fb24c9da876e1f149"
+    },
+    {
+      "caminho": "static/pitwall-archive/lotus-79-4d3d53fcc3a0-960.webp",
+      "fonte": "static/pitwall-archive/lotus-79-4d3d53fcc3a0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c6e7749bb3a6736068dce89c7e46ec60a1f96a598bc2cbb56e131cbbc6b0c6c1",
+      "sha256_origem": "c6e7749bb3a6736068dce89c7e46ec60a1f96a598bc2cbb56e131cbbc6b0c6c1"
+    },
+    {
+      "caminho": "static/pitwall-archive/mario-andretti-retrato-0fd227f5a67a-2391.webp",
+      "fonte": "static/pitwall-archive/mario-andretti-retrato-0fd227f5a67a-2391.webp",
+      "modo": "copia",
+      "sha256_destino": "52b2a28e02189f7a7f85cc06ba7eb8cbb999add6fd925896637d4459e04ecfe0",
+      "sha256_origem": "52b2a28e02189f7a7f85cc06ba7eb8cbb999add6fd925896637d4459e04ecfe0"
+    },
+    {
+      "caminho": "static/pitwall-archive/mario-andretti-retrato-0fd227f5a67a-960.webp",
+      "fonte": "static/pitwall-archive/mario-andretti-retrato-0fd227f5a67a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b6e39fd5886fe7444979378a281298bf0e127acb1d5375f5caaa40620c6c8189",
+      "sha256_origem": "b6e39fd5886fe7444979378a281298bf0e127acb1d5375f5caaa40620c6c8189"
+    },
+    {
       "caminho": "static/pitwall-archive/massa-interlagos-2008-2107c6b0f3a0-2400.webp",
       "fonte": "static/pitwall-archive/massa-interlagos-2008-2107c6b0f3a0-2400.webp",
       "modo": "copia",
@@ -3644,6 +4568,34 @@
       "modo": "copia",
       "sha256_destino": "80e210242883b9ebe4ca23ea90bbe0afd759d4bbaa8266838d3996588bcfad41",
       "sha256_origem": "80e210242883b9ebe4ca23ea90bbe0afd759d4bbaa8266838d3996588bcfad41"
+    },
+    {
+      "caminho": "static/pitwall-archive/matra-ms80-edd29c57c25c-2400.webp",
+      "fonte": "static/pitwall-archive/matra-ms80-edd29c57c25c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "14be351a1b8937b4fbbcd1f42fb31cb2a9c27ee4972160add5da5049da6c9565",
+      "sha256_origem": "14be351a1b8937b4fbbcd1f42fb31cb2a9c27ee4972160add5da5049da6c9565"
+    },
+    {
+      "caminho": "static/pitwall-archive/matra-ms80-edd29c57c25c-960.webp",
+      "fonte": "static/pitwall-archive/matra-ms80-edd29c57c25c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d63b93ad37900a48b3e4f73804ffeb7370abb25a33ce0b89e847c66c238c9bfe",
+      "sha256_origem": "d63b93ad37900a48b3e4f73804ffeb7370abb25a33ce0b89e847c66c238c9bfe"
+    },
+    {
+      "caminho": "static/pitwall-archive/max-verstappen-retrato-c2ad68b9aeab-2400.webp",
+      "fonte": "static/pitwall-archive/max-verstappen-retrato-c2ad68b9aeab-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6520ebe18baffe1ceb04fa8f2460fbaf200c4c7eaf6fd65ed7f87d3d10e5b796",
+      "sha256_origem": "6520ebe18baffe1ceb04fa8f2460fbaf200c4c7eaf6fd65ed7f87d3d10e5b796"
+    },
+    {
+      "caminho": "static/pitwall-archive/max-verstappen-retrato-c2ad68b9aeab-960.webp",
+      "fonte": "static/pitwall-archive/max-verstappen-retrato-c2ad68b9aeab-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a9256e803f145537817dbdd25e7f30cf00de1c78ce66781994dd24fa4e98cea8",
+      "sha256_origem": "a9256e803f145537817dbdd25e7f30cf00de1c78ce66781994dd24fa4e98cea8"
     },
     {
       "caminho": "static/pitwall-archive/mcl38-suzuka-4a4042c68643-2400.webp",
@@ -3688,6 +4640,202 @@
       "sha256_origem": "b2aadc905791b4d29c9f5ec7bcc85217c8f4f16cdcf404aa34a0761f46cf1d00"
     },
     {
+      "caminho": "static/pitwall-archive/mclaren-m23-1974-3683849ff717-2400.webp",
+      "fonte": "static/pitwall-archive/mclaren-m23-1974-3683849ff717-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b533e633efc9d7929ac1330212662bd8a9a6ec89396330e121279cec8551cc15",
+      "sha256_origem": "b533e633efc9d7929ac1330212662bd8a9a6ec89396330e121279cec8551cc15"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-m23-1974-3683849ff717-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-m23-1974-3683849ff717-960.webp",
+      "modo": "copia",
+      "sha256_destino": "515997b1b326417b90c927536aecc84e2e83e9a2122f6555ab28b8f1489ddadb",
+      "sha256_origem": "515997b1b326417b90c927536aecc84e2e83e9a2122f6555ab28b8f1489ddadb"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-m23b-a087033e4c31-2400.webp",
+      "fonte": "static/pitwall-archive/mclaren-m23b-a087033e4c31-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2b75a38a938c796c802fa47b9b564e0d386bb7d8c56e7026100b72495c39bf9e",
+      "sha256_origem": "2b75a38a938c796c802fa47b9b564e0d386bb7d8c56e7026100b72495c39bf9e"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-m23b-a087033e4c31-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-m23b-a087033e4c31-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9b67c92e11c0cd25ebf5af9dcba31ae9d05613e3e057b2533508c793bc1f3d10",
+      "sha256_origem": "9b67c92e11c0cd25ebf5af9dcba31ae9d05613e3e057b2533508c793bc1f3d10"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-m23d-45be52395aed-2144.webp",
+      "fonte": "static/pitwall-archive/mclaren-m23d-45be52395aed-2144.webp",
+      "modo": "copia",
+      "sha256_destino": "14fc807404622ec04bef880450af1a8e330c0b8876056a67e6be9d52a64caf3f",
+      "sha256_origem": "14fc807404622ec04bef880450af1a8e330c0b8876056a67e6be9d52a64caf3f"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-m23d-45be52395aed-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-m23d-45be52395aed-960.webp",
+      "modo": "copia",
+      "sha256_destino": "da150dea11113bf3d4199d5b8661caa0bea430516265d6e6dc8e1123480de6b0",
+      "sha256_origem": "da150dea11113bf3d4199d5b8661caa0bea430516265d6e6dc8e1123480de6b0"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-mp4-13-49f8a3dceea3-2400.webp",
+      "fonte": "static/pitwall-archive/mclaren-mp4-13-49f8a3dceea3-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7ac04fa5d0c36deb7b85970df5c614b274de72933c33f35842d2a30cb311771c",
+      "sha256_origem": "7ac04fa5d0c36deb7b85970df5c614b274de72933c33f35842d2a30cb311771c"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-mp4-13-49f8a3dceea3-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-mp4-13-49f8a3dceea3-960.webp",
+      "modo": "copia",
+      "sha256_destino": "93ee858c34386d78e8ba67dad407b931b9b0622ffed76cad9973171903301972",
+      "sha256_origem": "93ee858c34386d78e8ba67dad407b931b9b0622ffed76cad9973171903301972"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-mp4-14-11a1c8979a86-2400.webp",
+      "fonte": "static/pitwall-archive/mclaren-mp4-14-11a1c8979a86-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d0d66bd62a9735e336fe6f55ff8f38a6bdedabf21d0b078936ab4889f732645c",
+      "sha256_origem": "d0d66bd62a9735e336fe6f55ff8f38a6bdedabf21d0b078936ab4889f732645c"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-mp4-14-11a1c8979a86-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-mp4-14-11a1c8979a86-960.webp",
+      "modo": "copia",
+      "sha256_destino": "50a36e455b1d3576b5ceffac194c035cbad8fba56f1fedccc8c4d91a18164619",
+      "sha256_origem": "50a36e455b1d3576b5ceffac194c035cbad8fba56f1fedccc8c4d91a18164619"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-mp4-2-ccb9fd75856f-2400.webp",
+      "fonte": "static/pitwall-archive/mclaren-mp4-2-ccb9fd75856f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a4c3e00674559216ae2f183d1bcaa8f54b6d2523e3306c09fca087afa3814dca",
+      "sha256_origem": "a4c3e00674559216ae2f183d1bcaa8f54b6d2523e3306c09fca087afa3814dca"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-mp4-2-ccb9fd75856f-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-mp4-2-ccb9fd75856f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cc6209dee4474b9ce2a5155dd43cbbbf674fb5d8076a30f5418b4a3298476430",
+      "sha256_origem": "cc6209dee4474b9ce2a5155dd43cbbbf674fb5d8076a30f5418b4a3298476430"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-mp4-23-febcc7582ffe-2400.webp",
+      "fonte": "static/pitwall-archive/mclaren-mp4-23-febcc7582ffe-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "a23c2d4ba2912ce115034c615a076ee1e5116093709fcefbd306a312b07a0bf3",
+      "sha256_origem": "a23c2d4ba2912ce115034c615a076ee1e5116093709fcefbd306a312b07a0bf3"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-mp4-23-febcc7582ffe-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-mp4-23-febcc7582ffe-960.webp",
+      "modo": "copia",
+      "sha256_destino": "99cff628fa085a5063106edbfd95e8d48265f3aeaaacb0269c5f2da366fcda7d",
+      "sha256_origem": "99cff628fa085a5063106edbfd95e8d48265f3aeaaacb0269c5f2da366fcda7d"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-mp4-2c-9cc18520e0d1-2400.webp",
+      "fonte": "static/pitwall-archive/mclaren-mp4-2c-9cc18520e0d1-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1e49c561136fc592074203364e481cd9ddaa292f00a98be1cf0d1093f51463af",
+      "sha256_origem": "1e49c561136fc592074203364e481cd9ddaa292f00a98be1cf0d1093f51463af"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-mp4-2c-9cc18520e0d1-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-mp4-2c-9cc18520e0d1-960.webp",
+      "modo": "copia",
+      "sha256_destino": "96be1a2e2ab76bfe0d9834406e913144b425099e43b21729eacf175ab536cfc0",
+      "sha256_origem": "96be1a2e2ab76bfe0d9834406e913144b425099e43b21729eacf175ab536cfc0"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w05-cf3235c646e9-1920.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w05-cf3235c646e9-1920.webp",
+      "modo": "copia",
+      "sha256_destino": "cbce2c68cec17f8e0d43171f13781915eba141f6b5c580422351bfa6e1b82529",
+      "sha256_origem": "cbce2c68cec17f8e0d43171f13781915eba141f6b5c580422351bfa6e1b82529"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w05-cf3235c646e9-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w05-cf3235c646e9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "53a8939be1aeccaf62955665686df3323cb7f8559d9a9b68a31735f913162773",
+      "sha256_origem": "53a8939be1aeccaf62955665686df3323cb7f8559d9a9b68a31735f913162773"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w06-8fcef49eacc9-2400.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w06-8fcef49eacc9-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "44d5ffde0fc38bab1744505bb5c78344f3c7e556199dc921a27b5af63c39b38a",
+      "sha256_origem": "44d5ffde0fc38bab1744505bb5c78344f3c7e556199dc921a27b5af63c39b38a"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w06-8fcef49eacc9-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w06-8fcef49eacc9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4ac192fa5f7f53824d55ff58bc49b96dfcb415694095c1f4418273b4d44b7392",
+      "sha256_origem": "4ac192fa5f7f53824d55ff58bc49b96dfcb415694095c1f4418273b4d44b7392"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w07-cd17574943a5-1600.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w07-cd17574943a5-1600.webp",
+      "modo": "copia",
+      "sha256_destino": "30b0949fdd865c58c1a88abf344fde86f5a2e66d06736f57b79f6a3411537a85",
+      "sha256_origem": "30b0949fdd865c58c1a88abf344fde86f5a2e66d06736f57b79f6a3411537a85"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w07-cd17574943a5-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w07-cd17574943a5-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e963981c49ce2bebaa0635e5a71567302c009b8e946dfb2fdd957b48a1dbb915",
+      "sha256_origem": "e963981c49ce2bebaa0635e5a71567302c009b8e946dfb2fdd957b48a1dbb915"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w08-08fcb22953f8-2400.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w08-08fcb22953f8-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "48b1502decdc45dc0d2083cf229b4e80672fd828ef127a726803c7c3b34f1638",
+      "sha256_origem": "48b1502decdc45dc0d2083cf229b4e80672fd828ef127a726803c7c3b34f1638"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w08-08fcb22953f8-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w08-08fcb22953f8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c0e46d93234f0861af0a4a55648e1b8b2b263cc86eb4e6ed6dcd9786a0d25287",
+      "sha256_origem": "c0e46d93234f0861af0a4a55648e1b8b2b263cc86eb4e6ed6dcd9786a0d25287"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w09-2b9824cde76a-2400.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w09-2b9824cde76a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6bce5848b3a45a32e077b803275dd8c7c56941a849a4e704948aea0ea2c52869",
+      "sha256_origem": "6bce5848b3a45a32e077b803275dd8c7c56941a849a4e704948aea0ea2c52869"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w09-2b9824cde76a-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w09-2b9824cde76a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "7bbb727c358c1d7994c5b9c9d058bffbb89e2ea2c23e5a642f70c702a502bb28",
+      "sha256_origem": "7bbb727c358c1d7994c5b9c9d058bffbb89e2ea2c23e5a642f70c702a502bb28"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w12-ec46bdfe4e77-2400.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w12-ec46bdfe4e77-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d343477f70bcc254a027e960beabe3dfd825a98a94bdb5cf5b76494c12487cca",
+      "sha256_origem": "d343477f70bcc254a027e960beabe3dfd825a98a94bdb5cf5b76494c12487cca"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-f1-w12-ec46bdfe4e77-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-f1-w12-ec46bdfe4e77-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6590db516958de01a1c9cd2be9903d2d449999bc2c9736b70e1a3df0739458bc",
+      "sha256_origem": "6590db516958de01a1c9cd2be9903d2d449999bc2c9736b70e1a3df0739458bc"
+    },
+    {
       "caminho": "static/pitwall-archive/mercedes-w10-43935052d55b-2400.webp",
       "fonte": "static/pitwall-archive/mercedes-w10-43935052d55b-2400.webp",
       "modo": "copia",
@@ -3714,6 +4862,132 @@
       "modo": "copia",
       "sha256_destino": "78c46a861a21d3127a1b35426af2952d93e766f8699cc80a8cef5f1662e15fdd",
       "sha256_origem": "78c46a861a21d3127a1b35426af2952d93e766f8699cc80a8cef5f1662e15fdd"
+    },
+    {
+      "caminho": "static/pitwall-archive/michael-schumacher-foto-9a0deff45011-2046.webp",
+      "fonte": "static/pitwall-archive/michael-schumacher-foto-9a0deff45011-2046.webp",
+      "modo": "copia",
+      "sha256_destino": "ede2ba8ab89714103a456540b5be99cc704115cdd30bf31e54d60e05278696ab",
+      "sha256_origem": "ede2ba8ab89714103a456540b5be99cc704115cdd30bf31e54d60e05278696ab"
+    },
+    {
+      "caminho": "static/pitwall-archive/michael-schumacher-foto-9a0deff45011-960.webp",
+      "fonte": "static/pitwall-archive/michael-schumacher-foto-9a0deff45011-960.webp",
+      "modo": "copia",
+      "sha256_destino": "dc0adeb31429f3e003e465861f05624f308fb65bbbc95f304e80de54d7a308b0",
+      "sha256_origem": "dc0adeb31429f3e003e465861f05624f308fb65bbbc95f304e80de54d7a308b0"
+    },
+    {
+      "caminho": "static/pitwall-archive/mika-hakkinen-retrato-fd571902537f-2400.webp",
+      "fonte": "static/pitwall-archive/mika-hakkinen-retrato-fd571902537f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d69ab1f36f44cf456947986fcbb96a49c92a6e4e0f6c080f3fe6c4c6a9a7990e",
+      "sha256_origem": "d69ab1f36f44cf456947986fcbb96a49c92a6e4e0f6c080f3fe6c4c6a9a7990e"
+    },
+    {
+      "caminho": "static/pitwall-archive/mika-hakkinen-retrato-fd571902537f-960.webp",
+      "fonte": "static/pitwall-archive/mika-hakkinen-retrato-fd571902537f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1ea26ea0dc7709ec72d2cfaf32093773ddcce57d39257c2ec0347b06976c95ec",
+      "sha256_origem": "1ea26ea0dc7709ec72d2cfaf32093773ddcce57d39257c2ec0347b06976c95ec"
+    },
+    {
+      "caminho": "static/pitwall-archive/mike-hawthorn-pista-e74947b1a71e-1679.webp",
+      "fonte": "static/pitwall-archive/mike-hawthorn-pista-e74947b1a71e-1679.webp",
+      "modo": "copia",
+      "sha256_destino": "8cbb03cbf476c0c593c387b704c4152d0e321e84088e7398b03e570d98662b2e",
+      "sha256_origem": "8cbb03cbf476c0c593c387b704c4152d0e321e84088e7398b03e570d98662b2e"
+    },
+    {
+      "caminho": "static/pitwall-archive/mike-hawthorn-pista-e74947b1a71e-960.webp",
+      "fonte": "static/pitwall-archive/mike-hawthorn-pista-e74947b1a71e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "45baccc1d59815430441cd0a3f1c68592f636842546d34b0c0b709617c58c826",
+      "sha256_origem": "45baccc1d59815430441cd0a3f1c68592f636842546d34b0c0b709617c58c826"
+    },
+    {
+      "caminho": "static/pitwall-archive/nelson-piquet-foto-4f1eecf379b2-1910.webp",
+      "fonte": "static/pitwall-archive/nelson-piquet-foto-4f1eecf379b2-1910.webp",
+      "modo": "copia",
+      "sha256_destino": "e3eae38bb4d68c1890f37f0e18492035626858fe7266a99a898c10972429221b",
+      "sha256_origem": "e3eae38bb4d68c1890f37f0e18492035626858fe7266a99a898c10972429221b"
+    },
+    {
+      "caminho": "static/pitwall-archive/nelson-piquet-foto-4f1eecf379b2-960.webp",
+      "fonte": "static/pitwall-archive/nelson-piquet-foto-4f1eecf379b2-960.webp",
+      "modo": "copia",
+      "sha256_destino": "0f4e04d62eb9d3acdacf404a907a2ba13f3d9ac7cb6f5c9e99768a1f56dbe10b",
+      "sha256_origem": "0f4e04d62eb9d3acdacf404a907a2ba13f3d9ac7cb6f5c9e99768a1f56dbe10b"
+    },
+    {
+      "caminho": "static/pitwall-archive/nico-rosberg-retrato-3ec28c2629bd-2400.webp",
+      "fonte": "static/pitwall-archive/nico-rosberg-retrato-3ec28c2629bd-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "35f04d9297f1d4d2387c86ab01ce3c4b3ba6fb9f395af2e4a397ce44af3a4800",
+      "sha256_origem": "35f04d9297f1d4d2387c86ab01ce3c4b3ba6fb9f395af2e4a397ce44af3a4800"
+    },
+    {
+      "caminho": "static/pitwall-archive/nico-rosberg-retrato-3ec28c2629bd-960.webp",
+      "fonte": "static/pitwall-archive/nico-rosberg-retrato-3ec28c2629bd-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a14520bb03e9bb4a1c2c3828388400a12c2d57eb873b950d35ca18aa4d64c292",
+      "sha256_origem": "a14520bb03e9bb4a1c2c3828388400a12c2d57eb873b950d35ca18aa4d64c292"
+    },
+    {
+      "caminho": "static/pitwall-archive/nigel-mansell-retrato-65cab341e197-2400.webp",
+      "fonte": "static/pitwall-archive/nigel-mansell-retrato-65cab341e197-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "325aa74771ea3110a8b06e1bc9afbafa3981a3dc5a273459f3042e350c9d4cce",
+      "sha256_origem": "325aa74771ea3110a8b06e1bc9afbafa3981a3dc5a273459f3042e350c9d4cce"
+    },
+    {
+      "caminho": "static/pitwall-archive/nigel-mansell-retrato-65cab341e197-960.webp",
+      "fonte": "static/pitwall-archive/nigel-mansell-retrato-65cab341e197-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d683679bd86dcc37d9df9837b8937f3bfea57f0671430a76dda1194ada258c95",
+      "sha256_origem": "d683679bd86dcc37d9df9837b8937f3bfea57f0671430a76dda1194ada258c95"
+    },
+    {
+      "caminho": "static/pitwall-archive/niki-lauda-retrato-2c57a98bf7a0-2400.webp",
+      "fonte": "static/pitwall-archive/niki-lauda-retrato-2c57a98bf7a0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6d4a3812abd9adf248c169e1e13006695d2653bf354d0b1cdc6bad73e19336e2",
+      "sha256_origem": "6d4a3812abd9adf248c169e1e13006695d2653bf354d0b1cdc6bad73e19336e2"
+    },
+    {
+      "caminho": "static/pitwall-archive/niki-lauda-retrato-2c57a98bf7a0-960.webp",
+      "fonte": "static/pitwall-archive/niki-lauda-retrato-2c57a98bf7a0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "332fbd309027f49ac2fbd662fd2412cb403165ae65b7a3d39d45198e6b0d1b3a",
+      "sha256_origem": "332fbd309027f49ac2fbd662fd2412cb403165ae65b7a3d39d45198e6b0d1b3a"
+    },
+    {
+      "caminho": "static/pitwall-archive/nino-farina-foto-4b379b7decf7-2000.webp",
+      "fonte": "static/pitwall-archive/nino-farina-foto-4b379b7decf7-2000.webp",
+      "modo": "copia",
+      "sha256_destino": "67cbf730bd0e1e2e7b0808c8de6706b4f6060fe471f5a8ce567d4b093aff5f05",
+      "sha256_origem": "67cbf730bd0e1e2e7b0808c8de6706b4f6060fe471f5a8ce567d4b093aff5f05"
+    },
+    {
+      "caminho": "static/pitwall-archive/nino-farina-foto-4b379b7decf7-960.webp",
+      "fonte": "static/pitwall-archive/nino-farina-foto-4b379b7decf7-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1caecd855fecc6500c5c7cf624f0e860542409b30f5a5c3c59f290d057a33cad",
+      "sha256_origem": "1caecd855fecc6500c5c7cf624f0e860542409b30f5a5c3c59f290d057a33cad"
+    },
+    {
+      "caminho": "static/pitwall-archive/phil-hill-pista-2a489fd88775-2400.webp",
+      "fonte": "static/pitwall-archive/phil-hill-pista-2a489fd88775-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "662e30b7bdc950cc9c728a6e4abddd6bc839b44ee383327380023a5999ceb602",
+      "sha256_origem": "662e30b7bdc950cc9c728a6e4abddd6bc839b44ee383327380023a5999ceb602"
+    },
+    {
+      "caminho": "static/pitwall-archive/phil-hill-pista-2a489fd88775-960.webp",
+      "fonte": "static/pitwall-archive/phil-hill-pista-2a489fd88775-960.webp",
+      "modo": "copia",
+      "sha256_destino": "afb531faa899b5cf0e6cdc0c53e14f0011c71a9e3c2045c7826fb1306513feb2",
+      "sha256_origem": "afb531faa899b5cf0e6cdc0c53e14f0011c71a9e3c2045c7826fb1306513feb2"
     },
     {
       "caminho": "static/pitwall-archive/prost-brands-hatch-1985-584e27e05d95-2400.webp",
@@ -3772,6 +5046,20 @@
       "sha256_origem": "56de72dfe04797ed4d395ce93a466aed1def3de30732dade90e27b1a12aa8d47"
     },
     {
+      "caminho": "static/pitwall-archive/racing-bulls-shanghai-6e9f4113beef-2400.webp",
+      "fonte": "static/pitwall-archive/racing-bulls-shanghai-6e9f4113beef-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8b064d5d4af17235cce5652ae4763e5ea42de180e367c49093e935deba3b1c47",
+      "sha256_origem": "8b064d5d4af17235cce5652ae4763e5ea42de180e367c49093e935deba3b1c47"
+    },
+    {
+      "caminho": "static/pitwall-archive/racing-bulls-shanghai-6e9f4113beef-960.webp",
+      "fonte": "static/pitwall-archive/racing-bulls-shanghai-6e9f4113beef-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a95140d1deaabafba7e913026069e8cfc0ff1d634d88d7bd3b7ffc3180ddebc3",
+      "sha256_origem": "a95140d1deaabafba7e913026069e8cfc0ff1d634d88d7bd3b7ffc3180ddebc3"
+    },
+    {
       "caminho": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-2400.webp",
       "fonte": "static/pitwall-archive/rb19-spielberg-f1e3f06ce512-2400.webp",
       "modo": "copia",
@@ -3786,6 +5074,104 @@
       "sha256_origem": "e0c5d30367f1111dfc7aaf8852869f9e434f412a6eae1a0b3cc5633536f30f8d"
     },
     {
+      "caminho": "static/pitwall-archive/red-bull-rb16b-4e56f4e71ae3-2400.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb16b-4e56f4e71ae3-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "4193e7332a9eeadfbebc28824232d436969f437f310ff8875b7755a97d91280f",
+      "sha256_origem": "4193e7332a9eeadfbebc28824232d436969f437f310ff8875b7755a97d91280f"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb16b-4e56f4e71ae3-960.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb16b-4e56f4e71ae3-960.webp",
+      "modo": "copia",
+      "sha256_destino": "f776dd41f99eab5ba5fa65e565e6895da4f6db963cc8d239e0b42943799ef856",
+      "sha256_origem": "f776dd41f99eab5ba5fa65e565e6895da4f6db963cc8d239e0b42943799ef856"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb18-c52ce464d755-2400.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb18-c52ce464d755-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1eeb824824d00cd46f61c961f7d93be8d0f4cab588d7d832a20940393fcd8e69",
+      "sha256_origem": "1eeb824824d00cd46f61c961f7d93be8d0f4cab588d7d832a20940393fcd8e69"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb18-c52ce464d755-960.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb18-c52ce464d755-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1e5fc51e1caa87895a1d1f5c7fadbc336741dcf0a79916d6261610b0980f63e7",
+      "sha256_origem": "1e5fc51e1caa87895a1d1f5c7fadbc336741dcf0a79916d6261610b0980f63e7"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb20-064fdd7db5ce-2400.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb20-064fdd7db5ce-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "329e5d0ff0d55429f7aaf9358569eddc607d89d1896e725ceffcd67307165f6f",
+      "sha256_origem": "329e5d0ff0d55429f7aaf9358569eddc607d89d1896e725ceffcd67307165f6f"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb20-064fdd7db5ce-960.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb20-064fdd7db5ce-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bbd5e1949d95d79f4482bea6cb1c9b805f1c3139970108c21d9be8d845017d26",
+      "sha256_origem": "bbd5e1949d95d79f4482bea6cb1c9b805f1c3139970108c21d9be8d845017d26"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb6-b74813260ba1-2400.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb6-b74813260ba1-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e474d6b737674db696329bb0a2421c8b64d73c06633c711260189884d0e937aa",
+      "sha256_origem": "e474d6b737674db696329bb0a2421c8b64d73c06633c711260189884d0e937aa"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb6-b74813260ba1-960.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb6-b74813260ba1-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d0ab1693a57ae0ae119ae3953bd81628cec33a6e967de07a44c0d0917d6d2f9c",
+      "sha256_origem": "d0ab1693a57ae0ae119ae3953bd81628cec33a6e967de07a44c0d0917d6d2f9c"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb7-f7833446d450-2400.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb7-f7833446d450-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c29bb62fd8ad82c834290287cdf58c62bdc95888bcfbdd016571164279edf7c2",
+      "sha256_origem": "c29bb62fd8ad82c834290287cdf58c62bdc95888bcfbdd016571164279edf7c2"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb7-f7833446d450-960.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb7-f7833446d450-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9bdab7803db0788b32c45bc1468c9ba9a3eefa55564b3c3bae0ac8309750d0af",
+      "sha256_origem": "9bdab7803db0788b32c45bc1468c9ba9a3eefa55564b3c3bae0ac8309750d0af"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb8-29406802975e-2400.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb8-29406802975e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c7c047f41bba2b2c1203eb286913af1c20343e21a97158f631fd76e45f96d4cb",
+      "sha256_origem": "c7c047f41bba2b2c1203eb286913af1c20343e21a97158f631fd76e45f96d4cb"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb8-29406802975e-960.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb8-29406802975e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bfae399e0dcf931bb0c2b4af713ab91f8c21e6867c0cf3c48b9278c3a3dfb858",
+      "sha256_origem": "bfae399e0dcf931bb0c2b4af713ab91f8c21e6867c0cf3c48b9278c3a3dfb858"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb9-91b37e011a23-2400.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb9-91b37e011a23-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "cf6c7d2bc4ab7899b19695e585081c7251023061fc60b9d5e5455cec55ea8431",
+      "sha256_origem": "cf6c7d2bc4ab7899b19695e585081c7251023061fc60b9d5e5455cec55ea8431"
+    },
+    {
+      "caminho": "static/pitwall-archive/red-bull-rb9-91b37e011a23-960.webp",
+      "fonte": "static/pitwall-archive/red-bull-rb9-91b37e011a23-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5711e28524974244c43293c5a6b64549f6e31da8d89a228febaec341b822ea4a",
+      "sha256_origem": "5711e28524974244c43293c5a6b64549f6e31da8d89a228febaec341b822ea4a"
+    },
+    {
       "caminho": "static/pitwall-archive/schumacher-f2004-2c60e8b962ca-2400.webp",
       "fonte": "static/pitwall-archive/schumacher-f2004-2c60e8b962ca-2400.webp",
       "modo": "copia",
@@ -3798,6 +5184,20 @@
       "modo": "copia",
       "sha256_destino": "65c0e286d8b5bbcb21bfbe367dc60c7e3cb19e8e06c223edfac02d378c66619f",
       "sha256_origem": "65c0e286d8b5bbcb21bfbe367dc60c7e3cb19e8e06c223edfac02d378c66619f"
+    },
+    {
+      "caminho": "static/pitwall-archive/sebastian-vettel-retrato-fd438148b9b2-1920.webp",
+      "fonte": "static/pitwall-archive/sebastian-vettel-retrato-fd438148b9b2-1920.webp",
+      "modo": "copia",
+      "sha256_destino": "17e0c1513054303550c5962faab1e18c648384c25ae91fc3fc1e0116cb7a2db1",
+      "sha256_origem": "17e0c1513054303550c5962faab1e18c648384c25ae91fc3fc1e0116cb7a2db1"
+    },
+    {
+      "caminho": "static/pitwall-archive/sebastian-vettel-retrato-fd438148b9b2-960.webp",
+      "fonte": "static/pitwall-archive/sebastian-vettel-retrato-fd438148b9b2-960.webp",
+      "modo": "copia",
+      "sha256_destino": "89a5c8dc5c047e4f4e5bb38bb5afa39d3ff6587ebe6b58a4a90d2a954d2d1d2b",
+      "sha256_origem": "89a5c8dc5c047e4f4e5bb38bb5afa39d3ff6587ebe6b58a4a90d2a954d2d1d2b"
     },
     {
       "caminho": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-2400.webp",
@@ -3854,6 +5254,188 @@
       "modo": "copia",
       "sha256_destino": "febb0cad5d2349391cab0cd024a454cce8fec5134fa4db8f7f1cd6e8cac3e7c5",
       "sha256_origem": "febb0cad5d2349391cab0cd024a454cce8fec5134fa4db8f7f1cd6e8cac3e7c5"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-spa-1991-6b49c2b35dac-2400.webp",
+      "fonte": "static/pitwall-archive/senna-spa-1991-6b49c2b35dac-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5a59c30cc422226923c5d86f661272b42ad00ea46d66924de0719c1254e6bc58",
+      "sha256_origem": "5a59c30cc422226923c5d86f661272b42ad00ea46d66924de0719c1254e6bc58"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-spa-1991-6b49c2b35dac-960.webp",
+      "fonte": "static/pitwall-archive/senna-spa-1991-6b49c2b35dac-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4c0067f5bce5ea3574a0f721ae8ca7160e169811485c551b9103ea8543bbffe0",
+      "sha256_origem": "4c0067f5bce5ea3574a0f721ae8ca7160e169811485c551b9103ea8543bbffe0"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-002-0cf5bc9b4113-2400.webp",
+      "fonte": "static/pitwall-archive/tyrrell-002-0cf5bc9b4113-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "697eb88ea6ee0ed21a16fe6dfc09c3b640a7fc4863efcad1f25c0663d668914e",
+      "sha256_origem": "697eb88ea6ee0ed21a16fe6dfc09c3b640a7fc4863efcad1f25c0663d668914e"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-002-0cf5bc9b4113-960.webp",
+      "fonte": "static/pitwall-archive/tyrrell-002-0cf5bc9b4113-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a622911ba61a6c49c37b240de88a331980bf57810595f80465359a95945e0f20",
+      "sha256_origem": "a622911ba61a6c49c37b240de88a331980bf57810595f80465359a95945e0f20"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-003-7aa2c5bc906a-2400.webp",
+      "fonte": "static/pitwall-archive/tyrrell-003-7aa2c5bc906a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "732014cf4b56ad1ddea4e3e2d4217b016411e75bd5a9ebddbec82704574b4070",
+      "sha256_origem": "732014cf4b56ad1ddea4e3e2d4217b016411e75bd5a9ebddbec82704574b4070"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-003-7aa2c5bc906a-960.webp",
+      "fonte": "static/pitwall-archive/tyrrell-003-7aa2c5bc906a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6f85705be2661fabb3d121d2ab0100e8eafed26d4ca05a14a2d75b0904805d83",
+      "sha256_origem": "6f85705be2661fabb3d121d2ab0100e8eafed26d4ca05a14a2d75b0904805d83"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-005-8b7adb36daab-2400.webp",
+      "fonte": "static/pitwall-archive/tyrrell-005-8b7adb36daab-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "be7eb4945a4bbc68c2536e31bf10ed7d747d6ae8191733362567e430e0fc2e3b",
+      "sha256_origem": "be7eb4945a4bbc68c2536e31bf10ed7d747d6ae8191733362567e430e0fc2e3b"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-005-8b7adb36daab-960.webp",
+      "fonte": "static/pitwall-archive/tyrrell-005-8b7adb36daab-960.webp",
+      "modo": "copia",
+      "sha256_destino": "7e13f5dc2fc014c7b2566a638140f81e2a92274a73632613c63da23c0e72e3e6",
+      "sha256_origem": "7e13f5dc2fc014c7b2566a638140f81e2a92274a73632613c63da23c0e72e3e6"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-006-a4f40367c7f9-2400.webp",
+      "fonte": "static/pitwall-archive/tyrrell-006-a4f40367c7f9-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "14a0e3fb7d0f975d61f7f041ebf7a487929171077b341bf27f3df4285b6eb057",
+      "sha256_origem": "14a0e3fb7d0f975d61f7f041ebf7a487929171077b341bf27f3df4285b6eb057"
+    },
+    {
+      "caminho": "static/pitwall-archive/tyrrell-006-a4f40367c7f9-960.webp",
+      "fonte": "static/pitwall-archive/tyrrell-006-a4f40367c7f9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "03be366f004257c73e1a0603884e3c852009e183771f0e92aa6c4a0f5a907aad",
+      "sha256_origem": "03be366f004257c73e1a0603884e3c852009e183771f0e92aa6c4a0f5a907aad"
+    },
+    {
+      "caminho": "static/pitwall-archive/vanwall-vw-5-bcd542a2c842-2400.webp",
+      "fonte": "static/pitwall-archive/vanwall-vw-5-bcd542a2c842-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "0bbac0d25d44675ec2f97eab11de0abe0240c1cf297e0512392837354170ff9d",
+      "sha256_origem": "0bbac0d25d44675ec2f97eab11de0abe0240c1cf297e0512392837354170ff9d"
+    },
+    {
+      "caminho": "static/pitwall-archive/vanwall-vw-5-bcd542a2c842-960.webp",
+      "fonte": "static/pitwall-archive/vanwall-vw-5-bcd542a2c842-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b48cc959394280a65bcf77fa03b20320e9a20d3bec31d09dea740f4cb0ca76b3",
+      "sha256_origem": "b48cc959394280a65bcf77fa03b20320e9a20d3bec31d09dea740f4cb0ca76b3"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-barcelona-2016-b1f8d0a2d00d-2400.webp",
+      "fonte": "static/pitwall-archive/verstappen-barcelona-2016-b1f8d0a2d00d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "034275bc5831e110796e8b1bd3c387b6b9f6b4c4b2bc7a179dad7d523c317566",
+      "sha256_origem": "034275bc5831e110796e8b1bd3c387b6b9f6b4c4b2bc7a179dad7d523c317566"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-barcelona-2016-b1f8d0a2d00d-960.webp",
+      "fonte": "static/pitwall-archive/verstappen-barcelona-2016-b1f8d0a2d00d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a2f21b2cfd6aad0917efa49cdf83007cb00773123800752c5b41d5b7d37b0552",
+      "sha256_origem": "a2f21b2cfd6aad0917efa49cdf83007cb00773123800752c5b41d5b7d37b0552"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-abu-dhabi-2010-9a753f4bc6b0-2400.webp",
+      "fonte": "static/pitwall-archive/vettel-abu-dhabi-2010-9a753f4bc6b0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "fcf5691f1384cba6075b3760f8f75cf2a0d2206b93af6a1856aac09122dea92d",
+      "sha256_origem": "fcf5691f1384cba6075b3760f8f75cf2a0d2206b93af6a1856aac09122dea92d"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-abu-dhabi-2010-9a753f4bc6b0-960.webp",
+      "fonte": "static/pitwall-archive/vettel-abu-dhabi-2010-9a753f4bc6b0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4f3662a8e8b49f150aaef12b8cabb6b2739758159ae88f5db53bd186cb663816",
+      "sha256_origem": "4f3662a8e8b49f150aaef12b8cabb6b2739758159ae88f5db53bd186cb663816"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-monza-2008-f7c14332d44e-2400.webp",
+      "fonte": "static/pitwall-archive/vettel-monza-2008-f7c14332d44e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "10cc698a673fd668f66cfd5c264a6d14a26b24f2f15e2d4d3d2891b8c1b8fc41",
+      "sha256_origem": "10cc698a673fd668f66cfd5c264a6d14a26b24f2f15e2d4d3d2891b8c1b8fc41"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-monza-2008-f7c14332d44e-960.webp",
+      "fonte": "static/pitwall-archive/vettel-monza-2008-f7c14332d44e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a0a3df46f2ce7c894a11844d8e34ab53cef7b5e79fa99c62f6ffbcc9a74d1ed1",
+      "sha256_origem": "a0a3df46f2ce7c894a11844d8e34ab53cef7b5e79fa99c62f6ffbcc9a74d1ed1"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-suzuka-2011-737f7bcbee5e-1600.webp",
+      "fonte": "static/pitwall-archive/vettel-suzuka-2011-737f7bcbee5e-1600.webp",
+      "modo": "copia",
+      "sha256_destino": "17a11dfa543473044dedfcc7b3976180cfacf38dc9434195954c6575ef7a5923",
+      "sha256_origem": "17a11dfa543473044dedfcc7b3976180cfacf38dc9434195954c6575ef7a5923"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-suzuka-2011-737f7bcbee5e-960.webp",
+      "fonte": "static/pitwall-archive/vettel-suzuka-2011-737f7bcbee5e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4bf435480107e9b28d663d107a28334010c9bd75e480b8bb746d6621532dbfef",
+      "sha256_origem": "4bf435480107e9b28d663d107a28334010c9bd75e480b8bb746d6621532dbfef"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw07b-ea42bc3e1d48-2400.webp",
+      "fonte": "static/pitwall-archive/williams-fw07b-ea42bc3e1d48-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2c7392e92f125017c7b13fbd983893e257d16da46016d401507cdee38f4a882a",
+      "sha256_origem": "2c7392e92f125017c7b13fbd983893e257d16da46016d401507cdee38f4a882a"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw07b-ea42bc3e1d48-960.webp",
+      "fonte": "static/pitwall-archive/williams-fw07b-ea42bc3e1d48-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b1c5a114e4fbe329ce00ff2fe849fe338a68e4eda60091270f1e4f72deac6a12",
+      "sha256_origem": "b1c5a114e4fbe329ce00ff2fe849fe338a68e4eda60091270f1e4f72deac6a12"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw07c-d3b00f9f01b5-2400.webp",
+      "fonte": "static/pitwall-archive/williams-fw07c-d3b00f9f01b5-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "194ccafa11d141a991142f9a001a07b291c3e0da668ed4ffb9078e7bae5fbc32",
+      "sha256_origem": "194ccafa11d141a991142f9a001a07b291c3e0da668ed4ffb9078e7bae5fbc32"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw07c-d3b00f9f01b5-960.webp",
+      "fonte": "static/pitwall-archive/williams-fw07c-d3b00f9f01b5-960.webp",
+      "modo": "copia",
+      "sha256_destino": "08e80ca1d52662a329dea23325dc3ec63243f19748655197965e24cac741f758",
+      "sha256_origem": "08e80ca1d52662a329dea23325dc3ec63243f19748655197965e24cac741f758"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw08-781bca1940e4-2400.webp",
+      "fonte": "static/pitwall-archive/williams-fw08-781bca1940e4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e52f9e7749c502f9f13b4f09195f405d52f7c65ed4696251a62cf2d271d0c0d5",
+      "sha256_origem": "e52f9e7749c502f9f13b4f09195f405d52f7c65ed4696251a62cf2d271d0c0d5"
+    },
+    {
+      "caminho": "static/pitwall-archive/williams-fw08-781bca1940e4-960.webp",
+      "fonte": "static/pitwall-archive/williams-fw08-781bca1940e4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b84f02f47db182b655af68b058878604f03d0181a18c8b374bdc46cca2c2fb88",
+      "sha256_origem": "b84f02f47db182b655af68b058878604f03d0181a18c8b374bdc46cca2c2fb88"
     },
     {
       "caminho": "static/pitwall-archive/williams-fw11-ddae8144685d-2400.webp",
