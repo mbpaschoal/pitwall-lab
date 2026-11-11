@@ -8193,8 +8193,8 @@
     "hunt-m23d-zandvoort-fuji-1976": {
       "arquivo_commons": "File:Hunt at 1976 Dutch Grand Prix.jpg",
       "legenda": {
-        "pt": "James Hunt nos treinos do GP dos Países Baixos de 1976 no McLaren M23 de chassi 8-2. Com o mesmo carro, ele terminou em terceiro em Fuji e conquistou o Mundial.",
-        "en": "James Hunt in McLaren M23 chassis 8-2 during practice for the 1976 Dutch Grand Prix. He finished third at Fuji in the same car to clinch the World Championship."
+        "pt": "James Hunt nos treinos do GP dos Países Baixos de 1976 no McLaren M23 de chassi 8-2. Com o mesmo carro, ele venceu em Watkins Glen e terminou em terceiro em Fuji para conquistar o Mundial.",
+        "en": "James Hunt in McLaren M23 chassis 8-2 during practice for the 1976 Dutch Grand Prix. In the same car he won at Watkins Glen and finished third at Fuji to clinch the World Championship."
       },
       "modelo": "mclaren-m23d",
       "temporadas": [
@@ -8207,6 +8207,7 @@
         "1976:12"
       ],
       "artefatos_gps": [
+        "1976:15",
         "1976:16"
       ],
       "construtor": "mclaren",
@@ -9117,6 +9118,269 @@
           "largura": 2400,
           "altura": 1560,
           "sha256": "6a29a9e2ffd7058b6d9474f20d065e587755f1b106e8b0ec8d51c335f33abc09"
+        }
+      ]
+    },
+    "stewart-brm-p261-1965": {
+      "arquivo_commons": "File:BRM P261 (42184110510).jpg",
+      "legenda": {
+        "pt": "O BRM P261 de chassi 2617 no Festival de Velocidade de Goodwood de 2018. Jackie Stewart estreou no Mundial com esse carro em East London, foi terceiro em Mônaco e conquistou sua primeira vitória em Monza, tudo em 1965.",
+        "en": "BRM P261 chassis 2617 at the 2018 Goodwood Festival of Speed. Jackie Stewart made his World Championship debut in this car at East London, finished third in Monaco and took his first win at Monza, all in 1965."
+      },
+      "artefatos_gps": [
+        "1965:1",
+        "1965:2",
+        "1965:8"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:BRM_P261_(42184110510).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/40/BRM_P261_%2842184110510%29.jpg",
+      "autor": "Neil",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "b345476664a86b46cd01837a7e4bd024bf8d18a57df5ba4ac4c1d5a5e55459f2",
+      "largura": 3065,
+      "altura": 1747,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/stewart-brm-p261-1965-b345476664a8-960.webp",
+          "largura": 960,
+          "altura": 547,
+          "sha256": "4198fe998a984f69484269d7d08da54c1d988c6f706be89641e976395d3607c1"
+        },
+        {
+          "arquivo": "static/pitwall-archive/stewart-brm-p261-1965-b345476664a8-2400.webp",
+          "largura": 2400,
+          "altura": 1368,
+          "sha256": "d8e6fa8cc81071a4e71900255b125aaa833b49911c4b3b8196e67416cd337177"
+        }
+      ]
+    },
+    "scheckter-mclaren-m19a-watkins-glen-1972": {
+      "arquivo_commons": "File:1979 McLaren M19A (54833107322).jpg",
+      "legenda": {
+        "pt": "O McLaren M19A de chassi M19A/1 em exposição no Silverstone Festival de 2025. Jody Scheckter estreou no Mundial com esse carro em Watkins Glen, em 1972.",
+        "en": "McLaren M19A chassis M19A/1 on display at the 2025 Silverstone Festival. Jody Scheckter made his World Championship debut in this car at Watkins Glen in 1972."
+      },
+      "equipes": [
+        "mclaren"
+      ],
+      "artefatos_gps": [
+        "1972:12"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:1979_McLaren_M19A_(54833107322).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/2c/1979_McLaren_M19A_%2854833107322%29.jpg",
+      "autor": "David Merrett from Daventry, England",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "0eadf5364c01687c4f9263b1b97f611370c00509c5a3f7f0aa08a195dbef63ae",
+      "largura": 2913,
+      "altura": 3301,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/scheckter-mclaren-m19a-watkins-glen-1972-0eadf5364c01-960.webp",
+          "largura": 847,
+          "altura": 960,
+          "sha256": "3b9d38d4a0add998d281a8eb8620d31fb23be5ca7177788ee8e405a310db17ac"
+        },
+        {
+          "arquivo": "static/pitwall-archive/scheckter-mclaren-m19a-watkins-glen-1972-0eadf5364c01-2400.webp",
+          "largura": 2118,
+          "altura": 2400,
+          "sha256": "e178add4c175ebca54776feec8a506838c25934438d54eaea9424e7dcaac427e"
+        }
+      ]
+    },
+    "lauda-ferrari-312b3-jarama-1974": {
+      "arquivo_commons": "File:Lauda at 1974 Dutch Grand Prix (2).jpg",
+      "legenda": {
+        "pt": "Niki Lauda com o Ferrari 312 B3-74 de chassi 015 em Zandvoort, em 1974. Com esse mesmo carro, ele havia conquistado sua primeira vitória na Fórmula 1 em Jarama.",
+        "en": "Niki Lauda in Ferrari 312 B3-74 chassis 015 at Zandvoort in 1974. He had taken his first Formula One win in the same car at Jarama."
+      },
+      "equipes": [
+        "ferrari"
+      ],
+      "gps": [
+        "1974:8"
+      ],
+      "artefatos_gps": [
+        "1974:4"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lauda_at_1974_Dutch_Grand_Prix_(2).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Lauda_at_1974_Dutch_Grand_Prix_%282%29.jpg",
+      "autor": "Rob Croes for Anefo",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "b51dcb66371194b6ad4a6fd7121709aee037bd857c4328a87950178798eba3fd",
+      "largura": 3680,
+      "altura": 2441,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/lauda-ferrari-312b3-jarama-1974-b51dcb663711-960.webp",
+          "largura": 960,
+          "altura": 637,
+          "sha256": "4fc5e73ea6b23e6e04b27758949a9d69eb2c51d118d61bde6842e2ba496ab179"
+        },
+        {
+          "arquivo": "static/pitwall-archive/lauda-ferrari-312b3-jarama-1974-b51dcb663711-2400.webp",
+          "largura": 2400,
+          "altura": 1592,
+          "sha256": "7e8f4f55018899f99737ac354cc1aa963fdf5b7b8ffdd17f985c57d7cb97f3ae"
+        }
+      ]
+    },
+    "peterson-lotus-78-kyalami-1978": {
+      "arquivo_commons": "File:Ronnie Peterson - John Player Special Lotus 78 enters Casino Square during practice at the 1978 Monaco GP (51041766113).jpg",
+      "legenda": {
+        "pt": "Ronnie Peterson no Lotus 78 de chassi 78/2, também chamado JPS16, nos treinos em Mônaco em 1978. Ele venceu com esse carro em Kyalami, na prova que marcou a estreia de Keke Rosberg no Mundial.",
+        "en": "Ronnie Peterson in Lotus 78 chassis 78/2, also known as JPS16, during practice in Monaco in 1978. He won in this car at Kyalami in the race that marked Keke Rosberg’s World Championship debut."
+      },
+      "modelo": "lotus-78",
+      "temporadas": [
+        1978
+      ],
+      "gps": [
+        "1978:5"
+      ],
+      "artefatos_gps": [
+        "1978:3"
+      ],
+      "construtor": "lotus",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Ronnie_Peterson_-_John_Player_Special_Lotus_78_enters_Casino_Square_during_practice_at_the_1978_Monaco_GP_(51041766113).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/37/Ronnie_Peterson_-_John_Player_Special_Lotus_78_enters_Casino_Square_during_practice_at_the_1978_Monaco_GP_%2851041766113%29.jpg",
+      "autor": "Martin Lee from London, UK",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "bf4554852bafa3f715c19154ade77b12d4b2033890fee08877e8b6fc377112a9",
+      "largura": 5672,
+      "altura": 3928,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/peterson-lotus-78-kyalami-1978-bf4554852baf-960.webp",
+          "largura": 960,
+          "altura": 665,
+          "sha256": "162c29f754ccbd5d0575d68e9c186bb2c7a3cf2d9b5a4e872b5102ae6ca98581"
+        },
+        {
+          "arquivo": "static/pitwall-archive/peterson-lotus-78-kyalami-1978-bf4554852baf-2400.webp",
+          "largura": 2400,
+          "altura": 1662,
+          "sha256": "99dcf509b44194648c5f90b1add5477a236d4250ac99600eadbc136867c25243"
+        }
+      ]
+    },
+    "andretti-lotus-79-hockenheim-1978": {
+      "arquivo_commons": "File:1978 Lotus 79 (54834214633).jpg",
+      "legenda": {
+        "pt": "O Lotus 79 de chassi 79/3, também chamado JPS21, no Silverstone Festival de 2025. Mario Andretti venceu com esse carro em Hockenheim, na corrida em que Nelson Piquet estreou na Fórmula 1.",
+        "en": "Lotus 79 chassis 79/3, also known as JPS21, at the 2025 Silverstone Festival. Mario Andretti won in this car at Hockenheim in the race that marked Nelson Piquet’s Formula One debut."
+      },
+      "modelo": "lotus-79",
+      "temporadas": [
+        1978
+      ],
+      "artefatos_gps": [
+        "1978:11"
+      ],
+      "construtor": "lotus",
+      "fonte": "https://commons.wikimedia.org/wiki/File:1978_Lotus_79_(54834214633).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/c6/1978_Lotus_79_%2854834214633%29.jpg",
+      "autor": "David Merrett from Daventry, England",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "f3530c3a18de368c7e936843cef537d0a1d8f050d1b7e658cadcda2558b1b2fb",
+      "largura": 3230,
+      "altura": 3289,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/andretti-lotus-79-hockenheim-1978-f3530c3a18de-960.webp",
+          "largura": 943,
+          "altura": 960,
+          "sha256": "f264bc2e13a3db299e2e2480880abbfcc5cb3059591fd9f3c7987cb28ce174e9"
+        },
+        {
+          "arquivo": "static/pitwall-archive/andretti-lotus-79-hockenheim-1978-f3530c3a18de-2400.webp",
+          "largura": 2357,
+          "altura": 2400,
+          "sha256": "289435e4312395ce98a89248e50db87b549003beb22d2193b8cf1af230c63137"
+        }
+      ]
+    },
+    "mansell-williams-fw14b-hungria-1992": {
+      "arquivo_commons": "File:-1992-07-12 Nigel Mansell, Williams FW14B, Woodcote, 1992 British Grand Prix, Silverstone, England (1).JPG",
+      "legenda": {
+        "pt": "Nigel Mansell passa por Woodcote no Williams FW14B de chassi 11, com a torcida em Silverstone, em 1992. Ele conquistou o título mundial na Hungria com o mesmo carro.",
+        "en": "Nigel Mansell passes Woodcote in Williams FW14B chassis 11 with fans watching at Silverstone in 1992. He clinched the World Championship in Hungary in the same car."
+      },
+      "modelo": "williams-fw14b",
+      "temporadas": [
+        1992
+      ],
+      "gps": [
+        "1992:9"
+      ],
+      "artefatos_gps": [
+        "1992:11"
+      ],
+      "construtor": "williams",
+      "fonte": "https://commons.wikimedia.org/wiki/File:-1992-07-12_Nigel_Mansell,_Williams_FW14B,_Woodcote,_1992_British_Grand_Prix,_Silverstone,_England_(1).JPG",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/8f/-1992-07-12_Nigel_Mansell%2C_Williams_FW14B%2C_Woodcote%2C_1992_British_Grand_Prix%2C_Silverstone%2C_England_%281%29.JPG",
+      "autor": "Kolforn ( Kolforn ) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "ac92411e260609e1bdb40946c2c60ec43cd90ef9b61a2c4d47cd4a138d2370fe",
+      "largura": 4678,
+      "altura": 3087,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/mansell-williams-fw14b-hungria-1992-ac92411e2606-960.webp",
+          "largura": 960,
+          "altura": 634,
+          "sha256": "979a8b1d2317fdb918d76d31fe252173f2977aa9fae7a3e5b08dc39d37afe097"
+        },
+        {
+          "arquivo": "static/pitwall-archive/mansell-williams-fw14b-hungria-1992-ac92411e2606-2400.webp",
+          "largura": 2400,
+          "altura": 1584,
+          "sha256": "9e3845a40a6752d028503b2b8e33281b0c50fcea3d76d2471aa003484678e68d"
+        }
+      ]
+    },
+    "ferrari-312t2-decisoes-1977": {
+      "arquivo_commons": "File:Carlos Reutemann - Ferrari 312T2 leads Niki Lauda - Ferrari 312T2 into the swimming pool complex at the 1977 Monaco GP.jpg",
+      "legenda": {
+        "pt": "Carlos Reutemann (chassi 029) à frente de Niki Lauda (chassi 030) no GP de Mônaco de 1977. Reutemann voltou a correr com o 029 quando a Ferrari selou o título de construtores em Monza e com o 030 quando Lauda foi campeão em Watkins Glen.",
+        "en": "Carlos Reutemann (chassis 029) leads Niki Lauda (chassis 030) at the 1977 Monaco Grand Prix. Reutemann raced the 029 again when Ferrari clinched the constructors’ title at Monza and the 030 when Lauda clinched the drivers’ title at Watkins Glen."
+      },
+      "equipes": [
+        "ferrari"
+      ],
+      "gps": [
+        "1977:6"
+      ],
+      "artefatos_gps": [
+        "1977:14",
+        "1977:15"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Carlos_Reutemann_-_Ferrari_312T2_leads_Niki_Lauda_-_Ferrari_312T2_into_the_swimming_pool_complex_at_the_1977_Monaco_GP.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/74/Carlos_Reutemann_-_Ferrari_312T2_leads_Niki_Lauda_-_Ferrari_312T2_into_the_swimming_pool_complex_at_the_1977_Monaco_GP.jpg",
+      "autor": "Martin Lee",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "2e765d5fc24e8f8238132aa8264d7565a7d636918e1718c6759ade3380dbdc84",
+      "largura": 2529,
+      "altura": 1496,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ferrari-312t2-decisoes-1977-2e765d5fc24e-960.webp",
+          "largura": 960,
+          "altura": 568,
+          "sha256": "f561a4ea26a321d55f7352866783bea3490872b39be731c9a707ac31f63a252e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ferrari-312t2-decisoes-1977-2e765d5fc24e-2400.webp",
+          "largura": 2400,
+          "altura": 1420,
+          "sha256": "017829f65a9ce73273241759f9cbe12b176849c588524437038cc70579162279"
         }
       ]
     }

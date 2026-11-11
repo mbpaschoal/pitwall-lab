@@ -6,6 +6,8 @@ O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × P
 
 O Acervo fotográfico reúne imagens dos 36 campeões, das 11 equipes do grid de 2026 e de pelo menos um carro de cada campanha campeã desde 1950. As fichas trazem legendas bilíngues, autoria, licença e acesso aos originais. A galeria usa versões WebP locais e permite consultar carros e momentos históricos por temporada.
 
+O acervo inclui 271 fotografias e cobre 121 de 184 momentos históricos catalogados. As legendas identificam quando a imagem é do próprio GP e quando mostra um carro ou troféu original fotografado em outra ocasião.
+
 ## 0.18.0 — 2026-11-11
 
 Pilotos ganha um Hall da Fama com os 36 campeões mundiais de Fórmula 1 de 1950 a 2026. A lista permite buscar e ordenar os campeões. Cada perfil reúne resumo biográfico, estreia, primeira vitória, estatísticas e os GPs decisivos dos títulos.

@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "0f7c4e3998d11c04199b40ad957763c986cb3c8adb8566e6e490ccfb8c3cccd7",
+  "apresentacao_build_sha256": "d4c8c332d87705c12a160465986e13aaa3555ce14982e1b7207b2c389b7fc54c",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "2c36075ceedddbaf6c5d69cc7ef800bd1b40c485e3c4f34588d928f3786e89f2",
+      "sha256_destino": "368671f8ead929bb34b1b0520934e37c8c88fbc064041e78cb610e8ac88dff2d",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "4431589a2bc643d7d739297d37b0e2b71d0898626675a6afbb663d9c9da302e7",
-      "sha256_origem": "d839f54c42426e3fd62c9445dc2e6386693c2b0cca07208f3f5ef3aef9e03d6a"
+      "sha256_destino": "db3db5203c36a984decee2e88aaa20da1209729085aa0ee39c949ab9419a0c57",
+      "sha256_origem": "bbc029a27932e1d58778d7d861e01c77a1cecf591f64106f8d2b91e3a9d9f89c"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "aef4a9e99229d1f6ed89676c2f539032921b70f78d6021b3dd5bd28ab28e480c",
-      "sha256_origem": "7ee821d9d4ae66baedf74fce6e0839a446e5d5a0dca9c6bc91388d261bde1327"
+      "sha256_destino": "449f1c35ca9f48e47549350b49d67c11dedb93eabcc5992793e27d2d05c0ea86",
+      "sha256_origem": "f4dd761bafc7089c2e4bc9a6cd1481c1b2d538e650226f23fe58720d069a5489"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "dc5a01355260e50ca8aab7f88119b8dbc383528b50f411f262a2a882afc98213",
-      "sha256_origem": "dc5a01355260e50ca8aab7f88119b8dbc383528b50f411f262a2a882afc98213"
+      "sha256_destino": "48d8a39381938c11c73917b68143f0e0c2de102c77f76b4c2475214e23ed9cb6",
+      "sha256_origem": "48d8a39381938c11c73917b68143f0e0c2de102c77f76b4c2475214e23ed9cb6"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3534,6 +3534,20 @@
       "sha256_origem": "f331c1103308f4153259db923ee74d112b3810f165a2de373be545f9d8c94915"
     },
     {
+      "caminho": "static/pitwall-archive/andretti-lotus-79-hockenheim-1978-f3530c3a18de-2400.webp",
+      "fonte": "static/pitwall-archive/andretti-lotus-79-hockenheim-1978-f3530c3a18de-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "289435e4312395ce98a89248e50db87b549003beb22d2193b8cf1af230c63137",
+      "sha256_origem": "289435e4312395ce98a89248e50db87b549003beb22d2193b8cf1af230c63137"
+    },
+    {
+      "caminho": "static/pitwall-archive/andretti-lotus-79-hockenheim-1978-f3530c3a18de-960.webp",
+      "fonte": "static/pitwall-archive/andretti-lotus-79-hockenheim-1978-f3530c3a18de-960.webp",
+      "modo": "copia",
+      "sha256_destino": "f264bc2e13a3db299e2e2480880abbfcc5cb3059591fd9f3c7987cb28ce174e9",
+      "sha256_origem": "f264bc2e13a3db299e2e2480880abbfcc5cb3059591fd9f3c7987cb28ce174e9"
+    },
+    {
       "caminho": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-2400.webp",
       "fonte": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-2400.webp",
       "modo": "copia",
@@ -4318,6 +4332,20 @@
       "sha256_origem": "a2db7fdd2551409c2c4498d2c1ca1b88bb47e423edc2c9026f567ce5e1141a8c"
     },
     {
+      "caminho": "static/pitwall-archive/ferrari-312t2-decisoes-1977-2e765d5fc24e-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t2-decisoes-1977-2e765d5fc24e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "017829f65a9ce73273241759f9cbe12b176849c588524437038cc70579162279",
+      "sha256_origem": "017829f65a9ce73273241759f9cbe12b176849c588524437038cc70579162279"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t2-decisoes-1977-2e765d5fc24e-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t2-decisoes-1977-2e765d5fc24e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "f561a4ea26a321d55f7352866783bea3490872b39be731c9a707ac31f63a252e",
+      "sha256_origem": "f561a4ea26a321d55f7352866783bea3490872b39be731c9a707ac31f63a252e"
+    },
+    {
       "caminho": "static/pitwall-archive/ferrari-312t2b-f9b0e276ab6b-2400.webp",
       "fonte": "static/pitwall-archive/ferrari-312t2b-f9b0e276ab6b-2400.webp",
       "modo": "copia",
@@ -5060,6 +5088,20 @@
       "sha256_origem": "9744be866200336983159b9b7b5276bff50e357ce999a542fa77561961f2e10b"
     },
     {
+      "caminho": "static/pitwall-archive/lauda-ferrari-312b3-jarama-1974-b51dcb663711-2400.webp",
+      "fonte": "static/pitwall-archive/lauda-ferrari-312b3-jarama-1974-b51dcb663711-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7e8f4f55018899f99737ac354cc1aa963fdf5b7b8ffdd17f985c57d7cb97f3ae",
+      "sha256_origem": "7e8f4f55018899f99737ac354cc1aa963fdf5b7b8ffdd17f985c57d7cb97f3ae"
+    },
+    {
+      "caminho": "static/pitwall-archive/lauda-ferrari-312b3-jarama-1974-b51dcb663711-960.webp",
+      "fonte": "static/pitwall-archive/lauda-ferrari-312b3-jarama-1974-b51dcb663711-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4fc5e73ea6b23e6e04b27758949a9d69eb2c51d118d61bde6842e2ba496ab179",
+      "sha256_origem": "4fc5e73ea6b23e6e04b27758949a9d69eb2c51d118d61bde6842e2ba496ab179"
+    },
+    {
       "caminho": "static/pitwall-archive/lauda-mp4-2-estoril-1984-d03b3ef572fb-2400.webp",
       "fonte": "static/pitwall-archive/lauda-mp4-2-estoril-1984-d03b3ef572fb-2400.webp",
       "modo": "copia",
@@ -5268,6 +5310,20 @@
       "modo": "copia",
       "sha256_destino": "d574f20339b2c7e151208699bf22b14ddd9ae2700264b01d4108e21263c34791",
       "sha256_origem": "d574f20339b2c7e151208699bf22b14ddd9ae2700264b01d4108e21263c34791"
+    },
+    {
+      "caminho": "static/pitwall-archive/mansell-williams-fw14b-hungria-1992-ac92411e2606-2400.webp",
+      "fonte": "static/pitwall-archive/mansell-williams-fw14b-hungria-1992-ac92411e2606-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9e3845a40a6752d028503b2b8e33281b0c50fcea3d76d2471aa003484678e68d",
+      "sha256_origem": "9e3845a40a6752d028503b2b8e33281b0c50fcea3d76d2471aa003484678e68d"
+    },
+    {
+      "caminho": "static/pitwall-archive/mansell-williams-fw14b-hungria-1992-ac92411e2606-960.webp",
+      "fonte": "static/pitwall-archive/mansell-williams-fw14b-hungria-1992-ac92411e2606-960.webp",
+      "modo": "copia",
+      "sha256_destino": "979a8b1d2317fdb918d76d31fe252173f2977aa9fae7a3e5b08dc39d37afe097",
+      "sha256_origem": "979a8b1d2317fdb918d76d31fe252173f2977aa9fae7a3e5b08dc39d37afe097"
     },
     {
       "caminho": "static/pitwall-archive/mario-andretti-retrato-0fd227f5a67a-2391.webp",
@@ -5914,6 +5970,20 @@
       "sha256_origem": "b432483c6e8ce0a96fb7d286f11b851f065f014e139fbbf123b3b72eb25149e2"
     },
     {
+      "caminho": "static/pitwall-archive/peterson-lotus-78-kyalami-1978-bf4554852baf-2400.webp",
+      "fonte": "static/pitwall-archive/peterson-lotus-78-kyalami-1978-bf4554852baf-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "99dcf509b44194648c5f90b1add5477a236d4250ac99600eadbc136867c25243",
+      "sha256_origem": "99dcf509b44194648c5f90b1add5477a236d4250ac99600eadbc136867c25243"
+    },
+    {
+      "caminho": "static/pitwall-archive/peterson-lotus-78-kyalami-1978-bf4554852baf-960.webp",
+      "fonte": "static/pitwall-archive/peterson-lotus-78-kyalami-1978-bf4554852baf-960.webp",
+      "modo": "copia",
+      "sha256_destino": "162c29f754ccbd5d0575d68e9c186bb2c7a3cf2d9b5a4e872b5102ae6ca98581",
+      "sha256_origem": "162c29f754ccbd5d0575d68e9c186bb2c7a3cf2d9b5a4e872b5102ae6ca98581"
+    },
+    {
       "caminho": "static/pitwall-archive/phil-hill-pista-2a489fd88775-2400.webp",
       "fonte": "static/pitwall-archive/phil-hill-pista-2a489fd88775-2400.webp",
       "modo": "copia",
@@ -6250,6 +6320,20 @@
       "sha256_origem": "11264edec67d7797c5267a9b3bcab5d34854c513b64a369be00d7f9e53c3f3b4"
     },
     {
+      "caminho": "static/pitwall-archive/scheckter-mclaren-m19a-watkins-glen-1972-0eadf5364c01-2400.webp",
+      "fonte": "static/pitwall-archive/scheckter-mclaren-m19a-watkins-glen-1972-0eadf5364c01-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e178add4c175ebca54776feec8a506838c25934438d54eaea9424e7dcaac427e",
+      "sha256_origem": "e178add4c175ebca54776feec8a506838c25934438d54eaea9424e7dcaac427e"
+    },
+    {
+      "caminho": "static/pitwall-archive/scheckter-mclaren-m19a-watkins-glen-1972-0eadf5364c01-960.webp",
+      "fonte": "static/pitwall-archive/scheckter-mclaren-m19a-watkins-glen-1972-0eadf5364c01-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3b9d38d4a0add998d281a8eb8620d31fb23be5ca7177788ee8e405a310db17ac",
+      "sha256_origem": "3b9d38d4a0add998d281a8eb8620d31fb23be5ca7177788ee8e405a310db17ac"
+    },
+    {
       "caminho": "static/pitwall-archive/scheckter-tyrrell-007-brands-hatch-1974-f8efaee92320-2104.webp",
       "fonte": "static/pitwall-archive/scheckter-tyrrell-007-brands-hatch-1974-f8efaee92320-2104.webp",
       "modo": "copia",
@@ -6556,6 +6640,20 @@
       "modo": "copia",
       "sha256_destino": "4c0067f5bce5ea3574a0f721ae8ca7160e169811485c551b9103ea8543bbffe0",
       "sha256_origem": "4c0067f5bce5ea3574a0f721ae8ca7160e169811485c551b9103ea8543bbffe0"
+    },
+    {
+      "caminho": "static/pitwall-archive/stewart-brm-p261-1965-b345476664a8-2400.webp",
+      "fonte": "static/pitwall-archive/stewart-brm-p261-1965-b345476664a8-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d8e6fa8cc81071a4e71900255b125aaa833b49911c4b3b8196e67416cd337177",
+      "sha256_origem": "d8e6fa8cc81071a4e71900255b125aaa833b49911c4b3b8196e67416cd337177"
+    },
+    {
+      "caminho": "static/pitwall-archive/stewart-brm-p261-1965-b345476664a8-960.webp",
+      "fonte": "static/pitwall-archive/stewart-brm-p261-1965-b345476664a8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4198fe998a984f69484269d7d08da54c1d988c6f706be89641e976395d3607c1",
+      "sha256_origem": "4198fe998a984f69484269d7d08da54c1d988c6f706be89641e976395d3607c1"
     },
     {
       "caminho": "static/pitwall-archive/stewart-ms80-monza-1969-32e5fb472dda-2400.webp",

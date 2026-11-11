@@ -6,6 +6,8 @@ Champions Duel compares any two Hall of Fame drivers and opens with Senna and Pr
 
 The Photo Archive brings together photographs of all 36 champions, all 11 teams on the 2026 grid, and at least one car from each championship campaign since 1950. Profiles display bilingual captions, photographer credits, license details and links to the originals. The gallery serves local WebP variants and lets visitors browse cars and historic moments by season.
 
+The archive contains 271 photographs and covers 121 of the 184 catalogued historic moments. Captions identify photos taken at the Grand Prix itself and images of an original car or trophy photographed on another occasion.
+
 ## 0.18.0 — 2026-11-11
 
 Drivers adds a Hall of Fame with all 36 Formula 1 World Drivers' Champions from 1950 through 2026. Fans can search and sort the list. Each profile covers the driver's career, debut, first win, statistics and title-deciding Grands Prix.
