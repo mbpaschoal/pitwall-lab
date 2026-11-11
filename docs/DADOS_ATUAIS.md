@@ -6,6 +6,18 @@ Pilotos incorpora México e São Paulo 2026 por complementos rastreáveis. A cob
 
 O acervo é descritivo e separado das entradas v1: 66 GPs/330 sessões de 2024–2026 até Austin. A aquisição complementar de 29/10 foi serial e cacheada. Os nove artefatos científicos e as emissões anteriores foram preservados.
 
+## Perfis de equipes
+
+As fichas cobrem as 11 equipes do grid de 2026. Base, unidade de potência e liderança técnica correspondem às fontes consultadas em 11/11/2026. O GP selecionado continua disponível nos links de retorno ao comparativo e ao campeonato.
+
+Os títulos até 2025 vêm da classificação histórica e dos inscritos por construtor da release F1DB v2026.19.0, sob CC BY 4.0. Fangio assegurou o título de 1954 pela Mercedes e também correu pela Maserati naquele ano. O nono título de construtores da Mercedes e o título de Kimi Antonelli em 2026 têm confirmação da FIA. Os títulos de Renault, Benetton e Brawn GP permanecem identificados pelo construtor que os venceu. [Catálogo e fontes por equipe](../frontend_assets/perfis_equipes.json) · [F1DB](https://github.com/f1db/f1db/releases/tag/v2026.19.0)
+
+As campanhas locais mostram a posição e os pontos acumulados do construtor a cada rodada. As duas campanhas da Mercedes de 2026 terminam na rodada de confirmação de cada título. Nas temporadas anteriores à cobertura local, os anos dos títulos abrem a classificação correspondente no arquivo da Fórmula 1.
+
+## Hall da Fama dos pilotos
+
+O catálogo contém os 36 campeões e os 77 títulos de 1950 a 2026. A lista de pilotos confere com o Hall da Fama oficial. A release F1DB v2026.20.0 fornece títulos por temporada, construtores, GPs decisivos e estatísticas até a corrida de São Paulo em 08/11/2026. As biografias oficiais e a confirmação do título de Antonelli pela FIA ficam nos perfis. A edição de 1954 conserva a passagem de Fangio por Maserati e Mercedes. [Catálogo](../frontend_assets/hall_da_fama.json) · [Hall da Fama da Fórmula 1](https://www.formula1.com/en/drivers/hall-of-fame) · [F1DB v2026.20.0](https://github.com/f1db/f1db/releases/tag/v2026.20.0)
+
 ## Revisão completa do calendário
 
 A revisão de 09/11/2026 cruza as 15 abas com as 71 opções do calendário, em 1.065 combinações. São 24 GPs de 2024, 24 de 2025 e 23 de 2026. O [inventário por GP e sessão](evidence/auditoria-calendario-20261109.json) registra a disponibilidade e as lacunas nos arquivos distribuídos.

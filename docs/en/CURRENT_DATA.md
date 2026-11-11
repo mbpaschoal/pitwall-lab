@@ -6,6 +6,18 @@ Drivers includes 2026 Mexico and São Paulo through traceable supplements. Cover
 
 The descriptive archive is separate from v1 inputs: 66 GPs/330 sessions in 2024–2026 through Austin. Supplementary acquisition on 29 October was serial and cached. The nine scientific artefacts and previous recorded predictions were preserved.
 
+## Team profiles
+
+Profiles cover all 11 teams on the 2026 grid. Base, power unit and technical leadership reflect sources checked on 11 November 2026. The selected GP stays in the links back to race team results and standings.
+
+Titles through 2025 come from historical standings and driver entries by constructor in F1DB v2026.19.0 under CC BY 4.0. Fangio clinched the 1954 title with Mercedes and also raced for Maserati that year. The FIA confirmed Mercedes' ninth constructors' title and Kimi Antonelli's drivers' title in 2026. Renault, Benetton and Brawn GP retain their individual championship credits. [Catalogue and team sources](../../frontend_assets/perfis_equipes.json) · [F1DB](https://github.com/f1db/f1db/releases/tag/v2026.19.0)
+
+Local campaigns show each constructor's accumulated points and position by round. Each 2026 Mercedes campaign stops at the round where its title was clinched. Title years before the local coverage link to the corresponding Formula 1 standings.
+
+## Drivers' Hall of Fame
+
+The catalogue covers 36 champions and 77 titles from 1950 to 2026. The driver list matches the official Hall of Fame. F1DB v2026.20.0 supplies title seasons, constructors, deciding Grands Prix and statistics through the São Paulo race on 8 November 2026. The profiles link to the official biographies and the FIA's confirmation of Antonelli's title. The 1954 entry records Fangio's season with Maserati and Mercedes. [Catalogue](../../frontend_assets/hall_da_fama.json) · [Formula 1 Hall of Fame](https://www.formula1.com/en/drivers/hall-of-fame) · [F1DB v2026.20.0](https://github.com/f1db/f1db/releases/tag/v2026.20.0)
+
 ## Full calendar audit
 
 The 9 November 2026 audit covers all 15 pages across 71 selectable rounds for 1,065 combinations. The calendar has 24 rounds in 2024, 24 in 2025 and 23 in 2026. The [inventory by round and session](../evidence/auditoria-calendario-20261109.json) records coverage and missing fields in the distributed files.

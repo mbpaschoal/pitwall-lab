@@ -250,6 +250,8 @@ RUNTIME_WORKTREE = (
     'pitwall/data/tyre_age.py',
     'pitwall/dashboard/archive_views.py',
     'pitwall/dashboard/pilot_views.py',
+    'pitwall/dashboard/team_views.py', 'frontend_assets/perfis_equipes.json',
+    'pitwall/dashboard/hall_views.py', 'frontend_assets/hall_da_fama.json',
     'docs/galeria-cartas.html',
     'docs/JORNADA_DO_FA.md', 'docs/en/FAN_JOURNEY.md', 'docs/OPERACAO_FIM_SEMANA.md', 'docs/en/WEEKEND_OPERATION.md',
     'docs/PREPARACAO_SAO_PAULO.md', 'docs/en/SAO_PAULO_PREPARATION.md',

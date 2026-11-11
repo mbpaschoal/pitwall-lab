@@ -1,0 +1,1534 @@
+{
+  "temporada": 2026,
+  "conferido_em": "2026-11-11",
+  "fonte_historia": "https://www.formula1.com/en/latest/article/the-family-tree-f1-11-teams-and-how-they-came-to-be.2QBA1PPMf0bC8mp2xxqZeq",
+  "fonte_titulos": "https://github.com/f1db/f1db/releases/tag/v2026.19.0",
+  "sha256_f1db": "92372221dccd37d9807790a23a090fd946735050b8ff4d6140f0f66bfb764b37",
+  "equipes": {
+    "alpine": {
+      "nome": "Alpine",
+      "base": {
+        "pt": "Enstone, Reino Unido",
+        "en": "Enstone, United Kingdom"
+      },
+      "unidade_potencia": "Mercedes",
+      "fonte": "https://www.formula1.com/en/teams/alpine",
+      "fontes_complementares": [],
+      "lideranca": [
+        {
+          "cargo": "Conselheiro executivo",
+          "nome": "Flavio Briatore"
+        },
+        {
+          "cargo": "Diretor-gerente",
+          "nome": "Steve Nielsen"
+        },
+        {
+          "cargo": "Direção técnica",
+          "nome": "David Sanchez"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 1981,
+          "pt": "A linhagem da equipe começa com a estreia da Toleman.",
+          "en": "The team's lineage begins with Toleman's debut."
+        },
+        {
+          "ano": 1986,
+          "pt": "A operação passa a competir como Benetton.",
+          "en": "The operation begins racing as Benetton."
+        },
+        {
+          "ano": 1995,
+          "pt": "A Benetton vence o Mundial de Construtores com motor Renault.",
+          "en": "Benetton wins the Constructors' Championship with Renault power."
+        },
+        {
+          "ano": 2002,
+          "pt": "A Renault assume a identidade da equipe de Enstone e conquista os títulos de 2005 e 2006.",
+          "en": "Renault takes over the Enstone team's identity and wins the 2005 and 2006 titles."
+        },
+        {
+          "ano": 2012,
+          "pt": "A equipe compete como Lotus até a volta da Renault em 2016.",
+          "en": "The team races as Lotus until Renault returns in 2016."
+        },
+        {
+          "ano": 2021,
+          "pt": "A operação adota o nome Alpine e vence na Hungria com Esteban Ocon.",
+          "en": "The operation adopts the Alpine name and wins in Hungary with Esteban Ocon."
+        },
+        {
+          "ano": 2026,
+          "pt": "A Alpine passa a usar unidades de potência Mercedes.",
+          "en": "Alpine switches to Mercedes power units."
+        }
+      ],
+      "titulos_anteriores": [
+        {
+          "ano": 1995,
+          "construtor": "Benetton"
+        },
+        {
+          "ano": 2005,
+          "construtor": "Renault"
+        },
+        {
+          "ano": 2006,
+          "construtor": "Renault"
+        }
+      ],
+      "titulos_construtores": [],
+      "titulos_pilotos": []
+    },
+    "aston_martin": {
+      "nome": "Aston Martin",
+      "base": {
+        "pt": "Silverstone, Reino Unido",
+        "en": "Silverstone, United Kingdom"
+      },
+      "unidade_potencia": "Honda",
+      "fonte": "https://www.formula1.com/en/teams/aston-martin",
+      "fontes_complementares": [
+        "https://www.formula1.com/en/latest/article/team-guide-aston-martins-complex-f1-roots-and-how-theyre-aiming-to-fulfil.465QgZKQ9XcBDcD54VT4xR"
+      ],
+      "lideranca": [
+        {
+          "cargo": "Chefe de equipe",
+          "nome": "Adrian Newey"
+        },
+        {
+          "cargo": "Direção técnica",
+          "nome": "Enrico Cardile"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 1959,
+          "pt": "A Aston Martin estreia na F1 em sua primeira passagem como construtora.",
+          "en": "Aston Martin debuts in F1 in its original spell as a constructor."
+        },
+        {
+          "ano": 1991,
+          "pt": "A operação atual tem origem na Jordan Grand Prix, fundada por Eddie Jordan.",
+          "en": "The present operation traces its roots to Jordan Grand Prix, founded by Eddie Jordan."
+        },
+        {
+          "ano": 2006,
+          "pt": "A Jordan dá lugar à Midland. A operação passa por Spyker e Force India nos anos seguintes.",
+          "en": "Midland replaces Jordan. The operation goes through Spyker and Force India in the following years."
+        },
+        {
+          "ano": 2018,
+          "pt": "Um consórcio liderado por Lawrence Stroll compra os ativos da Force India. A operação passa a usar o nome Racing Point.",
+          "en": "A consortium led by Lawrence Stroll buys Force India's assets. The operation takes the Racing Point name."
+        },
+        {
+          "ano": 2021,
+          "pt": "A operação de Silverstone passa a competir como Aston Martin.",
+          "en": "The Silverstone operation begins racing as Aston Martin."
+        },
+        {
+          "ano": 2026,
+          "pt": "A Honda passa a fornecer a unidade de potência à equipe.",
+          "en": "Honda becomes the team's power unit supplier."
+        }
+      ],
+      "titulos_anteriores": [],
+      "titulos_construtores": [],
+      "titulos_pilotos": []
+    },
+    "audi": {
+      "nome": "Audi",
+      "base": {
+        "pt": "Hinwil, Suíça",
+        "en": "Hinwil, Switzerland"
+      },
+      "unidade_potencia": "Audi",
+      "fonte": "https://www.formula1.com/en/teams/audi",
+      "fontes_complementares": [
+        "https://www.formula1.com/en/latest/article/audi-announce-team-boss-wheatley-to-exit-with-immediate-effect.1WqcMA6UUNOuruqoQcPb3Q"
+      ],
+      "lideranca": [
+        {
+          "cargo": "Chefe de equipe",
+          "nome": "Mattia Binotto"
+        },
+        {
+          "cargo": "Direção técnica",
+          "nome": "James Key"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 1993,
+          "pt": "A Sauber estreia na F1 com a operação suíça de Hinwil.",
+          "en": "Sauber enters F1 with its Swiss operation in Hinwil."
+        },
+        {
+          "ano": 2006,
+          "pt": "A equipe passa a competir como BMW Sauber. Em 2008, Robert Kubica conquista sua vitória no Canadá.",
+          "en": "The team begins racing as BMW Sauber. Robert Kubica takes its Canadian Grand Prix win in 2008."
+        },
+        {
+          "ano": 2022,
+          "pt": "A Audi anuncia a entrada na F1 e o acordo para transformar a Sauber em sua equipe de fábrica.",
+          "en": "Audi announces its F1 entry and the agreement to turn Sauber into its works team."
+        },
+        {
+          "ano": 2026,
+          "pt": "A Audi estreia como construtora com unidade de potência própria e a operação de Hinwil.",
+          "en": "Audi debuts as a constructor with its own power unit and the Hinwil operation."
+        }
+      ],
+      "titulos_anteriores": [],
+      "titulos_construtores": [],
+      "titulos_pilotos": []
+    },
+    "cadillac": {
+      "nome": "Cadillac",
+      "base": {
+        "pt": "Silverstone, Reino Unido",
+        "en": "Silverstone, United Kingdom"
+      },
+      "unidade_potencia": "Ferrari",
+      "fonte": "https://www.formula1.com/en/teams/cadillac",
+      "fontes_complementares": [
+        "https://www.cadillacf1team.com/news/cadillac-formula-1-team-appoints-marcin-budkowski-as-new-team-principal"
+      ],
+      "lideranca": [
+        {
+          "cargo": "Chefe de equipe",
+          "nome": "Marcin Budkowski"
+        },
+        {
+          "cargo": "Direção técnica",
+          "nome": "Nick Chester"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 2024,
+          "pt": "A Fórmula 1 anuncia um acordo inicial com a General Motors e a TWG Motorsports para a entrada da Cadillac.",
+          "en": "Formula 1 announces an agreement in principle with General Motors and TWG Motorsports for Cadillac's entry."
+        },
+        {
+          "ano": 2025,
+          "pt": "A entrada em 2026 recebe aprovação. Valtteri Bottas e Sergio Pérez são anunciados para a temporada de estreia.",
+          "en": "The 2026 entry is approved. Valtteri Bottas and Sergio Pérez are announced for the debut season."
+        },
+        {
+          "ano": 2026,
+          "pt": "A Cadillac estreia como a 11ª equipe do grid com unidade de potência Ferrari. Marcin Budkowski assume a chefia em agosto.",
+          "en": "Cadillac debuts as the grid's eleventh team with Ferrari power. Marcin Budkowski takes over as team principal in August."
+        }
+      ],
+      "titulos_anteriores": [],
+      "titulos_construtores": [],
+      "titulos_pilotos": []
+    },
+    "ferrari": {
+      "nome": "Ferrari",
+      "base": {
+        "pt": "Maranello, Itália",
+        "en": "Maranello, Italy"
+      },
+      "unidade_potencia": "Ferrari",
+      "fonte": "https://www.formula1.com/en/teams/ferrari",
+      "fontes_complementares": [
+        "https://www.formula1.com/en/latest/article/ferrari-announce-organisational-changes-as-former-mercedes-man-loic-serra.0IUcPWfs0xy101n43QxxS"
+      ],
+      "lideranca": [
+        {
+          "cargo": "Chefe de equipe",
+          "nome": "Frédéric Vasseur"
+        },
+        {
+          "cargo": "Direção técnica de chassi",
+          "nome": "Loïc Serra"
+        },
+        {
+          "cargo": "Direção da unidade de potência",
+          "nome": "Enrico Gualtieri"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 1950,
+          "pt": "A Scuderia Ferrari participa da temporada inaugural do Mundial de Fórmula 1.",
+          "en": "Scuderia Ferrari takes part in the inaugural Formula 1 World Championship season."
+        },
+        {
+          "ano": 1961,
+          "pt": "A Ferrari conquista seu primeiro título de construtores e Phil Hill vence o Mundial de Pilotos.",
+          "en": "Ferrari wins its first Constructors' Championship and Phil Hill wins the Drivers' Championship."
+        },
+        {
+          "ano": 1999,
+          "pt": "Começa uma sequência de seis títulos de construtores. Michael Schumacher conquista cinco títulos de pilotos entre 2000 e 2004.",
+          "en": "The team begins a run of six consecutive constructors' titles. Michael Schumacher wins five drivers' titles from 2000 to 2004."
+        },
+        {
+          "ano": 2008,
+          "pt": "A Ferrari conquista o seu 16º título de construtores.",
+          "en": "Ferrari wins its 16th constructors' title."
+        }
+      ],
+      "titulos_anteriores": [],
+      "titulos_construtores": [
+        {
+          "ano": 1961
+        },
+        {
+          "ano": 1964
+        },
+        {
+          "ano": 1975
+        },
+        {
+          "ano": 1976
+        },
+        {
+          "ano": 1977
+        },
+        {
+          "ano": 1979
+        },
+        {
+          "ano": 1982
+        },
+        {
+          "ano": 1983
+        },
+        {
+          "ano": 1999
+        },
+        {
+          "ano": 2000
+        },
+        {
+          "ano": 2001
+        },
+        {
+          "ano": 2002
+        },
+        {
+          "ano": 2003
+        },
+        {
+          "ano": 2004
+        },
+        {
+          "ano": 2007
+        },
+        {
+          "ano": 2008
+        }
+      ],
+      "titulos_pilotos": [
+        {
+          "ano": 1952,
+          "piloto": "Alberto Ascari"
+        },
+        {
+          "ano": 1953,
+          "piloto": "Alberto Ascari"
+        },
+        {
+          "ano": 1956,
+          "piloto": "Juan Manuel Fangio"
+        },
+        {
+          "ano": 1958,
+          "piloto": "Mike Hawthorn"
+        },
+        {
+          "ano": 1961,
+          "piloto": "Phil Hill"
+        },
+        {
+          "ano": 1964,
+          "piloto": "John Surtees"
+        },
+        {
+          "ano": 1975,
+          "piloto": "Niki Lauda"
+        },
+        {
+          "ano": 1977,
+          "piloto": "Niki Lauda"
+        },
+        {
+          "ano": 1979,
+          "piloto": "Jody Scheckter"
+        },
+        {
+          "ano": 2000,
+          "piloto": "Michael Schumacher"
+        },
+        {
+          "ano": 2001,
+          "piloto": "Michael Schumacher"
+        },
+        {
+          "ano": 2002,
+          "piloto": "Michael Schumacher"
+        },
+        {
+          "ano": 2003,
+          "piloto": "Michael Schumacher"
+        },
+        {
+          "ano": 2004,
+          "piloto": "Michael Schumacher"
+        },
+        {
+          "ano": 2007,
+          "piloto": "Kimi Räikkönen"
+        }
+      ]
+    },
+    "haas": {
+      "nome": "Haas F1 Team",
+      "base": {
+        "pt": "Kannapolis, Estados Unidos",
+        "en": "Kannapolis, United States"
+      },
+      "unidade_potencia": "Ferrari",
+      "fonte": "https://www.formula1.com/en/teams/haas",
+      "fontes_complementares": [],
+      "lideranca": [
+        {
+          "cargo": "Chefe de equipe",
+          "nome": "Ayao Komatsu"
+        },
+        {
+          "cargo": "Direção técnica",
+          "nome": "Andrea De Zordo"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 2016,
+          "pt": "A equipe fundada por Gene Haas estreia na F1 com unidade de potência Ferrari.",
+          "en": "Gene Haas's team enters F1 with Ferrari power."
+        },
+        {
+          "ano": 2018,
+          "pt": "A Haas termina em quinto no Mundial de Construtores.",
+          "en": "Haas finishes fifth in the Constructors' Championship."
+        },
+        {
+          "ano": 2024,
+          "pt": "Ayao Komatsu assume a chefia e a Haas fecha o ano em sétimo entre os construtores.",
+          "en": "Ayao Komatsu takes over as team principal and Haas finishes seventh among the constructors."
+        }
+      ],
+      "titulos_anteriores": [],
+      "titulos_construtores": [],
+      "titulos_pilotos": []
+    },
+    "mclaren": {
+      "nome": "McLaren",
+      "base": {
+        "pt": "Woking, Reino Unido",
+        "en": "Woking, United Kingdom"
+      },
+      "unidade_potencia": "Mercedes",
+      "fonte": "https://www.formula1.com/en/teams/mclaren",
+      "fontes_complementares": [
+        "https://www.mclaren.com/racing/formula-1/2024/mclaren-formula-1-team-announces-organisational-updates/",
+        "https://www.mclaren.com/racing/formula-1/2026/how-racing-has-changed-since-the-2026-rule-change/"
+      ],
+      "lideranca": [
+        {
+          "cargo": "Chefe de equipe",
+          "nome": "Andrea Stella"
+        },
+        {
+          "cargo": "Direção técnica de aerodinâmica",
+          "nome": "Peter Prodromou"
+        },
+        {
+          "cargo": "Direção técnica de engenharia",
+          "nome": "Neil Houldey"
+        },
+        {
+          "cargo": "Direção técnica de desempenho",
+          "nome": "Mark Temple"
+        },
+        {
+          "cargo": "Projetista-chefe",
+          "nome": "Rob Marshall"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 1966,
+          "pt": "A equipe fundada por Bruce McLaren estreia na Fórmula 1.",
+          "en": "Bruce McLaren's team makes its Formula 1 debut."
+        },
+        {
+          "ano": 1974,
+          "pt": "A McLaren conquista seu primeiro Mundial de Construtores e Emerson Fittipaldi vence entre os pilotos.",
+          "en": "McLaren wins its first Constructors' Championship and Emerson Fittipaldi wins the drivers' title."
+        },
+        {
+          "ano": 1988,
+          "pt": "Ayrton Senna conquista seu primeiro título, e a McLaren inicia uma série de quatro campeonatos de construtores consecutivos.",
+          "en": "Ayrton Senna wins his first title and McLaren begins a run of four consecutive constructors' championships."
+        },
+        {
+          "ano": 2024,
+          "pt": "A McLaren conquista seu primeiro título de construtores desde 1998.",
+          "en": "McLaren wins its first constructors' title since 1998."
+        },
+        {
+          "ano": 2025,
+          "pt": "A equipe conquista o décimo título de construtores e Lando Norris vence o Mundial de Pilotos.",
+          "en": "The team wins its tenth constructors' title and Lando Norris wins the Drivers' Championship."
+        }
+      ],
+      "titulos_anteriores": [],
+      "titulos_construtores": [
+        {
+          "ano": 1974
+        },
+        {
+          "ano": 1984
+        },
+        {
+          "ano": 1985
+        },
+        {
+          "ano": 1988
+        },
+        {
+          "ano": 1989
+        },
+        {
+          "ano": 1990
+        },
+        {
+          "ano": 1991
+        },
+        {
+          "ano": 1998
+        },
+        {
+          "ano": 2024
+        },
+        {
+          "ano": 2025
+        }
+      ],
+      "titulos_pilotos": [
+        {
+          "ano": 1974,
+          "piloto": "Emerson Fittipaldi"
+        },
+        {
+          "ano": 1976,
+          "piloto": "James Hunt"
+        },
+        {
+          "ano": 1984,
+          "piloto": "Niki Lauda"
+        },
+        {
+          "ano": 1985,
+          "piloto": "Alain Prost"
+        },
+        {
+          "ano": 1986,
+          "piloto": "Alain Prost"
+        },
+        {
+          "ano": 1988,
+          "piloto": "Ayrton Senna"
+        },
+        {
+          "ano": 1989,
+          "piloto": "Alain Prost"
+        },
+        {
+          "ano": 1990,
+          "piloto": "Ayrton Senna"
+        },
+        {
+          "ano": 1991,
+          "piloto": "Ayrton Senna"
+        },
+        {
+          "ano": 1998,
+          "piloto": "Mika Häkkinen"
+        },
+        {
+          "ano": 1999,
+          "piloto": "Mika Häkkinen"
+        },
+        {
+          "ano": 2008,
+          "piloto": "Lewis Hamilton"
+        },
+        {
+          "ano": 2025,
+          "piloto": "Lando Norris"
+        }
+      ],
+      "campanhas": {
+        "2024": [
+          {
+            "rodada": 1,
+            "gp": "Bahrain Grand Prix",
+            "posicao": 4,
+            "pontos": 12
+          },
+          {
+            "rodada": 2,
+            "gp": "Saudi Arabian Grand Prix",
+            "posicao": 3,
+            "pontos": 28
+          },
+          {
+            "rodada": 3,
+            "gp": "Australian Grand Prix",
+            "posicao": 3,
+            "pontos": 55
+          },
+          {
+            "rodada": 4,
+            "gp": "Japanese Grand Prix",
+            "posicao": 3,
+            "pontos": 69
+          },
+          {
+            "rodada": 5,
+            "gp": "Chinese Grand Prix",
+            "posicao": 3,
+            "pontos": 96
+          },
+          {
+            "rodada": 6,
+            "gp": "Miami Grand Prix",
+            "posicao": 3,
+            "pontos": 124
+          },
+          {
+            "rodada": 7,
+            "gp": "Emilia Romagna Grand Prix",
+            "posicao": 3,
+            "pontos": 154
+          },
+          {
+            "rodada": 8,
+            "gp": "Monaco Grand Prix",
+            "posicao": 3,
+            "pontos": 184
+          },
+          {
+            "rodada": 9,
+            "gp": "Canadian Grand Prix",
+            "posicao": 3,
+            "pontos": 212
+          },
+          {
+            "rodada": 10,
+            "gp": "Spanish Grand Prix",
+            "posicao": 3,
+            "pontos": 237
+          },
+          {
+            "rodada": 11,
+            "gp": "Austrian Grand Prix",
+            "posicao": 3,
+            "pontos": 268
+          },
+          {
+            "rodada": 12,
+            "gp": "British Grand Prix",
+            "posicao": 3,
+            "pontos": 295
+          },
+          {
+            "rodada": 13,
+            "gp": "Hungarian Grand Prix",
+            "posicao": 2,
+            "pontos": 338
+          },
+          {
+            "rodada": 14,
+            "gp": "Belgian Grand Prix",
+            "posicao": 2,
+            "pontos": 366
+          },
+          {
+            "rodada": 15,
+            "gp": "Dutch Grand Prix",
+            "posicao": 2,
+            "pontos": 404
+          },
+          {
+            "rodada": 16,
+            "gp": "Italian Grand Prix",
+            "posicao": 2,
+            "pontos": 438
+          },
+          {
+            "rodada": 17,
+            "gp": "Azerbaijan Grand Prix",
+            "posicao": 1,
+            "pontos": 476
+          },
+          {
+            "rodada": 18,
+            "gp": "Singapore Grand Prix",
+            "posicao": 1,
+            "pontos": 516
+          },
+          {
+            "rodada": 19,
+            "gp": "United States Grand Prix",
+            "posicao": 1,
+            "pontos": 544
+          },
+          {
+            "rodada": 20,
+            "gp": "Mexico City Grand Prix",
+            "posicao": 1,
+            "pontos": 566
+          },
+          {
+            "rodada": 21,
+            "gp": "São Paulo Grand Prix",
+            "posicao": 1,
+            "pontos": 593
+          },
+          {
+            "rodada": 22,
+            "gp": "Las Vegas Grand Prix",
+            "posicao": 1,
+            "pontos": 608
+          },
+          {
+            "rodada": 23,
+            "gp": "Qatar Grand Prix",
+            "posicao": 1,
+            "pontos": 640
+          },
+          {
+            "rodada": 24,
+            "gp": "Abu Dhabi Grand Prix",
+            "posicao": 1,
+            "pontos": 666
+          }
+        ],
+        "2025": [
+          {
+            "rodada": 1,
+            "gp": "Australian Grand Prix",
+            "posicao": 1,
+            "pontos": 27
+          },
+          {
+            "rodada": 2,
+            "gp": "Chinese Grand Prix",
+            "posicao": 1,
+            "pontos": 78
+          },
+          {
+            "rodada": 3,
+            "gp": "Japanese Grand Prix",
+            "posicao": 1,
+            "pontos": 111
+          },
+          {
+            "rodada": 4,
+            "gp": "Bahrain Grand Prix",
+            "posicao": 1,
+            "pontos": 151
+          },
+          {
+            "rodada": 5,
+            "gp": "Saudi Arabian Grand Prix",
+            "posicao": 1,
+            "pontos": 188
+          },
+          {
+            "rodada": 6,
+            "gp": "Miami Grand Prix",
+            "posicao": 1,
+            "pontos": 246
+          },
+          {
+            "rodada": 7,
+            "gp": "Emilia Romagna Grand Prix",
+            "posicao": 1,
+            "pontos": 279
+          },
+          {
+            "rodada": 8,
+            "gp": "Monaco Grand Prix",
+            "posicao": 1,
+            "pontos": 319
+          },
+          {
+            "rodada": 9,
+            "gp": "Spanish Grand Prix",
+            "posicao": 1,
+            "pontos": 362
+          },
+          {
+            "rodada": 10,
+            "gp": "Canadian Grand Prix",
+            "posicao": 1,
+            "pontos": 374
+          },
+          {
+            "rodada": 11,
+            "gp": "Austrian Grand Prix",
+            "posicao": 1,
+            "pontos": 417
+          },
+          {
+            "rodada": 12,
+            "gp": "British Grand Prix",
+            "posicao": 1,
+            "pontos": 460
+          },
+          {
+            "rodada": 13,
+            "gp": "Belgian Grand Prix",
+            "posicao": 1,
+            "pontos": 516
+          },
+          {
+            "rodada": 14,
+            "gp": "Hungarian Grand Prix",
+            "posicao": 1,
+            "pontos": 559
+          },
+          {
+            "rodada": 15,
+            "gp": "Dutch Grand Prix",
+            "posicao": 1,
+            "pontos": 584
+          },
+          {
+            "rodada": 16,
+            "gp": "Italian Grand Prix",
+            "posicao": 1,
+            "pontos": 617
+          },
+          {
+            "rodada": 17,
+            "gp": "Azerbaijan Grand Prix",
+            "posicao": 1,
+            "pontos": 623
+          },
+          {
+            "rodada": 18,
+            "gp": "Singapore Grand Prix",
+            "posicao": 1,
+            "pontos": 650
+          },
+          {
+            "rodada": 19,
+            "gp": "United States Grand Prix",
+            "posicao": 1,
+            "pontos": 678
+          },
+          {
+            "rodada": 20,
+            "gp": "Mexico City Grand Prix",
+            "posicao": 1,
+            "pontos": 713
+          },
+          {
+            "rodada": 21,
+            "gp": "São Paulo Grand Prix",
+            "posicao": 1,
+            "pontos": 756
+          },
+          {
+            "rodada": 22,
+            "gp": "Las Vegas Grand Prix",
+            "posicao": 1,
+            "pontos": 756
+          },
+          {
+            "rodada": 23,
+            "gp": "Qatar Grand Prix",
+            "posicao": 1,
+            "pontos": 800
+          },
+          {
+            "rodada": 24,
+            "gp": "Abu Dhabi Grand Prix",
+            "posicao": 1,
+            "pontos": 833
+          }
+        ]
+      }
+    },
+    "mercedes": {
+      "nome": "Mercedes",
+      "base": {
+        "pt": "Brackley, Reino Unido",
+        "en": "Brackley, United Kingdom"
+      },
+      "unidade_potencia": "Mercedes",
+      "fonte": "https://www.formula1.com/en/teams/mercedes",
+      "fontes_complementares": [
+        "https://www.fia.com/news/f1-norris-triumphs-sao-paulo-mercedes-secure-2026-constructors-championship",
+        "https://www.fia.com/news/f1-antonelli-crowned-f1s-youngest-world-champion-verstappen-wins-mexico-city"
+      ],
+      "lideranca": [
+        {
+          "cargo": "Chefe de equipe",
+          "nome": "Toto Wolff"
+        },
+        {
+          "cargo": "Direção técnica",
+          "nome": "James Allison"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 1954,
+          "pt": "A Mercedes estreia no Mundial de Fórmula 1. Juan Manuel Fangio conquista o título daquele ano após também competir pela Maserati.",
+          "en": "Mercedes enters the Formula 1 World Championship. Juan Manuel Fangio wins that year's title after also racing for Maserati."
+        },
+        {
+          "ano": 2009,
+          "pt": "A Brawn GP conquista o Mundial de Construtores antes de se tornar a equipe de fábrica da Mercedes.",
+          "en": "Brawn GP wins the Constructors' Championship before becoming the Mercedes works team."
+        },
+        {
+          "ano": 2010,
+          "pt": "A Mercedes volta ao grid com uma equipe de fábrica sediada em Brackley.",
+          "en": "Mercedes returns to the grid with a works team based in Brackley."
+        },
+        {
+          "ano": 2014,
+          "pt": "O início da era híbrida marca o primeiro de oito títulos de construtores consecutivos da Mercedes.",
+          "en": "The start of the hybrid era marks the first of eight consecutive Mercedes constructors' titles."
+        },
+        {
+          "ano": 2026,
+          "pt": "A Mercedes assegura o nono Mundial de Construtores em São Paulo. Kimi Antonelli havia garantido o título de pilotos no México.",
+          "en": "Mercedes clinches its ninth Constructors' Championship in São Paulo. Kimi Antonelli had already clinched the drivers' title in Mexico."
+        }
+      ],
+      "titulos_anteriores": [
+        {
+          "ano": 2009,
+          "construtor": "Brawn GP"
+        }
+      ],
+      "titulos_construtores": [
+        {
+          "ano": 2014
+        },
+        {
+          "ano": 2015
+        },
+        {
+          "ano": 2016
+        },
+        {
+          "ano": 2017
+        },
+        {
+          "ano": 2018
+        },
+        {
+          "ano": 2019
+        },
+        {
+          "ano": 2020
+        },
+        {
+          "ano": 2021
+        },
+        {
+          "ano": 2026,
+          "rodada": 20,
+          "fonte": "https://www.fia.com/news/f1-norris-triumphs-sao-paulo-mercedes-secure-2026-constructors-championship"
+        }
+      ],
+      "titulos_pilotos": [
+        {
+          "ano": 1954,
+          "piloto": "Juan Manuel Fangio"
+        },
+        {
+          "ano": 1955,
+          "piloto": "Juan Manuel Fangio"
+        },
+        {
+          "ano": 2014,
+          "piloto": "Lewis Hamilton"
+        },
+        {
+          "ano": 2015,
+          "piloto": "Lewis Hamilton"
+        },
+        {
+          "ano": 2016,
+          "piloto": "Nico Rosberg"
+        },
+        {
+          "ano": 2017,
+          "piloto": "Lewis Hamilton"
+        },
+        {
+          "ano": 2018,
+          "piloto": "Lewis Hamilton"
+        },
+        {
+          "ano": 2019,
+          "piloto": "Lewis Hamilton"
+        },
+        {
+          "ano": 2020,
+          "piloto": "Lewis Hamilton"
+        },
+        {
+          "ano": 2026,
+          "rodada": 19,
+          "piloto": "Kimi Antonelli",
+          "fonte": "https://www.fia.com/news/f1-antonelli-crowned-f1s-youngest-world-champion-verstappen-wins-mexico-city"
+        }
+      ],
+      "campanhas": {
+        "2026": [
+          {
+            "rodada": 1,
+            "gp": "Australian Grand Prix",
+            "posicao": 1,
+            "pontos": 43
+          },
+          {
+            "rodada": 2,
+            "gp": "Chinese Grand Prix",
+            "posicao": 1,
+            "pontos": 98
+          },
+          {
+            "rodada": 3,
+            "gp": "Japanese Grand Prix",
+            "posicao": 1,
+            "pontos": 135
+          },
+          {
+            "rodada": 4,
+            "gp": "Miami Grand Prix",
+            "posicao": 1,
+            "pontos": 180
+          },
+          {
+            "rodada": 5,
+            "gp": "Canadian Grand Prix",
+            "posicao": 1,
+            "pontos": 219
+          },
+          {
+            "rodada": 6,
+            "gp": "Monaco Grand Prix",
+            "posicao": 1,
+            "pontos": 244
+          },
+          {
+            "rodada": 7,
+            "gp": "Barcelona Grand Prix",
+            "posicao": 1,
+            "pontos": 262
+          },
+          {
+            "rodada": 8,
+            "gp": "Austrian Grand Prix",
+            "posicao": 1,
+            "pontos": 302
+          },
+          {
+            "rodada": 9,
+            "gp": "British Grand Prix",
+            "posicao": 1,
+            "pontos": 333
+          },
+          {
+            "rodada": 10,
+            "gp": "Belgian Grand Prix",
+            "posicao": 1,
+            "pontos": 358
+          },
+          {
+            "rodada": 11,
+            "gp": "Hungarian Grand Prix",
+            "posicao": 1,
+            "pontos": 379
+          },
+          {
+            "rodada": 12,
+            "gp": "Dutch Grand Prix",
+            "posicao": 1,
+            "pontos": 425
+          },
+          {
+            "rodada": 13,
+            "gp": "Italian Grand Prix",
+            "posicao": 1,
+            "pontos": 468
+          },
+          {
+            "rodada": 14,
+            "gp": "Spanish Grand Prix",
+            "posicao": 1,
+            "pontos": 503
+          },
+          {
+            "rodada": 15,
+            "gp": "Azerbaijan Grand Prix",
+            "posicao": 1,
+            "pontos": 538
+          },
+          {
+            "rodada": 16,
+            "gp": "Bahrain Grand Prix in Malaysia",
+            "posicao": 1,
+            "pontos": 556
+          },
+          {
+            "rodada": 17,
+            "gp": "Singapore Grand Prix",
+            "posicao": 1,
+            "pontos": 578
+          },
+          {
+            "rodada": 18,
+            "gp": "United States Grand Prix",
+            "posicao": 1,
+            "pontos": 607
+          },
+          {
+            "rodada": 19,
+            "gp": "Mexico City Grand Prix",
+            "posicao": 1,
+            "pontos": 630
+          },
+          {
+            "rodada": 20,
+            "gp": "São Paulo Grand Prix",
+            "posicao": 1,
+            "pontos": 652.0,
+            "fonte": "https://www.fia.com/news/f1-norris-triumphs-sao-paulo-mercedes-secure-2026-constructors-championship"
+          }
+        ]
+      }
+    },
+    "rb": {
+      "nome": "Racing Bulls",
+      "base": {
+        "pt": "Faenza, Itália",
+        "en": "Faenza, Italy"
+      },
+      "unidade_potencia": "Red Bull Ford",
+      "fonte": "https://www.formula1.com/en/teams/racing-bulls",
+      "fontes_complementares": [],
+      "lideranca": [
+        {
+          "cargo": "Chefe de equipe",
+          "nome": "Alan Permane"
+        },
+        {
+          "cargo": "Direção técnica",
+          "nome": "Tim Goss"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 1985,
+          "pt": "A linhagem de Faenza começa com a estreia da Minardi.",
+          "en": "The Faenza lineage begins with Minardi's debut."
+        },
+        {
+          "ano": 2006,
+          "pt": "A operação da Minardi passa a competir como Toro Rosso.",
+          "en": "The Minardi operation begins racing as Toro Rosso."
+        },
+        {
+          "ano": 2008,
+          "pt": "Sebastian Vettel conquista a vitória da Toro Rosso em Monza.",
+          "en": "Sebastian Vettel wins for Toro Rosso at Monza."
+        },
+        {
+          "ano": 2020,
+          "pt": "A Toro Rosso adota o nome AlphaTauri. Pierre Gasly vence em Monza naquele ano.",
+          "en": "Toro Rosso becomes AlphaTauri. Pierre Gasly wins at Monza that year."
+        },
+        {
+          "ano": 2024,
+          "pt": "A operação corre como RB antes de adotar Racing Bulls em 2025.",
+          "en": "The operation races as RB before adopting Racing Bulls in 2025."
+        }
+      ],
+      "titulos_anteriores": [],
+      "titulos_construtores": [],
+      "titulos_pilotos": []
+    },
+    "red_bull": {
+      "nome": "Red Bull Racing",
+      "base": {
+        "pt": "Milton Keynes, Reino Unido",
+        "en": "Milton Keynes, United Kingdom"
+      },
+      "unidade_potencia": "Red Bull Ford",
+      "fonte": "https://www.formula1.com/en/teams/red-bull-racing",
+      "fontes_complementares": [],
+      "lideranca": [
+        {
+          "cargo": "Chefe de equipe",
+          "nome": "Laurent Mekies"
+        },
+        {
+          "cargo": "Direção técnica",
+          "nome": "Pierre Waché"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 2005,
+          "pt": "A Red Bull Racing estreia depois de assumir a operação da Jaguar.",
+          "en": "Red Bull Racing debuts after taking over the Jaguar operation."
+        },
+        {
+          "ano": 2010,
+          "pt": "A Red Bull conquista o primeiro de quatro títulos de construtores seguidos, com Sebastian Vettel também campeão entre os pilotos.",
+          "en": "Red Bull wins the first of four consecutive constructors' titles, with Sebastian Vettel also winning the drivers' title."
+        },
+        {
+          "ano": 2022,
+          "pt": "A Red Bull volta ao topo dos construtores e repete o título em 2023.",
+          "en": "Red Bull returns to the top of the constructors' standings and retains the title in 2023."
+        },
+        {
+          "ano": 2025,
+          "pt": "Laurent Mekies assume a chefia da equipe.",
+          "en": "Laurent Mekies takes over as team principal."
+        },
+        {
+          "ano": 2026,
+          "pt": "A equipe estreia a unidade de potência Red Bull Ford.",
+          "en": "The team debuts the Red Bull Ford power unit."
+        }
+      ],
+      "titulos_anteriores": [],
+      "titulos_construtores": [
+        {
+          "ano": 2010
+        },
+        {
+          "ano": 2011
+        },
+        {
+          "ano": 2012
+        },
+        {
+          "ano": 2013
+        },
+        {
+          "ano": 2022
+        },
+        {
+          "ano": 2023
+        }
+      ],
+      "titulos_pilotos": [
+        {
+          "ano": 2010,
+          "piloto": "Sebastian Vettel"
+        },
+        {
+          "ano": 2011,
+          "piloto": "Sebastian Vettel"
+        },
+        {
+          "ano": 2012,
+          "piloto": "Sebastian Vettel"
+        },
+        {
+          "ano": 2013,
+          "piloto": "Sebastian Vettel"
+        },
+        {
+          "ano": 2021,
+          "piloto": "Max Verstappen"
+        },
+        {
+          "ano": 2022,
+          "piloto": "Max Verstappen"
+        },
+        {
+          "ano": 2023,
+          "piloto": "Max Verstappen"
+        },
+        {
+          "ano": 2024,
+          "piloto": "Max Verstappen"
+        }
+      ],
+      "campanhas": {
+        "2024": [
+          {
+            "rodada": 1,
+            "gp": "Bahrain Grand Prix",
+            "posicao": 1,
+            "pontos": 44
+          },
+          {
+            "rodada": 2,
+            "gp": "Saudi Arabian Grand Prix",
+            "posicao": 1,
+            "pontos": 87
+          },
+          {
+            "rodada": 3,
+            "gp": "Australian Grand Prix",
+            "posicao": 1,
+            "pontos": 97
+          },
+          {
+            "rodada": 4,
+            "gp": "Japanese Grand Prix",
+            "posicao": 1,
+            "pontos": 141
+          },
+          {
+            "rodada": 5,
+            "gp": "Chinese Grand Prix",
+            "posicao": 1,
+            "pontos": 195
+          },
+          {
+            "rodada": 6,
+            "gp": "Miami Grand Prix",
+            "posicao": 1,
+            "pontos": 239
+          },
+          {
+            "rodada": 7,
+            "gp": "Emilia Romagna Grand Prix",
+            "posicao": 1,
+            "pontos": 268
+          },
+          {
+            "rodada": 8,
+            "gp": "Monaco Grand Prix",
+            "posicao": 1,
+            "pontos": 276
+          },
+          {
+            "rodada": 9,
+            "gp": "Canadian Grand Prix",
+            "posicao": 1,
+            "pontos": 301
+          },
+          {
+            "rodada": 10,
+            "gp": "Spanish Grand Prix",
+            "posicao": 1,
+            "pontos": 330
+          },
+          {
+            "rodada": 11,
+            "gp": "Austrian Grand Prix",
+            "posicao": 1,
+            "pontos": 355
+          },
+          {
+            "rodada": 12,
+            "gp": "British Grand Prix",
+            "posicao": 1,
+            "pontos": 373
+          },
+          {
+            "rodada": 13,
+            "gp": "Hungarian Grand Prix",
+            "posicao": 1,
+            "pontos": 389
+          },
+          {
+            "rodada": 14,
+            "gp": "Belgian Grand Prix",
+            "posicao": 1,
+            "pontos": 408
+          },
+          {
+            "rodada": 15,
+            "gp": "Dutch Grand Prix",
+            "posicao": 1,
+            "pontos": 434
+          },
+          {
+            "rodada": 16,
+            "gp": "Italian Grand Prix",
+            "posicao": 1,
+            "pontos": 446
+          },
+          {
+            "rodada": 17,
+            "gp": "Azerbaijan Grand Prix",
+            "posicao": 2,
+            "pontos": 456
+          },
+          {
+            "rodada": 18,
+            "gp": "Singapore Grand Prix",
+            "posicao": 2,
+            "pontos": 475
+          },
+          {
+            "rodada": 19,
+            "gp": "United States Grand Prix",
+            "posicao": 2,
+            "pontos": 504
+          },
+          {
+            "rodada": 20,
+            "gp": "Mexico City Grand Prix",
+            "posicao": 3,
+            "pontos": 512
+          },
+          {
+            "rodada": 21,
+            "gp": "São Paulo Grand Prix",
+            "posicao": 3,
+            "pontos": 544
+          },
+          {
+            "rodada": 22,
+            "gp": "Las Vegas Grand Prix",
+            "posicao": 3,
+            "pontos": 555
+          },
+          {
+            "rodada": 23,
+            "gp": "Qatar Grand Prix",
+            "posicao": 3,
+            "pontos": 581
+          },
+          {
+            "rodada": 24,
+            "gp": "Abu Dhabi Grand Prix",
+            "posicao": 3,
+            "pontos": 589
+          }
+        ]
+      }
+    },
+    "williams": {
+      "nome": "Williams",
+      "base": {
+        "pt": "Grove, Reino Unido",
+        "en": "Grove, United Kingdom"
+      },
+      "unidade_potencia": "Mercedes",
+      "fonte": "https://www.formula1.com/en/teams/williams",
+      "fontes_complementares": [],
+      "lideranca": [
+        {
+          "cargo": "Chefe de equipe",
+          "nome": "James Vowles"
+        },
+        {
+          "cargo": "Direção técnica",
+          "nome": "Pat Fry"
+        }
+      ],
+      "marcos": [
+        {
+          "ano": 1978,
+          "pt": "A Williams disputa a F1 com seu próprio chassi.",
+          "en": "Williams contests F1 with its own chassis."
+        },
+        {
+          "ano": 1980,
+          "pt": "A Williams vence pela primeira vez entre os construtores, e Alan Jones é campeão entre os pilotos.",
+          "en": "Williams wins its first constructors' title and Alan Jones wins the drivers' title."
+        },
+        {
+          "ano": 1992,
+          "pt": "Nigel Mansell vence o Mundial de Pilotos. A Williams conquista cinco títulos de construtores entre 1992 e 1997.",
+          "en": "Nigel Mansell wins the Drivers' Championship. Williams wins five constructors' titles between 1992 and 1997."
+        },
+        {
+          "ano": 2020,
+          "pt": "A família Williams vende a equipe à Dorilton Capital.",
+          "en": "The Williams family sells the team to Dorilton Capital."
+        }
+      ],
+      "titulos_anteriores": [],
+      "titulos_construtores": [
+        {
+          "ano": 1980
+        },
+        {
+          "ano": 1981
+        },
+        {
+          "ano": 1986
+        },
+        {
+          "ano": 1987
+        },
+        {
+          "ano": 1992
+        },
+        {
+          "ano": 1993
+        },
+        {
+          "ano": 1994
+        },
+        {
+          "ano": 1996
+        },
+        {
+          "ano": 1997
+        }
+      ],
+      "titulos_pilotos": [
+        {
+          "ano": 1980,
+          "piloto": "Alan Jones"
+        },
+        {
+          "ano": 1982,
+          "piloto": "Keke Rosberg"
+        },
+        {
+          "ano": 1987,
+          "piloto": "Nelson Piquet"
+        },
+        {
+          "ano": 1992,
+          "piloto": "Nigel Mansell"
+        },
+        {
+          "ano": 1993,
+          "piloto": "Alain Prost"
+        },
+        {
+          "ano": 1996,
+          "piloto": "Damon Hill"
+        },
+        {
+          "ano": 1997,
+          "piloto": "Jacques Villeneuve"
+        }
+      ]
+    }
+  }
+}

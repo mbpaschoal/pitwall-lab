@@ -1,0 +1,2250 @@
+{
+  "schema": "pitwall-hall-da-fama-v1",
+  "conferido_em": "2026-11-11",
+  "corte": "2026-11-08",
+  "fonte_f1": "https://www.formula1.com/en/drivers/hall-of-fame",
+  "fonte_dados": "https://github.com/f1db/f1db/releases/tag/v2026.20.0",
+  "sha256_f1db": "d646ef0dd92dff39b8b91e6b750669f5a85999a04180ade79e3f0dba2fdcc902",
+  "pilotos": {
+    "nino-farina": {
+      "nome": "Nino Farina",
+      "pais": {
+        "pt": "Itália",
+        "en": "Italy"
+      },
+      "bio": {
+        "pt": "Giuseppe “Nino” Farina venceu a prova inaugural do Mundial em Silverstone e foi campeão da primeira temporada pela Alfa Romeo.",
+        "en": "Giuseppe “Nino” Farina won the inaugural World Championship race at Silverstone and took the first season’s title with Alfa Romeo."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-nino-farina.42vZMEuSei8avz76yMDHpf",
+      "estreia": {
+        "ano": 1950,
+        "rodada": 1,
+        "gp": "British Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1950,
+        "rodada": 1,
+        "gp": "British Grand Prix"
+      },
+      "anos_atividade": [
+        1950,
+        1955
+      ],
+      "largadas": 33,
+      "vitorias": 5,
+      "podios": 19,
+      "poles": 5,
+      "titulos": [
+        {
+          "ano": 1950,
+          "construtores": [
+            {
+              "id": "alfa-romeo",
+              "nome": "Alfa Romeo"
+            }
+          ],
+          "decisao": {
+            "ano": 1950,
+            "rodada": 7,
+            "gp": "Italian Grand Prix"
+          }
+        }
+      ]
+    },
+    "juan-manuel-fangio": {
+      "nome": "Juan Manuel Fangio",
+      "pais": {
+        "pt": "Argentina",
+        "en": "Argentina"
+      },
+      "bio": {
+        "pt": "Fangio conquistou cinco títulos nos anos 1950. Em 1954, correu pela Maserati no início da temporada e garantiu o campeonato pela Mercedes.",
+        "en": "Fangio won five titles in the 1950s. In 1954 he raced for Maserati early in the season and clinched the championship with Mercedes."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-juan-manuel-fangio.6SSng3B5E6j6pxPNbyqQIv",
+      "estreia": {
+        "ano": 1950,
+        "rodada": 1,
+        "gp": "British Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1950,
+        "rodada": 2,
+        "gp": "Monaco Grand Prix"
+      },
+      "anos_atividade": [
+        1950,
+        1958
+      ],
+      "largadas": 51,
+      "vitorias": 24,
+      "podios": 35,
+      "poles": 29,
+      "titulos": [
+        {
+          "ano": 1951,
+          "construtores": [
+            {
+              "id": "alfa-romeo",
+              "nome": "Alfa Romeo"
+            }
+          ],
+          "decisao": {
+            "ano": 1951,
+            "rodada": 8,
+            "gp": "Spanish Grand Prix"
+          }
+        },
+        {
+          "ano": 1954,
+          "construtores": [
+            {
+              "id": "maserati",
+              "nome": "Maserati"
+            },
+            {
+              "id": "mercedes",
+              "nome": "Mercedes"
+            }
+          ],
+          "decisao": {
+            "ano": 1954,
+            "rodada": 7,
+            "gp": "Swiss Grand Prix"
+          }
+        },
+        {
+          "ano": 1955,
+          "construtores": [
+            {
+              "id": "mercedes",
+              "nome": "Mercedes"
+            }
+          ],
+          "decisao": {
+            "ano": 1955,
+            "rodada": 6,
+            "gp": "British Grand Prix"
+          }
+        },
+        {
+          "ano": 1956,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 1956,
+            "rodada": 8,
+            "gp": "Italian Grand Prix"
+          }
+        },
+        {
+          "ano": 1957,
+          "construtores": [
+            {
+              "id": "maserati",
+              "nome": "Maserati"
+            }
+          ],
+          "decisao": {
+            "ano": 1957,
+            "rodada": 6,
+            "gp": "German Grand Prix"
+          }
+        }
+      ]
+    },
+    "alberto-ascari": {
+      "nome": "Alberto Ascari",
+      "pais": {
+        "pt": "Itália",
+        "en": "Italy"
+      },
+      "bio": {
+        "pt": "Ascari foi bicampeão consecutivo pela Ferrari. Suas conquistas vieram em 1952 e 1953.",
+        "en": "Ascari won consecutive championships with Ferrari, in 1952 and 1953."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-alberto-ascari.6zgWYwDIjoQmYSiz48FAZD",
+      "estreia": {
+        "ano": 1950,
+        "rodada": 2,
+        "gp": "Monaco Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1951,
+        "rodada": 6,
+        "gp": "German Grand Prix"
+      },
+      "anos_atividade": [
+        1950,
+        1955
+      ],
+      "largadas": 32,
+      "vitorias": 13,
+      "podios": 17,
+      "poles": 14,
+      "titulos": [
+        {
+          "ano": 1952,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 1952,
+            "rodada": 6,
+            "gp": "German Grand Prix"
+          }
+        },
+        {
+          "ano": 1953,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 1953,
+            "rodada": 8,
+            "gp": "Swiss Grand Prix"
+          }
+        }
+      ]
+    },
+    "mike-hawthorn": {
+      "nome": "Mike Hawthorn",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Hawthorn tornou-se o primeiro britânico campeão mundial de F1. Em 1958, terminou um ponto à frente de Stirling Moss.",
+        "en": "Hawthorn became Britain’s first F1 world champion. In 1958 he finished one point ahead of Stirling Moss."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-mike-hawthorn.1ZhSmpnVlO7Pb8peo23YVd",
+      "estreia": {
+        "ano": 1952,
+        "rodada": 3,
+        "gp": "Belgian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1953,
+        "rodada": 5,
+        "gp": "French Grand Prix"
+      },
+      "anos_atividade": [
+        1952,
+        1958
+      ],
+      "largadas": 45,
+      "vitorias": 3,
+      "podios": 18,
+      "poles": 4,
+      "titulos": [
+        {
+          "ano": 1958,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 1958,
+            "rodada": 11,
+            "gp": "Moroccan Grand Prix"
+          }
+        }
+      ]
+    },
+    "jack-brabham": {
+      "nome": "Jack Brabham",
+      "pais": {
+        "pt": "Austrália",
+        "en": "Australia"
+      },
+      "bio": {
+        "pt": "Depois de dois títulos com a Cooper, o australiano voltou a ser campeão em 1966 ao volante de um carro com seu próprio nome.",
+        "en": "After two titles with Cooper, the Australian won again in 1966 driving a car that carried his own name."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-jack-brabham.3XK2XWdL0moCmnSC55m84J",
+      "estreia": {
+        "ano": 1955,
+        "rodada": 6,
+        "gp": "British Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1959,
+        "rodada": 1,
+        "gp": "Monaco Grand Prix"
+      },
+      "anos_atividade": [
+        1955,
+        1970
+      ],
+      "largadas": 126,
+      "vitorias": 14,
+      "podios": 31,
+      "poles": 13,
+      "titulos": [
+        {
+          "ano": 1959,
+          "construtores": [
+            {
+              "id": "cooper",
+              "nome": "Cooper"
+            }
+          ],
+          "decisao": {
+            "ano": 1959,
+            "rodada": 9,
+            "gp": "United States Grand Prix"
+          }
+        },
+        {
+          "ano": 1960,
+          "construtores": [
+            {
+              "id": "cooper",
+              "nome": "Cooper"
+            }
+          ],
+          "decisao": {
+            "ano": 1960,
+            "rodada": 8,
+            "gp": "Portuguese Grand Prix"
+          }
+        },
+        {
+          "ano": 1966,
+          "construtores": [
+            {
+              "id": "brabham",
+              "nome": "Brabham"
+            }
+          ],
+          "decisao": {
+            "ano": 1966,
+            "rodada": 7,
+            "gp": "Italian Grand Prix"
+          }
+        }
+      ]
+    },
+    "phil-hill": {
+      "nome": "Phil Hill",
+      "pais": {
+        "pt": "Estados Unidos",
+        "en": "United States"
+      },
+      "bio": {
+        "pt": "Phil Hill foi o primeiro americano campeão mundial de F1. Conquistou o título de 1961 pela Ferrari.",
+        "en": "Phil Hill became the first American F1 world champion. He won the 1961 title with Ferrari."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-phil-hill.6lgmSO6KAK9UgCNziJodGB",
+      "estreia": {
+        "ano": 1958,
+        "rodada": 6,
+        "gp": "French Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1960,
+        "rodada": 9,
+        "gp": "Italian Grand Prix"
+      },
+      "anos_atividade": [
+        1958,
+        1964
+      ],
+      "largadas": 48,
+      "vitorias": 3,
+      "podios": 16,
+      "poles": 6,
+      "titulos": [
+        {
+          "ano": 1961,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 1961,
+            "rodada": 7,
+            "gp": "Italian Grand Prix"
+          }
+        }
+      ]
+    },
+    "graham-hill": {
+      "nome": "Graham Hill",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Hill conquistou o Mundial com BRM e Lotus. Também venceu as 500 Milhas de Indianápolis e as 24 Horas de Le Mans.",
+        "en": "Hill won F1 titles with BRM and Lotus. He also won the Indianapolis 500 and the 24 Hours of Le Mans."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-graham-hill.NUqzbttsJ2gsuGtW9PzNG",
+      "estreia": {
+        "ano": 1958,
+        "rodada": 2,
+        "gp": "Monaco Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1962,
+        "rodada": 1,
+        "gp": "Dutch Grand Prix"
+      },
+      "anos_atividade": [
+        1958,
+        1975
+      ],
+      "largadas": 176,
+      "vitorias": 14,
+      "podios": 36,
+      "poles": 13,
+      "titulos": [
+        {
+          "ano": 1962,
+          "construtores": [
+            {
+              "id": "brm",
+              "nome": "BRM"
+            }
+          ],
+          "decisao": {
+            "ano": 1962,
+            "rodada": 9,
+            "gp": "South African Grand Prix"
+          }
+        },
+        {
+          "ano": 1968,
+          "construtores": [
+            {
+              "id": "lotus",
+              "nome": "Lotus"
+            }
+          ],
+          "decisao": {
+            "ano": 1968,
+            "rodada": 12,
+            "gp": "Mexican Grand Prix"
+          }
+        }
+      ]
+    },
+    "jim-clark": {
+      "nome": "Jim Clark",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Clark conquistou seus dois títulos pela Lotus. Em 1965, venceu também as 500 Milhas de Indianápolis.",
+        "en": "Clark won both titles with Lotus. In 1965 he also won the Indianapolis 500."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-jim-clark.2xXQsIYM7LBHJrP4Gw6rRD",
+      "estreia": {
+        "ano": 1960,
+        "rodada": 4,
+        "gp": "Dutch Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1962,
+        "rodada": 3,
+        "gp": "Belgian Grand Prix"
+      },
+      "anos_atividade": [
+        1960,
+        1968
+      ],
+      "largadas": 72,
+      "vitorias": 25,
+      "podios": 32,
+      "poles": 33,
+      "titulos": [
+        {
+          "ano": 1963,
+          "construtores": [
+            {
+              "id": "lotus",
+              "nome": "Lotus"
+            }
+          ],
+          "decisao": {
+            "ano": 1963,
+            "rodada": 7,
+            "gp": "Italian Grand Prix"
+          }
+        },
+        {
+          "ano": 1965,
+          "construtores": [
+            {
+              "id": "lotus",
+              "nome": "Lotus"
+            }
+          ],
+          "decisao": {
+            "ano": 1965,
+            "rodada": 7,
+            "gp": "German Grand Prix"
+          }
+        }
+      ]
+    },
+    "john-surtees": {
+      "nome": "John Surtees",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Surtees conquistou o Mundial de Fórmula 1 de 1964 pela Ferrari após ser campeão mundial no motociclismo.",
+        "en": "Surtees won the 1964 Formula 1 championship with Ferrari after winning world titles in motorcycle racing."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-john-surtees.7a0aXDMmG4DZeRFpzeN4vz",
+      "estreia": {
+        "ano": 1960,
+        "rodada": 2,
+        "gp": "Monaco Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1963,
+        "rodada": 6,
+        "gp": "German Grand Prix"
+      },
+      "anos_atividade": [
+        1960,
+        1972
+      ],
+      "largadas": 111,
+      "vitorias": 6,
+      "podios": 24,
+      "poles": 8,
+      "titulos": [
+        {
+          "ano": 1964,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 1964,
+            "rodada": 10,
+            "gp": "Mexican Grand Prix"
+          }
+        }
+      ]
+    },
+    "denny-hulme": {
+      "nome": "Denny Hulme",
+      "pais": {
+        "pt": "Nova Zelândia",
+        "en": "New Zealand"
+      },
+      "bio": {
+        "pt": "O neozelandês venceu seu primeiro GP em Mônaco em 1967 e conquistou o título naquele ano com a Brabham.",
+        "en": "The New Zealander won his first Grand Prix at Monaco in 1967 and took that year’s title with Brabham."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-denny-hulme.4Y4lvrNNAQcB0Cf6PQcIqq",
+      "estreia": {
+        "ano": 1965,
+        "rodada": 2,
+        "gp": "Monaco Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1967,
+        "rodada": 2,
+        "gp": "Monaco Grand Prix"
+      },
+      "anos_atividade": [
+        1965,
+        1974
+      ],
+      "largadas": 112,
+      "vitorias": 8,
+      "podios": 33,
+      "poles": 1,
+      "titulos": [
+        {
+          "ano": 1967,
+          "construtores": [
+            {
+              "id": "brabham",
+              "nome": "Brabham"
+            }
+          ],
+          "decisao": {
+            "ano": 1967,
+            "rodada": 11,
+            "gp": "Mexican Grand Prix"
+          }
+        }
+      ]
+    },
+    "jackie-stewart": {
+      "nome": "Jackie Stewart",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Stewart venceu o Mundial três vezes com carros Matra e Tyrrell. Sua carreira também marcou a campanha por mais segurança nas pistas.",
+        "en": "Stewart won three championships in Matra and Tyrrell cars. His career also helped advance the campaign for safer racing."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-jackie-stewart.18715uErEG7LS83UDkeqP4",
+      "estreia": {
+        "ano": 1965,
+        "rodada": 1,
+        "gp": "South African Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1965,
+        "rodada": 8,
+        "gp": "Italian Grand Prix"
+      },
+      "anos_atividade": [
+        1965,
+        1973
+      ],
+      "largadas": 99,
+      "vitorias": 27,
+      "podios": 43,
+      "poles": 17,
+      "titulos": [
+        {
+          "ano": 1969,
+          "construtores": [
+            {
+              "id": "matra",
+              "nome": "Matra"
+            }
+          ],
+          "decisao": {
+            "ano": 1969,
+            "rodada": 8,
+            "gp": "Italian Grand Prix"
+          }
+        },
+        {
+          "ano": 1971,
+          "construtores": [
+            {
+              "id": "tyrrell",
+              "nome": "Tyrrell"
+            }
+          ],
+          "decisao": {
+            "ano": 1971,
+            "rodada": 8,
+            "gp": "Austrian Grand Prix"
+          }
+        },
+        {
+          "ano": 1973,
+          "construtores": [
+            {
+              "id": "tyrrell",
+              "nome": "Tyrrell"
+            }
+          ],
+          "decisao": {
+            "ano": 1973,
+            "rodada": 13,
+            "gp": "Italian Grand Prix"
+          }
+        }
+      ]
+    },
+    "jochen-rindt": {
+      "nome": "Jochen Rindt",
+      "pais": {
+        "pt": "Áustria",
+        "en": "Austria"
+      },
+      "bio": {
+        "pt": "Rindt venceu cinco GPs pela Lotus em 1970. O campeonato daquele ano foi concedido postumamente.",
+        "en": "Rindt won five Grands Prix for Lotus in 1970. He was awarded that year’s championship posthumously."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-jochen-rindt.297CPloKgJFry8fsI3oVyx",
+      "estreia": {
+        "ano": 1964,
+        "rodada": 7,
+        "gp": "Austrian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1969,
+        "rodada": 10,
+        "gp": "United States Grand Prix"
+      },
+      "anos_atividade": [
+        1964,
+        1970
+      ],
+      "largadas": 60,
+      "vitorias": 6,
+      "podios": 13,
+      "poles": 10,
+      "titulos": [
+        {
+          "ano": 1970,
+          "construtores": [
+            {
+              "id": "lotus",
+              "nome": "Lotus"
+            }
+          ],
+          "decisao": {
+            "ano": 1970,
+            "rodada": 12,
+            "gp": "United States Grand Prix"
+          }
+        }
+      ]
+    },
+    "emerson-fittipaldi": {
+      "nome": "Emerson Fittipaldi",
+      "pais": {
+        "pt": "Brasil",
+        "en": "Brazil"
+      },
+      "bio": {
+        "pt": "Primeiro brasileiro campeão mundial de F1, Emerson venceu pela Lotus em 1972 e deu à McLaren seu primeiro título de pilotos em 1974.",
+        "en": "Brazil’s first F1 world champion won with Lotus in 1972 and gave McLaren its first drivers’ title in 1974."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-emerson-fittipaldi.2H5252hs7KMUh5HBXoYdoW",
+      "estreia": {
+        "ano": 1970,
+        "rodada": 7,
+        "gp": "British Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1970,
+        "rodada": 12,
+        "gp": "United States Grand Prix"
+      },
+      "anos_atividade": [
+        1970,
+        1980
+      ],
+      "largadas": 144,
+      "vitorias": 14,
+      "podios": 35,
+      "poles": 6,
+      "titulos": [
+        {
+          "ano": 1972,
+          "construtores": [
+            {
+              "id": "lotus",
+              "nome": "Lotus"
+            }
+          ],
+          "decisao": {
+            "ano": 1972,
+            "rodada": 10,
+            "gp": "Italian Grand Prix"
+          }
+        },
+        {
+          "ano": 1974,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1974,
+            "rodada": 15,
+            "gp": "United States Grand Prix"
+          }
+        }
+      ]
+    },
+    "niki-lauda": {
+      "nome": "Niki Lauda",
+      "pais": {
+        "pt": "Áustria",
+        "en": "Austria"
+      },
+      "bio": {
+        "pt": "Lauda foi campeão duas vezes pela Ferrari e voltou ao topo com a McLaren em 1984, meio ponto à frente de Alain Prost.",
+        "en": "Lauda won twice with Ferrari and returned to the top with McLaren in 1984, half a point ahead of Alain Prost."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-niki-lauda.2Ye7VYWdXwhb97ZqLyxvX",
+      "estreia": {
+        "ano": 1971,
+        "rodada": 8,
+        "gp": "Austrian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1974,
+        "rodada": 4,
+        "gp": "Spanish Grand Prix"
+      },
+      "anos_atividade": [
+        1971,
+        1985
+      ],
+      "largadas": 171,
+      "vitorias": 25,
+      "podios": 54,
+      "poles": 24,
+      "titulos": [
+        {
+          "ano": 1975,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 1975,
+            "rodada": 13,
+            "gp": "Italian Grand Prix"
+          }
+        },
+        {
+          "ano": 1977,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 1977,
+            "rodada": 15,
+            "gp": "United States Grand Prix"
+          }
+        },
+        {
+          "ano": 1984,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1984,
+            "rodada": 16,
+            "gp": "Portuguese Grand Prix"
+          }
+        }
+      ]
+    },
+    "james-hunt": {
+      "nome": "James Hunt",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Hunt conquistou seu título pela McLaren em 1976. A disputa com Niki Lauda terminou com um ponto de diferença.",
+        "en": "Hunt won his title with McLaren in 1976. His contest with Niki Lauda was decided by one point."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-james-hunt.4vRKjActuXEjrFBR9hzo2A",
+      "estreia": {
+        "ano": 1973,
+        "rodada": 6,
+        "gp": "Monaco Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1975,
+        "rodada": 8,
+        "gp": "Dutch Grand Prix"
+      },
+      "anos_atividade": [
+        1973,
+        1979
+      ],
+      "largadas": 92,
+      "vitorias": 10,
+      "podios": 23,
+      "poles": 14,
+      "titulos": [
+        {
+          "ano": 1976,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1976,
+            "rodada": 16,
+            "gp": "Japanese Grand Prix"
+          }
+        }
+      ]
+    },
+    "mario-andretti": {
+      "nome": "Mario Andretti",
+      "pais": {
+        "pt": "Estados Unidos",
+        "en": "United States"
+      },
+      "bio": {
+        "pt": "Andretti conquistou o Mundial de 1978 pela Lotus. Sua trajetória também inclui vitórias nas 500 Milhas de Indianápolis e na Daytona 500.",
+        "en": "Andretti won the 1978 title with Lotus. His career also includes wins in the Indianapolis 500 and Daytona 500."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-mario-andretti.6F7CXYpxRzHezXe6At2E7E",
+      "estreia": {
+        "ano": 1968,
+        "rodada": 11,
+        "gp": "United States Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1971,
+        "rodada": 1,
+        "gp": "South African Grand Prix"
+      },
+      "anos_atividade": [
+        1968,
+        1982
+      ],
+      "largadas": 128,
+      "vitorias": 12,
+      "podios": 19,
+      "poles": 18,
+      "titulos": [
+        {
+          "ano": 1978,
+          "construtores": [
+            {
+              "id": "lotus",
+              "nome": "Lotus"
+            }
+          ],
+          "decisao": {
+            "ano": 1978,
+            "rodada": 14,
+            "gp": "Italian Grand Prix"
+          }
+        }
+      ]
+    },
+    "jody-scheckter": {
+      "nome": "Jody Scheckter",
+      "pais": {
+        "pt": "África do Sul",
+        "en": "South Africa"
+      },
+      "bio": {
+        "pt": "Scheckter conquistou o título de 1979 pela Ferrari e encerrou sua carreira na F1 após a temporada seguinte.",
+        "en": "Scheckter won the 1979 title with Ferrari and ended his F1 career after the following season."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-jody-scheckter.xGrSCopMMf1mkdIUX1119",
+      "estreia": {
+        "ano": 1972,
+        "rodada": 12,
+        "gp": "United States Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1974,
+        "rodada": 7,
+        "gp": "Swedish Grand Prix"
+      },
+      "anos_atividade": [
+        1972,
+        1980
+      ],
+      "largadas": 112,
+      "vitorias": 10,
+      "podios": 33,
+      "poles": 3,
+      "titulos": [
+        {
+          "ano": 1979,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 1979,
+            "rodada": 13,
+            "gp": "Italian Grand Prix"
+          }
+        }
+      ]
+    },
+    "alan-jones": {
+      "nome": "Alan Jones",
+      "pais": {
+        "pt": "Austrália",
+        "en": "Australia"
+      },
+      "bio": {
+        "pt": "Jones venceu seu primeiro GP pela Shadow em 1977 e conquistou o primeiro título de pilotos da Williams em 1980.",
+        "en": "Jones won his first Grand Prix with Shadow in 1977 and gave Williams its first drivers’ title in 1980."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-alan-jones.2g6TF5HMcodjT4Jd6Xuub2",
+      "estreia": {
+        "ano": 1975,
+        "rodada": 4,
+        "gp": "Spanish Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1977,
+        "rodada": 12,
+        "gp": "Austrian Grand Prix"
+      },
+      "anos_atividade": [
+        1975,
+        1986
+      ],
+      "largadas": 116,
+      "vitorias": 12,
+      "podios": 24,
+      "poles": 6,
+      "titulos": [
+        {
+          "ano": 1980,
+          "construtores": [
+            {
+              "id": "williams",
+              "nome": "Williams"
+            }
+          ],
+          "decisao": {
+            "ano": 1980,
+            "rodada": 13,
+            "gp": "Canadian Grand Prix"
+          }
+        }
+      ]
+    },
+    "nelson-piquet": {
+      "nome": "Nelson Piquet",
+      "pais": {
+        "pt": "Brasil",
+        "en": "Brazil"
+      },
+      "bio": {
+        "pt": "Piquet venceu duas vezes pela Brabham e completou o tricampeonato com a Williams em 1987.",
+        "en": "Piquet won twice with Brabham and secured his third title with Williams in 1987."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-nelson-piquet.7EkDuZAxJN03b0kgFksCzf",
+      "estreia": {
+        "ano": 1978,
+        "rodada": 11,
+        "gp": "German Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1980,
+        "rodada": 4,
+        "gp": "United States Grand Prix West"
+      },
+      "anos_atividade": [
+        1978,
+        1991
+      ],
+      "largadas": 203,
+      "vitorias": 23,
+      "podios": 60,
+      "poles": 24,
+      "titulos": [
+        {
+          "ano": 1981,
+          "construtores": [
+            {
+              "id": "brabham",
+              "nome": "Brabham"
+            }
+          ],
+          "decisao": {
+            "ano": 1981,
+            "rodada": 15,
+            "gp": "Caesars Palace Grand Prix"
+          }
+        },
+        {
+          "ano": 1983,
+          "construtores": [
+            {
+              "id": "brabham",
+              "nome": "Brabham"
+            }
+          ],
+          "decisao": {
+            "ano": 1983,
+            "rodada": 15,
+            "gp": "South African Grand Prix"
+          }
+        },
+        {
+          "ano": 1987,
+          "construtores": [
+            {
+              "id": "williams",
+              "nome": "Williams"
+            }
+          ],
+          "decisao": {
+            "ano": 1987,
+            "rodada": 15,
+            "gp": "Japanese Grand Prix"
+          }
+        }
+      ]
+    },
+    "keke-rosberg": {
+      "nome": "Keke Rosberg",
+      "pais": {
+        "pt": "Finlândia",
+        "en": "Finland"
+      },
+      "bio": {
+        "pt": "Rosberg conquistou o Mundial de 1982 pela Williams com uma vitória na temporada, no GP da Suíça disputado em Dijon.",
+        "en": "Rosberg won the 1982 title with Williams and took one win that season, in the Swiss Grand Prix at Dijon."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-keke-rosberg.5oGvi8v8jkuvLTXHTgm0bt",
+      "estreia": {
+        "ano": 1978,
+        "rodada": 3,
+        "gp": "South African Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1982,
+        "rodada": 14,
+        "gp": "Swiss Grand Prix"
+      },
+      "anos_atividade": [
+        1978,
+        1986
+      ],
+      "largadas": 114,
+      "vitorias": 5,
+      "podios": 17,
+      "poles": 5,
+      "titulos": [
+        {
+          "ano": 1982,
+          "construtores": [
+            {
+              "id": "williams",
+              "nome": "Williams"
+            }
+          ],
+          "decisao": {
+            "ano": 1982,
+            "rodada": 16,
+            "gp": "Caesars Palace Grand Prix"
+          }
+        }
+      ]
+    },
+    "alain-prost": {
+      "nome": "Alain Prost",
+      "pais": {
+        "pt": "França",
+        "en": "France"
+      },
+      "bio": {
+        "pt": "Prost conquistou três títulos pela McLaren e um pela Williams. A temporada do quarto título, em 1993, foi sua última na F1.",
+        "en": "Prost won three titles with McLaren and one with Williams. His fourth title season, in 1993, was his last in F1."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-alain-prost.6xkomcqkRL5K0HgmPX4zAH",
+      "estreia": {
+        "ano": 1980,
+        "rodada": 1,
+        "gp": "Argentine Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1981,
+        "rodada": 8,
+        "gp": "French Grand Prix"
+      },
+      "anos_atividade": [
+        1980,
+        1993
+      ],
+      "largadas": 199,
+      "vitorias": 51,
+      "podios": 106,
+      "poles": 33,
+      "titulos": [
+        {
+          "ano": 1985,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1985,
+            "rodada": 14,
+            "gp": "European Grand Prix"
+          }
+        },
+        {
+          "ano": 1986,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1986,
+            "rodada": 16,
+            "gp": "Australian Grand Prix"
+          }
+        },
+        {
+          "ano": 1989,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1989,
+            "rodada": 15,
+            "gp": "Japanese Grand Prix"
+          }
+        },
+        {
+          "ano": 1993,
+          "construtores": [
+            {
+              "id": "williams",
+              "nome": "Williams"
+            }
+          ],
+          "decisao": {
+            "ano": 1993,
+            "rodada": 14,
+            "gp": "Portuguese Grand Prix"
+          }
+        }
+      ]
+    },
+    "ayrton-senna": {
+      "nome": "Ayrton Senna",
+      "pais": {
+        "pt": "Brasil",
+        "en": "Brazil"
+      },
+      "bio": {
+        "pt": "Senna venceu pela primeira vez com a Lotus, em Portugal, e conquistou seus três títulos pela McLaren.",
+        "en": "Senna took his first win with Lotus in Portugal and won all three of his titles with McLaren."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-ayrton-senna.FLD7ZtO0nUn7JzLEn5rOJ",
+      "estreia": {
+        "ano": 1984,
+        "rodada": 1,
+        "gp": "Brazilian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1985,
+        "rodada": 2,
+        "gp": "Portuguese Grand Prix"
+      },
+      "anos_atividade": [
+        1984,
+        1994
+      ],
+      "largadas": 161,
+      "vitorias": 41,
+      "podios": 80,
+      "poles": 65,
+      "titulos": [
+        {
+          "ano": 1988,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1988,
+            "rodada": 15,
+            "gp": "Japanese Grand Prix"
+          }
+        },
+        {
+          "ano": 1990,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1990,
+            "rodada": 15,
+            "gp": "Japanese Grand Prix"
+          }
+        },
+        {
+          "ano": 1991,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1991,
+            "rodada": 15,
+            "gp": "Japanese Grand Prix"
+          }
+        }
+      ]
+    },
+    "nigel-mansell": {
+      "nome": "Nigel Mansell",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Mansell conquistou o título de 1992 pela Williams e venceu o campeonato da CART na temporada seguinte.",
+        "en": "Mansell won the 1992 title with Williams and took the CART championship the following season."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-nigel-mansell.3mLYxotFMTyLgIRxilGObS",
+      "estreia": {
+        "ano": 1980,
+        "rodada": 10,
+        "gp": "Austrian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1985,
+        "rodada": 14,
+        "gp": "European Grand Prix"
+      },
+      "anos_atividade": [
+        1980,
+        1995
+      ],
+      "largadas": 187,
+      "vitorias": 31,
+      "podios": 59,
+      "poles": 32,
+      "titulos": [
+        {
+          "ano": 1992,
+          "construtores": [
+            {
+              "id": "williams",
+              "nome": "Williams"
+            }
+          ],
+          "decisao": {
+            "ano": 1992,
+            "rodada": 11,
+            "gp": "Hungarian Grand Prix"
+          }
+        }
+      ]
+    },
+    "michael-schumacher": {
+      "nome": "Michael Schumacher",
+      "pais": {
+        "pt": "Alemanha",
+        "en": "Germany"
+      },
+      "bio": {
+        "pt": "Schumacher conquistou dois títulos pela Benetton e cinco consecutivos pela Ferrari, de 2000 a 2004.",
+        "en": "Schumacher won two titles with Benetton and five in a row with Ferrari from 2000 to 2004."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-michael-schumacher.7KdX5nJlTG55vR5JQSbZ21",
+      "estreia": {
+        "ano": 1991,
+        "rodada": 11,
+        "gp": "Belgian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1992,
+        "rodada": 12,
+        "gp": "Belgian Grand Prix"
+      },
+      "anos_atividade": [
+        1991,
+        2012
+      ],
+      "largadas": 306,
+      "vitorias": 91,
+      "podios": 155,
+      "poles": 68,
+      "titulos": [
+        {
+          "ano": 1994,
+          "construtores": [
+            {
+              "id": "benetton",
+              "nome": "Benetton"
+            }
+          ],
+          "decisao": {
+            "ano": 1994,
+            "rodada": 16,
+            "gp": "Australian Grand Prix"
+          }
+        },
+        {
+          "ano": 1995,
+          "construtores": [
+            {
+              "id": "benetton",
+              "nome": "Benetton"
+            }
+          ],
+          "decisao": {
+            "ano": 1995,
+            "rodada": 15,
+            "gp": "Pacific Grand Prix"
+          }
+        },
+        {
+          "ano": 2000,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 2000,
+            "rodada": 16,
+            "gp": "Japanese Grand Prix"
+          }
+        },
+        {
+          "ano": 2001,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 2001,
+            "rodada": 13,
+            "gp": "Hungarian Grand Prix"
+          }
+        },
+        {
+          "ano": 2002,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 2002,
+            "rodada": 11,
+            "gp": "French Grand Prix"
+          }
+        },
+        {
+          "ano": 2003,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 2003,
+            "rodada": 16,
+            "gp": "Japanese Grand Prix"
+          }
+        },
+        {
+          "ano": 2004,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 2004,
+            "rodada": 14,
+            "gp": "Belgian Grand Prix"
+          }
+        }
+      ]
+    },
+    "damon-hill": {
+      "nome": "Damon Hill",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Damon conquistou o Mundial pela Williams em 1996. Seu pai, Graham Hill, também foi campeão mundial de F1.",
+        "en": "Damon won the championship with Williams in 1996. His father, Graham Hill, was also an F1 world champion."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-damon-hill.5Cwo2Aog5nHCR1eduIkq3y",
+      "estreia": {
+        "ano": 1992,
+        "rodada": 9,
+        "gp": "British Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1993,
+        "rodada": 11,
+        "gp": "Hungarian Grand Prix"
+      },
+      "anos_atividade": [
+        1992,
+        1999
+      ],
+      "largadas": 115,
+      "vitorias": 22,
+      "podios": 42,
+      "poles": 20,
+      "titulos": [
+        {
+          "ano": 1996,
+          "construtores": [
+            {
+              "id": "williams",
+              "nome": "Williams"
+            }
+          ],
+          "decisao": {
+            "ano": 1996,
+            "rodada": 16,
+            "gp": "Japanese Grand Prix"
+          }
+        }
+      ]
+    },
+    "jacques-villeneuve": {
+      "nome": "Jacques Villeneuve",
+      "pais": {
+        "pt": "Canadá",
+        "en": "Canada"
+      },
+      "bio": {
+        "pt": "Villeneuve venceu as 500 Milhas de Indianápolis em 1995 antes de conquistar o Mundial de F1 pela Williams em 1997.",
+        "en": "Villeneuve won the Indianapolis 500 in 1995 before taking the F1 championship with Williams in 1997."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-jacques-villeneuve.7gsINZWlAMv5jdtvUJKL8e",
+      "estreia": {
+        "ano": 1996,
+        "rodada": 1,
+        "gp": "Australian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1996,
+        "rodada": 4,
+        "gp": "European Grand Prix"
+      },
+      "anos_atividade": [
+        1996,
+        2006
+      ],
+      "largadas": 163,
+      "vitorias": 11,
+      "podios": 23,
+      "poles": 13,
+      "titulos": [
+        {
+          "ano": 1997,
+          "construtores": [
+            {
+              "id": "williams",
+              "nome": "Williams"
+            }
+          ],
+          "decisao": {
+            "ano": 1997,
+            "rodada": 17,
+            "gp": "European Grand Prix"
+          }
+        }
+      ]
+    },
+    "mika-hakkinen": {
+      "nome": "Mika Häkkinen",
+      "pais": {
+        "pt": "Finlândia",
+        "en": "Finland"
+      },
+      "bio": {
+        "pt": "Häkkinen conquistou sua primeira vitória na última prova de 1997 e os dois títulos seguintes, todos pela McLaren.",
+        "en": "Häkkinen took his first win in the final race of 1997 and won the following two championships, all with McLaren."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-mika-hakkinen.7ptiWW1foQkbFQSp2boc9d",
+      "estreia": {
+        "ano": 1991,
+        "rodada": 1,
+        "gp": "United States Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 1997,
+        "rodada": 17,
+        "gp": "European Grand Prix"
+      },
+      "anos_atividade": [
+        1991,
+        2001
+      ],
+      "largadas": 161,
+      "vitorias": 20,
+      "podios": 51,
+      "poles": 26,
+      "titulos": [
+        {
+          "ano": 1998,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1998,
+            "rodada": 16,
+            "gp": "Japanese Grand Prix"
+          }
+        },
+        {
+          "ano": 1999,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 1999,
+            "rodada": 16,
+            "gp": "Japanese Grand Prix"
+          }
+        }
+      ]
+    },
+    "fernando-alonso": {
+      "nome": "Fernando Alonso",
+      "pais": {
+        "pt": "Espanha",
+        "en": "Spain"
+      },
+      "bio": {
+        "pt": "Alonso estreou pela Minardi em 2001. Com a Renault, venceu seu primeiro GP em 2003 e foi bicampeão em 2005 e 2006.",
+        "en": "Alonso debuted with Minardi in 2001. He won his first Grand Prix with Renault in 2003 and took back-to-back titles in 2005 and 2006."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-fernando-alonso.2Ig4mBh2FaPMgAMjI0bBF9",
+      "estreia": {
+        "ano": 2001,
+        "rodada": 1,
+        "gp": "Australian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 2003,
+        "rodada": 13,
+        "gp": "Hungarian Grand Prix"
+      },
+      "anos_atividade": [
+        2001,
+        2026
+      ],
+      "largadas": 446,
+      "vitorias": 32,
+      "podios": 106,
+      "poles": 22,
+      "titulos": [
+        {
+          "ano": 2005,
+          "construtores": [
+            {
+              "id": "renault",
+              "nome": "Renault"
+            }
+          ],
+          "decisao": {
+            "ano": 2005,
+            "rodada": 17,
+            "gp": "Brazilian Grand Prix"
+          }
+        },
+        {
+          "ano": 2006,
+          "construtores": [
+            {
+              "id": "renault",
+              "nome": "Renault"
+            }
+          ],
+          "decisao": {
+            "ano": 2006,
+            "rodada": 18,
+            "gp": "Brazilian Grand Prix"
+          }
+        }
+      ],
+      "perfil_pitwall": "alonso"
+    },
+    "kimi-raikkonen": {
+      "nome": "Kimi Räikkönen",
+      "pais": {
+        "pt": "Finlândia",
+        "en": "Finland"
+      },
+      "bio": {
+        "pt": "Räikkönen conquistou o Mundial de 2007 pela Ferrari. A vitória no GP do Brasil o deixou um ponto à frente de Lewis Hamilton e Fernando Alonso.",
+        "en": "Räikkönen won the 2007 title with Ferrari. Victory in Brazil put him one point ahead of both Lewis Hamilton and Fernando Alonso."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-kimi-raikkonen.4Ykdt9U76gWO40cNbjaMXf",
+      "estreia": {
+        "ano": 2001,
+        "rodada": 1,
+        "gp": "Australian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 2003,
+        "rodada": 2,
+        "gp": "Malaysian Grand Prix"
+      },
+      "anos_atividade": [
+        2001,
+        2021
+      ],
+      "largadas": 350,
+      "vitorias": 21,
+      "podios": 103,
+      "poles": 18,
+      "titulos": [
+        {
+          "ano": 2007,
+          "construtores": [
+            {
+              "id": "ferrari",
+              "nome": "Ferrari"
+            }
+          ],
+          "decisao": {
+            "ano": 2007,
+            "rodada": 17,
+            "gp": "Brazilian Grand Prix"
+          }
+        }
+      ]
+    },
+    "lewis-hamilton": {
+      "nome": "Lewis Hamilton",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Hamilton conquistou seu primeiro título pela McLaren em 2008 e somou outros seis pela Mercedes.",
+        "en": "Hamilton won his first title with McLaren in 2008 and added six more with Mercedes."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-lewis-hamilton.6TbSwzJA2miTUwtnXUHkjk",
+      "estreia": {
+        "ano": 2007,
+        "rodada": 1,
+        "gp": "Australian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 2007,
+        "rodada": 6,
+        "gp": "Canadian Grand Prix"
+      },
+      "anos_atividade": [
+        2007,
+        2026
+      ],
+      "largadas": 400,
+      "vitorias": 106,
+      "podios": 209,
+      "poles": 105,
+      "titulos": [
+        {
+          "ano": 2008,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 2008,
+            "rodada": 18,
+            "gp": "Brazilian Grand Prix"
+          }
+        },
+        {
+          "ano": 2014,
+          "construtores": [
+            {
+              "id": "mercedes",
+              "nome": "Mercedes"
+            }
+          ],
+          "decisao": {
+            "ano": 2014,
+            "rodada": 19,
+            "gp": "Abu Dhabi Grand Prix"
+          }
+        },
+        {
+          "ano": 2015,
+          "construtores": [
+            {
+              "id": "mercedes",
+              "nome": "Mercedes"
+            }
+          ],
+          "decisao": {
+            "ano": 2015,
+            "rodada": 16,
+            "gp": "United States Grand Prix"
+          }
+        },
+        {
+          "ano": 2017,
+          "construtores": [
+            {
+              "id": "mercedes",
+              "nome": "Mercedes"
+            }
+          ],
+          "decisao": {
+            "ano": 2017,
+            "rodada": 18,
+            "gp": "Mexican Grand Prix"
+          }
+        },
+        {
+          "ano": 2018,
+          "construtores": [
+            {
+              "id": "mercedes",
+              "nome": "Mercedes"
+            }
+          ],
+          "decisao": {
+            "ano": 2018,
+            "rodada": 19,
+            "gp": "Mexican Grand Prix"
+          }
+        },
+        {
+          "ano": 2019,
+          "construtores": [
+            {
+              "id": "mercedes",
+              "nome": "Mercedes"
+            }
+          ],
+          "decisao": {
+            "ano": 2019,
+            "rodada": 19,
+            "gp": "United States Grand Prix"
+          }
+        },
+        {
+          "ano": 2020,
+          "construtores": [
+            {
+              "id": "mercedes",
+              "nome": "Mercedes"
+            }
+          ],
+          "decisao": {
+            "ano": 2020,
+            "rodada": 14,
+            "gp": "Turkish Grand Prix"
+          }
+        }
+      ],
+      "perfil_pitwall": "hamilton"
+    },
+    "jenson-button": {
+      "nome": "Jenson Button",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Button conquistou o Mundial de 2009 com a Brawn GP, que disputou uma única temporada com esse nome.",
+        "en": "Button won the 2009 title with Brawn GP, which raced for a single season under that name."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-jenson-button.3BuV7MDE7ykNAThxxLr8vT",
+      "estreia": {
+        "ano": 2000,
+        "rodada": 1,
+        "gp": "Australian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 2006,
+        "rodada": 13,
+        "gp": "Hungarian Grand Prix"
+      },
+      "anos_atividade": [
+        2000,
+        2017
+      ],
+      "largadas": 306,
+      "vitorias": 15,
+      "podios": 50,
+      "poles": 8,
+      "titulos": [
+        {
+          "ano": 2009,
+          "construtores": [
+            {
+              "id": "brawn",
+              "nome": "Brawn"
+            }
+          ],
+          "decisao": {
+            "ano": 2009,
+            "rodada": 16,
+            "gp": "Brazilian Grand Prix"
+          }
+        }
+      ]
+    },
+    "sebastian-vettel": {
+      "nome": "Sebastian Vettel",
+      "pais": {
+        "pt": "Alemanha",
+        "en": "Germany"
+      },
+      "bio": {
+        "pt": "Vettel obteve sua primeira vitória pela Toro Rosso em Monza. Depois venceu quatro Mundiais consecutivos pela Red Bull Racing.",
+        "en": "Vettel took his first win with Toro Rosso at Monza, then won four consecutive championships with Red Bull Racing."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-sebastian-vettel.GBy6vPkxKOKUV89QOhZe5",
+      "estreia": {
+        "ano": 2007,
+        "rodada": 7,
+        "gp": "United States Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 2008,
+        "rodada": 14,
+        "gp": "Italian Grand Prix"
+      },
+      "anos_atividade": [
+        2007,
+        2022
+      ],
+      "largadas": 299,
+      "vitorias": 53,
+      "podios": 122,
+      "poles": 57,
+      "titulos": [
+        {
+          "ano": 2010,
+          "construtores": [
+            {
+              "id": "red-bull",
+              "nome": "Red Bull"
+            }
+          ],
+          "decisao": {
+            "ano": 2010,
+            "rodada": 19,
+            "gp": "Abu Dhabi Grand Prix"
+          }
+        },
+        {
+          "ano": 2011,
+          "construtores": [
+            {
+              "id": "red-bull",
+              "nome": "Red Bull"
+            }
+          ],
+          "decisao": {
+            "ano": 2011,
+            "rodada": 15,
+            "gp": "Japanese Grand Prix"
+          }
+        },
+        {
+          "ano": 2012,
+          "construtores": [
+            {
+              "id": "red-bull",
+              "nome": "Red Bull"
+            }
+          ],
+          "decisao": {
+            "ano": 2012,
+            "rodada": 20,
+            "gp": "Brazilian Grand Prix"
+          }
+        },
+        {
+          "ano": 2013,
+          "construtores": [
+            {
+              "id": "red-bull",
+              "nome": "Red Bull"
+            }
+          ],
+          "decisao": {
+            "ano": 2013,
+            "rodada": 16,
+            "gp": "Indian Grand Prix"
+          }
+        }
+      ]
+    },
+    "nico-rosberg": {
+      "nome": "Nico Rosberg",
+      "pais": {
+        "pt": "Alemanha",
+        "en": "Germany"
+      },
+      "bio": {
+        "pt": "Rosberg conquistou o título de 2016 pela Mercedes e anunciou sua aposentadoria poucos dias depois.",
+        "en": "Rosberg won the 2016 title with Mercedes and announced his retirement a few days later."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-nico-rosberg.7ryzoUXKrxqhlcNlXEUaTf",
+      "estreia": {
+        "ano": 2006,
+        "rodada": 1,
+        "gp": "Bahrain Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 2012,
+        "rodada": 3,
+        "gp": "Chinese Grand Prix"
+      },
+      "anos_atividade": [
+        2006,
+        2016
+      ],
+      "largadas": 206,
+      "vitorias": 23,
+      "podios": 57,
+      "poles": 30,
+      "titulos": [
+        {
+          "ano": 2016,
+          "construtores": [
+            {
+              "id": "mercedes",
+              "nome": "Mercedes"
+            }
+          ],
+          "decisao": {
+            "ano": 2016,
+            "rodada": 21,
+            "gp": "Abu Dhabi Grand Prix"
+          }
+        }
+      ]
+    },
+    "max-verstappen": {
+      "nome": "Max Verstappen",
+      "pais": {
+        "pt": "Países Baixos",
+        "en": "Netherlands"
+      },
+      "bio": {
+        "pt": "Verstappen venceu na estreia pela Red Bull Racing, no GP da Espanha de 2016. Com a equipe, conquistou quatro títulos consecutivos a partir de 2021.",
+        "en": "Verstappen won on his Red Bull Racing debut at the 2016 Spanish Grand Prix. He took four consecutive titles with the team starting in 2021."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-max-verstappen.2DttvntAuFvHYrBY2tV8fN",
+      "estreia": {
+        "ano": 2015,
+        "rodada": 1,
+        "gp": "Australian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 2016,
+        "rodada": 5,
+        "gp": "Spanish Grand Prix"
+      },
+      "anos_atividade": [
+        2015,
+        2026
+      ],
+      "largadas": 253,
+      "vitorias": 74,
+      "podios": 139,
+      "poles": 50,
+      "titulos": [
+        {
+          "ano": 2021,
+          "construtores": [
+            {
+              "id": "red-bull",
+              "nome": "Red Bull"
+            }
+          ],
+          "decisao": {
+            "ano": 2021,
+            "rodada": 22,
+            "gp": "Abu Dhabi Grand Prix"
+          }
+        },
+        {
+          "ano": 2022,
+          "construtores": [
+            {
+              "id": "red-bull",
+              "nome": "Red Bull"
+            }
+          ],
+          "decisao": {
+            "ano": 2022,
+            "rodada": 18,
+            "gp": "Japanese Grand Prix"
+          }
+        },
+        {
+          "ano": 2023,
+          "construtores": [
+            {
+              "id": "red-bull",
+              "nome": "Red Bull"
+            }
+          ],
+          "decisao": {
+            "ano": 2023,
+            "rodada": 17,
+            "gp": "Qatar Grand Prix"
+          }
+        },
+        {
+          "ano": 2024,
+          "construtores": [
+            {
+              "id": "red-bull",
+              "nome": "Red Bull"
+            }
+          ],
+          "decisao": {
+            "ano": 2024,
+            "rodada": 22,
+            "gp": "Las Vegas Grand Prix"
+          }
+        }
+      ],
+      "perfil_pitwall": "max_verstappen"
+    },
+    "lando-norris": {
+      "nome": "Lando Norris",
+      "pais": {
+        "pt": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "bio": {
+        "pt": "Norris conquistou sua primeira vitória em Miami em 2024. No ano seguinte, garantiu o título pela McLaren na última etapa, em Abu Dhabi.",
+        "en": "Norris took his first win in Miami in 2024. The following year, he clinched the title with McLaren at the Abu Dhabi finale."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-lando-norris.1x6Yu55IhitkH8t4NnFMmK",
+      "estreia": {
+        "ano": 2019,
+        "rodada": 1,
+        "gp": "Australian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 2024,
+        "rodada": 6,
+        "gp": "Miami Grand Prix"
+      },
+      "anos_atividade": [
+        2019,
+        2026
+      ],
+      "largadas": 171,
+      "vitorias": 14,
+      "podios": 50,
+      "poles": 20,
+      "titulos": [
+        {
+          "ano": 2025,
+          "construtores": [
+            {
+              "id": "mclaren",
+              "nome": "McLaren"
+            }
+          ],
+          "decisao": {
+            "ano": 2025,
+            "rodada": 24,
+            "gp": "Abu Dhabi Grand Prix"
+          }
+        }
+      ],
+      "perfil_pitwall": "norris"
+    },
+    "kimi-antonelli": {
+      "nome": "Kimi Antonelli",
+      "pais": {
+        "pt": "Itália",
+        "en": "Italy"
+      },
+      "bio": {
+        "pt": "Antonelli terminou em terceiro no GP da Cidade do México de 2026 e garantiu o título pela Mercedes, tornando-se o campeão mais jovem da F1.",
+        "en": "Antonelli finished third in the 2026 Mexico City Grand Prix to clinch the title with Mercedes and become F1’s youngest world champion."
+      },
+      "fonte": "https://www.formula1.com/en/information/drivers-hall-of-fame-kimi-antonelli.1HuxqgrACUjU9HeaG1dLqJ",
+      "estreia": {
+        "ano": 2025,
+        "rodada": 1,
+        "gp": "Australian Grand Prix"
+      },
+      "primeira_vitoria": {
+        "ano": 2026,
+        "rodada": 2,
+        "gp": "Chinese Grand Prix"
+      },
+      "anos_atividade": [
+        2025,
+        2026
+      ],
+      "largadas": 44,
+      "vitorias": 9,
+      "podios": 19,
+      "poles": 7,
+      "titulos": [
+        {
+          "ano": 2026,
+          "construtores": [
+            {
+              "id": "mercedes",
+              "nome": "Mercedes"
+            }
+          ],
+          "decisao": {
+            "ano": 2026,
+            "rodada": 19,
+            "gp": "Mexican Grand Prix"
+          },
+          "fonte": "https://www.fia.com/news/f1-antonelli-crowned-f1s-youngest-world-champion-verstappen-wins-mexico-city"
+        }
+      ],
+      "perfil_pitwall": "antonelli"
+    }
+  }
+}
