@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "bc6249a87a83596af9d389acca24e64a98208827f26798a033425ec0440065ee",
+  "apresentacao_build_sha256": "327ba93fee679517d1f9d93eed15042d4785a9917cf18a49773fdc9c216cef9c",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "62747ea6ad520c95d122fa61926fd7a0e827518dc137e2d2bca5a6b31e74c606",
+      "sha256_destino": "7f403f2b9a973654f927bc043abbcd517a28f2221a59f45795c31ed435c9eb19",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "83c9ffc645e6fd2643b1432834bfe43c22758a776b0ab99ec023d2b7bd4b50ab",
-      "sha256_origem": "83c9ffc645e6fd2643b1432834bfe43c22758a776b0ab99ec023d2b7bd4b50ab"
+      "sha256_destino": "8ff08e8e6e7e813528bce7540a6b67111c9dcdcddeb0a242122fcde0b2189987",
+      "sha256_origem": "8ff08e8e6e7e813528bce7540a6b67111c9dcdcddeb0a242122fcde0b2189987"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -5898,6 +5898,20 @@
       "modo": "copia",
       "sha256_destino": "b97ae33ad938b6eb5c00f9cc64711aaa4b7d177e8848851ef7b1fd64c3f645e1",
       "sha256_origem": "b97ae33ad938b6eb5c00f9cc64711aaa4b7d177e8848851ef7b1fd64c3f645e1"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mp4-5b-suzuka-chassi-7-d695db6e104c-2400.webp",
+      "fonte": "static/pitwall-archive/senna-mp4-5b-suzuka-chassi-7-d695db6e104c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7e8770e22ff39c93deda1fdb1b94481df1f7a3131384fe10e87c7fdb8a33cee9",
+      "sha256_origem": "7e8770e22ff39c93deda1fdb1b94481df1f7a3131384fe10e87c7fdb8a33cee9"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mp4-5b-suzuka-chassi-7-d695db6e104c-960.webp",
+      "fonte": "static/pitwall-archive/senna-mp4-5b-suzuka-chassi-7-d695db6e104c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "af6ee7bf5cf2801ba6ef833eef07632f468cf38a4e917db5aae9a98f22d2afa2",
+      "sha256_origem": "af6ee7bf5cf2801ba6ef833eef07632f468cf38a4e917db5aae9a98f22d2afa2"
     },
     {
       "caminho": "static/pitwall-archive/senna-phoenix-1991-ef19fe8abc06-2400.webp",

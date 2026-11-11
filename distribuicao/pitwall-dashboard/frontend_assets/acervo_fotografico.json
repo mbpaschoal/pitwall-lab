@@ -7149,6 +7149,43 @@
           "sha256": "d8ae72515635963f132d2b78f9ae2526dc54e5c84657a0bd9724c8f9c11835cc"
         }
       ]
+    },
+    "senna-mp4-5b-suzuka-chassi-7": {
+      "arquivo_commons": "File:McLaren MP4-5B.jpg",
+      "legenda": {
+        "pt": "O McLaren MP4/5B de chassi 7, usado por Ayrton Senna no GP do Japão de 1990, em exposição na coleção de Donington. Senna garantiu o segundo título em Suzuka.",
+        "en": "McLaren MP4/5B chassis 7, driven by Ayrton Senna in the 1990 Japanese Grand Prix, on display at the Donington collection. Senna secured his second title at Suzuka."
+      },
+      "modelo": "mclaren-mp4-5b",
+      "temporadas": [
+        1990
+      ],
+      "artefatos_gps": [
+        "1990:15"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:McLaren_MP4-5B.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/77/McLaren_MP4-5B.jpg",
+      "autor": "John Chapman ( Pyrope )",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sha256": "d695db6e104ccf4df6867ab26f8b2d20f305c17aaccb8cbee8251d007f5618b0",
+      "largura": 2792,
+      "altura": 2095,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/senna-mp4-5b-suzuka-chassi-7-d695db6e104c-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "af6ee7bf5cf2801ba6ef833eef07632f468cf38a4e917db5aae9a98f22d2afa2"
+        },
+        {
+          "arquivo": "static/pitwall-archive/senna-mp4-5b-suzuka-chassi-7-d695db6e104c-2400.webp",
+          "largura": 2400,
+          "altura": 1801,
+          "sha256": "7e8770e22ff39c93deda1fdb1b94481df1f7a3131384fe10e87c7fdb8a33cee9"
+        }
+      ]
     }
   },
   "referencias_fotograficas": {
@@ -7395,6 +7432,14 @@
           "en": "Jody Scheckter on the podium after his first win at Anderstorp, 1974"
         }
       },
+      "1975:4": {
+        "url": "https://www.formula1.com/en/latest/article/obituary-remembering-alan-jones-the-champion-who-took-williams-to-new-heights.6qVxl1O8uJu9kbPiPtfSzo",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Alan Jones na estreia no Mundial com o Hesketh 308 em Montjuïc, 1975",
+          "en": "Alan Jones on his World Championship debut in the Hesketh 308 at Montjuïc, 1975"
+        }
+      },
       "1976:16": {
         "url": "https://www.formula1.com/en/latest/article/moments-in-time-the-japanese-grand-prix.5M4HpgAHNmMjn15iW7nAXO",
         "acervo": "Formula 1",
@@ -7531,12 +7576,36 @@
           "en": "Ayrton Senna and Alain Prost at the title decider at Suzuka, 1989"
         }
       },
+      "1990:15": {
+        "url": "https://www.autosport.com/f1/news/on-track-in-sennas-first-f1-title-winner/10646159/",
+        "acervo": "Autosport / Ercole Colombo",
+        "legenda": {
+          "pt": "Senna e Prost na primeira curva do GP do Japão de 1990",
+          "en": "Senna and Prost at the first corner of the 1990 Japanese Grand Prix"
+        }
+      },
+      "1992:11": {
+        "url": "https://www.gettyimages.co.uk/detail/news-photo/nigel-mansell-from-great-britain-drives-the-canon-williams-news-photo/1631367115",
+        "acervo": "Getty Images / Pascal Rondeau",
+        "legenda": {
+          "pt": "Nigel Mansell com o Williams FW14B na corrida do título no Hungaroring, 1992",
+          "en": "Nigel Mansell in the Williams FW14B at his title-clinching race at the Hungaroring, 1992"
+        }
+      },
       "1992:12": {
         "url": "https://www.gettyimages.co.uk/detail/news-photo/michael-schumacher-from-germany-driver-of-the-camel-news-photo/2245979034",
         "acervo": "Pascal Rondeau / Getty Images",
         "legenda": {
           "pt": "Michael Schumacher no pódio da primeira vitória em Spa, 1992",
           "en": "Michael Schumacher on the podium after his first win at Spa, 1992"
+        }
+      },
+      "1994:16": {
+        "url": "https://www.gettyimages.co.uk/detail/news-photo/german-racing-driver-michael-schumacher-celebrates-winning-news-photo/1607427960",
+        "acervo": "Getty Images / Alexander Hassenstein",
+        "legenda": {
+          "pt": "Michael Schumacher comemora o primeiro título em Adelaide, 1994",
+          "en": "Michael Schumacher celebrates his first title in Adelaide, 1994"
         }
       },
       "1998:16": {
@@ -7553,6 +7622,14 @@
         "legenda": {
           "pt": "Michael Schumacher na decisão em Suzuka, 2000",
           "en": "Michael Schumacher at the title decider at Suzuka, 2000"
+        }
+      },
+      "2003:16": {
+        "url": "https://www.gettyimages.fi/detail/uutiskuva/japanese-grand-prix-suzuka-japan-10th-112th-october-2003-uutiskuva/2229474968",
+        "acervo": "Getty Images / LAT Images",
+        "legenda": {
+          "pt": "Schumacher, Jean Todt e Ross Brawn comemoram o título em Suzuka, 2003",
+          "en": "Schumacher, Jean Todt and Ross Brawn celebrate the title at Suzuka, 2003"
         }
       },
       "2020:14": {
