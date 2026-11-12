@@ -12,6 +12,10 @@ A CC BY-SA 4.0 photograph shows Héctor Rebaque in the Brabham BT49C in Montreal
 
 Three photographs by Cilo Roberto Bonaparte document the 2010 Brazilian Grand Prix at Interlagos, where Red Bull clinched its first constructors’ championship. They show spectators applauding an RB6 at the end of the race and the cars of Fernando Alonso and Lewis Hamilton. The originals are 3,264 × 2,448 px and licensed under CC BY-SA 2.0.
 
+A 5,184 × 3,456 px photograph by Takayuki Suzuki under CC BY-SA 2.0 shows Sebastian Vettel in the Red Bull RB7 at Suzuka, where he clinched his second title in 2011. It appears in Historic moments, Championship cars, and Red Bull’s gallery.
+
+Three period photographs in the public domain document the 1975 title decider at Monza. The Autosprint scans show Niki Lauda and Emerson Fittipaldi on the podium, Fittipaldi passing Lauda, and Ferrari celebrating with Clay Regazzoni. All three scans measure at least 2,400 px on the long edge.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

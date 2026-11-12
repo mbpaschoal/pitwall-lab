@@ -12,6 +12,10 @@ Uma foto em CC BY-SA 4.0 mostra Héctor Rebaque no Brabham BT49C em Montreal, no
 
 Três fotos de Cilo Roberto Bonaparte registram o GP do Brasil de 2010 em Interlagos, quando a Red Bull conquistou seu primeiro Mundial de Construtores. As imagens mostram o público aplaudindo um RB6 no fim da prova e os carros de Fernando Alonso e Lewis Hamilton. Os originais têm 3.264 × 2.448 px e licença CC BY-SA 2.0.
 
+O registro de Sebastian Vettel no Red Bull RB7 em Suzuka, na corrida do bicampeonato de 2011, ganha uma foto de Takayuki Suzuki em 5.184 × 3.456 px, sob CC BY-SA 2.0. A foto entra em Momentos históricos, Carros campeões e na galeria da Red Bull.
+
+Três fotos de época em domínio público registram a decisão de Monza em 1975. As digitalizações da Autosprint mostram Niki Lauda e Emerson Fittipaldi no pódio, a ultrapassagem de Fittipaldi sobre Lauda e a festa da Ferrari com Clay Regazzoni. Os três originais digitalizados têm pelo menos 2.400 px no lado maior.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

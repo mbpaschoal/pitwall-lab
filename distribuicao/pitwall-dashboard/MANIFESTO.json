@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "1c86239a323957c92c09b848d6335487369e134cf2d8d4b396c977d491c0a2c6",
+  "apresentacao_build_sha256": "3262d70a67ad87cf1418603858903cd7dc031a30eed97180188622aca480956c",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "3983e2b67dce38827ce874fa7c7d4d699408598b1f08c5b2b6c8c516845cd8fc",
+      "sha256_destino": "7e066d2539b663334361b76d4a79cb3e210fdeace2d6f90ab0f34a73c8473bc4",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "9b496e8490c885ce57bf9b1c11ace729b1b8f9aa449e19c31d54a002516e4805",
-      "sha256_origem": "2362a203d607582a2a3d4a12b27c9b5e46ce871cde87ee0f24f0c966e801a300"
+      "sha256_destino": "c0c03a6e5d18549cefda7b8181dada32a184528ccd469c250e022db78c9ac5c2",
+      "sha256_origem": "ed88d577c0bc6d15c5f4ea4609c3501fe329fa2cb752b015783b82eaf8204577"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "dfd18d18a4b953e0cad00f62264d3d29ba9ee10080b320d1ca7d2423aad7bb84",
-      "sha256_origem": "d52013dc9a792d201fb69e1a17c6db6d17ce374e2e2a836a675e4211b51dffe3"
+      "sha256_destino": "a29784e2550814a41c57c813f9a062edc22674bfc43dad51fb0085e2ecc3df6e",
+      "sha256_origem": "f4c07b788206e6fc2b5a0212789f7ea3a18097bcc7472517ed71953459f822b1"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "8cb84e133ae070f8cc93bad7ea5af34d52d00961cb30a69ebdd0ac552e53a5bb",
-      "sha256_origem": "8cb84e133ae070f8cc93bad7ea5af34d52d00961cb30a69ebdd0ac552e53a5bb"
+      "sha256_destino": "7868310618ad723273b3e14d701c16eef0a6acd2e29a931ad84135f5daac83c5",
+      "sha256_origem": "7868310618ad723273b3e14d701c16eef0a6acd2e29a931ad84135f5daac83c5"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4864,6 +4864,20 @@
       "sha256_origem": "c4bfd3b67475fa5028ce356bbdf6c25f7b8495780da07cfb33fcfd80203b07d7"
     },
     {
+      "caminho": "static/pitwall-archive/fittipaldi-ultrapassa-lauda-monza-1975-3d8f1990fd49-2400.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-ultrapassa-lauda-monza-1975-3d8f1990fd49-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "897a3e0af127415d2c96005afd27a07bb110d34df06bd5ba4a554427e5aef9ca",
+      "sha256_origem": "897a3e0af127415d2c96005afd27a07bb110d34df06bd5ba4a554427e5aef9ca"
+    },
+    {
+      "caminho": "static/pitwall-archive/fittipaldi-ultrapassa-lauda-monza-1975-3d8f1990fd49-960.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-ultrapassa-lauda-monza-1975-3d8f1990fd49-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4f4d44d9cc9bd98d7f29f0414de01b26c25e88774ec01554ea9e60af550666e3",
+      "sha256_origem": "4f4d44d9cc9bd98d7f29f0414de01b26c25e88774ec01554ea9e60af550666e3"
+    },
+    {
       "caminho": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-1788.webp",
       "fonte": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-1788.webp",
       "modo": "copia",
@@ -5646,6 +5660,20 @@
       "modo": "copia",
       "sha256_destino": "4fc5e73ea6b23e6e04b27758949a9d69eb2c51d118d61bde6842e2ba496ab179",
       "sha256_origem": "4fc5e73ea6b23e6e04b27758949a9d69eb2c51d118d61bde6842e2ba496ab179"
+    },
+    {
+      "caminho": "static/pitwall-archive/lauda-fittipaldi-podio-monza-1975-91f95d62f616-2400.webp",
+      "fonte": "static/pitwall-archive/lauda-fittipaldi-podio-monza-1975-91f95d62f616-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5c63d2596e1942de39ea6aff1e09a67c5a5fb9ee3a96d3d2d5a1956c8465b5f6",
+      "sha256_origem": "5c63d2596e1942de39ea6aff1e09a67c5a5fb9ee3a96d3d2d5a1956c8465b5f6"
+    },
+    {
+      "caminho": "static/pitwall-archive/lauda-fittipaldi-podio-monza-1975-91f95d62f616-960.webp",
+      "fonte": "static/pitwall-archive/lauda-fittipaldi-podio-monza-1975-91f95d62f616-960.webp",
+      "modo": "copia",
+      "sha256_destino": "7919163ce1d6ec8535b9199c9f6c2c23d1d2858fea6a59306e02ddbd5777d87c",
+      "sha256_origem": "7919163ce1d6ec8535b9199c9f6c2c23d1d2858fea6a59306e02ddbd5777d87c"
     },
     {
       "caminho": "static/pitwall-archive/lauda-mp4-2-estoril-1984-d03b3ef572fb-2400.webp",
@@ -7076,6 +7104,20 @@
       "sha256_origem": "8021b70b2d906ebd09decd50601a0c27c9dc2bfcfd054b373ce209e8100f1c8f"
     },
     {
+      "caminho": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-2400.webp",
+      "fonte": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3f1d141c9768de220f5c48fb71c59a8d3f7bb7e99daab0cd896a0bc1a88a9df2",
+      "sha256_origem": "3f1d141c9768de220f5c48fb71c59a8d3f7bb7e99daab0cd896a0bc1a88a9df2"
+    },
+    {
+      "caminho": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-960.webp",
+      "fonte": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cad3b0c6e7111b169d36640c67000b7c5c7aa0509de89746a62d00baedb7df21",
+      "sha256_origem": "cad3b0c6e7111b169d36640c67000b7c5c7aa0509de89746a62d00baedb7df21"
+    },
+    {
       "caminho": "static/pitwall-archive/reutemann-ferrari-312t3-watkins-glen-1978-b5e3b685aba5-2400.webp",
       "fonte": "static/pitwall-archive/reutemann-ferrari-312t3-watkins-glen-1978-b5e3b685aba5-2400.webp",
       "modo": "copia",
@@ -7956,6 +7998,20 @@
       "modo": "copia",
       "sha256_destino": "8297664f77c55ebb4ef990ee4aa26e8c821ca728fb4a64068e56a894eb196f90",
       "sha256_origem": "8297664f77c55ebb4ef990ee4aa26e8c821ca728fb4a64068e56a894eb196f90"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-rb7-suzuka-2011-suzuki-3b1d178545e4-2400.webp",
+      "fonte": "static/pitwall-archive/vettel-rb7-suzuka-2011-suzuki-3b1d178545e4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3868fb99c549fb6d6f5ca8e75d42767ca73e8de06f7fd281f83c8c70d94aaa57",
+      "sha256_origem": "3868fb99c549fb6d6f5ca8e75d42767ca73e8de06f7fd281f83c8c70d94aaa57"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-rb7-suzuka-2011-suzuki-3b1d178545e4-960.webp",
+      "fonte": "static/pitwall-archive/vettel-rb7-suzuka-2011-suzuki-3b1d178545e4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "03de46513b02f0d0b8c11b9e9d8bef4544b0aedfaeec337cc554e0379f05f89a",
+      "sha256_origem": "03de46513b02f0d0b8c11b9e9d8bef4544b0aedfaeec337cc554e0379f05f89a"
     },
     {
       "caminho": "static/pitwall-archive/vettel-rb9-india-2013-pos-corrida-02c7c8fc93df-2400.webp",
