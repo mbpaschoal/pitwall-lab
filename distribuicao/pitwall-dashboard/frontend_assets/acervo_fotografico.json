@@ -12469,6 +12469,51 @@
           "sha256": "f9e8eda2aba241310283338f1ffe5ee94176ff085c6256292492d2ed0981529a"
         }
       ]
+    },
+    "grid-monza-1961-anuario": {
+      "legenda": {
+        "pt": "Os 32 carros alinhados para a largada do GP da Itália de 1961, com quatro Ferrari 156 nas primeiras posições. Phil Hill venceu em Monza com a Ferrari nº 2 e conquistou o Mundial de Pilotos. Foto colorida do Anuário de Monza de 1962, p. 107.",
+        "en": "The 32-car grid for the 1961 Italian Grand Prix, with four Ferrari 156s at the front. Phil Hill won at Monza in the No. 2 Ferrari and clinched the Drivers’ Championship. Colour photograph from the 1962 Monza yearbook, p. 107."
+      },
+      "modelo": "ferrari-156",
+      "temporadas": [
+        1961
+      ],
+      "equipes": [
+        "ferrari"
+      ],
+      "gps": [
+        "1961:7"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://bibliotecadigitale.aci.it/pubblicazioni/dettaglio/#/volume/311763eaef7aa4b8bf77cc6f/eca4ea17e27f989d3940045e",
+      "original": "https://media-bibliotecadigitale.aci.it/archives/AC_MILANO_2016/RIVISTE/Annuario%20gran%20premio%20d%27Italia-Monza/1962/JPEG300/Annuario%20gran%20premio%20d%27Italia-Monza_19620101_nd_109_m.jpg",
+      "autor": "Annuario di Monza 1962 · ACI (fotógrafo não identificado / photographer unknown)",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "ab05751886f219dbd6e4ba66ec614f692755d1cca55d71d554c43dd8dde67632",
+      "largura": 2490,
+      "altura": 1813,
+      "recorte_original": {
+        "x": 20,
+        "y": 625,
+        "largura": 2490,
+        "altura": 1813
+      },
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-960.webp",
+          "largura": 960,
+          "altura": 699,
+          "sha256": "3fde945b1500e102fc656f41cf3f1e553295a1c068a7e513778d24858b095ed9"
+        },
+        {
+          "arquivo": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-2400.webp",
+          "largura": 2400,
+          "altura": 1747,
+          "sha256": "42c3f4caea3bd53df4fd1941593f49ec6fa8c9e55b695bc978b47708d6db4ae0"
+        }
+      ]
     }
   },
   "referencias_fotograficas": {

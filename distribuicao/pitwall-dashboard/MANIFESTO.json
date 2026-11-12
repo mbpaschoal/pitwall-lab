@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "38ab94061c2438d81538ffebd582a5c10875f5754002db52bd43c22baeefb5e4",
+  "apresentacao_build_sha256": "ddbb2ac46f3c758fab0505ad7f9af815af4c394f0cd9bed0aa1eca389ebd8c8a",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "8897a3d33baecd775652ddfecadc1a2263e777c63922d9b34ef605099433bbaf",
+      "sha256_destino": "24aa63f1f9ed56b7b1505cddc6c9747f7a27cee1aa5df4b1a81cffbd2c454d51",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "28ef3c9b29edaf2b5058e06af0f7b9b704b7e4cd58ffc6cbd023cb33a21e5138",
-      "sha256_origem": "cb6396bca1ade499ed0600a62fe8d00517e2dc5d0a238a740999e96f32c266f4"
+      "sha256_destino": "2ee01d6c276c0fd25cd02fdd082760addea716c628635f5bfcd90133eec77820",
+      "sha256_origem": "7155625cd168d69467dc7869753023f433033a9df43bc353d4ff89c20271005f"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "57aec0b9f902159354cf2074c0fa55ded8a4792ba1a8f3001c7fd5d1cdf59b27",
-      "sha256_origem": "3d077d082892c53c33f33244d8c5d153818f8fbcf76903048d38b939e483a07f"
+      "sha256_destino": "fc3dfb5e72698134ef6bb7e8b5308a0433aa9121a25df9c9d9e0f2c494a3e571",
+      "sha256_origem": "e1f485bb337d21d208d9770d80925745706d9ac69efe85bfb60d4dded0ac9b8f"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "c5804ac099dcbc3df5cdc32cec5c4dc32ac1e87aa83e27302c67027c003be47b",
-      "sha256_origem": "c5804ac099dcbc3df5cdc32cec5c4dc32ac1e87aa83e27302c67027c003be47b"
+      "sha256_destino": "b2e16093986d0251673fc03187b3b9b2dd62bb35979cf04e27a1f8ddcebe0edc",
+      "sha256_origem": "b2e16093986d0251673fc03187b3b9b2dd62bb35979cf04e27a1f8ddcebe0edc"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4960,6 +4960,20 @@
       "modo": "copia",
       "sha256_destino": "15847fdeca97e40cc8b15c3325aa92e6363667aec70195f387b4acd75859e878",
       "sha256_origem": "15847fdeca97e40cc8b15c3325aa92e6363667aec70195f387b4acd75859e878"
+    },
+    {
+      "caminho": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-2400.webp",
+      "fonte": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "42c3f4caea3bd53df4fd1941593f49ec6fa8c9e55b695bc978b47708d6db4ae0",
+      "sha256_origem": "42c3f4caea3bd53df4fd1941593f49ec6fa8c9e55b695bc978b47708d6db4ae0"
+    },
+    {
+      "caminho": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-960.webp",
+      "fonte": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3fde945b1500e102fc656f41cf3f1e553295a1c068a7e513778d24858b095ed9",
+      "sha256_origem": "3fde945b1500e102fc656f41cf3f1e553295a1c068a7e513778d24858b095ed9"
     },
     {
       "caminho": "static/pitwall-archive/haas-austin-cae13f5932f9-2400.webp",

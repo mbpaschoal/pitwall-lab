@@ -18,6 +18,8 @@ Three period photographs in the public domain document the 1975 title decider at
 
 Three period photographs from the official Monza yearbooks show Stirling Moss on his way to victory in the race where Cooper clinched its first constructors’ title in 1959 and the start of the race where Phil Hill took his first win in 1960. The scans provide crops with long edges from 2,495 to 2,548 px.
 
+A colour photograph of the 1961 Monza grid documents the Grand Prix where Phil Hill clinched the world title. The 2,490 × 1,813 px crop from the official 1962 yearbook appears in the Hall of Fame, Championship cars, and Ferrari’s gallery.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
