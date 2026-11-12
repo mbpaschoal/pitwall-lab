@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "5ad698722b94bee5016ab871c94aef7927849cb8e8cc2bc1dee3e4a069beba3b",
+  "apresentacao_build_sha256": "8c29c7e8f7986f3eab28a225262f9fdcbc9d729fb24d524909ed42d656e42746",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "b4028ff64496ca5ff91af68738cef1c8faefc063d00b4a9ef6ad2d3f98dc8bfd",
+      "sha256_destino": "016319990cc5bfb0b52ec386a74fc5dcbbd05d1a70c1ba0a5a0a02f53a5b6e34",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "4ae4dc3f0de28c7c6d41be087b38b63a4da79bb133204b70026f0fd8b93099df",
-      "sha256_origem": "1d5c87282a7883c331dd15f4b9f7bab538a706ac04d1fb8765c6e353ba3e86c0"
+      "sha256_destino": "01ea5a8d52e7ee088fbbee9f8e5788b21aa8202dfd8a05e6aa63415ff3f57b20",
+      "sha256_origem": "93ac72ebf6feb3f76414e4255aad3900d8e2ad245136dbe0ea21068c32e4e6bf"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "34132a7f540ac1b03d6266bac6e895afaad69554299d09d4fe5c50c659346125",
-      "sha256_origem": "b3b8874936c10aa6b9290aad1cb69fa65c1618d4a1b3afd913877b80b5e3a046"
+      "sha256_destino": "b556da3984b3e2a6f0787476f322c900e9b01971c174fa71248e5dc76f2e2bd4",
+      "sha256_origem": "1d0b78e84f919ff3f07ba228808fcfdfaeeb457f5050388da6155dc09765eccd"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "816d0dd8936b8e08b9e50b4c0736bb029a6c66c703091ced077cf21c687eef22",
-      "sha256_origem": "816d0dd8936b8e08b9e50b4c0736bb029a6c66c703091ced077cf21c687eef22"
+      "sha256_destino": "e89fc7ad1c380c243e604f5326b8f4bdb1a49aa35813fcbbc2c3f6e1ecbb9d68",
+      "sha256_origem": "e89fc7ad1c380c243e604f5326b8f4bdb1a49aa35813fcbbc2c3f6e1ecbb9d68"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3588,6 +3588,20 @@
       "modo": "copia",
       "sha256_destino": "f264bc2e13a3db299e2e2480880abbfcc5cb3059591fd9f3c7987cb28ce174e9",
       "sha256_origem": "f264bc2e13a3db299e2e2480880abbfcc5cb3059591fd9f3c7987cb28ce174e9"
+    },
+    {
+      "caminho": "static/pitwall-archive/andretti-monza-1977-f6ba819d247a-2400.webp",
+      "fonte": "static/pitwall-archive/andretti-monza-1977-f6ba819d247a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2568987d6c6c5c5874433d1fba8fcb14d8b22d9742b9b9fdb49561c74c889628",
+      "sha256_origem": "2568987d6c6c5c5874433d1fba8fcb14d8b22d9742b9b9fdb49561c74c889628"
+    },
+    {
+      "caminho": "static/pitwall-archive/andretti-monza-1977-f6ba819d247a-960.webp",
+      "fonte": "static/pitwall-archive/andretti-monza-1977-f6ba819d247a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c1a31c96aafaf198798d30810667ec1425a6db335acc2563dd9e6dcfa21004d8",
+      "sha256_origem": "c1a31c96aafaf198798d30810667ec1425a6db335acc2563dd9e6dcfa21004d8"
     },
     {
       "caminho": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-2400.webp",
@@ -5522,6 +5536,20 @@
       "sha256_origem": "2d5e82e9f5f8ad1253b333a6257ddd1c37c44cb121f718b6511deb4334e6a4cd"
     },
     {
+      "caminho": "static/pitwall-archive/keegan-imola-1980-db380d816d51-2400.webp",
+      "fonte": "static/pitwall-archive/keegan-imola-1980-db380d816d51-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2c35abd7ef686614d3e9df67e4a14adbeea37e67d04846525c0336dea3162b14",
+      "sha256_origem": "2c35abd7ef686614d3e9df67e4a14adbeea37e67d04846525c0336dea3162b14"
+    },
+    {
+      "caminho": "static/pitwall-archive/keegan-imola-1980-db380d816d51-960.webp",
+      "fonte": "static/pitwall-archive/keegan-imola-1980-db380d816d51-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1b0b9abf6298fbe463c28016dc32d4082efb40ede3d68e12ec729bea838a3d88",
+      "sha256_origem": "1b0b9abf6298fbe463c28016dc32d4082efb40ede3d68e12ec729bea838a3d88"
+    },
+    {
       "caminho": "static/pitwall-archive/keke-rosberg-retrato-9551af59e24f-2400.webp",
       "fonte": "static/pitwall-archive/keke-rosberg-retrato-9551af59e24f-2400.webp",
       "modo": "copia",
@@ -6654,6 +6682,20 @@
       "modo": "copia",
       "sha256_destino": "f0d622ad9437a4895968cff3f28e2c510094330f0b20dfc91c30349f32f2090c",
       "sha256_origem": "f0d622ad9437a4895968cff3f28e2c510094330f0b20dfc91c30349f32f2090c"
+    },
+    {
+      "caminho": "static/pitwall-archive/piquet-imola-1980-2a1593f0465c-2400.webp",
+      "fonte": "static/pitwall-archive/piquet-imola-1980-2a1593f0465c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "0d1971e354d02e67d3993fe88385e28edf5dff036251c012ceba2b9e447498ea",
+      "sha256_origem": "0d1971e354d02e67d3993fe88385e28edf5dff036251c012ceba2b9e447498ea"
+    },
+    {
+      "caminho": "static/pitwall-archive/piquet-imola-1980-2a1593f0465c-960.webp",
+      "fonte": "static/pitwall-archive/piquet-imola-1980-2a1593f0465c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bed4f5d4a0a4e236b4e12aa681fb1c0a6b0f5cde5fbecb6f9877b4cdf7f05e37",
+      "sha256_origem": "bed4f5d4a0a4e236b4e12aa681fb1c0a6b0f5cde5fbecb6f9877b4cdf7f05e37"
     },
     {
       "caminho": "static/pitwall-archive/piquet-prost-zandvoort-1983-0a2a0732146b-2400.webp",

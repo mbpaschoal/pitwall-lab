@@ -6,6 +6,8 @@ The McLaren and Mercedes galleries gain two CC BY-SA 4.0 photographs. The first 
 
 Historic Moments gains a CC0 photograph by Cees de Boer at 2,893 × 2,153 px, showing spectators above the pits at Zandvoort on the day McLaren clinched the 1984 constructors’ title.
 
+Three period photographs show Mario Andretti at Monza in 1977 and Nelson Piquet and Rupert Keegan at Imola in 1980. They document the weekends when Ferrari and Williams clinched their respective constructors’ titles.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

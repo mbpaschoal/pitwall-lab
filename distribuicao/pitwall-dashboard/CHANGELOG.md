@@ -6,6 +6,8 @@ As galerias da McLaren e da Mercedes ganham duas fotos CC BY-SA 4.0. A primeira 
 
 Em Momentos históricos, o acervo ganha uma foto em CC0 de Cees de Boer, com 2.893 × 2.153 px, do público nos boxes de Zandvoort no dia em que a McLaren garantiu o título de construtores de 1984.
 
+Três fotos de época mostram Mario Andretti em Monza em 1977 e Nelson Piquet e Rupert Keegan em Ímola em 1980. São registros dos fins de semana em que a Ferrari e a Williams garantiram os respectivos títulos de construtores.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
