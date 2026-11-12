@@ -54,6 +54,8 @@ A foto do Benetton B192 de chassi 05 no Rétromobile de 2016 mostra o carro da p
 
 Uma fotografia de Harry Pot em CC0, com 3.496 × 2.800 px, mostra Stirling Moss, Stuart Lewis-Evans e Tony Brooks em Zandvoort em 1958. A imagem entra na galeria da Vanwall e nas peças de acervo de Monza e Casablanca, onde o VW5 de Lewis-Evans na foto venceu com Brooks e Moss, respectivamente.
 
+Uma fotografia de Harry Pot em CC0 mostra Alberto Ascari à frente do pelotão em Zandvoort em 1953. O recorte de 3.210 × 1.685 px, feito a partir do negativo digitalizado pelo Nationaal Archief, entra na galeria da Ferrari e no acervo do GP dos Países Baixos. Também ilustra o modelo Ferrari 500 na ficha da primeira vitória de Hawthorn em Reims.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

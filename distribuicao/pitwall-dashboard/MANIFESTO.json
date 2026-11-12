@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "87c03466556b196714a1a7bde2d7cd3d8df8f6f0f84808aea1cd4473472b1661",
+  "apresentacao_build_sha256": "55b928c90427dac8f9678e5df44c69fdce15b9e073a56c25109a8490cef62ecf",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "23182c7daa58968f5410a7aa04ae2ca6c0a5b797b65d0cbb1cd2b506b34e2a5c",
+      "sha256_destino": "a478bb4a80d6df5ea3dd8315f5427faddc207be64e7e611c4654181ab7b697d9",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "4a1402a69be0197bd3cc8d6ca8eac81d864a31540213a9f23ee9092a0896e266",
-      "sha256_origem": "8607cfb2ff226efa9ab8ba806b3d57d90d9ff9d480f67bafd3f1ba9fa39bda62"
+      "sha256_destino": "e9390e1f0d269a71a987194ba63e3eb99767b584d2dff975fea9afb4ccc8bee4",
+      "sha256_origem": "3e3cea1464f828e9fe1700f12e41bffe36197505e7fcc0b37e6207970d6cab18"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "f57dc98f5d25dae3609804e394aeec6d8146d2c5bdff11474904d1262733acc8",
-      "sha256_origem": "7fc05d6c5ad201c429aa2c38c1f6e21f62ada0c728d43393b748d93fe7622f92"
+      "sha256_destino": "0f0ba91d258db637699999dfec4d82a28ea1274303365ff4bd43182340e0e960",
+      "sha256_origem": "217f74bebb91b596fc2df3808244448479f5267d2bf1180ac6a338f417455cc1"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "625ba1f6e253f4a01341772e3f37755285dc180e58ed9ece67385eb01965cf0e",
-      "sha256_origem": "625ba1f6e253f4a01341772e3f37755285dc180e58ed9ece67385eb01965cf0e"
+      "sha256_destino": "d818a36217c75f6b11fcf5546a5499913adbba7c88605d17ee0993fda00179ab",
+      "sha256_origem": "d818a36217c75f6b11fcf5546a5499913adbba7c88605d17ee0993fda00179ab"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6948,6 +6948,20 @@
       "modo": "copia",
       "sha256_destino": "384307eae2d5843bff4674642dc88bf5abaa8270c5b2d3c8c758c7f531cec0ee",
       "sha256_origem": "384307eae2d5843bff4674642dc88bf5abaa8270c5b2d3c8c758c7f531cec0ee"
+    },
+    {
+      "caminho": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-2400.webp",
+      "fonte": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1d16ebe1d04a497ee52ad1ed9081151e9cc1f2059177d9a18262fa8447497cef",
+      "sha256_origem": "1d16ebe1d04a497ee52ad1ed9081151e9cc1f2059177d9a18262fa8447497cef"
+    },
+    {
+      "caminho": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-960.webp",
+      "fonte": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-960.webp",
+      "modo": "copia",
+      "sha256_destino": "aec204a45c6c2d2250eddf17bab5aad04e9bcb8c177116a7d6a2af0a567d10eb",
+      "sha256_origem": "aec204a45c6c2d2250eddf17bab5aad04e9bcb8c177116a7d6a2af0a567d10eb"
     },
     {
       "caminho": "static/pitwall-archive/peterson-lotus-78-kyalami-1978-bf4554852baf-2400.webp",

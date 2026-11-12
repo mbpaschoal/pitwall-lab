@@ -54,6 +54,8 @@ A photograph of Benetton B192 chassis 05 at Rétromobile 2016 shows the car Mich
 
 A 3,496 × 2,800 px CC0 photograph by Harry Pot shows Stirling Moss, Stuart Lewis-Evans and Tony Brooks at Zandvoort in 1958. The Vanwall gallery features the photograph, which also illustrates Monza and Casablanca, where the VW5 Lewis-Evans is pictured driving won with Brooks and Moss, respectively.
 
+A CC0 photograph by Harry Pot shows Alberto Ascari leading the field at Zandvoort in 1953. The 3,210 × 1,685 px crop from the Nationaal Archief’s digitised negative appears in the Ferrari gallery and the Dutch Grand Prix archive. It also illustrates the Ferrari 500 model in the entry for Hawthorn’s first win at Reims.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

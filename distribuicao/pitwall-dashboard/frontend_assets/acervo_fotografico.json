@@ -13438,6 +13438,54 @@
           "sha256": "6ac49c44dfd153c56a30114b9bcfbc5e03204199ec8bb54beb7e5df00f1ca201"
         }
       ]
+    },
+    "pelotao-zandvoort-1953": {
+      "legenda": {
+        "pt": "Alberto Ascari lidera o pelotão no Ferrari 500 nº 2 em Zandvoort, no GP dos Países Baixos de 7 de junho de 1953. Com outro Ferrari 500, seu companheiro Mike Hawthorn conquistou a primeira vitória no Mundial em Reims no mês seguinte.",
+        "en": "Alberto Ascari leads the field in Ferrari 500 No. 2 at Zandvoort during the Dutch Grand Prix on 7 June 1953. His teammate Mike Hawthorn took his first World Championship win in another Ferrari 500 at Reims the following month."
+      },
+      "pilotos": [
+        "alberto-ascari"
+      ],
+      "modelo": "ferrari-500",
+      "temporadas": [
+        1953
+      ],
+      "gps": [
+        "1953:3"
+      ],
+      "artefatos_gps": [
+        "1953:5"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://www.nationaalarchief.nl/onderzoeken/fotocollectie/a90d596a-d0b4-102d-bcf8-003048976d84",
+      "original": "https://service.archief.nl/gaf/api/file/v1/original/81281c77-ba1c-452e-b64b-1579f1969423",
+      "autor": "Harry Pot / Anefo · Nationaal Archief (905-7655)",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "c9b5c0a81450c7052b0fda15cbab0e4b60258cb1ba06dcabb6937d8e76f6f23a",
+      "largura": 3210,
+      "altura": 1685,
+      "recorte_original": {
+        "x": 105,
+        "y": 685,
+        "largura": 3210,
+        "altura": 1685
+      },
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-960.webp",
+          "largura": 960,
+          "altura": 504,
+          "sha256": "aec204a45c6c2d2250eddf17bab5aad04e9bcb8c177116a7d6a2af0a567d10eb"
+        },
+        {
+          "arquivo": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-2400.webp",
+          "largura": 2400,
+          "altura": 1260,
+          "sha256": "1d16ebe1d04a497ee52ad1ed9081151e9cc1f2059177d9a18262fa8447497cef"
+        }
+      ]
     }
   },
   "referencias_fotograficas": {
