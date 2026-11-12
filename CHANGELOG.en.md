@@ -34,6 +34,8 @@ A 2,560 × 1,440 px Publifoto photograph shows Juan Manuel Fangio congratulating
 
 A 3,415 × 2,849 px CC0 photograph by Harry Pot shows Alberto Ascari on his way to victory at Zandvoort in 1953 in Ferrari 500 chassis 005. It appears in Champion cars, the Ferrari gallery and Historic moments. The same car won the title-clinching race at Bremgarten, so the Hall of Fame also shows the photo as a related archive item.
 
+A 3,024 × 2,005 px CC BY 3.0 photograph by Silvio Chiozini shows cars on track from the grandstand at the 2006 Brazilian Grand Prix. The photograph appears in Historic moments and in the Hall of Fame entry for Fernando Alonso’s second title.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

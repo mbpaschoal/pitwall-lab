@@ -34,6 +34,8 @@ Uma foto de 2.560 × 1.440 px da Publifoto mostra Juan Manuel Fangio cumprimenta
 
 Uma foto de Harry Pot em CC0, com 3.415 × 2.849 px, mostra Alberto Ascari a caminho da vitória em Zandvoort em 1953 no Ferrari 500 de chassi 005. Ela entra em Carros campeões, na galeria Ferrari e em Momentos históricos. Como o mesmo carro venceu a prova do título em Bremgarten, o Hall da Fama também exibe a foto entre as peças de acervo dessa decisão.
 
+Uma fotografia de Silvio Chiozini com 3.024 × 2.005 px e licença CC BY 3.0 mostra os carros em pista vistos da arquibancada do GP do Brasil de 2006. A imagem entra em Momentos históricos e na decisão do bicampeonato de Fernando Alonso no Hall da Fama.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

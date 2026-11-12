@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "126081c8a2b17779e846a1c8dbd0385d35f2701fefeb7ecf41e6589e00557aa6",
+  "apresentacao_build_sha256": "94c58974a105e50d3b7512dd665954310917035de1344302a5bf6d59af21de15",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "5002de1d9f119686b9f3b5e59e92d684e3b9b8df4cac9be45117e5489536f43b",
+      "sha256_destino": "8783d1ce17fe5bc13f24962ed9f28f39fdb17fd3cc2f702b0e70db95bb536ce6",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "7f9aa53fded03d533a6d73b76a051c7f93a80bee3af90206651b87cfa5d41abc",
-      "sha256_origem": "3d007505fc476d094ace03a53d0164188fe94b10eeeb078522a472ce6388200e"
+      "sha256_destino": "1ee106f9647a7c4a35c5ac15e40f285f4c7223712d987c8b2ee6dc8e03454de0",
+      "sha256_origem": "8ef5971eede62d96cb2a66087441c0582e2802ee273d6ffca5f379673707e5c2"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a467a6b7a7f20f985bf6f94dab944bf866c3a8d76d40fbd5094b8da97473f934",
-      "sha256_origem": "054e1a14df4b2f664c953bd32402aeedb6b4624542591641b7ccb0db48f1cd9f"
+      "sha256_destino": "fe34833d51980cd7b21b40cef293b29c3b1fd700ebb22ebd0f1506af1caad5c6",
+      "sha256_origem": "92de2ee7b022b61f5ede97d225ab2af30db31905507abaf428df3d07f8e57336"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "1179653ef717a37a4868c9b6f2508f9a2b9be4e506fd0161fb1cf1c4cd8ef185",
-      "sha256_origem": "1179653ef717a37a4868c9b6f2508f9a2b9be4e506fd0161fb1cf1c4cd8ef185"
+      "sha256_destino": "ed988ce050dc871530e7709b8647890b638a23cf97d0f52b0a4e6d4e1fc543a7",
+      "sha256_origem": "ed988ce050dc871530e7709b8647890b638a23cf97d0f52b0a4e6d4e1fc543a7"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -5492,6 +5492,20 @@
       "modo": "copia",
       "sha256_destino": "9f8202e683770e25a61ae0b9e56fbdab4ea682321e647d0ce2570d2be1756d4e",
       "sha256_origem": "9f8202e683770e25a61ae0b9e56fbdab4ea682321e647d0ce2570d2be1756d4e"
+    },
+    {
+      "caminho": "static/pitwall-archive/interlagos-2006-arquibancada-555f97f65c8e-2400.webp",
+      "fonte": "static/pitwall-archive/interlagos-2006-arquibancada-555f97f65c8e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b7d1fc53069a573ecef5b3086a45c675e0d10af565adcee0046325e49fa995fc",
+      "sha256_origem": "b7d1fc53069a573ecef5b3086a45c675e0d10af565adcee0046325e49fa995fc"
+    },
+    {
+      "caminho": "static/pitwall-archive/interlagos-2006-arquibancada-555f97f65c8e-960.webp",
+      "fonte": "static/pitwall-archive/interlagos-2006-arquibancada-555f97f65c8e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "53db1a5b4336bb52120b0f540a748f21aaf7f4a6af42997a520ac7056479a5de",
+      "sha256_origem": "53db1a5b4336bb52120b0f540a748f21aaf7f4a6af42997a520ac7056479a5de"
     },
     {
       "caminho": "static/pitwall-archive/interlagos-2009-fc2ce6d17e5b-2400.webp",
