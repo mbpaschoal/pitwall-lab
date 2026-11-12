@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "73d00e60404f67586642819bb8478db05b729d6a77f39d1a0806d8f984f27715",
+  "apresentacao_build_sha256": "58b98fece1823b15133eae8808cb380abf267e9bd63bdda26d255140dc34fae7",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "27a038d185100f6c3c8f4ccaaf0f0d1ef648e5dc2fddb9676cd31a1bc89fcfb4",
+      "sha256_destino": "57c609004e2aacebcafd2ba54161c1b2dcb50df232d349ce39ab3d73b2fdceff",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "f0cd3ecd40c76c27a9ec62f63dcc494b3c57796530ce21bed0ea1a1a11a85e0a",
-      "sha256_origem": "f0cd3ecd40c76c27a9ec62f63dcc494b3c57796530ce21bed0ea1a1a11a85e0a"
+      "sha256_destino": "ee0443771743aac5c514b57df69b01b94b8c262ba8c074a88ad8340d92d27fc8",
+      "sha256_origem": "ee0443771743aac5c514b57df69b01b94b8c262ba8c074a88ad8340d92d27fc8"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4946,6 +4946,20 @@
       "modo": "copia",
       "sha256_destino": "c2a8c0c9adb142554660f1538baaa9d52bec703de86b4aee05516243417063a2",
       "sha256_origem": "c2a8c0c9adb142554660f1538baaa9d52bec703de86b4aee05516243417063a2"
+    },
+    {
+      "caminho": "static/pitwall-archive/foro-sol-publico-mexico-2017-bb1074568073-1920.webp",
+      "fonte": "static/pitwall-archive/foro-sol-publico-mexico-2017-bb1074568073-1920.webp",
+      "modo": "copia",
+      "sha256_destino": "1c9c02b9482230c4275c3efcdddf43eb039c16cc154aa0afe9989b7afc05c251",
+      "sha256_origem": "1c9c02b9482230c4275c3efcdddf43eb039c16cc154aa0afe9989b7afc05c251"
+    },
+    {
+      "caminho": "static/pitwall-archive/foro-sol-publico-mexico-2017-bb1074568073-960.webp",
+      "fonte": "static/pitwall-archive/foro-sol-publico-mexico-2017-bb1074568073-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3be3c7979a42143ecb82adf64cdee50c04ee39f625951d7fa3ec9af48536d45d",
+      "sha256_origem": "3be3c7979a42143ecb82adf64cdee50c04ee39f625951d7fa3ec9af48536d45d"
     },
     {
       "caminho": "static/pitwall-archive/gerard-era-r4a-2014-01739e3a9858-2400.webp",
@@ -8110,6 +8124,20 @@
       "modo": "copia",
       "sha256_destino": "a2f21b2cfd6aad0917efa49cdf83007cb00773123800752c5b41d5b7d37b0552",
       "sha256_origem": "a2f21b2cfd6aad0917efa49cdf83007cb00773123800752c5b41d5b7d37b0552"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-rb13-mexico-2017-683e583d4803-1920.webp",
+      "fonte": "static/pitwall-archive/verstappen-rb13-mexico-2017-683e583d4803-1920.webp",
+      "modo": "copia",
+      "sha256_destino": "9e7f037c114202404f66cf5de55e80c61db8dff21abb3e3918c0e615a7dddb89",
+      "sha256_origem": "9e7f037c114202404f66cf5de55e80c61db8dff21abb3e3918c0e615a7dddb89"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-rb13-mexico-2017-683e583d4803-960.webp",
+      "fonte": "static/pitwall-archive/verstappen-rb13-mexico-2017-683e583d4803-960.webp",
+      "modo": "copia",
+      "sha256_destino": "82c7444e38e1a86e5abd5028750b8c964ecd368c3ac0af09a6e95e3e31fef255",
+      "sha256_origem": "82c7444e38e1a86e5abd5028750b8c964ecd368c3ac0af09a6e95e3e31fef255"
     },
     {
       "caminho": "static/pitwall-archive/verstappen-rb16b-abu-dhabi-2021-bb38bbacd1ee-2400.webp",
