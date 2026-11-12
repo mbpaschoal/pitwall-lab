@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "33e94f428b42275d4cc1b9a3a56c4a116c043662d9f2a5972449416a973c90ba",
+  "apresentacao_build_sha256": "d0e8c156d56885a9f2a39ca60749e98293b0e20f5efe56004965fb7891f3d061",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "ee3132513bfe8fe7196bb5027dd25308c4d5f768fa2d96350ac5fbc1344c2b02",
+      "sha256_destino": "9da8ad20fde83bccd0eab33d170ba960844c1eabcaa1053d68c0382a3f012ad8",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "982e00daf299444165ae283deb76a2cb18c941e1560dbf6120edb7f2ba760efe",
-      "sha256_origem": "9718b1d69a2e7e37881153141f3933a32344d3c1d45cc6894b36f2e86a828457"
+      "sha256_destino": "aa39c6bb7a75705009b47101b1e69fb59718544cbc5c3eb93f1377d0cd4b33b1",
+      "sha256_origem": "0e25b36dfb5b498066248dbe735c5df39235fe5bc9205dc969b8acc07e51bbb3"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "1a0b7f3b71c7d777a18ac440ad123085ce4edbeace8743fd31b0e6d364538173",
-      "sha256_origem": "fd2dbb2bc1ec03bdc4930676382054206528687bb1e2e9527f6b7e8d1d59d124"
+      "sha256_destino": "e64436bfb28307d7cb0771f3679b9e617b4e67d45b641de78bfa4ac2377f8ea4",
+      "sha256_origem": "ad0dad12486d284d8c00dd05f8f10c79b5be571de9e2e3efca4261cfe7585026"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "05dac16976f8d996104f86408fddf54c8a73e06a0ccc0cdff91050508b3ebf80",
-      "sha256_origem": "05dac16976f8d996104f86408fddf54c8a73e06a0ccc0cdff91050508b3ebf80"
+      "sha256_destino": "5fac4b7cd4ee4d74dafe1fe588848dd773da662f68bac8142d712c43ffd1c15e",
+      "sha256_origem": "5fac4b7cd4ee4d74dafe1fe588848dd773da662f68bac8142d712c43ffd1c15e"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4750,6 +4750,20 @@
       "modo": "copia",
       "sha256_destino": "d9af1824670973d98ecdc6245db1b7d1e0fd2aae2e4bb777fc4a6f343143fa10",
       "sha256_origem": "d9af1824670973d98ecdc6245db1b7d1e0fd2aae2e4bb777fc4a6f343143fa10"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t4-037r-detalhe-laguna-seca-2016-797c9c72e20a-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t4-037r-detalhe-laguna-seca-2016-797c9c72e20a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "70fe2634a8488a94e57ffffbd0149a7c359e74ec430d9c8d7b753e72ca4bd33c",
+      "sha256_origem": "70fe2634a8488a94e57ffffbd0149a7c359e74ec430d9c8d7b753e72ca4bd33c"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t4-037r-detalhe-laguna-seca-2016-797c9c72e20a-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t4-037r-detalhe-laguna-seca-2016-797c9c72e20a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "f5829cb8f0d2ed2010a774581928ef7b54abe7dfe0a0a7f9a112c7fccc784975",
+      "sha256_origem": "f5829cb8f0d2ed2010a774581928ef7b54abe7dfe0a0a7f9a112c7fccc784975"
     },
     {
       "caminho": "static/pitwall-archive/ferrari-312t4-92e4bce1b87f-2400.webp",

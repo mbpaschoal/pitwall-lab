@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+The Ferrari gallery adds a bodywork detail of 312 T4 chassis 037-R, rebuilt by the factory for Ferdinando Bonomi. Matt Brunner photographed the car at Laguna Seca in 2016. The 6,000 × 4,000 px original is licensed CC BY-SA 2.0.
+
 The McLaren and Mercedes galleries gain two CC BY-SA 4.0 photographs. The first shows Norris and Piastri on the Shanghai grid in 2024 at 5,373 × 3,022 px. The second shows Russell and Antonelli on the podium after their one-two finish in Melbourne in 2026 at 5,585 × 3,723 px. The team profiles and photo archive display bilingual captions, credits, and links to the originals.
 
 Historic Moments gains a CC0 photograph by Cees de Boer at 2,893 × 2,153 px, showing spectators above the pits at Zandvoort on the day McLaren clinched the 1984 constructors’ title.
