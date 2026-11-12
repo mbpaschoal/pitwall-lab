@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "58b98fece1823b15133eae8808cb380abf267e9bd63bdda26d255140dc34fae7",
+  "apresentacao_build_sha256": "6329c9fddf335621d7eaf16d67bbefb8cbe27fe38f2a5299330814e69a7b17fc",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "57c609004e2aacebcafd2ba54161c1b2dcb50df232d349ce39ab3d73b2fdceff",
+      "sha256_destino": "4edee26b832a9b62f20010e47651bc9d3f4500cefd0749f4878f562b2875d69e",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "ee0443771743aac5c514b57df69b01b94b8c262ba8c074a88ad8340d92d27fc8",
-      "sha256_origem": "ee0443771743aac5c514b57df69b01b94b8c262ba8c074a88ad8340d92d27fc8"
+      "sha256_destino": "0e7ea39f91b92ecd1b53f82ae0d4e084931498b129debd018439df7868eddf92",
+      "sha256_origem": "0e7ea39f91b92ecd1b53f82ae0d4e084931498b129debd018439df7868eddf92"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7748,6 +7748,20 @@
       "sha256_origem": "018ddb507ca77617e78817e0374846f36c9cdf52b371ce84d665bf8d795c454b"
     },
     {
+      "caminho": "static/pitwall-archive/senna-mansell-hungria-1988-688e521ab76a-2400.webp",
+      "fonte": "static/pitwall-archive/senna-mansell-hungria-1988-688e521ab76a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ff96bb8a9f732d90567466a849cb1e78061cfaf2dc2c1ebc1eb1ea05090d0530",
+      "sha256_origem": "ff96bb8a9f732d90567466a849cb1e78061cfaf2dc2c1ebc1eb1ea05090d0530"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mansell-hungria-1988-688e521ab76a-960.webp",
+      "fonte": "static/pitwall-archive/senna-mansell-hungria-1988-688e521ab76a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cf0b775d02e52e9d57ce0e973ca18ed0e6cf4e3c56c5d8df0314e0494e65b2dd",
+      "sha256_origem": "cf0b775d02e52e9d57ce0e973ca18ed0e6cf4e3c56c5d8df0314e0494e65b2dd"
+    },
+    {
       "caminho": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-2400.webp",
       "fonte": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-2400.webp",
       "modo": "copia",
@@ -7858,6 +7872,20 @@
       "modo": "copia",
       "sha256_destino": "7a90c1ce0649697605e4b461f6269701a051dddf5c481d9bd13c1cb9f000333d",
       "sha256_origem": "7a90c1ce0649697605e4b461f6269701a051dddf5c481d9bd13c1cb9f000333d"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-prost-podio-hungria-1988-c9fc0ddf9e2d-2400.webp",
+      "fonte": "static/pitwall-archive/senna-prost-podio-hungria-1988-c9fc0ddf9e2d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "71df12c213c39c93f32155046f425b78b7f238084f3c2a7f5aa223743998ba55",
+      "sha256_origem": "71df12c213c39c93f32155046f425b78b7f238084f3c2a7f5aa223743998ba55"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-prost-podio-hungria-1988-c9fc0ddf9e2d-960.webp",
+      "fonte": "static/pitwall-archive/senna-prost-podio-hungria-1988-c9fc0ddf9e2d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "27f52c11988d4e3270bab9e03aff770c009d29b88b94b49c946a33b29ee70354",
+      "sha256_origem": "27f52c11988d4e3270bab9e03aff770c009d29b88b94b49c946a33b29ee70354"
     },
     {
       "caminho": "static/pitwall-archive/senna-spa-1991-6b49c2b35dac-2400.webp",
