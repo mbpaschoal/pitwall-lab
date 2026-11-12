@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "2770f8d95135ac0bb0731d4721d8ac3a0fff5a83824991a9af5178de606e6b1b",
+  "apresentacao_build_sha256": "48d66d1255b8f1ee849cf5e1d738f9842972fe02b12f349345b9be994ebab96f",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "659333f7de295e25a507be7d15a843e71e0df92f1cf2f3cd2461bc2a7d957f27",
+      "sha256_destino": "ee3132513bfe8fe7196bb5027dd25308c4d5f768fa2d96350ac5fbc1344c2b02",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "dbcb0cf09107e662d84878f0ab08419d1b24017eeff1947a64fa1ff1ab3baf91",
-      "sha256_origem": "1a5adbb31509837ecbdbeca658f222cc9a237673c606a81ddcdfad000490bfdc"
+      "sha256_destino": "c69743f0aa7d4446b3d0a662c731976eba30ced759b9f5547951853fc7a01ad1",
+      "sha256_origem": "00cf3c584744318438bc54ff42556c931780a64370d57130c53ec8b429fc0553"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "6df20025b9c9f4b36ea9b3a49ee836a104ad3a83e4429fb76a5786974419306e",
-      "sha256_origem": "1a8fb5b9b08cd7cb4eb32cc9c644b15bca6fd9952ba07536c3694c936e0d6b42"
+      "sha256_destino": "efa46cd01dedb95991241dfe8135902c60423fc87c23cc1f3b2c9ed575a6592b",
+      "sha256_origem": "fe3aaf4819850ec173fd290830d1dfe83d6d5781eccb1104ea6ccd4b65571142"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "d63b00434bec7d2f5bbb075130d92d06845cfcf18baa82000d79ccbb7c468a66",
-      "sha256_origem": "d63b00434bec7d2f5bbb075130d92d06845cfcf18baa82000d79ccbb7c468a66"
+      "sha256_destino": "e265e32538b5f849fcfe606d6f8e50101cdc6e1fea1ee0b20c77dd2a8f08e72c",
+      "sha256_origem": "e265e32538b5f849fcfe606d6f8e50101cdc6e1fea1ee0b20c77dd2a8f08e72c"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -2753,8 +2753,8 @@
       "caminho": "frontend_assets/inventario_campeoes.json",
       "fonte": "frontend_assets/inventario_campeoes.json",
       "modo": "copia",
-      "sha256_destino": "9940e45aa4e0cdddf27702081967d73dc2244be3634687f79d32d33d50ff7d9b",
-      "sha256_origem": "9940e45aa4e0cdddf27702081967d73dc2244be3634687f79d32d33d50ff7d9b"
+      "sha256_destino": "40d137fe49dbee9a20954811de59591ebbc9c5eb6ff4ce65444da41e1e180e09",
+      "sha256_origem": "40d137fe49dbee9a20954811de59591ebbc9c5eb6ff4ce65444da41e1e180e09"
     },
     {
       "caminho": "frontend_assets/journey.css",
@@ -3982,6 +3982,20 @@
       "sha256_origem": "d413be70df472a4a0e1930c65e1c4e30f399749093cfc6a330602adc4e8808a7"
     },
     {
+      "caminho": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "63c16a39ddc581eb353b3f3562b69fb1854532b274d90d73845fb44a62e3bffd",
+      "sha256_origem": "63c16a39ddc581eb353b3f3562b69fb1854532b274d90d73845fb44a62e3bffd"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-960.webp",
+      "fonte": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c41147a521eee1d055d3cb64d8713a1308ae03054150b9d8296db50e6eaa2196",
+      "sha256_origem": "c41147a521eee1d055d3cb64d8713a1308ae03054150b9d8296db50e6eaa2196"
+    },
+    {
       "caminho": "static/pitwall-archive/brabham-bt20-31b858ae8e9d-2400.webp",
       "fonte": "static/pitwall-archive/brabham-bt20-31b858ae8e9d-2400.webp",
       "modo": "copia",
@@ -4232,6 +4246,20 @@
       "modo": "copia",
       "sha256_destino": "57b4d53374263ce2b66629d47d07efc52beea6750333c54df7aa62ceff1ef5fe",
       "sha256_origem": "57b4d53374263ce2b66629d47d07efc52beea6750333c54df7aa62ceff1ef5fe"
+    },
+    {
+      "caminho": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-2400.webp",
+      "fonte": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "de03c57e7e16685cbec5630b86bbea43fe5093a79fa8e07a4a1cc9dfec9ec06e",
+      "sha256_origem": "de03c57e7e16685cbec5630b86bbea43fe5093a79fa8e07a4a1cc9dfec9ec06e"
+    },
+    {
+      "caminho": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-960.webp",
+      "fonte": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-960.webp",
+      "modo": "copia",
+      "sha256_destino": "27864e179c2394c38a4405794441fa75e44ac00576c8d8ff7332c36c72313a70",
+      "sha256_origem": "27864e179c2394c38a4405794441fa75e44ac00576c8d8ff7332c36c72313a70"
     },
     {
       "caminho": "static/pitwall-archive/cooper-moss-zandvoort-1959-f7631f667681-2400.webp",
@@ -4596,6 +4624,20 @@
       "modo": "copia",
       "sha256_destino": "1ce43b04145c9e4adc2f5866cfc20e04d756e72c7ae74415b588532e5ff53c0f",
       "sha256_origem": "1ce43b04145c9e4adc2f5866cfc20e04d756e72c7ae74415b588532e5ff53c0f"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "356a4f033912c20116ba70c9d39b7c7ad80778ec731c4e0835b7320ee02e77f1",
+      "sha256_origem": "356a4f033912c20116ba70c9d39b7c7ad80778ec731c4e0835b7320ee02e77f1"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-960.webp",
+      "modo": "copia",
+      "sha256_destino": "adfb15fe8b460a4c18c47e0ecd969b9c983785f692d902070f986c2207e6a817",
+      "sha256_origem": "adfb15fe8b460a4c18c47e0ecd969b9c983785f692d902070f986c2207e6a817"
     },
     {
       "caminho": "static/pitwall-archive/ferrari-158-8ceb2a9265a1-2400.webp",
@@ -7536,6 +7578,20 @@
       "modo": "copia",
       "sha256_destino": "8021b70b2d906ebd09decd50601a0c27c9dc2bfcfd054b373ce209e8100f1c8f",
       "sha256_origem": "8021b70b2d906ebd09decd50601a0c27c9dc2bfcfd054b373ce209e8100f1c8f"
+    },
+    {
+      "caminho": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-2400.webp",
+      "fonte": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "888194ec1e8439865b6ee6d71411e5ea5a2055cf1f1aa2c26e54f4d6c4296aa5",
+      "sha256_origem": "888194ec1e8439865b6ee6d71411e5ea5a2055cf1f1aa2c26e54f4d6c4296aa5"
+    },
+    {
+      "caminho": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-960.webp",
+      "fonte": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "089344d4fe0bc35e67b2aaaadf11b1942cc0f765df2e5e42aae5d9f3248005b6",
+      "sha256_origem": "089344d4fe0bc35e67b2aaaadf11b1942cc0f765df2e5e42aae5d9f3248005b6"
     },
     {
       "caminho": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-2400.webp",

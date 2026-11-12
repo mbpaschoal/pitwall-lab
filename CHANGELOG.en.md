@@ -70,6 +70,8 @@ Jack Brabham’s 1955 debut at Aintree gains a photograph of the Cooper Bristol 
 
 A 3,664 × 2,436 px photograph by Hans van Dijk (Anefo / Nationaal Archief), licensed under CC BY-SA 3.0 Netherlands, shows Prost and Jones at Zandvoort in 1981. The Renault RE30 illustrates the model in which Prost took his first win at Dijon. Williams FW07C chassis 16 raced at the constructors’ title decider in Montreal and won the drivers’ title decider in Las Vegas with Alan Jones.
 
+Four openly licensed photographs expand season coverage. The archive adds Jack Brabham in the BT19 in 1967, Clay Regazzoni in Ferrari 312 T2 chassis 027 in 1976, Jim Clark in the Lotus 25/R6 and the Ferrari 156 F1 Aero on display in Paris. The inventory distinguishes the 1958 Dino 156 F2, 1961 156 F1 Sharknose and 1964 156 Aero. Existing photos of the Cooper T51, Lotus 72D and Williams FW07C also illustrate the 1960, 1973 and 1982 campaigns.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

@@ -93,7 +93,9 @@
     "ferrari-126c2b": "Ferrari 126C2B",
     "ferrari-126c3": "Ferrari 126C3",
     "ferrari-1512": "Ferrari 1512",
-    "ferrari-156": "Ferrari 156",
+    "ferrari-156": "Ferrari 156 F1 Sharknose",
+    "ferrari-156-aero": "Ferrari 156 F1 Aero",
+    "ferrari-156-f2": "Ferrari Dino 156 F2",
     "ferrari-158": "Ferrari 158",
     "ferrari-246": "Ferrari 246",
     "ferrari-312b3-74": "Ferrari 312B3-74",
@@ -338,7 +340,7 @@
       ],
       "construtores": false,
       "modelos_candidatos": [
-        "ferrari-156",
+        "ferrari-156-f2",
         "ferrari-246"
       ]
     },
@@ -428,7 +430,7 @@
       "construtores": true,
       "modelos_candidatos": [
         "ferrari-1512",
-        "ferrari-156",
+        "ferrari-156-aero",
         "ferrari-158"
       ]
     },

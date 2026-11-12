@@ -70,6 +70,8 @@ A estreia de Jack Brabham em Aintree, em 1955, ganha uma foto do Cooper Bristol 
 
 Uma fotografia de Hans van Dijk (Anefo / Nationaal Archief), de 3.664 × 2.436 px sob CC BY-SA 3.0 Países Baixos, mostra Prost e Jones em Zandvoort em 1981. O Renault RE30 ilustra o modelo da primeira vitória de Prost em Dijon. O Williams FW07C de chassi 16 correu no GP do título de construtores, em Montreal, e venceu a decisão de pilotos em Las Vegas com Alan Jones.
 
+Quatro fotos abertas ampliam a cobertura por temporada. O acervo ganha Jack Brabham no BT19 em 1967, Clay Regazzoni no Ferrari 312 T2 de chassi 027 em 1976, Jim Clark no Lotus 25/R6 e o Ferrari 156 F1 Aero exposto em Paris. O inventário distingue o Dino 156 F2 de 1958, o 156 F1 Sharknose de 1961 e o 156 Aero de 1964. As fotos do Cooper T51, Lotus 72D e Williams FW07C passam a ilustrar também as campanhas de 1960, 1973 e 1982.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

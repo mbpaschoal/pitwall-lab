@@ -1765,12 +1765,13 @@
     "cooper-t51": {
       "arquivo_commons": "File:Cooper T51 Donington 2007.jpg",
       "legenda": {
-        "pt": "Cooper T51 na coleção de Donington.",
-        "en": "Cooper T51 at the Donington collection."
+        "pt": "Cooper T51 fotografado em Donington em 2007. O modelo das campanhas de 1959 e 1960 também foi usado por Jack Brabham na abertura do Mundial de 1960, na Argentina.",
+        "en": "A Cooper T51 photographed at Donington in 2007. The model appeared in the 1959 and 1960 campaigns, including with Jack Brabham at the 1960 season opener in Argentina."
       },
       "modelo": "cooper-t51",
       "temporadas": [
-        1959
+        1959,
+        1960
       ],
       "construtor": "cooper",
       "fonte": "https://commons.wikimedia.org/wiki/File:Cooper_T51_Donington_2007.jpg",
@@ -3147,12 +3148,13 @@
     "lotus-72d": {
       "arquivo_commons": "File:1972 French Grand Prix Fittipaldi (5225674175).jpg",
       "legenda": {
-        "pt": "Emerson Fittipaldi com o Lotus 72D no GP da França de 1972.",
-        "en": "Emerson Fittipaldi in the Lotus 72D at the 1972 French Grand Prix."
+        "pt": "Emerson Fittipaldi no GP da França de 1972 com o Lotus 72D de chassi R7. Venceu com esse mesmo carro na Argentina e no Brasil no início da campanha que deu à Lotus o título de construtores de 1973.",
+        "en": "Emerson Fittipaldi in Lotus 72D chassis R7 at the 1972 French Grand Prix. He won in this same car in Argentina and Brazil at the start of Lotus’s 1973 constructors’ title campaign."
       },
       "modelo": "lotus-72d",
       "temporadas": [
-        1972
+        1972,
+        1973
       ],
       "construtor": "lotus",
       "fonte": "https://commons.wikimedia.org/wiki/File:1972_French_Grand_Prix_Fittipaldi_(5225674175).jpg",
@@ -3349,12 +3351,13 @@
     "williams-fw07c": {
       "arquivo_commons": "File:Reutemann at 1981 Dutch Grand Prix.jpg",
       "legenda": {
-        "pt": "Carlos Reutemann no Williams FW07C de chassi 17 em Zandvoort, em 1981. Ele levou o mesmo carro ao décimo lugar em Montreal, onde a Williams garantiu o título de construtores, e ao oitavo em Las Vegas, onde perdeu o título de pilotos para Nelson Piquet por um ponto.",
-        "en": "Carlos Reutemann in Williams FW07C chassis 17 at Zandvoort in 1981. He finished tenth in this car at Montreal, where Williams clinched the constructors’ title, and eighth at Las Vegas, where he lost the drivers’ title to Nelson Piquet by one point."
+        "pt": "Carlos Reutemann no Williams FW07C de chassi 17 em Zandvoort, em 1981. Ele levou o mesmo carro ao décimo lugar em Montreal, onde a Williams garantiu o título de construtores, e ao oitavo em Las Vegas, onde perdeu o título de pilotos para Nelson Piquet por um ponto. Keke Rosberg correu com esse chassi no GP do Brasil de 1982, durante sua campanha pelo título.",
+        "en": "Carlos Reutemann in Williams FW07C chassis 17 at Zandvoort in 1981. He finished tenth in this car at Montreal, where Williams clinched the constructors’ title, and eighth at Las Vegas, where he lost the drivers’ title to Nelson Piquet by one point. Keke Rosberg raced the same chassis at the 1982 Brazilian Grand Prix during his title campaign."
       },
       "modelo": "williams-fw07c",
       "temporadas": [
-        1981
+        1981,
+        1982
       ],
       "construtor": "williams",
       "fonte": "https://commons.wikimedia.org/wiki/File:Reutemann_at_1981_Dutch_Grand_Prix.jpg",
@@ -13820,6 +13823,166 @@
           "sha256": "7e048500d3af36283bbe2a711c967e315a13ae73564d86af26152249cf9f8058"
         }
       ]
+    },
+    "brabham-bt19-zandvoort-1967": {
+      "arquivo_commons": "File:Brabham at 1967 Dutch Grand Prix.jpg",
+      "construtor": "brabham",
+      "modelo": "brabham-bt19",
+      "temporadas": [
+        1967
+      ],
+      "gps": [
+        "1967:3"
+      ],
+      "pilotos": [
+        "jack-brabham"
+      ],
+      "autor": "Eric Koch / Anefo / Nationaal Archief",
+      "legenda": {
+        "pt": "Jack Brabham no cockpit do BT19 nº 1 em Zandvoort, em 1967. Ele terminou em segundo na corrida, contribuindo com o carro para o segundo título de construtores da equipe.",
+        "en": "Jack Brabham in the cockpit of the No. 1 BT19 at Zandvoort in 1967. He finished second in the race, scoring points in this car towards the team’s second constructors’ title."
+      },
+      "fonte": "https://commons.wikimedia.org/wiki/File:Brabham_at_1967_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/18/Brabham_at_1967_Dutch_Grand_Prix.jpg",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "208d98fcd1eef3804b8d4dee2c15e528c80086f46c01255b3c4ac11a925fb9c4",
+      "largura": 3682,
+      "altura": 2428,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-960.webp",
+          "largura": 960,
+          "altura": 633,
+          "sha256": "c41147a521eee1d055d3cb64d8713a1308ae03054150b9d8296db50e6eaa2196"
+        },
+        {
+          "arquivo": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-2400.webp",
+          "largura": 2400,
+          "altura": 1583,
+          "sha256": "63c16a39ddc581eb353b3f3562b69fb1854532b274d90d73845fb44a62e3bffd"
+        }
+      ]
+    },
+    "regazzoni-ferrari-312t2-zandvoort-1976": {
+      "arquivo_commons": "File:Regazzoni at 1976 Dutch Grand Prix.jpg",
+      "construtor": "ferrari",
+      "modelo": "ferrari-312t2",
+      "temporadas": [
+        1976
+      ],
+      "gps": [
+        "1976:12"
+      ],
+      "artefatos_gps": [
+        "1976:15"
+      ],
+      "autor": "Rob Croes / Anefo / Nationaal Archief",
+      "legenda": {
+        "pt": "Clay Regazzoni no Ferrari 312 T2 de chassi 027 a caminho do segundo lugar em Zandvoort, em 1976. Ele voltou a correr com o mesmo carro em Watkins Glen, onde a Ferrari garantiu o título de construtores.",
+        "en": "Clay Regazzoni in Ferrari 312 T2 chassis 027 on his way to second place at Zandvoort in 1976. He raced the same car at Watkins Glen, where Ferrari clinched the constructors’ title."
+      },
+      "fonte": "https://commons.wikimedia.org/wiki/File:Regazzoni_at_1976_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Regazzoni_at_1976_Dutch_Grand_Prix.jpg",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "0a415f247b8d372e31b0043714801435a811cee3c8b3b26e7228ce1db2909490",
+      "largura": 3700,
+      "altura": 2457,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-960.webp",
+          "largura": 960,
+          "altura": 637,
+          "sha256": "089344d4fe0bc35e67b2aaaadf11b1942cc0f765df2e5e42aae5d9f3248005b6"
+        },
+        {
+          "arquivo": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-2400.webp",
+          "largura": 2400,
+          "altura": 1594,
+          "sha256": "888194ec1e8439865b6ee6d71411e5ea5a2055cf1f1aa2c26e54f4d6c4296aa5"
+        }
+      ]
+    },
+    "ferrari-156-aero-retromobile-2017": {
+      "arquivo_commons": "File:Rétromobile 2017 - Ferrari 156 F1 Aero - 001.jpg",
+      "construtor": "ferrari",
+      "modelo": "ferrari-156-aero",
+      "temporadas": [
+        1964
+      ],
+      "artefatos_gps": [
+        "1964:7"
+      ],
+      "autor": "Thesupermat",
+      "legenda": {
+        "pt": "Ferrari 156 F1 Aero exposto no Rétromobile de 2017, em Paris. Lorenzo Bandini venceu o GP da Áustria de 1964 com um carro desse modelo, na temporada em que a Ferrari conquistou o Mundial de Construtores.",
+        "en": "A Ferrari 156 F1 Aero on display at Rétromobile in Paris in 2017. Lorenzo Bandini won the 1964 Austrian Grand Prix in this model, in the season Ferrari won the constructors’ title."
+      },
+      "fonte": "https://commons.wikimedia.org/wiki/File:R%C3%A9tromobile_2017_-_Ferrari_156_F1_Aero_-_001.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/6b/R%C3%A9tromobile_2017_-_Ferrari_156_F1_Aero_-_001.jpg",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "a5f1cd34b19758661b464562ddb3f36f5a0b0a80699e3ec4b7552b495c1d3a7c",
+      "largura": 5472,
+      "altura": 3648,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "adfb15fe8b460a4c18c47e0ecd969b9c983785f692d902070f986c2207e6a817"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "356a4f033912c20116ba70c9d39b7c7ad80778ec731c4e0835b7320ee02e77f1"
+        }
+      ]
+    },
+    "clark-lotus-25-r6-zandvoort-1964": {
+      "arquivo_commons": "File:Grand Prix van Nederland, het rennersveld Jim Clark in zijn Lotus in actie, Bestanddeelnr 916-4688.jpg",
+      "construtor": "lotus",
+      "modelo": "lotus-25",
+      "temporadas": [
+        1965
+      ],
+      "gps": [
+        "1964:2"
+      ],
+      "artefatos_gps": [
+        "1965:7"
+      ],
+      "pilotos": [
+        "jim-clark"
+      ],
+      "autor": "Harry Pot / Anefo / Nationaal Archief",
+      "legenda": {
+        "pt": "Jim Clark vence em Zandvoort com o Lotus 25 de chassi R6, em 1964. Ele voltou a vencer com esse carro no GP da França de 1965. Gerhard Mitter pilotou o R6 no Nürburgring quando Clark confirmou o título de 1965.",
+        "en": "Jim Clark wins at Zandvoort in Lotus 25 chassis R6 in 1964. He won again in this car at the 1965 French Grand Prix. Gerhard Mitter drove R6 at the Nürburgring when Clark clinched the 1965 title."
+      },
+      "fonte": "https://commons.wikimedia.org/wiki/File:Grand_Prix_van_Nederland,_het_rennersveld_Jim_Clark_in_zijn_Lotus_in_actie,_Bestanddeelnr_916-4688.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/66/Grand_Prix_van_Nederland%2C_het_rennersveld_Jim_Clark_in_zijn_Lotus_in_actie%2C_Bestanddeelnr_916-4688.jpg",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "f976917429373130612bc5d7b3428c0ce1934143329e1497b55871386fe5fea6",
+      "largura": 3648,
+      "altura": 2406,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-960.webp",
+          "largura": 960,
+          "altura": 633,
+          "sha256": "27864e179c2394c38a4405794441fa75e44ac00576c8d8ff7332c36c72313a70"
+        },
+        {
+          "arquivo": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-2400.webp",
+          "largura": 2400,
+          "altura": 1583,
+          "sha256": "de03c57e7e16685cbec5630b86bbea43fe5093a79fa8e07a4a1cc9dfec9ec06e"
+        }
+      ]
     }
   },
   "referencias_fotograficas": {
@@ -13854,6 +14017,14 @@
         "legenda": {
           "pt": "Ferrari F2002B · chassi 225",
           "en": "Ferrari F2002B · chassis 225"
+        }
+      },
+      "ferrari-156-f2": {
+        "url": "https://www.goodingco.com/lot/photograph-of-phil-hill-driving-the-ferrari-156-dino-f2-at-the-1958-german-grand-prix-mounted",
+        "acervo": "Gooding Christie’s",
+        "legenda": {
+          "pt": "Phil Hill no Ferrari Dino 156 F2 no GP da Alemanha de 1958",
+          "en": "Phil Hill in the Ferrari Dino 156 F2 at the 1958 German Grand Prix"
         }
       }
     },
