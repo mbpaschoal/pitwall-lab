@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "b916988669b8932146c4bf8b8bc1264dd1850401cd51fe4d14729f796bd23247",
+  "apresentacao_build_sha256": "f04dca8db2a22fbda25e73ebfb76a8b1b0448b69bec5ed432045e8d932135d9e",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "c955dde80dd0841e6a7c427930a6e055f54aed73bce347df50c4010156edc6bc",
+      "sha256_destino": "6e8ada2ab3520fc373663c3712f5e63b27ca223ce075cfa8b00928b89d20860c",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "9b34b2d6860f3baf20bc0d7adeecbcd7a97c5df211516608a055685869676f0a",
-      "sha256_origem": "fc77ba38bfb5ca669abf484d9c938eae32f6d952acc6ec48d6cf7f98f12cd5e6"
+      "sha256_destino": "a5ad9ff6ccd3d181a2ff1ea082e0d7abb9c57bc19b290f5afda1ae28be74fe66",
+      "sha256_origem": "13c68df5571746d0ca0391f11700753064cb59e05a72570b6ecdf6985949b5c3"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "2099bf507003bf353580a27b7264696676c141d0d1511cf082c86315ccf3e254",
-      "sha256_origem": "1129ae10d3c37cb1441d799c33ada2f0e86578916ec370aa0f5983ff58db2f5a"
+      "sha256_destino": "fd212515eaf07d772267979865a407864dd5725a926b98dad8164baee040fb49",
+      "sha256_origem": "43a4460f9e928432d55458c878021a311fea035b9f65f3206e334f157f7eab55"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "959074f567036fb1a438645430355fcde2fa5c70ea0034f26eef6d743321f3f8",
-      "sha256_origem": "959074f567036fb1a438645430355fcde2fa5c70ea0034f26eef6d743321f3f8"
+      "sha256_destino": "eaa758bc497a03e48f9b0edf0ae21259a42b18ab827fb07ffa30eae4fcf8c4d4",
+      "sha256_origem": "eaa758bc497a03e48f9b0edf0ae21259a42b18ab827fb07ffa30eae4fcf8c4d4"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3462,6 +3462,20 @@
       "modo": "copia",
       "sha256_destino": "0d6c51130a88ed4e4702fe38377fcdba92c4be93edd5e57e78d49edd5c02273f",
       "sha256_origem": "0d6c51130a88ed4e4702fe38377fcdba92c4be93edd5e57e78d49edd5c02273f"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-minardi-ps01-museo-2017-a988f48e0809-2400.webp",
+      "fonte": "static/pitwall-archive/alonso-minardi-ps01-museo-2017-a988f48e0809-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "531a52884f5cfeca8c935f07c9b3fe6d3eac3ff83257a5ce2fcabd0f06650846",
+      "sha256_origem": "531a52884f5cfeca8c935f07c9b3fe6d3eac3ff83257a5ce2fcabd0f06650846"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-minardi-ps01-museo-2017-a988f48e0809-960.webp",
+      "fonte": "static/pitwall-archive/alonso-minardi-ps01-museo-2017-a988f48e0809-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9d9c292389e757b85c0079e7a2476704fea0bda826de27ef1140808fb96be9c3",
+      "sha256_origem": "9d9c292389e757b85c0079e7a2476704fea0bda826de27ef1140808fb96be9c3"
     },
     {
       "caminho": "static/pitwall-archive/alonso-r25-5d5bc4051bfa-2400.webp",
@@ -7200,6 +7214,20 @@
       "modo": "copia",
       "sha256_destino": "a95140d1deaabafba7e913026069e8cfc0ff1d634d88d7bd3b7ffc3180ddebc3",
       "sha256_origem": "a95140d1deaabafba7e913026069e8cfc0ff1d634d88d7bd3b7ffc3180ddebc3"
+    },
+    {
+      "caminho": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-2400.webp",
+      "fonte": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6889a328498640e5ef0215f54b13ca9021a5d0e12f11486f4df17188b551b1bf",
+      "sha256_origem": "6889a328498640e5ef0215f54b13ca9021a5d0e12f11486f4df17188b551b1bf"
+    },
+    {
+      "caminho": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-960.webp",
+      "fonte": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a9f5744a32c3938d8a202f66e706b7029c52da44c39ca442644c67feff2c6abc",
+      "sha256_origem": "a9f5744a32c3938d8a202f66e706b7029c52da44c39ca442644c67feff2c6abc"
     },
     {
       "caminho": "static/pitwall-archive/raikkonen-spa-2007-32ec255bf716-2400.webp",

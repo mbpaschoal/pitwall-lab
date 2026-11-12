@@ -62,6 +62,8 @@ A 4,755 × 2,675 px photograph by Pedro Mendes, licensed under CC BY 2.0, shows 
 
 A 3,736 × 2,064 px photograph by Ann McKelvie, licensed under CC BY-SA 2.0, shows Lewis Hamilton at Silverstone in 2007 in McLaren MP4-22 chassis 04. He reached the podium in the same car on his debut in Melbourne. The photo appears in the McLaren gallery and in the Hall of Fame entry for his debut.
 
+Two photographs accompany Fernando Alonso and Kimi Räikkönen’s 2001 Melbourne debut. They show the No. 21 Minardi PS01 and a Sauber C20 bearing Räikkönen’s name. Morio photographed both models on display in 2017. The 3,840 × 2,560 px originals are licensed under CC BY-SA 4.0. The photographs appear under Objects from the collection in both Hall of Fame profiles and in Historic moments.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

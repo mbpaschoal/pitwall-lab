@@ -62,6 +62,8 @@ Uma foto de Pedro Mendes em 4.755 × 2.675 px, sob CC BY 2.0, mostra Nico Rosber
 
 Uma foto de Ann McKelvie em 3.736 × 2.064 px, sob CC BY-SA 2.0, mostra Lewis Hamilton em Silverstone, em 2007, no McLaren MP4-22 de chassi 04. Foi com esse carro que ele chegou ao pódio em sua estreia em Melbourne. A foto entra na galeria da McLaren e na ficha da estreia no Hall da Fama.
 
+A estreia de Fernando Alonso e Kimi Räikkönen em Melbourne, em 2001, ganha fotos do Minardi PS01 nº 21 e do Sauber C20 com o nome de Räikkönen. Morio fotografou os dois modelos em exposições em 2017, com originais de 3.840 × 2.560 px sob CC BY-SA 4.0. As imagens aparecem em Peças de acervo nos dois perfis do Hall da Fama e em Momentos históricos.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
