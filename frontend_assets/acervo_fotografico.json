@@ -12877,6 +12877,44 @@
           "sha256": "934eb12a1882065ddfacfbb97de6236a6157982ceaf870c5a743228df310e41e"
         }
       ]
+    },
+    "monza-curva-1950": {
+      "legenda": {
+        "pt": "Carros contornam uma curva de Monza no GP da Itália de 1950. Nino Farina venceu pela Alfa Romeo e conquistou o primeiro Mundial de Pilotos. Fotografia publicada na revista Via! de setembro de 1950.",
+        "en": "Cars round a bend at Monza during the 1950 Italian Grand Prix. Nino Farina won for Alfa Romeo and clinched the first Drivers’ Championship. Photograph published in the September 1950 issue of Via!."
+      },
+      "gps": [
+        "1950:7"
+      ],
+      "construtor": "alfa-romeo",
+      "fonte": "https://bibliotecadigitale.aci.it/pubblicazioni/dettaglio/#/volume/f71f9baa87a5c50773930200/4d39e7208b2b710a90d300eb",
+      "original": "https://media-bibliotecadigitale.aci.it/archives/AC_MILANO/PERIODICI/Via%20%20rivista%20mensile%20edita%20dall%20%27%20Automobile%20Club%20di%20Milano/1950/Immagini/M/CFI0368794_195009_9_14_m.jpg",
+      "autor": "Via! nº 9 · Publifoto, Fumagalli, Bordin e Millanta (reportagem / feature) · Automobile Club di Milano",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "5e9fc468b6470f23715d33c1d3c6344d71115310b432fb1ef1b98f5d9b397a83",
+      "largura": 2400,
+      "altura": 1800,
+      "recorte_original": {
+        "x": 18,
+        "y": 546,
+        "largura": 2400,
+        "altura": 1800
+      },
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "bdf1cba764de7b8d40bf639cc6a7b526ce9d9c06683886f34ae9379c580e3b26"
+        },
+        {
+          "arquivo": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "e92b1e00cbd42491b58612e918868ca4372312712a1b3a1fb04e660e66adc5d3"
+        }
+      ]
     }
   },
   "referencias_fotograficas": {

@@ -40,6 +40,8 @@ Historic moments links to the openly licensed photographs of Jo Bonnier in Porsc
 
 Fangio’s 1954 Maserati 250F gains two photographs. A 2,075 × 2,400 px public-domain crop from El Gráfico shows chassis 2505 in the rain at the Argentine Grand Prix. Rahil Rupawala’s 4,288 × 2,848 px CC BY 2.0 photograph shows the restored car in Turin. The photograph of chassis 2529 now appears only in the 1957 season.
 
+A trackside photograph from the September 1950 issue of Via! shows the Italian Grand Prix where Nino Farina clinched the first Drivers’ Championship. The public-domain crop measures 2,400 × 1,800 px without enlargement. The photo appears in Farina’s Hall of Fame profile, the Alfa Romeo gallery and Historic moments.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

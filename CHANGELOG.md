@@ -40,6 +40,8 @@ Momentos históricos inclui os links para a foto aberta de Jo Bonnier no Porsche
 
 O Maserati 250F de Fangio em 1954 ganha duas fotos. A primeira, em domínio público, mostra o chassi 2505 sob chuva no GP da Argentina, em um recorte de 2.075 × 2.400 px da revista El Gráfico. A segunda, de Rahil Rupawala, mostra o carro restaurado em Turim em 4.288 × 2.848 px, sob CC BY 2.0. A imagem do chassi 2529 passa a aparecer apenas na temporada de 1957.
 
+Uma foto de pista da revista Via! de setembro de 1950 registra o GP da Itália em que Nino Farina conquistou o primeiro Mundial de Pilotos. O recorte em domínio público mede 2.400 × 1.800 px, sem ampliação. A foto entra no Hall de Farina, na galeria Alfa Romeo e em Momentos históricos.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

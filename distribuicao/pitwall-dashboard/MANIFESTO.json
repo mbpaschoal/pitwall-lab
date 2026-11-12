@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "9ded9041a59380af2d250341896e0b7c9b5e01202e153e5fefb78306076ea425",
+  "apresentacao_build_sha256": "00bf74a2a753570db4e439f09108cb3222a6e10817fd66fd31d9d485968caa34",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "8493c2f2b116986ba9344240510b4f3b12cbd7f357a95fc6436558b823619d3b",
+      "sha256_destino": "0fb291e92528fa689a2b155e227ccebf59d8bfc1fdf4789c060392a9fcef39a1",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "574b501d0f368c79d22ed940cf246a2bb387cf0448187019211f4bd5683824b7",
-      "sha256_origem": "60e5e2ad9289fbe224876f0d19aec7713e584e78a3fccf15ba44b36c7ed6a051"
+      "sha256_destino": "17324b525b14176d9f80f83c0922ab7664d7d643dca5d7d0338c66f80029a409",
+      "sha256_origem": "8200676bd494f1715f40faacccb77367116b75d123d9941d4b97003a6ec00e1e"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "fe0123bdf87dccae19b70fbcfbf778841f08b860f57a07bf2a4b3fc4da18bd5a",
-      "sha256_origem": "5a75c3a6c766d39a1fe7c906de93ad9e638f25adb5d2b522e1bea27db85b0605"
+      "sha256_destino": "c536a9640b857670919362ac0248e1c3da76cc21ac8e42e1a889654eb577976a",
+      "sha256_origem": "71be3093eaa57f0533f3c37af522c61d57a68518be86d21a5aabc5d3ff31ac8b"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "e17dc79d5e11e34132ddfce7e50222fa5cd9bdeec686bf83f8c8869a9fe41c71",
-      "sha256_origem": "e17dc79d5e11e34132ddfce7e50222fa5cd9bdeec686bf83f8c8869a9fe41c71"
+      "sha256_destino": "8a5bdc373064a76aa84c903f802ff8d959ab8682f7134b2ddbc11a644e7e914c",
+      "sha256_origem": "8a5bdc373064a76aa84c903f802ff8d959ab8682f7134b2ddbc11a644e7e914c"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6654,6 +6654,20 @@
       "modo": "copia",
       "sha256_destino": "9e78f5867da9c5ee488f109889a28cf77657f4deb8a05e8da44080d6ebf80110",
       "sha256_origem": "9e78f5867da9c5ee488f109889a28cf77657f4deb8a05e8da44080d6ebf80110"
+    },
+    {
+      "caminho": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-2400.webp",
+      "fonte": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e92b1e00cbd42491b58612e918868ca4372312712a1b3a1fb04e660e66adc5d3",
+      "sha256_origem": "e92b1e00cbd42491b58612e918868ca4372312712a1b3a1fb04e660e66adc5d3"
+    },
+    {
+      "caminho": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-960.webp",
+      "fonte": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bdf1cba764de7b8d40bf639cc6a7b526ce9d9c06683886f34ae9379c580e3b26",
+      "sha256_origem": "bdf1cba764de7b8d40bf639cc6a7b526ce9d9c06683886f34ae9379c580e3b26"
     },
     {
       "caminho": "static/pitwall-archive/monza-grid-1950-f2852af71db4-1955.webp",
