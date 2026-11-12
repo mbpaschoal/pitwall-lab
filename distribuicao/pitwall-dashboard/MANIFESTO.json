@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "8860e2a5d7ac713eb190888b06cc0cdf5ed8592891fecd61d2de4b66b62c4f18",
+  "apresentacao_build_sha256": "f09222c66388d56c05057a4728817c8ac2583843731a268663693f32b2717ad8",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "3f5d71ad001e529937c680ffc1cfc6571f51d04c6285b2168cff88add2507cfa",
+      "sha256_destino": "60168474a52baba6a3059fed1c9dd393a137c02332c9aca82b80075935dea0d6",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "ebe9f0e67336304150be9128531539ced044ab095b1ac9f2a4a3809f0598cd3d",
-      "sha256_origem": "ebe9f0e67336304150be9128531539ced044ab095b1ac9f2a4a3809f0598cd3d"
+      "sha256_destino": "1567b58cb03b3db31c64991494523fbbdb8965f160e52d96c3f3aef4d66d99ac",
+      "sha256_origem": "1567b58cb03b3db31c64991494523fbbdb8965f160e52d96c3f3aef4d66d99ac"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4876,6 +4876,20 @@
       "modo": "copia",
       "sha256_destino": "c80f519068037a6764d30e4639b31eb58c8694ad154976ca0200fb6460a376d0",
       "sha256_origem": "c80f519068037a6764d30e4639b31eb58c8694ad154976ca0200fb6460a376d0"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-trofeu-suzuka-2003-d48ff1d749ea-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-trofeu-suzuka-2003-d48ff1d749ea-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8f3dc5ad420bdf08e249565c2700266536fd4a04bc619ba8a84f9b40a5924483",
+      "sha256_origem": "8f3dc5ad420bdf08e249565c2700266536fd4a04bc619ba8a84f9b40a5924483"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-trofeu-suzuka-2003-d48ff1d749ea-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-trofeu-suzuka-2003-d48ff1d749ea-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bf3252ea8c4721f82a304b631f72e86607fd18177ba8db79251b8def59b12c7a",
+      "sha256_origem": "bf3252ea8c4721f82a304b631f72e86607fd18177ba8db79251b8def59b12c7a"
     },
     {
       "caminho": "static/pitwall-archive/fittipaldi-lotus-72-r5-watkins-glen-1970-62aa90319738-2400.webp",
