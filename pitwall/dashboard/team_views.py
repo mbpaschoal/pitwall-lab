@@ -4,6 +4,7 @@ import json
 from html import escape
 from pathlib import Path
 
+from pitwall.dashboard import photo_archive
 from pitwall.dashboard.components import data_editorial
 from pitwall.dashboard.fan_views import href, team_mark, text
 from pitwall.dashboard.journey import race_identity
@@ -189,6 +190,7 @@ def render(root, year, round_):
     st.markdown('<header class="pw-chapter pw-team-profile-head"><div aria-hidden="true">{}</div><h1>{}</h1></header>'.format(
         team_mark(team, profile["nome"]), escape(profile["nome"]),
     ), unsafe_allow_html=True)
+    team_images, cars = photo_archive.team_photos(root, team)
 
     _render_campaign(profile, st.query_params.get("campanha"))
 
@@ -208,6 +210,9 @@ def render(root, year, round_):
                     unsafe_allow_html=True)
     if team == "mercedes":
         st.caption("Fangio assegurou o título de 1954 pela Mercedes após disputar provas daquela temporada pela Maserati.")
+    if cars:
+        with st.expander("Carros campeões"):
+            photo_archive.gallery(cars)
 
     st.subheader(translate("Equipe técnica em {}").format(snapshot["temporada"]))
     st.caption(translate("Informações conferidas em {}.").format(data_editorial(snapshot["conferido_em"])))
@@ -226,6 +231,9 @@ def render(root, year, round_):
             _milestone_year(team, profile, mark["ano"], year, round_), escape(mark[language()]),
         ) for mark in profile["marcos"]
     )), unsafe_allow_html=True)
+    if team_images:
+        with st.expander("Mais fotografias da equipe"):
+            photo_archive.gallery(team_images)
 
     with st.expander("Fontes do perfil"):
         sources = [

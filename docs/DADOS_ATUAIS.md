@@ -16,6 +16,10 @@ As campanhas locais mostram a posição e os pontos acumulados do construtor a c
 
 ## Hall da Fama dos pilotos
 
+O Acervo fotográfico usa originais de arquivo com licença indicada por fotografia. O catálogo registra autoria, origem, dimensões e hashes das versões locais. O inventário cruza os títulos do F1DB com os chassis inscritos e incorpora a documentação da Ferrari sobre o D50 de Fangio em 1956. A cobertura por campanha exige pelo menos um carro fotografado. A associação de cada variante e a cobertura dos GPs históricos são conferidas individualmente. Troféus e capacetes fotografados depois da prova aparecem em **Peças de acervo**. **Ampliar foto** abre a versão local de maior resolução. **Fotografias nos arquivos de origem** reúne links para registros consultáveis em outras coleções. [Catálogo fotográfico](../frontend_assets/acervo_fotografico.json) · [Inventário](../frontend_assets/inventario_campeoes.json)
+
+O Duelo de Campeões calcula a idade entre a data de nascimento e o dia do GP decisivo registrados no F1DB. A contagem inclui a temporada do primeiro título e cada temporada anterior em que o piloto largou em pelo menos um GP.
+
 O catálogo contém os 36 campeões e os 77 títulos de 1950 a 2026. A lista de pilotos confere com o Hall da Fama oficial. A release F1DB v2026.20.0 fornece títulos por temporada, construtores, GPs decisivos e estatísticas até a corrida de São Paulo em 08/11/2026. As biografias oficiais e a confirmação do título de Antonelli pela FIA ficam nos perfis. A edição de 1954 conserva a passagem de Fangio por Maserati e Mercedes. [Catálogo](../frontend_assets/hall_da_fama.json) · [Hall da Fama da Fórmula 1](https://www.formula1.com/en/drivers/hall-of-fame) · [F1DB v2026.20.0](https://github.com/f1db/f1db/releases/tag/v2026.20.0)
 
 ## Revisão completa do calendário

@@ -896,6 +896,7 @@ def sincronizar_navegacao():
     st.query_params.pop("equipe", None)
     st.query_params.pop("campanha", None)
     st.query_params.pop("campeao", None)
+    st.query_params.pop("rival_campeao", None)
     params = dict(tela=st.session_state["tela"])
     gp = st.session_state.get("_gp_context",st.session_state.get("gp"))
     if isinstance(gp,str) and re.fullmatch(r"202[456]:[0-9]{1,2}",gp):
@@ -1391,9 +1392,16 @@ def executar_app():
         st.markdown('<span id="pw-main-content" tabindex="-1" aria-label="{}"></span>'.format(escape(translate('Conteúdo principal'), quote=True)), unsafe_allow_html=True)
         if tela == "Pilotos":
             from pitwall.dashboard.hall_views import hall_url, render as render_hall
-            if st.query_params.get("visao") == "hall":
+            pilot_view = st.query_params.get("visao")
+            if pilot_view == "acervo":
+                from pitwall.dashboard.photo_archive import render as render_archive
                 renderizar_topo(pacote, slot=tool_control)
-                render_hall(raiz_artefatos(), temporada, rodada)
+                render_archive(raiz_artefatos(), temporada, rodada)
+                render_motion()
+                return
+            if pilot_view in ("hall", "duelo-campeoes"):
+                renderizar_topo(pacote, slot=tool_control)
+                render_hall(raiz_artefatos(), temporada, rodada, duel=pilot_view == "duelo-campeoes")
                 render_motion()
                 return
             from pitwall.dashboard.pilot_views import render

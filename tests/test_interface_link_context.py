@@ -204,6 +204,114 @@ class LinkContextTests(unittest.TestCase):
         self.assertEqual(app.query_params.get("lang"), "en")
         self.assertTrue(any("Mexico City Grand Prix" in m.value for m in app.markdown))
 
+    def test_champions_duel_counts_raced_seasons_and_preserves_pair(self):
+        app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=45)
+        app.query_params.update(tela="Pilotos", visao="duelo-campeoes", temporada="2026", gp="20", lang="pt")
+        app.run()
+        self.assertFalse(app.exception)
+        first = app.selectbox(key="hall_duel_first")
+        self.assertEqual(first.value, "ayrton-senna")
+        self.assertEqual(len(first.options), 36)
+        self.assertEqual(app.selectbox(key="hall_duel_second").value, "alain-prost")
+        comparison = next(m.value for m in app.markdown if 'aria-label="Comparação de campeões"' in m.value)
+        self.assertIn("28 anos e 223 dias", comparison)
+        self.assertIn("30 anos e 224 dias", comparison)
+        self.assertIn("<td>5</td><td>6</td>", comparison)
+        timeline = next(m.value for m in app.markdown if 'aria-label="Títulos do duelo"' in m.value)
+        years = [int(a["href"].split("/")[-2]) for a in Links(timeline).links if a["href"].endswith("/drivers")]
+        self.assertEqual(years, [1985, 1986, 1988, 1989, 1990, 1991, 1993])
+
+        first.set_value("alain-prost").run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.info[0].value, "Escolha dois campeões diferentes para comparar.")
+        app.selectbox(key="hall_duel_first").set_value("fernando-alonso").run()
+        english = next(b for b in app.button if b.key and b.key.startswith("pw_language_button_") and b.key.endswith("_en"))
+        english.click().run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.query_params.get("campeao"), "fernando-alonso")
+        self.assertEqual(app.query_params.get("rival_campeao"), "alain-prost")
+        self.assertEqual(app.query_params.get("gp"), "20")
+        comparison = next(m.value for m in app.markdown if 'aria-label="Champion comparison"' in m.value)
+        self.assertIn("<td>4</td><td>6</td>", comparison)
+
+    def test_championship_photo_archive_preserves_model_and_credit(self):
+        from pitwall.dashboard.photo_archive import load
+
+        photos = load(ROOT)
+        self.assertEqual(photos["senna-mp4-4"]["modelo"], "mclaren-mp4-4")
+        self.assertEqual(photos["senna-mp4-4"]["temporadas"], [1988])
+        self.assertEqual(photos["fangio-nurburgring-1957"]["gps"], ["1957:6"])
+        app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=45)
+        app.query_params.update(tela="Pilotos", visao="acervo", temporada="2026", gp="20", lang="en")
+        app.run()
+        self.assertFalse(app.exception)
+        app.selectbox(key="archive_season").set_value(1988).run()
+        self.assertFalse(app.exception)
+        photo = next(item.value for item in app.markdown if 'data-archive-photo="senna-mp4-4"' in item.value)
+        self.assertIn("Tony Hisgett", photo)
+        self.assertIn("Resized version", photo)
+        links = [anchor["href"] for anchor in Links(photo).links]
+        self.assertTrue(any(link.startswith("https://creativecommons.org/") for link in links))
+        self.assertIn(photos["senna-mp4-4"]["fonte"], links)
+        self.assertIn("app/" + photos["senna-mp4-4"]["variantes"][-1]["arquivo"], links)
+        self.assertNotIn('data-archive-photo="prost-mp4-5"', photo)
+        app.radio(key="archive_mode").set_value("Momentos históricos").run()
+        self.assertFalse(app.exception)
+        app.selectbox(key="archive_event_season").set_value(1957).run()
+        self.assertFalse(app.exception)
+        event = next(item.value for item in app.markdown if 'data-archive-photo="fangio-nurburgring-1957"' in item.value)
+        self.assertNotIn('data-archive-photo="hamilton-interlagos-2008"', event)
+        app.selectbox(key="archive_event_season").set_value(1988).run()
+        self.assertFalse(app.exception)
+        self.assertIn("Objects from the collection", [item.value for item in app.subheader])
+        self.assertTrue(any('data-archive-photo="mclaren-trofeu-suzuka-1988"' in item.value for item in app.markdown))
+        self.assertFalse(app.info)
+        references = next(item for item in app.expander if item.label == "Photographs in source archives")
+        self.assertIn("Suzuka, 1988", references.markdown[0].value)
+        self.assertNotIn("Reims, 1953", references.markdown[0].value)
+        app.selectbox(key="archive_event_group").set_value("equipes").run()
+        app.selectbox(key="archive_event_season").set_value(1978).run()
+        self.assertFalse(app.exception)
+        event = next(item.value for item in app.markdown if 'data-archive-photo="lotus-dobradinha-zandvoort-1978"' in item.value)
+        self.assertNotIn('data-archive-photo="lotus-79"', event)
+        app.selectbox(key="archive_event_group").set_value("pilotos").run()
+        self.assertFalse(app.exception)
+        lotus = 'data-archive-photo="lotus-dobradinha-zandvoort-1978"'
+        self.assertTrue(any(lotus in item.value for item in app.markdown))
+        self.assertIn("Objects from the collection", [item.value for item in app.subheader])
+        app.selectbox(key="archive_event_group").set_value(None).run()
+        self.assertFalse(app.exception)
+        self.assertEqual(sum(item.value.count(lotus) for item in app.markdown), 1)
+
+    def test_photo_archive_has_a_car_for_each_title_campaign_and_each_current_team(self):
+        from pitwall.dashboard.photo_archive import CATALOG, INVENTORY, load
+
+        inventory = json.loads((ROOT / INVENTORY).read_text(encoding="utf-8"))
+        photos = load(ROOT)
+        campaigns = {(entry["ano"], entry["equipe"]): entry for entry in inventory["campanhas"]}
+        photographed = set()
+        for photo in photos.values():
+            for season in photo.get("temporadas", []):
+                campaign = season, photo["construtor"]
+                self.assertIn(photo["modelo"], campaigns[campaign]["modelos_candidatos"])
+                photographed.add(campaign)
+        self.assertEqual(photographed, set(campaigns))
+        self.assertEqual(photos["ferrari-d50"]["temporadas"], [1956])
+        self.assertIn("ferrari.com", campaigns[1956, "ferrari"]["modelos_documentados"]["ferrari-d50"]["fonte"])
+        photographed_teams = {team for photo in photos.values() for team in photo.get("equipes", [])}
+        self.assertTrue(set(inventory["equipes_atuais"]).issubset(photographed_teams))
+        historic_gps = {f'{event["ano"]}:{event["rodada"]}' for event in inventory["momentos"]}
+        team_deciders = [(event["ano"], team) for event in inventory["momentos"] for team in event.get("equipes", [])]
+        self.assertCountEqual(team_deciders, [key for key, entry in campaigns.items() if entry["construtores"]])
+        source_links = json.loads((ROOT / CATALOG).read_text(encoding="utf-8"))["referencias_fotograficas"]
+        self.assertTrue(set(source_links["gps"]).issubset(historic_gps))
+        self.assertTrue(set(source_links["modelos"]).issubset(inventory["modelos"]))
+        self.assertEqual(len({photo["sha256"] for photo in photos.values()}), len(photos))
+        for photo in photos.values():
+            artifact_gps = set(photo.get("artefatos_gps", []))
+            self.assertTrue(artifact_gps.issubset(historic_gps))
+            self.assertTrue(artifact_gps.isdisjoint(photo.get("gps", [])))
+
     def test_document_return_preserves_hosted_frame_without_nesting_wrapper(self):
         for lang in ('pt','en'):
             app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=45)

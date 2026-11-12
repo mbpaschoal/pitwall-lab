@@ -4,6 +4,7 @@ import csv
 import hashlib
 import json
 import os
+import re
 import shutil
 import stat
 import subprocess
@@ -252,6 +253,8 @@ RUNTIME_WORKTREE = (
     'pitwall/dashboard/pilot_views.py',
     'pitwall/dashboard/team_views.py', 'frontend_assets/perfis_equipes.json',
     'pitwall/dashboard/hall_views.py', 'frontend_assets/hall_da_fama.json',
+    'pitwall/dashboard/photo_archive.py', 'frontend_assets/acervo_fotografico.json',
+    'frontend_assets/inventario_campeoes.json',
     'docs/galeria-cartas.html',
     'docs/JORNADA_DO_FA.md', 'docs/en/FAN_JOURNEY.md', 'docs/OPERACAO_FIM_SEMANA.md', 'docs/en/WEEKEND_OPERATION.md',
     'docs/PREPARACAO_SAO_PAULO.md', 'docs/en/SAO_PAULO_PREPARATION.md',
@@ -440,6 +443,15 @@ def runtime_worktree(raiz):
         derivative = 'dashboard_assets/presentation/' + Path(ativos['foto']['caminho']).stem + '.webp'
         if (Path(raiz) / derivative).is_file():
             arquivos.append(derivative)
+    photos = json.loads(_ler_arquivo_regular(raiz, 'frontend_assets/acervo_fotografico.json'))
+    for photo in photos['fotos'].values():
+        for variant in photo['variantes']:
+            relative = variant['arquivo']
+            if not re.fullmatch(r'static/pitwall-archive/[a-z0-9-]+-[a-f0-9]{12}-[0-9]+\.webp', relative):
+                raise ValueError('caminho inválido no acervo fotográfico: {}'.format(relative))
+            if _sha256(_ler_arquivo_regular(raiz, relative)) != variant['sha256']:
+                raise ValueError('hash divergente no acervo fotográfico: {}'.format(relative))
+            arquivos.append(relative)
     if len(arquivos) != len(set(arquivos)):
         raise ValueError('allowlist de runtime contém caminho duplicado')
     return tuple(arquivos)

@@ -14,7 +14,7 @@ def navigation_links(params, selected, lang='pt'):
         ('Metodologia', 'Como funciona', 'How it works'),
     )
     context = {key: value for key, value in params.items()
-               if key not in ('documento', 'painel', 'cartas', 'equipe', 'campanha', 'campeao')}
+               if key not in ('documento', 'painel', 'cartas', 'equipe', 'campanha', 'campeao', 'rival_campeao')}
     links = []
     for screen, pt, en in labels:
         query = urlencode(dict(context, tela=screen, lang=lang), doseq=True)
@@ -66,6 +66,22 @@ _RACE_IDENTITIES = {
     'Qatar': ('🇶🇦', 'Catar', 'Qatar'),
     'Abu Dhabi': ('🇦🇪', 'Abu Dhabi', 'Abu Dhabi'),
     'Madrid': ('🇪🇸', 'Madrid', 'Madrid'),
+    'Argentine': ('🇦🇷', 'Argentina', 'Argentina'),
+    'Caesars Palace': ('🇺🇸', 'Caesars Palace', 'Caesars Palace'),
+    'European': ('', 'Europa', 'Europe'),
+    'French': ('🇫🇷', 'França', 'France'),
+    'German': ('🇩🇪', 'Alemanha', 'Germany'),
+    'Indian': ('🇮🇳', 'Índia', 'India'),
+    'Malaysian': ('🇲🇾', 'Malásia', 'Malaysia'),
+    'Mexican': ('🇲🇽', 'México', 'Mexico'),
+    'Moroccan': ('🇲🇦', 'Marrocos', 'Morocco'),
+    'Pacific': ('', 'Pacífico', 'Pacific'),
+    'Portuguese': ('🇵🇹', 'Portugal', 'Portugal'),
+    'South African': ('🇿🇦', 'África do Sul', 'South Africa'),
+    'Swedish': ('🇸🇪', 'Suécia', 'Sweden'),
+    'Swiss': ('', 'Suíça', 'Switzerland'),
+    'Turkish': ('🇹🇷', 'Turquia', 'Türkiye'),
+    'United States West': ('🇺🇸', 'EUA Oeste', 'USA West'),
 }
 
 

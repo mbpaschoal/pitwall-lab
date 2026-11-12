@@ -10,7 +10,8 @@ def _language_params(st, active_tab=None):
     """The native callback and its link alternative use identical context."""
     keys = ("temporada", "gp", "tela", "documento", "aba", "visao", "secao", "piloto", "rival",
             "duelo_condicao", "faixas", "anos", "metrica", "minimo", "condicao", "cartas",
-            "origem_tela", "origem_temporada", "origem_gp", "painel", "equipe", "campanha", "campeao")
+            "origem_tela", "origem_temporada", "origem_gp", "painel", "equipe", "campanha", "campeao",
+            "rival_campeao")
     params = {}
     for key in keys:
         if key in st.query_params:
