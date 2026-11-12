@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "e83d7fb616dfe0b67ad188286c47c5ff914ffed25461f98f3d690d00270d0166",
+  "apresentacao_build_sha256": "1c86239a323957c92c09b848d6335487369e134cf2d8d4b396c977d491c0a2c6",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "9a548300ddd1b2a23df69bfe69eaf80b1e1d23dafbce254a77515bd89ea54808",
+      "sha256_destino": "3983e2b67dce38827ce874fa7c7d4d699408598b1f08c5b2b6c8c516845cd8fc",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "894ec6eb2690feb862379d39a54095669255c9fc2514c7aeae84acc56d50642b",
-      "sha256_origem": "82e2ea1b7cd14b09b87ac2dcca531a6aa06ff809d26fc32443efef8e698c2847"
+      "sha256_destino": "9b496e8490c885ce57bf9b1c11ace729b1b8f9aa449e19c31d54a002516e4805",
+      "sha256_origem": "2362a203d607582a2a3d4a12b27c9b5e46ce871cde87ee0f24f0c966e801a300"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "e7159c92048dbc2585024b37683177e898c7775c686f1236ff0df1b8857ee4b7",
-      "sha256_origem": "9e4bff886c87fea14d8944cde21abbfd78205383e6c03efcad0f1d0b69268efb"
+      "sha256_destino": "dfd18d18a4b953e0cad00f62264d3d29ba9ee10080b320d1ca7d2423aad7bb84",
+      "sha256_origem": "d52013dc9a792d201fb69e1a17c6db6d17ce374e2e2a836a675e4211b51dffe3"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "b71d8bb023fd0f00e8950a614fb4cef2365beaa6639bb8ba45fe31a4e8723cb4",
-      "sha256_origem": "b71d8bb023fd0f00e8950a614fb4cef2365beaa6639bb8ba45fe31a4e8723cb4"
+      "sha256_destino": "8cb84e133ae070f8cc93bad7ea5af34d52d00961cb30a69ebdd0ac552e53a5bb",
+      "sha256_origem": "8cb84e133ae070f8cc93bad7ea5af34d52d00961cb30a69ebdd0ac552e53a5bb"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3448,6 +3448,20 @@
       "modo": "copia",
       "sha256_destino": "e6c3fe0f6f906a885744f85a228b3db0e6d2128f30a6afefce5bcf0718b41170",
       "sha256_origem": "e6c3fe0f6f906a885744f85a228b3db0e6d2128f30a6afefce5bcf0718b41170"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-interlagos-2010-6d16d5ee9d88-2400.webp",
+      "fonte": "static/pitwall-archive/alonso-interlagos-2010-6d16d5ee9d88-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3d2e27b88c5780d40a201649504a51c78e1ef741aab1c8a9bada12d5eab9fdbe",
+      "sha256_origem": "3d2e27b88c5780d40a201649504a51c78e1ef741aab1c8a9bada12d5eab9fdbe"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-interlagos-2010-6d16d5ee9d88-960.webp",
+      "fonte": "static/pitwall-archive/alonso-interlagos-2010-6d16d5ee9d88-960.webp",
+      "modo": "copia",
+      "sha256_destino": "0d6c51130a88ed4e4702fe38377fcdba92c4be93edd5e57e78d49edd5c02273f",
+      "sha256_origem": "0d6c51130a88ed4e4702fe38377fcdba92c4be93edd5e57e78d49edd5c02273f"
     },
     {
       "caminho": "static/pitwall-archive/alonso-r25-5d5bc4051bfa-2400.webp",
@@ -5002,6 +5016,20 @@
       "modo": "copia",
       "sha256_destino": "b9afe05ac8ed6b9b156d0cff4bb07e3c94dc03baba1a0279852588be15154d34",
       "sha256_origem": "b9afe05ac8ed6b9b156d0cff4bb07e3c94dc03baba1a0279852588be15154d34"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-interlagos-2010-527ac41b5b16-2400.webp",
+      "fonte": "static/pitwall-archive/hamilton-interlagos-2010-527ac41b5b16-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8043ed1ecede0b8baf4968eb324cefaa252147b495a48dfee9f04d17b0d5a245",
+      "sha256_origem": "8043ed1ecede0b8baf4968eb324cefaa252147b495a48dfee9f04d17b0d5a245"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-interlagos-2010-527ac41b5b16-960.webp",
+      "fonte": "static/pitwall-archive/hamilton-interlagos-2010-527ac41b5b16-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5c87660f9acee527350775eae48baeac4e69e028c0e1c33e5a2e66cad082a2b2",
+      "sha256_origem": "5c87660f9acee527350775eae48baeac4e69e028c0e1c33e5a2e66cad082a2b2"
     },
     {
       "caminho": "static/pitwall-archive/hamilton-montreal-2007-4ef77236a19f-2400.webp",
@@ -6864,6 +6892,20 @@
       "modo": "copia",
       "sha256_destino": "e0c5d30367f1111dfc7aaf8852869f9e434f412a6eae1a0b3cc5633536f30f8d",
       "sha256_origem": "e0c5d30367f1111dfc7aaf8852869f9e434f412a6eae1a0b3cc5633536f30f8d"
+    },
+    {
+      "caminho": "static/pitwall-archive/rb6-publico-interlagos-2010-ed59873cc033-2400.webp",
+      "fonte": "static/pitwall-archive/rb6-publico-interlagos-2010-ed59873cc033-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b0f9c1b341fef570b93771bd50765900632601950185471bcee54e4bed471788",
+      "sha256_origem": "b0f9c1b341fef570b93771bd50765900632601950185471bcee54e4bed471788"
+    },
+    {
+      "caminho": "static/pitwall-archive/rb6-publico-interlagos-2010-ed59873cc033-960.webp",
+      "fonte": "static/pitwall-archive/rb6-publico-interlagos-2010-ed59873cc033-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cb713e7df7fce1135100dad6d7a00e6de6880ca6376ef7b006cc1aa4e973418a",
+      "sha256_origem": "cb713e7df7fce1135100dad6d7a00e6de6880ca6376ef7b006cc1aa4e973418a"
     },
     {
       "caminho": "static/pitwall-archive/rebaque-brabham-bt49-zandvoort-1980-22388344be7f-2400.webp",

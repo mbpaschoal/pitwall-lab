@@ -10,6 +10,8 @@ Três fotos de época mostram Mario Andretti em Monza em 1977 e Nelson Piquet e 
 
 Uma foto em CC BY-SA 4.0 mostra Héctor Rebaque no Brabham BT49C em Montreal, no GP do Canadá em que a Williams assegurou o título de construtores de 1981.
 
+Três fotos de Cilo Roberto Bonaparte registram o GP do Brasil de 2010 em Interlagos, quando a Red Bull conquistou seu primeiro Mundial de Construtores. As imagens mostram o público aplaudindo um RB6 no fim da prova e os carros de Fernando Alonso e Lewis Hamilton. Os originais têm 3.264 × 2.448 px e licença CC BY-SA 2.0.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

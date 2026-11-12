@@ -10,6 +10,8 @@ Three period photographs show Mario Andretti at Monza in 1977 and Nelson Piquet 
 
 A CC BY-SA 4.0 photograph shows Héctor Rebaque in the Brabham BT49C in Montreal, at the Canadian Grand Prix where Williams clinched the 1981 constructors’ title.
 
+Three photographs by Cilo Roberto Bonaparte document the 2010 Brazilian Grand Prix at Interlagos, where Red Bull clinched its first constructors’ championship. They show spectators applauding an RB6 at the end of the race and the cars of Fernando Alonso and Lewis Hamilton. The originals are 3,264 × 2,448 px and licensed under CC BY-SA 2.0.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
