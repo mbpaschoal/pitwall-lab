@@ -8,6 +8,8 @@ Historic Moments gains a CC0 photograph by Cees de Boer at 2,893 × 2,153 px, sh
 
 Three period photographs show Mario Andretti at Monza in 1977 and Nelson Piquet and Rupert Keegan at Imola in 1980. They document the weekends when Ferrari and Williams clinched their respective constructors’ titles.
 
+A CC BY-SA 4.0 photograph shows Héctor Rebaque in the Brabham BT49C in Montreal, at the Canadian Grand Prix where Williams clinched the 1981 constructors’ title.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

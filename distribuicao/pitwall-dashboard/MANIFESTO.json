@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "8c29c7e8f7986f3eab28a225262f9fdcbc9d729fb24d524909ed42d656e42746",
+  "apresentacao_build_sha256": "e83d7fb616dfe0b67ad188286c47c5ff914ffed25461f98f3d690d00270d0166",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "016319990cc5bfb0b52ec386a74fc5dcbbd05d1a70c1ba0a5a0a02f53a5b6e34",
+      "sha256_destino": "9a548300ddd1b2a23df69bfe69eaf80b1e1d23dafbce254a77515bd89ea54808",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "01ea5a8d52e7ee088fbbee9f8e5788b21aa8202dfd8a05e6aa63415ff3f57b20",
-      "sha256_origem": "93ac72ebf6feb3f76414e4255aad3900d8e2ad245136dbe0ea21068c32e4e6bf"
+      "sha256_destino": "894ec6eb2690feb862379d39a54095669255c9fc2514c7aeae84acc56d50642b",
+      "sha256_origem": "82e2ea1b7cd14b09b87ac2dcca531a6aa06ff809d26fc32443efef8e698c2847"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "b556da3984b3e2a6f0787476f322c900e9b01971c174fa71248e5dc76f2e2bd4",
-      "sha256_origem": "1d0b78e84f919ff3f07ba228808fcfdfaeeb457f5050388da6155dc09765eccd"
+      "sha256_destino": "e7159c92048dbc2585024b37683177e898c7775c686f1236ff0df1b8857ee4b7",
+      "sha256_origem": "9e4bff886c87fea14d8944cde21abbfd78205383e6c03efcad0f1d0b69268efb"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "e89fc7ad1c380c243e604f5326b8f4bdb1a49aa35813fcbbc2c3f6e1ecbb9d68",
-      "sha256_origem": "e89fc7ad1c380c243e604f5326b8f4bdb1a49aa35813fcbbc2c3f6e1ecbb9d68"
+      "sha256_destino": "b71d8bb023fd0f00e8950a614fb4cef2365beaa6639bb8ba45fe31a4e8723cb4",
+      "sha256_origem": "b71d8bb023fd0f00e8950a614fb4cef2365beaa6639bb8ba45fe31a4e8723cb4"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6878,6 +6878,20 @@
       "modo": "copia",
       "sha256_destino": "405e2f332b5d055c5d811e4928a4f570de3dfe84a47f9afb2a3249f1a46a6642",
       "sha256_origem": "405e2f332b5d055c5d811e4928a4f570de3dfe84a47f9afb2a3249f1a46a6642"
+    },
+    {
+      "caminho": "static/pitwall-archive/rebaque-montreal-1981-075335b5c5a4-2400.webp",
+      "fonte": "static/pitwall-archive/rebaque-montreal-1981-075335b5c5a4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "dd5efbee336f1027b48b1e71a58e734909f2c86dbe6ebd29c45efde3e883486c",
+      "sha256_origem": "dd5efbee336f1027b48b1e71a58e734909f2c86dbe6ebd29c45efde3e883486c"
+    },
+    {
+      "caminho": "static/pitwall-archive/rebaque-montreal-1981-075335b5c5a4-960.webp",
+      "fonte": "static/pitwall-archive/rebaque-montreal-1981-075335b5c5a4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3562433643b02947f41f8c61d6c16cf37f40d7846420c7989ea6f96e6f22879c",
+      "sha256_origem": "3562433643b02947f41f8c61d6c16cf37f40d7846420c7989ea6f96e6f22879c"
     },
     {
       "caminho": "static/pitwall-archive/red-bull-exposicao-austin-2022-36fba10eea74-2400.webp",
