@@ -4,6 +4,8 @@
 
 The McLaren and Mercedes galleries gain two CC BY-SA 4.0 photographs. The first shows Norris and Piastri on the Shanghai grid in 2024 at 5,373 × 3,022 px. The second shows Russell and Antonelli on the podium after their one-two finish in Melbourne in 2026 at 5,585 × 3,723 px. The team profiles and photo archive display bilingual captions, credits, and links to the originals.
 
+Historic Moments gains a CC0 photograph by Cees de Boer at 2,893 × 2,153 px, showing spectators above the pits at Zandvoort on the day McLaren clinched the 1984 constructors’ title.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "441ad411a005eedd603c1a0c25bd0ebca41ccacab6c6e041f75a5afbc0ef753f",
+  "apresentacao_build_sha256": "5ad698722b94bee5016ab871c94aef7927849cb8e8cc2bc1dee3e4a069beba3b",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "d08286fe11b23a1b189d42c68ba6b19fca34d4cd834973afda890ecbc8eaf5ee",
+      "sha256_destino": "b4028ff64496ca5ff91af68738cef1c8faefc063d00b4a9ef6ad2d3f98dc8bfd",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "6dcde62ac124d9d039e7d0e81d6eea0ff00c68810c5df6cd8dbaf8972e8ea096",
-      "sha256_origem": "c76a4bc4c2f2cbb5facd7b86fa48cc42ea55fb415fc5c17a67790133db7276a2"
+      "sha256_destino": "4ae4dc3f0de28c7c6d41be087b38b63a4da79bb133204b70026f0fd8b93099df",
+      "sha256_origem": "1d5c87282a7883c331dd15f4b9f7bab538a706ac04d1fb8765c6e353ba3e86c0"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "5a286d4ce5c64177dc5f335a9fd21453b524b42fdca8766f4ce5cfe6d319599f",
-      "sha256_origem": "00706926ff9f59c2abc5cfca71b09cf2aebede25ec2bc94a1fb70967f01d17b4"
+      "sha256_destino": "34132a7f540ac1b03d6266bac6e895afaad69554299d09d4fe5c50c659346125",
+      "sha256_origem": "b3b8874936c10aa6b9290aad1cb69fa65c1618d4a1b3afd913877b80b5e3a046"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "edda8649ac2ba390612de0b04a944be1901481932539bd95b5b3bd0edd6c4352",
-      "sha256_origem": "edda8649ac2ba390612de0b04a944be1901481932539bd95b5b3bd0edd6c4352"
+      "sha256_destino": "816d0dd8936b8e08b9e50b4c0736bb029a6c66c703091ced077cf21c687eef22",
+      "sha256_origem": "816d0dd8936b8e08b9e50b4c0736bb029a6c66c703091ced077cf21c687eef22"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -8166,6 +8166,20 @@
       "modo": "copia",
       "sha256_destino": "84d3f71106e62632fa3e0b8486a42023ff2e1929336eee42ffbfe07a5e9e00be",
       "sha256_origem": "84d3f71106e62632fa3e0b8486a42023ff2e1929336eee42ffbfe07a5e9e00be"
+    },
+    {
+      "caminho": "static/pitwall-archive/zandvoort-publico-1984-ce840a860a37-2400.webp",
+      "fonte": "static/pitwall-archive/zandvoort-publico-1984-ce840a860a37-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7569497b729532835e079904979b5b877502c6ff00de6dd48f182e96fb86927f",
+      "sha256_origem": "7569497b729532835e079904979b5b877502c6ff00de6dd48f182e96fb86927f"
+    },
+    {
+      "caminho": "static/pitwall-archive/zandvoort-publico-1984-ce840a860a37-960.webp",
+      "fonte": "static/pitwall-archive/zandvoort-publico-1984-ce840a860a37-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d268206d96fd9d3a2c2bb78a1cc8738129d04ee6a633e17765713eb538f25034",
+      "sha256_origem": "d268206d96fd9d3a2c2bb78a1cc8738129d04ee6a633e17765713eb538f25034"
     },
     {
       "caminho": "static/pitwall-art/gouache/albert_park-53d9911e82e0.png",
