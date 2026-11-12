@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "fcdbfde297f55157de923459f3a1a8f10579f91002b1014e410ae5e9c0802b79",
+  "apresentacao_build_sha256": "d4544740feb869259b29d78df328815e0de7ed0c07ace3fc8a362a0dc9a9491f",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "58a7ecf6ec1da0e512e7cf6833b1be5e83b908512ecff10a6a14e5508a488628",
+      "sha256_destino": "d08286fe11b23a1b189d42c68ba6b19fca34d4cd834973afda890ecbc8eaf5ee",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "1b048423db237fabd78ed45f57cc3bd81bbeac3b94c221e32874aada7ce45db3",
-      "sha256_origem": "1b048423db237fabd78ed45f57cc3bd81bbeac3b94c221e32874aada7ce45db3"
+      "sha256_destino": "edda8649ac2ba390612de0b04a944be1901481932539bd95b5b3bd0edd6c4352",
+      "sha256_origem": "edda8649ac2ba390612de0b04a944be1901481932539bd95b5b3bd0edd6c4352"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -5998,6 +5998,20 @@
       "sha256_origem": "b2aadc905791b4d29c9f5ec7bcc85217c8f4f16cdcf404aa34a0761f46cf1d00"
     },
     {
+      "caminho": "static/pitwall-archive/mclaren-grid-xangai-2024-bdfc0a1609a7-2400.webp",
+      "fonte": "static/pitwall-archive/mclaren-grid-xangai-2024-bdfc0a1609a7-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5f6631395d422a0031e198437693c19ebb310be84663daf0e356f600544ce1a9",
+      "sha256_origem": "5f6631395d422a0031e198437693c19ebb310be84663daf0e356f600544ce1a9"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-grid-xangai-2024-bdfc0a1609a7-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-grid-xangai-2024-bdfc0a1609a7-960.webp",
+      "modo": "copia",
+      "sha256_destino": "7991a5cb8a6a779715c3ebc05fa04b092fbe8480e1fd133a84fa06def024590d",
+      "sha256_origem": "7991a5cb8a6a779715c3ebc05fa04b092fbe8480e1fd133a84fa06def024590d"
+    },
+    {
       "caminho": "static/pitwall-archive/mclaren-m23-1974-3683849ff717-2400.webp",
       "fonte": "static/pitwall-archive/mclaren-m23-1974-3683849ff717-2400.webp",
       "modo": "copia",
@@ -6234,6 +6248,20 @@
       "modo": "copia",
       "sha256_destino": "6590db516958de01a1c9cd2be9903d2d449999bc2c9736b70e1a3df0739458bc",
       "sha256_origem": "6590db516958de01a1c9cd2be9903d2d449999bc2c9736b70e1a3df0739458bc"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-podio-melbourne-2026-07886b1b5d9d-2400.webp",
+      "fonte": "static/pitwall-archive/mercedes-podio-melbourne-2026-07886b1b5d9d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3dab9064b798e3bad021d4397c3ffcdc3347eee0fc3d68145147952575a525e3",
+      "sha256_origem": "3dab9064b798e3bad021d4397c3ffcdc3347eee0fc3d68145147952575a525e3"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-podio-melbourne-2026-07886b1b5d9d-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-podio-melbourne-2026-07886b1b5d9d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "95943ec917c45b49c6d6fee3afe06d3566fcb36a53ee72519d5218310ed21c6d",
+      "sha256_origem": "95943ec917c45b49c6d6fee3afe06d3566fcb36a53ee72519d5218310ed21c6d"
     },
     {
       "caminho": "static/pitwall-archive/mercedes-w10-43935052d55b-2400.webp",
