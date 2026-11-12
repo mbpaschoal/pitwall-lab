@@ -24,6 +24,8 @@ A foto da Publifoto com George VI e os pilotos da Alfa Romeo em Silverstone entr
 
 Duas fotos do Fortepan registram o primeiro GP da Hungria de Fórmula 1, em 1986. O pódio de Nelson Piquet, Ayrton Senna e Nigel Mansell tem original de 8.470 × 5.662 px. A foto de Piquet no Williams FW11 tem 3.359 × 2.031 px. As duas trazem crédito e licença CC BY-SA 3.0.
 
+Em Momentos históricos, o acervo ganha uma foto colorida de Peter Roach do GP de Mônaco de 1962. O original, de 2.592 × 1.680 px, registra o acidente da primeira volta na curva do Gasômetro e está sob CC0.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

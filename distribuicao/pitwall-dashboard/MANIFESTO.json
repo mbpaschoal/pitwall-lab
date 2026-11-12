@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "06613518a03598e3a4e22a1476610eefbf92401badd724397a7cbe578f9f4367",
+  "apresentacao_build_sha256": "86739589380d7d10947eeb4b044311ea832f94c208cd21367211eb16df4b5acd",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "51eac387fc13f015199c8e5e6d823d76652b8b8c4111c38b3181459571aab856",
+      "sha256_destino": "fe596c8329d02f5a45f530f2ef2608459c0516bfe3fae6df005bc988955e210d",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "2db61028811524f945796d2fe16554bf00e11fd2dccd082e497d517a777af43c",
-      "sha256_origem": "42b0af07c7def1e90699213847aa0897cad7f49b787f7c0723c27d68b845dd38"
+      "sha256_destino": "896c13355a418ed08d1d7ada095e3d20c55be47aea8a5085e3952eefdb430d22",
+      "sha256_origem": "8de70fce92de300a73fdd0375d083474d74d9178dfcbc9e73b92922d8c3ca355"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "403f4516020f6769f912ddaefb2a6984b916afa72275a75accbb0af2f83d8098",
-      "sha256_origem": "912570d32b7b3245355cc3ba3db389327af2af593f837409998f2db3d925cf78"
+      "sha256_destino": "2501c0305a055ce06bb407acbaa80698e62a94e82b6fb8c6cebb7cb3757dc58e",
+      "sha256_origem": "221f5d341625fdf1447f826fac1213afd0b891f381aa80c15c5114068602f1f3"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "50d8d08698faabcaa9616167eb6562bbde4f510345af91dababe52d05f70700f",
-      "sha256_origem": "50d8d08698faabcaa9616167eb6562bbde4f510345af91dababe52d05f70700f"
+      "sha256_destino": "927fb5aeea446629097e88a80e246c6445c1d1fa6ae6db7eaac8fc5bd63fea77",
+      "sha256_origem": "927fb5aeea446629097e88a80e246c6445c1d1fa6ae6db7eaac8fc5bd63fea77"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6528,6 +6528,20 @@
       "modo": "copia",
       "sha256_destino": "45baccc1d59815430441cd0a3f1c68592f636842546d34b0c0b709617c58c826",
       "sha256_origem": "45baccc1d59815430441cd0a3f1c68592f636842546d34b0c0b709617c58c826"
+    },
+    {
+      "caminho": "static/pitwall-archive/monaco-1962-gasworks-roach-d36d95343e25-2400.webp",
+      "fonte": "static/pitwall-archive/monaco-1962-gasworks-roach-d36d95343e25-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "219201c06cee7fb32c59882ac468a1bd29fd3fe00107b9b2fef5c897d5425263",
+      "sha256_origem": "219201c06cee7fb32c59882ac468a1bd29fd3fe00107b9b2fef5c897d5425263"
+    },
+    {
+      "caminho": "static/pitwall-archive/monaco-1962-gasworks-roach-d36d95343e25-960.webp",
+      "fonte": "static/pitwall-archive/monaco-1962-gasworks-roach-d36d95343e25-960.webp",
+      "modo": "copia",
+      "sha256_destino": "86b4b3b41ce31849795f82160d2ddbc3e167667740182ec4d3e1a7e781ef94c6",
+      "sha256_origem": "86b4b3b41ce31849795f82160d2ddbc3e167667740182ec4d3e1a7e781ef94c6"
     },
     {
       "caminho": "static/pitwall-archive/monza-1966-64edb08bc792-2400.webp",
