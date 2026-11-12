@@ -74,6 +74,8 @@ Four openly licensed photographs expand season coverage. The archive adds Jack B
 
 Historic moments links to the period photograph of Stirling Moss in Vanwall no. 26 at the 1958 Italian Grand Prix. The ACI Digital Library preserves the original issue of L’Automobile.
 
+Historic moments also links to the photograph of Mario Andretti in the Lotus 79 at his 1978 Monza title decider in the contemporary Motor Sport report.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

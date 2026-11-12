@@ -74,6 +74,8 @@ Quatro fotos abertas ampliam a cobertura por temporada. O acervo ganha Jack Brab
 
 Momentos históricos inclui um link para a fotografia de Stirling Moss no Vanwall nº 26 em Monza, no GP da Itália de 1958. O registro está na edição de época de L’Automobile preservada pela Biblioteca Digital do ACI.
 
+Momentos históricos também vincula a fotografia de Mario Andretti no Lotus 79 em Monza, no GP do título de 1978, ao relato de época da Motor Sport.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
