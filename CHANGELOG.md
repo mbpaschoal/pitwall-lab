@@ -58,6 +58,8 @@ Uma fotografia de Harry Pot em CC0 mostra Alberto Ascari à frente do pelotão e
 
 Uma foto de Martin Lee de 2.528 × 1.471 px, sob CC BY-SA 2.0, mostra Derek Daly em Brands Hatch em 1978 no Ensign N177 de chassi MN08. O mesmo carro marcou a estreia de Nelson Piquet duas semanas depois, em Hockenheim. A foto aparece entre as peças de acervo da estreia no Hall da Fama e em Momentos históricos.
 
+Uma foto de Pedro Mendes em 4.755 × 2.675 px, sob CC BY 2.0, mostra Nico Rosberg no Mercedes W07 Hybrid nº 6 em Austin, em 2016. Ela entra na galeria da Mercedes e ilustra a campanha de Rosberg na ficha da decisão do título em Abu Dhabi.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

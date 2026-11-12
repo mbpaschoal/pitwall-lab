@@ -58,6 +58,8 @@ A CC0 photograph by Harry Pot shows Alberto Ascari leading the field at Zandvoor
 
 A 2,528 × 1,471 px photograph by Martin Lee, licensed under CC BY-SA 2.0, shows Derek Daly at Brands Hatch in 1978 in Ensign N177 chassis MN08. Nelson Piquet made his debut in the same car two weeks later at Hockenheim. The photo appears among the collection items for his debut in the Hall of Fame and Historic Moments.
 
+A 4,755 × 2,675 px photograph by Pedro Mendes, licensed under CC BY 2.0, shows Nico Rosberg in the No. 6 Mercedes W07 Hybrid in Austin in 2016. It appears in the Mercedes gallery and illustrates Rosberg’s campaign in the entry for his title decider in Abu Dhabi.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

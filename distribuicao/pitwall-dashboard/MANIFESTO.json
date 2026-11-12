@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "57c125e2e20d7d4dd846bc9c856598cf034d84a377ccacb087dff56005c444e7",
+  "apresentacao_build_sha256": "a7d90c6cd2638c8e2616e75a391e3f914b19774a1bac84535718e4c1394d9677",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "f099524dffac4b4d247b0c0d5ae473f9c53cd9cc47403349e320be8e2f6df25f",
+      "sha256_destino": "35ad7cc62e58e15753cdfbe4f77154efd47e8e4ec92ea5db9632a14dd43c2175",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "d2de13b90f14e39eab7f35155ba1217c014f023f58b83b1f214f3c011987b18e",
-      "sha256_origem": "218ed8808536412c517d386b27b208a6a03697bb1ac0ac8b429d5353c474a220"
+      "sha256_destino": "ab74c823ee14e13a1fae73995494f7afba13f2e1782f911ecc4f0ada29180d9a",
+      "sha256_origem": "f1c989d0879a76eca8511327a4da7974cde01af5286199db36cda85f37f6e944"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "015f22704878c00adbf03bdbae3b7a1c44391810b64cadb0585f9d640267eed4",
-      "sha256_origem": "ee196555b0ad6ca5cf4eb1413198dd7bd3f009c137a2786ad3dc1fcede96e26a"
+      "sha256_destino": "faec8351388b032259b0ea416c06e4c9da599efd4734f04e001599bad3832956",
+      "sha256_origem": "6e4ab162807936670d5af3c823de5866eebdd435bbe7964c038020de8c19ac4d"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "457a2f7b72ea19f795c302c6125840bb6ea04bce57092afdea4a4887f4f1808e",
-      "sha256_origem": "457a2f7b72ea19f795c302c6125840bb6ea04bce57092afdea4a4887f4f1808e"
+      "sha256_destino": "f053dae79e51601809ba6a750b347493da257024913263e63d3a6dbda337e86c",
+      "sha256_origem": "f053dae79e51601809ba6a750b347493da257024913263e63d3a6dbda337e86c"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7494,6 +7494,20 @@
       "modo": "copia",
       "sha256_destino": "9bf39882c0f51fd69dba14854cb9f0295d3cf2b709c23269650eb7969cf1ef74",
       "sha256_origem": "9bf39882c0f51fd69dba14854cb9f0295d3cf2b709c23269650eb7969cf1ef74"
+    },
+    {
+      "caminho": "static/pitwall-archive/rosberg-w07-austin-2016-46e38de313a0-2400.webp",
+      "fonte": "static/pitwall-archive/rosberg-w07-austin-2016-46e38de313a0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1f1a8c0e2fa05b2ac382b6d4c1514a500e882cd8328be79038af9e33cd30bf31",
+      "sha256_origem": "1f1a8c0e2fa05b2ac382b6d4c1514a500e882cd8328be79038af9e33cd30bf31"
+    },
+    {
+      "caminho": "static/pitwall-archive/rosberg-w07-austin-2016-46e38de313a0-960.webp",
+      "fonte": "static/pitwall-archive/rosberg-w07-austin-2016-46e38de313a0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "173af9dfed389a2e99eb1709666706ecde0ecbf67a1261908908f45004b55a10",
+      "sha256_origem": "173af9dfed389a2e99eb1709666706ecde0ecbf67a1261908908f45004b55a10"
     },
     {
       "caminho": "static/pitwall-archive/rosier-talbot-t26c-da-zandvoort-1951-0c8432ae8684-2400.webp",
