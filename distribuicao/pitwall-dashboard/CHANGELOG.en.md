@@ -72,6 +72,8 @@ A 3,664 × 2,436 px photograph by Hans van Dijk (Anefo / Nationaal Archief), lic
 
 Four openly licensed photographs expand season coverage. The archive adds Jack Brabham in the BT19 in 1967, Clay Regazzoni in Ferrari 312 T2 chassis 027 in 1976, Jim Clark in the Lotus 25/R6 and the Ferrari 156 F1 Aero on display in Paris. The inventory distinguishes the 1958 Dino 156 F2, 1961 156 F1 Sharknose and 1964 156 Aero. Existing photos of the Cooper T51, Lotus 72D and Williams FW07C also illustrate the 1960, 1973 and 1982 campaigns.
 
+Historic moments links to the period photograph of Stirling Moss in Vanwall no. 26 at the 1958 Italian Grand Prix. The ACI Digital Library preserves the original issue of L’Automobile.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
