@@ -48,6 +48,8 @@ The archive adds links to source photographs for four milestones. They cover the
 
 A 3,512 × 2,376 px CC BY 2.0 photograph by Steve Gregory shows Jacques Villeneuve in the Williams FW18 and Mika Häkkinen in the McLaren during warm-up at Monaco in 1996. The archive also links to photographs of Villeneuve’s Melbourne debut, his first win at the Nürburgring, Damon Hill’s title at Suzuka and the 1997 Jerez podium.
 
+Alfa Romeo’s gallery opens with its drivers meeting George VI at the first World Championship Grand Prix, at Silverstone in 1950 (2,560 × 1,440 px). Maserati’s gallery opens with Fangio winning on the 250F’s debut in Argentina in 1954 (2,075 × 2,400 px). The archive also links to source photographs of Watkins Glen in 1970, 1972 and 1973, Alonso’s first win in Hungary and Hamilton’s titles in Mexico in 2017 and 2018.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

@@ -48,6 +48,8 @@ O acervo ganha referências aos arquivos de origem para quatro marcos. Elas leva
 
 Uma foto de Steve Gregory com 3.512 × 2.376 px e licença CC BY 2.0 mostra Jacques Villeneuve no Williams FW18 e Mika Häkkinen no McLaren durante o aquecimento de Mônaco em 1996. O acervo também ganha links para os registros de origem da estreia de Villeneuve em Melbourne, da primeira vitória em Nürburgring, do título de Damon Hill em Suzuka e do pódio decisivo de Jerez em 1997.
 
+A galeria da Alfa Romeo abre com seus pilotos recebidos por George VI no primeiro GP do Mundial, em Silverstone, em 1950 (2.560 × 1.440 px). A da Maserati abre com Fangio na estreia vitoriosa do 250F na Argentina, em 1954 (2.075 × 2.400 px). O acervo também ganha referências aos registros de Watkins Glen de 1970, 1972 e 1973, da primeira vitória de Alonso na Hungria e dos títulos de Hamilton no México em 2017 e 2018.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

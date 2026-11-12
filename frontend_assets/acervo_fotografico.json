@@ -1,6 +1,40 @@
 {
   "schema": 1,
   "fotos": {
+    "silverstone-1950-pilotos-alfa-publifoto": {
+      "legenda": {
+        "pt": "O rei George VI cumprimenta Juan Manuel Fangio, Nino Farina e Luigi Fagioli da Alfa Romeo antes da largada em Silverstone, em 13 de maio de 1950. Farina venceu o primeiro GP do Mundial de Fórmula 1. Foto publicada na revista Pirelli, ano III, nº 3, p. 15.",
+        "en": "King George VI greets Alfa Romeo drivers Juan Manuel Fangio, Nino Farina and Luigi Fagioli before the start at Silverstone on 13 May 1950. Farina won the first Formula One World Championship Grand Prix. Published in Pirelli magazine, year III, no. 3, p. 15."
+      },
+      "equipes": [
+        "alfa-romeo"
+      ],
+      "gps": [
+        "1950:1"
+      ],
+      "fonte": "https://www.fondazionepirelli.org/archivio-storico/fotografie/detail/IT-PIRELLI-FT0001-0000000375/gran-premio-gran-bretagna-del-1950.html",
+      "original": "https://pirelli500gp.fondazionepirelli.org/assets/images/illustrations/era1-1-dsk.avif",
+      "autor": "Publifoto · Fondazione Pirelli (1_1E_9)",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "2c834d13b801bc79e71853fc9dc60f588fd7ad37057916216825bfd96b1d7235",
+      "largura": 2560,
+      "altura": 1440,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "05c555e9e94c4feb15b95527b47a8ec611dd9c21f6c26c70583b7de6c92a74ed"
+        },
+        {
+          "arquivo": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "d680139c789db2d9d1c8a4dcd1780c59631f80756331780abaada58246981a59"
+        }
+      ]
+    },
     "farina-alfetta": {
       "arquivo_commons": "File:Alfa Romeo 158 Alfetta 1950 Museo Storico OCT 2015.jpg",
       "legenda": {
@@ -149,6 +183,48 @@
       ],
       "artefatos_gps": [
         "1954:7"
+      ]
+    },
+    "fangio-maserati-argentina-1954": {
+      "modelo": "maserati-250f",
+      "temporadas": [
+        1954
+      ],
+      "construtor": "maserati",
+      "legenda": {
+        "pt": "Juan Manuel Fangio no Maserati 250F nº 2, chassi 2505, sob chuva no GP da Argentina de 1954. Fangio venceu na estreia do modelo. Recorte da fotografia publicada em El Gráfico nº 1798, de 22 de janeiro de 1954.",
+        "en": "Juan Manuel Fangio in the No. 2 Maserati 250F, chassis 2505, in the rain at the 1954 Argentine Grand Prix. Fangio won on the model’s debut. Cropped from the photograph published in El Gráfico No. 1798 on 22 January 1954."
+      },
+      "gps": [
+        "1954:1"
+      ],
+      "fonte": "https://pub-6c6f65ea920548c3836a20bc3ee50840.r2.dev/el-grafico/1954/1798/page_25.webp",
+      "original": "https://pub-6c6f65ea920548c3836a20bc3ee50840.r2.dev/el-grafico/1954/1798/page_25.webp",
+      "autor": "El Gráfico nº 1798 · Kikuchi, Alfieri, Legarreta, Sanjurjo, Vázquez e Pellizeri (reportagem / feature) · Digitalização / scan: DataFútbol",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "recorte_original": {
+        "x": 480,
+        "y": 70,
+        "largura": 2075,
+        "altura": 2400
+      },
+      "sha256": "95d91ca8177a0b871c851dcf06174594cb00724b36c56f1973111fb25b6a5756",
+      "largura": 2075,
+      "altura": 2400,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-960.webp",
+          "largura": 830,
+          "altura": 960,
+          "sha256": "1b07d45ce74340c28431be17c3de272936fc20c0e3af32a396bc259e8921d44e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-2400.webp",
+          "largura": 2075,
+          "altura": 2400,
+          "sha256": "cb6daf891c1bc94ecaa8571e79521a541f96e871bd11312c3a1270330ed8b572"
+        }
       ]
     },
     "fangio-maserati": {
@@ -12514,40 +12590,6 @@
         }
       ]
     },
-    "silverstone-1950-pilotos-alfa-publifoto": {
-      "legenda": {
-        "pt": "O rei George VI cumprimenta Juan Manuel Fangio, Nino Farina e Luigi Fagioli da Alfa Romeo antes da largada em Silverstone, em 13 de maio de 1950. Farina venceu o primeiro GP do Mundial de Fórmula 1. Foto publicada na revista Pirelli, ano III, nº 3, p. 15.",
-        "en": "King George VI greets Alfa Romeo drivers Juan Manuel Fangio, Nino Farina and Luigi Fagioli before the start at Silverstone on 13 May 1950. Farina won the first Formula One World Championship Grand Prix. Published in Pirelli magazine, year III, no. 3, p. 15."
-      },
-      "equipes": [
-        "alfa-romeo"
-      ],
-      "gps": [
-        "1950:1"
-      ],
-      "fonte": "https://www.fondazionepirelli.org/archivio-storico/fotografie/detail/IT-PIRELLI-FT0001-0000000375/gran-premio-gran-bretagna-del-1950.html",
-      "original": "https://pirelli500gp.fondazionepirelli.org/assets/images/illustrations/era1-1-dsk.avif",
-      "autor": "Publifoto · Fondazione Pirelli (1_1E_9)",
-      "licenca": "Public domain",
-      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-      "sha256": "2c834d13b801bc79e71853fc9dc60f588fd7ad37057916216825bfd96b1d7235",
-      "largura": 2560,
-      "altura": 1440,
-      "variantes": [
-        {
-          "arquivo": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-960.webp",
-          "largura": 960,
-          "altura": 540,
-          "sha256": "05c555e9e94c4feb15b95527b47a8ec611dd9c21f6c26c70583b7de6c92a74ed"
-        },
-        {
-          "arquivo": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-2400.webp",
-          "largura": 2400,
-          "altura": 1350,
-          "sha256": "d680139c789db2d9d1c8a4dcd1780c59631f80756331780abaada58246981a59"
-        }
-      ]
-    },
     "hungaroring-1986-podio-fortepan": {
       "legenda": {
         "pt": "Nelson Piquet no degrau mais alto do pódio do primeiro GP da Hungria de Fórmula 1, em 10 de agosto de 1986. Ayrton Senna foi o segundo, à esquerda, e Nigel Mansell foi o terceiro, à direita.",
@@ -12799,48 +12841,6 @@
           "largura": 2400,
           "altura": 1591,
           "sha256": "b7d1fc53069a573ecef5b3086a45c675e0d10af565adcee0046325e49fa995fc"
-        }
-      ]
-    },
-    "fangio-maserati-argentina-1954": {
-      "modelo": "maserati-250f",
-      "temporadas": [
-        1954
-      ],
-      "construtor": "maserati",
-      "legenda": {
-        "pt": "Juan Manuel Fangio no Maserati 250F nº 2, chassi 2505, sob chuva no GP da Argentina de 1954. Fangio venceu na estreia do modelo. Recorte da fotografia publicada em El Gráfico nº 1798, de 22 de janeiro de 1954.",
-        "en": "Juan Manuel Fangio in the No. 2 Maserati 250F, chassis 2505, in the rain at the 1954 Argentine Grand Prix. Fangio won on the model’s debut. Cropped from the photograph published in El Gráfico No. 1798 on 22 January 1954."
-      },
-      "gps": [
-        "1954:1"
-      ],
-      "fonte": "https://pub-6c6f65ea920548c3836a20bc3ee50840.r2.dev/el-grafico/1954/1798/page_25.webp",
-      "original": "https://pub-6c6f65ea920548c3836a20bc3ee50840.r2.dev/el-grafico/1954/1798/page_25.webp",
-      "autor": "El Gráfico nº 1798 · Kikuchi, Alfieri, Legarreta, Sanjurjo, Vázquez e Pellizeri (reportagem / feature) · Digitalização / scan: DataFútbol",
-      "licenca": "Public domain",
-      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-      "recorte_original": {
-        "x": 480,
-        "y": 70,
-        "largura": 2075,
-        "altura": 2400
-      },
-      "sha256": "95d91ca8177a0b871c851dcf06174594cb00724b36c56f1973111fb25b6a5756",
-      "largura": 2075,
-      "altura": 2400,
-      "variantes": [
-        {
-          "arquivo": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-960.webp",
-          "largura": 830,
-          "altura": 960,
-          "sha256": "1b07d45ce74340c28431be17c3de272936fc20c0e3af32a396bc259e8921d44e"
-        },
-        {
-          "arquivo": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-2400.webp",
-          "largura": 2075,
-          "altura": 2400,
-          "sha256": "cb6daf891c1bc94ecaa8571e79521a541f96e871bd11312c3a1270330ed8b572"
         }
       ]
     },
@@ -13250,12 +13250,36 @@
           "en": "Emerson Fittipaldi on his debut at Brands Hatch, 1970"
         }
       },
+      "1970:12": {
+        "url": "https://www.motorsportmagazine.com/archive/article/november-1970/36/12th-united-states-grand-prix/",
+        "acervo": "Motor Sport",
+        "legenda": {
+          "pt": "Emerson Fittipaldi no Lotus a caminho da primeira vitória na F1 em Watkins Glen, 1970",
+          "en": "Emerson Fittipaldi in the Lotus on his way to his first F1 win at Watkins Glen in 1970"
+        }
+      },
       "1971:9": {
         "url": "https://www.formula1.com/en/latest/article/moments-in-time-the-italian-grand-prix.3WfuWj9h4gs0CufiDZ1ZS9.3WfuWj9h4gs0CufiDZ1ZS9",
         "acervo": "Formula 1",
         "legenda": {
           "pt": "François Cevert disputa a chegada em Monza no GP em que a Tyrrell assegurou o Mundial de Construtores de 1971",
           "en": "François Cevert battles to the finish at Monza in the Grand Prix where Tyrrell secured the 1971 Constructors’ Championship"
+        }
+      },
+      "1972:12": {
+        "url": "https://www.motorsportmagazine.com/articles/single-seaters/f1/jody-scheckters-stormy-f1-start-a-rookie-campaign-to-rival-the-best/",
+        "acervo": "Motor Sport",
+        "legenda": {
+          "pt": "Jody Scheckter no McLaren na estreia em Watkins Glen, 1972",
+          "en": "Jody Scheckter in the McLaren on his debut at Watkins Glen in 1972"
+        }
+      },
+      "1973:15": {
+        "url": "https://www.racingsportscars.com/f1/photo/Watkins_Glen-1973-10-07.html",
+        "acervo": "Racing Sports Cars",
+        "legenda": {
+          "pt": "Os Lotus 72E de Emerson Fittipaldi e do vencedor Ronnie Peterson em Watkins Glen, 1973",
+          "en": "The Lotus 72Es of Emerson Fittipaldi and race winner Ronnie Peterson at Watkins Glen in 1973"
         }
       },
       "1974:4": {
@@ -13530,6 +13554,14 @@
           "en": "Kimi Räikkönen’s first Formula 1 win, at Sepang in 2003"
         }
       },
+      "2003:13": {
+        "url": "https://commons.wikimedia.org/wiki/File:Renault_in_the_last_corner_at_the_2003_Hungarian_Grand_Prix.jpg",
+        "acervo": "Mitja / Wikimedia Commons",
+        "legenda": {
+          "pt": "Fernando Alonso na última curva do Hungaroring no GP da primeira vitória, 2003 (1.024 × 768 px, CC BY 3.0)",
+          "en": "Fernando Alonso at the final corner of the Hungaroring at the Grand Prix of his first win in 2003 (1,024 × 768 px, CC BY 3.0)"
+        }
+      },
       "2003:16": {
         "url": "https://www.gettyimages.fi/detail/uutiskuva/japanese-grand-prix-suzuka-japan-10th-112th-october-2003-uutiskuva/2229474968",
         "acervo": "Getty Images / LAT Images",
@@ -13552,6 +13584,22 @@
         "legenda": {
           "pt": "Lewis Hamilton recebe o troféu em Sóchi, na prova do primeiro título de construtores da Mercedes, 2014",
           "en": "Lewis Hamilton receives the trophy at Sochi, where Mercedes clinched its first constructors’ title, 2014"
+        }
+      },
+      "2017:18": {
+        "url": "https://www.formula1.com/en/latest/article/the-best-images-from-sunday-in-mexico.56LFjzWoqIEA4S8yM8CesO.56LFjzWoqIEA4S8yM8CesO",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Lewis Hamilton comemora o quarto Mundial no GP do México de 2017",
+          "en": "Lewis Hamilton celebrates his fourth title at the 2017 Mexican Grand Prix"
+        }
+      },
+      "2018:19": {
+        "url": "https://www.formula1.com/en/latest/article/top-shots-the-best-photos-from-mexico.6jJq0RjWzmyswgiiAQuumk",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Lewis Hamilton comemora o quinto Mundial com a Mercedes no GP do México de 2018",
+          "en": "Lewis Hamilton celebrates his fifth title with Mercedes at the 2018 Mexican Grand Prix"
         }
       },
       "2019:1": {
