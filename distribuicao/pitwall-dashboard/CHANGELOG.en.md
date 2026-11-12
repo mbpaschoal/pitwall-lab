@@ -28,6 +28,8 @@ A colour photograph by Peter Roach joins Historic Moments. The CC0 original meas
 
 The 2006 Hungarian Grand Prix gallery adds a CC BY-SA 4.0 qualifying photograph of Pedro de la Rosa at 2,576 × 1,932 px. He took his only F1 podium the next day, when Jenson Button won for the first time.
 
+Kimi Räikkönen’s profile and the 2007 Historic Moments selection link to Morio’s photograph from his title-clinching race at Interlagos. The entry lists the CC BY-SA 3.0 licence and the original dimensions of 1,280 × 402 px.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
