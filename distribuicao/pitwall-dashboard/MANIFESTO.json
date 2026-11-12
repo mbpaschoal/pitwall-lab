@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "9666f9a92547718c1fe99db28a9fc704ea1f85f44132dc9a6d14691d566f43a9",
+  "apresentacao_build_sha256": "9ded9041a59380af2d250341896e0b7c9b5e01202e153e5fefb78306076ea425",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "8783d1ce17fe5bc13f24962ed9f28f39fdb17fd3cc2f702b0e70db95bb536ce6",
+      "sha256_destino": "8493c2f2b116986ba9344240510b4f3b12cbd7f357a95fc6436558b823619d3b",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a712ad74c83c13cbc61bf722104ab1a9686813915593a38f724d436106fe00ff",
-      "sha256_origem": "5167a337910443522a92b9705334274fd7bdecb121dbd13f912f7f510041c5cc"
+      "sha256_destino": "574b501d0f368c79d22ed940cf246a2bb387cf0448187019211f4bd5683824b7",
+      "sha256_origem": "60e5e2ad9289fbe224876f0d19aec7713e584e78a3fccf15ba44b36c7ed6a051"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "20122c30dd5d4ee3dac7ebac5ac8c2bf3e5d0f2697032134e92a13e8b5e559e7",
-      "sha256_origem": "d696bb6d6a65feba663c25cfe0f5505a2b90b9078085a4e3a9c2a6fadb5934a3"
+      "sha256_destino": "fe0123bdf87dccae19b70fbcfbf778841f08b860f57a07bf2a4b3fc4da18bd5a",
+      "sha256_origem": "5a75c3a6c766d39a1fe7c906de93ad9e638f25adb5d2b522e1bea27db85b0605"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "8023f4b2f59b19e40383be0034527877e398e2d2e076f2d471b2dd929aa62bc3",
-      "sha256_origem": "8023f4b2f59b19e40383be0034527877e398e2d2e076f2d471b2dd929aa62bc3"
+      "sha256_destino": "e17dc79d5e11e34132ddfce7e50222fa5cd9bdeec686bf83f8c8869a9fe41c71",
+      "sha256_origem": "e17dc79d5e11e34132ddfce7e50222fa5cd9bdeec686bf83f8c8869a9fe41c71"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4330,6 +4330,20 @@
       "modo": "copia",
       "sha256_destino": "2804a1d319943c68b91b4dd4a71c51710e3855dc27790f02b12143ebb6702652",
       "sha256_origem": "2804a1d319943c68b91b4dd4a71c51710e3855dc27790f02b12143ebb6702652"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-2400.webp",
+      "fonte": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "cb6daf891c1bc94ecaa8571e79521a541f96e871bd11312c3a1270330ed8b572",
+      "sha256_origem": "cb6daf891c1bc94ecaa8571e79521a541f96e871bd11312c3a1270330ed8b572"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-960.webp",
+      "fonte": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1b07d45ce74340c28431be17c3de272936fc20c0e3af32a396bc259e8921d44e",
+      "sha256_origem": "1b07d45ce74340c28431be17c3de272936fc20c0e3af32a396bc259e8921d44e"
     },
     {
       "caminho": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-2400.webp",
@@ -6052,6 +6066,20 @@
       "modo": "copia",
       "sha256_destino": "b6e39fd5886fe7444979378a281298bf0e127acb1d5375f5caaa40620c6c8189",
       "sha256_origem": "b6e39fd5886fe7444979378a281298bf0e127acb1d5375f5caaa40620c6c8189"
+    },
+    {
+      "caminho": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-2400.webp",
+      "fonte": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "934eb12a1882065ddfacfbb97de6236a6157982ceaf870c5a743228df310e41e",
+      "sha256_origem": "934eb12a1882065ddfacfbb97de6236a6157982ceaf870c5a743228df310e41e"
+    },
+    {
+      "caminho": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-960.webp",
+      "fonte": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5a45049a91cc42583e50582add5a3805a679c9564ea228687831e2e924f3a4c5",
+      "sha256_origem": "5a45049a91cc42583e50582add5a3805a679c9564ea228687831e2e924f3a4c5"
     },
     {
       "caminho": "static/pitwall-archive/massa-interlagos-2008-2107c6b0f3a0-2400.webp",

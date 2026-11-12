@@ -38,6 +38,8 @@ Uma fotografia de Silvio Chiozini com 3.024 × 2.005 px e licença CC BY 3.0 mos
 
 Momentos históricos inclui os links para a foto aberta de Jo Bonnier no Porsche nº 8 em Aintree, em 1961, e para a entrega do troféu a Lewis Hamilton no primeiro título de construtores da Mercedes, em Sóchi, em 2014. As referências mostram autoria, licença e dimensões.
 
+O Maserati 250F de Fangio em 1954 ganha duas fotos. A primeira, em domínio público, mostra o chassi 2505 sob chuva no GP da Argentina, em um recorte de 2.075 × 2.400 px da revista El Gráfico. A segunda, de Rahil Rupawala, mostra o carro restaurado em Turim em 4.288 × 2.848 px, sob CC BY 2.0. A imagem do chassi 2529 passa a aparecer apenas na temporada de 1957.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

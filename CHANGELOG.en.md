@@ -38,6 +38,8 @@ A 3,024 × 2,005 px CC BY 3.0 photograph by Silvio Chiozini shows cars on track 
 
 Historic moments links to the openly licensed photographs of Jo Bonnier in Porsche no. 8 at Aintree in 1961 and Lewis Hamilton receiving the trophy at Sochi in 2014, where Mercedes clinched its first constructors’ title. Each reference lists its credit, licence and dimensions.
 
+Fangio’s 1954 Maserati 250F gains two photographs. A 2,075 × 2,400 px public-domain crop from El Gráfico shows chassis 2505 in the rain at the Argentine Grand Prix. Rahil Rupawala’s 4,288 × 2,848 px CC BY 2.0 photograph shows the restored car in Turin. The photograph of chassis 2529 now appears only in the 1957 season.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

@@ -159,7 +159,6 @@
       },
       "modelo": "maserati-250f",
       "temporadas": [
-        1954,
         1957
       ],
       "fonte": "https://commons.wikimedia.org/wiki/File:Maserati_250F_(Juan_Fangio).jpg",
@@ -12800,6 +12799,82 @@
           "largura": 2400,
           "altura": 1591,
           "sha256": "b7d1fc53069a573ecef5b3086a45c675e0d10af565adcee0046325e49fa995fc"
+        }
+      ]
+    },
+    "fangio-maserati-argentina-1954": {
+      "modelo": "maserati-250f",
+      "temporadas": [
+        1954
+      ],
+      "construtor": "maserati",
+      "legenda": {
+        "pt": "Juan Manuel Fangio no Maserati 250F nº 2, chassi 2505, sob chuva no GP da Argentina de 1954. Fangio venceu na estreia do modelo. Recorte da fotografia publicada em El Gráfico nº 1798, de 22 de janeiro de 1954.",
+        "en": "Juan Manuel Fangio in the No. 2 Maserati 250F, chassis 2505, in the rain at the 1954 Argentine Grand Prix. Fangio won on the model’s debut. Cropped from the photograph published in El Gráfico No. 1798 on 22 January 1954."
+      },
+      "gps": [
+        "1954:1"
+      ],
+      "fonte": "https://pub-6c6f65ea920548c3836a20bc3ee50840.r2.dev/el-grafico/1954/1798/page_25.webp",
+      "original": "https://pub-6c6f65ea920548c3836a20bc3ee50840.r2.dev/el-grafico/1954/1798/page_25.webp",
+      "autor": "El Gráfico nº 1798 · Kikuchi, Alfieri, Legarreta, Sanjurjo, Vázquez e Pellizeri (reportagem / feature) · Digitalização / scan: DataFútbol",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "recorte_original": {
+        "x": 480,
+        "y": 70,
+        "largura": 2075,
+        "altura": 2400
+      },
+      "sha256": "95d91ca8177a0b871c851dcf06174594cb00724b36c56f1973111fb25b6a5756",
+      "largura": 2075,
+      "altura": 2400,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-960.webp",
+          "largura": 830,
+          "altura": 960,
+          "sha256": "1b07d45ce74340c28431be17c3de272936fc20c0e3af32a396bc259e8921d44e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-2400.webp",
+          "largura": 2075,
+          "altura": 2400,
+          "sha256": "cb6daf891c1bc94ecaa8571e79521a541f96e871bd11312c3a1270330ed8b572"
+        }
+      ]
+    },
+    "maserati-250f-2505-turim-2015": {
+      "modelo": "maserati-250f",
+      "temporadas": [
+        1954
+      ],
+      "construtor": "maserati",
+      "arquivo_commons": "File:1954 Maserati 250 F Museo Nazionale dell'Automobile di Torino 08.jpg",
+      "legenda": {
+        "pt": "Maserati 250F que venceu o GP da Argentina de 1954 com Juan Manuel Fangio, fotografado no Museu Nacional do Automóvel, em Turim, em 2015. O chassi 2505 recebeu a identificação 2500 após o restauro de fábrica.",
+        "en": "The Maserati 250F that won the 1954 Argentine Grand Prix with Juan Manuel Fangio, photographed at the National Automobile Museum in Turin in 2015. Chassis 2505 was renumbered 2500 after its factory restoration."
+      },
+      "fonte": "https://commons.wikimedia.org/wiki/File:1954_Maserati_250_F_Museo_Nazionale_dell%27Automobile_di_Torino_08.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f0/1954_Maserati_250_F_Museo_Nazionale_dell%27Automobile_di_Torino_08.jpg",
+      "autor": "Rahil Rupawala",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0/",
+      "sha256": "b350f04510413cacb0bb46d300aee721e776cb015a032860e5b8c0e528676e90",
+      "largura": 4288,
+      "altura": 2848,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-960.webp",
+          "largura": 960,
+          "altura": 638,
+          "sha256": "5a45049a91cc42583e50582add5a3805a679c9564ea228687831e2e924f3a4c5"
+        },
+        {
+          "arquivo": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-2400.webp",
+          "largura": 2400,
+          "altura": 1594,
+          "sha256": "934eb12a1882065ddfacfbb97de6236a6157982ceaf870c5a743228df310e41e"
         }
       ]
     }
