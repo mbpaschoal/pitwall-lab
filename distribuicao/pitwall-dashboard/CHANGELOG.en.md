@@ -50,6 +50,8 @@ A 3,512 × 2,376 px CC BY 2.0 photograph by Steve Gregory shows Jacques Villeneu
 
 Alfa Romeo’s gallery opens with its drivers meeting George VI at the first World Championship Grand Prix, at Silverstone in 1950 (2,560 × 1,440 px). Maserati’s gallery opens with Fangio winning on the 250F’s debut in Argentina in 1954 (2,075 × 2,400 px). The archive also links to source photographs of Watkins Glen in 1970, 1972 and 1973, Alonso’s first win in Hungary and Hamilton’s titles in Mexico in 2017 and 2018.
 
+A photograph of Benetton B192 chassis 05 at Rétromobile 2016 shows the car Michael Schumacher drove to his first win at Spa in 1992. The original by Thesupermat measures 5,472 × 3,648 px and is licensed under CC BY-SA 4.0. It appears in Schumacher’s Hall of Fame profile, the Benetton gallery and the collection for the 1992 Belgian Grand Prix.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "f17620f064c96ac49fa07c98960e7efbeb2d3ffc38ace47db46657ef33db6708",
+  "apresentacao_build_sha256": "73d00e60404f67586642819bb8478db05b729d6a77f39d1a0806d8f984f27715",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "325401a7cf23a6d8fc46a33f78606bba246dd62a67a2c32f5cc94881eb32625f",
+      "sha256_destino": "27a038d185100f6c3c8f4ccaaf0f0d1ef648e5dc2fddb9676cd31a1bc89fcfb4",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "32dca5d233e50b2cbc5524918e7346222b301f1b9a2daf181433a214365fc456",
-      "sha256_origem": "5f869dd3c87cb4ce5cd1860aa0a0fd137d223edda2868bfc022efc84c945de4d"
+      "sha256_destino": "abeba6d397be237ff1dcc11c7a3b81c2118251b56b8b9a8989941ac6121be419",
+      "sha256_origem": "21a6fff5c159ca947e5e74e581d399f7327b363cd8f6b4e7a42b490e211da677"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "fea25f46ba4ffb36c2e08267ce8e27584e9908460d222e2ecfd0a0679de8a86d",
-      "sha256_origem": "42a0ec8ab1bd0e9b0fe99b86ffb32ad7f208ebcdd1e5aa19c030893defd5d44a"
+      "sha256_destino": "d58173471d2aeb1ab8c4e1c1e5884b96a29c9c10bc26763d37c34d616b3b2618",
+      "sha256_origem": "7ffe357cfe231a93d78560ad2a8a83f2d7b135bcbb4c7b2f77cd080983466bce"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "9e89ec108841f30c73c718746d4cd00d91df40e531746d2af14adc9c84120c38",
-      "sha256_origem": "9e89ec108841f30c73c718746d4cd00d91df40e531746d2af14adc9c84120c38"
+      "sha256_destino": "f0cd3ecd40c76c27a9ec62f63dcc494b3c57796530ce21bed0ea1a1a11a85e0a",
+      "sha256_origem": "f0cd3ecd40c76c27a9ec62f63dcc494b3c57796530ce21bed0ea1a1a11a85e0a"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7480,6 +7480,20 @@
       "modo": "copia",
       "sha256_destino": "48780753c9be36e8543ac5e8614cf56f88edea469116c6af07efb73720094ff0",
       "sha256_origem": "48780753c9be36e8543ac5e8614cf56f88edea469116c6af07efb73720094ff0"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-benetton-b192-05-retromobile-2016-a7eabb6d5ccb-2400.webp",
+      "fonte": "static/pitwall-archive/schumacher-benetton-b192-05-retromobile-2016-a7eabb6d5ccb-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "fdcbdf8001fcffd054ff9cf2972eccca7cfd1743dc34843a93a9a872142233c0",
+      "sha256_origem": "fdcbdf8001fcffd054ff9cf2972eccca7cfd1743dc34843a93a9a872142233c0"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-benetton-b192-05-retromobile-2016-a7eabb6d5ccb-960.webp",
+      "fonte": "static/pitwall-archive/schumacher-benetton-b192-05-retromobile-2016-a7eabb6d5ccb-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bf1ede99de5756645bc4f8e9a9e9739c6ce9ca1a47dc325c2d0544131c28c1fb",
+      "sha256_origem": "bf1ede99de5756645bc4f8e9a9e9739c6ce9ca1a47dc325c2d0544131c28c1fb"
     },
     {
       "caminho": "static/pitwall-archive/schumacher-capacete-aida-1995-1b15c8ff4567-2400.webp",
