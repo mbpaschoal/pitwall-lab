@@ -16,6 +16,8 @@ O registro de Sebastian Vettel no Red Bull RB7 em Suzuka, na corrida do bicampeo
 
 Três fotos de época em domínio público registram a decisão de Monza em 1975. As digitalizações da Autosprint mostram Niki Lauda e Emerson Fittipaldi no pódio, a ultrapassagem de Fittipaldi sobre Lauda e a festa da Ferrari com Clay Regazzoni. Os três originais digitalizados têm pelo menos 2.400 px no lado maior.
 
+Três fotos de época dos anuários oficiais de Monza mostram Stirling Moss a caminho da vitória no GP do primeiro título de construtores da Cooper, em 1959, e a largada do GP da primeira vitória de Phil Hill, em 1960. Os recortes das digitalizações têm entre 2.495 e 2.548 px no lado maior.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

@@ -16,6 +16,8 @@ A 5,184 × 3,456 px photograph by Takayuki Suzuki under CC BY-SA 2.0 shows Sebas
 
 Three period photographs in the public domain document the 1975 title decider at Monza. The Autosprint scans show Niki Lauda and Emerson Fittipaldi on the podium, Fittipaldi passing Lauda, and Ferrari celebrating with Clay Regazzoni. All three scans measure at least 2,400 px on the long edge.
 
+Three period photographs from the official Monza yearbooks show Stirling Moss on his way to victory in the race where Cooper clinched its first constructors’ title in 1959 and the start of the race where Phil Hill took his first win in 1960. The scans provide crops with long edges from 2,495 to 2,548 px.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

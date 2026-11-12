@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "3262d70a67ad87cf1418603858903cd7dc031a30eed97180188622aca480956c",
+  "apresentacao_build_sha256": "38ab94061c2438d81538ffebd582a5c10875f5754002db52bd43c22baeefb5e4",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "7e066d2539b663334361b76d4a79cb3e210fdeace2d6f90ab0f34a73c8473bc4",
+      "sha256_destino": "8897a3d33baecd775652ddfecadc1a2263e777c63922d9b34ef605099433bbaf",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "c0c03a6e5d18549cefda7b8181dada32a184528ccd469c250e022db78c9ac5c2",
-      "sha256_origem": "ed88d577c0bc6d15c5f4ea4609c3501fe329fa2cb752b015783b82eaf8204577"
+      "sha256_destino": "28ef3c9b29edaf2b5058e06af0f7b9b704b7e4cd58ffc6cbd023cb33a21e5138",
+      "sha256_origem": "cb6396bca1ade499ed0600a62fe8d00517e2dc5d0a238a740999e96f32c266f4"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a29784e2550814a41c57c813f9a062edc22674bfc43dad51fb0085e2ecc3df6e",
-      "sha256_origem": "f4c07b788206e6fc2b5a0212789f7ea3a18097bcc7472517ed71953459f822b1"
+      "sha256_destino": "57aec0b9f902159354cf2074c0fa55ded8a4792ba1a8f3001c7fd5d1cdf59b27",
+      "sha256_origem": "3d077d082892c53c33f33244d8c5d153818f8fbcf76903048d38b939e483a07f"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "7868310618ad723273b3e14d701c16eef0a6acd2e29a931ad84135f5daac83c5",
-      "sha256_origem": "7868310618ad723273b3e14d701c16eef0a6acd2e29a931ad84135f5daac83c5"
+      "sha256_destino": "c5804ac099dcbc3df5cdc32cec5c4dc32ac1e87aa83e27302c67027c003be47b",
+      "sha256_origem": "c5804ac099dcbc3df5cdc32cec5c4dc32ac1e87aa83e27302c67027c003be47b"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4106,6 +4106,20 @@
       "modo": "copia",
       "sha256_destino": "0a259ce8bde82bacd7e952e83383276ba43de2e4acc03aff4b4163afd4a7a045",
       "sha256_origem": "0a259ce8bde82bacd7e952e83383276ba43de2e4acc03aff4b4163afd4a7a045"
+    },
+    {
+      "caminho": "static/pitwall-archive/cabianca-salvadori-monza-1959-e07a171ff4be-2400.webp",
+      "fonte": "static/pitwall-archive/cabianca-salvadori-monza-1959-e07a171ff4be-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d5ec61e9a1690ad30b6ec0b9b6e932c117d1136e5ee85d0c5d38f5f27aa4ec61",
+      "sha256_origem": "d5ec61e9a1690ad30b6ec0b9b6e932c117d1136e5ee85d0c5d38f5f27aa4ec61"
+    },
+    {
+      "caminho": "static/pitwall-archive/cabianca-salvadori-monza-1959-e07a171ff4be-960.webp",
+      "fonte": "static/pitwall-archive/cabianca-salvadori-monza-1959-e07a171ff4be-960.webp",
+      "modo": "copia",
+      "sha256_destino": "92926c6bcc345aa310830e7b99af1fc842247dde04eb322114168fbb8de263a6",
+      "sha256_origem": "92926c6bcc345aa310830e7b99af1fc842247dde04eb322114168fbb8de263a6"
     },
     {
       "caminho": "static/pitwall-archive/cadillac-silverstone-27f1713144a5-2400.webp",
@@ -5634,6 +5648,20 @@
       "sha256_origem": "8ff7840e1d6977e0b8462e90f574596bd345cbc295b2b04ca49c2d52628fc20e"
     },
     {
+      "caminho": "static/pitwall-archive/largada-monza-1960-anuario-cae4dc15e13f-2400.webp",
+      "fonte": "static/pitwall-archive/largada-monza-1960-anuario-cae4dc15e13f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "f9e8eda2aba241310283338f1ffe5ee94176ff085c6256292492d2ed0981529a",
+      "sha256_origem": "f9e8eda2aba241310283338f1ffe5ee94176ff085c6256292492d2ed0981529a"
+    },
+    {
+      "caminho": "static/pitwall-archive/largada-monza-1960-anuario-cae4dc15e13f-960.webp",
+      "fonte": "static/pitwall-archive/largada-monza-1960-anuario-cae4dc15e13f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3591f3990a6ba841f6f84dadc8bfd4108852c358dee9124a18a0e1f4984e8648",
+      "sha256_origem": "3591f3990a6ba841f6f84dadc8bfd4108852c358dee9124a18a0e1f4984e8648"
+    },
+    {
       "caminho": "static/pitwall-archive/las-vegas-2024-e2219e21d4cd-2400.webp",
       "fonte": "static/pitwall-archive/las-vegas-2024-e2219e21d4cd-2400.webp",
       "modo": "copia",
@@ -6514,6 +6542,20 @@
       "modo": "copia",
       "sha256_destino": "84e7a60148b0eef344e180e614482ae058d06997a85f38524840a37718750d9c",
       "sha256_origem": "84e7a60148b0eef344e180e614482ae058d06997a85f38524840a37718750d9c"
+    },
+    {
+      "caminho": "static/pitwall-archive/moss-brabham-monza-1959-d493e442c4aa-2400.webp",
+      "fonte": "static/pitwall-archive/moss-brabham-monza-1959-d493e442c4aa-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7b35d6e3b989d928fd6e5995c5a654ef0bd9a8a143ae18f0aca1c02e024b9bbd",
+      "sha256_origem": "7b35d6e3b989d928fd6e5995c5a654ef0bd9a8a143ae18f0aca1c02e024b9bbd"
+    },
+    {
+      "caminho": "static/pitwall-archive/moss-brabham-monza-1959-d493e442c4aa-960.webp",
+      "fonte": "static/pitwall-archive/moss-brabham-monza-1959-d493e442c4aa-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b12a51041166f5237c474cd551f40685c7703274f861ca14f91891702dcc9509",
+      "sha256_origem": "b12a51041166f5237c474cd551f40685c7703274f861ca14f91891702dcc9509"
     },
     {
       "caminho": "static/pitwall-archive/nelson-piquet-foto-4f1eecf379b2-1910.webp",
