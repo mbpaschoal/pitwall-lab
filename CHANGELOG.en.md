@@ -64,6 +64,8 @@ A 3,736 × 2,064 px photograph by Ann McKelvie, licensed under CC BY-SA 2.0, sho
 
 Two photographs accompany Fernando Alonso and Kimi Räikkönen’s 2001 Melbourne debut. They show the No. 21 Minardi PS01 and a Sauber C20 bearing Räikkönen’s name. Morio photographed both models on display in 2017. The 3,840 × 2,560 px originals are licensed under CC BY-SA 4.0. The photographs appear under Objects from the collection in both Hall of Fame profiles and in Historic moments.
 
+Two photographs accompany Kimi Räikkönen’s first win at Sepang and Fernando Alonso’s first win at the Hungaroring, both in 2003. They show the No. 6 McLaren MP4-17D and No. 8 Renault R23B on display at Donington in 2013 and in Asturias in 2017. Both 3,840 × 2,560 px originals are by Morio under CC BY-SA licenses.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

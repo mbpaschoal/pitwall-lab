@@ -64,6 +64,8 @@ Uma foto de Ann McKelvie em 3.736 × 2.064 px, sob CC BY-SA 2.0, mostra Lewis Ha
 
 A estreia de Fernando Alonso e Kimi Räikkönen em Melbourne, em 2001, ganha fotos do Minardi PS01 nº 21 e do Sauber C20 com o nome de Räikkönen. Morio fotografou os dois modelos em exposições em 2017, com originais de 3.840 × 2.560 px sob CC BY-SA 4.0. As imagens aparecem em Peças de acervo nos dois perfis do Hall da Fama e em Momentos históricos.
 
+As primeiras vitórias de Kimi Räikkönen em Sepang e de Fernando Alonso no Hungaroring, em 2003, ganham fotos do McLaren MP4-17D nº 6 e do Renault R23B nº 8. As duas fotos são de Morio, com originais de 3.840 × 2.560 px e licenças CC BY-SA. Foram feitas em exposições em Donington (2013) e nas Astúrias (2017).
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

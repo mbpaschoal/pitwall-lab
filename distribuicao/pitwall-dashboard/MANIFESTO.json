@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "f04dca8db2a22fbda25e73ebfb76a8b1b0448b69bec5ed432045e8d932135d9e",
+  "apresentacao_build_sha256": "90405db37aac55a09e495d2e605822a338d8a159f044f28538208a75e36b580a",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "6e8ada2ab3520fc373663c3712f5e63b27ca223ce075cfa8b00928b89d20860c",
+      "sha256_destino": "fde876732ad7a3e22944ede82e5729a932a18a264786b2e972ea9673e1fa1e93",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a5ad9ff6ccd3d181a2ff1ea082e0d7abb9c57bc19b290f5afda1ae28be74fe66",
-      "sha256_origem": "13c68df5571746d0ca0391f11700753064cb59e05a72570b6ecdf6985949b5c3"
+      "sha256_destino": "0ffc7e914ea016fd9df5ec2e0e452df06eb3bfd886055fa9f94be7c1d8bb4212",
+      "sha256_origem": "ecb02c8c0b680da443efa98f69b9f82f1d71bfbb1e5787c3ed666982013a8602"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "fd212515eaf07d772267979865a407864dd5725a926b98dad8164baee040fb49",
-      "sha256_origem": "43a4460f9e928432d55458c878021a311fea035b9f65f3206e334f157f7eab55"
+      "sha256_destino": "e7aeccbae23b43ce62f510c198d841a9dd5bcdd974f0235c74ca10902e04b654",
+      "sha256_origem": "0162ba2f5a3e5cef906fe64e89818d7bdf26b5136f472478e39ecf35783e5d47"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "eaa758bc497a03e48f9b0edf0ae21259a42b18ab827fb07ffa30eae4fcf8c4d4",
-      "sha256_origem": "eaa758bc497a03e48f9b0edf0ae21259a42b18ab827fb07ffa30eae4fcf8c4d4"
+      "sha256_destino": "fee29d97f2758d249cf860323f8d0d76b236bc27b1183deba04134fb3b2e16fd",
+      "sha256_origem": "fee29d97f2758d249cf860323f8d0d76b236bc27b1183deba04134fb3b2e16fd"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3504,6 +3504,20 @@
       "modo": "copia",
       "sha256_destino": "cdfc1d9317e96da3cc1444101587f248edebcb1605f72ea4e1e28900791db728",
       "sha256_origem": "cdfc1d9317e96da3cc1444101587f248edebcb1605f72ea4e1e28900791db728"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-renault-r23b-museo-2017-68c0d38df710-2400.webp",
+      "fonte": "static/pitwall-archive/alonso-renault-r23b-museo-2017-68c0d38df710-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "915baa3198380c55ed70604c6787f37713ef2b1f05cf2b0649464c9691b9afe4",
+      "sha256_origem": "915baa3198380c55ed70604c6787f37713ef2b1f05cf2b0649464c9691b9afe4"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-renault-r23b-museo-2017-68c0d38df710-960.webp",
+      "fonte": "static/pitwall-archive/alonso-renault-r23b-museo-2017-68c0d38df710-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6d70cdb2309c06248aa6dcddb3326252df4e12419875ee04b0530c65d8968369",
+      "sha256_origem": "6d70cdb2309c06248aa6dcddb3326252df4e12419875ee04b0530c65d8968369"
     },
     {
       "caminho": "static/pitwall-archive/alonso-renault-r26-indianapolis-2006-b67a3def14b6-2400.webp",
@@ -7214,6 +7228,20 @@
       "modo": "copia",
       "sha256_destino": "a95140d1deaabafba7e913026069e8cfc0ff1d634d88d7bd3b7ffc3180ddebc3",
       "sha256_origem": "a95140d1deaabafba7e913026069e8cfc0ff1d634d88d7bd3b7ffc3180ddebc3"
+    },
+    {
+      "caminho": "static/pitwall-archive/raikkonen-mclaren-mp4-17d-donington-2013-2472f39c4303-2400.webp",
+      "fonte": "static/pitwall-archive/raikkonen-mclaren-mp4-17d-donington-2013-2472f39c4303-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e94c7e0941b6f2e9776d3f78fa6f37be2de8c1bdfc1033c98c27e502bbedcc92",
+      "sha256_origem": "e94c7e0941b6f2e9776d3f78fa6f37be2de8c1bdfc1033c98c27e502bbedcc92"
+    },
+    {
+      "caminho": "static/pitwall-archive/raikkonen-mclaren-mp4-17d-donington-2013-2472f39c4303-960.webp",
+      "fonte": "static/pitwall-archive/raikkonen-mclaren-mp4-17d-donington-2013-2472f39c4303-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8a8d16ac8ca45ab33638926e286d2e029ea54c081abead1ea2184444a0acd853",
+      "sha256_origem": "8a8d16ac8ca45ab33638926e286d2e029ea54c081abead1ea2184444a0acd853"
     },
     {
       "caminho": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-2400.webp",
