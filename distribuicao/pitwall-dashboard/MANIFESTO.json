@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "86739589380d7d10947eeb4b044311ea832f94c208cd21367211eb16df4b5acd",
+  "apresentacao_build_sha256": "cd82bbf7c8ecd324f0edefbfd66a8285c8a3d1b68670b3c702a0114ee40a4402",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "fe596c8329d02f5a45f530f2ef2608459c0516bfe3fae6df005bc988955e210d",
+      "sha256_destino": "a33fa097e58ef83fefa2ad62dbb34ef0348c1dc20214ab1a8e43ae589668a7e8",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "896c13355a418ed08d1d7ada095e3d20c55be47aea8a5085e3952eefdb430d22",
-      "sha256_origem": "8de70fce92de300a73fdd0375d083474d74d9178dfcbc9e73b92922d8c3ca355"
+      "sha256_destino": "ce127a3eb6c206125f3e29b3479d52198905b0a9246f3a2c135962630d2a8927",
+      "sha256_origem": "faeeba8aa6ce546559adc5bfc6429efd18dd121baf003b5542960955b04a847c"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "2501c0305a055ce06bb407acbaa80698e62a94e82b6fb8c6cebb7cb3757dc58e",
-      "sha256_origem": "221f5d341625fdf1447f826fac1213afd0b891f381aa80c15c5114068602f1f3"
+      "sha256_destino": "11a27ffac1d1e58d1694ed68326bb0bd2c8dcbf455a7e5f24cbb3b4d141a56a9",
+      "sha256_origem": "9c59fc018014fb0f29a2e7daa8b448ca7a01e6b8c85a39ea187dc404cf3a8e10"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "927fb5aeea446629097e88a80e246c6445c1d1fa6ae6db7eaac8fc5bd63fea77",
-      "sha256_origem": "927fb5aeea446629097e88a80e246c6445c1d1fa6ae6db7eaac8fc5bd63fea77"
+      "sha256_destino": "1cc0bf70109a65b823571339598e6205ec1afccd353a89bb54370caee7503418",
+      "sha256_origem": "1cc0bf70109a65b823571339598e6205ec1afccd353a89bb54370caee7503418"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6752,6 +6752,20 @@
       "modo": "copia",
       "sha256_destino": "b432483c6e8ce0a96fb7d286f11b851f065f014e139fbbf123b3b72eb25149e2",
       "sha256_origem": "b432483c6e8ce0a96fb7d286f11b851f065f014e139fbbf123b3b72eb25149e2"
+    },
+    {
+      "caminho": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-2400.webp",
+      "fonte": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "fe55219253a93e303f5489f485c839144698367d958e724c1b22f2d963965bb8",
+      "sha256_origem": "fe55219253a93e303f5489f485c839144698367d958e724c1b22f2d963965bb8"
+    },
+    {
+      "caminho": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-960.webp",
+      "fonte": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "384307eae2d5843bff4674642dc88bf5abaa8270c5b2d3c8c758c7f531cec0ee",
+      "sha256_origem": "384307eae2d5843bff4674642dc88bf5abaa8270c5b2d3c8c758c7f531cec0ee"
     },
     {
       "caminho": "static/pitwall-archive/peterson-lotus-78-kyalami-1978-bf4554852baf-2400.webp",

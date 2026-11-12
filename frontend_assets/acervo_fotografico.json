@@ -11903,8 +11903,8 @@
     "villeneuve-ferrari-312t4b-imola-1979": {
       "arquivo_commons": "File:Gilles Villeneuve imola 1979.jpg",
       "legenda": {
-        "pt": "Gilles Villeneuve nos boxes de Ímola no GP Dino Ferrari de 1979, uma semana após terminar em segundo em Monza com o mesmo Ferrari 312 T4B, chassi 038.",
-        "en": "Gilles Villeneuve in the Imola pits at the 1979 Dino Ferrari Grand Prix, a week after finishing second at Monza in the same Ferrari 312 T4B, chassis 038."
+        "pt": "Gilles Villeneuve nos boxes de Ímola no GP Dino Ferrari de 1979 com o 312 T4B, chassi 038. O carro usava freios traseiros nas rodas e havia terminado em segundo em Monza uma semana antes.",
+        "en": "Gilles Villeneuve in the Imola pits at the 1979 Dino Ferrari Grand Prix with the 312 T4B, chassis 038. It ran with outboard rear brakes and had finished second at Monza a week earlier."
       },
       "modelo": "ferrari-312t4b",
       "temporadas": [
@@ -12661,6 +12661,39 @@
           "largura": 2400,
           "altura": 1556,
           "sha256": "219201c06cee7fb32c59882ac468a1bd29fd3fe00107b9b2fef5c897d5425263"
+        }
+      ]
+    },
+    "pedro-de-la-rosa-hungaroring-2006": {
+      "arquivo_commons": "File:Pedro de la Rosa Hungaroring.jpg",
+      "legenda": {
+        "pt": "Pedro de la Rosa no McLaren MP4-21 durante a classificação do GP da Hungria de 2006. No dia seguinte, terminou em segundo, seu único pódio na F1, na primeira vitória de Jenson Button.",
+        "en": "Pedro de la Rosa in the McLaren MP4-21 during qualifying for the 2006 Hungarian Grand Prix. The next day he took his only F1 podium, finishing second behind first-time winner Jenson Button."
+      },
+      "gps": [
+        "2006:13"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Pedro_de_la_Rosa_Hungaroring.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Pedro_de_la_Rosa_Hungaroring.jpg",
+      "autor": "Rzober89",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "9326c23063d8a7ec006e4177b799de06785363ecd5c165fadd5a15d2311dd2c9",
+      "largura": 2576,
+      "altura": 1932,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "384307eae2d5843bff4674642dc88bf5abaa8270c5b2d3c8c758c7f531cec0ee"
+        },
+        {
+          "arquivo": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "fe55219253a93e303f5489f485c839144698367d958e724c1b22f2d963965bb8"
         }
       ]
     }
