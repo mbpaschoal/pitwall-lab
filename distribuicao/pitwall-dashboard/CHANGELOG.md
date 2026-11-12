@@ -30,6 +30,8 @@ O acervo do GP da Hungria de 2006 ganha uma foto de Pedro de la Rosa na classifi
 
 O perfil de Kimi Räikkönen e a seleção de 2007 em Momentos históricos incluem um link para a foto de Morio no GP do título em Interlagos. A ficha indica a licença CC BY-SA 3.0 e as dimensões de 1.280 × 402 px do original.
 
+Uma foto de 2.560 × 1.440 px da Publifoto mostra Juan Manuel Fangio cumprimentando Stirling Moss após a vitória da Vanwall em Pescara, em 1957. Publicado na revista Pirelli naquele ano, o registro entra no perfil de Fangio e em Momentos históricos.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

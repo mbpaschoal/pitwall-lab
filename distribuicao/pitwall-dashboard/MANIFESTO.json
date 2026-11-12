@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "bdd0cceb29d6ace1bcf6db98fa6b1a0b412dc41ed46e6e2af7da4da84e88b185",
+  "apresentacao_build_sha256": "6c364c4ab32b75773c15997fda23ef5867044a785a00b24c31bb4ca5126636af",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "a33fa097e58ef83fefa2ad62dbb34ef0348c1dc20214ab1a8e43ae589668a7e8",
+      "sha256_destino": "7359ca8af036470b17d8131d9a5154a909c4461af712a63fd796e9715e6e903f",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "d9933acf547b71346187b67aebdbfce5cb53d78af0e10cbdf07df183beb06a64",
-      "sha256_origem": "3ffbdaa9d1725dd69fa831b51a5d2ecd67116f46e6fbea717c4cb7c0faf93d3d"
+      "sha256_destino": "c33a1a3a1a3cc00f929af88498a2d60a0970422e1a6d76c9b0e48e56d7de6002",
+      "sha256_origem": "5701f5c6a1da9403a405a89fa1aea6b46500aa7a250d04587d93c96d69496cc5"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "0a9095fcc24c5f62d28602a0eb4f0e07c2aa5bace2331df15ac5c1eff94eaedb",
-      "sha256_origem": "17f650bafd1c4f18f60bf9ad7a2c7386364f37b197fd1715e0f7d488805edf17"
+      "sha256_destino": "dff43a4448fdfc9dd8323d71800953235c5a80a0f454dd80c12f3647e12d7a2b",
+      "sha256_origem": "73a4f3fa41c23fc58fa32f9f63ed130a7fc02e4b36e87bff37f630f8934ae190"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "5eaf21d6e3f323bea3db314fe3e6f95984acac8316f349d26b2ef5c9c3dc7bf1",
-      "sha256_origem": "5eaf21d6e3f323bea3db314fe3e6f95984acac8316f349d26b2ef5c9c3dc7bf1"
+      "sha256_destino": "018a55db31a2586a4fc94d36ac632574bd2aced0bb873259a3cbf5c67239695c",
+      "sha256_origem": "018a55db31a2586a4fc94d36ac632574bd2aced0bb873259a3cbf5c67239695c"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4316,6 +4316,20 @@
       "modo": "copia",
       "sha256_destino": "2804a1d319943c68b91b4dd4a71c51710e3855dc27790f02b12143ebb6702652",
       "sha256_origem": "2804a1d319943c68b91b4dd4a71c51710e3855dc27790f02b12143ebb6702652"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-2400.webp",
+      "fonte": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "759113c79b46856dfe6a86af1f0a08fda380e04c2989d8454d9e6ae03840b596",
+      "sha256_origem": "759113c79b46856dfe6a86af1f0a08fda380e04c2989d8454d9e6ae03840b596"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-960.webp",
+      "fonte": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "da55d7cbe10b699d739896afb0f1a95fc29b65b451347840cb8770be2c9857ad",
+      "sha256_origem": "da55d7cbe10b699d739896afb0f1a95fc29b65b451347840cb8770be2c9857ad"
     },
     {
       "caminho": "static/pitwall-archive/fangio-nurburgring-1954-020463d3cf44-2400.webp",

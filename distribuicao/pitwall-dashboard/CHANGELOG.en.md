@@ -30,6 +30,8 @@ The 2006 Hungarian Grand Prix gallery adds a CC BY-SA 4.0 qualifying photograph 
 
 Kimi Räikkönen’s profile and the 2007 Historic Moments selection link to Morio’s photograph from his title-clinching race at Interlagos. The entry lists the CC BY-SA 3.0 licence and the original dimensions of 1,280 × 402 px.
 
+A 2,560 × 1,440 px Publifoto photograph shows Juan Manuel Fangio congratulating Stirling Moss after Vanwall’s 1957 win at Pescara. Published in Pirelli magazine that year, it appears in Fangio’s profile and in Historic moments.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
