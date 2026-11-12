@@ -32,6 +32,8 @@ O perfil de Kimi Räikkönen e a seleção de 2007 em Momentos históricos inclu
 
 Uma foto de 2.560 × 1.440 px da Publifoto mostra Juan Manuel Fangio cumprimentando Stirling Moss após a vitória da Vanwall em Pescara, em 1957. Publicado na revista Pirelli naquele ano, o registro entra no perfil de Fangio e em Momentos históricos.
 
+Uma foto de Harry Pot em CC0, com 3.415 × 2.849 px, mostra Alberto Ascari a caminho da vitória em Zandvoort em 1953 no Ferrari 500 de chassi 005. Ela entra em Carros campeões, na galeria Ferrari e em Momentos históricos. Como o mesmo carro venceu a prova do título em Bremgarten, o Hall da Fama também exibe a foto entre as peças de acervo dessa decisão.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
