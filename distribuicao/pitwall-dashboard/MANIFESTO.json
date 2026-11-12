@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "59c105bb7f6146c08c7885f682e1d2fa393e322d88edb47e493e0d6c4025b439",
+  "apresentacao_build_sha256": "7a00e61e680e4a3805cfa4bd049e4b70a6b06d93495f76d210a4e0d87f0123fb",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "beb66e8fd0cc05ffaab3b92772b9603c05c4a0a111b8c672e8d59457d143339a",
+      "sha256_destino": "22a4f2ac515eacfee3dfe79f28e8d261cf8a9d1a17307d1f94ba8665fb303b24",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "32fb5fa93b0d49d90bd3de3edb2df147eba3fd2ca8405f9f3286e14a11ef3167",
-      "sha256_origem": "32fb5fa93b0d49d90bd3de3edb2df147eba3fd2ca8405f9f3286e14a11ef3167"
+      "sha256_destino": "849263a049e083e5616e26c8863aadedaf4fc680aadb2e26b393ba2f4b620789",
+      "sha256_origem": "849263a049e083e5616e26c8863aadedaf4fc680aadb2e26b393ba2f4b620789"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6864,6 +6864,20 @@
       "modo": "copia",
       "sha256_destino": "6f3eed883bc3ff63870d0626623450a27c4bd5059f6c9355d41c02dba74a864c",
       "sha256_origem": "6f3eed883bc3ff63870d0626623450a27c4bd5059f6c9355d41c02dba74a864c"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-2400.webp",
+      "fonte": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6ac49c44dfd153c56a30114b9bcfbc5e03204199ec8bb54beb7e5df00f1ca201",
+      "sha256_origem": "6ac49c44dfd153c56a30114b9bcfbc5e03204199ec8bb54beb7e5df00f1ca201"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-960.webp",
+      "fonte": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-960.webp",
+      "modo": "copia",
+      "sha256_destino": "81f1e0d8ecdab7ab3e5647d2b4f8635264139c222577051bb63b7c4ef441eb15",
+      "sha256_origem": "81f1e0d8ecdab7ab3e5647d2b4f8635264139c222577051bb63b7c4ef441eb15"
     },
     {
       "caminho": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-2400.webp",

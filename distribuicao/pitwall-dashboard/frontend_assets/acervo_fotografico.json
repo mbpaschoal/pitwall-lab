@@ -13348,6 +13348,49 @@
           "sha256": "b138fb7433eec552156167328c76c01cc6998ef53ee6803810bf2430013840ba"
         }
       ]
+    },
+    "norris-mcl39-spielberg-2025": {
+      "arquivo_commons": "File:FIA F1 Austria 2025 Nr. 4 Norris.jpg",
+      "legenda": {
+        "pt": "Lando Norris no McLaren MCL39 nº 4 na sexta-feira do GP da Áustria de 2025, em Spielberg. Norris venceu a corrida no domingo e conquistou o Mundial de Pilotos com o MCL39 em Abu Dhabi.",
+        "en": "Lando Norris in the No. 4 McLaren MCL39 on Friday at the 2025 Austrian Grand Prix in Spielberg. Norris won the race on Sunday and clinched the Drivers’ Championship with the MCL39 in Abu Dhabi."
+      },
+      "pilotos": [
+        "lando-norris"
+      ],
+      "gps": [
+        "2025:11"
+      ],
+      "artefatos_gps": [
+        "2025:24"
+      ],
+      "modelo": "mclaren-mcl39",
+      "temporadas": [
+        2025
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2025_Nr._4_Norris.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/de/FIA_F1_Austria_2025_Nr._4_Norris.jpg",
+      "autor": "Lukas Raich",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "09bad12daeefed8ce187409315414b4bf7ff1780561359ae57625a0bd2d6cf8a",
+      "largura": 4956,
+      "altura": 2788,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "81f1e0d8ecdab7ab3e5647d2b4f8635264139c222577051bb63b7c4ef441eb15"
+        },
+        {
+          "arquivo": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "6ac49c44dfd153c56a30114b9bcfbc5e03204199ec8bb54beb7e5df00f1ca201"
+        }
+      ]
     }
   },
   "referencias_fotograficas": {
