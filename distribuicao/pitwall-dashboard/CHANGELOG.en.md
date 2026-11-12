@@ -44,6 +44,8 @@ A trackside photograph from the September 1950 issue of Via! shows the Italian G
 
 A photograph by Corrado Millanta shows spectators waiting for the start at Pedralbes, where Juan Manuel Fangio won his first Drivers’ Championship at the 1951 Spanish Grand Prix. The 2,400 × 1,340 px public-domain crop appears in Fangio’s Hall of Fame profile and Historic moments.
 
+The archive adds links to source photographs for four milestones. They cover the East London race that clinched the 1962 titles for Graham Hill and BRM, Jackie Stewart’s 1965 debut at the same circuit, François Cevert’s finish at Monza where Tyrrell clinched the 1971 title, and Kimi Räikkönen’s first win at Sepang in 2003.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

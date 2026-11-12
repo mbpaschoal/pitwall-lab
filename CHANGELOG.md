@@ -44,6 +44,8 @@ Uma foto de pista da revista Via! de setembro de 1950 registra o GP da Itália e
 
 Uma foto de Corrado Millanta mostra o público à espera da largada em Pedralbes, no GP da Espanha em que Juan Manuel Fangio conquistou seu primeiro Mundial em 1951. O recorte em domínio público mede 2.400 × 1.340 px e aparece no Hall de Fangio e em Momentos históricos.
 
+O acervo ganha referências aos arquivos de origem para quatro marcos. Elas levam às fotos dos títulos de Graham Hill e da BRM em East London em 1962, da estreia de Jackie Stewart na mesma pista em 1965, da chegada de François Cevert em Monza no GP do título da Tyrrell em 1971 e da primeira vitória de Kimi Räikkönen em Sepang em 2003.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
