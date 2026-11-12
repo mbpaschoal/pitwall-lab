@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "a2462873e3cc42660f67515202b56458c117051a735c383dadddf227886cc578",
+  "apresentacao_build_sha256": "06613518a03598e3a4e22a1476610eefbf92401badd724397a7cbe578f9f4367",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "484dc0ead4c8deabd9671619021fb221f9882feaa5fc5e592f78e3351bacfd4f",
+      "sha256_destino": "51eac387fc13f015199c8e5e6d823d76652b8b8c4111c38b3181459571aab856",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "8609ff94aa593104006b15fade4f1837e3ccbbeed5f577693858a357f16a319d",
-      "sha256_origem": "e7c96e9f4fb86321a95d81bbf099f5d0edf0b926ae04f6bf3f9c21ae9cbbe3e7"
+      "sha256_destino": "2db61028811524f945796d2fe16554bf00e11fd2dccd082e497d517a777af43c",
+      "sha256_origem": "42b0af07c7def1e90699213847aa0897cad7f49b787f7c0723c27d68b845dd38"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "859fa46758880e73729dc5b653bf55a6fe2a8f285486a1488800c39a60310864",
-      "sha256_origem": "688c300edc98951762a530da8c2e240bc62c61294ba2660fa64ae26e2dc884f3"
+      "sha256_destino": "403f4516020f6769f912ddaefb2a6984b916afa72275a75accbb0af2f83d8098",
+      "sha256_origem": "912570d32b7b3245355cc3ba3db389327af2af593f837409998f2db3d925cf78"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "22ff7006feabd51df686a3c086bc2db53a319adccac420f51bbe5d7501eedad0",
-      "sha256_origem": "22ff7006feabd51df686a3c086bc2db53a319adccac420f51bbe5d7501eedad0"
+      "sha256_destino": "50d8d08698faabcaa9616167eb6562bbde4f510345af91dababe52d05f70700f",
+      "sha256_origem": "50d8d08698faabcaa9616167eb6562bbde4f510345af91dababe52d05f70700f"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -5338,6 +5338,34 @@
       "modo": "copia",
       "sha256_destino": "9958d7ed992035714543b64e864b6eb6c9c5f50f09f91b1dfe432a1989b51323",
       "sha256_origem": "9958d7ed992035714543b64e864b6eb6c9c5f50f09f91b1dfe432a1989b51323"
+    },
+    {
+      "caminho": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-2400.webp",
+      "fonte": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c0fdb169a02419424215430130a89aea36f22c38cb0a74531d74e6bd00dc0f10",
+      "sha256_origem": "c0fdb169a02419424215430130a89aea36f22c38cb0a74531d74e6bd00dc0f10"
+    },
+    {
+      "caminho": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-960.webp",
+      "fonte": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-960.webp",
+      "modo": "copia",
+      "sha256_destino": "80114caeeef2dfdbf89520077bb88919782e48989c029f95c794f48720a9b8da",
+      "sha256_origem": "80114caeeef2dfdbf89520077bb88919782e48989c029f95c794f48720a9b8da"
+    },
+    {
+      "caminho": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-2400.webp",
+      "fonte": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "77f398d1261b44c43600a07d180043e6dc72af65145b1b9a4379bc415ed74682",
+      "sha256_origem": "77f398d1261b44c43600a07d180043e6dc72af65145b1b9a4379bc415ed74682"
+    },
+    {
+      "caminho": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-960.webp",
+      "fonte": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-960.webp",
+      "modo": "copia",
+      "sha256_destino": "244bba162e62cdef570442fb66eacd42b1df87ed57007f42378a2ff583634b60",
+      "sha256_origem": "244bba162e62cdef570442fb66eacd42b1df87ed57007f42378a2ff583634b60"
     },
     {
       "caminho": "static/pitwall-archive/hungaroring-podio-apos-cerimonia-2002-07f41f91ed55-1357.webp",

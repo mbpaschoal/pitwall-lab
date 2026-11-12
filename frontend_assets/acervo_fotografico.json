@@ -12548,6 +12548,89 @@
           "sha256": "d680139c789db2d9d1c8a4dcd1780c59631f80756331780abaada58246981a59"
         }
       ]
+    },
+    "hungaroring-1986-podio-fortepan": {
+      "legenda": {
+        "pt": "Nelson Piquet no degrau mais alto do pódio do primeiro GP da Hungria de Fórmula 1, em 10 de agosto de 1986. Ayrton Senna foi o segundo, à esquerda, e Nigel Mansell foi o terceiro, à direita.",
+        "en": "Nelson Piquet on the top step of the podium at the first Formula One Hungarian Grand Prix on 10 August 1986. Ayrton Senna finished second, on the left, and Nigel Mansell finished third, on the right."
+      },
+      "pilotos": [
+        "nelson-piquet",
+        "ayrton-senna",
+        "nigel-mansell"
+      ],
+      "equipes": [
+        "williams",
+        "lotus"
+      ],
+      "autor": "Fortepan / Glósz András (268542)",
+      "gps": [
+        "1986:11"
+      ],
+      "fonte": "https://fortepan.hu/en/photos/?id=268542",
+      "original": "https://fortepan.download/file/fortepan-eu/download/fortepan_268542.jpg",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "1dfae204ed812106c0755dd74a7c2ef91f531558e7d48dd329164c73ee188f14",
+      "largura": 8470,
+      "altura": 5662,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-960.webp",
+          "largura": 960,
+          "altura": 642,
+          "sha256": "244bba162e62cdef570442fb66eacd42b1df87ed57007f42378a2ff583634b60"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-2400.webp",
+          "largura": 2400,
+          "altura": 1604,
+          "sha256": "77f398d1261b44c43600a07d180043e6dc72af65145b1b9a4379bc415ed74682"
+        }
+      ]
+    },
+    "hungaroring-1986-piquet-fw11-fortepan": {
+      "legenda": {
+        "pt": "Nelson Piquet no Williams FW11-Honda nº 6, à frente de Derek Warwick no Brabham-BMW, no primeiro GP da Hungria de Fórmula 1. Piquet venceu a prova de 10 de agosto de 1986.",
+        "en": "Nelson Piquet in the No. 6 Williams FW11-Honda, ahead of Derek Warwick in the Brabham-BMW, at the first Formula One Hungarian Grand Prix. Piquet won the 10 August 1986 race."
+      },
+      "pilotos": [
+        "nelson-piquet"
+      ],
+      "equipes": [
+        "williams",
+        "brabham"
+      ],
+      "construtor": "williams",
+      "modelo": "williams-fw11",
+      "temporadas": [
+        1986
+      ],
+      "autor": "Fortepan / Urbán Tamás (125416)",
+      "gps": [
+        "1986:11"
+      ],
+      "fonte": "https://fortepan.hu/en/photos/?id=125416",
+      "original": "https://fortepan.download/file/fortepan-eu/download/fortepan_125416.jpg",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "387b97ec0459ccc083f3ed521c612c9d352b83c19d069a9e6701810b436b14e8",
+      "largura": 3359,
+      "altura": 2031,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-960.webp",
+          "largura": 960,
+          "altura": 580,
+          "sha256": "80114caeeef2dfdbf89520077bb88919782e48989c029f95c794f48720a9b8da"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-2400.webp",
+          "largura": 2400,
+          "altura": 1451,
+          "sha256": "c0fdb169a02419424215430130a89aea36f22c38cb0a74531d74e6bd00dc0f10"
+        }
+      ]
     }
   },
   "referencias_fotograficas": {

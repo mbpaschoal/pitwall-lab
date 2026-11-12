@@ -22,6 +22,8 @@ A colour photograph of the 1961 Monza grid documents the Grand Prix where Phil H
 
 The Publifoto photograph of George VI and the Alfa Romeo drivers at Silverstone joins Historic moments and the team gallery. The 2,560 × 1,440 px photograph shows the first World Championship Grand Prix in 1950 and was published in Pirelli magazine that year.
 
+Two Fortepan photographs document the first Formula One Hungarian Grand Prix in 1986. The original photograph of Nelson Piquet, Ayrton Senna and Nigel Mansell on the podium measures 8,470 × 5,662 px. The photograph of Piquet in the Williams FW11 measures 3,359 × 2,031 px. Both carry a credit and a CC BY-SA 3.0 license.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
