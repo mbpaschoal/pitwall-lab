@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "644284fd8941e782529536fab1073cb4f79aaf599ccf69943a6f91eab6100bef",
+  "apresentacao_build_sha256": "96c7bedc2da4c8096aeb81f21f20a63200bd48f27ff455985c3a0d1a346c99dd",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "7ad16193d819bab9e15a8d8d1484374d7015cc475ed68c53b87d6f4e5ab2ef79",
+      "sha256_destino": "325401a7cf23a6d8fc46a33f78606bba246dd62a67a2c32f5cc94881eb32625f",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "7bd747adf201b1c70208ecc119dccf8fd105b3e1ab0935e8d44a969c3e98834a",
-      "sha256_origem": "127cba1ab6bf2bca664ab7465d71de2df2d4911b79dd76343aa22183a5fb9b13"
+      "sha256_destino": "dac59c67c79e6e80c96361bda848c100d081d888ff4af3bf53c53729e4c4b9af",
+      "sha256_origem": "4c192f402373c125d7779008c62e84dc322fc4a201399a708a433f15b4d2d034"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "36bc6d8689f3767e42bc0c28ff927a0e72ee32dd9361a77b7e4bb495336bcbd1",
-      "sha256_origem": "388c8da5657a5e89bd6412091ad855b0a8a2af18cf9eceea357110b62709dce8"
+      "sha256_destino": "f3d80610d4184b9ad97982ce616b4c8001b29590258c12525ba6dbe0fe27f583",
+      "sha256_origem": "5b7e6495f8ca8af389a9ad8bee56b29ce92bb62a94e7d044eb55e0a7e24b4804"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "81a76ce555f3689b675499c7d20c10a6af5917b9784010651871b0e6be129223",
-      "sha256_origem": "81a76ce555f3689b675499c7d20c10a6af5917b9784010651871b0e6be129223"
+      "sha256_destino": "80b58e5d529b2ba3cfb4962543d696b8f4640a56131c30fb4e6146b7c805a0c6",
+      "sha256_origem": "80b58e5d529b2ba3cfb4962543d696b8f4640a56131c30fb4e6146b7c805a0c6"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6612,6 +6612,20 @@
       "modo": "copia",
       "sha256_destino": "86b4b3b41ce31849795f82160d2ddbc3e167667740182ec4d3e1a7e781ef94c6",
       "sha256_origem": "86b4b3b41ce31849795f82160d2ddbc3e167667740182ec4d3e1a7e781ef94c6"
+    },
+    {
+      "caminho": "static/pitwall-archive/monaco-1996-aquecimento-villeneuve-3027740244b3-2400.webp",
+      "fonte": "static/pitwall-archive/monaco-1996-aquecimento-villeneuve-3027740244b3-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "92276a47ad35020e8f8db6b46661a83781b26ee860aef8e6a0e0235378699fe4",
+      "sha256_origem": "92276a47ad35020e8f8db6b46661a83781b26ee860aef8e6a0e0235378699fe4"
+    },
+    {
+      "caminho": "static/pitwall-archive/monaco-1996-aquecimento-villeneuve-3027740244b3-960.webp",
+      "fonte": "static/pitwall-archive/monaco-1996-aquecimento-villeneuve-3027740244b3-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e69342814e00412fab9cd1f3bf285c8eac0b5d0ae1e65396a789d0ff92827967",
+      "sha256_origem": "e69342814e00412fab9cd1f3bf285c8eac0b5d0ae1e65396a789d0ff92827967"
     },
     {
       "caminho": "static/pitwall-archive/monza-1966-64edb08bc792-2400.webp",

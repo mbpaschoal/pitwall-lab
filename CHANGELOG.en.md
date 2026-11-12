@@ -46,6 +46,8 @@ A photograph by Corrado Millanta shows spectators waiting for the start at Pedra
 
 The archive adds links to source photographs for four milestones. They cover the East London race that clinched the 1962 titles for Graham Hill and BRM, Jackie Stewart’s 1965 debut at the same circuit, François Cevert’s finish at Monza where Tyrrell clinched the 1971 title, and Kimi Räikkönen’s first win at Sepang in 2003.
 
+A 3,512 × 2,376 px CC BY 2.0 photograph by Steve Gregory shows Jacques Villeneuve in the Williams FW18 and Mika Häkkinen in the McLaren during warm-up at Monaco in 1996. The archive also links to photographs of Villeneuve’s Melbourne debut, his first win at the Nürburgring, Damon Hill’s title at Suzuka and the 1997 Jerez podium.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

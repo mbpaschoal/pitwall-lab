@@ -46,6 +46,8 @@ Uma foto de Corrado Millanta mostra o público à espera da largada em Pedralbes
 
 O acervo ganha referências aos arquivos de origem para quatro marcos. Elas levam às fotos dos títulos de Graham Hill e da BRM em East London em 1962, da estreia de Jackie Stewart na mesma pista em 1965, da chegada de François Cevert em Monza no GP do título da Tyrrell em 1971 e da primeira vitória de Kimi Räikkönen em Sepang em 2003.
 
+Uma foto de Steve Gregory com 3.512 × 2.376 px e licença CC BY 2.0 mostra Jacques Villeneuve no Williams FW18 e Mika Häkkinen no McLaren durante o aquecimento de Mônaco em 1996. O acervo também ganha links para os registros de origem da estreia de Villeneuve em Melbourne, da primeira vitória em Nürburgring, do título de Damon Hill em Suzuka e do pódio decisivo de Jerez em 1997.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
