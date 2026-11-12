@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "55b928c90427dac8f9678e5df44c69fdce15b9e073a56c25109a8490cef62ecf",
+  "apresentacao_build_sha256": "57c125e2e20d7d4dd846bc9c856598cf034d84a377ccacb087dff56005c444e7",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "a478bb4a80d6df5ea3dd8315f5427faddc207be64e7e611c4654181ab7b697d9",
+      "sha256_destino": "f099524dffac4b4d247b0c0d5ae473f9c53cd9cc47403349e320be8e2f6df25f",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "e9390e1f0d269a71a987194ba63e3eb99767b584d2dff975fea9afb4ccc8bee4",
-      "sha256_origem": "3e3cea1464f828e9fe1700f12e41bffe36197505e7fcc0b37e6207970d6cab18"
+      "sha256_destino": "d2de13b90f14e39eab7f35155ba1217c014f023f58b83b1f214f3c011987b18e",
+      "sha256_origem": "218ed8808536412c517d386b27b208a6a03697bb1ac0ac8b429d5353c474a220"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "0f0ba91d258db637699999dfec4d82a28ea1274303365ff4bd43182340e0e960",
-      "sha256_origem": "217f74bebb91b596fc2df3808244448479f5267d2bf1180ac6a338f417455cc1"
+      "sha256_destino": "015f22704878c00adbf03bdbae3b7a1c44391810b64cadb0585f9d640267eed4",
+      "sha256_origem": "ee196555b0ad6ca5cf4eb1413198dd7bd3f009c137a2786ad3dc1fcede96e26a"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "d818a36217c75f6b11fcf5546a5499913adbba7c88605d17ee0993fda00179ab",
-      "sha256_origem": "d818a36217c75f6b11fcf5546a5499913adbba7c88605d17ee0993fda00179ab"
+      "sha256_destino": "457a2f7b72ea19f795c302c6125840bb6ea04bce57092afdea4a4887f4f1808e",
+      "sha256_origem": "457a2f7b72ea19f795c302c6125840bb6ea04bce57092afdea4a4887f4f1808e"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4246,6 +4246,20 @@
       "modo": "copia",
       "sha256_destino": "5e9adabd4ef599d5fda343a86504558cdc64fa51af39b4776e878a2ff396e5ec",
       "sha256_origem": "5e9adabd4ef599d5fda343a86504558cdc64fa51af39b4776e878a2ff396e5ec"
+    },
+    {
+      "caminho": "static/pitwall-archive/daly-ensign-mn08-brands-hatch-1978-3a898ae0bd90-2400.webp",
+      "fonte": "static/pitwall-archive/daly-ensign-mn08-brands-hatch-1978-3a898ae0bd90-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7c5110382dd1ff030c19faf2fb0c39ca7a803ce475e35ff0a60803d64da5a9fd",
+      "sha256_origem": "7c5110382dd1ff030c19faf2fb0c39ca7a803ce475e35ff0a60803d64da5a9fd"
+    },
+    {
+      "caminho": "static/pitwall-archive/daly-ensign-mn08-brands-hatch-1978-3a898ae0bd90-960.webp",
+      "fonte": "static/pitwall-archive/daly-ensign-mn08-brands-hatch-1978-3a898ae0bd90-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a02cfc926be7dbbc1aa5d2e51d7f25c588810d9a4604c042f0952df034d6720d",
+      "sha256_origem": "a02cfc926be7dbbc1aa5d2e51d7f25c588810d9a4604c042f0952df034d6720d"
     },
     {
       "caminho": "static/pitwall-archive/damon-hill-retrato-99042871cb88-2400.webp",

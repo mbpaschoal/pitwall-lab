@@ -56,6 +56,8 @@ Uma fotografia de Harry Pot em CC0, com 3.496 × 2.800 px, mostra Stirling Moss,
 
 Uma fotografia de Harry Pot em CC0 mostra Alberto Ascari à frente do pelotão em Zandvoort em 1953. O recorte de 3.210 × 1.685 px, feito a partir do negativo digitalizado pelo Nationaal Archief, entra na galeria da Ferrari e no acervo do GP dos Países Baixos. Também ilustra o modelo Ferrari 500 na ficha da primeira vitória de Hawthorn em Reims.
 
+Uma foto de Martin Lee de 2.528 × 1.471 px, sob CC BY-SA 2.0, mostra Derek Daly em Brands Hatch em 1978 no Ensign N177 de chassi MN08. O mesmo carro marcou a estreia de Nelson Piquet duas semanas depois, em Hockenheim. A foto aparece entre as peças de acervo da estreia no Hall da Fama e em Momentos históricos.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
