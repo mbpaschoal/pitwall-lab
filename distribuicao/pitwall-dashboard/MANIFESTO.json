@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "6329c9fddf335621d7eaf16d67bbefb8cbe27fe38f2a5299330814e69a7b17fc",
+  "apresentacao_build_sha256": "8860e2a5d7ac713eb190888b06cc0cdf5ed8592891fecd61d2de4b66b62c4f18",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "4edee26b832a9b62f20010e47651bc9d3f4500cefd0749f4878f562b2875d69e",
+      "sha256_destino": "3f5d71ad001e529937c680ffc1cfc6571f51d04c6285b2168cff88add2507cfa",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "0e7ea39f91b92ecd1b53f82ae0d4e084931498b129debd018439df7868eddf92",
-      "sha256_origem": "0e7ea39f91b92ecd1b53f82ae0d4e084931498b129debd018439df7868eddf92"
+      "sha256_destino": "ebe9f0e67336304150be9128531539ced044ab095b1ac9f2a4a3809f0598cd3d",
+      "sha256_origem": "ebe9f0e67336304150be9128531539ced044ab095b1ac9f2a4a3809f0598cd3d"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6808,6 +6808,20 @@
       "modo": "copia",
       "sha256_destino": "a47c30088988b92f1e95c15a341800543af990c104e2ae77bf6da810d1c0a284",
       "sha256_origem": "a47c30088988b92f1e95c15a341800543af990c104e2ae77bf6da810d1c0a284"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-mcl38-zandvoort-2024-989f1d9d03b0-2400.webp",
+      "fonte": "static/pitwall-archive/norris-mcl38-zandvoort-2024-989f1d9d03b0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "de3f16424a55fe873ee6784b1fde36d8425f58990409570eb61fbe669c6acd0a",
+      "sha256_origem": "de3f16424a55fe873ee6784b1fde36d8425f58990409570eb61fbe669c6acd0a"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-mcl38-zandvoort-2024-989f1d9d03b0-960.webp",
+      "fonte": "static/pitwall-archive/norris-mcl38-zandvoort-2024-989f1d9d03b0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6f3eed883bc3ff63870d0626623450a27c4bd5059f6c9355d41c02dba74a864c",
+      "sha256_origem": "6f3eed883bc3ff63870d0626623450a27c4bd5059f6c9355d41c02dba74a864c"
     },
     {
       "caminho": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-2400.webp",
