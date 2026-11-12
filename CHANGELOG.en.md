@@ -52,6 +52,8 @@ Alfa Romeo’s gallery opens with its drivers meeting George VI at the first Wor
 
 A photograph of Benetton B192 chassis 05 at Rétromobile 2016 shows the car Michael Schumacher drove to his first win at Spa in 1992. The original by Thesupermat measures 5,472 × 3,648 px and is licensed under CC BY-SA 4.0. It appears in Schumacher’s Hall of Fame profile, the Benetton gallery and the collection for the 1992 Belgian Grand Prix.
 
+A 3,496 × 2,800 px CC0 photograph by Harry Pot shows Stirling Moss, Stuart Lewis-Evans and Tony Brooks at Zandvoort in 1958. The Vanwall gallery features the photograph, which also illustrates Monza and Casablanca, where the VW5 Lewis-Evans is pictured driving won with Brooks and Moss, respectively.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

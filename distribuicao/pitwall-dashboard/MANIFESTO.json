@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "52d6dd7a2302128a6b90d0f476909c0fa35f27c76e78d42280d79736bf1c813d",
+  "apresentacao_build_sha256": "87c03466556b196714a1a7bde2d7cd3d8df8f6f0f84808aea1cd4473472b1661",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "22a4f2ac515eacfee3dfe79f28e8d261cf8a9d1a17307d1f94ba8665fb303b24",
+      "sha256_destino": "23182c7daa58968f5410a7aa04ae2ca6c0a5b797b65d0cbb1cd2b506b34e2a5c",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "abeba6d397be237ff1dcc11c7a3b81c2118251b56b8b9a8989941ac6121be419",
-      "sha256_origem": "21a6fff5c159ca947e5e74e581d399f7327b363cd8f6b4e7a42b490e211da677"
+      "sha256_destino": "4a1402a69be0197bd3cc8d6ca8eac81d864a31540213a9f23ee9092a0896e266",
+      "sha256_origem": "8607cfb2ff226efa9ab8ba806b3d57d90d9ff9d480f67bafd3f1ba9fa39bda62"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "d58173471d2aeb1ab8c4e1c1e5884b96a29c9c10bc26763d37c34d616b3b2618",
-      "sha256_origem": "7ffe357cfe231a93d78560ad2a8a83f2d7b135bcbb4c7b2f77cd080983466bce"
+      "sha256_destino": "f57dc98f5d25dae3609804e394aeec6d8146d2c5bdff11474904d1262733acc8",
+      "sha256_origem": "7fc05d6c5ad201c429aa2c38c1f6e21f62ada0c728d43393b748d93fe7622f92"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "338f694ad34d7a6d770c25d995af643dc3927a522833f69b175be31b7d382f3d",
-      "sha256_origem": "338f694ad34d7a6d770c25d995af643dc3927a522833f69b175be31b7d382f3d"
+      "sha256_destino": "625ba1f6e253f4a01341772e3f37755285dc180e58ed9ece67385eb01965cf0e",
+      "sha256_origem": "625ba1f6e253f4a01341772e3f37755285dc180e58ed9ece67385eb01965cf0e"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -8194,6 +8194,20 @@
       "modo": "copia",
       "sha256_destino": "d7e8dc64629431c19942ca5a7ce92b9c6ccd622544d8a43c9cd81d189edf6b9c",
       "sha256_origem": "d7e8dc64629431c19942ca5a7ce92b9c6ccd622544d8a43c9cd81d189edf6b9c"
+    },
+    {
+      "caminho": "static/pitwall-archive/vanwall-trio-zandvoort-1958-dc7ee2730785-2400.webp",
+      "fonte": "static/pitwall-archive/vanwall-trio-zandvoort-1958-dc7ee2730785-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "63a0948accdd443c3f52218a942266d7796eb09032e7e8c135bfc4c717ff0aa3",
+      "sha256_origem": "63a0948accdd443c3f52218a942266d7796eb09032e7e8c135bfc4c717ff0aa3"
+    },
+    {
+      "caminho": "static/pitwall-archive/vanwall-trio-zandvoort-1958-dc7ee2730785-960.webp",
+      "fonte": "static/pitwall-archive/vanwall-trio-zandvoort-1958-dc7ee2730785-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e3d80e313bd5abb75eaa84a93cfde25e9778ae67279406ef8424ade92c4b383e",
+      "sha256_origem": "e3d80e313bd5abb75eaa84a93cfde25e9778ae67279406ef8424ade92c4b383e"
     },
     {
       "caminho": "static/pitwall-archive/vanwall-vw-5-bcd542a2c842-2400.webp",

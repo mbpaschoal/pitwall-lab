@@ -52,6 +52,8 @@ A galeria da Alfa Romeo abre com seus pilotos recebidos por George VI no primeir
 
 A foto do Benetton B192 de chassi 05 no Rétromobile de 2016 mostra o carro da primeira vitória de Michael Schumacher em Spa, em 1992. O original de Thesupermat, em CC BY-SA 4.0, mede 5.472 × 3.648 px. A imagem entra no Hall de Schumacher, na galeria da Benetton e nas peças de acervo do GP da Bélgica de 1992.
 
+Uma fotografia de Harry Pot em CC0, com 3.496 × 2.800 px, mostra Stirling Moss, Stuart Lewis-Evans e Tony Brooks em Zandvoort em 1958. A imagem entra na galeria da Vanwall e nas peças de acervo de Monza e Casablanca, onde o VW5 de Lewis-Evans na foto venceu com Brooks e Moss, respectivamente.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
