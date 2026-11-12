@@ -76,6 +76,8 @@ Momentos históricos inclui um link para a fotografia de Stirling Moss no Vanwal
 
 Momentos históricos também vincula a fotografia de Mario Andretti no Lotus 79 em Monza, no GP do título de 1978, ao relato de época da Motor Sport.
 
+No GP da Alemanha de 1957, Momentos históricos passa a oferecer um link para a foto de Willy Pragher da saída de Fangio dos boxes. A digitalização de 1.684 × 1.125 px está disponível sob licença aberta na Biblioteca Digital Alemã.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

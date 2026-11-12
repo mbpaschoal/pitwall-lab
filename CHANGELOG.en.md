@@ -76,6 +76,8 @@ Historic moments links to the period photograph of Stirling Moss in Vanwall no. 
 
 Historic moments also links to the photograph of Mario Andretti in the Lotus 79 at his 1978 Monza title decider in the contemporary Motor Sport report.
 
+For the 1957 German Grand Prix, Historic moments links to Willy Pragher’s photograph of Fangio leaving the pits. The openly licensed 1,684 × 1,125 px scan is available from the German Digital Library.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
