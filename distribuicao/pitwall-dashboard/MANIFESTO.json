@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "f09222c66388d56c05057a4728817c8ac2583843731a268663693f32b2717ad8",
+  "apresentacao_build_sha256": "59c105bb7f6146c08c7885f682e1d2fa393e322d88edb47e493e0d6c4025b439",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "60168474a52baba6a3059fed1c9dd393a137c02332c9aca82b80075935dea0d6",
+      "sha256_destino": "beb66e8fd0cc05ffaab3b92772b9603c05c4a0a111b8c672e8d59457d143339a",
       "sha256_origem": null
     },
     {
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "1567b58cb03b3db31c64991494523fbbdb8965f160e52d96c3f3aef4d66d99ac",
-      "sha256_origem": "1567b58cb03b3db31c64991494523fbbdb8965f160e52d96c3f3aef4d66d99ac"
+      "sha256_destino": "32fb5fa93b0d49d90bd3de3edb2df147eba3fd2ca8405f9f3286e14a11ef3167",
+      "sha256_origem": "32fb5fa93b0d49d90bd3de3edb2df147eba3fd2ca8405f9f3286e14a11ef3167"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -2984,8 +2984,8 @@
       "caminho": "pitwall/dashboard/photo_archive.py",
       "fonte": "pitwall/dashboard/photo_archive.py",
       "modo": "copia",
-      "sha256_destino": "84872cce5bdf3362e51203f8dad411675ced310091d3d2c29ca5075994c52a18",
-      "sha256_origem": "84872cce5bdf3362e51203f8dad411675ced310091d3d2c29ca5075994c52a18"
+      "sha256_destino": "e50e0f21db4256502ad19ecc1f096aebd5e45d4bb4566205c19ff2837a0c7982",
+      "sha256_origem": "e50e0f21db4256502ad19ecc1f096aebd5e45d4bb4566205c19ff2837a0c7982"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
@@ -3658,6 +3658,20 @@
       "modo": "copia",
       "sha256_destino": "06be4ae1dcceba8b51c2d8c9de0daec16c18d0b19103a46f29019b8abb2fc5c6",
       "sha256_origem": "06be4ae1dcceba8b51c2d8c9de0daec16c18d0b19103a46f29019b8abb2fc5c6"
+    },
+    {
+      "caminho": "static/pitwall-archive/antonelli-w17-zandvoort-2026-993ee0f7a1ca-2400.webp",
+      "fonte": "static/pitwall-archive/antonelli-w17-zandvoort-2026-993ee0f7a1ca-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "16a320505740b1a36e31ab3c4fb3bd6c5456111656f4377b909b55933a9eb1a1",
+      "sha256_origem": "16a320505740b1a36e31ab3c4fb3bd6c5456111656f4377b909b55933a9eb1a1"
+    },
+    {
+      "caminho": "static/pitwall-archive/antonelli-w17-zandvoort-2026-993ee0f7a1ca-960.webp",
+      "fonte": "static/pitwall-archive/antonelli-w17-zandvoort-2026-993ee0f7a1ca-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c8b468b495c7dbbf53e8d0d3ad4ea316990c73640f023b0c85d15d45ec66c72f",
+      "sha256_origem": "c8b468b495c7dbbf53e8d0d3ad4ea316990c73640f023b0c85d15d45ec66c72f"
     },
     {
       "caminho": "static/pitwall-archive/antonelli-xangai-2026-9db3ef47746a-2400.webp",
@@ -6416,6 +6430,20 @@
       "modo": "copia",
       "sha256_destino": "305626a39fbf5221175ad5764577e07e89f64d71ef26c2f07d9c635800b10531",
       "sha256_origem": "305626a39fbf5221175ad5764577e07e89f64d71ef26c2f07d9c635800b10531"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-dupla-zandvoort-2026-ee6670c6ebf6-2400.webp",
+      "fonte": "static/pitwall-archive/mercedes-dupla-zandvoort-2026-ee6670c6ebf6-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b138fb7433eec552156167328c76c01cc6998ef53ee6803810bf2430013840ba",
+      "sha256_origem": "b138fb7433eec552156167328c76c01cc6998ef53ee6803810bf2430013840ba"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-dupla-zandvoort-2026-ee6670c6ebf6-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-dupla-zandvoort-2026-ee6670c6ebf6-960.webp",
+      "modo": "copia",
+      "sha256_destino": "002a26f75460818c24946d715b0ff1706c2192786855457617153aadb438457a",
+      "sha256_origem": "002a26f75460818c24946d715b0ff1706c2192786855457617153aadb438457a"
     },
     {
       "caminho": "static/pitwall-archive/mercedes-f1-w05-cf3235c646e9-1920.webp",

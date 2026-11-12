@@ -168,6 +168,7 @@ class LinkContextTests(unittest.TestCase):
 
     def test_hall_covers_each_championship_and_preserves_historical_credits(self):
         from pitwall.dashboard.hall_views import load
+        from pitwall.dashboard.photo_archive import driver_photos
 
         snapshot = load(ROOT)
         champions = snapshot["pilotos"]
@@ -181,6 +182,11 @@ class LinkContextTests(unittest.TestCase):
         antonelli = champions["kimi-antonelli"]["titulos"][0]
         self.assertEqual(antonelli["decisao"]["rodada"], 19)
         self.assertEqual(snapshot["corte"], "2026-11-08")
+        for driver, profile in champions.items():
+            with self.subTest(driver=driver):
+                portraits, cars, moments, artifacts, _ = driver_photos(ROOT, driver, profile)
+                photos = [key for key, _ in portraits + cars + moments + artifacts]
+                self.assertEqual(len(photos), len(set(photos)))
 
     def test_hall_directory_selection_and_language_preserve_gp_and_champion(self):
         app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=45)
