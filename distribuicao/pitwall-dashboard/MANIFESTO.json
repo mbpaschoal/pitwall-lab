@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "d0e8c156d56885a9f2a39ca60749e98293b0e20f5efe56004965fb7891f3d061",
+  "apresentacao_build_sha256": "cd769edf72de15e8808dc96fc027bef857bfcbbeae52d30dcb84a1430e905745",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "9da8ad20fde83bccd0eab33d170ba960844c1eabcaa1053d68c0382a3f012ad8",
+      "sha256_destino": "55e3d1b68895fc9d4cd1a3f3095020b02d1d3a3ef5e8ae9e9b99e6e3f4d7ddea",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "aa39c6bb7a75705009b47101b1e69fb59718544cbc5c3eb93f1377d0cd4b33b1",
-      "sha256_origem": "0e25b36dfb5b498066248dbe735c5df39235fe5bc9205dc969b8acc07e51bbb3"
+      "sha256_destino": "3f91fa6aa8189f25c2f32c4e5592d8a8f249913aab66d26a561b715dc586e068",
+      "sha256_origem": "0e3cf87d6f3ddf44e17f8389b7048a5d5ac2fbc5b52037d302d1b1a80b199d78"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "e64436bfb28307d7cb0771f3679b9e617b4e67d45b641de78bfa4ac2377f8ea4",
-      "sha256_origem": "ad0dad12486d284d8c00dd05f8f10c79b5be571de9e2e3efca4261cfe7585026"
+      "sha256_destino": "801500beca751be76483720e93ab805e605fb41ab0ffa1e00fdbc3326f442ef1",
+      "sha256_origem": "d8cee86b59e4a6ece91ea252835e239691e2f0cb38e9a873faec7cc6dcc1085b"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "5fac4b7cd4ee4d74dafe1fe588848dd773da662f68bac8142d712c43ffd1c15e",
-      "sha256_origem": "5fac4b7cd4ee4d74dafe1fe588848dd773da662f68bac8142d712c43ffd1c15e"
+      "sha256_destino": "14f1de93a3b8cdfa564d09daa238156cc3f97a660749971622cf58f632531a46",
+      "sha256_origem": "14f1de93a3b8cdfa564d09daa238156cc3f97a660749971622cf58f632531a46"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4666,6 +4666,20 @@
       "modo": "copia",
       "sha256_destino": "434e273e3a7b8d9c4308dc5597b6957ceeea9a7ba338c3f468e83d4ce07fdcdf",
       "sha256_origem": "434e273e3a7b8d9c4308dc5597b6957ceeea9a7ba338c3f468e83d4ce07fdcdf"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ee08a04aa350397660d717d04c183967f52f0e287ce1ee068266e10bfe438a3b",
+      "sha256_origem": "ee08a04aa350397660d717d04c183967f52f0e287ce1ee068266e10bfe438a3b"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1716f13d6dedf03bbef5a57b9e5328d3eb4120068c82521e20d82ff9b8b53bdc",
+      "sha256_origem": "1716f13d6dedf03bbef5a57b9e5328d3eb4120068c82521e20d82ff9b8b53bdc"
     },
     {
       "caminho": "static/pitwall-archive/ferrari-312b3-74-51cbf583c301-2400.webp",

@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+The Ferrari gallery adds a photo of MAUTO’s restored 1960 246 F1. Marie-Lan Taÿ Pamart photographed the car in Turin in 2026 at 7,884 × 5,259 px under CC BY 4.0. The Modena photo caption identifies the 246/60 bodywork on chassis 0011.
+
 The Ferrari gallery adds a bodywork detail of 312 T4 chassis 037-R, rebuilt by the factory for Ferdinando Bonomi. Matt Brunner photographed the car at Laguna Seca in 2016. The 6,000 × 4,000 px original is licensed CC BY-SA 2.0.
 
 The McLaren and Mercedes galleries gain two CC BY-SA 4.0 photographs. The first shows Norris and Piastri on the Shanghai grid in 2024 at 5,373 × 3,022 px. The second shows Russell and Antonelli on the podium after their one-two finish in Melbourne in 2026 at 5,585 × 3,723 px. The team profiles and photo archive display bilingual captions, credits, and links to the originals.

@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+A galeria da Ferrari ganha uma foto do 246 F1 de 1960 restaurado pelo MAUTO. Marie-Lan Taÿ Pamart fotografou o exemplar em Turim, em 2026, em 7.884 × 5.259 px sob CC BY 4.0. A legenda da foto de Módena identifica a carroceria do chassi 0011 na configuração 246/60.
+
 A galeria da Ferrari ganha um detalhe da carroceria do 312 T4 de chassi 037-R, reconstruído pela fábrica para Ferdinando Bonomi. Matt Brunner fotografou o exemplar em Laguna Seca, em 2016. O original de 6.000 × 4.000 px tem licença CC BY-SA 2.0.
 
 As galerias da McLaren e da Mercedes ganham duas fotos CC BY-SA 4.0. A primeira mostra Norris e Piastri no grid de Xangai em 2024, em 5.373 × 3.022 px. A segunda mostra Russell e Antonelli no pódio da dobradinha em Melbourne em 2026, em 5.585 × 3.723 px. Os perfis e o acervo exibem as legendas bilíngues, os créditos e os links para os originais.

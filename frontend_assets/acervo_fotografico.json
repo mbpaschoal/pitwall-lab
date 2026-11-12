@@ -3002,8 +3002,8 @@
     "ferrari-246": {
       "arquivo_commons": "File:Ferrari 246 F1 front-left Enzo Ferrari Museum.jpg",
       "legenda": {
-        "pt": "Ferrari 246 F1 no Museu Enzo Ferrari, modelo campeão de Mike Hawthorn.",
-        "en": "Ferrari 246 F1 at the Enzo Ferrari Museum, Mike Hawthorn’s championship-winning model."
+        "pt": "Ferrari Dino de chassi 0011 no Museu Enzo Ferrari, em Módena, em 2013. A carroceria segue a configuração 246/60, evolução da família de carros com que Mike Hawthorn foi campeão em 1958.",
+        "en": "Ferrari Dino chassis 0011 at the Enzo Ferrari Museum in Modena in 2013. Its bodywork follows the 246/60 configuration, an evolution of the car family that took Mike Hawthorn to the 1958 title."
       },
       "modelo": "ferrari-246",
       "temporadas": [
@@ -14009,6 +14009,38 @@
           "largura": 2400,
           "altura": 1600,
           "sha256": "70fe2634a8488a94e57ffffbd0149a7c359e74ec430d9c8d7b753e72ca4bd33c"
+        }
+      ],
+      "equipes": [
+        "ferrari"
+      ]
+    },
+    "ferrari-246f1-1960-mauto-2026": {
+      "arquivo_commons": "File:Ferrari 246 F1 1958 MAUTO.jpg",
+      "legenda": {
+        "pt": "Ferrari 246 F1 de 1960, fotografado no MAUTO, em Turim, em 2026. Enzo Ferrari doou o exemplar ao museu, que o restaurou em 2001 com apoio da fábrica.",
+        "en": "A 1960 Ferrari 246 F1 photographed at MAUTO in Turin in 2026. Enzo Ferrari donated the car to the museum, which restored it in 2001 with support from the factory."
+      },
+      "autor": "Marie-Lan Taÿ Pamart",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Ferrari_246_F1_1958_MAUTO.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Ferrari_246_F1_1958_MAUTO.jpg",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "3c8b4ee643ff8df7fa5bb9a14ba4354fbbd53bdbd503c297fe3cfa0c095d70d4",
+      "largura": 7884,
+      "altura": 5259,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "1716f13d6dedf03bbef5a57b9e5328d3eb4120068c82521e20d82ff9b8b53bdc"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-2400.webp",
+          "largura": 2400,
+          "altura": 1601,
+          "sha256": "ee08a04aa350397660d717d04c183967f52f0e287ce1ee068266e10bfe438a3b"
         }
       ],
       "equipes": [
