@@ -42,6 +42,8 @@ O Maserati 250F de Fangio em 1954 ganha duas fotos. A primeira, em domínio púb
 
 Uma foto de pista da revista Via! de setembro de 1950 registra o GP da Itália em que Nino Farina conquistou o primeiro Mundial de Pilotos. O recorte em domínio público mede 2.400 × 1.800 px, sem ampliação. A foto entra no Hall de Farina, na galeria Alfa Romeo e em Momentos históricos.
 
+Uma foto de Corrado Millanta mostra o público à espera da largada em Pedralbes, no GP da Espanha em que Juan Manuel Fangio conquistou seu primeiro Mundial em 1951. O recorte em domínio público mede 2.400 × 1.340 px e aparece no Hall de Fangio e em Momentos históricos.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

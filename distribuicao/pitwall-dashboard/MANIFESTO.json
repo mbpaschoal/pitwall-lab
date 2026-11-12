@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "00bf74a2a753570db4e439f09108cb3222a6e10817fd66fd31d9d485968caa34",
+  "apresentacao_build_sha256": "a681858eb785f889bab6d482ac9fb250ce5bb4aace596f5d680837a0ae907435",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "0fb291e92528fa689a2b155e227ccebf59d8bfc1fdf4789c060392a9fcef39a1",
+      "sha256_destino": "7ad16193d819bab9e15a8d8d1484374d7015cc475ed68c53b87d6f4e5ab2ef79",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "17324b525b14176d9f80f83c0922ab7664d7d643dca5d7d0338c66f80029a409",
-      "sha256_origem": "8200676bd494f1715f40faacccb77367116b75d123d9941d4b97003a6ec00e1e"
+      "sha256_destino": "c3c4dc421e7d8b21baeb1c3ef5eae89ed32bde908e482eaac922e3b34201c4b7",
+      "sha256_origem": "a797a5c143e97d133bfe6034b7dbca3d36331fcaaad3421f8ee01537077015a0"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "c536a9640b857670919362ac0248e1c3da76cc21ac8e42e1a889654eb577976a",
-      "sha256_origem": "71be3093eaa57f0533f3c37af522c61d57a68518be86d21a5aabc5d3ff31ac8b"
+      "sha256_destino": "e1a6d52c5be6e530f24fca3f9e3107d151792fced31ba86bcca125982b8cf6cd",
+      "sha256_origem": "c1da395c37c1528a07cd49bd442ce0587f75d01b363a0e4c30a2a01c1dded9f9"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "8a5bdc373064a76aa84c903f802ff8d959ab8682f7134b2ddbc11a644e7e914c",
-      "sha256_origem": "8a5bdc373064a76aa84c903f802ff8d959ab8682f7134b2ddbc11a644e7e914c"
+      "sha256_destino": "08efe219e2b6601e815996f01aeca281218bb50783c0dcc7dcf177902c03dc02",
+      "sha256_origem": "08efe219e2b6601e815996f01aeca281218bb50783c0dcc7dcf177902c03dc02"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7032,6 +7032,20 @@
       "modo": "copia",
       "sha256_destino": "56de72dfe04797ed4d395ce93a466aed1def3de30732dade90e27b1a12aa8d47",
       "sha256_origem": "56de72dfe04797ed4d395ce93a466aed1def3de30732dade90e27b1a12aa8d47"
+    },
+    {
+      "caminho": "static/pitwall-archive/publico-pedralbes-1951-7d74345a8507-2400.webp",
+      "fonte": "static/pitwall-archive/publico-pedralbes-1951-7d74345a8507-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7096ee02dfe1d83e3238390515d3868dde80825e2b3fd084a1229e778c49ae8f",
+      "sha256_origem": "7096ee02dfe1d83e3238390515d3868dde80825e2b3fd084a1229e778c49ae8f"
+    },
+    {
+      "caminho": "static/pitwall-archive/publico-pedralbes-1951-7d74345a8507-960.webp",
+      "fonte": "static/pitwall-archive/publico-pedralbes-1951-7d74345a8507-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5711eb663726c50085293b943d15845e9d2737820fbe17c17ac3b846c7fa171b",
+      "sha256_origem": "5711eb663726c50085293b943d15845e9d2737820fbe17c17ac3b846c7fa171b"
     },
     {
       "caminho": "static/pitwall-archive/racing-bulls-shanghai-6e9f4113beef-2400.webp",

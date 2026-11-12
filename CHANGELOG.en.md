@@ -42,6 +42,8 @@ Fangio’s 1954 Maserati 250F gains two photographs. A 2,075 × 2,400 px public-
 
 A trackside photograph from the September 1950 issue of Via! shows the Italian Grand Prix where Nino Farina clinched the first Drivers’ Championship. The public-domain crop measures 2,400 × 1,800 px without enlargement. The photo appears in Farina’s Hall of Fame profile, the Alfa Romeo gallery and Historic moments.
 
+A photograph by Corrado Millanta shows spectators waiting for the start at Pedralbes, where Juan Manuel Fangio won his first Drivers’ Championship at the 1951 Spanish Grand Prix. The 2,400 × 1,340 px public-domain crop appears in Fangio’s Hall of Fame profile and Historic moments.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
