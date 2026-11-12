@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "90405db37aac55a09e495d2e605822a338d8a159f044f28538208a75e36b580a",
+  "apresentacao_build_sha256": "36d7400853363118696961bb5a39fac252a3fd2a6c90e614007ef19f4e0d3e87",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "fde876732ad7a3e22944ede82e5729a932a18a264786b2e972ea9673e1fa1e93",
+      "sha256_destino": "b08a218016acca692f17ffdbe37db76f6e93cec58c81ddeae73512e9a887dedc",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "0ffc7e914ea016fd9df5ec2e0e452df06eb3bfd886055fa9f94be7c1d8bb4212",
-      "sha256_origem": "ecb02c8c0b680da443efa98f69b9f82f1d71bfbb1e5787c3ed666982013a8602"
+      "sha256_destino": "fe5933c3fe6783b61e3a4aabe7be75402aae9268e1057463afd70fcf4c3e4df2",
+      "sha256_origem": "86e0882e754a31556cf083540323978b1f3c843d25c14e6df0efa2999f3684d8"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "e7aeccbae23b43ce62f510c198d841a9dd5bcdd974f0235c74ca10902e04b654",
-      "sha256_origem": "0162ba2f5a3e5cef906fe64e89818d7bdf26b5136f472478e39ecf35783e5d47"
+      "sha256_destino": "8f7ebc7f896404a0abed62bc79f77460b930b9084b8da8da91e1a5b36ba24e01",
+      "sha256_origem": "68c33327cf0a0e87676cabb7b348d27aa9ab5b66c51ae5f130475be8fd56cf96"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "fee29d97f2758d249cf860323f8d0d76b236bc27b1183deba04134fb3b2e16fd",
-      "sha256_origem": "fee29d97f2758d249cf860323f8d0d76b236bc27b1183deba04134fb3b2e16fd"
+      "sha256_destino": "40e51befedd9c89ed93a88c7187aec9d7b2425517ded929416fb49b1516450c2",
+      "sha256_origem": "40e51befedd9c89ed93a88c7187aec9d7b2425517ded929416fb49b1516450c2"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -4064,6 +4064,20 @@
       "modo": "copia",
       "sha256_destino": "89f8905856c0f922b0d9b5cbfe6641aea862241d438ed8e6a781b4e700f4dbac",
       "sha256_origem": "89f8905856c0f922b0d9b5cbfe6641aea862241d438ed8e6a781b4e700f4dbac"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9c107e0352e4d98f20bd4d08bd8b7776ed2af0a59c00b49803950b67ec8d6e85",
+      "sha256_origem": "9c107e0352e4d98f20bd4d08bd8b7776ed2af0a59c00b49803950b67ec8d6e85"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-960.webp",
+      "fonte": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-960.webp",
+      "modo": "copia",
+      "sha256_destino": "380e56547ec3a46fe16609370ec5ed336f793e119f3b57702e9f32c72b0fa8b8",
+      "sha256_origem": "380e56547ec3a46fe16609370ec5ed336f793e119f3b57702e9f32c72b0fa8b8"
     },
     {
       "caminho": "static/pitwall-archive/brabham-zandvoort-podio-1966-6812246ab5ca-2400.webp",

@@ -38,8 +38,8 @@
     "farina-alfetta": {
       "arquivo_commons": "File:Alfa Romeo 158 Alfetta 1950 Museo Storico OCT 2015.jpg",
       "legenda": {
-        "pt": "O Alfa Romeo 158 de 1950 no museu da marca.",
-        "en": "The 1950 Alfa Romeo 158 at the marque’s museum."
+        "pt": "Alfa Romeo 158 no Museo Storico Alfa Romeo, em Arese, em 2015. Juan Manuel Fangio conquistou sua primeira vitória no Mundial com esse modelo no GP de Mônaco de 1950.",
+        "en": "An Alfa Romeo 158 at the Alfa Romeo Museum in Arese in 2015. Juan Manuel Fangio took his first World Championship win in this model at the 1950 Monaco Grand Prix."
       },
       "modelo": "alfa-romeo-158",
       "temporadas": [
@@ -70,7 +70,10 @@
           "sha256": "e4f34192877fc72d32f137278265b9b7a2c42d49ec373ffbfc33e3eac172e89d"
         }
       ],
-      "construtor": "alfa-romeo"
+      "construtor": "alfa-romeo",
+      "artefatos_gps": [
+        "1950:2"
+      ]
     },
     "fangio-alfa-159": {
       "arquivo_commons": "File:1951 Alfa Romeo 159 Alfetta Museo Nazionale dell'Automobile Torino 01.jpg",
@@ -13736,6 +13739,39 @@
           "largura": 2400,
           "altura": 1600,
           "sha256": "915baa3198380c55ed70604c6787f37713ef2b1f05cf2b0649464c9691b9afe4"
+        }
+      ]
+    },
+    "brabham-cooper-t40-nurburgring-2011": {
+      "arquivo_commons": "File:Cooper Bristol T40, Bj. 1955 (2011-08-13 Sp).JPG",
+      "legenda": {
+        "pt": "Cooper Bristol T40 em demonstração no Nürburgring, em 2011. Foi com esse carro que Jack Brabham estreou na Fórmula 1 em Aintree, no GP da Grã-Bretanha de 1955.",
+        "en": "The Cooper Bristol T40 on a demonstration run at the Nürburgring in 2011. Jack Brabham made his Formula 1 debut in this car at Aintree in the 1955 British Grand Prix."
+      },
+      "artefatos_gps": [
+        "1955:6"
+      ],
+      "construtor": "cooper",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Cooper_Bristol_T40,_Bj._1955_(2011-08-13_Sp).JPG",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/37/Cooper_Bristol_T40%2C_Bj._1955_%282011-08-13_Sp%29.JPG",
+      "autor": "Lothar Spurzem",
+      "licenca": "CC BY-SA 2.0 de",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+      "sha256": "fbff2e6aa19549ccc92754ec77d0862e4cc9c9ff35254d430b730ef1c0f4b0af",
+      "largura": 2712,
+      "altura": 1808,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "380e56547ec3a46fe16609370ec5ed336f793e119f3b57702e9f32c72b0fa8b8"
+        },
+        {
+          "arquivo": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "9c107e0352e4d98f20bd4d08bd8b7776ed2af0a59c00b49803950b67ec8d6e85"
         }
       ]
     }

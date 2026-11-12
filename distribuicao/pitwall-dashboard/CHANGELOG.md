@@ -66,6 +66,8 @@ A estreia de Fernando Alonso e Kimi Räikkönen em Melbourne, em 2001, ganha fot
 
 As primeiras vitórias de Kimi Räikkönen em Sepang e de Fernando Alonso no Hungaroring, em 2003, ganham fotos do McLaren MP4-17D nº 6 e do Renault R23B nº 8. As duas fotos são de Morio, com originais de 3.840 × 2.560 px e licenças CC BY-SA. Foram feitas em exposições em Donington (2013) e nas Astúrias (2017).
 
+A estreia de Jack Brabham em Aintree, em 1955, ganha uma foto do Cooper Bristol T40 que ele pilotou, em demonstração no Nürburgring em 2011. O original de Lothar Spurzem tem 2.712 × 1.808 px e licença CC BY-SA 2.0 Alemanha. A primeira vitória de Fangio, em Mônaco em 1950, passa a ter como referência a foto de museu de um Alfa Romeo 158, de azrhey, com 4.000 × 3.000 px e licença CC BY-SA 2.0.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
