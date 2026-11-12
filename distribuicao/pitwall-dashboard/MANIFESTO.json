@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "ddbb2ac46f3c758fab0505ad7f9af815af4c394f0cd9bed0aa1eca389ebd8c8a",
+  "apresentacao_build_sha256": "a2462873e3cc42660f67515202b56458c117051a735c383dadddf227886cc578",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "24aa63f1f9ed56b7b1505cddc6c9747f7a27cee1aa5df4b1a81cffbd2c454d51",
+      "sha256_destino": "484dc0ead4c8deabd9671619021fb221f9882feaa5fc5e592f78e3351bacfd4f",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "2ee01d6c276c0fd25cd02fdd082760addea716c628635f5bfcd90133eec77820",
-      "sha256_origem": "7155625cd168d69467dc7869753023f433033a9df43bc353d4ff89c20271005f"
+      "sha256_destino": "8609ff94aa593104006b15fade4f1837e3ccbbeed5f577693858a357f16a319d",
+      "sha256_origem": "e7c96e9f4fb86321a95d81bbf099f5d0edf0b926ae04f6bf3f9c21ae9cbbe3e7"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "fc3dfb5e72698134ef6bb7e8b5308a0433aa9121a25df9c9d9e0f2c494a3e571",
-      "sha256_origem": "e1f485bb337d21d208d9770d80925745706d9ac69efe85bfb60d4dded0ac9b8f"
+      "sha256_destino": "859fa46758880e73729dc5b653bf55a6fe2a8f285486a1488800c39a60310864",
+      "sha256_origem": "688c300edc98951762a530da8c2e240bc62c61294ba2660fa64ae26e2dc884f3"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "b2e16093986d0251673fc03187b3b9b2dd62bb35979cf04e27a1f8ddcebe0edc",
-      "sha256_origem": "b2e16093986d0251673fc03187b3b9b2dd62bb35979cf04e27a1f8ddcebe0edc"
+      "sha256_destino": "22ff7006feabd51df686a3c086bc2db53a319adccac420f51bbe5d7501eedad0",
+      "sha256_origem": "22ff7006feabd51df686a3c086bc2db53a319adccac420f51bbe5d7501eedad0"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7690,6 +7690,20 @@
       "modo": "copia",
       "sha256_destino": "7276da81c9df6db1e677bad86e3f6d414f350a8e75c1c14f687f0dee318f5ce3",
       "sha256_origem": "7276da81c9df6db1e677bad86e3f6d414f350a8e75c1c14f687f0dee318f5ce3"
+    },
+    {
+      "caminho": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-2400.webp",
+      "fonte": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d680139c789db2d9d1c8a4dcd1780c59631f80756331780abaada58246981a59",
+      "sha256_origem": "d680139c789db2d9d1c8a4dcd1780c59631f80756331780abaada58246981a59"
+    },
+    {
+      "caminho": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-960.webp",
+      "fonte": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-960.webp",
+      "modo": "copia",
+      "sha256_destino": "05c555e9e94c4feb15b95527b47a8ec611dd9c21f6c26c70583b7de6c92a74ed",
+      "sha256_origem": "05c555e9e94c4feb15b95527b47a8ec611dd9c21f6c26c70583b7de6c92a74ed"
     },
     {
       "caminho": "static/pitwall-archive/stewart-brm-p261-1965-b345476664a8-2400.webp",

@@ -20,6 +20,8 @@ Três fotos de época dos anuários oficiais de Monza mostram Stirling Moss a ca
 
 A foto colorida do grid de Monza de 1961 registra o GP em que Phil Hill conquistou o título mundial. O recorte de 2.490 × 1.813 px do anuário oficial de 1962 entra no Hall da Fama, em Carros campeões e na galeria da Ferrari.
 
+A foto da Publifoto com George VI e os pilotos da Alfa Romeo em Silverstone entra em Momentos históricos e na galeria da equipe. O registro de 2.560 × 1.440 px mostra o primeiro GP do Mundial, disputado em 1950, e foi publicado na revista Pirelli naquele ano.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

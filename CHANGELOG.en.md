@@ -20,6 +20,8 @@ Three period photographs from the official Monza yearbooks show Stirling Moss on
 
 A colour photograph of the 1961 Monza grid documents the Grand Prix where Phil Hill clinched the world title. The 2,490 × 1,813 px crop from the official 1962 yearbook appears in the Hall of Fame, Championship cars, and Ferrari’s gallery.
 
+The Publifoto photograph of George VI and the Alfa Romeo drivers at Silverstone joins Historic moments and the team gallery. The 2,560 × 1,440 px photograph shows the first World Championship Grand Prix in 1950 and was published in Pirelli magazine that year.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
