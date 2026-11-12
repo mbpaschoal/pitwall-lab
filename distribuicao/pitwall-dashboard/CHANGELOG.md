@@ -68,6 +68,8 @@ As primeiras vitórias de Kimi Räikkönen em Sepang e de Fernando Alonso no Hun
 
 A estreia de Jack Brabham em Aintree, em 1955, ganha uma foto do Cooper Bristol T40 que ele pilotou, em demonstração no Nürburgring em 2011. O original de Lothar Spurzem tem 2.712 × 1.808 px e licença CC BY-SA 2.0 Alemanha. A primeira vitória de Fangio, em Mônaco em 1950, passa a ter como referência a foto de museu de um Alfa Romeo 158, de azrhey, com 4.000 × 3.000 px e licença CC BY-SA 2.0.
 
+Uma fotografia de Hans van Dijk (Anefo / Nationaal Archief), de 3.664 × 2.436 px sob CC BY-SA 3.0 Países Baixos, mostra Prost e Jones em Zandvoort em 1981. O Renault RE30 ilustra o modelo da primeira vitória de Prost em Dijon. O Williams FW07C de chassi 16 correu no GP do título de construtores, em Montreal, e venceu a decisão de pilotos em Las Vegas com Alan Jones.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

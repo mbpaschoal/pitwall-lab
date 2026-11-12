@@ -68,6 +68,8 @@ Two photographs accompany Kimi Räikkönen’s first win at Sepang and Fernando 
 
 Jack Brabham’s 1955 debut at Aintree gains a photograph of the Cooper Bristol T40 he drove, on a demonstration run at the Nürburgring in 2011. Lothar Spurzem’s 2,712 × 1,808 px original is licensed under CC BY-SA 2.0 Germany. Fangio’s first win at Monaco in 1950 is now illustrated by azrhey’s 4,000 × 3,000 px museum photograph of an Alfa Romeo 158, licensed under CC BY-SA 2.0.
 
+A 3,664 × 2,436 px photograph by Hans van Dijk (Anefo / Nationaal Archief), licensed under CC BY-SA 3.0 Netherlands, shows Prost and Jones at Zandvoort in 1981. The Renault RE30 illustrates the model in which Prost took his first win at Dijon. Williams FW07C chassis 16 raced at the constructors’ title decider in Montreal and won the drivers’ title decider in Las Vegas with Alan Jones.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.

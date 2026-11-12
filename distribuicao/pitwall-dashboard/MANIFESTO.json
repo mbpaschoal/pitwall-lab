@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "36d7400853363118696961bb5a39fac252a3fd2a6c90e614007ef19f4e0d3e87",
+  "apresentacao_build_sha256": "2770f8d95135ac0bb0731d4721d8ac3a0fff5a83824991a9af5178de606e6b1b",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "b08a218016acca692f17ffdbe37db76f6e93cec58c81ddeae73512e9a887dedc",
+      "sha256_destino": "659333f7de295e25a507be7d15a843e71e0df92f1cf2f3cd2461bc2a7d957f27",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "fe5933c3fe6783b61e3a4aabe7be75402aae9268e1057463afd70fcf4c3e4df2",
-      "sha256_origem": "86e0882e754a31556cf083540323978b1f3c843d25c14e6df0efa2999f3684d8"
+      "sha256_destino": "dbcb0cf09107e662d84878f0ab08419d1b24017eeff1947a64fa1ff1ab3baf91",
+      "sha256_origem": "1a5adbb31509837ecbdbeca658f222cc9a237673c606a81ddcdfad000490bfdc"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "8f7ebc7f896404a0abed62bc79f77460b930b9084b8da8da91e1a5b36ba24e01",
-      "sha256_origem": "68c33327cf0a0e87676cabb7b348d27aa9ab5b66c51ae5f130475be8fd56cf96"
+      "sha256_destino": "6df20025b9c9f4b36ea9b3a49ee836a104ad3a83e4429fb76a5786974419306e",
+      "sha256_origem": "1a8fb5b9b08cd7cb4eb32cc9c644b15bca6fd9952ba07536c3694c936e0d6b42"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "40e51befedd9c89ed93a88c7187aec9d7b2425517ded929416fb49b1516450c2",
-      "sha256_origem": "40e51befedd9c89ed93a88c7187aec9d7b2425517ded929416fb49b1516450c2"
+      "sha256_destino": "d63b00434bec7d2f5bbb075130d92d06845cfcf18baa82000d79ccbb7c468a66",
+      "sha256_origem": "d63b00434bec7d2f5bbb075130d92d06845cfcf18baa82000d79ccbb7c468a66"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7172,6 +7172,20 @@
       "modo": "copia",
       "sha256_destino": "625499695f7e766811d8122b7c901761758688a97d006817f437bc3046afe6e1",
       "sha256_origem": "625499695f7e766811d8122b7c901761758688a97d006817f437bc3046afe6e1"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-jones-zandvoort-1981-631cf140e1c8-2400.webp",
+      "fonte": "static/pitwall-archive/prost-jones-zandvoort-1981-631cf140e1c8-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7e048500d3af36283bbe2a711c967e315a13ae73564d86af26152249cf9f8058",
+      "sha256_origem": "7e048500d3af36283bbe2a711c967e315a13ae73564d86af26152249cf9f8058"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-jones-zandvoort-1981-631cf140e1c8-960.webp",
+      "fonte": "static/pitwall-archive/prost-jones-zandvoort-1981-631cf140e1c8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "35155531cb5d20e42a8cba4a19f6e08a2b502ea5b6912376ae5025b974b7ae55",
+      "sha256_origem": "35155531cb5d20e42a8cba4a19f6e08a2b502ea5b6912376ae5025b974b7ae55"
     },
     {
       "caminho": "static/pitwall-archive/prost-mp4-2c-adelaide-1986-4054488851de-2400.webp",
