@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.19.1 — 2026-11-11
+
+As galerias da McLaren e da Mercedes ganham duas fotos CC BY-SA 4.0. A primeira mostra Norris e Piastri no grid de Xangai em 2024, em 5.373 × 3.022 px. A segunda mostra Russell e Antonelli no pódio da dobradinha em Melbourne em 2026, em 5.585 × 3.723 px. Os perfis e o acervo exibem as legendas bilíngues, os créditos e os links para os originais.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.
