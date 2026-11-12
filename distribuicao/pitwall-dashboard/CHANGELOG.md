@@ -60,6 +60,8 @@ Uma foto de Martin Lee de 2.528 × 1.471 px, sob CC BY-SA 2.0, mostra Derek Daly
 
 Uma foto de Pedro Mendes em 4.755 × 2.675 px, sob CC BY 2.0, mostra Nico Rosberg no Mercedes W07 Hybrid nº 6 em Austin, em 2016. Ela entra na galeria da Mercedes e ilustra a campanha de Rosberg na ficha da decisão do título em Abu Dhabi.
 
+Uma foto de Ann McKelvie em 3.736 × 2.064 px, sob CC BY-SA 2.0, mostra Lewis Hamilton em Silverstone, em 2007, no McLaren MP4-22 de chassi 04. Foi com esse carro que ele chegou ao pódio em sua estreia em Melbourne. A foto entra na galeria da McLaren e na ficha da estreia no Hall da Fama.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "a7d90c6cd2638c8e2616e75a391e3f914b19774a1bac84535718e4c1394d9677",
+  "apresentacao_build_sha256": "b916988669b8932146c4bf8b8bc1264dd1850401cd51fe4d14729f796bd23247",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "35ad7cc62e58e15753cdfbe4f77154efd47e8e4ec92ea5db9632a14dd43c2175",
+      "sha256_destino": "c955dde80dd0841e6a7c427930a6e055f54aed73bce347df50c4010156edc6bc",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "ab74c823ee14e13a1fae73995494f7afba13f2e1782f911ecc4f0ada29180d9a",
-      "sha256_origem": "f1c989d0879a76eca8511327a4da7974cde01af5286199db36cda85f37f6e944"
+      "sha256_destino": "9b34b2d6860f3baf20bc0d7adeecbcd7a97c5df211516608a055685869676f0a",
+      "sha256_origem": "fc77ba38bfb5ca669abf484d9c938eae32f6d952acc6ec48d6cf7f98f12cd5e6"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "faec8351388b032259b0ea416c06e4c9da599efd4734f04e001599bad3832956",
-      "sha256_origem": "6e4ab162807936670d5af3c823de5866eebdd435bbe7964c038020de8c19ac4d"
+      "sha256_destino": "2099bf507003bf353580a27b7264696676c141d0d1511cf082c86315ccf3e254",
+      "sha256_origem": "1129ae10d3c37cb1441d799c33ada2f0e86578916ec370aa0f5983ff58db2f5a"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "f053dae79e51601809ba6a750b347493da257024913263e63d3a6dbda337e86c",
-      "sha256_origem": "f053dae79e51601809ba6a750b347493da257024913263e63d3a6dbda337e86c"
+      "sha256_destino": "959074f567036fb1a438645430355fcde2fa5c70ea0034f26eef6d743321f3f8",
+      "sha256_origem": "959074f567036fb1a438645430355fcde2fa5c70ea0034f26eef6d743321f3f8"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -5184,6 +5184,20 @@
       "modo": "copia",
       "sha256_destino": "b5cb5de4a9c20ca4fee7db77b9ed0c0f03f5ddc69311284ee0c74446df0f119d",
       "sha256_origem": "b5cb5de4a9c20ca4fee7db77b9ed0c0f03f5ddc69311284ee0c74446df0f119d"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-mp4-22-04-silverstone-2007-bb2d2e335c75-2400.webp",
+      "fonte": "static/pitwall-archive/hamilton-mp4-22-04-silverstone-2007-bb2d2e335c75-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "930f44c45aecc8d894843d486cd59f1b7a1e3845b768e500ed807beeea06c913",
+      "sha256_origem": "930f44c45aecc8d894843d486cd59f1b7a1e3845b768e500ed807beeea06c913"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-mp4-22-04-silverstone-2007-bb2d2e335c75-960.webp",
+      "fonte": "static/pitwall-archive/hamilton-mp4-22-04-silverstone-2007-bb2d2e335c75-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c4dda11df5d749d5d8616474939efa0e9f134a3a6644893a807ab3fc4f4a7660",
+      "sha256_origem": "c4dda11df5d749d5d8616474939efa0e9f134a3a6644893a807ab3fc4f4a7660"
     },
     {
       "caminho": "static/pitwall-archive/hamilton-sochi-2015-d6b0d1ba2c6d-2400.webp",

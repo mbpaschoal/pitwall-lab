@@ -60,6 +60,8 @@ A 2,528 × 1,471 px photograph by Martin Lee, licensed under CC BY-SA 2.0, shows
 
 A 4,755 × 2,675 px photograph by Pedro Mendes, licensed under CC BY 2.0, shows Nico Rosberg in the No. 6 Mercedes W07 Hybrid in Austin in 2016. It appears in the Mercedes gallery and illustrates Rosberg’s campaign in the entry for his title decider in Abu Dhabi.
 
+A 3,736 × 2,064 px photograph by Ann McKelvie, licensed under CC BY-SA 2.0, shows Lewis Hamilton at Silverstone in 2007 in McLaren MP4-22 chassis 04. He reached the podium in the same car on his debut in Melbourne. The photo appears in the McLaren gallery and in the Hall of Fame entry for his debut.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
