@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+A photograph by Koen Suyk shows Alan Jones’s Shadow DN8 at Zandvoort in 1977. Jones drove the same chassis to victory in Austria two weeks earlier. The 3,682 × 2,415 px CC0 photograph appears among the objects from the collection for his first win.
+
 The 1958 inventory identifies the Ferrari Dino 246 F1 as the car Mike Hawthorn drove in his championship campaign. The season record documents the Dino 156 F2 under Phil Hill’s Formula 2 entry at the Nürburgring.
 
 The Ferrari gallery adds a photo of MAUTO’s restored 1960 246 F1. Marie-Lan Taÿ Pamart photographed the car in Turin in 2026 at 7,884 × 5,259 px under CC BY 4.0. The Modena photo caption identifies the 246/60 bodywork on chassis 0011.

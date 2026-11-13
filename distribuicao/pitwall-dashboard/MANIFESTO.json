@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "8c8065f6bf4ba2771605fd14c2a33e318a4f78b0e29d2574f7839bfc8280aa97",
+  "apresentacao_build_sha256": "7e32b665456c2cb5ab0491e81e7efa40bf6691ecfb1a151bb416768de9c6a61e",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "55e3d1b68895fc9d4cd1a3f3095020b02d1d3a3ef5e8ae9e9b99e6e3f4d7ddea",
+      "sha256_destino": "a27c43bdcaa9ff077cccd480876c115542c6a59a96e1c57141f66cc344e798a6",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "0b83ec4dc0447f1f675235babb78b4a0859d2a2f3151e9425d6a63024a26fc84",
-      "sha256_origem": "539a93deaedbe65c0363707685d32f2374d6067c722dd5139c9a169ae7ddabd6"
+      "sha256_destino": "10c08af3625ae16b9b523f79d4685e220666bb45a44f29f4a84f29be2a324ab7",
+      "sha256_origem": "a9df48a8232dfb70bc5646dc224ae29e671bc7bfc7dbd51611539b2824b9e2c7"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "45ff8399dbde89ce731982cc020017851af2bf7a1cd3a38becbc58e76de88a45",
-      "sha256_origem": "93d29a46cd61b48ea52de63d0755a89e54c8ff4c02a6ff3c37baef675e2c312e"
+      "sha256_destino": "7a45aebf96640169035c45dcaa1f2ced59da33369a3922562658b2b82247f736",
+      "sha256_origem": "891d74178e57fe6e5bf2d4cba807dab8e28ea5348a1310e0820066f45f3fe149"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "2b59da6887d6bc6c769230e50e431ea1d9d4c962c38e6aecab85578616bc6bf9",
-      "sha256_origem": "2b59da6887d6bc6c769230e50e431ea1d9d4c962c38e6aecab85578616bc6bf9"
+      "sha256_destino": "4990108a2308cf57ebc7dd3ec41a55d89b665391ff2aeac5bbc5feb83a369645",
+      "sha256_origem": "4990108a2308cf57ebc7dd3ec41a55d89b665391ff2aeac5bbc5feb83a369645"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -5856,6 +5856,20 @@
       "modo": "copia",
       "sha256_destino": "3870a81dae45d7b6214c1a56b05a55dbff54eedecd4ef8734799080f97780517",
       "sha256_origem": "3870a81dae45d7b6214c1a56b05a55dbff54eedecd4ef8734799080f97780517"
+    },
+    {
+      "caminho": "static/pitwall-archive/jones-shadow-dn8-zandvoort-1977-e99a51a5329b-2400.webp",
+      "fonte": "static/pitwall-archive/jones-shadow-dn8-zandvoort-1977-e99a51a5329b-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2db222257fbc20b4cf10aa37a87f46938a91025f364535959405b3f6fc057068",
+      "sha256_origem": "2db222257fbc20b4cf10aa37a87f46938a91025f364535959405b3f6fc057068"
+    },
+    {
+      "caminho": "static/pitwall-archive/jones-shadow-dn8-zandvoort-1977-e99a51a5329b-960.webp",
+      "fonte": "static/pitwall-archive/jones-shadow-dn8-zandvoort-1977-e99a51a5329b-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1e25d10b9ec918e0d8d0953aecb9a399b8bf23934be58f985be589502c81270f",
+      "sha256_origem": "1e25d10b9ec918e0d8d0953aecb9a399b8bf23934be58f985be589502c81270f"
     },
     {
       "caminho": "static/pitwall-archive/jones-trofeu-austria-1977-ed0185220dc2-2400.webp",
