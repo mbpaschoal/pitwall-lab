@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "cd769edf72de15e8808dc96fc027bef857bfcbbeae52d30dcb84a1430e905745",
+  "apresentacao_build_sha256": "8c8065f6bf4ba2771605fd14c2a33e318a4f78b0e29d2574f7839bfc8280aa97",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "3f91fa6aa8189f25c2f32c4e5592d8a8f249913aab66d26a561b715dc586e068",
-      "sha256_origem": "0e3cf87d6f3ddf44e17f8389b7048a5d5ac2fbc5b52037d302d1b1a80b199d78"
+      "sha256_destino": "0b83ec4dc0447f1f675235babb78b4a0859d2a2f3151e9425d6a63024a26fc84",
+      "sha256_origem": "539a93deaedbe65c0363707685d32f2374d6067c722dd5139c9a169ae7ddabd6"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "801500beca751be76483720e93ab805e605fb41ab0ffa1e00fdbc3326f442ef1",
-      "sha256_origem": "d8cee86b59e4a6ece91ea252835e239691e2f0cb38e9a873faec7cc6dcc1085b"
+      "sha256_destino": "45ff8399dbde89ce731982cc020017851af2bf7a1cd3a38becbc58e76de88a45",
+      "sha256_origem": "93d29a46cd61b48ea52de63d0755a89e54c8ff4c02a6ff3c37baef675e2c312e"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "14f1de93a3b8cdfa564d09daa238156cc3f97a660749971622cf58f632531a46",
-      "sha256_origem": "14f1de93a3b8cdfa564d09daa238156cc3f97a660749971622cf58f632531a46"
+      "sha256_destino": "2b59da6887d6bc6c769230e50e431ea1d9d4c962c38e6aecab85578616bc6bf9",
+      "sha256_origem": "2b59da6887d6bc6c769230e50e431ea1d9d4c962c38e6aecab85578616bc6bf9"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -2753,8 +2753,8 @@
       "caminho": "frontend_assets/inventario_campeoes.json",
       "fonte": "frontend_assets/inventario_campeoes.json",
       "modo": "copia",
-      "sha256_destino": "40d137fe49dbee9a20954811de59591ebbc9c5eb6ff4ce65444da41e1e180e09",
-      "sha256_origem": "40d137fe49dbee9a20954811de59591ebbc9c5eb6ff4ce65444da41e1e180e09"
+      "sha256_destino": "f7f6329ac9cf848168dfe31cfd13f87533b9d07b402b0c87fe2f11a942f545f3",
+      "sha256_origem": "f7f6329ac9cf848168dfe31cfd13f87533b9d07b402b0c87fe2f11a942f545f3"
     },
     {
       "caminho": "frontend_assets/journey.css",

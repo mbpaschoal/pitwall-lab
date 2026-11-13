@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+The 1958 inventory identifies the Ferrari Dino 246 F1 as the car Mike Hawthorn drove in his championship campaign. The season record documents the Dino 156 F2 under Phil Hill’s Formula 2 entry at the Nürburgring.
+
 The Ferrari gallery adds a photo of MAUTO’s restored 1960 246 F1. Marie-Lan Taÿ Pamart photographed the car in Turin in 2026 at 7,884 × 5,259 px under CC BY 4.0. The Modena photo caption identifies the 246/60 bodywork on chassis 0011.
 
 The Ferrari gallery adds a bodywork detail of 312 T4 chassis 037-R, rebuilt by the factory for Ferdinando Bonomi. Matt Brunner photographed the car at Laguna Seca in 2016. The 6,000 × 4,000 px original is licensed CC BY-SA 2.0.

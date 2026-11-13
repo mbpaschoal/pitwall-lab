@@ -304,6 +304,9 @@ class LinkContextTests(unittest.TestCase):
         self.assertEqual(photographed, set(campaigns))
         self.assertEqual(photos["ferrari-d50"]["temporadas"], [1956])
         self.assertIn("ferrari.com", campaigns[1956, "ferrari"]["modelos_documentados"]["ferrari-d50"]["fonte"])
+        self.assertEqual(campaigns[1958, "ferrari"]["modelos_candidatos"], ["ferrari-246"])
+        self.assertIn("ferrari-156-f2", campaigns[1958, "ferrari"]["modelos_sem_contribuicao"])
+        self.assertIn("ferrari-156-aero", campaigns[1964, "ferrari"]["modelos_candidatos"])
         photographed_teams = {team for photo in photos.values() for team in photo.get("equipes", [])}
         self.assertTrue(set(inventory["equipes_atuais"]).issubset(photographed_teams))
         historic_gps = {f'{event["ano"]}:{event["rodada"]}' for event in inventory["momentos"]}
