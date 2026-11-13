@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "6d44aaaa762da73f6037866a1710eaa21008a8f859840a251049e8dbad583fac",
+  "apresentacao_build_sha256": "ddf7755eb67ff9b1bdcb058d45c2a0cd3f0d10ed017993e00235d3253054e166",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "cda2e61474887f763ce121261c9a01c5bf288c8e50c2e16b39aa144a2170f73d",
+      "sha256_destino": "8883243c556e31c8f599436cdfe75429c073cec5e9b1f5a9d87bece7903aba49",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "63c52495537e92819e6e90e880f530d4a7adcf4957116521842b50c8175e999e",
-      "sha256_origem": "c937703145bab79f4a950f88ad5d16ca4a6cb3161b10e0babaf6e2c68cbaa685"
+      "sha256_destino": "ae247e357681c20724b4695cf6b908f8f787d83e3194e7e94f078553525b5a06",
+      "sha256_origem": "6d6ccb7c7af0673c04a1f9386f2a0aa4ebe26af46aec7698dcbbe60efc9b6398"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "cd773264c22cd0f01371bc7108832ba088c4865fdf0b0df52ac8503f25b5503b",
-      "sha256_origem": "e17529dbb5838b62be386f04e17c61a305b5069ddecbe4fb41e6af022db034f9"
+      "sha256_destino": "fb5c17899ae7bd644c451ed19887cd029f4ed1e60f7aec64ab3f3195f1d01a34",
+      "sha256_origem": "ea59df186e1c4583ebce01beb9f83d86baa9bf8252e308bcc012a49c0ff312eb"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "8133ba4cf4ec07fd33be8d41f87d90e1c083106deb585bba93f40ae283294afa",
-      "sha256_origem": "8133ba4cf4ec07fd33be8d41f87d90e1c083106deb585bba93f40ae283294afa"
+      "sha256_destino": "4f9acef12d1e7c5f6b4649a371e04b33e6e1702ac6f3ac546def4d700bcf9443",
+      "sha256_origem": "4f9acef12d1e7c5f6b4649a371e04b33e6e1702ac6f3ac546def4d700bcf9443"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -8754,6 +8754,20 @@
       "modo": "copia",
       "sha256_destino": "aba685545e238f12d54da6167fb29d746a996bc643a4a21e33f410b96118a27c",
       "sha256_origem": "aba685545e238f12d54da6167fb29d746a996bc643a4a21e33f410b96118a27c"
+    },
+    {
+      "caminho": "static/pitwall-archive/von-trips-clark-phil-hill-zandvoort-1961-367f7351ffb7-2400.webp",
+      "fonte": "static/pitwall-archive/von-trips-clark-phil-hill-zandvoort-1961-367f7351ffb7-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "36d9aeb8e396a057c6a11611c961c93ba9cebde1f3bf36adfa9b809ef96fd7e5",
+      "sha256_origem": "36d9aeb8e396a057c6a11611c961c93ba9cebde1f3bf36adfa9b809ef96fd7e5"
+    },
+    {
+      "caminho": "static/pitwall-archive/von-trips-clark-phil-hill-zandvoort-1961-367f7351ffb7-960.webp",
+      "fonte": "static/pitwall-archive/von-trips-clark-phil-hill-zandvoort-1961-367f7351ffb7-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b234e12a96be9a8a44cefdbd5537551a85569ccfa3a37018666c3e51a4b03484",
+      "sha256_origem": "b234e12a96be9a8a44cefdbd5537551a85569ccfa3a37018666c3e51a4b03484"
     },
     {
       "caminho": "static/pitwall-archive/williams-fw07-f19229cad817-2400.webp",

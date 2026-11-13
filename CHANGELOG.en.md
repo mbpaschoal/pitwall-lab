@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+A photograph by Harry Pot shows Wolfgang von Trips, Jim Clark and Phil Hill at Zandvoort in 1961. The 3,651 × 2,448 px original, licensed CC BY-SA 3.0 NL, accompanies Ferrari’s first constructors’ title, clinched at Aintree with Von Trips and Hill in the top two places.
+
 A photograph by Rob Croes shows Lauda and Prost with Huub Rothengatter at Schiphol, eight days after the 1984 title decider at Estoril. The 3,673 × 2,445 px CC0 original documents the press conference that followed Lauda’s third championship.
 
 A photograph by Koen Suyk shows Alan Jones’s Shadow DN8 at Zandvoort in 1977. Jones drove the same chassis to victory in Austria two weeks earlier. The 3,682 × 2,415 px CC0 photograph appears among the objects from the collection for his first win.
