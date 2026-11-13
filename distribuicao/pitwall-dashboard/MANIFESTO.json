@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "c4876f93e8f713ca9ce69da9a0231bcef3f94b9f20c7e06569e810058f5f94ac",
+  "apresentacao_build_sha256": "eaa75c4f9d2c0e3afcaf02c5f242230f3c8ee1ff887857e117134a36410c8d02",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "d20042a67ee880b48891abc697c6883285245f3f6fac971464e84ac5dbd83f33",
-      "sha256_origem": "3c6dcb61d50986642703448a0ebf9e342eceecdd42d510767537c95605283720"
+      "sha256_destino": "5dc09d7ff14f800339b4c3d77d9321ff592523436f5d3be3ee6ba4a3278fa4b4",
+      "sha256_origem": "39b968aaa0b4ffa05e65a6eee653320b930b66a53eed27ab0d38145325b7d2ef"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "e8d880f759094f28050f92c81799e8d3b9fc4c66c4ae8d51532f7251b8a05015",
-      "sha256_origem": "9e60904dcfafac7ad9cdf96bc4fb7c6839f6a76830e6bcfacd2672d26989b0ff"
+      "sha256_destino": "0d3fd1f5a0ed575b657760eaf5a16efc171c58c97432e896d5ef7b35e5b0da2a",
+      "sha256_origem": "9b0ec4512d0893620a8339bcd0713cae2c08376101ff4c135c0f42bd4cecc886"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "8df56758856446d35ce7e204dca927cde7cc2adb05a053ce5cd77e9c2a17ee3e",
-      "sha256_origem": "8df56758856446d35ce7e204dca927cde7cc2adb05a053ce5cd77e9c2a17ee3e"
+      "sha256_destino": "bd1cfda405f57bd1edfc06a447edda5f260dca1af10d8bdbdaecf21fefddbb59",
+      "sha256_origem": "bd1cfda405f57bd1edfc06a447edda5f260dca1af10d8bdbdaecf21fefddbb59"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",

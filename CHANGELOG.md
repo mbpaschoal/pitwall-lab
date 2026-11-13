@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+A foto de Martin Lee em Zolder, em 1979, passa a acompanhar a decisão de Monza como peça de acervo. Ela mostra Jody Scheckter com o Ferrari 312 T4 de chassi 040, vencedor em ambas as provas.
+
 Uma foto de época de Joost Evers mostra Jochen Rindt no Lotus 49B de chassi R6-2, em Zandvoort, em 1969. O original de 3.687 × 2.418 px, sob CC BY-SA 3.0 NL, acompanha o marco da primeira vitória de Rindt na Fórmula 1, conquistada com esse mesmo chassi em Watkins Glen.
 
 Uma foto de Ben Sutherland mostra o McLaren de chassi M29/5, usado por Alain Prost na Alemanha e na Áustria em sua temporada de estreia. O original de 4.928 × 3.264 px, sob CC BY 2.0, acompanha o marco de Buenos Aires como peça de acervo. A legenda identifica o M29B de chassi 1 usado na corrida de estreia.

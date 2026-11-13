@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+Martin Lee’s photograph from Zolder in 1979 now accompanies the Monza title decider as an object from the collection. It shows Jody Scheckter in Ferrari 312 T4 chassis 040, which won both races.
+
 A period photograph by Joost Evers shows Jochen Rindt in Lotus 49B chassis R6-2 at Zandvoort in 1969. The 3,687 × 2,418 px original, under CC BY-SA 3.0 NL, accompanies Rindt's first Formula 1 win, which he took in the same chassis at Watkins Glen.
 
 A photograph by Ben Sutherland shows McLaren chassis M29/5, which Alain Prost raced in Germany and Austria in his debut season. The 4,928 × 3,264 px original, under CC BY 2.0, accompanies the Buenos Aires milestone as an object from the collection. The caption identifies M29B chassis 1 as Prost's car in his debut race.
