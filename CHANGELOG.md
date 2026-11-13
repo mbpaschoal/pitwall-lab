@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+Uma foto de Rob Croes mostra Lauda e Prost com Huub Rothengatter em Schiphol, oito dias após a decisão de 1984 no Estoril. O original de 3.673 × 2.445 px tem licença CC0 e documenta a coletiva que se seguiu à conquista do tricampeonato de Lauda.
+
 Uma foto de Koen Suyk mostra o Shadow DN8 de Alan Jones em Zandvoort, em 1977. É o mesmo chassi com que Jones venceu na Áustria duas semanas antes. O registro de 3.682 × 2.415 px, em CC0, aparece entre as peças de acervo da primeira vitória de Jones.
 
 O inventário de 1958 identifica o Ferrari Dino 246 F1 como o carro da campanha campeã de Mike Hawthorn. O Dino 156 F2 fica documentado na ficha da temporada pela participação de Phil Hill na classe de Fórmula 2 em Nürburgring.

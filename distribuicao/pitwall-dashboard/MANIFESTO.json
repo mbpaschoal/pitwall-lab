@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "7e32b665456c2cb5ab0491e81e7efa40bf6691ecfb1a151bb416768de9c6a61e",
+  "apresentacao_build_sha256": "6d44aaaa762da73f6037866a1710eaa21008a8f859840a251049e8dbad583fac",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "a27c43bdcaa9ff077cccd480876c115542c6a59a96e1c57141f66cc344e798a6",
+      "sha256_destino": "cda2e61474887f763ce121261c9a01c5bf288c8e50c2e16b39aa144a2170f73d",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "10c08af3625ae16b9b523f79d4685e220666bb45a44f29f4a84f29be2a324ab7",
-      "sha256_origem": "a9df48a8232dfb70bc5646dc224ae29e671bc7bfc7dbd51611539b2824b9e2c7"
+      "sha256_destino": "63c52495537e92819e6e90e880f530d4a7adcf4957116521842b50c8175e999e",
+      "sha256_origem": "c937703145bab79f4a950f88ad5d16ca4a6cb3161b10e0babaf6e2c68cbaa685"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "7a45aebf96640169035c45dcaa1f2ced59da33369a3922562658b2b82247f736",
-      "sha256_origem": "891d74178e57fe6e5bf2d4cba807dab8e28ea5348a1310e0820066f45f3fe149"
+      "sha256_destino": "cd773264c22cd0f01371bc7108832ba088c4865fdf0b0df52ac8503f25b5503b",
+      "sha256_origem": "e17529dbb5838b62be386f04e17c61a305b5069ddecbe4fb41e6af022db034f9"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "4990108a2308cf57ebc7dd3ec41a55d89b665391ff2aeac5bbc5feb83a369645",
-      "sha256_origem": "4990108a2308cf57ebc7dd3ec41a55d89b665391ff2aeac5bbc5feb83a369645"
+      "sha256_destino": "8133ba4cf4ec07fd33be8d41f87d90e1c083106deb585bba93f40ae283294afa",
+      "sha256_origem": "8133ba4cf4ec07fd33be8d41f87d90e1c083106deb585bba93f40ae283294afa"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -6010,6 +6010,20 @@
       "modo": "copia",
       "sha256_destino": "cc9e78b67a17834f3ad67e96b9789336a89f3f683e3a012a948389f9217ce33e",
       "sha256_origem": "cc9e78b67a17834f3ad67e96b9789336a89f3f683e3a012a948389f9217ce33e"
+    },
+    {
+      "caminho": "static/pitwall-archive/lauda-prost-schiphol-1984-73ed99791293-2400.webp",
+      "fonte": "static/pitwall-archive/lauda-prost-schiphol-1984-73ed99791293-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9e21466813766f4f5f5d52643666e588b8d0935f4c7f4a84465bec5bc4ab478d",
+      "sha256_origem": "9e21466813766f4f5f5d52643666e588b8d0935f4c7f4a84465bec5bc4ab478d"
+    },
+    {
+      "caminho": "static/pitwall-archive/lauda-prost-schiphol-1984-73ed99791293-960.webp",
+      "fonte": "static/pitwall-archive/lauda-prost-schiphol-1984-73ed99791293-960.webp",
+      "modo": "copia",
+      "sha256_destino": "64626e2a0276de1562aae47d2dc99d16cb3b7cb0bd90b5cbaaa2dcabdc95e9a1",
+      "sha256_origem": "64626e2a0276de1562aae47d2dc99d16cb3b7cb0bd90b5cbaaa2dcabdc95e9a1"
     },
     {
       "caminho": "static/pitwall-archive/lotus-24-f5b9a4c7ecdc-2400.webp",
