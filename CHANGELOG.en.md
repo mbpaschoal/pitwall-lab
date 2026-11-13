@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+A photograph by Ben Sutherland shows McLaren chassis M29/5, which Alain Prost raced in Germany and Austria in his debut season. The 4,928 × 3,264 px original, under CC BY 2.0, accompanies the Buenos Aires milestone as an object from the collection. The caption identifies M29B chassis 1 as Prost's car in his debut race.
+
 A period photograph by Joop van Bilsen shows Alberto Ascari in Ferrari 500 F2 chassis 005 during his win at Zandvoort in 1952. The 2,830 × 2,028 px CC0 original accompanies the milestones at Spa and the Nürburgring, where Ascari won in the same car.
 
 A photograph by Harry Pot shows Wolfgang von Trips, Jim Clark and Phil Hill at Zandvoort in 1961. The 3,651 × 2,448 px original, licensed CC BY-SA 3.0 NL, accompanies Ferrari’s first constructors’ title, clinched at Aintree with Von Trips and Hill in the top two places.

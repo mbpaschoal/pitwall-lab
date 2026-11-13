@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "8c59ff8495e004dc9396c7b8783fae444c98d324e52d2873d1d431b174200daf",
+  "apresentacao_build_sha256": "efa727a1f3d6170fc29ccfac9032c7d29c8c6964cbda08866f4085f0333e6569",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "709f9079b9ca54a706879a27d8c67182a7190d5bea0132861f8ed158d33f1516",
+      "sha256_destino": "717e97760a120e4e1db662c7d1729151e574394d58b0044ba1e4a4044929ca2f",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "6248c1962959bbadde9dfc77a309a8eddf516a298d5107c3a30e15fe8f5ee6da",
-      "sha256_origem": "ad3af930913900aba7dc17f806d8989a1a6bd043d1024b47847c5ba3ee9ac1ae"
+      "sha256_destino": "17ffab5c5a4d8cf3613e1ef2d1d9b0e4a079f3a8dc35e123062d121b9033832e",
+      "sha256_origem": "c4a8719e10112bde45bbee41f98e1a6729185ac1943a3452c2cffb914a3ac3b0"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "71c9aa8a7c2d028345625184980f2edb5163ba106986ac0451151cdbaad9a757",
-      "sha256_origem": "98058856935aac1ccce173e9fce777b93dba5d6b3d5adfab74d5457b9eeabf9e"
+      "sha256_destino": "e7ada2ece278f2cc386d11d7ae2e6a75a94cc454c9c4d31f3f6627507b2510c8",
+      "sha256_origem": "eea9c9ba8736a5509921149d504a55bed89c4f5b262a051afa861a06ee430dbd"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "21145935206bcfe31b6421dc6961e90bfcb75fdf698f4e58b943cd7aceefe472",
-      "sha256_origem": "21145935206bcfe31b6421dc6961e90bfcb75fdf698f4e58b943cd7aceefe472"
+      "sha256_destino": "a7cf20ab0efda74169795ffc5291cad2e87ace78295e30f72ae8a9fc4fe0e580",
+      "sha256_origem": "a7cf20ab0efda74169795ffc5291cad2e87ace78295e30f72ae8a9fc4fe0e580"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7298,6 +7298,20 @@
       "modo": "copia",
       "sha256_destino": "35155531cb5d20e42a8cba4a19f6e08a2b502ea5b6912376ae5025b974b7ae55",
       "sha256_origem": "35155531cb5d20e42a8cba4a19f6e08a2b502ea5b6912376ae5025b974b7ae55"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-mclaren-m29-5-donington-2014-7f090ba5bbdf-2400.webp",
+      "fonte": "static/pitwall-archive/prost-mclaren-m29-5-donington-2014-7f090ba5bbdf-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "4b8a2833c8bc004b1e1e7e67890af29726b2aa2264b8c08733072d2bb3cd0799",
+      "sha256_origem": "4b8a2833c8bc004b1e1e7e67890af29726b2aa2264b8c08733072d2bb3cd0799"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-mclaren-m29-5-donington-2014-7f090ba5bbdf-960.webp",
+      "fonte": "static/pitwall-archive/prost-mclaren-m29-5-donington-2014-7f090ba5bbdf-960.webp",
+      "modo": "copia",
+      "sha256_destino": "549755cbe0e964374c3bd745e1c6e2ebde2c1454053d189e15205bb830906a68",
+      "sha256_origem": "549755cbe0e964374c3bd745e1c6e2ebde2c1454053d189e15205bb830906a68"
     },
     {
       "caminho": "static/pitwall-archive/prost-mp4-2c-adelaide-1986-4054488851de-2400.webp",
