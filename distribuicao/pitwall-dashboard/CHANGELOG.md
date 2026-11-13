@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+Uma foto de época de Joost Evers mostra Jochen Rindt no Lotus 49B de chassi R6-2, em Zandvoort, em 1969. O original de 3.687 × 2.418 px, sob CC BY-SA 3.0 NL, acompanha o marco da primeira vitória de Rindt na Fórmula 1, conquistada com esse mesmo chassi em Watkins Glen.
+
 Uma foto de Ben Sutherland mostra o McLaren de chassi M29/5, usado por Alain Prost na Alemanha e na Áustria em sua temporada de estreia. O original de 4.928 × 3.264 px, sob CC BY 2.0, acompanha o marco de Buenos Aires como peça de acervo. A legenda identifica o M29B de chassi 1 usado na corrida de estreia.
 
 Uma foto de época de Joop van Bilsen mostra Alberto Ascari no Ferrari 500 F2 de chassi 005 durante sua vitória em Zandvoort, em 1952. O original de 2.830 × 2.028 px, em CC0, acompanha os marcos de Spa e Nürburgring, onde Ascari venceu com o mesmo carro.

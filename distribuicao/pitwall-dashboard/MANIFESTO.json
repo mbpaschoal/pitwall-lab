@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "efa727a1f3d6170fc29ccfac9032c7d29c8c6964cbda08866f4085f0333e6569",
+  "apresentacao_build_sha256": "c4876f93e8f713ca9ce69da9a0231bcef3f94b9f20c7e06569e810058f5f94ac",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "717e97760a120e4e1db662c7d1729151e574394d58b0044ba1e4a4044929ca2f",
+      "sha256_destino": "6feaec93a4419b49c512f1e32c4293686055d29bf6379ad6cabff69e8d64cb96",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "17ffab5c5a4d8cf3613e1ef2d1d9b0e4a079f3a8dc35e123062d121b9033832e",
-      "sha256_origem": "c4a8719e10112bde45bbee41f98e1a6729185ac1943a3452c2cffb914a3ac3b0"
+      "sha256_destino": "d20042a67ee880b48891abc697c6883285245f3f6fac971464e84ac5dbd83f33",
+      "sha256_origem": "3c6dcb61d50986642703448a0ebf9e342eceecdd42d510767537c95605283720"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "e7ada2ece278f2cc386d11d7ae2e6a75a94cc454c9c4d31f3f6627507b2510c8",
-      "sha256_origem": "eea9c9ba8736a5509921149d504a55bed89c4f5b262a051afa861a06ee430dbd"
+      "sha256_destino": "e8d880f759094f28050f92c81799e8d3b9fc4c66c4ae8d51532f7251b8a05015",
+      "sha256_origem": "9e60904dcfafac7ad9cdf96bc4fb7c6839f6a76830e6bcfacd2672d26989b0ff"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "a7cf20ab0efda74169795ffc5291cad2e87ace78295e30f72ae8a9fc4fe0e580",
-      "sha256_origem": "a7cf20ab0efda74169795ffc5291cad2e87ace78295e30f72ae8a9fc4fe0e580"
+      "sha256_destino": "8df56758856446d35ce7e204dca927cde7cc2adb05a053ce5cd77e9c2a17ee3e",
+      "sha256_origem": "8df56758856446d35ce7e204dca927cde7cc2adb05a053ce5cd77e9c2a17ee3e"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -7704,6 +7704,20 @@
       "modo": "copia",
       "sha256_destino": "15e5b497ffcf4243f2df3adad034fda48c43f661959e8721d732ebefd075ef16",
       "sha256_origem": "15e5b497ffcf4243f2df3adad034fda48c43f661959e8721d732ebefd075ef16"
+    },
+    {
+      "caminho": "static/pitwall-archive/rindt-lotus-49b-zandvoort-1969-e360d1191601-2400.webp",
+      "fonte": "static/pitwall-archive/rindt-lotus-49b-zandvoort-1969-e360d1191601-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d2b9b63826bd668843afc0d42f452139cae394e8dd9a6f253cd1b5f19b1011db",
+      "sha256_origem": "d2b9b63826bd668843afc0d42f452139cae394e8dd9a6f253cd1b5f19b1011db"
+    },
+    {
+      "caminho": "static/pitwall-archive/rindt-lotus-49b-zandvoort-1969-e360d1191601-960.webp",
+      "fonte": "static/pitwall-archive/rindt-lotus-49b-zandvoort-1969-e360d1191601-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6de59c7acf14b61e09ad3c1efa9949476f04a6ab97ed5a643bbaf58ea3691d17",
+      "sha256_origem": "6de59c7acf14b61e09ad3c1efa9949476f04a6ab97ed5a643bbaf58ea3691d17"
     },
     {
       "caminho": "static/pitwall-archive/rindt-zandvoort-vitoria-1970-ab10151f479e-2400.webp",
