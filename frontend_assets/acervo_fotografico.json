@@ -1,11 +1,45 @@
 {
   "schema": 1,
   "fotos": {
+    "silverstone-1950-pilotos-alfa-publifoto": {
+      "legenda": {
+        "pt": "O rei George VI cumprimenta Juan Manuel Fangio, Nino Farina e Luigi Fagioli da Alfa Romeo antes da largada em Silverstone, em 13 de maio de 1950. Farina venceu o primeiro GP do Mundial de Fórmula 1. Foto publicada na revista Pirelli, ano III, nº 3, p. 15.",
+        "en": "King George VI greets Alfa Romeo drivers Juan Manuel Fangio, Nino Farina and Luigi Fagioli before the start at Silverstone on 13 May 1950. Farina won the first Formula One World Championship Grand Prix. Published in Pirelli magazine, year III, no. 3, p. 15."
+      },
+      "equipes": [
+        "alfa-romeo"
+      ],
+      "gps": [
+        "1950:1"
+      ],
+      "fonte": "https://www.fondazionepirelli.org/archivio-storico/fotografie/detail/IT-PIRELLI-FT0001-0000000375/gran-premio-gran-bretagna-del-1950.html",
+      "original": "https://pirelli500gp.fondazionepirelli.org/assets/images/illustrations/era1-1-dsk.avif",
+      "autor": "Publifoto · Fondazione Pirelli (1_1E_9)",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "2c834d13b801bc79e71853fc9dc60f588fd7ad37057916216825bfd96b1d7235",
+      "largura": 2560,
+      "altura": 1440,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "05c555e9e94c4feb15b95527b47a8ec611dd9c21f6c26c70583b7de6c92a74ed"
+        },
+        {
+          "arquivo": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "d680139c789db2d9d1c8a4dcd1780c59631f80756331780abaada58246981a59"
+        }
+      ]
+    },
     "farina-alfetta": {
       "arquivo_commons": "File:Alfa Romeo 158 Alfetta 1950 Museo Storico OCT 2015.jpg",
       "legenda": {
-        "pt": "O Alfa Romeo 158 de 1950 no museu da marca.",
-        "en": "The 1950 Alfa Romeo 158 at the marque’s museum."
+        "pt": "Alfa Romeo 158 no Museo Storico Alfa Romeo, em Arese, em 2015. Juan Manuel Fangio conquistou sua primeira vitória no Mundial com esse modelo no GP de Mônaco de 1950.",
+        "en": "An Alfa Romeo 158 at the Alfa Romeo Museum in Arese in 2015. Juan Manuel Fangio took his first World Championship win in this model at the 1950 Monaco Grand Prix."
       },
       "modelo": "alfa-romeo-158",
       "temporadas": [
@@ -36,7 +70,10 @@
           "sha256": "e4f34192877fc72d32f137278265b9b7a2c42d49ec373ffbfc33e3eac172e89d"
         }
       ],
-      "construtor": "alfa-romeo"
+      "construtor": "alfa-romeo",
+      "artefatos_gps": [
+        "1950:2"
+      ]
     },
     "fangio-alfa-159": {
       "arquivo_commons": "File:1951 Alfa Romeo 159 Alfetta Museo Nazionale dell'Automobile Torino 01.jpg",
@@ -151,6 +188,48 @@
         "1954:7"
       ]
     },
+    "fangio-maserati-argentina-1954": {
+      "modelo": "maserati-250f",
+      "temporadas": [
+        1954
+      ],
+      "construtor": "maserati",
+      "legenda": {
+        "pt": "Juan Manuel Fangio no Maserati 250F nº 2, chassi 2505, sob chuva no GP da Argentina de 1954. Fangio venceu na estreia do modelo. Recorte da fotografia publicada em El Gráfico nº 1798, de 22 de janeiro de 1954.",
+        "en": "Juan Manuel Fangio in the No. 2 Maserati 250F, chassis 2505, in the rain at the 1954 Argentine Grand Prix. Fangio won on the model’s debut. Cropped from the photograph published in El Gráfico No. 1798 on 22 January 1954."
+      },
+      "gps": [
+        "1954:1"
+      ],
+      "fonte": "https://pub-6c6f65ea920548c3836a20bc3ee50840.r2.dev/el-grafico/1954/1798/page_25.webp",
+      "original": "https://pub-6c6f65ea920548c3836a20bc3ee50840.r2.dev/el-grafico/1954/1798/page_25.webp",
+      "autor": "El Gráfico nº 1798 · Kikuchi, Alfieri, Legarreta, Sanjurjo, Vázquez e Pellizeri (reportagem / feature) · Digitalização / scan: DataFútbol",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "recorte_original": {
+        "x": 480,
+        "y": 70,
+        "largura": 2075,
+        "altura": 2400
+      },
+      "sha256": "95d91ca8177a0b871c851dcf06174594cb00724b36c56f1973111fb25b6a5756",
+      "largura": 2075,
+      "altura": 2400,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-960.webp",
+          "largura": 830,
+          "altura": 960,
+          "sha256": "1b07d45ce74340c28431be17c3de272936fc20c0e3af32a396bc259e8921d44e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-2400.webp",
+          "largura": 2075,
+          "altura": 2400,
+          "sha256": "cb6daf891c1bc94ecaa8571e79521a541f96e871bd11312c3a1270330ed8b572"
+        }
+      ]
+    },
     "fangio-maserati": {
       "arquivo_commons": "File:Maserati 250F (Juan Fangio).jpg",
       "legenda": {
@@ -159,7 +238,6 @@
       },
       "modelo": "maserati-250f",
       "temporadas": [
-        1954,
         1957
       ],
       "fonte": "https://commons.wikimedia.org/wiki/File:Maserati_250F_(Juan_Fangio).jpg",
@@ -1640,15 +1718,60 @@
         "vanwall"
       ]
     },
+    "vanwall-trio-zandvoort-1958": {
+      "arquivo_commons": "File:Grote prijs van Nederland op het circuit van Zandvoort aangetast, Bestanddeelnr 909-5854.jpg",
+      "legenda": {
+        "pt": "Stirling Moss (nº 1) lidera em Zandvoort, onde venceu o GP dos Países Baixos de 1958. Também aparecem Tony Brooks (nº 2) e Stuart Lewis-Evans (nº 3). Brooks venceu em Monza com o chassi VW5 que Lewis-Evans pilota nesta foto. Moss venceu em Casablanca com o mesmo carro.",
+        "en": "Stirling Moss (No. 1) leads at Zandvoort, where he won the 1958 Dutch Grand Prix. Tony Brooks (No. 2) and Stuart Lewis-Evans (No. 3) are also pictured. Brooks won at Monza in the VW5 chassis Lewis-Evans is driving here. Moss won at Casablanca in the same car."
+      },
+      "modelo": "vanwall-vw-5",
+      "temporadas": [
+        1958
+      ],
+      "construtor": "vanwall",
+      "fonte": "https://www.nationaalarchief.nl/onderzoeken/fotocollectie/a97cc66a-d0b4-102d-bcf8-003048976d84",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Grote_prijs_van_Nederland_op_het_circuit_van_Zandvoort_aangetast%2C_Bestanddeelnr_909-5854.jpg",
+      "autor": "Harry Pot / Anefo · Nationaal Archief",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "dc7ee2730785b3cc4a082999ed8fa561faee39cb368971401464d82707aad058",
+      "largura": 3496,
+      "altura": 2800,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/vanwall-trio-zandvoort-1958-dc7ee2730785-960.webp",
+          "largura": 960,
+          "altura": 769,
+          "sha256": "e3d80e313bd5abb75eaa84a93cfde25e9778ae67279406ef8424ade92c4b383e"
+        },
+        {
+          "arquivo": "static/pitwall-archive/vanwall-trio-zandvoort-1958-dc7ee2730785-2400.webp",
+          "largura": 2400,
+          "altura": 1922,
+          "sha256": "63a0948accdd443c3f52218a942266d7796eb09032e7e8c135bfc4c717ff0aa3"
+        }
+      ],
+      "gps": [
+        "1958:3"
+      ],
+      "artefatos_gps": [
+        "1958:10",
+        "1958:11"
+      ],
+      "equipes": [
+        "vanwall"
+      ]
+    },
     "cooper-t51": {
       "arquivo_commons": "File:Cooper T51 Donington 2007.jpg",
       "legenda": {
-        "pt": "Cooper T51 na coleção de Donington.",
-        "en": "Cooper T51 at the Donington collection."
+        "pt": "Cooper T51 fotografado em Donington em 2007. O modelo das campanhas de 1959 e 1960 também foi usado por Jack Brabham na abertura do Mundial de 1960, na Argentina.",
+        "en": "A Cooper T51 photographed at Donington in 2007. The model appeared in the 1959 and 1960 campaigns, including with Jack Brabham at the 1960 season opener in Argentina."
       },
       "modelo": "cooper-t51",
       "temporadas": [
-        1959
+        1959,
+        1960
       ],
       "construtor": "cooper",
       "fonte": "https://commons.wikimedia.org/wiki/File:Cooper_T51_Donington_2007.jpg",
@@ -2053,6 +2176,105 @@
           "largura": 2400,
           "altura": 1798,
           "sha256": "14a0e3fb7d0f975d61f7f041ebf7a487929171077b341bf27f3df4285b6eb057"
+        }
+      ]
+    },
+    "lauda-fittipaldi-podio-monza-1975": {
+      "arquivo_commons": "File:1975 Italian GP - The new F1 Drivers' World Champion Niki Lauda on the podium.jpg",
+      "legenda": {
+        "pt": "Niki Lauda é aplaudido por Emerson Fittipaldi no pódio de Monza em 1975. O terceiro lugar deu a Lauda seu primeiro Mundial de Pilotos. Fittipaldi, campeão de 1974, terminou em segundo.",
+        "en": "Emerson Fittipaldi applauds Niki Lauda on the podium at Monza in 1975. Third place secured Lauda’s first Drivers’ Championship. Fittipaldi, the 1974 champion, finished second."
+      },
+      "gps": [
+        "1975:13"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:1975_Italian_GP_-_The_new_F1_Drivers%27_World_Champion_Niki_Lauda_on_the_podium.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/18/1975_Italian_GP_-_The_new_F1_Drivers%27_World_Champion_Niki_Lauda_on_the_podium.jpg",
+      "autor": "ATTUALFOTO",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "91f95d62f6169f3434b482db81c90419395823eabefaaa6f71e9ca1da6bab54d",
+      "largura": 1949,
+      "altura": 2433,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/lauda-fittipaldi-podio-monza-1975-91f95d62f616-960.webp",
+          "largura": 769,
+          "altura": 960,
+          "sha256": "7919163ce1d6ec8535b9199c9f6c2c23d1d2858fea6a59306e02ddbd5777d87c"
+        },
+        {
+          "arquivo": "static/pitwall-archive/lauda-fittipaldi-podio-monza-1975-91f95d62f616-2400.webp",
+          "largura": 1923,
+          "altura": 2400,
+          "sha256": "5c63d2596e1942de39ea6aff1e09a67c5a5fb9ee3a96d3d2d5a1956c8465b5f6"
+        }
+      ]
+    },
+    "fittipaldi-ultrapassa-lauda-monza-1975": {
+      "arquivo_commons": "File:1975 Italian GP - Fittipaldi overtakes Lauda.jpg",
+      "autor": "Autosprint, nº 37 (fotógrafo não identificado / photographer unknown)",
+      "legenda": {
+        "pt": "Emerson Fittipaldi, no McLaren M23C nº 1, ultrapassa Niki Lauda, no Ferrari 312 T nº 12, nas voltas finais do GP da Itália de 1975. A digitalização conserva a dobra central da revista Autosprint.",
+        "en": "Emerson Fittipaldi, in the No. 1 McLaren M23C, passes Niki Lauda, in the No. 12 Ferrari 312 T, in the closing laps of the 1975 Italian Grand Prix. The scan retains the Autosprint magazine’s centre fold."
+      },
+      "gps": [
+        "1975:13"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:1975_Italian_GP_-_Fittipaldi_overtakes_Lauda.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/bb/1975_Italian_GP_-_Fittipaldi_overtakes_Lauda.jpg",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "3d8f1990fd495abd6e2576ef1249a0cf439915a012af8f72b2c8c19e97927121",
+      "largura": 2420,
+      "altura": 1198,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/fittipaldi-ultrapassa-lauda-monza-1975-3d8f1990fd49-960.webp",
+          "largura": 960,
+          "altura": 475,
+          "sha256": "4f4d44d9cc9bd98d7f29f0414de01b26c25e88774ec01554ea9e60af550666e3"
+        },
+        {
+          "arquivo": "static/pitwall-archive/fittipaldi-ultrapassa-lauda-monza-1975-3d8f1990fd49-2400.webp",
+          "largura": 2400,
+          "altura": 1188,
+          "sha256": "897a3e0af127415d2c96005afd27a07bb110d34df06bd5ba4a554427e5aef9ca"
+        }
+      ]
+    },
+    "regazzoni-ferrari-festa-monza-1975": {
+      "arquivo_commons": "File:1975 Italian GP - Ferrari's party for the winner Clay Regazzoni.jpg",
+      "autor": "Autosprint, nº 38 (fotógrafo não identificado / photographer unknown)",
+      "legenda": {
+        "pt": "Torcedores e integrantes da Ferrari festejam Clay Regazzoni após a vitória em Monza, em 1975. A Ferrari garantiu o Mundial de Construtores nessa corrida.",
+        "en": "Ferrari team members and fans celebrate Clay Regazzoni’s win at Monza in 1975. Ferrari clinched the Constructors’ Championship at this race."
+      },
+      "equipes": [
+        "ferrari"
+      ],
+      "gps": [
+        "1975:13"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:1975_Italian_GP_-_Ferrari%27s_party_for_the_winner_Clay_Regazzoni.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/08/1975_Italian_GP_-_Ferrari%27s_party_for_the_winner_Clay_Regazzoni.jpg",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "a2f31cc4fc8fd27de8c4015919badf8616ac59ad8a2920a05a1b105691a7d3a5",
+      "largura": 1947,
+      "altura": 2679,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-960.webp",
+          "largura": 698,
+          "altura": 960,
+          "sha256": "cad3b0c6e7111b169d36640c67000b7c5c7aa0509de89746a62d00baedb7df21"
+        },
+        {
+          "arquivo": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-2400.webp",
+          "largura": 1744,
+          "altura": 2400,
+          "sha256": "3f1d141c9768de220f5c48fb71c59a8d3f7bb7e99daab0cd896a0bc1a88a9df2"
         }
       ]
     },
@@ -2573,9 +2795,12 @@
     "ferrari-f2002-barrichello-mugello-2023": {
       "arquivo_flickr": "53714829010",
       "legenda": {
-        "pt": "O Ferrari F2002 de chassi 224 em pista nas Finali Mondiali de Mugello, em 2023. Rubens Barrichello venceu o GP da Itália de 2002 com esse chassi.",
-        "en": "Ferrari F2002 chassis 224 on track at the 2023 Finali Mondiali at Mugello. Rubens Barrichello won the 2002 Italian Grand Prix in this chassis."
+        "pt": "O Ferrari F2002 de chassi 224 em pista nas Finali Mondiali de Mugello, em 2023. Rubens Barrichello venceu em Monza com esse chassi, na mesma campanha em que garantiu o Mundial de Construtores para a Ferrari na Hungria com o F2002 de chassi 220.",
+        "en": "Ferrari F2002 chassis 224 on track at the 2023 Finali Mondiali at Mugello. Rubens Barrichello won at Monza in this chassis, in the same season that he secured Ferrari’s Constructors’ Championship in Hungary in F2002 chassis 220."
       },
+      "artefatos_gps": [
+        "2002:13"
+      ],
       "modelo": "ferrari-f2002",
       "temporadas": [
         2002
@@ -2777,8 +3002,8 @@
     "ferrari-246": {
       "arquivo_commons": "File:Ferrari 246 F1 front-left Enzo Ferrari Museum.jpg",
       "legenda": {
-        "pt": "Ferrari 246 F1 no Museu Enzo Ferrari, modelo campeão de Mike Hawthorn.",
-        "en": "Ferrari 246 F1 at the Enzo Ferrari Museum, Mike Hawthorn’s championship-winning model."
+        "pt": "Ferrari Dino de chassi 0011 no Museu Enzo Ferrari, em Módena, em 2013. A carroceria segue a configuração 246/60, evolução da família de carros com que Mike Hawthorn foi campeão em 1958.",
+        "en": "Ferrari Dino chassis 0011 at the Enzo Ferrari Museum in Modena in 2013. Its bodywork follows the 246/60 configuration, an evolution of the car family that took Mike Hawthorn to the 1958 title."
       },
       "modelo": "ferrari-246",
       "temporadas": [
@@ -2923,12 +3148,13 @@
     "lotus-72d": {
       "arquivo_commons": "File:1972 French Grand Prix Fittipaldi (5225674175).jpg",
       "legenda": {
-        "pt": "Emerson Fittipaldi com o Lotus 72D no GP da França de 1972.",
-        "en": "Emerson Fittipaldi in the Lotus 72D at the 1972 French Grand Prix."
+        "pt": "Emerson Fittipaldi no GP da França de 1972 com o Lotus 72D de chassi R7. Venceu com esse mesmo carro na Argentina e no Brasil no início da campanha que deu à Lotus o título de construtores de 1973.",
+        "en": "Emerson Fittipaldi in Lotus 72D chassis R7 at the 1972 French Grand Prix. He won in this same car in Argentina and Brazil at the start of Lotus’s 1973 constructors’ title campaign."
       },
       "modelo": "lotus-72d",
       "temporadas": [
-        1972
+        1972,
+        1973
       ],
       "construtor": "lotus",
       "fonte": "https://commons.wikimedia.org/wiki/File:1972_French_Grand_Prix_Fittipaldi_(5225674175).jpg",
@@ -3057,8 +3283,8 @@
     "ferrari-312t4": {
       "arquivo_commons": "File:Ferrari 312T4 - Jody Scheckter at the 1979 Belgian Grand Prix, Zolder (51632958993).jpg",
       "legenda": {
-        "pt": "Jody Scheckter no Ferrari 312 T4 durante o GP da Bélgica de 1979.",
-        "en": "Jody Scheckter in the Ferrari 312 T4 at the 1979 Belgian Grand Prix."
+        "pt": "Jody Scheckter no Ferrari 312 T4 nº 11, chassi 040, no GP da Bélgica de 1979, em Zolder. Ele venceu na estreia do chassi e voltou a vencer com ele em Monza, onde garantiu o título de pilotos e o de construtores da Ferrari.",
+        "en": "Jody Scheckter in Ferrari 312 T4 no. 11, chassis 040, at the 1979 Belgian Grand Prix at Zolder. He won on the chassis’s debut and won again in it at Monza, where he clinched the drivers’ title and Ferrari secured the constructors’ title."
       },
       "modelo": "ferrari-312t4",
       "temporadas": [
@@ -3086,6 +3312,9 @@
           "altura": 1416,
           "sha256": "8e818c08192d1b162af56b23c3bbd1a4cc429d3ead1623215223cafc4bfe80d0"
         }
+      ],
+      "artefatos_gps": [
+        "1979:13"
       ]
     },
     "williams-fw07b": {
@@ -3125,12 +3354,13 @@
     "williams-fw07c": {
       "arquivo_commons": "File:Reutemann at 1981 Dutch Grand Prix.jpg",
       "legenda": {
-        "pt": "Carlos Reutemann no Williams FW07C de chassi 17 em Zandvoort, em 1981. Ele levou o mesmo carro ao décimo lugar em Montreal, onde a Williams garantiu o título de construtores, e ao oitavo em Las Vegas, onde perdeu o título de pilotos para Nelson Piquet por um ponto.",
-        "en": "Carlos Reutemann in Williams FW07C chassis 17 at Zandvoort in 1981. He finished tenth in this car at Montreal, where Williams clinched the constructors’ title, and eighth at Las Vegas, where he lost the drivers’ title to Nelson Piquet by one point."
+        "pt": "Carlos Reutemann no Williams FW07C de chassi 17 em Zandvoort, em 1981. Ele levou o mesmo carro ao décimo lugar em Montreal, onde a Williams garantiu o título de construtores, e ao oitavo em Las Vegas, onde perdeu o título de pilotos para Nelson Piquet por um ponto. Keke Rosberg correu com esse chassi no GP do Brasil de 1982, durante sua campanha pelo título.",
+        "en": "Carlos Reutemann in Williams FW07C chassis 17 at Zandvoort in 1981. He finished tenth in this car at Montreal, where Williams clinched the constructors’ title, and eighth at Las Vegas, where he lost the drivers’ title to Nelson Piquet by one point. Keke Rosberg raced the same chassis at the 1982 Brazilian Grand Prix during his title campaign."
       },
       "modelo": "williams-fw07c",
       "temporadas": [
-        1981
+        1981,
+        1982
       ],
       "construtor": "williams",
       "fonte": "https://commons.wikimedia.org/wiki/File:Reutemann_at_1981_Dutch_Grand_Prix.jpg",
@@ -5271,6 +5501,45 @@
         }
       ]
     },
+    "vettel-rb7-suzuka-2011-suzuki": {
+      "legenda": {
+        "pt": "Sebastian Vettel no Red Bull RB7 no GP do Japão de 2011. O terceiro lugar em Suzuka garantiu seu segundo Mundial de Pilotos. Título da foto “Red Bull, Sebastian Vettel [IMG_5249]”.",
+        "en": "Sebastian Vettel in the Red Bull RB7 at the 2011 Japanese Grand Prix. Third place at Suzuka secured his second Drivers’ Championship. Photo title “Red Bull, Sebastian Vettel [IMG_5249]”."
+      },
+      "modelo": "red-bull-rb7",
+      "temporadas": [
+        2011
+      ],
+      "equipes": [
+        "red_bull"
+      ],
+      "gps": [
+        "2011:15"
+      ],
+      "construtor": "red-bull",
+      "fonte": "https://www.flickr.com/photos/78475089@N02/7028620645/",
+      "original": "https://live.staticflickr.com/7188/7028620645_a3ac266053_o.jpg",
+      "autor": "Takayuki Suzuki",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "sha256": "3b1d178545e4789989f24887a896d2833a5ce5ae68fe3ec167a14ac7e0bb469e",
+      "largura": 5184,
+      "altura": 3456,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/vettel-rb7-suzuka-2011-suzuki-3b1d178545e4-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "03de46513b02f0d0b8c11b9e9d8bef4544b0aedfaeec337cc554e0379f05f89a"
+        },
+        {
+          "arquivo": "static/pitwall-archive/vettel-rb7-suzuka-2011-suzuki-3b1d178545e4-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "3868fb99c549fb6d6f5ca8e75d42767ca73e8de06f7fd281f83c8c70d94aaa57"
+        }
+      ]
+    },
     "vettel-suzuka-2011": {
       "arquivo_commons": "File:Sebastian Vettel 2011 Japan Race.jpg",
       "legenda": {
@@ -6458,6 +6727,71 @@
           "largura": 2400,
           "altura": 1350,
           "sha256": "8069734350617605b626bce5be9f73c8a02fddd7d7f100d5ebb987e30ce55c12"
+        }
+      ]
+    },
+    "verstappen-rb13-mexico-2017": {
+      "legenda": {
+        "pt": "Max Verstappen no Red Bull RB13 nº 33 no GP do México de 2017. Verstappen venceu a prova em que Lewis Hamilton conquistou seu quarto Mundial de Pilotos.",
+        "en": "Max Verstappen in the No. 33 Red Bull RB13 at the 2017 Mexican Grand Prix. Verstappen won the race in which Lewis Hamilton secured his fourth Drivers’ Championship."
+      },
+      "gps": [
+        "2017:18"
+      ],
+      "equipes": [
+        "red_bull"
+      ],
+      "fonte": "https://www.flickr.com/photos/140660272@N07/26299298269/",
+      "original": "https://live.staticflickr.com/4497/26299298269_f8883bfc66_o.jpg",
+      "autor": "Gobierno CDMX",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "683e583d4803a35e0345a47602c9b66082583211c1f9551c1fe6b5d6661166b2",
+      "largura": 1920,
+      "altura": 1280,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/verstappen-rb13-mexico-2017-683e583d4803-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "82c7444e38e1a86e5abd5028750b8c964ecd368c3ac0af09a6e95e3e31fef255"
+        },
+        {
+          "arquivo": "static/pitwall-archive/verstappen-rb13-mexico-2017-683e583d4803-1920.webp",
+          "largura": 1920,
+          "altura": 1280,
+          "sha256": "9e7f037c114202404f66cf5de55e80c61db8dff21abb3e3918c0e615a7dddb89"
+        }
+      ]
+    },
+    "foro-sol-publico-mexico-2017": {
+      "legenda": {
+        "pt": "Público na pista e nas arquibancadas do Foro Sol após o GP do México de 2017, em que Lewis Hamilton conquistou seu quarto Mundial de Pilotos.",
+        "en": "Fans on the track and in the Foro Sol grandstands after the 2017 Mexican Grand Prix, where Lewis Hamilton secured his fourth Drivers’ Championship."
+      },
+      "gps": [
+        "2017:18"
+      ],
+      "fonte": "https://www.flickr.com/photos/140660272@N07/37365978554/",
+      "original": "https://live.staticflickr.com/4473/37365978554_23f1a9af7c_o.jpg",
+      "autor": "Gobierno CDMX",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "bb1074568073bb7e26e071141425f3666116b8b5fdb9c6f7ed46c7fd9da755c4",
+      "largura": 1920,
+      "altura": 1280,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/foro-sol-publico-mexico-2017-bb1074568073-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "3be3c7979a42143ecb82adf64cdee50c04ee39f625951d7fa3ec9af48536d45d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/foro-sol-publico-mexico-2017-bb1074568073-1920.webp",
+          "largura": 1920,
+          "altura": 1280,
+          "sha256": "1c9c02b9482230c4275c3efcdddf43eb039c16cc154aa0afe9989b7afc05c251"
         }
       ]
     },
@@ -8717,8 +9051,8 @@
     "fangio-w196-zandvoort-aintree-1955": {
       "arquivo_commons": "File:Grote Prijs van Nederland Zandvoort. Vooraan J. M. Fangio in Mercedes (de latere, Bestanddeelnr 907-1903.jpg",
       "legenda": {
-        "pt": "Juan Manuel Fangio lidera Stirling Moss em Zandvoort em 1955 no Mercedes W196 de chassi 00013/55. Com o mesmo carro, foi segundo em Aintree e assegurou seu terceiro título mundial.",
-        "en": "Juan Manuel Fangio leads Stirling Moss at Zandvoort in 1955 in Mercedes W196 chassis 00013/55. He finished second at Aintree in the same car to secure his third World Championship."
+        "pt": "Juan Manuel Fangio lidera Stirling Moss em Zandvoort em 1955 no Mercedes W196 de chassi 00013/55. Foi segundo em Aintree com o mesmo carro. Com os cancelamentos no calendário, esse resultado bastou para o tricampeonato.",
+        "en": "Juan Manuel Fangio leads Stirling Moss at Zandvoort in 1955 in Mercedes W196 chassis 00013/55. He finished second at Aintree in the same car. With the calendar shortened by cancellations, that result was enough for his third world title."
       },
       "modelo": "mercedes-w196",
       "temporadas": [
@@ -11765,8 +12099,8 @@
     "villeneuve-ferrari-312t4b-imola-1979": {
       "arquivo_commons": "File:Gilles Villeneuve imola 1979.jpg",
       "legenda": {
-        "pt": "Gilles Villeneuve nos boxes de Ímola no GP Dino Ferrari de 1979, uma semana após terminar em segundo em Monza com o mesmo Ferrari 312 T4B, chassi 038.",
-        "en": "Gilles Villeneuve in the Imola pits at the 1979 Dino Ferrari Grand Prix, a week after finishing second at Monza in the same Ferrari 312 T4B, chassis 038."
+        "pt": "Gilles Villeneuve nos boxes de Ímola no GP Dino Ferrari de 1979 com o 312 T4B, chassi 038. O carro usava freios traseiros nas rodas e havia terminado em segundo em Monza uma semana antes.",
+        "en": "Gilles Villeneuve in the Imola pits at the 1979 Dino Ferrari Grand Prix with the 312 T4B, chassis 038. It ran with outboard rear brakes and had finished second at Monza a week earlier."
       },
       "modelo": "ferrari-312t4b",
       "temporadas": [
@@ -11865,6 +12199,2052 @@
           "largura": 2400,
           "altura": 1888,
           "sha256": "a5b641f2eee26d002a6499b63723f0fa62a09abf94e28bee1b8f2b77b868dfff"
+        }
+      ]
+    },
+    "mclaren-grid-xangai-2024": {
+      "arquivo_commons": "File:Norris & Piastri on the grid - Chinese GP 2024.jpg",
+      "legenda": {
+        "pt": "Lando Norris e Oscar Piastri no grid do GP da China, em Xangai, em 21 de abril de 2024. Os dois pilotaram o MCL38 na campanha do nono Mundial de Construtores da McLaren.",
+        "en": "Lando Norris and Oscar Piastri on the grid at the Chinese Grand Prix in Shanghai on 21 April 2024. Both drove the MCL38 in McLaren’s ninth Constructors’ Championship campaign."
+      },
+      "modelo": "mclaren-mcl38",
+      "temporadas": [
+        2024
+      ],
+      "equipes": [
+        "mclaren"
+      ],
+      "gps": [
+        "2024:5"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Norris_%26_Piastri_on_the_grid_-_Chinese_GP_2024.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/40/Norris_%26_Piastri_on_the_grid_-_Chinese_GP_2024.jpg",
+      "autor": "Liauzh",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "bdfc0a1609a793e9164d93cffd68e1d7388f8e003dde9112d6a80a2d75501ce0",
+      "largura": 5373,
+      "altura": 3022,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/mclaren-grid-xangai-2024-bdfc0a1609a7-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "7991a5cb8a6a779715c3ebc05fa04b092fbe8480e1fd133a84fa06def024590d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/mclaren-grid-xangai-2024-bdfc0a1609a7-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "5f6631395d422a0031e198437693c19ebb310be84663daf0e356f600544ce1a9"
+        }
+      ]
+    },
+    "mercedes-podio-melbourne-2026": {
+      "arquivo_commons": "File:Podium celebration at the 2026 Australian Grand Prix (028A8775).jpg",
+      "legenda": {
+        "pt": "George Russell e Kimi Antonelli no pódio do GP da Austrália em Melbourne, em 8 de março de 2026. A Mercedes abriu a temporada com uma dobradinha, com Russell em primeiro e Antonelli em segundo.",
+        "en": "George Russell and Kimi Antonelli on the podium at the Australian Grand Prix in Melbourne on 8 March 2026. Mercedes opened the season with a one-two finish, with Russell first and Antonelli second."
+      },
+      "equipes": [
+        "mercedes"
+      ],
+      "gps": [
+        "2026:1"
+      ],
+      "uso_editorial": true,
+      "fonte": "https://commons.wikimedia.org/wiki/File:Podium_celebration_at_the_2026_Australian_Grand_Prix_(028A8775).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Podium_celebration_at_the_2026_Australian_Grand_Prix_%28028A8775%29.jpg",
+      "autor": "Yu Chu Chin",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "07886b1b5d9d5cc6d79e3bdf0789cbfd401250069882844b3cc8969f03b82a0c",
+      "largura": 5585,
+      "altura": 3723,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/mercedes-podio-melbourne-2026-07886b1b5d9d-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "95943ec917c45b49c6d6fee3afe06d3566fcb36a53ee72519d5218310ed21c6d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/mercedes-podio-melbourne-2026-07886b1b5d9d-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "3dab9064b798e3bad021d4397c3ffcdc3347eee0fc3d68145147952575a525e3"
+        }
+      ]
+    },
+    "zandvoort-publico-1984": {
+      "arquivo_commons": "File:Grand Prix 1984 toeschouwers op de pits, ziende naar het noorden, NL-HlmNHA 54016523.JPG",
+      "legenda": {
+        "pt": "Público sobre os boxes de Zandvoort em 26 de agosto de 1984. Nesse GP, Alain Prost venceu à frente de Niki Lauda e a dobradinha garantiu à McLaren o título de construtores.",
+        "en": "Spectators above the pits at Zandvoort on 26 August 1984. Alain Prost won the Grand Prix ahead of Niki Lauda, and the one-two finish secured the constructors’ title for McLaren."
+      },
+      "autor": "Cees de Boer / Noord-Hollands Archief · Fotoburo de Boer",
+      "gps": [
+        "1984:13"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Grand_Prix_1984_toeschouwers_op_de_pits,_ziende_naar_het_noorden,_NL-HlmNHA_54016523.JPG",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/03/Grand_Prix_1984_toeschouwers_op_de_pits%2C_ziende_naar_het_noorden%2C_NL-HlmNHA_54016523.JPG",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "ce840a860a37725001f76f9da8f322020bf84baa22ed27d005451918e5a23211",
+      "largura": 2893,
+      "altura": 2153,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/zandvoort-publico-1984-ce840a860a37-960.webp",
+          "largura": 960,
+          "altura": 714,
+          "sha256": "d268206d96fd9d3a2c2bb78a1cc8738129d04ee6a633e17765713eb538f25034"
+        },
+        {
+          "arquivo": "static/pitwall-archive/zandvoort-publico-1984-ce840a860a37-2400.webp",
+          "largura": 2400,
+          "altura": 1786,
+          "sha256": "7569497b729532835e079904979b5b877502c6ff00de6dd48f182e96fb86927f"
+        }
+      ]
+    },
+    "andretti-monza-1977": {
+      "arquivo_commons": "File:Monza 1977 - Mario Andretti - Vainqueur et Recordman du tour.jpg",
+      "legenda": {
+        "pt": "Mario Andretti volta aos boxes com o Lotus 78 em Monza, em 1977. Ele venceu o GP da Itália, no qual o segundo lugar de Niki Lauda garantiu à Ferrari o Mundial de Construtores.",
+        "en": "Mario Andretti returns to the pits in the Lotus 78 at Monza in 1977. He won the Italian Grand Prix, where Niki Lauda’s second place secured the constructors’ title for Ferrari."
+      },
+      "gps": [
+        "1977:14"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Monza_1977_-_Mario_Andretti_-_Vainqueur_et_Recordman_du_tour.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Monza_1977_-_Mario_Andretti_-_Vainqueur_et_Recordman_du_tour.jpg",
+      "autor": "Lelièvre Jean-Philippe",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "f6ba819d247aea1afbacc0743f8c321d71942f4f3e05a6d8cf0195f6441e4d25",
+      "largura": 4656,
+      "altura": 2895,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/andretti-monza-1977-f6ba819d247a-960.webp",
+          "largura": 960,
+          "altura": 597,
+          "sha256": "c1a31c96aafaf198798d30810667ec1425a6db335acc2563dd9e6dcfa21004d8"
+        },
+        {
+          "arquivo": "static/pitwall-archive/andretti-monza-1977-f6ba819d247a-2400.webp",
+          "largura": 2400,
+          "altura": 1492,
+          "sha256": "2568987d6c6c5c5874433d1fba8fcb14d8b22d9742b9b9fdb49561c74c889628"
+        }
+      ]
+    },
+    "piquet-imola-1980": {
+      "arquivo_commons": "File:Nelson Piquet Imola 1980.jpg",
+      "legenda": {
+        "pt": "Nelson Piquet sai dos boxes com a Brabham no treino de sábado em Ímola, em 13 de setembro de 1980. No domingo, ele venceu o GP da Itália, no qual a Williams conquistou seu primeiro Mundial de Construtores.",
+        "en": "Nelson Piquet leaves the pits in his Brabham during Saturday practice at Imola on 13 September 1980. He won the Italian Grand Prix on Sunday, when Williams clinched its first constructors’ title."
+      },
+      "gps": [
+        "1980:12"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Nelson_Piquet_Imola_1980.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Nelson_Piquet_Imola_1980.jpg",
+      "autor": "Carlom1961",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "2a1593f0465cdf362aad8c152d85e8b3c4ac0141a51faf01f403a55394a4fcdb",
+      "largura": 4320,
+      "altura": 2880,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/piquet-imola-1980-2a1593f0465c-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "bed4f5d4a0a4e236b4e12aa681fb1c0a6b0f5cde5fbecb6f9877b4cdf7f05e37"
+        },
+        {
+          "arquivo": "static/pitwall-archive/piquet-imola-1980-2a1593f0465c-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "0d1971e354d02e67d3993fe88385e28edf5dff036251c012ceba2b9e447498ea"
+        }
+      ]
+    },
+    "keegan-imola-1980": {
+      "arquivo_commons": "File:Rupert Keegan 1980 Italian GP.jpg",
+      "legenda": {
+        "pt": "Rupert Keegan sai dos boxes de Ímola na classificação de 1980, em um Williams FW07 inscrito pela RAM Racing. No domingo, Alan Jones e Carlos Reutemann levaram a equipe de fábrica ao primeiro título de construtores.",
+        "en": "Rupert Keegan leaves the Imola pits during 1980 qualifying in a Williams FW07 entered by RAM Racing. On Sunday, Alan Jones and Carlos Reutemann took the works team to its first constructors’ title."
+      },
+      "gps": [
+        "1980:12"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Rupert_Keegan_1980_Italian_GP.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/47/Rupert_Keegan_1980_Italian_GP.jpg",
+      "autor": "Carlom1961",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "db380d816d51176ca9e611e94b09fe70adeed00ce8cf4340dfcac3f2d8871e4a",
+      "largura": 5728,
+      "altura": 3824,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/keegan-imola-1980-db380d816d51-960.webp",
+          "largura": 960,
+          "altura": 641,
+          "sha256": "1b0b9abf6298fbe463c28016dc32d4082efb40ede3d68e12ec729bea838a3d88"
+        },
+        {
+          "arquivo": "static/pitwall-archive/keegan-imola-1980-db380d816d51-2400.webp",
+          "largura": 2400,
+          "altura": 1602,
+          "sha256": "2c35abd7ef686614d3e9df67e4a14adbeea37e67d04846525c0336dea3162b14"
+        }
+      ]
+    },
+    "rebaque-montreal-1981": {
+      "arquivo_commons": "File:1981 Canadian Grand Prix in Montreal - Formula 1 - Héctor Rebaque - Brabham-Ford - Parmalat Racing Team -6.jpg",
+      "legenda": {
+        "pt": "Héctor Rebaque com o Brabham BT49C nº 6 no fim de semana do GP do Canadá de 1981, em Montreal. Nessa etapa, a Williams assegurou seu segundo Mundial de Construtores.",
+        "en": "Héctor Rebaque in the No. 6 Brabham BT49C during the 1981 Canadian Grand Prix weekend in Montreal. Williams clinched its second constructors’ title at this round."
+      },
+      "gps": [
+        "1981:14"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:1981_Canadian_Grand_Prix_in_Montreal_-_Formula_1_-_H%C3%A9ctor_Rebaque_-_Brabham-Ford_-_Parmalat_Racing_Team_-6.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/27/1981_Canadian_Grand_Prix_in_Montreal_-_Formula_1_-_H%C3%A9ctor_Rebaque_-_Brabham-Ford_-_Parmalat_Racing_Team_-6.jpg",
+      "autor": "RedF127",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "075335b5c5a43462814c8dc06f81d3001e38711c87e85df50186277b192b0301",
+      "largura": 3543,
+      "altura": 2415,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/rebaque-montreal-1981-075335b5c5a4-960.webp",
+          "largura": 960,
+          "altura": 654,
+          "sha256": "3562433643b02947f41f8c61d6c16cf37f40d7846420c7989ea6f96e6f22879c"
+        },
+        {
+          "arquivo": "static/pitwall-archive/rebaque-montreal-1981-075335b5c5a4-2400.webp",
+          "largura": 2400,
+          "altura": 1636,
+          "sha256": "dd5efbee336f1027b48b1e71a58e734909f2c86dbe6ebd29c45efde3e883486c"
+        }
+      ],
+      "modelo": "brabham-bt49c",
+      "temporadas": [
+        1981
+      ],
+      "construtor": "brabham"
+    },
+    "rb6-publico-interlagos-2010": {
+      "legenda": {
+        "pt": "Em “fim de corrida”, o público aplaude um Red Bull RB6 em Interlagos. A dobradinha de Sebastian Vettel e Mark Webber no GP do Brasil de 2010 garantiu o primeiro Mundial de Construtores da Red Bull.",
+        "en": "In “fim de corrida” (“end of the race”), spectators applaud a Red Bull RB6 at Interlagos. Sebastian Vettel and Mark Webber’s one-two at the 2010 Brazilian Grand Prix secured Red Bull’s first constructors’ title."
+      },
+      "modelo": "red-bull-rb6",
+      "temporadas": [
+        2010
+      ],
+      "equipes": [
+        "red_bull"
+      ],
+      "construtor": "red-bull",
+      "gps": [
+        "2010:18"
+      ],
+      "fonte": "https://www.flickr.com/photos/ciloroberto/5236207687/",
+      "original": "https://live.staticflickr.com/5041/5236207687_d4185994ca_o.jpg",
+      "autor": "Cilo Roberto Bonaparte",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "sha256": "ed59873cc033400f8af8e8db7d97339879086651e1aac7cbb5a1299335275dab",
+      "largura": 3264,
+      "altura": 2448,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/rb6-publico-interlagos-2010-ed59873cc033-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "cb713e7df7fce1135100dad6d7a00e6de6880ca6376ef7b006cc1aa4e973418a"
+        },
+        {
+          "arquivo": "static/pitwall-archive/rb6-publico-interlagos-2010-ed59873cc033-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "b0f9c1b341fef570b93771bd50765900632601950185471bcee54e4bed471788"
+        }
+      ]
+    },
+    "alonso-interlagos-2010": {
+      "legenda": {
+        "pt": "Fernando Alonso no Ferrari F10 nº 8 no dia do GP do Brasil de 2010, em Interlagos. Terminou em terceiro, atrás da dobradinha que garantiu o primeiro título de construtores da Red Bull.",
+        "en": "Fernando Alonso in the No. 8 Ferrari F10 on race day at the 2010 Brazilian Grand Prix at Interlagos. He finished third behind the one-two that secured Red Bull’s first constructors’ title."
+      },
+      "gps": [
+        "2010:18"
+      ],
+      "fonte": "https://www.flickr.com/photos/ciloroberto/5236791088/",
+      "original": "https://live.staticflickr.com/5125/5236791088_6f2b0dd3b1_o.jpg",
+      "autor": "Cilo Roberto Bonaparte",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "sha256": "6d16d5ee9d886f87455be389bd65a395c3954aafc76a01cde703074885dcf1ec",
+      "largura": 3264,
+      "altura": 2448,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/alonso-interlagos-2010-6d16d5ee9d88-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "0d6c51130a88ed4e4702fe38377fcdba92c4be93edd5e57e78d49edd5c02273f"
+        },
+        {
+          "arquivo": "static/pitwall-archive/alonso-interlagos-2010-6d16d5ee9d88-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "3d2e27b88c5780d40a201649504a51c78e1ef741aab1c8a9bada12d5eab9fdbe"
+        }
+      ]
+    },
+    "hamilton-interlagos-2010": {
+      "legenda": {
+        "pt": "Lewis Hamilton no McLaren MP4-25 nº 2 no dia do GP do Brasil de 2010, em Interlagos. Terminou em quarto e fez a volta mais rápida da corrida.",
+        "en": "Lewis Hamilton in the No. 2 McLaren MP4-25 on race day at the 2010 Brazilian Grand Prix at Interlagos. He finished fourth and set the fastest lap."
+      },
+      "gps": [
+        "2010:18"
+      ],
+      "fonte": "https://www.flickr.com/photos/ciloroberto/5236760770/",
+      "original": "https://live.staticflickr.com/5006/5236760770_a2aae09d9e_o.jpg",
+      "autor": "Cilo Roberto Bonaparte",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "sha256": "527ac41b5b166a74eb54f614a1f386e800e4248724c82700d11122cb2f7cbbfc",
+      "largura": 3264,
+      "altura": 2448,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-interlagos-2010-527ac41b5b16-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "5c87660f9acee527350775eae48baeac4e69e028c0e1c33e5a2e66cad082a2b2"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-interlagos-2010-527ac41b5b16-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "8043ed1ecede0b8baf4968eb324cefaa252147b495a48dfee9f04d17b0d5a245"
+        }
+      ]
+    },
+    "moss-brabham-monza-1959": {
+      "legenda": {
+        "pt": "Stirling Moss, no Cooper T51 nº 14, lidera Phil Hill, Dan Gurney e Jack Brabham em Lesmo no GP da Itália de 1959. Moss venceu e a Cooper assegurou seu primeiro Mundial de Construtores. Foto do Anuário de Monza de 1960, p. 79.",
+        "en": "Stirling Moss, in the No. 14 Cooper T51, leads Phil Hill, Dan Gurney and Jack Brabham through Lesmo at the 1959 Italian Grand Prix. Moss won and Cooper clinched its first Constructors’ Championship. Photo from the 1960 Monza yearbook, p. 79."
+      },
+      "modelo": "cooper-t51",
+      "temporadas": [
+        1959
+      ],
+      "equipes": [
+        "cooper"
+      ],
+      "gps": [
+        "1959:8"
+      ],
+      "construtor": "cooper",
+      "fonte": "https://bibliotecadigitale.aci.it/pubblicazioni/dettaglio/#/volume/e2bfcb3ebbc0cf3ebf465016/8a97b8edab93eee8c1bd2592",
+      "original": "https://media-bibliotecadigitale.aci.it/archives/AC_MILANO_2016/RIVISTE/Annuario%20gran%20premio%20d%27Italia-Monza/1960/JPEG300/Annuario%20gran%20premio%20d%27Italia-Monza_19600101_nd_083_m.jpg",
+      "autor": "Annuario di Monza 1960 · ACI (fotógrafo não identificado / photographer unknown)",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "d493e442c4aa4ec00fb7aa810fa3fc3cbc90aa87e2ff44c9f84be11c5cde038d",
+      "largura": 2515,
+      "altura": 1979,
+      "recorte_original": {
+        "x": 15,
+        "y": 216,
+        "largura": 2515,
+        "altura": 1979
+      },
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/moss-brabham-monza-1959-d493e442c4aa-960.webp",
+          "largura": 960,
+          "altura": 755,
+          "sha256": "b12a51041166f5237c474cd551f40685c7703274f861ca14f91891702dcc9509"
+        },
+        {
+          "arquivo": "static/pitwall-archive/moss-brabham-monza-1959-d493e442c4aa-2400.webp",
+          "largura": 2400,
+          "altura": 1889,
+          "sha256": "7b35d6e3b989d928fd6e5995c5a654ef0bd9a8a143ae18f0aca1c02e024b9bbd"
+        }
+      ]
+    },
+    "cabianca-salvadori-monza-1959": {
+      "legenda": {
+        "pt": "O Maserati 250F de Giulio Cabianca e o Aston Martin de Roy Salvadori passam pela reta dos boxes no GP da Itália de 1959. Foto colorida do Anuário de Monza de 1960, p. 72.",
+        "en": "Giulio Cabianca’s Maserati 250F and Roy Salvadori’s Aston Martin pass the pits at the 1959 Italian Grand Prix. Colour photograph from the 1960 Monza yearbook, p. 72."
+      },
+      "gps": [
+        "1959:8"
+      ],
+      "fonte": "https://bibliotecadigitale.aci.it/pubblicazioni/dettaglio/#/volume/e2bfcb3ebbc0cf3ebf465016/b2ae3b592a63e51259884532",
+      "original": "https://media-bibliotecadigitale.aci.it/archives/AC_MILANO_2016/RIVISTE/Annuario%20gran%20premio%20d%27Italia-Monza/1960/JPEG300/Annuario%20gran%20premio%20d%27Italia-Monza_19600101_nd_076_m.jpg",
+      "autor": "Annuario di Monza 1960 · ACI (fotógrafo não identificado / photographer unknown)",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "e07a171ff4beffc5d901ea72ac02da82321742d725f6d636be3c852646dd7298",
+      "largura": 2548,
+      "altura": 1695,
+      "recorte_original": {
+        "x": 12,
+        "y": 615,
+        "largura": 2548,
+        "altura": 1695
+      },
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/cabianca-salvadori-monza-1959-e07a171ff4be-960.webp",
+          "largura": 960,
+          "altura": 639,
+          "sha256": "92926c6bcc345aa310830e7b99af1fc842247dde04eb322114168fbb8de263a6"
+        },
+        {
+          "arquivo": "static/pitwall-archive/cabianca-salvadori-monza-1959-e07a171ff4be-2400.webp",
+          "largura": 2400,
+          "altura": 1597,
+          "sha256": "d5ec61e9a1690ad30b6ec0b9b6e932c117d1136e5ee85d0c5d38f5f27aa4ec61"
+        }
+      ]
+    },
+    "largada-monza-1960-anuario": {
+      "legenda": {
+        "pt": "O pelotão acelera diante da arquibancada na largada do GP da Itália de 1960. Phil Hill conquistou sua primeira vitória na Fórmula 1, em uma chegada com três Ferrari na frente. Foto colorida do Anuário de Monza de 1961, p. 89.",
+        "en": "The field accelerates past the grandstand at the start of the 1960 Italian Grand Prix. Phil Hill earned his first Formula 1 win in a Ferrari one-two-three. Colour photograph from the 1961 Monza yearbook, p. 89."
+      },
+      "equipes": [
+        "ferrari"
+      ],
+      "gps": [
+        "1960:9"
+      ],
+      "fonte": "https://bibliotecadigitale.aci.it/pubblicazioni/dettaglio/#/volume/bfd626a245ea74861e49541a/3264ac0c64c3998110e58f70",
+      "original": "https://media-bibliotecadigitale.aci.it/archives/AC_MILANO_2016/RIVISTE/Annuario%20gran%20premio%20d%27Italia-Monza/1961/JPEG300/Annuario%20gran%20premio%20d%27Italia-Monza_19610101_nd_093_m.jpg",
+      "autor": "Annuario di Monza 1961 · ACI (fotógrafo não identificado / photographer unknown)",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "cae4dc15e13ff06798d0fa4538fd5b5f31d4e3066a40e2b8957c39b7f85a89d6",
+      "largura": 2495,
+      "altura": 1793,
+      "recorte_original": {
+        "x": 20,
+        "y": 615,
+        "largura": 2495,
+        "altura": 1793
+      },
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/largada-monza-1960-anuario-cae4dc15e13f-960.webp",
+          "largura": 960,
+          "altura": 690,
+          "sha256": "3591f3990a6ba841f6f84dadc8bfd4108852c358dee9124a18a0e1f4984e8648"
+        },
+        {
+          "arquivo": "static/pitwall-archive/largada-monza-1960-anuario-cae4dc15e13f-2400.webp",
+          "largura": 2400,
+          "altura": 1725,
+          "sha256": "f9e8eda2aba241310283338f1ffe5ee94176ff085c6256292492d2ed0981529a"
+        }
+      ]
+    },
+    "grid-monza-1961-anuario": {
+      "legenda": {
+        "pt": "Os 32 carros alinhados para a largada do GP da Itália de 1961, com quatro Ferrari 156 nas primeiras posições. Phil Hill venceu em Monza com a Ferrari nº 2 e conquistou o Mundial de Pilotos. Foto colorida do Anuário de Monza de 1962, p. 107.",
+        "en": "The 32-car grid for the 1961 Italian Grand Prix, with four Ferrari 156s at the front. Phil Hill won at Monza in the No. 2 Ferrari and clinched the Drivers’ Championship. Colour photograph from the 1962 Monza yearbook, p. 107."
+      },
+      "modelo": "ferrari-156",
+      "temporadas": [
+        1961
+      ],
+      "equipes": [
+        "ferrari"
+      ],
+      "gps": [
+        "1961:7"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://bibliotecadigitale.aci.it/pubblicazioni/dettaglio/#/volume/311763eaef7aa4b8bf77cc6f/eca4ea17e27f989d3940045e",
+      "original": "https://media-bibliotecadigitale.aci.it/archives/AC_MILANO_2016/RIVISTE/Annuario%20gran%20premio%20d%27Italia-Monza/1962/JPEG300/Annuario%20gran%20premio%20d%27Italia-Monza_19620101_nd_109_m.jpg",
+      "autor": "Annuario di Monza 1962 · ACI (fotógrafo não identificado / photographer unknown)",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "ab05751886f219dbd6e4ba66ec614f692755d1cca55d71d554c43dd8dde67632",
+      "largura": 2490,
+      "altura": 1813,
+      "recorte_original": {
+        "x": 20,
+        "y": 625,
+        "largura": 2490,
+        "altura": 1813
+      },
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-960.webp",
+          "largura": 960,
+          "altura": 699,
+          "sha256": "3fde945b1500e102fc656f41cf3f1e553295a1c068a7e513778d24858b095ed9"
+        },
+        {
+          "arquivo": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-2400.webp",
+          "largura": 2400,
+          "altura": 1747,
+          "sha256": "42c3f4caea3bd53df4fd1941593f49ec6fa8c9e55b695bc978b47708d6db4ae0"
+        }
+      ]
+    },
+    "hungaroring-1986-podio-fortepan": {
+      "legenda": {
+        "pt": "Nelson Piquet no degrau mais alto do pódio do primeiro GP da Hungria de Fórmula 1, em 10 de agosto de 1986. Ayrton Senna foi o segundo, à esquerda, e Nigel Mansell foi o terceiro, à direita.",
+        "en": "Nelson Piquet on the top step of the podium at the first Formula One Hungarian Grand Prix on 10 August 1986. Ayrton Senna finished second, on the left, and Nigel Mansell finished third, on the right."
+      },
+      "pilotos": [
+        "nelson-piquet",
+        "ayrton-senna",
+        "nigel-mansell"
+      ],
+      "equipes": [
+        "williams",
+        "lotus"
+      ],
+      "autor": "Fortepan / Glósz András (268542)",
+      "gps": [
+        "1986:11"
+      ],
+      "fonte": "https://fortepan.hu/en/photos/?id=268542",
+      "original": "https://fortepan.download/file/fortepan-eu/download/fortepan_268542.jpg",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "1dfae204ed812106c0755dd74a7c2ef91f531558e7d48dd329164c73ee188f14",
+      "largura": 8470,
+      "altura": 5662,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-960.webp",
+          "largura": 960,
+          "altura": 642,
+          "sha256": "244bba162e62cdef570442fb66eacd42b1df87ed57007f42378a2ff583634b60"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-2400.webp",
+          "largura": 2400,
+          "altura": 1604,
+          "sha256": "77f398d1261b44c43600a07d180043e6dc72af65145b1b9a4379bc415ed74682"
+        }
+      ]
+    },
+    "hungaroring-1986-piquet-fw11-fortepan": {
+      "legenda": {
+        "pt": "Nelson Piquet no Williams FW11-Honda nº 6, à frente de Derek Warwick no Brabham-BMW, no primeiro GP da Hungria de Fórmula 1. Piquet venceu a prova de 10 de agosto de 1986.",
+        "en": "Nelson Piquet in the No. 6 Williams FW11-Honda, ahead of Derek Warwick in the Brabham-BMW, at the first Formula One Hungarian Grand Prix. Piquet won the 10 August 1986 race."
+      },
+      "pilotos": [
+        "nelson-piquet"
+      ],
+      "equipes": [
+        "williams",
+        "brabham"
+      ],
+      "construtor": "williams",
+      "modelo": "williams-fw11",
+      "temporadas": [
+        1986
+      ],
+      "autor": "Fortepan / Urbán Tamás (125416)",
+      "gps": [
+        "1986:11"
+      ],
+      "fonte": "https://fortepan.hu/en/photos/?id=125416",
+      "original": "https://fortepan.download/file/fortepan-eu/download/fortepan_125416.jpg",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "387b97ec0459ccc083f3ed521c612c9d352b83c19d069a9e6701810b436b14e8",
+      "largura": 3359,
+      "altura": 2031,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-960.webp",
+          "largura": 960,
+          "altura": 580,
+          "sha256": "80114caeeef2dfdbf89520077bb88919782e48989c029f95c794f48720a9b8da"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-2400.webp",
+          "largura": 2400,
+          "altura": 1451,
+          "sha256": "c0fdb169a02419424215430130a89aea36f22c38cb0a74531d74e6bd00dc0f10"
+        }
+      ]
+    },
+    "monaco-1962-gasworks-roach": {
+      "arquivo_commons": "File:Monaco62.jpg",
+      "legenda": {
+        "pt": "Acidente na primeira volta do GP de Mônaco de 1962, na curva do Gasômetro, junto ao porto. Foto de 3 de junho de 1962.",
+        "en": "Opening-lap crash at the Gasworks Hairpin by the harbour during the 1962 Monaco Grand Prix. Photographed on 3 June 1962."
+      },
+      "gps": [
+        "1962:2"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Monaco62.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/24/Monaco62.jpg",
+      "autor": "Peter Roach (RoachPeter)",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "d36d95343e25850bd3c0b48f4c85c9e69abda60ac63b52f600453ec1db289692",
+      "largura": 2592,
+      "altura": 1680,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/monaco-1962-gasworks-roach-d36d95343e25-960.webp",
+          "largura": 960,
+          "altura": 622,
+          "sha256": "86b4b3b41ce31849795f82160d2ddbc3e167667740182ec4d3e1a7e781ef94c6"
+        },
+        {
+          "arquivo": "static/pitwall-archive/monaco-1962-gasworks-roach-d36d95343e25-2400.webp",
+          "largura": 2400,
+          "altura": 1556,
+          "sha256": "219201c06cee7fb32c59882ac468a1bd29fd3fe00107b9b2fef5c897d5425263"
+        }
+      ]
+    },
+    "pedro-de-la-rosa-hungaroring-2006": {
+      "arquivo_commons": "File:Pedro de la Rosa Hungaroring.jpg",
+      "legenda": {
+        "pt": "Pedro de la Rosa no McLaren MP4-21 durante a classificação do GP da Hungria de 2006. No dia seguinte, terminou em segundo, seu único pódio na F1, na primeira vitória de Jenson Button.",
+        "en": "Pedro de la Rosa in the McLaren MP4-21 during qualifying for the 2006 Hungarian Grand Prix. The next day he took his only F1 podium, finishing second behind first-time winner Jenson Button."
+      },
+      "gps": [
+        "2006:13"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Pedro_de_la_Rosa_Hungaroring.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Pedro_de_la_Rosa_Hungaroring.jpg",
+      "autor": "Rzober89",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "9326c23063d8a7ec006e4177b799de06785363ecd5c165fadd5a15d2311dd2c9",
+      "largura": 2576,
+      "altura": 1932,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "384307eae2d5843bff4674642dc88bf5abaa8270c5b2d3c8c758c7f531cec0ee"
+        },
+        {
+          "arquivo": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "fe55219253a93e303f5489f485c839144698367d958e724c1b22f2d963965bb8"
+        }
+      ]
+    },
+    "fangio-moss-pescara-1957": {
+      "legenda": {
+        "pt": "Juan Manuel Fangio cumprimenta Stirling Moss, vencedor do GP de Pescara em 18 de agosto de 1957. Moss venceu pela Vanwall e Fangio terminou em segundo pela Maserati. Foto publicada na revista Pirelli nº 5 de 1957, p. 29.",
+        "en": "Juan Manuel Fangio congratulates Stirling Moss, winner of the Pescara Grand Prix on 18 August 1957. Moss won for Vanwall and Fangio finished second for Maserati. Published in Pirelli magazine no. 5, 1957, p. 29."
+      },
+      "pilotos": [
+        "juan-manuel-fangio"
+      ],
+      "gps": [
+        "1957:7"
+      ],
+      "fonte": "https://www.fondazionepirelli.org/archivio-storico/fotografie/detail/IT-PIRELLI-FT0001-0000007111/gran-premio-pescara-del-1957.html",
+      "original": "https://pirelli500gp.fondazionepirelli.org/assets/images/illustrations/era1-19-dsk.avif",
+      "autor": "Publifoto · Fondazione Pirelli (18317)",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "402ec9f6136d7e6d13d0ad839dd05b5b656b9d6c7079e6f41b852ad86b7c58bf",
+      "largura": 2560,
+      "altura": 1440,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "da55d7cbe10b699d739896afb0f1a95fc29b65b451347840cb8770be2c9857ad"
+        },
+        {
+          "arquivo": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "759113c79b46856dfe6a86af1f0a08fda380e04c2989d8454d9e6ae03840b596"
+        }
+      ]
+    },
+    "ascari-ferrari-500-zandvoort-1953": {
+      "arquivo_commons": "File:Autoraces Dutch Grand Prix Zandvoort. Ascari in de bocht, Bestanddeelnr 905-7652.jpg",
+      "legenda": {
+        "pt": "Alberto Ascari no Ferrari 500 de chassi 005 durante a vitória em Zandvoort, em 7 de junho de 1953. Com esse carro, Ascari também venceu em Bremgarten e confirmou o bicampeonato na mesma temporada.",
+        "en": "Alberto Ascari in Ferrari 500 chassis 005 on his way to victory at Zandvoort on 7 June 1953. He also won at Bremgarten in this car to clinch his second title that season."
+      },
+      "modelo": "ferrari-500",
+      "temporadas": [
+        1953
+      ],
+      "gps": [
+        "1953:3"
+      ],
+      "artefatos_gps": [
+        "1953:8"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://www.nationaalarchief.nl/onderzoeken/fotocollectie/a90d573a-d0b4-102d-bcf8-003048976d84",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/archive/1/1c/20200905112037%21Autoraces_Dutch_Grand_Prix_Zandvoort._Ascari_in_de_bocht%2C_Bestanddeelnr_905-7652.jpg",
+      "autor": "Harry Pot / Anefo · Nationaal Archief (905-7652)",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "b6b993fe917d21cb7021eaa1d4d4408e64e81e04fcb77bcd076917c736ca035a",
+      "largura": 3415,
+      "altura": 2849,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ascari-ferrari-500-zandvoort-1953-b6b993fe917d-960.webp",
+          "largura": 960,
+          "altura": 801,
+          "sha256": "864f7ad6114ad3f0275c8e555890ac0942c5756755378c9b800479d3c56066c6"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ascari-ferrari-500-zandvoort-1953-b6b993fe917d-2400.webp",
+          "largura": 2400,
+          "altura": 2002,
+          "sha256": "4b5ca240926ea9e478f8b9539935138d51a9145407ad8293672a21734b693762"
+        }
+      ]
+    },
+    "interlagos-2006-arquibancada": {
+      "arquivo_commons": "File:2006 Fómula 1...Adeus Schumacher^ - panoramio.jpg",
+      "legenda": {
+        "pt": "Carros em pista vistos da arquibancada de Interlagos no GP do Brasil de 2006, corrida em que Felipe Massa venceu e Fernando Alonso e a Renault conquistaram seus segundos títulos mundiais.",
+        "en": "Cars on track seen from the Interlagos grandstand at the 2006 Brazilian Grand Prix, where Felipe Massa won and Fernando Alonso and Renault clinched their second world championships."
+      },
+      "gps": [
+        "2006:18"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:2006_F%C3%B3mula_1...Adeus_Schumacher%5E_-_panoramio.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/1c/2006_F%C3%B3mula_1...Adeus_Schumacher%5E_-_panoramio.jpg",
+      "autor": "Silvio Chiozini",
+      "licenca": "CC BY 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/3.0",
+      "sha256": "555f97f65c8e36df4c484b62be55809eb5785c2171f0eeadc2dbd07d53bc84c6",
+      "largura": 3024,
+      "altura": 2005,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/interlagos-2006-arquibancada-555f97f65c8e-960.webp",
+          "largura": 960,
+          "altura": 637,
+          "sha256": "53db1a5b4336bb52120b0f540a748f21aaf7f4a6af42997a520ac7056479a5de"
+        },
+        {
+          "arquivo": "static/pitwall-archive/interlagos-2006-arquibancada-555f97f65c8e-2400.webp",
+          "largura": 2400,
+          "altura": 1591,
+          "sha256": "b7d1fc53069a573ecef5b3086a45c675e0d10af565adcee0046325e49fa995fc"
+        }
+      ]
+    },
+    "maserati-250f-2505-turim-2015": {
+      "modelo": "maserati-250f",
+      "temporadas": [
+        1954
+      ],
+      "construtor": "maserati",
+      "arquivo_commons": "File:1954 Maserati 250 F Museo Nazionale dell'Automobile di Torino 08.jpg",
+      "legenda": {
+        "pt": "Maserati 250F que venceu o GP da Argentina de 1954 com Juan Manuel Fangio, fotografado no Museu Nacional do Automóvel, em Turim, em 2015. O chassi 2505 recebeu a identificação 2500 após o restauro de fábrica.",
+        "en": "The Maserati 250F that won the 1954 Argentine Grand Prix with Juan Manuel Fangio, photographed at the National Automobile Museum in Turin in 2015. Chassis 2505 was renumbered 2500 after its factory restoration."
+      },
+      "fonte": "https://commons.wikimedia.org/wiki/File:1954_Maserati_250_F_Museo_Nazionale_dell%27Automobile_di_Torino_08.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f0/1954_Maserati_250_F_Museo_Nazionale_dell%27Automobile_di_Torino_08.jpg",
+      "autor": "Rahil Rupawala",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0/",
+      "sha256": "b350f04510413cacb0bb46d300aee721e776cb015a032860e5b8c0e528676e90",
+      "largura": 4288,
+      "altura": 2848,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-960.webp",
+          "largura": 960,
+          "altura": 638,
+          "sha256": "5a45049a91cc42583e50582add5a3805a679c9564ea228687831e2e924f3a4c5"
+        },
+        {
+          "arquivo": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-2400.webp",
+          "largura": 2400,
+          "altura": 1594,
+          "sha256": "934eb12a1882065ddfacfbb97de6236a6157982ceaf870c5a743228df310e41e"
+        }
+      ]
+    },
+    "monza-curva-1950": {
+      "legenda": {
+        "pt": "Carros contornam uma curva de Monza no GP da Itália de 1950. Nino Farina venceu pela Alfa Romeo e conquistou o primeiro Mundial de Pilotos. Fotografia publicada na revista Via! de setembro de 1950.",
+        "en": "Cars round a bend at Monza during the 1950 Italian Grand Prix. Nino Farina won for Alfa Romeo and clinched the first Drivers’ Championship. Photograph published in the September 1950 issue of Via!."
+      },
+      "gps": [
+        "1950:7"
+      ],
+      "construtor": "alfa-romeo",
+      "fonte": "https://bibliotecadigitale.aci.it/pubblicazioni/dettaglio/#/volume/f71f9baa87a5c50773930200/4d39e7208b2b710a90d300eb",
+      "original": "https://media-bibliotecadigitale.aci.it/archives/AC_MILANO/PERIODICI/Via%20%20rivista%20mensile%20edita%20dall%20%27%20Automobile%20Club%20di%20Milano/1950/Immagini/M/CFI0368794_195009_9_14_m.jpg",
+      "autor": "Via! nº 9 · Publifoto, Fumagalli, Bordin e Millanta (reportagem / feature) · Automobile Club di Milano",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "5e9fc468b6470f23715d33c1d3c6344d71115310b432fb1ef1b98f5d9b397a83",
+      "largura": 2400,
+      "altura": 1800,
+      "recorte_original": {
+        "x": 18,
+        "y": 546,
+        "largura": 2400,
+        "altura": 1800
+      },
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-960.webp",
+          "largura": 960,
+          "altura": 720,
+          "sha256": "bdf1cba764de7b8d40bf639cc6a7b526ce9d9c06683886f34ae9379c580e3b26"
+        },
+        {
+          "arquivo": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-2400.webp",
+          "largura": 2400,
+          "altura": 1800,
+          "sha256": "e92b1e00cbd42491b58612e918868ca4372312712a1b3a1fb04e660e66adc5d3"
+        }
+      ]
+    },
+    "publico-pedralbes-1951": {
+      "legenda": {
+        "pt": "O público aguarda a largada no circuito de Pedralbes, em Barcelona, no GP da Espanha de 1951. Juan Manuel Fangio venceu pela Alfa Romeo e conquistou seu primeiro Mundial de Pilotos.",
+        "en": "Spectators wait for the start at Barcelona’s Pedralbes circuit at the 1951 Spanish Grand Prix. Juan Manuel Fangio won for Alfa Romeo and clinched his first Drivers’ Championship."
+      },
+      "gps": [
+        "1951:8"
+      ],
+      "fonte": "https://bibliotecadigitale.aci.it/pubblicazioni/dettaglio/#/volume/317bbc00f8b32176334b5f17/9f67f62da350032a0261f3dc",
+      "original": "https://media-bibliotecadigitale.aci.it/archives/AC_MILANO/PERIODICI/Via%20%20rivista%20mensile%20edita%20dall%20%27%20Automobile%20Club%20di%20Milano/1951/Immagini/M/CFI0368794_195111_11_26_m.jpg",
+      "autor": "Corrado Millanta · Via! nº 11, novembro de 1951 · Automobile Club di Milano",
+      "licenca": "Public domain",
+      "licenca_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "7d74345a8507f55b4cc83e7c7983b896bf995ee9dc0c2661269aad651821c390",
+      "largura": 2400,
+      "altura": 1340,
+      "recorte_original": {
+        "x": 12,
+        "y": 905,
+        "largura": 2400,
+        "altura": 1340
+      },
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/publico-pedralbes-1951-7d74345a8507-960.webp",
+          "largura": 960,
+          "altura": 536,
+          "sha256": "5711eb663726c50085293b943d15845e9d2737820fbe17c17ac3b846c7fa171b"
+        },
+        {
+          "arquivo": "static/pitwall-archive/publico-pedralbes-1951-7d74345a8507-2400.webp",
+          "largura": 2400,
+          "altura": 1340,
+          "sha256": "7096ee02dfe1d83e3238390515d3868dde80825e2b3fd084a1229e778c49ae8f"
+        }
+      ]
+    },
+    "monaco-1996-aquecimento-villeneuve": {
+      "arquivo_commons": "File:Grand Prix Monaco96 131954710.jpg",
+      "legenda": {
+        "pt": "Jacques Villeneuve, terceiro no grupo, no Williams FW18 durante o aquecimento para o GP de Mônaco de 1996. Mika Häkkinen aparece à frente no McLaren e a Ligier de Olivier Panis, vencedor da prova, está parcialmente encoberta.",
+        "en": "Jacques Villeneuve runs third in this group in the Williams FW18 during warm-up for the 1996 Monaco Grand Prix. Mika Häkkinen leads the group in his McLaren, and eventual race winner Olivier Panis’s Ligier is partly obscured."
+      },
+      "autor": "Steve Gregory",
+      "modelo": "williams-fw18",
+      "temporadas": [
+        1996
+      ],
+      "gps": [
+        "1996:6"
+      ],
+      "pilotos": [
+        "jacques-villeneuve",
+        "mika-hakkinen"
+      ],
+      "equipes": [
+        "williams"
+      ],
+      "construtor": "williams",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Grand_Prix_Monaco96_131954710.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/86/Grand_Prix_Monaco96_131954710.jpg",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "3027740244b337b031555dad7df79d9e0468bea0204fc9a874901050a7b3a355",
+      "largura": 3512,
+      "altura": 2376,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/monaco-1996-aquecimento-villeneuve-3027740244b3-960.webp",
+          "largura": 960,
+          "altura": 649,
+          "sha256": "e69342814e00412fab9cd1f3bf285c8eac0b5d0ae1e65396a789d0ff92827967"
+        },
+        {
+          "arquivo": "static/pitwall-archive/monaco-1996-aquecimento-villeneuve-3027740244b3-2400.webp",
+          "largura": 2400,
+          "altura": 1624,
+          "sha256": "92276a47ad35020e8f8db6b46661a83781b26ee860aef8e6a0e0235378699fe4"
+        }
+      ]
+    },
+    "schumacher-benetton-b192-05-retromobile-2016": {
+      "arquivo_commons": "File:Rétromobile 2016 - Benetton B192-05 - 1992 - 001.jpg",
+      "legenda": {
+        "pt": "Benetton B192 de chassi 05, fotografado no Rétromobile em 2016. Foi com esse carro que Michael Schumacher conquistou sua primeira vitória na Fórmula 1, no GP da Bélgica de 1992, em Spa-Francorchamps.",
+        "en": "Benetton B192 chassis 05, photographed at Rétromobile in 2016. Michael Schumacher drove this car to his first Formula 1 win at the 1992 Belgian Grand Prix at Spa-Francorchamps."
+      },
+      "equipes": [
+        "benetton"
+      ],
+      "artefatos_gps": [
+        "1992:12"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:R%C3%A9tromobile_2016_-_Benetton_B192-05_-_1992_-_001.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/4c/R%C3%A9tromobile_2016_-_Benetton_B192-05_-_1992_-_001.jpg",
+      "autor": "Thesupermat",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "a7eabb6d5ccbfe1d6704c8d964e4f57660b87958b0cebc2a431fba36b22849f4",
+      "largura": 5472,
+      "altura": 3648,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/schumacher-benetton-b192-05-retromobile-2016-a7eabb6d5ccb-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "bf1ede99de5756645bc4f8e9a9e9739c6ce9ca1a47dc325c2d0544131c28c1fb"
+        },
+        {
+          "arquivo": "static/pitwall-archive/schumacher-benetton-b192-05-retromobile-2016-a7eabb6d5ccb-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "fdcbdf8001fcffd054ff9cf2972eccca7cfd1743dc34843a93a9a872142233c0"
+        }
+      ]
+    },
+    "senna-mansell-hungria-1988": {
+      "arquivo_commons": "File:The Hungarian Formula One Grand Prix in Budapest in 1988 (JOKAMAA2H-6).tif",
+      "legenda": {
+        "pt": "Ayrton Senna lidera o GP da Hungria de 1988 no McLaren MP4/4 de chassi 5, seguido por Nigel Mansell no Williams FW12. Senna venceu no Hungaroring e voltou a vencer com esse carro em Spa, onde a McLaren garantiu o Mundial de Construtores.",
+        "en": "Ayrton Senna leads the 1988 Hungarian Grand Prix in McLaren MP4/4 chassis 5, followed by Nigel Mansell in the Williams FW12. Senna won at the Hungaroring and won again in the same car at Spa, where McLaren clinched the constructors’ title."
+      },
+      "autor": "Mauritz Antin / Coleção Mauritz Antin, JOKA / Finnish Heritage Agency",
+      "modelo": "mclaren-mp4-4",
+      "temporadas": [
+        1988
+      ],
+      "equipes": [
+        "mclaren",
+        "williams"
+      ],
+      "pilotos": [
+        "ayrton-senna",
+        "nigel-mansell"
+      ],
+      "gps": [
+        "1988:10"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:The_Hungarian_Formula_One_Grand_Prix_in_Budapest_in_1988_(JOKAMAA2H-6).tif",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/04/The_Hungarian_Formula_One_Grand_Prix_in_Budapest_in_1988_%28JOKAMAA2H-6%29.tif",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "688e521ab76a3a5c09d0b10b2dfe8b6c8f9bdeb2a01ff407655095697317d3f5",
+      "largura": 2980,
+      "altura": 2108,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/senna-mansell-hungria-1988-688e521ab76a-960.webp",
+          "largura": 960,
+          "altura": 679,
+          "sha256": "cf0b775d02e52e9d57ce0e973ca18ed0e6cf4e3c56c5d8df0314e0494e65b2dd"
+        },
+        {
+          "arquivo": "static/pitwall-archive/senna-mansell-hungria-1988-688e521ab76a-2400.webp",
+          "largura": 2400,
+          "altura": 1698,
+          "sha256": "ff96bb8a9f732d90567466a849cb1e78061cfaf2dc2c1ebc1eb1ea05090d0530"
+        }
+      ],
+      "artefatos_gps": [
+        "1988:11"
+      ]
+    },
+    "senna-prost-podio-hungria-1988": {
+      "arquivo_commons": "File:The Hungarian Formula One Grand Prix in Budapest in 1988 (JOKAMAA2H-7).tif",
+      "legenda": {
+        "pt": "Alain Prost, à esquerda, e Ayrton Senna no pódio do GP da Hungria de 1988. Senna venceu por 0,529 s e Prost completou a dobradinha da McLaren.",
+        "en": "Alain Prost, left, and Ayrton Senna on the podium at the 1988 Hungarian Grand Prix. Senna won by 0.529 seconds and Prost completed McLaren’s one-two."
+      },
+      "autor": "Mauritz Antin / Coleção Mauritz Antin, JOKA / Finnish Heritage Agency",
+      "equipes": [
+        "mclaren"
+      ],
+      "pilotos": [
+        "ayrton-senna",
+        "alain-prost"
+      ],
+      "gps": [
+        "1988:10"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:The_Hungarian_Formula_One_Grand_Prix_in_Budapest_in_1988_(JOKAMAA2H-7).tif",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/16/The_Hungarian_Formula_One_Grand_Prix_in_Budapest_in_1988_%28JOKAMAA2H-7%29.tif",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "c9fc0ddf9e2df0a4e78d4fcfe2543e59e8d6fe7ee07c90bbb5be9aa4ba8bca3c",
+      "largura": 2097,
+      "altura": 2980,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/senna-prost-podio-hungria-1988-c9fc0ddf9e2d-960.webp",
+          "largura": 676,
+          "altura": 960,
+          "sha256": "27f52c11988d4e3270bab9e03aff770c009d29b88b94b49c946a33b29ee70354"
+        },
+        {
+          "arquivo": "static/pitwall-archive/senna-prost-podio-hungria-1988-c9fc0ddf9e2d-2400.webp",
+          "largura": 1689,
+          "altura": 2400,
+          "sha256": "71df12c213c39c93f32155046f425b78b7f238084f3c2a7f5aa223743998ba55"
+        }
+      ]
+    },
+    "norris-mcl38-zandvoort-2024": {
+      "arquivo_commons": "File:2024-08-25 Motorsport, Formel 1, Großer Preis der Niederlande 2024 STP 3858 by Stepro.jpg",
+      "legenda": {
+        "pt": "Lando Norris no McLaren MCL38 nº 4 durante sua vitória em Zandvoort, em 2024. O mesmo modelo conquistou o Mundial de Construtores em Abu Dhabi.",
+        "en": "Lando Norris in the No. 4 McLaren MCL38 during his 2024 win at Zandvoort. The same model clinched the Constructors’ Championship in Abu Dhabi."
+      },
+      "pilotos": [
+        "lando-norris"
+      ],
+      "gps": [
+        "2024:15"
+      ],
+      "artefatos_gps": [
+        "2024:24"
+      ],
+      "modelo": "mclaren-mcl38",
+      "temporadas": [
+        2024
+      ],
+      "uso_editorial": true,
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3858_by_Stepro.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/52/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3858_by_Stepro.jpg",
+      "autor": "Steffen Prößdorf",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "989f1d9d03b0ef6b8ed8076a66ececb9e8289caebd9497efceb8c3eb94db0e8c",
+      "largura": 3527,
+      "altura": 1984,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/norris-mcl38-zandvoort-2024-989f1d9d03b0-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "6f3eed883bc3ff63870d0626623450a27c4bd5059f6c9355d41c02dba74a864c"
+        },
+        {
+          "arquivo": "static/pitwall-archive/norris-mcl38-zandvoort-2024-989f1d9d03b0-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "de3f16424a55fe873ee6784b1fde36d8425f58990409570eb61fbe669c6acd0a"
+        }
+      ]
+    },
+    "ferrari-trofeu-suzuka-2003": {
+      "arquivo_commons": "File:Formula One trophies Museo Ferrari.jpg",
+      "legenda": {
+        "pt": "Ao centro, o troféu da Ferrari como construtora vencedora do GP do Japão de 2003, fotografado no Museu Ferrari em 2013. Rubens Barrichello venceu em Suzuka, na prova em que a equipe e Michael Schumacher confirmaram seus títulos.",
+        "en": "At centre, Ferrari’s winning constructor trophy from the 2003 Japanese Grand Prix, photographed at the Ferrari Museum in 2013. Rubens Barrichello won at Suzuka as Ferrari and Michael Schumacher clinched their titles."
+      },
+      "artefatos_gps": [
+        "2003:16"
+      ],
+      "equipes": [
+        "ferrari"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Formula_One_trophies_Museo_Ferrari.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/61/Formula_One_trophies_Museo_Ferrari.jpg",
+      "autor": "Morio",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sha256": "d48ff1d749ea51be673d68823aaa6aad556fec7bcc67b0b963dcd38a050b21e8",
+      "largura": 2560,
+      "altura": 3840,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ferrari-trofeu-suzuka-2003-d48ff1d749ea-960.webp",
+          "largura": 640,
+          "altura": 960,
+          "sha256": "bf3252ea8c4721f82a304b631f72e86607fd18177ba8db79251b8def59b12c7a"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ferrari-trofeu-suzuka-2003-d48ff1d749ea-2400.webp",
+          "largura": 1600,
+          "altura": 2400,
+          "sha256": "8f3dc5ad420bdf08e249565c2700266536fd4a04bc619ba8a84f9b40a5924483"
+        }
+      ]
+    },
+    "antonelli-w17-zandvoort-2026": {
+      "arquivo_commons": "File:2026-08-23 Motorsport, Formel 1, Großer Preis der Niederlande 2026 STP 2969.jpg",
+      "legenda": {
+        "pt": "Kimi Antonelli no Mercedes W17 nº 12 durante o GP dos Países Baixos de 2026, em Zandvoort. Ele garantiu o título de pilotos com o mesmo modelo no GP do México.",
+        "en": "Kimi Antonelli in the No. 12 Mercedes W17 during the 2026 Dutch Grand Prix at Zandvoort. He clinched the drivers’ title in the same model at the Mexican Grand Prix."
+      },
+      "pilotos": [
+        "kimi-antonelli"
+      ],
+      "gps": [
+        "2026:12"
+      ],
+      "artefatos_gps": [
+        "2026:19"
+      ],
+      "modelo": "mercedes-f1-w17",
+      "temporadas": [
+        2026
+      ],
+      "uso_editorial": true,
+      "construtor": "mercedes",
+      "fonte": "https://commons.wikimedia.org/wiki/File:2026-08-23_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_2969.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/d6/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_2969.jpg",
+      "autor": "Steffen Prößdorf",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "993ee0f7a1ca6ccb71e387fdc60b6f489544c5a0246032008fc64241c13fb01c",
+      "largura": 3528,
+      "altura": 1984,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/antonelli-w17-zandvoort-2026-993ee0f7a1ca-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "c8b468b495c7dbbf53e8d0d3ad4ea316990c73640f023b0c85d15d45ec66c72f"
+        },
+        {
+          "arquivo": "static/pitwall-archive/antonelli-w17-zandvoort-2026-993ee0f7a1ca-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "16a320505740b1a36e31ab3c4fb3bd6c5456111656f4377b909b55933a9eb1a1"
+        }
+      ]
+    },
+    "mercedes-dupla-zandvoort-2026": {
+      "arquivo_commons": "File:2026-08-23 Motorsport, Formel 1, Großer Preis der Niederlande 2026 STP 3019.jpg",
+      "legenda": {
+        "pt": "Kimi Antonelli e George Russell após terminarem em segundo e terceiro no GP dos Países Baixos de 2026, em Zandvoort. A dupla levou a Mercedes ao título de construtores confirmado em Interlagos.",
+        "en": "Kimi Antonelli and George Russell after finishing second and third at the 2026 Dutch Grand Prix at Zandvoort. The pair helped Mercedes clinch the constructors’ title at Interlagos."
+      },
+      "pilotos": [
+        "kimi-antonelli"
+      ],
+      "equipes": [
+        "mercedes"
+      ],
+      "gps": [
+        "2026:12"
+      ],
+      "artefatos_gps": [
+        "2026:20"
+      ],
+      "uso_editorial": true,
+      "fonte": "https://commons.wikimedia.org/wiki/File:2026-08-23_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3019.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/d4/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3019.jpg",
+      "autor": "Steffen Prößdorf",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "ee6670c6ebf6db96adf34db23806cd23b79636561fcbf1a9f0810b9adab3c0e4",
+      "largura": 3240,
+      "altura": 2160,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/mercedes-dupla-zandvoort-2026-ee6670c6ebf6-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "002a26f75460818c24946d715b0ff1706c2192786855457617153aadb438457a"
+        },
+        {
+          "arquivo": "static/pitwall-archive/mercedes-dupla-zandvoort-2026-ee6670c6ebf6-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "b138fb7433eec552156167328c76c01cc6998ef53ee6803810bf2430013840ba"
+        }
+      ]
+    },
+    "norris-mcl39-spielberg-2025": {
+      "arquivo_commons": "File:FIA F1 Austria 2025 Nr. 4 Norris.jpg",
+      "legenda": {
+        "pt": "Lando Norris no McLaren MCL39 nº 4 na sexta-feira do GP da Áustria de 2025, em Spielberg. Norris venceu a corrida no domingo e conquistou o Mundial de Pilotos com o MCL39 em Abu Dhabi.",
+        "en": "Lando Norris in the No. 4 McLaren MCL39 on Friday at the 2025 Austrian Grand Prix in Spielberg. Norris won the race on Sunday and clinched the Drivers’ Championship with the MCL39 in Abu Dhabi."
+      },
+      "pilotos": [
+        "lando-norris"
+      ],
+      "gps": [
+        "2025:11"
+      ],
+      "artefatos_gps": [
+        "2025:24"
+      ],
+      "modelo": "mclaren-mcl39",
+      "temporadas": [
+        2025
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2025_Nr._4_Norris.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/de/FIA_F1_Austria_2025_Nr._4_Norris.jpg",
+      "autor": "Lukas Raich",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "09bad12daeefed8ce187409315414b4bf7ff1780561359ae57625a0bd2d6cf8a",
+      "largura": 4956,
+      "altura": 2788,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "81f1e0d8ecdab7ab3e5647d2b4f8635264139c222577051bb63b7c4ef441eb15"
+        },
+        {
+          "arquivo": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "6ac49c44dfd153c56a30114b9bcfbc5e03204199ec8bb54beb7e5df00f1ca201"
+        }
+      ]
+    },
+    "pelotao-zandvoort-1953": {
+      "legenda": {
+        "pt": "Alberto Ascari lidera o pelotão no Ferrari 500 nº 2 em Zandvoort, no GP dos Países Baixos de 7 de junho de 1953. Com outro Ferrari 500, seu companheiro Mike Hawthorn conquistou a primeira vitória no Mundial em Reims no mês seguinte.",
+        "en": "Alberto Ascari leads the field in Ferrari 500 No. 2 at Zandvoort during the Dutch Grand Prix on 7 June 1953. His teammate Mike Hawthorn took his first World Championship win in another Ferrari 500 at Reims the following month."
+      },
+      "pilotos": [
+        "alberto-ascari"
+      ],
+      "modelo": "ferrari-500",
+      "temporadas": [
+        1953
+      ],
+      "gps": [
+        "1953:3"
+      ],
+      "artefatos_gps": [
+        "1953:5"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://www.nationaalarchief.nl/onderzoeken/fotocollectie/a90d596a-d0b4-102d-bcf8-003048976d84",
+      "original": "https://service.archief.nl/gaf/api/file/v1/original/81281c77-ba1c-452e-b64b-1579f1969423",
+      "autor": "Harry Pot / Anefo · Nationaal Archief (905-7655)",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "c9b5c0a81450c7052b0fda15cbab0e4b60258cb1ba06dcabb6937d8e76f6f23a",
+      "largura": 3210,
+      "altura": 1685,
+      "recorte_original": {
+        "x": 105,
+        "y": 685,
+        "largura": 3210,
+        "altura": 1685
+      },
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-960.webp",
+          "largura": 960,
+          "altura": 504,
+          "sha256": "aec204a45c6c2d2250eddf17bab5aad04e9bcb8c177116a7d6a2af0a567d10eb"
+        },
+        {
+          "arquivo": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-2400.webp",
+          "largura": 2400,
+          "altura": 1260,
+          "sha256": "1d16ebe1d04a497ee52ad1ed9081151e9cc1f2059177d9a18262fa8447497cef"
+        }
+      ]
+    },
+    "daly-ensign-mn08-brands-hatch-1978": {
+      "legenda": {
+        "pt": "Derek Daly no Ensign N177 nº 22, chassi MN08, à frente de Rupert Keegan em Brands Hatch, no fim de semana do GP da Grã-Bretanha de 1978. Duas semanas depois, Nelson Piquet estreou na Fórmula 1 com esse mesmo carro em Hockenheim.",
+        "en": "Derek Daly in Ensign N177 No. 22, chassis MN08, ahead of Rupert Keegan at Brands Hatch during the 1978 British Grand Prix weekend. Two weeks later, Nelson Piquet made his Formula 1 debut in the same car at Hockenheim."
+      },
+      "gps": [
+        "1978:10"
+      ],
+      "artefatos_gps": [
+        "1978:11"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Derek_Daly_-_Ensign_N177_%26_Rupert_Keegan_-_Surtees_TS20_head_down_Paddock_Hill_at_the_1978_British_Grand_Prix_(50050265771).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Derek_Daly_-_Ensign_N177_%26_Rupert_Keegan_-_Surtees_TS20_head_down_Paddock_Hill_at_the_1978_British_Grand_Prix_%2850050265771%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "autor": "Martin Lee",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "3a898ae0bd90b6818e053cacc62195f593b206fdcbd1083a1b8fe4cd488c729b",
+      "largura": 2528,
+      "altura": 1471,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/daly-ensign-mn08-brands-hatch-1978-3a898ae0bd90-960.webp",
+          "largura": 960,
+          "altura": 559,
+          "sha256": "a02cfc926be7dbbc1aa5d2e51d7f25c588810d9a4604c042f0952df034d6720d"
+        },
+        {
+          "arquivo": "static/pitwall-archive/daly-ensign-mn08-brands-hatch-1978-3a898ae0bd90-2400.webp",
+          "largura": 2400,
+          "altura": 1397,
+          "sha256": "7c5110382dd1ff030c19faf2fb0c39ca7a803ce475e35ff0a60803d64da5a9fd"
+        }
+      ]
+    },
+    "rosberg-w07-austin-2016": {
+      "arquivo_commons": "File:Nico Rosberg, USA GP 2016 (30445009246).jpg",
+      "legenda": {
+        "pt": "Nico Rosberg no Mercedes W07 Hybrid nº 6 em Austin, no fim de semana do GP dos Estados Unidos de 2016. Rosberg terminou em segundo no Texas e voltou ao pódio em Abu Dhabi, onde conquistou o Mundial de Pilotos.",
+        "en": "Nico Rosberg in the No. 6 Mercedes W07 Hybrid in Austin during the 2016 United States Grand Prix weekend. Rosberg finished second in Texas and returned to the podium in Abu Dhabi, where he clinched the Drivers’ Championship."
+      },
+      "pilotos": [
+        "nico-rosberg"
+      ],
+      "modelo": "mercedes-f1-w07",
+      "temporadas": [
+        2016
+      ],
+      "equipes": [
+        "mercedes"
+      ],
+      "gps": [
+        "2016:18"
+      ],
+      "artefatos_gps": [
+        "2016:21"
+      ],
+      "construtor": "mercedes",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Nico_Rosberg,_USA_GP_2016_(30445009246).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/73/Nico_Rosberg%2C_USA_GP_2016_%2830445009246%29.jpg",
+      "autor": "Pedro Mendes (pedrik)",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "46e38de313a0b45d9a51b7cb24bdfcdc684c020c1ebbdd588d7284cfad41d25e",
+      "largura": 4755,
+      "altura": 2675,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/rosberg-w07-austin-2016-46e38de313a0-960.webp",
+          "largura": 960,
+          "altura": 540,
+          "sha256": "173af9dfed389a2e99eb1709666706ecde0ecbf67a1261908908f45004b55a10"
+        },
+        {
+          "arquivo": "static/pitwall-archive/rosberg-w07-austin-2016-46e38de313a0-2400.webp",
+          "largura": 2400,
+          "altura": 1350,
+          "sha256": "1f1a8c0e2fa05b2ac382b6d4c1514a500e882cd8328be79038af9e33cd30bf31"
+        }
+      ]
+    },
+    "hamilton-mp4-22-04-silverstone-2007": {
+      "arquivo_commons": "File:Lewis Hamilton 2007 British GP.jpg",
+      "legenda": {
+        "pt": "Lewis Hamilton no McLaren MP4-22 nº 2, chassi 04, em Silverstone, no fim de semana do GP da Grã-Bretanha de 2007. Hamilton terminou em terceiro em Melbourne com esse mesmo carro em sua estreia na Fórmula 1.",
+        "en": "Lewis Hamilton in the No. 2 McLaren MP4-22, chassis 04, at Silverstone during the 2007 British Grand Prix weekend. Hamilton finished third in Melbourne in the same car on his Formula 1 debut."
+      },
+      "pilotos": [
+        "lewis-hamilton"
+      ],
+      "equipes": [
+        "mclaren"
+      ],
+      "gps": [
+        "2007:9"
+      ],
+      "artefatos_gps": [
+        "2007:1"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Lewis_Hamilton_2007_British_GP.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/77/Lewis_Hamilton_2007_British_GP.jpg",
+      "autor": "Ann McKelvie (Ann64)",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "bb2d2e335c759b1ab5636a59d7689db9626839830e6301d81eeb6eb266276ef5",
+      "largura": 3736,
+      "altura": 2064,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/hamilton-mp4-22-04-silverstone-2007-bb2d2e335c75-960.webp",
+          "largura": 960,
+          "altura": 530,
+          "sha256": "c4dda11df5d749d5d8616474939efa0e9f134a3a6644893a807ab3fc4f4a7660"
+        },
+        {
+          "arquivo": "static/pitwall-archive/hamilton-mp4-22-04-silverstone-2007-bb2d2e335c75-2400.webp",
+          "largura": 2400,
+          "altura": 1326,
+          "sha256": "930f44c45aecc8d894843d486cd59f1b7a1e3845b768e500ed807beeea06c913"
+        }
+      ]
+    },
+    "alonso-minardi-ps01-museo-2017": {
+      "arquivo_commons": "File:Minardi PS01 front 2017 Museo Fernando Alonso.jpg",
+      "legenda": {
+        "pt": "Minardi PS01 nº 21 no Museo Fernando Alonso, nas Astúrias, em 2017. Alonso estreou na Fórmula 1 com esse modelo e terminou em 12º no GP da Austrália de 2001.",
+        "en": "The No. 21 Minardi PS01 at the Fernando Alonso Museum in Asturias in 2017. Alonso made his Formula 1 debut in this model and finished 12th at the 2001 Australian Grand Prix."
+      },
+      "artefatos_gps": [
+        "2001:1"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Minardi_PS01_front_2017_Museo_Fernando_Alonso.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Minardi_PS01_front_2017_Museo_Fernando_Alonso.jpg",
+      "autor": "Morio",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "a988f48e080911b738f64b8eac3eeb4ffc11d0e0f29545fd375afe7f88fdce72",
+      "largura": 3840,
+      "altura": 2560,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/alonso-minardi-ps01-museo-2017-a988f48e0809-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "9d9c292389e757b85c0079e7a2476704fea0bda826de27ef1140808fb96be9c3"
+        },
+        {
+          "arquivo": "static/pitwall-archive/alonso-minardi-ps01-museo-2017-a988f48e0809-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "531a52884f5cfeca8c935f07c9b3fe6d3eac3ff83257a5ce2fcabd0f06650846"
+        }
+      ]
+    },
+    "raikkonen-sauber-c20-salzburg-2017": {
+      "arquivo_commons": "File:Sauber C20 front-right 2017 Hangar-7.jpg",
+      "legenda": {
+        "pt": "Sauber C20 com o nome de Kimi Räikkönen no cockpit, fotografado no Hangar-7, em Salzburgo, em 2017. Räikkönen estreou na Fórmula 1 com esse modelo e terminou em 6º no GP da Austrália de 2001.",
+        "en": "A Sauber C20 bearing Kimi Räikkönen’s name on the cockpit, photographed at Hangar-7 in Salzburg in 2017. Räikkönen made his Formula 1 debut in this model and finished sixth at the 2001 Australian Grand Prix."
+      },
+      "artefatos_gps": [
+        "2001:1"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Sauber_C20_front-right_2017_Hangar-7.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Sauber_C20_front-right_2017_Hangar-7.jpg",
+      "autor": "Morio",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "9a350cd976189fe46990d8501bb5d9be0ce4f5bdd412b7f2f2943debc19ff82f",
+      "largura": 3840,
+      "altura": 2560,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "a9f5744a32c3938d8a202f66e706b7029c52da44c39ca442644c67feff2c6abc"
+        },
+        {
+          "arquivo": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "6889a328498640e5ef0215f54b13ca9021a5d0e12f11486f4df17188b551b1bf"
+        }
+      ]
+    },
+    "raikkonen-mclaren-mp4-17d-donington-2013": {
+      "arquivo_commons": "File:McLaren MP4-17D front-left Donington Grand Prix Collection.jpg",
+      "legenda": {
+        "pt": "McLaren MP4-17D nº 6 exposto na Donington Grand Prix Collection, em 2013. Kimi Räikkönen conquistou sua primeira vitória na Fórmula 1 com esse modelo em Sepang, em 2003.",
+        "en": "The No. 6 McLaren MP4-17D on display at the Donington Grand Prix Collection in 2013. Kimi Räikkönen took his first Formula 1 win in this model at Sepang in 2003."
+      },
+      "artefatos_gps": [
+        "2003:2"
+      ],
+      "construtor": "mclaren",
+      "fonte": "https://commons.wikimedia.org/wiki/File:McLaren_MP4-17D_front-left_Donington_Grand_Prix_Collection.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/53/McLaren_MP4-17D_front-left_Donington_Grand_Prix_Collection.jpg",
+      "autor": "Morio",
+      "licenca": "CC BY-SA 3.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sha256": "2472f39c43035d978ec55f7875759b38e771cd5447766a031f5254ba18f14f8d",
+      "largura": 3840,
+      "altura": 2560,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/raikkonen-mclaren-mp4-17d-donington-2013-2472f39c4303-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "8a8d16ac8ca45ab33638926e286d2e029ea54c081abead1ea2184444a0acd853"
+        },
+        {
+          "arquivo": "static/pitwall-archive/raikkonen-mclaren-mp4-17d-donington-2013-2472f39c4303-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "e94c7e0941b6f2e9776d3f78fa6f37be2de8c1bdfc1033c98c27e502bbedcc92"
+        }
+      ]
+    },
+    "alonso-renault-r23b-museo-2017": {
+      "arquivo_commons": "File:Renault R23B front-left 2017 Museo Fernando Alonso.jpg",
+      "legenda": {
+        "pt": "Renault R23B nº 8 no Museo Fernando Alonso, nas Astúrias, em 2017. Fernando Alonso conquistou sua primeira vitória na Fórmula 1 com esse modelo no Hungaroring, em 2003.",
+        "en": "The No. 8 Renault R23B at the Fernando Alonso Museum in Asturias in 2017. Fernando Alonso took his first Formula 1 win in this model at the Hungaroring in 2003."
+      },
+      "artefatos_gps": [
+        "2003:13"
+      ],
+      "construtor": "renault",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Renault_R23B_front-left_2017_Museo_Fernando_Alonso.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Renault_R23B_front-left_2017_Museo_Fernando_Alonso.jpg",
+      "autor": "Morio",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "68c0d38df7104f5358affb504922c4257eb5b803ab84dc715c478919c2cfc9b3",
+      "largura": 3840,
+      "altura": 2560,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/alonso-renault-r23b-museo-2017-68c0d38df710-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "6d70cdb2309c06248aa6dcddb3326252df4e12419875ee04b0530c65d8968369"
+        },
+        {
+          "arquivo": "static/pitwall-archive/alonso-renault-r23b-museo-2017-68c0d38df710-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "915baa3198380c55ed70604c6787f37713ef2b1f05cf2b0649464c9691b9afe4"
+        }
+      ]
+    },
+    "brabham-cooper-t40-nurburgring-2011": {
+      "arquivo_commons": "File:Cooper Bristol T40, Bj. 1955 (2011-08-13 Sp).JPG",
+      "legenda": {
+        "pt": "Cooper Bristol T40 em demonstração no Nürburgring, em 2011. Foi com esse carro que Jack Brabham estreou na Fórmula 1 em Aintree, no GP da Grã-Bretanha de 1955.",
+        "en": "The Cooper Bristol T40 on a demonstration run at the Nürburgring in 2011. Jack Brabham made his Formula 1 debut in this car at Aintree in the 1955 British Grand Prix."
+      },
+      "artefatos_gps": [
+        "1955:6"
+      ],
+      "construtor": "cooper",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Cooper_Bristol_T40,_Bj._1955_(2011-08-13_Sp).JPG",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/37/Cooper_Bristol_T40%2C_Bj._1955_%282011-08-13_Sp%29.JPG",
+      "autor": "Lothar Spurzem",
+      "licenca": "CC BY-SA 2.0 de",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+      "sha256": "fbff2e6aa19549ccc92754ec77d0862e4cc9c9ff35254d430b730ef1c0f4b0af",
+      "largura": 2712,
+      "altura": 1808,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "380e56547ec3a46fe16609370ec5ed336f793e119f3b57702e9f32c72b0fa8b8"
+        },
+        {
+          "arquivo": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "9c107e0352e4d98f20bd4d08bd8b7776ed2af0a59c00b49803950b67ec8d6e85"
+        }
+      ]
+    },
+    "prost-jones-zandvoort-1981": {
+      "arquivo_commons": "File:Prost and Jones at 1981 Dutch Grand Prix.jpg",
+      "legenda": {
+        "pt": "Alain Prost, no Renault RE30 nº 15, à frente de Alan Jones, no Williams FW07C nº 1, em Zandvoort, em 1981. Prost conquistou sua primeira vitória em Dijon com outro RE30. Jones correu com este mesmo Williams, chassi 16, na etapa do título de construtores em Montreal e venceu com ele em Las Vegas.",
+        "en": "Alain Prost in the No. 15 Renault RE30 leads Alan Jones in the No. 1 Williams FW07C at Zandvoort in 1981. Prost took his first win at Dijon in another RE30. Jones raced this same Williams, chassis 16, at the constructors’ title decider in Montreal and won in it at Las Vegas."
+      },
+      "gps": [
+        "1981:12"
+      ],
+      "artefatos_gps": [
+        "1981:8",
+        "1981:14",
+        "1981:15"
+      ],
+      "pilotos": [
+        "alain-prost",
+        "alan-jones"
+      ],
+      "construtor": "renault",
+      "equipes": [
+        "renault",
+        "williams"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Prost_and_Jones_at_1981_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Prost_and_Jones_at_1981_Dutch_Grand_Prix.jpg",
+      "autor": "Hans van Dijk / Anefo / Nationaal Archief",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "631cf140e1c80fcb9ea3e2e020af26d9b54d436d6c7134dd1efaeb24d34c3f30",
+      "largura": 3664,
+      "altura": 2436,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/prost-jones-zandvoort-1981-631cf140e1c8-960.webp",
+          "largura": 960,
+          "altura": 638,
+          "sha256": "35155531cb5d20e42a8cba4a19f6e08a2b502ea5b6912376ae5025b974b7ae55"
+        },
+        {
+          "arquivo": "static/pitwall-archive/prost-jones-zandvoort-1981-631cf140e1c8-2400.webp",
+          "largura": 2400,
+          "altura": 1596,
+          "sha256": "7e048500d3af36283bbe2a711c967e315a13ae73564d86af26152249cf9f8058"
+        }
+      ]
+    },
+    "brabham-bt19-zandvoort-1967": {
+      "arquivo_commons": "File:Brabham at 1967 Dutch Grand Prix.jpg",
+      "construtor": "brabham",
+      "modelo": "brabham-bt19",
+      "temporadas": [
+        1967
+      ],
+      "gps": [
+        "1967:3"
+      ],
+      "pilotos": [
+        "jack-brabham"
+      ],
+      "autor": "Eric Koch / Anefo / Nationaal Archief",
+      "legenda": {
+        "pt": "Jack Brabham no cockpit do BT19 nº 1 em Zandvoort, em 1967. Ele terminou em segundo na corrida, contribuindo com o carro para o segundo título de construtores da equipe.",
+        "en": "Jack Brabham in the cockpit of the No. 1 BT19 at Zandvoort in 1967. He finished second in the race, scoring points in this car towards the team’s second constructors’ title."
+      },
+      "fonte": "https://commons.wikimedia.org/wiki/File:Brabham_at_1967_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/18/Brabham_at_1967_Dutch_Grand_Prix.jpg",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "208d98fcd1eef3804b8d4dee2c15e528c80086f46c01255b3c4ac11a925fb9c4",
+      "largura": 3682,
+      "altura": 2428,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-960.webp",
+          "largura": 960,
+          "altura": 633,
+          "sha256": "c41147a521eee1d055d3cb64d8713a1308ae03054150b9d8296db50e6eaa2196"
+        },
+        {
+          "arquivo": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-2400.webp",
+          "largura": 2400,
+          "altura": 1583,
+          "sha256": "63c16a39ddc581eb353b3f3562b69fb1854532b274d90d73845fb44a62e3bffd"
+        }
+      ]
+    },
+    "regazzoni-ferrari-312t2-zandvoort-1976": {
+      "arquivo_commons": "File:Regazzoni at 1976 Dutch Grand Prix.jpg",
+      "construtor": "ferrari",
+      "modelo": "ferrari-312t2",
+      "temporadas": [
+        1976
+      ],
+      "gps": [
+        "1976:12"
+      ],
+      "artefatos_gps": [
+        "1976:15"
+      ],
+      "autor": "Rob Croes / Anefo / Nationaal Archief",
+      "legenda": {
+        "pt": "Clay Regazzoni no Ferrari 312 T2 de chassi 027 a caminho do segundo lugar em Zandvoort, em 1976. Ele voltou a correr com o mesmo carro em Watkins Glen, onde a Ferrari garantiu o título de construtores.",
+        "en": "Clay Regazzoni in Ferrari 312 T2 chassis 027 on his way to second place at Zandvoort in 1976. He raced the same car at Watkins Glen, where Ferrari clinched the constructors’ title."
+      },
+      "fonte": "https://commons.wikimedia.org/wiki/File:Regazzoni_at_1976_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Regazzoni_at_1976_Dutch_Grand_Prix.jpg",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "0a415f247b8d372e31b0043714801435a811cee3c8b3b26e7228ce1db2909490",
+      "largura": 3700,
+      "altura": 2457,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-960.webp",
+          "largura": 960,
+          "altura": 637,
+          "sha256": "089344d4fe0bc35e67b2aaaadf11b1942cc0f765df2e5e42aae5d9f3248005b6"
+        },
+        {
+          "arquivo": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-2400.webp",
+          "largura": 2400,
+          "altura": 1594,
+          "sha256": "888194ec1e8439865b6ee6d71411e5ea5a2055cf1f1aa2c26e54f4d6c4296aa5"
+        }
+      ]
+    },
+    "ferrari-156-aero-retromobile-2017": {
+      "arquivo_commons": "File:Rétromobile 2017 - Ferrari 156 F1 Aero - 001.jpg",
+      "construtor": "ferrari",
+      "modelo": "ferrari-156-aero",
+      "temporadas": [
+        1964
+      ],
+      "artefatos_gps": [
+        "1964:7"
+      ],
+      "autor": "Thesupermat",
+      "legenda": {
+        "pt": "Ferrari 156 F1 Aero exposto no Rétromobile de 2017, em Paris. Lorenzo Bandini venceu o GP da Áustria de 1964 com um carro desse modelo, na temporada em que a Ferrari conquistou o Mundial de Construtores.",
+        "en": "A Ferrari 156 F1 Aero on display at Rétromobile in Paris in 2017. Lorenzo Bandini won the 1964 Austrian Grand Prix in this model, in the season Ferrari won the constructors’ title."
+      },
+      "fonte": "https://commons.wikimedia.org/wiki/File:R%C3%A9tromobile_2017_-_Ferrari_156_F1_Aero_-_001.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/6b/R%C3%A9tromobile_2017_-_Ferrari_156_F1_Aero_-_001.jpg",
+      "licenca": "CC BY-SA 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "a5f1cd34b19758661b464562ddb3f36f5a0b0a80699e3ec4b7552b495c1d3a7c",
+      "largura": 5472,
+      "altura": 3648,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "adfb15fe8b460a4c18c47e0ecd969b9c983785f692d902070f986c2207e6a817"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "356a4f033912c20116ba70c9d39b7c7ad80778ec731c4e0835b7320ee02e77f1"
+        }
+      ]
+    },
+    "clark-lotus-25-r6-zandvoort-1964": {
+      "arquivo_commons": "File:Grand Prix van Nederland, het rennersveld Jim Clark in zijn Lotus in actie, Bestanddeelnr 916-4688.jpg",
+      "construtor": "lotus",
+      "modelo": "lotus-25",
+      "temporadas": [
+        1965
+      ],
+      "gps": [
+        "1964:2"
+      ],
+      "artefatos_gps": [
+        "1965:7"
+      ],
+      "pilotos": [
+        "jim-clark"
+      ],
+      "autor": "Harry Pot / Anefo / Nationaal Archief",
+      "legenda": {
+        "pt": "Jim Clark vence em Zandvoort com o Lotus 25 de chassi R6, em 1964. Ele voltou a vencer com esse carro no GP da França de 1965. Gerhard Mitter pilotou o R6 no Nürburgring quando Clark confirmou o título de 1965.",
+        "en": "Jim Clark wins at Zandvoort in Lotus 25 chassis R6 in 1964. He won again in this car at the 1965 French Grand Prix. Gerhard Mitter drove R6 at the Nürburgring when Clark clinched the 1965 title."
+      },
+      "fonte": "https://commons.wikimedia.org/wiki/File:Grand_Prix_van_Nederland,_het_rennersveld_Jim_Clark_in_zijn_Lotus_in_actie,_Bestanddeelnr_916-4688.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/66/Grand_Prix_van_Nederland%2C_het_rennersveld_Jim_Clark_in_zijn_Lotus_in_actie%2C_Bestanddeelnr_916-4688.jpg",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "f976917429373130612bc5d7b3428c0ce1934143329e1497b55871386fe5fea6",
+      "largura": 3648,
+      "altura": 2406,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-960.webp",
+          "largura": 960,
+          "altura": 633,
+          "sha256": "27864e179c2394c38a4405794441fa75e44ac00576c8d8ff7332c36c72313a70"
+        },
+        {
+          "arquivo": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-2400.webp",
+          "largura": 2400,
+          "altura": 1583,
+          "sha256": "de03c57e7e16685cbec5630b86bbea43fe5093a79fa8e07a4a1cc9dfec9ec06e"
+        }
+      ]
+    },
+    "ferrari-312t4-037r-detalhe-laguna-seca-2016": {
+      "legenda": {
+        "pt": "O nome de Gilles Villeneuve na carroceria do Ferrari 312 T4 de chassi 037-R, em Laguna Seca, em 2016. A fábrica reconstruiu esse exemplar para Ferdinando Bonomi após a temporada de 1979.",
+        "en": "Gilles Villeneuve’s name on the bodywork of Ferrari 312 T4 chassis 037-R at Laguna Seca in 2016. The factory rebuilt this example for Ferdinando Bonomi after the 1979 season."
+      },
+      "fonte": "https://www.flickr.com/photos/144847839@N08/28545668213/",
+      "original": "https://live.staticflickr.com/8167/28545668213_529a536840_o.jpg",
+      "autor": "Matt Brunner",
+      "licenca": "CC BY-SA 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "sha256": "797c9c72e20a1913536e5c71b5f64a68e0446409985c9704d4eaef6d3a94e342",
+      "largura": 6000,
+      "altura": 4000,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ferrari-312t4-037r-detalhe-laguna-seca-2016-797c9c72e20a-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "f5829cb8f0d2ed2010a774581928ef7b54abe7dfe0a0a7f9a112c7fccc784975"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ferrari-312t4-037r-detalhe-laguna-seca-2016-797c9c72e20a-2400.webp",
+          "largura": 2400,
+          "altura": 1600,
+          "sha256": "70fe2634a8488a94e57ffffbd0149a7c359e74ec430d9c8d7b753e72ca4bd33c"
+        }
+      ],
+      "equipes": [
+        "ferrari"
+      ]
+    },
+    "ferrari-246f1-1960-mauto-2026": {
+      "arquivo_commons": "File:Ferrari 246 F1 1958 MAUTO.jpg",
+      "legenda": {
+        "pt": "Ferrari 246 F1 de 1960, fotografado no MAUTO, em Turim, em 2026. Enzo Ferrari doou o exemplar ao museu, que o restaurou em 2001 com apoio da fábrica.",
+        "en": "A 1960 Ferrari 246 F1 photographed at MAUTO in Turin in 2026. Enzo Ferrari donated the car to the museum, which restored it in 2001 with support from the factory."
+      },
+      "autor": "Marie-Lan Taÿ Pamart",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Ferrari_246_F1_1958_MAUTO.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Ferrari_246_F1_1958_MAUTO.jpg",
+      "licenca": "CC BY 4.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "3c8b4ee643ff8df7fa5bb9a14ba4354fbbd53bdbd503c297fe3cfa0c095d70d4",
+      "largura": 7884,
+      "altura": 5259,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-960.webp",
+          "largura": 960,
+          "altura": 640,
+          "sha256": "1716f13d6dedf03bbef5a57b9e5328d3eb4120068c82521e20d82ff9b8b53bdc"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-2400.webp",
+          "largura": 2400,
+          "altura": 1601,
+          "sha256": "ee08a04aa350397660d717d04c183967f52f0e287ce1ee068266e10bfe438a3b"
+        }
+      ],
+      "equipes": [
+        "ferrari"
+      ]
+    },
+    "jones-shadow-dn8-zandvoort-1977": {
+      "arquivo_commons": "File:Accident at 1977 Dutch Grand Prix.jpg",
+      "legenda": {
+        "pt": "Alan Jones no Shadow DN8 nº 17, parcialmente encoberto pelo McLaren de Jochen Mass na primeira volta do GP dos Países Baixos de 1977, em Zandvoort. Duas semanas antes, Jones conquistou sua primeira vitória na Fórmula 1 com o mesmo chassi, o DN8/4A, na Áustria.",
+        "en": "Alan Jones in the No. 17 Shadow DN8, partly obscured by Jochen Mass’s McLaren on the opening lap of the 1977 Dutch Grand Prix at Zandvoort. Two weeks earlier, Jones took his first Formula 1 win in the same chassis, DN8/4A, in Austria."
+      },
+      "autor": "Koen Suyk / Anefo / Nationaal Archief",
+      "artefatos_gps": [
+        "1977:12"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Accident_at_1977_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Accident_at_1977_Dutch_Grand_Prix.jpg",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "e99a51a5329b001cbfab219b4e2925e0ef8c0e0a1446c4e42093e432dd1798aa",
+      "largura": 3682,
+      "altura": 2415,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/jones-shadow-dn8-zandvoort-1977-e99a51a5329b-960.webp",
+          "largura": 960,
+          "altura": 630,
+          "sha256": "1e25d10b9ec918e0d8d0953aecb9a399b8bf23934be58f985be589502c81270f"
+        },
+        {
+          "arquivo": "static/pitwall-archive/jones-shadow-dn8-zandvoort-1977-e99a51a5329b-2400.webp",
+          "largura": 2400,
+          "altura": 1574,
+          "sha256": "2db222257fbc20b4cf10aa37a87f46938a91025f364535959405b3f6fc057068"
+        }
+      ]
+    },
+    "lauda-prost-schiphol-1984": {
+      "arquivo_commons": "File:Anefo 933-1302 Huub Rothengatter, Alain Prost, Niki Lauda 29.10.1984.jpg",
+      "legenda": {
+        "pt": "Huub Rothengatter, Alain Prost e Niki Lauda em uma coletiva no aeroporto de Schiphol, em 29 de outubro de 1984. Oito dias antes, Lauda garantiu o tricampeonato no Estoril, com meio ponto de vantagem sobre Prost.",
+        "en": "Huub Rothengatter, Alain Prost and Niki Lauda at a press conference at Schiphol Airport on 29 October 1984. Eight days earlier, Lauda clinched his third title at Estoril, half a point ahead of Prost."
+      },
+      "autor": "Rob Croes / Anefo / Nationaal Archief",
+      "artefatos_gps": [
+        "1984:16"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Anefo_933-1302_Huub_Rothengatter,_Alain_Prost,_Niki_Lauda_29.10.1984.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Anefo_933-1302_Huub_Rothengatter%2C_Alain_Prost%2C_Niki_Lauda_29.10.1984.jpg",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "73ed99791293f55f00893b4a401424a11cb211ed902fbcf9419909e19bded6e9",
+      "largura": 3673,
+      "altura": 2445,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/lauda-prost-schiphol-1984-73ed99791293-960.webp",
+          "largura": 960,
+          "altura": 639,
+          "sha256": "64626e2a0276de1562aae47d2dc99d16cb3b7cb0bd90b5cbaaa2dcabdc95e9a1"
+        },
+        {
+          "arquivo": "static/pitwall-archive/lauda-prost-schiphol-1984-73ed99791293-2400.webp",
+          "largura": 2400,
+          "altura": 1598,
+          "sha256": "9e21466813766f4f5f5d52643666e588b8d0935f4c7f4a84465bec5bc4ab478d"
+        }
+      ]
+    },
+    "von-trips-clark-phil-hill-zandvoort-1961": {
+      "arquivo_commons": "File:Von Trips, Clark and P. Hill at 1961 Dutch Grand Prix.jpg",
+      "legenda": {
+        "pt": "Wolfgang von Trips, Jim Clark e Phil Hill no GP dos Países Baixos de 1961, em Zandvoort. Em julho, Von Trips venceu em Aintree à frente de Hill e Richie Ginther, na prova em que a Ferrari garantiu seu primeiro Mundial de Construtores.",
+        "en": "Wolfgang von Trips, Jim Clark and Phil Hill at the 1961 Dutch Grand Prix at Zandvoort. In July, Von Trips led Hill and Richie Ginther home at Aintree, where Ferrari clinched its first constructors’ championship."
+      },
+      "autor": "Harry Pot / Anefo / Nationaal Archief",
+      "artefatos_gps": [
+        "1961:5"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Von_Trips,_Clark_and_P._Hill_at_1961_Dutch_Grand_Prix.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/69/Von_Trips%2C_Clark_and_P._Hill_at_1961_Dutch_Grand_Prix.jpg",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "367f7351ffb7f0d12ff326f7d3719ab78d77a058fb24e28f44dd3bf3e378b479",
+      "largura": 3651,
+      "altura": 2448,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/von-trips-clark-phil-hill-zandvoort-1961-367f7351ffb7-960.webp",
+          "largura": 960,
+          "altura": 644,
+          "sha256": "b234e12a96be9a8a44cefdbd5537551a85569ccfa3a37018666c3e51a4b03484"
+        },
+        {
+          "arquivo": "static/pitwall-archive/von-trips-clark-phil-hill-zandvoort-1961-367f7351ffb7-2400.webp",
+          "largura": 2400,
+          "altura": 1609,
+          "sha256": "36d9aeb8e396a057c6a11611c961c93ba9cebde1f3bf36adfa9b809ef96fd7e5"
+        }
+      ]
+    },
+    "ascari-ferrari-500-005-zandvoort-1952": {
+      "arquivo_commons": "File:Grote Prijs Nederlandse autoraces Zandvoort. Finish Askari, Bestanddeelnr 905-2692.jpg",
+      "legenda": {
+        "pt": "Alberto Ascari no Ferrari 500 F2 nº 2, chassi 005, no GP dos Países Baixos de 1952, que venceu em Zandvoort. Com o mesmo carro, venceu em Spa na estreia de Mike Hawthorn no Mundial e garantiu seu primeiro título no Nürburgring.",
+        "en": "Alberto Ascari in the No. 2 Ferrari 500 F2, chassis 005, at the 1952 Dutch Grand Prix, which he won at Zandvoort. He also won in this car on Mike Hawthorn’s World Championship debut at Spa and clinched his first title at the Nürburgring."
+      },
+      "autor": "Joop van Bilsen / Anefo / Nationaal Archief",
+      "modelo": "ferrari-500",
+      "temporadas": [
+        1952
+      ],
+      "artefatos_gps": [
+        "1952:3",
+        "1952:6"
+      ],
+      "construtor": "ferrari",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Grote_Prijs_Nederlandse_autoraces_Zandvoort._Finish_Askari,_Bestanddeelnr_905-2692.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Grote_Prijs_Nederlandse_autoraces_Zandvoort._Finish_Askari%2C_Bestanddeelnr_905-2692.jpg",
+      "licenca": "CC0",
+      "licenca_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "e2fe34b622e93f4fa242e91d583922917763d6c37d6e915d86a24a176e60ea8d",
+      "largura": 2830,
+      "altura": 2028,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/ascari-ferrari-500-005-zandvoort-1952-e2fe34b622e9-960.webp",
+          "largura": 960,
+          "altura": 688,
+          "sha256": "d2e3f7d7a9c908d1ed9160f9965a6ca0df4db14194e4247db998cf98fa58a796"
+        },
+        {
+          "arquivo": "static/pitwall-archive/ascari-ferrari-500-005-zandvoort-1952-e2fe34b622e9-2400.webp",
+          "largura": 2400,
+          "altura": 1720,
+          "sha256": "9f197d0fd0ba95282d99f40a12d2b75b4cb95f835e6266296c47cbfe5785635a"
+        }
+      ]
+    },
+    "prost-mclaren-m29-5-donington-2014": {
+      "arquivo_commons": "File:The 1980 McLaren-Ford M29-5 Formula 1 racing car, driven by Alain Prost (14662385401).jpg",
+      "autor": "Ben Sutherland",
+      "legenda": {
+        "pt": "McLaren de chassi M29/5, fotografado em Donington em 2014. Prost correu com esse exemplar na Alemanha e na Áustria em 1980. Na estreia em Buenos Aires, terminou em sexto com o M29B de chassi 1.",
+        "en": "McLaren chassis M29/5, photographed at Donington in 2014. Prost raced this car in Germany and Austria in 1980. He finished sixth on his Buenos Aires debut in M29B chassis 1."
+      },
+      "artefatos_gps": [
+        "1980:1"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:The_1980_McLaren-Ford_M29-5_Formula_1_racing_car,_driven_by_Alain_Prost_(14662385401).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/e4/The_1980_McLaren-Ford_M29-5_Formula_1_racing_car%2C_driven_by_Alain_Prost_%2814662385401%29.jpg",
+      "licenca": "CC BY 2.0",
+      "licenca_url": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "7f090ba5bbdf0353ea4b85ff96c490e2a388300fc4b427d547d180d72f10c6e3",
+      "largura": 4928,
+      "altura": 3264,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/prost-mclaren-m29-5-donington-2014-7f090ba5bbdf-960.webp",
+          "largura": 960,
+          "altura": 636,
+          "sha256": "549755cbe0e964374c3bd745e1c6e2ebde2c1454053d189e15205bb830906a68"
+        },
+        {
+          "arquivo": "static/pitwall-archive/prost-mclaren-m29-5-donington-2014-7f090ba5bbdf-2400.webp",
+          "largura": 2400,
+          "altura": 1590,
+          "sha256": "4b8a2833c8bc004b1e1e7e67890af29726b2aa2264b8c08733072d2bb3cd0799"
+        }
+      ]
+    },
+    "rindt-lotus-49b-zandvoort-1969": {
+      "arquivo_commons": "File:Rindt at 1969 Dutch Grand Prix (2).jpg",
+      "autor": "Joost Evers / Anefo",
+      "legenda": {
+        "pt": "Jochen Rindt no Lotus 49B nº 2, chassi R6-2, no GP da Holanda de 1969, em Zandvoort. Em outubro, Rindt conquistou sua primeira vitória na Fórmula 1 com esse mesmo chassi, em Watkins Glen.",
+        "en": "Jochen Rindt in Lotus 49B no. 2, chassis R6-2, at the 1969 Dutch Grand Prix at Zandvoort. In October, Rindt took his first Formula 1 win in the same chassis at Watkins Glen."
+      },
+      "artefatos_gps": [
+        "1969:10"
+      ],
+      "fonte": "https://commons.wikimedia.org/wiki/File:Rindt_at_1969_Dutch_Grand_Prix_(2).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Rindt_at_1969_Dutch_Grand_Prix_%282%29.jpg",
+      "licenca": "CC BY-SA 3.0 nl",
+      "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "sha256": "e360d1191601df06b58f0f84a14dc54194e3b5cff8eb2b88c0c01aad5fa61f11",
+      "largura": 3687,
+      "altura": 2418,
+      "variantes": [
+        {
+          "arquivo": "static/pitwall-archive/rindt-lotus-49b-zandvoort-1969-e360d1191601-960.webp",
+          "largura": 960,
+          "altura": 630,
+          "sha256": "6de59c7acf14b61e09ad3c1efa9949476f04a6ab97ed5a643bbaf58ea3691d17"
+        },
+        {
+          "arquivo": "static/pitwall-archive/rindt-lotus-49b-zandvoort-1969-e360d1191601-2400.webp",
+          "largura": 2400,
+          "altura": 1574,
+          "sha256": "d2b9b63826bd668843afc0d42f452139cae394e8dd9a6f253cd1b5f19b1011db"
         }
       ]
     }
@@ -11969,6 +14349,14 @@
           "en": "Jack Brabham on his debut at Aintree, 1955"
         }
       },
+      "1957:6": {
+        "url": "https://www.deutsche-digitale-bibliothek.de/item/7EZIENXQ4IMMYVP4YFY4HMQA5UZVNCEB",
+        "acervo": "Deutsche Digitale Bibliothek / Landesarchiv Baden-Württemberg",
+        "legenda": {
+          "pt": "Fangio sai dos boxes do Nürburgring após reabastecer em 1957, em foto de Willy Pragher",
+          "en": "Fangio leaves the Nürburgring pits after refuelling in 1957, photographed by Willy Pragher"
+        }
+      },
       "1958:2": {
         "url": "https://library.revsinstitute.org/monaco-grand-prix/393131",
         "acervo": "Revs Digital Library",
@@ -11983,6 +14371,14 @@
         "legenda": {
           "pt": "Maserati de Phil Hill na estreia em Reims, 1958",
           "en": "Phil Hill’s Maserati on his debut at Reims, 1958"
+        }
+      },
+      "1958:10": {
+        "url": "https://bibliotecadigitale.aci.it/pubblicazioni/dettaglio/#/volume/00f96cdf48f42885df0fb734/a7b878b60fb924eb67ba4e90",
+        "acervo": "Biblioteca Digitale ACI · L’Automobile, n. 37, p. 7",
+        "legenda": {
+          "pt": "Stirling Moss no Vanwall nº 26 durante o GP da Itália de 1958",
+          "en": "Stirling Moss in Vanwall no. 26 during the 1958 Italian Grand Prix"
         }
       },
       "1958:11": {
@@ -12009,6 +14405,14 @@
           "en": "Brabham in the Cooper T53 at Boavista, 1960"
         }
       },
+      "1961:5": {
+        "url": "https://commons.wikimedia.org/wiki/File:Anchor_Crossing,_British_Grand_Prix,_1961_geograph-2741605-by-John-Goldsmith.jpg",
+        "acervo": "John Goldsmith / Geograph · CC BY-SA 2.0 · 1932 × 1314 px",
+        "legenda": {
+          "pt": "Jo Bonnier no Porsche nº 8 em Anchor Crossing, Aintree, 1961",
+          "en": "Jo Bonnier in Porsche no. 8 at Anchor Crossing, Aintree, 1961"
+        }
+      },
       "1961:7": {
         "url": "https://library.revsinstitute.org/italian-grand-prix/1978",
         "acervo": "Revs Digital Library",
@@ -12023,6 +14427,14 @@
         "legenda": {
           "pt": "Jim Clark com o Lotus 25 na primeira vitória, em Spa, 1962",
           "en": "Jim Clark in the Lotus 25 at his first win in Spa, 1962"
+        }
+      },
+      "1962:9": {
+        "url": "https://www.motorsportmagazine.com/articles/single-seaters/f1/f1-winter-sun-new-year-racing-clark-hill-stewart-and-moss/",
+        "acervo": "Motorsport Images / Motor Sport",
+        "legenda": {
+          "pt": "Graham Hill e Jim Clark no grid de East London, na corrida dos títulos de Hill e da BRM em 1962",
+          "en": "Graham Hill and Jim Clark on the East London grid for the race that clinched the 1962 titles for Hill and BRM"
         }
       },
       "1963:6": {
@@ -12047,6 +14459,14 @@
         "legenda": {
           "pt": "John Surtees e a Ferrari da decisão no México, 1964",
           "en": "John Surtees and Ferrari at the title decider in Mexico, 1964"
+        }
+      },
+      "1965:1": {
+        "url": "https://www.motorsportmagazine.com/archive/article/february-1965/28/11th-south-african/",
+        "acervo": "Motor Sport",
+        "legenda": {
+          "pt": "Jackie Stewart no BRM P261 na estreia no Mundial em East London, 1965",
+          "en": "Jackie Stewart in the BRM P261 on his World Championship debut at East London in 1965"
         }
       },
       "1965:8": {
@@ -12097,6 +14517,38 @@
           "en": "Emerson Fittipaldi on his debut at Brands Hatch, 1970"
         }
       },
+      "1970:12": {
+        "url": "https://www.motorsportmagazine.com/archive/article/november-1970/36/12th-united-states-grand-prix/",
+        "acervo": "Motor Sport",
+        "legenda": {
+          "pt": "Emerson Fittipaldi no Lotus a caminho da primeira vitória na F1 em Watkins Glen, 1970",
+          "en": "Emerson Fittipaldi in the Lotus on his way to his first F1 win at Watkins Glen in 1970"
+        }
+      },
+      "1971:9": {
+        "url": "https://www.formula1.com/en/latest/article/moments-in-time-the-italian-grand-prix.3WfuWj9h4gs0CufiDZ1ZS9.3WfuWj9h4gs0CufiDZ1ZS9",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "François Cevert disputa a chegada em Monza no GP em que a Tyrrell assegurou o Mundial de Construtores de 1971",
+          "en": "François Cevert battles to the finish at Monza in the Grand Prix where Tyrrell secured the 1971 Constructors’ Championship"
+        }
+      },
+      "1972:12": {
+        "url": "https://www.motorsportmagazine.com/articles/single-seaters/f1/jody-scheckters-stormy-f1-start-a-rookie-campaign-to-rival-the-best/",
+        "acervo": "Motor Sport",
+        "legenda": {
+          "pt": "Jody Scheckter no McLaren na estreia em Watkins Glen, 1972",
+          "en": "Jody Scheckter in the McLaren on his debut at Watkins Glen in 1972"
+        }
+      },
+      "1973:15": {
+        "url": "https://www.racingsportscars.com/f1/photo/Watkins_Glen-1973-10-07.html",
+        "acervo": "Racing Sports Cars",
+        "legenda": {
+          "pt": "Os Lotus 72E de Emerson Fittipaldi e do vencedor Ronnie Peterson em Watkins Glen, 1973",
+          "en": "The Lotus 72Es of Emerson Fittipaldi and race winner Ronnie Peterson at Watkins Glen in 1973"
+        }
+      },
       "1974:4": {
         "url": "https://library.revsinstitute.org/spanish-grand-prix/42449",
         "acervo": "Revs Digital Library",
@@ -12135,6 +14587,14 @@
         "legenda": {
           "pt": "Niki Lauda com a Ferrari 312 T2 em Watkins Glen, 1977",
           "en": "Niki Lauda in the Ferrari 312 T2 at Watkins Glen, 1977"
+        }
+      },
+      "1978:14": {
+        "url": "https://www.motorsportmagazine.com/archive/article/october-1978/27/the-49th-italian-grand-prix/",
+        "acervo": "Motor Sport · Motorsport Images",
+        "legenda": {
+          "pt": "Mario Andretti no Lotus 79 em Monza, no GP da Itália em que conquistou o título de 1978",
+          "en": "Mario Andretti in the Lotus 79 at the Italian Grand Prix where he clinched the 1978 title"
         }
       },
       "1979:13": {
@@ -12289,6 +14749,38 @@
           "en": "Michael Schumacher celebrates his first title in Adelaide, 1994"
         }
       },
+      "1996:1": {
+        "url": "https://www.williamsf1.com/articles/4f1376d4-b1a8-45ab-86b1-88ee1ea4856f/torquing-points-tracks-and-throwbacks-with-damon-and-jacques",
+        "acervo": "Williams F1 Team",
+        "legenda": {
+          "pt": "Jacques Villeneuve e Damon Hill no pódio da estreia de Villeneuve em Melbourne, 1996",
+          "en": "Jacques Villeneuve and Damon Hill on the podium on Villeneuve’s debut at Melbourne in 1996"
+        }
+      },
+      "1996:4": {
+        "url": "https://www.gettyimages.com.br/detail/foto-jornal%C3%ADstica/jacques-villeneuve-david-coulthard-rubens-foto-jornal%C3%ADstica/1189102953",
+        "acervo": "Paul-Henri Cahier / Getty Images",
+        "legenda": {
+          "pt": "Jacques Villeneuve no GP da primeira vitória na F1, em Nürburgring, 1996",
+          "en": "Jacques Villeneuve at the Grand Prix of his first F1 victory, at the Nürburgring in 1996"
+        }
+      },
+      "1996:16": {
+        "url": "https://www.suzukacircuit.jp/motorsports_s/library/f1/1996/",
+        "acervo": "Suzuka Circuit",
+        "legenda": {
+          "pt": "A pole de Jacques Villeneuve e a vitória do campeão Damon Hill em Suzuka, 1996",
+          "en": "Jacques Villeneuve’s pole and champion Damon Hill’s win at Suzuka in 1996"
+        }
+      },
+      "1997:17": {
+        "url": "https://www.formula1.com/en/latest/article/revealed-the-classic-f1-race-you-voted-to-watch-this-wednesday.4v787ZuyIcxz4cWQ6EbACV",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "O pódio do título de Jacques Villeneuve e da primeira vitória de Mika Häkkinen em Jerez, 1997",
+          "en": "The podium of Jacques Villeneuve’s title and Mika Häkkinen’s first win at Jerez in 1997"
+        }
+      },
       "1998:16": {
         "url": "https://www.formula1.com/en/latest/article/moments-in-time-the-japanese-grand-prix.5M4HpgAHNmMjn15iW7nAXO",
         "acervo": "Formula 1",
@@ -12329,12 +14821,68 @@
           "en": "Barrichello leads Schumacher at the start of the race that clinched Ferrari’s constructors’ title, Hungary 2002"
         }
       },
+      "2003:2": {
+        "url": "https://www.mclaren.com/racing/heritage/formula-1/drivers/kimi-raikkonen/kimi-raikkonens-defining-moments/",
+        "acervo": "McLaren Racing",
+        "legenda": {
+          "pt": "A primeira vitória de Kimi Räikkönen na Fórmula 1, em Sepang, 2003",
+          "en": "Kimi Räikkönen’s first Formula 1 win, at Sepang in 2003"
+        }
+      },
+      "2003:13": {
+        "url": "https://commons.wikimedia.org/wiki/File:Renault_in_the_last_corner_at_the_2003_Hungarian_Grand_Prix.jpg",
+        "acervo": "Mitja / Wikimedia Commons",
+        "legenda": {
+          "pt": "Fernando Alonso na última curva do Hungaroring no GP da primeira vitória, 2003 (1.024 × 768 px, CC BY 3.0)",
+          "en": "Fernando Alonso at the final corner of the Hungaroring at the Grand Prix of his first win in 2003 (1,024 × 768 px, CC BY 3.0)"
+        }
+      },
       "2003:16": {
         "url": "https://www.gettyimages.fi/detail/uutiskuva/japanese-grand-prix-suzuka-japan-10th-112th-october-2003-uutiskuva/2229474968",
         "acervo": "Getty Images / LAT Images",
         "legenda": {
           "pt": "Schumacher, Jean Todt e Ross Brawn comemoram o título em Suzuka, 2003",
           "en": "Schumacher, Jean Todt and Ross Brawn celebrate the title at Suzuka, 2003"
+        }
+      },
+      "2007:17": {
+        "url": "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_won_2007_Brazil_GP.jpg",
+        "acervo": "Morio / Wikimedia Commons",
+        "legenda": {
+          "pt": "Kimi Räikkönen no Ferrari F2007 no GP do título, Interlagos, 2007 (1.280 × 402 px, CC BY-SA 3.0)",
+          "en": "Kimi Räikkönen in the Ferrari F2007 at his title-clinching race, Interlagos, 2007 (1,280 × 402 px, CC BY-SA 3.0)"
+        }
+      },
+      "2012:20": {
+        "url": "https://commons.wikimedia.org/wiki/File:Start_2012_brazil_GP.jpg",
+        "acervo": "Pedro Leiria / Wikimedia Commons",
+        "legenda": {
+          "pt": "Largada em Interlagos no GP em que Sebastian Vettel conquistou o tricampeonato, 2012 (800 × 536 px, CC BY-SA 2.0)",
+          "en": "Start at Interlagos in the race where Sebastian Vettel secured his third title, 2012 (800 × 536 px, CC BY-SA 2.0)"
+        }
+      },
+      "2014:16": {
+        "url": "https://commons.wikimedia.org/wiki/File:Hamilton_and_Putin.jpg",
+        "acervo": "Kremlin.ru · CC BY 4.0 · 1100 × 678 px",
+        "legenda": {
+          "pt": "Lewis Hamilton recebe o troféu em Sóchi, na prova do primeiro título de construtores da Mercedes, 2014",
+          "en": "Lewis Hamilton receives the trophy at Sochi, where Mercedes clinched its first constructors’ title, 2014"
+        }
+      },
+      "2017:18": {
+        "url": "https://www.formula1.com/en/latest/article/the-best-images-from-sunday-in-mexico.56LFjzWoqIEA4S8yM8CesO.56LFjzWoqIEA4S8yM8CesO",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Lewis Hamilton comemora o quarto Mundial no GP do México de 2017",
+          "en": "Lewis Hamilton celebrates his fourth title at the 2017 Mexican Grand Prix"
+        }
+      },
+      "2018:19": {
+        "url": "https://www.formula1.com/en/latest/article/top-shots-the-best-photos-from-mexico.6jJq0RjWzmyswgiiAQuumk",
+        "acervo": "Formula 1",
+        "legenda": {
+          "pt": "Lewis Hamilton comemora o quinto Mundial com a Mercedes no GP do México de 2018",
+          "en": "Lewis Hamilton celebrates his fifth title with Mercedes at the 2018 Mexican Grand Prix"
         }
       },
       "2019:1": {

@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "fcdbfde297f55157de923459f3a1a8f10579f91002b1014e410ae5e9c0802b79",
+  "apresentacao_build_sha256": "eaa75c4f9d2c0e3afcaf02c5f242230f3c8ee1ff887857e117134a36410c8d02",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "58a7ecf6ec1da0e512e7cf6833b1be5e83b908512ecff10a6a14e5508a488628",
+      "sha256_destino": "6feaec93a4419b49c512f1e32c4293686055d29bf6379ad6cabff69e8d64cb96",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "bd9b2e27152090aaf120d40fb587ea70a458a77aaeb564ce4ecd326727580366",
-      "sha256_origem": "3437891302384fd78841de118de353e04218d3cb88db47032c74086dbd22643a"
+      "sha256_destino": "5dc09d7ff14f800339b4c3d77d9321ff592523436f5d3be3ee6ba4a3278fa4b4",
+      "sha256_origem": "39b968aaa0b4ffa05e65a6eee653320b930b66a53eed27ab0d38145325b7d2ef"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "8f4f8a2f3db65bf97a140bbcfbeca65af6680b9405554be0ba47454f674a22f9",
-      "sha256_origem": "b469e54ca73fc07d5e4e1a5dc5c8f31f62843c9aa978bd254fb6c0d6fc9c1032"
+      "sha256_destino": "0d3fd1f5a0ed575b657760eaf5a16efc171c58c97432e896d5ef7b35e5b0da2a",
+      "sha256_origem": "9b0ec4512d0893620a8339bcd0713cae2c08376101ff4c135c0f42bd4cecc886"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "06c53dd4f22b2e0038ca2bb9af32cc1ab7e69898d99cc3bfa22bd965f21aac8f",
-      "sha256_origem": "06c53dd4f22b2e0038ca2bb9af32cc1ab7e69898d99cc3bfa22bd965f21aac8f"
+      "sha256_destino": "1e2014bb4df1afe535af98f048e6e3772508e5273c142f83b9fc747b40f9cf4d",
+      "sha256_origem": "1e2014bb4df1afe535af98f048e6e3772508e5273c142f83b9fc747b40f9cf4d"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "1b048423db237fabd78ed45f57cc3bd81bbeac3b94c221e32874aada7ce45db3",
-      "sha256_origem": "1b048423db237fabd78ed45f57cc3bd81bbeac3b94c221e32874aada7ce45db3"
+      "sha256_destino": "bd1cfda405f57bd1edfc06a447edda5f260dca1af10d8bdbdaecf21fefddbb59",
+      "sha256_origem": "bd1cfda405f57bd1edfc06a447edda5f260dca1af10d8bdbdaecf21fefddbb59"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -2753,8 +2753,8 @@
       "caminho": "frontend_assets/inventario_campeoes.json",
       "fonte": "frontend_assets/inventario_campeoes.json",
       "modo": "copia",
-      "sha256_destino": "9940e45aa4e0cdddf27702081967d73dc2244be3634687f79d32d33d50ff7d9b",
-      "sha256_origem": "9940e45aa4e0cdddf27702081967d73dc2244be3634687f79d32d33d50ff7d9b"
+      "sha256_destino": "f7f6329ac9cf848168dfe31cfd13f87533b9d07b402b0c87fe2f11a942f545f3",
+      "sha256_origem": "f7f6329ac9cf848168dfe31cfd13f87533b9d07b402b0c87fe2f11a942f545f3"
     },
     {
       "caminho": "frontend_assets/journey.css",
@@ -2984,8 +2984,8 @@
       "caminho": "pitwall/dashboard/photo_archive.py",
       "fonte": "pitwall/dashboard/photo_archive.py",
       "modo": "copia",
-      "sha256_destino": "84872cce5bdf3362e51203f8dad411675ced310091d3d2c29ca5075994c52a18",
-      "sha256_origem": "84872cce5bdf3362e51203f8dad411675ced310091d3d2c29ca5075994c52a18"
+      "sha256_destino": "e50e0f21db4256502ad19ecc1f096aebd5e45d4bb4566205c19ff2837a0c7982",
+      "sha256_origem": "e50e0f21db4256502ad19ecc1f096aebd5e45d4bb4566205c19ff2837a0c7982"
     },
     {
       "caminho": "pitwall/dashboard/pilot_views.py",
@@ -3450,6 +3450,34 @@
       "sha256_origem": "e6c3fe0f6f906a885744f85a228b3db0e6d2128f30a6afefce5bcf0718b41170"
     },
     {
+      "caminho": "static/pitwall-archive/alonso-interlagos-2010-6d16d5ee9d88-2400.webp",
+      "fonte": "static/pitwall-archive/alonso-interlagos-2010-6d16d5ee9d88-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3d2e27b88c5780d40a201649504a51c78e1ef741aab1c8a9bada12d5eab9fdbe",
+      "sha256_origem": "3d2e27b88c5780d40a201649504a51c78e1ef741aab1c8a9bada12d5eab9fdbe"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-interlagos-2010-6d16d5ee9d88-960.webp",
+      "fonte": "static/pitwall-archive/alonso-interlagos-2010-6d16d5ee9d88-960.webp",
+      "modo": "copia",
+      "sha256_destino": "0d6c51130a88ed4e4702fe38377fcdba92c4be93edd5e57e78d49edd5c02273f",
+      "sha256_origem": "0d6c51130a88ed4e4702fe38377fcdba92c4be93edd5e57e78d49edd5c02273f"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-minardi-ps01-museo-2017-a988f48e0809-2400.webp",
+      "fonte": "static/pitwall-archive/alonso-minardi-ps01-museo-2017-a988f48e0809-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "531a52884f5cfeca8c935f07c9b3fe6d3eac3ff83257a5ce2fcabd0f06650846",
+      "sha256_origem": "531a52884f5cfeca8c935f07c9b3fe6d3eac3ff83257a5ce2fcabd0f06650846"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-minardi-ps01-museo-2017-a988f48e0809-960.webp",
+      "fonte": "static/pitwall-archive/alonso-minardi-ps01-museo-2017-a988f48e0809-960.webp",
+      "modo": "copia",
+      "sha256_destino": "9d9c292389e757b85c0079e7a2476704fea0bda826de27ef1140808fb96be9c3",
+      "sha256_origem": "9d9c292389e757b85c0079e7a2476704fea0bda826de27ef1140808fb96be9c3"
+    },
+    {
       "caminho": "static/pitwall-archive/alonso-r25-5d5bc4051bfa-2400.webp",
       "fonte": "static/pitwall-archive/alonso-r25-5d5bc4051bfa-2400.webp",
       "modo": "copia",
@@ -3476,6 +3504,20 @@
       "modo": "copia",
       "sha256_destino": "cdfc1d9317e96da3cc1444101587f248edebcb1605f72ea4e1e28900791db728",
       "sha256_origem": "cdfc1d9317e96da3cc1444101587f248edebcb1605f72ea4e1e28900791db728"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-renault-r23b-museo-2017-68c0d38df710-2400.webp",
+      "fonte": "static/pitwall-archive/alonso-renault-r23b-museo-2017-68c0d38df710-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "915baa3198380c55ed70604c6787f37713ef2b1f05cf2b0649464c9691b9afe4",
+      "sha256_origem": "915baa3198380c55ed70604c6787f37713ef2b1f05cf2b0649464c9691b9afe4"
+    },
+    {
+      "caminho": "static/pitwall-archive/alonso-renault-r23b-museo-2017-68c0d38df710-960.webp",
+      "fonte": "static/pitwall-archive/alonso-renault-r23b-museo-2017-68c0d38df710-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6d70cdb2309c06248aa6dcddb3326252df4e12419875ee04b0530c65d8968369",
+      "sha256_origem": "6d70cdb2309c06248aa6dcddb3326252df4e12419875ee04b0530c65d8968369"
     },
     {
       "caminho": "static/pitwall-archive/alonso-renault-r26-indianapolis-2006-b67a3def14b6-2400.webp",
@@ -3590,6 +3632,20 @@
       "sha256_origem": "f264bc2e13a3db299e2e2480880abbfcc5cb3059591fd9f3c7987cb28ce174e9"
     },
     {
+      "caminho": "static/pitwall-archive/andretti-monza-1977-f6ba819d247a-2400.webp",
+      "fonte": "static/pitwall-archive/andretti-monza-1977-f6ba819d247a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2568987d6c6c5c5874433d1fba8fcb14d8b22d9742b9b9fdb49561c74c889628",
+      "sha256_origem": "2568987d6c6c5c5874433d1fba8fcb14d8b22d9742b9b9fdb49561c74c889628"
+    },
+    {
+      "caminho": "static/pitwall-archive/andretti-monza-1977-f6ba819d247a-960.webp",
+      "fonte": "static/pitwall-archive/andretti-monza-1977-f6ba819d247a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c1a31c96aafaf198798d30810667ec1425a6db335acc2563dd9e6dcfa21004d8",
+      "sha256_origem": "c1a31c96aafaf198798d30810667ec1425a6db335acc2563dd9e6dcfa21004d8"
+    },
+    {
       "caminho": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-2400.webp",
       "fonte": "static/pitwall-archive/andretti-podio-zandvoort-1978-06bfda0a1519-2400.webp",
       "modo": "copia",
@@ -3632,6 +3688,20 @@
       "sha256_origem": "06be4ae1dcceba8b51c2d8c9de0daec16c18d0b19103a46f29019b8abb2fc5c6"
     },
     {
+      "caminho": "static/pitwall-archive/antonelli-w17-zandvoort-2026-993ee0f7a1ca-2400.webp",
+      "fonte": "static/pitwall-archive/antonelli-w17-zandvoort-2026-993ee0f7a1ca-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "16a320505740b1a36e31ab3c4fb3bd6c5456111656f4377b909b55933a9eb1a1",
+      "sha256_origem": "16a320505740b1a36e31ab3c4fb3bd6c5456111656f4377b909b55933a9eb1a1"
+    },
+    {
+      "caminho": "static/pitwall-archive/antonelli-w17-zandvoort-2026-993ee0f7a1ca-960.webp",
+      "fonte": "static/pitwall-archive/antonelli-w17-zandvoort-2026-993ee0f7a1ca-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c8b468b495c7dbbf53e8d0d3ad4ea316990c73640f023b0c85d15d45ec66c72f",
+      "sha256_origem": "c8b468b495c7dbbf53e8d0d3ad4ea316990c73640f023b0c85d15d45ec66c72f"
+    },
+    {
       "caminho": "static/pitwall-archive/antonelli-xangai-2026-9db3ef47746a-2400.webp",
       "fonte": "static/pitwall-archive/antonelli-xangai-2026-9db3ef47746a-2400.webp",
       "modo": "copia",
@@ -3660,6 +3730,20 @@
       "sha256_origem": "2bce9ac630ae8e3ff40c27430f326350edad945275ab7f3ef433bf35d05d3d03"
     },
     {
+      "caminho": "static/pitwall-archive/ascari-ferrari-500-005-zandvoort-1952-e2fe34b622e9-2400.webp",
+      "fonte": "static/pitwall-archive/ascari-ferrari-500-005-zandvoort-1952-e2fe34b622e9-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9f197d0fd0ba95282d99f40a12d2b75b4cb95f835e6266296c47cbfe5785635a",
+      "sha256_origem": "9f197d0fd0ba95282d99f40a12d2b75b4cb95f835e6266296c47cbfe5785635a"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-ferrari-500-005-zandvoort-1952-e2fe34b622e9-960.webp",
+      "fonte": "static/pitwall-archive/ascari-ferrari-500-005-zandvoort-1952-e2fe34b622e9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d2e3f7d7a9c908d1ed9160f9965a6ca0df4db14194e4247db998cf98fa58a796",
+      "sha256_origem": "d2e3f7d7a9c908d1ed9160f9965a6ca0df4db14194e4247db998cf98fa58a796"
+    },
+    {
       "caminho": "static/pitwall-archive/ascari-ferrari-500-736c124bbd8d-2400.webp",
       "fonte": "static/pitwall-archive/ascari-ferrari-500-736c124bbd8d-2400.webp",
       "modo": "copia",
@@ -3672,6 +3756,20 @@
       "modo": "copia",
       "sha256_destino": "9ad4081c51135ff4d9161845ad27062bb499f304201a281a453f1f4f5c652cdf",
       "sha256_origem": "9ad4081c51135ff4d9161845ad27062bb499f304201a281a453f1f4f5c652cdf"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-ferrari-500-zandvoort-1953-b6b993fe917d-2400.webp",
+      "fonte": "static/pitwall-archive/ascari-ferrari-500-zandvoort-1953-b6b993fe917d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "4b5ca240926ea9e478f8b9539935138d51a9145407ad8293672a21734b693762",
+      "sha256_origem": "4b5ca240926ea9e478f8b9539935138d51a9145407ad8293672a21734b693762"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-ferrari-500-zandvoort-1953-b6b993fe917d-960.webp",
+      "fonte": "static/pitwall-archive/ascari-ferrari-500-zandvoort-1953-b6b993fe917d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "864f7ad6114ad3f0275c8e555890ac0942c5756755378c9b800479d3c56066c6",
+      "sha256_origem": "864f7ad6114ad3f0275c8e555890ac0942c5756755378c9b800479d3c56066c6"
     },
     {
       "caminho": "static/pitwall-archive/ascari-podio-zandvoort-1953-990903924d45-2400.webp",
@@ -3898,6 +3996,20 @@
       "sha256_origem": "d413be70df472a4a0e1930c65e1c4e30f399749093cfc6a330602adc4e8808a7"
     },
     {
+      "caminho": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "63c16a39ddc581eb353b3f3562b69fb1854532b274d90d73845fb44a62e3bffd",
+      "sha256_origem": "63c16a39ddc581eb353b3f3562b69fb1854532b274d90d73845fb44a62e3bffd"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-960.webp",
+      "fonte": "static/pitwall-archive/brabham-bt19-zandvoort-1967-208d98fcd1ee-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c41147a521eee1d055d3cb64d8713a1308ae03054150b9d8296db50e6eaa2196",
+      "sha256_origem": "c41147a521eee1d055d3cb64d8713a1308ae03054150b9d8296db50e6eaa2196"
+    },
+    {
       "caminho": "static/pitwall-archive/brabham-bt20-31b858ae8e9d-2400.webp",
       "fonte": "static/pitwall-archive/brabham-bt20-31b858ae8e9d-2400.webp",
       "modo": "copia",
@@ -3980,6 +4092,20 @@
       "modo": "copia",
       "sha256_destino": "89f8905856c0f922b0d9b5cbfe6641aea862241d438ed8e6a781b4e700f4dbac",
       "sha256_origem": "89f8905856c0f922b0d9b5cbfe6641aea862241d438ed8e6a781b4e700f4dbac"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-2400.webp",
+      "fonte": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9c107e0352e4d98f20bd4d08bd8b7776ed2af0a59c00b49803950b67ec8d6e85",
+      "sha256_origem": "9c107e0352e4d98f20bd4d08bd8b7776ed2af0a59c00b49803950b67ec8d6e85"
+    },
+    {
+      "caminho": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-960.webp",
+      "fonte": "static/pitwall-archive/brabham-cooper-t40-nurburgring-2011-fbff2e6aa195-960.webp",
+      "modo": "copia",
+      "sha256_destino": "380e56547ec3a46fe16609370ec5ed336f793e119f3b57702e9f32c72b0fa8b8",
+      "sha256_origem": "380e56547ec3a46fe16609370ec5ed336f793e119f3b57702e9f32c72b0fa8b8"
     },
     {
       "caminho": "static/pitwall-archive/brabham-zandvoort-podio-1966-6812246ab5ca-2400.webp",
@@ -4080,6 +4206,20 @@
       "sha256_origem": "0a259ce8bde82bacd7e952e83383276ba43de2e4acc03aff4b4163afd4a7a045"
     },
     {
+      "caminho": "static/pitwall-archive/cabianca-salvadori-monza-1959-e07a171ff4be-2400.webp",
+      "fonte": "static/pitwall-archive/cabianca-salvadori-monza-1959-e07a171ff4be-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d5ec61e9a1690ad30b6ec0b9b6e932c117d1136e5ee85d0c5d38f5f27aa4ec61",
+      "sha256_origem": "d5ec61e9a1690ad30b6ec0b9b6e932c117d1136e5ee85d0c5d38f5f27aa4ec61"
+    },
+    {
+      "caminho": "static/pitwall-archive/cabianca-salvadori-monza-1959-e07a171ff4be-960.webp",
+      "fonte": "static/pitwall-archive/cabianca-salvadori-monza-1959-e07a171ff4be-960.webp",
+      "modo": "copia",
+      "sha256_destino": "92926c6bcc345aa310830e7b99af1fc842247dde04eb322114168fbb8de263a6",
+      "sha256_origem": "92926c6bcc345aa310830e7b99af1fc842247dde04eb322114168fbb8de263a6"
+    },
+    {
       "caminho": "static/pitwall-archive/cadillac-silverstone-27f1713144a5-2400.webp",
       "fonte": "static/pitwall-archive/cadillac-silverstone-27f1713144a5-2400.webp",
       "modo": "copia",
@@ -4120,6 +4260,20 @@
       "modo": "copia",
       "sha256_destino": "57b4d53374263ce2b66629d47d07efc52beea6750333c54df7aa62ceff1ef5fe",
       "sha256_origem": "57b4d53374263ce2b66629d47d07efc52beea6750333c54df7aa62ceff1ef5fe"
+    },
+    {
+      "caminho": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-2400.webp",
+      "fonte": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "de03c57e7e16685cbec5630b86bbea43fe5093a79fa8e07a4a1cc9dfec9ec06e",
+      "sha256_origem": "de03c57e7e16685cbec5630b86bbea43fe5093a79fa8e07a4a1cc9dfec9ec06e"
+    },
+    {
+      "caminho": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-960.webp",
+      "fonte": "static/pitwall-archive/clark-lotus-25-r6-zandvoort-1964-f97691742937-960.webp",
+      "modo": "copia",
+      "sha256_destino": "27864e179c2394c38a4405794441fa75e44ac00576c8d8ff7332c36c72313a70",
+      "sha256_origem": "27864e179c2394c38a4405794441fa75e44ac00576c8d8ff7332c36c72313a70"
     },
     {
       "caminho": "static/pitwall-archive/cooper-moss-zandvoort-1959-f7631f667681-2400.webp",
@@ -4176,6 +4330,20 @@
       "modo": "copia",
       "sha256_destino": "5e9adabd4ef599d5fda343a86504558cdc64fa51af39b4776e878a2ff396e5ec",
       "sha256_origem": "5e9adabd4ef599d5fda343a86504558cdc64fa51af39b4776e878a2ff396e5ec"
+    },
+    {
+      "caminho": "static/pitwall-archive/daly-ensign-mn08-brands-hatch-1978-3a898ae0bd90-2400.webp",
+      "fonte": "static/pitwall-archive/daly-ensign-mn08-brands-hatch-1978-3a898ae0bd90-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7c5110382dd1ff030c19faf2fb0c39ca7a803ce475e35ff0a60803d64da5a9fd",
+      "sha256_origem": "7c5110382dd1ff030c19faf2fb0c39ca7a803ce475e35ff0a60803d64da5a9fd"
+    },
+    {
+      "caminho": "static/pitwall-archive/daly-ensign-mn08-brands-hatch-1978-3a898ae0bd90-960.webp",
+      "fonte": "static/pitwall-archive/daly-ensign-mn08-brands-hatch-1978-3a898ae0bd90-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a02cfc926be7dbbc1aa5d2e51d7f25c588810d9a4604c042f0952df034d6720d",
+      "sha256_origem": "a02cfc926be7dbbc1aa5d2e51d7f25c588810d9a4604c042f0952df034d6720d"
     },
     {
       "caminho": "static/pitwall-archive/damon-hill-retrato-99042871cb88-2400.webp",
@@ -4274,6 +4442,34 @@
       "modo": "copia",
       "sha256_destino": "2804a1d319943c68b91b4dd4a71c51710e3855dc27790f02b12143ebb6702652",
       "sha256_origem": "2804a1d319943c68b91b4dd4a71c51710e3855dc27790f02b12143ebb6702652"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-2400.webp",
+      "fonte": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "cb6daf891c1bc94ecaa8571e79521a541f96e871bd11312c3a1270330ed8b572",
+      "sha256_origem": "cb6daf891c1bc94ecaa8571e79521a541f96e871bd11312c3a1270330ed8b572"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-960.webp",
+      "fonte": "static/pitwall-archive/fangio-maserati-argentina-1954-95d91ca8177a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1b07d45ce74340c28431be17c3de272936fc20c0e3af32a396bc259e8921d44e",
+      "sha256_origem": "1b07d45ce74340c28431be17c3de272936fc20c0e3af32a396bc259e8921d44e"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-2400.webp",
+      "fonte": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "759113c79b46856dfe6a86af1f0a08fda380e04c2989d8454d9e6ae03840b596",
+      "sha256_origem": "759113c79b46856dfe6a86af1f0a08fda380e04c2989d8454d9e6ae03840b596"
+    },
+    {
+      "caminho": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-960.webp",
+      "fonte": "static/pitwall-archive/fangio-moss-pescara-1957-402ec9f6136d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "da55d7cbe10b699d739896afb0f1a95fc29b65b451347840cb8770be2c9857ad",
+      "sha256_origem": "da55d7cbe10b699d739896afb0f1a95fc29b65b451347840cb8770be2c9857ad"
     },
     {
       "caminho": "static/pitwall-archive/fangio-nurburgring-1954-020463d3cf44-2400.webp",
@@ -4444,6 +4640,20 @@
       "sha256_origem": "1ce43b04145c9e4adc2f5866cfc20e04d756e72c7ae74415b588532e5ff53c0f"
     },
     {
+      "caminho": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "356a4f033912c20116ba70c9d39b7c7ad80778ec731c4e0835b7320ee02e77f1",
+      "sha256_origem": "356a4f033912c20116ba70c9d39b7c7ad80778ec731c4e0835b7320ee02e77f1"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-156-aero-retromobile-2017-a5f1cd34b197-960.webp",
+      "modo": "copia",
+      "sha256_destino": "adfb15fe8b460a4c18c47e0ecd969b9c983785f692d902070f986c2207e6a817",
+      "sha256_origem": "adfb15fe8b460a4c18c47e0ecd969b9c983785f692d902070f986c2207e6a817"
+    },
+    {
       "caminho": "static/pitwall-archive/ferrari-158-8ceb2a9265a1-2400.webp",
       "fonte": "static/pitwall-archive/ferrari-158-8ceb2a9265a1-2400.webp",
       "modo": "copia",
@@ -4470,6 +4680,20 @@
       "modo": "copia",
       "sha256_destino": "434e273e3a7b8d9c4308dc5597b6957ceeea9a7ba338c3f468e83d4ce07fdcdf",
       "sha256_origem": "434e273e3a7b8d9c4308dc5597b6957ceeea9a7ba338c3f468e83d4ce07fdcdf"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ee08a04aa350397660d717d04c183967f52f0e287ce1ee068266e10bfe438a3b",
+      "sha256_origem": "ee08a04aa350397660d717d04c183967f52f0e287ce1ee068266e10bfe438a3b"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-246f1-1960-mauto-2026-3c8b4ee643ff-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1716f13d6dedf03bbef5a57b9e5328d3eb4120068c82521e20d82ff9b8b53bdc",
+      "sha256_origem": "1716f13d6dedf03bbef5a57b9e5328d3eb4120068c82521e20d82ff9b8b53bdc"
     },
     {
       "caminho": "static/pitwall-archive/ferrari-312b3-74-51cbf583c301-2400.webp",
@@ -4554,6 +4778,20 @@
       "modo": "copia",
       "sha256_destino": "d9af1824670973d98ecdc6245db1b7d1e0fd2aae2e4bb777fc4a6f343143fa10",
       "sha256_origem": "d9af1824670973d98ecdc6245db1b7d1e0fd2aae2e4bb777fc4a6f343143fa10"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t4-037r-detalhe-laguna-seca-2016-797c9c72e20a-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t4-037r-detalhe-laguna-seca-2016-797c9c72e20a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "70fe2634a8488a94e57ffffbd0149a7c359e74ec430d9c8d7b753e72ca4bd33c",
+      "sha256_origem": "70fe2634a8488a94e57ffffbd0149a7c359e74ec430d9c8d7b753e72ca4bd33c"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-312t4-037r-detalhe-laguna-seca-2016-797c9c72e20a-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-312t4-037r-detalhe-laguna-seca-2016-797c9c72e20a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "f5829cb8f0d2ed2010a774581928ef7b54abe7dfe0a0a7f9a112c7fccc784975",
+      "sha256_origem": "f5829cb8f0d2ed2010a774581928ef7b54abe7dfe0a0a7f9a112c7fccc784975"
     },
     {
       "caminho": "static/pitwall-archive/ferrari-312t4-92e4bce1b87f-2400.webp",
@@ -4794,6 +5032,20 @@
       "sha256_origem": "c80f519068037a6764d30e4639b31eb58c8694ad154976ca0200fb6460a376d0"
     },
     {
+      "caminho": "static/pitwall-archive/ferrari-trofeu-suzuka-2003-d48ff1d749ea-2400.webp",
+      "fonte": "static/pitwall-archive/ferrari-trofeu-suzuka-2003-d48ff1d749ea-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8f3dc5ad420bdf08e249565c2700266536fd4a04bc619ba8a84f9b40a5924483",
+      "sha256_origem": "8f3dc5ad420bdf08e249565c2700266536fd4a04bc619ba8a84f9b40a5924483"
+    },
+    {
+      "caminho": "static/pitwall-archive/ferrari-trofeu-suzuka-2003-d48ff1d749ea-960.webp",
+      "fonte": "static/pitwall-archive/ferrari-trofeu-suzuka-2003-d48ff1d749ea-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bf3252ea8c4721f82a304b631f72e86607fd18177ba8db79251b8def59b12c7a",
+      "sha256_origem": "bf3252ea8c4721f82a304b631f72e86607fd18177ba8db79251b8def59b12c7a"
+    },
+    {
       "caminho": "static/pitwall-archive/fittipaldi-lotus-72-r5-watkins-glen-1970-62aa90319738-2400.webp",
       "fonte": "static/pitwall-archive/fittipaldi-lotus-72-r5-watkins-glen-1970-62aa90319738-2400.webp",
       "modo": "copia",
@@ -4836,6 +5088,20 @@
       "sha256_origem": "c4bfd3b67475fa5028ce356bbdf6c25f7b8495780da07cfb33fcfd80203b07d7"
     },
     {
+      "caminho": "static/pitwall-archive/fittipaldi-ultrapassa-lauda-monza-1975-3d8f1990fd49-2400.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-ultrapassa-lauda-monza-1975-3d8f1990fd49-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "897a3e0af127415d2c96005afd27a07bb110d34df06bd5ba4a554427e5aef9ca",
+      "sha256_origem": "897a3e0af127415d2c96005afd27a07bb110d34df06bd5ba4a554427e5aef9ca"
+    },
+    {
+      "caminho": "static/pitwall-archive/fittipaldi-ultrapassa-lauda-monza-1975-3d8f1990fd49-960.webp",
+      "fonte": "static/pitwall-archive/fittipaldi-ultrapassa-lauda-monza-1975-3d8f1990fd49-960.webp",
+      "modo": "copia",
+      "sha256_destino": "4f4d44d9cc9bd98d7f29f0414de01b26c25e88774ec01554ea9e60af550666e3",
+      "sha256_origem": "4f4d44d9cc9bd98d7f29f0414de01b26c25e88774ec01554ea9e60af550666e3"
+    },
+    {
       "caminho": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-1788.webp",
       "fonte": "static/pitwall-archive/fittipaldi-watkins-glen-1974-269ab4af5e97-1788.webp",
       "modo": "copia",
@@ -4848,6 +5114,20 @@
       "modo": "copia",
       "sha256_destino": "c2a8c0c9adb142554660f1538baaa9d52bec703de86b4aee05516243417063a2",
       "sha256_origem": "c2a8c0c9adb142554660f1538baaa9d52bec703de86b4aee05516243417063a2"
+    },
+    {
+      "caminho": "static/pitwall-archive/foro-sol-publico-mexico-2017-bb1074568073-1920.webp",
+      "fonte": "static/pitwall-archive/foro-sol-publico-mexico-2017-bb1074568073-1920.webp",
+      "modo": "copia",
+      "sha256_destino": "1c9c02b9482230c4275c3efcdddf43eb039c16cc154aa0afe9989b7afc05c251",
+      "sha256_origem": "1c9c02b9482230c4275c3efcdddf43eb039c16cc154aa0afe9989b7afc05c251"
+    },
+    {
+      "caminho": "static/pitwall-archive/foro-sol-publico-mexico-2017-bb1074568073-960.webp",
+      "fonte": "static/pitwall-archive/foro-sol-publico-mexico-2017-bb1074568073-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3be3c7979a42143ecb82adf64cdee50c04ee39f625951d7fa3ec9af48536d45d",
+      "sha256_origem": "3be3c7979a42143ecb82adf64cdee50c04ee39f625951d7fa3ec9af48536d45d"
     },
     {
       "caminho": "static/pitwall-archive/gerard-era-r4a-2014-01739e3a9858-2400.webp",
@@ -4904,6 +5184,20 @@
       "modo": "copia",
       "sha256_destino": "15847fdeca97e40cc8b15c3325aa92e6363667aec70195f387b4acd75859e878",
       "sha256_origem": "15847fdeca97e40cc8b15c3325aa92e6363667aec70195f387b4acd75859e878"
+    },
+    {
+      "caminho": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-2400.webp",
+      "fonte": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "42c3f4caea3bd53df4fd1941593f49ec6fa8c9e55b695bc978b47708d6db4ae0",
+      "sha256_origem": "42c3f4caea3bd53df4fd1941593f49ec6fa8c9e55b695bc978b47708d6db4ae0"
+    },
+    {
+      "caminho": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-960.webp",
+      "fonte": "static/pitwall-archive/grid-monza-1961-anuario-ab05751886f2-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3fde945b1500e102fc656f41cf3f1e553295a1c068a7e513778d24858b095ed9",
+      "sha256_origem": "3fde945b1500e102fc656f41cf3f1e553295a1c068a7e513778d24858b095ed9"
     },
     {
       "caminho": "static/pitwall-archive/haas-austin-cae13f5932f9-2400.webp",
@@ -4990,6 +5284,20 @@
       "sha256_origem": "b9afe05ac8ed6b9b156d0cff4bb07e3c94dc03baba1a0279852588be15154d34"
     },
     {
+      "caminho": "static/pitwall-archive/hamilton-interlagos-2010-527ac41b5b16-2400.webp",
+      "fonte": "static/pitwall-archive/hamilton-interlagos-2010-527ac41b5b16-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "8043ed1ecede0b8baf4968eb324cefaa252147b495a48dfee9f04d17b0d5a245",
+      "sha256_origem": "8043ed1ecede0b8baf4968eb324cefaa252147b495a48dfee9f04d17b0d5a245"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-interlagos-2010-527ac41b5b16-960.webp",
+      "fonte": "static/pitwall-archive/hamilton-interlagos-2010-527ac41b5b16-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5c87660f9acee527350775eae48baeac4e69e028c0e1c33e5a2e66cad082a2b2",
+      "sha256_origem": "5c87660f9acee527350775eae48baeac4e69e028c0e1c33e5a2e66cad082a2b2"
+    },
+    {
       "caminho": "static/pitwall-archive/hamilton-montreal-2007-4ef77236a19f-2400.webp",
       "fonte": "static/pitwall-archive/hamilton-montreal-2007-4ef77236a19f-2400.webp",
       "modo": "copia",
@@ -5002,6 +5310,20 @@
       "modo": "copia",
       "sha256_destino": "b5cb5de4a9c20ca4fee7db77b9ed0c0f03f5ddc69311284ee0c74446df0f119d",
       "sha256_origem": "b5cb5de4a9c20ca4fee7db77b9ed0c0f03f5ddc69311284ee0c74446df0f119d"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-mp4-22-04-silverstone-2007-bb2d2e335c75-2400.webp",
+      "fonte": "static/pitwall-archive/hamilton-mp4-22-04-silverstone-2007-bb2d2e335c75-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "930f44c45aecc8d894843d486cd59f1b7a1e3845b768e500ed807beeea06c913",
+      "sha256_origem": "930f44c45aecc8d894843d486cd59f1b7a1e3845b768e500ed807beeea06c913"
+    },
+    {
+      "caminho": "static/pitwall-archive/hamilton-mp4-22-04-silverstone-2007-bb2d2e335c75-960.webp",
+      "fonte": "static/pitwall-archive/hamilton-mp4-22-04-silverstone-2007-bb2d2e335c75-960.webp",
+      "modo": "copia",
+      "sha256_destino": "c4dda11df5d749d5d8616474939efa0e9f134a3a6644893a807ab3fc4f4a7660",
+      "sha256_origem": "c4dda11df5d749d5d8616474939efa0e9f134a3a6644893a807ab3fc4f4a7660"
     },
     {
       "caminho": "static/pitwall-archive/hamilton-sochi-2015-d6b0d1ba2c6d-2400.webp",
@@ -5256,6 +5578,34 @@
       "sha256_origem": "9958d7ed992035714543b64e864b6eb6c9c5f50f09f91b1dfe432a1989b51323"
     },
     {
+      "caminho": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-2400.webp",
+      "fonte": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "c0fdb169a02419424215430130a89aea36f22c38cb0a74531d74e6bd00dc0f10",
+      "sha256_origem": "c0fdb169a02419424215430130a89aea36f22c38cb0a74531d74e6bd00dc0f10"
+    },
+    {
+      "caminho": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-960.webp",
+      "fonte": "static/pitwall-archive/hungaroring-1986-piquet-fw11-fortepan-387b97ec0459-960.webp",
+      "modo": "copia",
+      "sha256_destino": "80114caeeef2dfdbf89520077bb88919782e48989c029f95c794f48720a9b8da",
+      "sha256_origem": "80114caeeef2dfdbf89520077bb88919782e48989c029f95c794f48720a9b8da"
+    },
+    {
+      "caminho": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-2400.webp",
+      "fonte": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "77f398d1261b44c43600a07d180043e6dc72af65145b1b9a4379bc415ed74682",
+      "sha256_origem": "77f398d1261b44c43600a07d180043e6dc72af65145b1b9a4379bc415ed74682"
+    },
+    {
+      "caminho": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-960.webp",
+      "fonte": "static/pitwall-archive/hungaroring-1986-podio-fortepan-1dfae204ed81-960.webp",
+      "modo": "copia",
+      "sha256_destino": "244bba162e62cdef570442fb66eacd42b1df87ed57007f42378a2ff583634b60",
+      "sha256_origem": "244bba162e62cdef570442fb66eacd42b1df87ed57007f42378a2ff583634b60"
+    },
+    {
       "caminho": "static/pitwall-archive/hungaroring-podio-apos-cerimonia-2002-07f41f91ed55-1357.webp",
       "fonte": "static/pitwall-archive/hungaroring-podio-apos-cerimonia-2002-07f41f91ed55-1357.webp",
       "modo": "copia",
@@ -5352,6 +5702,20 @@
       "modo": "copia",
       "sha256_destino": "9f8202e683770e25a61ae0b9e56fbdab4ea682321e647d0ce2570d2be1756d4e",
       "sha256_origem": "9f8202e683770e25a61ae0b9e56fbdab4ea682321e647d0ce2570d2be1756d4e"
+    },
+    {
+      "caminho": "static/pitwall-archive/interlagos-2006-arquibancada-555f97f65c8e-2400.webp",
+      "fonte": "static/pitwall-archive/interlagos-2006-arquibancada-555f97f65c8e-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b7d1fc53069a573ecef5b3086a45c675e0d10af565adcee0046325e49fa995fc",
+      "sha256_origem": "b7d1fc53069a573ecef5b3086a45c675e0d10af565adcee0046325e49fa995fc"
+    },
+    {
+      "caminho": "static/pitwall-archive/interlagos-2006-arquibancada-555f97f65c8e-960.webp",
+      "fonte": "static/pitwall-archive/interlagos-2006-arquibancada-555f97f65c8e-960.webp",
+      "modo": "copia",
+      "sha256_destino": "53db1a5b4336bb52120b0f540a748f21aaf7f4a6af42997a520ac7056479a5de",
+      "sha256_origem": "53db1a5b4336bb52120b0f540a748f21aaf7f4a6af42997a520ac7056479a5de"
     },
     {
       "caminho": "static/pitwall-archive/interlagos-2009-fc2ce6d17e5b-2400.webp",
@@ -5508,6 +5872,20 @@
       "sha256_origem": "3870a81dae45d7b6214c1a56b05a55dbff54eedecd4ef8734799080f97780517"
     },
     {
+      "caminho": "static/pitwall-archive/jones-shadow-dn8-zandvoort-1977-e99a51a5329b-2400.webp",
+      "fonte": "static/pitwall-archive/jones-shadow-dn8-zandvoort-1977-e99a51a5329b-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2db222257fbc20b4cf10aa37a87f46938a91025f364535959405b3f6fc057068",
+      "sha256_origem": "2db222257fbc20b4cf10aa37a87f46938a91025f364535959405b3f6fc057068"
+    },
+    {
+      "caminho": "static/pitwall-archive/jones-shadow-dn8-zandvoort-1977-e99a51a5329b-960.webp",
+      "fonte": "static/pitwall-archive/jones-shadow-dn8-zandvoort-1977-e99a51a5329b-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1e25d10b9ec918e0d8d0953aecb9a399b8bf23934be58f985be589502c81270f",
+      "sha256_origem": "1e25d10b9ec918e0d8d0953aecb9a399b8bf23934be58f985be589502c81270f"
+    },
+    {
       "caminho": "static/pitwall-archive/jones-trofeu-austria-1977-ed0185220dc2-2400.webp",
       "fonte": "static/pitwall-archive/jones-trofeu-austria-1977-ed0185220dc2-2400.webp",
       "modo": "copia",
@@ -5520,6 +5898,20 @@
       "modo": "copia",
       "sha256_destino": "2d5e82e9f5f8ad1253b333a6257ddd1c37c44cb121f718b6511deb4334e6a4cd",
       "sha256_origem": "2d5e82e9f5f8ad1253b333a6257ddd1c37c44cb121f718b6511deb4334e6a4cd"
+    },
+    {
+      "caminho": "static/pitwall-archive/keegan-imola-1980-db380d816d51-2400.webp",
+      "fonte": "static/pitwall-archive/keegan-imola-1980-db380d816d51-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "2c35abd7ef686614d3e9df67e4a14adbeea37e67d04846525c0336dea3162b14",
+      "sha256_origem": "2c35abd7ef686614d3e9df67e4a14adbeea37e67d04846525c0336dea3162b14"
+    },
+    {
+      "caminho": "static/pitwall-archive/keegan-imola-1980-db380d816d51-960.webp",
+      "fonte": "static/pitwall-archive/keegan-imola-1980-db380d816d51-960.webp",
+      "modo": "copia",
+      "sha256_destino": "1b0b9abf6298fbe463c28016dc32d4082efb40ede3d68e12ec729bea838a3d88",
+      "sha256_origem": "1b0b9abf6298fbe463c28016dc32d4082efb40ede3d68e12ec729bea838a3d88"
     },
     {
       "caminho": "static/pitwall-archive/keke-rosberg-retrato-9551af59e24f-2400.webp",
@@ -5564,6 +5956,20 @@
       "sha256_origem": "8ff7840e1d6977e0b8462e90f574596bd345cbc295b2b04ca49c2d52628fc20e"
     },
     {
+      "caminho": "static/pitwall-archive/largada-monza-1960-anuario-cae4dc15e13f-2400.webp",
+      "fonte": "static/pitwall-archive/largada-monza-1960-anuario-cae4dc15e13f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "f9e8eda2aba241310283338f1ffe5ee94176ff085c6256292492d2ed0981529a",
+      "sha256_origem": "f9e8eda2aba241310283338f1ffe5ee94176ff085c6256292492d2ed0981529a"
+    },
+    {
+      "caminho": "static/pitwall-archive/largada-monza-1960-anuario-cae4dc15e13f-960.webp",
+      "fonte": "static/pitwall-archive/largada-monza-1960-anuario-cae4dc15e13f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3591f3990a6ba841f6f84dadc8bfd4108852c358dee9124a18a0e1f4984e8648",
+      "sha256_origem": "3591f3990a6ba841f6f84dadc8bfd4108852c358dee9124a18a0e1f4984e8648"
+    },
+    {
       "caminho": "static/pitwall-archive/las-vegas-2024-e2219e21d4cd-2400.webp",
       "fonte": "static/pitwall-archive/las-vegas-2024-e2219e21d4cd-2400.webp",
       "modo": "copia",
@@ -5592,6 +5998,20 @@
       "sha256_origem": "4fc5e73ea6b23e6e04b27758949a9d69eb2c51d118d61bde6842e2ba496ab179"
     },
     {
+      "caminho": "static/pitwall-archive/lauda-fittipaldi-podio-monza-1975-91f95d62f616-2400.webp",
+      "fonte": "static/pitwall-archive/lauda-fittipaldi-podio-monza-1975-91f95d62f616-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5c63d2596e1942de39ea6aff1e09a67c5a5fb9ee3a96d3d2d5a1956c8465b5f6",
+      "sha256_origem": "5c63d2596e1942de39ea6aff1e09a67c5a5fb9ee3a96d3d2d5a1956c8465b5f6"
+    },
+    {
+      "caminho": "static/pitwall-archive/lauda-fittipaldi-podio-monza-1975-91f95d62f616-960.webp",
+      "fonte": "static/pitwall-archive/lauda-fittipaldi-podio-monza-1975-91f95d62f616-960.webp",
+      "modo": "copia",
+      "sha256_destino": "7919163ce1d6ec8535b9199c9f6c2c23d1d2858fea6a59306e02ddbd5777d87c",
+      "sha256_origem": "7919163ce1d6ec8535b9199c9f6c2c23d1d2858fea6a59306e02ddbd5777d87c"
+    },
+    {
       "caminho": "static/pitwall-archive/lauda-mp4-2-estoril-1984-d03b3ef572fb-2400.webp",
       "fonte": "static/pitwall-archive/lauda-mp4-2-estoril-1984-d03b3ef572fb-2400.webp",
       "modo": "copia",
@@ -5604,6 +6024,20 @@
       "modo": "copia",
       "sha256_destino": "cc9e78b67a17834f3ad67e96b9789336a89f3f683e3a012a948389f9217ce33e",
       "sha256_origem": "cc9e78b67a17834f3ad67e96b9789336a89f3f683e3a012a948389f9217ce33e"
+    },
+    {
+      "caminho": "static/pitwall-archive/lauda-prost-schiphol-1984-73ed99791293-2400.webp",
+      "fonte": "static/pitwall-archive/lauda-prost-schiphol-1984-73ed99791293-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9e21466813766f4f5f5d52643666e588b8d0935f4c7f4a84465bec5bc4ab478d",
+      "sha256_origem": "9e21466813766f4f5f5d52643666e588b8d0935f4c7f4a84465bec5bc4ab478d"
+    },
+    {
+      "caminho": "static/pitwall-archive/lauda-prost-schiphol-1984-73ed99791293-960.webp",
+      "fonte": "static/pitwall-archive/lauda-prost-schiphol-1984-73ed99791293-960.webp",
+      "modo": "copia",
+      "sha256_destino": "64626e2a0276de1562aae47d2dc99d16cb3b7cb0bd90b5cbaaa2dcabdc95e9a1",
+      "sha256_origem": "64626e2a0276de1562aae47d2dc99d16cb3b7cb0bd90b5cbaaa2dcabdc95e9a1"
     },
     {
       "caminho": "static/pitwall-archive/lotus-24-f5b9a4c7ecdc-2400.webp",
@@ -5858,6 +6292,20 @@
       "sha256_origem": "b6e39fd5886fe7444979378a281298bf0e127acb1d5375f5caaa40620c6c8189"
     },
     {
+      "caminho": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-2400.webp",
+      "fonte": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "934eb12a1882065ddfacfbb97de6236a6157982ceaf870c5a743228df310e41e",
+      "sha256_origem": "934eb12a1882065ddfacfbb97de6236a6157982ceaf870c5a743228df310e41e"
+    },
+    {
+      "caminho": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-960.webp",
+      "fonte": "static/pitwall-archive/maserati-250f-2505-turim-2015-b350f0451041-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5a45049a91cc42583e50582add5a3805a679c9564ea228687831e2e924f3a4c5",
+      "sha256_origem": "5a45049a91cc42583e50582add5a3805a679c9564ea228687831e2e924f3a4c5"
+    },
+    {
       "caminho": "static/pitwall-archive/massa-interlagos-2008-2107c6b0f3a0-2400.webp",
       "fonte": "static/pitwall-archive/massa-interlagos-2008-2107c6b0f3a0-2400.webp",
       "modo": "copia",
@@ -5996,6 +6444,20 @@
       "modo": "copia",
       "sha256_destino": "b2aadc905791b4d29c9f5ec7bcc85217c8f4f16cdcf404aa34a0761f46cf1d00",
       "sha256_origem": "b2aadc905791b4d29c9f5ec7bcc85217c8f4f16cdcf404aa34a0761f46cf1d00"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-grid-xangai-2024-bdfc0a1609a7-2400.webp",
+      "fonte": "static/pitwall-archive/mclaren-grid-xangai-2024-bdfc0a1609a7-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "5f6631395d422a0031e198437693c19ebb310be84663daf0e356f600544ce1a9",
+      "sha256_origem": "5f6631395d422a0031e198437693c19ebb310be84663daf0e356f600544ce1a9"
+    },
+    {
+      "caminho": "static/pitwall-archive/mclaren-grid-xangai-2024-bdfc0a1609a7-960.webp",
+      "fonte": "static/pitwall-archive/mclaren-grid-xangai-2024-bdfc0a1609a7-960.webp",
+      "modo": "copia",
+      "sha256_destino": "7991a5cb8a6a779715c3ebc05fa04b092fbe8480e1fd133a84fa06def024590d",
+      "sha256_origem": "7991a5cb8a6a779715c3ebc05fa04b092fbe8480e1fd133a84fa06def024590d"
     },
     {
       "caminho": "static/pitwall-archive/mclaren-m23-1974-3683849ff717-2400.webp",
@@ -6152,6 +6614,20 @@
       "sha256_origem": "305626a39fbf5221175ad5764577e07e89f64d71ef26c2f07d9c635800b10531"
     },
     {
+      "caminho": "static/pitwall-archive/mercedes-dupla-zandvoort-2026-ee6670c6ebf6-2400.webp",
+      "fonte": "static/pitwall-archive/mercedes-dupla-zandvoort-2026-ee6670c6ebf6-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b138fb7433eec552156167328c76c01cc6998ef53ee6803810bf2430013840ba",
+      "sha256_origem": "b138fb7433eec552156167328c76c01cc6998ef53ee6803810bf2430013840ba"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-dupla-zandvoort-2026-ee6670c6ebf6-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-dupla-zandvoort-2026-ee6670c6ebf6-960.webp",
+      "modo": "copia",
+      "sha256_destino": "002a26f75460818c24946d715b0ff1706c2192786855457617153aadb438457a",
+      "sha256_origem": "002a26f75460818c24946d715b0ff1706c2192786855457617153aadb438457a"
+    },
+    {
       "caminho": "static/pitwall-archive/mercedes-f1-w05-cf3235c646e9-1920.webp",
       "fonte": "static/pitwall-archive/mercedes-f1-w05-cf3235c646e9-1920.webp",
       "modo": "copia",
@@ -6234,6 +6710,20 @@
       "modo": "copia",
       "sha256_destino": "6590db516958de01a1c9cd2be9903d2d449999bc2c9736b70e1a3df0739458bc",
       "sha256_origem": "6590db516958de01a1c9cd2be9903d2d449999bc2c9736b70e1a3df0739458bc"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-podio-melbourne-2026-07886b1b5d9d-2400.webp",
+      "fonte": "static/pitwall-archive/mercedes-podio-melbourne-2026-07886b1b5d9d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3dab9064b798e3bad021d4397c3ffcdc3347eee0fc3d68145147952575a525e3",
+      "sha256_origem": "3dab9064b798e3bad021d4397c3ffcdc3347eee0fc3d68145147952575a525e3"
+    },
+    {
+      "caminho": "static/pitwall-archive/mercedes-podio-melbourne-2026-07886b1b5d9d-960.webp",
+      "fonte": "static/pitwall-archive/mercedes-podio-melbourne-2026-07886b1b5d9d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "95943ec917c45b49c6d6fee3afe06d3566fcb36a53ee72519d5218310ed21c6d",
+      "sha256_origem": "95943ec917c45b49c6d6fee3afe06d3566fcb36a53ee72519d5218310ed21c6d"
     },
     {
       "caminho": "static/pitwall-archive/mercedes-w10-43935052d55b-2400.webp",
@@ -6348,6 +6838,34 @@
       "sha256_origem": "45baccc1d59815430441cd0a3f1c68592f636842546d34b0c0b709617c58c826"
     },
     {
+      "caminho": "static/pitwall-archive/monaco-1962-gasworks-roach-d36d95343e25-2400.webp",
+      "fonte": "static/pitwall-archive/monaco-1962-gasworks-roach-d36d95343e25-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "219201c06cee7fb32c59882ac468a1bd29fd3fe00107b9b2fef5c897d5425263",
+      "sha256_origem": "219201c06cee7fb32c59882ac468a1bd29fd3fe00107b9b2fef5c897d5425263"
+    },
+    {
+      "caminho": "static/pitwall-archive/monaco-1962-gasworks-roach-d36d95343e25-960.webp",
+      "fonte": "static/pitwall-archive/monaco-1962-gasworks-roach-d36d95343e25-960.webp",
+      "modo": "copia",
+      "sha256_destino": "86b4b3b41ce31849795f82160d2ddbc3e167667740182ec4d3e1a7e781ef94c6",
+      "sha256_origem": "86b4b3b41ce31849795f82160d2ddbc3e167667740182ec4d3e1a7e781ef94c6"
+    },
+    {
+      "caminho": "static/pitwall-archive/monaco-1996-aquecimento-villeneuve-3027740244b3-2400.webp",
+      "fonte": "static/pitwall-archive/monaco-1996-aquecimento-villeneuve-3027740244b3-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "92276a47ad35020e8f8db6b46661a83781b26ee860aef8e6a0e0235378699fe4",
+      "sha256_origem": "92276a47ad35020e8f8db6b46661a83781b26ee860aef8e6a0e0235378699fe4"
+    },
+    {
+      "caminho": "static/pitwall-archive/monaco-1996-aquecimento-villeneuve-3027740244b3-960.webp",
+      "fonte": "static/pitwall-archive/monaco-1996-aquecimento-villeneuve-3027740244b3-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e69342814e00412fab9cd1f3bf285c8eac0b5d0ae1e65396a789d0ff92827967",
+      "sha256_origem": "e69342814e00412fab9cd1f3bf285c8eac0b5d0ae1e65396a789d0ff92827967"
+    },
+    {
       "caminho": "static/pitwall-archive/monza-1966-64edb08bc792-2400.webp",
       "fonte": "static/pitwall-archive/monza-1966-64edb08bc792-2400.webp",
       "modo": "copia",
@@ -6390,6 +6908,20 @@
       "sha256_origem": "9e78f5867da9c5ee488f109889a28cf77657f4deb8a05e8da44080d6ebf80110"
     },
     {
+      "caminho": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-2400.webp",
+      "fonte": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e92b1e00cbd42491b58612e918868ca4372312712a1b3a1fb04e660e66adc5d3",
+      "sha256_origem": "e92b1e00cbd42491b58612e918868ca4372312712a1b3a1fb04e660e66adc5d3"
+    },
+    {
+      "caminho": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-960.webp",
+      "fonte": "static/pitwall-archive/monza-curva-1950-5e9fc468b647-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bdf1cba764de7b8d40bf639cc6a7b526ce9d9c06683886f34ae9379c580e3b26",
+      "sha256_origem": "bdf1cba764de7b8d40bf639cc6a7b526ce9d9c06683886f34ae9379c580e3b26"
+    },
+    {
       "caminho": "static/pitwall-archive/monza-grid-1950-f2852af71db4-1955.webp",
       "fonte": "static/pitwall-archive/monza-grid-1950-f2852af71db4-1955.webp",
       "modo": "copia",
@@ -6402,6 +6934,20 @@
       "modo": "copia",
       "sha256_destino": "84e7a60148b0eef344e180e614482ae058d06997a85f38524840a37718750d9c",
       "sha256_origem": "84e7a60148b0eef344e180e614482ae058d06997a85f38524840a37718750d9c"
+    },
+    {
+      "caminho": "static/pitwall-archive/moss-brabham-monza-1959-d493e442c4aa-2400.webp",
+      "fonte": "static/pitwall-archive/moss-brabham-monza-1959-d493e442c4aa-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7b35d6e3b989d928fd6e5995c5a654ef0bd9a8a143ae18f0aca1c02e024b9bbd",
+      "sha256_origem": "7b35d6e3b989d928fd6e5995c5a654ef0bd9a8a143ae18f0aca1c02e024b9bbd"
+    },
+    {
+      "caminho": "static/pitwall-archive/moss-brabham-monza-1959-d493e442c4aa-960.webp",
+      "fonte": "static/pitwall-archive/moss-brabham-monza-1959-d493e442c4aa-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b12a51041166f5237c474cd551f40685c7703274f861ca14f91891702dcc9509",
+      "sha256_origem": "b12a51041166f5237c474cd551f40685c7703274f861ca14f91891702dcc9509"
     },
     {
       "caminho": "static/pitwall-archive/nelson-piquet-foto-4f1eecf379b2-1910.webp",
@@ -6488,6 +7034,34 @@
       "sha256_origem": "a47c30088988b92f1e95c15a341800543af990c104e2ae77bf6da810d1c0a284"
     },
     {
+      "caminho": "static/pitwall-archive/norris-mcl38-zandvoort-2024-989f1d9d03b0-2400.webp",
+      "fonte": "static/pitwall-archive/norris-mcl38-zandvoort-2024-989f1d9d03b0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "de3f16424a55fe873ee6784b1fde36d8425f58990409570eb61fbe669c6acd0a",
+      "sha256_origem": "de3f16424a55fe873ee6784b1fde36d8425f58990409570eb61fbe669c6acd0a"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-mcl38-zandvoort-2024-989f1d9d03b0-960.webp",
+      "fonte": "static/pitwall-archive/norris-mcl38-zandvoort-2024-989f1d9d03b0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6f3eed883bc3ff63870d0626623450a27c4bd5059f6c9355d41c02dba74a864c",
+      "sha256_origem": "6f3eed883bc3ff63870d0626623450a27c4bd5059f6c9355d41c02dba74a864c"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-2400.webp",
+      "fonte": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6ac49c44dfd153c56a30114b9bcfbc5e03204199ec8bb54beb7e5df00f1ca201",
+      "sha256_origem": "6ac49c44dfd153c56a30114b9bcfbc5e03204199ec8bb54beb7e5df00f1ca201"
+    },
+    {
+      "caminho": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-960.webp",
+      "fonte": "static/pitwall-archive/norris-mcl39-spielberg-2025-09bad12daeef-960.webp",
+      "modo": "copia",
+      "sha256_destino": "81f1e0d8ecdab7ab3e5647d2b4f8635264139c222577051bb63b7c4ef441eb15",
+      "sha256_origem": "81f1e0d8ecdab7ab3e5647d2b4f8635264139c222577051bb63b7c4ef441eb15"
+    },
+    {
       "caminho": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-2400.webp",
       "fonte": "static/pitwall-archive/norris-singapura-2025-3394769b7d1a-2400.webp",
       "modo": "copia",
@@ -6542,6 +7116,34 @@
       "modo": "copia",
       "sha256_destino": "b432483c6e8ce0a96fb7d286f11b851f065f014e139fbbf123b3b72eb25149e2",
       "sha256_origem": "b432483c6e8ce0a96fb7d286f11b851f065f014e139fbbf123b3b72eb25149e2"
+    },
+    {
+      "caminho": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-2400.webp",
+      "fonte": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "fe55219253a93e303f5489f485c839144698367d958e724c1b22f2d963965bb8",
+      "sha256_origem": "fe55219253a93e303f5489f485c839144698367d958e724c1b22f2d963965bb8"
+    },
+    {
+      "caminho": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-960.webp",
+      "fonte": "static/pitwall-archive/pedro-de-la-rosa-hungaroring-2006-9326c23063d8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "384307eae2d5843bff4674642dc88bf5abaa8270c5b2d3c8c758c7f531cec0ee",
+      "sha256_origem": "384307eae2d5843bff4674642dc88bf5abaa8270c5b2d3c8c758c7f531cec0ee"
+    },
+    {
+      "caminho": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-2400.webp",
+      "fonte": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1d16ebe1d04a497ee52ad1ed9081151e9cc1f2059177d9a18262fa8447497cef",
+      "sha256_origem": "1d16ebe1d04a497ee52ad1ed9081151e9cc1f2059177d9a18262fa8447497cef"
+    },
+    {
+      "caminho": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-960.webp",
+      "fonte": "static/pitwall-archive/pelotao-zandvoort-1953-c9b5c0a81450-960.webp",
+      "modo": "copia",
+      "sha256_destino": "aec204a45c6c2d2250eddf17bab5aad04e9bcb8c177116a7d6a2af0a567d10eb",
+      "sha256_origem": "aec204a45c6c2d2250eddf17bab5aad04e9bcb8c177116a7d6a2af0a567d10eb"
     },
     {
       "caminho": "static/pitwall-archive/peterson-lotus-78-kyalami-1978-bf4554852baf-2400.webp",
@@ -6628,6 +7230,20 @@
       "sha256_origem": "f0d622ad9437a4895968cff3f28e2c510094330f0b20dfc91c30349f32f2090c"
     },
     {
+      "caminho": "static/pitwall-archive/piquet-imola-1980-2a1593f0465c-2400.webp",
+      "fonte": "static/pitwall-archive/piquet-imola-1980-2a1593f0465c-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "0d1971e354d02e67d3993fe88385e28edf5dff036251c012ceba2b9e447498ea",
+      "sha256_origem": "0d1971e354d02e67d3993fe88385e28edf5dff036251c012ceba2b9e447498ea"
+    },
+    {
+      "caminho": "static/pitwall-archive/piquet-imola-1980-2a1593f0465c-960.webp",
+      "fonte": "static/pitwall-archive/piquet-imola-1980-2a1593f0465c-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bed4f5d4a0a4e236b4e12aa681fb1c0a6b0f5cde5fbecb6f9877b4cdf7f05e37",
+      "sha256_origem": "bed4f5d4a0a4e236b4e12aa681fb1c0a6b0f5cde5fbecb6f9877b4cdf7f05e37"
+    },
+    {
       "caminho": "static/pitwall-archive/piquet-prost-zandvoort-1983-0a2a0732146b-2400.webp",
       "fonte": "static/pitwall-archive/piquet-prost-zandvoort-1983-0a2a0732146b-2400.webp",
       "modo": "copia",
@@ -6668,6 +7284,34 @@
       "modo": "copia",
       "sha256_destino": "625499695f7e766811d8122b7c901761758688a97d006817f437bc3046afe6e1",
       "sha256_origem": "625499695f7e766811d8122b7c901761758688a97d006817f437bc3046afe6e1"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-jones-zandvoort-1981-631cf140e1c8-2400.webp",
+      "fonte": "static/pitwall-archive/prost-jones-zandvoort-1981-631cf140e1c8-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7e048500d3af36283bbe2a711c967e315a13ae73564d86af26152249cf9f8058",
+      "sha256_origem": "7e048500d3af36283bbe2a711c967e315a13ae73564d86af26152249cf9f8058"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-jones-zandvoort-1981-631cf140e1c8-960.webp",
+      "fonte": "static/pitwall-archive/prost-jones-zandvoort-1981-631cf140e1c8-960.webp",
+      "modo": "copia",
+      "sha256_destino": "35155531cb5d20e42a8cba4a19f6e08a2b502ea5b6912376ae5025b974b7ae55",
+      "sha256_origem": "35155531cb5d20e42a8cba4a19f6e08a2b502ea5b6912376ae5025b974b7ae55"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-mclaren-m29-5-donington-2014-7f090ba5bbdf-2400.webp",
+      "fonte": "static/pitwall-archive/prost-mclaren-m29-5-donington-2014-7f090ba5bbdf-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "4b8a2833c8bc004b1e1e7e67890af29726b2aa2264b8c08733072d2bb3cd0799",
+      "sha256_origem": "4b8a2833c8bc004b1e1e7e67890af29726b2aa2264b8c08733072d2bb3cd0799"
+    },
+    {
+      "caminho": "static/pitwall-archive/prost-mclaren-m29-5-donington-2014-7f090ba5bbdf-960.webp",
+      "fonte": "static/pitwall-archive/prost-mclaren-m29-5-donington-2014-7f090ba5bbdf-960.webp",
+      "modo": "copia",
+      "sha256_destino": "549755cbe0e964374c3bd745e1c6e2ebde2c1454053d189e15205bb830906a68",
+      "sha256_origem": "549755cbe0e964374c3bd745e1c6e2ebde2c1454053d189e15205bb830906a68"
     },
     {
       "caminho": "static/pitwall-archive/prost-mp4-2c-adelaide-1986-4054488851de-2400.webp",
@@ -6712,6 +7356,20 @@
       "sha256_origem": "56de72dfe04797ed4d395ce93a466aed1def3de30732dade90e27b1a12aa8d47"
     },
     {
+      "caminho": "static/pitwall-archive/publico-pedralbes-1951-7d74345a8507-2400.webp",
+      "fonte": "static/pitwall-archive/publico-pedralbes-1951-7d74345a8507-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7096ee02dfe1d83e3238390515d3868dde80825e2b3fd084a1229e778c49ae8f",
+      "sha256_origem": "7096ee02dfe1d83e3238390515d3868dde80825e2b3fd084a1229e778c49ae8f"
+    },
+    {
+      "caminho": "static/pitwall-archive/publico-pedralbes-1951-7d74345a8507-960.webp",
+      "fonte": "static/pitwall-archive/publico-pedralbes-1951-7d74345a8507-960.webp",
+      "modo": "copia",
+      "sha256_destino": "5711eb663726c50085293b943d15845e9d2737820fbe17c17ac3b846c7fa171b",
+      "sha256_origem": "5711eb663726c50085293b943d15845e9d2737820fbe17c17ac3b846c7fa171b"
+    },
+    {
       "caminho": "static/pitwall-archive/racing-bulls-shanghai-6e9f4113beef-2400.webp",
       "fonte": "static/pitwall-archive/racing-bulls-shanghai-6e9f4113beef-2400.webp",
       "modo": "copia",
@@ -6724,6 +7382,34 @@
       "modo": "copia",
       "sha256_destino": "a95140d1deaabafba7e913026069e8cfc0ff1d634d88d7bd3b7ffc3180ddebc3",
       "sha256_origem": "a95140d1deaabafba7e913026069e8cfc0ff1d634d88d7bd3b7ffc3180ddebc3"
+    },
+    {
+      "caminho": "static/pitwall-archive/raikkonen-mclaren-mp4-17d-donington-2013-2472f39c4303-2400.webp",
+      "fonte": "static/pitwall-archive/raikkonen-mclaren-mp4-17d-donington-2013-2472f39c4303-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "e94c7e0941b6f2e9776d3f78fa6f37be2de8c1bdfc1033c98c27e502bbedcc92",
+      "sha256_origem": "e94c7e0941b6f2e9776d3f78fa6f37be2de8c1bdfc1033c98c27e502bbedcc92"
+    },
+    {
+      "caminho": "static/pitwall-archive/raikkonen-mclaren-mp4-17d-donington-2013-2472f39c4303-960.webp",
+      "fonte": "static/pitwall-archive/raikkonen-mclaren-mp4-17d-donington-2013-2472f39c4303-960.webp",
+      "modo": "copia",
+      "sha256_destino": "8a8d16ac8ca45ab33638926e286d2e029ea54c081abead1ea2184444a0acd853",
+      "sha256_origem": "8a8d16ac8ca45ab33638926e286d2e029ea54c081abead1ea2184444a0acd853"
+    },
+    {
+      "caminho": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-2400.webp",
+      "fonte": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "6889a328498640e5ef0215f54b13ca9021a5d0e12f11486f4df17188b551b1bf",
+      "sha256_origem": "6889a328498640e5ef0215f54b13ca9021a5d0e12f11486f4df17188b551b1bf"
+    },
+    {
+      "caminho": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-960.webp",
+      "fonte": "static/pitwall-archive/raikkonen-sauber-c20-salzburg-2017-9a350cd97618-960.webp",
+      "modo": "copia",
+      "sha256_destino": "a9f5744a32c3938d8a202f66e706b7029c52da44c39ca442644c67feff2c6abc",
+      "sha256_origem": "a9f5744a32c3938d8a202f66e706b7029c52da44c39ca442644c67feff2c6abc"
     },
     {
       "caminho": "static/pitwall-archive/raikkonen-spa-2007-32ec255bf716-2400.webp",
@@ -6796,6 +7482,20 @@
       "sha256_origem": "e0c5d30367f1111dfc7aaf8852869f9e434f412a6eae1a0b3cc5633536f30f8d"
     },
     {
+      "caminho": "static/pitwall-archive/rb6-publico-interlagos-2010-ed59873cc033-2400.webp",
+      "fonte": "static/pitwall-archive/rb6-publico-interlagos-2010-ed59873cc033-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "b0f9c1b341fef570b93771bd50765900632601950185471bcee54e4bed471788",
+      "sha256_origem": "b0f9c1b341fef570b93771bd50765900632601950185471bcee54e4bed471788"
+    },
+    {
+      "caminho": "static/pitwall-archive/rb6-publico-interlagos-2010-ed59873cc033-960.webp",
+      "fonte": "static/pitwall-archive/rb6-publico-interlagos-2010-ed59873cc033-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cb713e7df7fce1135100dad6d7a00e6de6880ca6376ef7b006cc1aa4e973418a",
+      "sha256_origem": "cb713e7df7fce1135100dad6d7a00e6de6880ca6376ef7b006cc1aa4e973418a"
+    },
+    {
       "caminho": "static/pitwall-archive/rebaque-brabham-bt49-zandvoort-1980-22388344be7f-2400.webp",
       "fonte": "static/pitwall-archive/rebaque-brabham-bt49-zandvoort-1980-22388344be7f-2400.webp",
       "modo": "copia",
@@ -6808,6 +7508,20 @@
       "modo": "copia",
       "sha256_destino": "405e2f332b5d055c5d811e4928a4f570de3dfe84a47f9afb2a3249f1a46a6642",
       "sha256_origem": "405e2f332b5d055c5d811e4928a4f570de3dfe84a47f9afb2a3249f1a46a6642"
+    },
+    {
+      "caminho": "static/pitwall-archive/rebaque-montreal-1981-075335b5c5a4-2400.webp",
+      "fonte": "static/pitwall-archive/rebaque-montreal-1981-075335b5c5a4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "dd5efbee336f1027b48b1e71a58e734909f2c86dbe6ebd29c45efde3e883486c",
+      "sha256_origem": "dd5efbee336f1027b48b1e71a58e734909f2c86dbe6ebd29c45efde3e883486c"
+    },
+    {
+      "caminho": "static/pitwall-archive/rebaque-montreal-1981-075335b5c5a4-960.webp",
+      "fonte": "static/pitwall-archive/rebaque-montreal-1981-075335b5c5a4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "3562433643b02947f41f8c61d6c16cf37f40d7846420c7989ea6f96e6f22879c",
+      "sha256_origem": "3562433643b02947f41f8c61d6c16cf37f40d7846420c7989ea6f96e6f22879c"
     },
     {
       "caminho": "static/pitwall-archive/red-bull-exposicao-austin-2022-36fba10eea74-2400.webp",
@@ -6950,6 +7664,34 @@
       "sha256_origem": "8021b70b2d906ebd09decd50601a0c27c9dc2bfcfd054b373ce209e8100f1c8f"
     },
     {
+      "caminho": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-2400.webp",
+      "fonte": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "888194ec1e8439865b6ee6d71411e5ea5a2055cf1f1aa2c26e54f4d6c4296aa5",
+      "sha256_origem": "888194ec1e8439865b6ee6d71411e5ea5a2055cf1f1aa2c26e54f4d6c4296aa5"
+    },
+    {
+      "caminho": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-960.webp",
+      "fonte": "static/pitwall-archive/regazzoni-ferrari-312t2-zandvoort-1976-0a415f247b8d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "089344d4fe0bc35e67b2aaaadf11b1942cc0f765df2e5e42aae5d9f3248005b6",
+      "sha256_origem": "089344d4fe0bc35e67b2aaaadf11b1942cc0f765df2e5e42aae5d9f3248005b6"
+    },
+    {
+      "caminho": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-2400.webp",
+      "fonte": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3f1d141c9768de220f5c48fb71c59a8d3f7bb7e99daab0cd896a0bc1a88a9df2",
+      "sha256_origem": "3f1d141c9768de220f5c48fb71c59a8d3f7bb7e99daab0cd896a0bc1a88a9df2"
+    },
+    {
+      "caminho": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-960.webp",
+      "fonte": "static/pitwall-archive/regazzoni-ferrari-festa-monza-1975-a2f31cc4fc8f-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cad3b0c6e7111b169d36640c67000b7c5c7aa0509de89746a62d00baedb7df21",
+      "sha256_origem": "cad3b0c6e7111b169d36640c67000b7c5c7aa0509de89746a62d00baedb7df21"
+    },
+    {
       "caminho": "static/pitwall-archive/reutemann-ferrari-312t3-watkins-glen-1978-b5e3b685aba5-2400.webp",
       "fonte": "static/pitwall-archive/reutemann-ferrari-312t3-watkins-glen-1978-b5e3b685aba5-2400.webp",
       "modo": "copia",
@@ -6962,6 +7704,20 @@
       "modo": "copia",
       "sha256_destino": "15e5b497ffcf4243f2df3adad034fda48c43f661959e8721d732ebefd075ef16",
       "sha256_origem": "15e5b497ffcf4243f2df3adad034fda48c43f661959e8721d732ebefd075ef16"
+    },
+    {
+      "caminho": "static/pitwall-archive/rindt-lotus-49b-zandvoort-1969-e360d1191601-2400.webp",
+      "fonte": "static/pitwall-archive/rindt-lotus-49b-zandvoort-1969-e360d1191601-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d2b9b63826bd668843afc0d42f452139cae394e8dd9a6f253cd1b5f19b1011db",
+      "sha256_origem": "d2b9b63826bd668843afc0d42f452139cae394e8dd9a6f253cd1b5f19b1011db"
+    },
+    {
+      "caminho": "static/pitwall-archive/rindt-lotus-49b-zandvoort-1969-e360d1191601-960.webp",
+      "fonte": "static/pitwall-archive/rindt-lotus-49b-zandvoort-1969-e360d1191601-960.webp",
+      "modo": "copia",
+      "sha256_destino": "6de59c7acf14b61e09ad3c1efa9949476f04a6ab97ed5a643bbaf58ea3691d17",
+      "sha256_origem": "6de59c7acf14b61e09ad3c1efa9949476f04a6ab97ed5a643bbaf58ea3691d17"
     },
     {
       "caminho": "static/pitwall-archive/rindt-zandvoort-vitoria-1970-ab10151f479e-2400.webp",
@@ -6990,6 +7746,20 @@
       "modo": "copia",
       "sha256_destino": "9bf39882c0f51fd69dba14854cb9f0295d3cf2b709c23269650eb7969cf1ef74",
       "sha256_origem": "9bf39882c0f51fd69dba14854cb9f0295d3cf2b709c23269650eb7969cf1ef74"
+    },
+    {
+      "caminho": "static/pitwall-archive/rosberg-w07-austin-2016-46e38de313a0-2400.webp",
+      "fonte": "static/pitwall-archive/rosberg-w07-austin-2016-46e38de313a0-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "1f1a8c0e2fa05b2ac382b6d4c1514a500e882cd8328be79038af9e33cd30bf31",
+      "sha256_origem": "1f1a8c0e2fa05b2ac382b6d4c1514a500e882cd8328be79038af9e33cd30bf31"
+    },
+    {
+      "caminho": "static/pitwall-archive/rosberg-w07-austin-2016-46e38de313a0-960.webp",
+      "fonte": "static/pitwall-archive/rosberg-w07-austin-2016-46e38de313a0-960.webp",
+      "modo": "copia",
+      "sha256_destino": "173af9dfed389a2e99eb1709666706ecde0ecbf67a1261908908f45004b55a10",
+      "sha256_origem": "173af9dfed389a2e99eb1709666706ecde0ecbf67a1261908908f45004b55a10"
     },
     {
       "caminho": "static/pitwall-archive/rosier-talbot-t26c-da-zandvoort-1951-0c8432ae8684-2400.webp",
@@ -7088,6 +7858,20 @@
       "modo": "copia",
       "sha256_destino": "48780753c9be36e8543ac5e8614cf56f88edea469116c6af07efb73720094ff0",
       "sha256_origem": "48780753c9be36e8543ac5e8614cf56f88edea469116c6af07efb73720094ff0"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-benetton-b192-05-retromobile-2016-a7eabb6d5ccb-2400.webp",
+      "fonte": "static/pitwall-archive/schumacher-benetton-b192-05-retromobile-2016-a7eabb6d5ccb-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "fdcbdf8001fcffd054ff9cf2972eccca7cfd1743dc34843a93a9a872142233c0",
+      "sha256_origem": "fdcbdf8001fcffd054ff9cf2972eccca7cfd1743dc34843a93a9a872142233c0"
+    },
+    {
+      "caminho": "static/pitwall-archive/schumacher-benetton-b192-05-retromobile-2016-a7eabb6d5ccb-960.webp",
+      "fonte": "static/pitwall-archive/schumacher-benetton-b192-05-retromobile-2016-a7eabb6d5ccb-960.webp",
+      "modo": "copia",
+      "sha256_destino": "bf1ede99de5756645bc4f8e9a9e9739c6ce9ca1a47dc325c2d0544131c28c1fb",
+      "sha256_origem": "bf1ede99de5756645bc4f8e9a9e9739c6ce9ca1a47dc325c2d0544131c28c1fb"
     },
     {
       "caminho": "static/pitwall-archive/schumacher-capacete-aida-1995-1b15c8ff4567-2400.webp",
@@ -7328,6 +8112,20 @@
       "sha256_origem": "018ddb507ca77617e78817e0374846f36c9cdf52b371ce84d665bf8d795c454b"
     },
     {
+      "caminho": "static/pitwall-archive/senna-mansell-hungria-1988-688e521ab76a-2400.webp",
+      "fonte": "static/pitwall-archive/senna-mansell-hungria-1988-688e521ab76a-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "ff96bb8a9f732d90567466a849cb1e78061cfaf2dc2c1ebc1eb1ea05090d0530",
+      "sha256_origem": "ff96bb8a9f732d90567466a849cb1e78061cfaf2dc2c1ebc1eb1ea05090d0530"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-mansell-hungria-1988-688e521ab76a-960.webp",
+      "fonte": "static/pitwall-archive/senna-mansell-hungria-1988-688e521ab76a-960.webp",
+      "modo": "copia",
+      "sha256_destino": "cf0b775d02e52e9d57ce0e973ca18ed0e6cf4e3c56c5d8df0314e0494e65b2dd",
+      "sha256_origem": "cf0b775d02e52e9d57ce0e973ca18ed0e6cf4e3c56c5d8df0314e0494e65b2dd"
+    },
+    {
       "caminho": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-2400.webp",
       "fonte": "static/pitwall-archive/senna-mp4-4-5c17d79a1840-2400.webp",
       "modo": "copia",
@@ -7440,6 +8238,20 @@
       "sha256_origem": "7a90c1ce0649697605e4b461f6269701a051dddf5c481d9bd13c1cb9f000333d"
     },
     {
+      "caminho": "static/pitwall-archive/senna-prost-podio-hungria-1988-c9fc0ddf9e2d-2400.webp",
+      "fonte": "static/pitwall-archive/senna-prost-podio-hungria-1988-c9fc0ddf9e2d-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "71df12c213c39c93f32155046f425b78b7f238084f3c2a7f5aa223743998ba55",
+      "sha256_origem": "71df12c213c39c93f32155046f425b78b7f238084f3c2a7f5aa223743998ba55"
+    },
+    {
+      "caminho": "static/pitwall-archive/senna-prost-podio-hungria-1988-c9fc0ddf9e2d-960.webp",
+      "fonte": "static/pitwall-archive/senna-prost-podio-hungria-1988-c9fc0ddf9e2d-960.webp",
+      "modo": "copia",
+      "sha256_destino": "27f52c11988d4e3270bab9e03aff770c009d29b88b94b49c946a33b29ee70354",
+      "sha256_origem": "27f52c11988d4e3270bab9e03aff770c009d29b88b94b49c946a33b29ee70354"
+    },
+    {
       "caminho": "static/pitwall-archive/senna-spa-1991-6b49c2b35dac-2400.webp",
       "fonte": "static/pitwall-archive/senna-spa-1991-6b49c2b35dac-2400.webp",
       "modo": "copia",
@@ -7466,6 +8278,20 @@
       "modo": "copia",
       "sha256_destino": "7276da81c9df6db1e677bad86e3f6d414f350a8e75c1c14f687f0dee318f5ce3",
       "sha256_origem": "7276da81c9df6db1e677bad86e3f6d414f350a8e75c1c14f687f0dee318f5ce3"
+    },
+    {
+      "caminho": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-2400.webp",
+      "fonte": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "d680139c789db2d9d1c8a4dcd1780c59631f80756331780abaada58246981a59",
+      "sha256_origem": "d680139c789db2d9d1c8a4dcd1780c59631f80756331780abaada58246981a59"
+    },
+    {
+      "caminho": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-960.webp",
+      "fonte": "static/pitwall-archive/silverstone-1950-pilotos-alfa-publifoto-2c834d13b801-960.webp",
+      "modo": "copia",
+      "sha256_destino": "05c555e9e94c4feb15b95527b47a8ec611dd9c21f6c26c70583b7de6c92a74ed",
+      "sha256_origem": "05c555e9e94c4feb15b95527b47a8ec611dd9c21f6c26c70583b7de6c92a74ed"
     },
     {
       "caminho": "static/pitwall-archive/stewart-brm-p261-1965-b345476664a8-2400.webp",
@@ -7664,6 +8490,20 @@
       "sha256_origem": "d7e8dc64629431c19942ca5a7ce92b9c6ccd622544d8a43c9cd81d189edf6b9c"
     },
     {
+      "caminho": "static/pitwall-archive/vanwall-trio-zandvoort-1958-dc7ee2730785-2400.webp",
+      "fonte": "static/pitwall-archive/vanwall-trio-zandvoort-1958-dc7ee2730785-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "63a0948accdd443c3f52218a942266d7796eb09032e7e8c135bfc4c717ff0aa3",
+      "sha256_origem": "63a0948accdd443c3f52218a942266d7796eb09032e7e8c135bfc4c717ff0aa3"
+    },
+    {
+      "caminho": "static/pitwall-archive/vanwall-trio-zandvoort-1958-dc7ee2730785-960.webp",
+      "fonte": "static/pitwall-archive/vanwall-trio-zandvoort-1958-dc7ee2730785-960.webp",
+      "modo": "copia",
+      "sha256_destino": "e3d80e313bd5abb75eaa84a93cfde25e9778ae67279406ef8424ade92c4b383e",
+      "sha256_origem": "e3d80e313bd5abb75eaa84a93cfde25e9778ae67279406ef8424ade92c4b383e"
+    },
+    {
       "caminho": "static/pitwall-archive/vanwall-vw-5-bcd542a2c842-2400.webp",
       "fonte": "static/pitwall-archive/vanwall-vw-5-bcd542a2c842-2400.webp",
       "modo": "copia",
@@ -7690,6 +8530,20 @@
       "modo": "copia",
       "sha256_destino": "a2f21b2cfd6aad0917efa49cdf83007cb00773123800752c5b41d5b7d37b0552",
       "sha256_origem": "a2f21b2cfd6aad0917efa49cdf83007cb00773123800752c5b41d5b7d37b0552"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-rb13-mexico-2017-683e583d4803-1920.webp",
+      "fonte": "static/pitwall-archive/verstappen-rb13-mexico-2017-683e583d4803-1920.webp",
+      "modo": "copia",
+      "sha256_destino": "9e7f037c114202404f66cf5de55e80c61db8dff21abb3e3918c0e615a7dddb89",
+      "sha256_origem": "9e7f037c114202404f66cf5de55e80c61db8dff21abb3e3918c0e615a7dddb89"
+    },
+    {
+      "caminho": "static/pitwall-archive/verstappen-rb13-mexico-2017-683e583d4803-960.webp",
+      "fonte": "static/pitwall-archive/verstappen-rb13-mexico-2017-683e583d4803-960.webp",
+      "modo": "copia",
+      "sha256_destino": "82c7444e38e1a86e5abd5028750b8c964ecd368c3ac0af09a6e95e3e31fef255",
+      "sha256_origem": "82c7444e38e1a86e5abd5028750b8c964ecd368c3ac0af09a6e95e3e31fef255"
     },
     {
       "caminho": "static/pitwall-archive/verstappen-rb16b-abu-dhabi-2021-bb38bbacd1ee-2400.webp",
@@ -7832,6 +8686,20 @@
       "sha256_origem": "8297664f77c55ebb4ef990ee4aa26e8c821ca728fb4a64068e56a894eb196f90"
     },
     {
+      "caminho": "static/pitwall-archive/vettel-rb7-suzuka-2011-suzuki-3b1d178545e4-2400.webp",
+      "fonte": "static/pitwall-archive/vettel-rb7-suzuka-2011-suzuki-3b1d178545e4-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "3868fb99c549fb6d6f5ca8e75d42767ca73e8de06f7fd281f83c8c70d94aaa57",
+      "sha256_origem": "3868fb99c549fb6d6f5ca8e75d42767ca73e8de06f7fd281f83c8c70d94aaa57"
+    },
+    {
+      "caminho": "static/pitwall-archive/vettel-rb7-suzuka-2011-suzuki-3b1d178545e4-960.webp",
+      "fonte": "static/pitwall-archive/vettel-rb7-suzuka-2011-suzuki-3b1d178545e4-960.webp",
+      "modo": "copia",
+      "sha256_destino": "03de46513b02f0d0b8c11b9e9d8bef4544b0aedfaeec337cc554e0379f05f89a",
+      "sha256_origem": "03de46513b02f0d0b8c11b9e9d8bef4544b0aedfaeec337cc554e0379f05f89a"
+    },
+    {
       "caminho": "static/pitwall-archive/vettel-rb9-india-2013-pos-corrida-02c7c8fc93df-2400.webp",
       "fonte": "static/pitwall-archive/vettel-rb9-india-2013-pos-corrida-02c7c8fc93df-2400.webp",
       "modo": "copia",
@@ -7928,6 +8796,20 @@
       "modo": "copia",
       "sha256_destino": "aba685545e238f12d54da6167fb29d746a996bc643a4a21e33f410b96118a27c",
       "sha256_origem": "aba685545e238f12d54da6167fb29d746a996bc643a4a21e33f410b96118a27c"
+    },
+    {
+      "caminho": "static/pitwall-archive/von-trips-clark-phil-hill-zandvoort-1961-367f7351ffb7-2400.webp",
+      "fonte": "static/pitwall-archive/von-trips-clark-phil-hill-zandvoort-1961-367f7351ffb7-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "36d9aeb8e396a057c6a11611c961c93ba9cebde1f3bf36adfa9b809ef96fd7e5",
+      "sha256_origem": "36d9aeb8e396a057c6a11611c961c93ba9cebde1f3bf36adfa9b809ef96fd7e5"
+    },
+    {
+      "caminho": "static/pitwall-archive/von-trips-clark-phil-hill-zandvoort-1961-367f7351ffb7-960.webp",
+      "fonte": "static/pitwall-archive/von-trips-clark-phil-hill-zandvoort-1961-367f7351ffb7-960.webp",
+      "modo": "copia",
+      "sha256_destino": "b234e12a96be9a8a44cefdbd5537551a85569ccfa3a37018666c3e51a4b03484",
+      "sha256_origem": "b234e12a96be9a8a44cefdbd5537551a85569ccfa3a37018666c3e51a4b03484"
     },
     {
       "caminho": "static/pitwall-archive/williams-fw07-f19229cad817-2400.webp",
@@ -8138,6 +9020,20 @@
       "modo": "copia",
       "sha256_destino": "84d3f71106e62632fa3e0b8486a42023ff2e1929336eee42ffbfe07a5e9e00be",
       "sha256_origem": "84d3f71106e62632fa3e0b8486a42023ff2e1929336eee42ffbfe07a5e9e00be"
+    },
+    {
+      "caminho": "static/pitwall-archive/zandvoort-publico-1984-ce840a860a37-2400.webp",
+      "fonte": "static/pitwall-archive/zandvoort-publico-1984-ce840a860a37-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "7569497b729532835e079904979b5b877502c6ff00de6dd48f182e96fb86927f",
+      "sha256_origem": "7569497b729532835e079904979b5b877502c6ff00de6dd48f182e96fb86927f"
+    },
+    {
+      "caminho": "static/pitwall-archive/zandvoort-publico-1984-ce840a860a37-960.webp",
+      "fonte": "static/pitwall-archive/zandvoort-publico-1984-ce840a860a37-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d268206d96fd9d3a2c2bb78a1cc8738129d04ee6a633e17765713eb538f25034",
+      "sha256_origem": "d268206d96fd9d3a2c2bb78a1cc8738129d04ee6a633e17765713eb538f25034"
     },
     {
       "caminho": "static/pitwall-art/gouache/albert_park-53d9911e82e0.png",
@@ -8964,5 +9860,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.19.0"
+  "versao_produto": "0.19.1"
 }

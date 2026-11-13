@@ -104,8 +104,15 @@ def driver_photos(root, driver, profile):
     portraits = [(key, photo) for key, photo in photos if driver in photo.get("pilotos", [])]
     if not portraits and cars:
         portraits, cars = cars[:1], cars[1:]
-    moments = [(key, photo) for key, photo in photos if race_ids.intersection(photo.get("gps", []))]
-    artifacts = [(key, photo) for key, photo in photos if race_ids.intersection(photo.get("artefatos_gps", []))]
+    shown = {key for key, _ in portraits[:1]}
+    moments = [(key, photo) for key, photo in photos
+               if key not in shown and race_ids.intersection(photo.get("gps", []))]
+    shown.update(key for key, _ in moments)
+    artifacts = [(key, photo) for key, photo in photos
+                 if key not in shown and race_ids.intersection(photo.get("artefatos_gps", []))]
+    shown.update(key for key, _ in artifacts)
+    cars = [(key, photo) for key, photo in cars if key not in shown]
+    portraits = portraits[:1] + [(key, photo) for key, photo in portraits[1:] if key not in shown]
     return portraits, cars, moments, artifacts, _references(catalog, "gps", race_ids)
 
 

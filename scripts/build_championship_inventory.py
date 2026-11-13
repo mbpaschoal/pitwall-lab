@@ -10,6 +10,15 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 EXCLUDED = {"DNS", "DNQ", "DNPQ", "DNP", "WD"}
+CHASSIS_VARIANTS = {
+    (1958, "ferrari", "ferrari-156"): "ferrari-156-f2",
+    (1964, "ferrari", "ferrari-156"): "ferrari-156-aero",
+}
+CHASSIS_NAMES = {
+    "ferrari-156": "Ferrari 156 F1 Sharknose",
+    "ferrari-156-aero": "Ferrari 156 F1 Aero",
+    "ferrari-156-f2": "Ferrari Dino 156 F2",
+}
 MANUFACTURER_DOCUMENTATION = {
     (1956, "ferrari"): {
         "ferrari-d50": {
@@ -45,6 +54,13 @@ CHASSIS_WITHOUT_TITLE_CONTRIBUTION = {
             "Gendebien correu com o 555 na Argentina. Fangio venceu em um Lancia-Ferrari D50 compartilhado com Musso.",
             "Gendebien raced the 555 in Argentina. Fangio won in a Lancia-Ferrari D50 shared with Musso.",
             "https://www.oldracingcars.com/results/result.php?RaceID=RA56",
+        ),
+    },
+    (1958, "ferrari"): {
+        "ferrari-156-f2": (
+            "Phil Hill correu com o Dino 156 na classe de Fórmula 2 em Nürburgring. Mike Hawthorn disputou o Mundial com o Dino 246 F1.",
+            "Phil Hill raced the Dino 156 in the Formula 2 class at the Nürburgring. Mike Hawthorn contested the championship in the Dino 246 F1.",
+            "https://www.motorsportmagazine.com/archive/article/september-1958/22/xx-grosser-preis-von-deutschland/",
         ),
     },
     (1962, "brm"): {
@@ -91,7 +107,7 @@ def build(archive, hall, teams):
         constructors = {row["id"]: row["name"] for row in read("constructors")}
         grands_prix = {row["id"]: row["fullName"] for row in read("grands-prix")}
         races = read("races")
-        cars = {row["id"]: row for row in read("chassis")}
+        car_names = {row["id"]: row["fullName"] for row in read("chassis")} | CHASSIS_NAMES
         driver_titles = read("seasons-driver-standings")
         constructor_titles = read("seasons-constructor-standings")
         season_cars = read("seasons-entrants-chassis")
@@ -135,7 +151,8 @@ def build(archive, hall, teams):
     entered_cars = defaultdict(set)
     for row in season_cars:
         key = (row["year"], row["constructorId"], row["entrantId"], row["engineManufacturerId"])
-        entered_cars[key].add(row["chassisId"])
+        chassis = row["chassisId"]
+        entered_cars[key].add(CHASSIS_VARIANTS.get((row["year"], row["constructorId"], chassis), chassis))
     points = {(row["year"], row["constructorId"], row["engineManufacturerId"], row["driverId"], row["round"])
               for row in race_results if row["positionText"] not in EXCLUDED and (row["points"] or 0) > 0}
     entries_by_driver = defaultdict(list)
@@ -181,7 +198,7 @@ def build(archive, hall, teams):
             row["modelos_documentados"] = documented
         if excluded:
             row["modelos_sem_contribuicao"] = {
-                key: {"nome": cars[key]["fullName"], "motivo": {"pt": pt, "en": en}, "fonte": source}
+                key: {"nome": car_names[key], "motivo": {"pt": pt, "en": en}, "fonte": source}
                 for key, (pt, en, source) in excluded.items()
             }
         output.append(row)
@@ -193,7 +210,7 @@ def build(archive, hall, teams):
         "pilotos": {key: profile["nome"] for key, profile in hall["pilotos"].items()},
         "equipes_campeas": {key: constructors[key] for key in sorted({key for _, key in campaigns})},
         "equipes_atuais": {key: profile["nome"] for key, profile in teams["equipes"].items()},
-        "modelos": {key: documented_cars[key] if key in documented_cars else cars[key]["fullName"]
+        "modelos": {key: documented_cars[key] if key in documented_cars else car_names[key]
                     for key in sorted(used_cars)},
         "campanhas": output,
         "momentos": [{**moment, "pilotos": sorted(moment["pilotos"])}

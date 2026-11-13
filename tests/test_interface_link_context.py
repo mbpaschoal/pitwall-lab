@@ -168,6 +168,7 @@ class LinkContextTests(unittest.TestCase):
 
     def test_hall_covers_each_championship_and_preserves_historical_credits(self):
         from pitwall.dashboard.hall_views import load
+        from pitwall.dashboard.photo_archive import driver_photos
 
         snapshot = load(ROOT)
         champions = snapshot["pilotos"]
@@ -181,6 +182,11 @@ class LinkContextTests(unittest.TestCase):
         antonelli = champions["kimi-antonelli"]["titulos"][0]
         self.assertEqual(antonelli["decisao"]["rodada"], 19)
         self.assertEqual(snapshot["corte"], "2026-11-08")
+        for driver, profile in champions.items():
+            with self.subTest(driver=driver):
+                portraits, cars, moments, artifacts, _ = driver_photos(ROOT, driver, profile)
+                photos = [key for key, _ in portraits + cars + moments + artifacts]
+                self.assertEqual(len(photos), len(set(photos)))
 
     def test_hall_directory_selection_and_language_preserve_gp_and_champion(self):
         app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=45)
@@ -298,6 +304,9 @@ class LinkContextTests(unittest.TestCase):
         self.assertEqual(photographed, set(campaigns))
         self.assertEqual(photos["ferrari-d50"]["temporadas"], [1956])
         self.assertIn("ferrari.com", campaigns[1956, "ferrari"]["modelos_documentados"]["ferrari-d50"]["fonte"])
+        self.assertEqual(campaigns[1958, "ferrari"]["modelos_candidatos"], ["ferrari-246"])
+        self.assertIn("ferrari-156-f2", campaigns[1958, "ferrari"]["modelos_sem_contribuicao"])
+        self.assertIn("ferrari-156-aero", campaigns[1964, "ferrari"]["modelos_candidatos"])
         photographed_teams = {team for photo in photos.values() for team in photo.get("equipes", [])}
         self.assertTrue(set(inventory["equipes_atuais"]).issubset(photographed_teams))
         historic_gps = {f'{event["ano"]}:{event["rodada"]}' for event in inventory["momentos"]}

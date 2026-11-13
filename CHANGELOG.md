@@ -1,5 +1,105 @@
 # Evolução do Pitwall Lab
 
+## 0.19.1 — 2026-11-11
+
+A foto de Martin Lee em Zolder, em 1979, passa a acompanhar a decisão de Monza como peça de acervo. Ela mostra Jody Scheckter com o Ferrari 312 T4 de chassi 040, vencedor em ambas as provas.
+
+Uma foto de época de Joost Evers mostra Jochen Rindt no Lotus 49B de chassi R6-2, em Zandvoort, em 1969. O original de 3.687 × 2.418 px, sob CC BY-SA 3.0 NL, acompanha o marco da primeira vitória de Rindt na Fórmula 1, conquistada com esse mesmo chassi em Watkins Glen.
+
+Uma foto de Ben Sutherland mostra o McLaren de chassi M29/5, usado por Alain Prost na Alemanha e na Áustria em sua temporada de estreia. O original de 4.928 × 3.264 px, sob CC BY 2.0, acompanha o marco de Buenos Aires como peça de acervo. A legenda identifica o M29B de chassi 1 usado na corrida de estreia.
+
+Uma foto de época de Joop van Bilsen mostra Alberto Ascari no Ferrari 500 F2 de chassi 005 durante sua vitória em Zandvoort, em 1952. O original de 2.830 × 2.028 px, em CC0, acompanha os marcos de Spa e Nürburgring, onde Ascari venceu com o mesmo carro.
+
+Uma foto de Harry Pot mostra Wolfgang von Trips, Jim Clark e Phil Hill em Zandvoort, em 1961. O original de 3.651 × 2.448 px, sob CC BY-SA 3.0 NL, acompanha o marco do primeiro Mundial de Construtores da Ferrari, conquistado em Aintree com Von Trips e Hill nos dois primeiros lugares.
+
+Uma foto de Rob Croes mostra Lauda e Prost com Huub Rothengatter em Schiphol, oito dias após a decisão de 1984 no Estoril. O original de 3.673 × 2.445 px tem licença CC0 e documenta a coletiva que se seguiu à conquista do tricampeonato de Lauda.
+
+Uma foto de Koen Suyk mostra o Shadow DN8 de Alan Jones em Zandvoort, em 1977. É o mesmo chassi com que Jones venceu na Áustria duas semanas antes. O registro de 3.682 × 2.415 px, em CC0, aparece entre as peças de acervo da primeira vitória de Jones.
+
+O inventário de 1958 identifica o Ferrari Dino 246 F1 como o carro da campanha campeã de Mike Hawthorn. O Dino 156 F2 fica documentado na ficha da temporada pela participação de Phil Hill na classe de Fórmula 2 em Nürburgring.
+
+A galeria da Ferrari ganha uma foto do 246 F1 de 1960 restaurado pelo MAUTO. Marie-Lan Taÿ Pamart fotografou o exemplar em Turim, em 2026, em 7.884 × 5.259 px sob CC BY 4.0. A legenda da foto de Módena identifica a carroceria do chassi 0011 na configuração 246/60.
+
+A galeria da Ferrari ganha um detalhe da carroceria do 312 T4 de chassi 037-R, reconstruído pela fábrica para Ferdinando Bonomi. Matt Brunner fotografou o exemplar em Laguna Seca, em 2016. O original de 6.000 × 4.000 px tem licença CC BY-SA 2.0.
+
+As galerias da McLaren e da Mercedes ganham duas fotos CC BY-SA 4.0. A primeira mostra Norris e Piastri no grid de Xangai em 2024, em 5.373 × 3.022 px. A segunda mostra Russell e Antonelli no pódio da dobradinha em Melbourne em 2026, em 5.585 × 3.723 px. Os perfis e o acervo exibem as legendas bilíngues, os créditos e os links para os originais.
+
+Em Momentos históricos, o acervo ganha uma foto em CC0 de Cees de Boer, com 2.893 × 2.153 px, do público nos boxes de Zandvoort no dia em que a McLaren garantiu o título de construtores de 1984.
+
+Três fotos de época mostram Mario Andretti em Monza em 1977 e Nelson Piquet e Rupert Keegan em Ímola em 1980. São registros dos fins de semana em que a Ferrari e a Williams garantiram os respectivos títulos de construtores.
+
+Uma foto em CC BY-SA 4.0 mostra Héctor Rebaque no Brabham BT49C em Montreal, no GP do Canadá em que a Williams assegurou o título de construtores de 1981.
+
+Três fotos de Cilo Roberto Bonaparte registram o GP do Brasil de 2010 em Interlagos, quando a Red Bull conquistou seu primeiro Mundial de Construtores. As imagens mostram o público aplaudindo um RB6 no fim da prova e os carros de Fernando Alonso e Lewis Hamilton. Os originais têm 3.264 × 2.448 px e licença CC BY-SA 2.0.
+
+O registro de Sebastian Vettel no Red Bull RB7 em Suzuka, na corrida do bicampeonato de 2011, ganha uma foto de Takayuki Suzuki em 5.184 × 3.456 px, sob CC BY-SA 2.0. A foto entra em Momentos históricos, Carros campeões e na galeria da Red Bull.
+
+Três fotos de época em domínio público registram a decisão de Monza em 1975. As digitalizações da Autosprint mostram Niki Lauda e Emerson Fittipaldi no pódio, a ultrapassagem de Fittipaldi sobre Lauda e a festa da Ferrari com Clay Regazzoni. Os três originais digitalizados têm pelo menos 2.400 px no lado maior.
+
+Três fotos de época dos anuários oficiais de Monza mostram Stirling Moss a caminho da vitória no GP do primeiro título de construtores da Cooper, em 1959, e a largada do GP da primeira vitória de Phil Hill, em 1960. Os recortes das digitalizações têm entre 2.495 e 2.548 px no lado maior.
+
+A foto colorida do grid de Monza de 1961 registra o GP em que Phil Hill conquistou o título mundial. O recorte de 2.490 × 1.813 px do anuário oficial de 1962 entra no Hall da Fama, em Carros campeões e na galeria da Ferrari.
+
+A foto da Publifoto com George VI e os pilotos da Alfa Romeo em Silverstone entra em Momentos históricos e na galeria da equipe. O registro de 2.560 × 1.440 px mostra o primeiro GP do Mundial, disputado em 1950, e foi publicado na revista Pirelli naquele ano.
+
+Duas fotos do Fortepan registram o primeiro GP da Hungria de Fórmula 1, em 1986. O pódio de Nelson Piquet, Ayrton Senna e Nigel Mansell tem original de 8.470 × 5.662 px. A foto de Piquet no Williams FW11 tem 3.359 × 2.031 px. As duas trazem crédito e licença CC BY-SA 3.0.
+
+Em Momentos históricos, o acervo ganha uma foto colorida de Peter Roach do GP de Mônaco de 1962. O original, de 2.592 × 1.680 px, registra o acidente da primeira volta na curva do Gasômetro e está sob CC0.
+
+O acervo do GP da Hungria de 2006 ganha uma foto de Pedro de la Rosa na classificação, com 2.576 × 1.932 px e licença CC BY-SA 4.0. No dia seguinte, ele conquistou seu único pódio na F1, na primeira vitória de Jenson Button.
+
+O perfil de Kimi Räikkönen e a seleção de 2007 em Momentos históricos incluem um link para a foto de Morio no GP do título em Interlagos. A ficha indica a licença CC BY-SA 3.0 e as dimensões de 1.280 × 402 px do original.
+
+Uma foto de 2.560 × 1.440 px da Publifoto mostra Juan Manuel Fangio cumprimentando Stirling Moss após a vitória da Vanwall em Pescara, em 1957. Publicado na revista Pirelli naquele ano, o registro entra no perfil de Fangio e em Momentos históricos.
+
+Uma foto de Harry Pot em CC0, com 3.415 × 2.849 px, mostra Alberto Ascari a caminho da vitória em Zandvoort em 1953 no Ferrari 500 de chassi 005. Ela entra em Carros campeões, na galeria Ferrari e em Momentos históricos. Como o mesmo carro venceu a prova do título em Bremgarten, o Hall da Fama também exibe a foto entre as peças de acervo dessa decisão.
+
+Uma fotografia de Silvio Chiozini com 3.024 × 2.005 px e licença CC BY 3.0 mostra os carros em pista vistos da arquibancada do GP do Brasil de 2006. A imagem entra em Momentos históricos e na decisão do bicampeonato de Fernando Alonso no Hall da Fama.
+
+Momentos históricos inclui os links para a foto aberta de Jo Bonnier no Porsche nº 8 em Aintree, em 1961, e para a entrega do troféu a Lewis Hamilton no primeiro título de construtores da Mercedes, em Sóchi, em 2014. As referências mostram autoria, licença e dimensões.
+
+O Maserati 250F de Fangio em 1954 ganha duas fotos. A primeira, em domínio público, mostra o chassi 2505 sob chuva no GP da Argentina, em um recorte de 2.075 × 2.400 px da revista El Gráfico. A segunda, de Rahil Rupawala, mostra o carro restaurado em Turim em 4.288 × 2.848 px, sob CC BY 2.0. A imagem do chassi 2529 passa a aparecer apenas na temporada de 1957.
+
+Uma foto de pista da revista Via! de setembro de 1950 registra o GP da Itália em que Nino Farina conquistou o primeiro Mundial de Pilotos. O recorte em domínio público mede 2.400 × 1.800 px, sem ampliação. A foto entra no Hall de Farina, na galeria Alfa Romeo e em Momentos históricos.
+
+Uma foto de Corrado Millanta mostra o público à espera da largada em Pedralbes, no GP da Espanha em que Juan Manuel Fangio conquistou seu primeiro Mundial em 1951. O recorte em domínio público mede 2.400 × 1.340 px e aparece no Hall de Fangio e em Momentos históricos.
+
+O acervo ganha referências aos arquivos de origem para quatro marcos. Elas levam às fotos dos títulos de Graham Hill e da BRM em East London em 1962, da estreia de Jackie Stewart na mesma pista em 1965, da chegada de François Cevert em Monza no GP do título da Tyrrell em 1971 e da primeira vitória de Kimi Räikkönen em Sepang em 2003.
+
+Uma foto de Steve Gregory com 3.512 × 2.376 px e licença CC BY 2.0 mostra Jacques Villeneuve no Williams FW18 e Mika Häkkinen no McLaren durante o aquecimento de Mônaco em 1996. O acervo também ganha links para os registros de origem da estreia de Villeneuve em Melbourne, da primeira vitória em Nürburgring, do título de Damon Hill em Suzuka e do pódio decisivo de Jerez em 1997.
+
+A galeria da Alfa Romeo abre com seus pilotos recebidos por George VI no primeiro GP do Mundial, em Silverstone, em 1950 (2.560 × 1.440 px). A da Maserati abre com Fangio na estreia vitoriosa do 250F na Argentina, em 1954 (2.075 × 2.400 px). O acervo também ganha referências aos registros de Watkins Glen de 1970, 1972 e 1973, da primeira vitória de Alonso na Hungria e dos títulos de Hamilton no México em 2017 e 2018.
+
+A foto do Benetton B192 de chassi 05 no Rétromobile de 2016 mostra o carro da primeira vitória de Michael Schumacher em Spa, em 1992. O original de Thesupermat, em CC BY-SA 4.0, mede 5.472 × 3.648 px. A imagem entra no Hall de Schumacher, na galeria da Benetton e nas peças de acervo do GP da Bélgica de 1992.
+
+Uma fotografia de Harry Pot em CC0, com 3.496 × 2.800 px, mostra Stirling Moss, Stuart Lewis-Evans e Tony Brooks em Zandvoort em 1958. A imagem entra na galeria da Vanwall e nas peças de acervo de Monza e Casablanca, onde o VW5 de Lewis-Evans na foto venceu com Brooks e Moss, respectivamente.
+
+Uma fotografia de Harry Pot em CC0 mostra Alberto Ascari à frente do pelotão em Zandvoort em 1953. O recorte de 3.210 × 1.685 px, feito a partir do negativo digitalizado pelo Nationaal Archief, entra na galeria da Ferrari e no acervo do GP dos Países Baixos. Também ilustra o modelo Ferrari 500 na ficha da primeira vitória de Hawthorn em Reims.
+
+Uma foto de Martin Lee de 2.528 × 1.471 px, sob CC BY-SA 2.0, mostra Derek Daly em Brands Hatch em 1978 no Ensign N177 de chassi MN08. O mesmo carro marcou a estreia de Nelson Piquet duas semanas depois, em Hockenheim. A foto aparece entre as peças de acervo da estreia no Hall da Fama e em Momentos históricos.
+
+Uma foto de Pedro Mendes em 4.755 × 2.675 px, sob CC BY 2.0, mostra Nico Rosberg no Mercedes W07 Hybrid nº 6 em Austin, em 2016. Ela entra na galeria da Mercedes e ilustra a campanha de Rosberg na ficha da decisão do título em Abu Dhabi.
+
+Uma foto de Ann McKelvie em 3.736 × 2.064 px, sob CC BY-SA 2.0, mostra Lewis Hamilton em Silverstone, em 2007, no McLaren MP4-22 de chassi 04. Foi com esse carro que ele chegou ao pódio em sua estreia em Melbourne. A foto entra na galeria da McLaren e na ficha da estreia no Hall da Fama.
+
+A estreia de Fernando Alonso e Kimi Räikkönen em Melbourne, em 2001, ganha fotos do Minardi PS01 nº 21 e do Sauber C20 com o nome de Räikkönen. Morio fotografou os dois modelos em exposições em 2017, com originais de 3.840 × 2.560 px sob CC BY-SA 4.0. As imagens aparecem em Peças de acervo nos dois perfis do Hall da Fama e em Momentos históricos.
+
+As primeiras vitórias de Kimi Räikkönen em Sepang e de Fernando Alonso no Hungaroring, em 2003, ganham fotos do McLaren MP4-17D nº 6 e do Renault R23B nº 8. As duas fotos são de Morio, com originais de 3.840 × 2.560 px e licenças CC BY-SA. Foram feitas em exposições em Donington (2013) e nas Astúrias (2017).
+
+A estreia de Jack Brabham em Aintree, em 1955, ganha uma foto do Cooper Bristol T40 que ele pilotou, em demonstração no Nürburgring em 2011. O original de Lothar Spurzem tem 2.712 × 1.808 px e licença CC BY-SA 2.0 Alemanha. A primeira vitória de Fangio, em Mônaco em 1950, passa a ter como referência a foto de museu de um Alfa Romeo 158, de azrhey, com 4.000 × 3.000 px e licença CC BY-SA 2.0.
+
+Uma fotografia de Hans van Dijk (Anefo / Nationaal Archief), de 3.664 × 2.436 px sob CC BY-SA 3.0 Países Baixos, mostra Prost e Jones em Zandvoort em 1981. O Renault RE30 ilustra o modelo da primeira vitória de Prost em Dijon. O Williams FW07C de chassi 16 correu no GP do título de construtores, em Montreal, e venceu a decisão de pilotos em Las Vegas com Alan Jones.
+
+Quatro fotos abertas ampliam a cobertura por temporada. O acervo ganha Jack Brabham no BT19 em 1967, Clay Regazzoni no Ferrari 312 T2 de chassi 027 em 1976, Jim Clark no Lotus 25/R6 e o Ferrari 156 F1 Aero exposto em Paris. O inventário distingue o Dino 156 F2 de 1958, o 156 F1 Sharknose de 1961 e o 156 Aero de 1964. As fotos do Cooper T51, Lotus 72D e Williams FW07C passam a ilustrar também as campanhas de 1960, 1973 e 1982.
+
+Momentos históricos inclui um link para a fotografia de Stirling Moss no Vanwall nº 26 em Monza, no GP da Itália de 1958. O registro está na edição de época de L’Automobile preservada pela Biblioteca Digital do ACI.
+
+Momentos históricos também vincula a fotografia de Mario Andretti no Lotus 79 em Monza, no GP do título de 1978, ao relato de época da Motor Sport.
+
+No GP da Alemanha de 1957, Momentos históricos passa a oferecer um link para a foto de Willy Pragher da saída de Fangio dos boxes. A digitalização de 1.684 × 1.125 px está disponível sob licença aberta na Biblioteca Digital Alemã.
+
+A legenda do Mercedes W196 de Fangio explica como o segundo lugar em Aintree e os cancelamentos no calendário definiram o Mundial de 1955.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

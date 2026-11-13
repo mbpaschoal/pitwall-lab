@@ -93,7 +93,8 @@
     "ferrari-126c2b": "Ferrari 126C2B",
     "ferrari-126c3": "Ferrari 126C3",
     "ferrari-1512": "Ferrari 1512",
-    "ferrari-156": "Ferrari 156",
+    "ferrari-156": "Ferrari 156 F1 Sharknose",
+    "ferrari-156-aero": "Ferrari 156 F1 Aero",
     "ferrari-158": "Ferrari 158",
     "ferrari-246": "Ferrari 246",
     "ferrari-312b3-74": "Ferrari 312B3-74",
@@ -338,9 +339,18 @@
       ],
       "construtores": false,
       "modelos_candidatos": [
-        "ferrari-156",
         "ferrari-246"
-      ]
+      ],
+      "modelos_sem_contribuicao": {
+        "ferrari-156-f2": {
+          "nome": "Ferrari Dino 156 F2",
+          "motivo": {
+            "pt": "Phil Hill correu com o Dino 156 na classe de Fórmula 2 em Nürburgring. Mike Hawthorn disputou o Mundial com o Dino 246 F1.",
+            "en": "Phil Hill raced the Dino 156 in the Formula 2 class at the Nürburgring. Mike Hawthorn contested the championship in the Dino 246 F1."
+          },
+          "fonte": "https://www.motorsportmagazine.com/archive/article/september-1958/22/xx-grosser-preis-von-deutschland/"
+        }
+      }
     },
     {
       "ano": 1958,
@@ -428,7 +438,7 @@
       "construtores": true,
       "modelos_candidatos": [
         "ferrari-1512",
-        "ferrari-156",
+        "ferrari-156-aero",
         "ferrari-158"
       ]
     },
