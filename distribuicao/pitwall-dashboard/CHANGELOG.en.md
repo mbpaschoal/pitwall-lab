@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+A period photograph by Joop van Bilsen shows Alberto Ascari in Ferrari 500 F2 chassis 005 during his win at Zandvoort in 1952. The 2,830 × 2,028 px CC0 original accompanies the milestones at Spa and the Nürburgring, where Ascari won in the same car.
+
 A photograph by Harry Pot shows Wolfgang von Trips, Jim Clark and Phil Hill at Zandvoort in 1961. The 3,651 × 2,448 px original, licensed CC BY-SA 3.0 NL, accompanies Ferrari’s first constructors’ title, clinched at Aintree with Von Trips and Hill in the top two places.
 
 A photograph by Rob Croes shows Lauda and Prost with Huub Rothengatter at Schiphol, eight days after the 1984 title decider at Estoril. The 3,673 × 2,445 px CC0 original documents the press conference that followed Lauda’s third championship.

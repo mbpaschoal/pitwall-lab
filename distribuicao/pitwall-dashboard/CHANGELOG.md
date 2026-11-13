@@ -2,6 +2,8 @@
 
 ## 0.19.1 — 2026-11-11
 
+Uma foto de época de Joop van Bilsen mostra Alberto Ascari no Ferrari 500 F2 de chassi 005 durante sua vitória em Zandvoort, em 1952. O original de 2.830 × 2.028 px, em CC0, acompanha os marcos de Spa e Nürburgring, onde Ascari venceu com o mesmo carro.
+
 Uma foto de Harry Pot mostra Wolfgang von Trips, Jim Clark e Phil Hill em Zandvoort, em 1961. O original de 3.651 × 2.448 px, sob CC BY-SA 3.0 NL, acompanha o marco do primeiro Mundial de Construtores da Ferrari, conquistado em Aintree com Von Trips e Hill nos dois primeiros lugares.
 
 Uma foto de Rob Croes mostra Lauda e Prost com Huub Rothengatter em Schiphol, oito dias após a decisão de 1984 no Estoril. O original de 3.673 × 2.445 px tem licença CC0 e documenta a coletiva que se seguiu à conquista do tricampeonato de Lauda.

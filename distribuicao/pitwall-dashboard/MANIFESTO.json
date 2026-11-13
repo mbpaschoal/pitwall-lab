@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "ddf7755eb67ff9b1bdcb058d45c2a0cd3f0d10ed017993e00235d3253054e166",
+  "apresentacao_build_sha256": "8c59ff8495e004dc9396c7b8783fae444c98d324e52d2873d1d431b174200daf",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "8883243c556e31c8f599436cdfe75429c073cec5e9b1f5a9d87bece7903aba49",
+      "sha256_destino": "709f9079b9ca54a706879a27d8c67182a7190d5bea0132861f8ed158d33f1516",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "ae247e357681c20724b4695cf6b908f8f787d83e3194e7e94f078553525b5a06",
-      "sha256_origem": "6d6ccb7c7af0673c04a1f9386f2a0aa4ebe26af46aec7698dcbbe60efc9b6398"
+      "sha256_destino": "6248c1962959bbadde9dfc77a309a8eddf516a298d5107c3a30e15fe8f5ee6da",
+      "sha256_origem": "ad3af930913900aba7dc17f806d8989a1a6bd043d1024b47847c5ba3ee9ac1ae"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "fb5c17899ae7bd644c451ed19887cd029f4ed1e60f7aec64ab3f3195f1d01a34",
-      "sha256_origem": "ea59df186e1c4583ebce01beb9f83d86baa9bf8252e308bcc012a49c0ff312eb"
+      "sha256_destino": "71c9aa8a7c2d028345625184980f2edb5163ba106986ac0451151cdbaad9a757",
+      "sha256_origem": "98058856935aac1ccce173e9fce777b93dba5d6b3d5adfab74d5457b9eeabf9e"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -2690,8 +2690,8 @@
       "caminho": "frontend_assets/acervo_fotografico.json",
       "fonte": "frontend_assets/acervo_fotografico.json",
       "modo": "copia",
-      "sha256_destino": "4f9acef12d1e7c5f6b4649a371e04b33e6e1702ac6f3ac546def4d700bcf9443",
-      "sha256_origem": "4f9acef12d1e7c5f6b4649a371e04b33e6e1702ac6f3ac546def4d700bcf9443"
+      "sha256_destino": "21145935206bcfe31b6421dc6961e90bfcb75fdf698f4e58b943cd7aceefe472",
+      "sha256_origem": "21145935206bcfe31b6421dc6961e90bfcb75fdf698f4e58b943cd7aceefe472"
     },
     {
       "caminho": "frontend_assets/avaliacao_posterior_mexico_2026.json",
@@ -3728,6 +3728,20 @@
       "modo": "copia",
       "sha256_destino": "2bce9ac630ae8e3ff40c27430f326350edad945275ab7f3ef433bf35d05d3d03",
       "sha256_origem": "2bce9ac630ae8e3ff40c27430f326350edad945275ab7f3ef433bf35d05d3d03"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-ferrari-500-005-zandvoort-1952-e2fe34b622e9-2400.webp",
+      "fonte": "static/pitwall-archive/ascari-ferrari-500-005-zandvoort-1952-e2fe34b622e9-2400.webp",
+      "modo": "copia",
+      "sha256_destino": "9f197d0fd0ba95282d99f40a12d2b75b4cb95f835e6266296c47cbfe5785635a",
+      "sha256_origem": "9f197d0fd0ba95282d99f40a12d2b75b4cb95f835e6266296c47cbfe5785635a"
+    },
+    {
+      "caminho": "static/pitwall-archive/ascari-ferrari-500-005-zandvoort-1952-e2fe34b622e9-960.webp",
+      "fonte": "static/pitwall-archive/ascari-ferrari-500-005-zandvoort-1952-e2fe34b622e9-960.webp",
+      "modo": "copia",
+      "sha256_destino": "d2e3f7d7a9c908d1ed9160f9965a6ca0df4db14194e4247db998cf98fa58a796",
+      "sha256_origem": "d2e3f7d7a9c908d1ed9160f9965a6ca0df4db14194e4247db998cf98fa58a796"
     },
     {
       "caminho": "static/pitwall-archive/ascari-ferrari-500-736c124bbd8d-2400.webp",
