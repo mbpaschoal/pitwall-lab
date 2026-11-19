@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.19.1 — 2026-11-19
+
+Atualização automática de dados de Las Vegas Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 0/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.19.0 — 2026-11-11
 
 O Duelo de Campeões compara qualquer dupla do Hall da Fama e abre em Senna × Prost. Mostra a idade e o número de temporadas disputadas até o primeiro título. Uma tabela reúne as conquistas dos dois pilotos por temporada, com construtores, GPs decisivos e links para classificações.

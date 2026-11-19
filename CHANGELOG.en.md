@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.19.1 — 2026-11-19
+
+Automatic Las Vegas Grand Prix data update through GitHub Actions. Sessions with received data: 0/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.19.0 — 2026-11-11
 
 Champions Duel compares any two Hall of Fame drivers and opens with Senna and Prost. It shows each driver's age and seasons raced through their first title. A shared table lists their championship seasons, constructors and deciding Grands Prix, with links to standings.
