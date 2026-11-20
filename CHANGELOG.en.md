@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.19.2 — 2026-11-20
+
+Automatic Las Vegas Grand Prix data update through GitHub Actions. Sessions with received data: 1/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.19.1 — 2026-11-19
 
 Automatic Las Vegas Grand Prix data update through GitHub Actions. Sessions with received data: 0/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
