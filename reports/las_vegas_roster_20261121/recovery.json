@@ -1,0 +1,47 @@
+{
+  "schema": "pitwall-native-emission-publication-recovery-v1",
+  "recovery_mode": "reviewed_native_registration",
+  "checked_at_utc": "2026-11-21T18:08:44.020254+00:00",
+  "prepared_by_run": "https://github.com/mbpaschoal/pitwall-lab/actions/runs/44928106857",
+  "declaration": {
+    "temporada": 2026,
+    "rodada": 21,
+    "circuito_id": "vegas",
+    "snapshot": "auto-vegas-20261121T170709841244Z",
+    "diretorio": "reports/operacao_2026/emissoes/auto-prospectivo-vegas-20261121T170709841244Z",
+    "modo": "PROSPECTIVO"
+  },
+  "probabilities_sha256": "7bb3ea1d039a6781a0970c63f5b776d003eba1b1f4f8eac94baa9921845ac610",
+  "original_automation_source": {
+    "commit": "d814a05e15e84a62f4b62901a033c778806279cc",
+    "sha256": {
+      "operacao2026/post_qualifying.py": "90a143c0d791bb33fdafcfe5074b1a208feac0f3d5b0f3093e9fc09608da26a9",
+      "operacao2026/forecast_policy.json": "f3e88f2fb35ffa178999fc69ec0817f9bae8e0cefb360d5105bd511a3556408c",
+      "operacao2026/eventos/vegas2026.json": "20c9ea9ea9f62401055f886165255b90788b44019860bf1a68b16bfbef7fe45b",
+      "reports/las_vegas_roster_20261121/sources/entry-list.pdf": "d20dd9957f539a500ff87cef632edd9aca62b4e65fa7147469dd2f8a3be8b3a5"
+    }
+  },
+  "observed_qualifying_end_utc": "2026-11-21T05:02:00.104000+00:00",
+  "observed_finish_source": {
+    "provider": "openf1",
+    "endpoint": "race_control",
+    "arquivo": "11416/race_control.json",
+    "arquivo_requisicao": "11416/race_control.json",
+    "url": "https://api.openf1.org/v1/race_control?session_key=11416",
+    "url_real": "https://api.openf1.org/v1/race_control?session_key=11416",
+    "status": 200,
+    "obtido_em_utc": "2026-11-21T11:40:12.867723Z",
+    "sha256": "24955f3470700d5959079f96d90ea4301a2d082bd80c16ae76d4d17bc6bd2de0",
+    "bytes": 21327,
+    "registros": 81,
+    "arquivo_local": "reports/las_vegas_roster_20261121/sources/qualifying-race-control.json"
+  },
+  "publication_guard": "passed",
+  "new_inference": false,
+  "prior_probabilities_changed": false,
+  "historical_identities_2024_2025_preserved": true,
+  "historical_identities_checked": 959,
+  "past_forecast_rows_checked": 440,
+  "past_probabilities_verified_unchanged": true,
+  "projection_verified_at_utc": "2026-11-21T18:16:29.128628+00:00"
+}

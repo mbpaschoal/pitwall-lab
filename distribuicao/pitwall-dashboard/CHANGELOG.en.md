@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.19.7 — 2026-11-21
+
+Recovers the original Las Vegas prospective emission, prepared on 21 November at 17:07 UTC, for publication with all 22 drivers and its immutable CSV. Preserves snapshots, sources and observed Q3 finish evidence. The updated projection and package are validated together in the PR. Browser acceptance retains evaluated Austin and Mexico, admits later validated results and rejects scoring without a result. Missing roster review after Q3 now signals forecast-health failure. Frozen v1 and previous probabilities remain unchanged.
+
 ## 0.19.6 — 2026-11-21
 
 Fixes two presentation tests that pinned the latest observed GP to Mexico. Default selection is checked against the fixture’s validated results, while the Mexican assessment test selects its GP explicitly. Recovery can reproject the retained Las Vegas emission without recomputing probabilities or changing the model.

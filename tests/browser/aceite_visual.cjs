@@ -9,6 +9,8 @@ if (!['chromium','webkit'].includes(browserName)) throw Error('Unsupported PLAYW
 const [base, output] = process.argv.slice(2);
 if (!base || !output) throw Error('Usage: node aceite_visual.cjs URL OUTPUT');
 const version = fs.readFileSync(path.join(__dirname,'../../VERSION'),'utf8').trim();
+const publishedRaces=JSON.parse(fs.readFileSync(path.join(__dirname,'../../frontend_assets/race_weekend.json'),'utf8')).dados_2026.corridas;
+const validatedRounds=new Set(publishedRaces.filter(r=>r.resultado_posterior_validado===true&&r.estado_resultado==='observado_local').map(r=>String(r.rodada)));
 const expectedCSS=fs.readFileSync(path.join(__dirname,'../../frontend_assets/journey.css'),'utf8');
 const cssHash=crypto.createHash('sha256').update(expectedCSS).digest('hex');
 const heroCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../dashboard_assets/fan/hero_catalog.json'),'utf8')).heroes;
@@ -152,7 +154,11 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     if(route==='Desempenho'){
      requireCheck(m.resultsHeader&&m.legend,'Missing results legend');
      if(!mobile)requireCheck(m.legend.x>m.resultsHeader.x+m.resultsHeader.width*.5,'Legend displaces comparison heading');
-     requireCheck(await surface.locator('.fan-gp-result[data-evaluated="true"]').count()===2,'Validated Austin and Mexico must be evaluated');
+     const evaluated=await surface.locator('.fan-gp-result[data-evaluated="true"]').evaluateAll(cards=>cards.map(card=>card.href));
+     requireCheck(evaluated.every(href=>new URL(href).searchParams.get('temporada')==='2026'),'Evaluated GP lost its season context');
+     const rounds=evaluated.map(href=>new URL(href).searchParams.get('gp'));
+     for(const round of ['18','19'])requireCheck(rounds.includes(round),'Validated Austin and Mexico must remain evaluated');
+     requireCheck(rounds.every(round=>validatedRounds.has(round)),'A GP without a validated result was evaluated');
     }
     if(route==='Metodologia'){
      requireCheck(m.steps.length===3&&m.documents.length===2,'Method explanation incomplete');
