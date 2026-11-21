@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.19.6 — 2026-11-21
+
+Corrige dois testes de apresentação que fixavam o último GP observado no México. A seleção padrão passa a ser conferida contra os resultados validados da fixture, e o teste da avaliação mexicana escolhe o GP explicitamente. A recuperação pode reprojetar a emissão de Las Vegas preservada, sem recalcular probabilidades ou alterar o modelo.
+
 ## 0.19.5 — 2026-11-21
 
 Revisão dos 22 inscritos de Las Vegas pela lista oficial da FIA, com PDF, SHA-256 e captura UTC preservados. A automação pode validar a classificação canônica com Rafael Câmara na Haas antes de emitir a previsão. Permanecem as travas de Q3 observado, identidade exata, calendário e prazo de publicação. Modelo v1 e emissões anteriores inalterados.
