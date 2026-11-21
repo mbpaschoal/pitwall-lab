@@ -274,16 +274,25 @@ class TestDashboardApp(unittest.TestCase):
         self.assertNotIn('sklearn', fontes)
 
     def test_2026_abre_no_ultimo_gp_observado_com_nomes_equipes_e_resultado(self):
+        dados = json.loads((self.raiz / 'frontend_assets/race_weekend.json').read_text())['dados_2026']
+        observadas = {corrida['rodada'] for corrida in dados['corridas']
+                      if corrida.get('resultado_posterior_validado') is True
+                      and corrida['estado_resultado'] == 'observado_local'}
+        ultima = max(observadas)
+        podio = [linha for linha in dados['previsoes'] if linha['rodada'] == ultima
+                 and linha['resultado_observado'] in (1, 2, 3)]
+        self.assertEqual(len(podio), 3)
         self.executar()
         self.escolher('temporada', 2026)
-        # A admissão do resultado final do México avança o último GP observado para19.
-        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, '2026:19')
+        # The publication fixture advances as later observed results are admitted.
+        self.assertEqual(por_chave(self.at.get('selectbox'), 'gp').value, f'2026:{ultima}')
         texto = texto_renderizado(self.at)
-        self.assertIn('Max Verstappen', texto)
-        self.assertIn('Red Bull', texto)
+        for linha in podio:
+            self.assertIn(linha['piloto'], texto)
+            self.assertIn(linha['equipe'], texto)
+            self.assertNotIn(f"{linha['piloto']} ({linha['piloto_id']})", texto)
         self.assertNotIn('Previsão e resultado observado', texto)
         self.assertIn('Integrantes do pódio observado', texto)
-        self.assertNotIn('Max Verstappen (max_verstappen)', texto)
 
     def test_2026_default_includes_observed_races_awaiting_forecast_scoring(self):
         from pitwall.dashboard.weekend_views import observed_rounds
@@ -518,7 +527,8 @@ class TestDashboardApp(unittest.TestCase):
     def test_corridas_e_previsoes_priorizam_blocos_distintos_sem_trocar_o_gp(self):
         self.executar()
         self.escolher('temporada', 2026)
-        # O GP padrão agora é México; a troca de tela preserva a seleção admitida.
+        # Mexico has the posterior assessment this navigation contract exercises.
+        self.escolher('gp', '2026:19')
         self.assertEqual(por_chave(self.at.selectbox, 'gp').value, '2026:19')
         corridas = texto_renderizado(self.at)
         self.assertNotIn('Campeonato de pilotos', corridas)

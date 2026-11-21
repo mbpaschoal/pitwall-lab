@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.19.6 — 2026-11-21
+
+Fixes two presentation tests that pinned the latest observed GP to Mexico. Default selection is checked against the fixture’s validated results, while the Mexican assessment test selects its GP explicitly. Recovery can reproject the retained Las Vegas emission without recomputing probabilities or changing the model.
+
 ## 0.19.5 — 2026-11-21
 
 Reviewed all 22 Las Vegas entries against the official FIA entry list, retaining the PDF, SHA-256 and UTC capture. Automation can validate canonical qualifying with Rafael Camara at Haas before emitting the forecast. Observed Q3, exact identity, calendar and publication-deadline gates remain required. Frozen v1 and previous emissions are unchanged.
