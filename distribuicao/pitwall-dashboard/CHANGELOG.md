@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.19.5 — 2026-11-21
+
+Revisão dos 22 inscritos de Las Vegas pela lista oficial da FIA, com PDF, SHA-256 e captura UTC preservados. A automação pode validar a classificação canônica com Rafael Câmara na Haas antes de emitir a previsão. Permanecem as travas de Q3 observado, identidade exata, calendário e prazo de publicação. Modelo v1 e emissões anteriores inalterados.
+
 ## 0.19.4 — 2026-11-21
 
 Atualização automática de dados de Las Vegas Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 3/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.

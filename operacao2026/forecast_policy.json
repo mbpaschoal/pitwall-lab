@@ -48,6 +48,261 @@
       ],
       "canonical_id": "Use the unchanged driverId from validated qualifying; not available at preparation time.",
       "openf1_fallback": "Requires reviewed literal mapping; no number or ID is inferred from the announcement."
+    },
+    {
+      "identity": [
+        2026,
+        21,
+        "vegas"
+      ],
+      "source": {
+        "file": "reports/las_vegas_roster_20261121/sources/entry-list.pdf",
+        "url": "https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_entry_list.pdf",
+        "sha256": "d20dd9957f539a500ff87cef632edd9aca62b4e65fa7147469dd2f8a3be8b3a5",
+        "obtido_em_utc": "2026-11-21T16:29:44.915125+00:00",
+        "document_type": "entry_list"
+      },
+      "absent_driver_ids": [
+        "ocon"
+      ],
+      "required_entries": [
+        {
+          "car_number": 81,
+          "literal_names": [
+            [
+              "Oscar",
+              "Piastri"
+            ]
+          ],
+          "team_id": "mclaren"
+        },
+        {
+          "car_number": 1,
+          "literal_names": [
+            [
+              "Lando",
+              "Norris"
+            ]
+          ],
+          "team_id": "mclaren"
+        },
+        {
+          "car_number": 63,
+          "literal_names": [
+            [
+              "George",
+              "Russell"
+            ]
+          ],
+          "team_id": "mercedes"
+        },
+        {
+          "car_number": 12,
+          "literal_names": [
+            [
+              "Kimi",
+              "Antonelli"
+            ],
+            [
+              "Andrea Kimi",
+              "Antonelli"
+            ]
+          ],
+          "team_id": "mercedes"
+        },
+        {
+          "car_number": 3,
+          "literal_names": [
+            [
+              "Max",
+              "Verstappen"
+            ]
+          ],
+          "team_id": "red_bull"
+        },
+        {
+          "car_number": 6,
+          "literal_names": [
+            [
+              "Isack",
+              "Hadjar"
+            ]
+          ],
+          "team_id": "red_bull"
+        },
+        {
+          "car_number": 16,
+          "literal_names": [
+            [
+              "Charles",
+              "Leclerc"
+            ]
+          ],
+          "team_id": "ferrari"
+        },
+        {
+          "car_number": 44,
+          "literal_names": [
+            [
+              "Lewis",
+              "Hamilton"
+            ]
+          ],
+          "team_id": "ferrari"
+        },
+        {
+          "car_number": 23,
+          "literal_names": [
+            [
+              "Alexander",
+              "Albon"
+            ]
+          ],
+          "team_id": "williams"
+        },
+        {
+          "car_number": 55,
+          "literal_names": [
+            [
+              "Carlos",
+              "Sainz"
+            ]
+          ],
+          "team_id": "williams"
+        },
+        {
+          "car_number": 41,
+          "literal_names": [
+            [
+              "Arvid",
+              "Lindblad"
+            ]
+          ],
+          "team_id": "rb"
+        },
+        {
+          "car_number": 30,
+          "literal_names": [
+            [
+              "Liam",
+              "Lawson"
+            ]
+          ],
+          "team_id": "rb"
+        },
+        {
+          "car_number": 18,
+          "literal_names": [
+            [
+              "Lance",
+              "Stroll"
+            ]
+          ],
+          "team_id": "aston_martin"
+        },
+        {
+          "car_number": 14,
+          "literal_names": [
+            [
+              "Fernando",
+              "Alonso"
+            ]
+          ],
+          "team_id": "aston_martin"
+        },
+        {
+          "car_number": 51,
+          "literal_names": [
+            [
+              "Rafael",
+              "Camara"
+            ],
+            [
+              "Rafael",
+              "Câmara"
+            ]
+          ],
+          "team_id": "haas"
+        },
+        {
+          "car_number": 87,
+          "literal_names": [
+            [
+              "Oliver",
+              "Bearman"
+            ]
+          ],
+          "team_id": "haas"
+        },
+        {
+          "car_number": 27,
+          "literal_names": [
+            [
+              "Nico",
+              "Hulkenberg"
+            ],
+            [
+              "Nico",
+              "Hülkenberg"
+            ]
+          ],
+          "team_id": "audi"
+        },
+        {
+          "car_number": 5,
+          "literal_names": [
+            [
+              "Gabriel",
+              "Bortoleto"
+            ]
+          ],
+          "team_id": "audi"
+        },
+        {
+          "car_number": 10,
+          "literal_names": [
+            [
+              "Pierre",
+              "Gasly"
+            ]
+          ],
+          "team_id": "alpine"
+        },
+        {
+          "car_number": 43,
+          "literal_names": [
+            [
+              "Franco",
+              "Colapinto"
+            ]
+          ],
+          "team_id": "alpine"
+        },
+        {
+          "car_number": 11,
+          "literal_names": [
+            [
+              "Sergio",
+              "Perez"
+            ],
+            [
+              "Sergio",
+              "Pérez"
+            ]
+          ],
+          "team_id": "cadillac"
+        },
+        {
+          "car_number": 77,
+          "literal_names": [
+            [
+              "Valtteri",
+              "Bottas"
+            ]
+          ],
+          "team_id": "cadillac"
+        }
+      ]
     }
   ],
   "p1_events": [

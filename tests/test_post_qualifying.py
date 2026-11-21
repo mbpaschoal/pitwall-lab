@@ -492,6 +492,11 @@ class VegasForecastTests(unittest.TestCase):
         self.config.parent.mkdir(parents=True)
         shutil.copyfile(ROOT / self.config.relative_to(self.root), self.config)
         shutil.copyfile(ROOT / pq.POLICY, self.root / pq.POLICY)
+        # Synthetic gate tests supply their own review and capture chronology.
+        rule = pq.policy(self.root)
+        rule['roster_reviews'] = [review for review in rule['roster_reviews']
+                                  if review['identity'] != list(IDENTITY)]
+        (self.root / pq.POLICY).write_text(json.dumps(rule))
         self.event = weekend.load_event(self.config)
         self.state = dict(temporada=2026, rodada=21, circuito_id='vegas', sessoes=[])
 
@@ -517,6 +522,24 @@ class VegasForecastTests(unittest.TestCase):
         race = dict(season='2026', round='21', date='2026-11-22',
                     Circuit=dict(circuitId='vegas'), QualifyingResults=rows)
         return {}, {'classificacao': [({}, {'MRData': {'RaceTable': {'Races': [race]}}})]}
+
+    def test_reviewed_vegas_roster_matches_preserved_canonical_qualifying(self):
+        base = ROOT / 'reports/las_vegas_roster_20261121'
+        receipt = json.loads((base / 'review.json').read_text())
+        for source in receipt['sources']:
+            raw = (ROOT / source['file']).read_bytes()
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), source['sha256'])
+        captured = json.loads((base / 'sources/qualifying.json').read_text())
+        event = weekend.load_event(ROOT / 'operacao2026/eventos/vegas2026.json')
+        reviewed_at = datetime.fromisoformat(receipt['reviewed_at_utc'])
+        with patch.object(pq.fontes, 'ler_snapshot', return_value=(
+                {}, {'classificacao': [({}, captured)]})):
+            review = pq.review_forecast_roster(ROOT, event, 'preserved-review', now=reviewed_at)
+        rows = captured['MRData']['RaceTable']['Races'][0]['QualifyingResults']
+        self.assertEqual({r['driver_id'] for r in review['admitted_entries']},
+                         {r['Driver']['driverId'] for r in rows})
+        self.assertEqual(len(review['admitted_entries']), 22)
+        self.assertIn({'driver_id': 'rafael_camara', 'team_id': 'haas'}, review['admitted_entries'])
 
     def test_offline_readiness_and_p1_scope(self):
         with patch('registro_emissoes.carregar', return_value={}), \

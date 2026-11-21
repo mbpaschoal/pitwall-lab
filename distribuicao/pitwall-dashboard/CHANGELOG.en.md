@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.19.5 — 2026-11-21
+
+Reviewed all 22 Las Vegas entries against the official FIA entry list, retaining the PDF, SHA-256 and UTC capture. Automation can validate canonical qualifying with Rafael Camara at Haas before emitting the forecast. Observed Q3, exact identity, calendar and publication-deadline gates remain required. Frozen v1 and previous emissions are unchanged.
+
 ## 0.19.4 — 2026-11-21
 
 Automatic Las Vegas Grand Prix data update through GitHub Actions. Sessions with received data: 3/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.

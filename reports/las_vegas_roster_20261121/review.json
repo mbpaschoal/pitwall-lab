@@ -1,0 +1,41 @@
+{
+  "schema": "pitwall-vegas-roster-review-v1",
+  "identity": [
+    2026,
+    21,
+    "vegas"
+  ],
+  "reviewed_at_utc": "2026-11-21T16:32:08.538132+00:00",
+  "sources": [
+    {
+      "file": "reports/las_vegas_roster_20261121/sources/entry-list.pdf",
+      "url": "https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_entry_list.pdf",
+      "sha256": "d20dd9957f539a500ff87cef632edd9aca62b4e65fa7147469dd2f8a3be8b3a5",
+      "obtido_em_utc": "2026-11-21T16:29:44.915125+00:00",
+      "bytes": 466732
+    },
+    {
+      "file": "reports/las_vegas_roster_20261121/sources/qualifying.json",
+      "url": "https://api.jolpi.ca/ergast/f1/2026/21/qualifying/",
+      "sha256": "993ee1445a2d2232f71976d7353e17b46760fc71c7eaf2b3dcac437027257a9f",
+      "obtido_em_utc": "2026-11-21T16:31:02.317603+00:00",
+      "bytes": 9976
+    }
+  ],
+  "official_document": 10,
+  "official_document_date": "2026-11-19",
+  "reviewed_entries": 22,
+  "excluded_fp1_only_drivers": [
+    "Dino Beganovic",
+    "Ryo Hirakawa",
+    "Jak Crawford"
+  ],
+  "car_number_footnotes": {
+    "44": "Superscript 1 is a footnote, not car 441.",
+    "14": "Superscript 3 is a footnote, not car 143.",
+    "87": "Superscript 2 is a footnote, not car 872."
+  },
+  "identity_policy": "Exact reviewed literal variants, team and car number; driverId remains unchanged from canonical qualifying.",
+  "fallback": "Existing OpenF1 mapping is unchanged; this review admits the captured canonical Jolpica population.",
+  "forecast_emitted": false
+}
