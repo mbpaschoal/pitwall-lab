@@ -465,7 +465,7 @@ class PostQualifyingTests(unittest.TestCase):
         self.assertEqual(result['identity'],[2026,20,'interlagos'])
 
     def test_blocked_retry_stays_actionable_but_future_q_does_not_alert(self):
-        for status in ('blocked','blocked_retry_deferred','publication_window_closed'):
+        for status in ('blocked','blocked_retry_deferred','publication_window_closed','waiting_for_roster_review'):
             with self.assertRaisesRegex(RuntimeError,'review'):pq.check_health(dict(forecast=dict(status=status)))
         self.assertEqual(pq.check_health(dict(forecast=dict(status='waiting_for_observed_qualifying')))['status'],
                          'waiting_for_observed_qualifying')

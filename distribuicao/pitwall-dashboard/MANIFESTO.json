@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "82a8f2461683547a2626a4766f1bee3c1f2804a143f35f93bcf60cce7c8fc758",
+  "apresentacao_build_sha256": "c09ee8abc65a82733eaffa6b8fae9f3fd35e23e8aead40c299e9513d85ac3803",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "b2aa00bd515b33b5d15107f1ddfd5e2964b588b5c74d4f29e519f726ca1556e5",
-      "sha256_origem": "946e5aae101433623b3b586bfd7b3b936197b57a8c68a645879f2a5958a64aeb"
+      "sha256_destino": "62f6bc3830ebd3092874c5b51270a642fdf6a617dd6ae0550a47efdbceda2eb1",
+      "sha256_origem": "f7cff9e37af24cee3b9aea8ac971e904f71cdb4f7a6bba477aebb0026f710bb0"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "42b4b8c8372626132c9f756145854709e7eae0e3d4aa58f6cea465f67c0b972a",
-      "sha256_origem": "35f40e528a67115e50aaa077876e71db9341dac0d952829e961e5b39dd207474"
+      "sha256_destino": "58e168b87387d8ec4007461cd9356ce1b919258ca0320bd023bf7e7fbdc17971",
+      "sha256_origem": "45efddac95effa0c73e5c4f3084b61a60d461760741f878fdf0b79040af8a30b"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "ce8ba9049ac08275face52f8d301dd9039d2bbd60d3bd906f7a3d154b1583a41",
-      "sha256_origem": "ce8ba9049ac08275face52f8d301dd9039d2bbd60d3bd906f7a3d154b1583a41"
+      "sha256_destino": "d7c08ba80ad48437c9c6f799477a7d7ab5a842ac3fe6cb9914b81ca4b660ad77",
+      "sha256_origem": "d7c08ba80ad48437c9c6f799477a7d7ab5a842ac3fe6cb9914b81ca4b660ad77"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2830,8 +2830,8 @@
       "caminho": "frontend_assets/race_weekend.json",
       "fonte": "frontend_assets/race_weekend.json",
       "modo": "copia",
-      "sha256_destino": "1edbb2b19e84f2787b7882ccd3fde5727bd18659c2c0d6427787db63ce6dcdbc",
-      "sha256_origem": "1edbb2b19e84f2787b7882ccd3fde5727bd18659c2c0d6427787db63ce6dcdbc"
+      "sha256_destino": "6ed7bda6d22248116b0444323d05978c5318b4f92cfba9b3a76de21fb93de680",
+      "sha256_origem": "6ed7bda6d22248116b0444323d05978c5318b4f92cfba9b3a76de21fb93de680"
     },
     {
       "caminho": "frontend_assets/revisao_identidade_pilotos_v1.json",
@@ -8964,5 +8964,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.19.6"
+  "versao_produto": "0.19.7"
 }

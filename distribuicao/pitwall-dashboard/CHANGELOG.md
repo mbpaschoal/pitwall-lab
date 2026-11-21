@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.19.7 — 2026-11-21
+
+Recupera para publicação a emissão prospectiva original de Las Vegas, preparada em 21/11 às 17h07 UTC, com 22 pilotos e o CSV imutável. Preserva snapshots, fontes e prova do encerramento de Q3. A projeção atualizada e o pacote são validados juntos no PR. O teste de navegador mantém Austin e México avaliados, admite resultados posteriores validados e rejeita avaliação sem resultado. A falta de revisão de inscritos após Q3 passa a sinalizar falha na saúde da previsão. Modelo v1 e probabilidades anteriores inalterados.
+
 ## 0.19.6 — 2026-11-21
 
 Corrige dois testes de apresentação que fixavam o último GP observado no México. A seleção padrão passa a ser conferida contra os resultados validados da fixture, e o teste da avaliação mexicana escolhe o GP explicitamente. A recuperação pode reprojetar a emissão de Las Vegas preservada, sem recalcular probabilidades ou alterar o modelo.

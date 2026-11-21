@@ -489,7 +489,8 @@ def prepare(root, event_path, state, now=None, run=command):
 
 def check_health(result):
     status = result.get('forecast',{}).get('status')
-    if status in ('blocked','blocked_retry_deferred','publication_window_closed'):
+    # A roster wait is returned only after observed Q3; it requires intervention.
+    if status in ('blocked','blocked_retry_deferred','publication_window_closed','waiting_for_roster_review'):
         raise RuntimeError('Previsão automática requer revisão / Automatic forecast needs review: '+status)
     return dict(status=status or 'not_in_forecast_window')
 
