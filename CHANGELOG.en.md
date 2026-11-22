@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.19.8 — 2026-11-22
+
+Automatic Las Vegas Grand Prix data update through GitHub Actions. Sessions with received data: 4/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.19.7 — 2026-11-21
 
 Recovers the original Las Vegas prospective emission, prepared on 21 November at 17:07 UTC, for publication with all 22 drivers and its immutable CSV. Preserves snapshots, sources and observed Q3 finish evidence. The updated projection and package are validated together in the PR. Browser acceptance retains evaluated Austin and Mexico, admits later validated results and rejects scoring without a result. Missing roster review after Q3 now signals forecast-health failure. Frozen v1 and previous probabilities remain unchanged.

@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.19.8 — 2026-11-22
+
+Atualização automática de dados de Las Vegas Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 4/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.19.7 — 2026-11-21
 
 Recupera para publicação a emissão prospectiva original de Las Vegas, preparada em 21/11 às 17h07 UTC, com 22 pilotos e o CSV imutável. Preserva snapshots, fontes e prova do encerramento de Q3. A projeção atualizada e o pacote são validados juntos no PR. O teste de navegador mantém Austin e México avaliados, admite resultados posteriores validados e rejeita avaliação sem resultado. A falta de revisão de inscritos após Q3 passa a sinalizar falha na saúde da previsão. Modelo v1 e probabilidades anteriores inalterados.
