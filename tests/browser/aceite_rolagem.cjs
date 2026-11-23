@@ -11,9 +11,17 @@ const expectedVersion=process.env.AUDIT_EXPECTED_VERSION||fs.readFileSync(path.j
 const [base,output]=process.argv.slice(2);
 if(!base||!output)throw Error('Usage: node aceite_rolagem.cjs BASE_URL OUTPUT_DIR');
 fs.mkdirSync(output,{recursive:true});
-const routes=['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
-const kinds=['race','drivers','championship','forecast','performance','method'];
-const audit={utc:new Date().toISOString(),base,browser:browserName,expectedVersion,scope:'6 screens x PT/EN x 390x560 and 1440x900 x five scroll positions; header and pilot controls text2x; mobile resize',limitations:['Canvas/Plotly internals and cross-origin iframe text require separate functional tests.','Background hero images and foreground title overlays are intentional and excluded from image collisions.','Partly clipped lines at scroll-viewport edges and CSS-hidden accessibility labels are excluded.','Text2x doubles computed font-size/line-height as a deterministic reflow stress test; it is not native browser zoom.'],samples:[],stress:[]};
+const headers={
+ Corridas:'.fan-hero[data-hero-kind="race"] h1',
+ Pilotos:'.fan-hero[data-hero-kind="drivers"] h1',
+ Carros:'.pw-chapter #carros-comparativo',
+ Campeonato:'.fan-hero[data-hero-kind="championship"] h1',
+ 'Previsões':'.fan-hero[data-hero-kind="forecast"] h1',
+ Desempenho:'.fan-hero[data-hero-kind="performance"] h1',
+ Metodologia:'.fan-hero[data-hero-kind="method"] h1',
+};
+const routes=Object.keys(headers);
+const audit={utc:new Date().toISOString(),base,browser:browserName,expectedVersion,scope:'7 screens x PT/EN x 390x560 and 1440x900 x five scroll positions; header and pilot controls text2x; mobile resize',limitations:['Canvas/Plotly internals and cross-origin iframe text require separate functional tests.','Background hero images and foreground title overlays are intentional and excluded from image collisions.','Partly clipped lines at scroll-viewport edges and CSS-hidden accessibility labels are excluded.','Text2x doubles computed font-size/line-height as a deterministic reflow stress test; it is not native browser zoom.'],samples:[],stress:[]};
 const launch={headless:true};if(browserName==='chromium'&&process.env.PLAYWRIGHT_CHANNEL)launch.channel=process.env.PLAYWRIGHT_CHANNEL;
 const save=()=>fs.writeFileSync(path.join(output,'scroll-audit.json'),JSON.stringify(audit,null,2));
 const doubleTextMetrics=surface=>surface.evaluate(async()=>{
@@ -25,7 +33,7 @@ const doubleTextMetrics=surface=>surface.evaluate(async()=>{
  document.querySelector('.stMain').scrollTo({top:0,behavior:'instant'});
 });
 (async()=>{const browser=await engines[browserName].launch(launch);try{
-for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const lang of ['pt','en'])for(const [index,route] of routes.entries()){
+for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const lang of ['pt','en'])for(const route of routes){
  const mobile=viewport.width===390,context=await browser.newContext({viewport,isMobile:mobile,hasTouch:mobile,deviceScaleFactor:1,reducedMotion:'reduce'}),page=await context.newPage();
  const errors=[];page.on('pageerror',error=>errors.push(error.message));
  const id=`${lang}-${viewport.width}x${viewport.height}-${route}`;
@@ -34,7 +42,7 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
   await page.goto(base+'/?'+new URLSearchParams({tela:route,temporada:'2026',gp:'19',lang}),{waitUntil:'domcontentloaded',timeout:90000});
   let surface=page;
   if(base.includes('streamlit.app')){for(let i=0;i<120;i++){surface=page.frames().find(f=>f.url().includes('/~/+/'));if(surface)break;await page.waitForTimeout(500);}if(!surface)throw Error('Public application frame unavailable');}
-  await surface.waitForFunction(kind=>document.querySelector('.fan-hero')?.dataset.heroKind===kind&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning',kinds[index],{timeout:90000});
+  await surface.waitForFunction(selector=>document.querySelector(selector)&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning',headers[route],{timeout:90000});
   await surface.evaluate(async()=>{
      await document.fonts.ready;
      // Streamlit can introduce Material Symbols after the first fonts.ready.
@@ -49,7 +57,7 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
     await surface.waitForFunction(expected=>{
      const labels=Array.from(document.querySelectorAll('.st-key-pw-sidebar-menu button'));
      const selects=document.querySelectorAll('.st-key-journey-context-row [data-testid="stSelectbox"]');
-     return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===15&&selects.length===2;
+     return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===16&&selects.length===2;
     },lang,{timeout:90000});
     await surface.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});await page.waitForTimeout(650);
   for(const fraction of [0,.25,.5,.75,1]){
@@ -106,7 +114,7 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
    if(result.issues.length||fraction===1)await page.screenshot({path:path.join(output,`${id}-${fraction}.jpg`),type:'jpeg',quality:65,scale:'css'});
   }
   if(route==='Corridas'){
-   // The header is shared by all six screens. Test text reflow separately from
+   // The header is shared by all seven screens. Test text reflow separately from
    // the photographs' 2x source-resolution contract in aceite_visual.cjs.
    await doubleTextMetrics(surface);
    await page.waitForTimeout(450);

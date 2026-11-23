@@ -4,13 +4,19 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const {inspectControls}=require('./verificar_publicacao.cjs');
 const base=process.argv[2]||'http://127.0.0.1:8501';
 const output=path.resolve(process.argv[3]||'/tmp/pitwall-resilience');
-const screens=['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
+const screens=['Corridas','Pilotos','Carros','Campeonato','Previsões','Desempenho','Metodologia'];
 async function check(page,lang){
  await page.locator('.st-key-pw-sidebar-menu').waitFor({state:'visible',timeout:30000});
- await page.waitForFunction(()=>document.querySelector('.st-key-pw-sidebar-menu details')?.dataset.pwReady==='true');
- const menu=page.locator('.st-key-pw-sidebar-menu details');if(!await menu.evaluate(e=>e.open))await menu.locator('summary').click();
- await page.waitForFunction(lang=>document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning',lang,{timeout:30000});
- assert.equal(await page.locator('.pw-nav-fallback:visible').count(),15);
+ const menu=page.locator('.st-key-pw-sidebar-menu details');
+ await page.waitForFunction(()=>{const menu=document.querySelector('.st-key-pw-sidebar-menu details'),summary=menu?.querySelector('summary');return menu?.open||summary&&summary.getClientRects().length>0&&getComputedStyle(summary).visibility!=='hidden';});
+ if(!await menu.evaluate(e=>e.open))await menu.locator('summary').click();
+ // pwReady belongs to native-button hydration, which this scenario blocks.
+ // Require the complete usable fallback inventory before exercising the links.
+ await page.waitForFunction(lang=>document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&
+  [...document.querySelectorAll('.pw-nav-fallback')].filter(e=>e.getClientRects().length&&getComputedStyle(e).visibility!=='hidden').length===16&&
+  [...document.querySelectorAll('.pw-language-fallback')].filter(e=>e.getClientRects().length&&getComputedStyle(e).visibility!=='hidden').length===2,
+ lang,{timeout:30000});
+ assert.equal(await page.locator('.pw-nav-fallback:visible').count(),16);
  assert.equal(await page.locator('.pw-language-fallback:visible').count(),2);
  assert.equal(await page.locator('.st-key-journey-navigation [role=radiogroup]').count(),0);
  assert.equal(await page.locator('[data-testid=stException]').count(),0);
@@ -53,7 +59,7 @@ async function check(page,lang){
   await page.goto(base+'/?tela=Metodologia&temporada=2026&gp=19&lang=pt',{waitUntil:'domcontentloaded'});
   await check(page,'pt');const last=page.locator('.pw-nav-fallback').last();await last.focus();
   assert.ok(releases.length>=2);releases.forEach(resolve=>resolve());
-  await page.waitForFunction(()=>document.querySelectorAll('.st-key-pw-sidebar-menu button').length===15);
+  await page.waitForFunction(()=>document.querySelectorAll('.st-key-pw-sidebar-menu button').length===16);
   assert.equal(await last.evaluate(e=>e===document.activeElement),true,'Hydration must preserve keyboard focus');
   assert.equal((await page.locator('body').evaluate(inspectControls,'pt')).navigation,'links');
   await page.keyboard.press('Tab');

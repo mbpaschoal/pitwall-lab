@@ -926,3 +926,5 @@ html:not([data-pw-reduced-motion="true"]) .fan-duel-difference{animation:pw-duel
     padding-inline: .25rem;
   }
 }
+/* The native dataframe toolbar rises above the table; reserve its own row. */
+.st-key-car-comparison-table{padding-block-start:48px}

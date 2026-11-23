@@ -80,6 +80,7 @@ jobs:
       - name: Testes PT e EN / PT and EN tests
         # Post-race admission is checked separately from frozen scientific tests.
         run: |
+          python -B -m unittest tests.test_car_comparison -v
           python -B -m unittest tests.test_acervo_dashboard_dados -v
           python -B -m unittest discover -s reports/prospectivo_p1_20261105 -p 'test_*.py' -v
           python -B -m unittest tests.test_prospective_automation tests.test_supervision -v
@@ -114,7 +115,7 @@ jobs:
       - run: python -m pip install -r publicacao/templates/requirements.txt
       - run: npm install --no-save --ignore-scripts playwright@1.62.1
       - name: Instalar navegadores / Install browsers
-        timeout-minutes: 10
+        timeout-minutes: 20
         run: npx playwright install --with-deps chromium webkit
       - name: Jornadas de fãs / Fan journeys
         env:
@@ -130,6 +131,7 @@ jobs:
           if [ "$PITWALL_BROWSER_SUITE" = "core" ]; then
             node --test tests/browser/test_verificar_p1.cjs
             node tests/browser/aceite_sidebar.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/sidebar-evidence"
+            node tests/browser/aceite_carros.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/cars-evidence"
             node tests/browser/aceite_diagramacao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/layout-evidence"
             node tests/browser/aceite_fotos_perfil.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/profile-photos-evidence"
             node tests/browser/aceite_editorial.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/editorial-evidence"
@@ -149,6 +151,7 @@ jobs:
             node tests/browser/aceite_rolagem.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/scroll-evidence"
           else
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_sidebar.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/sidebar-webkit-evidence"
+            PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_carros.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/cars-webkit-evidence"
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_diagramacao.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/layout-webkit-evidence"
             PLAYWRIGHT_BROWSER=webkit node tests/browser/aceite_fotos_perfil.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/profile-photos-webkit-evidence"
             PLAYWRIGHT_BROWSER=webkit PITWALL_FINISH_WIDTHS=390,768 PITWALL_FINISH_POINTER=mouse node tests/browser/aceite_acabamento.cjs http://127.0.0.1:8501 "$RUNNER_TEMP/finish-webkit-mouse-evidence"
@@ -167,6 +170,8 @@ jobs:
           path: |
             ${{ runner.temp }}/sidebar-evidence
             ${{ runner.temp }}/sidebar-webkit-evidence
+            ${{ runner.temp }}/cars-evidence
+            ${{ runner.temp }}/cars-webkit-evidence
             ${{ runner.temp }}/layout-evidence
             ${{ runner.temp }}/layout-webkit-evidence
             ${{ runner.temp }}/profile-photos-evidence

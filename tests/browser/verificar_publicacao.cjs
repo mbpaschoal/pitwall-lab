@@ -35,17 +35,17 @@ async function verifyImage(page,app,expected){
 
 function inspectControls(_element,lang){
  const visible=e=>{if(!e.getClientRects().length)return false;for(let n=e;n;n=n.parentElement){const s=getComputedStyle(n);if(s.visibility==='hidden'||Number(s.opacity)===0)return false;}return true;};
- const screens=['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
+ const screens=['Corridas','Pilotos','Carros','Campeonato','Previsões','Desempenho','Metodologia'];
  const native=[...document.querySelectorAll('.st-key-journey-navigation [role=radiogroup] label')].filter(visible);
  const links=[...document.querySelectorAll('.journey-navigation-fallback>a')].filter(visible);
- const validLinks=links.length===6&&links.every((e,i)=>{
+ const validLinks=links.length===screens.length&&links.every((e,i)=>{
   try{const u=new URL(e.href);return e.dataset.screen===screens[i]&&u.origin===location.origin&&u.pathname===location.pathname&&u.searchParams.get('tela')===screens[i]&&u.searchParams.get('lang')===lang;}catch{return false;}
  });
  const flags=[...document.querySelectorAll('[class*=st-key-pw_language_button_] button')].filter(visible);
  const flagLinks=[...document.querySelectorAll('.pw-language-fallback')].filter(visible);
  const validFlags=flagLinks.every(e=>{try{const u=new URL(e.href);return ['pt','en'].includes(e.dataset.language)&&u.origin===location.origin&&u.searchParams.get('lang')===e.dataset.language;}catch{return false;}});
  const codes=flags.map(e=>e.closest('[class*=st-key-pw_language_button_]').className.match(/_(pt|en)(?:\s|$)/)?.[1]).concat(flagLinks.map(e=>e.dataset.language));
- let navigation=native.length===6&&links.length===0?'native':native.length===0&&validLinks?'links':null;
+ let navigation=native.length===screens.length&&links.length===0?'native':native.length===0&&validLinks?'links':null;
  const sidebar=document.querySelector('.st-key-pw-sidebar-menu');
  let sidebarNative=[],sidebarLinks=[];
  if(sidebar){
@@ -53,8 +53,10 @@ function inspectControls(_element,lang){
   const all=[...sidebar.querySelectorAll('.pw-nav-fallback')];
   sidebarNative=[...sidebar.querySelectorAll('button')];
   sidebarLinks=all.filter(visible);
-  const valid=all.length===15&&new Set(all.map(e=>e.dataset.pwRoute)).size===15&&all.every(e=>{try{const u=new URL(e.href);return screens.includes(e.dataset.screen)&&u.origin===location.origin&&u.pathname===location.pathname&&u.searchParams.get('tela')===e.dataset.screen&&u.searchParams.get('lang')===lang;}catch{return false;}});
-  navigation=sidebarNative.length===15&&sidebarLinks.length===0?'native':valid&&sidebarNative.length===0?'links':sidebarNative.length===15&&sidebarLinks.some(e=>e===document.activeElement)?'links':null;
+  const routeScreens={forecast:'Previsões',accuracy:'Desempenho',summary:'Corridas',sessions:'Corridas',strategy:'Corridas',weather:'Corridas',history:'Corridas',teams:'Corridas',profiles:'Pilotos',duel:'Pilotos',cars:'Carros','drivers-standing':'Campeonato','teams-standing':'Campeonato',method:'Metodologia',sources:'Metodologia',terms:'Metodologia'};
+  const expectedCount=Object.keys(routeScreens).length;
+  const valid=all.length===expectedCount&&new Set(all.map(e=>e.dataset.pwRoute)).size===expectedCount&&all.every(e=>{try{const u=new URL(e.href);return routeScreens[e.dataset.pwRoute]===e.dataset.screen&&u.origin===location.origin&&u.pathname===location.pathname&&u.searchParams.get('tela')===e.dataset.screen&&u.searchParams.get('lang')===lang;}catch{return false;}});
+  navigation=valid&&sidebarNative.length===expectedCount&&sidebarLinks.length===0?'native':valid&&sidebarNative.length===0?'links':valid&&sidebarNative.length===expectedCount&&sidebarLinks.some(e=>e===document.activeElement)?'links':null;
  }
  const languageControl=codes.length===2&&new Set(codes).size===2&&codes.includes('pt')&&codes.includes('en')&&validFlags?(flags.length===2?'native':flags.length?'mixed':'links'):null;
  return{ready:document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&!!navigation&&!!languageControl&&document.querySelectorAll('.st-key-journey-context-row [data-testid=stSelectbox]').length===2,

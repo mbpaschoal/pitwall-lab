@@ -8,7 +8,7 @@ const report={version,engine,base,cases:[]};
 async function settleLanguage(app,lang,tela){
  await app.waitForFunction(({lang,tela})=>{
   const q=new URL(location.href).searchParams;
-  return document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&q.get('lang')===lang&&q.get('tela')===tela&&q.get('gp')==='19'&&q.get('temporada')==='2026'&&document.querySelectorAll('.st-key-pw-sidebar-menu button').length===15;
+  return document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&q.get('lang')===lang&&q.get('tela')===tela&&q.get('gp')==='19'&&q.get('temporada')==='2026'&&document.querySelectorAll('.st-key-pw-sidebar-menu button').length===16;
  },{lang,tela},{timeout:45000});
 }
 async function flagTarget(button){
@@ -23,12 +23,12 @@ async function activeMarker(app){
  return selected.evaluate(el=>({text:el.innerText,height:el.getBoundingClientRect().height,border:getComputedStyle(el).borderLeftWidth,color:getComputedStyle(el).borderLeftColor,align:getComputedStyle(el.querySelector('p')).textAlign}));
 }
 (async()=>{const opts={headless:true};if(engine==='chromium'&&process.env.PLAYWRIGHT_CHANNEL)opts.channel=process.env.PLAYWRIGHT_CHANNEL;const b=await pw[engine].launch(opts);try{
-for(const width of [390,1440])for(const lang of ['pt','en'])for(const tela of ['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia']){
+for(const width of [390,1440])for(const lang of ['pt','en'])for(const tela of ['Corridas','Pilotos','Carros','Campeonato','Previsões','Desempenho','Metodologia']){
  const c=await b.newContext({viewport:{width,height:844},isMobile:width===390,hasTouch:width===390}),p=await c.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));
  const row={width,lang,tela};try{
  await p.goto(base+'/?'+new URLSearchParams({tela,temporada:'2026',gp:'19',lang}),{waitUntil:'domcontentloaded',timeout:90000});
  let app=p;if(base.includes('streamlit.app')){for(let n=0;n<120;n++){app=p.frames().find(f=>f.url().includes('/~/+/'));if(app)break;await p.waitForTimeout(500);}assert(app,'App frame');}
- await app.waitForFunction(({lang,version,tela})=>document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===lang&&document.querySelectorAll('.st-key-pw-sidebar-menu button').length===15&&document.querySelectorAll('[data-testid=stSelectbox]').length>=2&&document.querySelector('.st-key-journey-header')?.innerText.includes('v'+version)&&new URL(location.href).searchParams.get('tela')===tela,{lang,version,tela},{timeout:90000});
+ await app.waitForFunction(({lang,version,tela})=>document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===lang&&document.querySelectorAll('.st-key-pw-sidebar-menu button').length===16&&document.querySelectorAll('[data-testid=stSelectbox]').length>=2&&document.querySelector('.st-key-journey-header')?.innerText.includes('v'+version)&&new URL(location.href).searchParams.get('tela')===tela,{lang,version,tela},{timeout:90000});
  await app.evaluate(()=>document.fonts.ready);await p.waitForTimeout(700);
  row.languageTargets=[];row.edgeClicks=[];
  for(const code of ['pt','en']){

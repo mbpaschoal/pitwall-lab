@@ -32,7 +32,7 @@ async function ready(app, driver, photo, lang, version) {
       document.querySelector('.stApp')?.dataset.testScriptState === 'notRunning' &&
       document.querySelectorAll('.fan-hero-profile-editorial').length === 1 &&
       document.querySelector('.fan-hero-profile-editorial')?.dataset.driverId === driver &&
-      document.querySelectorAll('.st-key-pw-sidebar-menu button').length === 15;
+      document.querySelectorAll('.st-key-pw-sidebar-menu button').length === 16;
   }, {driver,lang}, {timeout:90000});
   const hero = app.locator('.fan-hero-profile-editorial[data-driver-id="' + driver + '"]');
   assert.equal(normalise(await hero.locator('h1').innerText()), photo.name, 'Profile heading has another identity');

@@ -86,8 +86,8 @@ fs.mkdirSync(output, {recursive:true});
   }
   if(!['Corridas','Previsões'].includes(route))await p.locator('.fan-hero-image').evaluate(img=>img.decode());
   await stableIdle(p);
-  await p.waitForFunction(()=>document.querySelectorAll('.st-key-pw-sidebar-menu button').length===15,null,{timeout:15000});
-  check(await p.locator('.st-key-pw-sidebar-menu button').count()===15,'Sidebar: fifteen destinations required');
+  await p.waitForFunction(()=>document.querySelectorAll('.st-key-pw-sidebar-menu button').length===16,null,{timeout:15000});
+  check(await p.locator('.st-key-pw-sidebar-menu button').count()===16,'Sidebar: sixteen destinations required');
 
   return p;
  }
@@ -182,7 +182,7 @@ fs.mkdirSync(output, {recursive:true});
  const journey=await browser.newContext({viewport:{width:1440,height:1100}});
  p=await open(journey,'tela=Corridas&temporada=2026&gp=18&lang=pt','United States Grand Prix');
  const dock=p.locator('.st-key-pw-sidebar-menu');
- check(await dock.locator('button').count()===15,'Missing sidebar destinations');
+ check(await dock.locator('button').count()===16,'Missing sidebar destinations');
  await choose(p,'drivers-standing');
  await p.getByRole('heading',{name:'Campeonato de pilotos',level:1,exact:true}).waitFor();
  check(new URL(p.url()).searchParams.get('gp')==='18','Sidebar lost GP');

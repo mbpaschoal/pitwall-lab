@@ -13,6 +13,7 @@ const routes = {
  weather:{tela:'Corridas',aba:'Clima'}, history:{tela:'Corridas',aba:'Histórico'},
  teams:{tela:'Corridas',aba:'Comparativo de equipes'}, profiles:{tela:'Pilotos',visao:'perfil'},
  duel:{tela:'Pilotos',visao:'duelo'}, 'drivers-standing':{tela:'Campeonato',painel:'pilotos'},
+ cars:{tela:'Carros'},
  'teams-standing':{tela:'Campeonato',painel:'equipes'}, method:{tela:'Metodologia'},
  sources:{tela:'Metodologia',secao:'fontes'}, terms:{tela:'Metodologia',secao:'termos'}
 };
@@ -25,7 +26,7 @@ async function ready(page, expected) {
  await app.waitForFunction(expected=>{
   const q=new URL(location.href).searchParams;
   const valid = document.querySelector('.stApp')?.dataset.testScriptState==='notRunning' &&
-   document.querySelectorAll('.st-key-pw-sidebar-menu button').length===15 &&
+   document.querySelectorAll('.st-key-pw-sidebar-menu button').length===16 &&
    document.querySelector('.st-key-pw-sidebar-menu details')?.dataset.pwReady==='true' &&
    Object.entries(expected).every(([key,value])=>q.get(key)===String(value)) &&
    document.documentElement.lang===q.get('lang');

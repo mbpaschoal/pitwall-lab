@@ -8,6 +8,7 @@ def navigation_links(params, selected, lang='pt'):
     labels = (
         ('Corridas', 'Corridas', 'Races'),
         ('Pilotos', 'Pilotos', 'Drivers'),
+        ('Carros', 'Carros', 'Cars'),
         ('Campeonato', 'Campeonato', 'Championship'),
         ('Previsões', 'Chances de pódio', 'Podium chances'),
         ('Desempenho', 'Acertos do Lab', 'How the Lab did'),

@@ -384,6 +384,7 @@ documentacao_local.py
 frontend_assets/acervo_dashboard.json
 frontend_assets/acervo_fotografico.json
 frontend_assets/avaliacao_posterior_mexico_2026.json
+frontend_assets/car_comparison_2026.json
 frontend_assets/complemento_fontes_v1.json
 frontend_assets/complemento_idade_pneus_v1.json
 frontend_assets/contexto_editorial.json
@@ -412,6 +413,7 @@ pitwall/dashboard/__init__.py
 pitwall/dashboard/app.py
 pitwall/dashboard/archive_cache.py
 pitwall/dashboard/archive_views.py
+pitwall/dashboard/car_views.py
 pitwall/dashboard/components.py
 pitwall/dashboard/destination_art.py
 pitwall/dashboard/fan_views.py
@@ -436,6 +438,7 @@ pitwall/dashboard/tokens.py
 pitwall/dashboard/weekend_views.py
 pitwall/data/__init__.py
 pitwall/data/archive.py
+pitwall/data/car_comparison.py
 pitwall/data/circuit_history.py
 pitwall/data/complementary_sources.py
 pitwall/data/dashboard.py
@@ -459,6 +462,7 @@ pitwall/paths.py
 pitwall/publishing/__init__.py
 pitwall/publishing/documentation.py
 pitwall/research/__init__.py
+pitwall/research/car_comparison.py
 pitwall/research/driver_conditions.py
 pitwall/research/driver_duel.py
 pitwall/research/prospective_evaluation.py
@@ -1248,6 +1252,7 @@ static/pitwall-profiles/zhou-375bac8a6ce6.jpg
 tests/test_acervo_publico.py
 tests/test_archive_cache.py
 tests/test_avaliacao_posterior_publico.py
+tests/test_car_comparison.py
 tests/test_complemento_idade_publico.py
 tests/test_dashboard_app.py
 tests/test_dashboard_dados.py
@@ -1259,6 +1264,7 @@ tests/test_fan_composition.py
 tests/test_fan_exploration.py
 tests/test_fan_journey.py
 tests/test_high_resolution_assets.py
+tests/test_i18n.py
 tests/test_interface_editorial.py
 tests/test_pilot_views.py
 tests/test_pneus_apresentacao.py

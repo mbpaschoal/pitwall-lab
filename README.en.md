@@ -29,6 +29,7 @@ A Formula 1 data-science portfolio by **MBPaschoal**. Pitwall Lab started with a
 
 - **Drivers:** condition leaders, profiles, shared-race duels, a browser-local favourite and shareable cards, with explicit sample sizes and ties. [Data audit](reports/pilotos_condicoes_20261029/README.en.md).
 - **Races:** results, circuit profile, session times, weather, tyres/stops, teams and driver performance in up to five previous editions at the same circuit.
+- **Cars:** Q1 comparison of all 11 teams, team or driver trends and FIA technical declarations across 21 GPs in 2026. Team means require two comparable drivers; missing data and source conflicts are visible. This descriptive snapshot does not change recorded forecasts.
 - **Championship:** full driver and constructor standings at the selected round.
 - **Podium chances:** individual probabilities and subsequent comparison. The 2026 Austin and São Paulo forecasts have their own records, separate from the retrospective study.
 - **How the Lab did:** log loss, Brier, calibration, ranking and coverage with explicit denominators.

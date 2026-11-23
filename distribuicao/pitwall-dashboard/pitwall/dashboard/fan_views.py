@@ -25,10 +25,11 @@ def text(value):
     return escape(translate(str(value)))
 
 
-def chapter_header(title, description=''):
+def chapter_header(title, description='', anchor=None):
     """A single page title; a subtitle is useful only when it adds information."""
     subtitle = '<p>{}</p>'.format(text(description)) if description else ''
-    return '<header class="pw-chapter"><h1>{}</h1>{}</header>'.format(text(title), subtitle)
+    identifier = ' id="{}"'.format(escape(anchor, quote=True)) if anchor else ''
+    return '<header class="pw-chapter"><h1{}>{}</h1>{}</header>'.format(identifier, text(title), subtitle)
 
 
 def href(screen, **params):

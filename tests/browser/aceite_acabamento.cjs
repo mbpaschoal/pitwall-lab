@@ -38,7 +38,7 @@ async function ready(app){
    if(width<801){
     const menu=await require('./sidebar_navigation.cjs').openMenu(app);
     const targets=await app.locator('.st-key-pw-sidebar-menu button').evaluateAll(xs=>xs.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,right:r.right,width:r.width,height:r.height}}));
-    assert.equal(targets.length,15);assert(targets.every(r=>r.height>=44&&r.width>=44&&r.x>=0&&r.right<=width+1),'Narrow navigation target is clipped or smaller than 44 px');
+    assert.equal(targets.length,16);assert(targets.every(r=>r.height>=44&&r.width>=44&&r.x>=0&&r.right<=width+1),'Narrow navigation target is clipped or smaller than 44 px');
     await menu.locator('summary').click();
    }
    await app.locator('.stMain').evaluate(e=>e.scrollTo({top:650,behavior:'instant'}));
