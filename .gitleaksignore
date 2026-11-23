@@ -6,3 +6,10 @@
 9e65ad25b125e78b671a763a43934385c1264363:reports/operacao_2026/revisao_r4_20261021T003337Z/hashes_pre_revisao.json:sumologic-access-token:24
 f279b4763611fc348ed9f0ef9451ec934b6f220f:reports/operacao_2026/fechamento_local_20261021T004418Z/diff_implementacao_staged.diff:sumologic-access-token:631298
 05eec0b70b24abf9a68dae45aac36730eefb5bc5:docs/dashboard_artefatos_preservados.json:sumologic-access-token:57
+
+# Reviewed false positives: Streamlit widget IDs in portable translation tests.
+# Both findings compare s.key to the public ID acervo_2025_1_sessao_tempos.
+# Scope: exact historical commit, file, rule and line; no credentials are allowed.
+# https://github.com/gitleaks/gitleaks#-gitleaksignore
+5f7216b780e95cf4deff9d6e65b8b3c86a7a935d:distribuicao/pitwall-dashboard/tests/test_i18n.py:generic-api-key:229
+5f7216b780e95cf4deff9d6e65b8b3c86a7a935d:distribuicao/pitwall-dashboard/tests/test_i18n.py:generic-api-key:239
