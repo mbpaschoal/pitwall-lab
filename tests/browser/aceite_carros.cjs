@@ -80,6 +80,23 @@ async function run() {
     row.states.push('all_team_comparison');
     row.screenshots.push(await capture(page,app,`comparison-${width}-${lang}`));
 
+    if (touch) {
+     await page.setViewportSize({width,height:560});
+     await app.locator('.stMain').evaluate(m=>m.scrollTo({top:.25*(m.scrollHeight-m.clientHeight),behavior:'instant'}));
+     const sensitivity=app.locator('.st-key-car_no_flags');
+     const checkbox=sensitivity.getByRole('checkbox');
+     const explanation=app.getByText(lang==='pt'
+      ? 'Sensibilidade conservadora: um alerta local na sessão não prova que o piloto encontrou a bandeira.'
+      : 'Conservative sensitivity: a local flag in the session does not prove the driver encountered it.',{exact:true});
+     await explanation.waitFor({state:'visible'});
+     await sensitivity.locator('label').tap(); await ready(app);
+     assert.equal(await checkbox.isChecked(),true);
+     await sensitivity.locator('label').tap(); await ready(app);
+     assert.equal(await checkbox.isChecked(),false);
+     row.states.push('small_viewport_sensitivity_touch_and_visible_explanation');
+     await page.setViewportSize({width,height:1000});
+    }
+
     await view(app,lang==='pt'?'Evolução':'Evolution',touch);
     await app.locator('[data-testid=stPlotlyChart] svg.main-svg').first().waitFor({timeout:30000});
     assert.equal(await app.locator('.js-plotly-plot').evaluate(e=>e.data.length),11);

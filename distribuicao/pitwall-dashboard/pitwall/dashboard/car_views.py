@@ -47,7 +47,8 @@ def comparison(event,no_flags):
         rows.append({'Equipe':team['name'],'Diferença em Q1':pct(metric['gap_percent']),
                      'Pilotos comparáveis':f"{metric['eligible_drivers']}/2"+(' · '+', '.join(nonclassified) if nonclassified else ''),
                      'Declaração técnica':STATES[team['declaration']['status']]})
-    st.dataframe(pd.DataFrame(rows),hide_index=True,width='stretch',height=430)
+    with st.container(key='car-comparison-table'):
+        st.dataframe(pd.DataFrame(rows),hide_index=True,width='stretch',height=430)
     st.caption('Média dos dois pilotos contra o menor tempo válido de Q1, na mesma sessão. Positivo significa mais lento. Uma equipe com apenas um piloto elegível fica sem média.')
     if any(not d['qualifying_status'].isdigit() for t in event['teams'] for d in t['drivers']):
         st.caption('NC indica piloto não classificado. Seu tempo observado é preservado quando comparável; consulte o estado oficial e a cobertura nos detalhes dos pilotos.')
@@ -191,8 +192,8 @@ def render(root,year,round_,circuit_id=None):
     no_flags=False
     if view!='Alterações':
         no_flags=st.checkbox('Excluir voltas com alertas potenciais',key='car_no_flags',
-                             value=saved('car_no_flags',False),on_change=remember,args=('car_no_flags',),
-                             help='Sensibilidade conservadora: um alerta local na sessão não prova que o piloto encontrou a bandeira.')
+                             value=saved('car_no_flags',False),on_change=remember,args=('car_no_flags',))
+        st.caption('Sensibilidade conservadora: um alerta local na sessão não prova que o piloto encontrou a bandeira.')
     if view=='Comparação':comparison(event,no_flags)
     elif view=='Evolução':evolution(asset,event,no_flags)
     else:updates(asset,event)
