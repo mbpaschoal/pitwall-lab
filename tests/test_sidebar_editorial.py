@@ -39,7 +39,7 @@ class SidebarEditorialTests(unittest.TestCase):
         set_language('pt')
 
     def test_every_route_has_one_destination_and_keeps_exact_event_context(self):
-        self.assertEqual(len(ROUTES), 15)
+        self.assertEqual(len(ROUTES), 16)
         for key in ROUTES:
             query = route_params(key, 2024, 7, 'en')
             self.assertEqual((query['temporada'], query['gp'], query['lang']), (2024, 7, 'en'))

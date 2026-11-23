@@ -241,6 +241,12 @@ RUNTIME_WORKTREE = (
     'docs/en/relatorio_2025.md',
 
     'pitwall/dashboard/app.py',
+    'pitwall/dashboard/car_views.py',
+    'pitwall/data/car_comparison.py',
+    'pitwall/research/car_comparison.py',
+    'frontend_assets/car_comparison_2026.json',
+    'tests/test_car_comparison.py',
+    'tests/test_i18n.py',
     'pitwall/dashboard/archive_cache.py',
     'tests/test_archive_cache.py',
     'pitwall/publishing/documentation.py',

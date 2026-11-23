@@ -1,5 +1,15 @@
 # Evolução do Pitwall Lab
 
+## 0.20.0 — 2026-11-23
+
+Acrescenta a seção Carros para comparar as 11 equipes em 21 GPs de 2026. A visão principal usa a mesma fase de classificação (Q1), referência por GP e média apenas quando os dois pilotos são comparáveis. A evolução permite filtrar equipes ou mostrar séries individuais, preservando trocas de piloto e lacunas.
+
+As declarações técnicas da FIA reúnem 231 registros de equipe/GP e 483 entradas de componentes, com motivos declarados, páginas, fontes e hashes. Há 22 registros públicos de software SECU em Miami e Baku. A seção da Racing Bulls com título divergente no documento de Barcelona permanece em revisão, sem associação automática de componentes ao evento.
+
+A implementação foi validada localmente com 77 testes de integração, 22 suítes portáteis e oito cenários de navegador em PT/EN, Chromium/WebKit e desktop/celular emulado. O CI passa a exercitar as visões de comparação, evolução, alterações, downloads e estados indisponíveis de Carros. A identidade visual existente é preservada.
+
+Os dados descrevem o conjunto carro-piloto e não identificam ganho causal por peça. Combustível, acerto e inventário completo de versões por piloto/sessão não são conhecidos. Modelo v1, valores canônicos anteriores e probabilidades registradas permanecem preservados. A nova seção não é entrada do modelo preditivo.
+
 ## 0.19.9 — 2026-11-23
 
 Atualização automática de dados de Las Vegas Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 4/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.

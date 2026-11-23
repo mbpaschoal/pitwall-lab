@@ -13,7 +13,7 @@ const close = (a, b, label) => assert(Math.abs(a - b) <= 1, `${label}: ${a} / ${
 async function ready(app, selector, lang) {
   await app.waitForFunction(({selector,lang,version}) => document.querySelector('.stApp')?.dataset.testScriptState === 'notRunning' &&
     document.documentElement.lang === lang && document.querySelector('.st-key-journey-header')?.innerText.includes('v' + version) &&
-    !!document.querySelector(selector) && document.querySelectorAll('.st-key-pw-sidebar-menu button').length === 15,
+    !!document.querySelector(selector) && document.querySelectorAll('.st-key-pw-sidebar-menu button').length === 16,
   {selector,lang,version}, {timeout: 90000});
   if (selector === '.fan-hero-profile-editorial') {
     const driver = app.locator('.st-key-pilot-profile-selector').getByRole('combobox');

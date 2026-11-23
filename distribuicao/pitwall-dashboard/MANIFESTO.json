@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "c14e6b967a7d623276018c7c418ff29995ef78816b677a24cb06ca16533e4f54",
+  "apresentacao_build_sha256": "c0f8fc0911ddd5ddf7c4e9e299b7483ffac4c9985ed2ed69e32d7036d4ab211a",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -33,7 +33,7 @@
       "caminho": "ARQUIVOS_PUBLICACAO.txt",
       "fonte": null,
       "modo": "gerado",
-      "sha256_destino": "58a7ecf6ec1da0e512e7cf6833b1be5e83b908512ecff10a6a14e5508a488628",
+      "sha256_destino": "320e46d7d0f26dfe0ee902f0442a36d7d434e256fe9e1b609f5f25bda684ac4b",
       "sha256_origem": null
     },
     {
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "cfc2897a83faff3bfe7ed57bb3adc1d4b9a734f9cc603e54f155e3fd94f798da",
-      "sha256_origem": "33bc12c238e6f2c540f447e91c6b1b5c4b3005af8cd2493ddd40c937ce43c217"
+      "sha256_destino": "1da61fe505f3ff11477bb6be4580338bcb2af091d9adbc061b10c10e41f4d2ec",
+      "sha256_origem": "f3fc5804e3e87bb28ccd90d4f34765248aa3fc7aa010d532702f96779569cfbf"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "a76be311d883e922839652a816c88509856558ac542c89fd22e55df974e07350",
-      "sha256_origem": "524a6b98e03e6e3dbd5b6e11e313253d3e0c1440303d7ed2592fc377535e4c6d"
+      "sha256_destino": "478fc2789ae5e55c77b0c64694ad5faf83577a457e76f4bdf1fbecad98b70029",
+      "sha256_origem": "96a7fec438c476149c4117bcee5cc1c360063c2144ca9a6676890a1425c917cc"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "8d32c9d7042ece91a92f4b3ba23d93e790723f6349f93e32477211fdad2bad23",
-      "sha256_origem": "8d32c9d7042ece91a92f4b3ba23d93e790723f6349f93e32477211fdad2bad23"
+      "sha256_destino": "8da6a2ee5c36bb2770de645cbcd689209f5935b380d68729e107d0250a633b53",
+      "sha256_origem": "8da6a2ee5c36bb2770de645cbcd689209f5935b380d68729e107d0250a633b53"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2701,6 +2701,13 @@
       "sha256_origem": "55432f9010b201dba5b61702ce708eebea085957790dcee5e5c82c8aff2ba606"
     },
     {
+      "caminho": "frontend_assets/car_comparison_2026.json",
+      "fonte": "frontend_assets/car_comparison_2026.json",
+      "modo": "copia",
+      "sha256_destino": "4bdaae27a399625883b54071f605f8917ef5ee6b7073a653ce060a4118021ca7",
+      "sha256_origem": "4bdaae27a399625883b54071f605f8917ef5ee6b7073a653ce060a4118021ca7"
+    },
+    {
       "caminho": "frontend_assets/complemento_fontes_v1.json",
       "fonte": "frontend_assets/complemento_fontes_v1.json",
       "modo": "copia",
@@ -2767,8 +2774,8 @@
       "caminho": "frontend_assets/motion.js",
       "fonte": "frontend_assets/motion.js",
       "modo": "copia",
-      "sha256_destino": "05b0f8b08d8cec659f4d65b47503aacb5a60b86c5c6784f643665e599bc4fa83",
-      "sha256_origem": "05b0f8b08d8cec659f4d65b47503aacb5a60b86c5c6784f643665e599bc4fa83"
+      "sha256_destino": "96e5608be7faa63e629b73577f6cdcdd5a8c9a263a854f3ccaa2c9642023975f",
+      "sha256_origem": "96e5608be7faa63e629b73577f6cdcdd5a8c9a263a854f3ccaa2c9642023975f"
     },
     {
       "caminho": "frontend_assets/operacao_fim_semana.json",
@@ -2879,8 +2886,8 @@
       "caminho": "pitwall/dashboard/app.py",
       "fonte": "pitwall/dashboard/app.py",
       "modo": "copia",
-      "sha256_destino": "bf397bb64a87ab10dacc361292fa0e9cb31b29c41590bc84a5a58988b8835749",
-      "sha256_origem": "bf397bb64a87ab10dacc361292fa0e9cb31b29c41590bc84a5a58988b8835749"
+      "sha256_destino": "079a8d7e7aa6931e8c01527b2703ac86e5d005dfcb0d304b815ee7d02b2e414a",
+      "sha256_origem": "079a8d7e7aa6931e8c01527b2703ac86e5d005dfcb0d304b815ee7d02b2e414a"
     },
     {
       "caminho": "pitwall/dashboard/archive_cache.py",
@@ -2895,6 +2902,13 @@
       "modo": "copia",
       "sha256_destino": "0e681c9aa326ddc8f5bc63fe4d46a49d8a4fc4dc78ca010cee5c544d582cc2c3",
       "sha256_origem": "0e681c9aa326ddc8f5bc63fe4d46a49d8a4fc4dc78ca010cee5c544d582cc2c3"
+    },
+    {
+      "caminho": "pitwall/dashboard/car_views.py",
+      "fonte": "pitwall/dashboard/car_views.py",
+      "modo": "copia",
+      "sha256_destino": "3c7e83a69c892c9e56ddc4ae53b120f12990025f6119b775437cfd0eff2345ef",
+      "sha256_origem": "3c7e83a69c892c9e56ddc4ae53b120f12990025f6119b775437cfd0eff2345ef"
     },
     {
       "caminho": "pitwall/dashboard/components.py",
@@ -2914,8 +2928,8 @@
       "caminho": "pitwall/dashboard/fan_views.py",
       "fonte": "pitwall/dashboard/fan_views.py",
       "modo": "copia",
-      "sha256_destino": "e1dd04b1af5b93a8ed4d9a0cce896ea37e41d5426c46e76a4759fd03d408c9d1",
-      "sha256_origem": "e1dd04b1af5b93a8ed4d9a0cce896ea37e41d5426c46e76a4759fd03d408c9d1"
+      "sha256_destino": "3aefca77061d4fb9deb5720f2d1d30dffe06baf54919b079eb7629cc6f97ab26",
+      "sha256_origem": "3aefca77061d4fb9deb5720f2d1d30dffe06baf54919b079eb7629cc6f97ab26"
     },
     {
       "caminho": "pitwall/dashboard/favorites.py",
@@ -2949,8 +2963,8 @@
       "caminho": "pitwall/dashboard/journey.py",
       "fonte": "pitwall/dashboard/journey.py",
       "modo": "copia",
-      "sha256_destino": "c8d4f07c6fed5ba4920f14c4b63f1637c5257fde16f6c2e7b49bbdcbde78180d",
-      "sha256_origem": "c8d4f07c6fed5ba4920f14c4b63f1637c5257fde16f6c2e7b49bbdcbde78180d"
+      "sha256_destino": "9432e28449a1b2d0ba7a28902e708fcdc65c10ae78c0249a619bd99f71fd865e",
+      "sha256_origem": "9432e28449a1b2d0ba7a28902e708fcdc65c10ae78c0249a619bd99f71fd865e"
     },
     {
       "caminho": "pitwall/dashboard/media.py",
@@ -2977,8 +2991,8 @@
       "caminho": "pitwall/dashboard/navigation.py",
       "fonte": "pitwall/dashboard/navigation.py",
       "modo": "copia",
-      "sha256_destino": "ad80076035c636441f444ac28d9c09c6c54b2d524ec2246dc960664784427632",
-      "sha256_origem": "ad80076035c636441f444ac28d9c09c6c54b2d524ec2246dc960664784427632"
+      "sha256_destino": "5e538a5ac44739587cd3ec9515e777c8ad13616c918792abfab0cf8d1c71a301",
+      "sha256_origem": "5e538a5ac44739587cd3ec9515e777c8ad13616c918792abfab0cf8d1c71a301"
     },
     {
       "caminho": "pitwall/dashboard/photo_archive.py",
@@ -3063,6 +3077,13 @@
       "modo": "copia",
       "sha256_destino": "dbf58dffa5e2a69d48c0e65f1f95a78e03dc8ad288d6d0505a63f1d887245476",
       "sha256_origem": "dbf58dffa5e2a69d48c0e65f1f95a78e03dc8ad288d6d0505a63f1d887245476"
+    },
+    {
+      "caminho": "pitwall/data/car_comparison.py",
+      "fonte": "pitwall/data/car_comparison.py",
+      "modo": "copia",
+      "sha256_destino": "5bf81d1682a44668cb23cf47479938c931da969111ee8ebb10cfb9dadeb1ab60",
+      "sha256_origem": "5bf81d1682a44668cb23cf47479938c931da969111ee8ebb10cfb9dadeb1ab60"
     },
     {
       "caminho": "pitwall/data/circuit_history.py",
@@ -3187,8 +3208,8 @@
       "caminho": "pitwall/i18n/en.json",
       "fonte": "pitwall/i18n/en.json",
       "modo": "copia",
-      "sha256_destino": "a24b9c51c7f5d9a5636777128d16d5f8876e817331a1b06df61927aca6ae46be",
-      "sha256_origem": "a24b9c51c7f5d9a5636777128d16d5f8876e817331a1b06df61927aca6ae46be"
+      "sha256_destino": "24d92d217c9e297e40ed70d647b9d6d8210f9fb4155f262c08376f2a34dc6bd4",
+      "sha256_origem": "24d92d217c9e297e40ed70d647b9d6d8210f9fb4155f262c08376f2a34dc6bd4"
     },
     {
       "caminho": "pitwall/i18n/streamlit.py",
@@ -3224,6 +3245,13 @@
       "modo": "copia",
       "sha256_destino": "3f002730385d4e84bd9afad6cd1513f281d4c7948edbcb3f525a44ac9a94e039",
       "sha256_origem": "3f002730385d4e84bd9afad6cd1513f281d4c7948edbcb3f525a44ac9a94e039"
+    },
+    {
+      "caminho": "pitwall/research/car_comparison.py",
+      "fonte": "pitwall/research/car_comparison.py",
+      "modo": "copia",
+      "sha256_destino": "422386d8d6e879a8cfd40eb4cb472a3882d87ee1b5edccf1ecaeaf4ded6072c0",
+      "sha256_origem": "422386d8d6e879a8cfd40eb4cb472a3882d87ee1b5edccf1ecaeaf4ded6072c0"
     },
     {
       "caminho": "pitwall/research/driver_conditions.py",
@@ -8749,6 +8777,13 @@
       "sha256_origem": "0e48f17455af5e120682f444285f1e08ab38f958acf9e30de49de6f52714f484"
     },
     {
+      "caminho": "tests/test_car_comparison.py",
+      "fonte": "tests/test_car_comparison.py",
+      "modo": "copia",
+      "sha256_destino": "29cc32826cac348c986001e359f290ab91a70231f42d556936fab3a265d3f142",
+      "sha256_origem": "29cc32826cac348c986001e359f290ab91a70231f42d556936fab3a265d3f142"
+    },
+    {
       "caminho": "tests/test_complemento_idade_publico.py",
       "fonte": "publicacao/templates/test_complemento_idade_publico.py",
       "modo": "gerado",
@@ -8826,6 +8861,13 @@
       "sha256_origem": "2373315eadd062cead7e756a0fb45d19d4e65c361dbf401aea161bafcad01b44"
     },
     {
+      "caminho": "tests/test_i18n.py",
+      "fonte": "tests/test_i18n.py",
+      "modo": "copia",
+      "sha256_destino": "de3835f735a093fc72d6467773692410197e0f426bc48e0849d5ab29d507aa50",
+      "sha256_origem": "de3835f735a093fc72d6467773692410197e0f426bc48e0849d5ab29d507aa50"
+    },
+    {
       "caminho": "tests/test_interface_editorial.py",
       "fonte": "tests/test_interface_editorial.py",
       "modo": "copia",
@@ -8857,8 +8899,8 @@
       "caminho": "tests/test_sidebar_editorial.py",
       "fonte": "tests/test_sidebar_editorial.py",
       "modo": "copia",
-      "sha256_destino": "2fd61e86e1322fdf9784b7f8d74a1bea38774affb82c22dbeebb17cbe30045a7",
-      "sha256_origem": "2fd61e86e1322fdf9784b7f8d74a1bea38774affb82c22dbeebb17cbe30045a7"
+      "sha256_destino": "61c886226d5be7edf0d2e5b3847f4f121455fbfa342b3294955dfa5a1eba271a",
+      "sha256_origem": "61c886226d5be7edf0d2e5b3847f4f121455fbfa342b3294955dfa5a1eba271a"
     },
     {
       "caminho": "tests/test_standings_publication.py",
@@ -8901,7 +8943,7 @@
   "origens_novas_fora_do_commit_base": [
     {
       "caminho": "exportar_dashboard.py",
-      "sha256": "f87e95c805d33fd1a87cf97a50012af30bac3d3fcba4f6c08b7631c53963d6a5"
+      "sha256": "ca3a90f33a59a1429631fbd8c8ed9d969fa259ea5a369be12a25c183aa84b21a"
     },
     {
       "caminho": "publicacao/templates/README_PUBLICO.md.tpl",
@@ -8964,5 +9006,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.19.9"
+  "versao_produto": "0.20.0"
 }

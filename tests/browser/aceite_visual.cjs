@@ -75,7 +75,7 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
     await surface.waitForFunction(expected=>{
      const labels=Array.from(document.querySelectorAll('.st-key-pw-sidebar-menu button'));
      const selects=document.querySelectorAll('.st-key-journey-context-row [data-testid="stSelectbox"]');
-     return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===15&&selects.length===2;
+     return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===16&&selects.length===2;
     },lang,{timeout:90000});
     await surface.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});
     await page.waitForTimeout(700);
@@ -125,7 +125,7 @@ const requireCheck=(condition,message)=>{if(!condition)throw Error(message);};
      }
     }
     requireCheck(m.heading.y>=m.hero.y&&m.heading.bottom<=m.hero.bottom,'Title clipped by cover');
-    requireCheck(m.targets.length===15,'Sidebar destinations missing');
+    requireCheck(m.targets.length===16,'Sidebar destinations missing');
     requireCheck(await surface.locator('.st-key-journey-navigation:visible,.journey-calendar:visible').count()===0,'Redundant navigation visible');
     requireCheck(m.photos.every(i=>(i.sourcePixels||i.natural)[0]>=i.display[0]*2 && (i.sourcePixels||i.natural)[1]>=i.display[1]*2),'Photograph lacks source resolution for 2x display');
     requireCheck(m.bars.every(value=>value>=0&&value<=100),'Chart exceeds its container');

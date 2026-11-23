@@ -1263,7 +1263,7 @@ def executar_app():
     )
     if query_token != st.session_state.get("_query_aplicada"):
         ano, gp_query, painel, tela_query, _, documento, _ = query_token
-        if tela_query in ("Corridas", "Pilotos", "Campeonato", "Previsões", "Desempenho", "Metodologia"):
+        if tela_query in ("Corridas", "Pilotos", "Carros", "Campeonato", "Previsões", "Desempenho", "Metodologia"):
             st.session_state["tela"] = tela_query
         elif painel in ("pilotos", "equipes"):
             st.session_state["tela"] = "Campeonato"
@@ -1284,7 +1284,7 @@ def executar_app():
             logo_control,language_control = st.columns([2,1],vertical_alignment="center")
     with st.container(key="journey-navigation"):
         tela = st.radio(
-            "Navegação", ("Corridas", "Pilotos", "Campeonato", "Previsões", "Desempenho", "Metodologia"),
+            "Navegação", ("Corridas", "Pilotos", "Carros", "Campeonato", "Previsões", "Desempenho", "Metodologia"),
             key="tela",on_change=sincronizar_navegacao,label_visibility="collapsed",horizontal=True,
             format_func=lambda value: {"Previsões":"Chances de pódio","Desempenho":"Acertos do Lab","Metodologia":"Como funciona"}.get(value,value),
         )
@@ -1356,7 +1356,7 @@ def executar_app():
 
         if "gp" not in st.session_state and st.session_state.get("_gp_context") in valores:
             st.session_state["gp"] = st.session_state["_gp_context"]
-        if tela in ("Corridas", "Pilotos", "Previsões", "Campeonato", "Desempenho", "Metodologia"):
+        if tela in ("Corridas", "Pilotos", "Carros", "Previsões", "Campeonato", "Desempenho", "Metodologia"):
             gp = gp_control.selectbox(
                 "Etapa de referência" if tela == "Campeonato" else "Grande Prêmio",
                 valores,
@@ -1420,7 +1420,12 @@ def executar_app():
                 {"temporada": "2024–2026"}, slot=slot))
             render_motion()
             return
-        if tela in ("Corridas", "Previsões"):
+        if tela == "Carros":
+            renderizar_topo(pacote, slot=tool_control)
+            corrida = next(r for r in pacote['corridas'] if r['rodada'] == rodada)
+            from pitwall.dashboard.car_views import render as render_car_comparison
+            render_car_comparison(raiz_artefatos(), temporada, rodada, corrida.get('circuito_id'))
+        elif tela in ("Corridas", "Previsões"):
             tela_explorar(pacote, rodada, tela, topbar_slot=tool_control)
         elif tela == "Campeonato":
             bloco = dados_do_gp_2026(pacote, rodada) if temporada == 2026 else dados_do_gp(pacote, rodada)

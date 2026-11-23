@@ -11,9 +11,9 @@ const expectedVersion=process.env.AUDIT_EXPECTED_VERSION||fs.readFileSync(path.j
 const [base,output]=process.argv.slice(2);
 if(!base||!output)throw Error('Usage: node aceite_rolagem.cjs BASE_URL OUTPUT_DIR');
 fs.mkdirSync(output,{recursive:true});
-const routes=['Corridas','Pilotos','Campeonato','Previsões','Desempenho','Metodologia'];
+const routes=['Corridas','Pilotos','Carros','Campeonato','Previsões','Desempenho','Metodologia'];
 const kinds=['race','drivers','championship','forecast','performance','method'];
-const audit={utc:new Date().toISOString(),base,browser:browserName,expectedVersion,scope:'6 screens x PT/EN x 390x560 and 1440x900 x five scroll positions; header and pilot controls text2x; mobile resize',limitations:['Canvas/Plotly internals and cross-origin iframe text require separate functional tests.','Background hero images and foreground title overlays are intentional and excluded from image collisions.','Partly clipped lines at scroll-viewport edges and CSS-hidden accessibility labels are excluded.','Text2x doubles computed font-size/line-height as a deterministic reflow stress test; it is not native browser zoom.'],samples:[],stress:[]};
+const audit={utc:new Date().toISOString(),base,browser:browserName,expectedVersion,scope:'7 screens x PT/EN x 390x560 and 1440x900 x five scroll positions; header and pilot controls text2x; mobile resize',limitations:['Canvas/Plotly internals and cross-origin iframe text require separate functional tests.','Background hero images and foreground title overlays are intentional and excluded from image collisions.','Partly clipped lines at scroll-viewport edges and CSS-hidden accessibility labels are excluded.','Text2x doubles computed font-size/line-height as a deterministic reflow stress test; it is not native browser zoom.'],samples:[],stress:[]};
 const launch={headless:true};if(browserName==='chromium'&&process.env.PLAYWRIGHT_CHANNEL)launch.channel=process.env.PLAYWRIGHT_CHANNEL;
 const save=()=>fs.writeFileSync(path.join(output,'scroll-audit.json'),JSON.stringify(audit,null,2));
 const doubleTextMetrics=surface=>surface.evaluate(async()=>{
@@ -49,7 +49,7 @@ for(const viewport of [{width:390,height:560},{width:1440,height:900}])for(const
     await surface.waitForFunction(expected=>{
      const labels=Array.from(document.querySelectorAll('.st-key-pw-sidebar-menu button'));
      const selects=document.querySelectorAll('.st-key-journey-context-row [data-testid="stSelectbox"]');
-     return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===15&&selects.length===2;
+     return document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&document.documentElement.lang===expected&&document.fonts.status==='loaded'&&labels.length===16&&selects.length===2;
     },lang,{timeout:90000});
     await surface.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});await page.waitForTimeout(650);
   for(const fraction of [0,.25,.5,.75,1]){

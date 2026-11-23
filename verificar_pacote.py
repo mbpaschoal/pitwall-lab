@@ -17,7 +17,8 @@ TESTES_PORTATEIS = ('test_distribuicao.py', 'test_acervo_publico.py', 'test_comp
                     'test_driver_conditions.py', 'test_driver_projection.py', 'test_pilot_views.py',
                     'test_fan_exploration.py', 'test_review_regressions.py',
                     'test_sidebar_editorial.py', 'test_fan_journey.py', 'test_fan_composition.py',
-                    'test_tarot_catalog.py', 'test_high_resolution_assets.py')
+                    'test_tarot_catalog.py', 'test_high_resolution_assets.py',
+                    'test_car_comparison.py', 'test_i18n.py')
 
 
 def validar_pacote(pacote):

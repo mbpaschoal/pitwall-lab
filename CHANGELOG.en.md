@@ -1,5 +1,15 @@
 # Pitwall Lab evolution
 
+## 0.20.0 — 2026-11-23
+
+Adds Cars to compare all 11 teams across 21 GPs in 2026. The main view uses the same qualifying phase (Q1), one reference per GP and a team mean only when both drivers are comparable. Trends can filter teams or show individual driver series, preserving driver changes and missing data.
+
+FIA technical declarations provide 231 team/GP records and 483 component entries, with declared purposes, pages, sources and hashes. There are 22 public SECU software records for Miami and Baku. The Racing Bulls section with a conflicting title in the Barcelona document remains under review, without automatic component association with that event.
+
+The implementation was validated locally with 77 integration tests, 22 portable suites and eight browser scenarios across PT/EN, Chromium/WebKit and desktop/emulated mobile. CI now exercises Cars comparison, trends, updates, downloads and unavailable states. The established visual identity is preserved.
+
+These data describe combined car and driver execution, not causal gains from individual parts. Fuel, setup and the full component/version inventory by driver/session remain unknown. Frozen v1, previous canonical values and recorded probabilities are preserved. The new section does not feed the predictive model.
+
 ## 0.19.9 — 2026-11-23
 
 Automatic Las Vegas Grand Prix data update through GitHub Actions. Sessions with received data: 4/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.

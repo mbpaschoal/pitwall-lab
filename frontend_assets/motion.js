@@ -139,8 +139,9 @@
       focusCardDialog(deck.closest('[role="dialog"]'));
     }
     const explorer = d.querySelector('.st-key-pw-sidebar-menu details');
+    const navigationCount = d.querySelectorAll('.st-key-pw-sidebar-menu button[kind]').length;
     if (explorer &&
-        d.querySelectorAll('.pw-nav-fallback').length === 15 &&
+        navigationCount > 0 && d.querySelectorAll('.pw-nav-fallback').length === navigationCount &&
         d.querySelector('.stApp')?.dataset.testScriptState === 'notRunning') {
       explorer.dataset.pwReady = 'true';
       if (!w.matchMedia('(max-width:800px)').matches && !explorer.open)

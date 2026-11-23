@@ -29,6 +29,7 @@ Portfólio de ciência de dados sobre Fórmula 1, criado por **MBPaschoal**. O P
 
 - **Pilotos:** destaques por condição, perfil, duelos, favorito no navegador e cartões para compartilhar. Filtros, amostras e empates ficam explícitos. [Auditoria dos dados](reports/pilotos_condicoes_20261029/README.md).
 - **Corridas:** resultado, ficha do circuito, tempos, clima, pneus/paradas, equipes e desempenho dos pilotos em até cinco edições anteriores na mesma pista.
+- **Carros:** comparação das 11 equipes em Q1, evolução por equipe ou piloto e declarações técnicas da FIA em 21 GPs de 2026. Médias exigem dois pilotos comparáveis; lacunas e conflitos de fonte são visíveis. O recorte é descritivo e não altera previsões registradas.
 - **Campeonato:** classificação completa de pilotos e equipes na rodada selecionada.
 - **Chances de pódio:** probabilidades individuais e comparação posterior. As emissões de Austin e São Paulo de 2026 têm registros próprios, separados do estudo retrospectivo.
 - **Acertos do Lab:** log loss, Brier, calibração, ranking e cobertura, com denominadores explícitos.

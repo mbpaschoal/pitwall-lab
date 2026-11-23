@@ -37,9 +37,9 @@ class TestPublicNavigation(unittest.TestCase):
         params = dict(temporada='2026', gp='19', faixas=['chuva', 'calor'],
                       documento='metodo', painel='pilotos', cartas='1')
         links = Links(navigation_links(params, 'Pilotos', 'en')).links
-        self.assertEqual(len(links), 6)
+        self.assertEqual(len(links), 7)
         self.assertEqual([p['data-screen'] for p in links],
-                         ['Corridas', 'Pilotos', 'Campeonato', 'Previsões', 'Desempenho', 'Metodologia'])
+                         ['Corridas', 'Pilotos', 'Carros', 'Campeonato', 'Previsões', 'Desempenho', 'Metodologia'])
         for link in links:
             query = parse_qs(urlparse(link['href']).query)
             self.assertEqual(query['gp'], ['19'])
@@ -52,10 +52,12 @@ class TestPublicNavigation(unittest.TestCase):
 
     def test_fallback_navigation_has_bilingual_labels_and_escapes_user_values(self):
         self.assertIn('Chances de pódio', navigation_links({}, 'Corridas'))
+        self.assertIn('Carros', navigation_links({}, 'Carros'))
+        self.assertIn('Cars', navigation_links({}, 'Carros', 'en'))
         html = navigation_links({'piloto': '\"><script>alert(1)</script>'}, 'Metodologia', 'en')
         self.assertIn('How it works', html)
         self.assertNotIn('<script>', html)
-        self.assertEqual(len(Links(html).links), 6)
+        self.assertEqual(len(Links(html).links), 7)
 
     def test_language_link_keeps_profile_duel_and_chapter_context(self):
         params = dict(temporada='2026', gp='19', tela='Pilotos', piloto='norris', rival='piastri',
