@@ -140,10 +140,12 @@
     }
     const explorer = d.querySelector('.st-key-pw-sidebar-menu details');
     const navigationCount = d.querySelectorAll('.st-key-pw-sidebar-menu button[kind]').length;
+    const fallbackCount = d.querySelectorAll('.pw-nav-fallback').length;
     if (explorer &&
-        navigationCount > 0 && d.querySelectorAll('.pw-nav-fallback').length === navigationCount &&
+        fallbackCount > 0 &&
         d.querySelector('.stApp')?.dataset.testScriptState === 'notRunning') {
-      explorer.dataset.pwReady = 'true';
+      if (navigationCount === fallbackCount) explorer.dataset.pwReady = 'true';
+      // Desktop hides the disclosure: open usable links even if Button failed.
       if (!w.matchMedia('(max-width:800px)').matches && !explorer.open)
         explorer.querySelector('summary')?.click();
     }
