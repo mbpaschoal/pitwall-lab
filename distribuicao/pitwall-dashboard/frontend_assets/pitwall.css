@@ -161,6 +161,9 @@ nav[aria-label="Documentação"] { line-height:1.9; padding:4px 0 12px; }
 
 /* Fan reading rhythm: explanatory prose only; tables retain their width. */
 [data-testid="stMain"] [data-testid="stMarkdownContainer"] > p { max-width:75ch; line-height:1.6; margin-bottom:12px; }
+/* Radio labels are controls: prose spacing must not offset their indicators. */
+.st-key-car_view [data-testid="stRadioOption"] { display:flex; align-items:center; min-height:var(--pw-control-height); }
+.st-key-car_view [data-testid="stRadioOption"] [data-testid="stMarkdownContainer"] > p { margin:0; }
 .pilot-card p { max-width:none; }
 .pilot-header h1 { font-size:clamp(36px,4vw,64px); }
 [data-testid="stMain"] h2 { margin-top:24px; }

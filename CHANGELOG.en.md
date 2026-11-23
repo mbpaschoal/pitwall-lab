@@ -1,5 +1,11 @@
 # Pitwall Lab evolution
 
+## 0.20.1 — 2026-11-23
+
+Aligns the radio indicators and labels for Comparison, Evolution and Updates in Cars. Removes prose margins only from these options and preserves native controls with 44 px touch targets, leaving other typography unchanged.
+
+Stabilizes the wait for automatic menu opening in the fallback test. Frozen v1, canonical data, published components and recorded forecasts remain unchanged.
+
 ## 0.20.0 — 2026-11-23
 
 Adds Cars to compare all 11 teams across 21 GPs in 2026. The main view uses the same qualifying phase (Q1), one reference per GP and a team mean only when both drivers are comparable. Trends can filter teams or show individual driver series, preserving driver changes and missing data.
