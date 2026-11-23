@@ -1,5 +1,11 @@
 # Evolução do Pitwall Lab
 
+## 0.20.1 — 2026-11-23
+
+Alinha os círculos e os rótulos de Comparação, Evolução e Alterações na seção Carros. Remove a margem de prosa somente dessas opções e mantém os controles nativos com área de toque de 44 px, sem alterar o restante da tipografia.
+
+Estabiliza a espera pela abertura automática do menu no teste de contingência. Modelo v1, dados canônicos, componentes publicados e previsões registradas permanecem preservados.
+
 ## 0.20.0 — 2026-11-23
 
 Acrescenta a seção Carros para comparar as 11 equipes em 21 GPs de 2026. A visão principal usa a mesma fase de classificação (Q1), referência por GP e média apenas quando os dois pilotos são comparáveis. A evolução permite filtrar equipes ou mostrar séries individuais, preservando trocas de piloto e lacunas.

@@ -8,8 +8,14 @@ const screens=['Corridas','Pilotos','Carros','Campeonato','Previsões','Desempen
 async function check(page,lang){
  await page.locator('.st-key-pw-sidebar-menu').waitFor({state:'visible',timeout:30000});
  const menu=page.locator('.st-key-pw-sidebar-menu details');
- await page.waitForFunction(()=>{const menu=document.querySelector('.st-key-pw-sidebar-menu details'),summary=menu?.querySelector('summary');return menu?.open||summary&&summary.getClientRects().length>0&&getComputedStyle(summary).visibility!=='hidden';});
- if(!await menu.evaluate(e=>e.open))await menu.locator('summary').click();
+ // Desktop opens automatically and hides its disclosure. Waiting for that
+ // contract avoids clicking a summary that can disappear between checks.
+ if(await page.evaluate(()=>matchMedia('(max-width:800px)').matches)){
+  await menu.locator('summary').waitFor({state:'visible'});
+  if(!await menu.evaluate(e=>e.open))await menu.locator('summary').click();
+ }else{
+  await page.waitForFunction(()=>document.querySelector('.st-key-pw-sidebar-menu details')?.open,{},{timeout:30000});
+ }
  // pwReady belongs to native-button hydration, which this scenario blocks.
  // Require the complete usable fallback inventory before exercising the links.
  await page.waitForFunction(lang=>document.documentElement.lang===lang&&document.querySelector('.stApp')?.dataset.testScriptState==='notRunning'&&
