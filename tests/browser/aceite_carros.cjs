@@ -10,6 +10,19 @@ const out = path.resolve(output);
 fs.mkdirSync(out, {recursive:true});
 const evidence = {base, engine, scope:'observed browser journey', cases:[]};
 
+// BackMsg field 11 requests a Streamlit script rerun; ignore other traffic.
+function requestsRerun(payload) {
+ const b = Buffer.isBuffer(payload) ? payload : Buffer.from(payload); let i = 0;
+ function uint() { let n=0,s=0,v; do { assert(i<b.length && s<=49); v=b[i++]; n+=(v&127)*2**s; s+=7; } while(v&128); return n; }
+ while(i<b.length) {
+  const tag=uint(), field=Math.floor(tag/8), wire=tag%8;
+  if(field===11) return true;
+  if(wire===0) uint(); else if(wire===1) i+=8; else if(wire===2) { const n=uint(); i+=n; }
+  else if(wire===5) i+=4; else return false;
+ }
+ return false;
+}
+
 function url(year, round, lang) {
  const target = new URL(base);
  target.search = new URLSearchParams({tela:'Carros',temporada:year,gp:round,lang});
@@ -51,7 +64,8 @@ async function run() {
   for (const width of [1440,390]) for (const lang of ['pt','en']) {
    const touch = width === 390;
    const context = await browser.newContext({viewport:{width,height:1000},isMobile:touch,hasTouch:touch});
-   const page = await context.newPage(), errors = [];
+   const page = await context.newPage(), errors = []; let reruns = 0;
+   page.on('websocket',ws=>{if(ws.url().includes('_stcore/stream')) ws.on('framesent',event=>{if(requestsRerun(event.payload)) reruns++;});});
    page.on('pageerror',error=>errors.push(error.message));
    const row = {width,lang,states:[],screenshots:[]};
    evidence.cases.push(row);
@@ -80,11 +94,21 @@ async function run() {
     row.states.push('declared_components_and_source');
     row.screenshots.push(await capture(page,app,`updates-${width}-${lang}`));
     await activate(app.getByText(lang==='pt'?'Método, fontes e download':'Method, sources and download',{exact:true}),touch);
+    const button = app.getByRole('button',{name:lang==='pt'?'Baixar dados do comparativo':'Download comparison data',exact:true});
+    await button.evaluate(e=>e.scrollIntoView({block:'center'}));
+    await button.click({trial:true});
+    row.downloadTarget = await button.evaluate(e=>{const r=e.getBoundingClientRect(), hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2); return {visible:!!hit&&(hit===e||e.contains(hit)),label:e.textContent};});
+    assert.equal(row.downloadTarget.visible,true);
+    const beforeDownload = reruns;
     const [download] = await Promise.all([
      page.waitForEvent('download'),
-     activate(app.getByRole('button',{name:lang==='pt'?'Baixar dados do comparativo':'Download comparison data',exact:true}),touch)
+     activate(button,touch)
     ]);
     const bytes = fs.readFileSync(await download.path()), asset = JSON.parse(bytes);
+    assert.equal(await download.failure(),null);
+    await page.waitForTimeout(700);
+    assert.equal(reruns,beforeDownload,'Downloading the Cars snapshot must preserve the current view');
+    row.downloadReruns=reruns-beforeDownload;
     assert.equal(asset.events.length,21);
     assert.equal(Object.keys(asset.teams).length,11);
     assert.equal(asset.forecast_input,false);

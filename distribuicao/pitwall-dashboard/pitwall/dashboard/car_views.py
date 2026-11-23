@@ -201,4 +201,4 @@ def render(root,year,round_,circuit_id=None):
         st.write('A média exige os dois pilotos da equipe. Uma amostra incompleta aparece como indisponível, nunca zero. O número de componentes declarados não mede o tamanho do ganho e não é usado como nota do carro.')
         st.write('As fontes foram consultadas retrospectivamente. A data exata de captura é preservada quando disponível; uma verificação local posterior não substitui esse horário.')
         st.download_button('Baixar dados do comparativo',json.dumps(asset,ensure_ascii=False,indent=2),
-                           file_name='pitwall-carros-2026.json',mime='application/json',key='car_download')
+                           file_name='pitwall-carros-2026.json',mime='application/json',key='car_download',on_click='ignore')
