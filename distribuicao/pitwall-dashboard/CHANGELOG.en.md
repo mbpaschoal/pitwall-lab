@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.20.2 — 2026-11-23
+
+Automatic Las Vegas Grand Prix data update through GitHub Actions. Sessions with received data: 4/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.20.1 — 2026-11-23
 
 Aligns the radio indicators and labels for Comparison, Evolution and Updates in Cars. Removes prose margins only from these options and preserves native controls with 44 px touch targets, leaving other typography unchanged.

@@ -1,5 +1,5 @@
 {
-  "apresentacao_build_sha256": "e0f00babd9f8552ef5c27120a8cdfd01f3e8be6b3a23540b4b3ebb471191008a",
+  "apresentacao_build_sha256": "bd89540bb9f231c62063137396af70b7845a33c6a12353713f6b86af37160a40",
   "arquivos": [
     {
       "caminho": ".gitattributes",
@@ -41,16 +41,16 @@
       "fonte": "CHANGELOG.en.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "729d54a10e03ef1eebd3a7d3ac3d3c5b7927565c8907c26009ae2beda7a7265f",
-      "sha256_origem": "ab9431cb7f28c866e31e8fe48d02109f93da1776bc040e061f09378772030070"
+      "sha256_destino": "c2313a167ac191940a8f8cd013f121d53090757c8e502b80f1d882a4e83539c2",
+      "sha256_origem": "da2bd32e0331353af7d25327bef59bdeb89301a8b9d7ecffd97bd56a0436d272"
     },
     {
       "caminho": "CHANGELOG.md",
       "fonte": "CHANGELOG.md",
       "modo": "adaptado_documentacao",
       "nota": "link para o diário publicado; notas da versão preservadas",
-      "sha256_destino": "180ea7bd6ea4861f891fb9d4b8c1e1f49c85657c4db8e033fb3fa1465fd6a7fa",
-      "sha256_origem": "b38a6d373207835413f1279fa32bf219e6ad3739c3df2cf24fb2e953593e1891"
+      "sha256_destino": "a702c12b6ee92d5e59714d435c0445391a94222834b63b82b969f6c1c7346adb",
+      "sha256_origem": "5529a1862df6d8218f26232b5e7e81966bbef41515f5cf58a62e41a858621d81"
     },
     {
       "caminho": "FONTES_E_DADOS.md",
@@ -98,8 +98,8 @@
       "caminho": "VERSION",
       "fonte": "VERSION",
       "modo": "copia",
-      "sha256_destino": "356c9c9f099da7f9b380c6fedc51077ee98de22402b378bc0f431fdc57aac757",
-      "sha256_origem": "356c9c9f099da7f9b380c6fedc51077ee98de22402b378bc0f431fdc57aac757"
+      "sha256_destino": "5e497f028c02ff4514914cd91dc27bd43990b16f6408e29909bf9f4a8162e3bc",
+      "sha256_origem": "5e497f028c02ff4514914cd91dc27bd43990b16f6408e29909bf9f4a8162e3bc"
     },
     {
       "caminho": "acervo_dashboard_dados.py",
@@ -2816,8 +2816,8 @@
       "caminho": "frontend_assets/pilotos_condicoes_operacao.json",
       "fonte": "frontend_assets/pilotos_condicoes_operacao.json",
       "modo": "copia",
-      "sha256_destino": "a0f6ac3d9ccb90d473ea7e34da2e9cb4368484622f0d5060332c37cb861f7afc",
-      "sha256_origem": "a0f6ac3d9ccb90d473ea7e34da2e9cb4368484622f0d5060332c37cb861f7afc"
+      "sha256_destino": "f2a2059c257527a704a8b79c33d7013205b907423b6cc3261d5cbd815e3a1e52",
+      "sha256_origem": "f2a2059c257527a704a8b79c33d7013205b907423b6cc3261d5cbd815e3a1e52"
     },
     {
       "caminho": "frontend_assets/pitwall.css",
@@ -9006,5 +9006,5 @@
       "sha256": "4d342773a31fd693d90d6079855297fea167eafa1e9f40e301194da1e52b3c52"
     }
   ],
-  "versao_produto": "0.20.1"
+  "versao_produto": "0.20.2"
 }

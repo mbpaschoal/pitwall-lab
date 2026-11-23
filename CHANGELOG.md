@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.20.2 — 2026-11-23
+
+Atualização automática de dados de Las Vegas Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 4/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.20.1 — 2026-11-23
 
 Alinha os círculos e os rótulos de Comparação, Evolução e Alterações na seção Carros. Remove a margem de prosa somente dessas opções e mantém os controles nativos com área de toque de 44 px, sem alterar o restante da tipografia.
