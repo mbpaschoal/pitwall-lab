@@ -8,7 +8,7 @@ const engine = process.env.PLAYWRIGHT_BROWSER || 'chromium';
 assert(['chromium','webkit'].includes(engine));
 const out = path.resolve(output);
 fs.mkdirSync(out, {recursive:true});
-const evidence = {base, engine, scope:'observed browser journey', cases:[]};
+const evidence = {base, engine, scope:'observed browser journey', protocol:'Independent deep-link setup uses fresh tabs; native interactions stay in place. All pageerrors across live tabs are retained and rejected.', cases:[]};
 
 // BackMsg field 11 requests a Streamlit script rerun; ignore other traffic.
 function requestsRerun(payload) {
@@ -64,13 +64,33 @@ async function run() {
   for (const width of [1440,390]) for (const lang of ['pt','en']) {
    const touch = width === 390;
    const context = await browser.newContext({viewport:{width,height:1000},isMobile:touch,hasTouch:touch});
-   const page = await context.newPage(), errors = []; let reruns = 0;
-   page.on('websocket',ws=>{if(ws.url().includes('_stcore/stream')) ws.on('framesent',event=>{if(requestsRerun(event.payload)) reruns++;});});
-   page.on('pageerror',error=>errors.push(error.message));
-   const row = {width,lang,states:[],screenshots:[]};
+   let page = await context.newPage(); const errors = []; let reruns = 0;
+   const pendingResources = new Set();
+   function track(target) {
+    target.on('request',request=>{if (/\/(?:component|media|static\/js)\//.test(new URL(request.url()).pathname)) pendingResources.add(request);});
+    target.on('requestfinished',request=>pendingResources.delete(request));
+    target.on('requestfailed',request=>pendingResources.delete(request));
+    target.on('websocket',ws=>{if(ws.url().includes('_stcore/stream')) ws.on('framesent',event=>{if(requestsRerun(event.payload)) reruns++;});});
+    target.on('pageerror',error=>errors.push(error.message));
+   }
+   track(page);
+   const row = {width,lang,states:[],screenshots:[],setupPages:0};
    evidence.cases.push(row);
+   async function open(year, round) {
+    const deadline = Date.now()+30000; let settledSince = 0;
+    while (Date.now()<deadline) {
+     if (pendingResources.size) settledSince = 0;
+     else {settledSince ||= Date.now(); if (Date.now()-settledSince>=500) break;}
+     await page.waitForTimeout(50);
+    }
+    assert.equal(pendingResources.size,0,'Finish component/media loads before opening an independent case');
+    // These URLs set up independent cases, not user navigation. Keep old tabs observed.
+    if (page.url()!=='about:blank') {page=await context.newPage(); track(page);}
+    row.setupPages++;
+    await page.goto(url(year,round,lang));
+   }
    try {
-    await page.goto(url(2026,21,lang));
+    await open(2026,21);
     let app = await surface(page,base);
     await app.getByRole('heading',{name:lang==='pt'?'Carros':'Cars',level:1,exact:true}).waitFor({timeout:45000});
     await ready(app);
@@ -136,7 +156,7 @@ async function run() {
     row.states.push('download_exact_snapshot_and_missingness');
 
     if (!touch) {
-     await page.goto(url(2026,7,lang));
+     await open(2026,7);
      app = await surface(page,base); await ready(app);
      await view(app,lang==='pt'?'Alterações':'Updates',false);
      await app.locator('.st-key-car_update_team [role=combobox]').click();
@@ -148,14 +168,14 @@ async function run() {
      row.states.push('conflicting_event_identity_withheld');
      row.screenshots.push(await capture(page,app,`pending-${lang}`));
 
-     await page.goto(url(2026,4,lang));
+     await open(2026,4);
      app = await surface(page,base); await ready(app);
      await view(app,lang==='pt'?'Alterações':'Updates',false);
      await app.getByText((lang==='pt'?'Software SECU divulgado: ':'Published SECU software: ')+'SR1830 + B127.',{exact:true}).waitFor();
      row.states.push('published_secu_version');
     }
 
-    await page.goto(url(2024,1,lang));
+    await open(2024,1);
     app = await surface(page,base); await ready(app);
     await app.getByText(lang==='pt'
      ? 'O comparativo de carros cobre a temporada 2026. Selecione 2026 para consultar as onze equipes; os outros anos permanecem sem dados nesta seção.'
