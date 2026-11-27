@@ -1,5 +1,9 @@
 # Pitwall Lab evolution
 
+## 0.20.4 — 2026-11-27
+
+Automatic Qatar Grand Prix data update through GitHub Actions. Sessions with received data: 2/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.
+
 ## 0.20.3 — 2026-11-26
 
 Automatic Qatar Grand Prix data update through GitHub Actions. Sessions with received data: 0/5. Sources, timestamps and original captures preserved. Forecasts remain separate from observations. Existing probabilities and frozen v1 remain unchanged.

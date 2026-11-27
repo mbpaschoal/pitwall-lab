@@ -1,5 +1,9 @@
 # Evolução do Pitwall Lab
 
+## 0.20.4 — 2026-11-27
+
+Atualização automática de dados de Qatar Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 2/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
+
 ## 0.20.3 — 2026-11-26
 
 Atualização automática de dados de Qatar Grand Prix pelo GitHub Actions. Sessões com dados recebidos: 0/5. Fontes, horários e arquivos originais preservados. Clima previsto separado do observado. As probabilidades e o modelo v1 permanecem congelados.
